@@ -3,11 +3,11 @@ import React from 'react'
 import variables from '@/app/variables.module.scss'
 
 interface HamburgerMenuIconInterface {
-  handleSetMenuIsOpen: () => void  
+  handleSetMenuIsOpen: () => void
 }
 
 export default function HamburgerMenuIcon({
-  handleSetMenuIsOpen
+  handleSetMenuIsOpen,
 }: HamburgerMenuIconInterface) {
   return (
     <svg
