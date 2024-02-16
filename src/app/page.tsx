@@ -1,8 +1,7 @@
-import Hero from '@/slices/hero'
 import React from 'react'
 
+import Hero from '@/slices/hero'
+
 export default function Home() {
-  return (
-    <Hero />
-  )
+  return <Hero />
 }
