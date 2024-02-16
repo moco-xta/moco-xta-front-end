@@ -1,0 +1,45 @@
+nav {
+  justify-content: flex-end;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+#hamburger_menu_icon {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  #nav_wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 64px;
+    width: 120px;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: 0.3s transform ease-in-out;
+    background-color: red;
+
+    ul {
+      flex-direction: column;
+    }
+  }
+
+  #nav_wrapper.open {
+    transform: initial;
+  }
+
+  #hamburger_menu_icon {
+    display: block;
+    cursor: pointer;
+  }
+}
