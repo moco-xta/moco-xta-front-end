@@ -19,11 +19,12 @@
     ],
     "baseUrl": "src/",
     "paths": {
-      "@/*": ["./*"],
+      "@/app/*": ["app/*"],
       "@/components/*": ["components/*"],
       "@/constants/*": ["constants/*"],
       "@/interfaces/*": ["interfaces/*"],
-      "@/redux/*": ["redux/*"]
+      "@/redux/*": ["redux/*"],
+      "@/routes/*": ["routes/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
