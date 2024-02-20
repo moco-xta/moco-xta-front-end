@@ -8,6 +8,7 @@ import { IconBlender } from '@/components/r3f/models/icons/IconBlender'
 import { IconChatGpt } from '@/components/r3f/models/icons/IconChatGpt'
 import { IconDocker } from '@/components/r3f/models/icons/IconDocker'
 import { IconFigma } from '@/components/r3f/models/icons/IconFigma'
+import { IconSass } from '@/components/r3f/models/icons/IconSass'
 
 export default function PerformedWithScene() {
   return (
@@ -34,6 +35,7 @@ export default function PerformedWithScene() {
       <IconChatGpt />
       <IconDocker />
       <IconFigma />
+      <IconSass />
     </Canvas>
   )
 }
