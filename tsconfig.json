@@ -24,7 +24,9 @@
       "@/constants/*": ["constants/*"],
       "@/interfaces/*": ["interfaces/*"],
       "@/redux/*": ["redux/*"],
-      "@/routes/*": ["routes/*"]
+      "@/routes/*": ["routes/*"],
+      "@/styles/*": ["styles/*"],
+      "@/translations/*": ["translations/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

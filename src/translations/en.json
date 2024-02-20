@@ -1,7 +1,5 @@
 {
   "HOME": {
-    "PERFORM_WITH": {
-      "PERFORM_WITH": "Perfomed with:"
-    }
+    "PERFORMED_WITH": "Performed with:"
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import variables from '@/app/variables.module.scss'
+import variables from '@/styles/variables.module.scss'
 
 interface HamburgerMenuIconInterface {
   handleSetMenuIsOpen: () => void
