@@ -1,7 +1,5 @@
 {
   "HOME": {
-    "PERFORM_WITH": {
-      "PERFORM_WITH": "Realizado con:"
-    }
+    "PERFORMED_WITH": "Realizado con:"
   }
 }
