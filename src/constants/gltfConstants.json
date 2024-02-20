@@ -1,5 +1,6 @@
 {
   "ICON_BLENDER": "/gltf/icons/IconBlender.gltf",
+  "ICON_CHAT_GPT": "/gltf/icons/IconChatGpt.gltf",
   "ICON_DOCKER": "/gltf/icons/IconDocker.gltf",
   "ICON_FIGMA": "/gltf/icons/IconFigma.gltf"
 }
