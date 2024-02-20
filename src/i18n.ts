@@ -1,16 +1,14 @@
 import { notFound } from 'next/navigation'
 import { getRequestConfig } from 'next-intl/server'
 
-const locales = ['en', 'es', 'fr']
+import { default as LocalesConstants } from '@/constants/localesConstants.json'
 
 interface RequestConfigInterface {
   locale: string
 }
 
 export default getRequestConfig(async ({ locale }: RequestConfigInterface) => {
-  if (!locales.includes(locale as any)) {
-    console.log(locale)
-    alert('NOT FOUND')
+  if (!LocalesConstants.LOCALES.includes(locale as any)) {
     notFound()
   }
 
