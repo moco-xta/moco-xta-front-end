@@ -14,7 +14,7 @@ const shaderMaterial = {
   fragmentShader: fragmentShader,
 }
 
-export default function DefaultScene() {
+export default function PerformedWithScene() {
   return (
     <Canvas>
       <mesh>
