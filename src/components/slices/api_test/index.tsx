@@ -6,7 +6,6 @@ import { useGetTestsQuery, useAddNewTestMutation } from '@/redux/api/testApi'
 import { TestInterface } from '@/interfaces/api/testInterface'
 
 export default function ApiTest() {
-
   const [title, setTitle] = useState<string>('')
   const [description, setDescription] = useState<string>('')
   const [dateOfCreation, setDateOfCreation] = useState<string>('1995-12-17')
