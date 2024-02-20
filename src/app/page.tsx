@@ -1,13 +1,13 @@
 import React from 'react'
 
 import Hero from '@/components/slices/hero'
-import ApiTest from '@/components/slices/api_test'
+import PerformedWith from '@/components/slices/performed_with'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ApiTest />
+      <PerformedWith />
     </>
   )
 }
