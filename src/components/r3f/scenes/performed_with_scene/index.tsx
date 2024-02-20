@@ -4,8 +4,9 @@ import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
-import { IconDocker } from '@/components/r3f/models/icons/IconDocker'
 import { IconBlender } from '@/components/r3f/models/icons/IconBlender'
+import { IconChatGpt } from '@/components/r3f/models/icons/IconChatGpt'
+import { IconDocker } from '@/components/r3f/models/icons/IconDocker'
 import { IconFigma } from '@/components/r3f/models/icons/IconFigma'
 
 export default function PerformedWithScene() {
@@ -29,9 +30,10 @@ export default function PerformedWithScene() {
         castShadow
       />
       <ambientLight position={[3, 3, 3]} />
+      <IconBlender />
+      <IconChatGpt />
       <IconDocker />
       <IconFigma />
-      <IconBlender />
     </Canvas>
   )
 }
