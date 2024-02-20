@@ -2,28 +2,33 @@
 
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
+import { PerspectiveCamera } from '@react-three/drei'
 
-import vertexShader from '@/components/r3f/shaders/default_shaders/vertexShader.glsl'
-import fragmentShader from '@/components/r3f/shaders/default_shaders/fragmentShader.glsl'
-
-const shaderMaterial = {
-  uniforms: {
-    u_time: { type: 'f', value: 0 },
-  },
-  vertexShader: vertexShader,
-  fragmentShader: fragmentShader,
-}
+import { IconBlender } from '@/components/r3f/models/icons/IconBlender'
+import { IconFigma } from '@/components/r3f/models/icons/IconFigma'
 
 export default function PerformedWithScene() {
   return (
-    <Canvas>
-      <mesh>
-        <planeGeometry />
-        <shaderMaterial
-          attach='material'
-          args={[shaderMaterial]}
-        />
-      </mesh>
+    <Canvas
+      shadows
+      legacy
+      gl={{
+        antialias: true,
+        alpha: true,
+        powerPreference: 'high-performance',
+      }}
+    >
+      <PerspectiveCamera
+        makeDefault
+        position={[0, 0, 5]}
+      />
+      <directionalLight
+        position={[0, 0, 5]}
+        castShadow
+      />
+      <ambientLight position={[3, 3, 3]} />
+      <IconFigma />
+      <IconBlender />
     </Canvas>
   )
 }
