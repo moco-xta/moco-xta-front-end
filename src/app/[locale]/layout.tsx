@@ -5,7 +5,7 @@ import ReduxProvider from '@/redux/ReduxProvider'
 
 import Header from '@/components/shared/header'
 
-import './globals.scss'
+import '@/styles/globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,11 +16,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode
+  params: { locale: string }
 }>) {
   return (
-    <html lang='en'>
+    <html lang={locale}>
       <body className={inter.className}>
         <ReduxProvider>
           <Header />
