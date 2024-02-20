@@ -12,19 +12,19 @@ export function IconBlender(props) {
       position={[3, 0, 0]}
     >
       <mesh
-        geometry={nodes.Cylinder001_1.geometry}
+        geometry={nodes.IconBlender_1.geometry}
         material={materials['icon_blender_#265787']}
         receiveShadow
         castShadow
       />
       <mesh
-        geometry={nodes.Cylinder001_2.geometry}
+        geometry={nodes.IconBlender_2.geometry}
         material={materials['icon_blender_#ea7600']}
         receiveShadow
         castShadow
       />
       <mesh
-        geometry={nodes.Cylinder001_3.geometry}
+        geometry={nodes.IconBlender_3.geometry}
         material={materials['icon_blender_#ffffff']}
         receiveShadow
         castShadow
