@@ -8,5 +8,6 @@
   "ICON_NEXTJS": "/gltf/icons/IconNextjs.gltf",
   "ICON_POSTGRESQL": "/gltf/icons/IconPostgresql.gltf",
   "ICON_REDUX": "/gltf/icons/IconRedux.gltf",
-  "ICON_SASS": "/gltf/icons/IconSass.gltf"
+  "ICON_SASS": "/gltf/icons/IconSass.gltf",
+  "ICON_SPRINGBOOT": "/gltf/icons/IconSpringboot.gltf"
 }
