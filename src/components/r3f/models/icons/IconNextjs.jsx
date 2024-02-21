@@ -14,6 +14,8 @@ export function IconNextjs(props) {
       <mesh
         geometry={nodes.IconNextjs.geometry}
         material={materials['icon_nextjs_#ffffff']}
+        receiveShadow
+        castShadow
       />
     </group>
   )

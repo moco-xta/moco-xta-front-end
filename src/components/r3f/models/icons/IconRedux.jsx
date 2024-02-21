@@ -14,6 +14,8 @@ export function IconRedux(props) {
       <mesh
         geometry={nodes.IconRedux.geometry}
         material={materials['icon_redux_#764abc']}
+        receiveShadow
+        castShadow
       />
     </group>
   )

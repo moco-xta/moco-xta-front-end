@@ -14,6 +14,8 @@ export function IconSass(props) {
       <mesh
         geometry={nodes.IconSass.geometry}
         material={materials['icon_sass_#ce679b']}
+        receiveShadow
+        castShadow
       />
     </group>
   )

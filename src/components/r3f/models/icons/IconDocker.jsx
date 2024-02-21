@@ -21,4 +21,4 @@ export function IconDocker(props) {
   )
 }
 
-useGLTF.preload('/IconDocker.gltf')
+useGLTF.preload(GltfConstants.ICON_DOCKER)
