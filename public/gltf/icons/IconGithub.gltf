@@ -13,24 +13,22 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "IconSass"
+      "name": "IconGithub"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "name": "icon_sass_#ce679b",
+      "name": "icon_github_#ffffff",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.6173110604286194, 0.13562729954719543, 0.327754408121109, 1
-        ],
+        "baseColorFactor": [1, 1, 0.9999275803565979, 1],
         "metallicFactor": 0
       }
     }
   ],
   "meshes": [
     {
-      "name": "IconSass",
+      "name": "IconGithub",
       "primitives": [
         {
           "attributes": {
@@ -47,48 +45,48 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 3906,
-      "max": [1.3266383409500122, 1.0009698867797852, 0.1331108659505844],
-      "min": [-1.3279205560684204, -0.9892206788063049, -0.13311003148555756],
+      "count": 1026,
+      "max": [1.0073374509811401, 0.996697187423706, 0.20000022649765015],
+      "min": [-1.0070581436157227, -0.985853374004364, -0.20000016689300537],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 3906,
+      "count": 1026,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5123,
-      "count": 7866,
+      "count": 3012,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 46872,
+      "byteLength": 12312,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 46872,
-      "byteOffset": 46872,
+      "byteLength": 12312,
+      "byteOffset": 12312,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 15732,
-      "byteOffset": 93744,
+      "byteLength": 6024,
+      "byteOffset": 24624,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 109476,
-      "uri": "IconSass.bin"
+      "byteLength": 30648,
+      "uri": "IconGithub.bin"
     }
   ]
 }
