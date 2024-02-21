@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconFigma(props) {
+const IconFigma = forwardRef(function IconFigma(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_FIGMA)
 
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
     >
       <mesh
@@ -43,6 +43,8 @@ export function IconFigma(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_FIGMA)
+
+export default IconFigma

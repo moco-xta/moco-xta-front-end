@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconGsap(props) {
+const IconGsap = forwardRef(function IconGsap(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_GSAP)
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
+      position={[20.5, 0, 0]}
     >
       <mesh
         geometry={nodes.IconGsap.geometry}
@@ -19,6 +19,8 @@ export function IconGsap(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_GSAP)
+
+export default IconGsap

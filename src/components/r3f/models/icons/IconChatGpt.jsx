@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconChatGpt(props) {
+const IconChatGpt = forwardRef(function IconChatGpt(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_CHAT_GPT)
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
       position={[0, 0, 0]}
     >
@@ -19,6 +19,8 @@ export function IconChatGpt(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_CHAT_GPT)
+
+export default IconChatGpt

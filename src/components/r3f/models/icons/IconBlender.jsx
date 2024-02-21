@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconBlender(props) {
+const IconBlender = forwardRef(function IconBlender(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_BLENDER)
   return (
     <group
-      {...props}
+      ref={ref}
       dispose={null}
       position={[0, 0, 0]}
     >
@@ -31,6 +31,8 @@ export function IconBlender(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_BLENDER)
+
+export default IconBlender

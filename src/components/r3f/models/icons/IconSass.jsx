@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconSass(props) {
+const IconSass = forwardRef(function IconSass(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_SASS)
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
+      position={[7, 0, 0]}
     >
       <mesh
         geometry={nodes.IconSass.geometry}
@@ -19,6 +19,8 @@ export function IconSass(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_SASS)
+
+export default IconSass

@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconPostgresql(props) {
+const IconPostgresql = forwardRef(function IconPostgresql(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_POSTGRESQL)
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
+      position={[32, 0, 0]}
     >
       <mesh
         geometry={nodes.IconPostgresql_1.geometry}
@@ -31,6 +31,8 @@ export function IconPostgresql(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_POSTGRESQL)
+
+export default IconPostgresql

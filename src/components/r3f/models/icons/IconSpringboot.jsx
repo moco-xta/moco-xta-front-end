@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconSpringboot(props) {
+const IconSpringboot = forwardRef(function IconSpringboot(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_SPRINGBOOT)
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
+      position={[29.5, 0, 0]}
     >
       <mesh
         geometry={nodes.IconSpringboot_1.geometry}
@@ -25,6 +25,8 @@ export function IconSpringboot(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_SPRINGBOOT)
+
+export default IconSpringboot
