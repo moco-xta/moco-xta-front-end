@@ -26,7 +26,8 @@
       "@/redux/*": ["redux/*"],
       "@/routes/*": ["routes/*"],
       "@/styles/*": ["styles/*"],
-      "@/translations/*": ["translations/*"]
+      "@/translations/*": ["translations/*"],
+      "@/utils/*": ["utils/*"]
     }
   },
   "include": [

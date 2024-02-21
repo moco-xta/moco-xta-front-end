@@ -1,19 +1,26 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconRedux = forwardRef(function IconRedux(props, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.ICON_REDUX)
+  const gltf = useGLTF(GltfConstants.ICON_REDUX)
+  
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(gltf.scene)
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [])
+
   return (
     <group
-    ref={ref}
+      name={'icon_redux'}
+      ref={ref}
       dispose={null}
-      position={[15.5, 0, 0]}
     >
       <mesh
-        geometry={nodes.IconRedux.geometry}
-        material={materials['icon_redux_#764abc']}
+        geometry={gltf.nodes.IconRedux.geometry}
+        material={gltf.materials['icon_redux_#764abc']}
         receiveShadow
         castShadow
       />

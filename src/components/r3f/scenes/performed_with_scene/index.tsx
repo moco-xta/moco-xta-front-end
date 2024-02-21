@@ -7,7 +7,6 @@ import { PerspectiveCamera } from '@react-three/drei'
 import Elements from './elements'
 
 export default function PerformedWithScene() {
-
   return (
     <Canvas
       shadows
@@ -20,7 +19,7 @@ export default function PerformedWithScene() {
     >
       <PerspectiveCamera
         makeDefault
-        position={[29.5, 0, 7]}
+        position={[0, 0, 7]}
         fov={25}
       />
       <directionalLight

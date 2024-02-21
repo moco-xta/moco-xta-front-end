@@ -1,31 +1,38 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconI18n = forwardRef(function IconI18n(props, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.ICON_I18N)
+  const gltf = useGLTF(GltfConstants.ICON_I18N)
+  
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(gltf.scene)
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [])
+
   return (
     <group
-    ref={ref}
+      name={'icon_i18n'}
+      ref={ref}
       dispose={null}
-      position={[18, 0, 0]}
     >
       <mesh
-        geometry={nodes.IconI18n_1.geometry}
-        material={materials['icon_i18n_#004d40']}
+        geometry={gltf.nodes.IconI18n_1.geometry}
+        material={gltf.materials['icon_i18n_#004d40']}
         receiveShadow
         castShadow
       />
       <mesh
-        geometry={nodes.IconI18n_2.geometry}
-        material={materials['icon_i18n_#009688']}
+        geometry={gltf.nodes.IconI18n_2.geometry}
+        material={gltf.materials['icon_i18n_#009688']}
         receiveShadow
         castShadow
       />
       <mesh
-        geometry={nodes.IconI18n_3.geometry}
-        material={materials['icon_i18n_#ffffff']}
+        geometry={gltf.nodes.IconI18n_3.geometry}
+        material={gltf.materials['icon_i18n_#ffffff']}
         receiveShadow
         castShadow
       />

@@ -1,19 +1,26 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconChatGpt = forwardRef(function IconChatGpt(props, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.ICON_CHAT_GPT)
+  const gltf = useGLTF(GltfConstants.ICON_CHAT_GPT)
+  
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(gltf.scene)
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [])
+
   return (
     <group
-    ref={ref}
+      name={'icon_chat_gpt'}
+      ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
     >
       <mesh
-        geometry={nodes.IconChatGpt.geometry}
-        material={materials['icon_chat_gpt_#75ab9d']}
+        geometry={gltf.nodes.IconChatGpt.geometry}
+        material={gltf.materials['icon_chat_gpt_#75ab9d']}
         receiveShadow
         castShadow
       />
