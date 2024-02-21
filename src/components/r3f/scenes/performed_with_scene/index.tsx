@@ -14,6 +14,7 @@ import { IconNextjs } from '@/components/r3f/models/icons/IconNextjs'
 import { IconPostgresql } from '@/components/r3f/models/icons/IconPostgresql'
 import { IconRedux } from '@/components/r3f/models/icons/IconRedux'
 import { IconSass } from '@/components/r3f/models/icons/IconSass'
+import { IconSpringboot } from '@/components/r3f/models/icons/IconSpringboot'
 
 export default function PerformedWithScene() {
   return (
@@ -46,6 +47,7 @@ export default function PerformedWithScene() {
       <IconPostgresql />
       <IconRedux />
       <IconSass />
+      <IconSpringboot />
     </Canvas>
   )
 }
