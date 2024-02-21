@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
@@ -24,6 +24,26 @@ import { IconThreejs } from '@/components/r3f/models/icons/IconThreejs'
 import { IconWebgl } from '@/components/r3f/models/icons/IconWebgl'
 
 export default function PerformedWithScene() {
+
+  const iconAnsibleRef = useRef(null)
+  const iconBlenderRef = useRef(null)
+  const iconChatGptRef = useRef(null)
+  const iconCssRef = useRef(null)
+  const iconDockerRef = useRef(null)
+  const iconFigmaRef = useRef(null)
+  const iconGithubRef = useRef(null)
+  const iconGsapRef = useRef(null)
+  const iconHtmlRef = useRef(null)
+  const iconIllustratorRef = useRef(null)
+  const iconNextjsRef = useRef(null)
+  const iconPhotoshopRef = useRef(null)
+  const iconPostgresqlRef = useRef(null)
+  const iconReduxRef = useRef(null)
+  const iconSassRef = useRef(null)
+  const iconSpringbootRef = useRef(null)
+  const iconThreejsRef = useRef(null)
+  const iconWebglRef = useRef(null)
+
   return (
     <Canvas
       shadows
@@ -44,24 +64,24 @@ export default function PerformedWithScene() {
         castShadow
       />
       <ambientLight position={[3, 3, 3]} />
-      <IconAnsible />
-      <IconBlender />
-      <IconChatGpt />
-      <IconCss />
-      <IconDocker />
-      <IconFigma />
-      <IconGithub />
-      <IconGsap />
-      <IconHtml />
-      <IconIllustrator />
-      <IconNextjs />
-      <IconPhotoshop />
-      <IconPostgresql />
-      <IconRedux />
-      <IconSass />
-      <IconSpringboot />
-      <IconThreejs />
-      <IconWebgl />
+      <IconAnsible ref={iconAnsibleRef} />
+      <IconBlender ref={iconBlenderRef} />
+      <IconChatGpt ref={iconChatGptRef} />
+      <IconCss ref={iconCssRef} />
+      <IconDocker ref={iconDockerRef} />
+      <IconFigma ref={iconFigmaRef} />
+      <IconGithub ref={iconGithubRef} />
+      <IconGsap ref={iconGsapRef} />
+      <IconHtml ref={iconHtmlRef} />
+      <IconIllustrator ref={iconIllustratorRef} />
+      <IconNextjs ref={iconNextjsRef} />
+      <IconPhotoshop ref={iconPhotoshopRef} />
+      <IconPostgresql ref={iconPostgresqlRef} />
+      <IconRedux ref={iconReduxRef} />
+      <IconSass ref={iconSassRef} />
+      <IconSpringboot ref={iconSpringbootRef} />
+      <IconThreejs ref={iconThreejsRef} />
+      <IconWebgl ref={iconWebglRef} />
     </Canvas>
   )
 }

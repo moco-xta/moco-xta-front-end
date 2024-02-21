@@ -9,7 +9,7 @@ export function IconCss(props) {
     <group
       {...props}
       dispose={null}
-      position={[-7.5, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconCss_1.geometry}

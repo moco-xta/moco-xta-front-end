@@ -9,7 +9,7 @@ export function IconPostgresql(props) {
     <group
       {...props}
       dispose={null}
-      position={[1.5, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconPostgresql_1.geometry}

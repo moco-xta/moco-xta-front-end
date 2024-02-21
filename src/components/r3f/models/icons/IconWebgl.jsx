@@ -9,7 +9,7 @@ export function IconWebgl(props) {
     <group
       {...props}
       dispose={null}
-      position={[7.5, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconWebgl.geometry}

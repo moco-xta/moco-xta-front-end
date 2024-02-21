@@ -9,7 +9,7 @@ export function IconRedux(props) {
     <group
       {...props}
       dispose={null}
-      position={[12, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconRedux.geometry}

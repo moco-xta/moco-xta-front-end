@@ -9,7 +9,7 @@ export function IconSass(props) {
     <group
       {...props}
       dispose={null}
-      position={[-6, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconSass.geometry}

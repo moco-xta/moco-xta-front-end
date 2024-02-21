@@ -9,7 +9,7 @@ export function IconDocker(props) {
     <group
       {...props}
       dispose={null}
-      position={[6, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconDocker.geometry}

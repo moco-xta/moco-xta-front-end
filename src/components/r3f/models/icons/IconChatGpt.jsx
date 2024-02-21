@@ -9,7 +9,7 @@ export function IconChatGpt(props) {
     <group
       {...props}
       dispose={null}
-      position={[-3, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconChatGpt.geometry}

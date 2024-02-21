@@ -9,7 +9,7 @@ export function IconGithub(props) {
     <group
       {...props}
       dispose={null}
-      position={[-9, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconGithub.geometry}

@@ -9,7 +9,7 @@ export function IconPhotoshop(props) {
     <group
       {...props}
       dispose={null}
-      position={[-0.75, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconPhotoshop_1.geometry}

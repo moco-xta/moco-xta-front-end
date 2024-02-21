@@ -9,7 +9,7 @@ export function IconAnsible(props) {
     <group
       {...props}
       dispose={null}
-      position={[-4.5, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconAnsible_1.geometry}

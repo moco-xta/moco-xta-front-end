@@ -9,7 +9,7 @@ export function IconThreejs(props) {
     <group
       {...props}
       dispose={null}
-      position={[4.5, 0, 0]}
+      position={[0, 0, 0]}
     >
       <group rotation={[Math.PI / 2, 0, 0]}>
         <mesh
