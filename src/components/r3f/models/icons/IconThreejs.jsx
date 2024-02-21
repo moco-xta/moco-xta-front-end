@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconThreejs(props) {
+const IconThreejs = forwardRef(function IconThreejs(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_THREEJS)
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
+      position={[27, 0, 0]}
     >
       <group rotation={[Math.PI / 2, 0, 0]}>
         <mesh
@@ -27,6 +27,8 @@ export function IconThreejs(props) {
       </group>
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_THREEJS)
+
+export default IconThreejs

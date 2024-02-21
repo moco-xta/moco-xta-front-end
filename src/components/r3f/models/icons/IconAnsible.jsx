@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconAnsible(props) {
+const IconAnsible = forwardRef(function IconAnsible(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_ANSIBLE)
   return (
     <group
-      {...props}
+      ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
+      position={[37, 0, 0]}
     >
       <mesh
         geometry={nodes.IconAnsible_1.geometry}
@@ -25,6 +25,8 @@ export function IconAnsible(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_ANSIBLE)
+
+export default IconAnsible

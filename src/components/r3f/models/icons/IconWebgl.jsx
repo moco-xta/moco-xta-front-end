@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconWebgl(props) {
+const IconWebgl = forwardRef(function IconWebgl(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_WEBGL)
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
+      position={[24, 0, 0]}
     >
       <mesh
         geometry={nodes.IconWebgl.geometry}
@@ -19,6 +19,8 @@ export function IconWebgl(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_WEBGL)
+
+export default IconWebgl

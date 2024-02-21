@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconIllustrator(props) {
+const IconIllustrator = forwardRef(function IconIllustrator(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_ILLUSTRATOR)
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
       position={[0, 0, 0]}
     >
@@ -25,6 +25,8 @@ export function IconIllustrator(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_ILLUSTRATOR)
+
+export default IconIllustrator

@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-export function IconGithub(props) {
+const IconGithub = forwardRef(function IconGithub(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.ICON_GITHUB)
   return (
     <group
-      {...props}
+    ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
+      position={[34.5, 0, 0]}
     >
       <mesh
         geometry={nodes.IconGithub.geometry}
@@ -19,6 +19,8 @@ export function IconGithub(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.ICON_GITHUB)
+
+export default IconGithub
