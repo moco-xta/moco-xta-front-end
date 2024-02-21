@@ -9,7 +9,7 @@ export function IconIllustrator(props) {
     <group
       {...props}
       dispose={null}
-      position={[0.75, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconIllustrator_1.geometry}

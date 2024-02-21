@@ -9,7 +9,7 @@ export function IconSpringboot(props) {
     <group
       {...props}
       dispose={null}
-      position={[-1.5, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconSpringboot_1.geometry}

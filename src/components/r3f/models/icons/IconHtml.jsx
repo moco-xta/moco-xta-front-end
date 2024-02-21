@@ -9,7 +9,7 @@ export function IconHtml(props) {
     <group
       {...props}
       dispose={null}
-      position={[10.5, 0, 0]}
+      position={[0, 0, 0]}
     >
       <mesh
         geometry={nodes.IconHtml_1.geometry}
