@@ -1,25 +1,32 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconIllustrator = forwardRef(function IconIllustrator(props, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.ICON_ILLUSTRATOR)
+  const gltf = useGLTF(GltfConstants.ICON_ILLUSTRATOR)
+  
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(gltf.scene)
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [])
+
   return (
     <group
-    ref={ref}
+      name={'icon_illustrator'}
+      ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
     >
       <mesh
-        geometry={nodes.IconIllustrator_1.geometry}
-        material={materials['icon_illustrator_#f89a01']}
+        geometry={gltf.nodes.IconIllustrator_1.geometry}
+        material={gltf.materials['icon_illustrator_#f89a01']}
         receiveShadow
         castShadow
       />
       <mesh
-        geometry={nodes.IconIllustrator_2.geometry}
-        material={materials['icon_illustrator_#320000']}
+        geometry={gltf.nodes.IconIllustrator_2.geometry}
+        material={gltf.materials['icon_illustrator_#320000']}
         receiveShadow
         castShadow
       />

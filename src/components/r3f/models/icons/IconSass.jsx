@@ -1,19 +1,26 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconSass = forwardRef(function IconSass(props, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.ICON_SASS)
+  const gltf = useGLTF(GltfConstants.ICON_SASS)
+  
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(gltf.scene)
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [])
+
   return (
     <group
-    ref={ref}
+      name={'icon_sass'}
+      ref={ref}
       dispose={null}
-      position={[7, 0, 0]}
     >
       <mesh
-        geometry={nodes.IconSass.geometry}
-        material={materials['icon_sass_#ce679b']}
+        geometry={gltf.nodes.IconSass.geometry}
+        material={gltf.materials['icon_sass_#ce679b']}
         receiveShadow
         castShadow
       />

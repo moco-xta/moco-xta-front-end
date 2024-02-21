@@ -1,25 +1,32 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconAnsible = forwardRef(function IconAnsible(props, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.ICON_ANSIBLE)
+  const gltf = useGLTF(GltfConstants.ICON_ANSIBLE)
+  
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(gltf.scene)
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [])
+
   return (
     <group
+      name={'icon_ansible'}
       ref={ref}
       dispose={null}
-      position={[37, 0, 0]}
     >
       <mesh
-        geometry={nodes.IconAnsible_1.geometry}
-        material={materials['icon_ansible_#000000']}
+        geometry={gltf.nodes.IconAnsible_1.geometry}
+        material={gltf.materials['icon_ansible_#000000']}
         receiveShadow
         castShadow
       />
       <mesh
-        geometry={nodes.IconAnsible_2.geometry}
-        material={materials['icon_ansible_#ffffff']}
+        geometry={gltf.nodes.IconAnsible_2.geometry}
+        material={gltf.materials['icon_ansible_#ffffff']}
         receiveShadow
         castShadow
       />

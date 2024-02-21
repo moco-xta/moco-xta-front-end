@@ -1,19 +1,26 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconDocker = forwardRef(function IconDocker(props, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.ICON_DOCKER)
+  const gltf = useGLTF(GltfConstants.ICON_DOCKER)
+  
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(gltf.scene)
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [])
+
   return (
     <group
-    ref={ref}
+      name={'icon_docker'}
+      ref={ref}
       dispose={null}
-      position={[0, 0, 0]}
     >
       <mesh
-        geometry={nodes.IconDocker.geometry}
-        material={materials['icon_docker_#349cec']}
+        geometry={gltf.nodes.IconDocker.geometry}
+        material={gltf.materials['icon_docker_#349cec']}
         receiveShadow
         castShadow
       />
