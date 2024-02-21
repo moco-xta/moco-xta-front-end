@@ -9,5 +9,6 @@
   "ICON_POSTGRESQL": "/gltf/icons/IconPostgresql.gltf",
   "ICON_REDUX": "/gltf/icons/IconRedux.gltf",
   "ICON_SASS": "/gltf/icons/IconSass.gltf",
-  "ICON_SPRINGBOOT": "/gltf/icons/IconSpringboot.gltf"
+  "ICON_SPRINGBOOT": "/gltf/icons/IconSpringboot.gltf",
+  "ICON_THREEJS": "/gltf/icons/IconThreejs.gltf"
 }
