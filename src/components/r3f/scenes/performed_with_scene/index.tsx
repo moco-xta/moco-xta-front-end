@@ -11,6 +11,7 @@ import { IconFigma } from '@/components/r3f/models/icons/IconFigma'
 import { IconGithub } from '@/components/r3f/models/icons/IconGithub'
 import { IconGsap } from '@/components/r3f/models/icons/IconGsap'
 import { IconNextjs } from '@/components/r3f/models/icons/IconNextjs'
+import { IconPostgresql } from '@/components/r3f/models/icons/IconPostgresql'
 import { IconRedux } from '@/components/r3f/models/icons/IconRedux'
 import { IconSass } from '@/components/r3f/models/icons/IconSass'
 
@@ -42,6 +43,7 @@ export default function PerformedWithScene() {
       <IconGithub />
       <IconGsap />
       <IconNextjs />
+      <IconPostgresql />
       <IconRedux />
       <IconSass />
     </Canvas>
