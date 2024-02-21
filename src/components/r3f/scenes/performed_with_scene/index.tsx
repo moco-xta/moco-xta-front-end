@@ -10,6 +10,7 @@ import { IconDocker } from '@/components/r3f/models/icons/IconDocker'
 import { IconFigma } from '@/components/r3f/models/icons/IconFigma'
 import { IconGithub } from '@/components/r3f/models/icons/IconGithub'
 import { IconGsap } from '@/components/r3f/models/icons/IconGsap'
+import { IconNextjs } from '@/components/r3f/models/icons/IconNextjs'
 import { IconRedux } from '@/components/r3f/models/icons/IconRedux'
 import { IconSass } from '@/components/r3f/models/icons/IconSass'
 
@@ -40,6 +41,7 @@ export default function PerformedWithScene() {
       <IconFigma />
       <IconGithub />
       <IconGsap />
+      <IconNextjs />
       <IconRedux />
       <IconSass />
     </Canvas>
