@@ -3,5 +3,8 @@
   "ICON_CHAT_GPT": "/gltf/icons/IconChatGpt.gltf",
   "ICON_DOCKER": "/gltf/icons/IconDocker.gltf",
   "ICON_FIGMA": "/gltf/icons/IconFigma.gltf",
+  "ICON_GITHUB": "/gltf/icons/IconGithub.gltf",
+  "ICON_GSAP": "/gltf/icons/IconGsap.gltf",
+  "ICON_REDUX": "/gltf/icons/IconRedux.gltf",
   "ICON_SASS": "/gltf/icons/IconSass.gltf"
 }

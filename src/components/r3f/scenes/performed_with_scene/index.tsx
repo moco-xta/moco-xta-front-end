@@ -8,6 +8,9 @@ import { IconBlender } from '@/components/r3f/models/icons/IconBlender'
 import { IconChatGpt } from '@/components/r3f/models/icons/IconChatGpt'
 import { IconDocker } from '@/components/r3f/models/icons/IconDocker'
 import { IconFigma } from '@/components/r3f/models/icons/IconFigma'
+import { IconGithub } from '@/components/r3f/models/icons/IconGithub'
+import { IconGsap } from '@/components/r3f/models/icons/IconGsap'
+import { IconRedux } from '@/components/r3f/models/icons/IconRedux'
 import { IconSass } from '@/components/r3f/models/icons/IconSass'
 
 export default function PerformedWithScene() {
@@ -35,6 +38,9 @@ export default function PerformedWithScene() {
       <IconChatGpt />
       <IconDocker />
       <IconFigma />
+      <IconGithub />
+      <IconGsap />
+      <IconRedux />
       <IconSass />
     </Canvas>
   )

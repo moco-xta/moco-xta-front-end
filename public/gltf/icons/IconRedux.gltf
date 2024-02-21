@@ -13,31 +13,33 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "IconSass"
+      "name": "IconRedux"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "name": "icon_sass_#ce679b",
+      "name": "icon_redux_#764abc",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.6173110604286194, 0.13562729954719543, 0.327754408121109, 1
+          0.18119458854198456, 0.06847501546144485, 0.5028499960899353, 1
         ],
-        "metallicFactor": 0
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
       }
     }
   ],
   "meshes": [
     {
-      "name": "IconSass",
+      "name": "IconRedux",
       "primitives": [
         {
           "attributes": {
             "POSITION": 0,
-            "NORMAL": 1
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
           },
-          "indices": 2,
+          "indices": 3,
           "material": 0
         }
       ]
@@ -47,48 +49,60 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 3906,
-      "max": [1.3266383409500122, 1.0009698867797852, 0.1331108659505844],
-      "min": [-1.3279205560684204, -0.9892206788063049, -0.13311003148555756],
+      "count": 3444,
+      "max": [1.0635948181152344, 0.9852140545845032, 0.2000013142824173],
+      "min": [-1.0635952949523926, -1.000099539756775, -0.20000049471855164],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 3906,
+      "count": 3444,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
+      "componentType": 5126,
+      "count": 3444,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
       "componentType": 5123,
-      "count": 7866,
+      "count": 10098,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 46872,
+      "byteLength": 41328,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 46872,
-      "byteOffset": 46872,
+      "byteLength": 41328,
+      "byteOffset": 41328,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 15732,
-      "byteOffset": 93744,
+      "byteLength": 27552,
+      "byteOffset": 82656,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20196,
+      "byteOffset": 110208,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 109476,
-      "uri": "IconSass.bin"
+      "byteLength": 130404,
+      "uri": "IconRedux.bin"
     }
   ]
 }
