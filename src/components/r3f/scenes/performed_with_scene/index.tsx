@@ -15,6 +15,7 @@ import { IconGsap } from '@/components/r3f/models/icons/IconGsap'
 import { IconHtml } from '@/components/r3f/models/icons/IconHtml'
 import { IconIllustrator } from '@/components/r3f/models/icons/IconIllustrator'
 import { IconNextjs } from '@/components/r3f/models/icons/IconNextjs'
+import { IconNpm } from '@/components/r3f/models/icons/IconNpm'
 import { IconPhotoshop } from '@/components/r3f/models/icons/IconPhotoshop'
 import { IconPostgresql } from '@/components/r3f/models/icons/IconPostgresql'
 import { IconRedux } from '@/components/r3f/models/icons/IconRedux'
@@ -24,7 +25,6 @@ import { IconThreejs } from '@/components/r3f/models/icons/IconThreejs'
 import { IconWebgl } from '@/components/r3f/models/icons/IconWebgl'
 
 export default function PerformedWithScene() {
-
   const iconAnsibleRef = useRef(null)
   const iconBlenderRef = useRef(null)
   const iconChatGptRef = useRef(null)
@@ -36,6 +36,7 @@ export default function PerformedWithScene() {
   const iconHtmlRef = useRef(null)
   const iconIllustratorRef = useRef(null)
   const iconNextjsRef = useRef(null)
+  const iconNpmRef = useRef(null)
   const iconPhotoshopRef = useRef(null)
   const iconPostgresqlRef = useRef(null)
   const iconReduxRef = useRef(null)
@@ -75,6 +76,7 @@ export default function PerformedWithScene() {
       <IconHtml ref={iconHtmlRef} />
       <IconIllustrator ref={iconIllustratorRef} />
       <IconNextjs ref={iconNextjsRef} />
+      <IconNpm ref={iconNpmRef} />
       <IconPhotoshop ref={iconPhotoshopRef} />
       <IconPostgresql ref={iconPostgresqlRef} />
       <IconRedux ref={iconReduxRef} />
