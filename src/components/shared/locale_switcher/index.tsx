@@ -10,8 +10,6 @@ export default function LocaleSwitcher() {
   const locale = useLocale()
   const router = useRouter()
 
-  console.log(locale)
-
   const handleSwitchLocale = (e: React.ChangeEvent<HTMLSelectElement>) => {
     console.log(e.target.value)
     document.cookie = `NEXT_LOCALE=${e.target.value}; path=/; max-age=31536000; SameSite=Lax`
@@ -36,3 +34,5 @@ export default function LocaleSwitcher() {
     </div>
   )
 }
+
+// TODO: TR¡ranslated URLs 
