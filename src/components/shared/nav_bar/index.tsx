@@ -9,6 +9,7 @@ import { Routes } from '@/routes/routes'
 import HamburgerMenuIcon from '@/components/icons/hamburger_menu_icon'
 
 import './index.scss'
+import LangaugeSwitcher from '../language_switcher'
 
 export default function NavBar() {
   const t = useTranslations('ROUTES')
@@ -36,6 +37,9 @@ export default function NavBar() {
                 )
               }
             })}
+            <li>
+              <LangaugeSwitcher />
+            </li>
           </ul>
         </nav>
       </div>
