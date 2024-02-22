@@ -25,7 +25,7 @@ export default function NavBar() {
         <nav>
           <ul>
             {Routes.map((route) => {
-              if (route.name !== 'Home') {
+              if (route.name !== 'home') {
                 return (
                   <li key={`navBarLink_${route.name}`}>
                     <Link href={route.path}>{route.name}</Link>
