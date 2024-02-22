@@ -1,5 +1,7 @@
 import createMiddleware from 'next-intl/middleware'
 
+/* import {locales, localePrefix, pathnames} from './navigation' */
+
 import { default as LocalesConstants } from '@/constants/localesConstants.json'
 
 export default createMiddleware({
@@ -7,6 +9,13 @@ export default createMiddleware({
   defaultLocale: LocalesConstants.LOCALES[0],
   localePrefix: 'never',
 })
+
+/* export default createMiddleware({
+  defaultLocale: 'en',
+  locales,
+  pathnames,
+  localePrefix: 'never'
+}) */
 
 export const config = {
   matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
