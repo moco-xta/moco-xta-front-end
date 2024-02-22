@@ -5,6 +5,7 @@ import { default as LocalesConstants } from '@/constants/localesConstants.json'
 export default createMiddleware({
   locales: LocalesConstants.LOCALES,
   defaultLocale: LocalesConstants.LOCALES[0],
+  localePrefix: 'never'
 })
 
 export const config = {

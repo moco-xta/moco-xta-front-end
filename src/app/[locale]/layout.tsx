@@ -22,13 +22,13 @@ export default function RootLayout({
   children: React.ReactNode
   params: { locale: string }
 }>) {
-  const messages = useMessages()
+  const translations = useMessages()
 
   return (
     <html lang={locale}>
       <body className={inter.className}>
         <ReduxProvider>
-          <NextIntlClientProvider locale={locale} messages={messages}>
+          <NextIntlClientProvider locale={locale} messages={translations}>
             <Header />
             {children}
           </NextIntlClientProvider>

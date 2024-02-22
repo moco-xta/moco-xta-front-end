@@ -2,16 +2,19 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useLocale } from "next-intl"
 import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
 
 import HamburgerMenuIcon from '@/components/icons/hamburger_menu_icon'
+import LocaleSwitcher from '@/components/shared/locale_switcher'
 
 import './index.scss'
-import LangaugeSwitcher from '../language_switcher'
 
 export default function NavBar() {
+  const locale = useLocale()
+
   const t = useTranslations('ROUTES')
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -32,13 +35,14 @@ export default function NavBar() {
               if (route.key !== 'HOME') {
                 return (
                   <li key={`navBarLink_${route.key}`}>
-                    <Link href={route.path}>{t(route.key)}</Link>
+                    {/* @ts-ignore */}
+                    <Link href={route.path} locale={locale}>{t(route.key)}</Link>
                   </li>
                 )
               }
             })}
             <li>
-              <LangaugeSwitcher />
+              <LocaleSwitcher />
             </li>
           </ul>
         </nav>

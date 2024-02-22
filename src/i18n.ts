@@ -8,11 +8,12 @@ interface RequestConfigInterface {
 }
 
 export default getRequestConfig(async ({ locale }: RequestConfigInterface) => {
-  if (!LocalesConstants.LOCALES.includes(locale as any)) {
+  const baseLocale = new Intl.Locale(locale).baseName
+  if (!LocalesConstants.LOCALES.includes(baseLocale)) {
     notFound()
   }
 
   return {
-    messages: (await import(`./translations/${locale}.json`)).default,
+    messages: (await import(`./translations/${baseLocale}.json`)).default,
   }
 })
