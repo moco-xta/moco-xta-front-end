@@ -14,7 +14,7 @@ const IconPhotoshop = forwardRef(function IconPhotoshop(props, ref) {
 
   return (
     <group
-      name={'icon_nextjs'}
+      name={'icon_photoshop'}
       ref={ref}
       dispose={null}
     >

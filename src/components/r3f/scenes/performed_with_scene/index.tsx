@@ -19,8 +19,8 @@ export default function PerformedWithScene() {
     >
       <PerspectiveCamera
         makeDefault
-        position={[0, 0, 7]}
-        fov={25}
+        position={[0, 0, 15]}
+        fov={10}
       />
       <directionalLight
         position={[0, 0, 5]}
