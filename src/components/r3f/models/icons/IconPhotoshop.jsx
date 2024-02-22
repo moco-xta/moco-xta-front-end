@@ -6,7 +6,7 @@ import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconPhotoshop = forwardRef(function IconPhotoshop(props, ref) {
   const gltf = useGLTF(GltfConstants.ICON_PHOTOSHOP)
-  
+
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(gltf.scene)
     ref.current.width = box.getSize(new THREE.Vector3()).x

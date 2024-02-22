@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { useLocale } from "next-intl"
-import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
 
@@ -13,6 +13,7 @@ import LocaleSwitcher from '@/components/shared/locale_switcher'
 import './index.scss'
 
 export default function NavBar() {
+  const pathname = usePathname()
   const locale = useLocale()
 
   const t = useTranslations('ROUTES')
@@ -36,7 +37,12 @@ export default function NavBar() {
                 return (
                   <li key={`navBarLink_${route.key}`}>
                     {/* @ts-ignore */}
-                    <Link href={route.path} locale={locale}>{t(route.key)}</Link>
+                    <Link
+                      href={route.path}
+                      className={`link ${pathname === route.path ? 'active' : ''}`}
+                    >
+                      {t(route.key)}
+                    </Link>
                   </li>
                 )
               }
