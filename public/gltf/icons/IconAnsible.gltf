@@ -1,0 +1,171 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "IconAnsible"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "icon_ansible_#000000",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0, 0, 0, 1],
+        "metallicFactor": 0
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "icon_ansible_#ffffff",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "IconAnsible",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 192,
+      "max": [1.00141179561615, 1.0038678646087646, 0.10000023990869522],
+      "min": [-1.0051884651184082, -1.002732515335083, -0.20000006258487701],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 192,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 192,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 570,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 258,
+      "max": [0.4897996485233307, 0.6043879985809326, 0.1999998837709427],
+      "min": [-0.5105175971984863, -0.5000936985015869, 0.10000016540288925],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 258,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 258,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 738,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2304,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2304,
+      "byteOffset": 2304,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1536,
+      "byteOffset": 4608,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1140,
+      "byteOffset": 6144,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3096,
+      "byteOffset": 7284,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3096,
+      "byteOffset": 10380,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2064,
+      "byteOffset": 13476,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1476,
+      "byteOffset": 15540,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 17016,
+      "uri": "IconAnsible.bin"
+    }
+  ]
+}

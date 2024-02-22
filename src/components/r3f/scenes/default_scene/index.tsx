@@ -6,7 +6,7 @@ import { Canvas } from '@react-three/fiber'
 import vertexShader from '@/components/r3f/shaders/default_shaders/vertexShader.glsl'
 import fragmentShader from '@/components/r3f/shaders/default_shaders/fragmentShader.glsl'
 
-const SphereShaderMaterial = {
+const shaderMaterial = {
   uniforms: {
     u_time: { type: 'f', value: 0 },
   },
@@ -21,7 +21,7 @@ export default function DefaultScene() {
         <planeGeometry />
         <shaderMaterial
           attach='material'
-          args={[SphereShaderMaterial]}
+          args={[shaderMaterial]}
         />
       </mesh>
     </Canvas>
