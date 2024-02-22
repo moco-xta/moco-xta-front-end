@@ -8,7 +8,7 @@ import './index.scss'
 export default function Logo() {
   return (
     <div id='logo'>
-      <Link href={Routes.find((route) => route.name === 'Home')!.path}>
+      <Link href={Routes.find((route) => route.name === 'home')!.path}>
         Logo
       </Link>
     </div>
