@@ -1,0 +1,94 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "IconChatGpt"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "icon_chat_gpt_#75ab9d",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.1779179871082306, 0.4072225093841553, 0.3371392488479614, 1
+        ],
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "IconChatGpt",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1624,
+      "max": [0.9830198287963867, 0.996741533279419, 0.2000027745962143],
+      "min": [-0.9830198884010315, -0.9967414736747742, -0.20000004768371582],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1624,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 4728,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 19488,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 19488,
+      "byteOffset": 19488,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9456,
+      "byteOffset": 38976,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 48432,
+      "uri": "IconChatGpt.bin"
+    }
+  ]
+}

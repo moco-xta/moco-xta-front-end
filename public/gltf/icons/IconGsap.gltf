@@ -1,0 +1,95 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "IconGsap"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "icon_gsap_#87cf01",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.24232159554958344, 0.6239334940910339, 0.0003036604612134397, 1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "IconGsap",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 3454,
+      "max": [1.319177269935608, 0.49178802967071533, 0.37200015783309937],
+      "min": [-1.3744738101959229, -0.4940962791442871, -0.3720000386238098],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3454,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 10254,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 41448,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 41448,
+      "byteOffset": 41448,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20508,
+      "byteOffset": 82896,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 103404,
+      "uri": "IconGsap.bin"
+    }
+  ]
+}
