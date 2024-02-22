@@ -25,15 +25,20 @@ export default function RootLayout({
   const translations = useMessages()
 
   return (
-    <html lang={locale}>
-      <body className={inter.className}>
-        <ReduxProvider>
-          <NextIntlClientProvider locale={locale} messages={translations}>
-            <Header />
-            {children}
-          </NextIntlClientProvider>
-        </ReduxProvider>
-      </body>
-    </html>
+    <>
+      <html lang={locale}>
+        <body className={inter.className}>
+          <ReduxProvider>
+            <NextIntlClientProvider
+              locale={locale}
+              messages={translations}
+            >
+              <Header />
+              {children}
+            </NextIntlClientProvider>
+          </ReduxProvider>
+        </body>
+      </html>
+    </>
   )
 }

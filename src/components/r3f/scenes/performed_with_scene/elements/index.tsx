@@ -67,22 +67,22 @@ export default function Elements() {
     iconSassRef,
     iconSpringbootRef,
     iconThreejsRef,
-    iconWebglRef
+    iconWebglRef,
   ]
 
   const iconData: iconsDataInterface = {
     total_length: 0,
-    widths: []
+    widths: [],
   }
 
   useEffect(() => {
-    refs.forEach(ref => {
+    refs.forEach((ref) => {
       // @ts-ignore
       iconData.widths.push(ref.current.width)
     })
     let sum = 0
     refs.forEach((ref, index) => {
-      if(index === 0) {
+      if (index === 0) {
         ref.current.position.x = sum
         sum += iconData.widths[index] / 2
       } else {
@@ -90,15 +90,16 @@ export default function Elements() {
         sum += iconData.widths[index]
       }
     })
-    iconData.widths.forEach(width => {
+    iconData.widths.forEach((width) => {
       iconData.total_length += width + 0.5
     })
   }, [])
 
   useFrame((state, delta, xrFrame) => {
-    refs.forEach(ref => {
+    refs.forEach((ref) => {
       ref.current.position.x += delta
-      if(ref.current.position.x > iconData.total_length / 2) ref.current.position.x -= iconData.total_length
+      if (ref.current.position.x > iconData.total_length / 2)
+        ref.current.position.x -= iconData.total_length
     })
   })
 
