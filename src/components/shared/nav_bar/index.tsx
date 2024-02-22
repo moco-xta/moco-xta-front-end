@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
 
@@ -10,6 +11,8 @@ import HamburgerMenuIcon from '@/components/icons/hamburger_menu_icon'
 import './index.scss'
 
 export default function NavBar() {
+  const t = useTranslations('ROUTES')
+
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   const handleSetMenuIsOpen = () => {
@@ -25,10 +28,10 @@ export default function NavBar() {
         <nav>
           <ul>
             {Routes.map((route) => {
-              if (route.name !== 'home') {
+              if (route.key !== 'HOME') {
                 return (
-                  <li key={`navBarLink_${route.name}`}>
-                    <Link href={route.path}>{route.name}</Link>
+                  <li key={`navBarLink_${route.key}`}>
+                    <Link href={route.path}>{t(route.key)}</Link>
                   </li>
                 )
               }

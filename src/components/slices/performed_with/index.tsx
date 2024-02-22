@@ -7,9 +7,10 @@ import './index.scss'
 
 export default function PerformedWith() {
   const t = useTranslations('HOME')
+  
   return (
     <>
-      <div>{t('PERFORMED_WITH')}</div>
+      <div>{t('PERFORMED_WITH.PERFORMED_WITH')}</div>
       <div id='perform_with_scene_container'>
         <PerformedWithScene />
       </div>

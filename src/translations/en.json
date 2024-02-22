@@ -1,5 +1,16 @@
 {
   "HOME": {
-    "PERFORMED_WITH": "Performed with:"
+    "PERFORMED_WITH": {
+      "PERFORMED_WITH": "Performed with:"
+    }
+  },
+  "ROUTES": {
+    "ABOUT": "About",
+    "BLOG": "Blog",
+    "CONTACT": "Contact",
+    "HOME": "Home",
+    "PHOTOGRAPHY": "Photography",
+    "PROJECTS": "Projects",
+    "SKILLS": "Skills"
   }
 }
