@@ -1,6 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
+
+import { iconsDataInterface } from '@/interfaces/r3f/iconsDataInterface'
 
 import IconAnsible from '@/components/r3f/models/icons/IconAnsible'
 import IconBlender from '@/components/r3f/models/icons/IconBlender'
@@ -68,28 +70,37 @@ export default function Elements() {
     iconWebglRef
   ]
 
-  const [widths, setWidths] = useState([])
-
-  interface widthInterface {
-    name: string
-    width: number
+  const iconData: iconsDataInterface = {
+    total_length: 0,
+    widths: []
   }
 
   useEffect(() => {
-    const widths: widthInterface[] = []
     refs.forEach(ref => {
-      widths.push({
-        name: ref.current.name,
-        // @ts-ignore
-        width: ref.current.width,
-      })
+      // @ts-ignore
+      iconData.widths.push(ref.current.width)
     })
-    console.log(widths)
+    let sum = 0
+    refs.forEach((ref, index) => {
+      if(index === 0) {
+        ref.current.position.x = sum
+        sum += iconData.widths[index] / 2
+      } else {
+        ref.current.position.x = sum + iconData.widths[index] / 2 + index * 0.5
+        sum += iconData.widths[index]
+      }
+    })
+    iconData.widths.forEach(width => {
+      iconData.total_length += width + 0.5
+    })
   }, [])
 
-  /* useFrame(() => {
-    console.log(iconAnsibleRef)
-  }) */
+  useFrame((state, delta, xrFrame) => {
+    refs.forEach(ref => {
+      ref.current.position.x += delta
+      if(ref.current.position.x > iconData.total_length / 2) ref.current.position.x -= iconData.total_length
+    })
+  })
 
   return (
     <>
