@@ -35,4 +35,4 @@ export default function LocaleSwitcher() {
   )
 }
 
-// TODO: TR¡ranslated URLs 
+// TODO: TR¡ranslated URLs
