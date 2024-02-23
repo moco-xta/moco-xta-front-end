@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SkillsScene from '@/components/r3f/scenes/skills_scene'
+import SkillsScene from '@/components/r3f/canvas/skills_canvas'
 
 import './index.scss'
 
