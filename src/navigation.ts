@@ -3,7 +3,6 @@ import {
   Pathnames,
 } from 'next-intl/navigation'
 
-
 export const locales = ['en', 'es', 'fr']
 export const localePrefix = 'nerver'
 
