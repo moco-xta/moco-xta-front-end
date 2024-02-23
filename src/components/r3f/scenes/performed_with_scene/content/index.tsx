@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
+import { PerspectiveCamera } from '@react-three/drei'
 
 import { iconsDataInterface } from '@/interfaces/r3f/iconsDataInterface'
 
@@ -25,7 +26,7 @@ import IconSpringboot from '@/components/r3f/models/icons/IconSpringboot'
 import IconThreejs from '@/components/r3f/models/icons/IconThreejs'
 import IconWebgl from '@/components/r3f/models/icons/IconWebgl'
 
-export default function Elements() {
+export default function Content() {
   const iconAnsibleRef = useRef(new THREE.Object3D())
   const iconBlenderRef = useRef(new THREE.Object3D())
   const iconChatGptRef = useRef(new THREE.Object3D())
@@ -105,6 +106,16 @@ export default function Elements() {
 
   return (
     <>
+      <PerspectiveCamera
+        makeDefault
+        position={[0, 0, 15]}
+        fov={10}
+      />
+      <directionalLight
+        position={[0, 0, 5]}
+        castShadow
+      />
+      <ambientLight position={[3, 3, 3]} />
       <IconAnsible ref={iconAnsibleRef} />
       <IconBlender ref={iconBlenderRef} />
       <IconChatGpt ref={iconChatGptRef} />

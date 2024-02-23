@@ -2,9 +2,8 @@
 
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
 
-import Elements from './elements'
+import Content from './content'
 
 export default function PerformedWithScene() {
   return (
@@ -17,17 +16,7 @@ export default function PerformedWithScene() {
         powerPreference: 'high-performance',
       }}
     >
-      <PerspectiveCamera
-        makeDefault
-        position={[0, 0, 15]}
-        fov={10}
-      />
-      <directionalLight
-        position={[0, 0, 5]}
-        castShadow
-      />
-      <ambientLight position={[3, 3, 3]} />
-      <Elements />
+      <Content />
     </Canvas>
   )
 }
