@@ -1,6 +1,9 @@
+'use client'
+
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { useFrame } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { PerspectiveCamera } from '@react-three/drei'
 
 import { iconsDataInterface } from '@/interfaces/r3f/iconsDataInterface'
 
@@ -25,7 +28,7 @@ import IconSpringboot from '@/components/r3f/models/icons/IconSpringboot'
 import IconThreejs from '@/components/r3f/models/icons/IconThreejs'
 import IconWebgl from '@/components/r3f/models/icons/IconWebgl'
 
-export default function Elements() {
+function PerformedWithScene() {
   const iconAnsibleRef = useRef(new THREE.Object3D())
   const iconBlenderRef = useRef(new THREE.Object3D())
   const iconChatGptRef = useRef(new THREE.Object3D())
@@ -67,22 +70,22 @@ export default function Elements() {
     iconSassRef,
     iconSpringbootRef,
     iconThreejsRef,
-    iconWebglRef
+    iconWebglRef,
   ]
 
   const iconData: iconsDataInterface = {
     total_length: 0,
-    widths: []
+    widths: [],
   }
 
   useEffect(() => {
-    refs.forEach(ref => {
+    refs.forEach((ref) => {
       // @ts-ignore
       iconData.widths.push(ref.current.width)
     })
     let sum = 0
     refs.forEach((ref, index) => {
-      if(index === 0) {
+      if (index === 0) {
         ref.current.position.x = sum
         sum += iconData.widths[index] / 2
       } else {
@@ -90,20 +93,31 @@ export default function Elements() {
         sum += iconData.widths[index]
       }
     })
-    iconData.widths.forEach(width => {
+    iconData.widths.forEach((width) => {
       iconData.total_length += width + 0.5
     })
   }, [])
 
   useFrame((state, delta, xrFrame) => {
-    refs.forEach(ref => {
+    refs.forEach((ref) => {
       ref.current.position.x += delta
-      if(ref.current.position.x > iconData.total_length / 2) ref.current.position.x -= iconData.total_length
+      if (ref.current.position.x > iconData.total_length / 2)
+        ref.current.position.x -= iconData.total_length
     })
   })
 
   return (
     <>
+      <PerspectiveCamera
+        makeDefault
+        position={[0, 0, 15]}
+        fov={10}
+      />
+      <directionalLight
+        position={[0, 0, 5]}
+        castShadow
+      />
+      <ambientLight position={[3, 3, 3]} />
       <IconAnsible ref={iconAnsibleRef} />
       <IconBlender ref={iconBlenderRef} />
       <IconChatGpt ref={iconChatGptRef} />
@@ -125,5 +139,21 @@ export default function Elements() {
       <IconThreejs ref={iconThreejsRef} />
       <IconWebgl ref={iconWebglRef} />
     </>
+  )
+}
+
+export default function PerformedWithCanvas() {
+  return (
+    <Canvas
+      shadows
+      legacy
+      gl={{
+        antialias: true,
+        alpha: true,
+        powerPreference: 'high-performance',
+      }}
+    >
+      <PerformedWithScene />
+    </Canvas>
   )
 }
