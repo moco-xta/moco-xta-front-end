@@ -15,7 +15,7 @@ export const Routes: RoutesInterface[] = [
     path: '/about',
     width: {
       en: '76px',
-      es: '90px',
+      es: '98px',
       fr: '74px',
     }
   },
@@ -24,7 +24,7 @@ export const Routes: RoutesInterface[] = [
     path: '/blog',
     width: {
       en: '70px',
-      es: '66px',
+      es: '70px',
       fr: '70px',
     }
   },
@@ -33,7 +33,7 @@ export const Routes: RoutesInterface[] = [
     path: '/contact',
     width: {
       en: '86px',
-      es: '72px',
+      es: '76px',
       fr: '64px',
     }
   },
@@ -42,7 +42,7 @@ export const Routes: RoutesInterface[] = [
     path: '/photography',
     width: {
       en: '136px',
-      es: '110px',
+      es: '114px',
       fr: '136px',
     }
   },
@@ -51,7 +51,7 @@ export const Routes: RoutesInterface[] = [
     path: '/projects',
     width: {
       en: '86px',
-      es: '82px',
+      es: '86px',
       fr: '56px',
     }
   },
@@ -60,7 +60,7 @@ export const Routes: RoutesInterface[] = [
     path: '/skills',
     width: {
       en: '80px',
-      es: '120px',
+      es: '124px',
       fr: '142px',
     }
   },
