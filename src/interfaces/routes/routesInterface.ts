@@ -8,4 +8,7 @@ export interface RoutesInterface {
     | '/photography'
     | '/projects'
     | '/skills'
+  width: {
+    [key: string]: string
+  }
 }

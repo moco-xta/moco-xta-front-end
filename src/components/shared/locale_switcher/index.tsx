@@ -17,21 +17,19 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <div>
-      <select
-        value={locale}
-        onChange={handleSwitchLocale}
-      >
-        {LocalesConstants.LOCALES.map((locale) => (
-          <option
-            key={`localeSwitcherOption_${locale}`}
-            value={locale}
-          >
-            {locale}
-          </option>
-        ))}
-      </select>
-    </div>
+    <select
+      value={locale}
+      onChange={handleSwitchLocale}
+    >
+      {LocalesConstants.LOCALES.map((locale) => (
+        <option
+          key={`localeSwitcherOption_${locale}`}
+          value={locale}
+        >
+          {locale}
+        </option>
+      ))}
+    </select>
   )
 }
 

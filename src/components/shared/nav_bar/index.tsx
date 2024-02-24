@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useLocale, useTranslations } from 'next-intl'
+import { useLocale,  useTranslations } from 'next-intl'
 
 /* import {Link} from '../navigation' */
 
@@ -21,6 +21,20 @@ export default function NavBar() {
   const t = useTranslations('ROUTES')
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 700)
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 700)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', updateMedia)
+    return () => window.removeEventListener('resize', updateMedia)
+  }, [])
+
+  useEffect(() => {
+    console.log('isDesktop', isDesktop)
+  }, [isDesktop])
 
   const handleSetMenuIsOpen = () => {
     setMenuIsOpen(!menuIsOpen)
@@ -37,7 +51,16 @@ export default function NavBar() {
             {Routes.map((route) => {
               if (route.key !== 'HOME') {
                 return (
-                  <li key={`navBarLink_${route.key}`}>
+                  <li
+                    key={`navBarLink_${route.key}`}
+                    style={{ width: isDesktop ? route.width[locale] : '' }}
+                  >
+                    <>
+                      {(() => {
+                        console.log('`route.width[${locale}]`', `route.width[${locale}]`)
+                        return null
+                      })()}
+                    </>
                     {/* @ts-ignore */}
                     <Link
                       href={route.path}
