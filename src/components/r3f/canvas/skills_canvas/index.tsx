@@ -8,6 +8,8 @@ import { ScrollControls, useScroll } from '@react-three/drei'
 import { getProject, val } from '@theatre/core'
 import { PerspectiveCamera, SheetProvider, useCurrentSheet } from '@theatre/r3f'
 
+import { SkillsPattern } from '@/components/r3f/models/skills/SkillsPattern'
+
 studio.extend(extension)
 studio.initialize()
 
@@ -32,10 +34,7 @@ function SkillsScene() {
       />
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <mesh>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color='orange' />
-      </mesh>
+      <SkillsPattern />
     </>
   )
 }
@@ -46,7 +45,7 @@ export default function SkillsCanvas() {
   return (
     <Canvas gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={null}>
-        <ScrollControls pages={5}>
+        <ScrollControls pages={5} damping={1} maxSpeed={1}>
           <SheetProvider sheet={sheet}>
             <SkillsScene />
           </SheetProvider>
