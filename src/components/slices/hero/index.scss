@@ -1,5 +1,4 @@
 #hero_slice {
-  z-index: 0;
   position: relative;
 
   #default_scene_container {
@@ -7,7 +6,7 @@
     height: 100vh;
   }
 
-  #test {
+  #head_text {
     z-index: 1;
     position: absolute;
     top: 50%;

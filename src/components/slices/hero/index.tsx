@@ -7,7 +7,10 @@ import './index.scss'
 export default function Hero() {
   return (
     <div id='hero_slice'>
-      <div id='test'>Federico DESMOULIN</div>
+      <div id='head_text'>
+        <h1>Federico DESMOULIN</h1>
+        <h3>Creative developer</h3>
+      </div>
       <div id='default_scene_container'>
         <DefaultCanvas />
       </div>
