@@ -1,5 +1,16 @@
 {
   "HOME": {
-    "PERFORMED_WITH": "Réalisé avec:"
+    "PERFORMED_WITH": {
+      "PERFORMED_WITH": "Réalisé avec:"
+    }
+  },
+  "ROUTES": {
+    "ABOUT": "À propos",
+    "BLOG": "Blog",
+    "CONTACT": "Contact",
+    "HOME": "Home",
+    "PHOTOGRAPHY": "Photographie",
+    "PROJECTS": "Projets",
+    "SKILLS": "Compétences"
   }
 }

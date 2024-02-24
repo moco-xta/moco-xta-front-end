@@ -6,7 +6,7 @@ import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconNextjs = forwardRef(function IconNextjs(props, ref) {
   const gltf = useGLTF(GltfConstants.ICON_NEXTJS)
-  
+
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(gltf.scene)
     ref.current.width = box.getSize(new THREE.Vector3()).x

@@ -6,7 +6,7 @@ import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 const IconRedux = forwardRef(function IconRedux(props, ref) {
   const gltf = useGLTF(GltfConstants.ICON_REDUX)
-  
+
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(gltf.scene)
     ref.current.width = box.getSize(new THREE.Vector3()).x

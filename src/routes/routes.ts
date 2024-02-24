@@ -1,26 +1,32 @@
-export const Routes = [
+import { RoutesInterface } from '@/interfaces/routes/routesInterface'
+
+export const Routes: RoutesInterface[] = [
   {
-    name: 'Home',
+    key: 'HOME',
     path: '/',
   },
   {
-    name: 'About',
+    key: 'ABOUT',
     path: '/about',
   },
   {
-    name: 'Blog',
+    key: 'BLOG',
     path: '/blog',
   },
   {
-    name: 'Contact',
+    key: 'CONTACT',
     path: '/contact',
   },
   {
-    name: 'Photography',
+    key: 'PHOTOGRAPHY',
     path: '/photography',
   },
   {
-    name: 'Projects',
+    key: 'PROJECTS',
     path: '/projects',
+  },
+  {
+    key: 'SKILLS',
+    path: '/skills',
   },
 ]

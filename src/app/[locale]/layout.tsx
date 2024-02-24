@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { NextIntlClientProvider, useMessages } from 'next-intl'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
@@ -21,14 +22,23 @@ export default function RootLayout({
   children: React.ReactNode
   params: { locale: string }
 }>) {
+  const translations = useMessages()
+
   return (
-    <html lang={locale}>
-      <body className={inter.className}>
-        <ReduxProvider>
-          <Header />
-          {children}
-        </ReduxProvider>
-      </body>
-    </html>
+    <>
+      <html lang={locale}>
+        <body className={inter.className}>
+          <ReduxProvider>
+            <NextIntlClientProvider
+              locale={locale}
+              messages={translations}
+            >
+              <Header />
+              {children}
+            </NextIntlClientProvider>
+          </ReduxProvider>
+        </body>
+      </html>
+    </>
   )
 }
