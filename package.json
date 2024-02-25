@@ -17,6 +17,7 @@
     "@theatre/studio": "^0.7.0",
     "@types/react-redux": "^7.1.33",
     "@types/three": "^0.161.2",
+    "framer-motion": "^11.0.6",
     "next": "14.1.0",
     "next-intl": "^3.9.0",
     "react": "^18",
