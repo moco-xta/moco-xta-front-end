@@ -45,7 +45,11 @@ export default function SkillsCanvas() {
   return (
     <Canvas gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={null}>
-        <ScrollControls pages={5} damping={1} maxSpeed={1}>
+        <ScrollControls
+          pages={5}
+          damping={1}
+          maxSpeed={1}
+        >
           <SheetProvider sheet={sheet}>
             <SkillsScene />
           </SheetProvider>
