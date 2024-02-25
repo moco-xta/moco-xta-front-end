@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 
 import vertexShader from '@/components/r3f/shaders/default_shaders/vertexShader.glsl'
@@ -16,7 +17,7 @@ const shaderMaterial = {
 
 export default function Defaultcanvas() {
   return (
-    <Canvas>
+    <Canvas onCreated={(state) => state.gl.setClearColor('pink')}>
       <mesh>
         <planeGeometry />
         <shaderMaterial

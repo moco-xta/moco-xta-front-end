@@ -1,4 +1,62 @@
-#default_scene_container {
-  width: 100vw;
-  height: 100vh;
+#hero_slice {
+  position: relative;
+
+  #default_scene_container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #head_text {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 10%;
+    
+    h1 {
+      overflow: hidden;
+      /* box-sizing: border-box; */
+      animation: reveal 0.5s linear forwards;
+    }
+
+    h3 {
+      overflow: hidden;
+      /* box-sizing: border-box; */
+      animation: reveal 0.5s linear forwards;
+    }
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+    heihgt: 0px;
+    margin-top: 100px;
+  }
+  25% {
+    opacity: 0.25;
+    width: 100%;
+    heihgt: 25%;
+    margin-top: 75px;
+  }
+  50% {
+    opacity: 0.5;
+    width: 100%;
+    heihgt: 50%;
+    margin-top: 50px;
+  }
+  75% {
+    opacity: 0.75;
+    width: 100%;
+    heihgt: 75%;
+    margin-top: 25px;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+    heihgt: 100%;
+    margin-top: 0px;
+  }
 }
