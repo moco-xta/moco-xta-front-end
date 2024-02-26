@@ -11,10 +11,6 @@ export default function ApiTest() {
   const [dateOfCreation, setDateOfCreation] = useState<string>('1995-12-17')
   const [category, setCategory] = useState<string>('')
 
-  useEffect(() => {
-    console.log('dateOfCreation', dateOfCreation)
-  }, [dateOfCreation])
-
   const { data, isLoading, error } = useGetTestsQuery()
   const [addNewTest] = useAddNewTestMutation()
 
@@ -37,8 +33,6 @@ export default function ApiTest() {
       description: description,
       date_of_creation: new Date(dateOfCreation),
     }
-
-    console.log('test', test)
     addNewTest(test)
   }
 
