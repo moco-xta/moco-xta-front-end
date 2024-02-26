@@ -1,10 +1,39 @@
 'use client'
 
-import React from 'react'
+import React, { RefObject, useEffect, useRef } from 'react'
 
 import RevealComponent from '@/components/shared/reveal_component'
 
+import { getUvMousePositionOnDiv } from '@/utils/cssUtils'
+
 import './index.scss'
+
+const array = [{}, {}, {}, {}, {}, {}]
+
+function Card() {
+  const cardRef = useRef<HTMLElement>(null)
+
+  function handleMouseMove(e: MouseEvent): void {
+    const { x, y } = getUvMousePositionOnDiv(e)
+    cardRef.current!.style.transform = `perspective(1000px) rotateX(${y * 12}deg) rotateY(${x * 12}deg)`
+  }
+
+  useEffect(() => {
+    cardRef.current!.addEventListener('mousemove', handleMouseMove)
+    return () => {
+      cardRef.current!.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [])
+
+  return (
+    <div
+      ref={cardRef as RefObject<HTMLDivElement>}
+      className='card'
+    >
+      Test
+    </div>
+  )
+}
 
 export default function Introduction() {
   return (
@@ -42,6 +71,12 @@ export default function Introduction() {
             to life!
           </p>
         </RevealComponent>
+
+        <div id='cards_container'>
+          {array.map((card, index) => {
+            return <Card />
+          })}
+        </div>
       </div>
     </div>
   )

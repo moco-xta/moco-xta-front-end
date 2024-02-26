@@ -32,10 +32,6 @@ export default function NavBar() {
     return () => window.removeEventListener('resize', updateMedia)
   }, [])
 
-  useEffect(() => {
-    console.log('isDesktop', isDesktop)
-  }, [isDesktop])
-
   const handleSetMenuIsOpen = () => {
     setMenuIsOpen(!menuIsOpen)
   }
@@ -55,15 +51,6 @@ export default function NavBar() {
                     key={`navBarLink_${route.key}`}
                     style={{ width: isDesktop ? route.width[locale] : '' }}
                   >
-                    <>
-                      {(() => {
-                        console.log(
-                          '`route.width[${locale}]`',
-                          `route.width[${locale}]`,
-                        )
-                        return null
-                      })()}
-                    </>
                     {/* @ts-ignore */}
                     <Link
                       href={route.path}
