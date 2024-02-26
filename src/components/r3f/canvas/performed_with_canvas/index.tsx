@@ -5,7 +5,7 @@ import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
-import { iconsDataInterface } from '@/interfaces/r3f/iconsDataInterface'
+import { iconsDataInterface } from '@/interfaces/components/r3f/iconsDataInterface'
 
 import IconAnsible from '@/components/r3f/models/icons/IconAnsible'
 import IconBlender from '@/components/r3f/models/icons/IconBlender'
