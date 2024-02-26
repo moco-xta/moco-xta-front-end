@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useLocale,  useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 /* import {Link} from '../navigation' */
 
@@ -32,10 +32,6 @@ export default function NavBar() {
     return () => window.removeEventListener('resize', updateMedia)
   }, [])
 
-  useEffect(() => {
-    console.log('isDesktop', isDesktop)
-  }, [isDesktop])
-
   const handleSetMenuIsOpen = () => {
     setMenuIsOpen(!menuIsOpen)
   }
@@ -55,12 +51,6 @@ export default function NavBar() {
                     key={`navBarLink_${route.key}`}
                     style={{ width: isDesktop ? route.width[locale] : '' }}
                   >
-                    <>
-                      {(() => {
-                        console.log('`route.width[${locale}]`', `route.width[${locale}]`)
-                        return null
-                      })()}
-                    </>
                     {/* @ts-ignore */}
                     <Link
                       href={route.path}
