@@ -5,7 +5,7 @@ import PerformedWithCanvas from '@/components/r3f/canvas/performed_with_canvas'
 
 import './index.scss'
 
-export default function PerformedWith() {
+export default function PerformedWithSlice() {
   const t = useTranslations('HOME')
 
   return (

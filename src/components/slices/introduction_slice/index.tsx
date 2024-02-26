@@ -9,7 +9,7 @@ import './index.scss'
 
 const array = [{}, {}, {}, {}, {}, {}]
 
-export default function Introduction() {
+export default function IntroductionSlice() {
   return (
     <div id='introduction_slice'>
       <div id='introduction_content'>
