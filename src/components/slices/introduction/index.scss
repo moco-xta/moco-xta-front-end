@@ -17,15 +17,6 @@
       flex-wrap: wrap;
       justify-content: space-around;
       align-content: center;
-
-      .card {
-        width: 200px !important;
-        height: 200px !important;
-        margin: 10px;
-        /* flex: 0 1 24%; */
-        background-color: red;
-        border: solid;
-      }
     }
   }
 }
