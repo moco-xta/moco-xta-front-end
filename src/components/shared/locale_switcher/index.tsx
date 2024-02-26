@@ -11,7 +11,6 @@ export default function LocaleSwitcher() {
   const router = useRouter()
 
   const handleSwitchLocale = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log(e.target.value)
     document.cookie = `NEXT_LOCALE=${e.target.value}; path=/; max-age=31536000; SameSite=Lax`
     router.refresh()
   }
