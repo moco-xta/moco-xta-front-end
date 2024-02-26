@@ -18,8 +18,6 @@ export default function IntroductionCard({}: IntroductionCardInterface) {
     cardRef.current!.style.transform = `perspective(1000px) rotateX(${y * 12}deg) rotateY(${x * 12}deg) scale3d(1.1, 1.1, 1.1)`
     cameraRef.current!.position.x = -x * 2
     cameraRef.current!.position.y = -y * 2
-    /* console.log(cameraRef.current) */
-    console.log(boxRef.current)
     boxRef.current!.scale.x = 1.2
     boxRef.current!.scale.y = 1.2
     boxRef.current!.scale.z = 1.2
@@ -34,8 +32,10 @@ export default function IntroductionCard({}: IntroductionCardInterface) {
     cardRef.current!.addEventListener('mousemove', handleMouseMove)
     cardRef.current!.addEventListener('mouseleave', handleMouseLeave)
     return () => {
-      cardRef.current!.removeEventListener('mousemove', handleMouseMove)
-      cardRef.current!.removeEventListener('mouseleave', handleMouseLeave)
+      if(cardRef.current) {
+        cardRef.current.removeEventListener('mousemove', handleMouseMove)
+        cardRef.current.removeEventListener('mouseleave', handleMouseLeave)
+      }
     }
   }, [])
 
