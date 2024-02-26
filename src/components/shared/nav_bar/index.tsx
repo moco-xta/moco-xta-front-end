@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useLocale,  useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 /* import {Link} from '../navigation' */
 
@@ -57,7 +57,10 @@ export default function NavBar() {
                   >
                     <>
                       {(() => {
-                        console.log('`route.width[${locale}]`', `route.width[${locale}]`)
+                        console.log(
+                          '`route.width[${locale}]`',
+                          `route.width[${locale}]`,
+                        )
                         return null
                       })()}
                     </>
