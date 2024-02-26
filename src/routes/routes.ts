@@ -8,7 +8,7 @@ export const Routes: RoutesInterface[] = [
       en: '',
       es: '',
       fr: '',
-    }
+    },
   },
   {
     key: 'ABOUT',
@@ -17,7 +17,7 @@ export const Routes: RoutesInterface[] = [
       en: '76px',
       es: '98px',
       fr: '74px',
-    }
+    },
   },
   {
     key: 'BLOG',
@@ -26,7 +26,7 @@ export const Routes: RoutesInterface[] = [
       en: '70px',
       es: '70px',
       fr: '70px',
-    }
+    },
   },
   {
     key: 'CONTACT',
@@ -35,7 +35,7 @@ export const Routes: RoutesInterface[] = [
       en: '86px',
       es: '76px',
       fr: '64px',
-    }
+    },
   },
   {
     key: 'PHOTOGRAPHY',
@@ -44,7 +44,7 @@ export const Routes: RoutesInterface[] = [
       en: '136px',
       es: '114px',
       fr: '136px',
-    }
+    },
   },
   {
     key: 'PROJECTS',
@@ -53,7 +53,7 @@ export const Routes: RoutesInterface[] = [
       en: '86px',
       es: '86px',
       fr: '56px',
-    }
+    },
   },
   {
     key: 'SKILLS',
@@ -62,6 +62,6 @@ export const Routes: RoutesInterface[] = [
       en: '80px',
       es: '124px',
       fr: '142px',
-    }
+    },
   },
 ]
