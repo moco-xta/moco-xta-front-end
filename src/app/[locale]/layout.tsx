@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
+import { Toaster } from 'sonner'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
@@ -33,6 +34,7 @@ export default function RootLayout({
               locale={locale}
               messages={translations}
             >
+              <Toaster />
               <Header />
               {children}
             </NextIntlClientProvider>
