@@ -1,7 +1,6 @@
 'use client'
 
 import React, { SyntheticEvent } from 'react'
-import { useToaster } from 'react-hot-toast/headless'
 
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
