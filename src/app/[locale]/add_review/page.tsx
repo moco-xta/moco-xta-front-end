@@ -13,7 +13,7 @@ export default function AddReview() {
   const [email, setEmail] = useState<string>('')
   const [role, setRole] = useState<string>('')
   const [review, setReview] = useState<string>('')
-  const [numberOfStars, setNumberOfStars] = useState<number>(0)
+  const [numberOfStars, setNumberOfStars] = useState<number>(5)
 
   const [addReview] = useAddReviewMutation()
 

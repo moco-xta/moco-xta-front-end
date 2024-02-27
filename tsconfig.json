@@ -22,6 +22,7 @@
       "@/app/*": ["app/*"],
       "@/components/*": ["components/*"],
       "@/constants/*": ["constants/*"],
+      "@/helpers/*": ["helpers/*"],
       "@/interfaces/*": ["interfaces/*"],
       "@/redux/*": ["redux/*"],
       "@/routes/*": ["routes/*"],
