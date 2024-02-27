@@ -10,7 +10,7 @@ const reviewApi = apiSlice.injectEndpoints({
       query: () => ApiConstants.REVIEW,
       providesTags: ['Review'],
     }),
-    addNewReview: build.mutation<ReviewInterface, ReviewInterface>({
+    addReview: build.mutation<ReviewInterface, ReviewInterface>({
       query: (review) => ({
         url: ApiConstants.REVIEW,
         method: 'POST',
@@ -21,4 +21,4 @@ const reviewApi = apiSlice.injectEndpoints({
   }),
 })
 
-export const { useGetReviewsQuery, useAddNewReviewMutation } = reviewApi
+export const { useGetReviewsQuery, useAddReviewMutation } = reviewApi

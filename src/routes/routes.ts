@@ -4,7 +4,7 @@ export const Routes: RoutesInterface[] = [
   {
     key: 'HOME',
     path: '/',
-    display_in_nav_bar: false
+    display_in_nav_bar: false,
   },
   {
     key: 'ABOUT',
@@ -19,7 +19,7 @@ export const Routes: RoutesInterface[] = [
   {
     key: 'ADD_REVIEW',
     path: '/add_review',
-    display_in_nav_bar: false
+    display_in_nav_bar: false,
   },
   {
     key: 'BLOG',
