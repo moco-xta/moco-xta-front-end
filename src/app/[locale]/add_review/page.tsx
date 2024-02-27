@@ -1,94 +1,94 @@
 'use client'
 
-import React, { SyntheticEvent, useEffect } from 'react'
+import React from 'react'
+import { useFormik } from 'formik'
+import * as Yup from 'yup'
 import { toast } from 'sonner'
 
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
-import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
-
-import { ReviewInterface } from '@/interfaces/api/reviewInterface'
+import FormikField from '@/components/inputs/formik_field'
+import FormikTextarea from '@/components/inputs/formik_textarea'
 
 import './index.scss'
 
 export default function AddReview() {
-  const [name, setName] = useStoreInputValueInLocalStorage('name', '')
-  const [email, setEmail] = useStoreInputValueInLocalStorage('email', '')
-  const [role, setRole] = useStoreInputValueInLocalStorage('role', '')
-  const [review, setReview] = useStoreInputValueInLocalStorage('review', '')
-  const [numberOfStars, setNumberOfStars] = useStoreInputValueInLocalStorage('numberOfStars', 0)
-
   const [addReview] = useAddReviewMutation()
 
-  const handleSubmit = (e: SyntheticEvent) => {
-    e.preventDefault()
-    if(name && email && role) {
-      const newReview: ReviewInterface = {
-        name: name,
-        email: email,
-        role: role,
-        review: review,
-        numberOfStars: numberOfStars,
-        date: new Date(),
-      }
-      toast.promise(addReview(newReview), {
-        loading: 'loading',
-        success: 'success',
-        error: 'error',
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required('Required'),
+    email: Yup.string().email('Must be a valid email').required('Required'),
+    role: Yup.string().required('Required'),
+    review: Yup.string().required('Required'),
+  })
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      role: '',
+      review: '',
+      numberOfStars: 0,
+      date: new Date(),
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      toast.promise(addReview(values), {
+        loading: 'Loading',
+        success: 'Success',
+        error: 'Error',
       })
-    } else {
-      toast.error('Please fill all inputs')
-    }
-  }
+    },
+  })
+
   return (
     <div id='add_review_container'>
       <div id='add_review_form_and_preview_container'>
-        <form onSubmit={handleSubmit}>
-          <h1>Add a review</h1>
-          <input
-            id='name'
-            type='text'
-            placeholder='Name'
-            name='name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+        <h1>Add a review</h1>
+        <form onSubmit={formik.handleSubmit}>
+          <FormikField
+            type={'text'}
+            name={'name'}
+            handleChange={formik.handleChange}
+            value={formik.values.name}
+            error={formik.touched.name && Boolean(formik.errors.name)}
+            helperText={formik.touched.name && formik.errors.name}
           />
-          <input
-            id='email'
-            type='email'
-            placeholder='Email'
-            name='email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+          <FormikField
+            type={'text'}
+            name={'email'}
+            handleChange={formik.handleChange}
+            value={formik.values.email}
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
           />
-          <input
-            id='role'
-            type='text'
-            placeholder='Role'
-            name='role'
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
+          <FormikField
+            type={'text'}
+            name={'role'}
+            handleChange={formik.handleChange}
+            value={formik.values.role}
+            error={formik.touched.role && Boolean(formik.errors.role)}
+            helperText={formik.touched.role && formik.errors.role}
           />
-          <textarea
-            id='review'
-            rows={4}
+          <FormikTextarea
+            name={'review'}
             cols={50}
-            placeholder='Review'
-            name='review'
-            value={review}
-            onChange={(e) => setReview(e.target.value)}
+            rows={8}
+            maxLength={10}
+            handleChange={formik.handleChange}
+            value={formik.values.review}
+            error={formik.touched.review && Boolean(formik.errors.review)}
+            helperText={formik.touched.review && formik.errors.review}
           />
+          
           <button type='submit'>Submit</button>
-          <input
-            type='reset'
-            value='Reset'
-          />
         </form>
+
         <div id='new_review_preview'>
           <div id='review_card'>
-            <p>{review}</p>
-            <p>{name}</p>
-            <p>{role}</p>
+            <p>{formik.values.review}</p>
+            <p>{formik.values.name}</p>
+            <p>{formik.values.role}</p>
           </div>
         </div>
       </div>
