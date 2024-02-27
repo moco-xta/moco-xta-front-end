@@ -4,7 +4,7 @@ import { Box, PerspectiveCamera } from '@react-three/drei'
 
 import { IntroductionCardInterface } from '@/interfaces/components/cards/introductionCardInterface'
 
-import { getUvMousePositionOnDiv } from '@/utils/cssUtils'
+import { getUvMousePositionOnDiv } from '@/helpers/cssHelpers'
 
 import './index.scss'
 
