@@ -32,7 +32,7 @@ export default function IntroductionCard({}: IntroductionCardInterface) {
     cardRef.current!.addEventListener('mousemove', handleMouseMove)
     cardRef.current!.addEventListener('mouseleave', handleMouseLeave)
     return () => {
-      if(cardRef.current) {
+      if (cardRef.current) {
         cardRef.current.removeEventListener('mousemove', handleMouseMove)
         cardRef.current.removeEventListener('mouseleave', handleMouseLeave)
       }

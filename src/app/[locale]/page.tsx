@@ -1,6 +1,11 @@
 import React from 'react'
 
-import { HeroSlice, IntroductionSlice, PerformedWithSlice, ReviewsSlice } from '@/components/slices'
+import {
+  HeroSlice,
+  IntroductionSlice,
+  PerformedWithSlice,
+  ReviewsSlice,
+} from '@/components/slices'
 
 import './index.scss'
 
