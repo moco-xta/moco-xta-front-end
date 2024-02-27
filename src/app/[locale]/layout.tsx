@@ -6,8 +6,6 @@ import ReduxProvider from '@/redux/ReduxProvider'
 
 import Header from '@/components/shared/header'
 
-import Notification from '@/utils/Notification'
-
 import '@/styles/globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -35,7 +33,6 @@ export default function RootLayout({
               locale={locale}
               messages={translations}
             >
-              <Notification />
               <Header />
               {children}
             </NextIntlClientProvider>
