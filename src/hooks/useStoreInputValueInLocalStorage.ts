@@ -7,7 +7,6 @@ function getSavedValue(
   const savedJsonValue = localStorage.getItem(key)
   const savedValue = savedJsonValue !== null ? JSON.parse(savedJsonValue) : null
   if(savedValue) return savedValue
-
   return initialValue
 }
 
@@ -15,7 +14,6 @@ export default function useStoreInputValueInLocalStorage(
   key: string,
   initialValue: string | number | Date | null
 ) {
-
   const [value, setValue] = useState(() => {
     return getSavedValue(key, initialValue)
   })
