@@ -1,6 +1,7 @@
 'use client'
 
-import React, { SyntheticEvent } from 'react'
+import React, { SyntheticEvent, useEffect } from 'react'
+import { toast } from 'sonner'
 
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
@@ -30,9 +31,13 @@ export default function AddReview() {
         numberOfStars: numberOfStars,
         date: new Date(),
       }
-      addReview(newReview)
+      toast.promise(addReview(newReview), {
+        loading: 'loading',
+        success: 'success',
+        error: 'error',
+      })
     } else {
-
+      toast.error('Please fill all inputs')
     }
   }
   return (
