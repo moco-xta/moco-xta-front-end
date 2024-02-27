@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
-import { Toaster } from 'react-hot-toast'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
 import Header from '@/components/shared/header'
+
+import Notification from '@/utils/Notification'
 
 import '@/styles/globals.scss'
 
@@ -34,7 +35,7 @@ export default function RootLayout({
               locale={locale}
               messages={translations}
             >
-              <Toaster position='bottom-center' />
+              <Notification />
               <Header />
               {children}
             </NextIntlClientProvider>

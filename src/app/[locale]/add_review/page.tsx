@@ -1,6 +1,7 @@
 'use client'
 
-import React, { SyntheticEvent, useState } from 'react'
+import React, { SyntheticEvent } from 'react'
+import { useToaster } from 'react-hot-toast/headless'
 
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
@@ -21,15 +22,19 @@ export default function AddReview() {
 
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault()
-    const newReview: ReviewInterface = {
-      name: name,
-      email: email,
-      role: role,
-      review: review,
-      number_of_stars: numberOfStars,
-      date: new Date(),
+    if(name && email && role) {
+      const newReview: ReviewInterface = {
+        name: name,
+        email: email,
+        role: role,
+        review: review,
+        numberOfStars: numberOfStars,
+        date: new Date(),
+      }
+      addReview(newReview)
+    } else {
+
     }
-    addReview(newReview)
   }
   return (
     <div id='add_review_container'>
