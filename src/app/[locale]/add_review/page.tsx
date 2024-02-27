@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { toast } from 'sonner'
@@ -8,6 +8,7 @@ import { toast } from 'sonner'
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
 import FormikField from '@/components/inputs/formik_field'
+import FormikStarRating from '@/components/inputs/formik_star_rating'
 import FormikTextarea from '@/components/inputs/formik_textarea'
 
 import './index.scss'
@@ -20,6 +21,7 @@ export default function AddReview() {
     email: Yup.string().email('Must be a valid email').required('Required'),
     role: Yup.string().required('Required'),
     review: Yup.string().required('Required'),
+    rating: Yup.number().min(1, 'Required')
   })
 
   const formik = useFormik({
@@ -28,7 +30,7 @@ export default function AddReview() {
       email: '',
       role: '',
       review: '',
-      numberOfStars: 0,
+      rating: 0,
       date: new Date(),
     },
     validationSchema: validationSchema,
@@ -40,6 +42,10 @@ export default function AddReview() {
       })
     },
   })
+
+  useEffect(() => {
+    console.log('formik.values.rating', formik.values.rating)
+  }, [formik.values.rating])
 
   return (
     <div id='add_review_container'>
@@ -79,6 +85,13 @@ export default function AddReview() {
             value={formik.values.review}
             error={formik.touched.review && Boolean(formik.errors.review)}
             helperText={formik.touched.review && formik.errors.review}
+          />
+          <FormikStarRating
+            name={'rating'}
+            handleChange={formik.handleChange}
+            value={formik.values.rating}
+            error={formik.touched.rating && Boolean(formik.errors.rating)}
+            helperText={formik.touched.rating && formik.errors.rating}
           />
           <button type='submit'>Submit</button>
         </form>
