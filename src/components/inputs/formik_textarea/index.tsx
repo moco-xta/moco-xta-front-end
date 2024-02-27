@@ -5,8 +5,17 @@ import { FormikTextareaInterface } from '@/interfaces/components/inputs/formikTe
 import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 export default function FormikTextarea(props: FormikTextareaInterface) {
-  const { label, name, cols, rows, maxLength, handleChange, value, error, helperText } =
-    props
+  const {
+    label,
+    name,
+    cols,
+    rows,
+    maxLength,
+    handleChange,
+    value,
+    error,
+    helperText,
+  } = props
 
   return (
     <>
