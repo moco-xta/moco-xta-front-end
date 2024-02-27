@@ -4,16 +4,18 @@ import React, { SyntheticEvent, useState } from 'react'
 
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
+import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
+
 import { ReviewInterface } from '@/interfaces/api/reviewInterface'
 
 import './index.scss'
 
 export default function AddReview() {
-  const [name, setName] = useState<string>('')
-  const [email, setEmail] = useState<string>('')
-  const [role, setRole] = useState<string>('')
-  const [review, setReview] = useState<string>('')
-  const [numberOfStars, setNumberOfStars] = useState<number>(5)
+  const [name, setName] = useStoreInputValueInLocalStorage('name', '')
+  const [email, setEmail] = useStoreInputValueInLocalStorage('email', '')
+  const [role, setRole] = useStoreInputValueInLocalStorage('role', '')
+  const [review, setReview] = useStoreInputValueInLocalStorage('review', '')
+  const [numberOfStars, setNumberOfStars] = useStoreInputValueInLocalStorage('numberOfStars', 0)
 
   const [addReview] = useAddReviewMutation()
 
@@ -74,7 +76,7 @@ export default function AddReview() {
           />
         </form>
         <div id='new_review_preview'>
-          <div id="review_card">
+          <div id='review_card'>
             <p>{review}</p>
             <p>{name}</p>
             <p>{role}</p>
