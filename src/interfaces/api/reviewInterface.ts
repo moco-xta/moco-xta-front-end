@@ -4,6 +4,6 @@ export interface ReviewInterface {
   email: string
   role: string
   review: string
-  numberOfStars: number
+  rating: number
   date: Date
 }
