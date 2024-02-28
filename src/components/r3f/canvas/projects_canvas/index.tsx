@@ -2,6 +2,7 @@
 
 import React, { Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
+import { DepthOfField, EffectComposer } from '@react-three/postprocessing'
 import studio from '@theatre/studio'
 import extension from '@theatre/r3f/dist/extension'
 import { ScrollControls, useScroll } from '@react-three/drei'
@@ -34,6 +35,19 @@ function ProjectsScene() {
       />
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
+      <fog
+        attach='fog'
+        color='black'
+        near={0.5}
+        far={5}
+      />
+      <EffectComposer>
+        <DepthOfField
+          focusDistance={0.2}
+          focalLength={0.02}
+          bokehScale={3}
+        />
+      </EffectComposer>
       <ProjectsMap />
     </>
   )
