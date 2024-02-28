@@ -62,6 +62,11 @@ export const Routes: RoutesInterface[] = [
     },
   },
   {
+    key: 'REVIEWS',
+    path: '/reviews',
+    display_in_nav_bar: false,
+  },
+  {
     key: 'SKILLS',
     path: '/skills',
     display_in_nav_bar: true,

@@ -8,6 +8,7 @@ export interface RoutesInterface {
     | '/contact'
     | '/photography'
     | '/projects'
+    | '/reviews'
     | '/skills'
   display_in_nav_bar: boolean
   width?: {
