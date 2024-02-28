@@ -25,7 +25,7 @@ export default function AddReview() {
     email: Yup.string().email('Must be a valid email').required('Required'),
     role: Yup.string().required('Required'),
     review: Yup.string().required('Required'),
-    rating: Yup.number().min(1, 'Required')
+    rating: Yup.number().min(1, 'Required'),
   })
 
   const formik = useFormik({
@@ -108,9 +108,9 @@ export default function AddReview() {
             rating={formik.values.rating}
           />
         </div>
-      <Link href={Routes.find((route) => route.key === 'REVIEWS')!.path}>
-        View all reviews
-      </Link>
+        <Link href={Routes.find((route) => route.key === 'REVIEWS')!.path}>
+          View all reviews
+        </Link>
       </div>
     </div>
   )
