@@ -7,6 +7,7 @@ import { toast } from 'sonner'
 
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
+import ReviewCard from '@/components/cards/review_card'
 import FormikField from '@/components/inputs/formik_field'
 import FormikStarRating from '@/components/inputs/formik_star_rating'
 import FormikTextarea from '@/components/inputs/formik_textarea'
@@ -97,11 +98,12 @@ export default function AddReview() {
         </form>
 
         <div id='new_review_preview'>
-          <div id='review_card'>
-            <p>{formik.values.review}</p>
-            <p>{formik.values.name}</p>
-            <p>{formik.values.role}</p>
-          </div>
+          <ReviewCard
+            review={formik.values.review}
+            name={formik.values.name}
+            role={formik.values.role}
+            rating={formik.values.rating}
+          />
         </div>
       </div>
     </div>
