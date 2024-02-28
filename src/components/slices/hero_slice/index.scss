@@ -1,11 +1,6 @@
 #hero_slice {
   position: relative;
 
-  #default_scene_container {
-    width: 100vw;
-    height: 100vh;
-  }
-
   #head_text {
     z-index: 1;
     position: absolute;
@@ -25,6 +20,11 @@
       /* box-sizing: border-box; */
       animation: reveal 0.5s linear forwards;
     }
+  }
+
+  #default_scene_container {
+    width: 100vw;
+    height: 100vh;
   }
 }
 

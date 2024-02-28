@@ -18,5 +18,7 @@
   "ICON_SASS": "/gltf/icons/IconSass.gltf",
   "ICON_SPRINGBOOT": "/gltf/icons/IconSpringboot.gltf",
   "ICON_THREEJS": "/gltf/icons/IconThreejs.gltf",
-  "ICON_WEBGL": "/gltf/icons/IconWebgl.gltf"
+  "ICON_WEBGL": "/gltf/icons/IconWebgl.gltf",
+
+  "PROJECTS_MAP": "/gltf/projects/ProjectsMap.gltf"
 }

@@ -23,7 +23,7 @@ export default function Reviews() {
       <div id='review_cards_wrapper'>
         {data?.map((review, index) => {
           return (
-            <ReviewCard 
+            <ReviewCard
               key={`reviewCard_${index}`}
               review={review.review}
               name={review.name}
@@ -34,7 +34,7 @@ export default function Reviews() {
         })}
       </div>
     )
-    
+
   return (
     <>
       <div>{content}</div>
