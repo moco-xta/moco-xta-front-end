@@ -1,8 +1,11 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 
 import { useGetReviewsQuery } from '@/redux/api/reviewApi'
+
+import { Routes } from '@/routes/routes'
 
 import ReviewCard from '@/components/cards/review_card'
 
@@ -31,7 +34,13 @@ export default function Reviews() {
         })}
       </div>
     )
+    
   return (
-    <div>{content}</div>
+    <>
+      <div>{content}</div>
+      <Link href={Routes.find((route) => route.key === 'ADD_REVIEW')!.path}>
+        Add review
+      </Link>
+    </>
   )
 }
