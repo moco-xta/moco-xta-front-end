@@ -1,0 +1,17 @@
+#timeline_container {
+  margin: 100px 15% 100px 15%;
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+  background-color: DarkSlateGray;
+
+  #school_and_companies_logos_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #projects_container {
+    display: flex;
+    flex-direction: column;
+  }
+}
