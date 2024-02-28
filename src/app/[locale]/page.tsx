@@ -1,17 +1,21 @@
 import React from 'react'
 
-import Hero from '@/components/slices/hero'
-import Introduction from '@/components/slices/introduction'
-import PerformedWith from '@/components/slices/performed_with'
+import {
+  HeroSlice,
+  IntroductionSlice,
+  PerformedWithSlice,
+  ReviewsSlice,
+} from '@/components/slices'
 
 import './index.scss'
 
 export default function Home() {
   return (
     <div id='home_container'>
-      <Hero />
-      <Introduction />
-      <PerformedWith />
+      <HeroSlice />
+      <IntroductionSlice />
+      <ReviewsSlice />
+      <PerformedWithSlice />
     </div>
   )
 }

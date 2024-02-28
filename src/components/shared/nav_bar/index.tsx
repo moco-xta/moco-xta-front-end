@@ -45,13 +45,13 @@ export default function NavBar() {
         <nav>
           <ul>
             {Routes.map((route) => {
-              if (route.key !== 'HOME') {
+              if (route.display_in_nav_bar) {
                 return (
                   <li
                     key={`navBarLink_${route.key}`}
+                    //@ts-ignore
                     style={{ width: isDesktop ? route.width[locale] : '' }}
                   >
-                    {/* @ts-ignore */}
                     <Link
                       href={route.path}
                       className={`link ${pathname === route.path ? 'active' : ''}`}

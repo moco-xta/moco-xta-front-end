@@ -4,7 +4,7 @@ import DefaultCanvas from '@/components/r3f/canvas/default_canvas'
 
 import './index.scss'
 
-export default function Hero() {
+export default function HeroSlice() {
   return (
     <div id='hero_slice'>
       <div id='head_text'>
