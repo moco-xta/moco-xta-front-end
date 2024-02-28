@@ -1,11 +1,14 @@
 'use client'
 
 import React, { useEffect } from 'react'
+import Link from 'next/link'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { toast } from 'sonner'
 
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
+
+import { Routes } from '@/routes/routes'
 
 import ReviewCard from '@/components/cards/review_card'
 import FormikField from '@/components/inputs/formik_field'
@@ -105,6 +108,9 @@ export default function AddReview() {
             rating={formik.values.rating}
           />
         </div>
+      <Link href={Routes.find((route) => route.key === 'REVIEWS')!.path}>
+        View all reviews
+      </Link>
       </div>
     </div>
   )
