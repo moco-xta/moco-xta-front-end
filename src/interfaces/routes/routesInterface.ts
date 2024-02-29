@@ -1,6 +1,5 @@
 export interface RoutesInterface {
   index?: number
-  display_in_nav_bar: boolean
   key: string
   path:
     | '/'
