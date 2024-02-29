@@ -1,4 +1,5 @@
 export interface RoutesInterface {
+  index?: number
   key: string
   path:
     | '/'
@@ -10,7 +11,6 @@ export interface RoutesInterface {
     | '/projects'
     | '/reviews'
     | '/skills'
-  display_in_nav_bar: boolean
   width?: {
     [key: string]: string
   }
