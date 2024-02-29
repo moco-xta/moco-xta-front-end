@@ -4,12 +4,11 @@ export const Routes: RoutesInterface[] = [
   {
     key: 'HOME',
     path: '/',
-    display_in_nav_bar: false,
   },
   {
+    index: 4,
     key: 'ABOUT',
     path: '/about',
-    display_in_nav_bar: true,
     width: {
       en: '76px',
       es: '98px',
@@ -19,12 +18,11 @@ export const Routes: RoutesInterface[] = [
   {
     key: 'ADD_REVIEW',
     path: '/add_review',
-    display_in_nav_bar: false,
   },
   {
+    index: 3,
     key: 'BLOG',
     path: '/blog',
-    display_in_nav_bar: true,
     width: {
       en: '70px',
       es: '70px',
@@ -32,9 +30,9 @@ export const Routes: RoutesInterface[] = [
     },
   },
   {
+    index: 5,
     key: 'CONTACT',
     path: '/contact',
-    display_in_nav_bar: true,
     width: {
       en: '86px',
       es: '76px',
@@ -42,9 +40,9 @@ export const Routes: RoutesInterface[] = [
     },
   },
   {
+    index: 2,
     key: 'PHOTOGRAPHY',
     path: '/photography',
-    display_in_nav_bar: true,
     width: {
       en: '136px',
       es: '114px',
@@ -52,9 +50,9 @@ export const Routes: RoutesInterface[] = [
     },
   },
   {
+    index: 1,
     key: 'PROJECTS',
     path: '/projects',
-    display_in_nav_bar: true,
     width: {
       en: '86px',
       es: '86px',
@@ -64,12 +62,11 @@ export const Routes: RoutesInterface[] = [
   {
     key: 'REVIEWS',
     path: '/reviews',
-    display_in_nav_bar: false,
   },
   {
+    index: 0,
     key: 'SKILLS',
     path: '/skills',
-    display_in_nav_bar: true,
     width: {
       en: '80px',
       es: '124px',

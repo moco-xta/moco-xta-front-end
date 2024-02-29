@@ -44,8 +44,11 @@ export default function NavBar() {
       >
         <nav>
           <ul>
-            {Routes.map((route) => {
-              if (route.display_in_nav_bar) {
+            {Routes
+              .filter(route => route.hasOwnProperty('index'))
+              // @ts-ignore
+              .sort((a,b) => a.index - b.index)
+              .map((route) => {
                 return (
                   <li
                     key={`navBarLink_${route.key}`}
@@ -60,7 +63,6 @@ export default function NavBar() {
                     </Link>
                   </li>
                 )
-              }
             })}
             <li>
               <LocaleSwitcher />
