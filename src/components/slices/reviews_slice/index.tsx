@@ -24,9 +24,9 @@ export default function ReviewsSlice() {
     content = (
       <div id='review_cards_wrapper'>
         {data?.map((review, index) => {
-          if(index < 3) {
+          if (index < 3) {
             return (
-              <ReviewCard 
+              <ReviewCard
                 key={`reviewCard_${index}`}
                 review={review.review}
                 name={review.name}

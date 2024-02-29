@@ -4,7 +4,12 @@ import { ReviewCardInterface } from '@/interfaces/components/cards/reviewCardInt
 
 import './index.scss'
 
-export default function ReviewCard({ review, name, role, rating }: ReviewCardInterface) {
+export default function ReviewCard({
+  review,
+  name,
+  role,
+  rating,
+}: ReviewCardInterface) {
   return (
     <div id='review_card'>
       <p>{review}</p>
