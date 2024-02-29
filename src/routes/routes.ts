@@ -2,14 +2,15 @@ import { RoutesInterface } from '@/interfaces/routes/routesInterface'
 
 export const Routes: RoutesInterface[] = [
   {
+    display_in_nav_bar: false,
     key: 'HOME',
     path: '/',
-    display_in_nav_bar: false,
   },
   {
+    index: 4,
+    display_in_nav_bar: true,
     key: 'ABOUT',
     path: '/about',
-    display_in_nav_bar: true,
     width: {
       en: '76px',
       es: '98px',
@@ -17,14 +18,15 @@ export const Routes: RoutesInterface[] = [
     },
   },
   {
+    display_in_nav_bar: false,
     key: 'ADD_REVIEW',
     path: '/add_review',
-    display_in_nav_bar: false,
   },
   {
+    index: 3,
+    display_in_nav_bar: true,
     key: 'BLOG',
     path: '/blog',
-    display_in_nav_bar: true,
     width: {
       en: '70px',
       es: '70px',
@@ -32,9 +34,10 @@ export const Routes: RoutesInterface[] = [
     },
   },
   {
+    index: 5,
+    display_in_nav_bar: true,
     key: 'CONTACT',
     path: '/contact',
-    display_in_nav_bar: true,
     width: {
       en: '86px',
       es: '76px',
@@ -42,9 +45,10 @@ export const Routes: RoutesInterface[] = [
     },
   },
   {
+    index: 2,
+    display_in_nav_bar: true,
     key: 'PHOTOGRAPHY',
     path: '/photography',
-    display_in_nav_bar: true,
     width: {
       en: '136px',
       es: '114px',
@@ -52,9 +56,10 @@ export const Routes: RoutesInterface[] = [
     },
   },
   {
+    index: 1,
+    display_in_nav_bar: true,
     key: 'PROJECTS',
     path: '/projects',
-    display_in_nav_bar: true,
     width: {
       en: '86px',
       es: '86px',
@@ -62,14 +67,15 @@ export const Routes: RoutesInterface[] = [
     },
   },
   {
+    display_in_nav_bar: false,
     key: 'REVIEWS',
     path: '/reviews',
-    display_in_nav_bar: false,
   },
   {
+    index: 0,
+    display_in_nav_bar: true,
     key: 'SKILLS',
     path: '/skills',
-    display_in_nav_bar: true,
     width: {
       en: '80px',
       es: '124px',
