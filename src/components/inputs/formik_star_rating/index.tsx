@@ -10,7 +10,7 @@ export default function FormikStarRating({
   handleChange: FormikHandleChange,
   value,
   error,
-  helperText
+  helperText,
 }: FormikStarRatingInterface) {
   const [rating, setRating] = useState<number>(value)
   const [hover, setHover] = useState<number | null>(null)
@@ -23,7 +23,7 @@ export default function FormikStarRating({
     console.log('rating', rating)
   }, [rating])
 
-  function handleChange(e: ChangeEvent<HTMLInputElement> ) {
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
     FormikHandleChange(e)
   }
 
