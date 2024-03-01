@@ -18,6 +18,9 @@ import vertexShader from '@/components/r3f/shaders/photography_shaders/vertexSha
 import fragmentShader from '@/components/r3f/shaders/photography_shaders/fragmentShader.glsl'
 
 const uniforms = {
+  uColor: new THREE.Color(0xffffff),
+  uOpacity: 1.0,
+  uScale: 0.0,
   uShift: 0.0,
   uTexture: null,
 }
@@ -90,9 +93,9 @@ function PhotographsScene() {
     [textures],
   )
 
-  useEffect(() => {
+  /* useEffect(() => {
     console.log(object)
-  }, [object])
+  }, [object]) */
 
   useFrame(() => {
     if (photographsGroupRef.current)
@@ -100,8 +103,11 @@ function PhotographsScene() {
     materialRefs.forEach((materialRef) => {
       /* materialRef.current.uniforms.uShift = object.positive ? { value: Math.pow(scroll.delta * 500, 2) } : { value: -Math.pow(scroll.delta * 500, 2) } */
       // @ts-ignore
-        materialRef.current.uniforms.uShift = { value: Math.pow(scroll.delta * 500, 2) }
+        materialRef.current.uniforms.uShift = { value: scroll.delta * 500 }
+        /* materialRef.current.uniforms.uShift = { value: Math.pow(scroll.delta * 500, 2) } */
     })
+
+    console.log(Math.pow(scroll.delta * 500, 2))
     // @ts-ignore
     setObject(prevState => {
       return {
