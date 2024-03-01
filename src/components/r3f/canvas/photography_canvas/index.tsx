@@ -4,17 +4,15 @@ import React, {
   Suspense,
   createRef,
   forwardRef,
+  useEffect,
   useMemo,
   useRef,
-  useState,
 } from 'react'
 import * as THREE from 'three'
 import { Canvas, extend, Node, useFrame, useLoader } from '@react-three/fiber'
 import {
   Html,
-  ScrollControls,
   shaderMaterial,
-  useScroll,
 } from '@react-three/drei'
 
 import { default as PhotographsConstants } from '@/constants/photographsConstants.json'
@@ -69,11 +67,7 @@ const Photography = forwardRef(function Photography(
 })
 
 function PhotographsScene() {
-  const [object, setObject] = useState<{ positive: boolean; offset: number }>({
-    positive: false,
-    offset: 0,
-  })
-
+  const photographsGroupRef = useRef<THREE.Group>(null)
   const materialRefs = useMemo(
     () =>
       PhotographsConstants.PHOTOGRAPHS.map(() => ({
@@ -81,10 +75,6 @@ function PhotographsScene() {
       })),
     [],
   )
-
-  const scroll = useScroll()
-
-  const photographsGroupRef = useRef<THREE.Group>(null)
 
   const textures = useLoader(
     THREE.TextureLoader,
@@ -96,21 +86,27 @@ function PhotographsScene() {
     [textures],
   )
 
-  useFrame(() => {
-    if (photographsGroupRef.current)
-      photographsGroupRef.current.position.y = scroll.offset * 100
-    materialRefs.forEach((materialRef) => {
-      // @ts-ignore
-      materialRef.current.uniforms.uShift = { value: scroll.delta * 500 }
-    })
+  let position = 0
+  let speed = 0
+  let rounded = 0
+  function handleWheet(e: WheelEvent) {
+    speed += e.deltaY * 0.002
+  }
+  useEffect(() => {
+    window.addEventListener('wheel', handleWheet)
+    return () => {
+      window.removeEventListener('wheel', handleWheet)
+    }
+  }, [])
 
-    // @ts-ignore
-    setObject((prevState) => {
-      return {
-        position: prevState.offset > scroll.offset,
-        offset: scroll.offset,
-      }
-    })
+  useFrame(() => {
+    console.log(position)
+    position += speed
+    speed *= 0.8
+    rounded = Math.round(position)
+    let diff = (rounded - position)
+    position += Math.sign(diff) * Math.pow(Math.abs(diff), 0.7) * 0.015
+    if(photographsGroupRef.current) photographsGroupRef.current.position.y = position
   })
 
   return (
@@ -148,13 +144,7 @@ export default function PhotographyCanvas() {
           />
         }
       >
-        <ScrollControls
-          pages={3}
-          damping={0.5}
-          maxSpeed={10}
-        >
-          <PhotographsScene />
-        </ScrollControls>
+        <PhotographsScene />
       </Suspense>
     </Canvas>
   )
