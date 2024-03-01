@@ -1,6 +1,13 @@
 'use client'
 
-import React, { Suspense, createRef, forwardRef, useEffect, useMemo, useRef, useState } from 'react'
+import React, {
+  Suspense,
+  createRef,
+  forwardRef,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import * as THREE from 'three'
 import { Canvas, extend, Node, useFrame, useLoader } from '@react-three/fiber'
 import {
@@ -18,9 +25,6 @@ import vertexShader from '@/components/r3f/shaders/photography_shaders/vertexSha
 import fragmentShader from '@/components/r3f/shaders/photography_shaders/fragmentShader.glsl'
 
 const uniforms = {
-  uColor: new THREE.Color(0xffffff),
-  uOpacity: 1.0,
-  uScale: 0.0,
   uShift: 0.0,
   uTexture: null,
 }
@@ -48,7 +52,6 @@ const Photography = forwardRef(function Photography(
   { index, texture }: PhotographyInterface,
   ref,
 ) {
-
   return (
     <mesh position={new THREE.Vector3(0, -index * 20, 0)}>
       <planeGeometry
@@ -66,7 +69,7 @@ const Photography = forwardRef(function Photography(
 })
 
 function PhotographsScene() {
-  const [object, setObject] = useState<{ positive: boolean, offset: number }>({
+  const [object, setObject] = useState<{ positive: boolean; offset: number }>({
     positive: false,
     offset: 0,
   })
@@ -93,33 +96,21 @@ function PhotographsScene() {
     [textures],
   )
 
-  /* useEffect(() => {
-    console.log(object)
-  }, [object]) */
-
   useFrame(() => {
     if (photographsGroupRef.current)
       photographsGroupRef.current.position.y = scroll.offset * 100
     materialRefs.forEach((materialRef) => {
-      /* materialRef.current.uniforms.uShift = object.positive ? { value: Math.pow(scroll.delta * 500, 2) } : { value: -Math.pow(scroll.delta * 500, 2) } */
       // @ts-ignore
-        materialRef.current.uniforms.uShift = { value: scroll.delta * 500 }
-        /* materialRef.current.uniforms.uShift = { value: Math.pow(scroll.delta * 500, 2) } */
+      materialRef.current.uniforms.uShift = { value: scroll.delta * 500 }
     })
 
-    console.log(Math.pow(scroll.delta * 500, 2))
     // @ts-ignore
-    setObject(prevState => {
+    setObject((prevState) => {
       return {
         position: prevState.offset > scroll.offset,
-        offset: scroll.offset
+        offset: scroll.offset,
       }
     })
-    /* setObject((prevState) => {
-      position: prevState.offset > scroll.offset
-      offset: scroll.offset
-    }) */
-    /* console.log('scroll', scroll) */
   })
 
   return (
