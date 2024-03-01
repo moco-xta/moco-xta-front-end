@@ -1,9 +1,6 @@
 uniform sampler2D uTexture;
 uniform float hasTexture;
 uniform float uShift;
-uniform vec3 uColor;
-uniform float uOpacity;
-uniform float uScale;
 varying vec2 vUv;
 void main() {
 	float angle = 1.55;
@@ -12,6 +9,5 @@ void main() {
 	vec4 cr = texture2D(uTexture, p + offset);
 	vec4 cga = texture2D(uTexture, p);
 	vec4 cb = texture2D(uTexture, p - offset);
-	/* if (hasTexture == 1.0)  */gl_FragColor = vec4(cr.r, cga.g, cb.b, cga.a);
-	/* else gl_FragColor = vec4(uColor, uOpacity); */
+	gl_FragColor = vec4(cr.r, cga.g, cb.b, cga.a);
 }
