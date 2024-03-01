@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Suspense, createRef, forwardRef, useMemo, useRef } from 'react'
+import React, { Suspense, createRef, forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas, extend, Node, useFrame, useLoader } from '@react-three/fiber'
 import {
@@ -63,12 +63,15 @@ const Photography = forwardRef(function Photography(
 })
 
 function PhotographsScene() {
-  const materialRef = useRef<THREE.ShaderMaterial>(null)
+  const [object, setObject] = useState<{ positive: boolean, offset: number }>({
+    positive: false,
+    offset: 0,
+  })
 
   const materialRefs = useMemo(
     () =>
       PhotographsConstants.PHOTOGRAPHS.map(() => ({
-        ref: createRef<THREE.ShaderMaterial>(),
+        ref: createRef(),
       })),
     [],
   )
@@ -87,15 +90,30 @@ function PhotographsScene() {
     [textures],
   )
 
+  useEffect(() => {
+    console.log(object)
+  }, [object])
+
   useFrame(() => {
     if (photographsGroupRef.current)
       photographsGroupRef.current.position.y = scroll.offset * 100
     materialRefs.forEach((materialRef) => {
+      /* materialRef.current.uniforms.uShift = object.positive ? { value: Math.pow(scroll.delta * 500, 2) } : { value: -Math.pow(scroll.delta * 500, 2) } */
       // @ts-ignore
-        materialRef.current.uniforms.uShift = {
-          value: Math.pow(scroll.delta * 500, 2),
-        }
+        materialRef.current.uniforms.uShift = { value: Math.pow(scroll.delta * 500, 2) }
     })
+    // @ts-ignore
+    setObject(prevState => {
+      return {
+        position: prevState.offset > scroll.offset,
+        offset: scroll.offset
+      }
+    })
+    /* setObject((prevState) => {
+      position: prevState.offset > scroll.offset
+      offset: scroll.offset
+    }) */
+    /* console.log('scroll', scroll) */
   })
 
   return (
@@ -135,8 +153,8 @@ export default function PhotographyCanvas() {
       >
         <ScrollControls
           pages={3}
-          damping={1}
-          maxSpeed={1}
+          damping={0.5}
+          maxSpeed={10}
         >
           <PhotographsScene />
         </ScrollControls>
