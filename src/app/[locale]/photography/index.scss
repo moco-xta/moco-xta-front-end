@@ -1,11 +1,17 @@
 #photography_container {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   background-color: #ff00dd;
+  overflow: hidden;
 
-  #photography_scene_container {
+  /* #photography_scene_container {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+  } */
+
+  canvas {
+    overflow: hidden;
   }
 }

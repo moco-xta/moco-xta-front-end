@@ -1,13 +1,146 @@
 'use client'
 
-import React from 'react'
-import { Canvas } from '@react-three/fiber'
-import { Box } from '@react-three/drei'
+import React, { Suspense, createRef, forwardRef, useMemo, useRef } from 'react'
+import * as THREE from 'three'
+import { Canvas, extend, Node, useFrame, useLoader } from '@react-three/fiber'
+import {
+  Html,
+  ScrollControls,
+  shaderMaterial,
+  useScroll,
+} from '@react-three/drei'
+
+import { default as PhotographsConstants } from '@/constants/photographsConstants.json'
+
+import { PhotographyInterface } from '@/interfaces/components/r3f/photographyInterface'
+
+import vertexShader from '@/components/r3f/shaders/photography_shaders/vertexShader.glsl'
+import fragmentShader from '@/components/r3f/shaders/photography_shaders/fragmentShader.glsl'
+
+const uniforms = {
+  uShift: 0.0,
+  uTexture: null,
+}
+
+export const PhotographyMaterial = shaderMaterial(
+  uniforms,
+  vertexShader,
+  fragmentShader,
+)
+
+extend({ PhotographyMaterial })
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      photographyMaterial: Node<
+        typeof PhotographyMaterial & JSX.IntrinsicElements['shaderMaterial'],
+        typeof PhotographyMaterial
+      >
+    }
+  }
+}
+
+const Photography = forwardRef(function Photography(
+  { index, texture }: PhotographyInterface,
+  ref,
+) {
+
+  return (
+    <mesh position={new THREE.Vector3(0, -index * 20, 0)}>
+      <planeGeometry
+        attach='geometry'
+        args={[14, 10, 32, 32]}
+      />
+      <photographyMaterial
+        ref={ref as any}
+        attach='material'
+        // @ts-ignore
+        uTexture={texture}
+      />
+    </mesh>
+  )
+})
+
+function PhotographsScene() {
+  const materialRef = useRef<THREE.ShaderMaterial>(null)
+
+  const materialRefs = useMemo(
+    () =>
+      PhotographsConstants.PHOTOGRAPHS.map(() => ({
+        ref: createRef<THREE.ShaderMaterial>(),
+      })),
+    [],
+  )
+
+  const scroll = useScroll()
+
+  const photographsGroupRef = useRef<THREE.Group>(null)
+
+  const textures = useLoader(
+    THREE.TextureLoader,
+    PhotographsConstants.PHOTOGRAPHS.map((photography) => photography.SRC),
+  )
+  useMemo(
+    () =>
+      textures.forEach((texture) => (texture.minFilter = THREE.LinearFilter)),
+    [textures],
+  )
+
+  useFrame(() => {
+    if (photographsGroupRef.current)
+      photographsGroupRef.current.position.y = scroll.offset * 100
+    materialRefs.forEach((materialRef) => {
+      // @ts-ignore
+        materialRef.current.uniforms.uShift = {
+          value: Math.pow(scroll.delta * 500, 2),
+        }
+    })
+  })
+
+  return (
+    <group ref={photographsGroupRef}>
+      {PhotographsConstants.PHOTOGRAPHS.map((_, index) => (
+        <Photography
+          ref={materialRefs[index] as any}
+          key={`photography_${index}`}
+          index={index}
+          texture={textures[index]}
+        />
+      ))}
+    </group>
+  )
+}
 
 export default function PhotographyCanvas() {
   return (
-    <Canvas>
-      <Box />
+    <Canvas
+      legacy
+      dpr={1}
+      orthographic
+      camera={{ zoom: 75, position: [0, 0, 1] }}
+      gl={{
+        antialias: true,
+        alpha: true,
+        powerPreference: 'high-performance',
+      }}
+    >
+      <Suspense
+        fallback={
+          <Html
+            center
+            children='Loading...'
+          />
+        }
+      >
+        <ScrollControls
+          pages={3}
+          damping={1}
+          maxSpeed={1}
+        >
+          <PhotographsScene />
+        </ScrollControls>
+      </Suspense>
     </Canvas>
   )
 }

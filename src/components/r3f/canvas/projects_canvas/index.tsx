@@ -4,8 +4,27 @@ import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { DepthOfField, EffectComposer } from '@react-three/postprocessing'
-import { Bloom, ChromaticAberration, ColorAverage, DotScreen, Glitch, LensFlare, Noise, Scanline, SMAA, SSAO, Vignette } from '@react-three/postprocessing'
-import { BlendFunction, BlurPass, GlitchMode, Resizer, KernelSize, Resolution } from 'postprocessing'
+import {
+  Bloom,
+  ChromaticAberration,
+  ColorAverage,
+  DotScreen,
+  Glitch,
+  LensFlare,
+  Noise,
+  Scanline,
+  SMAA,
+  SSAO,
+  Vignette,
+} from '@react-three/postprocessing'
+import {
+  BlendFunction,
+  BlurPass,
+  GlitchMode,
+  Resizer,
+  KernelSize,
+  Resolution,
+} from 'postprocessing'
 import studio from '@theatre/studio'
 import extension from '@theatre/r3f/dist/extension'
 import { ScrollControls, useScroll } from '@react-three/drei'
@@ -65,7 +84,7 @@ function ProjectsScene() {
           angle={Math.PI * 0.5} // angle of the dot pattern
           scale={1.0} // scale of the dot pattern
         /> */}
-       {/*  <Glitch
+        {/*  <Glitch
           delay={new THREE.Vector2(1.5, 3.5)} // min and max glitch delay
           duration={new THREE.Vector2(0.6, 1.0)} // min and max glitch duration
           strength={new THREE.Vector2(0.3, 1.0)} // min and max glitch strength
@@ -130,7 +149,11 @@ function ProjectsScene() {
           eskil={false} // Eskil's vignette technique
           blendFunction={BlendFunction.NORMAL} // blend mode
         /> */}
-        <Vignette eskil={false} offset={0.3} darkness={0.9} />
+        <Vignette
+          eskil={false}
+          offset={0.3}
+          darkness={0.9}
+        />
       </EffectComposer>
       <ProjectsMap />
     </>
