@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react'
 import { MdComputer } from 'react-icons/md'
 
-import DefaultCanvas from '@/components/r3f/canvas/default_canvas'
+import HeroCanvas from '@/components/r3f/canvas/hero_canvas'
 
 import './index.scss'
 
@@ -34,7 +34,10 @@ export default function HeroSlice() {
   return (
     <div id='hero_slice'>
       <div className='gradient_container'>
-        <svg id='svg_bubble' xmlns='http://www.w3.org/2000/svg'>
+        <svg
+          id='svg_bubble'
+          xmlns='http://www.w3.org/2000/svg'
+        >
           <defs>
             <filter id='goo'>
               <feGaussianBlur
@@ -80,7 +83,7 @@ export default function HeroSlice() {
           </h3>
         </div>
         <div id='default_scene_container'>
-          <DefaultCanvas />
+          <HeroCanvas />
         </div>
       </div>
     </div>

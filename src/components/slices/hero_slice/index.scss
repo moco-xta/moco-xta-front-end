@@ -117,7 +117,7 @@
       animation: moveInCircle 20s ease infinite;
       opacity: 1;
     }
-    
+
     .interactive {
       position: absolute;
       background: radial-gradient(
@@ -161,6 +161,7 @@
         overflow: hidden;
 
         .gradient_text {
+          font-weight: 900;
           background: -webkit-linear-gradient(
             50deg,
             rgba(129, 85, 219, 1) 0%,
