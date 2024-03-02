@@ -1,0 +1,92 @@
+@import '@/styles/variables.module.scss';
+
+.select_locale_dropdowwn {
+  width: 380px;
+  margin: 150px auto;
+  user-select: none;
+
+  .select_locale_dropdowwn_button {
+    z-index: 1;
+    position: relative;
+    top: -140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    background-color: $white;
+    color: $grey_333;
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 5px $black_op30;
+
+    .select_locale_dropdown_arrow_icon {
+      transition: transform 0.5s;
+    }
+  }
+
+  .select_locale_dropdowwn_button.locale_dropdown_active
+    .select_locale_dropdown_arrow_icon {
+    transform: rotate(-180deg);
+  }
+
+  .locale__options_list {
+    z-index: 0;
+    position: absolute;
+    width: 380px;
+    transform: translateY(-140px);
+    margin-top: 10px;
+
+    .locale_option {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 55px;
+      background-color: $white;
+      padding: 0 16px;
+      cursor: pointer;
+      transform-origin: top;
+      opacity: 0;
+      transform: scale(0) translateY(-65px);
+      margin-bottom: -65px;
+      transition:
+        opacity 0.3s linear,
+        transform 0.3s ease-in-out,
+        margin-bottom 0.2s ease-in-out;
+      transition-delay: calc(0.1s * (3 - var(--i)));
+
+      .locale_option_text {
+        font-size: 18px;
+        color: $grey_333;
+      }
+    }
+
+    .locale_option:nth-child(1) {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .locale_option:nth-child(3) {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .locale_option:hover {
+      background-color: $grey_f2f2f2;
+    }
+  }
+
+  .select_locale_dropdowwn_button.locale_dropdown_active
+    ~ .locale__options_list
+    .locale_option {
+    transition:
+      opacity 0.3s linear,
+      transform 0.3s ease-in-out,
+      margin-bottom 0.2s ease-in-out;
+    transition-delay: calc(0.1s * var(--i));
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    margin-bottom: 0;
+  }
+}
