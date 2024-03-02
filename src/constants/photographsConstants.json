@@ -1,0 +1,30 @@
+{
+  "ZOOM": 75,
+  "ASPECT": 3.2,
+  "PHOTOGRAPHS": [
+    {
+      "SRC": "/img/jpg/dash.jpg",
+      "TITLE": "Title 000"
+    },
+    {
+      "SRC": "/img/jpg/robuste.jpg",
+      "TITLE": "Title 001"
+    },
+    {
+      "SRC": "/img/jpg/rose_rouge.jpg",
+      "TITLE": "Title 002"
+    },
+    {
+      "SRC": "/img/jpg/dash.jpg",
+      "TITLE": "Title 003"
+    },
+    {
+      "SRC": "/img/jpg/robuste.jpg",
+      "TITLE": "Title 004"
+    },
+    {
+      "SRC": "/img/jpg/rose_rouge.jpg",
+      "TITLE": "Title 005"
+    }
+  ]
+}

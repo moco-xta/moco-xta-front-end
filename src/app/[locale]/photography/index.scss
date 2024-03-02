@@ -1,0 +1,16 @@
+#photography_container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  /* #photography_scene_container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  } */
+
+  canvas {
+    overflow: hidden;
+  }
+}
