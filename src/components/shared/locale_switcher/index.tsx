@@ -1,6 +1,6 @@
 import React, { CSSProperties, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { IoIosArrowUp } from 'react-icons/io'
 
 import { default as LocalesConstants } from '@/constants/localesConstants.json'
@@ -11,6 +11,7 @@ import './index.scss'
 
 export default function LocaleSwitcher() {
   const locale = useLocale()
+  const t = useTranslations('HEADER')
   const router = useRouter()
 
   const [isActive, setIsActive] = useState(false)
@@ -30,9 +31,6 @@ export default function LocaleSwitcher() {
     setIsActive(false)
     router.refresh()
   }
-  const cssVar1 = { '--i': 3 } as CSSProperties
-  const cssVar2 = { '--i': 2 } as CSSProperties
-  const cssVar3 = { '--i': 1 } as CSSProperties
 
   return (
     <div className='select_locale_dropdowwn'>
@@ -40,22 +38,22 @@ export default function LocaleSwitcher() {
         className={`select_locale_dropdowwn_button ${isActive ? 'locale_dropdown_active' : ''}`}
         onClick={handleSetIsActive}
       >
-        <span id='select_locale_dropdowwn_text'>{selected}</span>
+        <span id='select_locale_dropdowwn_text'>{selected.toUpperCase()}</span>
         <IoIosArrowUp className='select_locale_dropdown_arrow_icon' />
       </div>
       <ul className='locale__options_list'>
-        {LocalesConstants.LOCALES.map((locale, index) => {
+        {LocalesConstants.LOCALES.filter(locale_constant => locale_constant !== locale).map((locale_constant, index) => {
           const cssVar = {
             '--i': LocalesConstants.LOCALES.length - index,
           } as CSSProperties
           return (
             <li
-              key={`localeSwitcherOption_${locale}`}
+              key={`localeSwitcherOption_${locale_constant}`}
               className='locale_option'
               style={cssVar}
-              onClick={() => handleSetSelected(locale)}
+              onClick={() => handleSetSelected(locale_constant)}
             >
-              <span className='locale_option_text'>{locale}</span>
+            <span className='locale_option_text'>{t(`LOCALES.${locale_constant.toUpperCase()}`)}</span>
             </li>
           )
         })}
