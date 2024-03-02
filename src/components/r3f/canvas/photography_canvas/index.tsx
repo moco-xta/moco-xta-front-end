@@ -51,13 +51,15 @@ const Photography = forwardRef(function Photography(
   ref,
 ) {
   return (
-    <mesh position={new THREE.Vector3(0, -index * 20, 0)}>
+    <mesh
+      ref={ref as any}
+      position={new THREE.Vector3(0, -index * 20, 0)}
+    >
       <planeGeometry
         attach='geometry'
-        args={[14, 10, 32, 32]}
+        args={[1.4, 1, 32, 32]}
       />
       <photographyMaterial
-        ref={ref as any}
         attach='material'
         // @ts-ignore
         uTexture={texture}
@@ -68,10 +70,10 @@ const Photography = forwardRef(function Photography(
 
 function PhotographsScene() {
   const photographsGroupRef = useRef<THREE.Group>(null)
-  const materialRefs = useMemo(
+  const meshRefs = useMemo(
     () =>
       PhotographsConstants.PHOTOGRAPHS.map(() => ({
-        ref: createRef(),
+        ref: createRef<THREE.Mesh>(),
       })),
     [],
   )
@@ -90,7 +92,7 @@ function PhotographsScene() {
   let speed = 0
   let rounded = 0
   function handleWheet(e: WheelEvent) {
-    speed += e.deltaY * 0.002
+    speed += e.deltaY * 0.0001
   }
   useEffect(() => {
     window.addEventListener('wheel', handleWheet)
@@ -99,21 +101,28 @@ function PhotographsScene() {
     }
   }, [])
 
-  useFrame(() => {
-    console.log(position)
+  useFrame((state, delta, xrFrame) => {
+    console.log(state)
     position += speed
     speed *= 0.8
     rounded = Math.round(position)
     let diff = (rounded - position)
     position += Math.sign(diff) * Math.pow(Math.abs(diff), 0.7) * 0.015
-    if(photographsGroupRef.current) photographsGroupRef.current.position.y = position
+    meshRefs.forEach((meshRef, index) => {
+      // @ts-ignore
+      meshRef.current.position.y = position * 1.2 - index * 1.2
+      // @ts-ignore
+      /* if(meshRef.current.position.y > (meshRefs.length * 1.2) / 2 + 0.1) meshRef.current.position.y -= meshRefs.length * 1.2 */
+      // @ts-ignore
+      /* if(index === 0) console.log('position', meshRef.current.position.y) */
+    })
   })
 
   return (
     <group ref={photographsGroupRef}>
       {PhotographsConstants.PHOTOGRAPHS.map((_, index) => (
         <Photography
-          ref={materialRefs[index] as any}
+          ref={meshRefs[index] as any}
           key={`photography_${index}`}
           index={index}
           texture={textures[index]}
@@ -129,7 +138,7 @@ export default function PhotographyCanvas() {
       legacy
       dpr={1}
       orthographic
-      camera={{ zoom: 75, position: [0, 0, 1] }}
+      camera={{ zoom: 750, position: [0, 0, 1] }}
       gl={{
         antialias: true,
         alpha: true,
