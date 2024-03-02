@@ -10,10 +10,7 @@ import React, {
 } from 'react'
 import * as THREE from 'three'
 import { Canvas, extend, Node, useFrame, useLoader } from '@react-three/fiber'
-import {
-  Html,
-  shaderMaterial,
-} from '@react-three/drei'
+import { Html, shaderMaterial } from '@react-three/drei'
 
 import { default as PhotographsConstants } from '@/constants/photographsConstants.json'
 
@@ -106,7 +103,7 @@ function PhotographsScene() {
     position += speed
     speed *= 0.8
     rounded = Math.round(position)
-    let diff = (rounded - position)
+    let diff = rounded - position
     position += Math.sign(diff) * Math.pow(Math.abs(diff), 0.7) * 0.015
     meshRefs.forEach((meshRef, index) => {
       // @ts-ignore
