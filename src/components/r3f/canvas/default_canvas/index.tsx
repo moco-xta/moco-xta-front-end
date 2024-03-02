@@ -17,7 +17,7 @@ const shaderMaterial = {
 
 export default function Defaultcanvas() {
   return (
-    <Canvas onCreated={(state) => state.gl.setClearColor('pink')}>
+    <Canvas>
       <mesh>
         <planeGeometry />
         <shaderMaterial

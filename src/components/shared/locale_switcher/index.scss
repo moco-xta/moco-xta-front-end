@@ -2,13 +2,12 @@
 
 .select_locale_dropdowwn {
   width: 380px;
-  margin: 150px auto;
+  margin-left: 20px;
   user-select: none;
 
   .select_locale_dropdowwn_button {
     z-index: 1;
     position: relative;
-    top: -140px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +34,6 @@
     z-index: 0;
     position: absolute;
     width: 380px;
-    transform: translateY(-140px);
     margin-top: 10px;
 
     .locale_option {
