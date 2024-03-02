@@ -1,4 +1,11 @@
 {
+  "HEADER":{
+    "LOCALES": {
+      "EN": "Anglais",
+      "ES": "Espagnol",
+      "FR": "Français"
+    }
+  },
   "HOME": {
     "PERFORMED_WITH": {
       "PERFORMED_WITH": "Réalisé avec:"
