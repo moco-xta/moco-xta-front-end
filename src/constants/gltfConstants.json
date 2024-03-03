@@ -1,4 +1,6 @@
 {
+  "WEB_PAGE": "/gltf/hero/Webpage.gltf",
+
   "ICON_ANSIBLE": "/gltf/icons/IconAnsible.gltf",
   "ICON_BLENDER": "/gltf/icons/IconBlender.gltf",
   "ICON_CHAT_GPT": "/gltf/icons/IconChatGpt.gltf",

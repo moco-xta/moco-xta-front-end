@@ -5,27 +5,15 @@ import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { Stars } from '@react-three/drei'
 
-import vertexShader from '@/components/r3f/shaders/default_shaders/vertexShader.glsl'
-import fragmentShader from '@/components/r3f/shaders/default_shaders/fragmentShader.glsl'
-
-const shaderMaterial = {
-  uniforms: {
-    u_time: { type: 'f', value: 0 },
-  },
-  vertexShader: vertexShader,
-  fragmentShader: fragmentShader,
-}
+import { WebPage } from '../../models/hero/WebPage'
 
 export default function HeroCanvas() {
   return (
     <Canvas>
-      <mesh>
-        <planeGeometry />
-        <shaderMaterial
-          attach='material'
-          args={[shaderMaterial]}
-        />
-      </mesh>
+      <pointLight position={new THREE.Vector3(4, 4, 4)} intensity={10} />
+      <pointLight position={new THREE.Vector3(-4, 4, 4)} intensity={10} />
+      <pointLight position={new THREE.Vector3(0, 0, 4)} intensity={10} />
+      <WebPage />
       <Stars
         radius={100}
         depth={10}
