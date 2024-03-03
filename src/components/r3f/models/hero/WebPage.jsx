@@ -1,37 +1,107 @@
-import React, { useRef } from 'react'
+import React, { forwardRef } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
+import { degreesToRadians } from '@/helpers/r3fHelpers'
 
-export function WebPage(props) {
+const WebPage = forwardRef(function WebPage(props, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.WEB_PAGE)
   return (
     <group
       name={'web_page'}
+      ref={ref}
+      position={new THREE.Vector3(0, 1.8, 0)}
+      rotation={new THREE.Euler(degreesToRadians(-45), 0, 0)}
+      scale={new THREE.Vector3(1, 0, 1)}
+      /* scale={new THREE.Vector3(0, 0, 0)} */
       {...props}
       dispose={null}
     >
       <mesh
+        name={'close_button'}
         geometry={nodes.CloseButton.geometry}
-        material={nodes.CloseButton.material}
-        position={[-3, 1.6, 0.04]}
-      />
+      >
+        <meshPhysicalMaterial
+          attach='material'
+          color={'#ff5f57'}
+          roughness={1}
+          metalness={1}
+          iridescence={1}
+          iridescenceIOR={2.062151}
+          clearcoat={1}
+          transparent
+          opacity={0.8}
+        />
+      </mesh>
       <mesh
+        name={'full_screen_button'}
         geometry={nodes.FullScreenButton.geometry}
-        material={nodes.FullScreenButton.material}
-        position={[-2.7, 1.6, 0.04]}
-      />
+      >
+        <meshPhysicalMaterial
+          attach='material'
+          color={'#2bc840'}
+          roughness={1}
+          metalness={1}
+          iridescence={1}
+          iridescenceIOR={2.062151}
+          clearcoat={1}
+          transparent
+          opacity={0.8}
+        />
+      </mesh>
       <mesh
+        name={'minimize_button'}
         geometry={nodes.MinimizeButton.geometry}
-        material={nodes.MinimizeButton.material}
-        position={[-2.85, 1.6, 0.04]}
-      />
+      >
+        <meshPhysicalMaterial
+          attach='material'
+          color={'#febc2e'}
+          roughness={1}
+          metalness={1}
+          iridescence={1}
+          iridescenceIOR={2.062151}
+          clearcoat={1}
+          transparent
+          opacity={0.8}
+        />
+      </mesh>
       <mesh
+        name={'page'}
         geometry={nodes.Page.geometry}
-        material={materials.Material}
-      />
+        >
+          <meshPhysicalMaterial
+            attach='material'
+            color={'#ffffff'}
+            roughness={1}
+            metalness={1}
+            iridescence={1}
+            iridescenceIOR={2.062151}
+            clearcoat={1}
+            transparent
+            opacity={0.8}
+          />
+        </mesh>
+      <mesh
+        name={'frame'}
+        geometry={nodes.Frame.geometry}
+      >
+        <meshPhysicalMaterial
+          attach='material'
+          color={'#1d1c23'}
+          roughness={0.5}
+          metalness={1}
+          iridescence={1}
+          iridescenceIOR={2.062151}
+          clearcoat={1}
+          transparent
+          /* opacity={0.8} */
+        />
+      </mesh>
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.WEB_PAGE)
+
+export default WebPage
