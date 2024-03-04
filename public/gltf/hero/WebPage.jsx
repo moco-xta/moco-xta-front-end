@@ -33,6 +33,10 @@ export function Model(props) {
         geometry={nodes.Frame.geometry}
         material={materials.Material}
       />
+      <mesh
+        geometry={nodes.Logo.geometry}
+        material={nodes.Logo.material}
+      />
     </group>
   )
 }
