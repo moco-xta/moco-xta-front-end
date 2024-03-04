@@ -21,10 +21,13 @@
   );
 
   .gradient_container {
+    z-index: 0;
     filter: url(#goo) blur(40px);
     /* -webkit-filter: url(#goo) blur(8px); */
+    position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
 
     #svg_bubble {
       display: none;
@@ -135,62 +138,11 @@
       left: -50%;
       opacity: 0.7;
     }
-
-    #head_text {
-      z-index: 1;
-      position: absolute;
-      top: 50%;
-      width: 60%;
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      left: 5%;
-
-      #role {
-        width: 210px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 20px;
-        border: solid 1px #32275d;
-        margin-bottom: 30px;
-        border-radius: 15px;
-        color: #8082ab;
-        background: -webkit-linear-gradient(-90deg, #01000f, #160b3f);
-      }
-
-      #heading {
-        color: #cccde8;
-        overflow: hidden;
-
-        .gradient_text {
-          font-weight: 900;
-          background: -webkit-linear-gradient(
-            50deg,
-            rgba(129, 85, 219, 1) 0%,
-            rgba(99, 146, 231, 1) 50%,
-            rgba(4, 151, 202, 1) 100%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
-
-      #subheading {
-        color: #8082ab;
-        width: 80%;
-        margin-top: 30px;
-        font-weight: 200;
-        line-height: 1.6;
-
-        overflow: hidden;
-        /* box-sizing: border-box; */
-        /* animation: reveal 0.5s linear forwards; */
-      }
-    }
   }
 
   #default_scene_container {
+    z-index: 1;
+    position: absolute;
     width: 100vw;
     height: 100vh;
   }
