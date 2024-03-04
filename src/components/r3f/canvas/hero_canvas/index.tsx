@@ -4,96 +4,155 @@ import React, { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, Stars } from '@react-three/drei'
+import { useControls } from 'leva'
 /* import gsap from 'gsap' */
+import { gsap } from 'gsap/dist/gsap'
+import { Flip } from 'gsap/dist/Flip'
 import { useGSAP } from '@gsap/react'
 
 import WebPage from '../../models/hero/WebPage'
 import { degreesToRadians, radiansToDegrees } from '@/helpers/r3fHelpers'
-import { gsap } from 'gsap/dist/gsap'
-import { Flip } from 'gsap/dist/Flip'
 
 gsap.registerPlugin(Flip)
 
-const speedFactor: number = 10
+const SPEED_FACTOR: number = 5
 
 export default function HeroCanvas() {
   const webPageRef = useRef<THREE.Group>()
   const gsapContainerRef = useRef<HTMLCanvasElement>()
 
+  /* const controls = useControls({
+    intensityLightTopLeft: { value: 10, min: 0, max: 100, step: 0.1 },
+    intensityLightTopRight: { value: 10, min: 0, max: 100, step: 0.1 },
+    intensityLightFront: { value: 10, min: 0, max: 100, step: 0.1 },
+  }) */
+
   useEffect(() => {
     console.log(webPageRef)
   }, [webPageRef])
 
-  const tl = gsap.timeline()
+  const tl = gsap.timeline({
+    onComplete: () => {
+      console.log('test')
+    },
+    repeat: -1,
+    repeatDelay: 1,
+  })
   tl.delay(1)
 
   useGSAP(
     () => {
-      gsap.timeline({ repeat: 2, repeatDelay: 1 })
-      if (webPageRef.current) {
-        tl.to(
-          webPageRef.current.getObjectByName('page')!.position,
+      if (!webPageRef.current) return
+      /* tl.fromTo(webPageRef.current.position,
+        {
+          z: -2,
+        },
+        {
+          z: 0,
+          duration: 0.1 * SPEED_FACTOR,
+          ease: 'expo.in',
+        }
+      ), */
+      tl.fromTo(
+        webPageRef.current.scale,
+        {
+          x: 0,
+          y: 0,
+          z: 0,
+        },
+        {
+          x: 1,
+          y: 1,
+          z: 1,
+          duration: 0.1 * SPEED_FACTOR,
+          ease: 'expo.in',
+        },
+        /* '<' */
+      ),
+        tl.fromTo(
+          [
+            // @ts-ignore
+            webPageRef.current.children[0].material,
+            // @ts-ignore
+            webPageRef.current.children[1].material,
+            // @ts-ignore
+            webPageRef.current.children[2].material,
+            // @ts-ignore
+            webPageRef.current.children[3].material,
+            // @ts-ignore
+            webPageRef.current.children[4].material,
+          ],
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 0.05 * SPEED_FACTOR,
+            /* ease: 'expo.in', */
+          },
+          '<',
+        ),
+        // @ts-ignore
+        tl.fromTo(
+          [
+            // @ts-ignore
+            webPageRef.current.children[0].rotation,
+            // @ts-ignore
+            webPageRef.current.children[1].rotation,
+            // @ts-ignore
+            webPageRef.current.children[2].rotation,
+            // @ts-ignore
+            webPageRef.current.children[3].rotation,
+            // @ts-ignore
+            webPageRef.current.children[4].rotation,
+          ],
+          {
+            x: degreesToRadians(-30),
+            y: 0,
+            z: 0,
+          },
           {
             x: 0,
             y: 0,
             z: 0,
-            duration: 0.1 * speedFactor,
+            duration: 0.1 * SPEED_FACTOR,
             ease: 'expo.in',
-            /* ease: 'back.out(2.2)', */
           },
-          /* '<', */
-        )
-        /* tl.to(
-          webPageRef.current.getObjectByName('page')!.rotation,
-          {
-            x: 0,
-            y: 0,
-            z: 0,
-            duration: 0.1 * speedFactor,
-            ease: 'back.out(2.2)',
-          },
-          '<',
-        ) */
+          /* '<0.3' */
+          `<${0.02 * SPEED_FACTOR}`,
+        ),
         tl.to(
-          webPageRef.current.scale,
+          [
+            // @ts-ignore
+            webPageRef.current.children[0].material,
+            // @ts-ignore
+            webPageRef.current.children[1].material,
+            // @ts-ignore
+            webPageRef.current.children[2].material,
+            // @ts-ignore
+            webPageRef.current.children[3].material,
+            // @ts-ignore
+            webPageRef.current.children[4].material,
+          ],
           {
-            x: 1,
-            y: 1,
-            z: 1,
-            duration: 0.1 * speedFactor,
-            ease: 'expo.out',
-            /* ease: 'back.out(2.2)', */
+            opacity: 0,
+            duration: 0.1 * SPEED_FACTOR,
+            /* ease: 'expo.in', */
           },
-          '<',
+          '>2',
         )
-        tl.to(
-          webPageRef.current.rotation,
-          {
-            x: 0,
-            y: 0,
-            z: 0,
-            duration: 0.1 * speedFactor,
-            ease: 'expo.out',
-            /* ease: 'back.out(2.2)', */
-          },
-          '<',
-          /* '<0.5', */
-          /* `>${-0.05 * speedFactor}`, */
-        )
-      }
     },
     { scope: gsapContainerRef },
   )
 
   return (
     <Canvas
-      dpr={1}
+      dpr={3}
       shadows
       legacy
+      performance={{ current: 5 }}
       gl={{
         antialias: true,
         alpha: true,
-        powerPreference: 'high-performance',
+        /* powerPreference: 'high-performance', */
         preserveDrawingBuffer: true,
       }}
       ref={gsapContainerRef as any}
@@ -106,22 +165,28 @@ export default function HeroCanvas() {
           near={0.1}
           far={70}
         />
-        <OrbitControls />
+        {/* <OrbitControls /> */}
         <group
           position={new THREE.Vector3(3, 0, 0)}
           rotation={new THREE.Euler(0, degreesToRadians(-45), 0)}
         >
           <pointLight
             position={new THREE.Vector3(4, 4, 4)}
-            intensity={15}
+            /* intensity={controls.intensityLightTopLeft} */
+            intensity={10}
+            castShadow
           />
           <pointLight
             position={new THREE.Vector3(-4, 4, 4)}
-            intensity={15}
+            /* intensity={controls.intensityLightTopRight} */
+            intensity={10}
+            castShadow
           />
           <pointLight
             position={new THREE.Vector3(0, 0, 4)}
-            intensity={15}
+            /* intensity={controls.intensityLightFront} */
+            intensity={10}
+            castShadow
           />
           <WebPage ref={webPageRef} />
         </group>
