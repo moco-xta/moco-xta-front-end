@@ -12,3 +12,11 @@ export function getUvMousePositionOnDiv(e: MouseEvent) {
       100,
   }
 }
+
+export function returnArrayOfCharacters(text: string) {
+  const test = []
+  for (var i = 0; i < text.length; i++) {
+    test.push(text.charAt(i))
+  }
+  return test
+}

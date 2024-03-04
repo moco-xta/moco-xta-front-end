@@ -16,20 +16,43 @@ export default function HeadText() {
         <span>Creative developer</span>
       </p>
       <RevealComponent
-        x={100}
-        y={100}
-        duration={'500ms'}
         threshold={0.75}
+        duration={'500ms'}
+        y={100}
       >
         <h1 id='heading'>
-          {t('HERO.HI_I_AM')} <span className='gradient_text'>Federico</span>
+          {t('HERO.HI_I_AM')}
+          {/* <span className='hi_i_am'>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+          </span> */}
+          <span className='gradient_text'>Federico</span>
+          {/* <span>
+            {returnArrayOfCharacters(t('HERO.HI_I_AM')).map(
+              (character, index) => (
+                <span>{character}</span>
+              ),
+            )}
+          </span>
+          <span className='gradient_text'>
+            {returnArrayOfCharacters('Federico').map(
+              (character, index) => (
+                <span>{character}</span>
+              ),
+            )}
+          </span> */}
         </h1>
       </RevealComponent>
       <RevealComponent
-        x={100}
-        y={100}
-        duration={'500ms'}
         threshold={0.75}
+        duration={'500ms'}
+        delay={'200ms'}
+        y={100}
       >
         <h3 id='subheading'>
           {t('HERO.SUBHEADING')}
