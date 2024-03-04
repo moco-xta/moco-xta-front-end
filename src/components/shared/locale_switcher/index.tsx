@@ -42,7 +42,9 @@ export default function LocaleSwitcher() {
         <IoIosArrowUp className='select_locale_dropdown_arrow_icon' />
       </div>
       <ul className='locale__options_list'>
-        {LocalesConstants.LOCALES.filter(locale_constant => locale_constant !== locale).map((locale_constant, index) => {
+        {LocalesConstants.LOCALES.filter(
+          (locale_constant) => locale_constant !== locale,
+        ).map((locale_constant, index) => {
           const cssVar = {
             '--i': LocalesConstants.LOCALES.length - index,
           } as CSSProperties
@@ -53,7 +55,9 @@ export default function LocaleSwitcher() {
               style={cssVar}
               onClick={() => handleSetSelected(locale_constant)}
             >
-            <span className='locale_option_text'>{t(`LOCALES.${locale_constant.toUpperCase()}`)}</span>
+              <span className='locale_option_text'>
+                {t(`LOCALES.${locale_constant.toUpperCase()}`)}
+              </span>
             </li>
           )
         })}
