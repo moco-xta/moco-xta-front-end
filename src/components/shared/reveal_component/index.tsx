@@ -8,8 +8,9 @@ export default function RevealComponent({
   children,
   threshold,
   duration,
-  x,
-  y,
+  delay = '0',
+  x = 0,
+  y = 0,
 }: RevealComponentInterface) {
   x = x || 0
   y = y || 0
@@ -45,6 +46,7 @@ export default function RevealComponent({
     <div
       style={{
         transitionDuration: duration,
+        transitionDelay: delay,
         transform: !intersecting
           ? `translate(${x}px, ${y}px)`
           : 'translate(0px, 0px)',

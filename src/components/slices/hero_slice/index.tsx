@@ -9,7 +9,6 @@ import './index.scss'
 import GradientBackground from './gradient_background'
 
 export default function HeroSlice() {
-
   return (
     <div id='hero_slice'>
       <HeadText />
