@@ -13,7 +13,7 @@ export default function HeadText() {
     <div id='head_text'>
       <p id='role'>
         <MdComputer />
-        <span>Creative developer</span>
+        <span>{t('HERO.CREATIVE_DEVELOPER')}</span>
       </p>
       <RevealComponent
         threshold={0.75}
