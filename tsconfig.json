@@ -22,6 +22,7 @@
       "@/app/*": ["app/*"],
       "@/components/*": ["components/*"],
       "@/constants/*": ["constants/*"],
+      "@/ata/*": ["data/*"],
       "@/helpers/*": ["helpers/*"],
       "@/hooks/*": ["hooks/*"],
       "@/interfaces/*": ["interfaces/*"],
