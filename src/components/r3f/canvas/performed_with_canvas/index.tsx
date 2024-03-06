@@ -23,10 +23,16 @@ import IconNpm from '@/components/r3f/models/icons/IconNpm'
 import IconPhotoshop from '@/components/r3f/models/icons/IconPhotoshop'
 import IconPostgresql from '@/components/r3f/models/icons/IconPostgresql'
 import IconRedux from '@/components/r3f/models/icons/IconRedux'
-import IconSass from '@/components/r3f/models/icons/IconSass'
 import IconSpringboot from '@/components/r3f/models/icons/IconSpringboot'
 import IconThreejs from '@/components/r3f/models/icons/IconThreejs'
 import IconWebgl from '@/components/r3f/models/icons/IconWebgl'
+
+import LogoSass from '@/components/r3f/models/logos/LogoSass'
+import LogoRedux from '@/components/r3f/models/logos/LogoRedux'
+import LogoGithub from '@/components/r3f/models/logos/LogoGithub'
+import LogoFigma from '../../models/logos/LogoFigma'
+import LogoHtml from '../../models/logos/LogoHtml'
+import LogoNpm from '../../models/logos/LogoNpm'
 
 function PerformedWithScene() {
   const iconAnsibleRef = useRef(new THREE.Object3D())
@@ -34,46 +40,32 @@ function PerformedWithScene() {
   const iconChatGptRef = useRef(new THREE.Object3D())
   const iconCssRef = useRef(new THREE.Object3D())
   const iconDockerRef = useRef(new THREE.Object3D())
-  const iconFigmaRef = useRef(new THREE.Object3D())
-  const iconGithubRef = useRef(new THREE.Object3D())
+  const logoFigmaRef = useRef(new THREE.Object3D())
+  const logoGithubRef = useRef(new THREE.Object3D())
   const iconGsapRef = useRef(new THREE.Object3D())
-  const iconHtmlRef = useRef(new THREE.Object3D())
+  const logoHtmlRef = useRef(new THREE.Object3D())
   const iconI18nRef = useRef(new THREE.Object3D())
   const iconIllustratorRef = useRef(new THREE.Object3D())
   const iconNextjsRef = useRef(new THREE.Object3D())
-  const iconNpmRef = useRef(new THREE.Object3D())
+  const logoNpmRef = useRef(new THREE.Object3D())
   const iconPhotoshopRef = useRef(new THREE.Object3D())
   const iconPostgresqlRef = useRef(new THREE.Object3D())
-  const iconReduxRef = useRef(new THREE.Object3D())
-  const iconSassRef = useRef(new THREE.Object3D())
+  const logoReduxRef = useRef(new THREE.Object3D())
+  const logoSassRef = useRef(new THREE.Object3D())
   const iconSpringbootRef = useRef(new THREE.Object3D())
   const iconThreejsRef = useRef(new THREE.Object3D())
   const iconWebglRef = useRef(new THREE.Object3D())
 
   const refs = [
-    iconAnsibleRef,
-    iconBlenderRef,
-    iconChatGptRef,
-    iconCssRef,
-    iconDockerRef,
-    iconFigmaRef,
-    iconGithubRef,
-    iconGsapRef,
-    iconHtmlRef,
-    iconI18nRef,
-    iconIllustratorRef,
-    iconNextjsRef,
-    iconNpmRef,
-    iconPhotoshopRef,
-    iconPostgresqlRef,
-    iconReduxRef,
-    iconSassRef,
-    iconSpringbootRef,
-    iconThreejsRef,
-    iconWebglRef,
+    logoFigmaRef,
+    logoGithubRef,
+    logoHtmlRef,
+    logoNpmRef,
+    logoReduxRef,
+    logoSassRef,
   ]
 
-  const iconData: iconsDataInterface = {
+  const logoData: iconsDataInterface = {
     total_length: 0,
     widths: [],
   }
@@ -81,28 +73,28 @@ function PerformedWithScene() {
   useEffect(() => {
     refs.forEach((ref) => {
       // @ts-ignore
-      iconData.widths.push(ref.current.width)
+      logoData.widths.push(ref.current.width)
     })
     let sum = 0
     refs.forEach((ref, index) => {
       if (index === 0) {
         ref.current.position.x = sum
-        sum += iconData.widths[index] / 2
+        sum += logoData.widths[index] / 2
       } else {
-        ref.current.position.x = sum + iconData.widths[index] / 2 + index * 0.5
-        sum += iconData.widths[index]
+        ref.current.position.x = sum + logoData.widths[index] / 2 + index * 0.5
+        sum += logoData.widths[index]
       }
     })
-    iconData.widths.forEach((width) => {
-      iconData.total_length += width + 0.5
+    logoData.widths.forEach((width) => {
+      logoData.total_length += width + 0.5
     })
   }, [])
 
   useFrame((state, delta, xrFrame) => {
     refs.forEach((ref) => {
       ref.current.position.x += delta
-      if (ref.current.position.x > iconData.total_length / 2)
-        ref.current.position.x -= iconData.total_length
+      if (ref.current.position.x > logoData.total_length / 2)
+        ref.current.position.x -= logoData.total_length
     })
   })
 
@@ -110,34 +102,23 @@ function PerformedWithScene() {
     <>
       <PerspectiveCamera
         makeDefault
-        position={[0, 0, 15]}
-        fov={10}
+        position={[0, 0, 40]}
+        fov={5}
       />
       <directionalLight
-        position={[0, 0, 5]}
+        position={[5, 5, 5]}
         castShadow
       />
-      <ambientLight position={[3, 3, 3]} />
-      <IconAnsible ref={iconAnsibleRef} />
-      <IconBlender ref={iconBlenderRef} />
-      <IconChatGpt ref={iconChatGptRef} />
-      <IconCss ref={iconCssRef} />
-      <IconDocker ref={iconDockerRef} />
-      <IconFigma ref={iconFigmaRef} />
-      <IconGithub ref={iconGithubRef} />
-      <IconGsap ref={iconGsapRef} />
-      <IconHtml ref={iconHtmlRef} />
-      <IconI18n ref={iconI18nRef} />
-      <IconIllustrator ref={iconIllustratorRef} />
-      <IconNextjs ref={iconNextjsRef} />
-      <IconNpm ref={iconNpmRef} />
-      <IconPhotoshop ref={iconPhotoshopRef} />
-      <IconPostgresql ref={iconPostgresqlRef} />
-      <IconRedux ref={iconReduxRef} />
-      <IconSass ref={iconSassRef} />
-      <IconSpringboot ref={iconSpringbootRef} />
-      <IconThreejs ref={iconThreejsRef} />
-      <IconWebgl ref={iconWebglRef} />
+      <directionalLight
+        position={[-5, 5, 5]}
+        castShadow
+      />
+      <LogoFigma ref={logoFigmaRef} scale={new THREE.Vector3(0.7, 0.7, 1)} />
+      <LogoGithub ref={logoGithubRef} />
+      <LogoHtml ref={logoHtmlRef} />
+      <LogoNpm ref={logoNpmRef} scale={new THREE.Vector3(0.4, 0.4, 1)} />
+      <LogoRedux ref={logoReduxRef} />
+      <LogoSass ref={logoSassRef} />
     </>
   )
 }

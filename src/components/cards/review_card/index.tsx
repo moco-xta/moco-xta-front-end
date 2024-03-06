@@ -20,15 +20,13 @@ export default function ReviewCard({
     console.log('event', event)
     const { x, y } = getUvMousePositionOnDiv(event)
     cardRef.current!.style.transform = `perspective(1000px) rotateX(${y * 8}deg) rotateY(${x * 12}deg) scale3d(1.1, 1.1, 1.1)`
-    cardRef.current!.style.transition =
-    'all 100ms ease-in-out'
+    cardRef.current!.style.transition = 'all 100ms ease-in-out'
   }
 
   function handleMouseLeave(event: MouseEvent): void {
     cardRef.current!.style.transform =
-    'perspective(1000px) rotateX(0deg) rotateY(0deg)scale3d(1, 1, 1)'
-    cardRef.current!.style.transition =
-    'all 250ms ease-in-out'
+      'perspective(1000px) rotateX(0deg) rotateY(0deg)scale3d(1, 1, 1)'
+    cardRef.current!.style.transition = 'all 250ms ease-in-out'
   }
 
   useEffect(() => {

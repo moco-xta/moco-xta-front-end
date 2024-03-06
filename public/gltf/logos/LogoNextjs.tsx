@@ -15,13 +15,22 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
+type ContextType = Record<
+  string,
+  React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>
+>
 
 export function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/LogoNextjs.gltf') as GLTFResult
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.LogoNextjs.geometry} material={nodes.LogoNextjs.material} />
+    <group
+      {...props}
+      dispose={null}
+    >
+      <mesh
+        geometry={nodes.LogoNextjs.geometry}
+        material={nodes.LogoNextjs.material}
+      />
     </group>
   )
 }

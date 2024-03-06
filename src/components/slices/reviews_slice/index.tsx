@@ -44,9 +44,7 @@ export default function ReviewsSlice() {
     <div id='reviews_slice'>
       <div id='reviews_slice_container'>
         <h2 className='gradient_text'>Reviews</h2>
-        <div id='review_cards_wrapper'>
-          {content}
-        </div>
+        <div id='review_cards_wrapper'>{content}</div>
         <Link href={Routes.find((route) => route.key === 'ADD_REVIEW')!.path}>
           Add review
         </Link>

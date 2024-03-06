@@ -1,5 +1,5 @@
 @property --gradient-angle {
-  syntax: "<angle>";
+  syntax: '<angle>';
   initial-value: 0deg;
   inherits: false;
 }
@@ -11,17 +11,13 @@
   --clr-4: #592e73;
   --clr-5: #314872;
 
-  --color-bg1: #0B0831;
-  --color-bg2: #150D75;
+  --color-bg1: #0b0831;
+  --color-bg2: #150d75;
 
   width: 300px;
   height: 400px;
   /* background: var(--clr-1); */
-  background: -webkit-linear-gradient(
-    45deg,
-    var(--clr-1),
-    var(--clr-2)
-  );
+  background: -webkit-linear-gradient(45deg, var(--clr-1), var(--clr-2));
   border-radius: 2rem;
 
   position: relative;

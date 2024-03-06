@@ -15,7 +15,7 @@ export default function Home() {
       <HeroSlice />
       <IntroductionSlice />
       <ReviewsSlice />
-      {/* <PerformedWithSlice /> */}
+      <PerformedWithSlice />
     </div>
   )
 }

@@ -5,6 +5,10 @@ import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 export function LogoNextjs(props) {
   return (
-    <Gltf src={GltfConstants.LOGO_NEXTJS} receiveShadow castShadow />
+    <Gltf
+      src={GltfConstants.LOGO_NEXTJS}
+      receiveShadow
+      castShadow
+    />
   )
 }
