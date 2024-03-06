@@ -32,25 +32,13 @@
       3: #333,
       4: #fff,
       5: #555,
-      6: #f00
+      6: #f00,
     );
 
     @each $index, $color in $colors {
       .hi_i_am:nth-child(#{$index + 1}) {
         color: $color;
       }
-    };
-
-    .gradient_text {
-      font-weight: 900;
-      background: -webkit-linear-gradient(
-        50deg,
-        rgba(129, 85, 219, 1) 0%,
-        rgba(99, 146, 231, 1) 50%,
-        rgba(4, 151, 202, 1) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
   }
 

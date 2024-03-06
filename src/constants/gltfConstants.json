@@ -22,5 +22,11 @@
   "ICON_THREEJS": "/gltf/icons/IconThreejs.gltf",
   "ICON_WEBGL": "/gltf/icons/IconWebgl.gltf",
 
+  "LOGO_NEXTJS": "/gltf/logos/LogoNextjs.gltf",
+  "LOGO_NPM": "/gltf/logos/LogoNpm.gltf",
+  "LOGO_REACT": "/gltf/logos/LogoReact.gltf",
+  "LOGO_REACT_THREE_DREI": "/gltf/logos/LogoReactThreeDrei.gltf",
+  "LOGO_SPRING_BOOT": "/gltf/logos/LogoSpringBoot.gltf",
+
   "PROJECTS_MAP": "/gltf/projects/ProjectsMap.gltf"
 }
