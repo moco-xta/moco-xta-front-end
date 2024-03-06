@@ -18,13 +18,7 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
 }
 
 h1 {
@@ -44,9 +38,9 @@ a {
   font-weight: 900;
   background: -webkit-linear-gradient(
     50deg,
-    rgba(129, 85, 219, 1) 0%,
-    rgba(99, 146, 231, 1) 50%,
-    rgba(4, 151, 202, 1) 100%
+    $gradient_text_rgba_0percent 0%,
+    $gradient_text_rgba_50percent 50%,
+    $gradient_text_rgba_100percent 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

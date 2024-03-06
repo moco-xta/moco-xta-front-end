@@ -13,7 +13,7 @@ export default function IntroductionSlice() {
       <div id='introduction_slice'>
         <div id='introduction_slice_content'>
           <Introduction />
-          <IntroductionCards />
+          {/* <IntroductionCards /> */}
         </div>
       </div>
     </div>

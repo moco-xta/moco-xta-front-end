@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { useGetReviewsQuery } from '@/redux/api/reviewApi'
 
+import GradientBackground from '@/components/shared/gradient_background'
 import ReviewCard from '@/components/cards/review_card'
 
 import { Routes } from '@/routes/routes'
@@ -51,6 +52,7 @@ export default function ReviewsSlice() {
           View all reviews
         </Link>
       </div>
+      <GradientBackground />
     </div>
   )
 }

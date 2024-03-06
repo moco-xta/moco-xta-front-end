@@ -9,6 +9,28 @@ $grey_333: #333;
 $white: #fff;
 $white_op80: #ffffff80;
 
+$color-bg1: #01000f;
+$color-bg2: #160b3f;
+$color1_opbb: #0b0327bb;
+$color1_op00: #0b032700;
+$color2_opbb: #291c5bbb;
+$color2_op00: #291c5b00;
+$color3_opbb: #423576bb;
+$color3_op00: #42357600;
+$color4_opbb: #592e73bb;
+$color4_op00: #592e7300;
+$color5_opbb: #314872bb;
+$color5_op00: #31487200;
+$color_interactive_opbb: #1a3057bb;
+$color_interactive_op00: #1a305700;
+$color-interactive: 26, 48, 87;
+$background_bubble_size: 60%;
+$background_bubble_blending: normal;
+
+$gradient_text_rgba_0percent: rgba(129, 85, 219, 1);
+$gradient_text_rgba_50percent: rgba(99, 146, 231, 1);
+$gradient_text_rgba_100percent: rgba(4, 151, 202, 1);
+
 :export {
   black: $black;
   black_op30: $black_op30;
@@ -18,4 +40,26 @@ $white_op80: #ffffff80;
   grey_333: $grey_333;
   white: $white;
   white_op80: $white_op80;
+
+  color-bg1: $color-bg1;
+  color-bg2: $color-bg2;
+  color1_opbb: $color1_opbb;
+  color1_op00: $color1_op00;
+  color2_opbb: $color2_opbb;
+  color2_op00: $color2_op00;
+  color3_opbb: $color3_opbb;
+  color3_op00: $color3_op00;
+  color4_opbb: $color4_opbb;
+  color4_op00: $color4_op00;
+  color5_opbb: $color5_opbb;
+  color5_op00: $color5_op00;
+  color_interactive_opbb: $color_interactive_opbb;
+  color_interactive_op00: $color_interactive_op00;
+  color-interactive: $color-interactive;
+  background_bubble_size: $background_bubble_size;
+  background_bubble_blending: $background_bubble_blending;
+  
+  gradient_text_rgba_0percent: $gradient_text_rgba_0percent;
+  gradient_text_rgba_50percent: $gradient_text_rgba_50percent;
+  gradient_text_rgba_100percent: $gradient_text_rgba_100percent;
 }
