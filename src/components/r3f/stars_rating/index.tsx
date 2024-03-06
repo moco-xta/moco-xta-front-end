@@ -38,7 +38,11 @@ export default function StarsRating({ rating }: StarsRatingInterface) {
       <OrbitControls />
       <group position={new THREE.Vector3(-5, 0, 0)}>
         {[...Array(5)].map((_, index) => (
-          <RatingStar key={`rating_star_${index}`} position={new THREE.Vector3(index * 2.5, 0, 0)} color={new THREE.Color(0xffff00)} />
+          <RatingStar
+            key={`rating_star_${index}`}
+            position={new THREE.Vector3(index * 2.5, 0, 0)}
+            color={new THREE.Color(0xffff00)}
+          />
         ))}
       </group>
     </Canvas>

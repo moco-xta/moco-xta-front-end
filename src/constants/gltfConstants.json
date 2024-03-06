@@ -24,10 +24,15 @@
 
   "RATING_STAR": "/gltf/icons/RatingStar.gltf",
 
+  "LOGO_FIGMA": "/gltf/logos/LogoFigma.gltf",
+  "LOGO_GITHUB": "/gltf/logos/LogoGithub.gltf",
+  "LOGO_HTML": "/gltf/logos/LogoHtml.gltf",
   "LOGO_NEXTJS": "/gltf/logos/LogoNextjs.gltf",
   "LOGO_NPM": "/gltf/logos/LogoNpm.gltf",
   "LOGO_REACT": "/gltf/logos/LogoReact.gltf",
   "LOGO_REACT_THREE_DREI": "/gltf/logos/LogoReactThreeDrei.gltf",
+  "LOGO_REDUX": "/gltf/logos/LogoRedux.gltf",
+  "LOGO_SASS": "/gltf/logos/LogoSass.gltf",
   "LOGO_SPRING_BOOT": "/gltf/logos/LogoSpringBoot.gltf",
 
   "PROJECTS_MAP": "/gltf/projects/ProjectsMap.gltf"
