@@ -9,11 +9,14 @@
   border-radius: 20px;
 
   .quote_up {
+    z-index: 0;
     font-size: 40px;
+    pointer-events: none;
   }
 
   .review {
     text-align: justify;
+    pointer-events: none;
   }
 
   .quote_down {
@@ -21,12 +24,14 @@
     display: flex;
     justify-content: flex-end;
     font-size: 40px;
+    pointer-events: none;
   }
 
   .rating_stars_container {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
+    pointer-events: none;
   }
 
   .name_role_container {
@@ -36,6 +41,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    pointer-events: none;
     
     .name {
     }
