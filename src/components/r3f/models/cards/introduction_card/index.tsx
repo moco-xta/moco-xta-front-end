@@ -3,23 +3,17 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, ThreeEvent } from '@react-three/fiber'
-import {
-  Box,
-  PerspectiveCamera,
-  RoundedBox,
-} from '@react-three/drei'
+import { Box, PerspectiveCamera, RoundedBox } from '@react-three/drei'
 
 import {
   IntroductionCardCanvasInterface,
   IntroductionCardSceneInterface,
 } from '@/interfaces/components/r3f/introductionCardInterfaces'
 
-import {
-  getUvMousePositionOnMesh,
-} from '@/helpers/r3fHelpers'
+import { getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
 
 import './index.scss'
-import { LogoNextjs } from '@/components/r3f/logos/LogoNextjs'
+import { LogoNextjs } from '@/components/r3f/models/logos/LogoNextjs'
 
 function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
   const cameraRef = useRef<THREE.PerspectiveCamera>(null!)
@@ -85,8 +79,7 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
           <meshBasicMaterial
             attach={'material'}
             color={'#0b0831'}
-          >
-          </meshBasicMaterial>
+          ></meshBasicMaterial>
         </RoundedBox>
       </group>
     </>

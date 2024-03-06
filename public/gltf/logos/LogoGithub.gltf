@@ -15,19 +15,20 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"LogoNpm"
+			"name":"LogoGithub"
 		}
 	],
 	"meshes":[
 		{
-			"name":"LogoNpm",
+			"name":"LogoGithub",
 			"primitives":[
 				{
 					"attributes":{
 						"POSITION":0,
-						"NORMAL":1
+						"NORMAL":1,
+						"TEXCOORD_0":2
 					},
-					"indices":2
+					"indices":3
 				}
 			]
 		}
@@ -36,56 +37,68 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":228,
+			"count":2820,
 			"max":[
-				2.5674710273742676,
-				0.993486762046814,
-				0.20000015199184418
+				0.9349566102027893,
+				0.9876880645751953,
+				0.20000022649765015
 			],
 			"min":[
-				-2.5674710273742676,
-				-0.9854068160057068,
-				-0.20000000298023224
+				-0.9312335848808289,
+				-0.9829122424125671,
+				-0.20000016689300537
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":228,
+			"count":2820,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
+			"componentType":5126,
+			"count":2820,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":3,
 			"componentType":5123,
-			"count":396,
+			"count":5616,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":2736,
+			"byteLength":33840,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2736,
-			"byteOffset":2736,
+			"byteLength":33840,
+			"byteOffset":33840,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":792,
-			"byteOffset":5472,
+			"byteLength":22560,
+			"byteOffset":67680,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":11232,
+			"byteOffset":90240,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":6264,
-			"uri":"LogoNpm.bin"
+			"byteLength":101472,
+			"uri":"LogoGithub.bin"
 		}
 	]
 }
