@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react'
 
-export interface FormikStarRatingInterface {
+export interface FormikRatingStarsInterface {
   name: string
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
   value: number
