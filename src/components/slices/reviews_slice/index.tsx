@@ -42,8 +42,8 @@ export default function ReviewsSlice() {
 
   return (
     <div id='reviews_slice'>
-      <div id='reviews_container'>
-        <p>Reviews</p>
+      <div id='reviews_slice_container'>
+        <h2 className='gradient_text'>Reviews</h2>
         <div id='review_cards_wrapper'>
           {content}
         </div>
@@ -54,7 +54,7 @@ export default function ReviewsSlice() {
           View all reviews
         </Link>
       </div>
-      <div id='reviews_gradient_background_container'>
+      <div id='reviews__slice_gradient_background'>
         <GradientBackground />
       </div>
     </div>

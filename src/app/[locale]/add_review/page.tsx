@@ -12,7 +12,7 @@ import { Routes } from '@/routes/routes'
 
 import ReviewCard from '@/components/cards/review_card'
 import FormikField from '@/components/inputs/formik_field'
-import FormikStarRating from '@/components/inputs/formik_star_rating'
+import FormikRatingStars from '@/components/inputs/formik_rating_stars'
 import FormikTextarea from '@/components/inputs/formik_textarea'
 
 import './index.scss'
@@ -84,13 +84,13 @@ export default function AddReview() {
             name={'review'}
             cols={50}
             rows={8}
-            maxLength={10}
+            maxLength={150}
             handleChange={formik.handleChange}
             value={formik.values.review}
             error={formik.touched.review && Boolean(formik.errors.review)}
             helperText={formik.touched.review && formik.errors.review}
           />
-          <FormikStarRating
+          <FormikRatingStars
             name={'rating'}
             handleChange={formik.handleChange}
             value={formik.values.rating}
