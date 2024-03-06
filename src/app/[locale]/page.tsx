@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <div id='home_container'>
       <HeroSlice />
-      <IntroductionSlice />
-      <ReviewsSlice />
-      <PerformedWithSlice />
+      {/* <IntroductionSlice /> */}
+      {/* <ReviewsSlice /> */}
+      {/* <PerformedWithSlice /> */}
     </div>
   )
 }

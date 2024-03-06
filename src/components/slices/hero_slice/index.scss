@@ -1,13 +1,37 @@
+@import '@/styles/variables.module.scss';
+
 #hero_slice {
-  z-index: 0;
   position: relative;
   width: 100vw;
   height: 100vh;
 
-  #default_scene_container {
+  #hero_slice_head_text {
+    z-index: 2;
+    position: absolute;
+    padding: 100px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  #hero_slice_canvas {
     z-index: 1;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+  }
+
+  #hero_slice_gradient_background {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(
+      48deg,
+      $color-bg1,
+      $color-bg2
+    );
+    filter: url(#goo) blur(40px);
+    overflow: hidden;
   }
 }

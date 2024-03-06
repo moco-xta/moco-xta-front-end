@@ -11,11 +11,15 @@ import './index.scss'
 export default function HeroSlice() {
   return (
     <div id='hero_slice'>
-      <HeadText />
-      <div id='default_scene_container'>
+      <div id='hero_slice_head_text'>
+        <HeadText />
+      </div>
+      <div id='hero_slice_canvas'>
         <HeroCanvas />
       </div>
-      <GradientBackground />
+      <div id='hero_slice_gradient_background'>
+        <GradientBackground />
+      </div>
     </div>
   )
 }
