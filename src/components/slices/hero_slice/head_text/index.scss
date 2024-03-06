@@ -32,14 +32,14 @@
       3: #333,
       4: #fff,
       5: #555,
-      6: #f00
+      6: #f00,
     );
 
     @each $index, $color in $colors {
       .hi_i_am:nth-child(#{$index + 1}) {
         color: $color;
       }
-    };
+    }
   }
 
   #subheading {

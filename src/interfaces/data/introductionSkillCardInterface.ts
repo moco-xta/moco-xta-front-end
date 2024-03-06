@@ -1,4 +1,6 @@
+import React from "react"
+
 export interface IntroductionSkillCardInterface {
-  icon: string
+  logo: JSX.Element
   description: string
 }
