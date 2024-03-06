@@ -3,9 +3,9 @@
 import React from 'react'
 
 import Introduction from '@/components/slices/introduction_slice/introduction'
+import IntroductionCards from '@/components/slices/introduction_slice/introduction_cards'
 
 import './index.scss'
-import IntroductionCards from './introduction_cards'
 
 export default function IntroductionSlice() {
   return (

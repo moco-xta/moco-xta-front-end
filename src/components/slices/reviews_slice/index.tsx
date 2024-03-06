@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { useGetReviewsQuery } from '@/redux/api/reviewApi'
 
+import GradientBackground from '@/components/shared/gradient_background'
 import ReviewCard from '@/components/cards/review_card'
 
 import { Routes } from '@/routes/routes'
@@ -22,7 +23,7 @@ export default function ReviewsSlice() {
 
   if (data)
     content = (
-      <div id='review_cards_wrapper'>
+      <>
         {data?.map((review, index) => {
           if (index < 3) {
             return (
@@ -36,20 +37,25 @@ export default function ReviewsSlice() {
             )
           }
         })}
-      </div>
+      </>
     )
 
   return (
     <div id='reviews_slice'>
-      <div id='reviews_container'>
-        <p>Reviews</p>
-        {content}
+      <div id='reviews_slice_container'>
+        <h2 className='gradient_text'>Reviews</h2>
+        <div id='review_cards_wrapper'>
+          {content}
+        </div>
         <Link href={Routes.find((route) => route.key === 'ADD_REVIEW')!.path}>
           Add review
         </Link>
         <Link href={Routes.find((route) => route.key === 'REVIEWS')!.path}>
           View all reviews
         </Link>
+      </div>
+      <div id='reviews__slice_gradient_background'>
+        <GradientBackground />
       </div>
     </div>
   )
