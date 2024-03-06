@@ -151,7 +151,7 @@ export default function HeroCanvas() {
       gl={{
         antialias: true,
         alpha: true,
-        powerPreference: 'high-performance',
+        /* powerPreference: 'high-performance', */
         preserveDrawingBuffer: true,
       }}
       ref={gsapContainerRef as any}

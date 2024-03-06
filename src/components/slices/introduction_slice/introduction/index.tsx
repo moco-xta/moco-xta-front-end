@@ -11,20 +11,22 @@ export default function Introduction() {
   return (
     <div id='introduction_text_container'>
       <RevealComponent
-          y={100}
-          duration={'500ms'}
-          threshold={0.75}
-        >
-          <h2 className='gradient_text'>{t('INTRODUCTION.INTRODUCTION_TITLE')}</h2>
-        </RevealComponent>
+        y={100}
+        duration={'500ms'}
+        threshold={0.75}
+      >
+        <h2 className='gradient_text'>
+          {t('INTRODUCTION.INTRODUCTION_TITLE')}
+        </h2>
+      </RevealComponent>
 
-        <RevealComponent
-          y={100}
-          duration={'500ms'}
-          threshold={0.75}
-        >
-          <p>{t('INTRODUCTION.INTRODUCTION_TEXT')}</p>
-        </RevealComponent>
+      <RevealComponent
+        y={100}
+        duration={'500ms'}
+        threshold={0.75}
+      >
+        <p>{t('INTRODUCTION.INTRODUCTION_TEXT')}</p>
+      </RevealComponent>
     </div>
   )
 }

@@ -54,9 +54,7 @@ export default function HeadText() {
         delay={'200ms'}
         y={100}
       >
-        <h3 id='subheading'>
-          {t('HERO.SUBHEADING')}
-        </h3>
+        <h3 id='subheading'>{t('HERO.SUBHEADING')}</h3>
       </RevealComponent>
     </div>
   )

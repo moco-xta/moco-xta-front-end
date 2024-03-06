@@ -1,0 +1,94 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoReact"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoReact",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 5166,
+      "max": [1.1215264797210693, 0.9966640472412109, 0.20000207424163818],
+      "min": [-1.1215262413024902, -0.9966646432876587, -0.20004825294017792],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 5166,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 5166,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 10308,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 61992,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 61992,
+      "byteOffset": 61992,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 41328,
+      "byteOffset": 123984,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20616,
+      "byteOffset": 165312,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 185928,
+      "uri": "LogoReact.bin"
+    }
+  ]
+}
