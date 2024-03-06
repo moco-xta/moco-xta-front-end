@@ -8,7 +8,9 @@ import { getUvMousePositionOnDiv } from '@/helpers/cssHelpers'
 
 import './index.scss'
 
-export default function IntroductionCard({ content }: IntroductionCardInterface) {
+export default function IntroductionCard({
+  content,
+}: IntroductionCardInterface) {
   const cardRef = useRef<HTMLElement>(null)
   const cameraRef = useRef<THREE.PerspectiveCamera>(null)
   const boxRef = useRef<THREE.Mesh>(null)
@@ -16,8 +18,8 @@ export default function IntroductionCard({ content }: IntroductionCardInterface)
   function handleMouseMove(e: MouseEvent): void {
     const { x, y } = getUvMousePositionOnDiv(e)
     cardRef.current!.style.transform = `perspective(1000px) rotateX(${y * 12}deg) rotateY(${x * 12}deg) scale3d(1.1, 1.1, 1.1)`
-    cameraRef.current!.position.x = -x * 3 / 3.5
-    cameraRef.current!.position.y = -y * 4 / 3.5
+    cameraRef.current!.position.x = (-x * 3) / 3.5
+    cameraRef.current!.position.y = (-y * 4) / 3.5
     boxRef.current!.scale.x = 1.2
     boxRef.current!.scale.y = 1.2
     boxRef.current!.scale.z = 1.2
@@ -26,11 +28,11 @@ export default function IntroductionCard({ content }: IntroductionCardInterface)
   function handleMouseLeave(e: MouseEvent): void {
     cardRef.current!.style.transform =
       'perspective(1000px) rotateX(0deg) rotateY(0deg)scale3d(1, 1, 1)'
-      cameraRef.current!.position.x = 0
-      cameraRef.current!.position.y = 0
-      boxRef.current!.scale.x = 1
-      boxRef.current!.scale.y = 1
-      boxRef.current!.scale.z = 1
+    cameraRef.current!.position.x = 0
+    cameraRef.current!.position.y = 0
+    boxRef.current!.scale.x = 1
+    boxRef.current!.scale.y = 1
+    boxRef.current!.scale.z = 1
   }
 
   useEffect(() => {
@@ -96,7 +98,9 @@ export default function IntroductionCard({ content }: IntroductionCardInterface)
             receiveShadow
           />
           <Html position={[-2.5, 0, 0]}>
-            <p style={{ width: '200px', textAlign: 'justify' }}>{content.description}</p>
+            <p style={{ width: '200px', textAlign: 'justify' }}>
+              {content.description}
+            </p>
           </Html>
         </Canvas>
       </div>

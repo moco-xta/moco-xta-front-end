@@ -9,8 +9,14 @@ import { useGLTF } from '@react-three/drei'
 export function Model(props) {
   const { nodes, materials } = useGLTF('/LogoNextjs.gltf')
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.LogoNextjs.geometry} material={nodes.LogoNextjs.material} />
+    <group
+      {...props}
+      dispose={null}
+    >
+      <mesh
+        geometry={nodes.LogoNextjs.geometry}
+        material={nodes.LogoNextjs.material}
+      />
     </group>
   )
 }
