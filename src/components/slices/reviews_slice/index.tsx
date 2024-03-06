@@ -23,7 +23,7 @@ export default function ReviewsSlice() {
 
   if (data)
     content = (
-      <div id='review_cards_wrapper'>
+      <>
         {data?.map((review, index) => {
           if (index < 3) {
             return (
@@ -37,14 +37,16 @@ export default function ReviewsSlice() {
             )
           }
         })}
-      </div>
+      </>
     )
 
   return (
     <div id='reviews_slice'>
       <div id='reviews_container'>
         <p>Reviews</p>
-        {content}
+        <div id='review_cards_wrapper'>
+          {content}
+        </div>
         <Link href={Routes.find((route) => route.key === 'ADD_REVIEW')!.path}>
           Add review
         </Link>
@@ -52,7 +54,9 @@ export default function ReviewsSlice() {
           View all reviews
         </Link>
       </div>
-      <GradientBackground />
+      <div id='reviews_gradient_background_container'>
+        <GradientBackground />
+      </div>
     </div>
   )
 }

@@ -28,18 +28,18 @@ export default function GradientBackground() {
   }, [])
 
   return (
-    <div id='gradient_background_container'>
+    <div className='gradient_background'>
       <img
-        id='svg_background_bubble'
+        className='svg_background_bubble'
         src={'/img/svg/background_buble.svg'}
         alt="background_bubble"
       />
       {[...Array(5)].map((_, index) => (
-        <div key={`background_bubble_${index + 1}`} id={`background_bubble_${index + 1}`}></div>
+        <div key={`background_bubble_${index + 1}`} className={`background_bubble_${index + 1}`}></div>
       ))}
       <div
         ref={backgroundInteractiveBubbleRef as any}
-        id='background_interactive_bubble'
+        className='background_interactive_bubble'
       />
     </div>
   )
