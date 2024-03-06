@@ -145,10 +145,9 @@ export default function HeroCanvas() {
 
   return (
     <Canvas
-      dpr={3}
+      dpr={1}
       shadows
       legacy
-      performance={{ current: 5 }}
       gl={{
         antialias: true,
         alpha: true,

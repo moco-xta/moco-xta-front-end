@@ -1,0 +1,94 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoNextjs"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoNextjs",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 2366,
+      "max": [2.4861955642700195, 0.4999997913837433, 0.19999895989894867],
+      "min": [-2.5, -0.5058870911598206, -0.2000003308057785],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 2366,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 2366,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 6684,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 28392,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28392,
+      "byteOffset": 28392,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 18928,
+      "byteOffset": 56784,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13368,
+      "byteOffset": 75712,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 89080,
+      "uri": "LogoNextjs.bin"
+    }
+  ]
+}

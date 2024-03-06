@@ -13,7 +13,7 @@ export default function HeadText() {
     <div id='head_text'>
       <p id='role'>
         <MdComputer />
-        <span>Creative developer</span>
+        <span>{t('HERO.CREATIVE_DEVELOPER')}</span>
       </p>
       <RevealComponent
         threshold={0.75}
@@ -54,9 +54,7 @@ export default function HeadText() {
         delay={'200ms'}
         y={100}
       >
-        <h3 id='subheading'>
-          {t('HERO.SUBHEADING')}
-        </h3>
+        <h3 id='subheading'>{t('HERO.SUBHEADING')}</h3>
       </RevealComponent>
     </div>
   )

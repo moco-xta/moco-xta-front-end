@@ -1,23 +1,20 @@
-#introduction_slice {
+#introduction_slice_background {
   z-index: 1;
   width: 100vw;
-  height: 100vh;
-  background-color: black;
+  background-color: #01000f;
 
-  #introduction_content {
+  #introduction_slice {
     position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    width: 100vw;
 
-    #cards_container {
+    #introduction_slice_content {
       position: relative;
-      width: 100%;
-      padding: 0 25% 0 25%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-content: center;
+      /* top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); */
+      /* border: solid 1px #555; */
+      /* border-radius: 10px; */
+      padding: 100px;
     }
   }
 }
