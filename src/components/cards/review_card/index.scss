@@ -1,11 +1,52 @@
 #review_card {
-  position: relative;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  height: 300px;
-  background-color: crimson;
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+
+  .quote_up {
+    z-index: 0;
+    font-size: 40px;
+    pointer-events: none;
+  }
+
+  .review {
+    text-align: justify;
+    pointer-events: none;
+  }
+
+  .quote_down {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 40px;
+    pointer-events: none;
+  }
+
+  .rating_stars_container {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  .name_role_container {
+    width: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    pointer-events: none;
+    
+    .name {
+    }
+  
+    .role {
+    }
+  }
 }

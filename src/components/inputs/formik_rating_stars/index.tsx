@@ -1,17 +1,17 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { IoStarOutline, IoStarSharp } from 'react-icons/io5'
+import { IoStarSharp } from 'react-icons/io5'
 
-import { FormikStarRatingInterface } from '@/interfaces/components/inputs/formikStarRatingInterface'
+import { FormikRatingStarsInterface } from '@/interfaces/components/inputs/formikRatingStarsInterface'
 
 import './index.scss'
 
-export default function FormikStarRating({
+export default function FormikRatingStars({
   name,
   handleChange: FormikHandleChange,
   value,
   error,
   helperText,
-}: FormikStarRatingInterface) {
+}: FormikRatingStarsInterface) {
   const [rating, setRating] = useState<number>(value)
   const [hover, setHover] = useState<number | null>(null)
 
@@ -28,10 +28,10 @@ export default function FormikStarRating({
   }
 
   return (
-    <div id='star_rating_container'>
+    <div id='rating_stars_container'>
       <p>Rating</p>
-      <div id='stars_wrapper'>
-        {[...Array(5)].map((start, index) => {
+      <div className='rating_stars_wrapper'>
+        {[...Array(5)].map((_, index) => {
           const currentRating = index + 1
           return (
             <label key={`startRatingLabel_${index}`}>
@@ -42,7 +42,7 @@ export default function FormikStarRating({
                 value={currentRating}
               />
               <IoStarSharp
-                className='star_rating'
+                className='rating_star'
                 size={30}
                 color={currentRating <= (hover || value) ? 'gold' : 'grey'}
                 onMouseEnter={() => setHover(currentRating)}

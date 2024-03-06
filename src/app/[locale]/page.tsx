@@ -12,10 +12,10 @@ import './index.scss'
 export default function Home() {
   return (
     <div id='home_container'>
-      {/* <HeroSlice /> */}
+      <HeroSlice />
       <IntroductionSlice />
       <ReviewsSlice />
-      <PerformedWithSlice />
+      {/* <PerformedWithSlice /> */}
     </div>
   )
 }

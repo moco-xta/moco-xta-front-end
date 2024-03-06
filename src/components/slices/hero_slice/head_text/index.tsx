@@ -10,7 +10,7 @@ export default function HeadText() {
   const t = useTranslations('HOME')
 
   return (
-    <div id='head_text'>
+    <>
       <p id='role'>
         <MdComputer />
         <span>{t('HERO.CREATIVE_DEVELOPER')}</span>
@@ -56,6 +56,6 @@ export default function HeadText() {
       >
         <h3 id='subheading'>{t('HERO.SUBHEADING')}</h3>
       </RevealComponent>
-    </div>
+    </>
   )
 }
