@@ -1,11 +1,11 @@
 #reviews_slice {
   width: 100vw;
   height: 100vh;
-  background-color: purple;
 
   #reviews_container {
     #review_cards_wrapper {
-      position: relative;
+      z-index: 1;
+      position: absolute;
       width: 100%;
       display: flex;
       flex-direction: row;
