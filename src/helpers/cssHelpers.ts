@@ -13,6 +13,15 @@ export function getUvMousePositionOnDiv(e: MouseEvent) {
   }
 }
 
+export function getUvMousePositionOnWindow(e: MouseEvent) {
+  const width = window.innerWidth
+  const height = window.innerHeight
+  return {
+    x: (((e.clientX * 100) / (width / 2)) - 100) / 100,
+    y: (((e.clientY * 100) / (height / 2)) - 100) / 100
+  }
+}
+
 export function returnArrayOfCharacters(text: string) {
   const test = []
   for (var i = 0; i < text.length; i++) {
