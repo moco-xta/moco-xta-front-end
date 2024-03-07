@@ -41,11 +41,14 @@ export default function AddReview() {
       date: new Date(),
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       console.log(values)
       toast.promise(addReview(values), {
         loading: 'Loading',
-        success: 'Success',
+        success: () => {
+          resetForm()
+          return 'Success'
+        },
         error: 'Error',
       })
     },
@@ -73,14 +76,6 @@ export default function AddReview() {
               error={formik.touched.email && Boolean(formik.errors.email)}
               helperText={formik.touched.email && formik.errors.email}
             />
-            {/* <FormikField
-              type={'text'}
-              name={'role'}
-              handleChange={formik.handleChange}
-              value={formik.values.role}
-              error={formik.touched.role && Boolean(formik.errors.role)}
-              helperText={formik.touched.role && formik.errors.role}
-            /> */}
             <FormikRadioGroup
               name={'role'}
               options={reviewRoles}
@@ -108,7 +103,12 @@ export default function AddReview() {
             />
             <div id='submit_reset_buttons_container'>
               <button type='submit'>Submit</button>
-              <button type='reset'>Reset</button>
+              <button
+                type='reset'
+                onClick={() => formik.resetForm()}
+              >
+                Reset
+              </button>
             </div>
           </form>
 
