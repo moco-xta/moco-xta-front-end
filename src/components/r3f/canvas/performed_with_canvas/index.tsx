@@ -113,10 +113,16 @@ function PerformedWithScene() {
         position={[-5, 5, 5]}
         castShadow
       />
-      <LogoFigma ref={logoFigmaRef} scale={new THREE.Vector3(0.7, 0.7, 1)} />
+      <LogoFigma
+        ref={logoFigmaRef}
+        scale={new THREE.Vector3(0.7, 0.7, 1)}
+      />
       <LogoGithub ref={logoGithubRef} />
       <LogoHtml ref={logoHtmlRef} />
-      <LogoNpm ref={logoNpmRef} scale={new THREE.Vector3(0.4, 0.4, 1)} />
+      <LogoNpm
+        ref={logoNpmRef}
+        scale={new THREE.Vector3(0.4, 0.4, 1)}
+      />
       <LogoRedux ref={logoReduxRef} />
       <LogoSass ref={logoSassRef} />
     </>

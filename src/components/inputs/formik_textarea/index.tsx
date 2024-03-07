@@ -4,6 +4,8 @@ import { FormikTextareaInterface } from '@/interfaces/components/inputs/formikTe
 
 import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
+import './index.scss'
+
 export default function FormikTextarea(props: FormikTextareaInterface) {
   const {
     label,
