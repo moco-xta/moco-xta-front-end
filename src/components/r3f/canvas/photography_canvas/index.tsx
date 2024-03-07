@@ -99,7 +99,6 @@ function PhotographsScene() {
   }, [])
 
   useFrame((state, delta, xrFrame) => {
-    console.log(state)
     position += speed
     speed *= 0.8
     rounded = Math.round(position)
@@ -111,7 +110,6 @@ function PhotographsScene() {
       // @ts-ignore
       /* if(meshRef.current.position.y > (meshRefs.length * 1.2) / 2 + 0.1) meshRef.current.position.y -= meshRefs.length * 1.2 */
       // @ts-ignore
-      /* if(index === 0) console.log('position', meshRef.current.position.y) */
     })
   })
 

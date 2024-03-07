@@ -12,16 +12,7 @@ export default function FormikRatingStars({
   error,
   helperText,
 }: FormikRatingStarsInterface) {
-  const [rating, setRating] = useState<number>(value)
   const [hover, setHover] = useState<number | null>(null)
-
-  useEffect(() => {
-    setRating(value)
-  }, [value])
-
-  useEffect(() => {
-    console.log('rating', rating)
-  }, [rating])
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     FormikHandleChange(e)

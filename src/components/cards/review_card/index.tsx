@@ -17,7 +17,6 @@ export default function ReviewCard({
   const cardRef = useRef<HTMLElement>(null)
 
   function handleMouseMove(event: MouseEvent): void {
-    console.log('event', event)
     const { x, y } = getUvMousePositionOnDiv(event)
     cardRef.current!.style.transform = `perspective(1000px) rotateX(${y * 8}deg) rotateY(${x * 12}deg) scale3d(1.1, 1.1, 1.1)`
     cardRef.current!.style.transition = 'all 100ms ease-in-out'
