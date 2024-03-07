@@ -27,9 +27,9 @@ function ContactScene() {
       if(x < 0) {
         // @ts-ignore
         meshRef.current.material.opacity = 1
-      } else if (x < 0.25) {
+      } else if (x < 0.2) {
         // @ts-ignore
-        meshRef.current.material.opacity = 1 - (x * 4)
+        meshRef.current.material.opacity = 1 - (x * 5)
       } else {
         // @ts-ignore
         meshRef.current.material.opacity = 0
