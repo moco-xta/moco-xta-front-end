@@ -6,6 +6,7 @@ import {
   PerformedWithSlice,
   ReviewsSlice,
 } from '@/components/slices'
+import Footer from '@/components/footer'
 
 import './index.scss'
 
@@ -16,6 +17,7 @@ export default function Home() {
       <IntroductionSlice />
       <ReviewsSlice />
       <PerformedWithSlice />
+      <Footer />
     </div>
   )
 }
