@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-const LogoNpm = forwardRef(function({ scale }, ref) {
+const LogoNpm = forwardRef(function ({ scale }, ref) {
   const gltf = useGLTF(GltfConstants.LOGO_NPM)
 
   useLayoutEffect(() => {
