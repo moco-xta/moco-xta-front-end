@@ -48,9 +48,11 @@ export default function ReviewCard({
       {review && <p className='quote_up'>"</p>}
       <p className='review'>{review}</p>
       {review && <p className='quote_down'>"</p>}
-      {rating !== 0 && <div className='rating_stars_container'>
-        <RatingStars rating={rating} />
-      </div>}
+      {rating !== 0 && (
+        <div className='rating_stars_container'>
+          <RatingStars rating={rating} />
+        </div>
+      )}
       <div className='name_role_container'>
         <p className='name'>{name}</p>
         <p className='role'>{role}</p>

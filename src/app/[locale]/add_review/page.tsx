@@ -12,8 +12,11 @@ import { Routes } from '@/routes/routes'
 
 import ReviewCard from '@/components/cards/review_card'
 import FormikField from '@/components/inputs/formik_field'
+import FormikRadioGroup from '@/components/inputs/formik_radio_group'
 import FormikRatingStars from '@/components/inputs/formik_rating_stars'
 import FormikTextarea from '@/components/inputs/formik_textarea'
+
+import { reviewRoles } from '@/data/reviewRoles'
 
 import './index.scss'
 
@@ -39,6 +42,7 @@ export default function AddReview() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
+      console.log(values)
       toast.promise(addReview(values), {
         loading: 'Loading',
         success: 'Success',
@@ -46,10 +50,6 @@ export default function AddReview() {
       })
     },
   })
-
-  useEffect(() => {
-    console.log('formik.values.rating', formik.values.rating)
-  }, [formik.values.rating])
 
   return (
     <div id='add_review'>
@@ -73,9 +73,17 @@ export default function AddReview() {
               error={formik.touched.email && Boolean(formik.errors.email)}
               helperText={formik.touched.email && formik.errors.email}
             />
-            <FormikField
+            {/* <FormikField
               type={'text'}
               name={'role'}
+              handleChange={formik.handleChange}
+              value={formik.values.role}
+              error={formik.touched.role && Boolean(formik.errors.role)}
+              helperText={formik.touched.role && formik.errors.role}
+            /> */}
+            <FormikRadioGroup
+              name={'role'}
+              options={reviewRoles}
               handleChange={formik.handleChange}
               value={formik.values.role}
               error={formik.touched.role && Boolean(formik.errors.role)}
@@ -100,7 +108,7 @@ export default function AddReview() {
             />
             <div id='submit_reset_buttons_container'>
               <button type='submit'>Submit</button>
-              <button type='submit'>Submit</button>
+              <button type='reset'>Reset</button>
             </div>
           </form>
 
@@ -114,7 +122,10 @@ export default function AddReview() {
           </div>
         </div>
         <div id='view_all_reviews_link_container'>
-          <Link id='view_all_reviews_link' href={Routes.find((route) => route.key === 'REVIEWS')!.path}>
+          <Link
+            id='view_all_reviews_link'
+            href={Routes.find((route) => route.key === 'REVIEWS')!.path}
+          >
             View all reviews
           </Link>
         </div>

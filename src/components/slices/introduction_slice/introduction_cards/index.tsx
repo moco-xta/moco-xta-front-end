@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { introductionSkillCards } from '@/ata/introductionSkillCards'
+import { introductionSkillCards } from '@/data/introductionSkillCards'
 
 import IntroductionCard from '@/components/r3f/models/cards/introduction_card'
 
