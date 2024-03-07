@@ -42,7 +42,6 @@ export default function AddReview() {
     },
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm }) => {
-      console.log(values)
       toast.promise(addReview(values), {
         loading: 'Loading',
         success: () => {

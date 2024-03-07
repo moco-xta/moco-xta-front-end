@@ -27,14 +27,7 @@ export default function HeroCanvas() {
     intensityLightFront: { value: 10, min: 0, max: 100, step: 0.1 },
   }) */
 
-  useEffect(() => {
-    console.log(webPageRef)
-  }, [webPageRef])
-
   const tl = gsap.timeline({
-    onComplete: () => {
-      console.log('test')
-    },
     repeat: -1,
     repeatDelay: 1,
   })
