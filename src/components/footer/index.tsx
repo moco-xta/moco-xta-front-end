@@ -4,6 +4,6 @@ import './index.scss'
 
 export default function Footer() {
   return (
-    <div>footer</div>
+    <footer>footer</footer>
   )
 }
