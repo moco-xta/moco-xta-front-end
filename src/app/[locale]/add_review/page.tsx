@@ -52,65 +52,72 @@ export default function AddReview() {
   }, [formik.values.rating])
 
   return (
-    <div id='add_review_container'>
-      <div id='add_review_form_and_preview_container'>
-        <h1>Add a review</h1>
-        <form onSubmit={formik.handleSubmit}>
-          <FormikField
-            type={'text'}
-            name={'name'}
-            handleChange={formik.handleChange}
-            value={formik.values.name}
-            error={formik.touched.name && Boolean(formik.errors.name)}
-            helperText={formik.touched.name && formik.errors.name}
-          />
-          <FormikField
-            type={'text'}
-            name={'email'}
-            handleChange={formik.handleChange}
-            value={formik.values.email}
-            error={formik.touched.email && Boolean(formik.errors.email)}
-            helperText={formik.touched.email && formik.errors.email}
-          />
-          <FormikField
-            type={'text'}
-            name={'role'}
-            handleChange={formik.handleChange}
-            value={formik.values.role}
-            error={formik.touched.role && Boolean(formik.errors.role)}
-            helperText={formik.touched.role && formik.errors.role}
-          />
-          <FormikTextarea
-            name={'review'}
-            cols={50}
-            rows={8}
-            maxLength={150}
-            handleChange={formik.handleChange}
-            value={formik.values.review}
-            error={formik.touched.review && Boolean(formik.errors.review)}
-            helperText={formik.touched.review && formik.errors.review}
-          />
-          <FormikRatingStars
-            name={'rating'}
-            handleChange={formik.handleChange}
-            value={formik.values.rating}
-            error={formik.touched.rating && Boolean(formik.errors.rating)}
-            helperText={formik.touched.rating && formik.errors.rating}
-          />
-          <button type='submit'>Submit</button>
-        </form>
+    <div id='add_review'>
+      <div id='add_review_container'>
+        <h1 className='gradient_text'>Add a review</h1>
+        <div id='add_review_form_and_preview_container'>
+          <form onSubmit={formik.handleSubmit}>
+            <FormikField
+              type={'text'}
+              name={'name'}
+              handleChange={formik.handleChange}
+              value={formik.values.name}
+              error={formik.touched.name && Boolean(formik.errors.name)}
+              helperText={formik.touched.name && formik.errors.name}
+            />
+            <FormikField
+              type={'text'}
+              name={'email'}
+              handleChange={formik.handleChange}
+              value={formik.values.email}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+              helperText={formik.touched.email && formik.errors.email}
+            />
+            <FormikField
+              type={'text'}
+              name={'role'}
+              handleChange={formik.handleChange}
+              value={formik.values.role}
+              error={formik.touched.role && Boolean(formik.errors.role)}
+              helperText={formik.touched.role && formik.errors.role}
+            />
+            <FormikTextarea
+              name={'review'}
+              cols={50}
+              rows={4}
+              maxLength={150}
+              handleChange={formik.handleChange}
+              value={formik.values.review}
+              error={formik.touched.review && Boolean(formik.errors.review)}
+              helperText={formik.touched.review && formik.errors.review}
+            />
+            <FormikRatingStars
+              name={'rating'}
+              handleChange={formik.handleChange}
+              value={formik.values.rating}
+              error={formik.touched.rating && Boolean(formik.errors.rating)}
+              helperText={formik.touched.rating && formik.errors.rating}
+            />
+            <div id='submit_reset_buttons_container'>
+              <button type='submit'>Submit</button>
+              <button type='submit'>Submit</button>
+            </div>
+          </form>
 
-        <div id='new_review_preview'>
-          <ReviewCard
-            review={formik.values.review}
-            name={formik.values.name}
-            role={formik.values.role}
-            rating={formik.values.rating}
-          />
+          <div id='new_review_preview'>
+            <ReviewCard
+              review={formik.values.review}
+              name={formik.values.name}
+              role={formik.values.role}
+              rating={formik.values.rating}
+            />
+          </div>
         </div>
-        <Link href={Routes.find((route) => route.key === 'REVIEWS')!.path}>
-          View all reviews
-        </Link>
+        <div id='view_all_reviews_link_container'>
+          <Link id='view_all_reviews_link' href={Routes.find((route) => route.key === 'REVIEWS')!.path}>
+            View all reviews
+          </Link>
+        </div>
       </div>
     </div>
   )
