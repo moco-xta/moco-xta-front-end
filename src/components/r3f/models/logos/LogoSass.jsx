@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-const LogoSass = forwardRef(function(props, ref) {
+const LogoSass = forwardRef(function (props, ref) {
   const gltf = useGLTF(GltfConstants.LOGO_SASS)
 
   useLayoutEffect(() => {
