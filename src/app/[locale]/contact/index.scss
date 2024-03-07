@@ -1,11 +1,14 @@
 @import '@/styles/variables.module.scss';
 
 #contact {
+  z-index: 1;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 
   #contact_container {
     width: 60%;
@@ -104,4 +107,10 @@
     bottom: 50px;
     color: $white_op80;
   }
+}
+
+#contact_canvas_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
