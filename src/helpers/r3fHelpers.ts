@@ -14,18 +14,17 @@ export function getUvMousePositionOnMesh(
   name: string,
 ) {
   const pointCoordinates = event.point
-  console.log(event.intersections)
   const max = {
     // @ts-ignore
     x: event.intersections.find((object) => (object.object.name = name)).object
+      // @ts-ignore
       .geometry.boundingBox.max.x,
     /* x: event.intersections[0].object.geometry.boundingBox.max.x, */
     // @ts-ignore
     y: event.intersections.find((object) => (object.object.name = name)).object
+      // @ts-ignore
       .geometry.boundingBox.max.y,
   }
-  /* console.log('pointCoordinates', pointCoordinates)
-  console.log('max', max) */
   return {
     x: (100 * pointCoordinates.x) / max.x,
     y: (100 * pointCoordinates.y) / max.y,

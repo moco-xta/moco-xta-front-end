@@ -4,6 +4,5 @@ export function getCookieByName(name: string) {
     let [key, value] = el.split('=')
     cookie[key.trim()] = value
   })
-  console.log(cookie[name])
   return cookie[name]
 }

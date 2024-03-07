@@ -104,7 +104,6 @@ export default function IntroductionCardCanvas({
         onCreated={(object) => {
           object.camera.layers.enableAll()
           object.raycaster.layers.set(1)
-          console.log(object)
         }}
         /* style={{ background: "hotpink" }} */
       >
