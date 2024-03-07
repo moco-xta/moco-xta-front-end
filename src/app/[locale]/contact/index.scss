@@ -1,17 +1,110 @@
-#contact_container {
-  margin: 100px 15% 100px 15%;
-  display: flex;
-  flex-direction: rows;
-  justify-content: space-between;
-  background-color: DarkSlateGray;
+@import '@/styles/variables.module.scss';
 
-  #contact_head_text {
+#contact {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #contact_container {
+    width: 60%;
     display: flex;
-    flex-direction: column;
+    flex-direction: rows;
   }
 
-  #socials_contact_container {
+  #contact_head_text {
+    width: 50%;
+    margin-right: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    h1 {
+      text-align: end;
+      line-height: 90px
+    }
+
+    h2 {
+      text-align: end;
+      color: $white_op80;
+    }
+  }
+  
+  #why_socials_contacts_container {
+    width: 50%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #why_container {
+      margin-bottom: 30px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      #why {
+        width: 80%;
+        margin-bottom: 15px;
+        text-align: justify;
+        color: $white_op80;
+      }
+    }
+
+    #socials_container {
+      margin-bottom: 30px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      .social_container {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        color: $white_op80;
+        cursor: pointer;
+      }
+
+      .social_container:hover {
+        color: $white;
+      }
+
+      .social_icon {
+        margin-right: 10px;
+      }
+    }
+
+    #contacts_container {
+      margin-bottom: 30px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      .contact_container {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        color: $white_op80;
+      }
+
+      .contact_icon {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  #my_role {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+
+    p {
+      position: relative;
+    }
   }
 }
