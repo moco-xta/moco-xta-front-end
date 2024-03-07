@@ -1,14 +1,14 @@
 export const reviewRoles = [
   {
-    name: 'project manager'
+    name: 'project manager',
   },
   {
-    name: 'developer'
+    name: 'developer',
   },
   {
-    name: 'designer'
+    name: 'designer',
   },
   {
-    name: 'other'
-  }
+    name: 'other',
+  },
 ]

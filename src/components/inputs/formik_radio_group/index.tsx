@@ -16,7 +16,10 @@ export default function FormikRadioGroup(props: FormikRadiogroupInterface) {
       </label>
       <div className='radio_options_wrapper'>
         {options.map((option, index) => (
-          <div key={`radio_${option.name}_${index}`} className='radio_option_container'>
+          <div
+            key={`radio_${option.name}_${index}`}
+            className='radio_option_container'
+          >
             <input
               type='radio'
               id={option.name}
@@ -24,7 +27,9 @@ export default function FormikRadioGroup(props: FormikRadiogroupInterface) {
               onChange={handleChange}
               value={option.value ? option.value : option.name}
             />
-            <label htmlFor={option.name}>{option.label ? option.label : capitalizeFirstLetter(option.name)}</label>
+            <label htmlFor={option.name}>
+              {option.label ? option.label : capitalizeFirstLetter(option.name)}
+            </label>
           </div>
         ))}
       </div>

@@ -29,7 +29,8 @@
           flex-direction: row;
           justify-content: space-between;
 
-          button[type='submit'], button[type='reset'] {
+          button[type='submit'],
+          button[type='reset'] {
             all: unset;
             width: 40%;
             padding: 12px 20px;
