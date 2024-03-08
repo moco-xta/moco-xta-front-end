@@ -24,6 +24,10 @@ export const LogoHtml = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
       ref.current.width = box.getSize(new THREE.Vector3()).x
     }, [])
 
+    /* const threeTone = new THREE.TextureLoader().load('/img/jpg/gradient_maps/threeTone.jpg')
+    threeTone.minFilter = THREE.NearestFilter
+    threeTone.magFilter = THREE.NearestFilter */
+
     return (
       <mesh
         ref={ref}
@@ -32,10 +36,15 @@ export const LogoHtml = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
         receiveShadow
         castShadow
       >
-        <meshStandardMaterial
+        <meshPhysicalMaterial
           attach='material'
           color={'white'}
         />
+        {/* <meshToonMaterial
+          attach='material'
+          color={'white'}
+          gradientMap={threeTone}
+        /> */}
       </mesh>
     )
   },
