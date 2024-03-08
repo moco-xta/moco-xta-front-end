@@ -13,7 +13,6 @@ import LogoFigma from '../../models/logos/LogoFigma'
 import LogoHtml from '../../models/logos/LogoHtml'
 import LogoNpm from '../../models/logos/LogoNpm'
 import LogoSass from '../../models/logos/LogoSass'
-import LogoSassNormal from '../../models/logos/LogoSassNormal'
 
 function PerformedWithScene() {
   const logoFigmaRef = useRef(new THREE.Object3D())
@@ -21,11 +20,10 @@ function PerformedWithScene() {
   const logoHtmlRef = useRef(new THREE.Object3D())
   const logoNpmRef = useRef(new THREE.Object3D())
   const logoReduxRef = useRef(new THREE.Object3D())
-  const logoSassRef = useRef(new THREE.Object3D())
-  const logoSassNormalRef = useRef<THREE.Mesh>(new THREE.Mesh())
+  const logoSassRef = useRef<THREE.Mesh>(new THREE.Mesh())
 
   const refs = [
-    logoSassNormalRef,
+    logoSassRef,
   ]
 
   const logoData: iconsDataInterface = {
@@ -88,7 +86,7 @@ function PerformedWithScene() {
       />
       <LogoRedux ref={logoReduxRef} /> */}
       {/* <LogoSass ref={logoSassRef} /> */}
-      <LogoSassNormal ref={logoSassNormalRef} />
+      <LogoSass ref={logoSassRef} />
     </>
   )
 }
