@@ -1,20 +1,27 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { Suspense, createRef, useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
 import { iconsDataInterface } from '@/interfaces/components/r3f/iconsDataInterface'
 
-import LogoSass from '../../models/logos/LogoSass'
+import { performedWithData } from '@/data/performedWithData'
+
+export type LogoRefType = THREE.Mesh & {
+  width: number
+}
 
 function PerformedWithScene() {
-  const logoSassRef = useRef<THREE.Mesh>(new THREE.Mesh())
-
-  const refs = [
-    logoSassRef,
-  ]
+  const logosGroupRef = useRef<THREE.Group>(null!)
+  const logosCreateRefs = useMemo(
+    () =>
+      performedWithData.map(() => ({
+        ref: createRef<LogoRefType>(),
+      })),
+    [],
+  )
 
   const logosData: iconsDataInterface = {
     total_length: 0,
@@ -22,18 +29,21 @@ function PerformedWithScene() {
   }
 
   useEffect(() => {
-    refs.forEach((ref) => {
-      // @ts-ignore
-      logosData.widths.push(ref.current.width)
+    logosCreateRefs.forEach(({ ref }, index) => {
+      if(ref.current) {
+        logosData.widths.push(ref.current.width * performedWithData[index].scale.x)
+      }
     })
     let sum = 0
-    refs.forEach((ref, index) => {
-      if (index === 0) {
-        ref.current.position.x = sum
-        sum += logosData.widths[index] / 2
-      } else {
-        ref.current.position.x = sum + logosData.widths[index] / 2 + index * 0.5
-        sum += logosData.widths[index]
+    logosCreateRefs.forEach(({ref}, index) => {
+      if(ref.current) {
+        if (index === 0) {
+          ref.current.position.x = sum
+          sum += logosData.widths[index] / 2
+        } else {
+          ref.current.position.x = sum + logosData.widths[index] / 2 + index * 0.5
+          sum += logosData.widths[index]
+        }
       }
     })
     logosData.widths.forEach((width) => {
@@ -42,10 +52,12 @@ function PerformedWithScene() {
   }, [])
 
   useFrame((state, delta, xrFrame) => {
-    refs.forEach((ref) => {
-      ref.current.position.x += delta
-      if (ref.current.position.x > logosData.total_length / 2)
-        ref.current.position.x -= logosData.total_length
+    logosCreateRefs.forEach(({ref}) => {
+      if(ref.current) {
+        ref.current.position.x += delta
+        if (ref.current.position.x > logosData.total_length / 2)
+          ref.current.position.x -= logosData.total_length
+      }
     })
   })
 
@@ -64,7 +76,18 @@ function PerformedWithScene() {
         position={[-5, 5, 5]}
         castShadow
       />
-      <LogoSass ref={logoSassRef} />
+      <group ref={logosGroupRef}>
+        {logosCreateRefs.map(({ ref }, index) => {
+          const Logo = performedWithData[index].logo
+          return (
+            <Logo
+              key={`performed_with_logo_${index}`}
+              ref={ref}
+              scale={performedWithData[index].scale}
+            />
+          )
+        })}
+      </group>
     </>
   )
 }
@@ -80,7 +103,9 @@ export default function PerformedWithCanvas() {
         powerPreference: 'high-performance',
       }}
     >
-      <PerformedWithScene />
+      <Suspense fallback={null}>
+        <PerformedWithScene />
+      </Suspense>
     </Canvas>
   )
 }

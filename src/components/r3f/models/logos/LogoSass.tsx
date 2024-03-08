@@ -1,22 +1,21 @@
+import { forwardRef, Ref, useLayoutEffect } from "react";
 import * as THREE from 'three'
-import React, { ForwardRefRenderFunction, Ref, RefObject, forwardRef, useLayoutEffect, useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { default as GltfConstants } from '@/constants/gltfConstants.json'
-import { MeshProps } from '@react-three/fiber'
+import { LogoRefType } from "types/logoRefType";
 
-type GLTFResult = GLTF & {
+import { default as GltfConstants } from '@/constants/gltfConstants.json'
+
+type GltfResultType = GLTF & {
   nodes: {
     LogoSass: THREE.Mesh
   }
   materials: {}
 }
 
-type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
-
-const LogoSass = forwardRef(function (props: JSX.IntrinsicElements['mesh'], ref: Ref<THREE.Mesh>) {
-  const gltf = useGLTF(GltfConstants.LOGO_SASS) as GLTFResult
+export const LogoSass = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(({ scale }, ref) => {
+  const gltf = useGLTF(GltfConstants.LOGO_SASS) as GltfResultType
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(gltf.scene)
@@ -25,12 +24,8 @@ const LogoSass = forwardRef(function (props: JSX.IntrinsicElements['mesh'], ref:
   }, [])
 
   return (
-    <mesh ref={ref} geometry={gltf.nodes.LogoSass.geometry}>
+    <mesh ref={ref} geometry={gltf.nodes.LogoSass.geometry} scale={scale}>
       <meshStandardMaterial attach='material' color={'white'} />
     </mesh>
   )
 })
-
-useGLTF.preload(GltfConstants.LOGO_SASS)
-
-export default LogoSass
