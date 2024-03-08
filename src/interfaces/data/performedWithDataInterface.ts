@@ -1,8 +1,8 @@
-import { ForwardRefExoticComponent, RefAttributes } from 'react'
+import { ForwardRefExoticComponent } from 'react'
 
-import { LogoInterface } from '@/interfaces/components/r3f/logoInterface'
+import { MeshProps } from '@react-three/fiber'
 
 export interface PerformedWithDataInterface {
-  logo: ForwardRefExoticComponent<RefAttributes<LogoInterface>>
+  logo: ForwardRefExoticComponent<Omit<MeshProps, "ref">>
   scale: THREE.Vector3
 }
