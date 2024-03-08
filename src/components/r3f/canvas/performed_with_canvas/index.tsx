@@ -3,7 +3,7 @@
 import React, { Suspense, createRef, useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera, SoftShadows } from '@react-three/drei'
 
 import { iconsDataInterface } from '@/interfaces/components/r3f/iconsDataInterface'
 
@@ -30,18 +30,21 @@ function PerformedWithScene() {
 
   useEffect(() => {
     logosCreateRefs.forEach(({ ref }, index) => {
-      if(ref.current) {
-        logosData.widths.push(ref.current.width * performedWithData[index].scale.x)
+      if (ref.current) {
+        logosData.widths.push(
+          ref.current.width * performedWithData[index].scale.x,
+        )
       }
     })
     let sum = 0
-    logosCreateRefs.forEach(({ref}, index) => {
-      if(ref.current) {
+    logosCreateRefs.forEach(({ ref }, index) => {
+      if (ref.current) {
         if (index === 0) {
           ref.current.position.x = sum
           sum += logosData.widths[index] / 2
         } else {
-          ref.current.position.x = sum + logosData.widths[index] / 2 + index * 0.5
+          ref.current.position.x =
+            sum + logosData.widths[index] / 2 + index * 0.5
           sum += logosData.widths[index]
         }
       }
@@ -52,8 +55,8 @@ function PerformedWithScene() {
   }, [])
 
   useFrame((state, delta, xrFrame) => {
-    logosCreateRefs.forEach(({ref}) => {
-      if(ref.current) {
+    logosCreateRefs.forEach(({ ref }) => {
+      if (ref.current) {
         ref.current.position.x += delta
         if (ref.current.position.x > logosData.total_length / 2)
           ref.current.position.x -= logosData.total_length
@@ -71,10 +74,26 @@ function PerformedWithScene() {
       <directionalLight
         position={[5, 5, 5]}
         castShadow
+        shadow-camera-left={-20}
+        shadow-camera-right={20}
+        shadow-camera-top={20}
+        shadow-camera-bottom={-20}
+        shadow-mapSize-height={2048}
+        shadow-mapSize-width={2048}
+        shadow-radius={1}
+        shadow-bias={-0.0001}
       />
       <directionalLight
         position={[-5, 5, 5]}
         castShadow
+        shadow-camera-left={-20}
+        shadow-camera-right={20}
+        shadow-camera-top={20}
+        shadow-camera-bottom={-20}
+        shadow-mapSize-height={2048}
+        shadow-mapSize-width={2048}
+        shadow-radius={1}
+        shadow-bias={-0.0001}
       />
       <group ref={logosGroupRef}>
         {logosCreateRefs.map(({ ref }, index) => {
@@ -103,6 +122,10 @@ export default function PerformedWithCanvas() {
         powerPreference: 'high-performance',
       }}
     >
+      <SoftShadows
+        size={30}
+        samples={10}
+      />
       <Suspense fallback={null}>
         <PerformedWithScene />
       </Suspense>

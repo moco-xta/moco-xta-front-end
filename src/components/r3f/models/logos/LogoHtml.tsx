@@ -9,14 +9,14 @@ import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 type GltfResultType = GLTF & {
   nodes: {
-    LogoSass: THREE.Mesh
+    LogoHtml: THREE.Mesh
   }
   materials: {}
 }
 
-export const LogoSass = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
+export const LogoHtml = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
   ({ scale }, ref) => {
-    const gltf = useGLTF(GltfConstants.LOGO_SASS) as GltfResultType
+    const gltf = useGLTF(GltfConstants.LOGO_HTML) as GltfResultType
 
     useLayoutEffect(() => {
       const box = new THREE.Box3().setFromObject(gltf.scene)
@@ -27,7 +27,7 @@ export const LogoSass = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
     return (
       <mesh
         ref={ref}
-        geometry={gltf.nodes.LogoSass.geometry}
+        geometry={gltf.nodes.LogoHtml.geometry}
         scale={scale}
         receiveShadow
         castShadow
@@ -41,4 +41,4 @@ export const LogoSass = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
   },
 )
 
-useGLTF.preload(GltfConstants.LOGO_SASS)
+useGLTF.preload(GltfConstants.LOGO_HTML)
