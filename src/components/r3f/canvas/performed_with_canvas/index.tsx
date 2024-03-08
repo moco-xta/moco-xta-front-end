@@ -73,6 +73,7 @@ function PerformedWithScene() {
       />
       <directionalLight
         position={[5, 5, 5]}
+        intensity={2}
         castShadow
         shadow-camera-left={-20}
         shadow-camera-right={20}
@@ -85,6 +86,7 @@ function PerformedWithScene() {
       />
       <directionalLight
         position={[-5, 5, 5]}
+        intensity={2}
         castShadow
         shadow-camera-left={-20}
         shadow-camera-right={20}

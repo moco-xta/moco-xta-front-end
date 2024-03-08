@@ -18,7 +18,7 @@ export const performedWithData: PerformedWithDataInterface[] = [
   },
   {
     logo: LogoHtml,
-    scale: new THREE.Vector3(0.8, 0.8, 1),
+    scale: new THREE.Vector3(0.5, 0.5, 1),
   },
   {
     logo: LogoSass,
