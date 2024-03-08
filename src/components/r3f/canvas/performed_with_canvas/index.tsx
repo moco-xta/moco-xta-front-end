@@ -1,68 +1,31 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { Ref, useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas, MeshProps, useFrame } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
 import { iconsDataInterface } from '@/interfaces/components/r3f/iconsDataInterface'
 
-import IconAnsible from '@/components/r3f/models/icons/IconAnsible'
-import IconBlender from '@/components/r3f/models/icons/IconBlender'
-import IconChatGpt from '@/components/r3f/models/icons/IconChatGpt'
-import IconCss from '@/components/r3f/models/icons/IconCss'
-import IconDocker from '@/components/r3f/models/icons/IconDocker'
-import IconFigma from '@/components/r3f/models/icons/IconFigma'
-import IconGithub from '@/components/r3f/models/icons/IconGithub'
-import IconGsap from '@/components/r3f/models/icons/IconGsap'
-import IconHtml from '@/components/r3f/models/icons/IconHtml'
-import IconI18n from '@/components/r3f/models/icons/IconI18n'
-import IconIllustrator from '@/components/r3f/models/icons/IconIllustrator'
-import IconNextjs from '@/components/r3f/models/icons/IconNextjs'
-import IconNpm from '@/components/r3f/models/icons/IconNpm'
-import IconPhotoshop from '@/components/r3f/models/icons/IconPhotoshop'
-import IconPostgresql from '@/components/r3f/models/icons/IconPostgresql'
-import IconRedux from '@/components/r3f/models/icons/IconRedux'
-import IconSpringboot from '@/components/r3f/models/icons/IconSpringboot'
-import IconThreejs from '@/components/r3f/models/icons/IconThreejs'
-import IconWebgl from '@/components/r3f/models/icons/IconWebgl'
-
-import LogoSass from '@/components/r3f/models/logos/LogoSass'
 import LogoRedux from '@/components/r3f/models/logos/LogoRedux'
 import LogoGithub from '@/components/r3f/models/logos/LogoGithub'
 import LogoFigma from '../../models/logos/LogoFigma'
 import LogoHtml from '../../models/logos/LogoHtml'
 import LogoNpm from '../../models/logos/LogoNpm'
+import LogoSass from '../../models/logos/LogoSass'
+import LogoSassNormal from '../../models/logos/LogoSassNormal'
 
 function PerformedWithScene() {
-  const iconAnsibleRef = useRef(new THREE.Object3D())
-  const iconBlenderRef = useRef(new THREE.Object3D())
-  const iconChatGptRef = useRef(new THREE.Object3D())
-  const iconCssRef = useRef(new THREE.Object3D())
-  const iconDockerRef = useRef(new THREE.Object3D())
   const logoFigmaRef = useRef(new THREE.Object3D())
   const logoGithubRef = useRef(new THREE.Object3D())
-  const iconGsapRef = useRef(new THREE.Object3D())
   const logoHtmlRef = useRef(new THREE.Object3D())
-  const iconI18nRef = useRef(new THREE.Object3D())
-  const iconIllustratorRef = useRef(new THREE.Object3D())
-  const iconNextjsRef = useRef(new THREE.Object3D())
   const logoNpmRef = useRef(new THREE.Object3D())
-  const iconPhotoshopRef = useRef(new THREE.Object3D())
-  const iconPostgresqlRef = useRef(new THREE.Object3D())
   const logoReduxRef = useRef(new THREE.Object3D())
   const logoSassRef = useRef(new THREE.Object3D())
-  const iconSpringbootRef = useRef(new THREE.Object3D())
-  const iconThreejsRef = useRef(new THREE.Object3D())
-  const iconWebglRef = useRef(new THREE.Object3D())
+  const logoSassNormalRef = useRef<THREE.Mesh>(new THREE.Mesh())
 
   const refs = [
-    logoFigmaRef,
-    logoGithubRef,
-    logoHtmlRef,
-    logoNpmRef,
-    logoReduxRef,
-    logoSassRef,
+    logoSassNormalRef,
   ]
 
   const logoData: iconsDataInterface = {
@@ -113,7 +76,7 @@ function PerformedWithScene() {
         position={[-5, 5, 5]}
         castShadow
       />
-      <LogoFigma
+      {/* <LogoFigma
         ref={logoFigmaRef}
         scale={new THREE.Vector3(0.7, 0.7, 1)}
       />
@@ -123,8 +86,9 @@ function PerformedWithScene() {
         ref={logoNpmRef}
         scale={new THREE.Vector3(0.4, 0.4, 1)}
       />
-      <LogoRedux ref={logoReduxRef} />
-      <LogoSass ref={logoSassRef} />
+      <LogoRedux ref={logoReduxRef} /> */}
+      {/* <LogoSass ref={logoSassRef} /> */}
+      <LogoSassNormal ref={logoSassNormalRef} />
     </>
   )
 }
