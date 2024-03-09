@@ -18,10 +18,11 @@ export default function IntroductionSlice() {
           <div id='introduction_cards_container'>
             {introductionSkillCardsData.map((content, index) => {
               return (
-                <div key={`introduction_card_container_${index}`} className='introduction_card_canvas_container'>
-                  <IntroductionCardCanvas
-                    content={content}
-                  />
+                <div
+                  key={`introduction_card_container_${index}`}
+                  className='introduction_card_canvas_container'
+                >
+                  <IntroductionCardCanvas content={content} />
                 </div>
               )
             })}

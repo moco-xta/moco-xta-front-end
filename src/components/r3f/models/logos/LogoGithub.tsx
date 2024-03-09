@@ -34,9 +34,7 @@ export const LogoGithub = forwardRef<
       receiveShadow
       castShadow
     >
-      <meshLambertMaterial
-        color={'white'}
-      />
+      <meshLambertMaterial color={'white'} />
     </mesh>
   )
 })
