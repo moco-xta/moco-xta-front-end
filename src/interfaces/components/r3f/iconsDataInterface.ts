@@ -1,4 +1,4 @@
-export interface iconsDataInterface {
-  total_length: number
+export interface IconsDataInterface {
+  totalLength: number
   widths: number[]
 }

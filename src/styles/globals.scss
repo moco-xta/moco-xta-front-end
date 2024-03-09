@@ -45,6 +45,10 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+.word, .word_active {
+  display: inline-block;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
