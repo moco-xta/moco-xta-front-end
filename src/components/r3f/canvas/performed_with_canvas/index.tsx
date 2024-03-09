@@ -5,7 +5,7 @@ import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { PerspectiveCamera, SoftShadows } from '@react-three/drei'
 
-import { iconsDataInterface } from '@/interfaces/components/r3f/iconsDataInterface'
+import { IconsDataInterface } from '@/interfaces/components/r3f/iconsDataInterface'
 
 import { performedWithData } from '@/data/performedWithData'
 
@@ -23,8 +23,8 @@ function PerformedWithScene() {
     [],
   )
 
-  const logosData: iconsDataInterface = {
-    total_length: 0,
+  const logosData: IconsDataInterface = {
+    totalLength: 0,
     widths: [],
   }
 
@@ -50,7 +50,7 @@ function PerformedWithScene() {
       }
     })
     logosData.widths.forEach((width) => {
-      logosData.total_length += width + 0.5
+      logosData.totalLength += width + 0.5
     })
   }, [])
 
@@ -58,8 +58,8 @@ function PerformedWithScene() {
     logosCreateRefs.forEach(({ ref }) => {
       if (ref.current) {
         ref.current.position.x += delta
-        if (ref.current.position.x > logosData.total_length / 2)
-          ref.current.position.x -= logosData.total_length
+        if (ref.current.position.x > logosData.totalLength / 2)
+          ref.current.position.x -= logosData.totalLength
       }
     })
   })
