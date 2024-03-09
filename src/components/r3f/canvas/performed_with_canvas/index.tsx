@@ -72,30 +72,43 @@ function PerformedWithScene() {
         fov={5}
       />
       <directionalLight
-        position={[5, 5, 5]}
+        position={[10, 10, 5]}
         intensity={2}
         castShadow
-        shadow-camera-left={-20}
+        /* shadow-camera-left={-20}
         shadow-camera-right={20}
         shadow-camera-top={20}
         shadow-camera-bottom={-20}
         shadow-mapSize-height={2048}
         shadow-mapSize-width={2048}
-        shadow-radius={1}
-        shadow-bias={-0.0001}
+        shadow-radius={10}
+        shadow-bias={-0.01} */
       />
       <directionalLight
-        position={[-5, 5, 5]}
+        position={[-10, 10, 5]}
         intensity={2}
         castShadow
-        shadow-camera-left={-20}
+        /* shadow-camera-left={-20}
         shadow-camera-right={20}
         shadow-camera-top={20}
         shadow-camera-bottom={-20}
         shadow-mapSize-height={2048}
         shadow-mapSize-width={2048}
-        shadow-radius={1}
-        shadow-bias={-0.0001}
+        shadow-radius={10}
+        shadow-bias={-0.01} */
+      />
+      <directionalLight
+        position={[0, 10, -5]}
+        intensity={2}
+        castShadow
+        /* shadow-camera-left={-20}
+        shadow-camera-right={20}
+        shadow-camera-top={20}
+        shadow-camera-bottom={-20}
+        shadow-mapSize-height={2048}
+        shadow-mapSize-width={2048}
+        shadow-radius={10}
+        shadow-bias={-0.01} */
       />
       <group ref={logosGroupRef}>
         {logosCreateRefs.map(({ ref }, index) => {
@@ -125,7 +138,7 @@ export default function PerformedWithCanvas() {
       }}
     >
       <SoftShadows
-        size={30}
+        size={20}
         samples={10}
       />
       <Suspense fallback={null}>
