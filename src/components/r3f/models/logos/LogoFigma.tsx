@@ -32,10 +32,7 @@ export const LogoFigma = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
         receiveShadow
         castShadow
       >
-        <meshStandardMaterial
-          attach='material'
-          color={'white'}
-        />
+        <meshLambertMaterial color={'white'} />
       </mesh>
     )
   },

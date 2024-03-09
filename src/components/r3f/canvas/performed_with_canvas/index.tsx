@@ -137,13 +137,13 @@ export default function PerformedWithCanvas() {
         powerPreference: 'high-performance',
       }}
     >
-      <SoftShadows
+      {/* <SoftShadows
         size={20}
         samples={10}
       />
-      <Suspense fallback={null}>
-        <PerformedWithScene />
-      </Suspense>
+      <Suspense fallback={null}> */}
+      <PerformedWithScene />
+      {/* </Suspense> */}
     </Canvas>
   )
 }

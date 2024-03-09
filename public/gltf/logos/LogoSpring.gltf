@@ -1,104 +1,94 @@
 {
-	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.0.44",
-		"version":"2.0"
-	},
-	"scene":0,
-	"scenes":[
-		{
-			"name":"Scene",
-			"nodes":[
-				0
-			]
-		}
-	],
-	"nodes":[
-		{
-			"mesh":0,
-			"name":"LogoSpring"
-		}
-	],
-	"meshes":[
-		{
-			"name":"LogoSpring",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":0,
-						"NORMAL":1,
-						"TEXCOORD_0":2
-					},
-					"indices":3
-				}
-			]
-		}
-	],
-	"accessors":[
-		{
-			"bufferView":0,
-			"componentType":5126,
-			"count":7059,
-			"max":[
-				0.8489974737167358,
-				0.9952535629272461,
-				0.2000007927417755
-			],
-			"min":[
-				-0.8450813889503479,
-				-0.9960150122642517,
-				-0.20000027120113373
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5126,
-			"count":7059,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":2,
-			"componentType":5126,
-			"count":7059,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":3,
-			"componentType":5123,
-			"count":11889,
-			"type":"SCALAR"
-		}
-	],
-	"bufferViews":[
-		{
-			"buffer":0,
-			"byteLength":84708,
-			"byteOffset":0,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":84708,
-			"byteOffset":84708,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":56472,
-			"byteOffset":169416,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":23778,
-			"byteOffset":225888,
-			"target":34963
-		}
-	],
-	"buffers":[
-		{
-			"byteLength":249668,
-			"uri":"LogoSpring.bin"
-		}
-	]
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoSpring"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoSpring",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 7059,
+      "max": [0.8489974737167358, 0.9952535629272461, 0.2000007927417755],
+      "min": [-0.8450813889503479, -0.9960150122642517, -0.20000027120113373],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 7059,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 7059,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 11889,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 84708,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 84708,
+      "byteOffset": 84708,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 56472,
+      "byteOffset": 169416,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 23778,
+      "byteOffset": 225888,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 249668,
+      "uri": "LogoSpring.bin"
+    }
+  ]
 }

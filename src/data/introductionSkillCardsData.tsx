@@ -1,48 +1,28 @@
-import * as THREE from 'three'
-
 import { IntroductionSkillCardDataInterface } from '@/interfaces/data/introductionSkillCardDataInterface'
 
-import { LogoNextjs } from '@/components/r3f/models/logos/LogoNextjs'
 import { LogoReactThreeDrei } from '@/components/r3f/models/logos/LogoReactThreeDrei'
-import { LogoSpringBoot } from '../components/r3f/models/logos/LogoSpring'
-
-import { default as GltfConstants } from '@/constants/gltfConstants.json'
-import { Gltf } from '@react-three/drei'
 
 export const introductionSkillCardsData: IntroductionSkillCardDataInterface[] =
   [
     {
       /* logo: <LogoReactThreeDrei position={new THREE.Vector3(0, 0, 0)}  scale={new THREE.Vector3(0, 0, 0)} />, */
-      logo: (
-        <Gltf
-          src={GltfConstants.LOGO_REACT_THREE_DREI}
-          receiveShadow
-          castShadow
-        />
-      ),
+      name: 'logo_react_three_fiber',
+      logo: LogoReactThreeDrei,
       description:
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+        'It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.',
     },
     {
-      logo: (
-        <Gltf
-          src={GltfConstants.LOGO_REACT_THREE_DREI}
-          receiveShadow
-          castShadow
-        />
-      ),
+      /* logo: <LogoReactThreeDrei position={new THREE.Vector3(0, 0, 0)}  scale={new THREE.Vector3(0, 0, 0)} />, */
+      name: 'logo_react_three_fiber',
+      logo: LogoReactThreeDrei,
       description:
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+      'It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.',
     },
     {
-      logo: (
-        <Gltf
-          src={GltfConstants.LOGO_REACT_THREE_DREI}
-          receiveShadow
-          castShadow
-        />
-      ),
+      /* logo: <LogoReactThreeDrei position={new THREE.Vector3(0, 0, 0)}  scale={new THREE.Vector3(0, 0, 0)} />, */
+      name: 'logo_react_three_fiber',
+      logo: LogoReactThreeDrei,
       description:
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+      'It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.',
     },
   ]
