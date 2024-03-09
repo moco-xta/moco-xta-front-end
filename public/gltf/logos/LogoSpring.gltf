@@ -15,12 +15,12 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"LogoRedux"
+			"name":"LogoSpring"
 		}
 	],
 	"meshes":[
 		{
-			"name":"LogoRedux",
+			"name":"LogoSpring",
 			"primitives":[
 				{
 					"attributes":{
@@ -37,68 +37,68 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":6072,
+			"count":7059,
 			"max":[
-				0.7840821743011475,
-				0.986859917640686,
-				0.19400128722190857
+				0.8489974737167358,
+				0.9952535629272461,
+				0.2000007927417755
 			],
 			"min":[
-				-0.7840825915336609,
-				-0.9841521978378296,
-				-0.1940004974603653
+				-0.8450813889503479,
+				-0.9960150122642517,
+				-0.20000027120113373
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":6072,
+			"count":7059,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":6072,
+			"count":7059,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":15330,
+			"count":11889,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":72864,
+			"byteLength":84708,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":72864,
-			"byteOffset":72864,
+			"byteLength":84708,
+			"byteOffset":84708,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":48576,
-			"byteOffset":145728,
+			"byteLength":56472,
+			"byteOffset":169416,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":30660,
-			"byteOffset":194304,
+			"byteLength":23778,
+			"byteOffset":225888,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":224964,
-			"uri":"LogoRedux.bin"
+			"byteLength":249668,
+			"uri":"LogoSpring.bin"
 		}
 	]
 }

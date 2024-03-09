@@ -4,7 +4,7 @@ import { IntroductionSkillCardInterface } from '@/interfaces/data/introductionSk
 
 import { LogoNextjs } from '@/components/r3f/models/logos/LogoNextjs'
 import { LogoReactThreeDrei } from '@/components/r3f/models/logos/LogoReactThreeDrei'
-import { LogoSpringBoot } from '../components/r3f/models/logos/LogoSpringBoot'
+import { LogoSpringBoot } from '../components/r3f/models/logos/LogoSpring'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 import { Gltf } from '@react-three/drei'
