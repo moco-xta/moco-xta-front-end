@@ -11,8 +11,7 @@ export function LogoReact({ position, scale }) {
       position={position}
       scale={scale}
     >
-      <meshStandardMaterial
-        attach='material'
+      <meshLambertMaterial
         color={'#61d9fb'} /*  emissive={'#61d9fb'} emissiveIntensity={5} */
       />
     </mesh>

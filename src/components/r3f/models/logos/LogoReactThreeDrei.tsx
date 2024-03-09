@@ -32,8 +32,7 @@ export const LogoReactThreeDrei = forwardRef<LogoRefType, JSX.IntrinsicElements[
         receiveShadow
         castShadow
       >
-        <meshStandardMaterial
-          attach='material'
+        <meshLambertMaterial
           color={'white'}
         />
       </mesh>
