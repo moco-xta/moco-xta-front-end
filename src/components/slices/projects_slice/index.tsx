@@ -50,7 +50,6 @@ export default function ProjectSlice() {
         },
         { 
           duration: 0.4,
-          /* duration: 2, */
           ease: 'power1.in',
           xPercent: () => gsap.utils.random(-50, 50),
           yPercent: () => gsap.utils.random(-10, 10),
@@ -73,8 +72,7 @@ export default function ProjectSlice() {
           opacity: 0,
         },
         {
-          /* duration: 0.8, */
-          duration: 2,
+          duration: 1,
           ease: 'expo',
           xPercent: 0,
           yPercent: 0,
@@ -90,7 +88,7 @@ export default function ProjectSlice() {
             setIsAnimating(false)
           }
         },
-        '>-=0.6',
+        '>-=0.7',
       )
   }
 
