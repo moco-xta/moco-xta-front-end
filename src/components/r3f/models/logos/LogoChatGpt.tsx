@@ -14,30 +14,29 @@ type GltfResultType = GLTF & {
   materials: {}
 }
 
-export const LogoChatGpt = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
-  ({ scale }, ref) => {
-    const gltf = useGLTF(GltfConstants.LOGO_CHAT_GPT) as GltfResultType
+export const LogoChatGpt = forwardRef<
+  LogoRefType,
+  JSX.IntrinsicElements['mesh']
+>(({ scale }, ref) => {
+  const gltf = useGLTF(GltfConstants.LOGO_CHAT_GPT) as GltfResultType
 
-    useLayoutEffect(() => {
-      const box = new THREE.Box3().setFromObject(gltf.scene)
-      // @ts-ignore
-      ref.current.width = box.getSize(new THREE.Vector3()).x
-    }, [])
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(gltf.scene)
+    // @ts-ignore
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [])
 
-    return (
-      <mesh
-        ref={ref}
-        geometry={gltf.nodes.LogoChatGpt.geometry}
-        scale={scale}
-        receiveShadow
-        castShadow
-      >
-        <meshLambertMaterial
-          color={'white'}
-        />
-      </mesh>
-    )
-  },
-)
+  return (
+    <mesh
+      ref={ref}
+      geometry={gltf.nodes.LogoChatGpt.geometry}
+      scale={scale}
+      receiveShadow
+      castShadow
+    >
+      <meshLambertMaterial color={'white'} />
+    </mesh>
+  )
+})
 
 useGLTF.preload(GltfConstants.LOGO_CHAT_GPT)

@@ -22,6 +22,10 @@
         .introduction_card_canvas_container {
           width: 400px;
           height: 500px;
+
+          div div {
+            pointer-events: none;
+          }
         }
       }
     }

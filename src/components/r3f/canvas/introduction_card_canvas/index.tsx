@@ -3,12 +3,27 @@
 import React, { Suspense, createRef, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, ThreeEvent } from '@react-three/fiber'
-import { Box, PerspectiveCamera, RoundedBox, SoftShadows } from '@react-three/drei'
+import {
+  Box,
+  Html,
+  PerspectiveCamera,
+  RoundedBox,
+  SoftShadows,
+  Text,
+  Text3D,
+} from '@react-three/drei'
 
-import { IntroductionCardCanvasInterface, IntroductionCardSceneInterface } from '@/interfaces/components/r3f/introductionCardInterfaces'
+import {
+  IntroductionCardCanvasInterface,
+  IntroductionCardSceneInterface,
+} from '@/interfaces/components/r3f/introductionCardInterfaces'
 
 import { getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
 import { LogoRefType } from 'types/logoRefType'
+
+const test = '/fonts/json/Monserrat_Bold.json'
+
+import './index.scss'
 
 function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
   const cameraRef = useRef<THREE.PerspectiveCamera>(null!)
@@ -61,6 +76,28 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
         castShadow
       />
       <group ref={introductionCardRef}>
+        {/* <Html
+          as='div'
+          className='introduction_skill_card_text_container'
+          prepend
+          transform
+        >
+          <p className='introduction_skill_card_text'>{content.description}</p>
+        </Html> */}
+        {/* <Text3D font={test}>
+          Hello world!
+          <meshNormalMaterial />
+        </Text3D> */}
+        <Text
+          font={"fonts/Poppins-Black.ttf"}
+          position={[0, -1, 1]}
+          textAlign={'center'}
+          fontSize={0.5}
+          receiveShadow
+          castShadow
+        >
+          {content.description}
+        </Text>
         <RoundedBox
           name='introduction_card'
           args={[6 * 1.2, 8 * 1.2, 0.2]}
@@ -78,13 +115,16 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
         <content.logo
           key={`introduction_skill_card_${content.name}`}
           ref={introductionSkillCardRef}
+          position={new THREE.Vector3(0, 3, 1)}
         />
       </group>
     </>
   )
 }
 
-export default function IntroductionCardCanvas({ content }: IntroductionCardCanvasInterface) {
+export default function IntroductionCardCanvas({
+  content,
+}: IntroductionCardCanvasInterface) {
   return (
     <Canvas
       shadows

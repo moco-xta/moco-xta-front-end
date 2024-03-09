@@ -14,30 +14,29 @@ type GltfResultType = GLTF & {
   materials: {}
 }
 
-export const LogoNextjs = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
-  ({ scale }, ref) => {
-    const gltf = useGLTF(GltfConstants.LOGO_NEXTJS) as GltfResultType
+export const LogoNextjs = forwardRef<
+  LogoRefType,
+  JSX.IntrinsicElements['mesh']
+>(({ scale }, ref) => {
+  const gltf = useGLTF(GltfConstants.LOGO_NEXTJS) as GltfResultType
 
-    useLayoutEffect(() => {
-      const box = new THREE.Box3().setFromObject(gltf.scene)
-      // @ts-ignore
-      ref.current.width = box.getSize(new THREE.Vector3()).x
-    }, [])
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(gltf.scene)
+    // @ts-ignore
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [])
 
-    return (
-      <mesh
-        ref={ref}
-        geometry={gltf.nodes.LogoNextjs.geometry}
-        scale={scale}
-        receiveShadow
-        castShadow
-      >
-        <meshLambertMaterial
-          color={'white'}
-        />
-      </mesh>
-    )
-  },
-)
+  return (
+    <mesh
+      ref={ref}
+      geometry={gltf.nodes.LogoNextjs.geometry}
+      scale={scale}
+      receiveShadow
+      castShadow
+    >
+      <meshLambertMaterial color={'white'} />
+    </mesh>
+  )
+})
 
 useGLTF.preload(GltfConstants.LOGO_NEXTJS)

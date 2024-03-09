@@ -142,7 +142,7 @@ export default function PerformedWithCanvas() {
         samples={10}
       />
       <Suspense fallback={null}> */}
-        <PerformedWithScene />
+      <PerformedWithScene />
       {/* </Suspense> */}
     </Canvas>
   )

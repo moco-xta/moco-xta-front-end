@@ -1,78 +1,68 @@
 {
-	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.0.44",
-		"version":"2.0"
-	},
-	"scene":0,
-	"scenes":[
-		{
-			"name":"Scene",
-			"nodes":[
-				0
-			]
-		}
-	],
-	"nodes":[
-		{
-			"mesh":0,
-			"name":"LogoFigma"
-		}
-	],
-	"meshes":[
-		{
-			"name":"LogoFigma",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":0
-					},
-					"indices":1
-				}
-			]
-		}
-	],
-	"accessors":[
-		{
-			"bufferView":0,
-			"componentType":5126,
-			"count":432,
-			"max":[
-				0.6665033102035522,
-				0.9995098114013672,
-				0.20012196898460388
-			],
-			"min":[
-				-0.6665033102035522,
-				-1,
-				-0.2002876251935959
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5123,
-			"count":1926,
-			"type":"SCALAR"
-		}
-	],
-	"bufferViews":[
-		{
-			"buffer":0,
-			"byteLength":5184,
-			"byteOffset":0,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":3852,
-			"byteOffset":5184,
-			"target":34963
-		}
-	],
-	"buffers":[
-		{
-			"byteLength":9036,
-			"uri":"LogoFigma.bin"
-		}
-	]
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoFigma"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoFigma",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0
+          },
+          "indices": 1
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 432,
+      "max": [0.6665033102035522, 0.9995098114013672, 0.20012196898460388],
+      "min": [-0.6665033102035522, -1, -0.2002876251935959],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5123,
+      "count": 1926,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 5184,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3852,
+      "byteOffset": 5184,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 9036,
+      "uri": "LogoFigma.bin"
+    }
+  ]
 }
