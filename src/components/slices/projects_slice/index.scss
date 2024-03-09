@@ -1,28 +1,17 @@
-.project_details {
-  position: relative;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-
-  .project_description {
-    position: absolute;
-    padding: 20% 25%;
-    line-height: 50px;
-
-    .word_active {
-      display: inline-block;
-      font-size: 30px;
-      opacity: 1;
-    }
-    
-    .word {
-      display: inline-block;
-      font-size: 30px;
-      opacity: 0;
-    }
-  }
+#projects_content {
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-button {
-  position: relative;
+#projects_canvas {
+  z-index: 1;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
