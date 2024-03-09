@@ -27,7 +27,7 @@ export default function ProjectSlice() {
   useEffect(() => {
     projectsDescriptionRefs.forEach(({ ref }) => {
       if (ref.current) {
-        gsap.set('.project_description', { perspective: 1000 })
+        gsap.set(['.word_active', '.word'], { transformPerspective: 900 })
       }
     })
   }, [])
@@ -42,41 +42,74 @@ export default function ProjectSlice() {
       .fromTo(
         '.word_active',
         { 
-          opacity: 1
+          xPercent: 0,
+          yPercent: 0,
+          z: 0,
+          rotationX: 0,
+          opacity: 1,
         },
         { 
-          duration: 1,
+          duration: 0.4,
+          /* duration: 2, */
+          ease: 'power1.in',
+          xPercent: () => gsap.utils.random(-50, 50),
+          yPercent: () => gsap.utils.random(-10, 10),
+          z: () => gsap.utils.random(-700, -400),
+          rotationX: () => gsap.utils.random(-60, 60),
           opacity: 0,
+          stagger: {
+            each: 0.006,
+            from: 'random'
+          },
         }
       )
       .fromTo(
         '.word',
         {
+          xPercent: () => gsap.utils.random(-50, 50),
+          yPercent: () => gsap.utils.random(-10, 10),
+          z: () => gsap.utils.random(400, 700),
+          rotationX: () => gsap.utils.random(-90, 90),
           opacity: 0,
         },
         {
-          duration: 1,
+          /* duration: 0.8, */
+          duration: 2,
+          ease: 'expo',
+          xPercent: 0,
+          yPercent: 0,
+          rotationX: 0,
+          z: 0,
           opacity: 1,
+          stagger: {
+            each: 0.006,
+            from: 'random'
+          },
           onComplete: () => {
             setActiveProject((activeProject) => activeProject + 1 < projectsData.length ? activeProject + 1 : 0)
             setIsAnimating(false)
           }
         },
-        '>-=0.45',
+        '>-=0.6',
       )
   }
 
   return (
     <>
-      <div>
-        <h1>Title</h1>
+      <h1>Title</h1>
+      <div className='project_details'>
         {projectsDescriptionRefs.map(({ ref }, index) => (
           <p
             key={`project_description_${index}`}
             ref={ref}
             id={`project_description_${index}`}
+            className='project_description'
           >
-            {splitTextInArrayOfWords(projectsData[index].description).map(word => (<span className={`word${activeProject === index ? '_active' : ''}`}>{word} </span>))}
+            {splitTextInArrayOfWords(projectsData[index].description).map(word => (
+              <>
+                <span className={`word${activeProject === index ? '_active' : ''}`}>{word}&nbsp;</span>
+              </>
+            ))}
           </p>
         ))}
       </div>
