@@ -1,0 +1,27 @@
+.project {
+  position: absolute;
+
+  .project_details {
+
+    .project_description {
+      line-height: 30px;
+      width: 50%;
+
+      .word_active {
+        display: inline-block;
+        font-size: 20px;
+        opacity: 1;
+      }
+
+      .word {
+        display: inline-block;
+        font-size: 20px;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+button {
+  position: relative;
+}

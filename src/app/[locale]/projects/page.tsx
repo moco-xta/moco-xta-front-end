@@ -7,9 +7,7 @@ import './index.scss'
 export default function Projects() {
   return (
     <div id='projects'>
-      <div id='projects_content'>
-        <ProjectSlice />
-      </div>
+      <ProjectSlice />
     </div>
   )
 }
