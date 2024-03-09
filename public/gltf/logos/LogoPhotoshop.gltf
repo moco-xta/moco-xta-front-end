@@ -15,12 +15,12 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"LogoRedux"
+			"name":"LogoPhotoshop"
 		}
 	],
 	"meshes":[
 		{
-			"name":"LogoRedux",
+			"name":"LogoPhotoshop",
 			"primitives":[
 				{
 					"attributes":{
@@ -37,68 +37,68 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":6072,
+			"count":976,
 			"max":[
-				0.7840821743011475,
-				0.986859917640686,
-				0.19400128722190857
+				1,
+				1,
+				0.2000000774860382
 			],
 			"min":[
-				-0.7840825915336609,
-				-0.9841521978378296,
-				-0.1940004974603653
+				-1,
+				-1,
+				-0.20000000298023224
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":6072,
+			"count":976,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":6072,
+			"count":976,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":15330,
+			"count":2280,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":72864,
+			"byteLength":11712,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":72864,
-			"byteOffset":72864,
+			"byteLength":11712,
+			"byteOffset":11712,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":48576,
-			"byteOffset":145728,
+			"byteLength":7808,
+			"byteOffset":23424,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":30660,
-			"byteOffset":194304,
+			"byteLength":4560,
+			"byteOffset":31232,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":224964,
-			"uri":"LogoRedux.bin"
+			"byteLength":35792,
+			"uri":"LogoPhotoshop.bin"
 		}
 	]
 }
