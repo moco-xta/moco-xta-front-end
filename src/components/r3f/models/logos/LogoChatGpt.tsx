@@ -32,8 +32,7 @@ export const LogoChatGpt = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']
         receiveShadow
         castShadow
       >
-        <meshStandardMaterial
-          attach='material'
+        <meshLambertMaterial
           color={'white'}
         />
       </mesh>

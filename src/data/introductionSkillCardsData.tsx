@@ -1,47 +1,27 @@
-import * as THREE from 'three'
-
 import { IntroductionSkillCardDataInterface } from '@/interfaces/data/introductionSkillCardDataInterface'
 
-import { LogoNextjs } from '@/components/r3f/models/logos/LogoNextjs'
 import { LogoReactThreeDrei } from '@/components/r3f/models/logos/LogoReactThreeDrei'
-import { LogoSpringBoot } from '../components/r3f/models/logos/LogoSpring'
-
-import { default as GltfConstants } from '@/constants/gltfConstants.json'
-import { Gltf } from '@react-three/drei'
 
 export const introductionSkillCardsData: IntroductionSkillCardDataInterface[] =
   [
     {
       /* logo: <LogoReactThreeDrei position={new THREE.Vector3(0, 0, 0)}  scale={new THREE.Vector3(0, 0, 0)} />, */
-      logo: (
-        <Gltf
-          src={GltfConstants.LOGO_REACT_THREE_DREI}
-          receiveShadow
-          castShadow
-        />
-      ),
+      name: 'logo_react-three-fiber',
+      logo: LogoReactThreeDrei,
       description:
         'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     },
     {
-      logo: (
-        <Gltf
-          src={GltfConstants.LOGO_REACT_THREE_DREI}
-          receiveShadow
-          castShadow
-        />
-      ),
+      /* logo: <LogoReactThreeDrei position={new THREE.Vector3(0, 0, 0)}  scale={new THREE.Vector3(0, 0, 0)} />, */
+      name: 'logo_react-three-fiber',
+      logo: LogoReactThreeDrei,
       description:
         'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     },
     {
-      logo: (
-        <Gltf
-          src={GltfConstants.LOGO_REACT_THREE_DREI}
-          receiveShadow
-          castShadow
-        />
-      ),
+      /* logo: <LogoReactThreeDrei position={new THREE.Vector3(0, 0, 0)}  scale={new THREE.Vector3(0, 0, 0)} />, */
+      name: 'logo_react-three-fiber',
+      logo: LogoReactThreeDrei,
       description:
         'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     },
