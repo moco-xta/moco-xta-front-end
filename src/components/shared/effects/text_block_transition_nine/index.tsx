@@ -7,8 +7,14 @@ import { splitTextInArrayOfWords } from '@/helpers/cssHelpers'
 
 import './index.scss'
 
-export default function TextBlockTransitionNine({ tag: Tag, id, className, text, activeText, index }: TextBlockTransitionNineInterface) {
-
+export default function TextBlockTransitionNine({
+  tag: Tag,
+  id,
+  className,
+  text,
+  activeText,
+  index,
+}: TextBlockTransitionNineInterface) {
   useEffect(() => {
     gsap.set(['.word_active', '.word'], { transformPerspective: 900 })
   }, [])
@@ -18,17 +24,13 @@ export default function TextBlockTransitionNine({ tag: Tag, id, className, text,
       id={id}
       className={className}
     >
-      {splitTextInArrayOfWords(text).map(
-        (word) => (
-          <>
-            <span
-              className={`word${activeText === index ? '_active' : ''}`}
-            >
-              {word}&nbsp;
-            </span>
-          </>
-        ),
-      )}
+      {splitTextInArrayOfWords(text).map((word) => (
+        <>
+          <span className={`word${activeText === index ? '_active' : ''}`}>
+            {word}&nbsp;
+          </span>
+        </>
+      ))}
     </Tag>
   )
 }
