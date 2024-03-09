@@ -29,3 +29,7 @@ export function returnArrayOfCharacters(text: string) {
   }
   return test
 }
+
+export function splitTextInArrayOfWords(text: string) {
+  return text.split(' ')
+}
