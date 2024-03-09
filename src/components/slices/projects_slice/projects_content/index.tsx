@@ -1,24 +1,17 @@
 'use client'
 
-import React, { createRef, useEffect, useMemo, useState } from 'react'
+import React, { useState } from 'react'
 import gsap from 'gsap'
 
 import { projectsData } from '@/data/projetcsData'
 
+import TextBlockTransitionNine from '@/components/shared/effects/text_block_transition_nine'
+
 import './index.scss'
-import { splitTextInArrayOfWords } from '@/helpers/cssHelpers'
 
 export default function ProjectsContent() {
-  let currentTextPos = 0
-
-  console.log(projectsData.length)
-
   const [activeProject, setActiveProject] = useState<number>(0)
   const [isAnimating, setIsAnimating] = useState<boolean>(false)
-
-  useEffect(() => {
-    gsap.set(['.word_active', '.word'], { transformPerspective: 900 })
-  }, [])
 
   function displayNextProject() {
     if (isAnimating) return false
@@ -85,26 +78,24 @@ export default function ProjectsContent() {
   return (
     <>
       {projectsData.map((project, index) => (
-        <div id={`project_${index}`} className='project'>
-          <h2>{project.title}</h2>
+        <div key={`project_${index}`} id={`project_${index}`} className='project'>
+          <TextBlockTransitionNine
+            tag={'h2'}
+            id={`project_description_${index}`}
+            className={'project_description'}
+            text={project.title}
+            activeText={activeProject}
+            index={index}
+          />
           <div className='project_details'>
-            <p
-              key={`project_description_${index}`}
+            <TextBlockTransitionNine
+              tag={'p'}
               id={`project_description_${index}`}
-              className='project_description'
-            >
-              {splitTextInArrayOfWords(projectsData[index].description).map(
-                (word) => (
-                  <>
-                    <span
-                      className={`word${activeProject === index ? '_active' : ''}`}
-                    >
-                      {word}&nbsp;
-                    </span>
-                  </>
-                ),
-              )}
-            </p>
+              className={'project_description'}
+              text={project.description}
+              activeText={activeProject}
+              index={index}
+            />
           </div>
         </div>
       ))}
