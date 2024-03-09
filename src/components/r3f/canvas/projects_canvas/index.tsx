@@ -28,6 +28,7 @@ import {
 import { PerspectiveCamera } from '@react-three/drei'
 
 import { ProjectsMap } from '@/components/r3f/models/projects/ProjectsMap'
+import { degreesToRadians } from '@/helpers/r3fHelpers'
 
 function ProjectsScene() {
 
@@ -35,8 +36,9 @@ function ProjectsScene() {
     <>
       <PerspectiveCamera
         makeDefault
-        position={[0, 0, 0]}
-        fov={90}
+        position={[-1.8, 0.4, 2.2]}
+        rotation={[degreesToRadians(-10), degreesToRadians(-5), 0]}
+        fov={45}
         near={0.1}
         far={70}
       />
@@ -46,11 +48,11 @@ function ProjectsScene() {
         attach='fog'
         color='black'
         near={0.5}
-        far={5}
+        far={8}
       />
       <EffectComposer>
         <DepthOfField
-          focusDistance={0.05}
+          focusDistance={0.01}
           focalLength={0.02}
           bokehScale={3}
         />
@@ -77,17 +79,17 @@ function ProjectsScene() {
           active // turn on/off the effect (switches between "mode" prop and GlitchMode.DISABLED)
           ratio={0.82} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
         /> */}
-        <Noise
+        {/* <Noise
           premultiply // enables or disables noise premultiplication
           blendFunction={BlendFunction.ADD} // blend mode
-        />
+        /> */}
         {/* <ChromaticAberration
           blendFunction={BlendFunction.NORMAL} // blend mode
           offset={new THREE.Vector2(0.002, 0.002)} // color offset
         /> */}
-        <ColorAverage
+        {/* <ColorAverage
           blendFunction={BlendFunction.NORMAL} // blend mode
-        />
+        /> */}
         {/* <LensFlare
           blendFunction={BlendFunction.SCREEN} // The blend function of this effect.
           enabled={true} // Boolean to enable/disable the effect.
@@ -110,11 +112,11 @@ function ProjectsScene() {
           aditionalStreaks={true} // Option to enable/disable aditional streaks. Default: true.
           smoothTime={0.07} // The time that it takes to fade the occlusion. Default: 0.07
         /> */}
-        <Scanline
+        {/* <Scanline
           blendFunction={BlendFunction.OVERLAY} // blend mode
           density={1.25} // scanline density
-        />
-        <SMAA />
+        /> */}
+        {/* <SMAA /> */}
         {/* <SSAO
           blendFunction={BlendFunction.MULTIPLY} // blend mode
           samples={30} // amount of samples per pixel (shouldn't be a multiple of the ring count)
@@ -134,11 +136,11 @@ function ProjectsScene() {
           eskil={false} // Eskil's vignette technique
           blendFunction={BlendFunction.NORMAL} // blend mode
         /> */}
-        <Vignette
+        {/* <Vignette
           eskil={false}
           offset={0.3}
           darkness={0.9}
-        />
+        /> */}
       </EffectComposer>
       <ProjectsMap />
     </>
