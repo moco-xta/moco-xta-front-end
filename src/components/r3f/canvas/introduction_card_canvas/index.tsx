@@ -1,9 +1,17 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { Suspense, createRef, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, ThreeEvent } from '@react-three/fiber'
-import { Box, PerspectiveCamera, RoundedBox } from '@react-three/drei'
+import {
+  Box,
+  Html,
+  PerspectiveCamera,
+  RoundedBox,
+  SoftShadows,
+  Text,
+  Text3D,
+} from '@react-three/drei'
 
 import {
   IntroductionCardCanvasInterface,
@@ -11,13 +19,16 @@ import {
 } from '@/interfaces/components/r3f/introductionCardInterfaces'
 
 import { getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
+import { LogoRefType } from 'types/logoRefType'
+
+const test = '/fonts/json/Monserrat_Bold.json'
 
 import './index.scss'
-import { LogoNextjs } from '@/components/r3f/models/logos/LogoNextjs'
 
 function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
   const cameraRef = useRef<THREE.PerspectiveCamera>(null!)
   const introductionCardRef = useRef<THREE.Group>(null!)
+  const introductionSkillCardRef = createRef<LogoRefType>()
 
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
     const { x, y } = getUvMousePositionOnMesh(event, 'introduction_card')
@@ -43,6 +54,7 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
 
   return (
     <>
+      {/* <SoftShadows size={56} focus={2} samples={20} /> */}
       <PerspectiveCamera
         ref={cameraRef}
         makeDefault
@@ -64,23 +76,47 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
         castShadow
       />
       <group ref={introductionCardRef}>
-        {content.logo}
-        {/* <Box /> */}
+        {/* <Html
+          as='div'
+          className='introduction_skill_card_text_container'
+          prepend
+          transform
+        >
+          <p className='introduction_skill_card_text'>{content.description}</p>
+        </Html> */}
+        {/* <Text3D font={test}>
+          Hello world!
+          <meshNormalMaterial />
+        </Text3D> */}
+        <Text
+          font={"fonts/Poppins-Black.ttf"}
+          position={[0, -1, 1]}
+          textAlign={'center'}
+          fontSize={0.5}
+          receiveShadow
+          castShadow
+        >
+          {content.description}
+        </Text>
         <RoundedBox
           name='introduction_card'
           args={[6 * 1.2, 8 * 1.2, 0.2]}
           radius={0.5}
           onPointerMove={handleOnPointerMove}
           onPointerOut={handleOnPointerLeave}
-          layers={1}
           receiveShadow
           castShadow
         >
-          <meshBasicMaterial
-            attach={'material'}
+          <meshStandardMaterial
+            attach='material'
             color={'#0b0831'}
-          ></meshBasicMaterial>
+          />
         </RoundedBox>
+        <content.logo
+          key={`introduction_skill_card_${content.name}`}
+          ref={introductionSkillCardRef}
+          position={new THREE.Vector3(0, 3, 1)}
+        />
       </group>
     </>
   )
@@ -90,25 +126,18 @@ export default function IntroductionCardCanvas({
   content,
 }: IntroductionCardCanvasInterface) {
   return (
-    <div className='introduction_card_canvas_container'>
-      <Canvas
-        dpr={1}
-        shadows
-        legacy
-        gl={{
-          antialias: true,
-          alpha: true,
-          /* powerPreference: 'high-performance', */
-          preserveDrawingBuffer: true,
-        }}
-        onCreated={(object) => {
-          object.camera.layers.enableAll()
-          object.raycaster.layers.set(1)
-        }}
-        /* style={{ background: "hotpink" }} */
-      >
+    <Canvas
+      shadows
+      legacy
+      gl={{
+        antialias: true,
+        alpha: true,
+        powerPreference: 'high-performance',
+      }}
+    >
+      <Suspense fallback={null}>
         <IntroducitonCardScene content={content} />
-      </Canvas>
-    </div>
+      </Suspense>
+    </Canvas>
   )
 }
