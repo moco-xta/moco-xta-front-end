@@ -1,0 +1,17 @@
+#projects_content {
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#projects_canvas {
+  z-index: 1;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}

@@ -89,7 +89,7 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
           <meshNormalMaterial />
         </Text3D> */}
         <Text
-          font={"fonts/Poppins-Black.ttf"}
+          font={'fonts/Poppins-Black.ttf'}
           position={[0, -1, 1]}
           textAlign={'center'}
           fontSize={0.5}
