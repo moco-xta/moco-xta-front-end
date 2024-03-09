@@ -17,8 +17,8 @@ export function getUvMousePositionOnWindow(e: MouseEvent) {
   const width = window.innerWidth
   const height = window.innerHeight
   return {
-    x: (((e.clientX * 100) / (width / 2)) - 100) / 100,
-    y: (((e.clientY * 100) / (height / 2)) - 100) / 100
+    x: ((e.clientX * 100) / (width / 2) - 100) / 100,
+    y: ((e.clientY * 100) / (height / 2) - 100) / 100,
   }
 }
 
