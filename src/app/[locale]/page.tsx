@@ -6,7 +6,7 @@ import {
   PerformedWithSlice,
   ReviewsSlice,
 } from '@/components/slices'
-import Footer from '@/components/footer'
+import Footer from '@/components/shared/footer'
 
 import './index.scss'
 
