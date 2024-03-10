@@ -11,7 +11,4 @@ export interface RoutesInterface {
     | '/projects'
     | '/reviews'
     | '/skills'
-  width?: {
-    [key: string]: string
-  }
 }

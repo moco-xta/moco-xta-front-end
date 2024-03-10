@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import RevealComponent from '@/components/shared/reveal_component'
+import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
 
 import './index.scss'
 
@@ -10,7 +10,7 @@ export default function Introduction() {
 
   return (
     <div id='introduction_text_container'>
-      <RevealComponent
+      <RevealTextBlock
         y={100}
         duration={'500ms'}
         threshold={0.75}
@@ -18,15 +18,15 @@ export default function Introduction() {
         <h2 className='gradient_text'>
           {t('INTRODUCTION.INTRODUCTION_TITLE')}
         </h2>
-      </RevealComponent>
+      </RevealTextBlock>
 
-      <RevealComponent
+      <RevealTextBlock
         y={100}
         duration={'500ms'}
         threshold={0.75}
       >
         <p>{t('INTRODUCTION.INTRODUCTION_TEXT')}</p>
-      </RevealComponent>
+      </RevealTextBlock>
     </div>
   )
 }

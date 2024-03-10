@@ -6,6 +6,6 @@ export interface TextBlockTransitionNineInterface
   id: string
   className: string
   text: string
-  index: number
-  activeText: number
+  blockIndex: number
+  activeBlock: number
 }

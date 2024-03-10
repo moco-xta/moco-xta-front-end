@@ -12,8 +12,8 @@ export default function TextBlockTransitionNine({
   id,
   className,
   text,
-  activeText,
-  index,
+  blockIndex,
+  activeBlock,
 }: TextBlockTransitionNineInterface) {
   useEffect(() => {
     gsap.set(['.word_active', '.word'], { transformPerspective: 900 })
@@ -24,12 +24,13 @@ export default function TextBlockTransitionNine({
       id={id}
       className={className}
     >
-      {splitTextInArrayOfWords(text).map((word) => (
-        <>
-          <span className={`word${activeText === index ? '_active' : ''}`}>
-            {word}&nbsp;
-          </span>
-        </>
+      {splitTextInArrayOfWords(text).map((word, word_index) => (
+        <span
+          key={`word_${id}_${word_index}`}
+          className={`word${activeBlock === blockIndex ? '_active' : ''}`}
+        >
+          {word}&nbsp;
+        </span>
       ))}
     </Tag>
   )
