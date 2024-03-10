@@ -4,7 +4,7 @@ import { RevealComponentInterface } from '@/interfaces/components/shared/revealC
 
 import './index.scss'
 
-export default function RevealComponent({
+export default function RevealTextBlock({
   children,
   threshold,
   duration,
