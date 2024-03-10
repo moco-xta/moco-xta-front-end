@@ -34,10 +34,6 @@ nav {
   }
 }
 
-#hamburger_menu_icon {
-  display: none;
-}
-
 @media screen and (max-width: 700px) {
   #nav_wrapper {
     z-index: 9;
@@ -74,11 +70,5 @@ nav {
 
   #nav_wrapper.open {
     transform: initial;
-  }
-
-  #hamburger_menu_icon {
-    z-index: 10;
-    display: block;
-    cursor: pointer;
   }
 }

@@ -49,7 +49,10 @@ export default function NavBar() {
               .map((route) => {
                 return (
                   <li key={`navBarLink_${route.key}`}>
-                    <span className='span_link_wrapper' title={t(route.key)}>
+                    <span
+                      className='span_link_wrapper'
+                      title={t(route.key)}
+                    >
                       <Link
                         href={route.path}
                         className={`link ${pathname === route.path ? 'active' : ''}`}
