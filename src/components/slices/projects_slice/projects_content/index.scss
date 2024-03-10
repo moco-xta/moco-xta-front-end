@@ -1,6 +1,16 @@
 .project {
   position: absolute;
 
+  .project_title {
+    .word_active {
+      opacity: 1;
+    }
+
+    .word {
+      opacity: 0;
+    }
+  }
+
   .project_details {
     .project_description {
       line-height: 30px;

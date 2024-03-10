@@ -3,20 +3,19 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 /* import {Link} from '../navigation' */
 
 import { Routes } from '@/routes/routes'
 
 import HamburgerMenuIcon from '@/components/icons/hamburger_menu_icon'
-import LocaleSwitcher from '@/components/shared/locale_switcher'
+import LocaleSwitcher from '@/components/shared/header/locale_switcher'
 
 import './index.scss'
 
 export default function NavBar() {
   const pathname = usePathname()
-  const locale = useLocale()
 
   const t = useTranslations('ROUTES')
 
@@ -49,17 +48,19 @@ export default function NavBar() {
               .sort((a, b) => a.index - b.index)
               .map((route) => {
                 return (
-                  <li
-                    key={`navBarLink_${route.key}`}
-                    //@ts-ignore
-                    style={{ width: isDesktop ? route.width[locale] : '' }}
-                  >
-                    <Link
-                      href={route.path}
-                      className={`link ${pathname === route.path ? 'active' : ''}`}
+                  <li key={`navBarLink_${route.key}`}>
+                    <span
+                      className='span_link_wrapper'
+                      title={t(route.key)}
                     >
-                      {t(route.key)}
-                    </Link>
+                      <Link
+                        href={route.path}
+                        className={`link ${pathname === route.path ? 'active' : ''}`}
+                        onClick={handleSetMenuIsOpen}
+                      >
+                        {t(route.key)}
+                      </Link>
+                    </span>
                   </li>
                 )
               })}

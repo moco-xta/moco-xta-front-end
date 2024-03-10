@@ -9,7 +9,7 @@ import { CiMobile1 } from 'react-icons/ci'
 import { MdOutlineEmail } from 'react-icons/md'
 import { IoLogoGithub } from 'react-icons/io'
 
-import RevealComponent from '@/components/shared/reveal_component'
+import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
 
 import './index.scss'
 import ContactCanvas from '@/components/r3f/canvas/contact_canvas'
@@ -20,17 +20,17 @@ export default function Contact() {
       <div id='contact'>
         <div id='contact_container'>
           <div id='contact_head_text'>
-            <RevealComponent
+            <RevealTextBlock
               y={100}
               duration={'500ms'}
               threshold={0.75}
             >
               <h1 className='gradient_text'>Federico Desmoulin</h1>
               {/* <h2>Web developer</h2> */}
-            </RevealComponent>
+            </RevealTextBlock>
           </div>
           <div id='why_socials_contacts_container'>
-            <RevealComponent
+            <RevealTextBlock
               y={100}
               duration={'500ms'}
               threshold={0.75}
@@ -102,17 +102,17 @@ export default function Contact() {
                   <p>moco.xta@gmail.com</p>
                 </div>
               </div>
-            </RevealComponent>
+            </RevealTextBlock>
           </div>
         </div>
         <div id='my_role'>
-          <RevealComponent
+          <RevealTextBlock
             y={50}
             duration={'500ms'}
             threshold={0.75}
           >
             <p>Creative Developer</p>
-          </RevealComponent>
+          </RevealTextBlock>
         </div>
       </div>
       <div id='contact_canvas_container'>
