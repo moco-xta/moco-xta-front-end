@@ -1,0 +1,29 @@
+@import '@/styles/variables.module.scss';
+
+#progress {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+
+  #progress_value {
+    display: block;
+    height: calc(100% - 3px);
+    width: calc(100% - 3px);
+    background-color: $background_dark;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: $grey_ededed;
+  }
+
+  #progress_value:hover {
+    color: $grey_ccc;
+  }
+}
