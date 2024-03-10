@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowUp } from 'react-icons/fa'
 
+import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function ScrollToTop() {
@@ -10,17 +11,17 @@ export default function ScrollToTop() {
 
   function handleScroll() {
     const position = window.scrollY
-    const height = document.documentElement.offsetHeight - document.documentElement.clientHeight
+    const height =
+      document.documentElement.offsetHeight -
+      document.documentElement.clientHeight
     const scrollPercentage = (position * 100) / height
-    console.log('precentage', scrollPercentage)
-    if(position > 0) {
-      progressRef.current.style.display = 'grid'
+    if (position < 100) {
+      if (progressRef.current) progressRef.current.style.display = 'none'
     } else {
-      progressRef.current.style.display = 'none'
+      if (progressRef.current) progressRef.current.style.display = 'grid'
     }
-    /* progressRef.current.style.backgroundColor = `conic-gradient (#03cc65 ${scrollPercentage}%, #d7d7d7 ${scrollPercentage}%)`; */
-    progressRef.current.style.background = `conic-gradient(#03cc65 ${scrollPercentage}%, #d7d7d7 ${scrollPercentage}%)`
-    /* progressRef.current.style.backgroundColor = `rgba(${scrollPercentage}, ${scrollPercentage}, ${scrollPercentage}, 1)` */
+    if (progressRef.current)
+      progressRef.current.style.background = `conic-gradient(${variables.grey_ededed} ${scrollPercentage}%, ${variables.background_dark} ${scrollPercentage}%)`
   }
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function ScrollToTop() {
   }, [])
 
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -40,10 +41,8 @@ export default function ScrollToTop() {
       id='progress'
       onClick={scrollToTop}
     >
-      <span
-        id='progress_value'
-      >
-        <FaArrowUp />
+      <span id='progress_value'>
+        <FaArrowUp size={20} />
       </span>
     </div>
   )

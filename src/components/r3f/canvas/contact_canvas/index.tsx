@@ -1,11 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
-import {
-  GradientTexture,
-  MeshDistortMaterial,
-  useCursor,
-} from '@react-three/drei'
+import { MeshDistortMaterial } from '@react-three/drei'
 import { getUvMousePositionOnWindow } from '@/helpers/cssHelpers'
 
 function ContactScene() {
@@ -17,9 +13,10 @@ function ContactScene() {
   const [hovered, hover] = useState(false)
 
   useFrame(() => {
-    // @ts-ignore
     if (ref.current)
+      // @ts-ignore
       ref.current.distort = THREE.MathUtils.lerp(
+        // @ts-ignore
         ref.current.distort,
         hovered ? 0.4 : 0,
         hovered ? 0.05 : 0.01,
@@ -27,9 +24,7 @@ function ContactScene() {
   })
 
   function handleMouseMove(e: MouseEvent) {
-    /* console.log('e', e) */
     const { x, y } = getUvMousePositionOnWindow(e)
-    console.log(x, y)
     if (meshRef.current) {
       meshRef.current.position.x = 6 * x
       meshRef.current.position.y = 4 * -y
@@ -44,8 +39,6 @@ function ContactScene() {
         meshRef.current.material.opacity = 0
       }
     }
-    /* console.log(e.clientX, e.clientY) */
-    /* console.log(`movement: ${e.movementX}, ${e.movementY}`) */
   }
 
   useEffect(() => {
