@@ -5,6 +5,7 @@ import React from 'react'
 import HeadText from './head_text'
 import HeroCanvas from '@/components/r3f/canvas/hero_canvas'
 import GradientBackground from '@/components/shared/gradient_background'
+import ScrollIcon from '@/components/icons/scroll_button'
 
 import './index.scss'
 
@@ -19,6 +20,9 @@ export default function HeroSlice() {
       </div>
       <div id='hero_slice_gradient_background'>
         <GradientBackground />
+      </div>
+      <div id='scroll_icon_container'>
+        <ScrollIcon />
       </div>
     </div>
   )
