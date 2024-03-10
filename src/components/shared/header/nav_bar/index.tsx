@@ -9,7 +9,7 @@ import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
 
-import HamburgerMenuIcon from '@/components/icons/hamburger_menu_icon'
+import HamburgerMenu from '@/components/buttons/hamburger_menu'
 import LocaleSwitcher from '@/components/shared/header/locale_switcher'
 
 import './index.scss'
@@ -70,7 +70,7 @@ export default function NavBar() {
           </ul>
         </nav>
       </div>
-      <HamburgerMenuIcon handleSetMenuIsOpen={handleSetMenuIsOpen} />
+      <HamburgerMenu handleSetMenuIsOpen={handleSetMenuIsOpen} />
     </>
   )
 }
