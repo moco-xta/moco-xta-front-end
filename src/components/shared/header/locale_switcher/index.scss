@@ -2,7 +2,7 @@
 
 .select_locale_dropdowwn {
   width: 80px;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 0 10px;
   user-select: none;
 
   .select_locale_dropdowwn_button {
@@ -20,6 +20,10 @@
     cursor: pointer;
     box-shadow: 0 0 5px $black_op30;
 
+    #select_locale_dropdowwn_text {
+      font-weight: 500;
+    }
+
     .select_locale_dropdown_arrow_icon {
       transition: transform 0.5s;
     }
@@ -34,7 +38,7 @@
     transform: rotate(-180deg);
   }
 
-  .locale__options_list {
+  .locale_options_list {
     z-index: 0;
     position: absolute;
     width: 80px;
@@ -81,7 +85,7 @@
   }
 
   .select_locale_dropdowwn_button.locale_dropdown_active
-    ~ .locale__options_list
+    ~ .locale_options_list
     .locale_option {
     transition:
       opacity 0.3s linear,

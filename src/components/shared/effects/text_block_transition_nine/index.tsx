@@ -25,7 +25,10 @@ export default function TextBlockTransitionNine({
       className={className}
     >
       {splitTextInArrayOfWords(text).map((word, word_index) => (
-        <span key={`word_${id}_${word_index}`} className={`word${activeBlock === blockIndex ? '_active' : ''}`}>
+        <span
+          key={`word_${id}_${word_index}`}
+          className={`word${activeBlock === blockIndex ? '_active' : ''}`}
+        >
           {word}&nbsp;
         </span>
       ))}

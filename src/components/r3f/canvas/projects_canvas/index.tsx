@@ -31,7 +31,6 @@ import { ProjectsMap } from '@/components/r3f/models/projects/ProjectsMap'
 import { degreesToRadians } from '@/helpers/r3fHelpers'
 
 function ProjectsScene() {
-
   return (
     <>
       <PerspectiveCamera
@@ -148,7 +147,6 @@ function ProjectsScene() {
 }
 
 export default function ProjectCanvas() {
-
   return (
     <Canvas gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={null}>

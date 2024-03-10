@@ -49,17 +49,15 @@ export default function NavBar() {
               .sort((a, b) => a.index - b.index)
               .map((route) => {
                 return (
-                  <li
-                    key={`navBarLink_${route.key}`}
-                    //@ts-ignore
-                    style={{ width: isDesktop ? route.width[locale] : '' }}
-                  >
-                    <Link
-                      href={route.path}
-                      className={`link ${pathname === route.path ? 'active' : ''}`}
-                    >
-                      {t(route.key)}
-                    </Link>
+                  <li key={`navBarLink_${route.key}`}>
+                    <span className='span_link_wrapper' title={t(route.key)}>
+                      <Link
+                        href={route.path}
+                        className={`link ${pathname === route.path ? 'active' : ''}`}
+                      >
+                        {t(route.key)}
+                      </Link>
+                    </span>
                   </li>
                 )
               })}
