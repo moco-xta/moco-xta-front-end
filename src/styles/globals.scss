@@ -2,6 +2,8 @@
 
 :root {
   --max-width: 1100px;
+  /* scrollbar-color: yellow hotpink;
+  scrollbar-width: 50px; */
 }
 
 * {
@@ -44,6 +46,21 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: $background_dark;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#642bff, #ff2296);
+  background: $grey_ccc;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track-piece {
+  background: $background_dark;
+} */
 
 .word,
 .word_active {
