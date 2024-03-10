@@ -10,7 +10,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { Routes } from '@/routes/routes'
 
 import HamburgerMenuIcon from '@/components/icons/hamburger_menu_icon'
-import LocaleSwitcher from '@/components/shared/locale_switcher'
+import LocaleSwitcher from '@/components/shared/header/locale_switcher'
 
 import './index.scss'
 

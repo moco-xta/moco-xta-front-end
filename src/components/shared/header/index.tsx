@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Logo from '@/components/shared/logo'
-import NavBar from '@/components/shared/nav_bar'
+import Logo from '@/components/shared/header/logo'
+import NavBar from '@/components/shared/header/nav_bar'
 
 import './index.scss'
 
