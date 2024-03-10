@@ -4,6 +4,6 @@ import './index.scss'
 
 export default function ScrollIcon() {
   return (
-    <div>index</div>
+    <div id='scroll_icon' />
   )
 }

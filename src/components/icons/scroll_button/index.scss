@@ -1,0 +1,53 @@
+@import '@/styles/variables.module.scss';
+
+#scroll_icon {
+  position: absolute;
+  height: 3em;
+  width: 1.8em;
+  border: 0.15em solid $grey_ccc;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 6.25em;
+  border-radius: 3em;
+  opacity: 0.8;
+}
+
+#scroll_icon::before {
+  position: absolute;
+  content: "";
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0.45em;
+  height: 0.5em;
+  width: 0.5em;
+  background-color: $grey_ccc;
+  border-radius: 50%;
+  animation: move_down 2s infinite;
+}
+
+@keyframes move_down {
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-1.3em);
+    opacity: 0;
+  }
+}
+
+/* #scroll_icon::after {
+  position: absolute;
+  content: "Scroll down";
+  width: 12em;
+  display: block;
+  width: 12em;
+  text-align: center;
+  left: -4.2em;
+  bottom: -2.5em;
+  font-size: 1.6em;
+  color: #ffffff;
+  letter-spacing: 3px;
+  font-weight: 600;
+} */
