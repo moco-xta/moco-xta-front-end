@@ -53,6 +53,7 @@ export default function NavBar() {
                       <Link
                         href={route.path}
                         className={`link ${pathname === route.path ? 'active' : ''}`}
+                        onClick={handleSetMenuIsOpen}
                       >
                         {t(route.key)}
                       </Link>
