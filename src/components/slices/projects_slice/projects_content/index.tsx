@@ -6,8 +6,9 @@ import { projectsData } from '@/data/projetcsData'
 
 import TextBlockTransitionNine from '@/components/shared/effects/text_block_transition_nine'
 
-import './index.scss'
 import { displayNextTextBlock } from 'animations/textBlockTransitionNine'
+
+import './index.scss'
 
 export default function ProjectsContent() {
   const [activeProject, setActiveProject] = useState<number>(0)
@@ -33,11 +34,11 @@ export default function ProjectsContent() {
         >
           <TextBlockTransitionNine
             tag={'h2'}
-            id={`project_description_${index}`}
-            className={'project_description'}
+            id={`project_title_${index}`}
+            className={'project_title'}
             text={project.title}
-            activeText={activeProject}
-            index={index}
+            blockIndex={index}
+            activeBlock={activeProject}
           />
           <div className='project_details'>
             <TextBlockTransitionNine
@@ -45,8 +46,8 @@ export default function ProjectsContent() {
               id={`project_description_${index}`}
               className={'project_description'}
               text={project.description}
-              activeText={activeProject}
-              index={index}
+              blockIndex={index}
+              activeBlock={activeProject}
             />
           </div>
         </div>
