@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 /* import {Link} from '../navigation' */
 
@@ -16,7 +16,6 @@ import './index.scss'
 
 export default function NavBar() {
   const pathname = usePathname()
-  const locale = useLocale()
 
   const t = useTranslations('ROUTES')
 
