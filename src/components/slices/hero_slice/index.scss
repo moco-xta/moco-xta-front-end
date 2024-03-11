@@ -9,10 +9,22 @@
   #hero_slice_head_text {
     z-index: 2;
     position: absolute;
+    width: 100%;
     padding: 100px;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #head_text_container {
+      width: 900px;
+      height: 650px;
+      background-color: rgba(100, 100, 100, 0.3);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+    }
   }
 
   #hero_slice_canvas {
@@ -30,6 +42,11 @@
     background: -webkit-linear-gradient(48deg, $color-bg1, $color-bg2);
     filter: url(#goo) blur(40px);
     overflow: hidden;
+
+    .hero_background_test {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   #scroll_icon_container {

@@ -58,7 +58,10 @@ export default function HeroCanvas() {
           intensity={40}
           castShadow
         />
-        <Environment preset="city" encoding={THREE.sRGBEncoding}/>
+        <Environment
+          preset='city'
+          encoding={THREE.sRGBEncoding}
+        />
         <HeroScene />
       </Suspense>
     </Canvas>

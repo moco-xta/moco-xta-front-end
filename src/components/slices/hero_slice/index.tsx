@@ -12,15 +12,21 @@ import './index.scss'
 export default function HeroSlice() {
   return (
     <div id='hero_slice'>
-      {/* <div id='hero_slice_head_text'>
-        <HeadText />
-      </div> */}
+      <div id='hero_slice_head_text'>
+        <div id='head_text_container'></div>
+        {/* <HeadText /> */}
+      </div>
       <div id='hero_slice_canvas'>
         <HeroCanvas />
       </div>
-      {/* <div id='hero_slice_gradient_background'>
-        <GradientBackground />
-      </div> */}
+      <div id='hero_slice_gradient_background'>
+        <img
+          className='hero_background_test'
+          src='/img/test/hero_background_test.jpg'
+          alt=''
+        />
+        {/* <GradientBackground /> */}
+      </div>
       <div id='scroll_icon_container'>
         <ScrollIcon />
       </div>
