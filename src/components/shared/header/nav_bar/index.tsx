@@ -35,12 +35,15 @@ export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
     setMenuIsOpen(!menuIsOpen)
   }
 
+  console.log('pathname: ' + pathname)
+
   return (
     <>
       <div
         ref={ref}
         id='nav_wrapper'
         className={`${menuIsOpen ? 'open' : ''}`}
+        style={{  marginTop: pathname === '/' && isDesktop ? '20px' : '0px', marginRight: pathname === '/' && isDesktop ? '20px' : '0px' }}
       >
         <nav>
           <ul>
@@ -49,7 +52,7 @@ export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
               .sort((a, b) => a.index - b.index)
               .map((route) => {
                 return (
-                  <li key={`navBarLink_${route.key}`} className='li_route'>
+                  <li key={`navBarLink_${route.key}`} className='li_route' style={{ marginRight: pathname === '/' && isDesktop ? '20px' : '0px' }}>
                     <span
                       className='span_link_wrapper'
                       title={t(route.key)}
