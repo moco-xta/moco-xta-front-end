@@ -1,18 +1,22 @@
 'use client'
 
-import React, { Suspense, useRef } from 'react'
+import React, { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
+import { Canvas, useThree } from '@react-three/fiber'
+import { Environment, PerspectiveCamera } from '@react-three/drei'
 import { OccupySpace } from '../../models/hero/OccupySpace'
 
 function HeroScene() {
   const occupySpaceRef = useRef<THREE.Mesh>(null!)
 
+  const { gl } = useThree()
+  /* gl.toneMapping = THREE.ACESFilmicToneMapping */
+  gl.toneMappingExposure = 1.5
+
   return (
     <OccupySpace
       ref={occupySpaceRef}
-      scale={[2.5, 2.5, 2.5]}
+      scale={[2.8, 2.8, 2.8]}
     />
   )
 }
@@ -22,7 +26,9 @@ export default function HeroCanvas() {
     <Canvas
       dpr={1}
       shadows
-      legacy
+      /* legacy={false} */
+      linear
+      flat
       gl={{
         antialias: true,
         alpha: true,
@@ -39,19 +45,20 @@ export default function HeroCanvas() {
         />
         <pointLight
           position={[5, 5, 5]}
-          intensity={50}
+          intensity={90}
           castShadow
         />
         <pointLight
           position={[-5, 5, 5]}
-          intensity={50}
+          intensity={90}
           castShadow
         />
         <pointLight
-          position={[-0, 5, 0]}
-          intensity={50}
+          position={[-0, -3, 5]}
+          intensity={40}
           castShadow
         />
+        <Environment preset="city" encoding={THREE.sRGBEncoding}/>
         <HeroScene />
       </Suspense>
     </Canvas>

@@ -5,6 +5,8 @@ import { GLTF } from 'three-stdlib'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
+import { flakesTexture } from '../../textures/flakesTexture'
+
 type GltfResultType = GLTF & {
   nodes: {
     OccupySpace: THREE.Mesh
@@ -26,7 +28,16 @@ export const OccupySpace = forwardRef<
       receiveShadow
       castShadow
     >
-      <meshLambertMaterial color={'white'} />
+      <meshPhysicalMaterial
+        map={flakesTexture()}
+        clearcoat={1}
+        clearcoatRoughness={0.1}
+        metalness={0.9}
+        roughness={0.5}
+        color={0x8418ca}
+        normalMap={flakesTexture()}
+        normalScale={new THREE.Vector2(0.15, 0.15)}
+      />
     </mesh>
   )
 })

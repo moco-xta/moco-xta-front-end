@@ -12,15 +12,15 @@ import './index.scss'
 export default function HeroSlice() {
   return (
     <div id='hero_slice'>
-      <div id='hero_slice_head_text'>
+      {/* <div id='hero_slice_head_text'>
         <HeadText />
-      </div>
+      </div> */}
       <div id='hero_slice_canvas'>
         <HeroCanvas />
       </div>
-      <div id='hero_slice_gradient_background'>
+      {/* <div id='hero_slice_gradient_background'>
         <GradientBackground />
-      </div>
+      </div> */}
       <div id='scroll_icon_container'>
         <ScrollIcon />
       </div>

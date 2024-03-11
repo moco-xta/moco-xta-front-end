@@ -37,7 +37,7 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":47816,
+			"count":47782,
 			"max":[
 				1.8270903825759888,
 				0.6499994993209839,
@@ -53,13 +53,13 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":47816,
+			"count":47782,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":47816,
+			"count":47782,
 			"type":"VEC2"
 		},
 		{
@@ -72,32 +72,32 @@
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":573792,
+			"byteLength":573384,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":573792,
-			"byteOffset":573792,
+			"byteLength":573384,
+			"byteOffset":573384,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":382528,
-			"byteOffset":1147584,
+			"byteLength":382256,
+			"byteOffset":1146768,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":147648,
-			"byteOffset":1530112,
+			"byteOffset":1529024,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":1677760,
+			"byteLength":1676672,
 			"uri":"OccupySpace.bin"
 		}
 	]
