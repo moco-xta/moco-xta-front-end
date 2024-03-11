@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { forwardRef, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
@@ -14,7 +14,7 @@ import LocaleSwitcher from '@/components/shared/header/locale_switcher'
 
 import './index.scss'
 
-export default function NavBar() {
+export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const pathname = usePathname()
 
   const t = useTranslations('ROUTES')
@@ -38,6 +38,7 @@ export default function NavBar() {
   return (
     <>
       <div
+        ref={ref}
         id='nav_wrapper'
         className={`${menuIsOpen ? 'open' : ''}`}
       >
@@ -48,7 +49,7 @@ export default function NavBar() {
               .sort((a, b) => a.index - b.index)
               .map((route) => {
                 return (
-                  <li key={`navBarLink_${route.key}`}>
+                  <li key={`navBarLink_${route.key}`} className='li_route'>
                     <span
                       className='span_link_wrapper'
                       title={t(route.key)}
@@ -73,4 +74,4 @@ export default function NavBar() {
       <HamburgerMenu handleSetMenuIsOpen={handleSetMenuIsOpen} />
     </>
   )
-}
+})

@@ -31,7 +31,6 @@ export default function RevealTextBlock({
           threshold,
         },
       )
-
       intersectionObserver.observe(ref.current)
 
       return () => {
