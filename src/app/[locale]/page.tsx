@@ -3,6 +3,7 @@ import React from 'react'
 import {
   HeroSlice,
   IntroductionSlice,
+  LastProjectsSlice,
   PerformedWithSlice,
   ReviewsSlice,
 } from '@/components/slices'
@@ -17,6 +18,7 @@ export default function Home() {
       <div id='home_container'>
         <HeroSlice />
         <IntroductionSlice />
+        <LastProjectsSlice />
         <ReviewsSlice />
         <PerformedWithSlice />
         <Footer />
