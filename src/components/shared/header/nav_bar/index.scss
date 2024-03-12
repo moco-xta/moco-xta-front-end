@@ -1,36 +1,42 @@
 @import '@/styles/variables.module.scss';
 
 nav {
+  transition: margin-top 0.5s, margin-right 0.5s;
+
   ul li {
     display: inline-block;
     text-align: center;
     padding: 0px;
   }
 
-  .span_link_wrapper,
-  a {
-    display: inline-block;
-    color: $white_op80;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
+  .li_route {
+    transition: margin-right 0.5s;
 
-  .span_link_wrapper {
-    padding: 0 10px;
-
-    a:hover,
-    .active {
-      color: $white;
-      font-weight: bold;
+    .span_link_wrapper,
+    a {
+      display: inline-block;
+      color: $white_op80;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
     }
-  }
 
-  .span_link_wrapper::before {
-    display: block;
-    content: attr(title);
-    font-weight: bold;
-    overflow: hidden;
-    visibility: hidden;
+    .span_link_wrapper {
+      padding: 0 10px;
+
+      a:hover,
+      .active {
+        color: $white;
+        font-weight: bold;
+      }
+    }
+
+    .span_link_wrapper::before {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      overflow: hidden;
+      visibility: hidden;
+    }
   }
 }
 
