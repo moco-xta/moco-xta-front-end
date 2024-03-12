@@ -1,0 +1,17 @@
+.introduction_cards_container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .introduction_card_canvas_container {
+    width: 400px;
+    height: 500px;
+
+    div div {
+      pointer-events: none;
+    }
+  }
+}
