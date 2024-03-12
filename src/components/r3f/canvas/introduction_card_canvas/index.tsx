@@ -4,14 +4,11 @@ import React, { Suspense, createRef, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, ThreeEvent } from '@react-three/fiber'
 import {
-  Box,
-  Html,
   PerspectiveCamera,
   RoundedBox,
-  SoftShadows,
   Text,
-  Text3D,
 } from '@react-three/drei'
+import { useTranslations } from 'next-intl'
 
 import {
   IntroductionCardCanvasInterface,
@@ -26,6 +23,8 @@ const test = '/fonts/json/Monserrat_Bold.json'
 import './index.scss'
 
 function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
+  const t = useTranslations('HOME')
+
   const cameraRef = useRef<THREE.PerspectiveCamera>(null!)
   const introductionCardRef = useRef<THREE.Group>(null!)
   const introductionSkillCardRef = createRef<LogoRefType>()
@@ -76,18 +75,6 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
         castShadow
       />
       <group ref={introductionCardRef}>
-        {/* <Html
-          as='div'
-          className='introduction_skill_card_text_container'
-          prepend
-          transform
-        >
-          <p className='introduction_skill_card_text'>{content.description}</p>
-        </Html> */}
-        {/* <Text3D font={test}>
-          Hello world!
-          <meshNormalMaterial />
-        </Text3D> */}
         <Text
           position={[0, -1, 1]}
           textAlign={'center'}
@@ -95,7 +82,7 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
           receiveShadow
           castShadow
         >
-          {content.description}
+          {t(`INTRODUCTION.CARDS.${content.descriptionKey}`)}
         </Text>
         <RoundedBox
           name='introduction_card'
@@ -114,7 +101,8 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
         <content.logo
           key={`introduction_skill_card_${content.name}`}
           ref={introductionSkillCardRef}
-          position={new THREE.Vector3(0, 3, 1)}
+          position={new THREE.Vector3(content.position.x, content.position.z, content.position.y)}
+          scale={new THREE.Vector3(content.scale.x, content.scale.z, content.scale.y)}
         />
       </group>
     </>

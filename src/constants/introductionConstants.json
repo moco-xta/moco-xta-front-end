@@ -1,0 +1,68 @@
+{
+  "DOUGHNUT_CHART": {
+    "NAMES": {
+      "THREE_D": "doughnut_chart_3D",
+      "FRONT_END": "doughnut_chart_front_end",
+      "BACK_END": "doughnut_chart_back_end"
+    },
+    "DESCRIPTION_KEY": {
+      "THREE_D": "THREE_D",
+      "FRONT_END": "FRONT_END",
+      "BACK_END": "BACK_END"
+    },
+    "POSITION": {
+      "X": 0,
+      "Y": 1,
+      "Z": 3
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "TOOLS": {
+    "REACT_THREE_DREI":{
+      "NAME": "logo_react_three_drei",
+      "DESCRIPTION_KEY": "REACT_THREE_DREI",
+      "POSITION": {
+        "X": 0,
+        "Y": 1,
+        "Z": 3
+      },
+      "SCALE": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1
+      }
+    },
+    "NEXT_JS":{
+      "NAME": "logo_nextjs",
+      "DESCRIPTION_KEY": "NEXTJS",
+      "POSITION": {
+        "X": 0,
+        "Y": 1,
+        "Z": 3
+      },
+      "SCALE": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1
+      }
+    },
+    "ANGULAR":{
+      "NAME": "logo_angular",
+      "DESCRIPTION_KEY": "ANGULAR",
+      "POSITION": {
+        "X": 0,
+        "Y": 1,
+        "Z": 3
+      },
+      "SCALE": {
+        "X": 1,
+        "Y": 1,
+        "Z": 1
+      }
+    }
+  }
+}

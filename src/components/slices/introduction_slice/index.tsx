@@ -16,8 +16,14 @@ export default function IntroductionSlice() {
       <div id='introduction_slice'>
         <div id='introduction_slice_content'>
           <Introduction />
-          <IntroductionCards data={introductionSkillsCardsData} type={'skills'} />
-          <IntroductionCards data={introductionToolsCardsData} type={'tools'} />
+          <IntroductionCards
+            data={introductionSkillsCardsData}
+            type={'skills'}
+          />
+          <IntroductionCards
+            data={introductionToolsCardsData}
+            type={'tools'}
+          />
         </div>
       </div>
     </div>
