@@ -43,9 +43,10 @@ export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
         ref={ref}
         id='nav_wrapper'
         className={`${menuIsOpen ? 'open' : ''}`}
-        style={{  marginTop: pathname === '/' && isDesktop ? '20px' : '0px', marginRight: pathname === '/' && isDesktop ? '20px' : '0px' }}
       >
-        <nav>
+        <nav
+          style={{  marginTop: pathname === '/' && isDesktop ? '20px' : '0px', marginRight: pathname === '/' && isDesktop ? '20px' : '0px' }}
+        >
           <ul>
             {Routes.filter((route) => route.hasOwnProperty('index'))
               // @ts-ignore
