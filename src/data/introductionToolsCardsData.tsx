@@ -8,48 +8,78 @@ import { default as IntroductionConstants } from '@/constants/introductionConsta
 
 export const introductionToolsCardsData: IntroductionCardDataInterface[] = [
   {
-    name: IntroductionConstants.TOOLS.REACT_THREE_DREI.NAME,
-    logo: LogoReactThreeDrei,
-    descriptionKey: IntroductionConstants.TOOLS.REACT_THREE_DREI.DESCRIPTION_KEY,
-    position: {
-      x: IntroductionConstants.TOOLS.REACT_THREE_DREI.POSITION.X,
-      y: IntroductionConstants.TOOLS.REACT_THREE_DREI.POSITION.Y,
-      z: IntroductionConstants.TOOLS.REACT_THREE_DREI.POSITION.Z,
+    name: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.NAME,
+    logo: {
+      component: LogoReactThreeDrei,
+      position: {
+        x: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.POSITION.X,
+        y: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.POSITION.Y,
+        z: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.POSITION.Z,
+      },
+      scale: {
+        x: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.SCALE.X,
+        y: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.SCALE.Y,
+        z: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.SCALE.Z,
+      },
     },
-    scale: {
-      x: IntroductionConstants.TOOLS.REACT_THREE_DREI.SCALE.X,
-      y: IntroductionConstants.TOOLS.REACT_THREE_DREI.SCALE.Y,
-      z: IntroductionConstants.TOOLS.REACT_THREE_DREI.SCALE.Z,
-    }
+    description: {
+      key: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.DESCRIPTION.KEY,
+      position: {
+        x: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.DESCRIPTION
+          .POSITION.X,
+        y: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.DESCRIPTION
+          .POSITION.Y,
+        z: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.DESCRIPTION
+          .POSITION.Z,
+      },
+    },
   },
   {
-    name: IntroductionConstants.TOOLS.NEXT_JS.NAME,
-    logo: LogoNextjs,
-    descriptionKey: IntroductionConstants.TOOLS.REACT_THREE_DREI.DESCRIPTION_KEY,
-    position: {
-      x: IntroductionConstants.TOOLS.NEXT_JS.POSITION.X,
-      y: IntroductionConstants.TOOLS.NEXT_JS.POSITION.Y,
-      z: IntroductionConstants.TOOLS.NEXT_JS.POSITION.Z,
+    name: IntroductionConstants.CARDS.TOOLS.NEXT_JS.NAME,
+    logo: {
+      component: LogoNextjs,
+      position: {
+        x: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.POSITION.X,
+        y: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.POSITION.Y,
+        z: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.POSITION.Z,
+      },
+      scale: {
+        x: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.SCALE.X,
+        y: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.SCALE.Y,
+        z: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.SCALE.Z,
+      },
     },
-    scale: {
-      x: IntroductionConstants.TOOLS.NEXT_JS.SCALE.X,
-      y: IntroductionConstants.TOOLS.NEXT_JS.SCALE.Y,
-      z: IntroductionConstants.TOOLS.NEXT_JS.SCALE.Z,
-    }
+    description: {
+      key: IntroductionConstants.CARDS.TOOLS.NEXT_JS.DESCRIPTION.KEY,
+      position: {
+        x: IntroductionConstants.CARDS.TOOLS.NEXT_JS.DESCRIPTION.POSITION.X,
+        y: IntroductionConstants.CARDS.TOOLS.NEXT_JS.DESCRIPTION.POSITION.Y,
+        z: IntroductionConstants.CARDS.TOOLS.NEXT_JS.DESCRIPTION.POSITION.Z,
+      },
+    },
   },
   {
-    name: IntroductionConstants.TOOLS.ANGULAR.NAME,
-    logo: LogoAngular,
-    descriptionKey: IntroductionConstants.TOOLS.REACT_THREE_DREI.DESCRIPTION_KEY,
-    position: {
-      x: IntroductionConstants.TOOLS.ANGULAR.POSITION.X,
-      y: IntroductionConstants.TOOLS.ANGULAR.POSITION.Y,
-      z: IntroductionConstants.TOOLS.ANGULAR.POSITION.Z,
+    name: IntroductionConstants.CARDS.TOOLS.ANGULAR.NAME,
+    logo: {
+      component: LogoAngular,
+      position: {
+        x: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.POSITION.X,
+        y: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.POSITION.Y,
+        z: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.POSITION.Z,
+      },
+      scale: {
+        x: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.SCALE.X,
+        y: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.SCALE.Y,
+        z: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.SCALE.Z,
+      },
     },
-    scale: {
-      x: IntroductionConstants.TOOLS.ANGULAR.SCALE.X,
-      y: IntroductionConstants.TOOLS.ANGULAR.SCALE.Y,
-      z: IntroductionConstants.TOOLS.ANGULAR.SCALE.Z,
-    }
+    description: {
+      key: IntroductionConstants.CARDS.TOOLS.ANGULAR.DESCRIPTION.KEY,
+      position: {
+        x: IntroductionConstants.CARDS.TOOLS.ANGULAR.DESCRIPTION.POSITION.X,
+        y: IntroductionConstants.CARDS.TOOLS.ANGULAR.DESCRIPTION.POSITION.Y,
+        z: IntroductionConstants.CARDS.TOOLS.ANGULAR.DESCRIPTION.POSITION.Z,
+      },
+    },
   },
 ]

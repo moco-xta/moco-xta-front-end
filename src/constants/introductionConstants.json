@@ -1,67 +1,163 @@
 {
-  "DOUGHNUT_CHART": {
-    "NAMES": {
-      "THREE_D": "doughnut_chart_3D",
-      "FRONT_END": "doughnut_chart_front_end",
-      "BACK_END": "doughnut_chart_back_end"
-    },
-    "DESCRIPTION_KEY": {
-      "THREE_D": "THREE_D",
-      "FRONT_END": "FRONT_END",
-      "BACK_END": "BACK_END"
-    },
-    "POSITION": {
-      "X": 0,
-      "Y": 1,
-      "Z": 3
+  "HANDLE_ON_PONTER_MOVE": {
+    "ROTATION": {
+      "FACTOR": 0.003,
+      "INITIAL": 0
     },
     "SCALE": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
+      "FACTOR": 1.2,
+      "INITIAL": 1
     }
   },
-  "TOOLS": {
-    "REACT_THREE_DREI":{
-      "NAME": "logo_react_three_drei",
-      "DESCRIPTION_KEY": "REACT_THREE_DREI",
+  "SCENE": {
+    "CANVAS": {
+      "DPR": 1,
+      "ANTIALIAS": true,
+      "POWER_PREFERENCE": "high-performance",
+      "PRESERVE_DRAWING_BUFFER": true
+    },
+    "PERSPECTIVE_CAMERA": {
       "POSITION": {
         "X": 0,
-        "Y": 1,
-        "Z": 3
-      },
-      "SCALE": {
-        "X": 1,
-        "Y": 1,
-        "Z": 1
+        "Y": 0,
+        "Z": 15
       }
     },
-    "NEXT_JS":{
-      "NAME": "logo_nextjs",
-      "DESCRIPTION_KEY": "NEXTJS",
+    "POINT_LIGHTS": [
+      {
+        "INTENSITY": 20,
+        "POSITION": {
+          "X": 3,
+          "Y": 3,
+          "Z": 3
+        }
+      },
+      {
+        "INTENSITY": 20,
+        "POSITION": {
+          "X": -3,
+          "Y": 3,
+          "Z": 3
+        }
+      },
+      {
+        "INTENSITY": 20,
+        "POSITION": {
+          "X": 0,
+          "Y": 5,
+          "Z": 0
+        }
+      }
+    ]
+  },
+  "CARDS": {
+    "ROUNDED_CARDS": {
+      "ARGS": {
+        "X": 6,
+        "Y": 8,
+        "Z": 0.2
+      },
+      "RADIUS": 0.5,
+      "FONT_SIZE": 0.5
+    },
+    "DOUGHNUT_CHARTS": {
+      "NAMES": {
+        "THREE_D": "doughnut_chart_3D",
+        "FRONT_END": "doughnut_chart_front_end",
+        "BACK_END": "doughnut_chart_back_end"
+      },
+      "TEXTS": {
+        "POSITION": {
+          "X": 0,
+          "Z": -1,
+          "Y": 1
+        }
+      },
+      "DESCRIPTION_KEYS": {
+        "THREE_D": "THREE_D",
+        "FRONT_END": "FRONT_END",
+        "BACK_END": "BACK_END"
+      },
       "POSITION": {
         "X": 0,
         "Y": 1,
-        "Z": 3
+        "Z": 2
       },
       "SCALE": {
-        "X": 1,
-        "Y": 1,
-        "Z": 1
+        "X": 2,
+        "Y": 2,
+        "Z": 2
       }
     },
-    "ANGULAR":{
-      "NAME": "logo_angular",
-      "DESCRIPTION_KEY": "ANGULAR",
-      "POSITION": {
-        "X": 0,
-        "Y": 1,
-        "Z": 3
+    "TOOLS": {
+      "REACT_THREE_DREI": {
+        "NAME": "logo_react_three_drei",
+        "LOGO": {
+          "POSITION": {
+            "X": 0,
+            "Y": 1,
+            "Z": 3
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        },
+        "DESCRIPTION": {
+          "KEY": "REACT_THREE_DREI",
+          "POSITION": {
+            "X": 0,
+            "Y": 1,
+            "Z": 0
+          }
+        }
       },
-      "SCALE": {
-        "X": 1,
-        "Y": 1,
-        "Z": 1
+      "NEXT_JS": {
+        "NAME": "logo_nextjs",
+        "LOGO": {
+          "POSITION": {
+            "X": 0,
+            "Y": 1,
+            "Z": 3
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        },
+        "DESCRIPTION": {
+          "KEY": "NEXTJS",
+          "POSITION": {
+            "X": 0,
+            "Y": 1,
+            "Z": 0
+          }
+        }
+      },
+      "ANGULAR": {
+        "NAME": "logo_angular",
+        "LOGO": {
+          "POSITION": {
+            "X": 0,
+            "Y": 1,
+            "Z": 3
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        },
+        "DESCRIPTION": {
+          "KEY": "ANGULAR",
+          "POSITION": {
+            "X": 0,
+            "Y": 1,
+            "Z": 0
+          }
+        }
       }
     }
   }
