@@ -4,13 +4,8 @@ import React, { Suspense, createRef, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, ThreeEvent, useThree } from '@react-three/fiber'
 import { PerspectiveCamera, RoundedBox, Text } from '@react-three/drei'
-import {
-  Bloom,
-} from '@react-three/postprocessing'
-import {
-  KernelSize,
-  Resolution,
-} from 'postprocessing'
+import { Bloom } from '@react-three/postprocessing'
+import { KernelSize, Resolution } from 'postprocessing'
 import { useTranslations } from 'next-intl'
 
 import {
@@ -31,7 +26,8 @@ import { EffectComposer } from '@react-three/postprocessing'
 
 function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
   const { gl } = useThree()
-  gl.toneMappingExposure = IntroductionConstants.SCENE.CANVAS.TONE_MAPPING_EXPOSURE
+  gl.toneMappingExposure =
+    IntroductionConstants.SCENE.CANVAS.TONE_MAPPING_EXPOSURE
 
   const t = useTranslations('HOME')
 
