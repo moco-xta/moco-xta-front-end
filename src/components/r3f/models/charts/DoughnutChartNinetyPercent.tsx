@@ -29,7 +29,7 @@ export const DoughnutChartNinetyPercent = forwardRef<
       receiveShadow
       castShadow
     >
-      <meshPhongMaterial
+      <meshPhysicalMaterial
         color={'hotpink'}
         specularColor={'hotpink'}
         roughness={1}
