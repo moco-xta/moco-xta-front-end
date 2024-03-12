@@ -1,4 +1,4 @@
-import { forwardRef, useLayoutEffect } from 'react'
+import { forwardRef } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
@@ -9,28 +9,21 @@ import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 type GltfResultType = GLTF & {
   nodes: {
-    LogoNextjs: THREE.Mesh
+    LogoAngular: THREE.Mesh
   }
   materials: {}
 }
 
-export const LogoNextjs = forwardRef<
+export const LogoAngular = forwardRef<
   LogoRefType,
   JSX.IntrinsicElements['mesh']
->(({ position, scale }, ref) => {
-  const gltf = useGLTF(GltfConstants.LOGO_NEXTJS) as GltfResultType
-
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(gltf.scene)
-    // @ts-ignore
-    ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [])
+>(({ scale }, ref) => {
+  const gltf = useGLTF(GltfConstants.LOGO_ANGULAR) as GltfResultType
 
   return (
     <mesh
       ref={ref}
-      geometry={gltf.nodes.LogoNextjs.geometry}
-      position={position}
+      geometry={gltf.nodes.LogoAngular.geometry}
       scale={scale}
       receiveShadow
       castShadow
@@ -40,4 +33,4 @@ export const LogoNextjs = forwardRef<
   )
 })
 
-useGLTF.preload(GltfConstants.LOGO_NEXTJS)
+useGLTF.preload(GltfConstants.LOGO_ANGULAR)
