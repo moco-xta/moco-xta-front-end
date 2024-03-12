@@ -2,8 +2,15 @@
 
 import React, { Suspense, createRef, useRef } from 'react'
 import * as THREE from 'three'
-import { Canvas, ThreeEvent } from '@react-three/fiber'
+import { Canvas, ThreeEvent, useThree } from '@react-three/fiber'
 import { PerspectiveCamera, RoundedBox, Text } from '@react-three/drei'
+import {
+  Bloom,
+} from '@react-three/postprocessing'
+import {
+  KernelSize,
+  Resolution,
+} from 'postprocessing'
 import { useTranslations } from 'next-intl'
 
 import {
@@ -20,8 +27,12 @@ import { default as IntroductionConstants } from '@/constants/introductionConsta
 const descriptionFont = '/fonts/json/Monserrat_Bold.json'
 
 import './index.scss'
+import { EffectComposer } from '@react-three/postprocessing'
 
 function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
+  const { gl } = useThree()
+  gl.toneMappingExposure = IntroductionConstants.SCENE.CANVAS.TONE_MAPPING_EXPOSURE
+
   const t = useTranslations('HOME')
 
   const cameraRef = useRef<THREE.PerspectiveCamera>(null!)
@@ -71,6 +82,7 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
           IntroductionConstants.SCENE.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
       />
+      {/* <ambientLight intensity={10} /> */}
       {IntroductionConstants.SCENE.POINT_LIGHTS.map((point_light, index) => (
         <pointLight
           key={`ìntroduction_scene_point_light_${index}`}
@@ -135,6 +147,18 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
           }
         />
       </group>
+      <EffectComposer>
+        <Bloom
+          intensity={1.0} // The bloom intensity.
+          blurPass={undefined} // A blur pass.
+          kernelSize={KernelSize.LARGE} // blur kernel size
+          luminanceThreshold={0.9} // luminance threshold. Raise this value to mask out darker elements in the scene.
+          luminanceSmoothing={0.025} // smoothness of the luminance threshold. Range is [0, 1]
+          mipmapBlur={false} // Enables or disables mipmap blur.
+          resolutionX={Resolution.AUTO_SIZE} // The horizontal resolution.
+          resolutionY={Resolution.AUTO_SIZE} // The vertical resolution.
+        />
+      </EffectComposer>
     </>
   )
 }

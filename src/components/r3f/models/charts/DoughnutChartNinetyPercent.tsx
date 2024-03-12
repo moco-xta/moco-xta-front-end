@@ -29,7 +29,17 @@ export const DoughnutChartNinetyPercent = forwardRef<
       receiveShadow
       castShadow
     >
-      <meshLambertMaterial color={'white'} />
+      <meshPhongMaterial
+        color={'hotpink'}
+        specularColor={'hotpink'}
+        roughness={1}
+        metalness={0}
+        iridescence={1}
+        clearcoat={0}
+        reflectivity={0}
+        emissive={'hotpink'}
+        emissiveIntensity={1}
+      />
     </mesh>
   )
 })

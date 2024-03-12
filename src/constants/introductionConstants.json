@@ -14,7 +14,8 @@
       "DPR": 1,
       "ANTIALIAS": true,
       "POWER_PREFERENCE": "high-performance",
-      "PRESERVE_DRAWING_BUFFER": true
+      "PRESERVE_DRAWING_BUFFER": true,
+      "TONE_MAPPING_EXPOSURE": 1.5
     },
     "PERSPECTIVE_CAMERA": {
       "POSITION": {
