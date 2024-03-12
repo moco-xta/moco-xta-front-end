@@ -1,6 +1,8 @@
 #projects {
-  position: fixed;
+  position: relative;
   width: 100vw;
-  height: 100vh;
   background-color: #050912;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  height: 800vh;
 }
