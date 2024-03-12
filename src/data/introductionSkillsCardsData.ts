@@ -1,25 +1,54 @@
 import { IntroductionCardDataInterface } from '@/interfaces/data/introductionCardDataInterface'
 
-import { LogoReactThreeDrei } from '@/components/r3f/models/logos/LogoReactThreeDrei'
+import { DoughnutChartSeventyFivePercent } from '@/components/r3f/models/charts/DoughnutChartSeventyFivePercent'
+import { DoughnutChartNinetyPercent } from '@/components/r3f/models/charts/DoughnutChartNinetyPercent'
 
-export const introductionSkillsCardsData: IntroductionCardDataInterface[] =
-  [
-    {
-      name: 'logo_react_three_fiber',
-      logo: LogoReactThreeDrei,
-      description:
-        'It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.',
+import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
+
+export const introductionSkillsCardsData: IntroductionCardDataInterface[] = [
+  {
+    name: IntroductionConstants.DOUGHNUT_CHART.NAMES.THREE_D,
+    logo: DoughnutChartNinetyPercent,
+    descriptionKey: IntroductionConstants.DOUGHNUT_CHART.DESCRIPTION_KEY.THREE_D,
+    position: {
+      x: IntroductionConstants.DOUGHNUT_CHART.POSITION.X,
+      y: IntroductionConstants.DOUGHNUT_CHART.POSITION.Y,
+      z: IntroductionConstants.DOUGHNUT_CHART.POSITION.Z,
     },
-    {
-      name: 'logo_react_three_fiber',
-      logo: LogoReactThreeDrei,
-      description:
-        'It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.',
+    scale: {
+      x: IntroductionConstants.DOUGHNUT_CHART.SCALE.X,
+      y: IntroductionConstants.DOUGHNUT_CHART.SCALE.Y,
+      z: IntroductionConstants.DOUGHNUT_CHART.SCALE.Z,
+    }
+  },
+  {
+    name: IntroductionConstants.DOUGHNUT_CHART.NAMES.FRONT_END,
+    logo: DoughnutChartNinetyPercent,
+    descriptionKey: IntroductionConstants.DOUGHNUT_CHART.DESCRIPTION_KEY.FRONT_END,
+    position: {
+      x: IntroductionConstants.DOUGHNUT_CHART.POSITION.X,
+      y: IntroductionConstants.DOUGHNUT_CHART.POSITION.Y,
+      z: IntroductionConstants.DOUGHNUT_CHART.POSITION.Z,
     },
-    {
-      name: 'logo_react_three_fiber',
-      logo: LogoReactThreeDrei,
-      description:
-        'It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.',
+    scale: {
+      x: IntroductionConstants.DOUGHNUT_CHART.SCALE.X,
+      y: IntroductionConstants.DOUGHNUT_CHART.SCALE.Y,
+      z: IntroductionConstants.DOUGHNUT_CHART.SCALE.Z,
+    }
+  },
+  {
+    name: IntroductionConstants.DOUGHNUT_CHART.NAMES.BACK_END,
+    logo: DoughnutChartSeventyFivePercent,
+    descriptionKey: IntroductionConstants.DOUGHNUT_CHART.DESCRIPTION_KEY.BACK_END,
+    position: {
+      x: IntroductionConstants.DOUGHNUT_CHART.POSITION.X,
+      y: IntroductionConstants.DOUGHNUT_CHART.POSITION.Y,
+      z: IntroductionConstants.DOUGHNUT_CHART.POSITION.Z,
     },
-  ]
+    scale: {
+      x: IntroductionConstants.DOUGHNUT_CHART.SCALE.X,
+      y: IntroductionConstants.DOUGHNUT_CHART.SCALE.Y,
+      z: IntroductionConstants.DOUGHNUT_CHART.SCALE.Z,
+    }
+  },
+]
