@@ -1,9 +1,21 @@
 import React from 'react'
 
+import { lastProjectsData } from '@/data/lastProjectsData'
+
+import LastProjectsCard from '@/components/cards/last_projects_card'
+
 import './index.scss'
 
 export default function LastProjectsSlice() {
   return (
-    <div>index</div>
+    <div id='last_projects_slice'>
+      <div id='last_projects_content'>
+        <div id='last_projects_container'>
+          {lastProjectsData.map((project, index) => (
+            <LastProjectsCard key={`last_projects_card_${index}`} content={project} /> 
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }

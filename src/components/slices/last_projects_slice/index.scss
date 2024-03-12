@@ -1,0 +1,21 @@
+#last_projects_slice {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/img/test/hero_background_test.jpg');
+  background-size: cover;
+
+  #last_projects_content {
+    width: 80%;
+    height: 80%;
+    background-color: hotpink;
+
+    #last_projects_container {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
