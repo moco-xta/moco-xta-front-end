@@ -2,11 +2,14 @@ import React from 'react'
 
 import { LastProjectsCardInterface } from '@/interfaces/data/lastProjectsDataInterface'
 
+import './index.scss'
+
 export default function LastProjectsCard({ content }: LastProjectsCardInterface) {
   return (
-    <div>
+    <div className='last_projects_card'>
       <h3>{content.name}</h3>
       <img
+        className='last_projects_img'
         src={content.picture.deskstop}
         alt=''
       />

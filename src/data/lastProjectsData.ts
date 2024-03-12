@@ -8,6 +8,7 @@ export const lastProjectsData: LastProjectsDataInterface[] = [
   {
     key: 'lento',
     name: 'Lento',
+    url: 'https://lento.eu/en',
     descriptionKey: 'LENTO_DESCRIPTION',
     picture: {
       deskstop: '/img/jpg/projects/1200x756/lento_home_screenshot.jpg',
@@ -22,6 +23,7 @@ export const lastProjectsData: LastProjectsDataInterface[] = [
   {
     key: 'abwerkt',
     name: 'AB Werkt',
+    url: 'https://www.ab-werkt.eu/home',
     descriptionKey: 'ABWERK_DESCRIPTION',
     picture: {
       deskstop: '/img/jpg/projects/1200x756/abwerkt_home_screenshot.jpg',
