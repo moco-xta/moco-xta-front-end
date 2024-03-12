@@ -2,6 +2,7 @@ import { IconType } from 'react-icons'
 
 export interface LastProjectsDataInterface {
   key: string
+  url: string
   name: string
   descriptionKey: string
   picture: {

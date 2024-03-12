@@ -9,13 +9,14 @@
   background-size: cover;
 
   #last_projects_content {
-    width: 80%;
-    height: 80%;
-    background-color: hotpink;
+    width: 70%;
+    height: 70%;
 
     #last_projects_container {
+      width: 100%;
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
     }
   }
 }
