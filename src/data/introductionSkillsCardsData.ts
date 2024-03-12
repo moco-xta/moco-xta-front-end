@@ -58,7 +58,7 @@ export const introductionSkillsCardsData: IntroductionCardDataInterface[] = [
   {
     name: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.NAMES.BACK_END,
     logo: {
-      component: DoughnutChartNinetyPercent,
+      component: DoughnutChartSeventyFivePercent,
       position: {
         x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.X,
         y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.Y,
