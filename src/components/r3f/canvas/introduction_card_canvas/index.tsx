@@ -3,29 +3,27 @@
 import React, { Suspense, createRef, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, ThreeEvent } from '@react-three/fiber'
-import {
-  Box,
-  Html,
-  PerspectiveCamera,
-  RoundedBox,
-  SoftShadows,
-  Text,
-  Text3D,
-} from '@react-three/drei'
+import { PerspectiveCamera, RoundedBox, Text } from '@react-three/drei'
+import { useTranslations } from 'next-intl'
 
 import {
   IntroductionCardCanvasInterface,
   IntroductionCardSceneInterface,
 } from '@/interfaces/components/r3f/introductionCardInterfaces'
 
-import { getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
 import { LogoRefType } from 'types/logoRefType'
 
-const test = '/fonts/json/Monserrat_Bold.json'
+import { getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
+
+import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
+
+const descriptionFont = '/fonts/json/Monserrat_Bold.json'
 
 import './index.scss'
 
 function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
+  const t = useTranslations('HOME')
+
   const cameraRef = useRef<THREE.PerspectiveCamera>(null!)
   const introductionCardRef = useRef<THREE.Group>(null!)
   const introductionSkillCardRef = createRef<LogoRefType>()
@@ -34,73 +32,80 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
     const { x, y } = getUvMousePositionOnMesh(event, 'introduction_card')
 
     if (introductionCardRef.current) {
-      introductionCardRef.current!.rotation.x = -y * 0.003
-      introductionCardRef.current!.rotation.y = -x * 0.003
-      introductionCardRef.current!.scale.x = 1.2
-      introductionCardRef.current!.scale.y = 1.2
-      introductionCardRef.current!.scale.z = 1.2
+      introductionCardRef.current!.rotation.x =
+        -y * IntroductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.FACTOR
+      introductionCardRef.current!.rotation.y =
+        -x * IntroductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.FACTOR
+      introductionCardRef.current!.scale.x =
+        IntroductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.FACTOR
+      introductionCardRef.current!.scale.y =
+        IntroductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.FACTOR
+      introductionCardRef.current!.scale.z =
+        IntroductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.FACTOR
     }
   }
 
   function handleOnPointerLeave(event: ThreeEvent<PointerEvent>) {
     if (introductionCardRef.current) {
-      introductionCardRef.current!.rotation.x = 0
-      introductionCardRef.current!.rotation.y = 0
-      introductionCardRef.current!.scale.x = 1
-      introductionCardRef.current!.scale.y = 1
-      introductionCardRef.current!.scale.z = 1
+      introductionCardRef.current!.rotation.x =
+        IntroductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.INITIAL
+      introductionCardRef.current!.rotation.y =
+        IntroductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.INITIAL
+      introductionCardRef.current!.scale.x =
+        IntroductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.INITIAL
+      introductionCardRef.current!.scale.y =
+        IntroductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.INITIAL
+      introductionCardRef.current!.scale.z =
+        IntroductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.INITIAL
     }
   }
 
   return (
     <>
-      {/* <SoftShadows size={56} focus={2} samples={20} /> */}
       <PerspectiveCamera
         ref={cameraRef}
         makeDefault
-        position={[0, 0, 15]}
+        position={[
+          IntroductionConstants.SCENE.PERSPECTIVE_CAMERA.POSITION.X,
+          IntroductionConstants.SCENE.PERSPECTIVE_CAMERA.POSITION.Y,
+          IntroductionConstants.SCENE.PERSPECTIVE_CAMERA.POSITION.Z,
+        ]}
       />
-      <pointLight
-        position={[5, 5, 5]}
-        intensity={20}
-        castShadow
-      />
-      <pointLight
-        position={[-5, 5, 5]}
-        intensity={20}
-        castShadow
-      />
-      <pointLight
-        position={[0, 0, 5]}
-        intensity={20}
-        castShadow
-      />
+      {IntroductionConstants.SCENE.POINT_LIGHTS.map((point_light, index) => (
+        <pointLight
+          key={`ìntroduction_scene_point_light_${index}`}
+          position={[
+            point_light.POSITION.X,
+            point_light.POSITION.Z,
+            point_light.POSITION.Y,
+          ]}
+          intensity={point_light.INTENSITY}
+          castShadow
+        />
+      ))}
       <group ref={introductionCardRef}>
-        {/* <Html
-          as='div'
-          className='introduction_skill_card_text_container'
-          prepend
-          transform
-        >
-          <p className='introduction_skill_card_text'>{content.description}</p>
-        </Html> */}
-        {/* <Text3D font={test}>
-          Hello world!
-          <meshNormalMaterial />
-        </Text3D> */}
         <Text
-          position={[0, -1, 1]}
+          font={descriptionFont}
           textAlign={'center'}
-          fontSize={0.5}
+          fontSize={IntroductionConstants.CARDS.ROUNDED_CARDS.FONT_SIZE}
+          position={[
+            content.description.position.x,
+            content.description.position.z,
+            content.description.position.y,
+          ]}
           receiveShadow
           castShadow
         >
-          {content.description}
+          {t(`INTRODUCTION.CARDS.${content.description.key}`)}
         </Text>
         <RoundedBox
           name='introduction_card'
-          args={[6 * 1.2, 8 * 1.2, 0.2]}
-          radius={0.5}
+          args={[
+            IntroductionConstants.CARDS.ROUNDED_CARDS.ARGS.X * 1.2,
+            IntroductionConstants.CARDS.ROUNDED_CARDS.ARGS.Y * 1.2,
+            IntroductionConstants.CARDS.ROUNDED_CARDS.ARGS.Z * 1.2,
+          ]}
+          radius={IntroductionConstants.CARDS.ROUNDED_CARDS.RADIUS}
           onPointerMove={handleOnPointerMove}
           onPointerOut={handleOnPointerLeave}
           receiveShadow
@@ -111,10 +116,23 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
             color={'#0b0831'}
           />
         </RoundedBox>
-        <content.logo
+        <content.logo.component
           key={`introduction_skill_card_${content.name}`}
           ref={introductionSkillCardRef}
-          position={new THREE.Vector3(0, 3, 1)}
+          position={
+            new THREE.Vector3(
+              content.logo.position.x,
+              content.logo.position.z,
+              content.logo.position.y,
+            )
+          }
+          scale={
+            new THREE.Vector3(
+              content.logo.scale.x,
+              content.logo.scale.z,
+              content.logo.scale.y,
+            )
+          }
         />
       </group>
     </>
@@ -126,12 +144,15 @@ export default function IntroductionCardCanvas({
 }: IntroductionCardCanvasInterface) {
   return (
     <Canvas
+      dpr={IntroductionConstants.SCENE.CANVAS.DPR}
       shadows
-      legacy
+      linear
+      flat
       gl={{
-        antialias: true,
-        alpha: true,
-        powerPreference: 'high-performance',
+        antialias: IntroductionConstants.SCENE.CANVAS.ANTIALIAS,
+        powerPreference: IntroductionConstants.SCENE.CANVAS.POWER_PREFERENCE,
+        preserveDrawingBuffer:
+          IntroductionConstants.SCENE.CANVAS.PRESERVE_DRAWING_BUFFER,
       }}
     >
       <Suspense fallback={null}>

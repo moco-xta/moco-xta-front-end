@@ -18,14 +18,14 @@ export default function Header() {
     const nav = navWrapperRef.current.querySelector('nav')
     const lis = navWrapperRef.current.querySelectorAll('.li_route')
     if (position < 100) {
-      lis.forEach(li_route => {
+      lis.forEach((li_route) => {
         nav!.style.marginTop = '20px'
         nav!.style.marginRight = '20px'
         // @ts-ignore
         li_route.style.marginRight = '20px'
       })
     } else {
-      lis.forEach(li_route => {
+      lis.forEach((li_route) => {
         nav!.style.marginTop = '0px'
         nav!.style.marginRight = '0px'
         // @ts-ignore
