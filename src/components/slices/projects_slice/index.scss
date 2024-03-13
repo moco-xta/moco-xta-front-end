@@ -3,9 +3,6 @@
   width: 100%;
   height: 100%;
   padding: 100px;
-  background-color: pink;
-  overflow-y: hidden; /* Hide vertical scrollbar */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
 
   #timeline_container {
     position: absolute;
@@ -13,7 +10,6 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 100px;
-    background-color: purple;
   }
 
   #projects_container {
