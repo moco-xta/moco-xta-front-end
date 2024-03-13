@@ -1,10 +1,10 @@
-import { projectsDataInterface } from '@/interfaces/data/projectsDataInterface'
+import { ProjectDataInterface } from '@/interfaces/data/projectsDataInterface'
 
 import { FaReact } from 'react-icons/fa'
 import { FaAngular } from 'react-icons/fa'
 import { SiDjango } from 'react-icons/si'
 
-export const projectsData: projectsDataInterface[] = [
+export const projectsData: ProjectDataInterface[] = [
   {
     key: 'abwerkt',
     name: 'AB Werkt',

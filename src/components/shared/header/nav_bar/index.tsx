@@ -17,7 +17,7 @@ import './index.scss'
 export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const pathname = usePathname()
 
-    window.scrollTo(0, 0);
+  window.scrollTo(0, 0)
 
   const t = useTranslations('ROUTES')
 

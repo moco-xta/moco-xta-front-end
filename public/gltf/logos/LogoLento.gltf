@@ -1,104 +1,94 @@
 {
-	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.0.44",
-		"version":"2.0"
-	},
-	"scene":0,
-	"scenes":[
-		{
-			"name":"Scene",
-			"nodes":[
-				0
-			]
-		}
-	],
-	"nodes":[
-		{
-			"mesh":0,
-			"name":"LogoLento"
-		}
-	],
-	"meshes":[
-		{
-			"name":"LogoLento",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":0,
-						"NORMAL":1,
-						"TEXCOORD_0":2
-					},
-					"indices":3
-				}
-			]
-		}
-	],
-	"accessors":[
-		{
-			"bufferView":0,
-			"componentType":5126,
-			"count":4289,
-			"max":[
-				5.692090034484863,
-				1.006502389907837,
-				0.2000000923871994
-			],
-			"min":[
-				-5.699999809265137,
-				-0.9815689325332642,
-				-0.20000000298023224
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5126,
-			"count":4289,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":2,
-			"componentType":5126,
-			"count":4289,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":3,
-			"componentType":5123,
-			"count":8976,
-			"type":"SCALAR"
-		}
-	],
-	"bufferViews":[
-		{
-			"buffer":0,
-			"byteLength":51468,
-			"byteOffset":0,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":51468,
-			"byteOffset":51468,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":34312,
-			"byteOffset":102936,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":17952,
-			"byteOffset":137248,
-			"target":34963
-		}
-	],
-	"buffers":[
-		{
-			"byteLength":155200,
-			"uri":"LogoLento.bin"
-		}
-	]
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoLento"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoLento",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4289,
+      "max": [5.692090034484863, 1.006502389907837, 0.2000000923871994],
+      "min": [-5.699999809265137, -0.9815689325332642, -0.20000000298023224],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4289,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 4289,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 8976,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 51468,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 51468,
+      "byteOffset": 51468,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 34312,
+      "byteOffset": 102936,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 17952,
+      "byteOffset": 137248,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 155200,
+      "uri": "LogoLento.bin"
+    }
+  ]
 }

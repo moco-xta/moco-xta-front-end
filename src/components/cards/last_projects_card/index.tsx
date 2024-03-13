@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-import { projectsCardInterface } from '@/interfaces/data/projectsDataInterface'
+import { ProjectsCardInterface } from '@/interfaces/data/projectsDataInterface'
 
 import './index.scss'
 
-export default function LastProjectsCard({ content }: projectsCardInterface) {
+export const LastProjectsCard = forwardRef<
+  HTMLDivElement,
+  ProjectsCardInterface
+>(({ content }, ref) => {
   return (
-    <div className='last_projects_card'>
+    <div
+      ref={ref}
+      className='last_projects_card'
+    >
       <h3>{content.name}</h3>
       <img
         className='last_projects_img'
@@ -25,4 +31,4 @@ export default function LastProjectsCard({ content }: projectsCardInterface) {
       </div>
     </div>
   )
-}
+})

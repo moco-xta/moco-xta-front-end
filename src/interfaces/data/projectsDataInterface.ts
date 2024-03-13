@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons'
 
-export interface projectsDataInterface {
+export interface ProjectDataInterface {
   key: string
   url: string
   name: string
@@ -14,6 +14,6 @@ export interface projectsDataInterface {
   tools: IconType[]
 }
 
-export interface projectsCardInterface {
-  content: projectsDataInterface
+export interface ProjectsCardInterface {
+  content: ProjectDataInterface
 }
