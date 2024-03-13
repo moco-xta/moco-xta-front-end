@@ -17,6 +17,8 @@ import './index.scss'
 export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const pathname = usePathname()
 
+  window.scrollTo(0, 0)
+
   const t = useTranslations('ROUTES')
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -27,8 +29,8 @@ export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
   }
 
   useEffect(() => {
-    window.addEventListener('resize', updateMedia)
-    return () => window.removeEventListener('resize', updateMedia)
+    document.addEventListener('resize', updateMedia)
+    return () => document.removeEventListener('resize', updateMedia)
   }, [])
 
   const handleSetMenuIsOpen = () => {
@@ -72,6 +74,7 @@ export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         href={route.path}
                         className={`link ${pathname === route.path ? 'active' : ''}`}
                         onClick={handleSetMenuIsOpen}
+                        scroll={true}
                       >
                         {t(route.key)}
                       </Link>
