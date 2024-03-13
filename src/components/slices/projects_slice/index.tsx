@@ -2,13 +2,13 @@
 
 import React, {
   createRef,
-  useCallback,
   useEffect,
   useMemo,
   useState,
 } from 'react'
 
 import { projectsData } from '@/data/projectsData'
+import { companiesAndSchollData } from '@/data/companiesAndSchoolData'
 
 import useScroll from '@/hooks/useScroll'
 
@@ -18,6 +18,7 @@ import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 /* import ProjectCanvas from '@/components/r3f/canvas/projects_canvas' */
 import Timeline from './timeline'
 import { LastProjectsCard } from '@/components/cards/last_projects_card'
+import { CompanyOrSchoolCard } from '@/components/cards/company_or_school_card'
 
 import './index.scss'
 
@@ -25,6 +26,7 @@ export default function ProjectsSlice() {
   const { y, offsetHeight, clientHeight, scrollFlow } = useScroll()
 
   const [currentProject, setCurrentProject] = useState<number>(0)
+  const [currentCompanyOrSchool, setCurrentCompanyOrSchool] = useState<number>(0)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
     getDifferenceBetweenTwoDatesInDays(
@@ -41,6 +43,13 @@ export default function ProjectsSlice() {
       })),
     [],
   )
+  const companiesAndSchoolRefs = useMemo(
+    () =>
+      companiesAndSchollData.map(() => ({
+        ref: createRef<HTMLDivElement>(),
+      })),
+    [],
+  )
 
   useEffect(() => {
     if (offsetHeight && clientHeight) {
@@ -49,7 +58,9 @@ export default function ProjectsSlice() {
 
       projectsRefs.forEach(({ ref }, index) => {
         if (ref.current) ref.current.style.top = `${(index + 1) * 400}px`
-        console.log('ref', ref.current)
+      })
+      companiesAndSchoolRefs.forEach(({ ref }, index) => {
+        if (ref.current) ref.current.style.top = `${(index + 1) * 400}px`
       })
     }
   }, [offsetHeight, clientHeight])
@@ -73,20 +84,32 @@ export default function ProjectsSlice() {
       )
         setCurrentProject(index)
     })
+    companiesAndSchollData.forEach((companyOrSchool, index) => {
+      if (
+        currentDate.getTime() > new Date(companyOrSchool.dates.from).getTime() &&
+        currentDate.getTime() < new Date(companyOrSchool.dates.to).getTime()
+      )
+      setCurrentCompanyOrSchool(index)
+    })
   }, [currentDate])
 
   useEffect(() => {
-    console.log('currentProject', currentProject)
-
     projectsRefs.forEach(({ ref }) => {
-      // @ts-ignore
       if (ref.current) {
         console.log('ref.current.style.top', parseInt(ref.current.style.top))
         ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - 400 : parseInt(ref.current.style.top) + 400}px`
       }
-      console.log('ref', ref.current)
     })
   }, [currentProject])
+
+  useEffect(() => {
+    companiesAndSchoolRefs.forEach(({ ref }) => {
+      if (ref.current) {
+        console.log('ref.current.style.top', parseInt(ref.current.style.top))
+        ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - 400 : parseInt(ref.current.style.top) + 400}px`
+      }
+    })
+  }, [currentCompanyOrSchool])
 
   if (!daysDifference && !deltaPerDay) return null
 
@@ -100,8 +123,17 @@ export default function ProjectsSlice() {
           {projectsRefs.map(({ ref }, index) => (
             <LastProjectsCard
               ref={ref}
-              key={`last_projects_card_${index}`}
+              key={`projects_card_${index}`}
               content={projectsData[index]}
+            />
+          ))}
+        </div>
+        <div id='companies_and_school_container'>
+          {companiesAndSchoolRefs.map(({ ref }, index) => (
+            <CompanyOrSchoolCard
+              ref={ref}
+              key={`company_or_school_card_${index}`}
+              content={companiesAndSchollData[index]}
             />
           ))}
         </div>
