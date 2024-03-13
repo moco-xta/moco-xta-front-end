@@ -16,7 +16,7 @@ export const projectsData: ProjectDataInterface[] = [
     },
     dates: {
       from: '2023-03-01',
-      to: '2023-10-31',
+      to: '2023-11-31',
     },
     tools: [FaReact, FaAngular, SiDjango],
   },
