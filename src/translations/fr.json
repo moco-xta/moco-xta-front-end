@@ -28,6 +28,31 @@
       "PERFORMED_WITH": "Réalisé avec:"
     }
   },
+  "PROJECTS": {
+    "DAYS_OF_THE_WEEK": {
+      "MON": "Lundi",
+      "TUE": "Mardi",
+      "WED": "Mercredi",
+      "THU": "Jeudi",
+      "FRI": "Vendredi",
+      "SAT": "Samedi",
+      "SUN": "Dimanche"
+    },
+    "MONTH":{
+      "JAN": "Janvier",
+      "FEB": "Février",
+      "MAR": "Mars",
+      "APR": "Avril",
+      "MAY": "Mai",
+      "JUN": "Juin",
+      "JUL": "Juillet",
+      "AUG": "Août",
+      "SEP": "Septembre",
+      "OCT": "Octobre",
+      "NOV": "Novembre",
+      "DEC": "Décembre"
+    }
+  },
   "ROUTES": {
     "ABOUT": "À propos",
     "BLOG": "Blog",

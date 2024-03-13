@@ -1,18 +1,13 @@
 'use client'
 
-import React, {
-  createRef,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
+import React, { createRef, useEffect, useMemo, useState } from 'react'
 
 import { projectsData } from '@/data/projectsData'
 import { companiesAndSchollData } from '@/data/companiesAndSchoolData'
 
 import useScroll from '@/hooks/useScroll'
 
-import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
+import { getDifferenceBetweenTwoDatesInDays, isValidDate } from '@/helpers/dateHelpers'
 
 /* import ProjectsContent from './projects_content' */
 /* import ProjectCanvas from '@/components/r3f/canvas/projects_canvas' */
@@ -26,7 +21,8 @@ export default function ProjectsSlice() {
   const { y, offsetHeight, clientHeight, scrollFlow } = useScroll()
 
   const [currentProject, setCurrentProject] = useState<number>(0)
-  const [currentCompanyOrSchool, setCurrentCompanyOrSchool] = useState<number>(0)
+  const [currentCompanyOrSchool, setCurrentCompanyOrSchool] =
+    useState<number>(0)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
     getDifferenceBetweenTwoDatesInDays(
@@ -86,17 +82,17 @@ export default function ProjectsSlice() {
     })
     companiesAndSchollData.forEach((companyOrSchool, index) => {
       if (
-        currentDate.getTime() > new Date(companyOrSchool.dates.from).getTime() &&
+        currentDate.getTime() >
+          new Date(companyOrSchool.dates.from).getTime() &&
         currentDate.getTime() < new Date(companyOrSchool.dates.to).getTime()
       )
-      setCurrentCompanyOrSchool(index)
+        setCurrentCompanyOrSchool(index)
     })
   }, [currentDate])
 
   useEffect(() => {
     projectsRefs.forEach(({ ref }) => {
       if (ref.current) {
-        console.log('ref.current.style.top', parseInt(ref.current.style.top))
         ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - 400 : parseInt(ref.current.style.top) + 400}px`
       }
     })
@@ -105,19 +101,18 @@ export default function ProjectsSlice() {
   useEffect(() => {
     companiesAndSchoolRefs.forEach(({ ref }) => {
       if (ref.current) {
-        console.log('ref.current.style.top', parseInt(ref.current.style.top))
         ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - 400 : parseInt(ref.current.style.top) + 400}px`
       }
     })
   }, [currentCompanyOrSchool])
 
-  if (!daysDifference && !deltaPerDay) return null
-
   return (
     <>
       <div id='project_slice'>
         <div id='timeline_container'>
-          <CurrentDate currentDate={currentDate} />
+          {isValidDate(currentDate) && (
+            <CurrentDate currentDate={currentDate} />
+          )}
         </div>
         <div id='projects_container'>
           {projectsRefs.map(({ ref }, index) => (
@@ -138,12 +133,6 @@ export default function ProjectsSlice() {
           ))}
         </div>
       </div>
-      {/* <div id='projects_content'>
-        <ProjectsContent />
-      </div>
-      <div id='projects_canvas'>
-        <ProjectCanvas />
-      </div> */}
     </>
   )
 }

@@ -7,3 +7,13 @@ export function getDifferenceBetweenTwoDatesInDays(
   )
   return difference_in_days
 }
+
+export function isValidDate(date: Date) {
+  if (Object.prototype.toString.call(date) === '[object Date]') {
+    if (isNaN(date.getTime())) {
+      return false
+    } else {
+      return true
+    }
+  }
+}

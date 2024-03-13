@@ -37,8 +37,6 @@ export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
     setMenuIsOpen(!menuIsOpen)
   }
 
-  console.log('pathname: ' + pathname)
-
   return (
     <>
       <div

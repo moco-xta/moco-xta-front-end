@@ -6,6 +6,6 @@ export interface CompanyOrSchollDataInterface {
   }
 }
 
-export interface CompanyOrSchoolCardInterface  {
+export interface CompanyOrSchoolCardInterface {
   content: CompanyOrSchollDataInterface
 }

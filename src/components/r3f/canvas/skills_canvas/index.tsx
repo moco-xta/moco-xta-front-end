@@ -17,7 +17,7 @@ export default function SkillCanvas() {
         antialias: SkillsConstants.SCENE.CANVAS.ANTIALIAS,
         powerPreference: SkillsConstants.SCENE.CANVAS.POWER_PREFERENCE,
         preserveDrawingBuffer:
-        SkillsConstants.SCENE.CANVAS.PRESERVE_DRAWING_BUFFER,
+          SkillsConstants.SCENE.CANVAS.PRESERVE_DRAWING_BUFFER,
       }}
     >
       <Suspense fallback={null}>
