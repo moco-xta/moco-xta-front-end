@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { LastProjectsCardInterface } from '@/interfaces/data/lastProjectsDataInterface'
+import { projectsCardInterface } from '@/interfaces/data/projectsDataInterface'
 
 import './index.scss'
 
-export default function LastProjectsCard({ content }: LastProjectsCardInterface) {
+export default function LastProjectsCard({ content }: projectsCardInterface) {
   return (
     <div className='last_projects_card'>
       <h3>{content.name}</h3>
