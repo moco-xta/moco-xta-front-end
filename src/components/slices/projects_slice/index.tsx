@@ -16,7 +16,7 @@ import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 
 /* import ProjectsContent from './projects_content' */
 /* import ProjectCanvas from '@/components/r3f/canvas/projects_canvas' */
-import Timeline from './timeline'
+import CurrentDate from './current_date'
 import { LastProjectsCard } from '@/components/cards/last_projects_card'
 import { CompanyOrSchoolCard } from '@/components/cards/company_or_school_card'
 
@@ -117,7 +117,7 @@ export default function ProjectsSlice() {
     <>
       <div id='project_slice'>
         <div id='timeline_container'>
-          <Timeline currentDate={currentDate} />
+          <CurrentDate currentDate={currentDate} />
         </div>
         <div id='projects_container'>
           {projectsRefs.map(({ ref }, index) => (
