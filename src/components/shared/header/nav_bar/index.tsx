@@ -29,8 +29,8 @@ export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
   }
 
   useEffect(() => {
-    window.addEventListener('resize', updateMedia)
-    return () => window.removeEventListener('resize', updateMedia)
+    document.addEventListener('resize', updateMedia)
+    return () => document.removeEventListener('resize', updateMedia)
   }, [])
 
   const handleSetMenuIsOpen = () => {

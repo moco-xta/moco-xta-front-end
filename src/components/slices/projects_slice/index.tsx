@@ -3,6 +3,12 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import moment from 'moment'
 
+import { projectsData } from '@/data/projectsData'
+
+import useScroll from '@/hooks/useScroll'
+
+import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
+
 /* import ProjectsContent from './projects_content' */
 /* import ProjectCanvas from '@/components/r3f/canvas/projects_canvas' */
 import Timeline from './timeline'
@@ -10,34 +16,26 @@ import Timeline from './timeline'
 import './index.scss'
 
 export default function ProjectsSlice() {
-  const [y, setY] = useState<number>(0)
-  const [currentDate, setCurrentDate] = useState<Date>(new Date())
+  const { y, offsetHeight, clientHeight } = useScroll()
+
+  const [currentDate, setCurrentDate] = useState<Date>()
+  const [daysDifference] = useState<number>(getDifferenceBetweenTwoDatesInDays(new Date(), new Date(projectsData[projectsData.length - 1].dates.from)))
+  const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
 
   useEffect(() => {
-    console.log('y', y)
+    if(offsetHeight && clientHeight) {
+      setCurrentDate(new Date())
+      setDeltaPerDay((offsetHeight - clientHeight) / daysDifference)
+    }
+  }, [offsetHeight, clientHeight])
+
+  useEffect(() => {
+    const differenceBetweenTodayAndCurrentDate = Math.round(y / deltaPerDay)
+    setCurrentDate(new Date(new Date().setDate(new Date().getDate() - differenceBetweenTodayAndCurrentDate)))
   }, [y])
 
-  const handleScroll = useCallback(
-    (e: any) => {
-      const window = e.currentTarget;
-      if (y > window.scrollY) {
-        console.log("scrolling up");
-        setCurrentDate(new Date(currentDate.setDate(currentDate.getDate() + 1)))
-      } else if (y < window.scrollY) {
-        console.log("scrolling down");
-        setCurrentDate(new Date(currentDate.setDate(currentDate.getDate() - 1)))
-      }
-      setY(window.scrollY);
-    }, [y]
-  );
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [handleScroll])
-
+  if(!daysDifference && !deltaPerDay) return null
+  
   return (
     <>
       <div id='project_slice'>
