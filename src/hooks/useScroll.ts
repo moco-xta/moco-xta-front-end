@@ -6,6 +6,7 @@ export default function useScroll() {
   const [y, setY] = useState<number>(0)
   const [offsetHeight, setOffsetHeight] = useState<number>(0)
   const [clientHeight, setClientHeight] = useState<number>(0)
+  const [scrollFlow, setScrollFlow] = useState<'up' | 'down'>('down')
 
   useEffect(() => {
     setOffsetHeight(document.documentElement.offsetHeight)
@@ -14,15 +15,16 @@ export default function useScroll() {
 
   const handleScroll = useCallback(
     (e: any) => {
-      const window = e.currentTarget;
+      const window = e.currentTarget
       if (y > window.scrollY) {
-        console.log("scrolling up");
+        setScrollFlow('down')
       } else if (y < window.scrollY) {
-        console.log("scrolling down");
+        setScrollFlow('up')
       }
-      setY(window.scrollY);
-    }, [y]
-  );
+      setY(window.scrollY)
+    },
+    [y],
+  )
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -31,5 +33,5 @@ export default function useScroll() {
     }
   }, [handleScroll])
 
-  return { y, offsetHeight, clientHeight }
+  return { y, offsetHeight, clientHeight, scrollFlow }
 }
