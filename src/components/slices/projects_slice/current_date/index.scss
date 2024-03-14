@@ -1,6 +1,11 @@
 #current_date_container {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  right: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
 
   #day_of_the_week {
