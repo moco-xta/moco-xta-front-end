@@ -12,7 +12,11 @@ import Loading from '../app/[locale]/loading'
 
 const IsClientContext = createContext(false)
 
-export const IsClientContextProvider = ({ children }: { children: ReactNode }) => {
+export const IsClientContextProvider = ({
+  children,
+}: {
+  children: ReactNode
+}) => {
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => setIsClient(true), [])
@@ -22,7 +26,9 @@ export const IsClientContextProvider = ({ children }: { children: ReactNode }) =
       {!isClient ? (
         <Loading />
       ) : (
-        <IsClientContext.Provider value={isClient}>{children}</IsClientContext.Provider>
+        <IsClientContext.Provider value={isClient}>
+          {children}
+        </IsClientContext.Provider>
       )}
     </>
   )

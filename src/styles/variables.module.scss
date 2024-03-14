@@ -1,4 +1,28 @@
 $black: #000;
+$white: #fff;
+
+$background_color: #161a1e;
+/* $background_color: #414851; */
+
+$text_light: #fff;
+$text_medium_light: #8b8b8b;
+$text_medium_dark: #161a1e;
+$text_dark: #000;
+
+$circle_gradient_in: #ef32d9;
+$circle_gradient_out: #89fffd;
+
+$font_size_small: 1em;
+$font_size_medium: 1.5em;
+$font_size_large: 2em;
+
+
+
+
+
+
+
+
 $black_op30: #00000030;
 
 $grey_f2f2f2: #f2f2f2;
@@ -6,7 +30,6 @@ $grey_ededed: #ededed;
 $grey_ccc: #ccc;
 $grey_333: #333;
 
-$white: #fff;
 $white_op80: #ffffff80;
 
 $color-bg1: #01000f;
@@ -36,12 +59,33 @@ $background_dark: #01000f;
 
 :export {
   black: $black;
+  white: $white;
+
+  background_color: $background_color;
+
+  text_light: $text_light;
+  text_medium_light: $text_medium_light;
+  text_medium_dark: $text_medium_dark;
+  text_dark: $text_dark;
+
+  circle_gradient_in: $circle_gradient_in;
+  circle_gradient_out: $circle_gradient_out;
+
+  font_size_small: $font_size_small;
+  font_size_medium: $font_size_medium;
+  font_size_large: $font_size_large;
+
+
+
+
+
+
+
   black_op30: $black_op30;
   grey_f2f2f2: $grey_f2f2f2;
   grey_ededed: $grey_ededed;
   grey_ccc: $grey_ccc;
   grey_333: $grey_333;
-  white: $white;
   white_op80: $white_op80;
 
   color-bg1: $color-bg1;
