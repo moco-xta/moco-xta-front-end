@@ -8,6 +8,7 @@ import ReduxProvider from '@/redux/ReduxProvider'
 import Header from '@/components/shared/header'
 
 import '@/styles/globals.scss'
+import { IsClientContextProvider } from 'contexts/IsClientContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,16 +30,18 @@ export default function RootLayout({
     <>
       <html lang={locale}>
         <body className={inter.className}>
-          <ReduxProvider>
-            <NextIntlClientProvider
-              locale={locale}
-              messages={translations}
-            >
-              <Toaster />
-              <Header />
-              {children}
-            </NextIntlClientProvider>
-          </ReduxProvider>
+          <IsClientContextProvider>
+            <ReduxProvider>
+              <NextIntlClientProvider
+                locale={locale}
+                messages={translations}
+              >
+                <Toaster />
+                <Header />
+                {children}
+              </NextIntlClientProvider>
+            </ReduxProvider>
+          </IsClientContextProvider>
         </body>
       </html>
     </>

@@ -19,7 +19,7 @@ import { getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
 
 import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
 
-const descriptionFont = '/fonts/json/Monserrat_Bold.json'
+/* const descriptionFont = '/fonts/json/Monserrat_Bold.json' */
 
 import './index.scss'
 import { EffectComposer } from '@react-three/postprocessing'
@@ -93,7 +93,7 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
       ))}
       <group ref={introductionCardRef}>
         <Text
-          font={descriptionFont}
+          /* font={descriptionFont} */
           textAlign={'center'}
           fontSize={IntroductionConstants.CARDS.ROUNDED_CARDS.FONT_SIZE}
           position={[

@@ -13,7 +13,10 @@ export default function useScroll() {
   useEffect(() => {
     setOffsetHeight(document.documentElement.offsetHeight)
     setClientHeight(document.documentElement.clientHeight)
-    setHeight(document.documentElement.offsetHeight - document.documentElement.clientHeight)
+    setHeight(
+      document.documentElement.offsetHeight -
+        document.documentElement.clientHeight,
+    )
   })
 
   const handleScroll = useCallback(
