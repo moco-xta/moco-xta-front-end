@@ -10,18 +10,20 @@ import useProjectsTimeline from '@/hooks/useProjectsTimeline'
 import { isValidDate } from '@/helpers/dateHelpers'
 
 import CurrentDate from './current_date'
-import { LastProjectsCard } from '@/components/cards/last_projects_card'
-import { CompanyOrSchoolCard } from '@/components/cards/company_or_school_card'
+import ProjectsContainer from './projects_container'
+
+import { default as ProjectsConstants } from '@/constants/projectsConstants.json'
 
 import './index.scss'
+import CompaniesOrSchoolContainer from './companies_or_school_container'
 
 export default function ProjectsSlice() {
   const {
+    clientHeight,
     scrollFlow,
     currentProject,
     currentCompanyOrSchool,
     currentDate,
-    dataLoaded,
   } = useProjectsTimeline(projectsData, companiesAndSchollData)
 
   const projectsRefs = useMemo(
@@ -41,17 +43,21 @@ export default function ProjectsSlice() {
 
   useEffect(() => {
     projectsRefs.forEach(({ ref }, index) => {
-      if (ref.current) ref.current.style.top = `${(index + 1) * 400}px`
+      if (ref.current) {
+        ref.current.style.top = `${(clientHeight - ref.current?.offsetHeight) / 2 + index * ProjectsConstants.CARDS_OFFSET.PROJECT}px`
+      }
     })
     companiesAndSchoolRefs.forEach(({ ref }, index) => {
-      if (ref.current) ref.current.style.top = `${(index + 1) * 400}px`
+      if (ref.current) {
+        ref.current.style.top = `${(clientHeight - ref.current?.offsetHeight) / 2 + index * ProjectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
+      }
     })
-  }, [dataLoaded])
+  }, [clientHeight])
 
   useEffect(() => {
     projectsRefs.forEach(({ ref }) => {
       if (ref.current) {
-        ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - 400 : parseInt(ref.current.style.top) + 400}px`
+        ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - ProjectsConstants.CARDS_OFFSET.PROJECT : parseInt(ref.current.style.top) + ProjectsConstants.CARDS_OFFSET.PROJECT}px`
       }
     })
   }, [currentProject])
@@ -59,7 +65,7 @@ export default function ProjectsSlice() {
   useEffect(() => {
     companiesAndSchoolRefs.forEach(({ ref }) => {
       if (ref.current) {
-        ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - 400 : parseInt(ref.current.style.top) + 400}px`
+        ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - ProjectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL : parseInt(ref.current.style.top) + ProjectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
       }
     })
   }, [currentCompanyOrSchool])
@@ -67,29 +73,15 @@ export default function ProjectsSlice() {
   return (
     <>
       <div id='project_slice'>
-        <div id='timeline_container'>
-          {isValidDate(currentDate) && (
-            <CurrentDate currentDate={currentDate} />
-          )}
-        </div>
-        <div id='projects_container'>
-          {projectsRefs.map(({ ref }, index) => (
-            <LastProjectsCard
-              ref={ref}
-              key={`projects_card_${index}`}
-              content={projectsData[index]}
-            />
-          ))}
-        </div>
-        <div id='companies_and_school_container'>
-          {companiesAndSchoolRefs.map(({ ref }, index) => (
-            <CompanyOrSchoolCard
-              ref={ref}
-              key={`company_or_school_card_${index}`}
-              content={companiesAndSchollData[index]}
-            />
-          ))}
-        </div>
+        <ProjectsContainer
+          projectsRefs={projectsRefs}
+          projectsData={projectsData}
+        />
+        <CompaniesOrSchoolContainer
+          companiesAndSchoolRefs={companiesAndSchoolRefs}
+          companiesAndSchollData={companiesAndSchollData}
+        />
+        {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
       </div>
     </>
   )
