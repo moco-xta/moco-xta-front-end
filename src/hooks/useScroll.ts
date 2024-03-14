@@ -6,15 +6,19 @@ export default function useScroll() {
   const [y, setY] = useState<number>(0)
   const [offsetHeight, setOffsetHeight] = useState<number>(0)
   const [clientHeight, setClientHeight] = useState<number>(0)
+  const [height, setHeight] = useState<number>(0)
+  const [scrollPercentage, setScrollPercentage] = useState<number>(0)
   const [scrollFlow, setScrollFlow] = useState<'up' | 'down'>('down')
 
   useEffect(() => {
     setOffsetHeight(document.documentElement.offsetHeight)
     setClientHeight(document.documentElement.clientHeight)
+    setHeight(document.documentElement.offsetHeight - document.documentElement.clientHeight)
   })
 
   const handleScroll = useCallback(
     (e: any) => {
+      setScrollPercentage((y * 100) / height)
       const window = e.currentTarget
       if (y > window.scrollY) {
         setScrollFlow('down')
@@ -33,5 +37,5 @@ export default function useScroll() {
     }
   }, [handleScroll])
 
-  return { y, offsetHeight, clientHeight, scrollFlow }
+  return { y, offsetHeight, clientHeight, scrollPercentage, scrollFlow }
 }
