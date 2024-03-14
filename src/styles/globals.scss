@@ -35,6 +35,13 @@ a {
   text-decoration: none;
 }
 
+.scroll_to_top_container {
+  z-index: 1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 .gradient_text {
   font-weight: 900;
   background: -webkit-linear-gradient(
