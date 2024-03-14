@@ -10,8 +10,6 @@ export default function CurrentDate({ currentDate }: TimelineInterface) {
   const locale = useLocale()
   const t = useTranslations('PROJECTS')
 
-  console.log(currentDate)
-
   return (
     <div id='current_date_container'>
       <p id='day_of_the_week'>
@@ -21,13 +19,17 @@ export default function CurrentDate({ currentDate }: TimelineInterface) {
       </p>
       {locale === 'en' ? (
         <>
-          <p id='month'>{t(`MONTH.${moment(currentDate).format('MMM').toUpperCase()}`)}</p>
+          <p id='month'>
+            {t(`MONTH.${moment(currentDate).format('MMM').toUpperCase()}`)}
+          </p>
           <p id='day_number'>{moment(currentDate).format('Do')}</p>
         </>
       ) : (
         <>
           <p id='day_number'>{moment(currentDate).format('DD')}</p>
-          <p id='month'>{t(`MONTH.${moment(currentDate).format('MMM').toUpperCase()}`)}</p>
+          <p id='month'>
+            {t(`MONTH.${moment(currentDate).format('MMM').toUpperCase()}`)}
+          </p>
         </>
       )}
       <p id='year'>{moment(currentDate).format('YYYY')}</p>
