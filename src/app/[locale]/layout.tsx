@@ -12,7 +12,7 @@ import '@/styles/globals.scss'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MOCO.xta',
+  title: 'Moco.xta',
   description: "Moco's portfolio",
 }
 
