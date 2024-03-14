@@ -24,14 +24,12 @@ export default function useProjectsTimeline(
     ),
   )
   const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
-  const [dataLoaded, setDataLoaded] = useState<boolean>(false)
 
   useEffect(() => {
     if (offsetHeight && clientHeight) {
       setCurrentDate(new Date())
       setDeltaPerDay((offsetHeight - clientHeight) / daysDifference)
     }
-    setDataLoaded(true)
   }, [offsetHeight, clientHeight])
 
   useEffect(() => {
@@ -64,10 +62,10 @@ export default function useProjectsTimeline(
   }, [currentDate])
 
   return {
+    clientHeight,
     scrollFlow,
     currentProject,
     currentCompanyOrSchool,
     currentDate,
-    dataLoaded,
   }
 }
