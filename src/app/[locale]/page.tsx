@@ -23,7 +23,7 @@ export default function Home() {
         <PerformedWithSlice />
         <Footer />
       </div>
-      <div id='scroll_to_top_container'>
+      <div className='scroll_to_top_container'>
         <ScrollToTop />
       </div>
     </>

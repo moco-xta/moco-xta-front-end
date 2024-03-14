@@ -11,6 +11,7 @@ import { isValidDate } from '@/helpers/dateHelpers'
 
 import CurrentDate from './current_date'
 import ProjectsContainer from './projects_container'
+import ScrollToTop from '@/components/buttons/scroll_to_top'
 
 import { default as ProjectsConstants } from '@/constants/projectsConstants.json'
 
@@ -82,6 +83,9 @@ export default function ProjectsSlice() {
           companiesAndSchollData={companiesAndSchollData}
         />
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
+      </div>
+      <div className='scroll_to_top_container'>
+        <ScrollToTop />
       </div>
     </>
   )
