@@ -1,46 +1,29 @@
-#role {
-  width: 210px;
+@import '@/styles/variables.module.scss';
+
+#hero_head_text_container {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  padding: 100px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  border: solid 1px #32275d;
-  margin-bottom: 30px;
-  border-radius: 15px;
-  color: #8082ab;
-  background: -webkit-linear-gradient(-90deg, #01000f, #160b3f);
-}
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
-#heading {
-  color: #cccde8;
-  overflow: hidden;
-
-  $colors: (
-    0: #0f0,
-    1: #111,
-    2: #222,
-    3: #333,
-    4: #fff,
-    5: #555,
-    6: #f00,
-  );
-
-  @each $index, $color in $colors {
-    .hi_i_am:nth-child(#{$index + 1}) {
-      color: $color;
-    }
+  #heading {
+    color: $text_light;
+    /* overflow: hidden; */
   }
-}
 
-#subheading {
-  color: #8082ab;
-  width: 50%;
-  margin-top: 30px;
-  font-weight: 200;
-  line-height: 1.6;
-
-  overflow: hidden;
-  /* box-sizing: border-box; */
-  /* animation: reveal 0.5s linear forwards; */
+  #subheading {
+    color: $text_light;
+    width: 50%;
+    margin-top: 30px;
+    font-weight: 200;
+    line-height: 1.6;
+    /* overflow: hidden; */
+  }
 }

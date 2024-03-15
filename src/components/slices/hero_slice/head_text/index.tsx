@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import { MdComputer } from 'react-icons/md'
 
+import RevealTextLetterByLetter from '@/components/shared/effects/reveal_text_letter_by_letter'
 import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
 
 import './index.scss'
@@ -10,44 +10,16 @@ export default function HeadText() {
   const t = useTranslations('HOME')
 
   return (
-    <>
-      <p id='role'>
-        <MdComputer />
-        <span>{t('HERO.CREATIVE_DEVELOPER')}</span>
-      </p>
-      <RevealTextBlock
+    <div id='hero_head_text_container'>
+      {/* <RevealTextBlock
         threshold={0.75}
         duration={'500ms'}
         y={100}
-      >
-        <h1 id='heading'>
-          {t('HERO.HI_I_AM')}
-          {/* <span className='hi_i_am'>
-            <span>1</span>
-            <span>1</span>
-            <span>1</span>
-            <span>1</span>
-            <span>1</span>
-            <span>1</span>
-            <span>1</span>
-          </span> */}
-          <span className='gradient_text'>Federico</span>
-          {/* <span>
-            {returnArrayOfCharacters(t('HERO.HI_I_AM')).map(
-              (character, index) => (
-                <span>{character}</span>
-              ),
-            )}
-          </span>
-          <span className='gradient_text'>
-            {returnArrayOfCharacters('Federico').map(
-              (character, index) => (
-                <span>{character}</span>
-              ),
-            )}
-          </span> */}
-        </h1>
-      </RevealTextBlock>
+      > */}
+      <h1 id='heading'>
+        <RevealTextLetterByLetter text={`${t('HERO.HI_I_AM')} Federico`} />
+      </h1>
+      {/* </RevealTextBlock> */}
       <RevealTextBlock
         threshold={0.75}
         duration={'500ms'}
@@ -56,6 +28,6 @@ export default function HeadText() {
       >
         <h3 id='subheading'>{t('HERO.SUBHEADING')}</h3>
       </RevealTextBlock>
-    </>
+    </div>
   )
 }
