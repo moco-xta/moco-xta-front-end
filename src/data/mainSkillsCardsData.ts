@@ -6,7 +6,7 @@ import { LogoAngular } from '@/components/r3f/models/logos/LogoAngular'
 
 import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
 
-export const introductionToolsCardsData: IntroductionCardDataInterface[] = [
+export const mainSkillsCardsData: IntroductionCardDataInterface[] = [
   {
     name: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.NAME,
     logo: {
