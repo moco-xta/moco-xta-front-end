@@ -4,7 +4,7 @@ import React, { Suspense, createRef, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, ThreeEvent, useThree } from '@react-three/fiber'
 import { PerspectiveCamera, RoundedBox, Text } from '@react-three/drei'
-import { Bloom } from '@react-three/postprocessing'
+import { Bloom, EffectComposer } from '@react-three/postprocessing'
 import { KernelSize, Resolution } from 'postprocessing'
 import { useTranslations } from 'next-intl'
 
@@ -21,8 +21,8 @@ import { default as IntroductionConstants } from '@/constants/introductionConsta
 
 /* const descriptionFont = '/fonts/json/Monserrat_Bold.json' */
 
+import variables from '@/styles/variables.module.scss'
 import './index.scss'
-import { EffectComposer } from '@react-three/postprocessing'
 
 function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
   const { gl } = useThree()
@@ -78,19 +78,20 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
           IntroductionConstants.SCENE.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
       />
-      {/* <ambientLight intensity={10} /> */}
-      {IntroductionConstants.SCENE.POINT_LIGHTS.map((point_light, index) => (
-        <pointLight
+      <ambientLight position={[0, 3, 0]} intensity={30} />
+      {/* {IntroductionConstants.SCENE.POINT_LIGHTS.POSITIONS.map((point_light, index) => (
+        <spotLight
           key={`ìntroduction_scene_point_light_${index}`}
           position={[
-            point_light.POSITION.X,
-            point_light.POSITION.Z,
-            point_light.POSITION.Y,
+            point_light.X,
+            point_light.Z,
+            point_light.Y,
           ]}
-          intensity={point_light.INTENSITY}
+          intensity={IntroductionConstants.SCENE.POINT_LIGHTS.INTENSITY}
+          angle={60}
           castShadow
         />
-      ))}
+      ))} */}
       <group ref={introductionCardRef}>
         <Text
           /* font={descriptionFont} */
@@ -119,9 +120,10 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
           receiveShadow
           castShadow
         >
-          <meshStandardMaterial
+          <meshPhysicalMaterial
             attach='material'
-            color={'#0b0831'}
+            color={variables.background_color}
+            roughness={1}
           />
         </RoundedBox>
         <content.logo.component
@@ -143,18 +145,18 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
           }
         />
       </group>
-      <EffectComposer>
+      {/* <EffectComposer>
         <Bloom
-          intensity={1.0} // The bloom intensity.
-          blurPass={undefined} // A blur pass.
-          kernelSize={KernelSize.LARGE} // blur kernel size
-          luminanceThreshold={0.9} // luminance threshold. Raise this value to mask out darker elements in the scene.
-          luminanceSmoothing={0.025} // smoothness of the luminance threshold. Range is [0, 1]
-          mipmapBlur={false} // Enables or disables mipmap blur.
-          resolutionX={Resolution.AUTO_SIZE} // The horizontal resolution.
-          resolutionY={Resolution.AUTO_SIZE} // The vertical resolution.
+          intensity={IntroductionConstants.SCENE.BLOOM.INTENSITY}
+          blurPass={undefined}
+          kernelSize={KernelSize.LARGE}
+          luminanceThreshold={IntroductionConstants.SCENE.BLOOM.LUMINANCE_THRESHOLD}
+          luminanceSmoothing={IntroductionConstants.SCENE.BLOOM.LUMINANCE_SMOOTHING}
+          mipmapBlur={IntroductionConstants.SCENE.BLOOM.MIPMAP_BLUR}
+          resolutionX={Resolution.AUTO_SIZE}
+          resolutionY={Resolution.AUTO_SIZE}
         />
-      </EffectComposer>
+      </EffectComposer> */}
     </>
   )
 }

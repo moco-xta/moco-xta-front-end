@@ -5,7 +5,7 @@ import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
 
 import './index.scss'
 
-export default function Introduction() {
+export default function IntroductionText() {
   const t = useTranslations('HOME')
 
   return (
@@ -15,7 +15,7 @@ export default function Introduction() {
         duration={'500ms'}
         threshold={0.75}
       >
-        <h2 className='gradient_text'>
+        <h2>
           {t('INTRODUCTION.INTRODUCTION_TITLE')}
         </h2>
       </RevealTextBlock>
