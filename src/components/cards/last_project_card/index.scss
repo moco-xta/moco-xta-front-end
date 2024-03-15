@@ -1,0 +1,52 @@
+@import '@/styles/variables.module.scss';
+
+.last_project_card {
+  width: 400px;
+  height: 500px;
+  background-color: $background_black;
+  border-radius: 20px;
+
+  .project_card_background {
+    z-index: 0;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: $font_size_extra_large;
+
+    .project_role {
+      text-align: end;
+      font-weight: bold;
+      line-height: 0.8;
+    }
+  }
+
+  .project_card_content {
+    z-index: 1;
+    width: auto;
+    height: auto;
+    margin: 10px;
+
+    .project_title {
+      margin: 10px;
+    }
+
+    .project_details_content {
+      height: 100%;
+      padding: 20px;
+      background-color: rgba(25, 25, 25, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+
+      .project_description {
+        margin-bottom: 10px;
+        color: $text_medium_light;
+        text-align: justify;
+        line-break: auto;
+      }
+    }
+  }
+}

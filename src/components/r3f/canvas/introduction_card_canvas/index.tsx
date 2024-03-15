@@ -78,7 +78,10 @@ function IntroducitonCardScene({ content }: IntroductionCardSceneInterface) {
           IntroductionConstants.SCENE.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
       />
-      <ambientLight position={[0, 3, 0]} intensity={30} />
+      <ambientLight
+        position={[0, 3, 0]}
+        intensity={30}
+      />
       {/* {IntroductionConstants.SCENE.POINT_LIGHTS.POSITIONS.map((point_light, index) => (
         <spotLight
           key={`ìntroduction_scene_point_light_${index}`}
