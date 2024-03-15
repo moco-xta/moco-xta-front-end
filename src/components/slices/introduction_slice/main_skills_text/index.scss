@@ -2,7 +2,7 @@
 
 #main_skills_text_container {
   position: relative;
-  width: 30%;
+  width: 40%;
   height: 100%;
   margin-top: auto;
   margin-bottom: auto;
@@ -20,6 +20,7 @@
     color: $text_medium_light;
     font-size: $font_size_small;
     text-align: justify;
+    text-align-last: right;
     font-weight: 200;
     line-height: 1.6;
   }
