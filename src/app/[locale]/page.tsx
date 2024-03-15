@@ -18,8 +18,8 @@ export default function Home() {
       <div id='home_container'>
         <HeroSlice />
         <IntroductionSlice />
-        {/* <LastProjectsSlice />
-        <ReviewsSlice />
+        <LastProjectsSlice />
+        {/* <ReviewsSlice />
         <PerformedWithSlice />
         <Footer /> */}
       </div>

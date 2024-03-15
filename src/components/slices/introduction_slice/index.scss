@@ -1,14 +1,19 @@
 @import '@/styles/variables.module.scss';
 
 #introduction_slice {
+  z-index: 2;
+  position: relative;
   width: 100vw;
+  height: 80vh;
   padding: 50px 100px;
   background-color: $background_black;
 
   #introduction_content {
+    position: relative;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    justify-content: space-between;
 
     #introduction_container {
       display: flex;

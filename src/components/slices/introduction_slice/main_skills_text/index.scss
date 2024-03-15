@@ -12,16 +12,29 @@
   justify-content: center;
 
   h2 {
-    color: $text_light;
     margin-bottom: 20px;
+    color: $text_light;
   }
 
   p {
+    margin-bottom: 20px;
     color: $text_medium_light;
     font-size: $font_size_small;
     text-align: justify;
     text-align-last: right;
     font-weight: 200;
     line-height: 1.6;
+  }
+
+  #view_more_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: $text_light;
+    font-size: $font_size_small;
+
+    #view_more_link_text {
+      margin-right: 5px;
+    }
   }
 }
