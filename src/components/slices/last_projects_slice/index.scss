@@ -1,22 +1,12 @@
+@import '@/styles/variables.module.scss';
+
 #last_projects_slice {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('/img/test/hero_background_test.jpg');
-  background-size: cover;
+  padding: 50px 100px;
+  background-color: $background_color;
 
   #last_projects_content {
-    width: 70%;
-    height: 70%;
-
-    #last_projects_container {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+    position: relative;
   }
 }

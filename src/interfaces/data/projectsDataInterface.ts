@@ -11,6 +11,7 @@ export interface ProjectDataInterface {
   dates: {
     [key: string]: string
   }
+  role: string
   tools: IconType[]
 }
 

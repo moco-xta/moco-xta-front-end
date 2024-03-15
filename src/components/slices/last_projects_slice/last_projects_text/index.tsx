@@ -5,17 +5,17 @@ import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
 
 import './index.scss'
 
-export default function IntroductionText() {
+export default function LastProjectsText() {
   const t = useTranslations('HOME')
 
   return (
-    <div id='introduction_text_container'>
+    <div id='last_projects_text_container'>
       <RevealTextBlock
         y={100}
         duration={'500ms'}
         threshold={0.75}
       >
-        <h2>{t('INTRODUCTION.INTRODUCTION_TITLE')}</h2>
+        <h2>{t('PROJECTS.TITLE')}</h2>
       </RevealTextBlock>
 
       <RevealTextBlock
@@ -23,7 +23,7 @@ export default function IntroductionText() {
         duration={'500ms'}
         threshold={0.75}
       >
-        <p>{t('INTRODUCTION.INTRODUCTION_TEXT')}</p>
+        <p>{t('PROJECTS.TEXT')}</p>
       </RevealTextBlock>
     </div>
   )
