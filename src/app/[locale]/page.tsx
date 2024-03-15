@@ -17,11 +17,11 @@ export default function Home() {
     <>
       <div id='home_container'>
         <HeroSlice />
-        <IntroductionSlice />
+        {/* <IntroductionSlice />
         <LastProjectsSlice />
         <ReviewsSlice />
         <PerformedWithSlice />
-        <Footer />
+        <Footer /> */}
       </div>
       <div className='scroll_to_top_container'>
         <ScrollToTop />
