@@ -2,8 +2,8 @@
 
 import React from 'react'
 
-import { introductionSkillsCardsData } from '@/data/introductionSkillsCardsData'
-import { introductionToolsCardsData } from '@/data/introductionToolsCardsData'
+import { introductionCardsData } from '@/data/introductionCardsData'
+import { mainSkillsCardsData } from '@/data/mainSkillsCardsData'
 
 import IntroductionText from './introduction_text'
 import IntroductionCards from './introduction_cards'
@@ -18,13 +18,13 @@ export default function IntroductionSlice() {
         <div id='introduction_container'>
           <IntroductionText />
           <IntroductionCards
-            data={introductionSkillsCardsData}
+            data={introductionCardsData}
             type={'skills'}
           />
         </div>
         <div id='main_skills_container'>
           <IntroductionCards
-            data={introductionToolsCardsData}
+            data={mainSkillsCardsData}
             type={'tools'}
           />
           <MainSkillsText />

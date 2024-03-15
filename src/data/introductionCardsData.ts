@@ -5,7 +5,7 @@ import { DoughnutChartNinetyPercent } from '@/components/r3f/models/charts/Dough
 
 import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
 
-export const introductionSkillsCardsData: IntroductionCardDataInterface[] = [
+export const introductionCardsData: IntroductionCardDataInterface[] = [
   {
     name: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.NAMES.THREE_D,
     logo: {

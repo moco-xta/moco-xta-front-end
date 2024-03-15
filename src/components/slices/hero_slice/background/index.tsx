@@ -53,11 +53,11 @@ export default function Background() {
           <radialGradient id='myGradient'>
             <stop
               id='gradient_in_stop'
-              stop-color={variables.circle_gradient_in}
+              stopColor={variables.circle_gradient_in}
             />
             <stop
               offset='95%'
-              stop-color={variables.circle_gradient_out}
+              stopColor={variables.circle_gradient_out}
             />
           </radialGradient>
         </defs>
