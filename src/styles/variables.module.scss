@@ -3,6 +3,7 @@ $white: #fff;
 
 $background_color: #161a1e;
 /* $background_color: #414851; */
+$background_black: #000;
 
 $text_light: #fff;
 $text_medium_light: #8b8b8b;
@@ -15,6 +16,16 @@ $circle_gradient_out: #89fffd;
 $font_size_small: 1em;
 $font_size_medium: 1.5em;
 $font_size_large: 2em;
+
+$phi: calc((1 + sqrt(5)) / 2);
+
+
+
+
+
+
+
+
 
 $black_op30: #00000030;
 
@@ -67,6 +78,16 @@ $background_dark: #01000f;
   font_size_small: $font_size_small;
   font_size_medium: $font_size_medium;
   font_size_large: $font_size_large;
+
+  phi: $phi;
+
+
+
+
+
+
+
+
 
   black_op30: $black_op30;
   grey_f2f2f2: $grey_f2f2f2;
