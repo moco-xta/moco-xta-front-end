@@ -13,21 +13,20 @@ export default function Background() {
 
   useGSAP(
     () => {
-      timeline
-        .fromTo(
-          '#circle',
-          {
-            r: 0,
-            opacity: 0
-          },
-          {
-            duration: 2,
-            ease: 'power3.out',
-            r: 450,
-            opacity: 1
-          }
-        )
-        /* .fromTo(
+      timeline.fromTo(
+        '#circle',
+        {
+          r: 0,
+          opacity: 0,
+        },
+        {
+          duration: 2,
+          ease: 'power3.out',
+          r: 450,
+          opacity: 1,
+        },
+      )
+      /* .fromTo(
           '#gradient_in_stop',
           {
             offset: '90%',
@@ -71,6 +70,61 @@ export default function Background() {
           filter='url(#blurMe)'
         />
       </svg>
+
+      {/* <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='300'
+        height='300'
+      >
+        <filter
+          id='noiseFilter'
+          x='0'
+          y='0'
+        >
+          <feTurbulence
+            type='fractalNoise'
+            baseFrequency='0.75'
+            stitchTiles='stitch'
+          />
+        </filter>
+
+        <rect
+          width='300'
+          height='300'
+          fill='#fff'
+        />
+        <rect
+          width='300'
+          height='300'
+          filter='url(#n)'
+          opacity='0.80'
+        />
+      </svg>
+
+      <svg>
+        <filter id='noiseFilter'>
+          <feTurbulence
+            type='fractalNoise'
+            baseFrequency='0.6'
+            stitchTiles='stitch'
+          />
+          <feColorMatrix
+            in='colorNoise'
+            type='matrix'
+            values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0'
+          />
+          <feComposite
+            operator='in'
+            in2='SourceGraphic'
+            result='monoNoise'
+          />
+          <feBlend
+            in='SourceGraphic'
+            in2='monoNoise'
+            mode='screen'
+          />
+        </filter>
+      </svg> */}
     </div>
   )
 }

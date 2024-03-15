@@ -3,7 +3,7 @@ import gsap from 'gsap'
 
 import { TextBlockTransitionNineInterface } from '@/interfaces/components/shared/effects/textBlockTransitionNineInterface'
 
-import { splitTextInArrayOfWords } from '@/helpers/cssHelpers'
+import { splitTextInArrayOfWords } from '@/helpers/textHelpers'
 
 import './index.scss'
 
