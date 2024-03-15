@@ -50,6 +50,7 @@ export default function ProjectsSlice() {
     })
     companiesAndSchoolRefs.forEach(({ ref }, index) => {
       if (ref.current) {
+        console.log('')
         ref.current.style.top = `${(clientHeight - ref.current?.offsetHeight) / 2 + index * ProjectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
       }
     })

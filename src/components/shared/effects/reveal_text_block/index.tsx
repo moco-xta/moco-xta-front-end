@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useRef, useState } from 'react'
 
 import { RevealComponentInterface } from '@/interfaces/components/shared/effects/revealComponentInterface'

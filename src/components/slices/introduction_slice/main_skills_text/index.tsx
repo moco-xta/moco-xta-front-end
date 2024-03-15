@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight } from 'react-icons/fa6'
 import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
@@ -19,9 +19,7 @@ export default function MainSkillsText() {
         duration={'500ms'}
         threshold={0.75}
       >
-        <h2>
-          {t('INTRODUCTION.MAIN_SKILLS_TITLE')}
-        </h2>
+        <h2>{t('INTRODUCTION.MAIN_SKILLS_TITLE')}</h2>
       </RevealTextBlock>
 
       <RevealTextBlock
@@ -37,13 +35,13 @@ export default function MainSkillsText() {
         duration={'500ms'}
         threshold={0.75}
       >
-      <Link
-        id='view_more_link'
-        href={Routes.find((route) => route.key === 'SKILLS')!.path}
-      >
-        <span id='view_more_link_text'>{t('INTRODUCTION.SEE_MORE')}</span>
-        <FaArrowRight />
-      </Link>
+        <Link
+          id='view_more_link'
+          href={Routes.find((route) => route.key === 'SKILLS')!.path}
+        >
+          <span id='view_more_link_text'>{t('INTRODUCTION.SEE_MORE')}</span>
+          <FaArrowRight />
+        </Link>
       </RevealTextBlock>
     </div>
   )

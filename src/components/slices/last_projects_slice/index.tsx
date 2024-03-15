@@ -1,23 +1,18 @@
 import React from 'react'
 
-import { projectsData } from '@/data/projectsData'
-
-import { LastProjectsCard } from '@/components/cards/last_projects_card'
+import LastProjectsText from './last_projects_text'
+import LastProjectsCards from './last_projects_cards'
 
 import './index.scss'
+import SeeAllProjectsLink from './see_all_projects_link'
 
 export default function LastProjectsSlice() {
   return (
     <div id='last_projects_slice'>
       <div id='last_projects_content'>
-        <div id='last_projects_container'>
-          {projectsData.map((project, index) => (
-            <LastProjectsCard
-              key={`last_projects_card_${index}`}
-              content={project}
-            />
-          ))}
-        </div>
+        <LastProjectsText />
+        <LastProjectsCards />
+        <SeeAllProjectsLink />
       </div>
     </div>
   )

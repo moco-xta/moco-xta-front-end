@@ -2,7 +2,7 @@ import React from 'react'
 
 import { ProjectsContainerInterface } from '@/interfaces/components/projectsContainerInterface'
 
-import { LastProjectsCard } from '@/components/cards/last_projects_card'
+import { ProjectCard } from '@/components/cards/project_card'
 
 import './index.scss'
 
@@ -13,7 +13,7 @@ export default function ProjectsContainer({
   return (
     <div id='projects_container'>
       {projectsRefs.map(({ ref }, index) => (
-        <LastProjectsCard
+        <ProjectCard
           ref={ref}
           key={`projects_card_${index}`}
           content={projectsData[index]}
