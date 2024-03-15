@@ -1,0 +1,26 @@
+@import '@/styles/variables.module.scss';
+
+#introduction_text_container {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  h2 {
+    color: $text_light;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: $text_medium_light;
+    font-size: $font_size_small;
+    text-align: justify;
+    font-weight: 200;
+    line-height: 1.6;
+  }
+}

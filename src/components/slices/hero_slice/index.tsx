@@ -11,13 +11,13 @@ import './index.scss'
 
 export default function HeroSlice() {
   return (
-    <div id='hero_slice'>
+    <section id='hero_slice'>
       <HeadText />
       <Background />
       <div id='scroll_icon_container'>
         <ScrollIcon />
       </div>
       <Role />
-    </div>
+    </section>
   )
 }
