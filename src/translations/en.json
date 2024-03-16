@@ -74,7 +74,8 @@
       "OCT": "October",
       "NOV": "November",
       "DEC": "December"
-    }
+    },
+    "SCROLL_DOWN": "Scroll down"
   },
   "ROUTES": {
     "ABOUT": "About",

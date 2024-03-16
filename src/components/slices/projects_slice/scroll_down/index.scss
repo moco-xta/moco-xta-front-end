@@ -1,0 +1,23 @@
+@import '@/styles/variables.module.scss';
+
+#scroll_dwon_container {
+  position: absolute;
+  top: 65vh;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: $text_medium_dark;
+
+  p {
+    margin-right: 5px;
+    margin-bottom: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  #arrow_down {
+    width: 30px;
+    height: 30px;
+  }
+}
