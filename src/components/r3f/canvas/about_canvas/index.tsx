@@ -1,29 +1,44 @@
 'use client'
 
 import React, { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { Box } from '@react-three/drei'
+import { Canvas, useThree } from '@react-three/fiber'
+import { Box, FirstPersonControls } from '@react-three/drei'
 
 import { default as AboutConstants } from '@/constants/aboutConstants.json'
 
+import { Parquet, Trestle } from '../../models/about'
+
 function AboutScene() {
-  return <Box />
+  const { gl } = useThree()
+  gl.toneMappingExposure = 1.5
+
+  return (
+    <>
+      <Parquet />
+      <Trestle />
+    </>
+  )
 }
 
 export default function AboutCanvas() {
   return (
-    <Canvas
-      dpr={AboutConstants.SCENE.CANVAS.DPR}
+      <Canvas
       shadows
-      linear
-      flat
+      legacy
       gl={{
-        antialias: AboutConstants.SCENE.CANVAS.ANTIALIAS,
-        powerPreference: AboutConstants.SCENE.CANVAS.POWER_PREFERENCE,
-        preserveDrawingBuffer:
-          AboutConstants.SCENE.CANVAS.PRESERVE_DRAWING_BUFFER,
+        antialias: true,
+        alpha: true,
+        powerPreference: 'high-performance',
+        /* shadowMapEnabled: true */
       }}
     >
+      <FirstPersonControls
+        makeDefault
+        position={[0, 0, 50]}
+        lookSpeed={0.1}
+      />
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} intensity={20} />
       <Suspense fallback={null}>
         <AboutScene />
       </Suspense>
