@@ -10,7 +10,9 @@ export default function ScrollDown() {
   return (
     <div id='scroll_dwon_container'>
       <p>{t('SCROLL_DOWN')}</p>
-      <FaArrowDown id='arrow_down' />
+      {/* <div id='arrow_down_container'> */}
+        <FaArrowDown id='arrow_down' />
+      {/* </div> */}
     </div>
   )
 }
