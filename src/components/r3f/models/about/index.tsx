@@ -1,7 +1,4 @@
-import { Parquet } from "./Parquet";
-import { Trestle } from "./Trestle";
+import { Parquet } from './Parquet'
+import { Trestle } from './Trestle'
 
-export {
-  Parquet,
-  Trestle
-}
+export { Parquet, Trestle }
