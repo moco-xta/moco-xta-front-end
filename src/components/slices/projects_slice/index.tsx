@@ -13,6 +13,7 @@ import CurrentDate from './current_date'
 import ProjectsContainer from './projects_container'
 import CompaniesOrSchoolContainer from './companies_or_school_container'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
+import ScrollDown from './scroll_down'
 
 import { default as projectsConstants } from '@/constants/projectsConstants.json'
 
@@ -85,6 +86,7 @@ export default function ProjectsSlice() {
           currentCompanyOrSchool={currentCompanyOrSchool}
         />
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
+        <ScrollDown />
       </div>
       <div className='scroll_to_top_container'>
         <ScrollToTop />
