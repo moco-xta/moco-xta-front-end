@@ -1,10 +1,6 @@
 {
-  "OCCUPY_SPACE": "/gltf/hero/OccupySpace.gltf",
-
   "DOUGHNUT_CHART_SEVENTY_FIVE_PERCENT": "/gltf/charts/DoughnutChartSeventyFivePercent.gltf",
   "DOUGHNUT_CHART_NINETY_PERCENT": "/gltf/charts/DoughnutChartNinetyPercent.gltf",
-
-  "RATING_STAR": "/gltf/icons/RatingStar.gltf",
 
   "LOGO_ANGULAR": "/gltf/logos/LogoAngular.gltf",
   "LOGO_BLENDER": "/gltf/logos/LogoBlender.gltf",
@@ -21,5 +17,6 @@
   "LOGO_SASS": "/gltf/logos/LogoSass.gltf",
   "LOGO_SPRING": "/gltf/logos/LogoSpring.gltf",
 
-  "PROJECTS_MAP": "/gltf/projects/ProjectsMap.gltf"
+  "PARQUET": "/gltf/about/Parquet.gltf",
+  "TRESTLE": "/gltf/about/Trestle.gltf"
 }
