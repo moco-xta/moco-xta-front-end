@@ -1,5 +1,15 @@
 @import './variables.module.scss';
 
+/* @font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: local('Montserrat-ExtraBold'), url(/fonts/ttf/Montserrat-ExtraBold.ttf) format('ttf');
+} */
+
+@font-face {
+  font-family: 'HelveticaNeue-Black';
+  src: local('HelveticaNeue-Black'), url(/fonts/ttf/HelveticaNeue-Black.ttf) format('ttf');
+}
+
 :root {
   --max-width: 1100px;
 }
