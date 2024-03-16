@@ -21,7 +21,12 @@ export interface CompanyOrSchollDataInterface {
     }
   }
   url: string
-  as: string
+  as: {
+    key: 'STUDENT' | 'INTERN' | 'EMPLOYEE'
+    position: {
+      [key: string]: number
+    }
+  }
   dates: {
     [key: string]: string
   }

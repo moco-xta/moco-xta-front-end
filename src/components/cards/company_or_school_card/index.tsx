@@ -1,6 +1,7 @@
 import React, { Suspense, forwardRef, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Box, PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera, Text } from '@react-three/drei'
+import { useTranslations } from 'next-intl'
 
 import { CompanyOrSchoolCardInterface } from '@/interfaces/data/companyOrSchollDataInterface'
 
@@ -12,6 +13,8 @@ export const CompanyOrSchoolCard = forwardRef<
   HTMLDivElement,
   CompanyOrSchoolCardInterface
 >(({ content, index, currentCompanyOrSchool }, ref) => {
+  const t = useTranslations('PROJECTS')
+
   const Logo = content.logo.component
 
   const [isActive, setIsActive] = useState<boolean>(false)
@@ -45,7 +48,7 @@ export const CompanyOrSchoolCard = forwardRef<
       >
         <PerspectiveCamera
           makeDefault
-          position={[0, 0, 4]}
+          position={[0, -0.1, 5.5]}
           fov={15}
         />
         <ambientLight intensity={0.5} />
@@ -59,6 +62,20 @@ export const CompanyOrSchoolCard = forwardRef<
             scale={[content.logo.scale.x, content.logo.scale.z, content.logo.scale.y]}
             onClick={handleOnClick}
           />
+          <Text
+            /* font={descriptionFont} */
+            textAlign={'center'}
+            fontSize={projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.FONT_SIZE}
+            position={[
+              content.as.position.x,
+              content.as.position.z,
+              content.as.position.y,
+            ]}
+            receiveShadow
+            castShadow
+          >
+            {t(`AS.${content.as.key}`)}
+          </Text>
         </Suspense>
       </Canvas>
     </div>

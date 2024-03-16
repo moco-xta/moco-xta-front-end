@@ -23,7 +23,14 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
       },
     },
     url: 'https://ponthus.nl/',
-    as: 'employe',
+    as: {
+      key: 'EMPLOYEE',
+      position: {
+        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.PONTHUS.X,
+        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.PONTHUS.Y,
+        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.PONTHUS.Z,
+      }
+    },
     dates: {
       to: '2023-11-31',
       from: '2022-03-01',
@@ -45,7 +52,14 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
       },
     },
     url: 'https://www.thebrinkagency.com/',
-    as: 'employe',
+    as: {
+      key: 'EMPLOYEE',
+      position: {
+        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.X,
+        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.Y,
+        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.Z,
+      }
+    },
     dates: {
       to: '2022-02-28',
       from: '2021-09-01',
@@ -67,7 +81,14 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
       },
     },
     url: 'https://www.thebrinkagency.com/',
-    as: 'intern',
+    as: {
+      key: 'INTERN',
+      position: {
+        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.X,
+        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.Y,
+        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.Z,
+      }
+    },
     dates: {
       to: '2021-08-31',
       from: '2021-04-17',
@@ -89,7 +110,14 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
       },
     },
     url: 'https://openclassrooms.com/en/',
-    as: 'intern',
+    as: {
+      key: 'STUDENT',
+      position: {
+        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.OPENCLASSROOMS.X,
+        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.OPENCLASSROOMS.Y,
+        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.OPENCLASSROOMS.Z,
+      }
+    },
     dates: {
       to: '2021-04-16',
       from: '2019-04-17',
