@@ -77,10 +77,12 @@ export default function ProjectsSlice() {
         <ProjectsContainer
           projectsRefs={projectsRefs}
           projectsData={projectsData}
+          currentProject={currentProject}
         />
         <CompaniesOrSchoolContainer
           companiesAndSchoolRefs={companiesAndSchoolRefs}
           companiesAndSchollData={companiesAndSchollData}
+          currentCompanyOrSchool={currentCompanyOrSchool}
         />
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
       </div>

@@ -28,5 +28,7 @@ export interface CompanyOrSchollDataInterface {
 }
 
 export interface CompanyOrSchoolCardInterface {
-  content: CompanyOrSchollDataInterface
+  content: CompanyOrSchollDataInterface,
+  index: number
+  currentCompanyOrSchool: number
 }

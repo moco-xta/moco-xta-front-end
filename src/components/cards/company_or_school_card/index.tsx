@@ -1,4 +1,4 @@
-import React, { Suspense, forwardRef } from 'react'
+import React, { Suspense, forwardRef, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Box, PerspectiveCamera } from '@react-three/drei'
 
@@ -11,8 +11,14 @@ import './index.scss'
 export const CompanyOrSchoolCard = forwardRef<
   HTMLDivElement,
   CompanyOrSchoolCardInterface
->(({ content }, ref) => {
+>(({ content, index, currentCompanyOrSchool }, ref) => {
   const Logo = content.logo.component
+
+  const [isActive, setIsActive] = useState<boolean>(false)
+
+  useEffect(() => {
+    currentCompanyOrSchool === index ? setIsActive(true) : setIsActive(false)
+  }, [currentCompanyOrSchool])
 
   function handleOnClick() {
     window.open(content.url, "_blank")
@@ -22,6 +28,7 @@ export const CompanyOrSchoolCard = forwardRef<
     <div
       ref={ref}
       className='company_or_school_card'
+      style={{ opacity: isActive ? '1' : '0.5' }}
     >
       <Canvas
         dpr={projectsConstants.COMPANY_OR_SCHOOL_CARDS.SCENE.CANVAS.DPR}

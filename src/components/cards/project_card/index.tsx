@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react'
+import React, { forwardRef, useEffect, useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 
@@ -7,15 +7,22 @@ import { ProjectsCardInterface } from '@/interfaces/data/projectsDataInterface'
 import './index.scss'
 
 export const ProjectCard = forwardRef<HTMLDivElement, ProjectsCardInterface>(
-  ({ content }, ref) => {
+  ({ content, index, currentProject }, ref) => {
     const t = useTranslations('PROJECTS')
 
+    const [isActive, setIsActive] = useState<boolean>(false)
     const [displayPlus, setDisplayPlus] = useState<boolean>(true)
     const [displayDescription, setDisplayDescription] = useState<boolean>(false)
 
+    useEffect(() => {
+      currentProject === index ? setIsActive(true) : setIsActive(false)
+    }, [currentProject])
+
     function handleMouseOver() {
-      setDisplayPlus(false)
-      setDisplayDescription(true)
+      if(isActive) {
+        setDisplayPlus(false)
+        setDisplayDescription(true)
+      }
     }
 
     function handleMouseLeave() {
@@ -27,6 +34,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, ProjectsCardInterface>(
       <div
         ref={ref}
         className='project_card card_background_gradient'
+        style={{ opacity: isActive ? '1' : '0.5' }}
       >
         <div className='project_card_details'>
           <a
@@ -60,7 +68,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, ProjectsCardInterface>(
         </div>
         <div className='project_card_description'>
           <div
-            className='project_description_container'
+            className={`project_description_container ${isActive ? 'is_active' : ''}`}
             onMouseOver={handleMouseOver}
             onMouseLeave={handleMouseLeave}
           >
