@@ -16,8 +16,20 @@
     text-orientation: mixed;
   }
 
-  #arrow_down {
-    width: 30px;
-    height: 30px;
-  }
+  /* #arrow_down_container {
+    width: 40px;
+    height: 40px;
+    margin-right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: $background_meduim_dark; */
+
+    #arrow_down {
+      width: 30px;
+      height: 30px;
+      /* color: $text_dark; */
+    }
+  /* } */
 }
