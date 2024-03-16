@@ -18,7 +18,7 @@ export const projectsData: ProjectDataInterface[] = [
       to: '2024-03-15',
       from: '2024-01-01',
     },
-    role: 'Full Stack',
+    roles: ['Real-time 3D', 'Full Stack'],
     tools: [FaReact, SiDjango],
   },
   {
@@ -34,7 +34,7 @@ export const projectsData: ProjectDataInterface[] = [
       to: '2023-11-31',
       from: '2023-03-01',
     },
-    role: 'Front End',
+    roles: ['Front End'],
     tools: [FaReact, FaAngular, SiDjango],
   },
   {
@@ -50,7 +50,7 @@ export const projectsData: ProjectDataInterface[] = [
       to: '2023-02-28',
       from: '2021-07-01',
     },
-    role: 'Front End',
+    roles: ['Front End'],
     tools: [FaReact, SiDjango],
   },
   /* {
