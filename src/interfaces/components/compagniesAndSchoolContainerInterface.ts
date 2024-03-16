@@ -5,4 +5,5 @@ import { CompanyOrSchollDataInterface } from '../data/companyOrSchollDataInterfa
 export interface CompagniesAndSchoolContainerInterface {
   companiesAndSchoolRefs: { ref: RefObject<HTMLDivElement> }[]
   companiesAndSchollData: CompanyOrSchollDataInterface[]
+  currentCompanyOrSchool: number
 }

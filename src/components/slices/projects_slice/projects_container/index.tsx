@@ -9,6 +9,7 @@ import './index.scss'
 export default function ProjectsContainer({
   projectsRefs,
   projectsData,
+  currentProject
 }: ProjectsContainerInterface) {
   return (
     <div id='projects_container'>
@@ -17,6 +18,8 @@ export default function ProjectsContainer({
           ref={ref}
           key={`projects_card_${index}`}
           content={projectsData[index]}
+          index={index}
+          currentProject={currentProject}
         />
       ))}
     </div>

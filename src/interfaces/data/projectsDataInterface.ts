@@ -19,4 +19,6 @@ export interface ProjectDataInterface {
 
 export interface ProjectsCardInterface {
   content: ProjectDataInterface
+  index: number
+  currentProject: number
 }
