@@ -26,7 +26,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, ProjectsCardInterface>(
     return (
       <div
         ref={ref}
-        className='last_project_card card_background_gradient'
+        className='project_card card_background_gradient'
       >
         <div className='project_card_details'>
           <a
@@ -38,7 +38,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, ProjectsCardInterface>(
           <div className='project_tools'>
             {content.tools.map((Logo, index) => (
               <Logo
-                key={`last_projects_tools_${content.key}_${index}`}
+                key={`projects_tools_${content.key}_${index}`}
                 className='tool_icon'
               />
             ))}
