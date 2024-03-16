@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 
 import LastProjectsText from './last_projects_text'
