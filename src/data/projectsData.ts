@@ -9,7 +9,10 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'moco_xta',
     name: 'Moco.xta',
     url: 'https://lento.eu/en',
-    descriptionKey: 'PROJECTS.CARDS.DESCRIPTIONS.LENTO',
+    descriptionsKey: {
+      lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.LENTO',
+      project: 'CARDS.DESCRIPTIONS.LENTO',
+    },
     picture: {
       deskstop: '/img/jpg/projects/1200x756/lento_home_screenshot.jpg',
       mobile: '/img/jpg/projects/360x227/lento_home_screenshot.jpg',
@@ -25,7 +28,10 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'abwerkt',
     name: 'AB Werkt',
     url: 'https://www.ab-werkt.eu/home',
-    descriptionKey: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
+    descriptionsKey: {
+      lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
+      project: 'CARDS.DESCRIPTIONS.ABWERKT',
+    },
     picture: {
       deskstop: '/img/jpg/projects/1200x756/abwerkt_home_screenshot.jpg',
       mobile: '/img/jpg/projects/360x227/abwerkt_home_screenshot.jpg',
@@ -41,7 +47,10 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'lento',
     name: 'Lento.eu',
     url: 'https://lento.eu/en',
-    descriptionKey: 'PROJECTS.CARDS.DESCRIPTIONS.LENTO',
+    descriptionsKey: {
+      lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
+      project: 'CARDS.DESCRIPTIONS.ABWERKT',
+    },
     picture: {
       deskstop: '/img/jpg/projects/1200x756/lento_home_screenshot.jpg',
       mobile: '/img/jpg/projects/360x227/lento_home_screenshot.jpg',
