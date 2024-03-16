@@ -33,6 +33,10 @@ a {
   text-decoration: none;
 }
 
+.card_background_gradient {
+  background: linear-gradient(155deg, $card_background_gradient_light, $card_background_gradient_dark)
+}
+
 #loading_container {
   position: fixed;
   width: 100%;
@@ -40,6 +44,36 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.scrollbar {
+  scrollbar-color: $scrollbar_thumb_color #00000000;
+}
+
+.scrollbar::-webkit-scrollbar-track
+{
+  background: none;
+}
+
+.scrollbar::-webkit-scrollbar
+{
+  width: 5px;
+  background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+  width: 5px;
+  border-radius: 5px;
+  background-color: $scrollbar_thumb_color;
+}
+
+.scrollbar::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 10px; 
+}
+
+.scrollbar::-webkit-scrollbar-track-piece:start {
+    margin-top: 10px;
 }
 
 .scroll_to_top_container {

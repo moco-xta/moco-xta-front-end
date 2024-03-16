@@ -1,21 +1,25 @@
 $black: #000;
 $white: #fff;
 
-$background_color: #161a1e;
-/* $background_color: #414851; */
+$background_color: #151416;
 $background_black: #000;
 
 $text_light: #fff;
-$text_medium_light: #8b8b8b;
-$text_medium_dark: #414851;
+$text_medium_light: #bfbfbf;
+$text_medium_dark: #4f4f4f;
 $text_dark: #000;
+
+$card_background_gradient_light: #29272a;
+$card_background_gradient_dark: #000;
+
+$scrollbar_thumb_color: #bfbfbf50;
 
 $circle_gradient_in: #ef32d9;
 $circle_gradient_out: #89fffd;
 
 $font_size_small: 1em;
 $font_size_medium: 1.5em;
-$font_size_large: 2em;
+$font_size_large: 3em;
 $font_size_extra_large: 6em;
 
 $phi: calc((1 + sqrt(5)) / 2);
@@ -64,6 +68,8 @@ $background_dark: #01000f;
   text_medium_light: $text_medium_light;
   text_medium_dark: $text_medium_dark;
   text_dark: $text_dark;
+
+  scrollbar_thumb_color: $scrollbar_thumb_color;
 
   circle_gradient_in: $circle_gradient_in;
   circle_gradient_out: $circle_gradient_out;
