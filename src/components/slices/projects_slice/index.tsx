@@ -11,12 +11,12 @@ import { isValidDate } from '@/helpers/dateHelpers'
 
 import CurrentDate from './current_date'
 import ProjectsContainer from './projects_container'
+import CompaniesOrSchoolContainer from './companies_or_school_container'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
 
-import { default as ProjectsConstants } from '@/constants/projectsConstants.json'
+import { default as projectsConstants } from '@/constants/projectsConstants.json'
 
 import './index.scss'
-import CompaniesOrSchoolContainer from './companies_or_school_container'
 
 export default function ProjectsSlice() {
   const {
@@ -45,13 +45,12 @@ export default function ProjectsSlice() {
   useEffect(() => {
     projectsRefs.forEach(({ ref }, index) => {
       if (ref.current) {
-        ref.current.style.top = `${(clientHeight - ref.current?.offsetHeight) / 2 + index * ProjectsConstants.CARDS_OFFSET.PROJECT}px`
+        ref.current.style.top = `${(clientHeight - ref.current?.offsetHeight) / 2 + index * projectsConstants.CARDS_OFFSET.PROJECT}px`
       }
     })
     companiesAndSchoolRefs.forEach(({ ref }, index) => {
       if (ref.current) {
-        console.log('')
-        ref.current.style.top = `${(clientHeight - ref.current?.offsetHeight) / 2 + index * ProjectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
+        ref.current.style.top = `${(clientHeight - ref.current?.offsetHeight) / 2 + index * projectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
       }
     })
   }, [clientHeight])
@@ -59,7 +58,7 @@ export default function ProjectsSlice() {
   useEffect(() => {
     projectsRefs.forEach(({ ref }) => {
       if (ref.current) {
-        ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - ProjectsConstants.CARDS_OFFSET.PROJECT : parseInt(ref.current.style.top) + ProjectsConstants.CARDS_OFFSET.PROJECT}px`
+        ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - projectsConstants.CARDS_OFFSET.PROJECT : parseInt(ref.current.style.top) + projectsConstants.CARDS_OFFSET.PROJECT}px`
       }
     })
   }, [currentProject])
@@ -67,7 +66,7 @@ export default function ProjectsSlice() {
   useEffect(() => {
     companiesAndSchoolRefs.forEach(({ ref }) => {
       if (ref.current) {
-        ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - ProjectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL : parseInt(ref.current.style.top) + ProjectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
+        ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - projectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL : parseInt(ref.current.style.top) + projectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
       }
     })
   }, [currentCompanyOrSchool])

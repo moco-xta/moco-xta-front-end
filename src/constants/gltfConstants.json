@@ -10,12 +10,15 @@
   "LOGO_HTML": "/gltf/logos/LogoHtml.gltf",
   "LOGO_NEXTJS": "/gltf/logos/LogoNextjs.gltf",
   "LOGO_NPM": "/gltf/logos/LogoNpm.gltf",
+  "LOGO_OPENCLASSROOMS": "/gltf/logos/LogoOpenclassrooms.gltf",
   "LOGO_PHOTOSHOP": "/gltf/logos/LogoPhotoshop.gltf",
+  "LOGO_PONTHUS": "/gltf/logos/LogoPonthus.gltf",
   "LOGO_REACT": "/gltf/logos/LogoReact.gltf",
   "LOGO_REACT_THREE_DREI": "/gltf/logos/LogoReactThreeDrei.gltf",
   "LOGO_REDUX": "/gltf/logos/LogoRedux.gltf",
   "LOGO_SASS": "/gltf/logos/LogoSass.gltf",
   "LOGO_SPRING": "/gltf/logos/LogoSpring.gltf",
+  "LOGO_THE_BRINK": "/gltf/logos/LogoTheBrink.gltf",
 
   "PARQUET": "/gltf/about/Parquet.gltf",
   "TRESTLE": "/gltf/about/Trestle.gltf"
