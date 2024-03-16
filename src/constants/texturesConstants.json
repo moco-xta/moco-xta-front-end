@@ -1,0 +1,6 @@
+{
+  "PARQUET_DIFFUSE": "/img/jpg/textures/parquet_diffuse.jpg",
+  "PARQUET_BUMP": "/img/jpg/textures/parquet_bump.jpg",
+  "PARQUET_NORMAL": "/img/jpg/textures/parquet_normal.jpg",
+  "PARQUET_ROUGHNESS": "/img/jpg/textures/parquet_roughness.jpg"
+}
