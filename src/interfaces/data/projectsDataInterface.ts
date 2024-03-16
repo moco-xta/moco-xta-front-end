@@ -4,7 +4,9 @@ export interface ProjectDataInterface {
   key: string
   url: string
   name: string
-  descriptionKey: string
+  descriptionsKey: {
+    [key: string]: string
+  }
   picture: {
     [key: string]: string
   }
@@ -17,4 +19,6 @@ export interface ProjectDataInterface {
 
 export interface ProjectsCardInterface {
   content: ProjectDataInterface
+  index: number
+  currentProject: number
 }

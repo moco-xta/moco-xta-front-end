@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import { FaArrowLeft } from "react-icons/fa6";
 import { useLocale, useTranslations } from 'next-intl'
 
 import { TimelineInterface } from '@/interfaces/components/timelineInterface'
@@ -32,7 +33,10 @@ export default function CurrentDate({ currentDate }: TimelineInterface) {
           </p>
         </>
       )}
-      <p id='year'>{moment(currentDate).format('YYYY')}</p>
+      <div id='arrow_and_year_container'>
+        <FaArrowLeft id='arrow_left_icon' />
+        <p id='year'>{moment(currentDate).format('YYYY')}</p>
+      </div>
     </div>
   )
 }
