@@ -12,7 +12,7 @@ export const LastProjectCard = forwardRef<
   HTMLDivElement,
   ProjectsCardInterface
 >(({ content }, ref) => {
-  const t = useTranslations('HOME')
+  const t = useTranslations('PROJECTS')
 
   const [displayPlus, setDisplayPlus] = useState<boolean>(true)
   const [displayDescription, setDisplayDescription] = useState<boolean>(false)
@@ -54,7 +54,7 @@ export const LastProjectCard = forwardRef<
       <div className='project_card_description'>
         <div className='project_description_container' onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
           {displayPlus && <FaPlus className='plus_icon' />}
-          {displayDescription && <p className='project_description scrollbar'>{t(content.descriptionKey)}</p>}
+          {displayDescription && <p className='project_description scrollbar'>{t(content.descriptionsKey.lastProject)}</p>}
         </div>
       </div>
     </div>
