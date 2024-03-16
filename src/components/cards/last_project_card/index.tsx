@@ -12,7 +12,7 @@ export const LastProjectCard = forwardRef<
   HTMLDivElement,
   ProjectsCardInterface
 >(({ content }, ref) => {
-  const t = useTranslations('PROJECTS')
+  const t = useTranslations('HOME')
 
   const [displayPlus, setDisplayPlus] = useState<boolean>(true)
   const [displayDescription, setDisplayDescription] = useState<boolean>(false)
