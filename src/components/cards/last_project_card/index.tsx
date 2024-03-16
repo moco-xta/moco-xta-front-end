@@ -33,7 +33,9 @@ export const LastProjectCard = forwardRef<
       className='last_project_card card_background_gradient'
     >
       <div className='project_card_details'>
-        <h3 className='project_title'>{content.name}</h3>
+        <a href={content.url} target="_blank">
+          <h3 className='project_title'>{content.name}</h3>
+        </a>
         <div className='project_tools'>
           {content.tools.map((Logo, index) => (
             <Logo key={`last_projects_tools_${content.key}_${index}`} className='tool_icon' />
