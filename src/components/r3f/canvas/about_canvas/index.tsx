@@ -2,7 +2,7 @@
 
 import React, { Suspense } from 'react'
 import { Canvas, useThree } from '@react-three/fiber'
-import { Box, FirstPersonControls } from '@react-three/drei'
+import { FirstPersonControls } from '@react-three/drei'
 
 import { default as AboutConstants } from '@/constants/aboutConstants.json'
 
@@ -22,7 +22,7 @@ function AboutScene() {
 
 export default function AboutCanvas() {
   return (
-      <Canvas
+    <Canvas
       shadows
       legacy
       gl={{
@@ -38,7 +38,10 @@ export default function AboutCanvas() {
         lookSpeed={0.1}
       />
       <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} intensity={20} />
+      <pointLight
+        position={[10, 10, 10]}
+        intensity={20}
+      />
       <Suspense fallback={null}>
         <AboutScene />
       </Suspense>

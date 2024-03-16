@@ -2,5 +2,54 @@
   "CARDS_OFFSET": {
     "PROJECT": 500,
     "COMPANY_OR_SCHOOL": 300
+  },
+  "COMPANY_OR_SCHOOL_CARDS": {
+    "SCENE": {
+      "CANVAS": {
+        "DPR": 1,
+        "ANTIALIAS": true,
+        "ALPHA": true,
+        "POWER_PREFERENCE": "high-performance",
+        "PRESERVE_DRAWING_BUFFER": true
+      }
+    },
+    "LOGOS": {
+      "PONTHUS": {
+        "POSITION": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "SCALE": {
+          "X": 0.5,
+          "Y": 0.5,
+          "Z": 0.5
+        }
+      },
+      "THE_BRINK": {
+        "POSITION": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "SCALE": {
+          "X": 0.8,
+          "Y": 0.8,
+          "Z": 0.8
+        }
+      },
+      "OPENCLASSROOMS": {
+        "POSITION": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "SCALE": {
+          "X": 0.06,
+          "Y": 0.06,
+          "Z": 0.06
+        }
+      }
+    }
   }
 }

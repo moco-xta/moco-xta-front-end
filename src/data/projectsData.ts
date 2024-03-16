@@ -57,7 +57,7 @@ export const projectsData: ProjectDataInterface[] = [
     },
     dates: {
       to: '2023-02-28',
-      from: '2021-07-01',
+      from: '2019-04-17',
     },
     roles: ['Front End'],
     tools: [FaReact, SiDjango],
