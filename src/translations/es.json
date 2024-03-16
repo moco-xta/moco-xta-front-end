@@ -75,7 +75,12 @@
       "NOV": "Noviembre",
       "DEC": "Diciembre"
     },
-    "SCROLL_DOWN": "Desplazarse hacia abajo"
+    "SCROLL_DOWN": "Desplazarse hacia abajo",
+    "AS": {
+      "STUDENT": "Alumno",
+      "INTERN": "Interno",
+      "EMPLOYEE": "Empleado"
+    }
   },
   "ROUTES": {
     "ABOUT": "A proposito",
