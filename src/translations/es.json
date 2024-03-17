@@ -108,6 +108,7 @@
   },
   "FORMS": {
     "SUBMIT": "Someter",
+    "SUBMITTING": "Sumisión",
     "RESET": "Reiniciar",
     "VALIDATIONS": {
       "REQUIRED": "Requerido",

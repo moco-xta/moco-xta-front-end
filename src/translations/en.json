@@ -108,6 +108,7 @@
   },
   "FORMS": {
     "SUBMIT": "Submit",
+    "SUBMITTING": "Submitting",
     "RESET": "Reset",
     "VALIDATIONS": {
       "REQUIRED": "Required",
