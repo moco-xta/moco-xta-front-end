@@ -9,13 +9,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
     .radio_option_container {
       display: flex;
       flex-direction: row;
       align-items: center;
 
-      input[type="radio"] {
+      input[type='radio'] {
         -webkit-appearance: none;
         appearance: none;
         width: 1.15em;
@@ -27,8 +27,8 @@
         border-radius: 50%;
       }
 
-      input[type="radio"]::before {
-        content: "";
+      input[type='radio']::before {
+        content: '';
         width: 0.65em;
         height: 0.65em;
         border-radius: 50%;
@@ -36,8 +36,8 @@
         transition: 120ms transform ease-in-out;
         box-shadow: inset 1em 1em $input_radio_checked_color;
       }
-      
-      input[type="radio"]:checked::before {
+
+      input[type='radio']:checked::before {
         transform: scale(1);
       }
 

@@ -26,7 +26,10 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
     <>
       <label htmlFor={name}>
         {label}
-        <FormError error={error} helperText={helperText} />
+        <FormError
+          error={error}
+          helperText={helperText}
+        />
       </label>
       <textarea
         className={`${error ? 'error' : ''}`}

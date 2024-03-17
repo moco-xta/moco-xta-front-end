@@ -14,9 +14,15 @@ export default function FormikField(props: FormikFieldInterface) {
 
   return (
     <div className='formik_input_container formik_field_container'>
-      <label htmlFor={name} className='input_label'>
+      <label
+        htmlFor={name}
+        className='input_label'
+      >
         {label}
-        <FormError error={error} helperText={helperText} />
+        <FormError
+          error={error}
+          helperText={helperText}
+        />
       </label>
       <input
         className={`${error ? 'error' : ''}`}

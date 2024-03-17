@@ -57,7 +57,7 @@ export default function ReviewCard({
       )}
       <div className='name_role_container'>
         <p className='name'>{name}</p>
-        {role && (<p className='role'>{t(`ROLES.${role}`)}</p>)}
+        {role && <p className='role'>{t(`ROLES.${role}`)}</p>}
       </div>
     </div>
   )

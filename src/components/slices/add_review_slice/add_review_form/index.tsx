@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from 'react'
+import React, { SyntheticEvent, useEffect } from 'react'
 import { useFormikContext } from 'formik'
 import { useTranslations } from 'next-intl'
 
@@ -53,6 +53,7 @@ export default function AddReviewForm() {
           options={reviewRoles}
           translationKeyPrefix={'ADD_REVIEW.ROLES'}
           handleChange={handleChange}
+          value={values.role}
           error={touched.role && Boolean(errors.role)}
           helperText={touched.role && errors.role}
         />
