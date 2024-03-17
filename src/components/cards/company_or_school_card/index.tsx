@@ -24,7 +24,7 @@ export const CompanyOrSchoolCard = forwardRef<
   }, [currentCompanyOrSchool])
 
   function handleOnClick() {
-    window.open(content.url, "_blank")
+    window.open(content.url, '_blank')
   }
 
   return (
@@ -58,8 +58,16 @@ export const CompanyOrSchoolCard = forwardRef<
         />
         <Suspense fallback={null}>
           <Logo
-            position={[content.logo.position.x, content.logo.position.z, content.logo.position.y]}
-            scale={[content.logo.scale.x, content.logo.scale.z, content.logo.scale.y]}
+            position={[
+              content.logo.position.x,
+              content.logo.position.z,
+              content.logo.position.y,
+            ]}
+            scale={[
+              content.logo.scale.x,
+              content.logo.scale.z,
+              content.logo.scale.y,
+            ]}
             onClick={handleOnClick}
           />
           <Text

@@ -7,7 +7,9 @@
 
 @font-face {
   font-family: 'HelveticaNeue-Black';
-  src: local('HelveticaNeue-Black'), url(/fonts/ttf/HelveticaNeue-Black.ttf) format('ttf');
+  src:
+    local('HelveticaNeue-Black'),
+    url(/fonts/ttf/HelveticaNeue-Black.ttf) format('ttf');
 }
 
 :root {
@@ -41,6 +43,10 @@ h2 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.formik_input_container {
+  margin-bottom: 20px;
 }
 
 .card_background_gradient {

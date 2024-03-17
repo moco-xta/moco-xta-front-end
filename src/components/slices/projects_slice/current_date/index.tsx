@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment'
-import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowLeft } from 'react-icons/fa6'
 import { useLocale, useTranslations } from 'next-intl'
 
 import { TimelineInterface } from '@/interfaces/components/timelineInterface'

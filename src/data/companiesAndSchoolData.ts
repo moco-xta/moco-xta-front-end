@@ -29,7 +29,7 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
         x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.PONTHUS.X,
         y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.PONTHUS.Y,
         z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.PONTHUS.Z,
-      }
+      },
     },
     dates: {
       to: '2023-11-31',
@@ -58,7 +58,7 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
         x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.X,
         y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.Y,
         z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.Z,
-      }
+      },
     },
     dates: {
       to: '2022-02-28',
@@ -87,7 +87,7 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
         x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.X,
         y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.Y,
         z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.THE_BRINK.Z,
-      }
+      },
     },
     dates: {
       to: '2021-08-31',
@@ -99,24 +99,33 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
     logo: {
       component: LogoOpenclassrooms,
       position: {
-        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS.POSITION.X,
-        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS.POSITION.Y,
-        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS.POSITION.Z,
+        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS
+          .POSITION.X,
+        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS
+          .POSITION.Y,
+        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS
+          .POSITION.Z,
       },
       scale: {
-        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS.SCALE.X,
-        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS.SCALE.Y,
-        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS.SCALE.Z,
+        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS.SCALE
+          .X,
+        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS.SCALE
+          .Y,
+        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.LOGOS.OPENCLASSROOMS.SCALE
+          .Z,
       },
     },
     url: 'https://openclassrooms.com/en/',
     as: {
       key: 'STUDENT',
       position: {
-        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.OPENCLASSROOMS.X,
-        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.OPENCLASSROOMS.Y,
-        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.OPENCLASSROOMS.Z,
-      }
+        x: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.OPENCLASSROOMS
+          .X,
+        y: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.OPENCLASSROOMS
+          .Y,
+        z: projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.POSTIONS.OPENCLASSROOMS
+          .Z,
+      },
     },
     dates: {
       to: '2021-04-16',

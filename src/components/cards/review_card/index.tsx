@@ -1,4 +1,5 @@
 import React, { RefObject, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 import { ReviewCardInterface } from '@/interfaces/components/cards/reviewCardInterface'
 
@@ -14,6 +15,8 @@ export default function ReviewCard({
   role,
   rating,
 }: ReviewCardInterface) {
+  const t = useTranslations('ADD_REVIEW')
+
   const cardRef = useRef<HTMLElement>(null)
 
   function handleMouseMove(event: MouseEvent): void {
@@ -54,7 +57,7 @@ export default function ReviewCard({
       )}
       <div className='name_role_container'>
         <p className='name'>{name}</p>
-        <p className='role'>{role}</p>
+        {role && <p className='role'>{t(`ROLES.${role}`)}</p>}
       </div>
     </div>
   )

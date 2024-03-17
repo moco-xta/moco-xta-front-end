@@ -82,6 +82,21 @@
       "EMPLOYEE": "Employé"
     }
   },
+  "ADD_REVIEW": {
+    "ADD_A_REVIEW": "Laisser un avis",
+    "NAME": "Nom",
+    "EMAIL": "E-mail",
+    "ROLE": "Fonction",
+    "ROLES": {
+      "PROJECT_MANAGER": "Chef de projet",
+      "DEVELOPER": "Développeur",
+      "DESIGNER": "Designer",
+      "OTHER": "Autre"
+    },
+    "REVIEW": "Avis",
+    "RATING": "Évaluation",
+    "SEE_ALL_REVIEWS": "Voir tous les avis"
+  },
   "ROUTES": {
     "ABOUT": "À propos",
     "BLOG": "Blog",
@@ -90,5 +105,13 @@
     "PHOTOGRAPHY": "Photographie",
     "PROJECTS": "Projets",
     "SKILLS": "Compétences"
+  },
+  "FORMS": {
+    "SUBMIT": "Soumettre",
+    "RESET": "Réinitialiser",
+    "VALIDATIONS": {
+      "REQUIRED": "Requis",
+      "MUST_BE_A_VALID_EMAIL": "Doit être un e-mail valide"
+    }
   }
 }
