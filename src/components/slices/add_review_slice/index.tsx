@@ -1,6 +1,7 @@
 import React from 'react'
 import { Formik } from 'formik'
 import { toast } from 'sonner'
+import { useTranslations } from 'next-intl'
 
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
@@ -24,12 +25,14 @@ const initialValues: AddReviewValuesInterface = {
 }
 
 export default function AddReviewSlice() {
+  const t = useTranslations('ADD_REVIEW')
+
   const [addReview] = useAddReviewMutation()
 
   return (
     <div id='add_review_slice'>
       <div id='add_review_container'>
-        <h1>Add a review</h1>
+        <h1>{t('ADD_A_REVIEW')}</h1>
         <Formik
           initialValues={initialValues}
           validationSchema={addNewReviewValidationSchema}

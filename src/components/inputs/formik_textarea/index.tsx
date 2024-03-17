@@ -1,12 +1,13 @@
 import React from 'react'
+import { useTranslations } from 'next-intl'
 
 import { FormikTextareaInterface } from '@/interfaces/components/inputs/formikTextareaInterface'
-
-import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 import './index.scss'
 
 export default function FormikTextarea(props: FormikTextareaInterface) {
+  const t = useTranslations()
+
   const {
     label,
     name,
@@ -22,7 +23,7 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
   return (
     <>
       <label htmlFor={name}>
-        {label ? label : capitalizeFirstLetter(name)}
+        {label}
       </label>
       <textarea
         id={name}
@@ -33,7 +34,7 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
         onChange={handleChange}
         value={value}
       />
-      {error && <span>{helperText}</span>}
+      {error && <span>{t(`${helperText}`)}</span>}
     </>
   )
 }

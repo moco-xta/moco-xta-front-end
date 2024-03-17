@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react'
 
 export interface FormikTextareaInterface {
-  label?: string
+  label: string
   name: string
   cols: number
   rows: number

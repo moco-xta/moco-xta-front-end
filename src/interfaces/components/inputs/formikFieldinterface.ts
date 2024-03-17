@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react'
 
 export interface FormikFieldInterface {
-  label?: string
+  label: string
   type?: string
   name: string
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void

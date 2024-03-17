@@ -1,9 +1,9 @@
 import * as Yup from 'yup'
 
 export const addNewReviewValidationSchema = Yup.object().shape({
-  name: Yup.string().required('Required'),
-  email: Yup.string().email('Must be a valid email').required('Required'),
-  role: Yup.string().required('Required'),
-  review: Yup.string().required('Required'),
-  rating: Yup.number().min(1, 'Required'),
+  name: Yup.string().required('FORMS.VALIDATIONS.REQUIRED'),
+  email: Yup.string().email('FORMS.VALIDATIONS.MUST_BE_A_VALID_EMAIL').required('FORMS.VALIDATIONS.REQUIRED'),
+  role: Yup.string().required('FORMS.VALIDATIONS.REQUIRED'),
+  review: Yup.string().required('FORMS.VALIDATIONS.REQUIRED'),
+  rating: Yup.number().min(1, 'FORMS.VALIDATIONS.REQUIRED'),
 })
