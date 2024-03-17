@@ -101,6 +101,9 @@
     "RATING": "Calificación",
     "SEE_ALL_REVIEWS": "Ver todas las reseñas"
   },
+  "ALL_REVIEWS": {
+    "ALL_REVIEWS": "todas las reseñas"
+  },
   "ROUTES": {
     "ABOUT": "A proposito",
     "BLOG": "Blog",
