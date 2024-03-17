@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, Node, extend, useLoader, useThree } from '@react-three/fiber'
-import { Box, Fisheye, Html, shaderMaterial } from '@react-three/drei'
+import { Fisheye, Html, shaderMaterial } from '@react-three/drei'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
