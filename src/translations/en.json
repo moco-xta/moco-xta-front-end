@@ -41,6 +41,10 @@
       },
       "SEE_ALL_PROJECTS": "See all projects"
     },
+    "LAST_REVIEWS": {
+      "ADD_A_REVIEW": "Add a review",
+      "SEE_ALL_REVIEWS": "See all reviews"
+    },
     "PERFORMED_WITH": {
       "PERFORMED_WITH": "Performed with:"
     }
@@ -108,10 +112,22 @@
   },
   "FORMS": {
     "SUBMIT": "Submit",
+    "SUBMITTING": "Submitting",
     "RESET": "Reset",
     "VALIDATIONS": {
       "REQUIRED": "Required",
       "MUST_BE_A_VALID_EMAIL": "Must be a valid email"
+    }
+  },
+  "REQUESTS": {
+    "FETCHING_DATA": "Fetching data...",
+    "AN_ERROR_OCCURED": "An error occurred!"
+  },
+  "TOASTERS": {
+    "ADD_REVIEW": {
+      "LOADING": "Your review is being submitted.",
+      "SUCCESS": "Your review has been submitted.",
+      "ERROR": "Sorry! An error occured. Please try again."
     }
   }
 }

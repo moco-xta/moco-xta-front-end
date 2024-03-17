@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Formik } from 'formik'
 import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
@@ -16,7 +16,9 @@ import SeeAllReviews from './see_all_reviews'
 import './index.scss'
 
 export default function AddReviewSlice() {
-  const t = useTranslations('ADD_REVIEW')
+  const t = useTranslations()
+
+  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(false)
 
   const initialValues: AddReviewValuesInterface = {
     name: '',
@@ -32,23 +34,25 @@ export default function AddReviewSlice() {
   return (
     <div id='add_review_slice'>
       <div id='add_review_container'>
-        <h1>{t('ADD_A_REVIEW')}</h1>
+        <h1 id='add_review'>{t('ADD_REVIEW.ADD_A_REVIEW')}</h1>
         <Formik
           initialValues={initialValues}
           validationSchema={addNewReviewValidationSchema}
           onSubmit={(values, { resetForm }) => {
+            setSubmitButtonIsDisabled(true)
             toast.promise(addReview(values), {
-              loading: 'Loading',
+              loading: t('TOASTERS.ADD_REVIEW.LOADING'),
               success: () => {
                 resetForm({ values: initialValues })
-                return 'Success'
+                setSubmitButtonIsDisabled(false)
+                return t('TOASTERS.ADD_REVIEW.SUCCESS')
               },
-              error: 'Error',
+              error: t('TOASTERS.ADD_REVIEW.ERROR'),
             })
           }}
         >
           <div id='add_review_form_and_preview_container'>
-            <AddReviewForm />
+            <AddReviewForm submitButtonIsDisabled={submitButtonIsDisabled} />
             <NewReviewPreview />
           </div>
         </Formik>
