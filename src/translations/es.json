@@ -82,6 +82,9 @@
       "EMPLOYEE": "Empleado"
     }
   },
+  "ADD_REVIEW": {
+    "SEE_ALL_REVIEWS": "Ver todas las reseñas"
+  },
   "ROUTES": {
     "ABOUT": "A proposito",
     "BLOG": "Blog",

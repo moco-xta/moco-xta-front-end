@@ -1,19 +1,16 @@
 import React from 'react'
-import Link from 'next/link'
 
-import { Routes } from '@/routes/routes'
+import InternalLink from '@/components/buttons/internal_link'
 
 import './index.scss'
 
 export default function SeeAllReviews() {
   return (
     <div id='view_all_reviews_link_container'>
-      <Link
-        id='view_all_reviews_link'
-        href={Routes.find((route) => route.key === 'REVIEWS')!.path}
-      >
-        View all reviews
-      </Link>
+      <InternalLink
+        routeKey={'REVIEWS'}
+        translationKey={'ADD_REVIEW.SEE_ALL_REVIEWS'}
+      />
     </div>
   )
 }
