@@ -1,5 +1,6 @@
 $black: #000;
 $white: #fff;
+$alert_color: #ec2a5f;
 
 $background_color: #151416;
 $background_meduim_dark: #4f4f4f;
@@ -9,9 +10,14 @@ $text_light: #fff;
 $text_medium_light: #bfbfbf;
 $text_medium_dark: #4f4f4f;
 $text_dark: #000;
+$text_alert: $alert_color;
 
 $card_background_gradient_light: #29272a;
 $card_background_gradient_dark: #000;
+
+$input_radio_checked_color: #bfbfbf;
+$input_border: 1px solid #2d2c2e;
+$input_border_alert: 1px solid $alert_color;
 
 $scrollbar_thumb_color: #bfbfbf50;
 
@@ -22,6 +28,7 @@ $font_size_small: 1em;
 $font_size_medium: 1.5em;
 $font_size_large: 3em;
 $font_size_extra_large: 6em;
+$font_size_alert: 0.8em;
 
 $phi: calc((1 + sqrt(5)) / 2);
 
@@ -62,6 +69,7 @@ $background_dark: #01000f;
 :export {
   black: $black;
   white: $white;
+  alert_color: $alert_color;
 
   background_color: $background_color;
 
