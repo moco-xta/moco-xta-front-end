@@ -41,6 +41,10 @@
       },
       "SEE_ALL_PROJECTS": "Voir tous les projects"
     },
+    "LAST_REVIEWS": {
+      "ADD_A_REVIEW": "Laisser un avis",
+      "SEE_ALL_REVIEWS": "Voir tous les avis"
+    },
     "PERFORMED_WITH": {
       "PERFORMED_WITH": "Réalisé avec:"
     }
@@ -108,10 +112,22 @@
   },
   "FORMS": {
     "SUBMIT": "Soumettre",
+    "SUBMITTING": "Soumission",
     "RESET": "Réinitialiser",
     "VALIDATIONS": {
       "REQUIRED": "Requis",
       "MUST_BE_A_VALID_EMAIL": "Doit être un e-mail valide"
+    }
+  },
+  "REQUESTS": {
+    "FETCHING_DATA": "Récupération des données...",
+    "AN_ERROR_OCCURED": "Une erreur s'est produite!"
+  },
+  "TOASTERS": {
+    "ADD_REVIEW": {
+      "LOADING": "Votre avis est en cours de soumission.",
+      "SUCCESS": "Votre avis a bien été soumis.",
+      "ERROR": "Désolé! Une erreur s'est produite. Veuillez réessayer."
     }
   }
 }
