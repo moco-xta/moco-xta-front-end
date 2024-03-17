@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react'
 import { IoStarSharp } from 'react-icons/io5'
-import { IoStarOutline } from "react-icons/io5";
+import { IoStarOutline } from 'react-icons/io5'
 import { useTranslations } from 'next-intl'
 
 import { FormikRatingStarsInterface } from '@/interfaces/form/inputs/formikRatingStarsInterface'
@@ -27,10 +27,16 @@ export default function FormikRatingStars({
   }
 
   return (
-    <div id='rating_stars_container' className='formik_input_container'>
+    <div
+      id='rating_stars_container'
+      className='formik_input_container'
+    >
       <p>
         {label}
-        <FormError error={error} helperText={helperText} />
+        <FormError
+          error={error}
+          helperText={helperText}
+        />
       </p>
       <div className='rating_stars_wrapper'>
         {[...Array(5)].map((_, index) => {
@@ -42,6 +48,7 @@ export default function FormikRatingStars({
                 name={name}
                 onChange={handleChange}
                 value={currentRating}
+                checked={value === currentRating}
               />
               {!error || hover ? (
                 <IoStarSharp

@@ -9,8 +9,6 @@ export default function FormError({ error, helperText }: FormErrorInterface) {
   const t = useTranslations()
 
   return (
-    <>
-      {error && <span className='input_error'>{t(`${helperText}`)}</span>}
-    </>
+    <>{error && <span className='input_error'>{t(`${helperText}`)}</span>}</>
   )
 }

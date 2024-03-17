@@ -10,13 +10,25 @@ import './index.scss'
 export default function FormikRadioGroup(props: FormikRadiogroupInterface) {
   const t = useTranslations()
 
-  const { label, name, options, translationKeyPrefix, handleChange, error, helperText } = props
+  const {
+    label,
+    name,
+    options,
+    translationKeyPrefix,
+    handleChange,
+    value,
+    error,
+    helperText,
+  } = props
 
   return (
     <div className='formik_input_container formik_radio_group_container'>
       <label htmlFor={name}>
         {label}
-        <FormError error={error} helperText={helperText} />
+        <FormError
+          error={error}
+          helperText={helperText}
+        />
       </label>
       <div className='radio_options_wrapper'>
         {options.map((option, index) => (
@@ -31,6 +43,7 @@ export default function FormikRadioGroup(props: FormikRadiogroupInterface) {
               name={name}
               onChange={handleChange}
               value={option.value ? option.value : option.name}
+              checked={value === option.value || value === option.name}
             />
             <label htmlFor={option.name}>
               {t(`${translationKeyPrefix}.${option.name}`)}

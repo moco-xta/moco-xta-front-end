@@ -12,6 +12,7 @@ export interface FormikRadiogroupInterface {
   options: RadioGroupOptions[]
   translationKeyPrefix: string
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
+  value: string
   error: boolean | undefined
   helperText: string | false | undefined
 }

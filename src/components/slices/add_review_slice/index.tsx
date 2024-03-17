@@ -15,17 +15,17 @@ import SeeAllReviews from './see_all_reviews'
 
 import './index.scss'
 
-const initialValues: AddReviewValuesInterface = {
-  name: '',
-  email: '',
-  role: '',
-  review: '',
-  rating: 0,
-  date: new Date(),
-}
-
 export default function AddReviewSlice() {
   const t = useTranslations('ADD_REVIEW')
+
+  const initialValues: AddReviewValuesInterface = {
+    name: '',
+    email: '',
+    role: '',
+    review: '',
+    rating: 0,
+    date: new Date(),
+  }
 
   const [addReview] = useAddReviewMutation()
 
@@ -40,7 +40,7 @@ export default function AddReviewSlice() {
             toast.promise(addReview(values), {
               loading: 'Loading',
               success: () => {
-                resetForm()
+                resetForm({ values: initialValues })
                 return 'Success'
               },
               error: 'Error',
