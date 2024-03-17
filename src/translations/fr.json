@@ -114,5 +114,12 @@
       "REQUIRED": "Requis",
       "MUST_BE_A_VALID_EMAIL": "Doit être un e-mail valide"
     }
+  },
+  "TOASTERS": {
+    "ADD_REVIEW": {
+      "LOADING": "Votre avis est en cours de soumission.",
+      "SUCCESS": "Votre avis a bien été soumis.",
+      "ERROR": "Désolé! Une erreur s'est produite. Veuillez réessayer."
+    }
   }
 }

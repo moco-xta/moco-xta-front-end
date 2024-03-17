@@ -114,5 +114,12 @@
       "REQUIRED": "Required",
       "MUST_BE_A_VALID_EMAIL": "Must be a valid email"
     }
+  },
+  "TOASTERS": {
+    "ADD_REVIEW": {
+      "LOADING": "Your review is being submitted.",
+      "SUCCESS": "Your review has been submitted.",
+      "ERROR": "Sorry! An error occured. Please try again."
+    }
   }
 }
