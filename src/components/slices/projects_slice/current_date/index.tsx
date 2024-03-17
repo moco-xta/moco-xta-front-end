@@ -13,11 +13,11 @@ export default function CurrentDate({ currentDate }: TimelineInterface) {
 
   return (
     <div id='current_date_container'>
-      <p id='day_of_the_week'>
+      {/* <p id='day_of_the_week'>
         {t(
           `DAYS_OF_THE_WEEK.${moment(currentDate).format('ddd').toUpperCase()}`,
         )}
-      </p>
+      </p> */}
       {locale === 'en' ? (
         <>
           <p id='month'>
