@@ -1,0 +1,25 @@
+form {
+  width: 90%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  #submit_reset_buttons_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button[type='submit'],
+    button[type='reset'] {
+      all: unset;
+      width: 40%;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+      border: 1px solid #2d2c2e;
+      border-radius: 10px;
+    }
+  }
+}
