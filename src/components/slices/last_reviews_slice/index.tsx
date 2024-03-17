@@ -15,10 +15,10 @@ export default function LastReviewsSlice() {
       <div id='last_reviews_content'>
         <h2>Reviews</h2>
         <LastReviewsCards />
-        <AddReviewLink />
-        <SeeAllReviewsLink />
-      </div>
-      <div id='reviews__slice_gradient_background'>
+        <div id='add_review_and_see_all_reviews_link_container'>
+          <AddReviewLink />
+          <SeeAllReviewsLink />
+        </div>
       </div>
     </div>
   )
