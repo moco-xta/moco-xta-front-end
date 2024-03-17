@@ -6,6 +6,6 @@ import './index.scss'
 
 export default function SeeAllReviewsLink() {
   return (
-    <InternalLink routeKey={'REVIEWS'} translationKey={'HOME.LAST_REVIEWS.SEE_ALL_REVIEWS'} />
+    <InternalLink routeKey={'ALL_REVIEWS'} translationKey={'HOME.LAST_REVIEWS.SEE_ALL_REVIEWS'} />
   )
 }
