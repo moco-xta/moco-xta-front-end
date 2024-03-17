@@ -32,7 +32,7 @@ export default function AddReviewSlice() {
   return (
     <div id='add_review_slice'>
       <div id='add_review_container'>
-        <h1>{t('ADD_A_REVIEW')}</h1>
+        <h1 id='add_review'>{t('ADD_A_REVIEW')}</h1>
         <Formik
           initialValues={initialValues}
           validationSchema={addNewReviewValidationSchema}

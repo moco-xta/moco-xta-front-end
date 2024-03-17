@@ -1,14 +1,21 @@
+@import '@/styles/variables.module.scss';
+
 #add_review_slice {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $background_black;
 
   #add_review_container {
     margin: 0 15% 0 15%;
     display: flex;
     flex-direction: column;
+
+    #add_review {
+      margin-bottom: 20px;
+    }
 
     #add_review_form_and_preview_container {
       display: flex;

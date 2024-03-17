@@ -1,9 +1,12 @@
+@import '@/styles/variables.module.scss';
+
 form {
   width: 90%;
-  padding: 20px 20px 20px 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border-radius: 10px;
 
   .submit_reset_buttons_container {
     width: 100%;
