@@ -12,7 +12,7 @@ import { Routes } from '@/routes/routes'
 
 import './index.scss'
 
-export default function ReviewsSlice() {
+export default function LastReviewsSlice() {
   const { data, isLoading, error } = useGetReviewsQuery()
 
   let content = null
