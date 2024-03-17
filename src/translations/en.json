@@ -101,6 +101,9 @@
     "RATING": "Rating",
     "SEE_ALL_REVIEWS": "See all reviews"
   },
+  "ALL_REVIEWS": {
+    "ALL_REVIEWS": "All reviews"
+  },
   "ROUTES": {
     "ABOUT": "About",
     "BLOG": "Blog",

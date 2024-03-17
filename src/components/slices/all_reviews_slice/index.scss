@@ -1,0 +1,25 @@
+#all_reviews_slice {
+  width: 100vw;
+
+  #all_reviews_content {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+
+    #all_reviews_title_and_add_review_link_container {
+      width: 100%;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    #review_cards_wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+}
