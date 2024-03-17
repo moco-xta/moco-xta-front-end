@@ -18,7 +18,8 @@ import './index.scss'
 export default function AddReviewSlice() {
   const t = useTranslations()
 
-  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(false)
+  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] =
+    useState<boolean>(false)
 
   const initialValues: AddReviewValuesInterface = {
     name: '',

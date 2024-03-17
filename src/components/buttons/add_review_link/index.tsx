@@ -6,6 +6,9 @@ import './index.scss'
 
 export default function AddReviewLink() {
   return (
-    <InternalLink routeKey={'ADD_REVIEW'} translationKey={'HOME.LAST_REVIEWS.ADD_A_REVIEW'} />
+    <InternalLink
+      routeKey={'ADD_REVIEW'}
+      translationKey={'HOME.LAST_REVIEWS.ADD_A_REVIEW'}
+    />
   )
 }

@@ -16,7 +16,9 @@ import { reviewRoles } from '@/data/reviewRoles'
 
 import './index.scss'
 
-export default function AddReviewForm({ submitButtonIsDisabled }: AddReviewFormInterface) {
+export default function AddReviewForm({
+  submitButtonIsDisabled,
+}: AddReviewFormInterface) {
   const t = useTranslations()
 
   const { errors, handleChange, values, resetForm, submitForm, touched } =
@@ -29,7 +31,10 @@ export default function AddReviewForm({ submitButtonIsDisabled }: AddReviewFormI
 
   return (
     <div id='add_review_form_container'>
-      <form className='card_background_gradient' onSubmit={handleSubmit}>
+      <form
+        className='card_background_gradient'
+        onSubmit={handleSubmit}
+      >
         <FormikField
           label={t('ADD_REVIEW.NAME')}
           type={'text'}
