@@ -1,5 +1,6 @@
 import React, { SyntheticEvent } from 'react'
 import { useFormikContext } from 'formik'
+import { useTranslations } from 'next-intl'
 
 import { AddReviewValuesInterface } from '@/interfaces/addReviewValuesInterface'
 
@@ -13,6 +14,8 @@ import { reviewRoles } from '@/data/reviewRoles'
 import './index.scss'
 
 export default function AddReviewForm() {
+  const t = useTranslations()
+
   const { errors, handleChange, values, resetForm, submitForm, touched } =
     useFormikContext<AddReviewValuesInterface>()
 
@@ -25,6 +28,7 @@ export default function AddReviewForm() {
     <div id='add_review_form_container'>
       <form onSubmit={handleSubmit}>
         <FormikField
+          label={t('ADD_REVIEW.NAME')}
           type={'text'}
           name={'name'}
           handleChange={handleChange}
@@ -33,6 +37,7 @@ export default function AddReviewForm() {
           helperText={touched.name && errors.name}
         />
         <FormikField
+          label={t('ADD_REVIEW.EMAIL')}
           type={'text'}
           name={'email'}
           handleChange={handleChange}
@@ -41,14 +46,16 @@ export default function AddReviewForm() {
           helperText={touched.email && errors.email}
         />
         <FormikRadioGroup
+          label={t('ADD_REVIEW.ROLE')}
           name={'role'}
           options={reviewRoles}
+          translationKeyPrefix={'ADD_REVIEW.ROLES'}
           handleChange={handleChange}
-          value={values.role}
           error={touched.role && Boolean(errors.role)}
           helperText={touched.role && errors.role}
         />
         <FormikTextarea
+          label={t('ADD_REVIEW.REVIEW')}
           name={'review'}
           cols={50}
           rows={4}
@@ -59,6 +66,7 @@ export default function AddReviewForm() {
           helperText={touched.review && errors.review}
         />
         <FormikRatingStars
+          label={t('ADD_REVIEW.RATING')}
           name={'rating'}
           handleChange={handleChange}
           value={values.rating}
@@ -66,12 +74,12 @@ export default function AddReviewForm() {
           helperText={touched.rating && errors.rating}
         />
         <div id='submit_reset_buttons_container'>
-          <button type='submit'>Submit</button>
+          <button type='submit'>{t('FORMS.SUBMIT')}</button>
           <button
             type='reset'
             onClick={() => resetForm()}
           >
-            Reset
+            {t('FORMS.RESET')}
           </button>
         </div>
       </form>

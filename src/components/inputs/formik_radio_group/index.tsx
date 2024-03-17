@@ -1,18 +1,19 @@
 import React from 'react'
+import { useTranslations } from 'next-intl'
 
 import { FormikRadiogroupInterface } from '@/interfaces/components/inputs/formikRadioGroupInterface'
-
-import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 import './index.scss'
 
 export default function FormikRadioGroup(props: FormikRadiogroupInterface) {
-  const { label, name, options, handleChange, value, error, helperText } = props
+  const t = useTranslations()
+
+  const { label, name, options, translationKeyPrefix, handleChange, error, helperText } = props
 
   return (
     <div className='formik_radio_group_container'>
       <label htmlFor={name}>
-        {label ? label : capitalizeFirstLetter(name)}
+        {label}
       </label>
       <div className='radio_options_wrapper'>
         {options.map((option, index) => (
@@ -28,12 +29,12 @@ export default function FormikRadioGroup(props: FormikRadiogroupInterface) {
               value={option.value ? option.value : option.name}
             />
             <label htmlFor={option.name}>
-              {option.label ? option.label : capitalizeFirstLetter(option.name)}
+              {t(`${translationKeyPrefix}.${option.name}`)}
             </label>
           </div>
         ))}
       </div>
-      {error && <span>{helperText}</span>}
+      {error && <span>{t(`${helperText}`)}</span>}
     </div>
   )
 }

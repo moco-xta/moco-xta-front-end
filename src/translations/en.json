@@ -83,6 +83,18 @@
     }
   },
   "ADD_REVIEW": {
+    "ADD_A_REVIEW": "Add a review",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "ROLE": "Role",
+    "ROLES": {
+      "PROJECT_MANAGER": "Project manager",
+      "DEVELOPER": "Developer",
+      "DESIGNER": "Designer",
+      "OTHER": "Other"
+    },
+    "REVIEW": "Review",
+    "RATING": "Rating",
     "SEE_ALL_REVIEWS": "See all reviews"
   },
   "ROUTES": {
@@ -93,5 +105,13 @@
     "PHOTOGRAPHY": "Photography",
     "PROJECTS": "Projects",
     "SKILLS": "Skills"
+  },
+  "FORMS": {
+    "SUBMIT": "Submit",
+    "RESET": "Reset",
+    "VALIDATIONS": {
+      "REQUIRED": "Required",
+      "MUST_BE_A_VALID_EMAIL": "Must be a valid email"
+    }
   }
 }
