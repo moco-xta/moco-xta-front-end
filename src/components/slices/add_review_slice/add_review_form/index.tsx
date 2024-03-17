@@ -8,6 +8,8 @@ import FormikField from '@/components/form/inputs/formik_field'
 import FormikRadioGroup from '@/components/form/inputs/formik_radio_group'
 import FormikRatingStars from '@/components/form/inputs/formik_rating_stars'
 import FormikTextarea from '@/components/form/inputs/formik_textarea'
+import SubmitButton from '@/components/form/buttons/submit_button'
+import ResetButton from '@/components/form/buttons/reset_button'
 
 import { reviewRoles } from '@/data/reviewRoles'
 
@@ -73,14 +75,9 @@ export default function AddReviewForm() {
           error={touched.rating && Boolean(errors.rating)}
           helperText={touched.rating && errors.rating}
         />
-        <div id='submit_reset_buttons_container'>
-          <button type='submit'>{t('FORMS.SUBMIT')}</button>
-          <button
-            type='reset'
-            onClick={() => resetForm()}
-          >
-            {t('FORMS.RESET')}
-          </button>
+        <div className='submit_reset_buttons_container'>
+          <SubmitButton />
+          <ResetButton resetForm={resetForm} />
         </div>
       </form>
     </div>
