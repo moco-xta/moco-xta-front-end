@@ -9,7 +9,7 @@ import './index.scss'
 export default function CompaniesOrSchoolContainer({
   companiesAndSchoolRefs,
   companiesAndSchollData,
-  currentCompanyOrSchool
+  currentCompanyOrSchool,
 }: CompagniesAndSchoolContainerInterface) {
   return (
     <div id='companies_and_school_container'>

@@ -7,7 +7,9 @@
 
 @font-face {
   font-family: 'HelveticaNeue-Black';
-  src: local('HelveticaNeue-Black'), url(/fonts/ttf/HelveticaNeue-Black.ttf) format('ttf');
+  src:
+    local('HelveticaNeue-Black'),
+    url(/fonts/ttf/HelveticaNeue-Black.ttf) format('ttf');
 }
 
 :root {

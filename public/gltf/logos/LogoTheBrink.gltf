@@ -1,107 +1,92 @@
 {
-	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.0.44",
-		"version":"2.0"
-	},
-	"scene":0,
-	"scenes":[
-		{
-			"name":"Scene",
-			"nodes":[
-				0
-			]
-		}
-	],
-	"nodes":[
-		{
-			"mesh":0,
-			"name":"LogoTheBrink"
-		}
-	],
-	"materials":[
-		{
-			"doubleSided":true,
-			"name":"logo_the_brink_#ff4407",
-			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					1,
-					0.05780279263854027,
-					0.002124576363712549,
-					1
-				],
-				"metallicFactor":0
-			}
-		}
-	],
-	"meshes":[
-		{
-			"name":"LogoTheBrink",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":0,
-						"NORMAL":1
-					},
-					"indices":2,
-					"material":0
-				}
-			]
-		}
-	],
-	"accessors":[
-		{
-			"bufferView":0,
-			"componentType":5126,
-			"count":1150,
-			"max":[
-				1.0998457670211792,
-				0.099249929189682,
-				0.019999975338578224
-			],
-			"min":[
-				-1.1000001430511475,
-				-0.11027388274669647,
-				-0.020000040531158447
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5126,
-			"count":1150,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":2,
-			"componentType":5123,
-			"count":2256,
-			"type":"SCALAR"
-		}
-	],
-	"bufferViews":[
-		{
-			"buffer":0,
-			"byteLength":13800,
-			"byteOffset":0,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":13800,
-			"byteOffset":13800,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":4512,
-			"byteOffset":27600,
-			"target":34963
-		}
-	],
-	"buffers":[
-		{
-			"byteLength":32112,
-			"uri":"LogoTheBrink.bin"
-		}
-	]
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoTheBrink"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_the_brink_#ff4407",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [1, 0.05780279263854027, 0.002124576363712549, 1],
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoTheBrink",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1150,
+      "max": [1.0998457670211792, 0.099249929189682, 0.019999975338578224],
+      "min": [-1.1000001430511475, -0.11027388274669647, -0.020000040531158447],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1150,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 2256,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 13800,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13800,
+      "byteOffset": 13800,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4512,
+      "byteOffset": 27600,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 32112,
+      "uri": "LogoTheBrink.bin"
+    }
+  ]
 }

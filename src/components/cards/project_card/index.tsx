@@ -19,7 +19,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, ProjectsCardInterface>(
     }, [currentProject])
 
     function handleMouseOver() {
-      if(isActive) {
+      if (isActive) {
         setDisplayPlus(false)
         setDisplayDescription(true)
       }
