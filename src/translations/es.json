@@ -41,6 +41,10 @@
       },
       "SEE_ALL_PROJECTS": "Ver todos los proyectos"
     },
+    "LAST_REVIEWS": {
+      "ADD_A_REVIEW": "Agrega una reseña",
+      "SEE_ALL_REVIEWS": "Ver todas las reseñas"
+    },
     "PERFORMED_WITH": {
       "PERFORMED_WITH": "Realizado con:"
     }
@@ -114,6 +118,10 @@
       "REQUIRED": "Requerido",
       "MUST_BE_A_VALID_EMAIL": "Debe ser un correo electrónico válido"
     }
+  },
+  "REQUESTS": {
+    "FETCHING_DATA": "Recuperacion de datos...",
+    "AN_ERROR_OCCURED": "Ocurrió un error!"
   },
   "TOASTERS": {
     "ADD_REVIEW": {

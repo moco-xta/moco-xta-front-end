@@ -1,59 +1,24 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
 
-import { useGetReviewsQuery } from '@/redux/api/reviewApi'
-
-/* import GradientBackground from '@/components/shared/gradient_background' */
-import ReviewCard from '@/components/cards/review_card'
-
-import { Routes } from '@/routes/routes'
+import LastReviewsCards from './last_reviews_cards'
+import AddReviewLink from './add_review_link'
+import SeeAllReviewsLink from './see_all_reviews_link'
 
 import './index.scss'
 
 export default function LastReviewsSlice() {
-  const { data, isLoading, error } = useGetReviewsQuery()
-
-  let content = null
-
-  if (isLoading) content = <div>Is loading...</div>
-
-  if (error) content = <div>An error occured...</div>
-
-  if (data)
-    content = (
-      <>
-        {data?.map((review, index) => {
-          if (index < 3) {
-            return (
-              <ReviewCard
-                key={`reviewCard_${index}`}
-                review={review.review}
-                name={review.name}
-                role={review.role}
-                rating={review.rating}
-              />
-            )
-          }
-        })}
-      </>
-    )
 
   return (
-    <div id='reviews_slice'>
-      <div id='reviews_slice_container'>
-        <h2 className='gradient_text'>Reviews</h2>
-        <div id='review_cards_wrapper'>{content}</div>
-        <Link href={Routes.find((route) => route.key === 'ADD_REVIEW')!.path}>
-          Add review
-        </Link>
-        <Link href={Routes.find((route) => route.key === 'REVIEWS')!.path}>
-          View all reviews
-        </Link>
+    <div id='last_reviews_slice'>
+      <div id='last_reviews_content'>
+        <h2>Reviews</h2>
+        <LastReviewsCards />
+        <AddReviewLink />
+        <SeeAllReviewsLink />
       </div>
       <div id='reviews__slice_gradient_background'>
-        {/* <GradientBackground /> */}
       </div>
     </div>
   )
