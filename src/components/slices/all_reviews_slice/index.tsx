@@ -14,8 +14,18 @@ export default function AllReviewsSlice() {
   const { data, isLoading, error } = useGetReviewsQuery()
 
   let content = null
-  if (isLoading) content = <div className='request_states_container'>{t('REQUESTS.FETCHING_DATA')}</div>
-  if (error) content = <div className='request_states_container'>{t('REQUESTS.AN_ERROR_OCCURED')}</div>
+  if (isLoading)
+    content = (
+      <div className='request_states_container'>
+        {t('REQUESTS.FETCHING_DATA')}
+      </div>
+    )
+  if (error)
+    content = (
+      <div className='request_states_container'>
+        {t('REQUESTS.AN_ERROR_OCCURED')}
+      </div>
+    )
   if (data)
     content = (
       <>
@@ -36,7 +46,7 @@ export default function AllReviewsSlice() {
     <div id='all_reviews_slice'>
       <div id='all_reviews_content'>
         <div id='all_reviews_title_and_add_review_link_container'>
-          <h2>{t("ALL_REVIEWS.ALL_REVIEWS")}</h2>
+          <h2>{t('ALL_REVIEWS.ALL_REVIEWS')}</h2>
           <AddReviewLink />
         </div>
         <div id='review_cards_wrapper'>{content}</div>

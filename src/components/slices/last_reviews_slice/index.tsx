@@ -9,7 +9,6 @@ import SeeAllReviewsLink from '../../buttons/see_all_reviews_link'
 import './index.scss'
 
 export default function LastReviewsSlice() {
-
   return (
     <div id='last_reviews_slice'>
       <div id='last_reviews_content'>
