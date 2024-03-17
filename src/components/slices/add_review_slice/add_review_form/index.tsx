@@ -28,7 +28,7 @@ export default function AddReviewForm() {
 
   return (
     <div id='add_review_form_container'>
-      <form onSubmit={handleSubmit}>
+      <form className='card_background_gradient' onSubmit={handleSubmit}>
         <FormikField
           label={t('ADD_REVIEW.NAME')}
           type={'text'}
