@@ -9,6 +9,6 @@ export interface RoutesInterface {
     | '/contact'
     | '/photography'
     | '/projects'
-    | '/reviews'
+    | '/all_reviews'
     | '/skills'
 }

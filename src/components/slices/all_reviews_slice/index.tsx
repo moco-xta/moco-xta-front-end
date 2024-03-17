@@ -3,11 +3,12 @@ import { useTranslations } from 'next-intl'
 
 import { useGetReviewsQuery } from '@/redux/api/reviewApi'
 
+import AddReviewLink from '@/components/buttons/add_review_link'
 import ReviewCard from '@/components/cards/review_card'
 
 import './index.scss'
 
-export default function LastReviewsCards() {
+export default function AllReviewsSlice() {
   const t = useTranslations()
 
   const { data, isLoading, error } = useGetReviewsQuery()
@@ -18,7 +19,7 @@ export default function LastReviewsCards() {
   if (data)
     content = (
       <>
-        {data?.filter((_, index) => index < 3).map((review, index) => {
+        {data?.map((review, index) => {
           return (
             <ReviewCard
               key={`reviewCard_${index}`}
@@ -31,8 +32,15 @@ export default function LastReviewsCards() {
         })}
       </>
     )
-
   return (
-      <div id='last_reviews_cards_wrapper'>{content}</div>
+    <div id='all_reviews_slice'>
+      <div id='all_reviews_content'>
+        <div id='all_reviews_title_and_add_review_link_container'>
+          <h2>{t("ALL_REVIEWS.ALL_REVIEWS")}</h2>
+          <AddReviewLink />
+        </div>
+        <div id='review_cards_wrapper'>{content}</div>
+      </div>
+    </div>
   )
 }

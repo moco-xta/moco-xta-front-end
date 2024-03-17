@@ -35,8 +35,8 @@ export const Routes: RoutesInterface[] = [
     path: '/projects',
   },
   {
-    key: 'REVIEWS',
-    path: '/reviews',
+    key: 'ALL_REVIEWS',
+    path: '/all_reviews',
   },
   {
     index: 0,
