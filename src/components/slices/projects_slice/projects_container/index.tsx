@@ -9,7 +9,7 @@ import './index.scss'
 export default function ProjectsContainer({
   projectsRefs,
   projectsData,
-  currentProject
+  currentProject,
 }: ProjectsContainerInterface) {
   return (
     <div id='projects_container'>
