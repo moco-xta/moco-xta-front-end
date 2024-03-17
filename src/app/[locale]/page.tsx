@@ -5,7 +5,7 @@ import {
   IntroductionSlice,
   LastProjectsSlice,
   PerformedWithSlice,
-  ReviewsSlice,
+  LastReviewsSlice,
 } from '@/components/slices'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
 import Footer from '@/components/shared/footer'
@@ -19,7 +19,7 @@ export default function Home() {
         <HeroSlice />
         <IntroductionSlice />
         <LastProjectsSlice />
-        <ReviewsSlice />
+        <LastReviewsSlice />
         {/* <PerformedWithSlice />
         <Footer /> */}
       </div>
