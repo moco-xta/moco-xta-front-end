@@ -114,5 +114,12 @@
       "REQUIRED": "Requerido",
       "MUST_BE_A_VALID_EMAIL": "Debe ser un correo electrónico válido"
     }
+  },
+  "TOASTERS": {
+    "ADD_REVIEW": {
+      "LOADING": "Su reseña se está enviando.",
+      "SUCCESS": "Su reseña ha sido enviada.",
+      "ERROR": "Sorry! An error occured. Please try again."
+    }
   }
 }

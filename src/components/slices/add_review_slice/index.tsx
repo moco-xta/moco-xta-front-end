@@ -16,7 +16,7 @@ import SeeAllReviews from './see_all_reviews'
 import './index.scss'
 
 export default function AddReviewSlice() {
-  const t = useTranslations('ADD_REVIEW')
+  const t = useTranslations()
 
   const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(false)
 
@@ -34,32 +34,21 @@ export default function AddReviewSlice() {
   return (
     <div id='add_review_slice'>
       <div id='add_review_container'>
-        <h1 id='add_review'>{t('ADD_A_REVIEW')}</h1>
+        <h1 id='add_review'>{t('ADD_REVIEW.ADD_A_REVIEW')}</h1>
         <Formik
           initialValues={initialValues}
           validationSchema={addNewReviewValidationSchema}
           onSubmit={(values, { resetForm }) => {
             setSubmitButtonIsDisabled(true)
-            setTimeout(() => {
-              toast.promise(addReview(values), {
-                loading: 'Loading',
-                success: () => {
-                  resetForm({ values: initialValues })
-                  setSubmitButtonIsDisabled(false)
-                  return 'Success'
-                },
-                error: 'Error',
-              })
-            }, 10000);
-            /* toast.promise(addReview(values), {
-              loading: 'Loading',
+            toast.promise(addReview(values), {
+              loading: t('TOASTERS.ADD_REVIEW.LOADING'),
               success: () => {
                 resetForm({ values: initialValues })
                 setSubmitButtonIsDisabled(false)
-                return 'Success'
+                return t('TOASTERS.ADD_REVIEW.SUCCESS')
               },
-              error: 'Error',
-            }) */
+              error: t('TOASTERS.ADD_REVIEW.ERROR'),
+            })
           }}
         >
           <div id='add_review_form_and_preview_container'>
