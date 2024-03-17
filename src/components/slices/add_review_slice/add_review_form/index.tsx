@@ -4,10 +4,10 @@ import { useTranslations } from 'next-intl'
 
 import { AddReviewValuesInterface } from '@/interfaces/addReviewValuesInterface'
 
-import FormikField from '@/components/inputs/formik_field'
-import FormikRadioGroup from '@/components/inputs/formik_radio_group'
-import FormikRatingStars from '@/components/inputs/formik_rating_stars'
-import FormikTextarea from '@/components/inputs/formik_textarea'
+import FormikField from '@/components/form/inputs/formik_field'
+import FormikRadioGroup from '@/components/form/inputs/formik_radio_group'
+import FormikRatingStars from '@/components/form/inputs/formik_rating_stars'
+import FormikTextarea from '@/components/form/inputs/formik_textarea'
 
 import { reviewRoles } from '@/data/reviewRoles'
 

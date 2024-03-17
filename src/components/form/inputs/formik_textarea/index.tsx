@@ -1,7 +1,9 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { FormikTextareaInterface } from '@/interfaces/components/inputs/formikTextareaInterface'
+import { FormikTextareaInterface } from '@/interfaces/form/inputs/formikTextareaInterface'
+
+import FormError from '../../errors/form_error'
 
 import './index.scss'
 
@@ -24,8 +26,10 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
     <>
       <label htmlFor={name}>
         {label}
+        <FormError error={error} helperText={helperText} />
       </label>
       <textarea
+        className={`${error ? 'error' : ''}`}
         id={name}
         name={name}
         cols={cols}
@@ -34,7 +38,6 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
         onChange={handleChange}
         value={value}
       />
-      {error && <span>{t(`${helperText}`)}</span>}
     </>
   )
 }
