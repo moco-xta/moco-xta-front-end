@@ -9,7 +9,7 @@ import { Routes } from '@/routes/routes'
 
 import ReviewCard from '@/components/cards/review_card'
 
-export default function Reviews() {
+export default function AllReviews() {
   const { data, isLoading, error } = useGetReviewsQuery()
 
   let content = null
