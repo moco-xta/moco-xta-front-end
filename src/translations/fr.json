@@ -108,6 +108,7 @@
   },
   "FORMS": {
     "SUBMIT": "Soumettre",
+    "SUBMITTING": "Soumission",
     "RESET": "Réinitialiser",
     "VALIDATIONS": {
       "REQUIRED": "Requis",

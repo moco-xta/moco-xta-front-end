@@ -1,7 +1,8 @@
-import React, { SyntheticEvent, useEffect } from 'react'
+import React, { SyntheticEvent } from 'react'
 import { useFormikContext } from 'formik'
 import { useTranslations } from 'next-intl'
 
+import { AddReviewFormInterface } from '@/interfaces/addReviewFormInterface'
 import { AddReviewValuesInterface } from '@/interfaces/addReviewValuesInterface'
 
 import FormikField from '@/components/form/inputs/formik_field'
@@ -15,7 +16,7 @@ import { reviewRoles } from '@/data/reviewRoles'
 
 import './index.scss'
 
-export default function AddReviewForm() {
+export default function AddReviewForm({ submitButtonIsDisabled }: AddReviewFormInterface) {
   const t = useTranslations()
 
   const { errors, handleChange, values, resetForm, submitForm, touched } =
@@ -77,7 +78,7 @@ export default function AddReviewForm() {
           helperText={touched.rating && errors.rating}
         />
         <div className='submit_reset_buttons_container'>
-          <SubmitButton />
+          <SubmitButton submitButtonIsDisabled={submitButtonIsDisabled} />
           <ResetButton resetForm={resetForm} />
         </div>
       </form>
