@@ -10,8 +10,6 @@ import {
 import ScrollToTop from '@/components/buttons/scroll_to_top'
 import Footer from '@/components/shared/footer'
 
-import './index.scss'
-
 export default function Home() {
   return (
     <>
