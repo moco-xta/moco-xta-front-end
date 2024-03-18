@@ -13,7 +13,7 @@ import CurrentDate from './current_date'
 import ProjectsContainer from './projects_container'
 import CompaniesOrSchoolContainer from './companies_or_school_container'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
-import ScrollDown from './scroll_down'
+import ScrollDown from '../../shared/scroll_down'
 
 import { default as projectsConstants } from '@/constants/projectsConstants.json'
 
