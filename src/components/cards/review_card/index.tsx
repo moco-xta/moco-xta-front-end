@@ -1,7 +1,7 @@
 import React, { RefObject, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
-import { ReviewCardInterface } from '@/interfaces/components/cards/reviewCardInterface'
+import { ReviewCardInterface } from '@/interfaces/reviewCardInterface'
 
 import RatingStars from '@/components/cards/review_card/rating_stars'
 

@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl'
 import {
   IntroductionCardCanvasInterface,
   IntroductionCardSceneInterface,
-} from '@/interfaces/components/r3f/introductionCardInterfaces'
+} from '@/interfaces/introductionCardInterfaces'
 
 import { LogoRefType } from 'types/logoRefType'
 

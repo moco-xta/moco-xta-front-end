@@ -3,8 +3,8 @@
 import React from 'react'
 
 import LastReviewsCards from './last_reviews_cards'
-import AddReviewLink from '../../buttons/add_review_link'
-import SeeAllReviewsLink from '../../buttons/see_all_reviews_link'
+import AddReviewLink from '../../links/add_review_link'
+import SeeAllReviewsLink from '../../links/see_all_reviews_link'
 
 import './index.scss'
 

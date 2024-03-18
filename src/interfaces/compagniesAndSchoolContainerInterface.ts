@@ -1,6 +1,6 @@
 import { RefObject } from 'react'
 
-import { CompanyOrSchollDataInterface } from '../data/companyOrSchollDataInterface'
+import { CompanyOrSchollDataInterface } from './companyOrSchollDataInterface'
 
 export interface CompagniesAndSchoolContainerInterface {
   companiesAndSchoolRefs: { ref: RefObject<HTMLDivElement> }[]

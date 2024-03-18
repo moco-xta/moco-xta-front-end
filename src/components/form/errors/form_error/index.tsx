@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { FormErrorInterface } from '@/interfaces/form/errors/formErrorInterface'
+import { FormErrorInterface } from '@/interfaces/formErrorInterface'
 
 import './index.scss'
 

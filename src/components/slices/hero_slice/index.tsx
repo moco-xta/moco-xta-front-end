@@ -4,7 +4,7 @@ import React from 'react'
 
 import HeadText from './head_text'
 import Background from './background'
-import ScrollIcon from '@/components/icons/scroll_button'
+import ScrollIcon from '@/components/icons/scroll'
 import Role from './role'
 
 import './index.scss'

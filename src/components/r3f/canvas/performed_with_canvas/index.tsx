@@ -5,7 +5,7 @@ import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { PerspectiveCamera, SoftShadows } from '@react-three/drei'
 
-import { IconsDataInterface } from '@/interfaces/components/r3f/iconsDataInterface'
+import { IconsDataInterface } from '@/interfaces/iconsDataInterface'
 
 import { performedWithData } from '@/data/performedWithData'
 

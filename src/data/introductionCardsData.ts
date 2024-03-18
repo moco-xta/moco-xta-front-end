@@ -1,4 +1,4 @@
-import { IntroductionCardDataInterface } from '@/interfaces/data/introductionCardDataInterface'
+import { IntroductionCardDataInterface } from '@/interfaces/introductionCardDataInterface'
 
 import { DoughnutChartSeventyFivePercent } from '@/components/r3f/models/charts/DoughnutChartSeventyFivePercent'
 import { DoughnutChartNinetyPercent } from '@/components/r3f/models/charts/DoughnutChartNinetyPercent'

@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { SyntheticEvent, useState } from 'react'
 
 import { useGetTestsQuery, useAddNewTestMutation } from '@/redux/api/testApi'
-import { TestInterface } from '@/interfaces/api/testInterface'
+import { TestInterface } from '@/interfaces/testInterface'
 
 export default function ApiTest() {
   const [title, setTitle] = useState<string>('')
@@ -26,7 +26,7 @@ export default function ApiTest() {
     ))
   }
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault()
     const test: TestInterface = {
       title: title,

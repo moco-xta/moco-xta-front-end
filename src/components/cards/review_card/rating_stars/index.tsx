@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoStarSharp } from 'react-icons/io5'
 
-import { RatingStarsinterface } from '@/interfaces/components/cards/ratingStarsInterface'
+import { RatingStarsinterface } from '@/interfaces/ratingStarsInterface'
 
 import './index.scss'
 
