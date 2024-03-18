@@ -1,9 +1,13 @@
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+
 import useScroll from '@/hooks/useScroll'
 
 import { ScrollHandlerInterface } from '@/interfaces/scrollHandlerInterface'
 
 function ScrollHandler({ navWrapperRef }: ScrollHandlerInterface) {
+  const pathname = usePathname()
+
   const { y } = useScroll()
 
   useEffect(() => {
@@ -11,7 +15,7 @@ function ScrollHandler({ navWrapperRef }: ScrollHandlerInterface) {
     const nav = navWrapperRef.current.querySelector('nav')
     // @ts-ignore
     const lis = navWrapperRef.current.querySelectorAll('.li_route')
-    if (y < 100) {
+    if (y < 100 && pathname === '/') {
       lis.forEach((li_route) => {
         nav!.style.marginTop = '20px'
         nav!.style.marginRight = '20px'
