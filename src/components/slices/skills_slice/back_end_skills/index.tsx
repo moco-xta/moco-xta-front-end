@@ -10,13 +10,17 @@ export default function BackEndSkills() {
 
   return (
     <div className='skills_block_container'>
-      <div className='skills_block_text'>
-        <h3>Back-end</h3>
-        <p className='skills_block_text_paragraph'>{t('PARAGRAPHS.BACK_END')}</p>
-      </div>
-      <div className='skills_separator'/>
       <div className='skills_canvas_container'>
         <ThreeDSkillsCanvas />
+      </div>
+      <div className='skills_separator'>
+        <div className='dot' />
+      </div>
+      <div className='skills_block_text'>
+        <h3>Back-end</h3>
+        <p className='skills_block_text_paragraph'>
+          {t('PARAGRAPHS.BACK_END')}
+        </p>
       </div>
     </div>
   )
