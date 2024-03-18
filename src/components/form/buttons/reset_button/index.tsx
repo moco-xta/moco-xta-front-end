@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { ResetButtonInterface } from '@/interfaces/components/resetButtonInterface'
+import { ResetButtonInterface } from '@/interfaces/resetButtonInterface'
 
 import './index.scss'
 

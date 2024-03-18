@@ -1,6 +1,6 @@
 import { FormikState } from 'formik'
 
-import { AddReviewValuesInterface } from '../addReviewValuesInterface'
+import { AddReviewValuesInterface } from './addReviewValuesInterface'
 
 export interface ResetButtonInterface {
   resetForm: (

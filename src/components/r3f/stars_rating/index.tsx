@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
-import { StarsRatingInterface } from '@/interfaces/components/r3f/starsRatingInterface'
+import { StarsRatingInterface } from '@/interfaces/starsRatingInterface'
 
 import { RatingStar } from '@/components/r3f/models/icons/RatingStar'
 

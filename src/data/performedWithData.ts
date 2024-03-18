@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import { PerformedWithDataInterface } from '@/interfaces/data/performedWithDataInterface'
+import { PerformedWithDataInterface } from '@/interfaces/performedWithDataInterface'
 
 import { LogoBlender } from '@/components/r3f/models/logos/LogoBlender'
 import { LogoFigma } from '@/components/r3f/models/logos/LogoFigma'

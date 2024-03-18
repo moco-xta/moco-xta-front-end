@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CompagniesAndSchoolContainerInterface } from '@/interfaces/components/compagniesAndSchoolContainerInterface'
+import { CompagniesAndSchoolContainerInterface } from '@/interfaces/compagniesAndSchoolContainerInterface'
 
 import { CompanyOrSchoolCard } from '@/components/cards/company_or_school_card'
 

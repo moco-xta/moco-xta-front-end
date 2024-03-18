@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import { Formik } from 'formik'
 import { toast } from 'sonner'

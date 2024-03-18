@@ -2,7 +2,7 @@ import apiSlice from '../slice/apiSlice'
 
 import { default as ApiConstants } from '@/constants/apiConstants.json'
 
-import { TestInterface } from '@/interfaces/api/testInterface'
+import { TestInterface } from '@/interfaces/testInterface'
 
 const taskApi = apiSlice.injectEndpoints({
   endpoints: (build) => ({

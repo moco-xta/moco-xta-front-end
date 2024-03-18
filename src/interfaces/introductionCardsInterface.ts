@@ -1,4 +1,4 @@
-import { IntroductionCardDataInterface } from '../data/introductionCardDataInterface'
+import { IntroductionCardDataInterface } from './introductionCardDataInterface'
 
 export interface IntroductionCardsInterface {
   data: IntroductionCardDataInterface[]
