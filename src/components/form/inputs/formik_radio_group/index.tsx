@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { FormikRadiogroupInterface } from '@/interfaces/form/inputs/formikRadioGroupInterface'
+import { FormikRadiogroupInterface } from '@/interfaces/formikRadioGroupInterface'
 
 import FormError from '../../errors/form_error'
 

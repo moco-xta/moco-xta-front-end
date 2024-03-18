@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera, Text } from '@react-three/drei'
 import { useTranslations } from 'next-intl'
 
-import { CompanyOrSchoolCardInterface } from '@/interfaces/data/companyOrSchollDataInterface'
+import { CompanyOrSchoolCardInterface } from '@/interfaces/companyOrSchollDataInterface'
 
 import { default as projectsConstants } from '@/constants/projectsConstants.json'
 

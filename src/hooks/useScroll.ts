@@ -1,6 +1,4 @@
-'use client'
-
-import { useCallback, useEffect, useState } from 'react'
+import { UIEvent, useCallback, useEffect, useState } from 'react'
 
 export default function useScroll() {
   const [y, setY] = useState<number>(0)
@@ -20,9 +18,11 @@ export default function useScroll() {
   })
 
   const handleScroll = useCallback(
-    (e: any) => {
+    (e: Event) => {
       setScrollPercentage((y * 100) / height)
-      const window = e.currentTarget
+      /* const window = e.currentTarget */
+      /* console.log('window', window) */
+      /* const window = e.currentTarget as Window */
       if (y > window.scrollY) {
         setScrollFlow('down')
       } else if (y < window.scrollY) {
@@ -34,7 +34,10 @@ export default function useScroll() {
   )
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, {
+      passive: true,
+      capture: true,
+    })
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }

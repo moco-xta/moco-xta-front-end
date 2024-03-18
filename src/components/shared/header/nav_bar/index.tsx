@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
-/* import {Link} from '../navigation' */
-
 import { Routes } from '@/routes/routes'
 
 import HamburgerMenu from '@/components/buttons/hamburger_menu'

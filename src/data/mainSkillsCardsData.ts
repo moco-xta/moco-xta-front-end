@@ -1,4 +1,4 @@
-import { IntroductionCardDataInterface } from '@/interfaces/data/introductionCardDataInterface'
+import { IntroductionCardDataInterface } from '@/interfaces/introductionCardDataInterface'
 
 import { LogoReactThreeDrei } from '@/components/r3f/models/logos/LogoReactThreeDrei'
 import { LogoNextjs } from '@/components/r3f/models/logos/LogoNextjs'
