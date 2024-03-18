@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import RevealTextLetterByLetter from '@/components/shared/effects/reveal_text_letter_by_letter'
+/* import RevealTextLetterByLetter from '@/components/shared/effects/reveal_text_letter_by_letter' */
 import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
 
 import './index.scss'
