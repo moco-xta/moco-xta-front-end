@@ -1,0 +1,11 @@
+@import '@/styles/variables.module.scss';
+
+#photography_slice {
+  width: 100vw;
+
+  #photography_header_canvas {
+    width: 100%;
+    height: 80vh;
+    background-color: $background_white;
+  }
+}
