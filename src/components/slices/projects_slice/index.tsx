@@ -74,7 +74,7 @@ export default function ProjectsSlice() {
 
   return (
     <>
-      <div id='project_slice'>
+      <section id='project_slice'>
         <ProjectsContainer
           projectsRefs={projectsRefs}
           projectsData={projectsData}
@@ -87,7 +87,7 @@ export default function ProjectsSlice() {
         />
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
         <ScrollDown />
-      </div>
+      </section>
       <div className='scroll_to_top_container'>
         <ScrollToTop />
       </div>

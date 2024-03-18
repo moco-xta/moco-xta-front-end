@@ -35,7 +35,7 @@ export default function AddReviewSlice() {
   const [addReview] = useAddReviewMutation()
 
   return (
-    <div id='add_review_slice'>
+    <section id='add_review_slice'>
       <div id='add_review_container'>
         <h1 id='add_review'>{t('ADD_REVIEW.ADD_A_REVIEW')}</h1>
         <Formik
@@ -61,6 +61,6 @@ export default function AddReviewSlice() {
         </Formik>
         <SeeAllReviews />
       </div>
-    </div>
+    </section>
   )
 }
