@@ -1,3 +1,5 @@
+'use client'
+
 import React, { RefObject, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
