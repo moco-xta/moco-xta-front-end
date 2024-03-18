@@ -14,7 +14,9 @@ export default function FrontEndSkills() {
         <h3>Front-end</h3>
         <p className='skills_block_text_paragraph'>{t('PARAGRAPHS.FRONT_END')}</p>
       </div>
-      <div className='skills_separator'/>
+      <div className='skills_separator'>
+        <div className='dot' />
+      </div>
       <div className='skills_canvas_container'>
         <ThreeDSkillsCanvas />
       </div>

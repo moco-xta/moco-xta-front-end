@@ -8,7 +8,7 @@ function ContactScene() {
   const meshRef = useRef<THREE.Mesh>(null!)
   const ref = useRef(null!)
 
-  const colorMap = useLoader(THREE.TextureLoader, '/img/jpg/portrait_test.jpg')
+  const colorMap = useLoader(THREE.TextureLoader, '/img/test/portrait_test.jpg')
 
   const [hovered, hover] = useState(false)
 

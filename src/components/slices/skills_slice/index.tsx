@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
+import GraphicsSkills from './graphics_skills'
 import ThreeDSkills from './three_d_skills'
 import FrontEndSkills from './front_end_skills'
 import MobileSkills from './mobile_skills'
@@ -17,6 +18,7 @@ export default function SkillsSlice() {
     <section id='skills_slice'>
       <div id='skills_content'>
         <h2>{t('SKILLS')}</h2>
+        <GraphicsSkills />
         <ThreeDSkills />
         <FrontEndSkills />
         <MobileSkills />

@@ -14,7 +14,9 @@ export default function ThreeDSkills() {
         <h3>{t('TITLES.REAL_TIME_THREE_D')}</h3>
         <p className='skills_block_text_paragraph'>{t('PARAGRAPHS.THREE_D')}</p>
       </div>
-      <div className='skills_separator'/>
+      <div className='skills_separator'>
+        <div className='dot' />
+      </div>
       <div className='skills_canvas_container'>
         <ThreeDSkillsCanvas />
       </div>
