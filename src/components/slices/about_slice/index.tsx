@@ -6,8 +6,8 @@ import './index.scss'
 
 export default function AboutSlice() {
   return (
-    <div id='about_slice'>
+    <section id='about_slice'>
       <AboutCanvas />
-    </div>
+    </section>
   )
 }
