@@ -1,17 +1,5 @@
 @import './variables.module.scss';
 
-/* @font-face {
-  font-family: 'Montserrat-ExtraBold';
-  src: local('Montserrat-ExtraBold'), url(/fonts/ttf/Montserrat-ExtraBold.ttf) format('ttf');
-} */
-
-@font-face {
-  font-family: 'HelveticaNeue-Black';
-  src:
-    local('HelveticaNeue-Black'),
-    url(/fonts/ttf/HelveticaNeue-Black.ttf) format('ttf');
-}
-
 :root {
   --max-width: 1100px;
 }
@@ -29,15 +17,44 @@ body {
   background-color: $background_color;
 }
 
-body {
-}
+body {}
+
+// FONTS
+
+// FONT_SIZES
 
 h1 {
-  font-size: 6rem;
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2rem;
 }
 
-h2 {
-  font-size: 4rem;
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
 }
 
 a {
@@ -66,9 +83,20 @@ a {
   align-items: center;
 }
 
-.scrollbar {
-  scrollbar-color: $scrollbar_thumb_color #00000000;
+.scroll_to_top_container {
+  z-index: 1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+// SCROLLBAR
 
 .scrollbar::-webkit-scrollbar-track {
   background: none;
@@ -91,49 +119,4 @@ a {
 
 .scrollbar::-webkit-scrollbar-track-piece:start {
   margin-top: 10px;
-}
-
-.scroll_to_top_container {
-  z-index: 1;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.gradient_text {
-  font-weight: 900;
-  background: -webkit-linear-gradient(
-    50deg,
-    $gradient_text_rgba_0percent 0%,
-    $gradient_text_rgba_50percent 50%,
-    $gradient_text_rgba_100percent 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background: $background_dark;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(#642bff, #ff2296);
-  background: $grey_ccc;
-  border-radius: 5px;
-}
-::-webkit-scrollbar-track-piece {
-  background: $background_dark;
-} */
-
-.word,
-.word_active {
-  display: inline-block;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
