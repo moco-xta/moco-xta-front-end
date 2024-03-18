@@ -73,7 +73,7 @@ export default function ProjectsSlice() {
   }, [currentCompanyOrSchool])
 
   return (
-    <>
+    <div id='project_timeline_container'>
       <section id='project_slice'>
         <ProjectsContainer
           projectsRefs={projectsRefs}
@@ -91,6 +91,6 @@ export default function ProjectsSlice() {
       <div className='scroll_to_top_container'>
         <ScrollToTop />
       </div>
-    </>
+    </div>
   )
 }
