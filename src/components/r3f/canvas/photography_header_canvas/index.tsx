@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, Node, extend, useLoader, useThree } from '@react-three/fiber'
-import { Fisheye, Html, shaderMaterial } from '@react-three/drei'
+import { Box, Fisheye, Html, OrbitControls, PerspectiveCamera, shaderMaterial } from '@react-three/drei'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -58,6 +58,7 @@ function PhotographyHeaderScene() {
         attach='material'
         // @ts-ignore
         uTexture={texture}
+        uShift={0.5}
       />
     </mesh>
   )
@@ -109,7 +110,6 @@ export default function PhotographyHeaderCanvas() {
       legacy
       dpr={1}
       orthographic
-      camera={{ zoom: 750, position: [0, 0, 1] }}
       gl={{
         antialias: true,
         alpha: true,
@@ -117,6 +117,11 @@ export default function PhotographyHeaderCanvas() {
       }}
     >
       {/* <Fisheye zoom={-3}> */}
+        <PerspectiveCamera
+          makeDefault
+          position={[0, 0, 2]}
+        />
+        <OrbitControls />
         <Suspense
           fallback={
             <Html
