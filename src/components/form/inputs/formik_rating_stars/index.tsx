@@ -3,7 +3,7 @@ import { IoStarSharp } from 'react-icons/io5'
 import { IoStarOutline } from 'react-icons/io5'
 import { useTranslations } from 'next-intl'
 
-import { FormikRatingStarsInterface } from '@/interfaces/form/inputs/formikRatingStarsInterface'
+import { FormikRatingStarsInterface } from '@/interfaces/formikRatingStarsInterface'
 
 import FormError from '../../errors/form_error'
 

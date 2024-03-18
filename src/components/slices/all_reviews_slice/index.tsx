@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 
 import { useGetReviewsQuery } from '@/redux/api/reviewApi'
 
-import AddReviewLink from '@/components/buttons/add_review_link'
+import AddReviewLink from '@/components/links/add_review_link'
 import ReviewCard from '@/components/cards/review_card'
 
 import './index.scss'

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import gsap from 'gsap'
 
-import { TextBlockTransitionNineInterface } from '@/interfaces/components/shared/effects/textBlockTransitionNineInterface'
+import { TextBlockTransitionNineInterface } from '@/interfaces/textBlockTransitionNineInterface'
 
 import { splitTextInArrayOfWords } from '@/helpers/textHelpers'
 

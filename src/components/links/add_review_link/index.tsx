@@ -1,6 +1,6 @@
 import React from 'react'
 
-import InternalLink from '@/components/buttons/internal_link'
+import InternalLink from '@/components/links/internal_link'
 
 import './index.scss'
 

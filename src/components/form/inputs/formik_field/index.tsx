@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { FormikFieldInterface } from '@/interfaces/form/inputs/formikFieldinterface'
+import { FormikFieldInterface } from '@/interfaces/formikFieldinterface'
 
 import FormError from '../../errors/form_error'
 

@@ -1,8 +1,6 @@
 import React from 'react'
 
-import SkillsSlice from '@/components/slices/skills_slice'
-
-import './index.scss'
+import { SkillsSlice } from '@/components/slices'
 
 export default function Skills() {
   return (

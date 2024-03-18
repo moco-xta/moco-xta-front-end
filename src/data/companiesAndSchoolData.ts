@@ -1,4 +1,4 @@
-import { CompanyOrSchollDataInterface } from '@/interfaces/data/companyOrSchollDataInterface'
+import { CompanyOrSchollDataInterface } from '@/interfaces/companyOrSchollDataInterface'
 
 import { LogoPonthus } from '@/components/r3f/models/logos/LogoPonthus'
 import { LogoTheBrink } from '@/components/r3f/models/logos/LogoTheBrink'

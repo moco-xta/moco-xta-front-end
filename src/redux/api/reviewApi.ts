@@ -2,7 +2,7 @@ import apiSlice from '../slice/apiSlice'
 
 import { default as ApiConstants } from '@/constants/apiConstants.json'
 
-import { ReviewInterface } from '@/interfaces/api/reviewInterface'
+import { ReviewInterface } from '@/interfaces/reviewInterface'
 
 const reviewApi = apiSlice.injectEndpoints({
   endpoints: (build) => ({

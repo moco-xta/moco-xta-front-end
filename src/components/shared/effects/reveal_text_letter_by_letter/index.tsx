@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { RevealTextLetterByLetterInterface } from '@/interfaces/components/shared/effects/revealTextLetterByLetterInterface'
+import { RevealTextLetterByLetterInterface } from '@/interfaces/revealTextLetterByLetterInterface'
 
 import { splitTextInArrayOfLetters } from '@/helpers/textHelpers'
 
