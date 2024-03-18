@@ -18,7 +18,9 @@ export default function BackEndSkills() {
       </div>
       <div className='skills_block_text'>
         <h3>Back-end</h3>
-        <p className='skills_block_text_paragraph'>{t('PARAGRAPHS.BACK_END')}</p>
+        <p className='skills_block_text_paragraph'>
+          {t('PARAGRAPHS.BACK_END')}
+        </p>
       </div>
     </div>
   )

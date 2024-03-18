@@ -12,7 +12,9 @@ export default function FrontEndSkills() {
     <div className='skills_block_container'>
       <div className='skills_block_text'>
         <h3>Front-end</h3>
-        <p className='skills_block_text_paragraph'>{t('PARAGRAPHS.FRONT_END')}</p>
+        <p className='skills_block_text_paragraph'>
+          {t('PARAGRAPHS.FRONT_END')}
+        </p>
       </div>
       <div className='skills_separator'>
         <div className='dot' />

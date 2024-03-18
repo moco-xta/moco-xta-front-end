@@ -18,7 +18,9 @@ export default function DatabaseSkills() {
       </div>
       <div className='skills_block_text'>
         <h3>{t('TITLES.DATABASE')}</h3>
-        <p className='skills_block_text_paragraph'>{t('PARAGRAPHS.DATABASE')}</p>
+        <p className='skills_block_text_paragraph'>
+          {t('PARAGRAPHS.DATABASE')}
+        </p>
       </div>
     </div>
   )
