@@ -17,11 +17,22 @@ type GLTFResult = GLTF & {
 }
 
 export function LogoReactThreeDrei(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(GltfConstants.LOGO_REACT_THREE_DREI) as GLTFResult
+  const { nodes, materials } = useGLTF(
+    GltfConstants.LOGO_REACT_THREE_DREI,
+  ) as GLTFResult
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.LogoReactThreeDrei_1.geometry} material={materials['react-three_drei_#f10055']} />
-      <mesh geometry={nodes.LogoReactThreeDrei_2.geometry} material={materials['react-three_drei_#ffffff']} />
+    <group
+      {...props}
+      dispose={null}
+    >
+      <mesh
+        geometry={nodes.LogoReactThreeDrei_1.geometry}
+        material={materials['react-three_drei_#f10055']}
+      />
+      <mesh
+        geometry={nodes.LogoReactThreeDrei_2.geometry}
+        material={materials['react-three_drei_#ffffff']}
+      />
     </group>
   )
 }

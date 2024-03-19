@@ -22,55 +22,39 @@ export default function Scene({ content }: IntroductionCardSceneInterface) {
   const introductionCardRef = useRef<THREE.Group>(null!)
   const introductionSkillCardRef = createRef<LogoRefType>()
 
-  useGSAP(
-    () => {
-    },
-    { scope: introductionCardRef },
-  )
+  useGSAP(() => {}, { scope: introductionCardRef })
 
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
     const { x, y } = getUvMousePositionOnMesh(event, 'introduction_card')
-    gsap.to(
-      introductionCardRef.current!.rotation,
-      {
-        duration: 0.2,
-        ease: 'power3.out',
-        x: -y * introductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.FACTOR,
-        y: -x * introductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.FACTOR,
-      },
-    )
-    gsap.to(
-      introductionCardRef.current!.scale,
-      {
-        duration: 0.2,
-        ease: 'power3.out',
-        x: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.FACTOR,
-        y: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.FACTOR,
-        z: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.FACTOR,
-      },
-    )
+    gsap.to(introductionCardRef.current!.rotation, {
+      duration: 0.2,
+      ease: 'power3.out',
+      x: -y * introductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.FACTOR,
+      y: -x * introductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.FACTOR,
+    })
+    gsap.to(introductionCardRef.current!.scale, {
+      duration: 0.2,
+      ease: 'power3.out',
+      x: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.FACTOR,
+      y: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.FACTOR,
+      z: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.FACTOR,
+    })
   }
 
   function handleOnPointerLeave(event: ThreeEvent<PointerEvent>) {
-    gsap.to(
-      introductionCardRef.current!.rotation,
-      {
-        duration: 0.2,
-        ease: 'power3.out',
-        x: introductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.INITIAL,
-        y: introductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.INITIAL,
-      },
-    )
-    gsap.to(
-      introductionCardRef.current!.scale,
-      {
-        duration: 0.2,
-        ease: 'power3.out',
-        x: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.INITIAL,
-        y: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.INITIAL,
-        z: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.INITIAL,
-      },
-    )
+    gsap.to(introductionCardRef.current!.rotation, {
+      duration: 0.2,
+      ease: 'power3.out',
+      x: introductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.INITIAL,
+      y: introductionConstants.HANDLE_ON_PONTER_MOVE.ROTATION.INITIAL,
+    })
+    gsap.to(introductionCardRef.current!.scale, {
+      duration: 0.2,
+      ease: 'power3.out',
+      x: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.INITIAL,
+      y: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.INITIAL,
+      z: introductionConstants.HANDLE_ON_PONTER_MOVE.SCALE.INITIAL,
+    })
   }
 
   return (
