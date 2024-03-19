@@ -17,7 +17,7 @@ export default function LastProjectsText() {
         duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
         y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
       >
-        <h2>{t('PROJECTS.TITLE')}</h2>
+        <h2>{t('LAST_PROJECTS.TITLE')}</h2>
       </RevealTextBlock>
 
       <RevealTextBlock
@@ -25,7 +25,7 @@ export default function LastProjectsText() {
         duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
         y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
       >
-        <p>{t('PROJECTS.TEXT')}</p>
+        <p>{t('LAST_PROJECTS.TEXT')}</p>
       </RevealTextBlock>
     </div>
   )
