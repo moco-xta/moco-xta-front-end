@@ -21,6 +21,7 @@
       right: 20px;
       display: flex;
       flex-direction: column;
+      pointer-events: none;
 
       .tool_icon {
         width: 25px;
@@ -36,6 +37,7 @@
       bottom: 10px;
       font-weight: bold;
       line-height: 0.8;
+      pointer-events: none;
 
       .role {
         font-size: $font_size_large;
