@@ -4,9 +4,9 @@ import React from 'react'
 
 import LastProjectsText from './last_projects_text'
 import LastProjectsCards from './last_projects_cards'
+import SeeAllProjectsLink from './see_all_projects_link'
 
 import './index.scss'
-import SeeAllProjectsLink from './see_all_projects_link'
 
 export default function LastProjectsSlice() {
   return (
