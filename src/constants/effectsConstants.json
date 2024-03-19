@@ -16,5 +16,34 @@
         }
       }
     }
+  },
+  "CARD_HOVER_EFFECT": {
+    "DURATION": 0.2,
+    "EASE": "power3.out",
+    "TRANSFORM_PERSPECTIVE": 1000,
+    "LAST_PROJECTS_CARDS": {
+      "INITIAL_ROTATION": {
+        "X": 0,
+        "Y": 0
+      },
+      "INITIAL_SCALE": 1,
+      "ROTATION_FACTOR": {
+        "X": 4,
+        "Y": 2
+      },
+      "SCALE_FACTOR": 1.2
+    },
+    "LAST_REVIEWS_CARDS": {
+      "INITIAL_ROTATION": {
+        "X": 0,
+        "Y": 0
+      },
+      "INITIAL_SCALE": 1,
+      "ROTATION_FACTOR": {
+        "X": 4,
+        "Y": 8
+      },
+      "SCALE_FACTOR": 1.2
+    }
   }
 }
