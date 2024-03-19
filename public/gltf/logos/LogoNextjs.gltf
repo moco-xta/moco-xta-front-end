@@ -16,6 +16,15 @@
       "name": "LogoNextjs"
     }
   ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_nextjs_#ffffff",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0
+      }
+    }
+  ],
   "meshes": [
     {
       "name": "LogoNextjs",
@@ -26,7 +35,8 @@
             "NORMAL": 1,
             "TEXCOORD_0": 2
           },
-          "indices": 3
+          "indices": 3,
+          "material": 0
         }
       ]
     }

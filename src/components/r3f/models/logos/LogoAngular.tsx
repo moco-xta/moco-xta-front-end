@@ -1,36 +1,50 @@
-import { forwardRef } from 'react'
 import * as THREE from 'three'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { LogoRefType } from 'types/logoRefType'
-
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-type GltfResultType = GLTF & {
+type GLTFResult = GLTF & {
   nodes: {
-    LogoAngular: THREE.Mesh
+    LogoAngular_1: THREE.Mesh
+    LogoAngular_2: THREE.Mesh
+    LogoAngular_3: THREE.Mesh
   }
-  materials: {}
+  materials: {
+    ['logo_angular_#dd002d']: THREE.MeshStandardMaterial
+    ['logo_angular_#ffffff']: THREE.MeshStandardMaterial
+    ['logo_angular_#c4002b']: THREE.MeshStandardMaterial
+  }
 }
 
-export const LogoAngular = forwardRef<
-  LogoRefType,
-  JSX.IntrinsicElements['mesh']
->(({ scale }, ref) => {
-  const gltf = useGLTF(GltfConstants.LOGO_ANGULAR) as GltfResultType
-
+export function LogoAngular(props: JSX.IntrinsicElements['group']) {
+  const { nodes, materials } = useGLTF(GltfConstants.LOGO_ANGULAR) as GLTFResult
   return (
-    <mesh
-      ref={ref}
-      geometry={gltf.nodes.LogoAngular.geometry}
-      scale={scale}
-      receiveShadow
-      castShadow
+    <group
+      {...props}
+      dispose={null}
     >
-      <meshLambertMaterial color={'white'} />
-    </mesh>
+      <mesh
+        geometry={nodes.LogoAngular_1.geometry}
+        material={materials['logo_angular_#dd002d']}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.LogoAngular_2.geometry}
+        material={materials['logo_angular_#ffffff']}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.LogoAngular_3.geometry}
+        material={materials['logo_angular_#c4002b']}
+        receiveShadow
+        castShadow
+      />
+    </group>
   )
-})
+}
 
 useGLTF.preload(GltfConstants.LOGO_ANGULAR)

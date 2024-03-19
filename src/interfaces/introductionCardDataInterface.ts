@@ -1,18 +1,9 @@
-import { ForwardRefExoticComponent, RefAttributes } from 'react'
-import { MeshProps } from '@react-three/fiber'
-
-import { LogoRefType } from './performedWithDataInterface'
+import { GroupProps } from '@react-three/fiber'
 
 export interface IntroductionCardDataInterface {
   name: string
   logo: {
-    component:
-      | ForwardRefExoticComponent<
-          Omit<MeshProps, 'ref'> & RefAttributes<LogoRefType>
-        >
-      | ForwardRefExoticComponent<
-          Omit<MeshProps, 'ref'> & RefAttributes<THREE.Mesh>
-        >
+    component: (props: GroupProps) => JSX.Element
     position: {
       [key: string]: number
     }
