@@ -29,8 +29,8 @@ export default function ReviewCard({
 
   function handleMouseLeave(event: MouseEvent): void {
     cardRef.current!.style.transform =
-      'perspective(1000px) rotateX(0deg) rotateY(0deg)scale3d(1, 1, 1)'
-    cardRef.current!.style.transition = 'all 250ms ease-in-out'
+      'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)'
+    cardRef.current!.style.transition = 'all 100ms ease-in-out'
   }
 
   useEffect(() => {
