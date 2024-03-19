@@ -1,7 +1,6 @@
 'use client'
 
-import React, { forwardRef, useState } from 'react'
-import { FaPlus } from 'react-icons/fa'
+import React, { forwardRef } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { ProjectsCardInterface } from '@/interfaces/projectsDataInterface'
@@ -13,19 +12,6 @@ export const LastProjectCard = forwardRef<
   ProjectsCardInterface
 >(({ content }, ref) => {
   const t = useTranslations('HOME')
-
-  const [displayPlus, setDisplayPlus] = useState<boolean>(true)
-  const [displayDescription, setDisplayDescription] = useState<boolean>(false)
-
-  function handleMouseOver() {
-    setDisplayPlus(false)
-    setDisplayDescription(true)
-  }
-
-  function handleMouseLeave() {
-    setDisplayDescription(false)
-    setDisplayPlus(true)
-  }
 
   return (
     <div
@@ -47,10 +33,6 @@ export const LastProjectCard = forwardRef<
             />
           ))}
         </div>
-        {/* <div>
-          <p>{content.dates.from}</p>
-          <p>{content.dates.to}</p>
-        </div> */}
         <div className='project_roles'>
           {content.roles.map((role, index) => (
             <p
