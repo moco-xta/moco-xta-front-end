@@ -5,10 +5,13 @@ import { useTranslations } from 'next-intl'
 
 import { ReviewCardInterface } from '@/interfaces/reviewCardInterface'
 
+import useCardHoverEffect from '@/hooks/useCardHoverEffect'
+
 import RatingStars from '@/components/cards/review_card/rating_stars'
 
+import { default as effectsConstants } from '@/constants/effectsConstants.json'
+
 import './index.scss'
-import useCardHoverEffect from '@/hooks/useCardHoverEffect'
 
 export default function ReviewCard({
   review,
@@ -19,8 +22,11 @@ export default function ReviewCard({
   const t = useTranslations('ADD_REVIEW')
 
   const cardRef = useRef<HTMLDivElement>(null)
-  
-  useCardHoverEffect(cardRef)
+
+  useCardHoverEffect(
+    cardRef,
+    effectsConstants.CARD_HOVER_EFFECT.LAST_REVIEWS_CARDS,
+  )
 
   return (
     <div

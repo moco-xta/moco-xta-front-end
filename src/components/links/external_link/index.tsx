@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 import { ExternalLinkinterface } from '@/interfaces/externalLinkinterface'
 
