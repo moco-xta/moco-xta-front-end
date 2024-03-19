@@ -1,4 +1,12 @@
 #hero_slice {
+  position: relative;
   width: 100vw;
   height: 100vh;
+
+  #hero_canvas_container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+  }
 }

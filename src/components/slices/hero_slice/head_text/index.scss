@@ -3,7 +3,7 @@
 #hero_head_text_container {
   z-index: 1;
   position: absolute;
-  width: 100%;
+  width: 60%;
   height: 100%;
   padding: 100px;
   display: flex;
@@ -17,7 +17,7 @@
 
   #subheading {
     color: $text_light;
-    width: 50%;
+    width: 90%;
     margin-top: 30px;
     font-weight: 200;
     line-height: 1.6;
