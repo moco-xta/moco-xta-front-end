@@ -62,20 +62,6 @@ export const LastProjectCard = forwardRef<
           ))}
         </div>
       </div>
-      <div className='project_card_description'>
-        <div
-          className='project_description_container'
-          onMouseOver={handleMouseOver}
-          onMouseLeave={handleMouseLeave}
-        >
-          {displayPlus && <FaPlus className='plus_icon' />}
-          {displayDescription && (
-            <p className='project_description scrollbar'>
-              {t(content.descriptionsKey.lastProject)}
-            </p>
-          )}
-        </div>
-      </div>
     </div>
   )
 })
