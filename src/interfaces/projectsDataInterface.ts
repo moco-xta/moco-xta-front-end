@@ -22,3 +22,7 @@ export interface ProjectsCardInterface {
   index: number
   currentProject: number
 }
+
+export interface LastProjectsCardInterface {
+  content: ProjectDataInterface
+}
