@@ -3,7 +3,12 @@
 import React, { Suspense, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
-import { Box, Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import {
+  Box,
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+} from '@react-three/drei'
 
 function HeroScene() {
   const occupySpaceRef = useRef<THREE.Mesh>(null!)
@@ -13,7 +18,10 @@ function HeroScene() {
   gl.toneMappingExposure = 1.5 */
 
   return (
-    <Box receiveShadow castShadow />
+    <Box
+      receiveShadow
+      castShadow
+    />
   )
 }
 
