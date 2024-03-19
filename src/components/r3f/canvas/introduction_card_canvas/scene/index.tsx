@@ -20,7 +20,6 @@ export default function Scene({ content }: IntroductionCardSceneInterface) {
   const t = useTranslations('HOME')
 
   const introductionCardRef = useRef<THREE.Group>(null!)
-  const introductionSkillCardRef = createRef<LogoRefType>()
 
   useGSAP(() => {}, { scope: introductionCardRef })
 
@@ -96,7 +95,6 @@ export default function Scene({ content }: IntroductionCardSceneInterface) {
       </RoundedBox>
       <content.logo.component
         key={`introduction_skill_card_${content.name}`}
-        ref={introductionSkillCardRef}
         position={
           new THREE.Vector3(
             content.logo.position.x,
