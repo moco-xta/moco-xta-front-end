@@ -62,20 +62,23 @@ export const projectsData: ProjectDataInterface[] = [
     roles: ['Front End'],
     tools: [FaReact, SiDjango],
   },
-  /* {
-    key: 'lento',
-    name: 'Lento',
-    url: 'https://lento.eu/en',
-    descriptionKey: 'PROJECTS.CARDS.DESCRIPTIONS.LENTO',
+  {
+    key: 'abwerkt',
+    name: 'AB Werkt',
+    url: 'https://www.ab-werkt.eu/home',
+    descriptionsKey: {
+      lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
+      project: 'CARDS.DESCRIPTIONS.ABWERKT',
+    },
     picture: {
-      deskstop: '/img/jpg/projects/1200x756/lento_home_screenshot.jpg',
-      mobile: '/img/jpg/projects/360x227/lento_home_screenshot.jpg',
+      deskstop: '/img/jpg/projects/1200x756/abwerkt_home_screenshot.jpg',
+      mobile: '/img/jpg/projects/360x227/abwerkt_home_screenshot.jpg',
     },
     dates: {
-      to: '2021-06-30',
-      from: '2020-07-01',
+      to: '2019-04-16',
+      from: '2018-03-01',
     },
-    role: 'Front End',
-    tools: [FaReact, SiDjango],
-  }, */
+    roles: ['Front End'],
+    tools: [FaReact, FaAngular, SiDjango],
+  },
 ]
