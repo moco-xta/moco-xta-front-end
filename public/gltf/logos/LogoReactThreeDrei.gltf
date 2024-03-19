@@ -1,94 +1,195 @@
 {
-  "asset": {
-    "generator": "Khronos glTF Blender I/O v4.0.44",
-    "version": "2.0"
-  },
-  "scene": 0,
-  "scenes": [
-    {
-      "name": "Scene",
-      "nodes": [0]
-    }
-  ],
-  "nodes": [
-    {
-      "mesh": 0,
-      "name": "LogoReactThreeDrei"
-    }
-  ],
-  "meshes": [
-    {
-      "name": "LogoReactThreeDrei",
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 0,
-            "NORMAL": 1,
-            "TEXCOORD_0": 2
-          },
-          "indices": 3
-        }
-      ]
-    }
-  ],
-  "accessors": [
-    {
-      "bufferView": 0,
-      "componentType": 5126,
-      "count": 2450,
-      "max": [2.862736463546753, 0.9900125861167908, 0.20000001788139343],
-      "min": [-2.84214448928833, -0.9895875453948975, -0.20000003278255463],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 1,
-      "componentType": 5126,
-      "count": 2450,
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 2450,
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5123,
-      "count": 3816,
-      "type": "SCALAR"
-    }
-  ],
-  "bufferViews": [
-    {
-      "buffer": 0,
-      "byteLength": 29400,
-      "byteOffset": 0,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 29400,
-      "byteOffset": 29400,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 19600,
-      "byteOffset": 58800,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 7632,
-      "byteOffset": 78400,
-      "target": 34963
-    }
-  ],
-  "buffers": [
-    {
-      "byteLength": 86032,
-      "uri": "LogoReactThreeDrei.bin"
-    }
-  ]
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v4.0.44",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"mesh":0,
+			"name":"LogoReactThreeDrei"
+		}
+	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"name":"react-three_drei_#f10055",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.8797715902328491,
+					0,
+					0.09083514660596848,
+					1
+				],
+				"metallicFactor":0
+			}
+		},
+		{
+			"doubleSided":true,
+			"name":"react-three_drei_#ffffff",
+			"pbrMetallicRoughness":{
+				"metallicFactor":0,
+				"roughnessFactor":0.5
+			}
+		}
+	],
+	"meshes":[
+		{
+			"name":"LogoReactThreeDrei",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":0,
+						"NORMAL":1,
+						"TEXCOORD_0":2
+					},
+					"indices":3,
+					"material":0
+				},
+				{
+					"attributes":{
+						"POSITION":4,
+						"NORMAL":5,
+						"TEXCOORD_0":6
+					},
+					"indices":7,
+					"material":1
+				}
+			]
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"componentType":5126,
+			"count":60,
+			"max":[
+				-1.13694429397583,
+				0.9900125861167908,
+				0.20000000298023224
+			],
+			"min":[
+				-2.84214448928833,
+				-0.9895875453948975,
+				-0.19999998807907104
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":1,
+			"componentType":5126,
+			"count":60,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":2,
+			"componentType":5126,
+			"count":60,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":3,
+			"componentType":5123,
+			"count":108,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":4,
+			"componentType":5126,
+			"count":2390,
+			"max":[
+				2.862736463546753,
+				0.7884340882301331,
+				0.20000001788139343
+			],
+			"min":[
+				-0.9997923970222473,
+				-0.9044743180274963,
+				-0.20000003278255463
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":5,
+			"componentType":5126,
+			"count":2390,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":6,
+			"componentType":5126,
+			"count":2390,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":7,
+			"componentType":5123,
+			"count":3708,
+			"type":"SCALAR"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":720,
+			"byteOffset":0,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":720,
+			"byteOffset":720,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":480,
+			"byteOffset":1440,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":216,
+			"byteOffset":1920,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":28680,
+			"byteOffset":2136,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":28680,
+			"byteOffset":30816,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":19120,
+			"byteOffset":59496,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":7416,
+			"byteOffset":78616,
+			"target":34963
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":86032,
+			"uri":"LogoReactThreeDrei.bin"
+		}
+	]
 }
