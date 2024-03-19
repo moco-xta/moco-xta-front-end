@@ -18,16 +18,20 @@ export default function HeadText() {
         duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
         y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
       >
-      <h1 id='heading'>
-        {/* <RevealTextLetterByLetter text={`${t('HERO.HI_I_AM')} Federico`} /> */}
-        {t('HERO.HI_I_AM')}<span> Federico</span>
-      </h1>
+        <h1 id='heading'>
+          {/* <RevealTextLetterByLetter text={`${t('HERO.HI_I_AM')} Federico`} /> */}
+          {t('HERO.HI_I_AM')}
+          <span> Federico</span>
+        </h1>
       </RevealTextBlock>
       <RevealTextBlock
         threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
         duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
         y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
-        delay={effectsConstants.REVEAL_TEXT_BLOCK.HOME.HERO.HEAD_TEXT.SUBHEADING.DELAY}
+        delay={
+          effectsConstants.REVEAL_TEXT_BLOCK.HOME.HERO.HEAD_TEXT.SUBHEADING
+            .DELAY
+        }
       >
         <h3 id='subheading'>{t('HERO.SUBHEADING')}</h3>
       </RevealTextBlock>
