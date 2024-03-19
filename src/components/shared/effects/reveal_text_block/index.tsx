@@ -14,7 +14,6 @@ export default function RevealTextBlock({
   x = 0,
   y = 0,
 }: RevealComponentInterface) {
-  x = x || 0
   y = y || 0
   const ref = useRef(null)
   const [intersecting, setIntersecting] = useState(false)
@@ -25,8 +24,6 @@ export default function RevealTextBlock({
         (entries) => {
           if (entries[0].isIntersecting) {
             setIntersecting(true)
-          } else {
-            setIntersecting(false)
           }
         },
         {
@@ -52,7 +49,7 @@ export default function RevealTextBlock({
           ? `translate(${x}px, ${y}px)`
           : 'translate(0px, 0px)',
       }}
-      className={`transition ${intersecting ? 'opacity_100' : 'opacity_0'}`}
+      className={`transition ${!intersecting ? 'opacity_0' : 'opacity_100'}`}
       ref={ref}
     >
       {children}
