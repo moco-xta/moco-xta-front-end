@@ -2,31 +2,40 @@ import { RefObject, useEffect } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
+import { ConstantsEffectInterface } from '@/interfaces/constantsEffectInterface'
+
 import { getUvMousePositionOnDiv } from '@/helpers/cssHelpers'
 
-export default function useCardHoverEffect(ref: RefObject<HTMLDivElement>) {
+import { default as effectsConstants } from '@/constants/effectsConstants.json'
+
+export default function useCardHoverEffect(
+  ref: RefObject<HTMLDivElement>,
+  constantsEffect: ConstantsEffectInterface,
+) {
   gsap.registerPlugin(useGSAP)
 
-  function handleMouseMove(event: MouseEvent): void {
+  function handleMouseMove(event: MouseEvent) {
     const { x, y } = getUvMousePositionOnDiv(event)
     gsap.to(ref.current, {
-      duration: 0.2,
-      ease: 'power3.out',
-      scale: 1.2,
-      rotationX: y * 4,
-      rotationY: x * 2,
-      transformPerspective: 1000
+      duration: effectsConstants.CARD_HOVER_EFFECT.DURATION,
+      ease: effectsConstants.CARD_HOVER_EFFECT.EASE,
+      transformPerspective:
+        effectsConstants.CARD_HOVER_EFFECT.TRANSFORM_PERSPECTIVE,
+      scale: constantsEffect.SCALE_FACTOR,
+      rotationX: y * constantsEffect.ROTATION_FACTOR.X,
+      rotationY: x * constantsEffect.ROTATION_FACTOR.Y,
     })
   }
 
   function handleMouseLeave(event: MouseEvent): void {
     gsap.to(ref.current, {
-      duration: 0.2,
-      ease: 'power3.out',
-      scale: 1,
-      rotationX: 0,
-      rotationY: 0,
-      transformPerspective: 1000
+      duration: effectsConstants.CARD_HOVER_EFFECT.DURATION,
+      ease: effectsConstants.CARD_HOVER_EFFECT.EASE,
+      transformPerspective:
+        effectsConstants.CARD_HOVER_EFFECT.TRANSFORM_PERSPECTIVE,
+      scale: constantsEffect.INITIAL_SCALE,
+      rotationX: constantsEffect.INITIAL_ROTATION.X,
+      rotationY: constantsEffect.INITIAL_ROTATION.Y,
     })
   }
 

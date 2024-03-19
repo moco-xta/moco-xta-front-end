@@ -1,13 +1,15 @@
 'use client'
 
-import React, { RefObject, useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { ReviewCardInterface } from '@/interfaces/reviewCardInterface'
 
+import useCardHoverEffect from '@/hooks/useCardHoverEffect'
+
 import RatingStars from '@/components/cards/review_card/rating_stars'
 
-import { getUvMousePositionOnDiv } from '@/helpers/cssHelpers'
+import { default as effectsConstants } from '@/constants/effectsConstants.json'
 
 import './index.scss'
 
@@ -19,34 +21,16 @@ export default function ReviewCard({
 }: ReviewCardInterface) {
   const t = useTranslations('ADD_REVIEW')
 
-  const cardRef = useRef<HTMLElement>(null)
+  const cardRef = useRef<HTMLDivElement>(null)
 
-  function handleMouseMove(event: MouseEvent): void {
-    const { x, y } = getUvMousePositionOnDiv(event)
-    cardRef.current!.style.transform = `perspective(1000px) rotateX(${y * 8}deg) rotateY(${x * 12}deg) scale3d(1.1, 1.1, 1.1)`
-    cardRef.current!.style.transition = 'all 100ms ease-in-out'
-  }
-
-  function handleMouseLeave(event: MouseEvent): void {
-    cardRef.current!.style.transform =
-      'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)'
-    cardRef.current!.style.transition = 'all 100ms ease-in-out'
-  }
-
-  useEffect(() => {
-    cardRef.current!.addEventListener('mousemove', handleMouseMove)
-    cardRef.current!.addEventListener('mouseleave', handleMouseLeave)
-    return () => {
-      if (cardRef.current) {
-        cardRef.current.removeEventListener('mousemove', handleMouseMove)
-        cardRef.current.removeEventListener('mouseleave', handleMouseLeave)
-      }
-    }
-  }, [])
+  useCardHoverEffect(
+    cardRef,
+    effectsConstants.CARD_HOVER_EFFECT.LAST_REVIEWS_CARDS,
+  )
 
   return (
     <div
-      ref={cardRef as RefObject<HTMLDivElement>}
+      ref={cardRef}
       id='review_card'
     >
       {review && <p className='quote_up'>"</p>}
