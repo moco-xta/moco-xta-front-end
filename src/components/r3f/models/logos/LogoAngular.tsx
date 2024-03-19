@@ -21,10 +21,22 @@ type GLTFResult = GLTF & {
 export function LogoAngular(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_ANGULAR) as GLTFResult
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.LogoAngular_1.geometry} material={materials['logo_angular_#dd002d']} />
-      <mesh geometry={nodes.LogoAngular_2.geometry} material={materials['logo_angular_#ffffff']} />
-      <mesh geometry={nodes.LogoAngular_3.geometry} material={materials['logo_angular_#c4002b']} />
+    <group
+      {...props}
+      dispose={null}
+    >
+      <mesh
+        geometry={nodes.LogoAngular_1.geometry}
+        material={materials['logo_angular_#dd002d']}
+      />
+      <mesh
+        geometry={nodes.LogoAngular_2.geometry}
+        material={materials['logo_angular_#ffffff']}
+      />
+      <mesh
+        geometry={nodes.LogoAngular_3.geometry}
+        material={materials['logo_angular_#c4002b']}
+      />
     </group>
   )
 }
