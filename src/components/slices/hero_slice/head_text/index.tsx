@@ -18,7 +18,7 @@ export default function HeadText() {
       >
       <h1 id='heading'>
         {/* <RevealTextLetterByLetter text={`${t('HERO.HI_I_AM')} Federico`} /> */}
-        {`${t('HERO.HI_I_AM')} Federico`}
+        {t('HERO.HI_I_AM')}<span> Federico</span>
       </h1>
       </RevealTextBlock>
       <RevealTextBlock
