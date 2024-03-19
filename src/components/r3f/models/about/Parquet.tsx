@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import * as THREE from 'three'
 
-import useGltfLoader from '@/hooks/UseGltfLoader'
+import useGltfLoader from '@/hooks/useGltfLoader'
 import useTextureLoader from '@/hooks/useTextureLoader'
 
 import { default as AboutConstants } from '@/constants/aboutConstants.json'
