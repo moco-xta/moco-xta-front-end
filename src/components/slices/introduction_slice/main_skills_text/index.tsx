@@ -1,11 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
-import { FaArrowRight } from 'react-icons/fa6'
 import { useTranslations } from 'next-intl'
 
-import { Routes } from '@/routes/routes'
-
 import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
+import InternalLink from '@/components/links/internal_link'
 
 import { default as effectsConstants } from '@/constants/effectsConstants.json'
 
@@ -37,13 +34,10 @@ export default function MainSkillsText() {
         duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
         y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
       >
-        <Link
-          id='view_more_link'
-          href={Routes.find((route) => route.key === 'SKILLS')!.path}
-        >
-          <span id='view_more_link_text'>{t('INTRODUCTION.SEE_MORE')}</span>
-          <FaArrowRight />
-        </Link>
+        <InternalLink
+          routeKey={'SKILLS'}
+          translationKey={'HOME.INTRODUCTION.SEE_MORE'}
+        />
       </RevealTextBlock>
     </div>
   )
