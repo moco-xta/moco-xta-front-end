@@ -9,11 +9,11 @@ export default function PerformedWithSlice() {
   const t = useTranslations('HOME')
 
   return (
-    <>
+    <section>
       <div>{t('PERFORMED_WITH.PERFORMED_WITH')}</div>
       <div id='perform_with_scene_container'>
         <PerformedWithCanvas />
       </div>
-    </>
+    </section>
   )
 }
