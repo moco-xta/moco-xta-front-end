@@ -26,7 +26,7 @@ export default function SeeAllProjectsLink() {
           href={Routes.find((route) => route.key === 'PROJECTS')!.path}
         >
           <span id='see_all_projects_link_text'>
-            {t('PROJECTS.SEE_ALL_PROJECTS')}
+            {t('LAST_PROJECTS.SEE_ALL_PROJECTS')}
           </span>
           <FaArrowRight />
         </Link>
