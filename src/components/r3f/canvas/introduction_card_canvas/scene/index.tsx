@@ -76,7 +76,6 @@ export default function Scene({ content }: IntroductionCardSceneInterface) {
   return (
     <group ref={introductionCardRef}>
       <Text
-        /* font={descriptionFont} */
         textAlign={'center'}
         fontSize={introductionConstants.CARDS.ROUNDED_CARDS.FONT_SIZE}
         position={[
