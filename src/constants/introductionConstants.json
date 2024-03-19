@@ -25,7 +25,7 @@
       }
     },
     "POINT_LIGHTS": {
-      "INTENSITY": 20,
+      "INTENSITY": 3,
       "POSITIONS": [
         {
           "X": 3,
@@ -54,11 +54,12 @@
   "CARDS": {
     "ROUNDED_CARDS": {
       "ARGS": {
-        "X": 6,
-        "Y": 8,
-        "Z": 0.2
+        "X": 7.2,
+        "Y": 9.6,
+        "Z": 0.3
       },
       "RADIUS": 0.5,
+      "COLOR": "rgb(100, 100, 100)",
       "FONT_SIZE": 0.5
     },
     "DOUGHNUT_CHARTS": {

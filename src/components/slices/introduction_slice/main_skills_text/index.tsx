@@ -7,6 +7,8 @@ import { Routes } from '@/routes/routes'
 
 import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
 
+import { default as effectsConstants } from '@/constants/effectsConstants.json'
+
 import './index.scss'
 
 export default function MainSkillsText() {
@@ -15,25 +17,25 @@ export default function MainSkillsText() {
   return (
     <div id='main_skills_text_container'>
       <RevealTextBlock
-        y={100}
-        duration={'500ms'}
-        threshold={0.75}
+        threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
+        duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
+        y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
       >
         <h2>{t('INTRODUCTION.MAIN_SKILLS_TITLE')}</h2>
       </RevealTextBlock>
 
       <RevealTextBlock
-        y={100}
-        duration={'500ms'}
-        threshold={0.75}
+        threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
+        duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
+        y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
       >
         <p>{t('INTRODUCTION.MAIN_SKILLS_TEXT')}</p>
       </RevealTextBlock>
 
       <RevealTextBlock
-        y={100}
-        duration={'500ms'}
-        threshold={0.75}
+        threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
+        duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
+        y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
       >
         <Link
           id='view_more_link'
