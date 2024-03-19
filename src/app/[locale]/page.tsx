@@ -18,8 +18,8 @@ export default function Home() {
         <IntroductionSlice />
         <LastProjectsSlice />
         <LastReviewsSlice />
-        <PerformedWithSlice />
-        <Footer />
+        {/* <PerformedWithSlice />
+        <Footer /> */}
       </div>
       <div className='scroll_to_top_container'>
         <ScrollToTop />

@@ -14,10 +14,10 @@ export default function RevealTextBlock({
   x = 0,
   y = 0,
 }: RevealComponentInterface) {
-  x = x || 0
   y = y || 0
   const ref = useRef(null)
   const [intersecting, setIntersecting] = useState(false)
+  /* const [revealed, setRevealed] = useState(false) */
 
   useEffect(() => {
     if (ref.current) {
@@ -25,9 +25,9 @@ export default function RevealTextBlock({
         (entries) => {
           if (entries[0].isIntersecting) {
             setIntersecting(true)
-          } else {
+          }/*  else {
             setIntersecting(false)
-          }
+          } */
         },
         {
           threshold,
@@ -43,16 +43,24 @@ export default function RevealTextBlock({
     }
   }, [])
 
+  /* useEffect(() => {
+    if (intersecting) {
+      setTimeout(() => {
+        setRevealed(true)
+      }, Number(delay));
+    }
+  }, [intersecting]) */
+
   return (
     <div
       style={{
         transitionDuration: duration,
         transitionDelay: delay,
-        transform: !intersecting
+        transform: !intersecting /* && !revealed */
           ? `translate(${x}px, ${y}px)`
           : 'translate(0px, 0px)',
       }}
-      className={`transition ${intersecting ? 'opacity_100' : 'opacity_0'}`}
+      className={`transition ${!intersecting /* && !revealed */ ? 'opacity_0' : 'opacity_100'}`}
       ref={ref}
     >
       {children}
