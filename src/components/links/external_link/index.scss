@@ -1,0 +1,12 @@
+@import '@/styles/variables.module.scss';
+
+.external_link_a {
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .external_link_text {
+    margin-right: 10px;
+  }
+}

@@ -2,15 +2,11 @@
 
 .last_project_card {
   position: relative;
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 300px;
   border-radius: 20px;
 
   .project_card_details {
-    z-index: 0;
-    position: absolute;
-    width: inherit;
-    height: inherit;
     padding: 20px;
     display: flex;
 
@@ -36,9 +32,8 @@
 
     .project_roles {
       position: absolute;
-      right: 20px;
-      bottom: 20px;
-      text-align: end;
+      left: 20px;
+      bottom: 10px;
       font-weight: bold;
       line-height: 0.8;
 

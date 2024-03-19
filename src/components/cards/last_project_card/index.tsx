@@ -3,28 +3,20 @@
 import React, { forwardRef } from 'react'
 import { useTranslations } from 'next-intl'
 
-import { ProjectsCardInterface } from '@/interfaces/projectsDataInterface'
+import { LastProjectsCardInterface } from '@/interfaces/projectsDataInterface'
+import ExternalLink from '@/components/links/external_link'
 
 import './index.scss'
 
-export const LastProjectCard = forwardRef<
-  HTMLDivElement,
-  ProjectsCardInterface
->(({ content }, ref) => {
+export function LastProjectCard({ content }: LastProjectsCardInterface) {
   const t = useTranslations('HOME')
 
   return (
     <div
-      ref={ref}
       className='last_project_card card_background_gradient'
     >
       <div className='project_card_details'>
-        <a
-          href={content.url}
-          target='_blank'
-        >
-          <h3 className='project_title'>{content.name}</h3>
-        </a>
+        <ExternalLink url={content.url} text={content.name} />
         <div className='project_tools'>
           {content.tools.map((Logo, index) => (
             <Logo
@@ -46,4 +38,4 @@ export const LastProjectCard = forwardRef<
       </div>
     </div>
   )
-})
+}
