@@ -1,94 +1,114 @@
 {
-  "asset": {
-    "generator": "Khronos glTF Blender I/O v4.0.44",
-    "version": "2.0"
-  },
-  "scene": 0,
-  "scenes": [
-    {
-      "name": "Scene",
-      "nodes": [0]
-    }
-  ],
-  "nodes": [
-    {
-      "mesh": 0,
-      "name": "LogoNextjs"
-    }
-  ],
-  "meshes": [
-    {
-      "name": "LogoNextjs",
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 0,
-            "NORMAL": 1,
-            "TEXCOORD_0": 2
-          },
-          "indices": 3
-        }
-      ]
-    }
-  ],
-  "accessors": [
-    {
-      "bufferView": 0,
-      "componentType": 5126,
-      "count": 256,
-      "max": [4.200000762939453, 0.9999995827674866, 0.19999481737613678],
-      "min": [-4.199999809265137, -1.000001072883606, -0.19999603927135468],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 1,
-      "componentType": 5126,
-      "count": 256,
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 256,
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5123,
-      "count": 456,
-      "type": "SCALAR"
-    }
-  ],
-  "bufferViews": [
-    {
-      "buffer": 0,
-      "byteLength": 3072,
-      "byteOffset": 0,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 3072,
-      "byteOffset": 3072,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 2048,
-      "byteOffset": 6144,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 912,
-      "byteOffset": 8192,
-      "target": 34963
-    }
-  ],
-  "buffers": [
-    {
-      "byteLength": 9104,
-      "uri": "LogoNextjs.bin"
-    }
-  ]
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v4.0.44",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"mesh":0,
+			"name":"LogoNextjs"
+		}
+	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"name":"logo_nextjs_#ffffff",
+			"pbrMetallicRoughness":{
+				"metallicFactor":0
+			}
+		}
+	],
+	"meshes":[
+		{
+			"name":"LogoNextjs",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":0,
+						"NORMAL":1,
+						"TEXCOORD_0":2
+					},
+					"indices":3,
+					"material":0
+				}
+			]
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"componentType":5126,
+			"count":256,
+			"max":[
+				4.200000762939453,
+				0.9999995827674866,
+				0.19999481737613678
+			],
+			"min":[
+				-4.199999809265137,
+				-1.000001072883606,
+				-0.19999603927135468
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":1,
+			"componentType":5126,
+			"count":256,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":2,
+			"componentType":5126,
+			"count":256,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":3,
+			"componentType":5123,
+			"count":456,
+			"type":"SCALAR"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":3072,
+			"byteOffset":0,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":3072,
+			"byteOffset":3072,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2048,
+			"byteOffset":6144,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":912,
+			"byteOffset":8192,
+			"target":34963
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":9104,
+			"uri":"LogoNextjs.bin"
+		}
+	]
 }

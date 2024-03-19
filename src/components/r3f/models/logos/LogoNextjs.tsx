@@ -1,43 +1,26 @@
-import { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { LogoRefType } from 'types/logoRefType'
-
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-type GltfResultType = GLTF & {
+type GLTFResult = GLTF & {
   nodes: {
     LogoNextjs: THREE.Mesh
   }
-  materials: {}
+  materials: {
+    ['logo_nextjs_#ffffff']: THREE.MeshStandardMaterial
+  }
 }
 
-export const LogoNextjs = forwardRef<
-  LogoRefType,
-  JSX.IntrinsicElements['mesh']
->(({ position, scale }, ref) => {
-  const gltf = useGLTF(GltfConstants.LOGO_NEXTJS) as GltfResultType
-
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(gltf.scene)
-    // @ts-ignore
-    ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [])
-
+export function LogoNextjs(props: JSX.IntrinsicElements['group']) {
+  const { nodes, materials } = useGLTF(GltfConstants.LOGO_NEXTJS) as GLTFResult
   return (
-    <mesh
-      ref={ref}
-      geometry={gltf.nodes.LogoNextjs.geometry}
-      position={position}
-      scale={scale}
-      receiveShadow
-      castShadow
-    >
-      <meshLambertMaterial color={'white'} />
-    </mesh>
+    <group {...props} dispose={null}>
+      <mesh geometry={nodes.LogoNextjs.geometry} material={materials['logo_nextjs_#ffffff']} />
+    </group>
   )
-})
+}
 
 useGLTF.preload(GltfConstants.LOGO_NEXTJS)
