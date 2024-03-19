@@ -10,9 +10,11 @@ import { MdOutlineEmail } from 'react-icons/md'
 import { IoLogoGithub } from 'react-icons/io'
 
 import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
+import ContactCanvas from '@/components/r3f/canvas/contact_canvas'
+
+import { default as effectsConstants } from '@/constants/effectsConstants.json'
 
 import './index.scss'
-import ContactCanvas from '@/components/r3f/canvas/contact_canvas'
 
 export default function Contact() {
   return (
@@ -21,9 +23,9 @@ export default function Contact() {
         <div id='contact_container'>
           <div id='contact_head_text'>
             <RevealTextBlock
-              y={100}
-              duration={'500ms'}
-              threshold={0.75}
+              threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
+              duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
+              y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
             >
               <h1 className='gradient_text'>Federico Desmoulin</h1>
               {/* <h2>Web developer</h2> */}
@@ -31,9 +33,9 @@ export default function Contact() {
           </div>
           <div id='why_socials_contacts_container'>
             <RevealTextBlock
-              y={100}
-              duration={'500ms'}
-              threshold={0.75}
+              threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
+              duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
+              y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
             >
               <div id='why_container'>
                 <h2>Why?</h2>
@@ -107,9 +109,9 @@ export default function Contact() {
         </div>
         <div id='my_role'>
           <RevealTextBlock
-            y={50}
-            duration={'500ms'}
-            threshold={0.75}
+            threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
+            duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
+            y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
           >
             <p>Creative Developer</p>
           </RevealTextBlock>
