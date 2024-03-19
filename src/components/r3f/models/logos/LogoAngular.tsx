@@ -28,14 +28,20 @@ export function LogoAngular(props: JSX.IntrinsicElements['group']) {
       <mesh
         geometry={nodes.LogoAngular_1.geometry}
         material={materials['logo_angular_#dd002d']}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.LogoAngular_2.geometry}
         material={materials['logo_angular_#ffffff']}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.LogoAngular_3.geometry}
         material={materials['logo_angular_#c4002b']}
+        receiveShadow
+        castShadow
       />
     </group>
   )

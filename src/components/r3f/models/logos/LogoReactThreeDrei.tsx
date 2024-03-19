@@ -28,10 +28,14 @@ export function LogoReactThreeDrei(props: JSX.IntrinsicElements['group']) {
       <mesh
         geometry={nodes.LogoReactThreeDrei_1.geometry}
         material={materials['react-three_drei_#f10055']}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.LogoReactThreeDrei_2.geometry}
         material={materials['react-three_drei_#ffffff']}
+        receiveShadow
+        castShadow
       />
     </group>
   )

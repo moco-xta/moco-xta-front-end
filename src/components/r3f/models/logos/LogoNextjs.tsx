@@ -24,6 +24,8 @@ export function LogoNextjs(props: JSX.IntrinsicElements['group']) {
       <mesh
         geometry={nodes.LogoNextjs.geometry}
         material={materials['logo_nextjs_#ffffff']}
+        receiveShadow
+        castShadow
       />
     </group>
   )
