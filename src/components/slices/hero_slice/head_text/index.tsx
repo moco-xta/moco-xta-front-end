@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import RevealTextLetterByLetter from '@/components/shared/effects/reveal_text_letter_by_letter'
+/* import RevealTextLetterByLetter from '@/components/shared/effects/reveal_text_letter_by_letter' */
 import RevealTextBlock from '@/components/shared/effects/reveal_text_block'
 
 import './index.scss'
@@ -11,15 +11,16 @@ export default function HeadText() {
 
   return (
     <div id='hero_head_text_container'>
-      {/* <RevealTextBlock
+      <RevealTextBlock
         threshold={0.75}
         duration={'500ms'}
         y={100}
-      > */}
+      >
       <h1 id='heading'>
-        <RevealTextLetterByLetter text={`${t('HERO.HI_I_AM')} Federico`} />
+        {/* <RevealTextLetterByLetter text={`${t('HERO.HI_I_AM')} Federico`} /> */}
+        {t('HERO.HI_I_AM')}<span> Federico</span>
       </h1>
-      {/* </RevealTextBlock> */}
+      </RevealTextBlock>
       <RevealTextBlock
         threshold={0.75}
         duration={'500ms'}

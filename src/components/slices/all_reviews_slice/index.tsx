@@ -43,7 +43,7 @@ export default function AllReviewsSlice() {
       </>
     )
   return (
-    <div id='all_reviews_slice'>
+    <section id='all_reviews_slice'>
       <div id='all_reviews_content'>
         <div id='all_reviews_title_and_add_review_link_container'>
           <h2>{t('ALL_REVIEWS.ALL_REVIEWS')}</h2>
@@ -51,6 +51,6 @@ export default function AllReviewsSlice() {
         </div>
         <div id='review_cards_wrapper'>{content}</div>
       </div>
-    </div>
+    </section>
   )
 }

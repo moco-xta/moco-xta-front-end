@@ -10,7 +10,7 @@ import './index.scss'
 
 export default function LastReviewsSlice() {
   return (
-    <div id='last_reviews_slice'>
+    <section id='last_reviews_slice'>
       <div id='last_reviews_content'>
         <h2>Reviews</h2>
         <LastReviewsCards />
@@ -19,6 +19,6 @@ export default function LastReviewsSlice() {
           <SeeAllReviewsLink />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
