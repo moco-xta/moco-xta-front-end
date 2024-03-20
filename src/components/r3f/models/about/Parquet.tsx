@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import * as THREE from 'three'
 
-import useGltfLoader from '@/hooks/useGltfLoader'
+import IssueUseGltfLoader from '@/hooks/IssueUseGltfLoader'
 import useTextureLoader from '@/hooks/useTextureLoader'
 
 import { default as AboutConstants } from '@/constants/aboutConstants.json'
@@ -9,7 +9,7 @@ import { default as gltfConstants } from '@/constants/gltfConstants.json'
 import { default as texturesConstants } from '@/constants/texturesConstants.json'
 
 export function Parquet() {
-  const gltf = useGltfLoader(gltfConstants.PARQUET)
+  const gltf = IssueUseGltfLoader(gltfConstants.PARQUET)
 
   const colorMap = useTextureLoader(texturesConstants.PARQUET_DIFFUSE)
   colorMap.wrapS = THREE.RepeatWrapping
