@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { ChangeEvent, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { FormikRadiogroupInterface } from '@/interfaces/formikRadioGroupInterface'
+
+import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
 import FormError from '../../errors/form_error'
 
@@ -16,10 +18,22 @@ export default function FormikRadioGroup(props: FormikRadiogroupInterface) {
     options,
     translationKeyPrefix,
     handleChange,
+    setFieldValue,
     value,
     error,
     helperText,
   } = props
+
+  const [ storedValue, setValueToStore ] = useStoreInputValueInLocalStorage(name, value)
+
+  useEffect(() => {
+    if(storedValue) setFieldValue(name, storedValue)
+  }, [storedValue])
+
+  function handleOnChange(e: ChangeEvent<HTMLInputElement>) {
+    setValueToStore(e.currentTarget.value)
+    return handleChange(e)
+  }
 
   return (
     <div className='formik_input_container formik_radio_group_container'>
@@ -41,7 +55,7 @@ export default function FormikRadioGroup(props: FormikRadiogroupInterface) {
               type='radio'
               id={option.name}
               name={name}
-              onChange={handleChange}
+              onChange={handleOnChange}
               value={option.value ? option.value : option.name}
               checked={value === option.value || value === option.name}
             />

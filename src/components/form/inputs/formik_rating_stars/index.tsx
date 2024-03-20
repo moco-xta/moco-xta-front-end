@@ -1,9 +1,11 @@
-import React, { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent, useEffect, useState } from 'react'
 import { IoStarSharp } from 'react-icons/io5'
 import { IoStarOutline } from 'react-icons/io5'
 import { useTranslations } from 'next-intl'
 
 import { FormikRatingStarsInterface } from '@/interfaces/formikRatingStarsInterface'
+
+import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
 import FormError from '../../errors/form_error'
 
@@ -13,17 +15,25 @@ import './index.scss'
 export default function FormikRatingStars({
   label,
   name,
-  handleChange: FormikHandleChange,
+  handleChange,
+  setFieldValue,
   value,
   error,
   helperText,
 }: FormikRatingStarsInterface) {
   const t = useTranslations()
 
+  const [ storedValue, setValueToStore ] = useStoreInputValueInLocalStorage(name, value)
+
   const [hover, setHover] = useState<number | null>(null)
 
-  function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    FormikHandleChange(e)
+  useEffect(() => {
+    if(storedValue) setFieldValue(name, storedValue)
+  }, [storedValue])
+
+  function handleOnChange(e: ChangeEvent<HTMLInputElement>) {
+    setValueToStore(e.currentTarget.value)
+    return handleChange(e)
   }
 
   return (
@@ -46,7 +56,7 @@ export default function FormikRatingStars({
               <input
                 type='radio'
                 name={name}
-                onChange={handleChange}
+                onChange={handleOnChange}
                 value={currentRating}
                 checked={value === currentRating}
               />
