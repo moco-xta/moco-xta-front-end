@@ -1,9 +1,9 @@
-import { IntroductionSkillCardInterface } from '@/interfaces/introductionSkillCardInterface'
+import { IntroductionCardDataInterface } from '@/interfaces/introductionCardDataInterface'
 
 export interface IntroductionCardCanvasInterface {
-  content: IntroductionSkillCardDataInterface
+  content: IntroductionCardDataInterface
 }
 
 export interface IntroductionCardSceneInterface {
-  content: IntroductionSkillCardDataInterface
+  content: IntroductionCardDataInterface
 }

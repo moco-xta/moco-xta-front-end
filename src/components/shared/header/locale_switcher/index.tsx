@@ -23,7 +23,7 @@ export default function LocaleSwitcher() {
 
   useEffect(() => {
     setSelected(getCookieByName('NEXT_LOCALE') || locale)
-  }, [])
+  }, [locale])
 
   function handleSetSelected(locale: string) {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`

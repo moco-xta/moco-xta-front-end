@@ -7,7 +7,7 @@ import { ProjectsCardInterface } from '@/interfaces/projectsDataInterface'
 import './index.scss'
 
 export const ProjectCard = forwardRef<HTMLDivElement, ProjectsCardInterface>(
-  ({ content, index, currentProject }, ref) => {
+  function ProjectCard({ content, index, currentProject }, ref) {
     const t = useTranslations('PROJECTS')
 
     const [isActive, setIsActive] = useState<boolean>(false)
@@ -16,7 +16,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, ProjectsCardInterface>(
 
     useEffect(() => {
       currentProject === index ? setIsActive(true) : setIsActive(false)
-    }, [currentProject])
+    }, [currentProject, index])
 
     function handleMouseOver() {
       if (isActive) {

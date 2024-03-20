@@ -4,7 +4,11 @@ import { FormikErrors } from 'formik'
 interface FormikInputsInterface {
   label?: string
   name: string
-  setFieldValue: (field: string, value: any, shouldValidate?: boolean | undefined) => Promise<void | FormikErrors<any>>
+  setFieldValue: (
+    field: string,
+    value: any,
+    shouldValidate?: boolean | undefined,
+  ) => Promise<void | FormikErrors<any>>
   error: boolean | undefined
   helperText: string | false | undefined
 }
@@ -45,4 +49,3 @@ export interface FormikErrorInterface {
   error: boolean | undefined
   helperText: string | false | undefined
 }
-

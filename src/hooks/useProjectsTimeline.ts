@@ -30,7 +30,7 @@ export default function useProjectsTimeline(
       setCurrentDate(new Date())
       setDeltaPerDay((offsetHeight - clientHeight) / daysDifference)
     }
-  }, [offsetHeight, clientHeight])
+  }, [offsetHeight, clientHeight, daysDifference])
 
   useEffect(() => {
     const differenceBetweenTodayAndCurrentDate = Math.round(y / deltaPerDay)
@@ -41,7 +41,7 @@ export default function useProjectsTimeline(
         ),
       ),
     )
-  }, [y])
+  }, [y, deltaPerDay])
 
   useEffect(() => {
     projectsData.forEach((project, index) => {
@@ -59,7 +59,7 @@ export default function useProjectsTimeline(
       )
         setCurrentCompanyOrSchool(index)
     })
-  }, [currentDate])
+  }, [currentDate, projectsData, companiesAndSchollData])
 
   return {
     clientHeight,

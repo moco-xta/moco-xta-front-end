@@ -40,13 +40,14 @@ export default function useCardHoverEffect(
   }
 
   useEffect(() => {
-    ref.current!.addEventListener('mousemove', handleMouseMove)
-    ref.current!.addEventListener('mouseleave', handleMouseLeave)
+    const refCurrent = ref.current!
+    refCurrent.addEventListener('mousemove', handleMouseMove)
+    refCurrent.addEventListener('mouseleave', handleMouseLeave)
     return () => {
-      if (ref.current) {
-        ref.current.removeEventListener('mousemove', handleMouseMove)
-        ref.current.removeEventListener('mouseleave', handleMouseLeave)
+      if (refCurrent) {
+        refCurrent.removeEventListener('mousemove', handleMouseMove)
+        refCurrent.removeEventListener('mouseleave', handleMouseLeave)
       }
     }
-  }, [])
+  })
 }

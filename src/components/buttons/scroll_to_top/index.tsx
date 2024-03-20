@@ -21,7 +21,7 @@ export default function ScrollToTop() {
     }
     if (progressRef.current)
       progressRef.current.style.background = `conic-gradient(${variables.grey_ededed} ${scrollPercentage}%, ${variables.background_dark} ${scrollPercentage}%)`
-  }, [y])
+  }, [y, scrollPercentage])
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' })

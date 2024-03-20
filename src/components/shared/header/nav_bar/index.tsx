@@ -12,79 +12,81 @@ import LocaleSwitcher from '@/components/shared/header/locale_switcher'
 
 import './index.scss'
 
-export const NavBar = forwardRef<HTMLDivElement, {}>((props, ref) => {
-  const pathname = usePathname()
+export const NavBar = forwardRef<HTMLDivElement, {}>(
+  function NavBar(props, ref) {
+    const pathname = usePathname()
 
-  window.scrollTo(0, 0)
+    window.scrollTo(0, 0)
 
-  const t = useTranslations('ROUTES')
+    const t = useTranslations('ROUTES')
 
-  const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 700)
+    const [menuIsOpen, setMenuIsOpen] = useState(false)
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 700)
 
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 700)
-  }
+    const updateMedia = () => {
+      setDesktop(window.innerWidth > 700)
+    }
 
-  useEffect(() => {
-    document.addEventListener('resize', updateMedia)
-    return () => document.removeEventListener('resize', updateMedia)
-  }, [])
+    useEffect(() => {
+      document.addEventListener('resize', updateMedia)
+      return () => document.removeEventListener('resize', updateMedia)
+    }, [])
 
-  const handleSetMenuIsOpen = () => {
-    setMenuIsOpen(!menuIsOpen)
-  }
+    const handleSetMenuIsOpen = () => {
+      setMenuIsOpen(!menuIsOpen)
+    }
 
-  return (
-    <>
-      <div
-        ref={ref}
-        id='nav_wrapper'
-        className={`${menuIsOpen ? 'open' : ''}`}
-      >
-        <nav
-          style={{
-            marginTop: pathname === '/' && isDesktop ? '20px' : '0px',
-            marginRight: pathname === '/' && isDesktop ? '20px' : '0px',
-          }}
+    return (
+      <>
+        <div
+          ref={ref}
+          id='nav_wrapper'
+          className={`${menuIsOpen ? 'open' : ''}`}
         >
-          <ul>
-            {Routes.filter((route) => route.hasOwnProperty('index'))
-              // @ts-ignore
-              .sort((a, b) => a.index - b.index)
-              .map((route) => {
-                return (
-                  <li
-                    key={`navBarLink_${route.key}`}
-                    className='li_route'
-                    style={{
-                      marginRight:
-                        pathname === '/' && isDesktop ? '20px' : '0px',
-                    }}
-                  >
-                    <span
-                      className='span_link_wrapper'
-                      title={t(route.key)}
+          <nav
+            style={{
+              marginTop: pathname === '/' && isDesktop ? '20px' : '0px',
+              marginRight: pathname === '/' && isDesktop ? '20px' : '0px',
+            }}
+          >
+            <ul>
+              {Routes.filter((route) => route.hasOwnProperty('index'))
+                // @ts-ignore
+                .sort((a, b) => a.index - b.index)
+                .map((route) => {
+                  return (
+                    <li
+                      key={`navBarLink_${route.key}`}
+                      className='li_route'
+                      style={{
+                        marginRight:
+                          pathname === '/' && isDesktop ? '20px' : '0px',
+                      }}
                     >
-                      <Link
-                        href={route.path}
-                        className={`link ${pathname === route.path ? 'active' : ''}`}
-                        onClick={handleSetMenuIsOpen}
-                        scroll={true}
+                      <span
+                        className='span_link_wrapper'
+                        title={t(route.key)}
                       >
-                        {t(route.key)}
-                      </Link>
-                    </span>
-                  </li>
-                )
-              })}
-            <li>
-              <LocaleSwitcher />
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <HamburgerMenu handleSetMenuIsOpen={handleSetMenuIsOpen} />
-    </>
-  )
-})
+                        <Link
+                          href={route.path}
+                          className={`link ${pathname === route.path ? 'active' : ''}`}
+                          onClick={handleSetMenuIsOpen}
+                          scroll={true}
+                        >
+                          {t(route.key)}
+                        </Link>
+                      </span>
+                    </li>
+                  )
+                })}
+              <li>
+                <LocaleSwitcher />
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <HamburgerMenu handleSetMenuIsOpen={handleSetMenuIsOpen} />
+      </>
+    )
+  },
+)

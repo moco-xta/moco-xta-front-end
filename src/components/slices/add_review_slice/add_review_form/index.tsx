@@ -21,8 +21,15 @@ export default function AddReviewForm({
 }: AddReviewFormInterface) {
   const t = useTranslations()
 
-  const { errors, handleChange, values, resetForm, setFieldValue, submitForm, touched } =
-    useFormikContext<AddReviewValuesInterface>()
+  const {
+    errors,
+    handleChange,
+    values,
+    resetForm,
+    setFieldValue,
+    submitForm,
+    touched,
+  } = useFormikContext<AddReviewValuesInterface>()
 
   function handleSubmit(e: SyntheticEvent) {
     e.preventDefault()
