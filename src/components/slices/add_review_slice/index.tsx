@@ -47,6 +47,7 @@ export default function AddReviewSlice() {
               loading: t('TOASTERS.ADD_REVIEW.LOADING'),
               success: () => {
                 resetForm({ values: initialValues })
+                localStorage.clear()
                 setSubmitButtonIsDisabled(false)
                 return t('TOASTERS.ADD_REVIEW.SUCCESS')
               },
