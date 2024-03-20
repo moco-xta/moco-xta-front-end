@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-function getSavedValue(
+function getStoredValue(
   key: string,
   initialValue: string | number | Date | null,
 ) {
@@ -14,13 +14,13 @@ export default function useStoreInputValueInLocalStorage(
   key: string,
   initialValue: string | number | Date | null,
 ) {
-  const [value, setValue] = useState(() => {
-    return getSavedValue(key, initialValue)
+  const [storedValue, setValueToStore] = useState(() => {
+    return getStoredValue(key, initialValue)
   })
 
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value))
-  }, [value])
+    localStorage.setItem(key, JSON.stringify(storedValue))
+  }, [storedValue])
 
-  return [value, setValue]
+  return [storedValue, setValueToStore]
 }
