@@ -35,20 +35,22 @@ export default function Footer() {
         ))}
       </div>
       <div id='logo_contact_and_socials_container'>
-        <div>Logo</div>
-        <div className='contact_container'>
-          <CiMobile1
-            className='contact_icon'
-            size={30}
-          />
-          <p>+33 6 35 67 87 75</p>
-        </div>
-        <div className='contact_container'>
-          <MdOutlineEmail
-            className='contact_icon'
-            size={30}
-          />
-          <p>moco.xta@gmail.com</p>
+        <div id='logo'>Logo</div>
+        <div id='contacts_container'>
+          <div className='contact_container'>
+            <CiMobile1
+              className='contact_icon'
+              size={30}
+            />
+            <p>+33 6 35 67 87 75</p>
+          </div>
+          <div className='contact_container'>
+            <MdOutlineEmail
+              className='contact_icon'
+              size={30}
+            />
+            <p>moco.xta@gmail.com</p>
+          </div>
         </div>
         <div id='socials_container'>
           <FaLinkedinIn
