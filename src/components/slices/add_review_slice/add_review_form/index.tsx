@@ -21,12 +21,17 @@ export default function AddReviewForm({
 }: AddReviewFormInterface) {
   const t = useTranslations()
 
-  const { errors, handleChange, values, resetForm, submitForm, touched } =
+  const { errors, handleChange, values, resetForm, setFieldValue, submitForm, touched } =
     useFormikContext<AddReviewValuesInterface>()
 
   function handleSubmit(e: SyntheticEvent) {
     e.preventDefault()
     submitForm()
+  }
+
+  function handleResetForm() {
+    resetForm()
+    localStorage.clear()
   }
 
   return (
@@ -40,6 +45,7 @@ export default function AddReviewForm({
           type={'text'}
           name={'name'}
           handleChange={handleChange}
+          setFieldValue={setFieldValue}
           value={values.name}
           error={touched.name && Boolean(errors.name)}
           helperText={touched.name && errors.name}
@@ -49,6 +55,7 @@ export default function AddReviewForm({
           type={'text'}
           name={'email'}
           handleChange={handleChange}
+          setFieldValue={setFieldValue}
           value={values.email}
           error={touched.email && Boolean(errors.email)}
           helperText={touched.email && errors.email}
@@ -59,6 +66,7 @@ export default function AddReviewForm({
           options={reviewRoles}
           translationKeyPrefix={'ADD_REVIEW.ROLES'}
           handleChange={handleChange}
+          setFieldValue={setFieldValue}
           value={values.role}
           error={touched.role && Boolean(errors.role)}
           helperText={touched.role && errors.role}
@@ -70,6 +78,7 @@ export default function AddReviewForm({
           rows={4}
           maxLength={150}
           handleChange={handleChange}
+          setFieldValue={setFieldValue}
           value={values.review}
           error={touched.review && Boolean(errors.review)}
           helperText={touched.review && errors.review}
@@ -78,13 +87,14 @@ export default function AddReviewForm({
           label={t('ADD_REVIEW.RATING')}
           name={'rating'}
           handleChange={handleChange}
+          setFieldValue={setFieldValue}
           value={values.rating}
           error={touched.rating && Boolean(errors.rating)}
           helperText={touched.rating && errors.rating}
         />
         <div className='submit_reset_buttons_container'>
           <SubmitButton submitButtonIsDisabled={submitButtonIsDisabled} />
-          <ResetButton resetForm={resetForm} />
+          <ResetButton resetForm={handleResetForm} />
         </div>
       </form>
     </div>
