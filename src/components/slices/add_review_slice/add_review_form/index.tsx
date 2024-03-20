@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { AddReviewFormInterface } from '@/interfaces/addReviewFormInterface'
 import { AddReviewValuesInterface } from '@/interfaces/addReviewValuesInterface'
 
-import FormikField from '@/components/form/inputs/formik_field'
+import FormikTextField from '@/components/form/inputs/formik_text_field'
 import FormikRadioGroup from '@/components/form/inputs/formik_radio_group'
 import FormikRatingStars from '@/components/form/inputs/formik_rating_stars'
 import FormikTextarea from '@/components/form/inputs/formik_textarea'
@@ -40,7 +40,7 @@ export default function AddReviewForm({
         className='card_background_gradient'
         onSubmit={handleSubmit}
       >
-        <FormikField
+        <FormikTextField
           label={t('ADD_REVIEW.NAME')}
           type={'text'}
           name={'name'}
@@ -50,7 +50,7 @@ export default function AddReviewForm({
           error={touched.name && Boolean(errors.name)}
           helperText={touched.name && errors.name}
         />
-        <FormikField
+        <FormikTextField
           label={t('ADD_REVIEW.EMAIL')}
           type={'text'}
           name={'email'}

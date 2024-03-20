@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect } from 'react'
 
-import { FormikFieldInterface } from '@/interfaces/formikFieldinterface'
+import { FormikTextInterface } from '@/interfaces/formikInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
@@ -8,7 +8,7 @@ import FormError from '../../errors/form_error'
 
 import './index.scss'
 
-export default function FormikField(props: FormikFieldInterface) {
+export default function FormikTextField(props: FormikTextInterface) {
   const { label, type, name, handleChange, setFieldValue, value, error, helperText } = props
 
   const [ storedValue, setValueToStore ] = useStoreInputValueInLocalStorage(name, value)
