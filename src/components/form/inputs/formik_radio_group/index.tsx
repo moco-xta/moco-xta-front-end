@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 
-import { FormikRadiogroupInterface } from '@/interfaces/formikRadioGroupInterface'
+import { FormikRadioGroupInterface } from '@/interfaces/formikInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
@@ -9,7 +9,7 @@ import FormError from '../../errors/form_error'
 
 import './index.scss'
 
-export default function FormikRadioGroup(props: FormikRadiogroupInterface) {
+export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
   const t = useTranslations()
 
   const {
