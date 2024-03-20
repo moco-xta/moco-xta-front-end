@@ -12,7 +12,10 @@ import './index.scss'
 export const CompanyOrSchoolCard = forwardRef<
   HTMLDivElement,
   CompanyOrSchoolCardInterface
->(({ content, index, currentCompanyOrSchool }, ref) => {
+>(function CompanyOrSchoolCard(
+  { content, index, currentCompanyOrSchool },
+  ref,
+) {
   const t = useTranslations('PROJECTS')
 
   const Logo = content.logo.component
@@ -21,7 +24,7 @@ export const CompanyOrSchoolCard = forwardRef<
 
   useEffect(() => {
     currentCompanyOrSchool === index ? setIsActive(true) : setIsActive(false)
-  }, [currentCompanyOrSchool])
+  }, [currentCompanyOrSchool, index])
 
   function handleOnClick() {
     window.open(content.url, '_blank')

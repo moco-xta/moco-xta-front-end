@@ -30,7 +30,7 @@ function ScrollHandler({ navWrapperRef }: ScrollHandlerInterface) {
         li_route.style.marginRight = '0px'
       })
     }
-  }, [y])
+  }, [y, navWrapperRef, pathname])
 
   return null
 }

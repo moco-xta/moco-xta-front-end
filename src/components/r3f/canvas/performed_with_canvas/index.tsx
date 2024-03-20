@@ -7,13 +7,11 @@ import { PerspectiveCamera, SoftShadows } from '@react-three/drei'
 
 import { IconsDataInterface } from '@/interfaces/iconsDataInterface'
 
-import { performedWithData } from '@/data/performedWithData'
-
 export type LogoRefType = THREE.Mesh & {
   width: number
 }
 
-function PerformedWithScene() {
+/* function PerformedWithScene() {
   const logosGroupRef = useRef<THREE.Group>(null!)
   const logosCreateRefs = useMemo(
     () =>
@@ -75,40 +73,40 @@ function PerformedWithScene() {
         position={[10, 10, 5]}
         intensity={2}
         castShadow
-        /* shadow-camera-left={-20}
+        shadow-camera-left={-20}
         shadow-camera-right={20}
         shadow-camera-top={20}
         shadow-camera-bottom={-20}
         shadow-mapSize-height={2048}
         shadow-mapSize-width={2048}
         shadow-radius={10}
-        shadow-bias={-0.01} */
+        shadow-bias={-0.01}
       />
       <directionalLight
         position={[-10, 10, 5]}
         intensity={2}
         castShadow
-        /* shadow-camera-left={-20}
+        shadow-camera-left={-20}
         shadow-camera-right={20}
         shadow-camera-top={20}
         shadow-camera-bottom={-20}
         shadow-mapSize-height={2048}
         shadow-mapSize-width={2048}
         shadow-radius={10}
-        shadow-bias={-0.01} */
+        shadow-bias={-0.01}
       />
       <directionalLight
         position={[0, 10, -5]}
         intensity={2}
         castShadow
-        /* shadow-camera-left={-20}
+        shadow-camera-left={-20}
         shadow-camera-right={20}
         shadow-camera-top={20}
         shadow-camera-bottom={-20}
         shadow-mapSize-height={2048}
         shadow-mapSize-width={2048}
         shadow-radius={10}
-        shadow-bias={-0.01} */
+        shadow-bias={-0.01}
       />
       <group ref={logosGroupRef}>
         {logosCreateRefs.map(({ ref }, index) => {
@@ -124,7 +122,7 @@ function PerformedWithScene() {
       </group>
     </>
   )
-}
+} */
 
 export default function PerformedWithCanvas() {
   return (
@@ -140,10 +138,8 @@ export default function PerformedWithCanvas() {
       {/* <SoftShadows
         size={20}
         samples={10}
-      />
-      <Suspense fallback={null}> */}
-      <PerformedWithScene />
-      {/* </Suspense> */}
+      /> */}
+      <Suspense fallback={null}>{/* <PerformedWithScene /> */}</Suspense>
     </Canvas>
   )
 }

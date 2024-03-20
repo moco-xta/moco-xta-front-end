@@ -54,7 +54,7 @@ export default function ProjectsSlice() {
         ref.current.style.top = `${(clientHeight - ref.current?.offsetHeight) / 2 + index * projectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
       }
     })
-  }, [clientHeight])
+  }, [clientHeight, projectsRefs, companiesAndSchoolRefs])
 
   useEffect(() => {
     projectsRefs.forEach(({ ref }) => {
@@ -62,7 +62,7 @@ export default function ProjectsSlice() {
         ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - projectsConstants.CARDS_OFFSET.PROJECT : parseInt(ref.current.style.top) + projectsConstants.CARDS_OFFSET.PROJECT}px`
       }
     })
-  }, [currentProject])
+  }, [currentProject, projectsRefs, scrollFlow])
 
   useEffect(() => {
     companiesAndSchoolRefs.forEach(({ ref }) => {
@@ -70,7 +70,7 @@ export default function ProjectsSlice() {
         ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - projectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL : parseInt(ref.current.style.top) + projectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
       }
     })
-  }, [currentCompanyOrSchool])
+  }, [currentCompanyOrSchool, companiesAndSchoolRefs, scrollFlow])
 
   return (
     <div id='project_timeline_container'>
