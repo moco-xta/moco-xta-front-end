@@ -67,7 +67,7 @@ export function Parquet() {
         object.material.envMapIntensity = 0
       }
     })
-  }, [gltf])
+  }, [gltf, colorMap, bumpMap, normalMap, roughnessMap])
 
   return <primitive object={gltf.scene} />
 }

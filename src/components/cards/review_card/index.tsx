@@ -33,9 +33,9 @@ export default function ReviewCard({
       ref={cardRef}
       id='review_card'
     >
-      {review && <p className='quote_up'>"</p>}
+      {review && <p className='quote_up'>&quot;</p>}
       <p className='review'>{review}</p>
-      {review && <p className='quote_down'>"</p>}
+      {review && <p className='quote_down'>&quot;</p>}
       {rating !== 0 && (
         <div className='rating_stars_container'>
           <RatingStars rating={rating} />

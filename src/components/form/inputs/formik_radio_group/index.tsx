@@ -24,11 +24,14 @@ export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
     helperText,
   } = props
 
-  const [ storedValue, setValueToStore ] = useStoreInputValueInLocalStorage(name, value)
+  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
+    name,
+    value,
+  )
 
   useEffect(() => {
-    if(storedValue) setFieldValue(name, storedValue)
-  }, [storedValue])
+    if (storedValue) setFieldValue(name, storedValue)
+  }, [storedValue, setFieldValue, name])
 
   function handleOnChange(e: ChangeEvent<HTMLInputElement>) {
     setValueToStore(e.currentTarget.value)

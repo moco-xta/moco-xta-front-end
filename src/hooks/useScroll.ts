@@ -15,7 +15,7 @@ export default function useScroll() {
       document.documentElement.offsetHeight -
         document.documentElement.clientHeight,
     )
-  })
+  }, [])
 
   const handleScroll = useCallback(
     (e: Event) => {
@@ -30,7 +30,7 @@ export default function useScroll() {
       }
       setY(window.scrollY)
     },
-    [y],
+    [y, height],
   )
 
   useEffect(() => {

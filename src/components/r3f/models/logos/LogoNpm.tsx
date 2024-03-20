@@ -15,14 +15,14 @@ type GltfResultType = GLTF & {
 }
 
 export const LogoNpm = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
-  ({ scale }, ref) => {
+  function LogoNpm({ scale }, ref) {
     const gltf = useGLTF(GltfConstants.LOGO_NPM) as GltfResultType
 
     useLayoutEffect(() => {
       const box = new THREE.Box3().setFromObject(gltf.scene)
       // @ts-ignore
       ref.current.width = box.getSize(new THREE.Vector3()).x
-    }, [])
+    }, [gltf.scene, ref])
 
     return (
       <mesh
