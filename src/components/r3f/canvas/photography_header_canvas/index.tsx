@@ -44,9 +44,9 @@ declare global {
 function PhotographyHeaderScene() {
   const state = useThree()
 
-  useEffect(() => {
+  /* useEffect(() => {
     console.log(state)
-  }, [])
+  }, []) */
 
   const texture = useLoader(
     THREE.TextureLoader,
@@ -127,14 +127,7 @@ export default function PhotographyHeaderCanvas() {
         position={[0, 0, 2]}
       />
       <OrbitControls />
-      <Suspense
-        fallback={
-          <Html
-            center
-            children='Loading...'
-          />
-        }
-      >
+      <Suspense fallback={<Html center>{'Loading...'}</Html>}>
         <PhotographyHeaderScene />
       </Suspense>
       {/* </Fisheye> */}

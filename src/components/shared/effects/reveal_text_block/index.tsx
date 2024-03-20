@@ -19,7 +19,8 @@ export default function RevealTextBlock({
   const [intersecting, setIntersecting] = useState(false)
 
   useEffect(() => {
-    if (ref.current) {
+    const refCurrent = ref.current!
+    if (refCurrent) {
       const intersectionObserver = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting) {
@@ -30,15 +31,15 @@ export default function RevealTextBlock({
           threshold,
         },
       )
-      intersectionObserver.observe(ref.current)
+      intersectionObserver.observe(refCurrent)
 
       return () => {
-        if (ref.current) {
-          intersectionObserver.unobserve(ref.current)
+        if (refCurrent) {
+          intersectionObserver.unobserve(refCurrent)
         }
       }
     }
-  }, [])
+  }, [threshold])
 
   return (
     <div

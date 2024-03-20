@@ -23,13 +23,16 @@ export default function FormikRatingStars({
 }: FormikRatingStarsInterface) {
   const t = useTranslations()
 
-  const [ storedValue, setValueToStore ] = useStoreInputValueInLocalStorage(name, value)
+  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
+    name,
+    value,
+  )
 
   const [hover, setHover] = useState<number | null>(null)
 
   useEffect(() => {
-    if(storedValue) setFieldValue(name, storedValue)
-  }, [storedValue])
+    if (storedValue) setFieldValue(name, storedValue)
+  }, [storedValue, setFieldValue, name])
 
   function handleOnChange(e: ChangeEvent<HTMLInputElement>) {
     setValueToStore(e.currentTarget.value)

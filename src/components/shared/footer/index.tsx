@@ -19,11 +19,10 @@ export default function Footer() {
   return (
     <footer>
       <div id='links_container'>
-        {Routes
-          .filter((route) => route.hasOwnProperty('index'))
+        {Routes.filter((route) => route.hasOwnProperty('index'))
           // @ts-ignore
           .sort((a, b) => a.index - b.index)
-          .map(route => (
+          .map((route) => (
             <Link
               key={`footerLink_${route.key}`}
               className='footer_link'
@@ -32,7 +31,7 @@ export default function Footer() {
             >
               {t(route.key)}
             </Link>
-        ))}
+          ))}
       </div>
       <div id='logo_contact_and_socials_container'>
         <div id='logo'>Logo</div>
@@ -53,21 +52,11 @@ export default function Footer() {
           </div>
         </div>
         <div id='socials_container'>
-          <FaLinkedinIn
-            size={30}
-          />
-          <FaTwitter
-            size={30}
-          />
-          <FaInstagram
-            size={30}
-          />
-          <FaFacebookF
-            size={30}
-          />
-          <IoLogoGithub
-            size={30}
-          />
+          <FaLinkedinIn size={30} />
+          <FaTwitter size={30} />
+          <FaInstagram size={30} />
+          <FaFacebookF size={30} />
+          <IoLogoGithub size={30} />
         </div>
         <p>© Copyright 2024 Federico Desmoulin</p>
         <p>All rights reserved</p>

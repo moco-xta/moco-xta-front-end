@@ -22,11 +22,14 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
     helperText,
   } = props
 
-  const [ storedValue, setValueToStore ] = useStoreInputValueInLocalStorage(name, value)
+  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
+    name,
+    value,
+  )
 
   useEffect(() => {
-    if(storedValue) setFieldValue(name, storedValue)
-  }, [storedValue])
+    if (storedValue) setFieldValue(name, storedValue)
+  }, [storedValue, setFieldValue, name])
 
   function handleOnChange(e: ChangeEvent<HTMLTextAreaElement>) {
     setValueToStore(e.currentTarget.value)

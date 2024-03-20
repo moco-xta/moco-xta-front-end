@@ -19,7 +19,7 @@ type GltfResultType = GLTF & {
 export const LogoOpenclassrooms = forwardRef<
   LogoRefType,
   JSX.IntrinsicElements['mesh']
->(({ position, scale, onClick }, ref) => {
+>(function LogoOpenclassrooms({ position, scale, onClick }, ref) {
   const gltf = useGLTF(GltfConstants.LOGO_OPENCLASSROOMS) as GltfResultType
 
   const [hovered, setHovered] = useState(false)

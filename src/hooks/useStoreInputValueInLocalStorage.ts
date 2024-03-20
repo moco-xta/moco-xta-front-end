@@ -20,7 +20,7 @@ export default function useStoreInputValueInLocalStorage(
 
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(storedValue))
-  }, [storedValue])
+  }, [storedValue, key])
 
   return [storedValue, setValueToStore]
 }
