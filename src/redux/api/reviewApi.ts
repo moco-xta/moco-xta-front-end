@@ -12,7 +12,7 @@ const reviewApi = apiSlice.injectEndpoints({
     }),
     addReview: build.mutation<ReviewInterface, ReviewInterface>({
       query: (review) => ({
-        url: ApiConstants.REVIEW,
+        url: 'https://127.0.0.1:8080/test/v1/' + ApiConstants.REVIEW,
         method: 'POST',
         body: review,
       }),
