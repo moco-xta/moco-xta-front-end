@@ -12,4 +12,6 @@ RUN npm run build
 
 COPY .next ./.next
 
+EXPOSE 80
+
 CMD ["npm", "run", "start"]
