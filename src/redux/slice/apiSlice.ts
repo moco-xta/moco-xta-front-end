@@ -4,8 +4,7 @@ const apiSlice = createApi({
   reducerPath: 'api',
   tagTypes: ['Review', 'Test'],
   baseQuery: fetchBaseQuery({
-    /* baseUrl: process.env.NEXT_PUBLIC_BACK_END, */
-    baseUrl: 'https://127.0.0.1:8080/test/v1/',
+    baseUrl: process.env.NEXT_PUBLIC_BACK_END,
   }),
   endpoints: () => ({}),
 })
