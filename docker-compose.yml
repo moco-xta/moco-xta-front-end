@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: client_container
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    
+  nginx:
+    container_name: nginx_container
+    image: nginx:latest
+    restart: always
+    volumes:
+      - ./conf/nginx.conf:/etc/nginx/conf.d/nginx.conf
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - next
