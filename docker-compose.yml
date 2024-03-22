@@ -1,17 +1,6 @@
 version: '3.8'
 
 services:
-  proxy:
-    restart: unless-stopped
-    image: nginx
-    ports:
-      - 80:80
-      - 3000:3000
-    depends_on: 
-      - moco-xta-front-end
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-
   moco-xta-front-end:
     container_name: moco-xta-front-end
     build:
