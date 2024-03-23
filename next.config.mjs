@@ -11,9 +11,7 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.glsl$/,
       exclude: /node_modules/,
-      use: {
-        loader: 'ts-shader-loader'
-      }
+      use: ['raw-loader', 'glslify-loader'],
     })
     return config
   },
