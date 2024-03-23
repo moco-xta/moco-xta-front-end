@@ -60,21 +60,24 @@ FROM base AS runner
 
 WORKDIR /app
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-USER nextjs
+# RUN addgroup --system --gid 1001 nodejs
+# RUN adduser --system --uid 1001 nextjs
+# USER nextjs
 
 COPY --from=builder /app/public ./public
 
 # COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/.next/server ./.next/server
-
-ARG ENV_VARIABLE
-ENV ENV_VARIABLE=${ENV_VARIABLE}
-ARG NEXT_PUBLIC_ENV_VARIABLE
-ENV NEXT_PUBLIC_ENV_VARIABLE=${NEXT_PUBLIC_ENV_VARIABLE}
+# COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+# COPY --from=builder --chown=nextjs:nodejs /app/.next/server ./.next/server
 
 EXPOSE 3000
 
-CMD ["node", "server.js"]
+COPY .next ./.next
+CMD ["npm", "run", "start"]
+
+# ARG ENV_VARIABLE
+# ENV ENV_VARIABLE=${ENV_VARIABLE}
+# ARG NEXT_PUBLIC_ENV_VARIABLE
+# ENV NEXT_PUBLIC_ENV_VARIABLE=${NEXT_PUBLIC_ENV_VARIABLE}
+
+# CMD ["node", "server.js"]
