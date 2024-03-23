@@ -11,7 +11,7 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.(glsl|vs|fs|vert|frag)$/,
       use: ['raw-loader'],
-      /* type: 'asset/source', */
+      type: 'asset/source',
     })
     return config
   },
