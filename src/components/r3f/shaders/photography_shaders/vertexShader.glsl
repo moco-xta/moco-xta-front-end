@@ -9,8 +9,3 @@ void main() {
 	vUv = uv;
 	gl_Position = projectionMatrix * modelViewMatrix * vec4(pos,1.);
 }
-
-declare module '*.glsl' {
-  const file: string;
-  export default file;
-}
