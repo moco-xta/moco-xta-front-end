@@ -5,7 +5,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 FROM nginx:1.25.3-alpine
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder .next /usr/share/nginx/html
 # COPY .next ./.next
 #EXPOSE 3000
 EXPOSE 80
