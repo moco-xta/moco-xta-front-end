@@ -11,8 +11,3 @@ void main() {
 	vec4 cb = texture2D(uTexture, p - offset);
 	gl_FragColor = vec4(cr.r, cga.g, cb.b, cga.a);
 }
-
-declare module '*.glsl' {
-  const file: string;
-  export default file;
-}
