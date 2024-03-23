@@ -42,15 +42,17 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install
 
-COPY src ./src
-COPY public ./public
-COPY next.config.mjs .
-COPY tsconfig.json .
+# COPY src ./src
+# COPY public ./public
+# COPY next.config.mjs .
+# COPY tsconfig.json .
 
-ARG ENV_VARIABLE
-ENV ENV_VARIABLE=${ENV_VARIABLE}
-ARG NEXT_PUBLIC_ENV_VARIABLE
-ENV NEXT_PUBLIC_ENV_VARIABLE=${NEXT_PUBLIC_ENV_VARIABLE}
+COPY . .
+
+# ARG ENV_VARIABLE
+# ENV ENV_VARIABLE=${ENV_VARIABLE}
+# ARG NEXT_PUBLIC_ENV_VARIABLE
+# ENV NEXT_PUBLIC_ENV_VARIABLE=${NEXT_PUBLIC_ENV_VARIABLE}
 
 RUN npm run build
 
