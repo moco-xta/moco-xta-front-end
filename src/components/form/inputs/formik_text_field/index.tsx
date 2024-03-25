@@ -4,7 +4,7 @@ import { FormikTextInterface } from '@/interfaces/formikInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
-import FormError from '../../errors/form_error'
+import Error from '../../errors'
 
 import './index.scss'
 
@@ -16,6 +16,7 @@ export default function FormikTextField(props: FormikTextInterface) {
     handleChange,
     setFieldValue,
     value,
+    storeValue = true,
     error,
     helperText,
   } = props
@@ -30,7 +31,7 @@ export default function FormikTextField(props: FormikTextInterface) {
   }, [storedValue, setFieldValue, name])
 
   function handleOnChange(e: ChangeEvent<HTMLInputElement>) {
-    setValueToStore(e.currentTarget.value)
+    if (storeValue) setValueToStore(e.currentTarget.value)
     return handleChange(e)
   }
 
@@ -41,7 +42,7 @@ export default function FormikTextField(props: FormikTextInterface) {
         className='input_label'
       >
         {label}
-        <FormError
+        <Error
           error={error}
           helperText={helperText}
         />

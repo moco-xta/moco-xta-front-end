@@ -5,7 +5,7 @@ import { FormikRadioGroupInterface } from '@/interfaces/formikInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
-import FormError from '../../errors/form_error'
+import Error from '../../errors'
 
 import './index.scss'
 
@@ -42,7 +42,7 @@ export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
     <div className='formik_input_container formik_radio_group_container'>
       <label htmlFor={name}>
         {label}
-        <FormError
+        <Error
           error={error}
           helperText={helperText}
         />

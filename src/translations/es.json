@@ -106,6 +106,21 @@
       "EMPLOYEE": "Empleado"
     }
   },
+  "AUTHENTICATION": {
+    "SIGN_IN": {
+      "EMAIL": "Correo electrónico",
+      "PASSWORD": "Contraseña",
+      "SIGN_UP": "Inscribirse"
+    },
+    "SIGN_UP": {
+      "FIRST_NAME": "Nombre",
+      "LAST_NAME": "Apellido",
+      "EMAIL": "Correo electrónico",
+      "PASSWORD": "Contraseña",
+      "CONFIRM_PASSWORD": "Confirmar Contraseña",
+      "SIGN_IN": "Iniciar sesión"
+    }
+  },
   "ADD_REVIEW": {
     "ADD_A_REVIEW": "Agrega una reseña",
     "NAME": "Nombre",
@@ -147,6 +162,13 @@
     "AN_ERROR_OCCURED": "Ocurrió un error!"
   },
   "TOASTERS": {
+    "AUTHENTICATION": {
+      "SIGN_IN": {
+        "LOADING": "Autenticación en curso.",
+        "SUCCESS": "Has iniciado sesión.",
+        "ERROR": "Sorry! An error occured. Please try again."
+      }
+    },
     "ADD_REVIEW": {
       "LOADING": "Su reseña se está enviando.",
       "SUCCESS": "Su reseña ha sido enviada.",
