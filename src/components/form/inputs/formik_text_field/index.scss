@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
 
-  input[type='text'] {
+  input[type='text'],
+  input[type='password'] {
     all: unset;
     margin: 8px 0;
     padding: 12px 20px;
@@ -13,7 +14,8 @@
     background-color: $input_background;
   }
 
-  input[type='text'].error {
+  input[type='text'].error,
+  input[type='password'].error {
     border: $input_border_alert;
   }
 }
