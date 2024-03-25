@@ -7,7 +7,7 @@ import { FormikRatingStarsInterface } from '@/interfaces/formikInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
-import FormError from '../../errors/form_error'
+import Error from '../../errors'
 
 import variables from '@/styles/variables.module.scss'
 import './index.scss'
@@ -46,7 +46,7 @@ export default function FormikRatingStars({
     >
       <p>
         {label}
-        <FormError
+        <Error
           error={error}
           helperText={helperText}
         />

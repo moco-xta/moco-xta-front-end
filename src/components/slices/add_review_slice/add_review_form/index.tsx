@@ -2,15 +2,16 @@ import React, { SyntheticEvent } from 'react'
 import { useFormikContext } from 'formik'
 import { useTranslations } from 'next-intl'
 
-import { AddReviewFormInterface } from '@/interfaces/addReviewFormInterface'
+import { FormsInterface } from '@/interfaces/formsInterfaces'
 import { AddReviewValuesInterface } from '@/interfaces/addReviewValuesInterface'
 
-import FormikTextField from '@/components/form/inputs/formik_text_field'
-import FormikRadioGroup from '@/components/form/inputs/formik_radio_group'
-import FormikRatingStars from '@/components/form/inputs/formik_rating_stars'
-import FormikTextarea from '@/components/form/inputs/formik_textarea'
-import SubmitButton from '@/components/form/buttons/submit_button'
-import ResetButton from '@/components/form/buttons/reset_button'
+import {
+  FormikRadioGroup,
+  FormikRatingStars,
+  FormikTextField,
+  FormikTextarea,
+} from '@/components/form/inputs'
+import { ResetButton, SubmitButton } from '@/components/form/buttons'
 
 import { reviewRoles } from '@/data/reviewRoles'
 
@@ -18,7 +19,7 @@ import './index.scss'
 
 export default function AddReviewForm({
   submitButtonIsDisabled,
-}: AddReviewFormInterface) {
+}: FormsInterface) {
   const t = useTranslations()
 
   const {

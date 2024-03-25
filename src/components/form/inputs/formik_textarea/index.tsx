@@ -4,7 +4,7 @@ import { FormikTextareaInterface } from '@/interfaces/formikInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
-import FormError from '../../errors/form_error'
+import Error from '../../errors'
 
 import './index.scss'
 
@@ -40,7 +40,7 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
     <>
       <label htmlFor={name}>
         {label}
-        <FormError
+        <Error
           error={error}
           helperText={helperText}
         />

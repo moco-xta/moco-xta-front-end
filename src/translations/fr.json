@@ -106,6 +106,21 @@
       "EMPLOYEE": "Employé"
     }
   },
+  "AUTHENTICATION": {
+    "SIGN_IN": {
+      "EMAIL": "E-mail",
+      "PASSWORD": "Mot-de-passe",
+      "SIGN_UP": "S'inscrire"
+    },
+    "SIGN_UP": {
+      "FIRST_NAME": "Prénom",
+      "LAST_NAME": "Nom",
+      "EMAIL": "E-mail",
+      "PASSWORD": "Mot-de-passe",
+      "CONFIRM_PASSWORD": "Confirmez le mot-de-passe",
+      "SIGN_IN": "Se connecter"
+    }
+  },
   "ADD_REVIEW": {
     "ADD_A_REVIEW": "Laisser un avis",
     "NAME": "Nom",
@@ -147,6 +162,13 @@
     "AN_ERROR_OCCURED": "Une erreur s'est produite!"
   },
   "TOASTERS": {
+    "AUTHENTICATION": {
+      "SIGN_IN": {
+        "LOADING": "Authentification en cours.",
+        "SUCCESS": "Vous êtes authentifié.",
+        "ERROR": "Sorry! An error occured. Please try again."
+      }
+    },
     "ADD_REVIEW": {
       "LOADING": "Votre avis est en cours de soumission.",
       "SUCCESS": "Votre avis a bien été soumis.",
