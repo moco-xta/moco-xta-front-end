@@ -3,6 +3,7 @@
 import React, { forwardRef, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { FaUserLarge } from "react-icons/fa6";
 import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
@@ -11,9 +12,10 @@ import HamburgerMenu from '@/components/buttons/hamburger_menu'
 import LocaleSwitcher from '@/components/shared/header/locale_switcher'
 
 import './index.scss'
+import Authentication from '../../authentication';
 
 export const NavBar = forwardRef<HTMLDivElement, {}>(
-  function NavBar(props, ref) {
+  function NavBar(_, ref) {
     const pathname = usePathname()
 
     window.scrollTo(0, 0)
@@ -21,6 +23,7 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(
     const t = useTranslations('ROUTES')
 
     const [menuIsOpen, setMenuIsOpen] = useState(false)
+    const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
     const [isDesktop, setDesktop] = useState(window.innerWidth > 700)
 
     const updateMedia = () => {
@@ -32,8 +35,12 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(
       return () => document.removeEventListener('resize', updateMedia)
     }, [])
 
-    const handleSetMenuIsOpen = () => {
+    function handleSetMenuIsOpen() {
       setMenuIsOpen(!menuIsOpen)
+    }
+
+    function handleAuthenticationIsOpen() {
+      setAuthenticationIsOpen(true)
     }
 
     return (
@@ -82,10 +89,15 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(
               <li>
                 <LocaleSwitcher />
               </li>
+              <li>
+                <FaUserLarge id='authentication_icon' size={30} onClick={handleAuthenticationIsOpen} />
+              </li>
             </ul>
           </nav>
         </div>
         <HamburgerMenu handleSetMenuIsOpen={handleSetMenuIsOpen} />
+        {authenticationIsOpen && <Authentication />}
+        
       </>
     )
   },
