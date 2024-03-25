@@ -1,0 +1,9 @@
+import React from 'react'
+
+import './index.scss'
+
+export default function Authentication() {
+  return (
+    <div>Authentication</div>
+  )
+}
