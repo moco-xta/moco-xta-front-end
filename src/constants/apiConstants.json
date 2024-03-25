@@ -1,4 +1,4 @@
 {
-  "REVIEW": "review",
-  "TEST": "test"
+  "SIGN_IN": "auth/sign_in",
+  "REVIEW": "review"
 }

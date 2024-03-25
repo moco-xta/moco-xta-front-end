@@ -1,20 +1,20 @@
 import apiSlice from '../slice/apiSlice'
 
-import { default as ApiConstants } from '@/constants/apiConstants.json'
+import { default as apiConstants } from '@/constants/apiConstants.json'
 
 import { ReviewInterface } from '@/interfaces/reviewInterface'
 
 const reviewApi = apiSlice.injectEndpoints({
   endpoints: (build) => ({
     getReviews: build.query<ReviewInterface[], void>({
-      query: () => ApiConstants.REVIEW,
+      query: () => apiConstants.REVIEW,
       providesTags: ['Review'],
     }),
     addReview: build.mutation<ReviewInterface, ReviewInterface>({
-      query: (review) => ({
-        url: ApiConstants.REVIEW,
+      query: (reviewPayload) => ({
+        url: apiConstants.REVIEW,
         method: 'POST',
-        body: review,
+        body: reviewPayload,
       }),
       invalidatesTags: ['Review'],
     }),
