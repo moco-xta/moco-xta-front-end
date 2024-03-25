@@ -5,7 +5,7 @@ import { FormikErrorInterface } from '@/interfaces/formikInterfaces'
 
 import './index.scss'
 
-export default function FormError({ error, helperText }: FormikErrorInterface) {
+export default function Error({ error, helperText }: FormikErrorInterface) {
   const t = useTranslations()
 
   return (

@@ -6,15 +6,14 @@ import SignUp from './sign_up'
 import './index.scss'
 
 export default function Authentication() {
-
-  const [isSignIn, setIsSignIn] = useState(true)
+  const [isSignIn, setIsSignIn] = useState(false)
 
   return (
     <div id='authentication'>
       {isSignIn ? (
-        <SignIn />
+        <SignIn setIsSignIn={setIsSignIn} />
       ) : (
-        <SignUp />
+        <SignUp setIsSignIn={setIsSignIn} />
       )}
     </div>
   )

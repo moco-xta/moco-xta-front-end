@@ -106,6 +106,21 @@
       "EMPLOYEE": "Employee"
     }
   },
+  "AUTHENTICATION": {
+    "SIGN_IN": {
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "SIGN_UP": "Sign up"
+    },
+    "SIGN_UP": {
+      "FIRST_NAME": "First Name",
+      "LAST_NAME": "Last Name",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "CONFIRM_PASSWORD": "Confirm password",
+      "SIGN_IN": "Sign in"
+    }
+  },
   "ADD_REVIEW": {
     "ADD_A_REVIEW": "Add a review",
     "NAME": "Name",
@@ -147,6 +162,13 @@
     "AN_ERROR_OCCURED": "An error occurred!"
   },
   "TOASTERS": {
+    "AUTHENTICATION": {
+      "SIGN_IN": {
+        "LOADING": "Authentication in progress.",
+        "SUCCESS": "You are logged in.",
+        "ERROR": "Sorry! An error occured. Please try again."
+      }
+    },
     "ADD_REVIEW": {
       "LOADING": "Your review is being submitted.",
       "SUCCESS": "Your review has been submitted.",

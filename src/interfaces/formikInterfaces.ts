@@ -16,6 +16,7 @@ interface FormikInputsInterface {
 export interface FormikTextInterface extends FormikInputsInterface {
   type?: string
   value: string
+  storeValue?: boolean | undefined
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
