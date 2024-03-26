@@ -1,6 +1,7 @@
 import apiSlice from '../slice/apiSlice'
 
 import { default as apiConstants } from '@/constants/apiConstants.json'
+import { storeTokens } from '@/helpers/localStorageHelpers'
 
 import {
   SignInPayloadInterface,
@@ -17,8 +18,7 @@ const authenticationApi = apiSlice.injectEndpoints({
         body: signUpPayload,
       }),
       transformResponse: (response: TokensInterface) => {
-        localStorage.setItem('ACCESS_TOKEN', response.access_token)
-        localStorage.setItem('REFRESH_TOKEN', response.refresh_token)
+        storeTokens(response)
         return response
       },
       invalidatesTags: ['Authentication'],
@@ -29,6 +29,10 @@ const authenticationApi = apiSlice.injectEndpoints({
         method: 'POST',
         body: signInPayload,
       }),
+      transformResponse: (response: TokensInterface) => {
+        storeTokens(response)
+        return response
+      },
       invalidatesTags: ['Authentication'],
     }),
   }),

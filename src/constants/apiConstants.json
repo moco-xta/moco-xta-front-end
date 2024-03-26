@@ -1,5 +1,5 @@
 {
   "SIGN_UP": "auth/register",
-  "SIGN_IN": "auth/sign_in",
+  "SIGN_IN": "auth/authenticate",
   "REVIEW": "review"
 }
