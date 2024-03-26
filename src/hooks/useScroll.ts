@@ -1,4 +1,4 @@
-import { UIEvent, useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 export default function useScroll() {
   const [y, setY] = useState<number>(0)
