@@ -10,9 +10,11 @@ import {
 
 import { useSignUpMutation } from '@/redux/api/authenticationApi'
 
-import { signInValidationSchema } from 'validations/signInValidationSchema'
+import { signUpValidationSchema } from 'validations/signUpValidationSchema'
 
 import SignUpForm from './sign_up_form'
+
+import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 
 import './index.scss'
 
@@ -39,7 +41,7 @@ export default function SignUp({
       <h1>Sign up</h1>
       <Formik
         initialValues={initialValues}
-        validationSchema={signInValidationSchema}
+        validationSchema={signUpValidationSchema}
         onSubmit={(values, { resetForm }) => {
           setSubmitButtonIsDisabled(true)
           const payload = {
@@ -53,7 +55,7 @@ export default function SignUp({
             loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
             success: () => {
               resetForm({ values: initialValues })
-              localStorage.clear()
+              clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
               return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
             },

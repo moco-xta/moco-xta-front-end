@@ -20,9 +20,6 @@ export default function useScroll() {
   const handleScroll = useCallback(
     (e: Event) => {
       setScrollPercentage((y * 100) / height)
-      /* const window = e.currentTarget */
-      /* console.log('window', window) */
-      /* const window = e.currentTarget as Window */
       if (y > window.scrollY) {
         setScrollFlow('down')
       } else if (y < window.scrollY) {
