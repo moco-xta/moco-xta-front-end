@@ -5,12 +5,12 @@ const apiSlice = createApi({
   tagTypes: ['Authentication', 'Review'],
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_API_URL,
-    prepareHeaders: headers => {
+    prepareHeaders: (headers) => {
       const token = localStorage.getItem('ACCESS_TOKEN')
       if (token) {
         headers.set('authorization', `Bearer ${token}`)
       }
-      return headers;
+      return headers
     },
   }),
   endpoints: () => ({}),

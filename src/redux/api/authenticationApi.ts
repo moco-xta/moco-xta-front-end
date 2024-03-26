@@ -5,11 +5,6 @@ import apiSlice from '../slice/apiSlice'
 import { default as apiConstants } from '@/constants/apiConstants.json'
 import { storeTokens } from '@/helpers/localStorageHelpers'
 
-interface ErrorResponseInterface {
-  statusCode: number
-  message: string
-}
-
 import {
   SignInPayloadInterface,
   SignUpPayloadInterface,
@@ -28,9 +23,7 @@ const authenticationApi = apiSlice.injectEndpoints({
         storeTokens(response)
         return response
       },
-      transformErrorResponse: (
-        response
-      ) => {
+      transformErrorResponse: (response) => {
         // @ts-ignore
         toast(response.data.message)
       },

@@ -11,15 +11,17 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function MHelliumBalloonLarge(
-  props: JSX.IntrinsicElements['group'],
-) {
-  const { nodes } = useGLTF(
-    GltfConstants.M_HELLIUM_BALLOON_LARGE,
-  ) as GLTFResult
+export function MHelliumBalloonLarge(props: JSX.IntrinsicElements['group']) {
+  const { nodes } = useGLTF(GltfConstants.M_HELLIUM_BALLOON_LARGE) as GLTFResult
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.MHelliumBalloonLarge.geometry} material={nodes.MHelliumBalloonLarge.material} />
+    <group
+      {...props}
+      dispose={null}
+    >
+      <mesh
+        geometry={nodes.MHelliumBalloonLarge.geometry}
+        material={nodes.MHelliumBalloonLarge.material}
+      />
     </group>
   )
 }
