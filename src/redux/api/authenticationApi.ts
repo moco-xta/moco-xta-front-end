@@ -1,7 +1,14 @@
+import { toast } from 'sonner'
+
 import apiSlice from '../slice/apiSlice'
 
 import { default as apiConstants } from '@/constants/apiConstants.json'
 import { storeTokens } from '@/helpers/localStorageHelpers'
+
+interface ErrorResponseInterface {
+  statusCode: number
+  message: string
+}
 
 import {
   SignInPayloadInterface,
@@ -20,6 +27,12 @@ const authenticationApi = apiSlice.injectEndpoints({
       transformResponse: (response: TokensInterface) => {
         storeTokens(response)
         return response
+      },
+      transformErrorResponse: (
+        response
+      ) => {
+        // @ts-ignore
+        toast(response.data.message)
       },
       invalidatesTags: ['Authentication'],
     }),
