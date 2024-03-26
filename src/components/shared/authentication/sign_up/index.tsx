@@ -10,7 +10,7 @@ import {
 
 import { useSignUpMutation } from '@/redux/api/authenticationApi'
 
-import { signInValidationSchema } from 'validations/signInValidationSchema'
+import { signUpValidationSchema } from 'validations/signUpValidationSchema'
 
 import SignUpForm from './sign_up_form'
 
@@ -41,7 +41,7 @@ export default function SignUp({
       <h1>Sign up</h1>
       <Formik
         initialValues={initialValues}
-        validationSchema={signInValidationSchema}
+        validationSchema={signUpValidationSchema}
         onSubmit={(values, { resetForm }) => {
           setSubmitButtonIsDisabled(true)
           const payload = {
