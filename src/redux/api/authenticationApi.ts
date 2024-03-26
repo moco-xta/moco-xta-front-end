@@ -3,7 +3,7 @@ import apiSlice from '../slice/apiSlice'
 import { default as apiConstants } from '@/constants/apiConstants.json'
 
 import {
-  SignInInterface,
+  SignInPayloadInterface,
   SignUpPayloadInterface,
   TokensInterface,
 } from '@/interfaces/authenticationInterfaces'
@@ -16,9 +16,14 @@ const authenticationApi = apiSlice.injectEndpoints({
         method: 'POST',
         body: signUpPayload,
       }),
+      transformResponse: (response: TokensInterface) => {
+        localStorage.setItem('ACCESS_TOKEN', response.access_token)
+        localStorage.setItem('REFRESH_TOKEN', response.refresh_token)
+        return response
+      },
       invalidatesTags: ['Authentication'],
     }),
-    signIn: build.mutation<TokensInterface, SignInInterface>({
+    signIn: build.mutation<TokensInterface, SignInPayloadInterface>({
       query: (signInPayload) => ({
         url: apiConstants.SIGN_IN,
         method: 'POST',

@@ -14,6 +14,8 @@ import { signInValidationSchema } from 'validations/signInValidationSchema'
 
 import SignUpForm from './sign_up_form'
 
+import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
+
 import './index.scss'
 
 export default function SignUp({
@@ -53,7 +55,7 @@ export default function SignUp({
             loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
             success: () => {
               resetForm({ values: initialValues })
-              localStorage.clear()
+              clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
               return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
             },
