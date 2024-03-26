@@ -1,0 +1,81 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "MHeliumBalloon"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "MHeliumBalloon",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 52656,
+      "max": [0.482255756855011, 0.5212430357933044, 0.22249317169189453],
+      "min": [-0.481101393699646, -0.5485408306121826, -0.2318648099899292],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 52656,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 315924,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 631872,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 631872,
+      "byteOffset": 631872,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 631848,
+      "byteOffset": 1263744,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1895592,
+      "uri": "MHeliumBalloon.bin"
+    }
+  ]
+}
