@@ -4,9 +4,7 @@ import React, { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
 import {
-  Box,
   Environment,
-  OrbitControls,
   PerspectiveCamera,
   Plane,
 } from '@react-three/drei'
@@ -213,7 +211,7 @@ export default function HeroCanvas() {
       <Suspense>
         <Physics /* debug */ gravity={[0, 0.05, 0]}>
           <Environment
-            files='/img/hdr/peppermint_powerplant_2_8k.hdr'
+            files='/img/hdr/peppermint_powerplant_2_1k.hdr'
             encoding={THREE.LinearEncoding}
           />
           <HeroScene />
