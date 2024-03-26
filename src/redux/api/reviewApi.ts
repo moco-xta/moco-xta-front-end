@@ -7,12 +7,12 @@ import { ReviewInterface } from '@/interfaces/reviewInterface'
 const reviewApi = apiSlice.injectEndpoints({
   endpoints: (build) => ({
     getReviews: build.query<ReviewInterface[], void>({
-      query: () => apiConstants.REVIEW,
+      query: () => apiConstants.REVIEWS_LIST,
       providesTags: ['Review'],
     }),
     addReview: build.mutation<ReviewInterface, ReviewInterface>({
       query: (reviewPayload) => ({
-        url: apiConstants.REVIEW,
+        url: apiConstants.ADD_REVIEW,
         method: 'POST',
         body: reviewPayload,
       }),

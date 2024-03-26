@@ -44,10 +44,6 @@ declare global {
 function PhotographyHeaderScene() {
   const state = useThree()
 
-  /* useEffect(() => {
-    console.log(state)
-  }, []) */
-
   const texture = useLoader(
     THREE.TextureLoader,
     PhotographsConstants.PHOTOGRAPHS[0].SRC,
@@ -74,10 +70,6 @@ export default function PhotographyHeaderCanvas() {
   const timeline = gsap.timeline()
 
   const container = useRef<HTMLCanvasElement>(null!)
-
-  useEffect(() => {
-    console.log(container)
-  }, [])
 
   /* useGSAP(
     () => {

@@ -1,5 +1,6 @@
 {
-  "SIGN_UP": "auth/register",
-  "SIGN_IN": "auth/sign_in",
-  "REVIEW": "review"
+  "SIGN_UP": "authentication/sign_up",
+  "SIGN_IN": "authentication/sign_in",
+  "REVIEWS_LIST": "review/reviews_list",
+  "ADD_REVIEW": "review/add_review"
 }

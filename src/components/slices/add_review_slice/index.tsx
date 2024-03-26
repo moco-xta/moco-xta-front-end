@@ -15,6 +15,8 @@ import AddReviewForm from './add_review_form'
 import NewReviewPreview from './new_review_preview'
 import SeeAllReviews from './see_all_reviews'
 
+import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
+
 import './index.scss'
 
 export default function AddReviewSlice() {
@@ -47,7 +49,7 @@ export default function AddReviewSlice() {
               loading: t('TOASTERS.ADD_REVIEW.LOADING'),
               success: () => {
                 resetForm({ values: initialValues })
-                localStorage.clear()
+                clearFormStoredValues(initialValues)
                 setSubmitButtonIsDisabled(false)
                 return t('TOASTERS.ADD_REVIEW.SUCCESS')
               },
