@@ -213,7 +213,7 @@ export default function HeroCanvas() {
       <Suspense>
         <Physics /* debug */ gravity={[0, 0.05, 0]}>
           <Environment
-            files='/img/hdr/peppermint_powerplant_2_8k.hdr'
+            files='/img/hdr/peppermint_powerplant_2_1k.hdr'
             encoding={THREE.LinearEncoding}
           />
           <HeroScene />
