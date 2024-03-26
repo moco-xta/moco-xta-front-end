@@ -9,6 +9,7 @@ import {
   OrbitControls,
   PerspectiveCamera,
 } from '@react-three/drei'
+import { MHelliumBalloonLarge } from '../../models/hero/MHelliumBalloonLarge'
 
 function HeroScene() {
   const occupySpaceRef = useRef<THREE.Mesh>(null!)
@@ -18,7 +19,7 @@ function HeroScene() {
   gl.toneMappingExposure = 1.5 */
 
   return (
-    <Box
+    <MHelliumBalloonLarge
       receiveShadow
       castShadow
     />
@@ -63,10 +64,10 @@ export default function HeroCanvas() {
         castShadow
       />
       <Suspense>
-        {/* <Environment
+        <Environment
           preset='city'
           encoding={THREE.sRGBEncoding}
-        /> */}
+        />
         <HeroScene />
       </Suspense>
     </Canvas>
