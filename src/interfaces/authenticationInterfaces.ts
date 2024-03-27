@@ -1,5 +1,10 @@
 export interface AuthenticationComponentsInterface {
+  setAuthenticationIsOpen: (value: boolean) => void
+}
+
+export interface SignUpSignInInterface {
   setIsSignIn: (value: boolean) => void
+  setAuthenticationIsOpen: (value: boolean) => void
 }
 
 export interface SignUpPayloadInterface {
@@ -21,4 +26,8 @@ export interface SignInPayloadInterface {
 export interface TokensInterface {
   access_token: string
   refresh_token: string
+}
+
+export interface LogOutPayloadInterface {
+  access_token: string
 }

@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Formik } from 'formik'
 import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
 
 import {
-  AuthenticationComponentsInterface,
+  SignUpSignInInterface,
   SignUpValuesInterface,
 } from '@/interfaces/authenticationInterfaces'
 
+import { AppDispatch } from '@/redux/store'
 import { useSignUpMutation } from '@/redux/api/authenticationApi'
+import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 
 import { signUpValidationSchema } from 'validations/signUpValidationSchema'
 
@@ -20,8 +23,13 @@ import './index.scss'
 
 export default function SignUp({
   setIsSignIn,
-}: AuthenticationComponentsInterface) {
+  setAuthenticationIsOpen
+}: SignUpSignInInterface) {
   const t = useTranslations()
+
+  const dispatch = useDispatch<AppDispatch>()
+
+  const [signUp] = useSignUpMutation()
 
   const [submitButtonIsDisabled, setSubmitButtonIsDisabled] =
     useState<boolean>(false)
@@ -34,7 +42,9 @@ export default function SignUp({
     confirmPassword: '',
   }
 
-  const [signUp] = useSignUpMutation()
+  function handleCloseAuthentication() {
+    setAuthenticationIsOpen(false)
+  }
 
   return (
     <div id='sign_in_container'>
@@ -54,9 +64,11 @@ export default function SignUp({
           toast.promise(signUp(payload), {
             loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
             success: () => {
+              dispatch(setIsAuthenticated(true))
               resetForm({ values: initialValues })
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
+              handleCloseAuthentication()
               return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
             },
             error: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.ERROR'),
@@ -68,6 +80,7 @@ export default function SignUp({
           setIsSignIn={setIsSignIn}
         />
       </Formik>
+      <button onClick={handleCloseAuthentication}>Close</button>
     </div>
   )
 }

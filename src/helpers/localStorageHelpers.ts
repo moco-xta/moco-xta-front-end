@@ -11,6 +11,15 @@ export function storeTokens(tokens: TokensInterface) {
   })
 }
 
+export function getAccessToken() {
+  return localStorage.getItem('ACCESS_TOKEN')
+}
+
+export function removeTokens() {
+  localStorage.removeItem('ACCESS_TOKEN')
+  localStorage.removeItem('REFRESH_TOKEN')
+}
+
 export function clearFormStoredValues(
   initialValues:
     | SignUpValuesInterface

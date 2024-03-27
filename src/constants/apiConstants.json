@@ -1,6 +1,7 @@
 {
   "SIGN_UP": "authentication/sign_up",
   "SIGN_IN": "authentication/sign_in",
+  "LOG_OUT": "authentication/log_out",
   "REVIEWS_LIST": "review/reviews_list",
   "ADD_REVIEW": "review/add_review"
 }

@@ -2,14 +2,16 @@ import { toast } from 'sonner'
 
 import apiSlice from '../slice/apiSlice'
 
-import { default as apiConstants } from '@/constants/apiConstants.json'
-import { storeTokens } from '@/helpers/localStorageHelpers'
-
 import {
   SignInPayloadInterface,
   SignUpPayloadInterface,
   TokensInterface,
+  LogOutPayloadInterface
 } from '@/interfaces/authenticationInterfaces'
+
+import { default as apiConstants } from '@/constants/apiConstants.json'
+
+import { storeTokens } from '@/helpers/localStorageHelpers'
 
 const authenticationApi = apiSlice.injectEndpoints({
   endpoints: (build) => ({
@@ -41,7 +43,15 @@ const authenticationApi = apiSlice.injectEndpoints({
       },
       invalidatesTags: ['Authentication'],
     }),
+    logOut: build.mutation<void, LogOutPayloadInterface>({
+      query: (signInPayload) => ({
+        url: apiConstants.LOG_OUT,
+        method: 'POST',
+        body: signInPayload,
+      }),
+      invalidatesTags: ['Authentication'],
+    }),
   }),
 })
 
-export const { useSignUpMutation, useSignInMutation } = authenticationApi
+export const { useSignUpMutation, useSignInMutation, useLogOutMutation } = authenticationApi
