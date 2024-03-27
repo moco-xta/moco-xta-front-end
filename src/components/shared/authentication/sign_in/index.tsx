@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Formik } from 'formik'
 import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
 
 import {
-  AuthenticationComponentsInterface,
+  SignUpSignInInterface,
   SignInPayloadInterface,
 } from '@/interfaces/authenticationInterfaces'
 
+import { AppDispatch } from '@/redux/store'
 import { useSignInMutation } from '@/redux/api/authenticationApi'
+import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 
 import { signInValidationSchema } from 'validations/signInValidationSchema'
 
@@ -20,8 +23,13 @@ import './index.scss'
 
 export default function SignIn({
   setIsSignIn,
-}: AuthenticationComponentsInterface) {
+  setAuthenticationIsOpen
+}: SignUpSignInInterface) {
   const t = useTranslations()
+
+  const dispatch = useDispatch<AppDispatch>()
+
+  const [signIn] = useSignInMutation()
 
   const [submitButtonIsDisabled, setSubmitButtonIsDisabled] =
     useState<boolean>(false)
@@ -31,7 +39,9 @@ export default function SignIn({
     password: '',
   }
 
-  const [signIn] = useSignInMutation()
+  function handleCloseAuthentication() {
+    setAuthenticationIsOpen(false)
+  }
 
   return (
     <div id='sign_in_container'>
@@ -44,9 +54,11 @@ export default function SignIn({
           toast.promise(signIn(values), {
             loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
             success: () => {
+              dispatch(setIsAuthenticated(true))
               resetForm({ values: initialValues })
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
+              handleCloseAuthentication()
               return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
             },
             error: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.ERROR'),
@@ -58,6 +70,7 @@ export default function SignIn({
           setIsSignIn={setIsSignIn}
         />
       </Formik>
+      <button onClick={handleCloseAuthentication}>Close</button>
     </div>
   )
 }
