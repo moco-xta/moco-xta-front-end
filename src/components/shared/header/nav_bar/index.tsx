@@ -33,7 +33,9 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
 
   const dispatch = useDispatch<AppDispatch>()
 
-  const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated);
+  const isAuthenticated = useSelector(
+    (state: RootState) => state.authentication.isAuthenticated,
+  )
 
   const [logOut] = useLogOutMutation()
 
@@ -59,17 +61,20 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
   }
 
   function handleLogOut() {
-    if(getAccessToken()) {
-      toast.promise(logOut({
-        access_token: getAccessToken()!
-      }), {
-        loading: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.LOADING'),
-        success: () => {
-          dispatch(setIsAuthenticated(false))
-          return t('TOASTERS.AUTHENTIFICATION.LOG_OUT.SUCCESS')
+    if (getAccessToken()) {
+      toast.promise(
+        logOut({
+          access_token: getAccessToken()!,
+        }),
+        {
+          loading: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.LOADING'),
+          success: () => {
+            dispatch(setIsAuthenticated(false))
+            return t('TOASTERS.AUTHENTIFICATION.LOG_OUT.SUCCESS')
+          },
+          error: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.ERROR'),
         },
-        error: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.ERROR'),
-      })
+      )
     }
     removeTokens()
   }
@@ -122,24 +127,18 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
             </li>
             <li>
               {!isAuthenticated ? (
-                <button
-                  onClick={handleAuthenticationIsOpen}
-                >
-                  Login
-                </button>
+                <button onClick={handleAuthenticationIsOpen}>Login</button>
               ) : (
-                <button
-                  onClick={handleLogOut}
-                >
-                  Log out
-                </button>
+                <button onClick={handleLogOut}>Log out</button>
               )}
             </li>
           </ul>
         </nav>
       </div>
       <HamburgerMenu handleSetMenuIsOpen={handleSetMenuIsOpen} />
-      {authenticationIsOpen && <Authentication setAuthenticationIsOpen={setAuthenticationIsOpen} />}
+      {authenticationIsOpen && (
+        <Authentication setAuthenticationIsOpen={setAuthenticationIsOpen} />
+      )}
     </>
   )
 })

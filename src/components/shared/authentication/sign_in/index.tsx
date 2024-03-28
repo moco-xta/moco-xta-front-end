@@ -23,7 +23,7 @@ import './index.scss'
 
 export default function SignIn({
   setIsSignIn,
-  setAuthenticationIsOpen
+  setAuthenticationIsOpen,
 }: SignUpSignInInterface) {
   const t = useTranslations()
 

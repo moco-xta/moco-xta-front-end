@@ -7,7 +7,7 @@ export default function Lights() {
     <>
       <ambientLight
         position={[0, 5, 0]}
-        intensity={2}
+        intensity={0}
       />
       {introductionConstants.SCENE.POINT_LIGHTS.POSITIONS.map(
         (point_light, index) => (

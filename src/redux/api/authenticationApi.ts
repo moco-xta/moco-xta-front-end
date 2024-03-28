@@ -6,7 +6,7 @@ import {
   SignInPayloadInterface,
   SignUpPayloadInterface,
   TokensInterface,
-  LogOutPayloadInterface
+  LogOutPayloadInterface,
 } from '@/interfaces/authenticationInterfaces'
 
 import { default as apiConstants } from '@/constants/apiConstants.json'
@@ -54,4 +54,5 @@ const authenticationApi = apiSlice.injectEndpoints({
   }),
 })
 
-export const { useSignUpMutation, useSignInMutation, useLogOutMutation } = authenticationApi
+export const { useSignUpMutation, useSignInMutation, useLogOutMutation } =
+  authenticationApi

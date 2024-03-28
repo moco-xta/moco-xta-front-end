@@ -3,11 +3,7 @@
 import React, { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
-import {
-  Environment,
-  PerspectiveCamera,
-  Plane,
-} from '@react-three/drei'
+import { Environment, PerspectiveCamera, Plane } from '@react-three/drei'
 import { Physics, RigidBody } from '@react-three/rapier'
 
 import { MHeliumBalloon } from '../../models/hero/MHeliumBalloon'
