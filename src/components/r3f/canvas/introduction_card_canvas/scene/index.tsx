@@ -1,16 +1,14 @@
-import React, { createRef, useRef } from 'react'
+import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { ThreeEvent } from '@react-three/fiber'
-import { RoundedBox, Text } from '@react-three/drei'
+import { Box, GradientTexture, RoundedBox, Text } from '@react-three/drei'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
 import { IntroductionCardSceneInterface } from '@/interfaces/introductionCardInterfaces'
 
-import { LogoRefType } from 'types/logoRefType'
-
-import { getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
+import { degreesToRadians, getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
 
 import { default as introductionConstants } from '@/constants/introductionConstants.json'
 
@@ -57,7 +55,24 @@ export default function Scene({ content }: IntroductionCardSceneInterface) {
   }
 
   return (
-    <group ref={introductionCardRef}>
+    <group ref={introductionCardRef} rotation={[degreesToRadians(30), 0, 0]}>
+      <mesh
+        position={[0, 2, 2]}
+        receiveShadow
+        castShadow
+      >
+        <boxGeometry
+          attach='geometry'
+          args={[3, 5, 2]}
+        />
+        {/* <meshBasicMaterial>
+          <GradientTexture
+            stops={[0, 1]} // As many stops as you want
+            colors={['aquamarine', 'hotpink']} // Colors need to match the number of stops
+            size={1024} // Size is optional, default = 1024
+          />
+        </meshBasicMaterial> */}
+      </mesh>
       <Text
         textAlign={'center'}
         fontSize={introductionConstants.CARDS.ROUNDED_CARDS.FONT_SIZE}
@@ -84,16 +99,20 @@ export default function Scene({ content }: IntroductionCardSceneInterface) {
         receiveShadow
         castShadow
       >
-        <meshPhysicalMaterial
+        <meshStandardMaterial
           attach='material'
-          color={
+          /* color={
             new THREE.Color(introductionConstants.CARDS.ROUNDED_CARDS.COLOR)
-          }
+          } */
+          /* color={0xdcff00} */
+          color={0xff194c}
           roughness={1}
-          metalness={0}
+          emissive={0xff194c}
+          emissiveIntensity={2}
+          /* metalness={0} */
         />
       </RoundedBox>
-      <content.logo.component
+      {/* <content.logo.component
         key={`introduction_skill_card_${content.name}`}
         position={
           new THREE.Vector3(
@@ -109,7 +128,7 @@ export default function Scene({ content }: IntroductionCardSceneInterface) {
             content.logo.scale.y,
           )
         }
-      />
+      /> */}
     </group>
   )
 }
