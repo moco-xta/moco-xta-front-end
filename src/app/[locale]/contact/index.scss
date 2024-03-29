@@ -15,22 +15,34 @@
     flex-direction: rows;
   }
 
-  #contact_head_text {
-    width: 50%;
-    margin-right: 30px;
+  #canvas_head_text_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
 
-    h1 {
-      text-align: end;
-      line-height: 90px;
+    #contact_canvas_container {
+      width: 600px;
+      height: 600px;
     }
 
-    h2 {
-      text-align: end;
-      color: $white_op80;
+    #contact_head_text {
+      width: 50%;
+      margin-right: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      h1 {
+        text-align: end;
+        line-height: 90px;
+      }
+
+      h2 {
+        text-align: end;
+        color: $white_op80;
+      }
     }
   }
 
@@ -108,8 +120,8 @@
   }
 }
 
-#contact_canvas_container {
+/* #contact_canvas_container {
   position: absolute;
   width: 100%;
   height: 100%;
-}
+} */
