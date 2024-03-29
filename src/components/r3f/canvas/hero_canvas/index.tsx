@@ -12,9 +12,9 @@ import { CHeliumBalloon } from '../../models/hero/CHeliumBalloon'
 
 import { degreesToRadians } from '@/helpers/r3fHelpers'
 import useMouseMove from '@/hooks/useMouseMove'
+import { Smiley } from '../../models/hero/Smiley'
 
 function HeroScene() {
-  const occupySpaceRef = useRef<THREE.Mesh>(null!)
   const mRef = useRef(null!)
   const o1Ref = useRef(null!)
   const cRef = useRef(null!)
@@ -154,10 +154,13 @@ function HeroScene() {
         ref={o2Ref}
         colliders='hull'
       >
-        <OHeliumBalloon
+        <group
           position={[0.96, 0, 0]}
           rotation={[0, degreesToRadians(rotation), 0]}
-        />
+        >
+          <OHeliumBalloon />
+          <Smiley />
+        </group>
       </RigidBody>
       {/* <MHeliumBalloon position={[-0.96, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} />
       <OHeliumBalloon position={[-0.32, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} />

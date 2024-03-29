@@ -5,6 +5,10 @@
   width: 100vw;
   padding: 100px;
   background-color: $background_color;
+  /* background-image: url("/img/png/inflated_projects.png"); */
+  background-image: url("/img/png/inflated_projects_transparent.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 
   #last_projects_content {
     position: relative;

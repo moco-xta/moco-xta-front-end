@@ -21,15 +21,20 @@ export default function Contact() {
     <>
       <div id='contact'>
         <div id='contact_container'>
-          <div id='contact_head_text'>
-            <RevealTextBlock
-              threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
-              duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
-              y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
-            >
-              <h1 className='gradient_text'>Federico Desmoulin</h1>
-              {/* <h2>Web developer</h2> */}
-            </RevealTextBlock>
+          <div id='canvas_head_text_container'>
+            <div id='contact_canvas_container'>
+              <ContactCanvas />
+            </div>
+            <div id='contact_head_text'>
+              <RevealTextBlock
+                threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
+                duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
+                y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
+              >
+                <h1 className='gradient_text'>Federico Desmoulin</h1>
+                {/* <h2>Web developer</h2> */}
+              </RevealTextBlock>
+            </div>
           </div>
           <div id='why_socials_contacts_container'>
             <RevealTextBlock
@@ -117,9 +122,9 @@ export default function Contact() {
           </RevealTextBlock>
         </div>
       </div>
-      <div id='contact_canvas_container'>
+      {/* <div id='contact_canvas_container'>
         <ContactCanvas />
-      </div>
+      </div> */}
     </>
   )
 }
