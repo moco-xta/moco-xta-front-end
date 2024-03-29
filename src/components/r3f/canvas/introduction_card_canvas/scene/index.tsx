@@ -8,7 +8,10 @@ import { useTranslations } from 'next-intl'
 
 import { IntroductionCardSceneInterface } from '@/interfaces/introductionCardInterfaces'
 
-import { degreesToRadians, getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
+import {
+  degreesToRadians,
+  getUvMousePositionOnMesh,
+} from '@/helpers/r3fHelpers'
 
 import { default as introductionConstants } from '@/constants/introductionConstants.json'
 
@@ -55,7 +58,10 @@ export default function Scene({ content }: IntroductionCardSceneInterface) {
   }
 
   return (
-    <group ref={introductionCardRef} rotation={[degreesToRadians(30), 0, 0]}>
+    <group
+      ref={introductionCardRef}
+      rotation={[degreesToRadians(30), 0, 0]}
+    >
       <mesh
         position={[0, 2, 2]}
         receiveShadow

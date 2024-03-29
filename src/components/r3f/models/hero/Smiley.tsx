@@ -13,14 +13,14 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function Smiley({
-  position,
-  rotation,
-}: JSX.IntrinsicElements['mesh']) {
+export function Smiley({ position, rotation }: JSX.IntrinsicElements['mesh']) {
   const { nodes, materials } = useGLTF(GltfConstants.SMILEY) as GLTFResult
 
   return (
-    <mesh geometry={nodes.Smiley.geometry} material={materials['Material.001']} />
+    <mesh
+      geometry={nodes.Smiley.geometry}
+      material={materials['Material.001']}
+    />
   )
 }
 

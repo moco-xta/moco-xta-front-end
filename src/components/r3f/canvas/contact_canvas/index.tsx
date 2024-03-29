@@ -1,11 +1,14 @@
 import React, { Suspense, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
-import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+} from '@react-three/drei'
 import { Physics, RigidBody } from '@react-three/rapier'
 
 import { HeartHeliumBalloon } from '../../models/contact/HeartHeliumBalloon'
-
 
 function ContactScene() {
   const { gl } = useThree()
