@@ -1,4 +1,6 @@
 {
+  "MOCO_LOGO": "/gltf/moco_logo/MocoLogo.gltf",
+
   "M_HELIUM_BALLOON": "/gltf/hero/MHeliumBalloon.gltf",
   "O_HELIUM_BALLOON": "/gltf/hero/OHeliumBalloon.gltf",
   "C_HELIUM_BALLOON": "/gltf/hero/CHeliumBalloon.gltf",
