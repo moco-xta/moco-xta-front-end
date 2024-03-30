@@ -1,7 +1,7 @@
 @import '@/styles/variables.module.scss';
 
 #dropdown {
-  margin-right: 20px;
+  margin-right: 10px;
   color: $white_op80;
   user-select: none;
 
@@ -32,7 +32,7 @@
       padding: 8px 12px;
       border-radius: 8px 0;
       cursor: pointer;
-      
+
       .option_text {
         font-size: 12px;
       }
@@ -41,7 +41,7 @@
     .option:nth-child(1) {
       border-radius: 8px 8px 0 0;
     }
-  
+
     .option:nth-child(2) {
       border-radius: 0 0 8px 8px;
     }

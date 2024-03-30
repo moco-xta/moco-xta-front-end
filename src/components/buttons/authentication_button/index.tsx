@@ -53,9 +53,19 @@ export default function AuthenticationButton({
   return (
     <li>
       {!isAuthenticated ? (
-        <button className='authentication_button small_border_radius' onClick={handleAuthenticationIsOpen}>Login</button>
+        <button
+          className='authentication_button small_border_radius'
+          onClick={handleAuthenticationIsOpen}
+        >
+          Login
+        </button>
       ) : (
-        <button className='authentication_button small_border_radius' onClick={handleLogOut}>Log out</button>
+        <button
+          className='authentication_button small_border_radius'
+          onClick={handleLogOut}
+        >
+          Log out
+        </button>
       )}
     </li>
   )

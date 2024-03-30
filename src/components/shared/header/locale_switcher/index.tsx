@@ -1,7 +1,9 @@
 import React, { CSSProperties, useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { TiArrowSortedUp } from 'react-icons/ti'
+
+import useIsDesktop from '@/hooks/useIsDesktop'
 
 import { default as LocalesConstants } from '@/constants/localesConstants.json'
 
@@ -10,9 +12,12 @@ import { getCookieByName } from '@/helpers/cookiesHelper'
 import './index.scss'
 
 export default function LocaleSwitcher() {
-  const locale = useLocale()
   const t = useTranslations('HEADER')
+  const locale = useLocale()
   const router = useRouter()
+  const pathname = usePathname()
+
+  const { isDesktop } = useIsDesktop()
 
   const [isActive, setIsActive] = useState(false)
   const [selected, setSelected] = useState('en')
@@ -35,15 +40,24 @@ export default function LocaleSwitcher() {
   return (
     <li
       id='dropdown'
-      className={`${isActive ? 'active' : ''}`}
+      className={`li_nav ${isActive ? 'active' : ''}`}
       onClick={handleSetIsActive}
     >
-      <div id='select' className='flex_row blur_background_medium small_border_radius'>
+      <div
+        id='select'
+        className='flex_row blur_background_medium small_border_radius'
+      >
         <span id='selected'>{selected.toUpperCase()}</span>
-        <TiArrowSortedUp id='caret' size={15} />
+        <TiArrowSortedUp
+          id='caret'
+          size={15}
+        />
       </div>
       {isActive && (
-        <ul id='options' className='flex_column'>
+        <ul
+          id='options'
+          className='flex_column'
+        >
           {LocalesConstants.LOCALES.filter(
             (locale_constant) => locale_constant !== locale,
           )

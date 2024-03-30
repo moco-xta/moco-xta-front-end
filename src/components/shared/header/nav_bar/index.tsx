@@ -1,11 +1,13 @@
 'use client'
 
-import React, { forwardRef, useEffect, useState } from 'react'
+import React, { forwardRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
+
+import useIsDesktop from '@/hooks/useIsDesktop'
 
 import HamburgerMenu from '@/components/buttons/hamburger_menu'
 import LocaleSwitcher from '@/components/shared/header/locale_switcher'
@@ -16,23 +18,14 @@ import './index.scss'
 
 export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
   const t = useTranslations('ROUTES')
-
   const pathname = usePathname()
+
+  const { isDesktop } = useIsDesktop()
 
   window.scrollTo(0, 0)
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 700)
-
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 700)
-  }
-
-  useEffect(() => {
-    document.addEventListener('resize', updateMedia)
-    return () => document.removeEventListener('resize', updateMedia)
-  }, [])
 
   function handleSetMenuIsOpen() {
     setMenuIsOpen(!menuIsOpen)
@@ -59,7 +52,7 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
                 return (
                   <li
                     key={`navBarLink_${route.key}`}
-                    className='li_route'
+                    className='li_nav'
                     style={{
                       marginRight:
                         pathname === '/' && isDesktop ? '20px' : '0px',
