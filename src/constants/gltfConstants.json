@@ -4,6 +4,8 @@
   "C_HELIUM_BALLOON": "/gltf/hero/CHeliumBalloon.gltf",
   "SMILEY": "/gltf/hero/Smiley.gltf",
 
+  "STAR": "/gltf/reviews/Star.gltf",
+
   "HEART_HELIUM_BALLOON": "/gltf/contact/HeartHeliumBalloon.gltf",
 
   "DOUGHNUT_CHART_SEVENTY_FIVE_PERCENT": "/gltf/charts/DoughnutChartSeventyFivePercent.gltf",

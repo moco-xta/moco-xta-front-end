@@ -1,255 +1,218 @@
-import React, { Suspense, useRef, useState } from 'react'
+import { Suspense, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import {
-  Environment,
-  MeshTransmissionMaterial,
-  OrbitControls,
-  PerspectiveCamera,
-  shaderMaterial,
-  useFBO,
-} from '@react-three/drei'
-import { FullScreenQuad } from 'three/examples/jsm/Addons.js'
-import { useControls } from 'leva'
+import { OrbitControls, useFBO, Float, Text3D, PerspectiveCamera, useGLTF } from '@react-three/drei'
+import { GLTF } from 'three-stdlib'
+import { Leva, folder, useControls } from 'leva'
 
-import normalVertexShader from '@/components/r3f/shaders/normal_shaders/vertexShader.glsl'
-import normalFragmentShader from '@/components/r3f/shaders/normal_shaders/fragmentShader.glsl'
+import vertexShader from '@/components/r3f/shaders/refraction_and_dispersion_shaders/vertexShader.glsl'
+import fragmentShader from '@/components/r3f/shaders/refraction_and_dispersion_shaders/fragmentShader.glsl'
 
-import causticsComputeVertexShader from '@/components/r3f/shaders/caustics_compute_shaders/vertexShader.glsl'
-import causticsComputeFragmentShader from '@/components/r3f/shaders/caustics_compute_shaders/fragmentShader.glsl'
+type GLTFResult = GLTF & {
+  nodes: {
+    Introduction: THREE.Mesh
+  }
+  materials: {}
+}
 
-import causticsPlaneVertexShader from '@/components/r3f/shaders/refraction_and_chromatic_aberration_shaders/vertexShader.glsl'
-import causticsPlaneFragmentShader from '@/components/r3f/shaders/refraction_and_chromatic_aberration_shaders/fragmentShader.glsl'
-
-export const NormalMaterial = shaderMaterial(
-  {},
-  normalVertexShader,
-  normalFragmentShader,
-)
-
-export const CausticsComputeMaterial = shaderMaterial(
-  {
-    uLight: new THREE.Vector2(0, 0),
-    uTexture: null,
-    uIntensity: 1.0,
-  },
-  causticsComputeVertexShader,
-  causticsComputeFragmentShader,
-)
-
-const CausticsPlaneMaterial = shaderMaterial(
-  {
-    uLight: new THREE.Vector2(0, 0),
-    uTexture: null,
-    uAberration: 0.02,
-  },
-  causticsPlaneVertexShader,
-  causticsPlaneFragmentShader
-);
-
-function IntroductionScene() {
+const Geometries = () => {
   const mesh = useRef<THREE.Mesh>(null!)
-  const causticsPlane = useRef<THREE.Mesh>(null!)
 
-  const light = new THREE.Vector3(-10, 13, -10)
+  const mainRenderTarget = useFBO()
+  const backRenderTarget = useFBO()
 
   const {
-    intensity,
+    light,
+    shininess,
+    diffuseness,
+    fresnelPower,
+    iorR,
+    iorY,
+    iorG,
+    iorC,
+    iorB,
+    iorP,
+    saturation,
     chromaticAberration,
+    refraction,
   } = useControls({
-    intensity: {
-      value: 1.5,
-      step: 0.01,
-      min: 0,
-      max: 10.0,
+    light: {
+      x: -1.0,
+      y: 1,
+      z: 1,
     },
+    diffuseness: {
+      value: 0.2,
+    },
+    shininess: {
+      value: 15.0,
+    },
+    fresnelPower: {
+      value: 8.0,
+    },
+    ior: folder({
+      iorR: { min: 1.0, max: 2.333, step: 0.001, value: 1.15 },
+      iorY: { min: 1.0, max: 2.333, step: 0.001, value: 1.16 },
+      iorG: { min: 1.0, max: 2.333, step: 0.001, value: 1.18 },
+      iorC: { min: 1.0, max: 2.333, step: 0.001, value: 1.22 },
+      iorB: { min: 1.0, max: 2.333, step: 0.001, value: 1.22 },
+      iorP: { min: 1.0, max: 2.333, step: 0.001, value: 1.22 },
+    }),
+    saturation: { value: 1.14, min: 1, max: 1.25, step: 0.01 },
     chromaticAberration: {
-      value: 0.19,
-      step: 0.001,
+      value: 0.5,
       min: 0,
-      max: 0.4,
+      max: 1.5,
+      step: 0.01,
     },
-  });
+    refraction: {
+      value: 0.25,
+      min: 0,
+      max: 1,
+      step: 0.01,
+    },
+  })
 
-  const normalRenderTarget = useFBO(2000, 2000, {})
-  const [normalCamera] = useState(
-    () => new THREE.PerspectiveCamera(65, 1, 0.1, 1000),
+  const uniforms = useMemo(
+    () => ({
+      uTexture: {
+        value: null,
+      },
+      uIorR: { value: 1.0 },
+      uIorY: { value: 1.0 },
+      uIorG: { value: 1.0 },
+      uIorC: { value: 1.0 },
+      uIorB: { value: 1.0 },
+      uIorP: { value: 1.0 },
+      uRefractPower: {
+        value: 0.2,
+      },
+      uChromaticAberration: {
+        value: 1.0,
+      },
+      uSaturation: { value: 0.0 },
+      uShininess: { value: 40.0 },
+      uDiffuseness: { value: 0.2 },
+      uFresnelPower: { value: 8.0 },
+      uLight: {
+        value: new THREE.Vector3(-1.0, 1.0, 1.0),
+      },
+      winResolution: {
+        value: new THREE.Vector2(
+          window.innerWidth,
+          window.innerHeight,
+        ).multiplyScalar(Math.min(window.devicePixelRatio, 2)),
+      },
+    }),
+    [],
   )
-  const [normalMaterial] = useState(() => new NormalMaterial())
-  const causticsComputeRenderTarget = useFBO(2000, 2000, {});
-  const [causticsQuad] = useState(() => new FullScreenQuad());
-  const [causticsComputeMaterial] = useState(() => new CausticsComputeMaterial());
-
-  const [causticsPlaneMaterial] = useState(() => new CausticsPlaneMaterial());
-  causticsPlaneMaterial.transparent = true;
-  causticsPlaneMaterial.blending = THREE.CustomBlending;
-  causticsPlaneMaterial.blendSrc = THREE.OneFactor;
-  causticsPlaneMaterial.blendDst = THREE.SrcAlphaFactor;
-
-  const config = {
-    backsideThickness: 0.3,
-    thickness: 25,
-    samples: 6,
-    transmission: 0.9,
-    clearcoat: 1,
-    clearcoatRoughness: 0.5,
-    chromaticAberration: 1.5,
-    anisotropy: 0.2,
-    roughness: 0,
-    distortion: 0,
-    distortionScale: 0.09,
-    temporalDistortion: 0,
-    ior: 1.5,
-    color: '#ffffff',
-  }
 
   useFrame((state) => {
-    const { gl } = state;
-
-    const bounds = new THREE.Box3().setFromObject(mesh.current, true);
-
-    let boundsVertices = [];
-    boundsVertices.push(
-      new THREE.Vector3(bounds.min.x, bounds.min.y, bounds.min.z)
-    );
-    boundsVertices.push(
-      new THREE.Vector3(bounds.min.x, bounds.min.y, bounds.max.z)
-    );
-    boundsVertices.push(
-      new THREE.Vector3(bounds.min.x, bounds.max.y, bounds.min.z)
-    );
-    boundsVertices.push(
-      new THREE.Vector3(bounds.min.x, bounds.max.y, bounds.max.z)
-    );
-    boundsVertices.push(
-      new THREE.Vector3(bounds.max.x, bounds.min.y, bounds.min.z)
-    );
-    boundsVertices.push(
-      new THREE.Vector3(bounds.max.x, bounds.min.y, bounds.max.z)
-    );
-    boundsVertices.push(
-      new THREE.Vector3(bounds.max.x, bounds.max.y, bounds.min.z)
-    );
-    boundsVertices.push(
-      new THREE.Vector3(bounds.max.x, bounds.max.y, bounds.max.z)
-    );
-
-    const lightDir = new THREE.Vector3(light.x, light.y, light.z).normalize();
-
-    // Calculates the projected coordinates of the vertices onto the plane
-    // perpendicular to the light direction
-    const newVertices = boundsVertices.map((v) => {
-      const newX = v.x + lightDir.x * (-v.y / lightDir.y);
-      const newY = v.y + lightDir.y * (-v.y / lightDir.y);
-      const newZ = v.z + lightDir.z * (-v.y / lightDir.y);
-
-      return new THREE.Vector3(newX, newY, newZ);
-    });
-    
-    const centerPos = newVertices
-      .reduce((a, b) => a.add(b), new THREE.Vector3(0, 0, 0))
-      .divideScalar(newVertices.length);
-
-    causticsPlane.current.position.set(centerPos.x, centerPos.y, centerPos.z);
-
-    const scale = newVertices
-      .map((p) =>
-    // @ts-ignore
-        Math.sqrt(Math.pow(p.x - centerPos.x, 2), Math.pow(p.z - centerPos.z, 2))
-      )
-      .reduce((a, b) => Math.max(a, b), 0);
-
-      // The scale of the plane is multiplied by this correction factor to
-      // avoid the caustics pattern to be cut / overflow the bounds of the plane
-      // my normal projection or my math must be a bit off, so I'm trying to be very conservative here
-      const scaleCorrection = 1.75;
-
-      causticsPlane.current.scale.set(
-        scale * scaleCorrection,
-        scale * scaleCorrection,
-        scale * scaleCorrection
-      );
-
-    normalCamera.position.set(light.x, light.y, light.z);
-    normalCamera.lookAt(
-      bounds.getCenter(new THREE.Vector3(0, 0, 0)).x,
-      bounds.getCenter(new THREE.Vector3(0, 0, 0)).y,
-      bounds.getCenter(new THREE.Vector3(0, 0, 0)).z
-    );
-    normalCamera.up = new THREE.Vector3(0, 1, 0);
-
-    const originalMaterial = mesh.current.material;
-
-    mesh.current.material = normalMaterial;
-    mesh.current.material.side = THREE.BackSide;
-
-    gl.setRenderTarget(normalRenderTarget);
-    gl.render(mesh.current, normalCamera);
-
-    mesh.current.material = originalMaterial;
-
-    causticsQuad.material = causticsComputeMaterial;
-    // @ts-ignore
-    causticsQuad.material.uniforms.uTexture.value = normalRenderTarget.texture;
-    // @ts-ignore
-    causticsQuad.material.uniforms.uLight.value = light;
-    // @ts-ignore
-    causticsQuad.material.uniforms.uIntensity.value = intensity;
-    
-    gl.setRenderTarget(causticsComputeRenderTarget);
-    causticsQuad.render(gl);
-
-    causticsPlane.current.material = causticsPlaneMaterial;
+    const { gl, scene, camera } = state
+    mesh.current.visible = false
 
     // @ts-ignore
-    causticsPlane.current.material.uniforms.uTexture.value =
-      causticsComputeRenderTarget.texture;
-      // @ts-ignore
-    causticsPlane.current.material.uniforms.uAberration.value =
-    chromaticAberration;
+    mesh.current.material.uniforms.uDiffuseness.value = diffuseness
+    // @ts-ignore
+    mesh.current.material.uniforms.uShininess.value = shininess
+    // @ts-ignore
+    mesh.current.material.uniforms.uLight.value = new THREE.Vector3(
+      light.x,
+      light.y,
+      light.z,
+    )
+    // @ts-ignore
+    mesh.current.material.uniforms.uFresnelPower.value = fresnelPower
 
-    gl.setRenderTarget(null);
+    // @ts-ignore
+    mesh.current.material.uniforms.uIorR.value = iorR
+    // @ts-ignore
+    mesh.current.material.uniforms.uIorY.value = iorY
+    // @ts-ignore
+    mesh.current.material.uniforms.uIorG.value = iorG
+    // @ts-ignore
+    mesh.current.material.uniforms.uIorC.value = iorC
+    // @ts-ignore
+    mesh.current.material.uniforms.uIorB.value = iorB
+    // @ts-ignore
+    mesh.current.material.uniforms.uIorP.value = iorP
+
+    // @ts-ignore
+    mesh.current.material.uniforms.uSaturation.value = saturation
+    // @ts-ignore
+    mesh.current.material.uniforms.uChromaticAberration.value =
+      chromaticAberration
+    // @ts-ignore
+    mesh.current.material.uniforms.uRefractPower.value = refraction
+
+    gl.setRenderTarget(backRenderTarget)
+    gl.render(scene, camera)
+
+    // @ts-ignore
+    mesh.current.material.uniforms.uTexture.value = backRenderTarget.texture
+    // @ts-ignore
+    mesh.current.material.side = THREE.BackSide
+
+    mesh.current.visible = true
+
+    gl.setRenderTarget(mainRenderTarget)
+    gl.render(scene, camera)
+
+    // @ts-ignore
+    mesh.current.material.uniforms.uTexture.value = mainRenderTarget.texture
+    // @ts-ignore
+    mesh.current.material.side = THREE.FrontSide
+
+    gl.setRenderTarget(null)
   })
 
   return (
+    <Text3D
+      ref={mesh}
+      letterSpacing={-0.06}
+      size={0.5}
+      font='/fonts/json/Inter_Bold.json'
+      scale={[5, 5, 5]}
+      position={[-10, 0, 0]}
+      curveSegments={36}
+      /* bevelEnabled={true}
+      bevelThickness={0.5}
+      bevelSize={0.3}
+      bevelOffset={0}
+      bevelSegments={10} */
+    >
+      Introduction
+      <shaderMaterial
+        vertexShader={vertexShader}
+        fragmentShader={fragmentShader}
+        uniforms={uniforms}
+      />
+    </Text3D>
+  )
+}
+
+const Scene = () => {
+  return (
     <>
-      <mesh
-        ref={mesh}
-        scale={0.02}
-        position={[0, 6.5, 0]}
+      <Leva collapsed />
+      <Canvas
+        dpr={[1, 2]}
       >
-        <torusKnotGeometry args={[200, 40, 600, 16]} />
-        <MeshTransmissionMaterial backside {...config} />
-      </mesh>
-      <mesh ref={causticsPlane} rotation={[-Math.PI / 2, 0, 0]} position={[5, 0, 5]}>
-        <planeGeometry args={[10, 10, 10, 10]} />
-        <meshBasicMaterial />
-      </mesh>
+        <PerspectiveCamera
+          makeDefault
+          position={[0, 0.5, 5]}
+          fov={5}
+          near={0.1}
+          far={1000}
+        />
+        <ambientLight intensity={1.0} />
+        <Suspense>
+          <Geometries />
+        </Suspense>
+        <OrbitControls />
+      </Canvas>
     </>
   )
 }
 
-export default function IntroductionCanvas() {
-  return (
-    <Canvas
-      dpr={1}
-      shadows
-      legacy
-      gl={{
-        antialias: true,
-        alpha: true,
-        preserveDrawingBuffer: true,
-      }}
-    >
-      <PerspectiveCamera makeDefault position={[15, 15, 15]} fov={65} />
-      <OrbitControls />
-      <Suspense>
-        <Environment
-          files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/syferfontein_0d_clear_puresky_1k.hdr"
-          ground={{ height: 45, radius: 100, scale: 300 }}
-        />
-        <IntroductionScene />
-      </Suspense>
-    </Canvas>
-  )
-}
+export default Scene

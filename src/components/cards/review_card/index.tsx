@@ -12,6 +12,7 @@ import RatingStars from '@/components/cards/review_card/rating_stars'
 import { default as effectsConstants } from '@/constants/effectsConstants.json'
 
 import './index.scss'
+import StarCanvas from '@/components/r3f/canvas/star_canvas'
 
 export default function ReviewCard({
   review,
@@ -44,6 +45,10 @@ export default function ReviewCard({
       <div className='name_role_container'>
         <p className='name'>{name}</p>
         {role && <p className='role'>{t(`ROLES.${role}`)}</p>}
+      </div>
+
+      <div id='star_canvas_container'>
+        <StarCanvas />
       </div>
     </div>
   )

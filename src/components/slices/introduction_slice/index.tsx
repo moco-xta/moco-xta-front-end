@@ -15,9 +15,9 @@ import './index.scss'
 export default function IntroductionSlice() {
   return (
     <section id='introduction_slice'>
-      <div id='introduction_canvas_container'>
+      {/* <div id='introduction_canvas_container'>
         <IntroductionCanvas />
-      </div>
+      </div> */}
       <div id='introduction_content'>
         <div id='introduction_container'>
           <IntroductionText />
