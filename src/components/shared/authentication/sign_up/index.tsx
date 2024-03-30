@@ -63,7 +63,7 @@ export default function SignUp({
             password: values.password,
             role: 'User',
           }
-          toast.promise(signUp(payload), {
+          toast.promise(signUp(payload).unwrap(), {
             loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
             success: () => {
               dispatch(setIsAuthenticated(true))
@@ -73,7 +73,10 @@ export default function SignUp({
               handleCloseAuthentication()
               return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
             },
-            error: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.ERROR'),
+            error: (response) => {
+              setSubmitButtonIsDisabled(false)
+              return response.data.message
+            },
           })
         }}
       >

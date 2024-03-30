@@ -53,7 +53,7 @@ export default function SignIn({
         validationSchema={signInValidationSchema}
         onSubmit={(values, { resetForm }) => {
           setSubmitButtonIsDisabled(true)
-          toast.promise(signIn(values), {
+          toast.promise(signIn(values).unwrap(), {
             loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
             success: () => {
               dispatch(setIsAuthenticated(true))
@@ -63,7 +63,10 @@ export default function SignIn({
               handleCloseAuthentication()
               return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
             },
-            error: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.ERROR'),
+            error: (response) => {
+              setSubmitButtonIsDisabled(false)
+              return response.data.message
+            },
           })
         }}
       >

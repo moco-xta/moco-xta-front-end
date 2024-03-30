@@ -26,8 +26,7 @@ const authenticationApi = apiSlice.injectEndpoints({
         return response
       },
       transformErrorResponse: (response) => {
-        // @ts-ignore
-        toast(response.data.message)
+        return response
       },
       invalidatesTags: ['Authentication'],
     }),
@@ -41,6 +40,9 @@ const authenticationApi = apiSlice.injectEndpoints({
         storeTokens(response)
         return response
       },
+      transformErrorResponse: (response) => {
+        return response
+      },
       invalidatesTags: ['Authentication'],
     }),
     logOut: build.mutation<void, LogOutPayloadInterface>({
@@ -49,6 +51,9 @@ const authenticationApi = apiSlice.injectEndpoints({
         method: 'POST',
         body: signInPayload,
       }),
+      transformErrorResponse: (response) => {
+        return response
+      },
       invalidatesTags: ['Authentication'],
     }),
   }),

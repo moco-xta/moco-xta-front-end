@@ -32,7 +32,7 @@ export default function AuthenticationButton({ setAuthenticationIsOpen }: Authen
       toast.promise(
         logOut({
           access_token: getAccessToken()!,
-        }),
+        }).unwrap(),
         {
           loading: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.LOADING'),
           success: () => {

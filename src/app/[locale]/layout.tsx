@@ -36,7 +36,22 @@ export default function RootLayout({
               locale={locale}
               messages={translations}
             >
-              <Toaster />
+              <Toaster 
+                toastOptions={{
+                  unstyled: true,
+                  duration: 50000,
+                  classNames: {
+                    loading: 'toaster toaster_loading',
+                    success: 'toaster toaster_success',
+                    error: 'toaster toaster_error',
+                  },
+                }}
+                /* icons={{
+                  loading: <LoadingIcon />,
+                  success: <SuccessIcon />,
+                  error: <ErrorIcon />,
+                }} */
+              />
               <Header />
               {children}
             </NextIntlClientProvider>

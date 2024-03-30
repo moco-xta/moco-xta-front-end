@@ -45,7 +45,7 @@ export default function AddReviewSlice() {
           validationSchema={addNewReviewValidationSchema}
           onSubmit={(values, { resetForm }) => {
             setSubmitButtonIsDisabled(true)
-            toast.promise(addReview(values), {
+            toast.promise(addReview(values).unwrap(), {
               loading: t('TOASTERS.ADD_REVIEW.LOADING'),
               success: () => {
                 resetForm({ values: initialValues })

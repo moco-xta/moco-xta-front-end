@@ -121,3 +121,29 @@ a {
 .scrollbar::-webkit-scrollbar-track-piece:start {
   margin-top: 10px;
 }
+
+// TOASTERS
+
+.toaster {
+  width: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.toaster_loading {
+  background-color: rgba(246, 183, 82, 0.3);
+}
+
+.toaster_success {
+  background-color: rgba(59, 133, 74, 0.3);
+}
+
+.toaster_error {
+  background-color: rgba(199, 65, 57, 0.3);
+}
