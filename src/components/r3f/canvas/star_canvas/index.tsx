@@ -1,7 +1,11 @@
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
-import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+} from '@react-three/drei'
 
 import { Star } from '../../models/reviews/Star'
 
@@ -10,9 +14,7 @@ function StarScene() {
   gl.toneMapping = THREE.ACESFilmicToneMapping
   gl.toneMappingExposure = 6
 
-  return (
-    <Star />
-  )
+  return <Star />
 }
 
 export default function StarCanvas() {

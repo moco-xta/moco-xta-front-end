@@ -12,7 +12,9 @@ import { useLogOutMutation } from '@/redux/api/authenticationApi'
 
 import { getAccessToken, removeTokens } from '@/helpers/localStorageHelpers'
 
-export default function AuthenticationButton({ setAuthenticationIsOpen }: AuthenticationButtonInterface) {
+export default function AuthenticationButton({
+  setAuthenticationIsOpen,
+}: AuthenticationButtonInterface) {
   const t = useTranslations('ROUTES')
 
   const dispatch = useDispatch<AppDispatch>()

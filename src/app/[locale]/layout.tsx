@@ -36,7 +36,7 @@ export default function RootLayout({
               locale={locale}
               messages={translations}
             >
-              <Toaster 
+              <Toaster
                 toastOptions={{
                   unstyled: true,
                   duration: 50000,

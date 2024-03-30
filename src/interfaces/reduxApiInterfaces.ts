@@ -41,4 +41,3 @@ export interface ReviewPayloadInterface {
   rating: number
   date: Date
 }
-

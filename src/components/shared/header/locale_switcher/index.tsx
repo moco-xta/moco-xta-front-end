@@ -1,7 +1,7 @@
 import React, { CSSProperties, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import { IoIosArrowUp } from 'react-icons/io'
+import { TiArrowSortedUp } from 'react-icons/ti'
 
 import { default as LocalesConstants } from '@/constants/localesConstants.json'
 
@@ -33,16 +33,17 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <li>
-      <div className='select_locale_dropdowwn'>
-        <div
-          className={`select_locale_dropdowwn_button ${isActive ? 'locale_dropdown_active' : ''}`}
-          onClick={handleSetIsActive}
-        >
-          <div id='select_locale_dropdowwn_text'>{selected.toUpperCase()}</div>
-          <IoIosArrowUp className='select_locale_dropdown_arrow_icon' />
-        </div>
-        <ul className='locale_options_list'>
+    <li
+      id='dropdown'
+      className={`${isActive ? 'active' : ''}`}
+      onClick={handleSetIsActive}
+    >
+      <div id='select' className='flex_row blur_background_medium small_border_radius'>
+        <span id='selected'>{selected.toUpperCase()}</span>
+        <TiArrowSortedUp id='caret' size={15} />
+      </div>
+      {isActive && (
+        <ul id='options' className='flex_column'>
           {LocalesConstants.LOCALES.filter(
             (locale_constant) => locale_constant !== locale,
           )
@@ -58,18 +59,18 @@ export default function LocaleSwitcher() {
               return (
                 <li
                   key={`localeSwitcherOption_${locale_constant}`}
-                  className='locale_option'
+                  className='option blur_background_medium'
                   style={cssVar}
                   onClick={() => handleSetSelected(locale_constant)}
                 >
-                  <span className='locale_option_text'>
+                  <span className='option_text'>
                     {t(`LOCALES.${locale_constant.toUpperCase()}`)}
                   </span>
                 </li>
               )
             })}
         </ul>
-      </div>
+      )}
     </li>
   )
 }

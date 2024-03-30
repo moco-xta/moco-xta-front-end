@@ -11,10 +11,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function Star({
-  position,
-  rotation,
-}: JSX.IntrinsicElements['mesh']) {
+export function Star({ position, rotation }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(GltfConstants.STAR) as GLTFResult
 
   return (

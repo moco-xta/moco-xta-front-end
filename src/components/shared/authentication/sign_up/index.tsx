@@ -4,12 +4,8 @@ import { Formik } from 'formik'
 import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
 
-import {
-  SignUpSignInInterface
-} from '@/interfaces/componentsInterfaces'
-import {
-  SignUpValuesInterface
-} from '@/interfaces/reduxApiInterfaces'
+import { SignUpSignInInterface } from '@/interfaces/componentsInterfaces'
+import { SignUpValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
 import { AppDispatch } from '@/redux/store'
 import { useSignUpMutation } from '@/redux/api/authenticationApi'

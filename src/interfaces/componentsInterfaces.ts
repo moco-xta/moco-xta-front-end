@@ -1,6 +1,10 @@
 import { ReactNode, RefObject } from 'react'
 
-import { CompanyOrSchollDataInterface, IntroductionCardDataInterface, ProjectDataInterface } from '@/interfaces/dataInterfaces'
+import {
+  CompanyOrSchollDataInterface,
+  IntroductionCardDataInterface,
+  ProjectDataInterface,
+} from '@/interfaces/dataInterfaces'
 
 export interface AuthenticationComponentsInterface {
   setAuthenticationIsOpen: (value: boolean) => void
@@ -56,5 +60,3 @@ export interface RatingStarsInterface {
 export interface ScrollHandlerInterface {
   navWrapperRef: RefObject<HTMLDivElement>
 }
-
-

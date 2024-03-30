@@ -9,10 +9,10 @@ import { Routes } from '@/routes/routes'
 
 import HamburgerMenu from '@/components/buttons/hamburger_menu'
 import LocaleSwitcher from '@/components/shared/header/locale_switcher'
-import Authentication from '../../authentication'
+import Authentication from '@/components/shared/authentication'
+import AuthenticationButton from '@/components/buttons/authentication_button'
 
 import './index.scss'
-import AuthenticationButton from '@/components/buttons/authentication_button'
 
 export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
   const t = useTranslations('ROUTES')
@@ -82,7 +82,9 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
                 )
               })}
             <LocaleSwitcher />
-            <AuthenticationButton setAuthenticationIsOpen={setAuthenticationIsOpen} />
+            <AuthenticationButton
+              setAuthenticationIsOpen={setAuthenticationIsOpen}
+            />
           </ul>
         </nav>
       </div>

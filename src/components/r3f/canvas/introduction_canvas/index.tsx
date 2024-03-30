@@ -1,7 +1,14 @@
 import { Suspense, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, useFBO, Float, Text3D, PerspectiveCamera, useGLTF } from '@react-three/drei'
+import {
+  OrbitControls,
+  useFBO,
+  Float,
+  Text3D,
+  PerspectiveCamera,
+  useGLTF,
+} from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import { Leva, folder, useControls } from 'leva'
 
@@ -195,9 +202,7 @@ const Scene = () => {
   return (
     <>
       <Leva collapsed />
-      <Canvas
-        dpr={[1, 2]}
-      >
+      <Canvas dpr={[1, 2]}>
         <PerspectiveCamera
           makeDefault
           position={[0, 0.5, 5]}
