@@ -4,7 +4,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
-import { IntroductionCardCanvasInterface } from '@/interfaces/introductionCardInterfaces'
+import { IntroductionCardCanvasInterface } from '@/interfaces/r3fInterfaces'
 
 import Lights from './lights'
 import BloomEffect from './bloom_effect'

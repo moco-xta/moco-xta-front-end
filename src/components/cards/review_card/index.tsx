@@ -3,7 +3,7 @@
 import React, { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
-import { ReviewCardInterface } from '@/interfaces/reviewCardInterface'
+import { ReviewCardInterface } from '@/interfaces/componentsInterfaces'
 
 import useCardHoverEffect from '@/hooks/useCardHoverEffect'
 

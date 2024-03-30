@@ -4,10 +4,8 @@ import { Formik } from 'formik'
 import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
 
-import {
-  SignUpSignInInterface,
-  SignUpValuesInterface,
-} from '@/interfaces/authenticationInterfaces'
+import { SignUpSignInInterface } from '@/interfaces/componentsInterfaces'
+import { SignUpValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
 import { AppDispatch } from '@/redux/store'
 import { useSignUpMutation } from '@/redux/api/authenticationApi'
@@ -61,7 +59,7 @@ export default function SignUp({
             password: values.password,
             role: 'User',
           }
-          toast.promise(signUp(payload), {
+          toast.promise(signUp(payload).unwrap(), {
             loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
             success: () => {
               dispatch(setIsAuthenticated(true))
@@ -71,7 +69,10 @@ export default function SignUp({
               handleCloseAuthentication()
               return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
             },
-            error: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.ERROR'),
+            error: (response) => {
+              setSubmitButtonIsDisabled(false)
+              return response.data.message
+            },
           })
         }}
       >

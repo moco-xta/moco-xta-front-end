@@ -1,3 +1,0 @@
-interface HamburgerMenuInterface {
-  handleSetMenuIsOpen: () => void
-}

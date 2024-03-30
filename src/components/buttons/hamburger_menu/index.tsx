@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { HamburgerMenuInterface } from '@/interfaces/buttonsInterfaces'
+
 import './index.scss'
 
 export default function HamburgerMenu({

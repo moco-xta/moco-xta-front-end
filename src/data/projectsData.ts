@@ -1,4 +1,4 @@
-import { ProjectDataInterface } from '@/interfaces/projectsDataInterface'
+import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
 import { FaReact } from 'react-icons/fa'
 import { FaAngular } from 'react-icons/fa'

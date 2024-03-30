@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FaArrowRight } from 'react-icons/fa6'
 import { useTranslations } from 'next-intl'
 
-import { InternalLinkInterface } from '@/interfaces/internalLinkInterface'
+import { InternalLinkInterface } from '@/interfaces/buttonsInterfaces'
 
 import { Routes } from '@/routes/routes'
 

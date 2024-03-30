@@ -1,11 +1,11 @@
 import React from 'react'
 import { IoStarSharp } from 'react-icons/io5'
 
-import { RatingStarsinterface } from '@/interfaces/ratingStarsInterface'
+import { RatingStarsInterface } from '@/interfaces/componentsInterfaces'
 
 import './index.scss'
 
-export default function RatingStars({ rating }: RatingStarsinterface) {
+export default function RatingStars({ rating }: RatingStarsInterface) {
   return (
     <div className='rating_stars_wrapper'>
       {[...Array(5)].map((_, index) => (

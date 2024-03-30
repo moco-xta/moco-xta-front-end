@@ -3,7 +3,7 @@ import { useFormikContext } from 'formik'
 import { useTranslations } from 'next-intl'
 
 import { FormsInterface } from '@/interfaces/formsInterfaces'
-import { AddReviewValuesInterface } from '@/interfaces/addReviewValuesInterface'
+import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
 import {
   FormikRadioGroup,

@@ -1,105 +1,53 @@
 @import '@/styles/variables.module.scss';
 
-.select_locale_dropdowwn {
-  width: 80px;
-  margin: 0 20px 0 10px;
+#dropdown {
+  margin-right: 10px;
+  color: $white_op80;
   user-select: none;
 
-  .select_locale_dropdowwn_button {
+  #select {
     z-index: 1;
     position: relative;
-    display: flex;
+    width: 74px;
+    padding: 10px 15px;
     justify-content: space-between;
     align-items: center;
-    height: 32px;
-    background-color: $grey_ededed;
-    color: $grey_333;
-    font-size: 14px;
-    padding: 20px;
-    border-radius: 8px;
+    gap: 8px;
     cursor: pointer;
-    box-shadow: 0 0 5px $black_op30;
 
-    #select_locale_dropdowwn_text {
-      font-weight: 500;
-    }
-
-    .select_locale_dropdown_arrow_icon {
+    #caret {
       transition: transform 0.5s;
     }
   }
 
-  .select_locale_dropdowwn_button:hover {
-    background-color: $grey_ccc;
-  }
-
-  .select_locale_dropdowwn_button.locale_dropdown_active
-    .select_locale_dropdown_arrow_icon {
-    transform: rotate(-180deg);
-  }
-
-  .locale_options_list {
+  #options {
     z-index: 0;
     position: absolute;
-    width: 80px;
-    margin-top: 10px;
+    width: 90px;
+    margin-top: 8px;
+    -ms-transform: translateX(-8px);
+    transform: translateX(-8px);
 
-    .locale_option {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      height: 32px;
-      background-color: $grey_ededed;
-      padding: 10px 18px;
+    .option {
+      padding: 8px 12px;
+      border-radius: 8px 0;
       cursor: pointer;
-      transform-origin: top;
-      opacity: 0;
-      transform: scale(0) translateY(-65px);
-      margin-bottom: -35px;
-      transition:
-        opacity 0.3s linear,
-        transform 0.3s ease-in-out,
-        margin-bottom 0.2s ease-in-out;
-      transition-delay: calc(0.1s * (3 - var(--i)));
-      justify-content: center;
 
-      .locale_option_text {
+      .option_text {
         font-size: 12px;
-        color: $grey_333;
       }
     }
 
-    .locale_option:nth-child(1) {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+    .option:nth-child(1) {
+      border-radius: 8px 8px 0 0;
     }
 
-    .locale_option:nth-child(2) {
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
+    .option:nth-child(2) {
+      border-radius: 0 0 8px 8px;
     }
-
-    .locale_option:hover {
-      background-color: $grey_ccc;
-    }
-  }
-
-  .select_locale_dropdowwn_button.locale_dropdown_active
-    ~ .locale_options_list
-    .locale_option {
-    transition:
-      opacity 0.3s linear,
-      transform 0.3s ease-in-out,
-      margin-bottom 0.2s ease-in-out;
-    transition-delay: calc(0.1s * var(--i));
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    margin-bottom: 0;
   }
 }
 
-@media screen and (max-width: 700px) {
-  .select_locale_dropdowwn {
-    margin: 30px 0 0 0;
-  }
+#dropdown.active #caret {
+  transform: rotate(-180deg);
 }

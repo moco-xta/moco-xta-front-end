@@ -1,7 +1,9 @@
 import React, { CSSProperties, useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import { IoIosArrowUp } from 'react-icons/io'
+import { TiArrowSortedUp } from 'react-icons/ti'
+
+import useIsDesktop from '@/hooks/useIsDesktop'
 
 import { default as LocalesConstants } from '@/constants/localesConstants.json'
 
@@ -10,9 +12,12 @@ import { getCookieByName } from '@/helpers/cookiesHelper'
 import './index.scss'
 
 export default function LocaleSwitcher() {
-  const locale = useLocale()
   const t = useTranslations('HEADER')
+  const locale = useLocale()
   const router = useRouter()
+  const pathname = usePathname()
+
+  const { isDesktop } = useIsDesktop()
 
   const [isActive, setIsActive] = useState(false)
   const [selected, setSelected] = useState('en')
@@ -33,42 +38,54 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <div className='select_locale_dropdowwn'>
+    <li
+      id='dropdown'
+      className={`li_nav ${isActive ? 'active' : ''}`}
+      onClick={handleSetIsActive}
+    >
       <div
-        className={`select_locale_dropdowwn_button ${isActive ? 'locale_dropdown_active' : ''}`}
-        onClick={handleSetIsActive}
+        id='select'
+        className='flex_row blur_background_medium small_border_radius'
       >
-        <div id='select_locale_dropdowwn_text'>{selected.toUpperCase()}</div>
-        <IoIosArrowUp className='select_locale_dropdown_arrow_icon' />
+        <span id='selected'>{selected.toUpperCase()}</span>
+        <TiArrowSortedUp
+          id='caret'
+          size={15}
+        />
       </div>
-      <ul className='locale_options_list'>
-        {LocalesConstants.LOCALES.filter(
-          (locale_constant) => locale_constant !== locale,
-        )
-          .sort((a, b) =>
-            t(`LOCALES.${a.toUpperCase()}`).localeCompare(
-              t(`LOCALES.${b.toUpperCase()}`),
-            ),
+      {isActive && (
+        <ul
+          id='options'
+          className='flex_column'
+        >
+          {LocalesConstants.LOCALES.filter(
+            (locale_constant) => locale_constant !== locale,
           )
-          .map((locale_constant, index) => {
-            const cssVar = {
-              '--i': LocalesConstants.LOCALES.length - index,
-            } as CSSProperties
-            return (
-              <li
-                key={`localeSwitcherOption_${locale_constant}`}
-                className='locale_option'
-                style={cssVar}
-                onClick={() => handleSetSelected(locale_constant)}
-              >
-                <span className='locale_option_text'>
-                  {t(`LOCALES.${locale_constant.toUpperCase()}`)}
-                </span>
-              </li>
+            .sort((a, b) =>
+              t(`LOCALES.${a.toUpperCase()}`).localeCompare(
+                t(`LOCALES.${b.toUpperCase()}`),
+              ),
             )
-          })}
-      </ul>
-    </div>
+            .map((locale_constant, index) => {
+              const cssVar = {
+                '--i': LocalesConstants.LOCALES.length - index,
+              } as CSSProperties
+              return (
+                <li
+                  key={`localeSwitcherOption_${locale_constant}`}
+                  className='option blur_background_medium'
+                  style={cssVar}
+                  onClick={() => handleSetSelected(locale_constant)}
+                >
+                  <span className='option_text'>
+                    {t(`LOCALES.${locale_constant.toUpperCase()}`)}
+                  </span>
+                </li>
+              )
+            })}
+        </ul>
+      )}
+    </li>
   )
 }
 
