@@ -1,4 +1,4 @@
-import { IntroductionCardDataInterface } from '@/interfaces/introductionCardDataInterface'
+import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
 
 export interface IntroductionCardCanvasInterface {
   content: IntroductionCardDataInterface

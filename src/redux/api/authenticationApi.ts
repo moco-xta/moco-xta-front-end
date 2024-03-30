@@ -7,7 +7,7 @@ import {
   SignUpPayloadInterface,
   TokensInterface,
   LogOutPayloadInterface,
-} from '@/interfaces/authenticationInterfaces'
+} from '@/interfaces/reduxApiInterfaces'
 
 import { default as apiConstants } from '@/constants/apiConstants.json'
 

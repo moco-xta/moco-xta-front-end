@@ -1,12 +1,3 @@
-export interface AuthenticationComponentsInterface {
-  setAuthenticationIsOpen: (value: boolean) => void
-}
-
-export interface SignUpSignInInterface {
-  setIsSignIn: (value: boolean) => void
-  setAuthenticationIsOpen: (value: boolean) => void
-}
-
 export interface SignUpPayloadInterface {
   firstName: string
   lastName: string
@@ -23,6 +14,15 @@ export interface SignInPayloadInterface {
   password: string
 }
 
+export interface AddReviewValuesInterface {
+  name: string
+  email: string
+  role: 'project_manager' | 'developer' | 'designer' | 'other' | ''
+  review: string
+  rating: number
+  date: Date
+}
+
 export interface TokensInterface {
   access_token: string
   refresh_token: string
@@ -31,3 +31,14 @@ export interface TokensInterface {
 export interface LogOutPayloadInterface {
   access_token: string
 }
+
+export interface ReviewPayloadInterface {
+  id?: number
+  name: string
+  email: string
+  role: string
+  review: string
+  rating: number
+  date: Date
+}
+

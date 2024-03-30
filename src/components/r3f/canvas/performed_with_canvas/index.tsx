@@ -5,7 +5,7 @@ import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { PerspectiveCamera, SoftShadows } from '@react-three/drei'
 
-import { IconsDataInterface } from '@/interfaces/iconsDataInterface'
+import { IconsDataInterface } from '@/interfaces/dataInterfaces'
 
 export type LogoRefType = THREE.Mesh & {
   width: number

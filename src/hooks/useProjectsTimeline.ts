@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 
 import useScroll from '@/hooks/useScroll'
 
-import { ProjectDataInterface } from '@/interfaces/projectsDataInterface'
-import { CompanyOrSchollDataInterface } from '@/interfaces/companyOrSchollDataInterface'
+import { CompanyOrSchollDataInterface, ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
 import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 

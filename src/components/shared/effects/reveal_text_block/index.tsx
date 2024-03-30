@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 
-import { RevealComponentInterface } from '@/interfaces/revealComponentInterface'
+import { RevealComponentInterface } from '@/interfaces/effectsInterfaces'
 
 import './index.scss'
 

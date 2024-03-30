@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { AuthenticationComponentsInterface } from '@/interfaces/authenticationInterfaces'
+import { AuthenticationComponentsInterface } from '@/interfaces/componentsInterfaces'
 
 import SignIn from './sign_in'
 import SignUp from './sign_up'

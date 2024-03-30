@@ -2,7 +2,7 @@ import { RefObject, useEffect } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { ConstantsEffectInterface } from '@/interfaces/constantsEffectInterface'
+import { CardHoverEffectInterface } from '@/interfaces/effectsInterfaces'
 
 import { getUvMousePositionOnDiv } from '@/helpers/cssHelpers'
 
@@ -10,7 +10,7 @@ import { default as effectsConstants } from '@/constants/effectsConstants.json'
 
 export default function useCardHoverEffect(
   ref: RefObject<HTMLDivElement>,
-  constantsEffect: ConstantsEffectInterface,
+  constantsEffect: CardHoverEffectInterface,
 ) {
   gsap.registerPlugin(useGSAP)
 

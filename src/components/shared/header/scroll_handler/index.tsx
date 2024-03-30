@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation'
 
 import useScroll from '@/hooks/useScroll'
 
-import { ScrollHandlerInterface } from '@/interfaces/scrollHandlerInterface'
+import { ScrollHandlerInterface } from '@/interfaces/componentsInterfaces'
 
 function ScrollHandler({ navWrapperRef }: ScrollHandlerInterface) {
   const pathname = usePathname()

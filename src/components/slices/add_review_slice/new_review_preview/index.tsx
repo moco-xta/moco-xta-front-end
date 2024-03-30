@@ -1,7 +1,7 @@
 import React from 'react'
 import { useFormikContext } from 'formik'
 
-import { AddReviewValuesInterface } from '@/interfaces/addReviewValuesInterface'
+import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
 import ReviewCard from '@/components/cards/review_card'
 

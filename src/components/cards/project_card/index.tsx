@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect, useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 
-import { ProjectsCardInterface } from '@/interfaces/projectsDataInterface'
+import { ProjectsCardInterface } from '@/interfaces/dataInterfaces'
 
 import './index.scss'
 

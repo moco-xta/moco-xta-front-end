@@ -6,7 +6,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { IntroductionCardSceneInterface } from '@/interfaces/introductionCardInterfaces'
+import { IntroductionCardSceneInterface } from '@/interfaces/r3fInterfaces'
 
 import {
   degreesToRadians,

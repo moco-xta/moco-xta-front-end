@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { IntroductionCardsInterface } from '@/interfaces/introductionCardsInterface'
+import { IntroductionCardsInterface } from '@/interfaces/componentsInterfaces'
 
 import IntroductionCardCanvas from '@/components/r3f/canvas/introduction_card_canvas'
 

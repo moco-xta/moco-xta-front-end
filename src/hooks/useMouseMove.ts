@@ -26,7 +26,7 @@ export default function useMouseMove() {
       setMouseY(e.clientY)
       setDeltaY(e.movementY)
     },
-    [mouseX],
+    [mouseX, mouseY],
   )
 
   useEffect(() => {

@@ -3,7 +3,7 @@ import { useFormikContext } from 'formik'
 import { useTranslations } from 'next-intl'
 
 import { AuthenticationFormsInterface } from '@/interfaces/formsInterfaces'
-import { SignUpValuesInterface } from '@/interfaces/authenticationInterfaces'
+import { SignUpValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
 import { FormikTextField } from '@/components/form/inputs'
 import { ResetButton, SubmitButton } from '@/components/form/buttons'

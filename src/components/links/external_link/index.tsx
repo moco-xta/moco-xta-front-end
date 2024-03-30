@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 
-import { ExternalLinkinterface } from '@/interfaces/externalLinkinterface'
+import { ExternalLinkinterface } from '@/interfaces/buttonsInterfaces'
 
 import './index.scss'
 

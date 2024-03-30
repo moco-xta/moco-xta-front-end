@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ProjectsContainerInterface } from '@/interfaces/projectsContainerInterface'
+import { ProjectsContainerInterface } from '@/interfaces/componentsInterfaces'
 
 import { ProjectCard } from '@/components/cards/project_card'
 

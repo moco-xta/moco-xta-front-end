@@ -5,9 +5,11 @@ import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
 
 import {
-  SignUpSignInInterface,
-  SignUpValuesInterface,
-} from '@/interfaces/authenticationInterfaces'
+  SignUpSignInInterface
+} from '@/interfaces/componentsInterfaces'
+import {
+  SignUpValuesInterface
+} from '@/interfaces/reduxApiInterfaces'
 
 import { AppDispatch } from '@/redux/store'
 import { useSignUpMutation } from '@/redux/api/authenticationApi'

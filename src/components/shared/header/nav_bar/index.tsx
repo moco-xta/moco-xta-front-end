@@ -2,27 +2,17 @@
 
 import React, { forwardRef, useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux'
 import { usePathname } from 'next/navigation'
-import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
-
-import { RootState } from '@/redux/store'
-
-import { AppDispatch } from '@/redux/store'
-import { useLogOutMutation } from '@/redux/api/authenticationApi'
-import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 
 import HamburgerMenu from '@/components/buttons/hamburger_menu'
 import LocaleSwitcher from '@/components/shared/header/locale_switcher'
 import Authentication from '../../authentication'
 
-import { getAccessToken, removeTokens } from '@/helpers/localStorageHelpers'
-
 import './index.scss'
+import AuthenticationButton from '@/components/buttons/authentication_button'
 
 export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
   const t = useTranslations('ROUTES')
@@ -30,14 +20,6 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
   const pathname = usePathname()
 
   window.scrollTo(0, 0)
-
-  const dispatch = useDispatch<AppDispatch>()
-
-  const isAuthenticated = useSelector(
-    (state: RootState) => state.authentication.isAuthenticated,
-  )
-
-  const [logOut] = useLogOutMutation()
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
@@ -54,29 +36,6 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
 
   function handleSetMenuIsOpen() {
     setMenuIsOpen(!menuIsOpen)
-  }
-
-  function handleAuthenticationIsOpen() {
-    setAuthenticationIsOpen(true)
-  }
-
-  function handleLogOut() {
-    if (getAccessToken()) {
-      toast.promise(
-        logOut({
-          access_token: getAccessToken()!,
-        }),
-        {
-          loading: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.LOADING'),
-          success: () => {
-            dispatch(setIsAuthenticated(false))
-            return t('TOASTERS.AUTHENTIFICATION.LOG_OUT.SUCCESS')
-          },
-          error: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.ERROR'),
-        },
-      )
-    }
-    removeTokens()
   }
 
   return (
@@ -122,16 +81,8 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
                   </li>
                 )
               })}
-            <li>
-              <LocaleSwitcher />
-            </li>
-            <li>
-              {!isAuthenticated ? (
-                <button onClick={handleAuthenticationIsOpen}>Login</button>
-              ) : (
-                <button onClick={handleLogOut}>Log out</button>
-              )}
-            </li>
+            <LocaleSwitcher />
+            <AuthenticationButton setAuthenticationIsOpen={setAuthenticationIsOpen} />
           </ul>
         </nav>
       </div>

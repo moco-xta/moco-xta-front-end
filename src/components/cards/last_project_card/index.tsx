@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react'
 
-import { LastProjectsCardInterface } from '@/interfaces/projectsDataInterface'
+import { LastProjectsCardInterface } from '@/interfaces/componentsInterfaces'
 
 import useCardHoverEffect from '@/hooks/useCardHoverEffect'
 
