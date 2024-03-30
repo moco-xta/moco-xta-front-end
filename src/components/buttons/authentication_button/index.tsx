@@ -12,6 +12,8 @@ import { useLogOutMutation } from '@/redux/api/authenticationApi'
 
 import { getAccessToken, removeTokens } from '@/helpers/localStorageHelpers'
 
+import './index.scss'
+
 export default function AuthenticationButton({
   setAuthenticationIsOpen,
 }: AuthenticationButtonInterface) {
@@ -51,9 +53,9 @@ export default function AuthenticationButton({
   return (
     <li>
       {!isAuthenticated ? (
-        <button onClick={handleAuthenticationIsOpen}>Login</button>
+        <button className='authentication_button small_border_radius' onClick={handleAuthenticationIsOpen}>Login</button>
       ) : (
-        <button onClick={handleLogOut}>Log out</button>
+        <button className='authentication_button small_border_radius' onClick={handleLogOut}>Log out</button>
       )}
     </li>
   )

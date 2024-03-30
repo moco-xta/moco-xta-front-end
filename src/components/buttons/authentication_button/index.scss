@@ -1,0 +1,8 @@
+@import '@/styles/variables.module.scss';
+
+.authentication_button {
+  all: unset;
+  padding: 8px 13px;
+  color: $white_op80;
+  border: 2px solid rgba(50, 50, 50, 0.5);
+}
