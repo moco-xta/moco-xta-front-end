@@ -4,6 +4,11 @@
   all: unset;
   margin-left: 10px;
   padding: 8px 13px;
-  color: $white_op80;
-  border: 2px solid rgba(50, 50, 50, 0.5);
+  color: $grey_07;
+  border: 2px solid $grey_05_80_rgba;
+  cursor: pointer;
+}
+
+.authentication_button:hover {
+  color: $white;
 }

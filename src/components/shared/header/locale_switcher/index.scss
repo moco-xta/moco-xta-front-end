@@ -2,14 +2,14 @@
 
 #dropdown {
   margin-right: 10px;
-  color: $white_op80;
+  color: $grey_07;
   user-select: none;
 
   #select {
     z-index: 1;
     position: relative;
     width: 74px;
-    padding: 10px 15px;
+    padding: 10px 13px 10px 15px;
     justify-content: space-between;
     align-items: center;
     gap: 8px;
@@ -18,6 +18,10 @@
     #caret {
       transition: transform 0.5s;
     }
+  }
+
+  #select:hover {
+    color: $white;
   }
 
   #options {
@@ -36,6 +40,10 @@
       .option_text {
         font-size: 12px;
       }
+    }
+
+    .option:hover {
+      color: $white;
     }
 
     .option:nth-child(1) {
