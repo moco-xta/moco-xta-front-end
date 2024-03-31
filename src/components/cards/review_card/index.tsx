@@ -14,22 +14,24 @@ import { default as effectsConstants } from '@/constants/effectsConstants.json'
 import './index.scss'
 import StarCanvas from '@/components/r3f/canvas/star_canvas'
 
-export default function ReviewCard({
-  review,
-  name,
-  role,
-  rating,
-}: ReviewCardInterface) {
+export default function ReviewCard({ data }: ReviewCardInterface) {
   const t = useTranslations('ADD_REVIEW')
 
   const cardRef = useRef<HTMLDivElement>(null)
 
-  useCardHoverEffect(
+  /* useCardHoverEffect(
     cardRef,
     effectsConstants.CARD_HOVER_EFFECT.LAST_REVIEWS_CARDS,
-  )
+  ) */
 
   return (
+    <div className='star_canvas_container'>
+      <StarCanvas data={data} />
+    </div>
+  )
+}
+
+/* return (
     <div
       ref={cardRef}
       id='review_card'
@@ -53,3 +55,4 @@ export default function ReviewCard({
     </div>
   )
 }
+ */

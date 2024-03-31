@@ -34,10 +34,7 @@ export default function LastReviewsCards() {
             return (
               <ReviewCard
                 key={`reviewCard_${index}`}
-                review={review.review}
-                name={review.name}
-                role={review.role}
-                rating={review.rating}
+                data={review}
               />
             )
           })}
