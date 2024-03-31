@@ -13,10 +13,7 @@ export default function NewReviewPreview() {
   return (
     <div id='new_review_preview'>
       <ReviewCard
-        review={values.review}
-        name={values.name}
-        role={values.role}
-        rating={values.rating}
+        data={values}
       />
     </div>
   )

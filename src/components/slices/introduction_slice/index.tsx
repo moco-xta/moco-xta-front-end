@@ -5,9 +5,8 @@ import React from 'react'
 import { introductionCardsData } from '@/data/introductionCardsData'
 import { mainSkillsCardsData } from '@/data/mainSkillsCardsData'
 
-import IntroductionCanvas from '@/components/r3f/canvas/introduction_canvas'
 import IntroductionText from './introduction_text'
-import IntroductionCards from './introduction_cards'
+import IntroductionCards from '../../cards/introduction_card'
 import MainSkillsText from './main_skills_text'
 
 import './index.scss'
@@ -15,9 +14,6 @@ import './index.scss'
 export default function IntroductionSlice() {
   return (
     <section id='introduction_slice'>
-      {/* <div id='introduction_canvas_container'>
-        <IntroductionCanvas />
-      </div> */}
       <div id='introduction_content'>
         <div id='introduction_container'>
           <IntroductionText />
