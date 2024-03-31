@@ -1,91 +1,81 @@
 {
-	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.1.62",
-		"version":"2.0"
-	},
-	"scene":0,
-	"scenes":[
-		{
-			"name":"Scene",
-			"nodes":[
-				0
-			]
-		}
-	],
-	"nodes":[
-		{
-			"mesh":0,
-			"name":"OHeliumBalloon"
-		}
-	],
-	"meshes":[
-		{
-			"name":"OHeliumBalloon",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":0,
-						"NORMAL":1
-					},
-					"indices":2
-				}
-			]
-		}
-	],
-	"accessors":[
-		{
-			"bufferView":0,
-			"componentType":5126,
-			"count":45426,
-			"max":[
-				0.4707501530647278,
-				0.5246825218200684,
-				0.2024383544921875
-			],
-			"min":[
-				-0.46927863359451294,
-				-0.5308152437210083,
-				-0.2094433307647705
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5126,
-			"count":45426,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":2,
-			"componentType":5123,
-			"count":272556,
-			"type":"SCALAR"
-		}
-	],
-	"bufferViews":[
-		{
-			"buffer":0,
-			"byteLength":545112,
-			"byteOffset":0,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":545112,
-			"byteOffset":545112,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":545112,
-			"byteOffset":1090224,
-			"target":34963
-		}
-	],
-	"buffers":[
-		{
-			"byteLength":1635336,
-			"uri":"OHeliumBalloon.bin"
-		}
-	]
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "OHeliumBalloon"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "OHeliumBalloon",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 45426,
+      "max": [0.4707501530647278, 0.5246825218200684, 0.2024383544921875],
+      "min": [-0.46927863359451294, -0.5308152437210083, -0.2094433307647705],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 45426,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 272556,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 545112,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 545112,
+      "byteOffset": 545112,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 545112,
+      "byteOffset": 1090224,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1635336,
+      "uri": "OHeliumBalloon.bin"
+    }
+  ]
 }
