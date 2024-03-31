@@ -14,9 +14,7 @@ import { default as effectsConstants } from '@/constants/effectsConstants.json'
 import './index.scss'
 import StarCanvas from '@/components/r3f/canvas/star_canvas'
 
-export default function ReviewCard({
-  data
-}: ReviewCardInterface) {
+export default function ReviewCard({ data }: ReviewCardInterface) {
   const t = useTranslations('ADD_REVIEW')
 
   const cardRef = useRef<HTMLDivElement>(null)
@@ -33,7 +31,7 @@ export default function ReviewCard({
   )
 }
 
-  /* return (
+/* return (
     <div
       ref={cardRef}
       id='review_card'

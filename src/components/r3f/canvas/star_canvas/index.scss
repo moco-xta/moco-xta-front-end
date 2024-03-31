@@ -1,4 +1,5 @@
 #review_card {
+  pointer-events: none;
   width: 300px;
   height: 400px;
   padding: 20px;
@@ -12,12 +13,15 @@
     z-index: 0;
     font-size: 40px;
     pointer-events: none;
+    background-color: green;
   }
 
   .review {
     text-align: justify;
     pointer-events: none;
     word-wrap: break-word;
+    pointer-events: none;
+    background-color: aqua;
   }
 
   .quote_down {
@@ -26,6 +30,7 @@
     justify-content: flex-end;
     font-size: 40px;
     pointer-events: none;
+    background-color: blue;
   }
 
   .rating_stars_container {
@@ -33,6 +38,7 @@
     display: flex;
     align-items: center;
     pointer-events: none;
+    background-color: purple;
   }
 
   .name_role_container {
@@ -43,6 +49,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     pointer-events: none;
+    background-color: yellow;
 
     .name {
     }

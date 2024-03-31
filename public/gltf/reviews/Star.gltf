@@ -1,107 +1,104 @@
 {
-  "asset": {
-    "generator": "Khronos glTF Blender I/O v4.1.62",
-    "version": "2.0"
-  },
-  "scene": 0,
-  "scenes": [
-    {
-      "name": "Scene",
-      "nodes": [0]
-    }
-  ],
-  "nodes": [
-    {
-      "mesh": 0,
-      "name": "Star"
-    }
-  ],
-  "materials": [
-    {
-      "doubleSided": true,
-      "name": "Material.001",
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
-        "roughnessFactor": 0.10000000149011612
-      }
-    }
-  ],
-  "meshes": [
-    {
-      "name": "Star",
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 0,
-            "NORMAL": 1,
-            "TEXCOORD_0": 2
-          },
-          "indices": 3,
-          "material": 0
-        }
-      ]
-    }
-  ],
-  "accessors": [
-    {
-      "bufferView": 0,
-      "componentType": 5126,
-      "count": 15360,
-      "max": [0.9247621297836304, 0.971973180770874, 0.20000004768371582],
-      "min": [-0.9247621297836304, -0.7878928184509277, -0.20000003278255463],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 1,
-      "componentType": 5126,
-      "count": 15360,
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 15360,
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5123,
-      "count": 23028,
-      "type": "SCALAR"
-    }
-  ],
-  "bufferViews": [
-    {
-      "buffer": 0,
-      "byteLength": 184320,
-      "byteOffset": 0,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 184320,
-      "byteOffset": 184320,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 122880,
-      "byteOffset": 368640,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 46056,
-      "byteOffset": 491520,
-      "target": 34963
-    }
-  ],
-  "buffers": [
-    {
-      "byteLength": 537576,
-      "uri": "Star.bin"
-    }
-  ]
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v4.1.62",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"mesh":0,
+			"name":"Star"
+		}
+	],
+	"meshes":[
+		{
+			"name":"Star",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":0,
+						"NORMAL":1,
+						"TEXCOORD_0":2
+					},
+					"indices":3
+				}
+			]
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"componentType":5126,
+			"count":15370,
+			"max":[
+				0.9195032715797424,
+				0.9663678407669067,
+				0.20000003278255463
+			],
+			"min":[
+				-0.9195032715797424,
+				-0.7836679220199585,
+				-0.20000003278255463
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":1,
+			"componentType":5126,
+			"count":15370,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":2,
+			"componentType":5126,
+			"count":15370,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":3,
+			"componentType":5123,
+			"count":23088,
+			"type":"SCALAR"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":184440,
+			"byteOffset":0,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":184440,
+			"byteOffset":184440,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":122960,
+			"byteOffset":368880,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":46176,
+			"byteOffset":491840,
+			"target":34963
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":538016,
+			"uri":"Star.bin"
+		}
+	]
 }

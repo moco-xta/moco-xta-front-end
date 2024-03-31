@@ -7,12 +7,12 @@ export default function LastProjectsBackground() {
   const backgroundRef = useRef<HTMLImageElement>(null!)
 
   function setFrame(y: number) {
-    if(y < 1) y = 1
-    const frame = Math.round(((y + 1) / 50) + 1)
+    if (y < 1) y = 1
+    const frame = Math.round((y + 1) / 50 + 1)
     const frameToString = frame.toString()
     const frameLength = frameToString.length
     var finalFrame = ''
-    for(var i = 0; i < 4 - frameLength; i++) {
+    for (var i = 0; i < 4 - frameLength; i++) {
       finalFrame += '0'
     }
     finalFrame += frameToString
@@ -20,8 +20,11 @@ export default function LastProjectsBackground() {
   }
 
   useEffect(() => {
-    console.log('backgroundRef', backgroundRef.current.getBoundingClientRect().top)
-    backgroundRef.current.src = `/img/png/projects_animation/inflated_project_frame_${setFrame(y -backgroundRef.current.getBoundingClientRect().top - 600)}.png`
+    console.log(
+      'backgroundRef',
+      backgroundRef.current.getBoundingClientRect().top,
+    )
+    backgroundRef.current.src = `/img/png/projects_animation/inflated_project_frame_${setFrame(y - backgroundRef.current.getBoundingClientRect().top - 600)}.png`
   }, [backgroundRef, y])
 
   return (

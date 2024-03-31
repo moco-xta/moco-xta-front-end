@@ -12,9 +12,7 @@ export default function NewReviewPreview() {
 
   return (
     <div id='new_review_preview'>
-      <ReviewCard
-        data={values}
-      />
+      <ReviewCard data={values} />
     </div>
   )
 }

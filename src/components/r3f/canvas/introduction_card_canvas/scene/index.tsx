@@ -8,19 +8,19 @@ import { IntroductionCardSceneInterface } from '@/interfaces/r3fInterfaces'
 
 import useModelHoverEffect from '@/hooks/useModelHoverEffect'
 
-import {
-  degreesToRadians,
-} from '@/helpers/r3fHelpers'
+import { degreesToRadians } from '@/helpers/r3fHelpers'
 
 import { default as introductionConstants } from '@/constants/introductionConstants.json'
 
 export default function Scene({ content }: IntroductionCardSceneInterface) {
-
   const t = useTranslations('HOME')
 
   const introductionCardRef = useRef<THREE.Group>(null!)
 
-  const { handleOnPointerMove, handleOnPointerLeave } = useModelHoverEffect(introductionCardRef, introductionConstants.HANDLE_ON_PONTER_MOVE)
+  const { handleOnPointerMove, handleOnPointerLeave } = useModelHoverEffect(
+    introductionCardRef,
+    introductionConstants.HANDLE_ON_PONTER_MOVE,
+  )
 
   return (
     <group
