@@ -57,9 +57,7 @@ function StarScene({ data }: StarSceneInterface) {
         receiveShadow
         castShadow
       >
-        <Text scale={[0.1, 0.1, 0.1]}>
-          hello world!
-        </Text>
+        <Text scale={[0.1, 0.1, 0.1]}>hello world!</Text>
 
         {data.review && <Text scale={[0.1, 0.1, 0.1]}>&quot;</Text>}
         <Text scale={[0.1, 0.1, 0.1]}>{data.review}</Text>
@@ -72,7 +70,9 @@ function StarScene({ data }: StarSceneInterface) {
           )}
         </Html> */}
         <Text scale={[0.1, 0.1, 0.1]}>{data.name}</Text>
-        {data.role && <Text scale={[0.1, 0.1, 0.1]}>{t(`ROLES.${data.role}`)}</Text>}
+        {data.role && (
+          <Text scale={[0.1, 0.1, 0.1]}>{t(`ROLES.${data.role}`)}</Text>
+        )}
         <meshStandardMaterial
           attach='material'
           color={'white'}
