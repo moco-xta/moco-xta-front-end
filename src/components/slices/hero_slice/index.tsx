@@ -15,7 +15,6 @@ export default function HeroSlice() {
       <div id='hero_canvas_container'>
         <HeroCanvas />
       </div>
-
       <ScrollDown />
     </section>
   )

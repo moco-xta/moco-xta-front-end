@@ -1,4 +1,16 @@
 $black: #000;
+$grey_01: #070508;
+$grey_02: #141114;
+$grey_03: #2c2a2d;
+$grey_04: #444245;
+$grey_05: #737174;
+$grey_05_80: #73717480;
+$grey_05_80_rgba: rgba(115, 113, 116, 0.5);
+$grey_06: #898787;
+$grey_07: #9a989b;
+$grey_08: #acaaad;
+$grey_09: #c0bfc3;
+$grey_10: #d9d7da;
 $white: #fff;
 $alert_color: #ec2a5f;
 
@@ -72,6 +84,16 @@ $background_dark: #01000f;
 
 :export {
   black: $black;
+  grey_01: $grey_01;
+  grey_02: $grey_02;
+  grey_03: $grey_03;
+  grey_04: $grey_04;
+  grey_05: $grey_05;
+  grey_06: $grey_06;
+  grey_07: $grey_07;
+  grey_08: $grey_08;
+  grey_09: $grey_09;
+  grey_10: $grey_10;
   white: $white;
   alert_color: $alert_color;
 

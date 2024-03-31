@@ -186,7 +186,7 @@ export default function HeroCanvas() {
     >
       <PerspectiveCamera
         makeDefault
-        position={[-0.1, 0, 2.6]}
+        position={[-0.08, 0, 2.6]}
         fov={30}
         near={0.1}
         far={55}

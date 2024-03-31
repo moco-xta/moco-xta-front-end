@@ -118,7 +118,7 @@ a {
 }
 
 .blur_background_medium:hover {
-  background-color: rgba(80, 80, 80, 0.5);
+  background-color: $grey_05_80_rgba;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }

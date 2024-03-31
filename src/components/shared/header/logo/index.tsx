@@ -4,11 +4,6 @@ import Link from 'next/link'
 import { Routes } from '@/routes/routes'
 
 import './index.scss'
-import { Canvas } from '@react-three/fiber'
-import { MocoLogo } from '@/components/r3f/models/moco_logo/MocoLogo'
-import { OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
-
-import './index.scss'
 
 export default function Logo() {
   return (
