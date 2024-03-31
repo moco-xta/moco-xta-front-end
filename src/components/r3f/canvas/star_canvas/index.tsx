@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
 import {
@@ -11,22 +11,34 @@ import { useTranslations } from 'next-intl'
 
 import { StarCanvasInterface, StarSceneInterface } from '@/interfaces/r3fInterfaces'
 
+import useModelHoverEffect from '@/hooks/useModelHoverEffect'
+
 import { Star } from '../../models/reviews/Star'
 import RatingStars from '@/components/cards/review_card/rating_stars'
 
+import { default as introductionConstants } from '@/constants/introductionConstants.json'
+
+import './index.scss'
+
 function StarScene({ data }: StarSceneInterface) {
-
-  console.log(data)
-
   const t = useTranslations('ADD_REVIEW')
+
+  const reviewCardRef = useRef<THREE.Group>(null!)
+
+  const { handleOnPointerMove, handleOnPointerLeave } = useModelHoverEffect(reviewCardRef, introductionConstants.HANDLE_ON_PONTER_MOVE)
 
   const { gl } = useThree()
   gl.toneMapping = THREE.ACESFilmicToneMapping
   gl.toneMappingExposure = 6
 
   return (
-    <>
-      <Star />
+    <group
+      ref={reviewCardRef}
+    >
+      <Star
+        handleOnPointerMove={handleOnPointerMove}
+        handleOnPointerLeave={handleOnPointerLeave}
+      />
       <Html>
         <div
           id='review_card'
@@ -45,7 +57,7 @@ function StarScene({ data }: StarSceneInterface) {
           </div>
         </div>
       </Html>
-    </>
+    </group>
   )
 }
 
