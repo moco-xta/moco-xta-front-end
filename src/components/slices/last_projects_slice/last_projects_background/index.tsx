@@ -20,10 +20,6 @@ export default function LastProjectsBackground() {
   }
 
   useEffect(() => {
-    console.log(
-      'backgroundRef',
-      backgroundRef.current.getBoundingClientRect().top,
-    )
     backgroundRef.current.src = `/img/png/projects_animation/inflated_project_frame_${setFrame(y - backgroundRef.current.getBoundingClientRect().top - 600)}.png`
   }, [backgroundRef, y])
 

@@ -15,7 +15,6 @@ export default function useModelHoverEffect(
   useGSAP(() => {}, { scope: ref })
 
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
-    console.log(event)
     const { x, y } = getUvMousePositionOnMesh(event, 'introduction_card')
     gsap.to(ref.current!.rotation, {
       duration: 0.2,
