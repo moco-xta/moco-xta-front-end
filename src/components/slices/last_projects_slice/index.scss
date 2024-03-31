@@ -5,12 +5,18 @@
   width: 100vw;
   padding: 100px;
   background-color: $background_color;
-  /* background-image: url("/img/png/inflated_projects.png"); */
-  background-image: url('/img/png/inflated_projects_transparent.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  #last_projects_background_container {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
 
   #last_projects_content {
+    z-index: 1;
     position: relative;
   }
 }

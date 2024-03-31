@@ -1,104 +1,94 @@
 {
-	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.1.62",
-		"version":"2.0"
-	},
-	"scene":0,
-	"scenes":[
-		{
-			"name":"Scene",
-			"nodes":[
-				0
-			]
-		}
-	],
-	"nodes":[
-		{
-			"mesh":0,
-			"name":"MocoLogo"
-		}
-	],
-	"meshes":[
-		{
-			"name":"MocoLogo",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":0,
-						"NORMAL":1,
-						"TEXCOORD_0":2
-					},
-					"indices":3
-				}
-			]
-		}
-	],
-	"accessors":[
-		{
-			"bufferView":0,
-			"componentType":5126,
-			"count":1716111,
-			"max":[
-				1.3987752199172974,
-				1.3985556364059448,
-				0.3880937397480011
-			],
-			"min":[
-				-1.3978205919265747,
-				-0.39875638484954834,
-				-1.1105782985687256
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5126,
-			"count":1716111,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":2,
-			"componentType":5126,
-			"count":1716111,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":3,
-			"componentType":5125,
-			"count":2822400,
-			"type":"SCALAR"
-		}
-	],
-	"bufferViews":[
-		{
-			"buffer":0,
-			"byteLength":20593332,
-			"byteOffset":0,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":20593332,
-			"byteOffset":20593332,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":13728888,
-			"byteOffset":41186664,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":11289600,
-			"byteOffset":54915552,
-			"target":34963
-		}
-	],
-	"buffers":[
-		{
-			"byteLength":66205152,
-			"uri":"MocoLogo.bin"
-		}
-	]
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "MocoLogo"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "MocoLogo",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1716111,
+      "max": [1.3987752199172974, 1.3985556364059448, 0.3880937397480011],
+      "min": [-1.3978205919265747, -0.39875638484954834, -1.1105782985687256],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1716111,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1716111,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 2822400,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 20593332,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20593332,
+      "byteOffset": 20593332,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13728888,
+      "byteOffset": 41186664,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11289600,
+      "byteOffset": 54915552,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 66205152,
+      "uri": "MocoLogo.bin"
+    }
+  ]
 }
