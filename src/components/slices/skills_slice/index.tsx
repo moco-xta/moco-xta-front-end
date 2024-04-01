@@ -1,31 +1,15 @@
-import React from 'react'
-import { useTranslations } from 'next-intl'
+'use client'
 
-import GraphicsSkills from './graphics_skills'
-import ThreeDSkills from './three_d_skills'
-import FrontEndSkills from './front_end_skills'
-import MobileSkills from './mobile_skills'
-import BackEndSkills from './back_end_skills'
-import DatabaseSkills from './database_skills'
-import ToolsSkills from './tools_skills'
+import React from 'react'
+
+import SkillsCanvas from '@/components/r3f/canvas/skills_canvas'
 
 import './index.scss'
 
 export default function SkillsSlice() {
-  const t = useTranslations('SKILLS')
-
   return (
-    <section id='skills_slice'>
-      <div id='skills_content'>
-        <h2>{t('SKILLS')}</h2>
-        <GraphicsSkills />
-        <ThreeDSkills />
-        <FrontEndSkills />
-        <MobileSkills />
-        <BackEndSkills />
-        <DatabaseSkills />
-        <ToolsSkills />
-      </div>
-    </section>
+    <div id='skills_slice'>
+      <SkillsCanvas />
+    </div>
   )
 }

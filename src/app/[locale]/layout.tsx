@@ -32,7 +32,9 @@ export default function RootLayout({
       <html lang={locale}>
         <body className={inter.className}>
           {/* <IsClientContextProvider> */}
-          <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+          <GoogleAnalytics
+            gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          />
           <ReduxProvider>
             <NextIntlClientProvider
               locale={locale}
