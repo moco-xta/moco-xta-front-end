@@ -1,14 +1,14 @@
 import React, { Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
+import { ScrollControls, useScroll } from '@react-three/drei'
 import studio from '@theatre/studio'
 import extension from '@theatre/r3f/dist/extension'
-import { ScrollControls, useScroll } from '@react-three/drei'
 import { getProject, val } from '@theatre/core'
 import { PerspectiveCamera, SheetProvider, useCurrentSheet } from '@theatre/r3f'
-import { Box } from '@react-three/drei'
-import { default as SkillsConstants } from '@/constants/skillsConstants.json'
 
 import { SkillsPattern } from '@/components/r3f/models/skills/SkillsPattern'
+
+import { default as SkillsConstants } from '@/constants/skillsConstants.json'
 
 studio.extend(extension)
 studio.initialize()
@@ -24,14 +24,6 @@ function SkillsScene() {
 
   return (
     <>
-      <PerspectiveCamera
-        theatreKey='Camera'
-        makeDefault
-        position={[0, 0, -20]}
-        fov={90}
-        near={0.1}
-        far={70}
-      />
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <SkillsPattern />
@@ -55,18 +47,25 @@ export default function SkillsCanvas() {
           SkillsConstants.SCENE.CANVAS.PRESERVE_DRAWING_BUFFER,
       }}
     >
-      <Suspense fallback={null}>
         <ScrollControls
           pages={5}
           damping={1}
           maxSpeed={1}
         >
-          <SheetProvider sheet={sheet}>
-            <SkillsScene />
+        <SheetProvider sheet={sheet}>
+          <PerspectiveCamera
+            theatreKey='Camera'
+            makeDefault
+            position={[0, 0, -20]}
+            fov={90}
+            near={0.1}
+            far={70}
+          />
+            <Suspense fallback={null}>
+              <SkillsScene />
+            </Suspense>
           </SheetProvider>
         </ScrollControls>
-        <Box />
-      </Suspense>
     </Canvas>
   )
 }
