@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { Toaster } from 'sonner'
@@ -31,6 +32,7 @@ export default function RootLayout({
       <html lang={locale}>
         <body className={inter.className}>
           {/* <IsClientContextProvider> */}
+          <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
           <ReduxProvider>
             <NextIntlClientProvider
               locale={locale}
