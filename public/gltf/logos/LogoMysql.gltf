@@ -1,150 +1,174 @@
 {
-  "asset": {
-    "generator": "Khronos glTF Blender I/O v4.1.62",
-    "version": "2.0"
-  },
-  "scene": 0,
-  "scenes": [
-    {
-      "name": "Scene",
-      "nodes": [0]
-    }
-  ],
-  "nodes": [
-    {
-      "mesh": 0,
-      "name": "LogoMysql"
-    }
-  ],
-  "materials": [
-    {
-      "doubleSided": true,
-      "name": "logo_mysql_#147993",
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.00699502881616354, 0.191201850771904, 0.2917707860469818, 1
-        ],
-        "metallicFactor": 0
-      }
-    },
-    {
-      "doubleSided": true,
-      "name": "logo_mysql_#f3941f",
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.8962646722793579, 0.29613858461380005, 0.013702169060707092, 1
-        ],
-        "metallicFactor": 0
-      }
-    }
-  ],
-  "meshes": [
-    {
-      "name": "LogoMysql",
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 0,
-            "NORMAL": 1
-          },
-          "indices": 2,
-          "material": 0
-        },
-        {
-          "attributes": {
-            "POSITION": 3,
-            "NORMAL": 4
-          },
-          "indices": 5,
-          "material": 1
-        }
-      ]
-    }
-  ],
-  "accessors": [
-    {
-      "bufferView": 0,
-      "componentType": 5126,
-      "count": 2562,
-      "max": [1.4233351945877075, 0.9268554449081421, 0.20000001788139343],
-      "min": [-1.5220035314559937, -1.0731403827667236, -0.20000000298023224],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 1,
-      "componentType": 5126,
-      "count": 2562,
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5123,
-      "count": 5010,
-      "type": "SCALAR"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5126,
-      "count": 1640,
-      "max": [1.191748023033142, -0.2060113549232483, 0.20000000298023224],
-      "min": [-0.2496107965707779, -0.9877336621284485, -0.19999998807907104],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 4,
-      "componentType": 5126,
-      "count": 1640,
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 5,
-      "componentType": 5123,
-      "count": 3258,
-      "type": "SCALAR"
-    }
-  ],
-  "bufferViews": [
-    {
-      "buffer": 0,
-      "byteLength": 30744,
-      "byteOffset": 0,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 30744,
-      "byteOffset": 30744,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 10020,
-      "byteOffset": 61488,
-      "target": 34963
-    },
-    {
-      "buffer": 0,
-      "byteLength": 19680,
-      "byteOffset": 71508,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 19680,
-      "byteOffset": 91188,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 6516,
-      "byteOffset": 110868,
-      "target": 34963
-    }
-  ],
-  "buffers": [
-    {
-      "byteLength": 117384,
-      "uri": "LogoMysql.bin"
-    }
-  ]
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v4.1.62",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"mesh":0,
+			"name":"LogoMysql"
+		}
+	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"name":"logo_mysql_#147993",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.00699502881616354,
+					0.191201850771904,
+					0.2917707860469818,
+					1
+				],
+				"metallicFactor":0
+			}
+		},
+		{
+			"doubleSided":true,
+			"name":"logo_mysql_#f3941f",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.8962646722793579,
+					0.29613858461380005,
+					0.013702169060707092,
+					1
+				],
+				"metallicFactor":0
+			}
+		}
+	],
+	"meshes":[
+		{
+			"name":"LogoMysql",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":0,
+						"NORMAL":1
+					},
+					"indices":2,
+					"material":0
+				},
+				{
+					"attributes":{
+						"POSITION":3,
+						"NORMAL":4
+					},
+					"indices":5,
+					"material":1
+				}
+			]
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"componentType":5126,
+			"count":2628,
+			"max":[
+				1.4233351945877075,
+				0.9268554449081421,
+				0.20000001788139343
+			],
+			"min":[
+				-1.5220035314559937,
+				-1.0731403827667236,
+				-0.20000000298023224
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":1,
+			"componentType":5126,
+			"count":2628,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":2,
+			"componentType":5123,
+			"count":5196,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":3,
+			"componentType":5126,
+			"count":1640,
+			"max":[
+				1.191748023033142,
+				-0.2060113549232483,
+				0.20000000298023224
+			],
+			"min":[
+				-0.2496107965707779,
+				-0.9877336621284485,
+				-0.19999998807907104
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":4,
+			"componentType":5126,
+			"count":1640,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":5,
+			"componentType":5123,
+			"count":3258,
+			"type":"SCALAR"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":31536,
+			"byteOffset":0,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":31536,
+			"byteOffset":31536,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":10392,
+			"byteOffset":63072,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":19680,
+			"byteOffset":73464,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":19680,
+			"byteOffset":93144,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":6516,
+			"byteOffset":112824,
+			"target":34963
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":119340,
+			"uri":"LogoMysql.bin"
+		}
+	]
 }
