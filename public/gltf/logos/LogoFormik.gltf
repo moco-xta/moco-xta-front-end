@@ -1,0 +1,92 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoFormik"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_formik_#0051cd",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0, 0.08228257298469543, 0.6104958653450012, 1],
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoFormik",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 648,
+      "max": [0.7143280506134033, 1.0000038146972656, 0.20000006258487701],
+      "min": [-0.7142382860183716, -0.9999977350234985, -0.20000006258487701],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 648,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 1128,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 7776,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 7776,
+      "byteOffset": 7776,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2256,
+      "byteOffset": 15552,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 17808,
+      "uri": "LogoFormik.bin"
+    }
+  ]
+}

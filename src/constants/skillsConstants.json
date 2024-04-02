@@ -1,4 +1,13 @@
 {
+  "CATEGORIES": {
+    "GRAPHICS": "graphics",
+    "THREE_D": "three_d",
+    "FRONT_END": "front_end",
+    "BACK_END": "back_end",
+    "DEV_OPS": "dev_ops",
+    "LANGUAGE": "language",
+    "TOOL": "tool"
+  },
   "SCENE": {
     "CANVAS": {
       "DPR": 1,

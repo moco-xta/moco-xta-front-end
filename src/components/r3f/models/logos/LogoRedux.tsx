@@ -1,41 +1,38 @@
-import { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { LogoRefType } from 'types/logoRefType'
-
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-type GltfResultType = GLTF & {
+type GLTFResult = GLTF & {
   nodes: {
     LogoRedux: THREE.Mesh
   }
-  materials: {}
+  materials: {
+    ['icon_redux_#764abc']: THREE.MeshStandardMaterial
+  }
 }
 
-export const LogoRedux = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
-  function LogoRedux({ scale }, ref) {
-    const gltf = useGLTF(GltfConstants.LOGO_REDUX) as GltfResultType
-
-    useLayoutEffect(() => {
-      const box = new THREE.Box3().setFromObject(gltf.scene)
-      // @ts-ignore
-      ref.current.width = box.getSize(new THREE.Vector3()).x
-    }, [gltf.scene, ref])
-
-    return (
+export const LogoRedux = forwardRef<
+  THREE.Group<THREE.Object3DEventMap>,
+  JSX.IntrinsicElements['group']
+>(function LogoRedux({}, ref) {
+  const { nodes, materials } = useGLTF(GltfConstants.LOGO_REDUX) as GLTFResult
+  return (
+    <group
+      ref={ref}
+      dispose={null}
+      position={[3, 12, 0]}
+    >
       <mesh
-        ref={ref}
-        geometry={gltf.nodes.LogoRedux.geometry}
-        scale={scale}
+        geometry={nodes.LogoRedux.geometry}
+        material={materials['icon_redux_#764abc']}
         receiveShadow
         castShadow
-      >
-        <meshLambertMaterial color={'white'} />
-      </mesh>
-    )
-  },
-)
+      />
+    </group>
+  )
+})
 
 useGLTF.preload(GltfConstants.LOGO_REDUX)

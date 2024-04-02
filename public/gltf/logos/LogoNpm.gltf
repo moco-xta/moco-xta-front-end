@@ -1,6 +1,6 @@
 {
   "asset": {
-    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "generator": "Khronos glTF Blender I/O v4.1.62",
     "version": "2.0"
   },
   "scene": 0,
@@ -16,6 +16,25 @@
       "name": "LogoNpm"
     }
   ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_npm_#cc3533",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6039296388626099, 0.03559969738125801, 0.033102404326200485, 1
+        ],
+        "metallicFactor": 0
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "logo_npm_#ffffff",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0
+      }
+    }
+  ],
   "meshes": [
     {
       "name": "LogoNpm",
@@ -25,7 +44,16 @@
             "POSITION": 0,
             "NORMAL": 1
           },
-          "indices": 2
+          "indices": 2,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 3,
+            "NORMAL": 4
+          },
+          "indices": 5,
+          "material": 1
         }
       ]
     }
@@ -34,47 +62,85 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 276,
-      "max": [2.5674710273742676, 0.993486762046814, 0.19999998807907104],
-      "min": [-2.5674710273742676, -0.9854068160057068, -0.20000000298023224],
+      "count": 48,
+      "max": [2.5948657989501953, 1.0000001192092896, 0.10106699168682098],
+      "min": [-2.5948657989501953, -1.0000109672546387, -0.20213399827480316],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 276,
+      "count": 48,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5123,
-      "count": 576,
+      "count": 84,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 180,
+      "max": [2.3151395320892334, 0.7218612432479858, 0.2021341472864151],
+      "min": [-2.315122127532959, -0.7234824299812317, 0.10106683522462845],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 180,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "count": 312,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 3312,
+      "byteLength": 576,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 3312,
-      "byteOffset": 3312,
+      "byteLength": 576,
+      "byteOffset": 576,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 1152,
-      "byteOffset": 6624,
+      "byteLength": 168,
+      "byteOffset": 1152,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2160,
+      "byteOffset": 1320,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2160,
+      "byteOffset": 3480,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 624,
+      "byteOffset": 5640,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 7776,
+      "byteLength": 6264,
       "uri": "LogoNpm.bin"
     }
   ]

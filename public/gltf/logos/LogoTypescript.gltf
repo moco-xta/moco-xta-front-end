@@ -1,8 +1,9 @@
 {
   "asset": {
-    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "generator": "Khronos glTF Blender I/O v4.1.62",
     "version": "2.0"
   },
+  "extensionsUsed": ["KHR_materials_specular", "KHR_materials_ior"],
   "scene": 0,
   "scenes": [
     {
@@ -19,18 +20,34 @@
   "materials": [
     {
       "doubleSided": true,
-      "name": "logo_typescript_#ffffff",
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        },
+        "KHR_materials_ior": {
+          "ior": 1.4500000476837158
+        }
+      },
+      "name": "icon_typescript_#2f78c7",
       "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.02842537872493267, 0.18782083690166473, 0.5711251497268677, 1
+        ],
         "metallicFactor": 0
       }
     },
     {
       "doubleSided": true,
-      "name": "logo_typescript_#3178c6",
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        },
+        "KHR_materials_ior": {
+          "ior": 1.4500000476837158
+        }
+      },
+      "name": "icon_typescript_#ffffff",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.030713438987731934, 0.18782085180282593, 0.5647117495536804, 1
-        ],
         "metallicFactor": 0
       }
     }
@@ -64,109 +81,109 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 479,
-      "max": [0.8361598253250122, 0.07211780548095703, 0.20000003278255463],
-      "min": [-0.5411521196365356, -0.8368905782699585, 0.09999967366456985],
+      "count": 264,
+      "max": [1, 1, 0.09999996423721313],
+      "min": [-1, -1, -0.19999998807907104],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 479,
+      "count": 264,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 479,
+      "count": 264,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 849,
+      "count": 516,
       "type": "SCALAR"
     },
     {
       "bufferView": 4,
       "componentType": 5126,
-      "count": 144,
-      "max": [0.9999996423721313, 0.9999995231628418, 0.09999985992908478],
-      "min": [-1, -1, -0.19999995827674866],
+      "count": 1678,
+      "max": [0.8182314038276672, 0.06771165132522583, 0.20000004768371582],
+      "min": [-0.4797653257846832, -0.814878523349762, 0.10000000149011612],
       "type": "VEC3"
     },
     {
       "bufferView": 5,
       "componentType": 5126,
-      "count": 144,
+      "count": 1678,
       "type": "VEC3"
     },
     {
       "bufferView": 6,
       "componentType": 5126,
-      "count": 144,
+      "count": 1678,
       "type": "VEC2"
     },
     {
       "bufferView": 7,
       "componentType": 5123,
-      "count": 276,
+      "count": 3264,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 5748,
+      "byteLength": 3168,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 5748,
-      "byteOffset": 5748,
+      "byteLength": 3168,
+      "byteOffset": 3168,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 3832,
-      "byteOffset": 11496,
+      "byteLength": 2112,
+      "byteOffset": 6336,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 1698,
-      "byteOffset": 15328,
+      "byteLength": 1032,
+      "byteOffset": 8448,
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 1728,
-      "byteOffset": 17028,
+      "byteLength": 20136,
+      "byteOffset": 9480,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 1728,
-      "byteOffset": 18756,
+      "byteLength": 20136,
+      "byteOffset": 29616,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 1152,
-      "byteOffset": 20484,
+      "byteLength": 13424,
+      "byteOffset": 49752,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 552,
-      "byteOffset": 21636,
+      "byteLength": 6528,
+      "byteOffset": 63176,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 22188,
+      "byteLength": 69704,
       "uri": "LogoTypescript.bin"
     }
   ]

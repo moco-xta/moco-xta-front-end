@@ -1,0 +1,94 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoGsap"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_gsap_#87cf01",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.24232159554958344, 0.6239334940910339, 0.0003036604612134397, 1
+        ],
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoGsap",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 5134,
+      "max": [2.676135778427124, 0.9976608753204346, 0.20000062882900238],
+      "min": [-2.7883126735687256, -1.002343773841858, -0.20000027120113373],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 5134,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 10254,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 61608,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 61608,
+      "byteOffset": 61608,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20508,
+      "byteOffset": 123216,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 143724,
+      "uri": "LogoGsap.bin"
+    }
+  ]
+}

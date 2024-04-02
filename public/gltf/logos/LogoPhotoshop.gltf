@@ -1,8 +1,9 @@
 {
   "asset": {
-    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "generator": "Khronos glTF Blender I/O v4.1.62",
     "version": "2.0"
   },
+  "extensionsUsed": ["KHR_materials_specular", "KHR_materials_ior"],
   "scene": 0,
   "scenes": [
     {
@@ -16,6 +17,42 @@
       "name": "LogoPhotoshop"
     }
   ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        },
+        "KHR_materials_ior": {
+          "ior": 1.4500000476837158
+        }
+      },
+      "name": "icon_photoshop_#051e37",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0015176329761743546, 0.012983032502233982, 0.038204375654459, 1
+        ],
+        "metallicFactor": 0
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        },
+        "KHR_materials_ior": {
+          "ior": 1.4500000476837158
+        }
+      },
+      "name": "icon_photoshop_#39a9ff",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.04091513156890869, 0.39675527811050415, 1, 1],
+        "metallicFactor": 0
+      }
+    }
+  ],
   "meshes": [
     {
       "name": "LogoPhotoshop",
@@ -26,7 +63,17 @@
             "NORMAL": 1,
             "TEXCOORD_0": 2
           },
-          "indices": 3
+          "indices": 3,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
         }
       ]
     }
@@ -35,59 +82,109 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 976,
-      "max": [1, 1, 0.2000000774860382],
-      "min": [-1, -1, -0.20000000298023224],
+      "count": 264,
+      "max": [1, 1, 0.09999996423721313],
+      "min": [-1, -1, -0.19999998807907104],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 976,
+      "count": 264,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 976,
+      "count": 264,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 2280,
+      "count": 516,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 2112,
+      "max": [0.635735034942627, 0.4795030951499939, 0.20000004768371582],
+      "min": [-0.5247204899787903, -0.40000003576278687, 0.10000000149011612],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 2112,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 2112,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 4140,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 11712,
+      "byteLength": 3168,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 11712,
-      "byteOffset": 11712,
+      "byteLength": 3168,
+      "byteOffset": 3168,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 7808,
-      "byteOffset": 23424,
+      "byteLength": 2112,
+      "byteOffset": 6336,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 4560,
-      "byteOffset": 31232,
+      "byteLength": 1032,
+      "byteOffset": 8448,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 25344,
+      "byteOffset": 9480,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 25344,
+      "byteOffset": 34824,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 16896,
+      "byteOffset": 60168,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8280,
+      "byteOffset": 77064,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 35792,
+      "byteLength": 85344,
       "uri": "LogoPhotoshop.bin"
     }
   ]

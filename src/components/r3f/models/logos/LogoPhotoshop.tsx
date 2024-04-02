@@ -3,39 +3,52 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { LogoRefType } from 'types/logoRefType'
-
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 type GltfResultType = GLTF & {
   nodes: {
-    LogoPhotoshop: THREE.Mesh
+    LogoPhotoshop_1: THREE.Mesh
+    LogoPhotoshop_2: THREE.Mesh
   }
-  materials: {}
+  materials: {
+    ['icon_photoshop_#051e37']: THREE.MeshStandardMaterial
+    ['icon_photoshop_#39a9ff']: THREE.MeshStandardMaterial
+  }
 }
 
 export const LogoPhotoshop = forwardRef<
-  LogoRefType,
-  JSX.IntrinsicElements['mesh']
->(function LogoPhotoshop({ scale }, ref) {
-  const gltf = useGLTF(GltfConstants.LOGO_PHOTOSHOP) as GltfResultType
+  THREE.Group<THREE.Object3DEventMap>,
+  JSX.IntrinsicElements['group']
+>(function LogoPhotoshop({}, ref) {
+  const { scene, nodes, materials } = useGLTF(
+    GltfConstants.LOGO_PHOTOSHOP,
+  ) as GltfResultType
 
   useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(gltf.scene)
+    const box = new THREE.Box3().setFromObject(scene)
     // @ts-ignore
     ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [gltf.scene, ref])
+  }, [scene, ref])
 
   return (
-    <mesh
+    <group
       ref={ref}
-      geometry={gltf.nodes.LogoPhotoshop.geometry}
-      scale={scale}
-      receiveShadow
-      castShadow
+      dispose={null}
+      position={[0, 6, 0]}
     >
-      <meshLambertMaterial color={'white'} />
-    </mesh>
+      <mesh
+        geometry={nodes.LogoPhotoshop_1.geometry}
+        material={materials['icon_photoshop_#051e37']}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.LogoPhotoshop_2.geometry}
+        material={materials['icon_photoshop_#39a9ff']}
+        receiveShadow
+        castShadow
+      />
+    </group>
   )
 })
 

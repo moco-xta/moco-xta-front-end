@@ -36,7 +36,10 @@ export default function Footer() {
         </div>
         <div id='contact_and_logo_container'>
           <div id='footer_logo_container'>
-            <img id='footer_logo' src='/img/png/moco_logo_normal_h300.png' />
+            <img
+              id='footer_logo'
+              src='/img/png/moco_logo_normal_h300.png'
+            />
           </div>
           <div className='contact_container'>
             <p>+33 6 35 67 87 75</p>
@@ -62,7 +65,9 @@ export default function Footer() {
         </div>
       </div>
       <div id='copyright_container'>
-        <p id='copyright'>© Copyright 2024 Federico Desmoulin - All rights reserved</p>
+        <p id='copyright'>
+          © Copyright 2024 Federico Desmoulin - All rights reserved
+        </p>
       </div>
     </footer>
   )

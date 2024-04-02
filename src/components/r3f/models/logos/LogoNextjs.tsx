@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -14,12 +14,16 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function LogoNextjs(props: JSX.IntrinsicElements['group']) {
+export const LogoNextjs = forwardRef<
+  THREE.Group<THREE.Object3DEventMap>,
+  JSX.IntrinsicElements['group']
+>(function LogoNextjs({}, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_NEXTJS) as GLTFResult
   return (
     <group
-      {...props}
+      ref={ref}
       dispose={null}
+      position={[3, 3, 0]}
     >
       <mesh
         geometry={nodes.LogoNextjs.geometry}
@@ -29,6 +33,6 @@ export function LogoNextjs(props: JSX.IntrinsicElements['group']) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.LOGO_NEXTJS)

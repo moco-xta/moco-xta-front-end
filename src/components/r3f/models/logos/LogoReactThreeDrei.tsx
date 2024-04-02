@@ -1,5 +1,11 @@
 import * as THREE from 'three'
-import React from 'react'
+import React, {
+  ForwardRefExoticComponent,
+  ForwardedRef,
+  Ref,
+  forwardRef,
+  useLayoutEffect,
+} from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -16,13 +22,23 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function LogoReactThreeDrei(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(
+export const LogoReactThreeDrei = forwardRef<
+  THREE.Group<THREE.Object3DEventMap>,
+  JSX.IntrinsicElements['group']
+>(function LogoReactThreeDrei({}, ref) {
+  const { scene, nodes, materials } = useGLTF(
     GltfConstants.LOGO_REACT_THREE_DREI,
   ) as GLTFResult
+
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(scene)
+    // @ts-ignore
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [scene, ref])
+
   return (
     <group
-      {...props}
+      ref={ref}
       dispose={null}
     >
       <mesh
@@ -39,6 +55,6 @@ export function LogoReactThreeDrei(props: JSX.IntrinsicElements['group']) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.LOGO_REACT_THREE_DREI)

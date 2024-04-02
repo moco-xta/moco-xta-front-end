@@ -1,6 +1,6 @@
 {
   "asset": {
-    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "generator": "Khronos glTF Blender I/O v4.1.62",
     "version": "2.0"
   },
   "scene": 0,
@@ -16,6 +16,18 @@
       "name": "LogoSass"
     }
   ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "icon_sass_#ce679b",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6173110604286194, 0.13562729954719543, 0.327754408121109, 1
+        ],
+        "metallicFactor": 0
+      }
+    }
+  ],
   "meshes": [
     {
       "name": "LogoSass",
@@ -25,7 +37,8 @@
             "POSITION": 0,
             "NORMAL": 1
           },
-          "indices": 2
+          "indices": 2,
+          "material": 0
         }
       ]
     }
@@ -35,8 +48,8 @@
       "bufferView": 0,
       "componentType": 5126,
       "count": 3906,
-      "max": [1.3266383409500122, 1.0009698867797852, 0.20000064373016357],
-      "min": [-1.3279205560684204, -0.9892206788063049, -0.20000000298023224],
+      "max": [1.3331786394119263, 1.0059046745300293, 0.20098665356636047],
+      "min": [-1.3344671726226807, -0.9940975308418274, -0.20098601281642914],
       "type": "VEC3"
     },
     {

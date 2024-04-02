@@ -1,0 +1,105 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoWebgl"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_webgl_#990001",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.3186008632183075, 0, 0.0003035138361155987, 1],
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoWebgl",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 3297,
+      "max": [2.2950050830841064, 0.9999988675117493, 0.20000122487545013],
+      "min": [-2.2941536903381348, -1.0000017881393433, -0.20000125467777252],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3297,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3297,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 5484,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 39564,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 39564,
+      "byteOffset": 39564,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 26376,
+      "byteOffset": 79128,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 10968,
+      "byteOffset": 105504,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 116472,
+      "uri": "LogoWebgl.bin"
+    }
+  ]
+}

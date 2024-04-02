@@ -1,41 +1,38 @@
-import { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { LogoRefType } from 'types/logoRefType'
-
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-type GltfResultType = GLTF & {
+type GLTFResult = GLTF & {
   nodes: {
     LogoSass: THREE.Mesh
   }
-  materials: {}
+  materials: {
+    ['icon_sass_#ce679b']: THREE.MeshStandardMaterial
+  }
 }
 
-export const LogoSass = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
-  function LogoSass({ scale }, ref) {
-    const gltf = useGLTF(GltfConstants.LOGO_SASS) as GltfResultType
-
-    useLayoutEffect(() => {
-      const box = new THREE.Box3().setFromObject(gltf.scene)
-      // @ts-ignore
-      ref.current.width = box.getSize(new THREE.Vector3()).x
-    }, [gltf.scene, ref])
-
-    return (
+export const LogoSass = forwardRef<
+  THREE.Group<THREE.Object3DEventMap>,
+  JSX.IntrinsicElements['group']
+>(function LogoSass({}, ref) {
+  const { nodes, materials } = useGLTF(GltfConstants.LOGO_SASS) as GLTFResult
+  return (
+    <group
+      ref={ref}
+      dispose={null}
+      position={[3, 9, 0]}
+    >
       <mesh
-        ref={ref}
-        geometry={gltf.nodes.LogoSass.geometry}
-        scale={scale}
+        geometry={nodes.LogoSass.geometry}
+        material={materials['icon_sass_#ce679b']}
         receiveShadow
         castShadow
-      >
-        <meshLambertMaterial color={'white'} />
-      </mesh>
-    )
-  },
-)
+      />
+    </group>
+  )
+})
 
 useGLTF.preload(GltfConstants.LOGO_SASS)

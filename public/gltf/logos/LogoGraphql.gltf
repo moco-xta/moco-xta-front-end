@@ -1,0 +1,95 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoGraphql",
+      "scale": [0.9448549747467041, 0.9448549747467041, 0.9448549747467041]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_graphql_#f7159f",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.930105984210968, 0.007498790509998798, 0.3467041254043579, 1
+        ],
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoGraphql",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1410,
+      "max": [0.9417564272880554, 1.0583657026290894, 0.21167272329330444],
+      "min": [-0.9417604804039001, -1.0583610534667969, -0.21167272329330444],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1410,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 2868,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 16920,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 16920,
+      "byteOffset": 16920,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5736,
+      "byteOffset": 33840,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 39576,
+      "uri": "LogoGraphql.bin"
+    }
+  ]
+}
