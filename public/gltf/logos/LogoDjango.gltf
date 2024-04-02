@@ -1,0 +1,107 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoDjango"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_django_#0b4b33",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.003346437821164727, 0.07036019116640091, 0.033104799687862396, 1
+        ],
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoDjango",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 6334,
+      "max": [2.876582145690918, 1.000529408454895, 0.20000313222408295],
+      "min": [-2.8537676334381104, -0.999468982219696, -0.20000004768371582],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 6334,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 6334,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 12816,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 76008,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 76008,
+      "byteOffset": 76008,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 50672,
+      "byteOffset": 152016,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 25632,
+      "byteOffset": 202688,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 228320,
+      "uri": "LogoDjango.bin"
+    }
+  ]
+}

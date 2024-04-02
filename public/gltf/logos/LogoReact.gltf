@@ -1,6 +1,6 @@
 {
   "asset": {
-    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "generator": "Khronos glTF Blender I/O v4.1.62",
     "version": "2.0"
   },
   "scene": 0,
@@ -16,6 +16,18 @@
       "name": "LogoReact"
     }
   ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_react_#61d9fb",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.11953665316104889, 0.6938724517822266, 0.9646866321563721, 1
+        ],
+        "metallicFactor": 0
+      }
+    }
+  ],
   "meshes": [
     {
       "name": "LogoReact",
@@ -26,7 +38,8 @@
             "NORMAL": 1,
             "TEXCOORD_0": 2
           },
-          "indices": 3
+          "indices": 3,
+          "material": 0
         }
       ]
     }
@@ -36,8 +49,8 @@
       "bufferView": 0,
       "componentType": 5126,
       "count": 5166,
-      "max": [1.1215264797210693, 0.9966640472412109, 0.20000207424163818],
-      "min": [-1.1215262413024902, -0.9966646432876587, -0.20004825294017792],
+      "max": [1.1252835988998413, 1.0000028610229492, 0.20067209005355835],
+      "min": [-1.1252833604812622, -1.000003457069397, -0.20071841776371002],
       "type": "VEC3"
     },
     {

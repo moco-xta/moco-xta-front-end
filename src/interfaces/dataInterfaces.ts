@@ -3,6 +3,7 @@ import { GroupProps, MeshProps } from '@react-three/fiber'
 import { IconType } from 'react-icons'
 
 import { LogoRefType } from 'types/logoRefType'
+import { ForwardRefGltfInterface } from './r3fInterfaces'
 
 export interface IntroductionCardDataInterface {
   name: string
@@ -78,4 +79,16 @@ export interface CompanyOrSchollDataInterface {
 export interface IconsDataInterface {
   totalLength: number
   widths: number[]
+}
+
+export interface SkillsLogoInterface {
+  name: string
+  category: string
+  logo: {
+    component: ForwardRefExoticComponent<
+      Omit<GroupProps, 'ref'> &
+        RefAttributes<THREE.Group<THREE.Object3DEventMap>>
+    >
+    scale: THREE.Vector3
+  }
 }

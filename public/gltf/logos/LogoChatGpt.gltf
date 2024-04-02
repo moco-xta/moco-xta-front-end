@@ -1,6 +1,6 @@
 {
   "asset": {
-    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "generator": "Khronos glTF Blender I/O v4.1.62",
     "version": "2.0"
   },
   "scene": 0,
@@ -16,6 +16,18 @@
       "name": "LogoChatGpt"
     }
   ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_chat_gpt_#75ab9d",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.1779179871082306, 0.4072225093841553, 0.3371392488479614, 1
+        ],
+        "metallicFactor": 0
+      }
+    }
+  ],
   "meshes": [
     {
       "name": "LogoChatGpt",
@@ -26,7 +38,8 @@
             "NORMAL": 1,
             "TEXCOORD_0": 2
           },
-          "indices": 3
+          "indices": 3,
+          "material": 0
         }
       ]
     }
@@ -35,59 +48,59 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 5894,
-      "max": [1.0886377096176147, 0.9955915212631226, 0.19999969005584717],
-      "min": [-1.0840243101119995, -1.0041407346725464, -0.199998676776886],
+      "count": 1624,
+      "max": [0.9871785044670105, 1.002577781677246, 0.2000000923871994],
+      "min": [-0.9852937459945679, -0.9974277019500732, -0.1999986320734024],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 5894,
+      "count": 1624,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 5894,
+      "count": 1624,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 13176,
+      "count": 4728,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 70728,
+      "byteLength": 19488,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 70728,
-      "byteOffset": 70728,
+      "byteLength": 19488,
+      "byteOffset": 19488,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 47152,
-      "byteOffset": 141456,
+      "byteLength": 12992,
+      "byteOffset": 38976,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 26352,
-      "byteOffset": 188608,
+      "byteLength": 9456,
+      "byteOffset": 51968,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 214960,
+      "byteLength": 61424,
       "uri": "LogoChatGpt.bin"
     }
   ]

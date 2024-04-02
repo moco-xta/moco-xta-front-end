@@ -3,39 +3,60 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { LogoRefType } from 'types/logoRefType'
-
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 type GltfResultType = GLTF & {
   nodes: {
-    LogoBlender: THREE.Mesh
+    LogoBlender_1: THREE.Mesh
+    LogoBlender_2: THREE.Mesh
+    LogoBlender_3: THREE.Mesh
   }
-  materials: {}
+  materials: {
+    ['icon_blender_#265787']: THREE.MeshStandardMaterial
+    ['icon_blender_#ea7600']: THREE.MeshStandardMaterial
+    ['icon_blender_#ffffff']: THREE.MeshStandardMaterial
+  }
 }
 
 export const LogoBlender = forwardRef<
-  LogoRefType,
-  JSX.IntrinsicElements['mesh']
+  THREE.Group<THREE.Object3DEventMap>,
+  JSX.IntrinsicElements['group']
 >(function LogoBlender({ scale }, ref) {
-  const gltf = useGLTF(GltfConstants.LOGO_BLENDER) as GltfResultType
+  const { scene, nodes, materials } = useGLTF(
+    GltfConstants.LOGO_BLENDER,
+  ) as GltfResultType
 
   useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(gltf.scene)
+    const box = new THREE.Box3().setFromObject(scene)
     // @ts-ignore
     ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [gltf.scene, ref])
+  }, [scene, ref])
 
   return (
-    <mesh
+    <group
       ref={ref}
-      geometry={gltf.nodes.LogoBlender.geometry}
-      scale={scale}
-      receiveShadow
-      castShadow
+      dispose={null}
+      position={[0, 3, 0]}
     >
-      <meshLambertMaterial color={'white'} />
-    </mesh>
+      <mesh
+        geometry={nodes.LogoBlender_1.geometry}
+        material={materials['icon_blender_#265787']}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.LogoBlender_2.geometry}
+        material={materials['icon_blender_#ea7600']}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.LogoBlender_3.geometry}
+        material={materials['icon_blender_#ffffff']}
+        receiveShadow
+        castShadow
+      />
+    </group>
   )
 })
 

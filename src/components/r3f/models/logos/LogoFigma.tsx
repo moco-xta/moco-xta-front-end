@@ -1,41 +1,70 @@
-import { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { LogoRefType } from 'types/logoRefType'
-
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-type GltfResultType = GLTF & {
+type GLTFResult = GLTF & {
   nodes: {
-    LogoFigma: THREE.Mesh
+    LogoFigma_1: THREE.Mesh
+    LogoFigma_2: THREE.Mesh
+    LogoFigma_3: THREE.Mesh
+    LogoFigma_4: THREE.Mesh
+    LogoFigma_5: THREE.Mesh
   }
-  materials: {}
+  materials: {
+    ['logo_figma_#f24d1d']: THREE.MeshStandardMaterial
+    ['logo_figma_#ff7162']: THREE.MeshStandardMaterial
+    ['logo_figma_#19bcfe']: THREE.MeshStandardMaterial
+    ['logo_figma_#a259ff']: THREE.MeshStandardMaterial
+    ['logo_figma_#0dcf82']: THREE.MeshStandardMaterial
+  }
 }
 
-export const LogoFigma = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
-  function LogoFigma({ scale }, ref) {
-    const gltf = useGLTF(GltfConstants.LOGO_FIGMA) as GltfResultType
-
-    useLayoutEffect(() => {
-      const box = new THREE.Box3().setFromObject(gltf.scene)
-      // @ts-ignore
-      ref.current.width = box.getSize(new THREE.Vector3()).x
-    }, [gltf.scene, ref])
-
-    return (
+export const LogoFigma = forwardRef<
+  THREE.Group<THREE.Object3DEventMap>,
+  JSX.IntrinsicElements['group']
+>(function LogoFigma({}, ref) {
+  const { nodes, materials } = useGLTF(GltfConstants.LOGO_FIGMA) as GLTFResult
+  return (
+    <group
+      ref={ref}
+      dispose={null}
+      position={[6, 12, 0]}
+    >
       <mesh
-        ref={ref}
-        geometry={gltf.nodes.LogoFigma.geometry}
-        scale={scale}
+        geometry={nodes.LogoFigma_1.geometry}
+        material={materials['logo_figma_#f24d1d']}
         receiveShadow
         castShadow
-      >
-        <meshLambertMaterial color={'white'} />
-      </mesh>
-    )
-  },
-)
+      />
+      <mesh
+        geometry={nodes.LogoFigma_2.geometry}
+        material={materials['logo_figma_#ff7162']}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.LogoFigma_3.geometry}
+        material={materials['logo_figma_#19bcfe']}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.LogoFigma_4.geometry}
+        material={materials['logo_figma_#a259ff']}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.LogoFigma_5.geometry}
+        material={materials['logo_figma_#0dcf82']}
+        receiveShadow
+        castShadow
+      />
+    </group>
+  )
+})
 
 useGLTF.preload(GltfConstants.LOGO_FIGMA)

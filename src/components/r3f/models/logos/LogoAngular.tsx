@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -18,12 +18,16 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function LogoAngular(props: JSX.IntrinsicElements['group']) {
+export const LogoAngular = forwardRef<
+  THREE.Group<THREE.Object3DEventMap>,
+  JSX.IntrinsicElements['group']
+>(function LogoAngular({}, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_ANGULAR) as GLTFResult
   return (
     <group
-      {...props}
+      ref={ref}
       dispose={null}
+      position={[3, 6, 0]}
     >
       <mesh
         geometry={nodes.LogoAngular_1.geometry}
@@ -45,6 +49,6 @@ export function LogoAngular(props: JSX.IntrinsicElements['group']) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.LOGO_ANGULAR)
