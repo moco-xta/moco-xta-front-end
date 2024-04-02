@@ -25,7 +25,7 @@ type GLTFResult = GLTF & {
 export const LogoGoogleMaps = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoGoogleMaps({}, ref) {
+>(function LogoGoogleMaps({ position, rotation, scale }, ref) {
   const { nodes, materials } = useGLTF(
     GltfConstants.LOGO_GOOGLE_MAPS,
   ) as GLTFResult
@@ -33,7 +33,9 @@ export const LogoGoogleMaps = forwardRef<
     <group
       ref={ref}
       dispose={null}
-      position={[12, 15, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoGoogleMaps_1.geometry}

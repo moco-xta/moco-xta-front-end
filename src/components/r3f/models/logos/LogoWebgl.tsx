@@ -17,7 +17,7 @@ type GltfResultType = GLTF & {
 export const LogoWebgl = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoWebgl({}, ref) {
+>(function LogoWebgl({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
     gltfConstants.LOGO_WEBGL,
   ) as GltfResultType
@@ -32,7 +32,9 @@ export const LogoWebgl = forwardRef<
     <group
       ref={ref}
       dispose={null}
-      position={[0, 9, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoWebgl.geometry}

@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -19,13 +19,24 @@ type GLTFResult = GLTF & {
 export const LogoPostman = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoPostman({}, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.LOGO_POSTMAN) as GLTFResult
+>(function LogoPostman({ position, rotation, scale }, ref) {
+  const { scene, nodes, materials } = useGLTF(
+    GltfConstants.LOGO_POSTMAN,
+  ) as GLTFResult
+
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(scene)
+    // @ts-ignore
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [scene, ref])
+
   return (
     <group
       ref={ref}
       dispose={null}
-      position={[15, 6, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoPostman_1.geometry}

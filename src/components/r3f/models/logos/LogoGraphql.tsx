@@ -17,13 +17,15 @@ type GLTFResult = GLTF & {
 export const LogoGraphql = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoGraphql({}, ref) {
+>(function LogoGraphql({ position, rotation, scale }, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_GRAPHQL) as GLTFResult
   return (
     <group
       ref={ref}
       dispose={null}
-      position={[15, -3, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoGraphql.geometry}

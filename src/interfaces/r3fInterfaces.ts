@@ -1,7 +1,7 @@
 import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
 import { ReviewCardDataInterface } from './componentsInterfaces'
 
-export interface ForwardRefGltfInterface extends THREE.Mesh {
+export interface ForwardRefGltfGroupInterface extends THREE.Group {
   width: number
 }
 

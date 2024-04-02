@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -19,15 +19,24 @@ type GLTFResult = GLTF & {
 export const LogoTypescript = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoTypescript({}, ref) {
-  const { nodes, materials } = useGLTF(
+>(function LogoTypescript({ position, rotation, scale }, ref) {
+  const { scene, nodes, materials } = useGLTF(
     GltfConstants.LOGO_TYPESCRIPT,
   ) as GLTFResult
+
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(scene)
+    // @ts-ignore
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [scene, ref])
+
   return (
     <group
       ref={ref}
       dispose={null}
-      position={[6, 3, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoTypescript_1.geometry}
