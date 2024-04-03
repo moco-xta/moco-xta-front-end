@@ -91,3 +91,16 @@ export interface PerformedWithLogoInterface {
     scale: THREE.Vector3
   }
 }
+
+export interface SkillsLogoInterface {
+  name: string
+  category: string
+  component: ForwardRefExoticComponent<
+    Omit<GroupProps, 'ref'> & RefAttributes<THREE.Group<THREE.Object3DEventMap>>
+  >
+  geometry: {
+    position: THREE.Vector3
+    rotation: THREE.Euler
+    scale: THREE.Vector3
+  }
+}

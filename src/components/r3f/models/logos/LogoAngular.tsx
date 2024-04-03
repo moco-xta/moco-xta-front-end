@@ -1,11 +1,11 @@
 import * as THREE from 'three'
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-import { degreesToRadians } from '@/helpers/r3fHelpers'
+import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -20,11 +20,20 @@ type GLTFResult = GLTF & {
   }
 }
 
-export const LogoAngular = forwardRef<
-  THREE.Group<THREE.Object3DEventMap>,
+const LogoAngular = forwardRef<
+  ForwardRefGltfGroupInterface,
   JSX.IntrinsicElements['group']
 >(function LogoAngular({ position, rotation, scale }, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.LOGO_ANGULAR) as GLTFResult
+  const { scene, nodes, materials } = useGLTF(
+    GltfConstants.LOGO_ANGULAR,
+  ) as GLTFResult
+
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(scene)
+    // @ts-ignore
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [scene, ref])
+
   return (
     <group
       ref={ref}
@@ -56,3 +65,5 @@ export const LogoAngular = forwardRef<
 })
 
 useGLTF.preload(GltfConstants.LOGO_ANGULAR)
+
+export default LogoAngular

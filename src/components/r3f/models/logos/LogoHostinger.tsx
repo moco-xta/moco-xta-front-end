@@ -5,6 +5,8 @@ import { GLTF } from 'three-stdlib'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
+import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
+
 type GLTFResult = GLTF & {
   nodes: {
     LogoHostinger: THREE.Mesh
@@ -14,8 +16,8 @@ type GLTFResult = GLTF & {
   }
 }
 
-export const LogoHostinger = forwardRef<
-  THREE.Group<THREE.Object3DEventMap>,
+const LogoHostinger = forwardRef<
+  ForwardRefGltfGroupInterface,
   JSX.IntrinsicElements['group']
 >(function LogoHostinger({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
@@ -47,3 +49,5 @@ export const LogoHostinger = forwardRef<
 })
 
 useGLTF.preload(GltfConstants.LOGO_HOSTINGER)
+
+export default LogoHostinger

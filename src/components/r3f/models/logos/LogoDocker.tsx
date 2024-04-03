@@ -5,6 +5,8 @@ import { GLTF } from 'three-stdlib'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
+import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
+
 type GLTFResult = GLTF & {
   nodes: {
     LogoDocker: THREE.Mesh
@@ -14,8 +16,8 @@ type GLTFResult = GLTF & {
   }
 }
 
-export const LogoDocker = forwardRef<
-  THREE.Group<THREE.Object3DEventMap>,
+const LogoDocker = forwardRef<
+  ForwardRefGltfGroupInterface,
   JSX.IntrinsicElements['group']
 >(function LogoDocker({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
@@ -47,3 +49,5 @@ export const LogoDocker = forwardRef<
 })
 
 useGLTF.preload(GltfConstants.LOGO_DOCKER)
+
+export default LogoDocker

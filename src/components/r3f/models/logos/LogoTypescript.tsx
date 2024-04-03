@@ -5,6 +5,8 @@ import { GLTF } from 'three-stdlib'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
+import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
+
 type GLTFResult = GLTF & {
   nodes: {
     LogoTypescript_1: THREE.Mesh
@@ -16,8 +18,8 @@ type GLTFResult = GLTF & {
   }
 }
 
-export const LogoTypescript = forwardRef<
-  THREE.Group<THREE.Object3DEventMap>,
+const LogoTypescript = forwardRef<
+  ForwardRefGltfGroupInterface,
   JSX.IntrinsicElements['group']
 >(function LogoTypescript({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
@@ -55,3 +57,5 @@ export const LogoTypescript = forwardRef<
 })
 
 useGLTF.preload(GltfConstants.LOGO_TYPESCRIPT)
+
+export default LogoTypescript

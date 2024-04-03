@@ -26,6 +26,10 @@ export type LogoRefType = THREE.Mesh & {
 }
 
 function PerformedWithScene() {
+  const { gl } = useThree()
+  gl.toneMapping = THREE.ACESFilmicToneMapping
+  gl.toneMappingExposure = 6
+
   const logosGroupRef = useRef<THREE.Group>(null!)
   const logosRefs = useMemo(
     () =>
@@ -34,10 +38,6 @@ function PerformedWithScene() {
       })),
     [],
   )
-
-  const { gl } = useThree()
-  gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 6
 
   const logosData: IconsDataInterface = {
     totalLength: 0,

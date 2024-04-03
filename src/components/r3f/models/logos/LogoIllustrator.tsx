@@ -5,6 +5,8 @@ import { GLTF } from 'three-stdlib'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
+import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
+
 type GltfResultType = GLTF & {
   nodes: {
     LogoIllustrator_1: THREE.Mesh
@@ -16,8 +18,8 @@ type GltfResultType = GLTF & {
   }
 }
 
-export const LogoIllustrator = forwardRef<
-  THREE.Group<THREE.Object3DEventMap>,
+const LogoIllustrator = forwardRef<
+  ForwardRefGltfGroupInterface,
   JSX.IntrinsicElements['group']
 >(function LogoIllustrator({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
@@ -55,3 +57,5 @@ export const LogoIllustrator = forwardRef<
 })
 
 useGLTF.preload(GltfConstants.LOGO_ILLUSTRATOR)
+
+export default LogoIllustrator
