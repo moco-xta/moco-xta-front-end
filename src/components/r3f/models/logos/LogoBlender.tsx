@@ -5,7 +5,7 @@ import { GLTF } from 'three-stdlib'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
-import { degreesToRadians } from '@/helpers/r3fHelpers'
+import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
 
 type GltfResultType = GLTF & {
   nodes: {
@@ -20,8 +20,8 @@ type GltfResultType = GLTF & {
   }
 }
 
-export const LogoBlender = forwardRef<
-  THREE.Group<THREE.Object3DEventMap>,
+const LogoBlender = forwardRef<
+  ForwardRefGltfGroupInterface,
   JSX.IntrinsicElements['group']
 >(function LogoBlender({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
@@ -65,3 +65,5 @@ export const LogoBlender = forwardRef<
 })
 
 useGLTF.preload(GltfConstants.LOGO_BLENDER)
+
+export default LogoBlender

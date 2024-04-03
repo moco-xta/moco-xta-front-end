@@ -1,12 +1,925 @@
 {
-  "CATEGORIES": {
-    "GRAPHICS": "graphics",
-    "THREE_D": "three_d",
-    "FRONT_END": "front_end",
-    "BACK_END": "back_end",
-    "DEV_OPS": "dev_ops",
-    "LANGUAGE": "language",
-    "TOOL": "tool"
+  "LOGOS": {
+    "CATEGORIES": {
+      "GRAPHICS": "graphics",
+      "THREE_D": "three_d",
+      "MOBILE_FRAMEWORK": "mobile_framework",
+      "FRONT_END_FRAMEWORK": "front_end_framework",
+      "FRONT_END_LANGUAGE": "front_end_language",
+      "FRONT_END_LIBRARY": "front_end_library",
+      "FRONT_END_GRAPHICS": "front_end_graphics",
+      "BACK_END_FRAMEWORK": "back_end_framework",
+      "BACK_END_LANGUAGE": "back_end_language",
+      "DATABASE": "database",
+      "DEV_OPS": "dev_ops",
+      "HOSTING": "hosting",
+      "LANGUAGE": "language",
+      "TOOL": "tool"
+    },
+    "DATA": [
+      {
+        "NAME": "logo_angular",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_FRAMEWORK",
+        "COMPONENT": "LogoAngular",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_aws",
+        "CATEGORY": "/LOGOS/CATEGORIES/HOSTING",
+        "COMPONENT": "LogoAws",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_babylonjs",
+        "CATEGORY": "/LOGOS/CATEGORIES/THREE_D",
+        "COMPONENT": "LogoBabylonjs",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_blender",
+        "CATEGORY": "/LOGOS/CATEGORIES/THREE_D",
+        "COMPONENT": "LogoBlender",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_chat_gpt",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoChatGpt",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_css",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoCss",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_django",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoDjango",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_docker",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoDocker",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_figma",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoFigma",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_formik",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoFormik",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_github",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoGithub",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_google_analytics",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoGoogleAnalytics",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_google_maps",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoGoogleMaps",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_graphql",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoGraphql",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_gsap",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoGsap",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_hostinger",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoHostinger",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_html",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "COMPONENT": "LogoHtml",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_illustrator",
+        "CATEGORY": "/LOGOS/CATEGORIES/GRAPHICS",
+        "COMPONENT": "LogoIllustrator",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_ionic",
+        "CATEGORY": "/LOGOS/CATEGORIES/MOBILE_FRAMEWORK",
+        "COMPONENT": "LogoIonic",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_java",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoJava",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_javascript",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoJavascript",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_mui",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoMui",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_mysql",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoMysql",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_next_intl",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoNextIntl",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_nextjs",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_FRAMEWORK",
+        "COMPONENT": "LogoNextjs",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.5,
+            "Y": 1,
+            "Z": 0.5
+          }
+        }
+      },
+      {
+        "NAME": "logo_nginx",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoNginx",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_npm",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoNpm",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_photoshop",
+        "CATEGORY": "/LOGOS/CATEGORIES/GRAPHICS",
+        "COMPONENT": "LogoPhotoshop",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_postgresql",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoPostgresql",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_postman",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoPostman",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_python",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoPython",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_react",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_FRAMEWORK",
+        "COMPONENT": "LogoReact",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_react_native",
+        "CATEGORY": "/LOGOS/CATEGORIES/MOBILE_FRAMEWORK",
+        "COMPONENT": "LogoReactNative",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_react_three_drei",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoReactThreeDrei",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_redux",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoRedux",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_sass",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoSass",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_spring",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoSpring",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_tailwind",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoTailwind",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_threejs",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoThreejs",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_typescript",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoTypescript",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      },
+      {
+        "NAME": "logo_webgl",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "COMPONENT": "LogoWebgl",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 0.9,
+            "Y": 1,
+            "Z": 0.9
+          }
+        }
+      }
+    ]
   },
   "SCENE": {
     "CANVAS": {

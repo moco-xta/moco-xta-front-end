@@ -91,7 +91,9 @@ export const performedWithData: PerformedWithLogoInterface[] = [
       component: LogoReactThreeDrei,
       rotation: new THREE.Euler(
         performedWithConstants.LOGO_REACT_THREE_DREI.ROTATION.X,
-        degreesToRadians(performedWithConstants.LOGO_REACT_THREE_DREI.ROTATION.Z),
+        degreesToRadians(
+          performedWithConstants.LOGO_REACT_THREE_DREI.ROTATION.Z,
+        ),
         performedWithConstants.LOGO_REACT_THREE_DREI.ROTATION.Y,
       ),
       scale: new THREE.Vector3(
@@ -411,7 +413,9 @@ export const performedWithData: PerformedWithLogoInterface[] = [
       component: LogoGoogleAnalytics,
       rotation: new THREE.Euler(
         performedWithConstants.LOGO_GOOGLE_ANALYTICS.ROTATION.X,
-        degreesToRadians(performedWithConstants.LOGO_GOOGLE_ANALYTICS.ROTATION.Z),
+        degreesToRadians(
+          performedWithConstants.LOGO_GOOGLE_ANALYTICS.ROTATION.Z,
+        ),
         performedWithConstants.LOGO_GOOGLE_ANALYTICS.ROTATION.Y,
       ),
       scale: new THREE.Vector3(
