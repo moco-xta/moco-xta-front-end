@@ -9,7 +9,7 @@ import React, {
   useRef,
 } from 'react'
 import * as THREE from 'three'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import {
   OrbitControls,
   PerspectiveCamera,
@@ -34,6 +34,10 @@ function PerformedWithScene() {
       })),
     [],
   )
+
+  const { gl } = useThree()
+  gl.toneMapping = THREE.ACESFilmicToneMapping
+  gl.toneMappingExposure = 6
 
   const logosData: IconsDataInterface = {
     totalLength: 0,
@@ -142,8 +146,11 @@ function PerformedWithScene() {
 export default function PerformedWithCanvas() {
   return (
     <Canvas
+      dpr={1}
       shadows
-      legacy
+      legacy={false}
+      linear
+      flat
       gl={{
         antialias: true,
         alpha: true,
