@@ -25,7 +25,7 @@ type GLTFResult = GLTF & {
 export const LogoReactThreeDrei = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoReactThreeDrei({}, ref) {
+>(function LogoReactThreeDrei({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
     GltfConstants.LOGO_REACT_THREE_DREI,
   ) as GLTFResult
@@ -40,6 +40,9 @@ export const LogoReactThreeDrei = forwardRef<
     <group
       ref={ref}
       dispose={null}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoReactThreeDrei_1.geometry}

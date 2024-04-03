@@ -19,13 +19,15 @@ type GLTFResult = GLTF & {
 export const LogoPython = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoPython({}, ref) {
+>(function LogoPython({ position, rotation, scale }, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_PYTHON) as GLTFResult
   return (
     <group
       ref={ref}
       dispose={null}
-      position={[18, 6, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoPython_1.geometry}

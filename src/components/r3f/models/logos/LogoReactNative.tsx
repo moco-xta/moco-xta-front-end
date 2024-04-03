@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 export const LogoReactNative = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoReactNative({}, ref) {
+>(function LogoReactNative({ position, rotation, scale }, ref) {
   const { nodes, materials } = useGLTF(
     GltfConstants.LOGO_REACT_NATIVE,
   ) as GLTFResult
@@ -25,7 +25,9 @@ export const LogoReactNative = forwardRef<
     <group
       ref={ref}
       dispose={null}
-      position={[3, 3, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoReactNative.geometry}

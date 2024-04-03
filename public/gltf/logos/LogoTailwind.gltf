@@ -7,31 +7,33 @@
   "scenes": [
     {
       "name": "Scene",
-      "nodes": [0]
+      "nodes": [0, 1]
     }
   ],
   "nodes": [
     {
+      "name": "tailwind-svgrepo-com.svg"
+    },
+    {
       "mesh": 0,
-      "name": "LogoRedux"
+      "name": "LogoTailwind"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "name": "icon_redux_#764abc",
+      "name": "logo_tailwind_#1cA4bc",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.18119458854198456, 0.06847501546144485, 0.5028499960899353, 1
+          0.01161155290901661, 0.3712380826473236, 0.5028865933418274, 1
         ],
-        "metallicFactor": 0,
-        "roughnessFactor": 0.5
+        "metallicFactor": 0
       }
     }
   ],
   "meshes": [
     {
-      "name": "LogoRedux",
+      "name": "LogoTailwind",
       "primitives": [
         {
           "attributes": {
@@ -49,60 +51,60 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 3378,
-      "max": [1.0714640617370605, 1.000003457069397, 0.20000170171260834],
-      "min": [-1.0714645385742188, -0.9999986886978149, -0.2000018209218979],
+      "count": 912,
+      "max": [1.6652891635894775, 1.000000238418579, 0.20000003278255463],
+      "min": [-1.6670602560043335, -0.9999988079071045, -0.20000003278255463],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 3378,
+      "count": 912,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 3378,
+      "count": 912,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 9882,
+      "count": 1800,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 40536,
+      "byteLength": 10944,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 40536,
-      "byteOffset": 40536,
+      "byteLength": 10944,
+      "byteOffset": 10944,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 27024,
-      "byteOffset": 81072,
+      "byteLength": 7296,
+      "byteOffset": 21888,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 19764,
-      "byteOffset": 108096,
+      "byteLength": 3600,
+      "byteOffset": 29184,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 127860,
-      "uri": "LogoRedux.bin"
+      "byteLength": 32784,
+      "uri": "LogoTailwind.bin"
     }
   ]
 }

@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import { SkillsLogoInterface } from '@/interfaces/dataInterfaces'
+import { gltfLogoInterface } from '@/interfaces/dataInterfaces'
 
 import {
   LogoAngular,
@@ -40,6 +40,7 @@ import {
   LogoRedux,
   LogoSass,
   LogoSpring,
+  LogoTailwind,
   LogoThreejs,
   LogoTypescript,
   LogoWebgl,
@@ -47,7 +48,7 @@ import {
 
 import { default as skillsConstants } from '@/constants/skillsConstants.json'
 
-export const skillsData: SkillsLogoInterface[] = [
+export const skillsData: gltfLogoInterface[] = [
   {
     name: 'logo_photoshop',
     category: skillsConstants.CATEGORIES.GRAPHICS,
@@ -221,6 +222,14 @@ export const skillsData: SkillsLogoInterface[] = [
     category: skillsConstants.CATEGORIES.LANGUAGE,
     logo: {
       component: LogoCss,
+      scale: new THREE.Vector3(1, 1, 1),
+    },
+  },
+  {
+    name: 'logo_tailwind',
+    category: skillsConstants.CATEGORIES.LANGUAGE,
+    logo: {
+      component: LogoTailwind,
       scale: new THREE.Vector3(1, 1, 1),
     },
   },

@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -11,27 +11,36 @@ type GLTFResult = GLTF & {
     LogoHtml_2: THREE.Mesh
     LogoHtml_3: THREE.Mesh
     LogoHtml_4: THREE.Mesh
-    LogoHtml_5: THREE.Mesh
   }
   materials: {
     ['logo_html_#f16529']: THREE.MeshStandardMaterial
     ['logo_html_#e44d26']: THREE.MeshStandardMaterial
     ['logo_html_#ffffff']: THREE.MeshStandardMaterial
     ['logo_html_#ebebeb']: THREE.MeshStandardMaterial
-    ['logo_html_#000000']: THREE.MeshStandardMaterial
   }
 }
 
 export const LogoHtml = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoHtml({}, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.LOGO_HTML) as GLTFResult
+>(function LogoHtml({ position, rotation, scale }, ref) {
+  const { scene, nodes, materials } = useGLTF(
+    GltfConstants.LOGO_HTML,
+  ) as GLTFResult
+
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(scene)
+    // @ts-ignore
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [scene, ref])
+
   return (
     <group
       ref={ref}
       dispose={null}
-      position={[9, 9, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoHtml_1.geometry}
@@ -54,12 +63,6 @@ export const LogoHtml = forwardRef<
       <mesh
         geometry={nodes.LogoHtml_4.geometry}
         material={materials['logo_html_#ebebeb']}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.LogoHtml_5.geometry}
-        material={materials['logo_html_#000000']}
         receiveShadow
         castShadow
       />

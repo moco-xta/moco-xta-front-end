@@ -17,13 +17,15 @@ type GLTFResult = GLTF & {
 export const LogoDjango = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoDjango({}, ref) {
+>(function LogoDjango({ position, rotation, scale }, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_DJANGO) as GLTFResult
   return (
     <group
       ref={ref}
       dispose={null}
-      position={[3, 3, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoDjango.geometry}

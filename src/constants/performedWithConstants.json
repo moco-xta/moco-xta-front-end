@@ -1,0 +1,353 @@
+{
+  "LOGO_PHOTOSHOP": {
+    "NAME": "logo_photoshop",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 0.9,
+      "Y": 1,
+      "Z": 0.9
+    }
+  },
+  "LOGO_ILLUSTRATOR": {
+    "NAME": "logo_illustrator",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 0.9,
+      "Y": 1,
+      "Z": 0.9
+    }
+  },
+  "LOGO_BLENDER": {
+    "NAME": "logo_blender",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_THREEJS": {
+    "NAME": "logo_threejs",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_REACT_THREE_DREI": {
+    "NAME": "logo_react_three_drei",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 0.5,
+      "Y": 1,
+      "Z": 0.5
+    }
+  },
+  "LOGO_WEBGL": {
+    "NAME": "logo_webgl",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 0.7,
+      "Y": 1,
+      "Z": 0.7
+    }
+  },
+  "LOGO_NPM": {
+    "NAME": "logo_npm",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 0.5,
+      "Y": 1,
+      "Z": 0.5
+    }
+  },
+  "LOGO_NEXTJS": {
+    "NAME": "logo_nextjs",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 0.4,
+      "Y": 1,
+      "Z": 0.4
+    }
+  },
+  "LOGO_SASS": {
+    "NAME": "logo_sass",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_GSAP": {
+    "NAME": "logo_gsap",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 0.5,
+      "Y": 1,
+      "Z": 0.5
+    }
+  },
+  "LOGO_REDUX": {
+    "NAME": "logo_redux",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_SPRING": {
+    "NAME": "logo_spring",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_POSTGRESQL": {
+    "NAME": "logo_postgresql",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_HTML": {
+    "NAME": "logo_html",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 45
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_CSS": {
+    "NAME": "logo_css",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_TYPESCRIPT": {
+    "NAME": "logo_typescript",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_FORMIK": {
+    "NAME": "logo_formik",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_NEXT_INTL": {
+    "NAME": "logo_next_intl",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_GITHUB": {
+    "NAME": "logo_github",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_FIGMA": {
+    "NAME": "logo_figma",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 0.8,
+      "Y": 1,
+      "Z": 0.8
+    }
+  },
+  "LOGO_DOCKER": {
+    "NAME": "logo_docker",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 0.8,
+      "Y": 1,
+      "Z": 0.8
+    }
+  },
+  "LOGO_NGINX": {
+    "NAME": "logo_nginx",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 0.4,
+      "Y": 1,
+      "Z": 0.4
+    }
+  },
+  "LOGO_CHAT_GPT": {
+    "NAME": "logo_chat_gpt",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_POSTMAN": {
+    "NAME": "logo_postman",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_GOOGLE_ANALYTICS": {
+    "NAME": "logo_google_analytics",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 0.8,
+      "Y": 1,
+      "Z": 0.8
+    }
+  },
+  "LOGO_HOSTINGER": {
+    "NAME": "logo_hostinger",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    }
+  },
+  "LOGO_TAILWIND": {
+    "NAME": "logo_tailwind",
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 30
+    },
+    "SCALE": {
+      "X": 0.6,
+      "Y": 1,
+      "Z": 0.6
+    }
+  }
+}

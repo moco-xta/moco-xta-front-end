@@ -19,13 +19,15 @@ type GLTFResult = GLTF & {
 export const LogoJava = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoJava({}, ref) {
+>(function LogoJava({ position, rotation, scale }, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_JAVA) as GLTFResult
   return (
     <group
       ref={ref}
       dispose={null}
-      position={[18, 12, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoJava_1.geometry}

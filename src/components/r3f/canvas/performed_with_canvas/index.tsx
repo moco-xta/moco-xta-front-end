@@ -1,25 +1,43 @@
 'use client'
 
-import React, { Suspense, createRef, useEffect, useMemo, useRef } from 'react'
+import React, {
+  Ref,
+  Suspense,
+  createRef,
+  useEffect,
+  useMemo,
+  useRef,
+} from 'react'
 import * as THREE from 'three'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { PerspectiveCamera, SoftShadows } from '@react-three/drei'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  SoftShadows,
+} from '@react-three/drei'
 
 import { IconsDataInterface } from '@/interfaces/dataInterfaces'
+import { skillsData } from '@/data/skillsData'
+import { performedWithData } from '@/data/performedWithData'
+import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
 
 export type LogoRefType = THREE.Mesh & {
   width: number
 }
 
-/* function PerformedWithScene() {
+function PerformedWithScene() {
   const logosGroupRef = useRef<THREE.Group>(null!)
-  const logosCreateRefs = useMemo(
+  const logosRefs = useMemo(
     () =>
       performedWithData.map(() => ({
-        ref: createRef<LogoRefType>(),
+        ref: createRef<ForwardRefGltfGroupInterface>(),
       })),
     [],
   )
+
+  const { gl } = useThree()
+  gl.toneMapping = THREE.ACESFilmicToneMapping
+  gl.toneMappingExposure = 6
 
   const logosData: IconsDataInterface = {
     totalLength: 0,
@@ -27,33 +45,33 @@ export type LogoRefType = THREE.Mesh & {
   }
 
   useEffect(() => {
-    logosCreateRefs.forEach(({ ref }, index) => {
+    logosRefs.forEach(({ ref }, index) => {
       if (ref.current) {
         logosData.widths.push(
-          ref.current.width * performedWithData[index].scale.x,
+          ref.current.width * performedWithData[index].logo.scale.x,
         )
       }
     })
     let sum = 0
-    logosCreateRefs.forEach(({ ref }, index) => {
+    logosRefs.forEach(({ ref }, index) => {
       if (ref.current) {
         if (index === 0) {
           ref.current.position.x = sum
           sum += logosData.widths[index] / 2
         } else {
           ref.current.position.x =
-            sum + logosData.widths[index] / 2 + index * 0.5
+            sum + logosData.widths[index] / 2 + index * 0.8
           sum += logosData.widths[index]
         }
       }
     })
     logosData.widths.forEach((width) => {
-      logosData.totalLength += width + 0.5
+      logosData.totalLength += width + 0.8
     })
   }, [])
 
   useFrame((state, delta, xrFrame) => {
-    logosCreateRefs.forEach(({ ref }) => {
+    logosRefs.forEach(({ ref }) => {
       if (ref.current) {
         ref.current.position.x += delta
         if (ref.current.position.x > logosData.totalLength / 2)
@@ -66,8 +84,8 @@ export type LogoRefType = THREE.Mesh & {
     <>
       <PerspectiveCamera
         makeDefault
-        position={[0, 0, 40]}
-        fov={5}
+        position={[0, 0, 90]}
+        fov={3}
       />
       <directionalLight
         position={[10, 10, 5]}
@@ -109,37 +127,40 @@ export type LogoRefType = THREE.Mesh & {
         shadow-bias={-0.01}
       />
       <group ref={logosGroupRef}>
-        {logosCreateRefs.map(({ ref }, index) => {
-          const Logo = performedWithData[index].logo
+        {logosRefs.map(({ ref }, index) => {
+          const Logo = performedWithData[index].logo.component
           return (
             <Logo
               key={`performed_with_logo_${index}`}
               ref={ref}
-              scale={performedWithData[index].scale}
+              rotation={performedWithData[index].logo.rotation}
+              scale={performedWithData[index].logo.scale}
             />
           )
         })}
       </group>
     </>
   )
-} */
+}
 
 export default function PerformedWithCanvas() {
   return (
     <Canvas
+      dpr={1}
       shadows
-      legacy
+      legacy={false}
+      linear
+      flat
       gl={{
         antialias: true,
         alpha: true,
         powerPreference: 'high-performance',
       }}
     >
-      {/* <SoftShadows
-        size={20}
-        samples={10}
-      /> */}
-      <Suspense fallback={null}>{/* <PerformedWithScene /> */}</Suspense>
+      <OrbitControls />
+      <Suspense fallback={null}>
+        <PerformedWithScene />
+      </Suspense>
     </Canvas>
   )
 }

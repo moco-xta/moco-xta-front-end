@@ -19,7 +19,7 @@ type GltfResultType = GLTF & {
 export const LogoIllustrator = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoIllustrator({}, ref) {
+>(function LogoIllustrator({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
     GltfConstants.LOGO_ILLUSTRATOR,
   ) as GltfResultType
@@ -34,7 +34,9 @@ export const LogoIllustrator = forwardRef<
     <group
       ref={ref}
       dispose={null}
-      position={[0, 12, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoIllustrator_1.geometry}

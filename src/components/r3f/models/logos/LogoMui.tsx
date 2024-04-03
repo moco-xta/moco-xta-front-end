@@ -17,13 +17,15 @@ type GLTFResult = GLTF & {
 export const LogoMui = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoMui({}, ref) {
+>(function LogoMui({ position, rotation, scale }, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_MUI) as GLTFResult
   return (
     <group
       ref={ref}
       dispose={null}
-      position={[18, 9, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoMui.geometry}

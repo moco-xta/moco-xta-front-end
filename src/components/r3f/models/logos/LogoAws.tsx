@@ -19,13 +19,15 @@ type GLTFResult = GLTF & {
 export const LogoAws = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoAws({}, ref) {
+>(function LogoAws({ position, rotation, scale }, ref) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_AWS) as GLTFResult
   return (
     <group
       ref={ref}
       dispose={null}
-      position={[18, 15, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoAws_1.geometry}

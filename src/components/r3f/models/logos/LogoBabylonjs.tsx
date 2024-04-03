@@ -25,7 +25,7 @@ type GltfResultType = GLTF & {
 export const LogoBabylonjs = forwardRef<
   THREE.Group<THREE.Object3DEventMap>,
   JSX.IntrinsicElements['group']
->(function LogoBabylonjs({}, ref) {
+>(function LogoBabylonjs({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
     GltfConstants.LOGO_BABYLONJS,
   ) as GltfResultType
@@ -40,7 +40,9 @@ export const LogoBabylonjs = forwardRef<
     <group
       ref={ref}
       dispose={null}
-      position={[0, 15, 0]}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.LogoBabylonjs_1.geometry}

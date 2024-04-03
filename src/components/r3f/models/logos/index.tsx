@@ -35,6 +35,7 @@ import { LogoReactThreeDrei } from '@/components/r3f/models/logos/LogoReactThree
 import { LogoRedux } from '@/components/r3f/models/logos/LogoRedux'
 import { LogoSass } from '@/components/r3f/models/logos/LogoSass'
 import { LogoSpring } from '@/components/r3f/models/logos/LogoSpring'
+import { LogoTailwind } from '@/components/r3f/models/logos/LogoTailwind'
 import { LogoThreejs } from '@/components/r3f/models/logos/LogoThreejs'
 import { LogoTypescript } from '@/components/r3f/models/logos/LogoTypescript'
 import { LogoWebgl } from '@/components/r3f/models/logos/LogoWebgl'
@@ -77,6 +78,7 @@ export {
   LogoRedux,
   LogoSass,
   LogoSpring,
+  LogoTailwind,
   LogoThreejs,
   LogoTypescript,
   LogoWebgl,
