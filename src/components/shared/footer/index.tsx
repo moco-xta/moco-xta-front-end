@@ -21,7 +21,7 @@ export default function Footer() {
     <footer>
       <div id='links_and_contact_container'>
         <div id='links_container'>
-          {Routes.filter((route) => route.hasOwnProperty('index'))
+          {/* {Routes.filter((route) => route.hasOwnProperty('index'))
             // @ts-ignore
             .sort((a, b) => a.index - b.index)
             .map((route) => (
@@ -33,7 +33,7 @@ export default function Footer() {
               >
                 {t(route.key)}
               </Link>
-            ))}
+            ))} */}
         </div>
         <div id='contact_and_logo_container'>
           <div id='footer_logo_container'>
@@ -60,11 +60,11 @@ export default function Footer() {
             />
           </div>
           <div id='footer_socials_container'>
-            <FaLinkedinIn size={30} />
-            <FaTwitter size={30} />
-            <FaInstagram size={30} />
-            <FaFacebookF size={30} />
-            <IoLogoGithub size={30} />
+            <FaLinkedinIn className='social_icon' size={30} />
+            <FaTwitter className='social_icon' size={30} />
+            <FaInstagram className='social_icon' size={30} />
+            <FaFacebookF className='social_icon' size={30} />
+            <IoLogoGithub className='social_icon' size={30} />
           </div>
         </div>
       </div>
