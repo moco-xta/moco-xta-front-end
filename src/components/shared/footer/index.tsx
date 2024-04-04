@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
 import { FaTwitter } from 'react-icons/fa'
@@ -36,9 +37,12 @@ export default function Footer() {
         </div>
         <div id='contact_and_logo_container'>
           <div id='footer_logo_container'>
-            <img
+            <Image
               id='footer_logo'
               src='/img/png/moco_logo_normal_h300.png'
+              width={466}
+              height={300}
+              alt='Logo footer'
             />
           </div>
           <div className='contact_container'>

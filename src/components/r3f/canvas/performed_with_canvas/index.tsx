@@ -1,23 +1,11 @@
 'use client'
 
-import React, {
-  Ref,
-  Suspense,
-  createRef,
-  useEffect,
-  useMemo,
-  useRef,
-} from 'react'
+import React, { Suspense, createRef, useEffect, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import {
-  OrbitControls,
-  PerspectiveCamera,
-  SoftShadows,
-} from '@react-three/drei'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
 import { IconsDataInterface } from '@/interfaces/dataInterfaces'
-import { skillsData } from '@/data/skillsData'
 import { performedWithData } from '@/data/performedWithData'
 import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
 
@@ -30,6 +18,8 @@ function PerformedWithScene() {
   gl.toneMapping = THREE.ACESFilmicToneMapping
   gl.toneMappingExposure = 6
 
+  const [totalLengthState, setTotalLengthState] = useState(0)
+
   const logosGroupRef = useRef<THREE.Group>(null!)
   const logosRefs = useMemo(
     () =>
@@ -39,43 +29,32 @@ function PerformedWithScene() {
     [],
   )
 
-  const logosData: IconsDataInterface = {
-    totalLength: 0,
-    widths: [],
-  }
-
   useEffect(() => {
-    logosRefs.forEach(({ ref }, index) => {
-      if (ref.current) {
-        logosData.widths.push(
-          ref.current.width * performedWithData[index].logo.scale.x,
-        )
-      }
-    })
     let sum = 0
-    logosRefs.forEach(({ ref }, index) => {
+    let totalLength = 0
+    performedWithData.forEach((logo, index) => {
+      const { ref } = logosRefs[index]
       if (ref.current) {
+        const width = ref.current.width * logo.logo.scale.x
         if (index === 0) {
           ref.current.position.x = sum
-          sum += logosData.widths[index] / 2
+          sum += width / 2
         } else {
-          ref.current.position.x =
-            sum + logosData.widths[index] / 2 + index * 0.8
-          sum += logosData.widths[index]
+          ref.current.position.x = sum + width / 2 + index * 0.8
+          sum += width
         }
+        totalLength += width + 0.8
       }
     })
-    logosData.widths.forEach((width) => {
-      logosData.totalLength += width + 0.8
-    })
-  }, [])
+    setTotalLengthState(totalLength)
+  }, [logosRefs])
 
   useFrame((state, delta, xrFrame) => {
     logosRefs.forEach(({ ref }) => {
       if (ref.current) {
         ref.current.position.x += delta
-        if (ref.current.position.x > logosData.totalLength / 2)
-          ref.current.position.x -= logosData.totalLength
+        if (ref.current.position.x > totalLengthState / 2)
+          ref.current.position.x -= totalLengthState
       }
     })
   })

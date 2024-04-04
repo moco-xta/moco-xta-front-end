@@ -1,5 +1,7 @@
-import useScroll from '@/hooks/useScroll'
 import React, { useEffect, useRef } from 'react'
+import Image from 'next/image'
+
+import useScroll from '@/hooks/useScroll'
 
 export default function LastProjectsBackground() {
   const { y } = useScroll()
@@ -24,10 +26,11 @@ export default function LastProjectsBackground() {
   }, [backgroundRef, y])
 
   return (
-    <img
+    <Image
       ref={backgroundRef}
       id='last_projects_background'
       src='/img/png/projects_animation/inflated_project_frame_0001.png'
+      alt='Last projects background'
     />
   )
 }

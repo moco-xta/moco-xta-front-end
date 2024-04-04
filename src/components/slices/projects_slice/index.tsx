@@ -17,6 +17,7 @@ import ScrollDown from '../../shared/scroll_down'
 
 import { default as projectsConstants } from '@/constants/projectsConstants.json'
 
+import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function ProjectsSlice() {
@@ -62,7 +63,8 @@ export default function ProjectsSlice() {
         ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - projectsConstants.CARDS_OFFSET.PROJECT : parseInt(ref.current.style.top) + projectsConstants.CARDS_OFFSET.PROJECT}px`
       }
     })
-  }, [currentProject, projectsRefs, scrollFlow])
+    // eslint-disable-next-line
+  }, [currentProject, projectsRefs])
 
   useEffect(() => {
     companiesAndSchoolRefs.forEach(({ ref }) => {
@@ -70,7 +72,8 @@ export default function ProjectsSlice() {
         ref.current.style.top = `${scrollFlow === 'up' ? parseInt(ref.current.style.top) - projectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL : parseInt(ref.current.style.top) + projectsConstants.CARDS_OFFSET.COMPANY_OR_SCHOOL}px`
       }
     })
-  }, [currentCompanyOrSchool, companiesAndSchoolRefs, scrollFlow])
+    // eslint-disable-next-line
+  }, [currentCompanyOrSchool, companiesAndSchoolRefs])
 
   return (
     <div id='project_timeline_container'>
@@ -86,7 +89,7 @@ export default function ProjectsSlice() {
           currentCompanyOrSchool={currentCompanyOrSchool}
         />
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
-        <ScrollDown />
+        <ScrollDown top={'65vh'} color={variables.grey_05} />
       </section>
       <div className='scroll_to_top_container'>
         <ScrollToTop />

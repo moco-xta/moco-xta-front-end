@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { Routes } from '@/routes/routes'
 
@@ -9,9 +10,11 @@ export default function Logo() {
   return (
     <div id='logo'>
       <Link href={Routes.find((route) => route.key === 'HOME')!.path}>
-        <img
+        <Image
           src='/img/png/moco_logo_light_h70.png'
-          alt='Girl in a jacket'
+          width={109}
+          height={70}
+          alt='Logo header'
         />
       </Link>
     </div>

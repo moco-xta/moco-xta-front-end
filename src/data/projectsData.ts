@@ -18,7 +18,7 @@ export const projectsData: ProjectDataInterface[] = [
       mobile: '/img/jpg/projects/360x227/lento_home_screenshot.jpg',
     },
     dates: {
-      to: '2024-03-15',
+      to: '2024-04-07',
       from: '2024-01-01',
     },
     roles: ['Real-time 3D', 'Full Stack'],

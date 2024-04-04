@@ -34,7 +34,7 @@ function SkillsScene() {
     sheet!.sequence.position = scroll.offset * sequenceLength
   })
 
-  function getRefs(category: string, data: SkillsLogoInterface[]) {
+  function useSetRefs(category: string, data: SkillsLogoInterface[]) {
     return useMemo(
       () =>
         data
@@ -42,13 +42,13 @@ function SkillsScene() {
           .map(() => ({
             ref: createRef<ForwardRefGltfGroupInterface>(),
           })),
-      [],
+      [data, category],
     )
   }
 
-  const logosGraphicsRefs = getRefs('graphics', skillsData)
-  const logosFrontEndFrameworkRefs = getRefs('front_end_framework', skillsData)
-  const logosMobileFrameworkRefs = getRefs('mobile_framework', skillsData)
+  const logosGraphicsRefs = useSetRefs('graphics', skillsData)
+  const logosFrontEndFrameworkRefs = useSetRefs('front_end_framework', skillsData)
+  const logosMobileFrameworkRefs = useSetRefs('mobile_framework', skillsData)
 
   function setPosition(
     data: SkillsLogoInterface[],
@@ -61,15 +61,13 @@ function SkillsScene() {
       .forEach((logo, index) => {
         const { ref } = refs[index]
         if (ref.current) {
+          const width = ref.current.width * logo.geometry.scale.x
           if (index === 0) {
             ref.current.position.x = sum
-            sum += (ref.current.width * logo.geometry.scale.x) / 2
+            sum += width / 2
           } else {
-            ref.current.position.x =
-              sum +
-              (ref.current.width * logo.geometry.scale.x) / 2 +
-              index * 0.8
-            sum += ref.current.width * logo.geometry.scale.x
+            ref.current.position.x = sum + width / 2 + index * 0.8
+            sum += width
           }
         }
       })
@@ -79,7 +77,7 @@ function SkillsScene() {
     setPosition(skillsData, 'graphics', logosGraphicsRefs)
     setPosition(skillsData, 'front_end_framework', logosFrontEndFrameworkRefs)
     setPosition(skillsData, 'mobile_framework', logosMobileFrameworkRefs)
-  }, [])
+  }, [logosGraphicsRefs, logosFrontEndFrameworkRefs, logosMobileFrameworkRefs])
 
   function getLogos(
     groupPosition: THREE.Vector3,

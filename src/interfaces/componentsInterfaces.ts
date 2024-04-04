@@ -64,3 +64,8 @@ export interface RatingStarsInterface {
 export interface ScrollHandlerInterface {
   navWrapperRef: RefObject<HTMLDivElement>
 }
+
+export interface ScrollDownInterface {
+  top: string
+  color: string
+}

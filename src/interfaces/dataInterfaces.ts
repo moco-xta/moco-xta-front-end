@@ -3,11 +3,12 @@ import { GroupProps, MeshProps } from '@react-three/fiber'
 import { IconType } from 'react-icons'
 
 import { LogoRefType } from 'types/logoRefType'
+import { ForwardRefGltfGroupInterface } from './r3fInterfaces'
 
 export interface IntroductionCardDataInterface {
   name: string
   logo: {
-    component: (props: GroupProps) => JSX.Element
+    component: ForwardRefExoticComponent<Omit<GroupProps, "ref"> & RefAttributes<ForwardRefGltfGroupInterface>>
     position: {
       [key: string]: number
     }

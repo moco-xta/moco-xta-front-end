@@ -21,13 +21,13 @@ export default function useScroll() {
     (e: Event) => {
       setScrollPercentage((y * 100) / height)
       if (y > window.scrollY) {
-        setScrollFlow('down')
+        if(scrollFlow !== 'down') setScrollFlow('down')
       } else if (y < window.scrollY) {
-        setScrollFlow('up')
+        if(scrollFlow !== 'up') setScrollFlow('up')
       }
       setY(window.scrollY)
     },
-    [y, height],
+    [y, height, scrollFlow],
   )
 
   useEffect(() => {
