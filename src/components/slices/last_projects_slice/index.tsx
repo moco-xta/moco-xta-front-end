@@ -12,9 +12,9 @@ import './index.scss'
 export default function LastProjectsSlice() {
   return (
     <section id='last_projects_slice'>
-      <div id='last_projects_background_container'>
+      {/* <div id='last_projects_background_container'>
         <LastProjectsBackground />
-      </div>
+      </div> */}
       <div id='last_projects_content'>
         <LastProjectsText />
         <LastProjectsCards />

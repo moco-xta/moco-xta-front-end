@@ -2,16 +2,17 @@ import React from 'react'
 import { FaArrowDown } from 'react-icons/fa6'
 import { useTranslations } from 'next-intl'
 
-import variables from '@/styles/variables.module.scss'
+import { ScrollDownInterface } from '@/interfaces/componentsInterfaces'
+
 import './index.scss'
 
-export default function ScrollDown() {
+export default function ScrollDown({ top, color }: ScrollDownInterface) {
   const t = useTranslations('PROJECTS')
 
   return (
     <div
       id='scroll_dwon_container'
-      style={{ top: '85vh', color: variables.white }}
+      style={{ top: top, color: color }}
     >
       <p>{t('SCROLL_DOWN')}</p>
       {/* <div id='arrow_down_container'> */}

@@ -1,8 +1,8 @@
 import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
 
-import { LogoReactThreeDrei } from '@/components/r3f/models/logos/LogoReactThreeDrei'
-import { LogoNextjs } from '@/components/r3f/models/logos/LogoNextjs'
-import { LogoAngular } from '@/components/r3f/models/logos/LogoAngular'
+import LogoReactThreeDrei from '@/components/r3f/models/logos/LogoReactThreeDrei'
+import LogoNextjs from '@/components/r3f/models/logos/LogoNextjs'
+import LogoAngular from '@/components/r3f/models/logos/LogoAngular'
 
 import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
 
