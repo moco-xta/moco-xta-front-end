@@ -3,7 +3,10 @@ import React, { useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import useTextureLoader from '@/hooks/useTextureLoader'
+
 import { default as gltfConstants } from '@/constants/gltfConstants.json'
+import { default as texturesConstants } from '@/constants/texturesConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -12,20 +15,25 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function Trestle(props: JSX.IntrinsicElements['group']) {
-  const gltf = useGLTF(gltfConstants.TRESTLE) as GLTFResult
+export function Trestle({ position }: JSX.IntrinsicElements['group']) {
+  const { nodes } = useGLTF(gltfConstants.TRESTLE) as GLTFResult
 
-  useEffect(() => {
-    gltf.scene.traverse((object) => {
-      if (object instanceof THREE.Mesh) {
-        object.receiveShadow = true
-        object.material = new THREE.MeshStandardMaterial()
-        object.material.envMapIntensity = 0
-      }
-    })
-  }, [gltf])
+  const map = useTextureLoader(texturesConstants.TRESTLE_DIFFUSE)
+  map.flipY = false
 
-  return <primitive object={gltf.scene} />
+  return (
+    <mesh
+      geometry={nodes.Trestle.geometry}
+      position={position}
+      receiveShadow
+      castShadow
+    >
+      <meshStandardMaterial
+        attach='material'
+        map={map}
+      />
+    </mesh>
+  )
 }
 
 useGLTF.preload(gltfConstants.TRESTLE)

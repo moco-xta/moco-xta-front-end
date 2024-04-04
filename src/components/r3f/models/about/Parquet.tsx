@@ -11,10 +11,10 @@ import { default as texturesConstants } from '@/constants/texturesConstants.json
 export function Parquet() {
   const gltf = useGltfLoader(gltfConstants.PARQUET)
 
-  const colorMap = useTextureLoader(texturesConstants.PARQUET_DIFFUSE)
-  colorMap.wrapS = THREE.RepeatWrapping
-  colorMap.wrapT = THREE.RepeatWrapping
-  colorMap.repeat.set(
+  const map = useTextureLoader(texturesConstants.PARQUET_DIFFUSE)
+  map.wrapS = THREE.RepeatWrapping
+  map.wrapT = THREE.RepeatWrapping
+  map.repeat.set(
     AboutConstants.SCENE.PARQUET.REPEAT,
     AboutConstants.SCENE.PARQUET.REPEAT,
   )
@@ -48,7 +48,7 @@ export function Parquet() {
       if (object instanceof THREE.Mesh) {
         object.receiveShadow = true
         object.material = new THREE.MeshStandardMaterial()
-        object.material.map = colorMap
+        object.material.map = map
         object.material.bumpMap = bumpMap
         object.material.normalMap = normalMap
         object.material.roughnessMap = roughnessMap
@@ -67,7 +67,7 @@ export function Parquet() {
         object.material.envMapIntensity = 0
       }
     })
-  }, [gltf, colorMap, bumpMap, normalMap, roughnessMap])
+  }, [gltf, map, bumpMap, normalMap, roughnessMap])
 
   return <primitive object={gltf.scene} />
 }

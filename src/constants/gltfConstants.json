@@ -59,5 +59,6 @@
   "LOGO_WEBGL": "/gltf/logos/LogoWebgl.gltf",
 
   "PARQUET": "/gltf/about/Parquet.gltf",
-  "TRESTLE": "/gltf/about/Trestle.gltf"
+  "TRESTLE": "/gltf/about/Trestle.gltf",
+  "MAC_BOOK_PRO": "/gltf/about/MacBookPro.gltf"
 }
