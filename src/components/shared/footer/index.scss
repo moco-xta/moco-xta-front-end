@@ -14,12 +14,22 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: row;
+    color: $grey_05;
 
     #links_container {
       width: 50%;
       display: flex;
       flex-direction: column;
       gap: 30px;
+      color: $grey_07;
+
+      .footer_link {
+        cursor: pointer;
+      }
+
+      .footer_link:hover {
+        color: $white;
+      }
     }
 
     #contact_and_logo_container {
@@ -53,6 +63,14 @@ footer {
         flex-direction: row;
         align-items: flex-end;
         gap: 10px;
+
+        .social_icon {
+          cursor: pointer;
+        }
+
+        .social_icon:hover {
+          color: $white;
+        }
       }
     }
   }
@@ -61,5 +79,6 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+    color: $grey_03;
   }
 }
