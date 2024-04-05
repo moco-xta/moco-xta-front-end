@@ -60,6 +60,7 @@
   "LOGO_THREEJS": "/gltf/logos/LogoThreejs.gltf",
   "LOGO_TYPESCRIPT": "/gltf/logos/LogoTypescript.gltf",
   "LOGO_WEBGL": "/gltf/logos/LogoWebgl.gltf",
+  "LOGO_YARN": "/gltf/logos/LogoYarn.gltf",
 
   "PARQUET": "/gltf/about/Parquet.gltf",
   "TRESTLE": "/gltf/about/Trestle.gltf",

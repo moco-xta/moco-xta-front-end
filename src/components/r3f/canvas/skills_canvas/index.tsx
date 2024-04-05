@@ -47,11 +47,21 @@ function SkillsScene() {
   }
 
   const logosGraphicsRefs = useSetRefs('graphics', skillsData)
+  const logos3DRefs = useSetRefs('3D', skillsData)
   const logosFrontEndFrameworkRefs = useSetRefs(
     'front_end_framework',
     skillsData,
   )
   const logosMobileFrameworkRefs = useSetRefs('mobile_framework', skillsData)
+  const logosFrontEndLanguageRefs = useSetRefs('front_end_language', skillsData)
+  const logosFrontEndLibraryRefs = useSetRefs('front_end_library', skillsData)
+  const logosFrontEndGraphicsRefs = useSetRefs('front_end_graphics', skillsData)
+  const logosPackageManagerRefs = useSetRefs('package_manager', skillsData)
+  const logosBackendFrameworkRefs = useSetRefs('back_end_framework', skillsData)
+  const logosBackendLanguageRefs = useSetRefs('back_end_language', skillsData)
+  const logosHostingRefs = useSetRefs('hosting', skillsData)
+  const logosToolRefs = useSetRefs('tool', skillsData)
+  const logosDatabaseRefs = useSetRefs('database', skillsData)
 
   function setPosition(
     data: SkillsLogoInterface[],
@@ -78,8 +88,18 @@ function SkillsScene() {
 
   useEffect(() => {
     setPosition(skillsData, 'graphics', logosGraphicsRefs)
+    setPosition(skillsData, '3D', logos3DRefs)
     setPosition(skillsData, 'front_end_framework', logosFrontEndFrameworkRefs)
     setPosition(skillsData, 'mobile_framework', logosMobileFrameworkRefs)
+    setPosition(skillsData, 'front_end_language', logosFrontEndLanguageRefs)
+    setPosition(skillsData, 'front_end_library', logosFrontEndLibraryRefs)
+    setPosition(skillsData, 'front_end_graphics', logosFrontEndGraphicsRefs)
+    setPosition(skillsData, 'package_manager', logosPackageManagerRefs)
+    setPosition(skillsData, 'back_end_framework', logosBackendFrameworkRefs)
+    setPosition(skillsData, 'back_end_language', logosBackendLanguageRefs)
+    setPosition(skillsData, 'database', logosDatabaseRefs)
+    setPosition(skillsData, 'hosting', logosHostingRefs)
+    setPosition(skillsData, 'tool', logosToolRefs)
   }, [logosGraphicsRefs, logosFrontEndFrameworkRefs, logosMobileFrameworkRefs])
 
   function getLogos(
@@ -118,17 +138,72 @@ function SkillsScene() {
         'graphics',
         logosGraphicsRefs,
       )}
+      {getLogos(new THREE.Vector3(0, 0, -2), skillsData, '3D', logos3DRefs)}
       {getLogos(
-        new THREE.Vector3(0, 0, -2),
+        new THREE.Vector3(0, 0, -4),
         skillsData,
         'front_end_framework',
         logosFrontEndFrameworkRefs,
       )}
       {getLogos(
-        new THREE.Vector3(0, 0, -4),
+        new THREE.Vector3(0, 0, -6),
         skillsData,
         'mobile_framework',
         logosMobileFrameworkRefs,
+      )}
+      {getLogos(
+        new THREE.Vector3(0, 0, -8),
+        skillsData,
+        'front_end_language',
+        logosFrontEndLanguageRefs,
+      )}
+      {getLogos(
+        new THREE.Vector3(0, 0, -10),
+        skillsData,
+        'front_end_library',
+        logosFrontEndLibraryRefs,
+      )}
+      {getLogos(
+        new THREE.Vector3(0, 0, -12),
+        skillsData,
+        'front_end_graphics',
+        logosFrontEndGraphicsRefs,
+      )}
+      {getLogos(
+        new THREE.Vector3(0, 0, -14),
+        skillsData,
+        'package_manager',
+        logosPackageManagerRefs,
+      )}
+      {getLogos(
+        new THREE.Vector3(0, 0, -16),
+        skillsData,
+        'back_end_framework',
+        logosBackendFrameworkRefs,
+      )}
+      {getLogos(
+        new THREE.Vector3(0, 0, -18),
+        skillsData,
+        'back_end_language',
+        logosBackendLanguageRefs,
+      )}
+      {getLogos(
+        new THREE.Vector3(0, 0, -20),
+        skillsData,
+        'database',
+        logosDatabaseRefs,
+      )}
+      {getLogos(
+        new THREE.Vector3(0, 0, -22),
+        skillsData,
+        'hosting',
+        logosHostingRefs,
+      )}
+      {getLogos(
+        new THREE.Vector3(0, 0, -24),
+        skillsData,
+        'tool',
+        logosToolRefs,
       )}
     </>
   )

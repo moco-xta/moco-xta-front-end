@@ -2,18 +2,17 @@
   "LOGOS": {
     "CATEGORIES": {
       "GRAPHICS": "graphics",
-      "THREE_D": "three_d",
+      "THREE_D": "3D",
       "MOBILE_FRAMEWORK": "mobile_framework",
       "FRONT_END_FRAMEWORK": "front_end_framework",
       "FRONT_END_LANGUAGE": "front_end_language",
       "FRONT_END_LIBRARY": "front_end_library",
       "FRONT_END_GRAPHICS": "front_end_graphics",
+      "PACKAGE_MANAGER": "package_manager",
       "BACK_END_FRAMEWORK": "back_end_framework",
       "BACK_END_LANGUAGE": "back_end_language",
       "DATABASE": "database",
-      "DEV_OPS": "dev_ops",
       "HOSTING": "hosting",
-      "LANGUAGE": "language",
       "TOOL": "tool"
     },
     "DATA": [
@@ -129,7 +128,7 @@
       },
       {
         "NAME": "logo_css",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LANGUAGE",
         "COMPONENT": "LogoCss",
         "GEOMETRY": {
           "POSITION": {
@@ -151,7 +150,7 @@
       },
       {
         "NAME": "logo_django",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/BACK_END_FRAMEWORK",
         "COMPONENT": "LogoDjango",
         "GEOMETRY": {
           "POSITION": {
@@ -173,7 +172,7 @@
       },
       {
         "NAME": "logo_docker",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/HOSTING",
         "COMPONENT": "LogoDocker",
         "GEOMETRY": {
           "POSITION": {
@@ -195,7 +194,7 @@
       },
       {
         "NAME": "logo_figma",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
         "COMPONENT": "LogoFigma",
         "GEOMETRY": {
           "POSITION": {
@@ -217,7 +216,7 @@
       },
       {
         "NAME": "logo_formik",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LIBRARY",
         "COMPONENT": "LogoFormik",
         "GEOMETRY": {
           "POSITION": {
@@ -239,7 +238,7 @@
       },
       {
         "NAME": "logo_github",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
         "COMPONENT": "LogoGithub",
         "GEOMETRY": {
           "POSITION": {
@@ -261,7 +260,7 @@
       },
       {
         "NAME": "logo_google_analytics",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
         "COMPONENT": "LogoGoogleAnalytics",
         "GEOMETRY": {
           "POSITION": {
@@ -283,7 +282,7 @@
       },
       {
         "NAME": "logo_google_maps",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LIBRARY",
         "COMPONENT": "LogoGoogleMaps",
         "GEOMETRY": {
           "POSITION": {
@@ -305,7 +304,7 @@
       },
       {
         "NAME": "logo_graphql",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LIBRARY",
         "COMPONENT": "LogoGraphql",
         "GEOMETRY": {
           "POSITION": {
@@ -349,7 +348,7 @@
       },
       {
         "NAME": "logo_hostinger",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/HOSTING",
         "COMPONENT": "LogoHostinger",
         "GEOMETRY": {
           "POSITION": {
@@ -371,7 +370,7 @@
       },
       {
         "NAME": "logo_html",
-        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LANGUAGE",
         "COMPONENT": "LogoHtml",
         "GEOMETRY": {
           "POSITION": {
@@ -407,9 +406,9 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
@@ -429,15 +428,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_java",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/BACK_END_LANGUAGE",
         "COMPONENT": "LogoJava",
         "GEOMETRY": {
           "POSITION": {
@@ -451,15 +450,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_javascript",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LANGUAGE",
         "COMPONENT": "LogoJavascript",
         "GEOMETRY": {
           "POSITION": {
@@ -473,15 +472,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_mui",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LIBRARY",
         "COMPONENT": "LogoMui",
         "GEOMETRY": {
           "POSITION": {
@@ -495,15 +494,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_mysql",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/DATABASE",
         "COMPONENT": "LogoMysql",
         "GEOMETRY": {
           "POSITION": {
@@ -517,15 +516,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_next_intl",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LIBRARY",
         "COMPONENT": "LogoNextIntl",
         "GEOMETRY": {
           "POSITION": {
@@ -539,9 +538,9 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
@@ -561,15 +560,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.5,
+            "X": 1,
             "Y": 1,
-            "Z": 0.5
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_nginx",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/HOSTING",
         "COMPONENT": "LogoNginx",
         "GEOMETRY": {
           "POSITION": {
@@ -583,15 +582,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_npm",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/PACKAGE_MANAGER",
         "COMPONENT": "LogoNpm",
         "GEOMETRY": {
           "POSITION": {
@@ -605,9 +604,9 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
@@ -627,15 +626,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_postgresql",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/DATABASE",
         "COMPONENT": "LogoPostgresql",
         "GEOMETRY": {
           "POSITION": {
@@ -649,9 +648,9 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
@@ -671,15 +670,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_python",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/BACK_END_LANGUAGE",
         "COMPONENT": "LogoPython",
         "GEOMETRY": {
           "POSITION": {
@@ -693,9 +692,9 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
@@ -715,9 +714,9 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
@@ -737,15 +736,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_react_three_drei",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/THREE_D",
         "COMPONENT": "LogoReactThreeDrei",
         "GEOMETRY": {
           "POSITION": {
@@ -759,15 +758,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_redux",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LIBRARY",
         "COMPONENT": "LogoRedux",
         "GEOMETRY": {
           "POSITION": {
@@ -781,15 +780,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_sass",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
         "COMPONENT": "LogoSass",
         "GEOMETRY": {
           "POSITION": {
@@ -803,15 +802,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_spring",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/BACK_END_FRAMEWORK",
         "COMPONENT": "LogoSpring",
         "GEOMETRY": {
           "POSITION": {
@@ -825,15 +824,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_tailwind",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_GRAPHICS",
         "COMPONENT": "LogoTailwind",
         "GEOMETRY": {
           "POSITION": {
@@ -847,15 +846,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_threejs",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/THREE_D",
         "COMPONENT": "LogoThreejs",
         "GEOMETRY": {
           "POSITION": {
@@ -869,15 +868,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_typescript",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/FRONT_END_LANGUAGE",
         "COMPONENT": "LogoTypescript",
         "GEOMETRY": {
           "POSITION": {
@@ -891,15 +890,15 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
           }
         }
       },
       {
         "NAME": "logo_webgl",
-        "CATEGORY": "/LOGOS/CATEGORIES/TOOL",
+        "CATEGORY": "/LOGOS/CATEGORIES/THREE_D",
         "COMPONENT": "LogoWebgl",
         "GEOMETRY": {
           "POSITION": {
@@ -913,9 +912,31 @@
             "Z": 0
           },
           "SCALE": {
-            "X": 0.9,
+            "X": 1,
             "Y": 1,
-            "Z": 0.9
+            "Z": 1
+          }
+        }
+      },
+      {
+        "NAME": "logo_yarn",
+        "CATEGORY": "/LOGOS/CATEGORIES/PACKAGE_MANAGER",
+        "COMPONENT": "LogoYarn",
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "ROTATION": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "SCALE": {
+            "X": 1,
+            "Y": 1,
+            "Z": 1
           }
         }
       }
