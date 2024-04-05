@@ -47,7 +47,10 @@ function SkillsScene() {
   }
 
   const logosGraphicsRefs = useSetRefs('graphics', skillsData)
-  const logosFrontEndFrameworkRefs = useSetRefs('front_end_framework', skillsData)
+  const logosFrontEndFrameworkRefs = useSetRefs(
+    'front_end_framework',
+    skillsData,
+  )
   const logosMobileFrameworkRefs = useSetRefs('mobile_framework', skillsData)
 
   function setPosition(

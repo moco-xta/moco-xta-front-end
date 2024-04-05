@@ -1,5 +1,6 @@
 import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
 import { ReviewCardDataInterface } from './componentsInterfaces'
+import { MeshProps } from '@react-three/fiber'
 
 export interface ForwardRefGltfGroupInterface extends THREE.Group {
   width: number
@@ -19,4 +20,8 @@ export interface StarCanvasInterface {
 
 export interface StarSceneInterface {
   data: ReviewCardDataInterface
+}
+
+export interface ColorPadInterface extends MeshProps {
+  color: THREE.Color
 }
