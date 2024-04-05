@@ -16,7 +16,10 @@ export default function HeroSlice() {
       <div id='hero_canvas_container'>
         <HeroCanvas />
       </div>
-      <ScrollDown top={'85vh'} color={variables.white} />
+      <ScrollDown
+        top={'85vh'}
+        color={variables.white}
+      />
     </section>
   )
 }

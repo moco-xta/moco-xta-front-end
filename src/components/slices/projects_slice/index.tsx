@@ -89,7 +89,10 @@ export default function ProjectsSlice() {
           currentCompanyOrSchool={currentCompanyOrSchool}
         />
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
-        <ScrollDown top={'65vh'} color={variables.grey_05} />
+        <ScrollDown
+          top={'65vh'}
+          color={variables.grey_05}
+        />
       </section>
       <div className='scroll_to_top_container'>
         <ScrollToTop />

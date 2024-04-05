@@ -60,11 +60,26 @@ export default function Footer() {
             />
           </div>
           <div id='footer_socials_container'>
-            <FaLinkedinIn className='social_icon' size={30} />
-            <FaTwitter className='social_icon' size={30} />
-            <FaInstagram className='social_icon' size={30} />
-            <FaFacebookF className='social_icon' size={30} />
-            <IoLogoGithub className='social_icon' size={30} />
+            <FaLinkedinIn
+              className='social_icon'
+              size={30}
+            />
+            <FaTwitter
+              className='social_icon'
+              size={30}
+            />
+            <FaInstagram
+              className='social_icon'
+              size={30}
+            />
+            <FaFacebookF
+              className='social_icon'
+              size={30}
+            />
+            <IoLogoGithub
+              className='social_icon'
+              size={30}
+            />
           </div>
         </div>
       </div>

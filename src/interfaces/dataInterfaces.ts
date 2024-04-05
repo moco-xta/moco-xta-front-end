@@ -8,7 +8,9 @@ import { ForwardRefGltfGroupInterface } from './r3fInterfaces'
 export interface IntroductionCardDataInterface {
   name: string
   logo: {
-    component: ForwardRefExoticComponent<Omit<GroupProps, "ref"> & RefAttributes<ForwardRefGltfGroupInterface>>
+    component: ForwardRefExoticComponent<
+      Omit<GroupProps, 'ref'> & RefAttributes<ForwardRefGltfGroupInterface>
+    >
     position: {
       [key: string]: number
     }
