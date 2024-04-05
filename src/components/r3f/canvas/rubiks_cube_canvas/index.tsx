@@ -64,20 +64,25 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     'Bottom CCW': button(() => {
       // @ts-ignore
       rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', -1, -1)
-    })
+    }),
   })
 
   return <group ref={rotationGroupRef} />
 }
 
 function setAxis(cubeCoordinate: THREE.Vector3) {
-  if(cubeCoordinate.x === 0) return 'x'
-  if(cubeCoordinate.y === 0) return 'y'
-  if(cubeCoordinate.z === 0) return 'z'
+  if (cubeCoordinate.x === 0) return 'x'
+  if (cubeCoordinate.y === 0) return 'y'
+  if (cubeCoordinate.z === 0) return 'z'
 }
 
-function rotate(rubiksCubeRef: THREE.Group, rotationGroupRef: THREE.Group, axis: string, limit: number, multiplier: number) {
-
+function rotate(
+  rubiksCubeRef: THREE.Group,
+  rotationGroupRef: THREE.Group,
+  axis: string,
+  limit: number,
+  multiplier: number,
+) {
   /* const axis: string = setAxis(e.eventObject.position) */
 
   /* const limit = e.eventObject.position[axis] */
@@ -200,7 +205,7 @@ function RubiksCubeScene() {
           ),
         )}
       </group>
-      <RotattionGroup rubiksCubeRef={rubiksCubeRef}  />
+      <RotattionGroup rubiksCubeRef={rubiksCubeRef} />
     </>
   )
 }
