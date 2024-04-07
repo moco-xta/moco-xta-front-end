@@ -13,3 +13,7 @@ textarea {
 textarea.error {
   border: $input_border_alert;
 }
+
+textarea.disabled {
+  cursor: default;
+}

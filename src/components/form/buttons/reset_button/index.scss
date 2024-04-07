@@ -8,3 +8,7 @@ button[type='reset'] {
   border-radius: 10px;
   cursor: pointer;
 }
+
+button[type='reset'].disabled {
+  cursor: default;
+}

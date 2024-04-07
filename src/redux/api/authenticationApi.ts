@@ -40,9 +40,6 @@ const authenticationApi = apiSlice.injectEndpoints({
         storeTokens(response)
         return response
       },
-      transformErrorResponse: (response) => {
-        return response
-      },
       invalidatesTags: ['Authentication'],
     }),
     logOut: build.mutation<void, LogOutPayloadInterface>({

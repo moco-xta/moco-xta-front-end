@@ -15,5 +15,9 @@
     .rating_star {
       cursor: pointer;
     }
+
+    .rating_star.disabled {
+      cursor: default;
+    }
   }
 }

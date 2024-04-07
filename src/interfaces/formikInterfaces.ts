@@ -26,6 +26,7 @@ export interface FormikTextareaInterface extends FormikInputsInterface {
   rows: number
   maxLength: number
   handleChange: (e: ChangeEvent<HTMLTextAreaElement>) => void
+  disabled: boolean
 }
 
 interface RadioGroupOptions {
@@ -39,11 +40,13 @@ export interface FormikRadioGroupInterface extends FormikInputsInterface {
   options: RadioGroupOptions[]
   translationKeyPrefix: string
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
+  disabled: boolean
 }
 
 export interface FormikRatingStarsInterface extends FormikInputsInterface {
   value: number
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
+  disabled: boolean
 }
 
 export interface FormikErrorInterface {

@@ -28,4 +28,5 @@ export interface ResetButtonInterface {
   resetForm: (
     nextState?: Partial<FormikState<AddReviewValuesInterface>> | undefined,
   ) => void
+  resetButtonIsDisabled: boolean
 }

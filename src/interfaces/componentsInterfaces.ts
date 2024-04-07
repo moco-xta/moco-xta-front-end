@@ -47,10 +47,11 @@ export interface TimelineInterface {
 }
 
 export interface ReviewCardDataInterface {
+  firstName: string
   review: string
-  name: string
   role: string
   rating: number
+  date: Date
 }
 
 export interface ReviewCardInterface {
