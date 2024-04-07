@@ -61,7 +61,7 @@ export default function SignIn({
             },
             error: (response) => {
               setSubmitButtonIsDisabled(false)
-              return response.data.message
+              return 'Authentication failed'
             },
           })
         }}

@@ -15,10 +15,8 @@ export interface SignInPayloadInterface {
 }
 
 export interface AddReviewValuesInterface {
-  name: string
-  email: string
-  role: 'project_manager' | 'developer' | 'designer' | 'other' | ''
   review: string
+  role: 'project_manager' | 'developer' | 'designer' | 'other' | ''
   rating: number
   date: Date
 }
@@ -32,10 +30,16 @@ export interface LogOutPayloadInterface {
   access_token: string
 }
 
+export interface AddReviewPayloadInterface {
+  review: string
+  role: string
+  rating: number
+  date: Date
+}
+
 export interface ReviewPayloadInterface {
   id?: number
-  name: string
-  email: string
+  firstName: string
   role: string
   review: string
   rating: number

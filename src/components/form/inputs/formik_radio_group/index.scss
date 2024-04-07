@@ -25,6 +25,7 @@
         place-content: center;
         border: $input_border;
         border-radius: 50%;
+        cursor: pointer;
       }
 
       input[type='radio']::before {
@@ -43,6 +44,10 @@
 
       input[type='radio'].error {
         border: $input_border_alert;
+      }
+
+      label {
+        cursor: pointer;
       }
     }
   }

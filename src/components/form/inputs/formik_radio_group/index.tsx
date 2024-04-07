@@ -22,6 +22,7 @@ export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
     value,
     error,
     helperText,
+    disabled
   } = props
 
   const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
@@ -61,6 +62,7 @@ export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
               onChange={handleOnChange}
               value={option.value ? option.value : option.name}
               checked={value === option.value || value === option.name}
+              disabled={disabled}
             />
             <label htmlFor={option.name}>
               {t(`${translationKeyPrefix}.${option.name}`)}

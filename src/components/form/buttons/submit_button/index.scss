@@ -13,4 +13,5 @@ button[type='submit'] {
 
 button[type='submit'].disabled {
   background-color: $alert_background;
+  cursor: default;
 }

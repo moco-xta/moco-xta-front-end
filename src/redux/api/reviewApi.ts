@@ -2,7 +2,7 @@ import apiSlice from '../slice/apiSlice'
 
 import { default as apiConstants } from '@/constants/apiConstants.json'
 
-import { ReviewPayloadInterface } from '@/interfaces/reduxApiInterfaces'
+import { AddReviewPayloadInterface, ReviewPayloadInterface } from '@/interfaces/reduxApiInterfaces'
 
 const reviewApi = apiSlice.injectEndpoints({
   endpoints: (build) => ({
@@ -10,7 +10,7 @@ const reviewApi = apiSlice.injectEndpoints({
       query: () => apiConstants.REVIEWS_LIST,
       providesTags: ['Review'],
     }),
-    addReview: build.mutation<ReviewPayloadInterface, ReviewPayloadInterface>({
+    addReview: build.mutation<ReviewPayloadInterface, AddReviewPayloadInterface>({
       query: (reviewPayload) => ({
         url: apiConstants.ADD_REVIEW,
         method: 'POST',
