@@ -6,8 +6,13 @@ import React, {
   useMemo,
 } from 'react'
 import * as THREE from 'three'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, ScrollControls, useScroll } from '@react-three/drei'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import {
+  Box,
+  OrbitControls,
+  ScrollControls,
+  useScroll,
+} from '@react-three/drei'
 import studio from '@theatre/studio'
 import extension from '@theatre/r3f/dist/extension'
 import { getProject, val } from '@theatre/core'
@@ -21,6 +26,10 @@ import { skillsData } from '@/data/skillsData'
 import { SkillsPattern } from '@/components/r3f/models/skills/SkillsPattern'
 
 import { default as SkillsConstants } from '@/constants/skillsConstants.json'
+import { GraphicsPack } from '../../models/skills/GraphicsPack'
+import { GraphicsSkills } from '../../models/skills/GraphicsSkills'
+import { RectAreaLightUniformsLib } from "three/examples/jsm/lights/RectAreaLightUniformsLib.js";
+import { RectAreaLightHelper } from 'three/examples/jsm/Addons.js'
 
 studio.extend(extension)
 studio.initialize()
@@ -88,18 +97,17 @@ function SkillsScene() {
 
   useEffect(() => {
     setPosition(skillsData, 'graphics', logosGraphicsRefs)
-    setPosition(skillsData, '3D', logos3DRefs)
     setPosition(skillsData, 'front_end_framework', logosFrontEndFrameworkRefs)
-    setPosition(skillsData, 'mobile_framework', logosMobileFrameworkRefs)
-    setPosition(skillsData, 'front_end_language', logosFrontEndLanguageRefs)
-    setPosition(skillsData, 'front_end_library', logosFrontEndLibraryRefs)
-    setPosition(skillsData, 'front_end_graphics', logosFrontEndGraphicsRefs)
-    setPosition(skillsData, 'package_manager', logosPackageManagerRefs)
-    setPosition(skillsData, 'back_end_framework', logosBackendFrameworkRefs)
-    setPosition(skillsData, 'back_end_language', logosBackendLanguageRefs)
-    setPosition(skillsData, 'database', logosDatabaseRefs)
-    setPosition(skillsData, 'hosting', logosHostingRefs)
-    setPosition(skillsData, 'tool', logosToolRefs)
+    /* setPosition(skillsData, 'mobile_framework', logosMobileFrameworkRefs) */
+    /* setPosition(skillsData, 'front_end_language', logosFrontEndLanguageRefs) */
+    /* setPosition(skillsData, 'front_end_library', logosFrontEndLibraryRefs) */
+    /* setPosition(skillsData, 'front_end_graphics', logosFrontEndGraphicsRefs) */
+    /* setPosition(skillsData, 'package_manager', logosPackageManagerRefs) */
+    /* setPosition(skillsData, 'back_end_framework', logosBackendFrameworkRefs) */
+    /* setPosition(skillsData, 'back_end_language', logosBackendLanguageRefs) */
+    /* setPosition(skillsData, 'database', logosDatabaseRefs) */
+    /* setPosition(skillsData, 'hosting', logosHostingRefs) */
+    /* setPosition(skillsData, 'tool', logosToolRefs) */
   }, [logosGraphicsRefs, logosFrontEndFrameworkRefs, logosMobileFrameworkRefs])
 
   function getLogos(
@@ -209,6 +217,35 @@ function SkillsScene() {
   )
 }
 
+function PackingScene() {
+  const { gl } = useThree()
+  gl.toneMapping = THREE.ACESFilmicToneMapping
+  gl.toneMappingExposure = 6
+
+  return (
+    <>
+      <GraphicsPack />
+      {/* <GraphicsSkills /> */}
+    </>
+  )
+}
+
+
+
+const RectArealightWithHelper = ({ position, color }) => {
+
+  const { scene } = useThree();
+
+  RectAreaLightUniformsLib.init();
+
+  const rectLight = new THREE.RectAreaLight(color, 7.5, 2, 5);
+  rectLight.position.set(position[0], position[1], position[2]);
+  scene.add(rectLight);
+  scene.add(new RectAreaLightHelper(rectLight));
+
+  return null;
+};
+
 export default function SkillsCanvas() {
   const sheet = getProject('Skills scene').sheet('Scene')
 
@@ -216,6 +253,7 @@ export default function SkillsCanvas() {
     <Canvas
       dpr={SkillsConstants.SCENE.CANVAS.DPR}
       shadows
+      legacy={false}
       linear
       flat
       gl={{
@@ -235,15 +273,44 @@ export default function SkillsCanvas() {
           <PerspectiveCamera
             theatreKey='Camera'
             makeDefault
-            position={[0, 0, -20]}
+            position={[0, 0, 7]}
             fov={90}
             near={0.1}
-            far={70}
+            far={55}
           />
-          <ambientLight />
-          <pointLight position={[10, 10, 10]} />
+          <ambientLight intensity={1} />
+
+          <RectArealightWithHelper position={[-5, 5, 5]} color="white" />
+          {/* <RectArealightWithHelper position={[0, 5, 5]} color="white" /> */}
+          <RectArealightWithHelper position={[5, 5, 5]} color="white" />
+          {/* <pointLight
+            position={[3, 3, 3]}
+            intensity={0.2}
+            castShadow
+          />
+          <pointLight
+            position={[-3, 3, 3]}
+            intensity={0.2}
+            castShadow
+          />
+          <pointLight
+            position={[0, 0, 3]}
+            intensity={0.2}
+            castShadow
+          /> */}
+          {/*  <rectAreaLight
+            position={[0, 8.06494, 16.7856]}
+            rotation={[THREE.MathUtils.degToRad(295.609), 0, 0]}
+            intensity={5000}
+          />
+          <rectAreaLight
+            position={[0, -5.04878, -8.19607]}
+            rotation={[THREE.MathUtils.degToRad(119.011), 0, 0]}
+            intensity={5000}
+          /> */}
           <Suspense fallback={null}>
-            <SkillsScene />
+            {/* <SkillsScene /> */}
+            <PackingScene />
           </Suspense>
         </SheetProvider>
       </ScrollControls>
