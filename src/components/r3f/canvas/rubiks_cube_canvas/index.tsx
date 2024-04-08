@@ -19,8 +19,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', -1, 1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'x',
+        -1,
+        1,
+        setIsRotating,
+      )
     }
   }
 
@@ -28,8 +35,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', -1, -1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'x',
+        -1,
+        -1,
+        setIsRotating,
+      )
     }
   }
 
@@ -37,8 +51,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', 1, -1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'x',
+        1,
+        -1,
+        setIsRotating,
+      )
     }
   }
 
@@ -46,8 +67,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', 1, 1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'x',
+        1,
+        1,
+        setIsRotating,
+      )
     }
   }
 
@@ -55,8 +83,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', -1, 1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'z',
+        -1,
+        1,
+        setIsRotating,
+      )
     }
   }
 
@@ -64,8 +99,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', -1, -1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'z',
+        -1,
+        -1,
+        setIsRotating,
+      )
     }
   }
 
@@ -73,8 +115,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', 1, -1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'z',
+        1,
+        -1,
+        setIsRotating,
+      )
     }
   }
 
@@ -82,8 +131,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', 1, 1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'z',
+        1,
+        1,
+        setIsRotating,
+      )
     }
   }
 
@@ -91,8 +147,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', 1, -1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'y',
+        1,
+        -1,
+        setIsRotating,
+      )
     }
   }
 
@@ -100,8 +163,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', 1, 1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'y',
+        1,
+        1,
+        setIsRotating,
+      )
     }
   }
 
@@ -109,8 +179,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', -1, 1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'y',
+        -1,
+        1,
+        setIsRotating,
+      )
     }
   }
 
@@ -118,8 +195,15 @@ function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
     if (!isRotating) {
       e.stopPropagation()
       setIsRotating(true)
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', -1, -1, setIsRotating)
+      rotate(
+        // @ts-ignore
+        rubiksCubeRef.current,
+        rotationGroupRef.current,
+        'y',
+        -1,
+        -1,
+        setIsRotating,
+      )
     }
   }
 
@@ -494,7 +578,7 @@ function rotate(
   axis: string,
   limit: number,
   multiplier: number,
-  setIsRotating: (value: boolean) => void
+  setIsRotating: (value: boolean) => void,
 ) {
   rotationGroupRef.children
     .slice()
@@ -521,7 +605,7 @@ function rotate(
     [axis]: THREE.MathUtils.degToRad(90) * multiplier,
     onComplete: () => {
       setIsRotating(false)
-    }
+    },
   })
 }
 
@@ -534,20 +618,6 @@ function ColorPadAndArrowGroup({
   coordinates: THREE.Vector3
   rotation: THREE.Euler
 }) {
-  function handleOnClick(e: ThreeEvent<MouseEvent>) {
-    console.log(e.eventObject.parent?.parent?.parent)
-  }
-
-  function handleOnpointerMove(e: ThreeEvent<MouseEvent>) {
-    e.stopPropagation()
-    /* console.log(e.eventObject.position) */
-    const pointer = new THREE.Vector3(
-      e.point.x - e.eventObject.position.x,
-      e.point.y - e.eventObject.position.y,
-      e.point.z - e.eventObject.position.z,
-    )
-    /* console.log(pointer) */
-  }
 
   return (
     <group rotation={rotation}>
@@ -559,17 +629,7 @@ function ColorPadAndArrowGroup({
             ? new THREE.Color(0xff0000)
             : new THREE.Color(0xffffff)
         }
-        /* onClick={handleOnClick} */
-        onPointerMove={handleOnpointerMove}
-        /* color={coordinates.x === -2 && coordinates.y === -2 && coordinates.z === -2 && index === 0 ? new THREE.Color(0xff0000) : new THREE.Color(0xffffff)} */
       />
-      {/* {(Math.abs(coordinates.x) === 2 && Math.abs(coordinates.y) === 2 && Math.abs(coordinates.z) === 2) && ( */}
-      {/* {coordinates.x === -2 && coordinates.y === -2 && coordinates.z === -2 && index === 0 && (
-        <>
-          <Arrow />
-          <Arrow rotation={new THREE.Euler(THREE.MathUtils.degToRad(-90), 0, 0)} />
-        </>
-      )} */}
     </group>
   )
 }

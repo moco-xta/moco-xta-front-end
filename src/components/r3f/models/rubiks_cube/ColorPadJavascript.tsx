@@ -9,36 +9,31 @@ import { default as gltfConstants } from '@/constants/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
-    ColorPad: THREE.Mesh
+    ColorPadJavascript: THREE.Mesh
   }
   materials: {}
 }
 
-export function ColorPad({
+export function ColorPadJavascript({
   position,
   rotation,
-  onClick,
-  onPointerMove,
-  color,
+  color
 }: ColorPadInterface) {
-  const { nodes } = useGLTF(gltfConstants.COLOR_PAD) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.COLOR_PAD_JAVASCRIPT) as GLTFResult
   return (
-    <group
+    <mesh
+      geometry={nodes.ColorPadJavascript.geometry}
       position={position}
       rotation={rotation}
+      receiveShadow
+      castShadow
     >
-      <mesh
-        geometry={nodes.ColorPad.geometry}
-        onClick={onClick}
-        onPointerMove={onPointerMove}
-      >
-        <meshStandardMaterial
-          attach='material'
-          color={color}
-        />
-      </mesh>
-    </group>
+      <meshStandardMaterial
+        attach='material'
+        color={color}
+      />
+    </mesh>
   )
 }
 
-useGLTF.preload(gltfConstants.COLOR_PAD)
+useGLTF.preload(gltfConstants.COLOR_PAD_JAVASCRIPT)
