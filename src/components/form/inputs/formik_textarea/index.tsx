@@ -20,7 +20,7 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
     value,
     error,
     helperText,
-    disabled
+    disabled,
   } = props
 
   const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(

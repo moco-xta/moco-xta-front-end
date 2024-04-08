@@ -4,6 +4,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as gltfConstants } from '@/constants/gltfConstants.json'
+import { RoundedCubeInterface } from '@/interfaces/r3fInterfaces'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -18,20 +19,30 @@ type ContextType = Record<
 >
 
 export function RoundedCube({
+  name,
   position,
   rotation,
-}: JSX.IntrinsicElements['mesh']) {
+  onPointerMove,
+  onPointerLeave,
+}: RoundedCubeInterface) {
   const { nodes, materials } = useGLTF(gltfConstants.ROUNDED_CUBE) as GLTFResult
   return (
     <mesh
+      name={name}
       geometry={nodes.RoundedCube.geometry}
       position={position}
       rotation={rotation}
+      onPointerMove={onPointerMove}
+      onPointerLeave={onPointerLeave}
+      receiveShadow
+      castShadow
     >
       <meshStandardMaterial
         attach='material'
-        color={0x000000}
+        color={0xffffff}
         roughness={0.2}
+        transparent
+        opacity={0.5}
       />
     </mesh>
   )

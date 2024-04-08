@@ -1,6 +1,7 @@
 import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
 import { ReviewCardDataInterface } from './componentsInterfaces'
-import { MeshProps } from '@react-three/fiber'
+import { GroupProps, MeshProps } from '@react-three/fiber'
+import { Ref } from 'react'
 
 export interface ForwardRefGltfGroupInterface extends THREE.Group {
   width: number
@@ -22,6 +23,22 @@ export interface StarSceneInterface {
   data: ReviewCardDataInterface
 }
 
-export interface ColorPadInterface extends MeshProps {
+export interface ColorPadAndArrowInterface {
+  groupRotation: THREE.Euler
+  padRotation: THREE.Euler
+  padColor: THREE.Color
+  displayArrows: boolean
+  exclude: number[]
+  arrowsGroupRotation: THREE.Euler
+  secondArrowRotation: THREE.Euler
+}
+
+export interface RotationGrooupInterface {
+  rubiksCubeRef: Ref<THREE.Group>
+}
+
+export interface RoundedCubeInterface extends MeshProps {}
+
+export interface ColorPadInterface extends GroupProps {
   color: THREE.Color
 }

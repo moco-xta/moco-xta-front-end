@@ -1,79 +1,491 @@
-import React, { Ref, Suspense, useEffect, useRef } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { Canvas, ThreeEvent } from '@react-three/fiber'
-import { useControls, button } from 'leva'
 import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
+
+import { RotationGrooupInterface } from '@/interfaces/r3fInterfaces'
 
 import { RoundedCube } from '../../models/rubiks_cube/RoundedCube'
 import { ColorPad } from '../../models/rubiks_cube/ColorPad'
-
-interface RotationGrooupInterface {
-  rubiksCubeRef: Ref<THREE.Group>
-}
+import { Button } from '../../models/rubiks_cube/Button'
 
 function RotattionGroup({ rubiksCubeRef }: RotationGrooupInterface) {
   const rotationGroupRef = useRef<THREE.Group>(null!)
 
-  useControls('Cube', {
-    'Left CW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', -1, 1)
-    }),
-    'Left CCW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', -1, -1)
-    }),
-    'Right CW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', 1, -1)
-    }),
-    'Right CCW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', 1, 1)
-    }),
-    'Back CW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', -1, 1)
-    }),
-    'Back CCW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', -1, -1)
-    }),
-    'Front CW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', 1, -1)
-    }),
-    'Front CCW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', 1, 1)
-    }),
-    'Top CW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', 1, -1)
-    }),
-    'Top CCW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', 1, 1)
-    }),
-    'Bottom CW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', -1, 1)
-    }),
-    'Bottom CCW': button(() => {
-      // @ts-ignore
-      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', -1, -1)
-    }),
-  })
+  const [isRotating, setIsRotating] = useState<boolean>(false)
 
-  return <group ref={rotationGroupRef} />
-}
+  const handleLeftCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', -1, 1, setIsRotating)
+    }
+  }
 
-function setAxis(cubeCoordinate: THREE.Vector3) {
-  if (cubeCoordinate.x === 0) return 'x'
-  if (cubeCoordinate.y === 0) return 'y'
-  if (cubeCoordinate.z === 0) return 'z'
+  const handleLeftCCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', -1, -1, setIsRotating)
+    }
+  }
+
+  const handleRightCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', 1, -1, setIsRotating)
+    }
+  }
+
+  const handleRightCCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'x', 1, 1, setIsRotating)
+    }
+  }
+
+  const handleBackCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', -1, 1, setIsRotating)
+    }
+  }
+
+  const handleBackCCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', -1, -1, setIsRotating)
+    }
+  }
+
+  const handleFrontCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', 1, -1, setIsRotating)
+    }
+  }
+
+  const handleFrontCCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'z', 1, 1, setIsRotating)
+    }
+  }
+
+  const handleTopCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', 1, -1, setIsRotating)
+    }
+  }
+
+  const handleTopCCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', 1, 1, setIsRotating)
+    }
+  }
+
+  const handleBottomCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', -1, 1, setIsRotating)
+    }
+  }
+
+  const handleBottomCCW = (e: ThreeEvent<MouseEvent>) => {
+    if (!isRotating) {
+      e.stopPropagation()
+      setIsRotating(true)
+      // @ts-ignore
+      rotate(rubiksCubeRef.current, rotationGroupRef.current, 'y', -1, -1, setIsRotating)
+    }
+  }
+
+  return (
+    <>
+      <Button
+        position={[2, 2, 2]}
+        onClick={handleRightCCW}
+      />
+      <Button
+        position={[2, 2, 2]}
+        rotation={[0, THREE.MathUtils.degToRad(180), 0]}
+        onClick={handleFrontCW}
+      />
+      <Button
+        position={[2, 2, -2]}
+        rotation={[0, THREE.MathUtils.degToRad(90), 0]}
+        onClick={handleBackCCW}
+      />
+      <Button
+        position={[2, 2, -2]}
+        rotation={[0, THREE.MathUtils.degToRad(-90), 0]}
+        onClick={handleRightCW}
+      />
+      <Button
+        position={[-2, 2, -2]}
+        onClick={handleBackCW}
+      />
+      <Button
+        position={[-2, 2, -2]}
+        rotation={[0, THREE.MathUtils.degToRad(180), 0]}
+        onClick={handleLeftCCW}
+      />
+      <Button
+        position={[-2, 2, 2]}
+        rotation={[0, THREE.MathUtils.degToRad(90), 0]}
+        onClick={handleLeftCW}
+      />
+      <Button
+        position={[-2, 2, 2]}
+        rotation={[0, THREE.MathUtils.degToRad(-90), 0]}
+        onClick={handleFrontCCW}
+      />
+      <Button
+        position={[2, -2, 2]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(90),
+          THREE.MathUtils.degToRad(180),
+        ]}
+        onClick={handleFrontCCW}
+      />
+      <Button
+        position={[2, -2, 2]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(-90),
+          THREE.MathUtils.degToRad(180),
+        ]}
+        onClick={handleRightCW}
+      />
+      <Button
+        position={[2, -2, -2]}
+        rotation={[0, 0, THREE.MathUtils.degToRad(180)]}
+        onClick={handleBackCW}
+      />
+      <Button
+        position={[2, -2, -2]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(180),
+          THREE.MathUtils.degToRad(180),
+        ]}
+        onClick={handleRightCCW}
+      />
+      <Button
+        position={[-2, -2, -2]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(90),
+          THREE.MathUtils.degToRad(180),
+        ]}
+        onClick={handleLeftCW}
+      />
+      <Button
+        position={[-2, -2, -2]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(-90),
+          THREE.MathUtils.degToRad(180),
+        ]}
+        onClick={handleBackCCW}
+      />
+      <Button
+        position={[-2, -2, 2]}
+        rotation={[0, 0, THREE.MathUtils.degToRad(180)]}
+        onClick={handleLeftCCW}
+      />
+      <Button
+        position={[-2, -2, 2]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(180),
+          THREE.MathUtils.degToRad(180),
+        ]}
+        onClick={handleFrontCW}
+      />
+      <Button
+        position={[2, 2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          THREE.MathUtils.degToRad(90),
+          0,
+        ]}
+        onClick={handleTopCCW}
+      />
+      <Button
+        position={[2, 2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          THREE.MathUtils.degToRad(-90),
+          0,
+        ]}
+        onClick={handleRightCW}
+      />
+      <Button
+        position={[2, -2, 2]}
+        rotation={[THREE.MathUtils.degToRad(90), 0, 0]}
+        onClick={handleRightCCW}
+      />
+      <Button
+        position={[2, -2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          THREE.MathUtils.degToRad(180),
+          0,
+        ]}
+        onClick={handleBottomCW}
+      />
+      <Button
+        position={[-2, -2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          THREE.MathUtils.degToRad(90),
+          0,
+        ]}
+        onClick={handleLeftCW}
+      />
+      <Button
+        position={[-2, -2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          THREE.MathUtils.degToRad(-90),
+          0,
+        ]}
+        onClick={handleBottomCCW}
+      />
+      <Button
+        position={[-2, 2, 2]}
+        rotation={[THREE.MathUtils.degToRad(90), 0, 0]}
+        onClick={handleTopCW}
+      />
+      <Button
+        position={[-2, 2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          THREE.MathUtils.degToRad(180),
+          0,
+        ]}
+        onClick={handleLeftCCW}
+      />
+      <Button
+        position={[2, 2, -2]}
+        rotation={[THREE.MathUtils.degToRad(-90), 0, 0]}
+        onClick={handleRightCCW}
+      />
+      <Button
+        position={[2, 2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          THREE.MathUtils.degToRad(180),
+          0,
+        ]}
+        onClick={handleTopCW}
+      />
+      <Button
+        position={[2, -2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          THREE.MathUtils.degToRad(90),
+          0,
+        ]}
+        onClick={handleBottomCCW}
+      />
+      <Button
+        position={[2, -2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          THREE.MathUtils.degToRad(-90),
+          0,
+        ]}
+        onClick={handleRightCW}
+      />
+      <Button
+        position={[-2, -2, -2]}
+        rotation={[THREE.MathUtils.degToRad(-90), 0, 0]}
+        onClick={handleBottomCW}
+      />
+      <Button
+        position={[-2, -2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          THREE.MathUtils.degToRad(180),
+          0,
+        ]}
+        onClick={handleLeftCCW}
+      />
+      <Button
+        position={[-2, 2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          THREE.MathUtils.degToRad(90),
+          0,
+        ]}
+        onClick={handleLeftCW}
+      />
+      <Button
+        position={[-2, 2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          THREE.MathUtils.degToRad(-90),
+          0,
+        ]}
+        onClick={handleTopCCW}
+      />
+      <Button
+        position={[2, 2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          0,
+          THREE.MathUtils.degToRad(-90),
+        ]}
+        onClick={handleTopCW}
+      />
+      <Button
+        position={[2, 2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          0,
+          THREE.MathUtils.degToRad(-90),
+        ]}
+        onClick={handleFrontCCW}
+      />
+      <Button
+        position={[2, 2, -2]}
+        rotation={[0, 0, THREE.MathUtils.degToRad(-90)]}
+        onClick={handleBackCW}
+      />
+      <Button
+        position={[2, 2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(180),
+          0,
+          THREE.MathUtils.degToRad(-90),
+        ]}
+        onClick={handleTopCCW}
+      />
+      <Button
+        position={[2, -2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          0,
+          THREE.MathUtils.degToRad(-90),
+        ]}
+        onClick={handleBackCCW}
+      />
+      <Button
+        position={[2, -2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          0,
+          THREE.MathUtils.degToRad(-90),
+        ]}
+        onClick={handleBottomCW}
+      />
+      <Button
+        position={[2, -2, 2]}
+        rotation={[0, 0, THREE.MathUtils.degToRad(-90)]}
+        onClick={handleBottomCCW}
+      />
+      <Button
+        position={[2, -2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(180),
+          0,
+          THREE.MathUtils.degToRad(-90),
+        ]}
+        onClick={handleFrontCW}
+      />
+      <Button
+        position={[-2, 2, 2]}
+        rotation={[0, 0, THREE.MathUtils.degToRad(90)]}
+        onClick={handleTopCCW}
+      />
+      <Button
+        position={[-2, 2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(180),
+          0,
+          THREE.MathUtils.degToRad(90),
+        ]}
+        onClick={handleFrontCW}
+      />
+      <Button
+        position={[-2, 2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          0,
+          THREE.MathUtils.degToRad(90),
+        ]}
+        onClick={handleTopCW}
+      />
+      <Button
+        position={[-2, 2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          0,
+          THREE.MathUtils.degToRad(90),
+        ]}
+        onClick={handleBackCCW}
+      />
+      <Button
+        position={[-2, -2, -2]}
+        rotation={[0, 0, THREE.MathUtils.degToRad(90)]}
+        onClick={handleBackCW}
+      />
+      <Button
+        position={[-2, -2, -2]}
+        rotation={[
+          THREE.MathUtils.degToRad(180),
+          0,
+          THREE.MathUtils.degToRad(90),
+        ]}
+        onClick={handleBottomCCW}
+      />
+      <Button
+        position={[-2, -2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(90),
+          0,
+          THREE.MathUtils.degToRad(90),
+        ]}
+        onClick={handleFrontCCW}
+      />
+      <Button
+        position={[-2, -2, 2]}
+        rotation={[
+          THREE.MathUtils.degToRad(-90),
+          0,
+          THREE.MathUtils.degToRad(90),
+        ]}
+        onClick={handleBottomCW}
+      />
+      <group ref={rotationGroupRef} />
+    </>
+  )
 }
 
 function rotate(
@@ -82,26 +494,15 @@ function rotate(
   axis: string,
   limit: number,
   multiplier: number,
+  setIsRotating: (value: boolean) => void
 ) {
-  /* const axis: string = setAxis(e.eventObject.position) */
-
-  /* const limit = e.eventObject.position[axis] */
-
-  console.log(limit)
-
   rotationGroupRef.children
     .slice()
     .reverse()
     .forEach(function (c: THREE.Object3D) {
-      /* const parent = c.parent */
       rubiksCubeRef.attach(c)
-      /* c.applyMatrix4(parent!.matrixWorld) */
-      /* parent!.remove(c) */
-      /* c.matrixWorld.decompose(c.position, c.quaternion, c.scale) */
-      /* c.updateMatrixWorld */
     })
   rotationGroupRef.quaternion.set(0, 0, 0, 1)
-  /* rotationGroupRef.current.children = [] */
 
   rubiksCubeRef.children
     .slice()
@@ -118,93 +519,179 @@ function rotate(
     duration: 1,
     ease: 'power3.out',
     [axis]: THREE.MathUtils.degToRad(90) * multiplier,
+    onComplete: () => {
+      setIsRotating(false)
+    }
   })
 }
 
-function RubiksCubeScene() {
-  gsap.registerPlugin(useGSAP)
-
-  const rubiksCubeRef = useRef<THREE.Group>(null!)
-
-  useEffect(() => {
-    console.log('rubiksCubeRef', rubiksCubeRef)
-  }, [rubiksCubeRef])
-
-  function setCoordinate(value: number) {
-    return value * 2 - 2
+function ColorPadAndArrowGroup({
+  index,
+  coordinates,
+  rotation,
+}: {
+  index: number
+  coordinates: THREE.Vector3
+  rotation: THREE.Euler
+}) {
+  function handleOnClick(e: ThreeEvent<MouseEvent>) {
+    console.log(e.eventObject.parent?.parent?.parent)
   }
 
-  function handleClick(e: ThreeEvent<MouseEvent>) {
+  function handleOnpointerMove(e: ThreeEvent<MouseEvent>) {
     e.stopPropagation()
-    /* console.log(e.point) */
-    console.log(e.eventObject.position)
-
-    /* console.log(
+    /* console.log(e.eventObject.position) */
+    const pointer = new THREE.Vector3(
       e.point.x - e.eventObject.position.x,
       e.point.y - e.eventObject.position.y,
       e.point.z - e.eventObject.position.z,
-    ) */
+    )
+    /* console.log(pointer) */
+  }
+
+  return (
+    <group rotation={rotation}>
+      <ColorPad
+        color={
+          Math.abs(coordinates.x) === 2 &&
+          Math.abs(coordinates.y) === 2 &&
+          Math.abs(coordinates.z) === 2
+            ? new THREE.Color(0xff0000)
+            : new THREE.Color(0xffffff)
+        }
+        /* onClick={handleOnClick} */
+        onPointerMove={handleOnpointerMove}
+        /* color={coordinates.x === -2 && coordinates.y === -2 && coordinates.z === -2 && index === 0 ? new THREE.Color(0xff0000) : new THREE.Color(0xffffff)} */
+      />
+      {/* {(Math.abs(coordinates.x) === 2 && Math.abs(coordinates.y) === 2 && Math.abs(coordinates.z) === 2) && ( */}
+      {/* {coordinates.x === -2 && coordinates.y === -2 && coordinates.z === -2 && index === 0 && (
+        <>
+          <Arrow />
+          <Arrow rotation={new THREE.Euler(THREE.MathUtils.degToRad(-90), 0, 0)} />
+        </>
+      )} */}
+    </group>
+  )
+}
+
+function CubeGroup({ coordinates }: { coordinates: THREE.Vector3 }) {
+  function setRoundedCubeType(coordinates: THREE.Vector3) {
+    let maxNumberOfPads = 3
+    Object.entries(coordinates).forEach(([_, value]) => {
+      if (value === 0) maxNumberOfPads -= 1
+    })
+    return maxNumberOfPads
+  }
+
+  function setColorPadRotation(coordinates: THREE.Vector3, index: number) {
+    const createEuler = (x: number, y: number, z: number) =>
+      new THREE.Euler(
+        THREE.MathUtils.degToRad(x),
+        THREE.MathUtils.degToRad(y),
+        THREE.MathUtils.degToRad(z),
+      )
+
+    let rotationX = 0,
+      rotationY = 0,
+      rotationZ = 0
+
+    if (index === 0) {
+      if (coordinates.y === -2) rotationZ = 180
+      else if (coordinates.y === 0) {
+        if (coordinates.x === 2) rotationZ = -90
+        else if (coordinates.x === -2) rotationZ = 90
+        else {
+          coordinates.z > 0 ? (rotationX = 90) : (rotationX = -90)
+        }
+      }
+    } else if (index === 1) {
+      if (coordinates.y === -2) {
+        if (coordinates.z === 2) rotationX = 90
+        else if (coordinates.z === -2) (rotationX = -90), (rotationY = 90)
+        else {
+          coordinates.x > 0 ? (rotationZ = -90) : (rotationZ = 90)
+        }
+      } else if (coordinates.y === 0) {
+        coordinates.z > 0 ? (rotationX = 90) : (rotationX = -90)
+      } else {
+        if (coordinates.x === 2) rotationZ = -90
+        else if (coordinates.x === -2) rotationZ = 90
+        else {
+          coordinates.z > 0 ? (rotationX = 90) : (rotationX = -90)
+        }
+      }
+    } else {
+      if (coordinates.y === -2) {
+        coordinates.x > 0 ? (rotationZ = -90) : (rotationZ = 90)
+      } else {
+        coordinates.z > 0 ? (rotationX = 90) : (rotationX = -90)
+      }
+    }
+
+    return createEuler(rotationX, rotationY, rotationZ)
+  }
+
+  function setColorPads(coordinates: THREE.Vector3) {
+    return (
+      <>
+        {[...Array(setRoundedCubeType(coordinates))].map((_, index) => {
+          return (
+            <ColorPadAndArrowGroup
+              index={index}
+              coordinates={coordinates}
+              rotation={setColorPadRotation(coordinates, index)}
+            />
+          )
+        })}
+      </>
+    )
+  }
+
+  return (
+    <group position={coordinates}>
+      <RoundedCube />
+      {setColorPads(coordinates)}
+    </group>
+  )
+}
+
+function RubiksCubeScene() {
+  const rubiksCubeRef = useRef<THREE.Group>(null!)
+
+  function setCoordinate(value: number) {
+    return value * 2 - 2
   }
 
   return (
     <>
       <group ref={rubiksCubeRef}>
         {[...Array(3)].map((_, x) =>
-          [...Array(3)].map((_, z) =>
-            [...Array(3)].map((_, y) => {
+          [...Array(3)].map((_, y) =>
+            [...Array(3)].map((_, z) => {
               const coordinateX = setCoordinate(x)
-              const coordinateZ = setCoordinate(z)
               const coordinateY = setCoordinate(y)
+              const coordinateZ = setCoordinate(z)
+
               return (
                 <>
-                  <group
-                    position={[coordinateX, coordinateZ, coordinateY]}
-                    onClick={handleClick}
-                  >
-                    <RoundedCube />
-                    {coordinateX === 2 && (
-                      <ColorPad
-                        rotation={[0, 0, THREE.MathUtils.degToRad(-90)]}
-                        color={new THREE.Color('rgb(255, 0, 0)')}
-                      />
-                    )}
-                    {coordinateX === -2 && (
-                      <ColorPad
-                        rotation={[0, 0, THREE.MathUtils.degToRad(90)]}
-                        color={new THREE.Color('rgb(255, 102, 0)')}
-                      />
-                    )}
-                    {coordinateY === 2 && (
-                      <ColorPad
-                        rotation={[THREE.MathUtils.degToRad(90), 0, 0]}
-                        color={new THREE.Color('rgb(255, 255, 255)')}
-                      />
-                    )}
-                    {coordinateY === -2 && (
-                      <ColorPad
-                        rotation={[THREE.MathUtils.degToRad(-90), 0, 0]}
-                        color={new THREE.Color('rgb(255, 255, 0)')}
-                      />
-                    )}
-                    {coordinateZ === 2 && (
-                      <ColorPad
-                        rotation={[0, 0, 0]}
-                        color={new THREE.Color('rgb(1, 255, 0)')}
-                      />
-                    )}
-                    {coordinateZ === -2 && (
-                      <ColorPad
-                        rotation={[THREE.MathUtils.degToRad(-180), 0, 0]}
-                        color={new THREE.Color('rgb(0, 0, 255)')}
-                      />
-                    )}
-                  </group>
+                  {!(
+                    coordinateX === 0 &&
+                    coordinateY === 0 &&
+                    coordinateZ === 0
+                  ) && (
+                    <CubeGroup
+                      coordinates={
+                        new THREE.Vector3(coordinateX, coordinateY, coordinateZ)
+                      }
+                    />
+                  )}
                 </>
               )
             }),
           ),
         )}
       </group>
+      {/* <ArrowsGroup /> */}
       <RotattionGroup rubiksCubeRef={rubiksCubeRef} />
     </>
   )

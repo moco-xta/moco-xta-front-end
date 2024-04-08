@@ -28,13 +28,15 @@ export default function AddReviewSlice() {
     (state: RootState) => state.authentication.isAuthenticated,
   )
 
-  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] =
-    useState<boolean>(!isAuthenticated ? true : false)
-  const [resetButtonIsDisabled, setResetButtonIsDisabled] =
-    useState<boolean>(!isAuthenticated ? true : false)
+  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(
+    !isAuthenticated ? true : false,
+  )
+  const [resetButtonIsDisabled, setResetButtonIsDisabled] = useState<boolean>(
+    !isAuthenticated ? true : false,
+  )
 
   useEffect(() => {
-    if(isAuthenticated) {
+    if (isAuthenticated) {
       setSubmitButtonIsDisabled(false)
       setResetButtonIsDisabled(false)
     }
@@ -53,7 +55,7 @@ export default function AddReviewSlice() {
     <section id='add_review_slice'>
       <div id='add_review_container'>
         <h1 id='add_review'>{t('ADD_REVIEW.ADD_A_REVIEW')}</h1>
-        {!isAuthenticated && (<p>You have to be logged in to add a review</p>)}
+        {!isAuthenticated && <p>You have to be logged in to add a review</p>}
         <Formik
           initialValues={initialValues}
           validationSchema={addNewReviewValidationSchema}
@@ -75,7 +77,10 @@ export default function AddReviewSlice() {
           }}
         >
           <div id='add_review_form_and_preview_container'>
-            <AddReviewForm submitButtonIsDisabled={submitButtonIsDisabled} resetButtonIsDisabled={resetButtonIsDisabled} />
+            <AddReviewForm
+              submitButtonIsDisabled={submitButtonIsDisabled}
+              resetButtonIsDisabled={resetButtonIsDisabled}
+            />
             <NewReviewPreview />
           </div>
         </Formik>

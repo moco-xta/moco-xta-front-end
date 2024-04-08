@@ -6,6 +6,7 @@ import { GLTF } from 'three-stdlib'
 import { ColorPadInterface } from '@/interfaces/r3fInterfaces'
 
 import { default as gltfConstants } from '@/constants/gltfConstants.json'
+import { Arrow } from './Arrow'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -14,19 +15,30 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function ColorPad({ position, rotation, color }: ColorPadInterface) {
+export function ColorPad({
+  position,
+  rotation,
+  onClick,
+  onPointerMove,
+  color,
+}: ColorPadInterface) {
   const { nodes } = useGLTF(gltfConstants.COLOR_PAD) as GLTFResult
   return (
-    <mesh
-      geometry={nodes.ColorPad.geometry}
+    <group
       position={position}
       rotation={rotation}
     >
-      <meshStandardMaterial
-        attach='material'
-        color={color}
-      />
-    </mesh>
+      <mesh
+        geometry={nodes.ColorPad.geometry}
+        onClick={onClick}
+        onPointerMove={onPointerMove}
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={color}
+        />
+      </mesh>
+    </group>
   )
 }
 
