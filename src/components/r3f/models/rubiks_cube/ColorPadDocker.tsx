@@ -1,9 +1,8 @@
 import * as THREE from 'three'
-import React from 'react'
+import React, { forwardRef } from 'react'
+import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
-
-import { ColorPadInterface } from '@/interfaces/r3fInterfaces'
 
 import { default as gltfConstants } from '@/constants/gltfConstants.json'
 
@@ -14,26 +13,29 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function ColorPadDocker({
-  position,
-  rotation,
-  color
-}: ColorPadInterface) {
+const ColorPadDocker = forwardRef<
+  THREE.Mesh<
+    THREE.BufferGeometry<THREE.NormalBufferAttributes>,
+    THREE.Material | THREE.Material[],
+    THREE.Object3DEventMap
+  >,
+  MeshProps
+>(function ColorPadDocker({ name, position, rotation }, ref) {
   const { nodes } = useGLTF(gltfConstants.COLOR_PAD_DOCKER) as GLTFResult
   return (
     <mesh
+      name={name}
       geometry={nodes.ColorPadDocker.geometry}
       position={position}
       rotation={rotation}
       receiveShadow
       castShadow
     >
-      <meshStandardMaterial
-        attach='material'
-        color={color}
-      />
+      <meshStandardMaterial attach='material' />
     </mesh>
   )
-}
+})
 
 useGLTF.preload(gltfConstants.COLOR_PAD_DOCKER)
+
+export default ColorPadDocker

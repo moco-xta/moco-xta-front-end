@@ -1,9 +1,8 @@
 import * as THREE from 'three'
-import React from 'react'
+import React, { forwardRef } from 'react'
+import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
-
-import { ColorPadInterface } from '@/interfaces/r3fInterfaces'
 
 import { default as gltfConstants } from '@/constants/gltfConstants.json'
 
@@ -14,26 +13,29 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function ColorPadRedux({
-  position,
-  rotation,
-  color
-}: ColorPadInterface) {
+const ColorPadRedux = forwardRef<
+  THREE.Mesh<
+    THREE.BufferGeometry<THREE.NormalBufferAttributes>,
+    THREE.Material | THREE.Material[],
+    THREE.Object3DEventMap
+  >,
+  MeshProps
+>(function ColorPadRedux({ name, position, rotation }, ref) {
   const { nodes } = useGLTF(gltfConstants.COLOR_PAD_REDUX) as GLTFResult
   return (
     <mesh
+      name={name}
       geometry={nodes.ColorPadRedux.geometry}
       position={position}
       rotation={rotation}
       receiveShadow
       castShadow
     >
-      <meshStandardMaterial
-        attach='material'
-        color={color}
-      />
+      <meshStandardMaterial attach='material' />
     </mesh>
   )
-}
+})
 
 useGLTF.preload(gltfConstants.COLOR_PAD_REDUX)
+
+export default ColorPadRedux

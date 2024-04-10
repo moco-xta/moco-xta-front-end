@@ -15,29 +15,24 @@ type GLTFResult = GLTF & {
 }
 
 export function ColorPad({
+  type,
   position,
   rotation,
-  onClick,
-  onPointerMove,
   color,
 }: ColorPadInterface) {
   const { nodes } = useGLTF(gltfConstants.COLOR_PAD) as GLTFResult
   return (
-    <group
+    <mesh
+      name={type}
+      geometry={nodes.ColorPad.geometry}
       position={position}
       rotation={rotation}
     >
-      <mesh
-        geometry={nodes.ColorPad.geometry}
-        onClick={onClick}
-        onPointerMove={onPointerMove}
-      >
-        <meshStandardMaterial
-          attach='material'
-          color={color}
-        />
-      </mesh>
-    </group>
+      <meshStandardMaterial
+        attach='material'
+        color={color}
+      />
+    </mesh>
   )
 }
 

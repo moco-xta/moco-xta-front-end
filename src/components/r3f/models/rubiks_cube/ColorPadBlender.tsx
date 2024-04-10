@@ -1,9 +1,8 @@
 import * as THREE from 'three'
-import React from 'react'
+import React, { forwardRef } from 'react'
+import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
-
-import { ColorPadInterface } from '@/interfaces/r3fInterfaces'
 
 import { default as gltfConstants } from '@/constants/gltfConstants.json'
 
@@ -14,26 +13,30 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function ColorPadBlender({
-  position,
-  rotation,
-  color
-}: ColorPadInterface) {
+const ColorPadBlender = forwardRef<
+  THREE.Mesh<
+    THREE.BufferGeometry<THREE.NormalBufferAttributes>,
+    THREE.Material | THREE.Material[],
+    THREE.Object3DEventMap
+  >,
+  MeshProps
+>(function ColorPadBlender({ name, position, rotation }, ref) {
   const { nodes } = useGLTF(gltfConstants.COLOR_PAD_BLENDER) as GLTFResult
   return (
     <mesh
+      ref={ref}
+      name={name}
       geometry={nodes.ColorPadBlender.geometry}
       position={position}
       rotation={rotation}
       receiveShadow
       castShadow
     >
-      <meshStandardMaterial
-        attach='material'
-        color={color}
-      />
+      <meshStandardMaterial attach='material' />
     </mesh>
   )
-}
+})
 
 useGLTF.preload(gltfConstants.COLOR_PAD_BLENDER)
+
+export default ColorPadBlender
