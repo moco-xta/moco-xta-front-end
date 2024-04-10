@@ -14,6 +14,7 @@ export default function Lights() {
         )
         return (
           <pointLight
+            key={`performed_with_light_${index}`}
             position={vector3Position}
             intensity={rubiksCubeConstants.LIGHTS.INTENSITY}
             castShadow

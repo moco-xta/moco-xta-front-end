@@ -51,12 +51,13 @@ export default function RotationGroupAndButtons({
 
   return (
     <>
-      {rubiksCubeConstants.RUBIKS_CUBE.BUTTONS.map(buttonCategory => {
+      {rubiksCubeConstants.RUBIKS_CUBE.BUTTONS.map((buttonCategory, buttonCategoryIndex) => {
         const buttonFunction = getFunction(buttonCategory.FUNCTION)
         return (
           <>
-            {buttonCategory.GEOMETRIES.map(button => (
+            {buttonCategory.GEOMETRIES.map((button, buttonIndex) => (
               <Button
+                key={`rubiks_cube_button_${buttonCategoryIndex}_${buttonIndex}`}
                 position={new THREE.Vector3(button.POSITION.X, button.POSITION.Y, button.POSITION.Z)}
                 rotation={new THREE.Euler(
                   THREE.MathUtils.degToRad(button.ROTATION.X),

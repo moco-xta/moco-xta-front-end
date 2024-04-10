@@ -21,6 +21,7 @@ export default function Pads({ colorPadIndex, coordinates }: PadsInterface) {
           padsData[currentColorPadIndex % rubiksCubeConstants.RUBIKS_CUBE.PADS.length].name
         return (
           <Pad
+            key={`rubiks_cube_pad_${colorPadName}_${currentColorPadIndex}`}
             name={colorPadName}
             rotation={setPadRotation(coordinates, index)}
           />
