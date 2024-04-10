@@ -1,0 +1,85 @@
+import React, { useRef, useState } from 'react'
+import * as THREE from 'three'
+
+import { RotationGroupInterface } from '@/interfaces/r3fInterfaces'
+
+import { Button } from '@/components/r3f/models/rubiks_cube/Button'
+
+import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
+
+import {
+  handleBackCCW,
+  handleBackCW,
+  handleBottomCCW,
+  handleBottomCW,
+  handleFrontCCW,
+  handleFrontCW,
+  handleLeftCCW,
+  handleLeftCW,
+  handleRightCCW,
+  handleRightCW,
+  handleTopCCW,
+  handleTopCW,
+} from '@/helpers/r3fHelpers'
+
+export default function RotationGroupAndButtons({
+  rubiksCubeRef,
+}: RotationGroupInterface) {
+  const rotationGroupRef = useRef<THREE.Group>(null!)
+
+  const [isRotating, setIsRotating] = useState<boolean>(false)
+
+  const functions = {
+    "handleBackCCW": handleBackCCW,
+    "handleBackCW": handleBackCW,
+    "handleBottomCCW": handleBottomCCW,
+    "handleBottomCW": handleBottomCW,
+    "handleFrontCCW": handleFrontCCW,
+    "handleFrontCW": handleFrontCW,
+    "handleLeftCCW": handleLeftCCW,
+    "handleLeftCW": handleLeftCW,
+    "handleRightCCW": handleRightCCW,
+    "handleRightCW": handleRightCW,
+    "handleTopCCW": handleTopCCW,
+    "handleTopCW": handleTopCW,
+  }
+
+  function getFunction(name: string) {
+    // @ts-ignore
+    return functions[name]
+  }
+
+  return (
+    <>
+      {rubiksCubeConstants.RUBIKS_CUBE.BUTTONS.map(buttonCategory => {
+        const buttonFunction = getFunction(buttonCategory.FUNCTION)
+        return (
+          <>
+            {buttonCategory.GEOMETRIES.map(button => (
+              <Button
+                position={new THREE.Vector3(button.POSITION.X, button.POSITION.Y, button.POSITION.Z)}
+                rotation={new THREE.Euler(
+                  THREE.MathUtils.degToRad(button.ROTATION.X),
+                  THREE.MathUtils.degToRad(button.ROTATION.Y),
+                  THREE.MathUtils.degToRad(button.ROTATION.Z),
+                )}
+                onClick={(e) =>
+                  buttonFunction(
+                    e,
+                    rubiksCubeRef,
+                    rotationGroupRef,
+                    isRotating,
+                    setIsRotating,
+                  )
+                }
+                arrow={buttonCategory.ARROW}
+                isRotating={isRotating}
+              />
+            ))}
+          </>
+        )
+      })}
+      <group ref={rotationGroupRef} />
+    </>
+  )
+}

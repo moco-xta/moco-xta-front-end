@@ -14,10 +14,16 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function ColorPad({ position, rotation, color }: ColorPadInterface) {
+export function ColorPad({
+  type,
+  position,
+  rotation,
+  color,
+}: ColorPadInterface) {
   const { nodes } = useGLTF(gltfConstants.COLOR_PAD) as GLTFResult
   return (
     <mesh
+      name={type}
       geometry={nodes.ColorPad.geometry}
       position={position}
       rotation={rotation}

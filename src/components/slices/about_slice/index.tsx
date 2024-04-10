@@ -14,7 +14,6 @@ export default function AboutSlice() {
   }
 
   useEffect(() => {
-    console.log('TEST')
     document.addEventListener(
       'HandleShowInstructions',
       HandleShowInstructions,

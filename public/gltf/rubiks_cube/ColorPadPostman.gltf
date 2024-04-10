@@ -1,0 +1,94 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "ColorPadPostman"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "ColorPadPostman",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1733,
+      "max": [0.7937999963760376, 1.0290005207061768, 0.7937999963760376],
+      "min": [-0.7937999963760376, 0.9800000190734863, -0.7937999963760376],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1733,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1733,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 3387,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 20796,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20796,
+      "byteOffset": 20796,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13864,
+      "byteOffset": 41592,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6774,
+      "byteOffset": 55456,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 62232,
+      "uri": "ColorPadPostman.bin"
+    }
+  ]
+}

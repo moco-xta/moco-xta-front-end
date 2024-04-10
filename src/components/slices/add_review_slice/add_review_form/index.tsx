@@ -92,7 +92,10 @@ export default function AddReviewForm({
         />
         <div className='submit_reset_buttons_container'>
           <SubmitButton submitButtonIsDisabled={submitButtonIsDisabled} />
-          <ResetButton resetForm={handleResetForm} resetButtonIsDisabled={resetButtonIsDisabled} />
+          <ResetButton
+            resetForm={handleResetForm}
+            resetButtonIsDisabled={resetButtonIsDisabled}
+          />
         </div>
       </form>
     </div>

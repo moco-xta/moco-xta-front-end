@@ -1,14 +1,14 @@
+import { ForwardRefExoticComponent, RefAttributes, lazy } from 'react'
 import * as THREE from 'three'
+import { GroupProps } from '@react-three/fiber'
+import pointer from 'json-pointer'
 
 import { SkillsLogoInterface } from '@/interfaces/dataInterfaces'
+import { SkillsLogoJsonInterface } from '@/interfaces/constantsInterfaces'
 
 import { default as skillsConstants } from '@/constants/skillsConstants.json'
 
 import { degreesToRadians } from '@/helpers/r3fHelpers'
-import { SkillsLogoJsonInterface } from '@/interfaces/constantsInterfaces'
-import { ForwardRefExoticComponent, RefAttributes, lazy } from 'react'
-import { GroupProps } from '@react-three/fiber'
-import pointer from 'json-pointer'
 
 interface ComponentsInterface {
   [key: string]: ForwardRefExoticComponent<
@@ -16,7 +16,7 @@ interface ComponentsInterface {
   >
 }
 
-let components = Array.from(skillsConstants.LOGOS.DATA).reduce(
+const components = Array.from(skillsConstants.LOGOS.DATA).reduce(
   (object: ComponentsInterface, logo) => {
     const Component = lazy(
       () =>
@@ -41,7 +41,6 @@ export const skillsData: SkillsLogoInterface[] = Array.from(
     name: logo.NAME,
     category: pointer(skillsConstants, logo.CATEGORY),
     component: components[logo.COMPONENT],
-    /* component: LogoPhotoshop, */
     geometry: {
       position: new THREE.Vector3(
         logo.GEOMETRY.POSITION.X,
@@ -61,5 +60,3 @@ export const skillsData: SkillsLogoInterface[] = Array.from(
     },
   }
 })
-
-console.log(skillsData)

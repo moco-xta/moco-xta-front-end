@@ -28,7 +28,7 @@ import { SkillsPattern } from '@/components/r3f/models/skills/SkillsPattern'
 import { default as SkillsConstants } from '@/constants/skillsConstants.json'
 import { GraphicsPack } from '../../models/skills/GraphicsPack'
 import { GraphicsSkills } from '../../models/skills/GraphicsSkills'
-import { RectAreaLightUniformsLib } from "three/examples/jsm/lights/RectAreaLightUniformsLib.js";
+import { RectAreaLightUniformsLib } from 'three/examples/jsm/lights/RectAreaLightUniformsLib.js'
 import { RectAreaLightHelper } from 'three/examples/jsm/Addons.js'
 
 studio.extend(extension)
@@ -230,21 +230,18 @@ function PackingScene() {
   )
 }
 
-
-
 const RectArealightWithHelper = ({ position, color }) => {
+  const { scene } = useThree()
 
-  const { scene } = useThree();
+  RectAreaLightUniformsLib.init()
 
-  RectAreaLightUniformsLib.init();
+  const rectLight = new THREE.RectAreaLight(color, 7.5, 2, 5)
+  rectLight.position.set(position[0], position[1], position[2])
+  scene.add(rectLight)
+  scene.add(new RectAreaLightHelper(rectLight))
 
-  const rectLight = new THREE.RectAreaLight(color, 7.5, 2, 5);
-  rectLight.position.set(position[0], position[1], position[2]);
-  scene.add(rectLight);
-  scene.add(new RectAreaLightHelper(rectLight));
-
-  return null;
-};
+  return null
+}
 
 export default function SkillsCanvas() {
   const sheet = getProject('Skills scene').sheet('Scene')
@@ -280,9 +277,15 @@ export default function SkillsCanvas() {
           />
           <ambientLight intensity={1} />
 
-          <RectArealightWithHelper position={[-5, 5, 5]} color="white" />
+          <RectArealightWithHelper
+            position={[-5, 5, 5]}
+            color='white'
+          />
           {/* <RectArealightWithHelper position={[0, 5, 5]} color="white" /> */}
-          <RectArealightWithHelper position={[5, 5, 5]} color="white" />
+          <RectArealightWithHelper
+            position={[5, 5, 5]}
+            color='white'
+          />
           {/* <pointLight
             position={[3, 3, 3]}
             intensity={0.2}

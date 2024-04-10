@@ -20,7 +20,7 @@ export default function FormikRatingStars({
   value,
   error,
   helperText,
-  disabled
+  disabled,
 }: FormikRatingStarsInterface) {
   const t = useTranslations()
 
@@ -69,8 +69,10 @@ export default function FormikRatingStars({
                 <IoStarSharp
                   className={`rating_star ${disabled ? 'disabled' : ''}`}
                   size={30}
-                  color={currentRating <= ((hover || value)) ? 'gold' : 'grey'}
-                  onMouseEnter={() => { if(!disabled) setHover(currentRating) }}
+                  color={currentRating <= (hover || value) ? 'gold' : 'grey'}
+                  onMouseEnter={() => {
+                    if (!disabled) setHover(currentRating)
+                  }}
                   onMouseLeave={() => setHover(null)}
                 />
               ) : (
