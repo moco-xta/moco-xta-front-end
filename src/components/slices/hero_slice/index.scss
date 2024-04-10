@@ -1,12 +1,24 @@
+@import '@/styles/variables.module.scss';
+
 #hero_slice {
   position: relative;
   width: 100vw;
   height: 100vh;
+  /* background-color: $vampire_violet; */
 
   #hero_canvas_container {
+    z-index: 1;
     position: absolute;
     width: 100%;
     height: 100%;
     right: 0;
+  }
+
+  #aries_container {
+    z-index: 0;
+    position: absolute;
+    left: 300px;
+    bottom: 50px;
+    opacity: 3%;
   }
 }
