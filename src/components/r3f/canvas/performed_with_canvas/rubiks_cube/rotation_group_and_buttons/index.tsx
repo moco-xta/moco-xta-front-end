@@ -30,18 +30,18 @@ export default function RotationGroupAndButtons({
   const [isRotating, setIsRotating] = useState<boolean>(false)
 
   const functions = {
-    "handleBackCCW": handleBackCCW,
-    "handleBackCW": handleBackCW,
-    "handleBottomCCW": handleBottomCCW,
-    "handleBottomCW": handleBottomCW,
-    "handleFrontCCW": handleFrontCCW,
-    "handleFrontCW": handleFrontCW,
-    "handleLeftCCW": handleLeftCCW,
-    "handleLeftCW": handleLeftCW,
-    "handleRightCCW": handleRightCCW,
-    "handleRightCW": handleRightCW,
-    "handleTopCCW": handleTopCCW,
-    "handleTopCW": handleTopCW,
+    handleBackCCW: handleBackCCW,
+    handleBackCW: handleBackCW,
+    handleBottomCCW: handleBottomCCW,
+    handleBottomCW: handleBottomCW,
+    handleFrontCCW: handleFrontCCW,
+    handleFrontCW: handleFrontCW,
+    handleLeftCCW: handleLeftCCW,
+    handleLeftCW: handleLeftCW,
+    handleRightCCW: handleRightCCW,
+    handleRightCW: handleRightCW,
+    handleTopCCW: handleTopCCW,
+    handleTopCW: handleTopCW,
   }
 
   function getFunction(name: string) {
@@ -51,35 +51,45 @@ export default function RotationGroupAndButtons({
 
   return (
     <>
-      {rubiksCubeConstants.RUBIKS_CUBE.BUTTONS.map((buttonCategory, buttonCategoryIndex) => {
-        const buttonFunction = getFunction(buttonCategory.FUNCTION)
-        return (
-          <>
-            {buttonCategory.GEOMETRIES.map((button, buttonIndex) => (
-              <Button
-                key={`rubiks_cube_button_${buttonCategoryIndex}_${buttonIndex}`}
-                position={new THREE.Vector3(button.POSITION.X, button.POSITION.Y, button.POSITION.Z)}
-                rotation={new THREE.Euler(
-                  THREE.MathUtils.degToRad(button.ROTATION.X),
-                  THREE.MathUtils.degToRad(button.ROTATION.Y),
-                  THREE.MathUtils.degToRad(button.ROTATION.Z),
-                )}
-                onClick={(e) =>
-                  buttonFunction(
-                    e,
-                    rubiksCubeRef,
-                    rotationGroupRef,
-                    isRotating,
-                    setIsRotating,
-                  )
-                }
-                arrow={buttonCategory.ARROW}
-                isRotating={isRotating}
-              />
-            ))}
-          </>
-        )
-      })}
+      {rubiksCubeConstants.RUBIKS_CUBE.BUTTONS.map(
+        (buttonCategory, buttonCategoryIndex) => {
+          const buttonFunction = getFunction(buttonCategory.FUNCTION)
+          return (
+            <>
+              {buttonCategory.GEOMETRIES.map((button, buttonIndex) => (
+                <Button
+                  key={`rubiks_cube_button_${buttonCategoryIndex}_${buttonIndex}`}
+                  position={
+                    new THREE.Vector3(
+                      button.POSITION.X,
+                      button.POSITION.Y,
+                      button.POSITION.Z,
+                    )
+                  }
+                  rotation={
+                    new THREE.Euler(
+                      THREE.MathUtils.degToRad(button.ROTATION.X),
+                      THREE.MathUtils.degToRad(button.ROTATION.Y),
+                      THREE.MathUtils.degToRad(button.ROTATION.Z),
+                    )
+                  }
+                  onClick={(e) =>
+                    buttonFunction(
+                      e,
+                      rubiksCubeRef,
+                      rotationGroupRef,
+                      isRotating,
+                      setIsRotating,
+                    )
+                  }
+                  arrow={buttonCategory.ARROW}
+                  isRotating={isRotating}
+                />
+              ))}
+            </>
+          )
+        },
+      )}
       <group ref={rotationGroupRef} />
     </>
   )

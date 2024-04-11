@@ -8,7 +8,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $background_black;
+  /* background-color: $background_black; */
+  background-image: url('/img/jpg/backgrounds/emile_claus_le_pique_nique_1887.jpeg');
+  background-size: cover;
 
   #links_and_contact_container {
     width: 100%;

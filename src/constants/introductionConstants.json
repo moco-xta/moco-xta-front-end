@@ -1,4 +1,41 @@
 {
+  "CANVAS": {
+    "DPR": 1,
+    "LEGACY": false,
+    "GL": {
+      "ANTIALIAS": true,
+      "ALPHA": true,
+      "POWER_PREFERENCE": "high-performance"
+    }
+  },
+  "PERSPECTIVE_CAMERA": {
+    "POSITION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 14
+    },
+    "FOV": 55
+  },
+  "LIGHTS": {
+    "INTENSITY": 3,
+    "POSITIONS": [
+      {
+        "X": 3,
+        "Y": 3,
+        "Z": 3
+      },
+      {
+        "X": -3,
+        "Y": 3,
+        "Z": 3
+      },
+      {
+        "X": 0,
+        "Y": 5,
+        "Z": 0
+      }
+    ]
+  },
   "HANDLE_ON_PONTER_MOVE": {
     "ROTATION": {
       "FACTOR": 0.003,
@@ -10,40 +47,6 @@
     }
   },
   "SCENE": {
-    "CANVAS": {
-      "DPR": 1,
-      "ANTIALIAS": true,
-      "POWER_PREFERENCE": "high-performance",
-      "PRESERVE_DRAWING_BUFFER": true,
-      "TONE_MAPPING_EXPOSURE": 1.5
-    },
-    "PERSPECTIVE_CAMERA": {
-      "POSITION": {
-        "X": 0,
-        "Y": 0,
-        "Z": 15
-      }
-    },
-    "POINT_LIGHTS": {
-      "INTENSITY": 3,
-      "POSITIONS": [
-        {
-          "X": 3,
-          "Y": 3,
-          "Z": 3
-        },
-        {
-          "X": -3,
-          "Y": 3,
-          "Z": 3
-        },
-        {
-          "X": 0,
-          "Y": 5,
-          "Z": 0
-        }
-      ]
-    },
     "BLOOM": {
       "INTENSITY": 1,
       "LUMINANCE_THRESHOLD": 0.9,

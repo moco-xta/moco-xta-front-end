@@ -3,6 +3,8 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
+
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 type GLTFResult = GLTF & {
@@ -12,16 +14,20 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function DoughnutChartSeventyFivePercent(
-  props: JSX.IntrinsicElements['group'],
-) {
+const DoughnutChartSeventyFivePercent = forwardRef<
+  ForwardRefGltfGroupInterface,
+  JSX.IntrinsicElements['group']
+>(function DoughnutChartSeventyFivePercent({ position, rotation, scale }, ref) {
   const { nodes } = useGLTF(
     GltfConstants.DOUGHNUT_CHART_SEVENTY_FIVE_PERCENT,
   ) as GLTFResult
   return (
     <group
-      {...props}
+      ref={ref}
       dispose={null}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.DoughnutChartSeventyFivePercent.geometry}
@@ -42,6 +48,8 @@ export function DoughnutChartSeventyFivePercent(
       </mesh>
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.DOUGHNUT_CHART_SEVENTY_FIVE_PERCENT)
+
+export default DoughnutChartSeventyFivePercent

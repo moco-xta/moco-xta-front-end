@@ -1,7 +1,7 @@
 import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
 
-import { DoughnutChartSeventyFivePercent } from '@/components/r3f/models/charts/DoughnutChartSeventyFivePercent'
-import { DoughnutChartNinetyPercent } from '@/components/r3f/models/charts/DoughnutChartNinetyPercent'
+import DoughnutChartSeventyFivePercent from '@/components/r3f/models/charts/DoughnutChartSeventyFivePercent'
+import RoundedDoughnutChartNinetyPercent from '@/components/r3f/models/charts/RoundedDoughnutChartNinetyPercent'
 
 import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
 
@@ -9,7 +9,7 @@ export const introductionCardsData: IntroductionCardDataInterface[] = [
   {
     name: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.NAMES.THREE_D,
     logo: {
-      component: DoughnutChartNinetyPercent,
+      component: RoundedDoughnutChartNinetyPercent,
       position: {
         x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.X,
         y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.Y,
@@ -33,7 +33,7 @@ export const introductionCardsData: IntroductionCardDataInterface[] = [
   {
     name: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.NAMES.FRONT_END,
     logo: {
-      component: DoughnutChartNinetyPercent,
+      component: RoundedDoughnutChartNinetyPercent,
       position: {
         x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.X,
         y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.Y,

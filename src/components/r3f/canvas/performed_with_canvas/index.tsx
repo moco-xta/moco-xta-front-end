@@ -26,8 +26,11 @@ export default function PerformedWithCanvas() {
     >
       <PerspectiveCamera
         makeDefault
-        position={[rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.X, rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Y, rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Z]}
-        /* position={[5, 7, 5]} */
+        position={[
+          rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.X,
+          rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+        ]}
         fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Controls />

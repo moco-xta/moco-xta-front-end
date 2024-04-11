@@ -12,7 +12,9 @@ export default function RubiksCube() {
   const rubiksCubeRef = useRef<THREE.Group>(null!)
   let colorPadIndex = useRef<number>(0)
 
-  const colors: string[] = rubiksCubeConstants.RUBIKS_CUBE.COLORS.map(color => color)
+  const colors: string[] = rubiksCubeConstants.RUBIKS_CUBE.COLORS.map(
+    (color) => color,
+  )
 
   useEffect(() => {
     const colorPads: THREE.Object3D<THREE.Object3DEventMap>[] = []

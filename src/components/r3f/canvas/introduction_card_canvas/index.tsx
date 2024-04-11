@@ -7,8 +7,8 @@ import { PerspectiveCamera } from '@react-three/drei'
 import { IntroductionCardCanvasInterface } from '@/interfaces/r3fInterfaces'
 
 import Lights from './lights'
+import Card from './card'
 import BloomEffect from './bloom_effect'
-import Scene from './scene'
 
 import { default as introductionConstants } from '@/constants/introductionConstants.json'
 
@@ -21,29 +21,30 @@ export default function IntroductionCardCanvas({
 }: IntroductionCardCanvasInterface) {
   return (
     <Canvas
-      dpr={introductionConstants.SCENE.CANVAS.DPR}
+      dpr={introductionConstants.CANVAS.DPR}
       shadows
+      legacy={introductionConstants.CANVAS.LEGACY}
       linear
       flat
       gl={{
-        antialias: introductionConstants.SCENE.CANVAS.ANTIALIAS,
-        powerPreference: introductionConstants.SCENE.CANVAS.POWER_PREFERENCE,
-        preserveDrawingBuffer:
-          introductionConstants.SCENE.CANVAS.PRESERVE_DRAWING_BUFFER,
+        antialias: introductionConstants.CANVAS.GL.ANTIALIAS,
+        alpha: introductionConstants.CANVAS.GL.ALPHA,
+        powerPreference: introductionConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
       <PerspectiveCamera
         makeDefault
         position={[
-          introductionConstants.SCENE.PERSPECTIVE_CAMERA.POSITION.X,
-          introductionConstants.SCENE.PERSPECTIVE_CAMERA.POSITION.Y,
-          introductionConstants.SCENE.PERSPECTIVE_CAMERA.POSITION.Z,
+          introductionConstants.PERSPECTIVE_CAMERA.POSITION.X,
+          introductionConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          introductionConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
+        fov={introductionConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Lights />
-      <BloomEffect />
+      {/* <BloomEffect /> */}
       <Suspense fallback={null}>
-        <Scene content={content} />
+        <Card content={content} />
       </Suspense>
     </Canvas>
   )

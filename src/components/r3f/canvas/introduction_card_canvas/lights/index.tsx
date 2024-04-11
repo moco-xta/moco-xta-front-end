@@ -9,16 +9,14 @@ export default function Lights() {
         position={[0, 5, 0]}
         intensity={0}
       />
-      {introductionConstants.SCENE.POINT_LIGHTS.POSITIONS.map(
-        (point_light, index) => (
-          <pointLight
-            key={`ìntroduction_scene_point_light_${index}`}
-            position={[point_light.X, point_light.Z, point_light.Y]}
-            intensity={introductionConstants.SCENE.POINT_LIGHTS.INTENSITY}
-            castShadow
-          />
-        ),
-      )}
+      {introductionConstants.LIGHTS.POSITIONS.map((point_light, index) => (
+        <pointLight
+          key={`ìntroduction_scene_point_light_${index}`}
+          position={[point_light.X, point_light.Z, point_light.Y]}
+          intensity={introductionConstants.LIGHTS.INTENSITY}
+          castShadow
+        />
+      ))}
     </>
   )
 }
