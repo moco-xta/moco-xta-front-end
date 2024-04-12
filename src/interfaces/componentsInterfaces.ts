@@ -46,7 +46,7 @@ export interface TimelineInterface {
   currentDate: Date
 }
 
-export interface ReviewCardDataInterface {
+export interface ReviewDataInterface {
   firstName: string
   review: string
   role: string
@@ -54,8 +54,8 @@ export interface ReviewCardDataInterface {
   date: Date
 }
 
-export interface ReviewCardInterface {
-  data: ReviewCardDataInterface
+export interface ReviewInterface {
+  data: ReviewDataInterface
 }
 
 export interface RatingStarsInterface {

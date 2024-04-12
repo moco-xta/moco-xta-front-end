@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 
 import { useGetReviewsQuery } from '@/redux/api/reviewApi'
 
-import ReviewCard from '@/components/cards/review_card'
+import ReviewCanvas from '@/components/r3f/canvas/review_canvas'
 
 import './index.scss'
 
@@ -32,10 +32,15 @@ export default function LastReviewsCards() {
           ?.filter((_, index) => index < 3)
           .map((review, index) => {
             return (
-              <ReviewCard
-                key={`reviewCard_${index}`}
-                data={review}
-              />
+              <div
+                key={`review_card_${index}`}
+                className='review_container'
+              >
+                <ReviewCanvas
+                  reviewIndex={index}
+                  data={review}
+                />
+              </div>
             )
           })}
       </>

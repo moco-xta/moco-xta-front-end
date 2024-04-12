@@ -5,14 +5,9 @@ import { useTranslations } from 'next-intl'
 
 import { ReviewCardInterface } from '@/interfaces/componentsInterfaces'
 
-import useCardHoverEffect from '@/hooks/useCardHoverEffect'
-
-import RatingStars from '@/components/cards/review_card/rating_stars'
-
-import { default as effectsConstants } from '@/constants/effectsConstants.json'
+import ReviewCanvas from '@/components/r3f/canvas/review_canvas'
 
 import './index.scss'
-import StarCanvas from '@/components/r3f/canvas/star_canvas'
 
 export default function ReviewCard({ data }: ReviewCardInterface) {
   const t = useTranslations('ADD_REVIEW')
@@ -26,7 +21,7 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
 
   return (
     <div className='star_canvas_container'>
-      <StarCanvas data={data} />
+      <ReviewCanvas data={data} />
     </div>
   )
 }

@@ -39,7 +39,11 @@
   "HANDLE_ON_PONTER_MOVE": {
     "ROTATION": {
       "FACTOR": 0.003,
-      "INITIAL": 0
+      "INITIAL": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      }
     },
     "SCALE": {
       "FACTOR": 1.2,

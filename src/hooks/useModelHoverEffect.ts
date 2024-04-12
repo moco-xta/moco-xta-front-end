@@ -21,6 +21,7 @@ export default function useModelHoverEffect(
       ease: 'power3.out',
       x: -y * constants.ROTATION.FACTOR,
       y: -x * constants.ROTATION.FACTOR,
+      z: 0,
     })
     gsap.to(ref.current!.scale, {
       duration: 0.2,
@@ -35,8 +36,9 @@ export default function useModelHoverEffect(
     gsap.to(ref.current!.rotation, {
       duration: 0.2,
       ease: 'power3.out',
-      x: constants.ROTATION.INITIAL,
-      y: constants.ROTATION.INITIAL,
+      x: THREE.MathUtils.degToRad(constants.ROTATION.INITIAL.X),
+      y: THREE.MathUtils.degToRad(constants.ROTATION.INITIAL.Y),
+      z: THREE.MathUtils.degToRad(constants.ROTATION.INITIAL.Z),
     })
     gsap.to(ref.current!.scale, {
       duration: 0.2,

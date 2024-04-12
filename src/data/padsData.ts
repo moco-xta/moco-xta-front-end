@@ -27,6 +27,8 @@ const padsComponents: Record<string, LazyPadType> = Array.from(
   {} as Record<string, LazyPadType>,
 )
 
+console.log(padsComponents)
+
 interface PadDataInterface {
   name: string
   component: LazyPadType
