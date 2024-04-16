@@ -176,14 +176,14 @@ export function RoundedCard({
 
     gl.setRenderTarget(null)
   })
-  
+
   return (
     <mesh
-    ref={meshRef}
+      ref={meshRef}
       geometry={nodes.RoundedCard.geometry}
       onPointerMove={onPointerMove}
       onPointerOut={onPointerOut}
-      >
+    >
       <shaderMaterial
         vertexShader={vertexShader}
         fragmentShader={fragmentShader}
@@ -195,7 +195,8 @@ export function RoundedCard({
 
 useGLTF.preload(GltfConstants.ROUNDED_CARD)
 
-{/* <meshPhysicalMaterial
+{
+  /* <meshPhysicalMaterial
   map={flakesTexture()}
   clearcoat={1}
   clearcoatRoughness={0.1}
@@ -204,4 +205,5 @@ useGLTF.preload(GltfConstants.ROUNDED_CARD)
   color={0x8418ca}
   normalMap={flakesTexture()}
   normalScale={new THREE.Vector2(0.15, 0.15)}
-/> */}
+/> */
+}

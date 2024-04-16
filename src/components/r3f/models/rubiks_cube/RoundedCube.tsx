@@ -39,10 +39,12 @@ export function RoundedCube({
     >
       <meshStandardMaterial
         attach='material'
-        color={0x000000}
-        roughness={0.6}
-        /* transparent
-        opacity={0.5} */
+        color={'white'}
+        roughness={0.2}
+        transparent
+        opacity={0.5}
+        emissive={'hotpink'}
+        emissiveIntensity={2}
       />
     </mesh>
   )

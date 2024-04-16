@@ -7,9 +7,7 @@ import {
   PerspectiveCamera,
 } from '@react-three/drei'
 
-import {
-  ReviewCanvasInterface,
-} from '@/interfaces/r3fInterfaces'
+import { ReviewCanvasInterface } from '@/interfaces/r3fInterfaces'
 
 import Lights from '../../lights'
 
@@ -18,8 +16,12 @@ import { default as imgConstants } from '@/constants/imgConstants.json'
 
 import './index.scss'
 import ReviewCard from './review_card'
+import PostProcessing from '../performed_with_canvas/post_processing'
 
-export default function ReviewCanvas({ reviewIndex, data }: ReviewCanvasInterface) {
+export default function ReviewCanvas({
+  reviewIndex,
+  data,
+}: ReviewCanvasInterface) {
   return (
     <Canvas
       dpr={reviewConstants.CANVAS.DPR}
@@ -44,14 +46,19 @@ export default function ReviewCanvas({ reviewIndex, data }: ReviewCanvasInterfac
         near={reviewConstants.PERSPECTIVE_CAMERA.NEAR}
         far={reviewConstants.PERSPECTIVE_CAMERA.FAR}
       />
-      <OrbitControls />
-      <Lights canvasName={`review_${reviewIndex}`} data={reviewConstants.LIGHTS} />
+      {/*
+       */}
+      <Lights
+        canvasName={`review_${reviewIndex}`}
+        data={reviewConstants.LIGHTS}
+      />
       <ambientLight />
       <Suspense>
         <Environment
           files={imgConstants.HDRS.REVIEW_CARD_ENVIRONMENT}
           encoding={THREE.LinearEncoding}
         />
+        {/* <PostProcessing /> */}
         <ReviewCard data={data} />
       </Suspense>
     </Canvas>

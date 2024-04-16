@@ -31,7 +31,13 @@ const ColorPadGithub = forwardRef<
       receiveShadow
       castShadow
     >
-      <meshStandardMaterial attach='material' />
+      <meshStandardMaterial
+        attach='material'
+        transparent
+        opacity={0.2}
+        emissive={'green'}
+        emissiveIntensity={10}
+      />
     </mesh>
   )
 })

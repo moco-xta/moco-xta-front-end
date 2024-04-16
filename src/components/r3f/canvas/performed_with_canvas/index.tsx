@@ -9,6 +9,7 @@ import RubiksCube from './rubiks_cube'
 import Controls from './controls'
 
 import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
+import PostProcessing from './post_processing'
 
 export default function PerformedWithCanvas() {
   return (
@@ -34,9 +35,13 @@ export default function PerformedWithCanvas() {
         fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Controls />
-      <Lights canvasName={'performed_with'} data={rubiksCubeConstants.LIGHTS} />
+      <Lights
+        canvasName={'performed_with'}
+        data={rubiksCubeConstants.LIGHTS}
+      />
       <Suspense>
         <RubiksCube />
+        <PostProcessing />
       </Suspense>
     </Canvas>
   )

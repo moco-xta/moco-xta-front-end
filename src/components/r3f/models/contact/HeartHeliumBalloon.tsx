@@ -24,11 +24,10 @@ export function HeartHeliumBalloon({
       geometry={nodes.HeartHeliumBalloon.geometry}
     >
       <meshStandardMaterial
-        color={0x888888}
-        metalness={1}
-        roughness={0.2}
-        transparent
-        opacity={0.5}
+        color={0xfd02d1}
+        metalness={0.1}
+        roughness={0.4}
+        
       />
     </mesh>
   )

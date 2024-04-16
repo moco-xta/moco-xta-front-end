@@ -1,10 +1,7 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useThree } from '@react-three/fiber'
-import {
-  RoundedBox,
-  Text,
-} from '@react-three/drei'
+import { RoundedBox, Text } from '@react-three/drei'
 import pointer from 'json-pointer'
 import { useTranslations } from 'next-intl'
 
@@ -33,11 +30,13 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
   return (
     <group
       ref={reviewCardRef}
-      rotation={new THREE.Euler(
-        THREE.MathUtils.degToRad(reviewConstants.CARD.ROTATION.X),
-        THREE.MathUtils.degToRad(reviewConstants.CARD.ROTATION.Y),
-        THREE.MathUtils.degToRad(reviewConstants.CARD.ROTATION.Z),
-      )}
+      rotation={
+        new THREE.Euler(
+          THREE.MathUtils.degToRad(reviewConstants.CARD.ROTATION.X),
+          THREE.MathUtils.degToRad(reviewConstants.CARD.ROTATION.Y),
+          THREE.MathUtils.degToRad(reviewConstants.CARD.ROTATION.Z),
+        )
+      }
     >
       <Star
         handleOnPointerMove={handleOnPointerMove}

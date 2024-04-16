@@ -19,12 +19,14 @@ type GLTFResult = GLTF & {
 const RoundedDoughnutChartNinetyPercent = forwardRef<
   ForwardRefGltfGroupInterface,
   JSX.IntrinsicElements['group']
->(function RoundedDoughnutChartNinetyPercent({ position, rotation, scale }, ref) {
+>(function RoundedDoughnutChartNinetyPercent(
+  { position, rotation, scale },
+  ref,
+) {
   const { nodes } = useGLTF(
     GltfConstants.ROUNDED_DOUGHNUT_CHART_NINETY_PERCENT,
   ) as GLTFResult
 
-  
   return (
     <group
       ref={ref}

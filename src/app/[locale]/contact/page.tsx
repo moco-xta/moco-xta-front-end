@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
 import { FaTwitter } from 'react-icons/fa'
@@ -23,7 +24,17 @@ export default function Contact() {
         <div id='contact_container'>
           <div id='canvas_head_text_container'>
             <div id='contact_canvas_container'>
-              <ContactCanvas />
+              {/* <ContactCanvas /> */}
+
+              <video width="320" height="240" autoPlay loop>
+                <source src="/video/webm/heart_ecstasy.webm" type="video/webm" />
+              </video>
+              <video width="320" height="240" autoPlay loop>
+                <source src="/video/webm/heart_ecstasy.webm" type="video/webm" />
+              </video>
+              <video width="320" height="240" autoPlay loop>
+                <source src="/video/webm/heart_ecstasy.webm" type="video/webm" />
+              </video>
             </div>
             <div id='contact_head_text'>
               <RevealTextBlock
@@ -56,35 +67,35 @@ export default function Contact() {
               </div>
               <div id='socials_container'>
                 <h2>Socials</h2>
-                <div className='social_container'>
+                <div id='linkedin_container' className='social_container'>
                   <FaLinkedinIn
                     className='social_icon'
                     size={30}
                   />
                   <span>Federico Desmoulin</span>
                 </div>
-                <div className='social_container'>
+                <div id='twitter_container' className='social_container'>
                   <FaTwitter
                     className='social_icon'
                     size={30}
                   />
                   <span>@moco_xta</span>
                 </div>
-                <div className='social_container'>
+                <div id='instagram_container' className='social_container'>
                   <FaInstagram
                     className='social_icon'
                     size={30}
                   />
                   <span>@moco_xta</span>
                 </div>
-                <div className='social_container'>
+                <div id='facebook_container' className='social_container'>
                   <FaFacebookF
                     className='social_icon'
                     size={30}
                   />
                   <span>Moco.xta</span>
                 </div>
-                <div className='social_container'>
+                <div id='github_container' className='social_container'>
                   <IoLogoGithub
                     className='social_icon'
                     size={30}
@@ -93,6 +104,22 @@ export default function Contact() {
                 </div>
               </div>
               <div id='contacts_container'>
+                <Image
+                  id='monkey_phone'
+                  src='/img/gif/monkey_phone.gif'
+                  width={240}
+                  height={135}
+                  alt='Monkey phone'
+                />
+                <Image
+                  id='lucky_cat'
+                  src='/img/gif/lucky_cat_2.gif'
+                  width={80}
+                  height={80}
+                  alt='Lucky cat'
+                />
+                {/* <iframe src="https://giphy.com/embed/l41lVsYDBC0UVQJCE" width="240" height="135" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> */}
+                {/* <iframe src="https://giphy.com/embed/RfkxvOmP3bXcCSSB0k" width="50" height="50" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> */}
                 <h2>Contact</h2>
                 <div className='contact_container'>
                   <CiMobile1

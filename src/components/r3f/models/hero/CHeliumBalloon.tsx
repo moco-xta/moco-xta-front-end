@@ -23,10 +23,11 @@ export function CHeliumBalloon({
       rotation={rotation}
       geometry={nodes.CHeliumBalloon.geometry}
     >
-      <meshStandardMaterial
+      <meshPhysicalMaterial
         color={0x888888}
         metalness={1}
         roughness={0.2}
+        reflectivity={10}
       />
     </mesh>
   )

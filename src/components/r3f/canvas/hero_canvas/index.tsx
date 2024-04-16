@@ -3,7 +3,12 @@
 import React, { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
-import { Environment, PerspectiveCamera, Plane } from '@react-three/drei'
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+  Plane,
+} from '@react-three/drei'
 import { Physics, RigidBody } from '@react-three/rapier'
 
 import { MHeliumBalloon } from '../../models/hero/MHeliumBalloon'
@@ -13,6 +18,7 @@ import { CHeliumBalloon } from '../../models/hero/CHeliumBalloon'
 import { degreesToRadians } from '@/helpers/r3fHelpers'
 import useMouseMove from '@/hooks/useMouseMove'
 import { Smiley } from '../../models/hero/Smiley'
+import PostProcessing from './post_processing'
 
 function HeroScene() {
   const mRef = useRef(null!)
@@ -22,7 +28,7 @@ function HeroScene() {
 
   const { gl } = useThree()
   gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 6
+  gl.toneMappingExposure = 1
 
   const { deltaX, deltaY } = useMouseMove()
 
@@ -175,7 +181,7 @@ export default function HeroCanvas() {
     <Canvas
       dpr={1}
       shadows
-      legacy={false}
+      legacy={true}
       linear
       flat
       gl={{
@@ -188,10 +194,11 @@ export default function HeroCanvas() {
         makeDefault
         position={[-0.08, 0, 2.6]}
         fov={30}
-        near={0.1}
-        far={55}
+        /* near={0.1} */
+        /* far={55} */
       />
       {/* <OrbitControls /> */}
+      <ambientLight intensity={3} />
       <pointLight
         position={[5, 5, 5]}
         intensity={1}
@@ -209,13 +216,14 @@ export default function HeroCanvas() {
       />
       <Suspense>
         <Physics /* debug */ gravity={[0, 0.05, 0]}>
+          <HeroScene />
           <Environment
             files='/img/hdr/peppermint_powerplant_2_1k.hdr'
             encoding={THREE.LinearEncoding}
           />
-          <HeroScene />
         </Physics>
       </Suspense>
+      {/* <PostProcessing /> */}
     </Canvas>
   )
 }
