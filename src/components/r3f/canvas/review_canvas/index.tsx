@@ -10,13 +10,12 @@ import {
 import { ReviewCanvasInterface } from '@/interfaces/r3fInterfaces'
 
 import Lights from '../../lights'
+import ReviewCard from './review_card'
 
 import { default as reviewConstants } from '@/constants/reviewConstants.json'
 import { default as imgConstants } from '@/constants/imgConstants.json'
 
 import './index.scss'
-import ReviewCard from './review_card'
-import PostProcessing from '../performed_with_canvas/post_processing'
 
 export default function ReviewCanvas({
   reviewIndex,

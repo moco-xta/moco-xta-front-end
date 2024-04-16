@@ -17,8 +17,8 @@ export default function Home() {
         <HeroSlice />
         {/* <IntroductionSlice /> */}
         {/* <LastProjectsSlice /> */}
-        {/* <LastReviewsSlice /> */}
-        {/* <PerformedWithSlice /> */}
+        <LastReviewsSlice />
+        <PerformedWithSlice />
         <Footer />
       </div>
       <div className='scroll_to_top_container'>
