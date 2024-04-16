@@ -3,7 +3,11 @@
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
-import { Environment, PerspectiveCamera } from '@react-three/drei'
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+} from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import Wrapper from './wrapper'

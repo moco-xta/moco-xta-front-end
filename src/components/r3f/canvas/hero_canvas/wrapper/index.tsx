@@ -4,7 +4,7 @@ import { Plane } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 
 export default function Wrapper() {
-  const width = 2.45
+  const width = 2.55
   const height = 1.1
   /* const height = 3.3 */
   const depth = 0.83

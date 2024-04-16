@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { useFrame, useThree } from '@react-three/fiber'
+import { useFrame } from '@react-three/fiber'
 import { RigidBody } from '@react-three/rapier'
-
-import useMouseMove from '@/hooks/useMouseMove'
 
 import { MHeliumBalloon } from '@/components/r3f/models/hero/MHeliumBalloon'
 import { OHeliumBalloon } from '@/components/r3f/models/hero/OHeliumBalloon'
@@ -25,14 +23,31 @@ export default function MocoHelium() {
     timeRef.current += delta
     xRef.current = Math.cos(timeRef.current)
     yRef.current = Math.sin(timeRef.current)
+    zRef.current = Math.tan(timeRef.current)
     // @ts-ignore
-    mRef.current.applyImpulse({ x: xRef.current * 0.01, y: -yRef.current * 0.01, z: 0 })
+    mRef.current.applyImpulse({
+      x: xRef.current * 0.005,
+      y: yRef.current * 0.005,
+      z: zRef.current * 0.001,
+    })
     // @ts-ignore
-    o1Ref.current.applyImpulse({ x: xRef.current * 0.01, y: -yRef.current * 0.01, z: 0 })
+    o1Ref.current.applyImpulse({
+      x: -xRef.current * 0.005,
+      y: -yRef.current * 0.005,
+      z: -zRef.current * 0.001,
+    })
     // @ts-ignore
-    cRef.current.applyImpulse({ x: xRef.current * 0.01, y: -yRef.current * 0.01, z: 0 })
+    cRef.current.applyImpulse({
+      x: -xRef.current * 0.005,
+      y: yRef.current * 0.005,
+      z: zRef.current * 0.001,
+    })
     // @ts-ignore
-    o2Ref.current.applyImpulse({ x: xRef.current * 0.01, y: -yRef.current * 0.01, z: 0 })
+    o2Ref.current.applyImpulse({
+      x: xRef.current * 0.005,
+      y: -yRef.current * 0.005,
+      z: -zRef.current * 0.001,
+    })
   })
 
   const rotation = 33
@@ -80,11 +95,4 @@ export default function MocoHelium() {
       </RigidBody>
     </group>
   )
-}
-
-{
-  /* <MHeliumBalloon position={[-0.96, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} />
-<OHeliumBalloon position={[-0.32, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} />
-<CHeliumBalloon position={[0.32, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} />
-<OHeliumBalloon position={[0.96, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} /> */
 }
