@@ -26,14 +26,38 @@ export default function Contact() {
             <div id='contact_canvas_container'>
               {/* <ContactCanvas /> */}
 
-              <video width="320" height="240" autoPlay loop>
-                <source src="/video/webm/heart_ecstasy.webm" type="video/webm" />
+              <video
+                width='320'
+                height='240'
+                autoPlay
+                loop
+              >
+                <source
+                  src='/video/webm/heart_ecstasy.webm'
+                  type='video/webm'
+                />
               </video>
-              <video width="320" height="240" autoPlay loop>
-                <source src="/video/webm/heart_ecstasy.webm" type="video/webm" />
+              <video
+                width='320'
+                height='240'
+                autoPlay
+                loop
+              >
+                <source
+                  src='/video/webm/heart_ecstasy.webm'
+                  type='video/webm'
+                />
               </video>
-              <video width="320" height="240" autoPlay loop>
-                <source src="/video/webm/heart_ecstasy.webm" type="video/webm" />
+              <video
+                width='320'
+                height='240'
+                autoPlay
+                loop
+              >
+                <source
+                  src='/video/webm/heart_ecstasy.webm'
+                  type='video/webm'
+                />
               </video>
             </div>
             <div id='contact_head_text'>
@@ -67,35 +91,50 @@ export default function Contact() {
               </div>
               <div id='socials_container'>
                 <h2>Socials</h2>
-                <div id='linkedin_container' className='social_container'>
+                <div
+                  id='linkedin_container'
+                  className='social_container'
+                >
                   <FaLinkedinIn
                     className='social_icon'
                     size={30}
                   />
                   <span>Federico Desmoulin</span>
                 </div>
-                <div id='twitter_container' className='social_container'>
+                <div
+                  id='twitter_container'
+                  className='social_container'
+                >
                   <FaTwitter
                     className='social_icon'
                     size={30}
                   />
                   <span>@moco_xta</span>
                 </div>
-                <div id='instagram_container' className='social_container'>
+                <div
+                  id='instagram_container'
+                  className='social_container'
+                >
                   <FaInstagram
                     className='social_icon'
                     size={30}
                   />
                   <span>@moco_xta</span>
                 </div>
-                <div id='facebook_container' className='social_container'>
+                <div
+                  id='facebook_container'
+                  className='social_container'
+                >
                   <FaFacebookF
                     className='social_icon'
                     size={30}
                   />
                   <span>Moco.xta</span>
                 </div>
-                <div id='github_container' className='social_container'>
+                <div
+                  id='github_container'
+                  className='social_container'
+                >
                   <IoLogoGithub
                     className='social_icon'
                     size={30}

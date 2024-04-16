@@ -50,8 +50,8 @@ export default function ContactCanvas() {
       />
       <OrbitControls />
       <ambientLight
-      intensity={0.5}
-      castShadow
+        intensity={0.5}
+        castShadow
       />
       <pointLight
         position={[5, 5, 0]}

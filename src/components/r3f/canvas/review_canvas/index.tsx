@@ -46,8 +46,6 @@ export default function ReviewCanvas({
         near={reviewConstants.PERSPECTIVE_CAMERA.NEAR}
         far={reviewConstants.PERSPECTIVE_CAMERA.FAR}
       />
-      {/*
-       */}
       <Lights
         canvasName={`review_${reviewIndex}`}
         data={reviewConstants.LIGHTS}

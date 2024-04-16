@@ -1,6 +1,7 @@
 @import '@/styles/variables.module.scss';
 
 #scroll_dwon_container {
+  z-index: 2;
   position: absolute;
   top: 65vh;
   right: 50px;

@@ -1,177 +1,26 @@
 'use client'
 
-import React, { Suspense, useEffect, useRef } from 'react'
+import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
-import {
-  Environment,
-  OrbitControls,
-  PerspectiveCamera,
-  Plane,
-} from '@react-three/drei'
-import { Physics, RigidBody } from '@react-three/rapier'
+import { Environment, PerspectiveCamera } from '@react-three/drei'
+import { Physics } from '@react-three/rapier'
 
-import { MHeliumBalloon } from '../../models/hero/MHeliumBalloon'
-import { OHeliumBalloon } from '../../models/hero/OHeliumBalloon'
-import { CHeliumBalloon } from '../../models/hero/CHeliumBalloon'
+import Wrapper from './wrapper'
+import MocoHelium from './moco_helium'
 
-import { degreesToRadians } from '@/helpers/r3fHelpers'
-import useMouseMove from '@/hooks/useMouseMove'
-import { Smiley } from '../../models/hero/Smiley'
-import PostProcessing from './post_processing'
+import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
+import { default as imgConstants } from '@/constants/imgConstants.json'
 
 function HeroScene() {
-  const mRef = useRef(null!)
-  const o1Ref = useRef(null!)
-  const cRef = useRef(null!)
-  const o2Ref = useRef(null!)
-
   const { gl } = useThree()
   gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 1
-
-  const { deltaX, deltaY } = useMouseMove()
-
-  useEffect(() => {
-    if (mRef.current) {
-      if (deltaX > 0)
-        // @ts-ignore
-        mRef.current.applyImpulse({ x: deltaX * 0.01, y: -deltaY * 0.01, z: 0 })
-      if (deltaX < 0)
-        // @ts-ignore
-        o2Ref.current.applyImpulse({
-          x: deltaX * 0.01,
-          y: -deltaY * 0.01,
-          z: 0,
-        })
-    }
-  }, [deltaX, deltaY])
-
-  const width = 2.45
-  const height = 1.1
-  /* const height = 3.3 */
-  const depth = 0.83
-  const rotation = 33
-  const opacity = 0
+  gl.toneMappingExposure = 3
 
   return (
     <>
-      {/* <group position={[0, - (height / 2) + 0.55, 0]}> */}
-      <RigidBody type='fixed'>
-        <Plane
-          args={[width, depth]}
-          position={[0, height / 2, 0]}
-          rotation={[degreesToRadians(90), 0, 0]}
-        >
-          <meshStandardMaterial
-            transparent
-            opacity={opacity}
-          />
-        </Plane>
-      </RigidBody>
-      <RigidBody type='fixed'>
-        <Plane
-          args={[width, height]}
-          position={[0, -height / 2, 0]}
-          rotation={[degreesToRadians(90), 0, 0]}
-        >
-          <meshStandardMaterial
-            transparent
-            opacity={opacity}
-          />
-        </Plane>
-      </RigidBody>
-      <RigidBody type='fixed'>
-        <Plane
-          args={[width, height]}
-          position={[0, 0, -depth / 2]}
-        >
-          <meshStandardMaterial
-            transparent
-            opacity={opacity}
-          />
-        </Plane>
-      </RigidBody>
-      <RigidBody type='fixed'>
-        <Plane
-          args={[width, height]}
-          position={[0, 0, depth / 2]}
-        >
-          <meshStandardMaterial
-            transparent
-            opacity={opacity}
-          />
-        </Plane>
-      </RigidBody>
-      <RigidBody type='fixed'>
-        <Plane
-          args={[depth, height]}
-          position={[-width / 2, 0, 0]}
-          rotation={[0, degreesToRadians(90), 0]}
-        >
-          <meshStandardMaterial
-            transparent
-            opacity={opacity}
-          />
-        </Plane>
-      </RigidBody>
-      <RigidBody type='fixed'>
-        <Plane
-          args={[depth, height]}
-          position={[width / 2, 0, 0]}
-          rotation={[0, degreesToRadians(-90), 0]}
-        >
-          <meshStandardMaterial
-            transparent
-            opacity={opacity}
-          />
-        </Plane>
-      </RigidBody>
-      {/* </group> */}
-
-      <RigidBody
-        ref={mRef}
-        colliders='hull'
-      >
-        <MHeliumBalloon
-          position={[-0.96, 0, 0]}
-          rotation={[0, degreesToRadians(rotation), 0]}
-        />
-      </RigidBody>
-      <RigidBody
-        ref={o1Ref}
-        colliders='hull'
-      >
-        <OHeliumBalloon
-          position={[-0.32, 0, 0]}
-          rotation={[0, degreesToRadians(rotation), 0]}
-        />
-      </RigidBody>
-      <RigidBody
-        ref={cRef}
-        colliders='hull'
-      >
-        <CHeliumBalloon
-          position={[0.32, 0, 0]}
-          rotation={[0, degreesToRadians(rotation), 0]}
-        />
-      </RigidBody>
-      <RigidBody
-        ref={o2Ref}
-        colliders='hull'
-      >
-        <group
-          position={[0.96, 0, 0]}
-          rotation={[0, degreesToRadians(rotation), 0]}
-        >
-          <OHeliumBalloon />
-          <Smiley />
-        </group>
-      </RigidBody>
-      {/* <MHeliumBalloon position={[-0.96, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} />
-      <OHeliumBalloon position={[-0.32, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} />
-      <CHeliumBalloon position={[0.32, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} />
-      <OHeliumBalloon position={[0.96, -1.5, 0]} rotation={[0, degreesToRadians(rotation), 0]} /> */}
+      <Wrapper />
+      <MocoHelium />
     </>
   )
 }
@@ -179,46 +28,39 @@ function HeroScene() {
 export default function HeroCanvas() {
   return (
     <Canvas
-      dpr={1}
+      dpr={heroConstants.CANVAS.DPR}
       shadows
-      legacy={true}
+      legacy={heroConstants.CANVAS.LEGACY}
       linear
       flat
       gl={{
-        antialias: true,
-        alpha: true,
-        preserveDrawingBuffer: true,
+        antialias: heroConstants.CANVAS.GL.ANTIALIAS,
+        alpha: heroConstants.CANVAS.GL.ALPHA,
+        powerPreference: heroConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
       <PerspectiveCamera
         makeDefault
-        position={[-0.08, 0, 2.6]}
-        fov={30}
-        /* near={0.1} */
-        /* far={55} */
+        position={[
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.X,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+        ]}
+        fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />
       {/* <OrbitControls /> */}
-      <ambientLight intensity={3} />
-      <pointLight
-        position={[5, 5, 5]}
-        intensity={1}
-        castShadow
-      />
-      <pointLight
-        position={[-5, 5, 5]}
-        intensity={1}
-        castShadow
-      />
-      <pointLight
-        position={[-0, -3, 5]}
-        intensity={1}
-        castShadow
-      />
+      <ambientLight intensity={0.5} />
       <Suspense>
-        <Physics /* debug */ gravity={[0, 0.05, 0]}>
+        <Physics
+          /* debug */ gravity={[
+            heroConstants.PHYSICS.GRAVITY.X,
+            heroConstants.PHYSICS.GRAVITY.Y,
+            heroConstants.PHYSICS.GRAVITY.Z,
+          ]}
+        >
           <HeroScene />
           <Environment
-            files='/img/hdr/peppermint_powerplant_2_1k.hdr'
+            files={imgConstants.HDRS.HERO_ENVIRONMENT}
             encoding={THREE.LinearEncoding}
           />
         </Physics>

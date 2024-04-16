@@ -27,7 +27,6 @@ export function HeartHeliumBalloon({
         color={0xfd02d1}
         metalness={0.1}
         roughness={0.4}
-        
       />
     </mesh>
   )
