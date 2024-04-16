@@ -7,9 +7,9 @@ import { PerspectiveCamera } from '@react-three/drei'
 import Lights from '../../lights'
 import RubiksCube from './rubiks_cube'
 import Controls from './controls'
+import PostProcessing from './post_processing'
 
 import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
-import PostProcessing from './post_processing'
 
 export default function PerformedWithCanvas() {
   return (
