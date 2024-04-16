@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+import { useFrame, useThree } from '@react-three/fiber'
 import { RigidBody } from '@react-three/rapier'
 
 import useMouseMove from '@/hooks/useMouseMove'
@@ -15,24 +16,26 @@ export default function MocoHelium() {
   const cRef = useRef(null!)
   const o2Ref = useRef(null!)
 
+  const timeRef = useRef(0)
+  const xRef = useRef(0)
+  const yRef = useRef(0)
+  const zRef = useRef(0)
+
+  useFrame((state, delta, xrFrame) => {
+    timeRef.current += delta
+    xRef.current = Math.cos(timeRef.current)
+    yRef.current = Math.sin(timeRef.current)
+    // @ts-ignore
+    mRef.current.applyImpulse({ x: xRef.current * 0.01, y: -yRef.current * 0.01, z: 0 })
+    // @ts-ignore
+    o1Ref.current.applyImpulse({ x: xRef.current * 0.01, y: -yRef.current * 0.01, z: 0 })
+    // @ts-ignore
+    cRef.current.applyImpulse({ x: xRef.current * 0.01, y: -yRef.current * 0.01, z: 0 })
+    // @ts-ignore
+    o2Ref.current.applyImpulse({ x: xRef.current * 0.01, y: -yRef.current * 0.01, z: 0 })
+  })
+
   const rotation = 33
-
-  const { deltaX, deltaY } = useMouseMove()
-
-  useEffect(() => {
-    if (mRef.current) {
-      if (deltaX > 0)
-        // @ts-ignore
-        mRef.current.applyImpulse({ x: deltaX * 0.01, y: -deltaY * 0.01, z: 0 })
-      if (deltaX < 0)
-        // @ts-ignore
-        o2Ref.current.applyImpulse({
-          x: deltaX * 0.01,
-          y: -deltaY * 0.01,
-          z: 0,
-        })
-    }
-  }, [deltaX, deltaY])
 
   return (
     <group>

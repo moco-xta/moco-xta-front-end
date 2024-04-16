@@ -15,7 +15,7 @@ import { default as imgConstants } from '@/constants/imgConstants.json'
 function HeroScene() {
   const { gl } = useThree()
   gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 3
+  gl.toneMappingExposure = 4
 
   return (
     <>
@@ -65,7 +65,6 @@ export default function HeroCanvas() {
           />
         </Physics>
       </Suspense>
-      {/* <PostProcessing /> */}
     </Canvas>
   )
 }
