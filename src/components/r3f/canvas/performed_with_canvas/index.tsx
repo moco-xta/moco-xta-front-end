@@ -4,9 +4,10 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
-import Lights from './lights'
+import Lights from '../../lights'
 import RubiksCube from './rubiks_cube'
 import Controls from './controls'
+import PostProcessing from './post_processing'
 
 import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
 
@@ -26,14 +27,21 @@ export default function PerformedWithCanvas() {
     >
       <PerspectiveCamera
         makeDefault
-        position={[rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.X, rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Y, rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Z]}
-        /* position={[5, 7, 5]} */
+        position={[
+          rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.X,
+          rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+        ]}
         fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Controls />
-      <Lights />
+      <Lights
+        canvasName={'performed_with'}
+        data={rubiksCubeConstants.LIGHTS}
+      />
       <Suspense>
         <RubiksCube />
+        <PostProcessing />
       </Suspense>
     </Canvas>
   )

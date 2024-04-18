@@ -1,6 +1,8 @@
 @import '@/styles/variables.module.scss';
 
 #performed_with_slice {
+  z-index: 1;
+  position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
   height: 100vh;

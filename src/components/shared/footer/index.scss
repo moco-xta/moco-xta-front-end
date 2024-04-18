@@ -1,6 +1,7 @@
 @import '@/styles/variables.module.scss';
 
 footer {
+  z-index: 0;
   position: relative;
   width: 100vw;
   height: 70vh;
@@ -8,7 +9,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $background_black;
+  background-color: #eff87a;
+  background-image: url('/img/png/moco_logo_perspective_footer_noise.png');
+  background-size: cover;
 
   #links_and_contact_container {
     width: 100%;

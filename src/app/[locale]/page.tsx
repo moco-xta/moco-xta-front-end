@@ -14,12 +14,12 @@ export default function Home() {
   return (
     <>
       <div id='home_container'>
-        {/* <HeroSlice />
-        <IntroductionSlice />
-        <LastProjectsSlice />
-        <LastReviewsSlice /> */}
-        <PerformedWithSlice />
-        <Footer />
+        <HeroSlice />
+        {/* <IntroductionSlice /> */}
+        {/* <LastProjectsSlice /> */}
+        {/* <LastReviewsSlice /> */}
+        {/* <PerformedWithSlice /> */}
+        {/* <Footer /> */}
       </div>
       <div className='scroll_to_top_container'>
         <ScrollToTop />

@@ -49,27 +49,27 @@ export default function ContactCanvas() {
         far={55}
       />
       <OrbitControls />
-      <pointLight
-        position={[5, 5, 5]}
-        intensity={1}
+      <ambientLight
+        intensity={0.5}
         castShadow
       />
       <pointLight
-        position={[-5, 5, 5]}
-        intensity={1}
+        position={[5, 5, 0]}
+        intensity={10}
         castShadow
       />
       <pointLight
-        position={[-0, -3, 5]}
-        intensity={1}
+        position={[-5, 5, 0]}
+        intensity={10}
+        castShadow
+      />
+      <pointLight
+        position={[-2, -5, 0]}
+        intensity={5}
         castShadow
       />
       <Suspense>
         <Physics /* debug */ gravity={[0, 0.05, 0]}>
-          <Environment
-            files='/img/hdr/peppermint_powerplant_2_1k.hdr'
-            encoding={THREE.LinearEncoding}
-          />
           <ContactScene />
         </Physics>
       </Suspense>

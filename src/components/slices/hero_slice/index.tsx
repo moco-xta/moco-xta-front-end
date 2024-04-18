@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 
 import HeadText from './head_text'
 import HeroCanvas from '@/components/r3f/canvas/hero_canvas'
@@ -15,6 +16,14 @@ export default function HeroSlice() {
       <HeadText />
       <div id='hero_canvas_container'>
         <HeroCanvas />
+      </div>
+      <div id='aries_container'>
+        <Image
+          src='/img/png/aries.png'
+          width={282}
+          height={150}
+          alt='aries'
+        />
       </div>
       <ScrollDown
         top={'85vh'}

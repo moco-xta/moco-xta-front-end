@@ -39,7 +39,7 @@ export default function Footer() {
           <div id='footer_logo_container'>
             <Image
               id='footer_logo'
-              src='/img/png/moco_logo_normal_h300.png'
+              src='/img/png/moco_logo_turquoise_h300.png'
               width={466}
               height={300}
               alt='Logo footer'

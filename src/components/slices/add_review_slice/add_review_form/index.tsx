@@ -15,7 +15,7 @@ import {
 } from '@/components/form/inputs'
 import { ResetButton, SubmitButton } from '@/components/form/buttons'
 
-import { reviewRoles } from '@/data/reviewRoles'
+import { reviewRolesData } from '@/data/reviewRolesData'
 
 import './index.scss'
 
@@ -71,7 +71,7 @@ export default function AddReviewForm({
         <FormikRadioGroup
           label={t('ADD_REVIEW.ROLE')}
           name={'role'}
-          options={reviewRoles}
+          options={reviewRolesData}
           translationKeyPrefix={'ADD_REVIEW.ROLES'}
           handleChange={handleChange}
           setFieldValue={setFieldValue}

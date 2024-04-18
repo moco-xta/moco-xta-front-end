@@ -1,9 +1,10 @@
 import * as THREE from 'three'
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
+import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -12,16 +13,20 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function DoughnutChartNinetyPercent(
-  props: JSX.IntrinsicElements['group'],
-) {
+const DoughnutChartNinetyPercent = forwardRef<
+  ForwardRefGltfGroupInterface,
+  JSX.IntrinsicElements['group']
+>(function DoughnutChartNinetyPercent({ position, rotation, scale }, ref) {
   const { nodes } = useGLTF(
     GltfConstants.DOUGHNUT_CHART_NINETY_PERCENT,
   ) as GLTFResult
   return (
     <group
-      {...props}
+      ref={ref}
       dispose={null}
+      position={position}
+      rotation={rotation}
+      scale={scale}
     >
       <mesh
         geometry={nodes.DoughnutChartNinetyPercent.geometry}
@@ -42,6 +47,8 @@ export function DoughnutChartNinetyPercent(
       </mesh>
     </group>
   )
-}
+})
 
 useGLTF.preload(GltfConstants.DOUGHNUT_CHART_NINETY_PERCENT)
+
+export default DoughnutChartNinetyPercent

@@ -5,6 +5,7 @@
   "O_HELIUM_BALLOON": "/gltf/hero/OHeliumBalloon.gltf",
   "C_HELIUM_BALLOON": "/gltf/hero/CHeliumBalloon.gltf",
   "SMILEY": "/gltf/hero/Smiley.gltf",
+  "OWL_STICKER": "/gltf/hero/OwlSticker.gltf",
 
   "STAR": "/gltf/reviews/Star.gltf",
 
@@ -12,6 +13,9 @@
 
   "DOUGHNUT_CHART_SEVENTY_FIVE_PERCENT": "/gltf/charts/DoughnutChartSeventyFivePercent.gltf",
   "DOUGHNUT_CHART_NINETY_PERCENT": "/gltf/charts/DoughnutChartNinetyPercent.gltf",
+  "ROUNDED_DOUGHNUT_CHART_NINETY_PERCENT": "/gltf/charts/RoundedDoughnutChartNinetyPercent.gltf",
+
+  "ROUNDED_CARD": "/gltf/cards/RoundedCard.gltf",
 
   "ROUNDED_CUBE": "/gltf/rubiks_cube/RoundedCube.gltf",
   "COLOR_PAD_BLENDER": "/gltf/rubiks_cube/ColorPadBlender.gltf",

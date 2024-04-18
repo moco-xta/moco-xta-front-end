@@ -1,10 +1,27 @@
 import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
-import { ReviewCardDataInterface } from './componentsInterfaces'
+import { ReviewDataInterface } from './componentsInterfaces'
 import { GroupProps, MeshProps } from '@react-three/fiber'
 import { MutableRefObject, Ref } from 'react'
 
+interface CoordinatesInterface {
+  X: number
+  Y: number
+  Z: number
+}
+
 export interface ForwardRefGltfGroupInterface extends THREE.Group {
   width: number
+}
+
+interface LightsByCategoryInterface {
+  TYPE: string
+  INTENSITY: number
+  POSITIONS: CoordinatesInterface[]
+}
+
+export interface LightsInterface {
+  canvasName: string
+  data: LightsByCategoryInterface[]
 }
 
 export interface IntroductionCardCanvasInterface {
@@ -15,12 +32,13 @@ export interface IntroductionCardSceneInterface {
   content: IntroductionCardDataInterface
 }
 
-export interface StarCanvasInterface {
-  data: ReviewCardDataInterface
+export interface ReviewCanvasInterface {
+  reviewIndex: number
+  data: ReviewDataInterface
 }
 
-export interface StarSceneInterface {
-  data: ReviewCardDataInterface
+export interface ReviewCardInterface {
+  data: ReviewDataInterface
 }
 
 export interface ColorPadAndArrowInterface {

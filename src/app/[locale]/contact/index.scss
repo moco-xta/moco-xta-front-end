@@ -8,6 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #990000;
+  background-image: url('/img/png/moco_logo_fur_back_ligths.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 
   #contact_container {
     width: 60%;
@@ -52,6 +56,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* background-color: rgba(245, 1, 245, 0.4);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px); */
 
     #why_container {
       margin-bottom: 30px;
@@ -76,16 +83,38 @@
       }
 
       .social_container {
-        margin-bottom: 8px;
+        /* margin-bottom: 8px; */
+        padding: 8px;
         display: flex;
         align-items: center;
-        color: $white_op80;
+        /* color: $white_op80; */
+        color: $white;
         cursor: pointer;
       }
 
       .social_container:hover {
         color: $white;
       }
+
+      /* #linkedin_container {
+        background-color: #00f40266;
+      }
+
+      #twitter_container {
+        background-color: #f501f566;
+      }
+
+      #instagram_container {
+        background-color: #f4020266;
+      }
+
+      #facebook_container {
+        background-color: #0100f466;
+      }
+
+      #github_container {
+        background-color: #00000066;
+      } */
 
       .social_icon {
         margin-right: 10px;
@@ -94,6 +123,10 @@
 
     #contacts_container {
       margin-bottom: 30px;
+
+      img {
+        border-radius: 10px;
+      }
 
       h2 {
         margin-bottom: 15px;
