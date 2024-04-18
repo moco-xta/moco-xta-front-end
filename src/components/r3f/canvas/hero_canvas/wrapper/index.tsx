@@ -7,7 +7,7 @@ export default function Wrapper() {
   const width = 2.55
   const height = 1.1
   /* const height = 3.3 */
-  const depth = 0.83
+  const depth = 0.85
   const opacity = 0
 
   return (

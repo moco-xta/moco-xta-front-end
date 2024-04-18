@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+import { useThree } from '@react-three/fiber'
 
 import CubeGroup from './cube_group'
 import RotationGroupAndButtons from './rotation_group_and_buttons'
@@ -9,6 +10,10 @@ import { setCubeGroupCoordinates, setPadColor } from '@/helpers/r3fHelpers'
 import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
 
 export default function RubiksCube() {
+  const { gl } = useThree()
+  gl.toneMapping = THREE.ACESFilmicToneMapping
+  gl.toneMappingExposure = 6
+
   const rubiksCubeRef = useRef<THREE.Group>(null!)
   let colorPadIndex = useRef<number>(0)
 

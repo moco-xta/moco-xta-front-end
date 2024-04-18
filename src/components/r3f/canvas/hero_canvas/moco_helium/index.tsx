@@ -7,6 +7,7 @@ import { MHeliumBalloon } from '@/components/r3f/models/hero/MHeliumBalloon'
 import { OHeliumBalloon } from '@/components/r3f/models/hero/OHeliumBalloon'
 import { CHeliumBalloon } from '@/components/r3f/models/hero/CHeliumBalloon'
 import { Smiley } from '@/components/r3f/models/hero/Smiley'
+import { OwlSticker } from '@/components/r3f/models/hero/OwlSticker'
 
 export default function MocoHelium() {
   const mRef = useRef(null!)
@@ -26,26 +27,26 @@ export default function MocoHelium() {
     zRef.current = Math.tan(timeRef.current)
     // @ts-ignore
     mRef.current.applyImpulse({
-      x: xRef.current * 0.005,
-      y: yRef.current * 0.005,
+      x: xRef.current * 0.002,
+      y: yRef.current * 0.002,
       z: zRef.current * 0.001,
     })
     // @ts-ignore
     o1Ref.current.applyImpulse({
-      x: -xRef.current * 0.005,
-      y: -yRef.current * 0.005,
+      x: -xRef.current * 0.002,
+      y: -yRef.current * 0.002,
       z: -zRef.current * 0.001,
     })
     // @ts-ignore
     cRef.current.applyImpulse({
-      x: -xRef.current * 0.005,
-      y: yRef.current * 0.005,
+      x: -xRef.current * 0.002,
+      y: yRef.current * 0.002,
       z: zRef.current * 0.001,
     })
     // @ts-ignore
     o2Ref.current.applyImpulse({
-      x: xRef.current * 0.005,
-      y: -yRef.current * 0.005,
+      x: xRef.current * 0.002,
+      y: -yRef.current * 0.002,
       z: -zRef.current * 0.001,
     })
   })
@@ -91,6 +92,7 @@ export default function MocoHelium() {
         >
           <OHeliumBalloon />
           <Smiley />
+          <OwlSticker />
         </group>
       </RigidBody>
     </group>

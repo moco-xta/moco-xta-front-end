@@ -19,7 +19,7 @@
   "LIGHTS": [
     {
       "TYPE": "pointLight",
-      "INTENSITY": 20,
+      "INTENSITY": 40,
       "POSITIONS": [
         {
           "X": 5,
