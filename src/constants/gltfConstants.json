@@ -97,7 +97,17 @@
   "GRAPHICS_PACK": "/gltf/skills/GraphicsPack.gltf",
   "GRAPHICS_SKILLS": "/gltf/skills/GraphicsSkills.gltf",
 
+  "AMOR_AMOR_SQUARE": "/gltf/about/AmorAmorSquare.gltf",
+  "BRAIN_SQUARE": "/gltf/about/BrainSquare.gltf",
+  "BUTTERFLY_SQUARE": "/gltf/about/ButterflySquare.gltf",
+  "CELESTIAL_MAP_SQUARE": "/gltf/about/CelestialMapSquare.gltf",
+  "COURONNE_SQUARE": "/gltf/about/CouronneSquare.gltf",
   "PARQUET": "/gltf/about/Parquet.gltf",
   "TRESTLE": "/gltf/about/Trestle.gltf",
-  "MAC_BOOK_PRO": "/gltf/about/MacBookPro.gltf"
+  "MAC_BOOK_PRO": "/gltf/about/MacBookPro.gltf",
+  "SPEAKER": "/gltf/about/Speaker.gltf",
+  "SPEAKER_ENCLOSURE": "/gltf/about/SpeakerEnclosure.gltf",
+  "TRINITY_SQUARE": "/gltf/about/TrinitySquare.gltf",
+  "WOODEN_SHELF": "/gltf/about/WoodenShelf.gltf",
+  "WORLD_MAP": "/gltf/about/WorldMap.gltf"
 }

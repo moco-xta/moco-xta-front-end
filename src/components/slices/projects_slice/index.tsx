@@ -19,6 +19,7 @@ import { default as projectsConstants } from '@/constants/projectsConstants.json
 
 import variables from '@/styles/variables.module.scss'
 import './index.scss'
+import ProjectsCanvas from '@/components/r3f/canvas/projects_canvas'
 
 export default function ProjectsSlice() {
   const {
@@ -78,7 +79,7 @@ export default function ProjectsSlice() {
   return (
     <div id='project_timeline_container'>
       <section id='project_slice'>
-        <ProjectsContainer
+        {/* <ProjectsContainer
           projectsRefs={projectsRefs}
           projectsData={projectsData}
           currentProject={currentProject}
@@ -87,8 +88,9 @@ export default function ProjectsSlice() {
           companiesAndSchoolRefs={companiesAndSchoolRefs}
           companiesAndSchollData={companiesAndSchollData}
           currentCompanyOrSchool={currentCompanyOrSchool}
-        />
+        /> */}
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
+        <ProjectsCanvas />
         <ScrollDown
           top={'65vh'}
           color={variables.grey_05}

@@ -1,5 +1,5 @@
-import * as THREE from 'three'
 import React from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -10,30 +10,21 @@ import { default as texturesConstants } from '@/constants/texturesConstants.json
 
 type GLTFResult = GLTF & {
   nodes: {
-    Trestle: THREE.Mesh
+    CelestialMapSquare: THREE.Mesh
   }
   materials: {}
 }
 
-export function Trestle({ position }: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(gltfConstants.TRESTLE) as GLTFResult
-
-  const map = useTextureLoader(texturesConstants.TRESTLE_DIFFUSE)
-  map.flipY = false
-
+export function CelestialMapSquare({ position, rotation }: JSX.IntrinsicElements['group']) {
+  const { nodes } = useGLTF(gltfConstants.CELESTIAL_MAP_SQUARE) as GLTFResult
   return (
-    <mesh
-      geometry={nodes.Trestle.geometry}
-      position={position}
-      receiveShadow
-      castShadow
-    >
+      <mesh geometry={nodes.CelestialMapSquare.geometry}  position={position} rotation={rotation} receiveShadow castShadow>
       <meshStandardMaterial
         attach='material'
-        map={map}
+        color={'white'}
       />
     </mesh>
   )
 }
 
-useGLTF.preload(gltfConstants.TRESTLE)
+useGLTF.preload(gltfConstants.CELESTIAL_MAP_SQUARE)

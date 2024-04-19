@@ -1,4 +1,5 @@
 import React, { Suspense, useMemo } from 'react'
+import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
 import {
   Box,
@@ -17,6 +18,15 @@ import { Parquet, Trestle } from '../../models/about'
 import { default as controlsConstants } from '@/constants/controlsConstants.json'
 import { degreesToRadians } from '@/helpers/r3fHelpers'
 import { MacBookPro } from '../../models/about/MacBookPro'
+import { SpeakerEnclosure } from '../../models/about/SpeakerEnclosure'
+import { WorldMap } from '../../models/about/WorldMap'
+import { WoodenShelf } from '../../models/about/WoodenShelf'
+import { BrainSquare } from '../../models/about/BrainSquare'
+import { TrinitySquare } from '../../models/about/TrinitySquare'
+import { AmorAmorSquare } from '../../models/about/AmorAmorSquare'
+import { CouronneSquare } from '../../models/about/CouronneSquare'
+import { ButterflySquare } from '../../models/about/ButterflySquare'
+import { CelestialMapSquare } from '../../models/about/CelestialMapSquare'
 
 function AboutScene() {
   const { gl } = useThree()
@@ -49,6 +59,16 @@ function AboutScene() {
           rotation={[degreesToRadians(90), 0, 0]}
         />
       </RigidBody>
+      <SpeakerEnclosure position={[9.9, 0, 12.5]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <SpeakerEnclosure position={[-10.7, 0, 12.5]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <WorldMap position={[9.9, 8.2, 12.4]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <WoodenShelf position={[0, 15, 14.3]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <BrainSquare position={[17.66, 14.52, 14.519]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <TrinitySquare position={[15.68, 20.9, 14.5]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <AmorAmorSquare position={[10.2, 8, 14.52]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <CouronneSquare position={[0, 22.6, 14.52]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <ButterflySquare position={[15.576, 8.7, 14.3]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <CelestialMapSquare position={[-9.5, 10.3, 14.52]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
     </>
   )
 }
@@ -83,7 +103,7 @@ export default function AboutCanvas() {
         <PerspectiveCamera
           makeDefault
           aspect={1200 / 600}
-          fov={80}
+          fov={55}
           position={[0, 0, 0]}
           onUpdate={(self) => self.updateProjectionMatrix()}
         />
