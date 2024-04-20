@@ -29,10 +29,12 @@ function HeroScene() {
   gl.toneMappingExposure = 4
 
   return (
-    <>
+    <group
+      position={[0.55, 0, 0]}
+    >
       <Wrapper />
       <MocoHelium />
-    </>
+    </group>
   )
 }
 
