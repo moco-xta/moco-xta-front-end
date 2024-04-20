@@ -32,9 +32,7 @@ export default function Card({ content }: IntroductionCardSceneInterface) {
   )
 
   return (
-    <group
-      ref={introductionCardRef}
-    >
+    <group ref={introductionCardRef}>
       <Text
         textAlign={'center'}
         fontSize={introductionConstants.CARDS.ROUNDED_CARDS.FONT_SIZE}

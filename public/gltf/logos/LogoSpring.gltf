@@ -1,194 +1,173 @@
 {
-	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.1.62",
-		"version":"2.0"
-	},
-	"scene":0,
-	"scenes":[
-		{
-			"name":"Scene",
-			"nodes":[
-				0
-			]
-		}
-	],
-	"nodes":[
-		{
-			"mesh":0,
-			"name":"LogoSpring"
-		}
-	],
-	"materials":[
-		{
-			"doubleSided":true,
-			"name":"logo_spring_#74b61d",
-			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.17464618384838104,
-					0.46778443455696106,
-					0.012286596931517124,
-					1
-				],
-				"metallicFactor":0
-			}
-		},
-		{
-			"doubleSided":true,
-			"name":"logo_spring_#ffffff",
-			"pbrMetallicRoughness":{
-				"metallicFactor":0
-			}
-		}
-	],
-	"meshes":[
-		{
-			"name":"LogoSpring",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":0,
-						"NORMAL":1,
-						"TEXCOORD_0":2
-					},
-					"indices":3,
-					"material":0
-				},
-				{
-					"attributes":{
-						"POSITION":4,
-						"NORMAL":5,
-						"TEXCOORD_0":6
-					},
-					"indices":7,
-					"material":1
-				}
-			]
-		}
-	],
-	"accessors":[
-		{
-			"bufferView":0,
-			"componentType":5126,
-			"count":565,
-			"max":[
-				1.0000005960464478,
-				1.0000005960464478,
-				0.10000025480985641
-			],
-			"min":[
-				-1.0000005960464478,
-				-1.0000005960464478,
-				-0.2000001072883606
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5126,
-			"count":565,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":2,
-			"componentType":5126,
-			"count":565,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":3,
-			"componentType":5123,
-			"count":1293,
-			"type":"SCALAR"
-		},
-		{
-			"bufferView":4,
-			"componentType":5126,
-			"count":809,
-			"max":[
-				0.9535344839096069,
-				0.7826176881790161,
-				0.20000025629997253
-			],
-			"min":[
-				-0.7045440077781677,
-				-0.757419764995575,
-				0.09999983757734299
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":5,
-			"componentType":5126,
-			"count":809,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":6,
-			"componentType":5126,
-			"count":809,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":7,
-			"componentType":5123,
-			"count":1455,
-			"type":"SCALAR"
-		}
-	],
-	"bufferViews":[
-		{
-			"buffer":0,
-			"byteLength":6780,
-			"byteOffset":0,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":6780,
-			"byteOffset":6780,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":4520,
-			"byteOffset":13560,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":2586,
-			"byteOffset":18080,
-			"target":34963
-		},
-		{
-			"buffer":0,
-			"byteLength":9708,
-			"byteOffset":20668,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":9708,
-			"byteOffset":30376,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":6472,
-			"byteOffset":40084,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":2910,
-			"byteOffset":46556,
-			"target":34963
-		}
-	],
-	"buffers":[
-		{
-			"byteLength":49468,
-			"uri":"LogoSpring.bin"
-		}
-	]
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "LogoSpring"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "logo_spring_#74b61d",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.17464618384838104, 0.46778443455696106, 0.012286596931517124, 1
+        ],
+        "metallicFactor": 0
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "logo_spring_#ffffff",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "LogoSpring",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 565,
+      "max": [1.0000005960464478, 1.0000005960464478, 0.10000025480985641],
+      "min": [-1.0000005960464478, -1.0000005960464478, -0.2000001072883606],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 565,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 565,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 1293,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 809,
+      "max": [0.9535344839096069, 0.7826176881790161, 0.20000025629997253],
+      "min": [-0.7045440077781677, -0.757419764995575, 0.09999983757734299],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 809,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 809,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 1455,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6780,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6780,
+      "byteOffset": 6780,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4520,
+      "byteOffset": 13560,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2586,
+      "byteOffset": 18080,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9708,
+      "byteOffset": 20668,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9708,
+      "byteOffset": 30376,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6472,
+      "byteOffset": 40084,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2910,
+      "byteOffset": 46556,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 49468,
+      "uri": "LogoSpring.bin"
+    }
+  ]
 }

@@ -10,16 +10,10 @@ import { setCubeGroupCoordinates, setPadColor } from '@/helpers/r3fHelpers'
 import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
 
 export default function RubiksCube() {
-  const { gl } = useThree()
-  gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 6
-
   const rubiksCubeRef = useRef<THREE.Group>(null!)
   let colorPadIndex = useRef<number>(0)
 
-  const colors: string[] = rubiksCubeConstants.RUBIKS_CUBE.COLORS.map(
-    (color) => color,
-  )
+  const colors: string[] = rubiksCubeConstants.RUBIKS_CUBE.COLORS.map(color => color)
 
   useEffect(() => {
     const colorPads: THREE.Object3D<THREE.Object3DEventMap>[] = []
@@ -40,7 +34,7 @@ export default function RubiksCube() {
           child.material.color = setPadColor(normal, colors)
         })
     })
-  }, [rubiksCubeRef, colors])
+  }, [rubiksCubeRef])
 
   return (
     <>

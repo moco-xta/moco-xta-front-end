@@ -26,29 +26,33 @@ export default function MocoHelium() {
     yRef.current = Math.sin(timeRef.current) * 0.0005
     zRef.current = Math.tan(timeRef.current) * 0.0005
     // @ts-ignore
-    if(mRef.current) mRef.current.applyImpulse({
-      x: xRef.current,
-      y: yRef.current,
-      z: zRef.current,
-    })
+    if (mRef.current)
+      mRef.current.applyImpulse({
+        x: xRef.current,
+        y: yRef.current,
+        z: zRef.current,
+      })
     // @ts-ignore
-    if(o1Ref.current) o1Ref.current.applyImpulse({
-      x: xRef.current,
-      y: yRef.current,
-      z: zRef.current,
-    })
+    if (o1Ref.current)
+      o1Ref.current.applyImpulse({
+        x: xRef.current,
+        y: yRef.current,
+        z: zRef.current,
+      })
     // @ts-ignore
-    if(cRef.current) cRef.current.applyImpulse({
-      x: xRef.current,
-      y: yRef.current,
-      z: zRef.current,
-    })
+    if (cRef.current)
+      cRef.current.applyImpulse({
+        x: xRef.current,
+        y: yRef.current,
+        z: zRef.current,
+      })
     // @ts-ignore
-    if(o2Ref.current) o2Ref.current.applyImpulse({
-      x: xRef.current,
-      y: yRef.current,
-      z: zRef.current,
-    })
+    if (o2Ref.current)
+      o2Ref.current.applyImpulse({
+        x: xRef.current,
+        y: yRef.current,
+        z: zRef.current,
+      })
   })
 
   const rotation = 33
