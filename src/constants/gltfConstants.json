@@ -48,6 +48,7 @@
   "COLOR_PAD": "/gltf/rubiks_cube/ColorPad.gltf",
   "BUTTON": "/gltf/rubiks_cube/Button.gltf",
 
+  "LOGO_ABWERKT": "/gltf/logos/LogoABWerkt.gltf",
   "LOGO_ANGULAR": "/gltf/logos/LogoAngular.gltf",
   "LOGO_AWS": "/gltf/logos/LogoAws.gltf",
   "LOGO_BABYLONJS": "/gltf/logos/LogoBabylonjs.gltf",
@@ -69,6 +70,8 @@
   "LOGO_IONIC": "/gltf/logos/LogoIonic.gltf",
   "LOGO_JAVA": "/gltf/logos/LogoJava.gltf",
   "LOGO_JAVASCRIPT": "/gltf/logos/LogoJavascript.gltf",
+  "LOGO_LENTO": "/gltf/logos/Logolento.gltf",
+  "LOGO_MOCO": "/gltf/logos/LogoMoco.gltf",
   "LOGO_MUI": "/gltf/logos/LogoMui.gltf",
   "LOGO_MYSQL": "/gltf/logos/LogoMysql.gltf",
   "LOGO_NEXTJS": "/gltf/logos/LogoNextjs.gltf",

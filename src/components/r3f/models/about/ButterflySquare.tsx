@@ -15,10 +15,19 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function ButterflySquare({ position, rotation }: JSX.IntrinsicElements['group']) {
+export function ButterflySquare({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.BUTTERFLY_SQUARE) as GLTFResult
   return (
-    <mesh geometry={nodes.ButterflySquare.geometry} position={position} rotation={rotation} receiveShadow castShadow>
+    <mesh
+      geometry={nodes.ButterflySquare.geometry}
+      position={position}
+      rotation={rotation}
+      receiveShadow
+      castShadow
+    >
       <meshStandardMaterial
         attach='material'
         color={'white'}

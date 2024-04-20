@@ -15,15 +15,24 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function AmorAmorSquare({ position, rotation }: JSX.IntrinsicElements['mesh']) {
+export function AmorAmorSquare({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(gltfConstants.AMOR_AMOR_SQUARE) as GLTFResult
   return (
-      <mesh geometry={nodes.AmorAmorSquare.geometry} position={position} rotation={rotation} receiveShadow castShadow>
-        <meshStandardMaterial
-          attach='material'
-          color={'white'}
-        />
-      </mesh>
+    <mesh
+      geometry={nodes.AmorAmorSquare.geometry}
+      position={position}
+      rotation={rotation}
+      receiveShadow
+      castShadow
+    >
+      <meshStandardMaterial
+        attach='material'
+        color={'white'}
+      />
+    </mesh>
   )
 }
 

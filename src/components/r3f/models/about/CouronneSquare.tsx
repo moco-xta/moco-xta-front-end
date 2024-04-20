@@ -16,22 +16,36 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function CouronneSquare({ position, rotation }: JSX.IntrinsicElements['group']) {
+export function CouronneSquare({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.COURONNE_SQUARE) as GLTFResult
   return (
-    <group position={position} rotation={rotation}>
-      <mesh geometry={nodes.CouronneSquare_1.geometry} receiveShadow castShadow>
-      <meshStandardMaterial
-        attach='material'
-        color={'white'}
-      />
-    </mesh>
-      <mesh geometry={nodes.CouronneSquare_2.geometry} receiveShadow castShadow>
-      <meshStandardMaterial
-        attach='material'
-        color={'white'}
-      />
-    </mesh>
+    <group
+      position={position}
+      rotation={rotation}
+    >
+      <mesh
+        geometry={nodes.CouronneSquare_1.geometry}
+        receiveShadow
+        castShadow
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={'white'}
+        />
+      </mesh>
+      <mesh
+        geometry={nodes.CouronneSquare_2.geometry}
+        receiveShadow
+        castShadow
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={'white'}
+        />
+      </mesh>
     </group>
   )
 }

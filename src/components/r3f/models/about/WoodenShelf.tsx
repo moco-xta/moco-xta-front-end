@@ -15,10 +15,19 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function WoodenShelf({ position, rotation }: JSX.IntrinsicElements['group']) {
+export function WoodenShelf({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.WOODEN_SHELF) as GLTFResult
   return (
-    <mesh geometry={nodes.WoodenShelf.geometry} position={position} rotation={rotation} receiveShadow castShadow>
+    <mesh
+      geometry={nodes.WoodenShelf.geometry}
+      position={position}
+      rotation={rotation}
+      receiveShadow
+      castShadow
+    >
       <meshStandardMaterial
         attach='material'
         color={'white'}

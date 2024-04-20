@@ -3,9 +3,9 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { default as GltfConstants } from '@/constants/gltfConstants.json'
-
 import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
+
+import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

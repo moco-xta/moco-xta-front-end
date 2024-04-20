@@ -15,10 +15,19 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function BrainSquare({ position, rotation }: JSX.IntrinsicElements['group']) {
+export function BrainSquare({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.BRAIN_SQUARE) as GLTFResult
   return (
-    <mesh geometry={nodes.BrainSquare.geometry} position={position} rotation={rotation} receiveShadow castShadow>
+    <mesh
+      geometry={nodes.BrainSquare.geometry}
+      position={position}
+      rotation={rotation}
+      receiveShadow
+      castShadow
+    >
       <meshStandardMaterial
         attach='material'
         color={'white'}

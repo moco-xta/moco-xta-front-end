@@ -1,117 +1,107 @@
 {
-	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.1.62",
-		"version":"2.0"
-	},
-	"scene":0,
-	"scenes":[
-		{
-			"name":"Scene",
-			"nodes":[
-				0
-			]
-		}
-	],
-	"nodes":[
-		{
-			"mesh":0,
-			"name":"BrainSquare"
-		}
-	],
-	"meshes":[
-		{
-			"name":"BrainSquare",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":0,
-						"NORMAL":1,
-						"TEXCOORD_0":2,
-						"TEXCOORD_1":3
-					},
-					"indices":4
-				}
-			]
-		}
-	],
-	"accessors":[
-		{
-			"bufferView":0,
-			"componentType":5126,
-			"count":1852,
-			"max":[
-				3.2760009765625,
-				4.242001533508301,
-				0.2559475302696228
-			],
-			"min":[
-				-3.2760009765625,
-				-4.242001056671143,
-				-2.6490915843169205e-06
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5126,
-			"count":1852,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":2,
-			"componentType":5126,
-			"count":1852,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":3,
-			"componentType":5126,
-			"count":1852,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":4,
-			"componentType":5123,
-			"count":2826,
-			"type":"SCALAR"
-		}
-	],
-	"bufferViews":[
-		{
-			"buffer":0,
-			"byteLength":22224,
-			"byteOffset":0,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":22224,
-			"byteOffset":22224,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":14816,
-			"byteOffset":44448,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":14816,
-			"byteOffset":59264,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":5652,
-			"byteOffset":74080,
-			"target":34963
-		}
-	],
-	"buffers":[
-		{
-			"byteLength":79732,
-			"uri":"BrainSquare.bin"
-		}
-	]
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "BrainSquare"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "BrainSquare",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3
+          },
+          "indices": 4
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1852,
+      "max": [3.2760009765625, 4.242001533508301, 0.2559475302696228],
+      "min": [-3.2760009765625, -4.242001056671143, -2.6490915843169205e-6],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1852,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1852,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1852,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5123,
+      "count": 2826,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 22224,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 22224,
+      "byteOffset": 22224,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 14816,
+      "byteOffset": 44448,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 14816,
+      "byteOffset": 59264,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5652,
+      "byteOffset": 74080,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 79732,
+      "uri": "BrainSquare.bin"
+    }
+  ]
 }

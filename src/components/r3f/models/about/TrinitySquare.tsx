@@ -15,10 +15,19 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function TrinitySquare({ position, rotation }: JSX.IntrinsicElements['group']) {
+export function TrinitySquare({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.TRINITY_SQUARE) as GLTFResult
   return (
-    <mesh geometry={nodes.TrinitySquare.geometry} position={position} rotation={rotation} receiveShadow castShadow>
+    <mesh
+      geometry={nodes.TrinitySquare.geometry}
+      position={position}
+      rotation={rotation}
+      receiveShadow
+      castShadow
+    >
       <meshStandardMaterial
         attach='material'
         color={'white'}

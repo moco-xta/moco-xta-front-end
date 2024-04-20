@@ -13,21 +13,31 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "WorldMap"
+      "name": "LogoMoco",
+      "scale": [1.1112500429153442, 1.1112500429153442, 1.1112500429153442]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "a.001",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0
+      }
     }
   ],
   "meshes": [
     {
-      "name": "WorldMap",
+      "name": "LogoMoco",
       "primitives": [
         {
           "attributes": {
             "POSITION": 0,
             "NORMAL": 1,
-            "TEXCOORD_0": 2,
-            "TEXCOORD_1": 3
+            "TEXCOORD_0": 2
           },
-          "indices": 4
+          "indices": 3,
+          "material": 0
         }
       ]
     }
@@ -36,72 +46,60 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 38210,
-      "max": [1.3346803188323975, 3.4159703254699707, 1.334977149963379],
-      "min": [-1.3346812725067139, 0, -1.3349790573120117],
+      "count": 7552,
+      "max": [1.2912031412124634, 0.9498326778411865, 0.7174447774887085],
+      "min": [-1.5077238082885742, -0.8499436974525452, -0.7939382791519165],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 38210,
+      "count": 7552,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 38210,
+      "count": 7552,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
-      "componentType": 5126,
-      "count": 38210,
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 4,
       "componentType": 5123,
-      "count": 59142,
+      "count": 44124,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 458520,
+      "byteLength": 90624,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 458520,
-      "byteOffset": 458520,
+      "byteLength": 90624,
+      "byteOffset": 90624,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 305680,
-      "byteOffset": 917040,
+      "byteLength": 60416,
+      "byteOffset": 181248,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 305680,
-      "byteOffset": 1222720,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 118284,
-      "byteOffset": 1528400,
+      "byteLength": 88248,
+      "byteOffset": 241664,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 1646684,
-      "uri": "WorldMap.bin"
+      "byteLength": 329912,
+      "uri": "LogoMoco.bin"
     }
   ]
 }

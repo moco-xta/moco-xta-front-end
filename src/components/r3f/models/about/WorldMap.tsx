@@ -15,14 +15,21 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function WorldMap({ position, rotation }: JSX.IntrinsicElements['group']) {
+export function WorldMap({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.WORLD_MAP) as GLTFResult
   return (
     <group
       position={position}
       rotation={rotation}
     >
-      <mesh geometry={nodes.WorldMap.geometry} receiveShadow castShadow>
+      <mesh
+        geometry={nodes.WorldMap.geometry}
+        receiveShadow
+        castShadow
+      >
         <meshStandardMaterial
           attach='material'
           color={'white'}

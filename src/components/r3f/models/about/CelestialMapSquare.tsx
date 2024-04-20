@@ -15,10 +15,19 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function CelestialMapSquare({ position, rotation }: JSX.IntrinsicElements['group']) {
+export function CelestialMapSquare({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.CELESTIAL_MAP_SQUARE) as GLTFResult
   return (
-      <mesh geometry={nodes.CelestialMapSquare.geometry}  position={position} rotation={rotation} receiveShadow castShadow>
+    <mesh
+      geometry={nodes.CelestialMapSquare.geometry}
+      position={position}
+      rotation={rotation}
+      receiveShadow
+      castShadow
+    >
       <meshStandardMaterial
         attach='material'
         color={'white'}

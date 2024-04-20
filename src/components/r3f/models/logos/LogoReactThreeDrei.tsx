@@ -35,7 +35,7 @@ const LogoReactThreeDrei = forwardRef<
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)
     // @ts-ignore
-    ref.current.width = box.getSize(new THREE.Vector3()).x
+    if (ref) ref.current.width = box.getSize(new THREE.Vector3()).x
   }, [scene, ref])
 
   return (

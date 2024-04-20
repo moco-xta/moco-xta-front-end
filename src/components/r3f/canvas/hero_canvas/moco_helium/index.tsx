@@ -92,7 +92,6 @@ export default function MocoHelium() {
         >
           <OHeliumBalloon />
           <Smiley />
-          <OwlSticker />
         </group>
       </RigidBody>
     </group>

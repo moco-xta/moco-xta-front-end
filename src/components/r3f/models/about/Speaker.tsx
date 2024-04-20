@@ -18,7 +18,12 @@ type GLTFResult = GLTF & {
 export function Speaker({ position }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.SPEAKER) as GLTFResult
   return (
-    <mesh geometry={nodes.Speaker.geometry} position={position} receiveShadow castShadow>
+    <mesh
+      geometry={nodes.Speaker.geometry}
+      position={position}
+      receiveShadow
+      castShadow
+    >
       <meshStandardMaterial
         attach='material'
         color={'white'}

@@ -7,9 +7,9 @@ export default function PostProcessing() {
   return (
     <EffectComposer>
       <DepthOfField
-        focusDistance={0.15}
-        focalLength={0.25}
-        bokehScale={1}
+        focusDistance={0.5}
+        focalLength={0.5}
+        bokehScale={2}
       />
       <Bloom
         intensity={2.5}

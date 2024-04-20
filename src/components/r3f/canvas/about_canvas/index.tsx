@@ -59,16 +59,46 @@ function AboutScene() {
           rotation={[degreesToRadians(90), 0, 0]}
         />
       </RigidBody>
-      <SpeakerEnclosure position={[9.9, 0, 12.5]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
-      <SpeakerEnclosure position={[-10.7, 0, 12.5]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
-      <WorldMap position={[9.9, 8.2, 12.4]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
-      <WoodenShelf position={[0, 15, 14.3]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
-      <BrainSquare position={[17.66, 14.52, 14.519]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
-      <TrinitySquare position={[15.68, 20.9, 14.5]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
-      <AmorAmorSquare position={[10.2, 8, 14.52]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
-      <CouronneSquare position={[0, 22.6, 14.52]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
-      <ButterflySquare position={[15.576, 8.7, 14.3]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
-      <CelestialMapSquare position={[-9.5, 10.3, 14.52]} rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))} />
+      <SpeakerEnclosure
+        position={[9.9, 0, 12.5]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
+      <SpeakerEnclosure
+        position={[-10.7, 0, 12.5]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
+      <WorldMap
+        position={[9.9, 8.2, 12.4]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
+      <WoodenShelf
+        position={[0, 15, 14.3]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
+      <BrainSquare
+        position={[17.66, 14.52, 14.519]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
+      <TrinitySquare
+        position={[15.68, 20.9, 14.5]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
+      <AmorAmorSquare
+        position={[10.2, 8, 14.52]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
+      <CouronneSquare
+        position={[0, 22.6, 14.52]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
+      <ButterflySquare
+        position={[15.576, 8.7, 14.3]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
+      <CelestialMapSquare
+        position={[-9.5, 10.3, 14.52]}
+        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
+      />
     </>
   )
 }

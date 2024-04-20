@@ -16,14 +16,21 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function SpeakerEnclosure({ position, rotation }: JSX.IntrinsicElements['group']) {
+export function SpeakerEnclosure({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.SPEAKER_ENCLOSURE) as GLTFResult
   return (
     <group
       position={position}
       rotation={rotation}
     >
-      <mesh geometry={nodes.SpeakerEnclosure.geometry} receiveShadow castShadow>
+      <mesh
+        geometry={nodes.SpeakerEnclosure.geometry}
+        receiveShadow
+        castShadow
+      >
         <meshStandardMaterial
           attach='material'
           color={'white'}
