@@ -2,26 +2,20 @@
 
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
-import { Canvas, useLoader, useThree } from '@react-three/fiber'
+import { Canvas, useThree } from '@react-three/fiber'
 import {
-  ContactShadows,
   Environment,
-  Fisheye,
-  Lightformer,
   OrbitControls,
   PerspectiveCamera,
-  Plane,
 } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import Wrapper from './wrapper'
 import MocoHelium from './moco_helium'
+import PostProcessing from './post_processing'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/imgConstants.json'
-import PostProcessing from './post_processing'
-import { OwlSticker } from '../../models/hero/OwlSticker'
-import { LayerMaterial, /* Base,  */ Depth, Noise } from 'lamina'
 
 function HeroScene() {
   const { gl } = useThree()
@@ -70,8 +64,8 @@ export default function HeroCanvas() {
         ]}
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      <OrbitControls />
-      <ambientLight intensity={1} />
+      {/* <OrbitControls /> */}
+      <ambientLight />
       <Suspense>
         <Physics
           /* debug */ gravity={[

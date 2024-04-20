@@ -22,32 +22,32 @@ export default function MocoHelium() {
 
   useFrame((state, delta, xrFrame) => {
     timeRef.current += delta
-    xRef.current = Math.cos(timeRef.current)
-    yRef.current = Math.sin(timeRef.current)
-    zRef.current = Math.tan(timeRef.current)
+    xRef.current = Math.cos(timeRef.current) * 0.0005
+    yRef.current = Math.sin(timeRef.current) * 0.0005
+    zRef.current = Math.tan(timeRef.current) * 0.0005
     // @ts-ignore
     mRef.current.applyImpulse({
-      x: xRef.current * 0.002,
-      y: yRef.current * 0.002,
-      z: zRef.current * 0.001,
+      x: xRef.current,
+      y: yRef.current,
+      z: zRef.current,
     })
     // @ts-ignore
     o1Ref.current.applyImpulse({
-      x: -xRef.current * 0.002,
-      y: -yRef.current * 0.002,
-      z: -zRef.current * 0.001,
+      x: xRef.current,
+      y: yRef.current,
+      z: zRef.current,
     })
     // @ts-ignore
     cRef.current.applyImpulse({
-      x: -xRef.current * 0.002,
-      y: yRef.current * 0.002,
-      z: zRef.current * 0.001,
+      x: xRef.current,
+      y: yRef.current,
+      z: zRef.current,
     })
     // @ts-ignore
     o2Ref.current.applyImpulse({
-      x: xRef.current * 0.002,
-      y: -yRef.current * 0.002,
-      z: -zRef.current * 0.001,
+      x: xRef.current,
+      y: yRef.current,
+      z: zRef.current,
     })
   })
 
