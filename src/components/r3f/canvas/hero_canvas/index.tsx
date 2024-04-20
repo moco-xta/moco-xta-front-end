@@ -1,8 +1,7 @@
 'use client'
 
 import React, { Suspense } from 'react'
-import * as THREE from 'three'
-import { Canvas, useThree } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import {
   Environment,
   OrbitControls,
@@ -10,36 +9,11 @@ import {
 } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
-import Wrapper from './wrapper'
-import MocoHelium from './moco_helium'
+import HeroScene from './hero_scene'
 import PostProcessing from './post_processing'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/imgConstants.json'
-
-function HeroScene() {
-  const { gl } = useThree()
-  gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 4
-
-  return (
-    <group
-      position={[0.55, 0, 0]}
-    >
-      <Wrapper />
-      <MocoHelium />
-    </group>
-  )
-}
-
-function Striplight(props: any) {
-  return (
-    <mesh {...props}>
-      <boxGeometry />
-      <meshBasicMaterial color='white' />
-    </mesh>
-  )
-}
 
 export default function HeroCanvas() {
   return (
@@ -75,9 +49,7 @@ export default function HeroCanvas() {
           ]}
         >
           <HeroScene />
-          <Environment
-            files={imgConstants.HDRS.HERO_ENVIRONMENT}
-          />
+          <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
           <PostProcessing />
         </Physics>
       </Suspense>

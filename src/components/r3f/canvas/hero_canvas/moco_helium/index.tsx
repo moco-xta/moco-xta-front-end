@@ -26,25 +26,25 @@ export default function MocoHelium() {
     yRef.current = Math.sin(timeRef.current) * 0.0005
     zRef.current = Math.tan(timeRef.current) * 0.0005
     // @ts-ignore
-    mRef.current.applyImpulse({
+    if(mRef.current) mRef.current.applyImpulse({
       x: xRef.current,
       y: yRef.current,
       z: zRef.current,
     })
     // @ts-ignore
-    o1Ref.current.applyImpulse({
+    if(o1Ref.current) o1Ref.current.applyImpulse({
       x: xRef.current,
       y: yRef.current,
       z: zRef.current,
     })
     // @ts-ignore
-    cRef.current.applyImpulse({
+    if(cRef.current) cRef.current.applyImpulse({
       x: xRef.current,
       y: yRef.current,
       z: zRef.current,
     })
     // @ts-ignore
-    o2Ref.current.applyImpulse({
+    if(o2Ref.current) o2Ref.current.applyImpulse({
       x: xRef.current,
       y: yRef.current,
       z: zRef.current,

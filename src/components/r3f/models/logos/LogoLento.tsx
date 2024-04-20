@@ -33,12 +33,26 @@ const LogoLento = forwardRef<
     >
       <mesh
         geometry={nodes.LogoLento_1.geometry}
-        material={materials['logo_lento_#303435']}
-      />
+        /* material={materials['logo_lento_#303435']} */
+        receiveShadow
+        castShadow
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0x303435}
+        />
+      </mesh>
       <mesh
         geometry={nodes.LogoLento_2.geometry}
-        material={materials['logo_lento_#eab39b']}
-      />
+        /* material={materials['logo_lento_#eab39b']} */
+        receiveShadow
+        castShadow
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0xeab39b}
+        />
+      </mesh>
     </group>
   )
 })

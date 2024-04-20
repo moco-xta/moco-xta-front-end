@@ -21,7 +21,7 @@ export default function Card({ content }: IntroductionCardSceneInterface) {
 
   const { gl } = useThree()
   gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 6
+  gl.toneMappingExposure = 4
 
   const introductionCardRef = useRef<THREE.Group>(null!)
   const introductionLogoRef = createRef<ForwardRefGltfGroupInterface>()
@@ -34,25 +34,7 @@ export default function Card({ content }: IntroductionCardSceneInterface) {
   return (
     <group
       ref={introductionCardRef}
-      rotation={[degreesToRadians(30), 0, 0]}
     >
-      <mesh
-        position={[0, 2, 2]}
-        receiveShadow
-        castShadow
-      >
-        {/* <boxGeometry
-          attach='geometry'
-          args={[3, 5, 2]}
-        /> */}
-        {/* <meshBasicMaterial>
-          <GradientTexture
-            stops={[0, 1]} // As many stops as you want
-            colors={['aquamarine', 'hotpink']} // Colors need to match the number of stops
-            size={1024} // Size is optional, default = 1024
-          />
-        </meshBasicMaterial> */}
-      </mesh>
       <Text
         textAlign={'center'}
         fontSize={introductionConstants.CARDS.ROUNDED_CARDS.FONT_SIZE}

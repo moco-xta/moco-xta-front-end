@@ -40,10 +40,15 @@ const LogoNextjs = forwardRef<
     >
       <mesh
         geometry={nodes.LogoNextjs.geometry}
-        material={materials['logo_nextjs_#ffffff']}
+        /* material={materials['logo_nextjs_#ffffff']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={'black'}
+        />
+      </mesh>
     </group>
   )
 })

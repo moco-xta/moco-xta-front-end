@@ -35,22 +35,37 @@ const LogoABWerkt = forwardRef<
     >
       <mesh
         geometry={nodes.LogoABWerkt_1.geometry}
-        material={materials['logo_abwerkt_#e32017']}
+        /* material={materials['logo_abwerkt_#e32017']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0xe32017}
+        />
+      </mesh>
       <mesh
         geometry={nodes.LogoABWerkt_2.geometry}
-        material={materials['logo_abwerkt_#b0c500']}
+        /* material={materials['logo_abwerkt_#b0c500']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0xb0c500}
+        />
+      </mesh>
       <mesh
         geometry={nodes.LogoABWerkt_3.geometry}
-        material={materials['logo_abwerkt_#036361']}
+        /* material={materials['logo_abwerkt_#036361']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0x036361}
+        />
+      </mesh>
     </group>
   )
 })

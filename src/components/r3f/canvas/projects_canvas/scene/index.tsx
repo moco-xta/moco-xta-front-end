@@ -17,10 +17,10 @@ export default function ProjectsScene({
   gl.toneMapping = THREE.ACESFilmicToneMapping
   gl.toneMappingExposure = 4
 
-  const {
-    scrollFlow,
-    currentProject,
-  } = useProjectsTimeline(projectsData, companiesAndSchollData)
+  const { scrollFlow, currentProject } = useProjectsTimeline(
+    projectsData,
+    companiesAndSchollData,
+  )
 
   function getInitialPosition(index: number, currentProject: number) {
     return (index - currentProject) * -3 + 3
@@ -37,7 +37,10 @@ export default function ProjectsScene({
           {
             duration: 1,
             ease: 'power3.out',
-            y: scrollFlow === 'up' ? getInitialPosition(index, currentProject) + 3 : getInitialPosition(index, currentProject) - 3,
+            y:
+              scrollFlow === 'up'
+                ? getInitialPosition(index, currentProject) + 3
+                : getInitialPosition(index, currentProject) - 3,
           },
         )
       }

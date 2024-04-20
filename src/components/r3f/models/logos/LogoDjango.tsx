@@ -43,7 +43,12 @@ const LogoDjango = forwardRef<
         material={materials['logo_django_#0b4b33']}
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0x0b4b33}
+        />
+      </mesh>
     </group>
   )
 })

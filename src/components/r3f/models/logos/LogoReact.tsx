@@ -40,10 +40,15 @@ const LogoReact = forwardRef<
     >
       <mesh
         geometry={nodes.LogoReact.geometry}
-        material={materials['logo_react_#61d9fb']}
+        /* material={materials['logo_react_#61d9fb']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0x61d9fb}
+        />
+      </mesh>
     </group>
   )
 })

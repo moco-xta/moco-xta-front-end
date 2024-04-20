@@ -22,5 +22,22 @@
       "Y": 0.05,
       "Z": 0
     }
+  },
+  "MOCO_HELIUM": {
+    "GROUP": {
+      "POSITION": {
+        "X": 0.55,
+        "Y": 0,
+        "Z": 0
+      }
+    },
+    "WRAPPER": {
+      "DIMENSIONS": {
+        "WIDTH": 2.55,
+        "HEIGHT": 1.1,
+        "DEPTH": 0.85
+      },
+      "OPACITY": 0
+    }
   }
 }
