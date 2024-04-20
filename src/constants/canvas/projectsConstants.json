@@ -1,0 +1,19 @@
+{
+  "CANVAS": {
+    "DPR": 1,
+    "LEGACY": false,
+    "GL": {
+      "ANTIALIAS": true,
+      "ALPHA": true,
+      "POWER_PREFERENCE": "high-performance"
+    }
+  },
+  "PERSPECTIVE_CAMERA": {
+    "POSITION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 5
+    },
+    "FOV": 30
+  }
+}

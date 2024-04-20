@@ -22,15 +22,30 @@ type GLTFResult = GLTF & {
   animations: GLTFAction[]
 }
 
-type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
+type ContextType = Record<
+  string,
+  React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>
+>
 
 export function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/OwlSticker.gltf') as GLTFResult
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.OwlSticker_1.geometry} material={materials['glitter_sticher_002.002']} />
-      <mesh geometry={nodes.OwlSticker_2.geometry} material={materials['Material.004']} />
-      <mesh geometry={nodes.OwlSticker_3.geometry} material={materials.white} />
+    <group
+      {...props}
+      dispose={null}
+    >
+      <mesh
+        geometry={nodes.OwlSticker_1.geometry}
+        material={materials['glitter_sticher_002.002']}
+      />
+      <mesh
+        geometry={nodes.OwlSticker_2.geometry}
+        material={materials['Material.004']}
+      />
+      <mesh
+        geometry={nodes.OwlSticker_3.geometry}
+        material={materials.white}
+      />
     </group>
   )
 }

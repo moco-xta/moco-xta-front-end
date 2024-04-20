@@ -26,6 +26,14 @@ export interface IntroductionCardDataInterface {
   }
 }
 
+interface ProjectsLogoInterface {
+  component: ForwardRefExoticComponent<
+    Omit<GroupProps, 'ref'> & RefAttributes<ForwardRefGltfGroupInterface>
+  >
+  position: { [key: string]: number }
+  scale: number
+}
+
 export interface ProjectDataInterface {
   key: string
   url: string
@@ -33,14 +41,13 @@ export interface ProjectDataInterface {
   descriptionsKey: {
     [key: string]: string
   }
-  picture: {
-    [key: string]: string
-  }
   dates: {
     [key: string]: string
   }
-  roles: string[]
-  tools: IconType[]
+  logos: {
+    main: ProjectsLogoInterface
+    tools: ProjectsLogoInterface[]
+  }
 }
 
 export interface ProjectsCardInterface {

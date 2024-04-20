@@ -1,7 +1,7 @@
-import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
+import { IntroductionCardDataInterface, ProjectDataInterface } from '@/interfaces/dataInterfaces'
 import { ReviewDataInterface } from './componentsInterfaces'
 import { GroupProps, MeshProps } from '@react-three/fiber'
-import { MutableRefObject, Ref } from 'react'
+import { MutableRefObject, Ref, RefObject } from 'react'
 
 interface CoordinatesInterface {
   X: number
@@ -30,6 +30,22 @@ export interface IntroductionCardCanvasInterface {
 
 export interface IntroductionCardSceneInterface {
   content: IntroductionCardDataInterface
+}
+
+export interface ProjectCardCanvasInterface {
+  content: ProjectDataInterface
+}
+
+export interface ProjectCardInterface {
+  content: ProjectDataInterface
+}
+
+export interface ProjectCardSceneInterface {
+  content: ProjectDataInterface
+}
+
+export interface ProjectsSceneInterface {
+  projectsRefs: { ref: RefObject<THREE.Group<THREE.Object3DEventMap>> }[]
 }
 
 export interface ReviewCanvasInterface {

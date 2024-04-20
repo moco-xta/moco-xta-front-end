@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 

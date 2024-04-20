@@ -48,6 +48,7 @@
   "COLOR_PAD": "/gltf/rubiks_cube/ColorPad.gltf",
   "BUTTON": "/gltf/rubiks_cube/Button.gltf",
 
+  "LOGO_ABWERKT": "/gltf/logos/LogoABWerkt.gltf",
   "LOGO_ANGULAR": "/gltf/logos/LogoAngular.gltf",
   "LOGO_AWS": "/gltf/logos/LogoAws.gltf",
   "LOGO_BABYLONJS": "/gltf/logos/LogoBabylonjs.gltf",
@@ -69,6 +70,8 @@
   "LOGO_IONIC": "/gltf/logos/LogoIonic.gltf",
   "LOGO_JAVA": "/gltf/logos/LogoJava.gltf",
   "LOGO_JAVASCRIPT": "/gltf/logos/LogoJavascript.gltf",
+  "LOGO_LENTO": "/gltf/logos/Logolento.gltf",
+  "LOGO_MOCO": "/gltf/logos/LogoMoco.gltf",
   "LOGO_MUI": "/gltf/logos/LogoMui.gltf",
   "LOGO_MYSQL": "/gltf/logos/LogoMysql.gltf",
   "LOGO_NEXTJS": "/gltf/logos/LogoNextjs.gltf",
@@ -97,7 +100,17 @@
   "GRAPHICS_PACK": "/gltf/skills/GraphicsPack.gltf",
   "GRAPHICS_SKILLS": "/gltf/skills/GraphicsSkills.gltf",
 
+  "AMOR_AMOR_SQUARE": "/gltf/about/AmorAmorSquare.gltf",
+  "BRAIN_SQUARE": "/gltf/about/BrainSquare.gltf",
+  "BUTTERFLY_SQUARE": "/gltf/about/ButterflySquare.gltf",
+  "CELESTIAL_MAP_SQUARE": "/gltf/about/CelestialMapSquare.gltf",
+  "COURONNE_SQUARE": "/gltf/about/CouronneSquare.gltf",
   "PARQUET": "/gltf/about/Parquet.gltf",
   "TRESTLE": "/gltf/about/Trestle.gltf",
-  "MAC_BOOK_PRO": "/gltf/about/MacBookPro.gltf"
+  "MAC_BOOK_PRO": "/gltf/about/MacBookPro.gltf",
+  "SPEAKER": "/gltf/about/Speaker.gltf",
+  "SPEAKER_ENCLOSURE": "/gltf/about/SpeakerEnclosure.gltf",
+  "TRINITY_SQUARE": "/gltf/about/TrinitySquare.gltf",
+  "WOODEN_SHELF": "/gltf/about/WoodenShelf.gltf",
+  "WORLD_MAP": "/gltf/about/WorldMap.gltf"
 }

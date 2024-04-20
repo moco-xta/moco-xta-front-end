@@ -78,15 +78,15 @@ export default function ProjectsSlice() {
   return (
     <div id='project_timeline_container'>
       <section id='project_slice'>
-        <ProjectsContainer
-          projectsRefs={projectsRefs}
-          projectsData={projectsData}
-          currentProject={currentProject}
-        />
         <CompaniesOrSchoolContainer
           companiesAndSchoolRefs={companiesAndSchoolRefs}
           companiesAndSchollData={companiesAndSchollData}
           currentCompanyOrSchool={currentCompanyOrSchool}
+        />
+        <ProjectsContainer
+          projectsRefs={projectsRefs}
+          projectsData={projectsData}
+          currentProject={currentProject}
         />
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
         <ScrollDown
