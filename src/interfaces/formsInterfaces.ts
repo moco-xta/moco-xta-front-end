@@ -4,5 +4,6 @@ export interface FormsInterface {
 }
 
 export interface AuthenticationFormsInterface extends FormsInterface {
+  submitButtonIsDisabled: boolean
   setIsSignIn: (value: boolean) => void
 }

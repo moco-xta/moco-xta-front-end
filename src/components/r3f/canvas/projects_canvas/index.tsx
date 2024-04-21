@@ -2,16 +2,11 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
-import { ProjectsCanvasInterface } from '@/interfaces/r3fInterfaces'
-
 import ProjectsScene from './scene'
-import PostProcessing from './post_processing'
 
 import { default as projectsConstants } from '@/constants/canvas/projectsConstants.json'
 
-export default function ProjectsCanvas({
-  projectsRefs,
-}: ProjectsCanvasInterface) {
+export default function ProjectsCanvas() {
   return (
     <Canvas
       dpr={projectsConstants.CANVAS.DPR}
@@ -47,8 +42,7 @@ export default function ProjectsCanvas({
         castShadow
       />
       <Suspense>
-        <ProjectsScene projectsRefs={projectsRefs} />
-        <PostProcessing />
+        {/* <ProjectsScene projectsRefs={projectsRefs} /> */}
       </Suspense>
     </Canvas>
   )
