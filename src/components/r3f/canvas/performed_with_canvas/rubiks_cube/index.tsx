@@ -34,7 +34,7 @@ export default function RubiksCube() {
           child.material.color = setPadColor(normal, colors)
         })
     })
-  }, [rubiksCubeRef])
+  }, [rubiksCubeRef, colors])
 
   return (
     <>
