@@ -44,22 +44,37 @@ const LogoAngular = forwardRef<
     >
       <mesh
         geometry={nodes.LogoAngular_1.geometry}
-        material={materials['logo_angular_#dd002d']}
+        /* material={materials['logo_angular_#dd002d']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0xdd002d}
+        />
+      </mesh>
       <mesh
         geometry={nodes.LogoAngular_2.geometry}
-        material={materials['logo_angular_#ffffff']}
+        /* material={materials['logo_angular_#ffffff']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0xffffff}
+        />
+      </mesh>
       <mesh
         geometry={nodes.LogoAngular_3.geometry}
-        material={materials['logo_angular_#c4002b']}
+        /* material={materials['logo_angular_#c4002b']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0xc4002b}
+        />
+      </mesh>
     </group>
   )
 })

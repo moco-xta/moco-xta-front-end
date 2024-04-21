@@ -47,9 +47,7 @@ export default function ProjectCardCanvas({
         castShadow
       />
       <Suspense>
-        <ProjectCardScene
-          content={content}
-        />
+        <ProjectCardScene content={content} />
         <PostProcessing />
       </Suspense>
     </Canvas>

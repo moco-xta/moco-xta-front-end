@@ -42,16 +42,26 @@ const LogoSpring = forwardRef<
     >
       <mesh
         geometry={nodes.LogoSpring_1.geometry}
-        material={materials['logo_spring_#74b61d']}
+        /* material={materials['logo_spring_#74b61d']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0x74b61d}
+        />
+      </mesh>
       <mesh
         geometry={nodes.LogoSpring_2.geometry}
-        material={materials['logo_spring_#ffffff']}
+        /* material={materials['logo_spring_#ffffff']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0xffffff}
+        />
+      </mesh>
     </group>
   )
 })

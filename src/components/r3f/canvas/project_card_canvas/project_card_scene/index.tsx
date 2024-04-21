@@ -2,13 +2,13 @@ import React from 'react'
 
 import { ProjectCardSceneInterface } from '@/interfaces/r3fInterfaces'
 
-export default function ProjectCardScene({ content }: ProjectCardSceneInterface) {
+export default function ProjectCardScene({
+  content,
+}: ProjectCardSceneInterface) {
   const MainLogo = content.logos.main.component
 
   return (
-    <group
-      key={`projects_${content.key}`}
-    >
+    <group key={`projects_${content.key}`}>
       <MainLogo scale={content.logos.main.scale} />
       <>
         {content.logos.tools.map((tool, index) => {
@@ -16,11 +16,7 @@ export default function ProjectCardScene({ content }: ProjectCardSceneInterface)
           return (
             <ToolLogo
               key={`projects_${content.key}_tool: ${index}`}
-              position={[
-                tool.position.x,
-                tool.position.y,
-                tool.position.z,
-              ]}
+              position={[tool.position.x, tool.position.y, tool.position.z]}
               scale={tool.scale}
             />
           )

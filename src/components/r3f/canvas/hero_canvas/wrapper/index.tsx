@@ -1,84 +1,122 @@
 import React from 'react'
 import * as THREE from 'three'
-import { Plane } from '@react-three/drei'
+import { Box, Plane } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 
-export default function Wrapper() {
-  const width = 2.55
-  const height = 1.1
-  /* const height = 3.3 */
-  const depth = 0.85
-  const opacity = 0
+import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
+export default function Wrapper() {
   return (
     <group>
       <RigidBody type='fixed'>
         <Plane
-          args={[width, depth]}
-          position={[0, height / 2, 0]}
+          args={[
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.WIDTH,
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.DEPTH,
+          ]}
+          position={[
+            0,
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.HEIGHT / 2,
+            0,
+          ]}
           rotation={[THREE.MathUtils.degToRad(90), 0, 0]}
         >
           <meshStandardMaterial
             transparent
-            opacity={opacity}
+            opacity={heroConstants.MOCO_HELIUM.WRAPPER.OPACITY}
           />
         </Plane>
       </RigidBody>
       <RigidBody type='fixed'>
         <Plane
-          args={[width, height]}
-          position={[0, -height / 2, 0]}
+          args={[
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.WIDTH,
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.DEPTH,
+          ]}
+          position={[
+            0,
+            -heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.HEIGHT / 2,
+            0,
+          ]}
           rotation={[THREE.MathUtils.degToRad(90), 0, 0]}
         >
           <meshStandardMaterial
             transparent
-            opacity={opacity}
+            opacity={heroConstants.MOCO_HELIUM.WRAPPER.OPACITY}
           />
         </Plane>
       </RigidBody>
       <RigidBody type='fixed'>
         <Plane
-          args={[width, height]}
-          position={[0, 0, -depth / 2]}
+          args={[
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.WIDTH,
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.HEIGHT,
+          ]}
+          position={[
+            0,
+            0,
+            -heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.DEPTH / 2,
+          ]}
         >
           <meshStandardMaterial
             transparent
-            opacity={opacity}
+            opacity={heroConstants.MOCO_HELIUM.WRAPPER.OPACITY}
           />
         </Plane>
       </RigidBody>
       <RigidBody type='fixed'>
         <Plane
-          args={[width, height]}
-          position={[0, 0, depth / 2]}
+          args={[
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.WIDTH,
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.HEIGHT,
+          ]}
+          position={[
+            0,
+            0,
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.DEPTH / 2,
+          ]}
         >
           <meshStandardMaterial
             transparent
-            opacity={opacity}
+            opacity={heroConstants.MOCO_HELIUM.WRAPPER.OPACITY}
           />
         </Plane>
       </RigidBody>
       <RigidBody type='fixed'>
         <Plane
-          args={[depth, height]}
-          position={[-width / 2, 0, 0]}
+          args={[
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.DEPTH,
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.HEIGHT,
+          ]}
+          position={[
+            -heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.WIDTH / 2,
+            0,
+            0,
+          ]}
           rotation={[0, THREE.MathUtils.degToRad(90), 0]}
         >
           <meshStandardMaterial
             transparent
-            opacity={opacity}
+            opacity={heroConstants.MOCO_HELIUM.WRAPPER.OPACITY}
           />
         </Plane>
       </RigidBody>
       <RigidBody type='fixed'>
         <Plane
-          args={[depth, height]}
-          position={[width / 2, 0, 0]}
+          args={[
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.DEPTH,
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.HEIGHT,
+          ]}
+          position={[
+            heroConstants.MOCO_HELIUM.WRAPPER.DIMENSIONS.WIDTH / 2,
+            0,
+            0,
+          ]}
           rotation={[0, THREE.MathUtils.degToRad(-90), 0]}
         >
           <meshStandardMaterial
             transparent
-            opacity={opacity}
+            opacity={heroConstants.MOCO_HELIUM.WRAPPER.OPACITY}
           />
         </Plane>
       </RigidBody>

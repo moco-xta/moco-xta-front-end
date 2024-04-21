@@ -48,16 +48,26 @@ const LogoReactThreeDrei = forwardRef<
     >
       <mesh
         geometry={nodes.LogoReactThreeDrei_1.geometry}
-        material={materials['react-three_drei_#f10055']}
+        /* material={materials['react-three_drei_#f10055']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0xf10055}
+        />
+      </mesh>
       <mesh
         geometry={nodes.LogoReactThreeDrei_2.geometry}
-        material={materials['react-three_drei_#ffffff']}
+        /* material={materials['react-three_drei_#ffffff']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0x000000}
+        />
+      </mesh>
     </group>
   )
 })

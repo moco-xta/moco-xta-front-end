@@ -8,6 +8,7 @@ import { OHeliumBalloon } from '@/components/r3f/models/hero/OHeliumBalloon'
 import { CHeliumBalloon } from '@/components/r3f/models/hero/CHeliumBalloon'
 import { Smiley } from '@/components/r3f/models/hero/Smiley'
 import { OwlSticker } from '@/components/r3f/models/hero/OwlSticker'
+import useMouseMove from '@/hooks/useMouseMove'
 
 export default function MocoHelium() {
   const mRef = useRef(null!)
@@ -21,35 +22,82 @@ export default function MocoHelium() {
   const zRef = useRef(0)
 
   useFrame((state, delta, xrFrame) => {
-    timeRef.current += delta
-    xRef.current = Math.cos(timeRef.current)
-    yRef.current = Math.sin(timeRef.current)
-    zRef.current = Math.tan(timeRef.current)
-    // @ts-ignore
-    mRef.current.applyImpulse({
-      x: xRef.current * 0.002,
-      y: yRef.current * 0.002,
-      z: zRef.current * 0.001,
-    })
-    // @ts-ignore
-    o1Ref.current.applyImpulse({
-      x: -xRef.current * 0.002,
-      y: -yRef.current * 0.002,
-      z: -zRef.current * 0.001,
-    })
-    // @ts-ignore
-    cRef.current.applyImpulse({
-      x: -xRef.current * 0.002,
-      y: yRef.current * 0.002,
-      z: zRef.current * 0.001,
-    })
-    // @ts-ignore
-    o2Ref.current.applyImpulse({
-      x: xRef.current * 0.002,
-      y: -yRef.current * 0.002,
-      z: -zRef.current * 0.001,
-    })
+    timeRef.current += delta * 2
+    xRef.current = Math.cos(timeRef.current) * 0.001
+    yRef.current = Math.sin(timeRef.current) * 0.001
+    zRef.current = -Math.cos(timeRef.current + 0.5) * 0.001
+    if (mRef.current)
+      // @ts-ignore
+      mRef.current.addForce({
+        x: xRef.current,
+        y: yRef.current,
+        z: zRef.current,
+      }, true)
+      if (o1Ref.current)
+        // @ts-ignore
+      o1Ref.current.addForce({
+        x: xRef.current,
+        y: yRef.current,
+        z: zRef.current,
+      }, true)
+      if (cRef.current)
+        // @ts-ignore
+      cRef.current.addForce({
+        x: xRef.current,
+        y: yRef.current,
+        z: zRef.current,
+      }, true)
+      if (o2Ref.current)
+        // @ts-ignore
+      o2Ref.current.addForce({
+        x: xRef.current,
+        y: yRef.current,
+        z: zRef.current,
+      }, true)
   })
+
+  const { deltaX, deltaY } = useMouseMove()
+
+  const MOUSE_INFLUENCE = 0.001
+
+  useEffect(() => {
+    if (mRef.current) {
+      if (deltaX > 0)
+        // @ts-ignore
+        mRef.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
+        // @ts-ignore
+        o1Ref.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
+        // @ts-ignore
+        cRef.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
+        // @ts-ignore
+        o2Ref.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
+      if (deltaX < 0)
+        // @ts-ignore
+        mRef.current.applyImpulse({
+          x: deltaX * MOUSE_INFLUENCE,
+          y: -deltaY * MOUSE_INFLUENCE,
+          z: 0,
+        })
+        // @ts-ignore
+        o1Ref.current.applyImpulse({
+          x: deltaX * MOUSE_INFLUENCE,
+          y: -deltaY * MOUSE_INFLUENCE,
+          z: 0,
+        })
+        // @ts-ignore
+        cRef.current.applyImpulse({
+          x: deltaX * MOUSE_INFLUENCE,
+          y: -deltaY * MOUSE_INFLUENCE,
+          z: 0,
+        })
+        // @ts-ignore
+        o2Ref.current.applyImpulse({
+          x: deltaX * MOUSE_INFLUENCE,
+          y: -deltaY * MOUSE_INFLUENCE,
+          z: 0,
+        })
+    }
+  }, [deltaX, deltaY])
 
   const rotation = 33
 
@@ -57,37 +105,53 @@ export default function MocoHelium() {
     <group>
       <RigidBody
         ref={mRef}
+        position={[-0.96, 0, 0]}
         colliders='hull'
+        restitution={0.2}
+        /* onContactForce={(payload) => {
+          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
+        }} */
       >
         <MHeliumBalloon
-          position={[-0.96, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
         />
       </RigidBody>
       <RigidBody
         ref={o1Ref}
+        position={[-0.32, 0, 0]}
         colliders='hull'
+        restitution={0.2}
+        /* onContactForce={(payload) => {
+          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
+        }} */
       >
         <OHeliumBalloon
-          position={[-0.32, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
         />
       </RigidBody>
       <RigidBody
         ref={cRef}
+        position={[0.32, 0, 0]}
         colliders='hull'
+        restitution={0.2}
+        /* onContactForce={(payload) => {
+          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
+        }} */
       >
         <CHeliumBalloon
-          position={[0.32, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
         />
       </RigidBody>
       <RigidBody
         ref={o2Ref}
+        position={[0.96, 0, 0]}
         colliders='hull'
+        restitution={0.2}
+        /* onContactForce={(payload) => {
+          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
+        }} */
       >
         <group
-          position={[0.96, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
         >
           <OHeliumBalloon />

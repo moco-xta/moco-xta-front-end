@@ -1,4 +1,7 @@
-import { IntroductionCardDataInterface, ProjectDataInterface } from '@/interfaces/dataInterfaces'
+import {
+  IntroductionCardDataInterface,
+  ProjectDataInterface,
+} from '@/interfaces/dataInterfaces'
 import { ReviewDataInterface } from './componentsInterfaces'
 import { GroupProps, MeshProps } from '@react-three/fiber'
 import { MutableRefObject, Ref, RefObject } from 'react'

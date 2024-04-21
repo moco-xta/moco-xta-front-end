@@ -8,6 +8,7 @@ import Lights from '../../lights'
 import RubiksCube from './rubiks_cube'
 import Controls from './controls'
 import PostProcessing from './post_processing'
+import { ToneMapping } from './tone_mapping'
 
 import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
 
@@ -41,6 +42,7 @@ export default function PerformedWithCanvas() {
       />
       <Suspense>
         <RubiksCube />
+        <ToneMapping />
         <PostProcessing />
       </Suspense>
     </Canvas>

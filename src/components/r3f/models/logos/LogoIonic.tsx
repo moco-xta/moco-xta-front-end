@@ -40,10 +40,15 @@ const LogoIonic = forwardRef<
     >
       <mesh
         geometry={nodes.LogoIonic.geometry}
-        material={materials['logo_ionic_#387fff']}
+        /* material={materials['logo_ionic_#387fff']} */
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          attach='material'
+          color={0x387fff}
+        />
+      </mesh>
     </group>
   )
 })
