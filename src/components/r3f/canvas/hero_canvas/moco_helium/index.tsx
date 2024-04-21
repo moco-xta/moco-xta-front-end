@@ -21,38 +21,38 @@ export default function MocoHelium() {
   const zRef = useRef(0)
 
   useFrame((state, delta, xrFrame) => {
-    timeRef.current += delta
-    xRef.current = Math.cos(timeRef.current) * 0.0005
-    yRef.current = Math.sin(timeRef.current) * 0.0005
-    zRef.current = Math.tan(timeRef.current) * 0.0005
-    // @ts-ignore
+    timeRef.current += delta * 2
+    xRef.current = Math.cos(timeRef.current) * 0.001
+    yRef.current = Math.sin(timeRef.current) * 0.001
+    zRef.current = -Math.cos(timeRef.current + 0.5) * 0.001
     if (mRef.current)
-      mRef.current.applyImpulse({
+      // @ts-ignore
+      mRef.current.addForce({
         x: xRef.current,
         y: yRef.current,
         z: zRef.current,
-      })
-    // @ts-ignore
-    if (o1Ref.current)
-      o1Ref.current.applyImpulse({
+      }, true)
+      if (o1Ref.current)
+        // @ts-ignore
+      o1Ref.current.addForce({
         x: xRef.current,
         y: yRef.current,
         z: zRef.current,
-      })
-    // @ts-ignore
-    if (cRef.current)
-      cRef.current.applyImpulse({
+      }, true)
+      if (cRef.current)
+        // @ts-ignore
+      cRef.current.addForce({
         x: xRef.current,
         y: yRef.current,
         z: zRef.current,
-      })
-    // @ts-ignore
-    if (o2Ref.current)
-      o2Ref.current.applyImpulse({
+      }, true)
+      if (o2Ref.current)
+        // @ts-ignore
+      o2Ref.current.addForce({
         x: xRef.current,
         y: yRef.current,
         z: zRef.current,
-      })
+      }, true)
   })
 
   const rotation = 33
@@ -61,37 +61,53 @@ export default function MocoHelium() {
     <group>
       <RigidBody
         ref={mRef}
+        position={[-0.96, 0, 0]}
         colliders='hull'
+        restitution={0.2}
+        /* onContactForce={(payload) => {
+          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
+        }} */
       >
         <MHeliumBalloon
-          position={[-0.96, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
         />
       </RigidBody>
       <RigidBody
         ref={o1Ref}
+        position={[-0.32, 0, 0]}
         colliders='hull'
+        restitution={0.2}
+        /* onContactForce={(payload) => {
+          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
+        }} */
       >
         <OHeliumBalloon
-          position={[-0.32, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
         />
       </RigidBody>
       <RigidBody
         ref={cRef}
+        position={[0.32, 0, 0]}
         colliders='hull'
+        restitution={0.2}
+        /* onContactForce={(payload) => {
+          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
+        }} */
       >
         <CHeliumBalloon
-          position={[0.32, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
         />
       </RigidBody>
       <RigidBody
         ref={o2Ref}
+        position={[0.96, 0, 0]}
         colliders='hull'
+        restitution={0.2}
+        /* onContactForce={(payload) => {
+          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
+        }} */
       >
         <group
-          position={[0.96, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
         >
           <OHeliumBalloon />

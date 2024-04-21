@@ -42,7 +42,7 @@ export default function HeroCanvas() {
       <ambientLight />
       <Suspense>
         <Physics
-          /* debug */ gravity={[
+          debug gravity={[
             heroConstants.PHYSICS.GRAVITY.X,
             heroConstants.PHYSICS.GRAVITY.Y,
             heroConstants.PHYSICS.GRAVITY.Z,

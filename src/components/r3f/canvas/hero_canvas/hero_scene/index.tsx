@@ -13,13 +13,7 @@ export default function HeroScene() {
   gl.toneMappingExposure = 4
 
   return (
-    <group
-      position={[
-        heroConstants.MOCO_HELIUM.GROUP.POSITION.X,
-        heroConstants.MOCO_HELIUM.GROUP.POSITION.Y,
-        heroConstants.MOCO_HELIUM.GROUP.POSITION.Z,
-      ]}
-    >
+    <group>
       <Wrapper />
       <MocoHelium />
     </group>

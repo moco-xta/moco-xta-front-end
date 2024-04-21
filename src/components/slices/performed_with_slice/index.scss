@@ -3,18 +3,21 @@
 #performed_with_slice {
   z-index: 1;
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
   height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
   background-color: $background_black;
 
-  #perform_with_canvas_container {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+  #performed_with_text_block {
+    /* position: relative; */
+    width: 30vw;
+    padding-left: 100px;
   }
 
-  #performed_with_text_block {
-    position: relative;
+  #perform_with_canvas_container {
+    /* position: absolute; */
+    width: 70vw;
+    height: 100vh;
   }
 }
