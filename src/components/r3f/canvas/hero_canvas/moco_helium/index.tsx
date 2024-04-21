@@ -8,6 +8,7 @@ import { OHeliumBalloon } from '@/components/r3f/models/hero/OHeliumBalloon'
 import { CHeliumBalloon } from '@/components/r3f/models/hero/CHeliumBalloon'
 import { Smiley } from '@/components/r3f/models/hero/Smiley'
 import { OwlSticker } from '@/components/r3f/models/hero/OwlSticker'
+import useMouseMove from '@/hooks/useMouseMove'
 
 export default function MocoHelium() {
   const mRef = useRef(null!)
@@ -54,6 +55,49 @@ export default function MocoHelium() {
         z: zRef.current,
       }, true)
   })
+
+  const { deltaX, deltaY } = useMouseMove()
+
+  const MOUSE_INFLUENCE = 0.001
+
+  useEffect(() => {
+    if (mRef.current) {
+      if (deltaX > 0)
+        // @ts-ignore
+        mRef.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
+        // @ts-ignore
+        o1Ref.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
+        // @ts-ignore
+        cRef.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
+        // @ts-ignore
+        o2Ref.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
+      if (deltaX < 0)
+        // @ts-ignore
+        mRef.current.applyImpulse({
+          x: deltaX * MOUSE_INFLUENCE,
+          y: -deltaY * MOUSE_INFLUENCE,
+          z: 0,
+        })
+        // @ts-ignore
+        o1Ref.current.applyImpulse({
+          x: deltaX * MOUSE_INFLUENCE,
+          y: -deltaY * MOUSE_INFLUENCE,
+          z: 0,
+        })
+        // @ts-ignore
+        cRef.current.applyImpulse({
+          x: deltaX * MOUSE_INFLUENCE,
+          y: -deltaY * MOUSE_INFLUENCE,
+          z: 0,
+        })
+        // @ts-ignore
+        o2Ref.current.applyImpulse({
+          x: deltaX * MOUSE_INFLUENCE,
+          y: -deltaY * MOUSE_INFLUENCE,
+          z: 0,
+        })
+    }
+  }, [deltaX, deltaY])
 
   const rotation = 33
 
