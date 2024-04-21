@@ -76,6 +76,8 @@ export default function SignUp({
           })
         }}
       >
+        {/* TODO: fix it */}
+        {/* @ts-ignore */}
         <SignUpForm
           submitButtonIsDisabled={submitButtonIsDisabled}
           setIsSignIn={setIsSignIn}

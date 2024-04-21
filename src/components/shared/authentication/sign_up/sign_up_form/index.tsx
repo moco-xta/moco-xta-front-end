@@ -96,6 +96,8 @@ export default function SignUpForm({
         />
         <div className='submit_reset_buttons_container'>
           <SubmitButton submitButtonIsDisabled={submitButtonIsDisabled} />
+          {/* TODO: fix it */}
+          {/* @ts-ignore */}
           <ResetButton resetForm={handleResetForm} />
           <button onClick={handleSwitchSignUp}>
             {t('AUTHENTICATION.SIGN_UP.SIGN_IN')}

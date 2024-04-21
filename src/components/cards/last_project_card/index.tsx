@@ -30,7 +30,7 @@ export function LastProjectCard({ content }: LastProjectsCardInterface) {
           url={content.url}
           text={content.name}
         />
-        <div className='project_tools'>
+        {/* <div className='project_tools'>
           {content.tools.map((Logo, index) => (
             <Logo
               key={`last_projects_tools_${content.key}_${index}`}
@@ -47,7 +47,7 @@ export function LastProjectCard({ content }: LastProjectsCardInterface) {
               {role}
             </p>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   )

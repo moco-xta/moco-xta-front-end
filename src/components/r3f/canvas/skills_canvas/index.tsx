@@ -230,6 +230,8 @@ function PackingScene() {
   )
 }
 
+
+// @ts-ignore
 const RectArealightWithHelper = ({ position, color }) => {
   const { scene } = useThree()
 

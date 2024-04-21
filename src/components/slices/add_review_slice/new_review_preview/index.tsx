@@ -12,6 +12,8 @@ export default function NewReviewPreview() {
 
   return (
     <div id='new_review_preview'>
+      {/* TODO: fix it */}
+      {/* @ts-ignore */}
       <ReviewCard data={values} />
     </div>
   )

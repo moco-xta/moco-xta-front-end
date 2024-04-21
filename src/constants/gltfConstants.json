@@ -47,6 +47,7 @@
   "COLOR_PAD_WEBGL": "/gltf/rubiks_cube/ColorPadWebgl.gltf",
   "COLOR_PAD": "/gltf/rubiks_cube/ColorPad.gltf",
   "BUTTON": "/gltf/rubiks_cube/Button.gltf",
+  "ARROW": "/gltf/rubiks_cube/Arrow.gltf",
 
   "LOGO_ABWERKT": "/gltf/logos/LogoABWerkt.gltf",
   "LOGO_ANGULAR": "/gltf/logos/LogoAngular.gltf",

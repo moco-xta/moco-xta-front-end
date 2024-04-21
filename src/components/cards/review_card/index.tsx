@@ -3,11 +3,10 @@
 import React, { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
-import { ReviewCardInterface } from '@/interfaces/componentsInterfaces'
 
-import ReviewCanvas from '@/components/r3f/canvas/review_canvas'
-
+import { ReviewCardInterface } from '@/interfaces/r3fInterfaces'
 import './index.scss'
+import ReviewCanvas from '@/components/r3f/canvas/review_canvas'
 
 export default function ReviewCard({ data }: ReviewCardInterface) {
   const t = useTranslations('ADD_REVIEW')
@@ -21,7 +20,7 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
 
   return (
     <div className='star_canvas_container'>
-      <ReviewCanvas data={data} />
+      {/* <ReviewCanvas data={data} /> */}
     </div>
   )
 }
