@@ -45,7 +45,7 @@ export default function ProjectsScene({
         )
       }
     })
-  }, [currentProject, projectsRefs])
+  }, [currentProject, projectsRefs, scrollFlow])
 
   return (
     <>
