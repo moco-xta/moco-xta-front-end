@@ -19,7 +19,7 @@ export default function HeroScene() {
   const [scaleRatio, setScaleRatio] = useState<number | null>(null)
 
   useEffect(() => {
-    dimensionsType !== 'IS_MOBILE' ? setScaleRatio(3) : setScaleRatio(1)
+    dimensionsType !== 'IS_MOBILE' ? setScaleRatio(3) : setScaleRatio(1.25)
   }, [dimensionsType])
 
   if(!dimensionsType) return null
