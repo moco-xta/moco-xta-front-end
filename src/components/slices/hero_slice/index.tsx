@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react'
 import Image from 'next/image'
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect'
 
 import HeadText from './head_text'
 import HeroCanvas from '@/components/r3f/canvas/hero_canvas'
@@ -20,20 +21,24 @@ export default function HeroSlice() {
 
   return (
     <section id='hero_slice'>
-      <HeadText />
+      {!isMobile && <HeadText />}
       <div id='hero_canvas_container'>
         <HeroCanvas />
       </div>
-      <Image
-        src={imgConstants.HERO.ARIES.SRC}
-        width={imgConstants.HERO.ARIES.DIMENSIONS.WITDH}
-        height={imgConstants.HERO.ARIES.DIMENSIONS.HEIGHT}
-        alt='Aries'
-      />
-      <ScrollDown
-        top={'85vh'}
-        color={variables.white}
-      />
+      {!isMobile && (
+        <>
+          <Image
+            src={imgConstants.HERO.ARIES.SRC}
+            width={imgConstants.HERO.ARIES.DIMENSIONS.WITDH}
+            height={imgConstants.HERO.ARIES.DIMENSIONS.HEIGHT}
+            alt='Aries'
+          />
+          <ScrollDown
+            top={'85vh'}
+            color={variables.white}
+          />
+        </>
+      )}
     </section>
   )
 }

@@ -10,9 +10,16 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "X": -0.08,
-      "Y": 0,
-      "Z": 3
+      "IS_NOT_MOBILE": {
+        "X": -0.08,
+        "Y": 0,
+        "Z": 3
+      },
+      "IS_MOBILE": {
+        "X": 0,
+        "Y": 0,
+        "Z": 1.5
+      }
     },
     "FOV": 30
   },
@@ -33,11 +40,70 @@
     },
     "WRAPPER": {
       "DIMENSIONS": {
-        "WIDTH": 2.55,
-        "HEIGHT": 1.1,
-        "DEPTH": 0.85
+        "IS_NOT_MOBILE": {
+          "WIDTH": 2.55,
+          "HEIGHT": 1.1,
+          "DEPTH": 0.85
+        },
+        "IS_MOBILE": {
+          "WIDTH": 1.4,
+          "HEIGHT": 2.2,
+          "DEPTH": 0.85
+        }
       },
       "OPACITY": 0
+    },
+    "BALLOONS": {
+      "POSITION": {
+        "M": {
+          "IS_NOT_MOBILE": {
+            "X": -0.96,
+            "Y": 0,
+            "Z": 0
+          },
+          "IS_MOBILE": {
+            "X": -0.48,
+            "Y": 0.55,
+            "Z": 0
+          }
+        },
+        "O1": {
+          "IS_NOT_MOBILE": {
+            "X": -0.32,
+            "Y": 0,
+            "Z": 0
+          },
+          "IS_MOBILE": {
+            "X": 0.32,
+            "Y": 0.55,
+            "Z": 0
+          }
+        },
+        "C": {
+          "IS_NOT_MOBILE": {
+            "X": 0.32,
+            "Y": 0,
+            "Z": 0
+          },
+          "IS_MOBILE": {
+            "X": -0.32,
+            "Y": -0.55,
+            "Z": 0
+          }
+        },
+        "O2": {
+          "IS_NOT_MOBILE": {
+            "X": 0.96,
+            "Y": 0,
+            "Z": 0
+          },
+          "IS_MOBILE": {
+            "X": 0.32,
+            "Y": -0.55,
+            "Z": 0
+          }
+        }
+      }
     }
   }
 }

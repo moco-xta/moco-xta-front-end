@@ -3,14 +3,19 @@ import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import { RigidBody } from '@react-three/rapier'
 
+import useIsMobile from '@/hooks/useIsMobile'
+
 import { MHeliumBalloon } from '@/components/r3f/models/hero/MHeliumBalloon'
 import { OHeliumBalloon } from '@/components/r3f/models/hero/OHeliumBalloon'
 import { CHeliumBalloon } from '@/components/r3f/models/hero/CHeliumBalloon'
 import { Smiley } from '@/components/r3f/models/hero/Smiley'
-import { OwlSticker } from '@/components/r3f/models/hero/OwlSticker'
 import useMouseMove from '@/hooks/useMouseMove'
 
+import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
+
 export default function MocoHelium() {
+  const { dimensionsType } = useIsMobile()
+
   const mRef = useRef(null!)
   const o1Ref = useRef(null!)
   const cRef = useRef(null!)
@@ -129,49 +134,55 @@ export default function MocoHelium() {
 
   const rotation = 33
 
+  if(!dimensionsType) return null
+
   return (
     <group>
       <RigidBody
         ref={mRef}
-        position={[-0.96, 0, 0]}
+        position={[
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.M[dimensionsType].X,
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.M[dimensionsType].Y,
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.M[dimensionsType].Z,
+        ]}
         colliders='hull'
         restitution={0.2}
-        /* onContactForce={(payload) => {
-          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
-        }} */
       >
         <MHeliumBalloon rotation={[0, THREE.MathUtils.degToRad(rotation), 0]} />
       </RigidBody>
       <RigidBody
         ref={o1Ref}
-        position={[-0.32, 0, 0]}
+        position={[
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.O1[dimensionsType].X,
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.O1[dimensionsType].Y,
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.O1[dimensionsType].Z,
+        ]}
         colliders='hull'
         restitution={0.2}
-        /* onContactForce={(payload) => {
-          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
-        }} */
       >
         <OHeliumBalloon rotation={[0, THREE.MathUtils.degToRad(rotation), 0]} />
       </RigidBody>
       <RigidBody
         ref={cRef}
-        position={[0.32, 0, 0]}
+        position={[
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.C[dimensionsType].X,
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.C[dimensionsType].Y,
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.C[dimensionsType].Z,
+        ]}
         colliders='hull'
         restitution={0.2}
-        /* onContactForce={(payload) => {
-          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
-        }} */
       >
         <CHeliumBalloon rotation={[0, THREE.MathUtils.degToRad(rotation), 0]} />
       </RigidBody>
       <RigidBody
         ref={o2Ref}
-        position={[0.96, 0, 0]}
+        position={[
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.O2[dimensionsType].X,
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.O2[dimensionsType].Y,
+          heroConstants.MOCO_HELIUM.BALLOONS.POSITION.O2[dimensionsType].Z,
+        ]}
         colliders='hull'
         restitution={0.2}
-        /* onContactForce={(payload) => {
-          console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
-        }} */
       >
         <group rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}>
           <OHeliumBalloon />
