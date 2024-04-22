@@ -28,32 +28,44 @@ export default function MocoHelium() {
     zRef.current = -Math.cos(timeRef.current + 0.5) * 0.001
     if (mRef.current)
       // @ts-ignore
-      mRef.current.addForce({
-        x: xRef.current,
-        y: yRef.current,
-        z: zRef.current,
-      }, true)
-      if (o1Ref.current)
-        // @ts-ignore
-      o1Ref.current.addForce({
-        x: xRef.current,
-        y: yRef.current,
-        z: zRef.current,
-      }, true)
-      if (cRef.current)
-        // @ts-ignore
-      cRef.current.addForce({
-        x: xRef.current,
-        y: yRef.current,
-        z: zRef.current,
-      }, true)
-      if (o2Ref.current)
-        // @ts-ignore
-      o2Ref.current.addForce({
-        x: xRef.current,
-        y: yRef.current,
-        z: zRef.current,
-      }, true)
+      mRef.current.addForce(
+        {
+          x: xRef.current,
+          y: yRef.current,
+          z: zRef.current,
+        },
+        true,
+      )
+    if (o1Ref.current)
+      // @ts-ignore
+      o1Ref.current.addForce(
+        {
+          x: xRef.current,
+          y: yRef.current,
+          z: zRef.current,
+        },
+        true,
+      )
+    if (cRef.current)
+      // @ts-ignore
+      cRef.current.addForce(
+        {
+          x: xRef.current,
+          y: yRef.current,
+          z: zRef.current,
+        },
+        true,
+      )
+    if (o2Ref.current)
+      // @ts-ignore
+      o2Ref.current.addForce(
+        {
+          x: xRef.current,
+          y: yRef.current,
+          z: zRef.current,
+        },
+        true,
+      )
   })
 
   const { deltaX, deltaY } = useMouseMove()
@@ -64,13 +76,29 @@ export default function MocoHelium() {
     if (mRef.current) {
       if (deltaX > 0)
         // @ts-ignore
-        mRef.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
-        // @ts-ignore
-        o1Ref.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
-        // @ts-ignore
-        cRef.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
-        // @ts-ignore
-        o2Ref.current.applyImpulse({ x: deltaX * MOUSE_INFLUENCE, y: -deltaY * MOUSE_INFLUENCE, z: 0 })
+        mRef.current.applyImpulse({
+          x: deltaX * MOUSE_INFLUENCE,
+          y: -deltaY * MOUSE_INFLUENCE,
+          z: 0,
+        })
+      // @ts-ignore
+      o1Ref.current.applyImpulse({
+        x: deltaX * MOUSE_INFLUENCE,
+        y: -deltaY * MOUSE_INFLUENCE,
+        z: 0,
+      })
+      // @ts-ignore
+      cRef.current.applyImpulse({
+        x: deltaX * MOUSE_INFLUENCE,
+        y: -deltaY * MOUSE_INFLUENCE,
+        z: 0,
+      })
+      // @ts-ignore
+      o2Ref.current.applyImpulse({
+        x: deltaX * MOUSE_INFLUENCE,
+        y: -deltaY * MOUSE_INFLUENCE,
+        z: 0,
+      })
       if (deltaX < 0)
         // @ts-ignore
         mRef.current.applyImpulse({
@@ -78,24 +106,24 @@ export default function MocoHelium() {
           y: -deltaY * MOUSE_INFLUENCE,
           z: 0,
         })
-        // @ts-ignore
-        o1Ref.current.applyImpulse({
-          x: deltaX * MOUSE_INFLUENCE,
-          y: -deltaY * MOUSE_INFLUENCE,
-          z: 0,
-        })
-        // @ts-ignore
-        cRef.current.applyImpulse({
-          x: deltaX * MOUSE_INFLUENCE,
-          y: -deltaY * MOUSE_INFLUENCE,
-          z: 0,
-        })
-        // @ts-ignore
-        o2Ref.current.applyImpulse({
-          x: deltaX * MOUSE_INFLUENCE,
-          y: -deltaY * MOUSE_INFLUENCE,
-          z: 0,
-        })
+      // @ts-ignore
+      o1Ref.current.applyImpulse({
+        x: deltaX * MOUSE_INFLUENCE,
+        y: -deltaY * MOUSE_INFLUENCE,
+        z: 0,
+      })
+      // @ts-ignore
+      cRef.current.applyImpulse({
+        x: deltaX * MOUSE_INFLUENCE,
+        y: -deltaY * MOUSE_INFLUENCE,
+        z: 0,
+      })
+      // @ts-ignore
+      o2Ref.current.applyImpulse({
+        x: deltaX * MOUSE_INFLUENCE,
+        y: -deltaY * MOUSE_INFLUENCE,
+        z: 0,
+      })
     }
   }, [deltaX, deltaY])
 
@@ -112,9 +140,7 @@ export default function MocoHelium() {
           console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
         }} */
       >
-        <MHeliumBalloon
-          rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
-        />
+        <MHeliumBalloon rotation={[0, THREE.MathUtils.degToRad(rotation), 0]} />
       </RigidBody>
       <RigidBody
         ref={o1Ref}
@@ -125,9 +151,7 @@ export default function MocoHelium() {
           console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
         }} */
       >
-        <OHeliumBalloon
-          rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
-        />
+        <OHeliumBalloon rotation={[0, THREE.MathUtils.degToRad(rotation), 0]} />
       </RigidBody>
       <RigidBody
         ref={cRef}
@@ -138,9 +162,7 @@ export default function MocoHelium() {
           console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
         }} */
       >
-        <CHeliumBalloon
-          rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
-        />
+        <CHeliumBalloon rotation={[0, THREE.MathUtils.degToRad(rotation), 0]} />
       </RigidBody>
       <RigidBody
         ref={o2Ref}
@@ -151,9 +173,7 @@ export default function MocoHelium() {
           console.log(`The total force generated was: x: ${payload.totalForce.x}, y: ${payload.totalForce.y}, z: ${payload.totalForce.z}`);
         }} */
       >
-        <group
-          rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}
-        >
+        <group rotation={[0, THREE.MathUtils.degToRad(rotation), 0]}>
           <OHeliumBalloon />
           <Smiley />
         </group>

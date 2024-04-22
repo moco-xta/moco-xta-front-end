@@ -1,4 +1,13 @@
 {
+  "HERO": {
+    "ARIES": {
+      "SRC": "/img/png/aries.png",
+      "DIMENSIONS": {
+        "WITDH": 132,
+        "HEIGHT": 70
+      }
+    }
+  },
   "HDRS": {
     "HERO_ENVIRONMENT": "/img/hdr/peppermint_powerplant_2_1k.hdr",
     "REVIEW_CARD_ENVIRONMENT": "/img/hdr/gradient_fluid.hdr"

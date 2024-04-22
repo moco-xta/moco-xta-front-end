@@ -10,41 +10,41 @@
   align-items: center;
 
   #hero_head_text_container {
-    width: 583px;
-    height: 360px;
+    width: 30%;
+    min-width: 300px;
+    height: 30%;
     padding: 30px 50px 30px 50px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border-radius: 20px 0 0 20px;
-    background-color: rgba(10, 10, 10, 0.5);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
+    border-radius: 15px 0 0 15px;
 
     #heading {
-      color: $text_light;
       font-size: 46px;
+      color: $text_light;
     }
 
     #subheading {
-      color: $text_light;
       margin-top: 20px;
       font-size: 16px;
       font-weight: 200;
       text-align: justify;
       line-height: 1.6;
+      color: $text_light;
     }
   }
 
   #creative_developer_container {
-    width: 120px;
-    height: 360px;
+    width: 6%;
+    min-width: 120px;
+    height: 30%;
     padding: 20px;
     display: flex;
     align-items: flex-end;
-    color: black;
     font-weight: 600;
-    border-radius: 0 20px 20px 0;
-    background-color: #dcff00;
+    border-radius: 0 15px 15px 0;
+    color: black;
+    background-color: $fluorescent_yellow;
   }
 }

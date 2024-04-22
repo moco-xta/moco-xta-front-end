@@ -111,6 +111,12 @@ a {
 
 // BLUR BACKGROUNDS
 
+.blur_background_dark {
+  background-color: rgba(10, 10, 10, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
 .blur_background_medium {
   background-color: rgba(50, 50, 50, 0.5);
   -webkit-backdrop-filter: blur(3px);
