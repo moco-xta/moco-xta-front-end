@@ -9,6 +9,8 @@ import {
 } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
+import useResize from '@/hooks/useResize'
+
 import HeroScene from './hero_scene'
 import PostProcessing from './post_processing'
 
@@ -16,6 +18,7 @@ import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/imgConstants.json'
 
 export default function HeroCanvas() {
+
   return (
     <Canvas
       dpr={heroConstants.CANVAS.DPR}

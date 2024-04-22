@@ -3,8 +3,6 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
 
-import useResize from '@/hooks/useResize'
-
 import HeadText from './head_text'
 import HeroCanvas from '@/components/r3f/canvas/hero_canvas'
 import ScrollDown from '@/components/shared/scroll_down'
@@ -15,7 +13,6 @@ import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function HeroSlice() {
-  const { innerWidth, innerHeight } = useResize()
 
   useEffect(() => {
     console.log(innerWidth, innerHeight)

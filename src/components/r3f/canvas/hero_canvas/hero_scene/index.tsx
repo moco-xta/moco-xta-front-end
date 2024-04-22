@@ -8,12 +8,12 @@ import MocoHelium from '../moco_helium'
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
 export default function HeroScene() {
-  const { gl } = useThree()
+  const { gl, viewport } = useThree()
   gl.toneMapping = THREE.ACESFilmicToneMapping
   gl.toneMappingExposure = 4
 
   return (
-    <group>
+    <group scale={[viewport.width / 3, viewport.width / 3, viewport.width / 3]}>
       <Wrapper />
       <MocoHelium />
     </group>
