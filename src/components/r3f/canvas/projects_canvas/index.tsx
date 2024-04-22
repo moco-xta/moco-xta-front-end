@@ -41,9 +41,7 @@ export default function ProjectsCanvas() {
         position={[-5, 5, 5]}
         castShadow
       />
-      <Suspense>
-        {/* <ProjectsScene projectsRefs={projectsRefs} /> */}
-      </Suspense>
+      <Suspense>{/* <ProjectsScene projectsRefs={projectsRefs} /> */}</Suspense>
     </Canvas>
   )
 }

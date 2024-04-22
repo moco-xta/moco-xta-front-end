@@ -3,7 +3,6 @@
 import React, { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
-
 import { ReviewCardInterface } from '@/interfaces/r3fInterfaces'
 import './index.scss'
 import ReviewCanvas from '@/components/r3f/canvas/review_canvas'

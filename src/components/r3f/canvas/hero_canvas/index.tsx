@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import {
   Environment,
@@ -9,6 +9,8 @@ import {
 } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
+import useIsMobile from '@/hooks/useIsMobile'
+
 import HeroScene from './hero_scene'
 import PostProcessing from './post_processing'
 
@@ -16,6 +18,14 @@ import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/imgConstants.json'
 
 export default function HeroCanvas() {
+  const { dimensionsType } = useIsMobile()
+
+  useEffect(() => {
+    console.log('dimensionsType', dimensionsType)
+  }, [dimensionsType])
+
+  if(!dimensionsType) return null
+
   return (
     <Canvas
       dpr={heroConstants.CANVAS.DPR}
@@ -32,13 +42,13 @@ export default function HeroCanvas() {
       <PerspectiveCamera
         makeDefault
         position={[
-          heroConstants.PERSPECTIVE_CAMERA.POSITION.X,
-          heroConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-          heroConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION[dimensionsType].X,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION[dimensionsType].Y,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION[dimensionsType].Z,
         ]}
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      {/* <OrbitControls /> */}
+      <OrbitControls />
       <ambientLight />
       <Suspense>
         <Physics
