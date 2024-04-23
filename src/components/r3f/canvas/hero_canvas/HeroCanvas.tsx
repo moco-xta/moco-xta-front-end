@@ -1,5 +1,3 @@
-'use client'
-
 import React, { Suspense, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import {
@@ -11,8 +9,9 @@ import { Physics } from '@react-three/rapier'
 
 import useIsMobile from '@/hooks/useIsMobile'
 
-import HeroScene from './hero_scene'
-import PostProcessing from './post_processing'
+import HeroScene from './HeroScene'
+import ToneMapping from './ToneMapping'
+import PostProcessing from './PostProcessing'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/imgConstants.json'
@@ -24,7 +23,7 @@ export default function HeroCanvas() {
     console.log('dimensionsType', dimensionsType)
   }, [dimensionsType])
 
-  if(!dimensionsType) return null
+  if (!dimensionsType) return null
 
   return (
     <Canvas
@@ -61,6 +60,7 @@ export default function HeroCanvas() {
         >
           <HeroScene />
           <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
+          <ToneMapping />
           <PostProcessing />
         </Physics>
       </Suspense>

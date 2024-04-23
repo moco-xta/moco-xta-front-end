@@ -23,6 +23,22 @@
     },
     "FOV": 30
   },
+  "TONE_MAPPING": {
+    "EXPOSURE": 4
+  },
+  "POST_PROCESSING": {
+    "DEPTH_OF_FIELD": {
+      "FOCUS_DISTANCE": 0.15,
+      "FOCUS_LENGTH": 0.25,
+      "BOKEH_SCALE": 1
+    },
+    "BLOOM": {
+      "INTENSITY": 2.5,
+      "LUMINANCE_THRESHOLD": 0.9,
+      "LUMINANCE_SMOOTHING": 0.025,
+      "MIPMAP_BLUR": true
+    }
+  },
   "PHYSICS": {
     "GRAVITY": {
       "X": 0,
@@ -30,13 +46,10 @@
       "Z": 0
     }
   },
-  "MOCO_HELIUM": {
-    "GROUP": {
-      "POSITION": {
-        "X": 0.55,
-        "Y": 0,
-        "Z": 0
-      }
+  "HELIUM_BALLOONS": {
+    "SCALE_RATIO": {
+      "IS_NOT_MOBILE": 3,
+      "IS_MOBILE": 1.25
     },
     "WRAPPER": {
       "DIMENSIONS": {
@@ -103,6 +116,15 @@
             "Z": 0
           }
         }
+      },
+      "ROTATION": 33,
+      "PHYSICS": {
+        "ADD_FORCE": {
+          "INTENSITY": 0.001,
+          "Z_THRESHOLD": 0.5
+        },
+        "APPLY_IMPULSE_INTENSITY": 0.001,
+        "RESTITUTION": 0.2
       }
     }
   }
