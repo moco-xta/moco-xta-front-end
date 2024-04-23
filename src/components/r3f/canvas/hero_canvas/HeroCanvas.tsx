@@ -47,7 +47,7 @@ export default function HeroCanvas() {
         ]}
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <ambientLight />
       <Suspense>
         <Physics
