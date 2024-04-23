@@ -14,7 +14,7 @@ export default function Player() {
   const isOnFloorRef = useRef(true)
 
   const { camera } = useThree()
-  const [, get] = useKeyboardControls()
+  const [_, get] = useKeyboardControls()
 
   const direction = new THREE.Vector3()
 
@@ -25,7 +25,7 @@ export default function Player() {
       positionRef.current = new THREE.Vector3(
         rigidBodyRef.current.translation().x,
         rigidBodyRef.current.translation().y,
-        rigidBodyRef.current!.translation().z,
+        rigidBodyRef.current.translation().z,
       )
       velocityRef.current = new THREE.Vector3(
         rigidBodyRef.current.rotation().x,
@@ -36,7 +36,7 @@ export default function Player() {
       camera.position.copy(
         new THREE.Vector3(
           positionRef.current.x,
-          positionRef.current.y + 10,
+          positionRef.current.y + 13,
           positionRef.current.z,
         ),
       )
@@ -92,7 +92,7 @@ export default function Player() {
       >
         <CuboidCollider
           args={[0.5, 0.5, 0.5]}
-          position={[2, 2, 2]}
+          position={[0, 0, 0]}
         />
       </RigidBody>
     </>
