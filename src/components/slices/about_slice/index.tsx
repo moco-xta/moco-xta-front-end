@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { isMobile } from 'react-device-detect'
 
-import AboutCanvas from '@/components/r3f/canvas/about_canvas'
+import AboutCanvas from '@/components/r3f/canvas/about_canvas/AboutCanvas'
 
 import './index.scss'
 
@@ -31,19 +32,23 @@ export default function AboutSlice() {
   return (
     <section id='about_slice'>
       <AboutCanvas />
-      <div className='absolute centered cursor'>+</div>
-      <div
-        id='instructions'
-        className={showInstructions ? 'show' : 'hide'}
-      >
-        Instructions
-        <button
-          id='button'
-          onClick={HandleShowInstructions}
-        >
-          Click To Enter
-        </button>
-      </div>
+      {!isMobile && (
+        <>
+          <div className='absolute centered cursor'>+</div>
+          <div
+            id='instructions'
+            className={showInstructions ? 'show' : 'hide'}
+          >
+            Instructions
+            <button
+              id='button'
+              onClick={HandleShowInstructions}
+            >
+              Click To Enter
+            </button>
+          </div>
+        </>
+      )}
     </section>
   )
 }

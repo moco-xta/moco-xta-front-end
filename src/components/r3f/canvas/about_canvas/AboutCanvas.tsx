@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
 import {
   Box,
+  DeviceOrientationControls,
   KeyboardControls,
   MeshTransmissionMaterial,
   PerspectiveCamera,
@@ -10,6 +11,7 @@ import {
   PointerLockControls,
 } from '@react-three/drei'
 import { Physics, RigidBody } from '@react-three/rapier'
+import { isMobile } from 'react-device-detect'
 
 import Player from '../../controls/Player'
 
@@ -135,6 +137,7 @@ export default function AboutCanvas() {
           aspect={1200 / 600}
           fov={55}
           position={[0, 0, 0]}
+          rotation={[0, THREE.MathUtils.degToRad(180), 0]}
           onUpdate={(self) => self.updateProjectionMatrix()}
         />
         <PointerLockControls selector='#button' />
@@ -146,7 +149,11 @@ export default function AboutCanvas() {
         />
         <Suspense fallback={null}>
           <Physics debug>
-            <Player />
+            {!isMobile ? (
+              <Player />
+            ) : (
+              <DeviceOrientationControls />
+            )}
             <AboutScene />
           </Physics>
         </Suspense>
