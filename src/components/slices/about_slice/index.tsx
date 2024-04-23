@@ -8,7 +8,7 @@ import AboutCanvas from '@/components/r3f/canvas/about_canvas/AboutCanvas'
 import './index.scss'
 
 export default function AboutSlice() {
-  const [showInstructions, setShowInstructions] = useState(true)
+  /* const [showInstructions, setShowInstructions] = useState(true)
 
   function HandleShowInstructions() {
     setShowInstructions(!showInstructions)
@@ -27,12 +27,12 @@ export default function AboutSlice() {
         false,
       )
     }
-  })
+  }) */
 
   return (
     <section id='about_slice'>
       <AboutCanvas />
-      {!isMobile && (
+      {/* {!isMobile && (
         <>
           <div className='absolute centered cursor'>+</div>
           <div
@@ -48,7 +48,7 @@ export default function AboutSlice() {
             </button>
           </div>
         </>
-      )}
+      )} */}
     </section>
   )
 }

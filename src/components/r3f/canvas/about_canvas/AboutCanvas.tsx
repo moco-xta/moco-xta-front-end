@@ -138,11 +138,11 @@ export default function AboutCanvas() {
           fov={55}
           position={[0, 13, 0]}
           rotation={[0, THREE.MathUtils.degToRad(180), 0]}
-          onUpdate={(self) => {
+          /* onUpdate={(self) => {
             if(!isMobile) self.updateProjectionMatrix()
-          }}
+          }} */
         />
-        {!isMobile && <PointerLockControls selector='#button' />}
+        {/* {!isMobile && <PointerLockControls selector='#button' />} */}
         {isMobile && <DeviceOrientationControls />}
         <ambientLight intensity={0.5} />
         <pointLight
@@ -151,10 +151,10 @@ export default function AboutCanvas() {
           castShadow
         />
         <Suspense fallback={null}>
-          <Physics debug>
-            {!isMobile && <Player />}
+          {/* <Physics debug>
+            {!isMobile && <Player />} */}
             <AboutScene />
-          </Physics>
+          {/* </Physics> */}
         </Suspense>
       </Canvas>
     </KeyboardControls>
