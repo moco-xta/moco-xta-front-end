@@ -107,6 +107,23 @@ function AboutScene() {
 
 // @ts-ignore
 function Accelerometer({ permissionGranted, setPermissionGranted }) {
+  useEffect(() => {
+    // @ts-ignore
+    if (typeof DeviceMotionEvent.requestPermission === "function") {
+      // @ts-ignore
+      DeviceMotionEvent.requestPermission()
+        .then((permissionState: any) => {
+          if (permissionState === "granted") {
+            setPermissionGranted(true);
+          }
+        })
+        .catch(console.error);
+    } else {
+      setPermissionGranted(true);
+    }
+
+    return () => {};
+  });
 
   function handlePermissionGranted() {
     // @ts-ignore
