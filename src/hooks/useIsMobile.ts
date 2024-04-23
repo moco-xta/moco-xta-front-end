@@ -9,7 +9,7 @@ export default function useIsMobile() {
   useEffect(() => {
     !isMobile
       ? setDimensionsType('IS_NOT_MOBILE')
-      : setDimensionsType('IS_MOBILE')
+      : setDimensionsType('IS_NOT_MOBILE')
   }, [isMobile])
 
   return { dimensionsType }
