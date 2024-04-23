@@ -136,9 +136,11 @@ export default function AboutCanvas() {
           makeDefault
           aspect={1200 / 600}
           fov={55}
-          position={[0, 0, 0]}
+          position={[0, 13, 0]}
           rotation={[0, THREE.MathUtils.degToRad(180), 0]}
-          onUpdate={(self) => self.updateProjectionMatrix()}
+          onUpdate={(self) => {
+            if(!isMobile) self.updateProjectionMatrix()
+          }}
         />
         {!isMobile && <PointerLockControls selector='#button' />}
         {isMobile && <DeviceOrientationControls />}
