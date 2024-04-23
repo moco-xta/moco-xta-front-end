@@ -55,12 +55,12 @@ function AboutScene() {
         rotation={[0, degreesToRadians(180), 0]}
       />
       <Parquet />
-      <RigidBody colliders='hull'>
+      {/* <RigidBody colliders='hull'>
         <Plane
           args={[50, 50, 20, 20]}
           rotation={[degreesToRadians(90), 0, 0]}
         />
-      </RigidBody>
+      </RigidBody> */}
       <SpeakerEnclosure
         position={[9.9, 0, 12.5]}
         rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
