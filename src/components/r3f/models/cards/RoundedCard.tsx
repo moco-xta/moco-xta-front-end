@@ -30,7 +30,7 @@ export function RoundedCard({
     >
       <meshStandardMaterial
         attach='material'
-        color={'white'}
+        color={0x5C5E69}
       />
     </mesh>
   )
