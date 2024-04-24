@@ -3,15 +3,15 @@
 #nav_wrapper {
   nav {
     transition:
-      margin-top 0.5s,
-      margin-right 0.5s;
+    margin-top 0.5s,
+    margin-right 0.5s;
 
     ul li {
+      padding: 0px;
       display: inline-block;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 0px;
     }
 
     .li_nav {
@@ -61,8 +61,8 @@
     transform: translateX(100%);
     transition: 0.3s transform ease-in-out;
     background-color: rgba(10, 10, 10, 0.7);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
 
     nav {
       width: 100%;
@@ -70,18 +70,27 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0px;
 
       ul {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        .active {
-          color: $white;
-          font-weight: bold;
+        .span_link_wrapper {
+          padding: 0 0;
+
+          .active {
+            color: $white;
+            font-weight: bold;
+          }
         }
       }
     }
+  }
+
+  #authentication_icon {
+    padding: 0;
   }
 
   #nav_wrapper.open {

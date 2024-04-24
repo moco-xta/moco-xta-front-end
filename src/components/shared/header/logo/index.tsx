@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { isMobile } from 'react-device-detect'
 
 import { Routes } from '@/routes/routes'
 
@@ -12,8 +13,8 @@ export default function Logo() {
       <Link href={Routes.find((route) => route.key === 'HOME')!.path}>
         <Image
           src='/img/png/moco_logo_light_h70.png'
-          width={109}
-          height={70}
+          width={!isMobile ? 109 : 55}
+          height={!isMobile ? 70 : 35}
           alt='Logo header'
         />
       </Link>
