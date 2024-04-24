@@ -46,7 +46,7 @@ const LogoNextjs = forwardRef<
       >
         <meshStandardMaterial
           attach='material'
-          color={'black'}
+          color={0xffffff}
         />
       </mesh>
     </group>

@@ -65,7 +65,7 @@ const LogoReactThreeDrei = forwardRef<
       >
         <meshStandardMaterial
           attach='material'
-          color={0x000000}
+          color={0xffffff}
         />
       </mesh>
     </group>
