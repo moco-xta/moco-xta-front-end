@@ -25,6 +25,7 @@ export default function HeroSlice() {
         height={imgConstants.HERO.ARIES.DIMENSIONS.HEIGHT}
         alt='Aries'
       /> */}
+      {/* TEXT TO BE ABLE TO MERGE */}
       <ScrollDown
         top={'85vh'}
         color={variables.white}
