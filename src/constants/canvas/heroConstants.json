@@ -49,7 +49,7 @@
   "HELIUM_BALLOONS": {
     "SCALE_RATIO": {
       "IS_NOT_MOBILE": 3,
-      "IS_MOBILE": 1
+      "IS_MOBILE": 1.25
     },
     "WRAPPER": {
       "DIMENSIONS": {
