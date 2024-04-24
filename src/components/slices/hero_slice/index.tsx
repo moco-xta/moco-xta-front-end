@@ -15,11 +15,11 @@ import './index.scss'
 export default function HeroSlice() {
   return (
     <section id='hero_slice'>
-      <HeadText />
+      {/* <HeadText /> */}
       <div id='hero_canvas_container'>
         <HeroCanvas />
       </div>
-      <>
+      {/* <>
         <Image
           src={imgConstants.HERO.ARIES.SRC}
           width={imgConstants.HERO.ARIES.DIMENSIONS.WITDH}
@@ -30,7 +30,7 @@ export default function HeroSlice() {
           top={'85vh'}
           color={variables.white}
         />
-      </>
+      </> */}
     </section>
   )
 }
