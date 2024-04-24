@@ -11,7 +11,7 @@
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
       "IS_NOT_MOBILE": {
-        "X": -0.04,
+        "X": -0.08,
         "Y": 0,
         "Z": 3
       },
@@ -48,8 +48,8 @@
   },
   "HELIUM_BALLOONS": {
     "SCALE_RATIO": {
-      "IS_NOT_MOBILE": 2,
-      "IS_MOBILE": 1.25
+      "IS_NOT_MOBILE": 3,
+      "IS_MOBILE": 1
     },
     "WRAPPER": {
       "DIMENSIONS": {
