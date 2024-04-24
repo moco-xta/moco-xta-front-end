@@ -15,7 +15,7 @@ import './index.scss'
 export default function HeroSlice() {
   return (
     <section id='hero_slice'>
-      {/* <HeadText /> */}
+      <HeadText />
       <div id='hero_canvas_container'>
         <HeroCanvas />
       </div>
