@@ -50,7 +50,6 @@
 }
 
 @media screen and (max-width: 700px) {
-
   #hero_head_text {
     z-index: 2;
     position: absolute;
@@ -61,7 +60,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
+
     #hero_head_text_container {
       width: 90%;
       height: 50%;
@@ -71,12 +70,12 @@
       justify-content: center;
       align-items: flex-start;
       border-radius: 15px 15px 0 0;
-  
+
       #heading {
         font-size: 46px;
         color: $text_light;
       }
-  
+
       #subheading {
         margin-top: 20px;
         font-size: 16px;
@@ -86,7 +85,7 @@
         color: $text_light;
       }
     }
-  
+
     #creative_developer_container {
       width: 90%;
       height: 10%;
