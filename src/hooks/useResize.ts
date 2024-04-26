@@ -14,7 +14,7 @@ export default function useResize() {
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [handleResize])
+  }, [])
 
   return { innerWidth, innerHeight }
 }

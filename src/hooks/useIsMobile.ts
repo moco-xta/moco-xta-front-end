@@ -10,7 +10,7 @@ export default function useIsMobile() {
     !isMobile
       ? setDimensionsType('IS_NOT_MOBILE')
       : setDimensionsType('IS_MOBILE')
-  }, [isMobile])
+  }, [])
 
   return { dimensionsType }
 }
