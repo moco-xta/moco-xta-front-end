@@ -1,19 +1,7 @@
 import React, { createRef, useRef } from 'react'
 import * as THREE from 'three'
-import { ThreeEvent, extend, useThree } from '@react-three/fiber'
-import {
-  Box,
-  Center,
-  GradientTexture,
-  RoundedBox,
-  Text,
-  Text3D,
-} from '@react-three/drei'
-import { FontLoader, TextGeometry } from 'three/examples/jsm/Addons.js'
-import { useTranslations } from 'next-intl'
-
-import upheaval from '@/assets/Upheaval.json'
-import pixelifySans from '@/assets/Pixelify_Sans.json'
+import { useThree } from '@react-three/fiber'
+import { Box, Text3D } from '@react-three/drei'
 
 import {
   ForwardRefGltfGroupInterface,
@@ -22,32 +10,14 @@ import {
 
 import useModelHoverEffect from '@/hooks/useModelHoverEffect'
 
-import { degreesToRadians } from '@/helpers/r3fHelpers'
-
 import { default as introductionConstants } from '@/constants/introductionConstants.json'
-import { RoundedCard } from '@/components/r3f/models/cards/RoundedCard'
-import { ComputerFrontEnd } from '@/components/r3f/models/introduction/ComputerFrontEnd'
-import { ServerBackEnd } from '@/components/r3f/models/introduction/ServerBackEnd'
-import { HeartThreeD } from '@/components/r3f/models/introduction/HeartThreeD'
-
 import { default as fontsConstants } from '@/constants/fontsConstants.json'
-import { Angular } from '@/components/r3f/models/introduction/Angular'
-import { Spring } from '@/components/r3f/models/introduction/Spring'
-import { Nextjs } from '@/components/r3f/models/introduction/Nextjs'
 
-extend({ TextGeometry })
-
-export default function Card({
-  content,
-  index,
-}: IntroductionCardSceneInterface) {
-  const t = useTranslations('HOME')
+export default function Card({ content }: IntroductionCardSceneInterface) {
 
   const { gl } = useThree()
   gl.toneMapping = THREE.ACESFilmicToneMapping
   gl.toneMappingExposure = 4
-
-  const font = new FontLoader().parse(pixelifySans)
 
   const introductionCardRef = useRef<THREE.Group>(null!)
   const introductionLogoRef = createRef<ForwardRefGltfGroupInterface>()
@@ -71,27 +41,6 @@ export default function Card({
 
   return (
     <group ref={introductionCardRef}>
-      {/* <Text
-        textAlign={'center'}
-        fontSize={introductionConstants.CARDS.ROUNDED_CARDS.FONT_SIZE}
-        position={[
-          content.description.position.x,
-          content.description.position.z,
-          content.description.position.y,
-        ]}
-        receiveShadow
-        castShadow
-      >
-        {t(`INTRODUCTION.CARDS.${content.description.key}`)}
-      </Text> */}
-      {/* <mesh>
-        @ts-ignore
-        <textGeometry args={[`Font-End${'<br>'} 90%`, { font, size: 1, height: 1 }]} />
-        <meshNormalMaterial
-          attach={'material'}
-          side={THREE.DoubleSide}
-        />
-      </mesh> */}
       {content.category.text.map((text, index) => {
         return (
           <Text3D
@@ -99,7 +48,11 @@ export default function Card({
             receiveShadow
             castShadow
             {...textOptions}
-            position={[content.category.position[index].x, content.category.position[index].y, content.category.position[index].z]}
+            position={[
+              content.category.position[index].x,
+              content.category.position[index].y,
+              content.category.position[index].z,
+            ]}
           >
             {text}
             <meshStandardMaterial
@@ -122,8 +75,8 @@ export default function Card({
       >
         {`${content.rate.value}%`}
         <meshStandardMaterial
-          color={colors[(content.rate.value / 10) - 1]}
-          emissive={(content.rate.value / 10) - 1}
+          color={colors[content.rate.value / 10 - 1]}
+          emissive={content.rate.value / 10 - 1}
           emissiveIntensity={0.5}
           side={THREE.DoubleSide}
         />

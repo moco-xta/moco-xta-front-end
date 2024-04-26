@@ -1,13 +1,10 @@
 import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
 
-import LogoReactThreeDrei from '@/components/r3f/models/logos/LogoReactThreeDrei'
-import LogoNextjs from '@/components/r3f/models/logos/LogoNextjs'
-import LogoAngular from '@/components/r3f/models/logos/LogoAngular'
-
-import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
 import { Nextjs } from '@/components/r3f/models/introduction/Nextjs'
 import { Angular } from '@/components/r3f/models/introduction/Angular'
 import { Spring } from '@/components/r3f/models/introduction/Spring'
+
+import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
 
 export const mainSkillsCardsData: IntroductionCardDataInterface[] = [
   {
@@ -32,8 +29,8 @@ export const mainSkillsCardsData: IntroductionCardDataInterface[] = [
           y: 0,
           z: 0,
         },
-      ]
-    }
+      ],
+    },
   },
   {
     name: IntroductionConstants.CARDS.TOOLS.NEXT_JS.NAME,
@@ -57,8 +54,8 @@ export const mainSkillsCardsData: IntroductionCardDataInterface[] = [
           y: 0,
           z: 0,
         },
-      ]
-    }
+      ],
+    },
   },
   {
     name: IntroductionConstants.CARDS.TOOLS.ANGULAR.NAME,
@@ -82,7 +79,7 @@ export const mainSkillsCardsData: IntroductionCardDataInterface[] = [
           y: 0,
           z: 0,
         },
-      ]
-    }
+      ],
+    },
   },
 ]

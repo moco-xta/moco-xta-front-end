@@ -1,12 +1,10 @@
 import { IntroductionCardDataInterface } from '@/interfaces/dataInterfaces'
 
-import DoughnutChartSeventyFivePercent from '@/components/r3f/models/charts/DoughnutChartSeventyFivePercent'
-import RoundedDoughnutChartNinetyPercent from '@/components/r3f/models/charts/RoundedDoughnutChartNinetyPercent'
-
-import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
 import { HeartThreeD } from '@/components/r3f/models/introduction/HeartThreeD'
 import { ComputerFrontEnd } from '@/components/r3f/models/introduction/ComputerFrontEnd'
 import { ServerBackEnd } from '@/components/r3f/models/introduction/ServerBackEnd'
+
+import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
 
 export const introductionCardsData: IntroductionCardDataInterface[] = [
   {
@@ -31,8 +29,8 @@ export const introductionCardsData: IntroductionCardDataInterface[] = [
           y: 0,
           z: 0,
         },
-      ]
-    }
+      ],
+    },
   },
   {
     name: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.NAMES.FRONT_END,
@@ -61,8 +59,8 @@ export const introductionCardsData: IntroductionCardDataInterface[] = [
           y: -1,
           z: 0,
         },
-      ]
-    }
+      ],
+    },
   },
   {
     name: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.NAMES.BACK_END,
@@ -91,7 +89,7 @@ export const introductionCardsData: IntroductionCardDataInterface[] = [
           y: -1,
           z: 0,
         },
-      ]
-    }
+      ],
+    },
   },
 ]

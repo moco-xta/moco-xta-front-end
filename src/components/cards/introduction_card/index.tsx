@@ -18,10 +18,7 @@ export default function IntroductionCards({
             key={`introduction_${type}_card_container_${index}`}
             className='introduction_card_canvas_container'
           >
-            <IntroductionCardCanvas
-              content={content}
-              index={index}
-            />
+            <IntroductionCardCanvas content={content} />
           </div>
         )
       })}

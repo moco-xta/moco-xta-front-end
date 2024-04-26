@@ -29,12 +29,10 @@ export interface LightsInterface {
 
 export interface IntroductionCardCanvasInterface {
   content: IntroductionCardDataInterface
-  index: number
 }
 
 export interface IntroductionCardSceneInterface {
   content: IntroductionCardDataInterface
-  index: number
 }
 
 export interface ProjectCardCanvasInterface {

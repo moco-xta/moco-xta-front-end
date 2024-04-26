@@ -1,6 +1,5 @@
 import { ForwardRefExoticComponent, RefAttributes } from 'react'
 import { GroupProps, MeshProps } from '@react-three/fiber'
-import { IconType } from 'react-icons'
 
 import { LogoRefType } from 'types/logoRefType'
 import { ForwardRefGltfGroupInterface } from './r3fInterfaces'
