@@ -16,6 +16,12 @@
   "ROUNDED_DOUGHNUT_CHART_NINETY_PERCENT": "/gltf/charts/RoundedDoughnutChartNinetyPercent.gltf",
 
   "ROUNDED_CARD": "/gltf/cards/RoundedCard.gltf",
+  "COMPUTER_FRONT_END": "/gltf/introduction/ComputerFrontEnd.gltf",
+  "SERVER_BACK_END": "/gltf/introduction/ServerBackEnd.gltf",
+  "HEART_THREE_D": "/gltf/introduction/HeartThreeD.gltf",
+  "NEXTJS": "/gltf/introduction/Nextjs.gltf",
+  "ANGULAR": "/gltf/introduction/Angular.gltf",
+  "SPRING": "/gltf/introduction/Spring.gltf",
 
   "ROUNDED_CUBE": "/gltf/rubiks_cube/RoundedCube.gltf",
   "COLOR_PAD_BLENDER": "/gltf/rubiks_cube/ColorPadBlender.gltf",

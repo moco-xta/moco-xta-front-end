@@ -109,56 +109,62 @@ function AboutScene() {
 function Accelerometer({ permissionGranted, setPermissionGranted }) {
   useEffect(() => {
     // @ts-ignore
-    if (typeof DeviceMotionEvent.requestPermission === "function") {
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
       // @ts-ignore
       DeviceMotionEvent.requestPermission()
         .then((permissionState: any) => {
-          if (permissionState === "granted") {
-            setPermissionGranted(true);
+          if (permissionState === 'granted') {
+            setPermissionGranted(true)
           }
         })
-        .catch(console.error);
+        .catch(console.error)
     } else {
-      setPermissionGranted(true);
+      setPermissionGranted(true)
     }
 
-    return () => {};
-  });
+    return () => {}
+  })
 
   function handlePermissionGranted() {
     // @ts-ignore
     DeviceMotionEvent.requestPermission()
       .then((permissionState: any) => {
-        if (permissionState === "granted") {
-          setPermissionGranted(true);
-          window.location.reload();
+        if (permissionState === 'granted') {
+          setPermissionGranted(true)
+          window.location.reload()
         }
       })
-      .catch(console.error);
+      .catch(console.error)
   }
 
   return (
     <>
       {permissionGranted ? null : (
-        <div className="accelerometer-modal" id="modal">
+        <div
+          className='accelerometer-modal'
+          id='modal'
+        >
           <div>
             <h2>Allow access to device motion and orientation</h2>
             <p>
               This app requires access to device motion and orientation to
               function properly.
             </p>
-            <button className="btn" onClick={handlePermissionGranted}>
+            <button
+              className='btn'
+              onClick={handlePermissionGranted}
+            >
               Grant Permission
             </button>
           </div>
         </div>
       )}
     </>
-  );
+  )
 }
 
 export default function AboutCanvas() {
-  const [permissionGranted, setPermissionGranted] = useState(false);
+  const [permissionGranted, setPermissionGranted] = useState(false)
 
   const keyboardControlsMap = useMemo(
     () => [
@@ -208,10 +214,10 @@ export default function AboutCanvas() {
           <Suspense fallback={null}>
             {/* <Physics debug>
               {!isMobile && <Player />} */}
-              <AboutScene />
+            <AboutScene />
             {/* </Physics> */}
           </Suspense>
-        </Canvas> 
+        </Canvas>
       ) : (
         <Accelerometer
           permissionGranted={permissionGranted}

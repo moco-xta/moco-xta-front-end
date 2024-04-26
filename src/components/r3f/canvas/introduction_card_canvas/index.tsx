@@ -18,6 +18,7 @@ import './index.scss'
 
 export default function IntroductionCardCanvas({
   content,
+  index,
 }: IntroductionCardCanvasInterface) {
   return (
     <Canvas
@@ -44,7 +45,10 @@ export default function IntroductionCardCanvas({
       <Lights />
       {/* <BloomEffect /> */}
       <Suspense fallback={null}>
-        <Card content={content} />
+        <Card
+          content={content}
+          index={index}
+        />
       </Suspense>
     </Canvas>
   )
