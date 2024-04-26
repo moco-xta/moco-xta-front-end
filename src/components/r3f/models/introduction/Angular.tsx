@@ -20,9 +20,7 @@ export function Angular({
   onPointerMove,
   onPointerOut,
 }: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.ANGULAR,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.ANGULAR) as GLTFResult
   return (
     <group
       dispose={null}

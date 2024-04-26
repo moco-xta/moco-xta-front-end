@@ -61,19 +61,12 @@ export default function Card({
 
   const textOptions = {
     size: 0.75,
-    depth: 5
+    depth: 5,
   }
 
   const colors = [
-    0xbf1421,
-    0xe94e21,
-    0xef9309,
-    0xfab236,
-    0xf6e91e,
-    0xdcdc03,
-    0x94c01f,
-    0x3ba934,
-    0x1b8d3b,
+    0xbf1421, 0xe94e21, 0xef9309, 0xfab236, 0xf6e91e, 0xdcdc03, 0x94c01f,
+    0x3ba934, 0x1b8d3b,
   ]
 
   return (
@@ -91,24 +84,6 @@ export default function Card({
       >
         {t(`INTRODUCTION.CARDS.${content.description.key}`)}
       </Text> */}
-      {index === 1 && (
-        <Nextjs
-          onPointerMove={handleOnPointerMove}
-          onPointerOut={handleOnPointerLeave}
-        />
-      )}
-      {index === 2 && (
-        <Spring
-          onPointerMove={handleOnPointerMove}
-          onPointerOut={handleOnPointerLeave}
-        />
-      )}
-      {index === 0 && (
-        <Angular
-          onPointerMove={handleOnPointerMove}
-          onPointerOut={handleOnPointerLeave}
-        />
-      )}
       {/* <mesh>
         @ts-ignore
         <textGeometry args={[`Font-End${'<br>'} 90%`, { font, size: 1, height: 1 }]} />
@@ -117,30 +92,47 @@ export default function Card({
           side={THREE.DoubleSide}
         />
       </mesh> */}
-      {/* <Center left bottom> */}
-      <Text3D font={fontsConstants.JSON.RUBIK_BLACK} receiveShadow castShadow {...textOptions} position={[-4.9, -2.8, 0.5]}>
-        Front-End
-        {/* <meshNormalMaterial */}
+      {content.category.text.map((text, index) => {
+        return (
+          <Text3D
+            font={fontsConstants.JSON.RUBIK_BLACK}
+            receiveShadow
+            castShadow
+            {...textOptions}
+            position={[content.category.position[index].x, content.category.position[index].y, content.category.position[index].z]}
+          >
+            {text}
+            <meshStandardMaterial
+              color={0x00cc00}
+              side={THREE.DoubleSide}
+            />
+          </Text3D>
+        )
+      })}
+      <Text3D
+        font={fontsConstants.JSON.RUBIK_BLACK}
+        receiveShadow
+        castShadow
+        {...textOptions}
+        position={[
+          content.rate.position.x,
+          content.rate.position.y,
+          content.rate.position.z,
+        ]}
+      >
+        {`${content.rate.value}%`}
         <meshStandardMaterial
-          color={0x00cc00}
+          color={colors[(content.rate.value / 10) - 1]}
+          emissive={(content.rate.value / 10) - 1}
+          emissiveIntensity={0.5}
           side={THREE.DoubleSide}
         />
       </Text3D>
-      {/* </Center> */}
-      <Text3D font={fontsConstants.JSON.RUBIK_BLACK} receiveShadow castShadow {...textOptions} position={[-1.55, -4, 1]}>
-        {/* {text.split(' ').join('\n')} */}
-        90%
-        {/* <meshNormalMaterial */}
-        <meshStandardMaterial
-          color={0x00cc00}
-          side={THREE.DoubleSide}
-        />
-      </Text3D>
-      {[...Array(9)].map((_, index) => {
+      {[...Array(content.rate.value / 10)].map((_, index) => {
         return (
           <Box
             args={[2, 0.4, 1.2]}
-            position={[2, (0.4 * index) - 4, 1]}
+            position={[2, 0.44 * index - 4, 1]}
             receiveShadow
             castShadow
           >
@@ -153,24 +145,13 @@ export default function Card({
           </Box>
         )
       })}
-      {/*  <content.logo.component
+      <content.logo.component
         ref={introductionLogoRef}
         key={`introduction_skill_card_${content.name}`}
-        position={
-          new THREE.Vector3(
-            content.logo.position.x,
-            content.logo.position.z,
-            content.logo.position.y,
-          )
-        }
-        scale={
-          new THREE.Vector3(
-            content.logo.scale.x,
-            content.logo.scale.z,
-            content.logo.scale.y,
-          )
-        }
-      /> */}
+        scale={content.logo.scale}
+        onPointerMove={handleOnPointerMove}
+        onPointerOut={handleOnPointerLeave}
+      />
     </group>
   )
 }

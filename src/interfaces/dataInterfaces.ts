@@ -5,24 +5,25 @@ import { IconType } from 'react-icons'
 import { LogoRefType } from 'types/logoRefType'
 import { ForwardRefGltfGroupInterface } from './r3fInterfaces'
 
+interface position {
+  x: number
+  y: number
+  z: number
+}
+
 export interface IntroductionCardDataInterface {
   name: string
   logo: {
-    component: ForwardRefExoticComponent<
-      Omit<GroupProps, 'ref'> & RefAttributes<ForwardRefGltfGroupInterface>
-    >
-    position: {
-      [key: string]: number
-    }
-    scale: {
-      [key: string]: number
-    }
+    component: (props: GroupProps) => JSX.Element
+    scale: number
   }
-  description: {
-    key: string
-    position: {
-      [key: string]: number
-    }
+  rate: {
+    value: number
+    position: position
+  }
+  category: {
+    text: string[]
+    position: position[]
   }
 }
 

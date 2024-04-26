@@ -1,5 +1,6 @@
 import React from 'react'
 import * as THREE from 'three'
+import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -16,18 +17,14 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function ServerBackEnd({
-  onPointerMove,
-  onPointerOut,
-}: JSX.IntrinsicElements['group']) {
+export function ServerBackEnd(props: GroupProps) {
   const { nodes, materials } = useGLTF(
     gltfConstants.SERVER_BACK_END,
   ) as GLTFResult
   return (
     <group
       dispose={null}
-      onPointerMove={onPointerMove}
-      onPointerOut={onPointerOut}
+      {...props}
       scale={2.5}
     >
       <mesh

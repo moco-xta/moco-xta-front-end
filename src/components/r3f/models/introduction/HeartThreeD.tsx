@@ -1,5 +1,6 @@
 import React from 'react'
 import * as THREE from 'three'
+import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -16,18 +17,14 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function HeartThreeD({
-  onPointerMove,
-  onPointerOut,
-}: JSX.IntrinsicElements['group']) {
+export function HeartThreeD(props: GroupProps) {
   const { nodes, materials } = useGLTF(
     gltfConstants.HEART_THREE_D,
   ) as GLTFResult
   return (
     <group
       dispose={null}
-      onPointerMove={onPointerMove}
-      onPointerOut={onPointerOut}
+      {...props}
       scale={2.3}
     >
       <mesh

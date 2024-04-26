@@ -4,80 +4,94 @@ import DoughnutChartSeventyFivePercent from '@/components/r3f/models/charts/Doug
 import RoundedDoughnutChartNinetyPercent from '@/components/r3f/models/charts/RoundedDoughnutChartNinetyPercent'
 
 import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
+import { HeartThreeD } from '@/components/r3f/models/introduction/HeartThreeD'
+import { ComputerFrontEnd } from '@/components/r3f/models/introduction/ComputerFrontEnd'
+import { ServerBackEnd } from '@/components/r3f/models/introduction/ServerBackEnd'
 
 export const introductionCardsData: IntroductionCardDataInterface[] = [
   {
     name: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.NAMES.THREE_D,
     logo: {
-      component: RoundedDoughnutChartNinetyPercent,
+      component: HeartThreeD,
+      scale: 2.5,
+    },
+    rate: {
+      value: 90,
       position: {
-        x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.X,
-        y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.Y,
-        z: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.Z,
-      },
-      scale: {
-        x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.SCALE.X,
-        y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.SCALE.Y,
-        z: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.SCALE.Z,
+        x: 0.8,
+        y: 0,
+        z: 1,
       },
     },
-    description: {
-      key: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.DESCRIPTION_KEYS.THREE_D,
-      position: {
-        x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.TEXTS.POSITION.X,
-        y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.TEXTS.POSITION.Y,
-        z: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.TEXTS.POSITION.Z,
-      },
-    },
+    category: {
+      text: ['3D'],
+      position: [
+        {
+          x: -2,
+          y: 0,
+          z: 0,
+        },
+      ]
+    }
   },
   {
     name: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.NAMES.FRONT_END,
     logo: {
-      component: RoundedDoughnutChartNinetyPercent,
+      component: ComputerFrontEnd,
+      scale: 2.5,
+    },
+    rate: {
+      value: 90,
       position: {
-        x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.X,
-        y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.Y,
-        z: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.Z,
-      },
-      scale: {
-        x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.SCALE.X,
-        y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.SCALE.Y,
-        z: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.SCALE.Z,
+        x: 0.8,
+        y: 0,
+        z: 1,
       },
     },
-    description: {
-      key: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.DESCRIPTION_KEYS
-        .FRONT_END,
-      position: {
-        x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.TEXTS.POSITION.X,
-        y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.TEXTS.POSITION.Y,
-        z: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.TEXTS.POSITION.Z,
-      },
-    },
+    category: {
+      text: ['Front', 'End'],
+      position: [
+        {
+          x: -2,
+          y: 0,
+          z: 0,
+        },
+        {
+          x: -2,
+          y: -1,
+          z: 0,
+        },
+      ]
+    }
   },
   {
     name: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.NAMES.BACK_END,
     logo: {
-      component: DoughnutChartSeventyFivePercent,
+      component: ServerBackEnd,
+      scale: 2.5,
+    },
+    rate: {
+      value: 70,
       position: {
-        x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.X,
-        y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.Y,
-        z: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.POSITION.Z,
-      },
-      scale: {
-        x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.SCALE.X,
-        y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.SCALE.Y,
-        z: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.SCALE.Z,
+        x: 0.8,
+        y: -0.8,
+        z: 1,
       },
     },
-    description: {
-      key: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.DESCRIPTION_KEYS
-        .BACK_END,
-      position: {
-        x: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.TEXTS.POSITION.X,
-        y: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.TEXTS.POSITION.Y,
-        z: IntroductionConstants.CARDS.DOUGHNUT_CHARTS.TEXTS.POSITION.Z,
-      },
-    },
+    category: {
+      text: ['Back', 'End'],
+      position: [
+        {
+          x: -2,
+          y: 0,
+          z: 0,
+        },
+        {
+          x: -2,
+          y: -1,
+          z: 0,
+        },
+      ]
+    }
   },
 ]

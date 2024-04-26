@@ -5,81 +5,84 @@ import LogoNextjs from '@/components/r3f/models/logos/LogoNextjs'
 import LogoAngular from '@/components/r3f/models/logos/LogoAngular'
 
 import { default as IntroductionConstants } from '@/constants/introductionConstants.json'
+import { Nextjs } from '@/components/r3f/models/introduction/Nextjs'
+import { Angular } from '@/components/r3f/models/introduction/Angular'
+import { Spring } from '@/components/r3f/models/introduction/Spring'
 
 export const mainSkillsCardsData: IntroductionCardDataInterface[] = [
   {
     name: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.NAME,
     logo: {
-      component: LogoReactThreeDrei,
+      component: Nextjs,
+      scale: 2.5,
+    },
+    rate: {
+      value: 90,
       position: {
-        x: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.POSITION.X,
-        y: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.POSITION.Y,
-        z: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.POSITION.Z,
-      },
-      scale: {
-        x: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.SCALE.X,
-        y: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.SCALE.Y,
-        z: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.LOGO.SCALE.Z,
+        x: 0.8,
+        y: 0,
+        z: 1,
       },
     },
-    description: {
-      key: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.DESCRIPTION.KEY,
-      position: {
-        x: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.DESCRIPTION
-          .POSITION.X,
-        y: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.DESCRIPTION
-          .POSITION.Y,
-        z: IntroductionConstants.CARDS.TOOLS.REACT_THREE_DREI.DESCRIPTION
-          .POSITION.Z,
-      },
-    },
+    category: {
+      text: ['Nextjs'],
+      position: [
+        {
+          x: -2,
+          y: 0,
+          z: 0,
+        },
+      ]
+    }
   },
   {
     name: IntroductionConstants.CARDS.TOOLS.NEXT_JS.NAME,
     logo: {
-      component: LogoNextjs,
+      component: Angular,
+      scale: 2.5,
+    },
+    rate: {
+      value: 80,
       position: {
-        x: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.POSITION.X,
-        y: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.POSITION.Y,
-        z: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.POSITION.Z,
-      },
-      scale: {
-        x: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.SCALE.X,
-        y: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.SCALE.Y,
-        z: IntroductionConstants.CARDS.TOOLS.NEXT_JS.LOGO.SCALE.Z,
+        x: 0.8,
+        y: -0.4,
+        z: 1,
       },
     },
-    description: {
-      key: IntroductionConstants.CARDS.TOOLS.NEXT_JS.DESCRIPTION.KEY,
-      position: {
-        x: IntroductionConstants.CARDS.TOOLS.NEXT_JS.DESCRIPTION.POSITION.X,
-        y: IntroductionConstants.CARDS.TOOLS.NEXT_JS.DESCRIPTION.POSITION.Y,
-        z: IntroductionConstants.CARDS.TOOLS.NEXT_JS.DESCRIPTION.POSITION.Z,
-      },
-    },
+    category: {
+      text: ['Angular'],
+      position: [
+        {
+          x: -2,
+          y: 0,
+          z: 0,
+        },
+      ]
+    }
   },
   {
     name: IntroductionConstants.CARDS.TOOLS.ANGULAR.NAME,
     logo: {
-      component: LogoAngular,
+      component: Spring,
+      scale: 2.5,
+    },
+    rate: {
+      value: 70,
       position: {
-        x: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.POSITION.X,
-        y: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.POSITION.Y,
-        z: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.POSITION.Z,
-      },
-      scale: {
-        x: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.SCALE.X,
-        y: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.SCALE.Y,
-        z: IntroductionConstants.CARDS.TOOLS.ANGULAR.LOGO.SCALE.Z,
+        x: 0.8,
+        y: -0.8,
+        z: 1,
       },
     },
-    description: {
-      key: IntroductionConstants.CARDS.TOOLS.ANGULAR.DESCRIPTION.KEY,
-      position: {
-        x: IntroductionConstants.CARDS.TOOLS.ANGULAR.DESCRIPTION.POSITION.X,
-        y: IntroductionConstants.CARDS.TOOLS.ANGULAR.DESCRIPTION.POSITION.Y,
-        z: IntroductionConstants.CARDS.TOOLS.ANGULAR.DESCRIPTION.POSITION.Z,
-      },
-    },
+    category: {
+      text: ['Spring'],
+      position: [
+        {
+          x: -2,
+          y: 0,
+          z: 0,
+        },
+      ]
+    }
   },
 ]
