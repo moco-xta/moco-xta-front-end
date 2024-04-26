@@ -44,6 +44,7 @@ export default function Card({ content }: IntroductionCardSceneInterface) {
       {content.category.text.map((text, index) => {
         return (
           <Text3D
+            key={`text_${content.name}_${index}`}
             font={fontsConstants.JSON.RUBIK_BLACK}
             receiveShadow
             castShadow
@@ -84,6 +85,7 @@ export default function Card({ content }: IntroductionCardSceneInterface) {
       {[...Array(content.rate.value / 10)].map((_, index) => {
         return (
           <Box
+            key={`rate_box_${content.name}_${index}`}
             args={[2, 0.4, 1.2]}
             position={[2, 0.44 * index - 4, 1]}
             receiveShadow
