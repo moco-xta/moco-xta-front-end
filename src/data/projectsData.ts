@@ -1,14 +1,17 @@
-import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
-
 import { FaReact } from 'react-icons/fa'
 import { FaAngular } from 'react-icons/fa'
 import { SiDjango } from 'react-icons/si'
+
+import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
+
+import { default as imgConstants } from '@/constants/imgConstants.json'
 
 export const projectsData: ProjectDataInterface[] = [
   {
     key: 'moco_xta',
     name: 'Moco.xta',
     url: 'https://lento.eu/en',
+    logoUrl: imgConstants.PROJECTS.LOGO_MOKO_XTA,
     descriptionsKey: {
       lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.LENTO',
       project: 'CARDS.DESCRIPTIONS.LENTO',
@@ -28,6 +31,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'abwerkt',
     name: 'AB Werkt',
     url: 'https://www.ab-werkt.eu/home',
+    logoUrl: imgConstants.PROJECTS.LOGO_ABWERKT,
     descriptionsKey: {
       lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
       project: 'CARDS.DESCRIPTIONS.ABWERKT',
@@ -47,6 +51,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'lento',
     name: 'Lento.eu',
     url: 'https://lento.eu/en',
+    logoUrl: imgConstants.PROJECTS.LOGO_LENTO,
     descriptionsKey: {
       lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
       project: 'CARDS.DESCRIPTIONS.ABWERKT',
@@ -66,6 +71,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'abwerkt',
     name: 'AB Werkt',
     url: 'https://www.ab-werkt.eu/home',
+    logoUrl: imgConstants.PROJECTS.LOGO_MOKO_XTA,
     descriptionsKey: {
       lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
       project: 'CARDS.DESCRIPTIONS.ABWERKT',

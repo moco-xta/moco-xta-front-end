@@ -157,8 +157,6 @@ export default function Contact() {
                   height={80}
                   alt='Lucky cat'
                 />
-                {/* <iframe src="https://giphy.com/embed/l41lVsYDBC0UVQJCE" width="240" height="135" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> */}
-                {/* <iframe src="https://giphy.com/embed/RfkxvOmP3bXcCSSB0k" width="50" height="50" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> */}
                 <h2>Contact</h2>
                 <div className='contact_container'>
                   <CiMobile1

@@ -39,6 +39,7 @@ export interface ProjectDataInterface {
   key: string
   url: string
   name: string
+  logoUrl: string
   descriptionsKey: {
     [key: string]: string
   }
