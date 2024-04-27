@@ -28,14 +28,14 @@ export function LastProjectCard({ content }: LastProjectsCardInterface) {
         <div className='external_link_and_logo_container'>
           <Image
             src={content.logoUrl}
-            width={80}
-            height={80}
+            width={120}
+            height={120}
             alt={`Logo ${content.name}`}
           />
-          <ExternalLink
+          {/* <ExternalLink
             url={content.url}
             text={content.name}
-          />
+          /> */}
         </div>
         <div className='project_tools'>
           {content.tools.map((Logo, index) => (
