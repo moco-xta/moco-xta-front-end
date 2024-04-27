@@ -1,6 +1,5 @@
-'use client'
-
 import React, { useRef } from 'react'
+import Image from 'next/image'
 
 import { LastProjectsCardInterface } from '@/interfaces/componentsInterfaces'
 
@@ -26,10 +25,18 @@ export function LastProjectCard({ content }: LastProjectsCardInterface) {
       className='last_project_card card_background_gradient'
     >
       <div className='project_card_details'>
-        <ExternalLink
-          url={content.url}
-          text={content.name}
-        />
+        <div className='external_link_and_logo_container'>
+          <Image
+            src={content.logoUrl}
+            width={80}
+            height={80}
+            alt={`Logo ${content.name}`}
+          />
+          <ExternalLink
+            url={content.url}
+            text={content.name}
+          />
+        </div>
         <div className='project_tools'>
           {content.tools.map((Logo, index) => (
             <Logo

@@ -8,6 +8,11 @@
       }
     }
   },
+  "PROJECTS": {
+    "LOGO_MOKO_XTA": "/img/png/projects/logo_moco_xta.png",
+    "LOGO_ABWERKT": "/img/png/projects/logo_abwerkt.png",
+    "LOGO_LENTO": "/img/png/projects/logo_lento.png"
+  },
   "HDRS": {
     "HERO_ENVIRONMENT": "/img/hdr/peppermint_powerplant_2_1k.hdr",
     "REVIEW_CARD_ENVIRONMENT": "/img/hdr/gradient_fluid.hdr"
