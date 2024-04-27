@@ -18,6 +18,7 @@ export default function IntroductionCards({
       {data.map((content, index) => {
         return (
           <RevealTextBlock
+            key={`introduction_${type}_card_container_${index}`}
             threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
             duration={'200ms'}
             delay={`${0.2 * (index + 1)}s`}
@@ -26,7 +27,6 @@ export default function IntroductionCards({
             style={{ margin: -40 }}
           >
             <div
-              key={`introduction_${type}_card_container_${index}`}
               className='introduction_card_canvas_container'
             >
               <IntroductionCardCanvas content={content} />
