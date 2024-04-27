@@ -10,9 +10,10 @@ export default function RevealTextBlock({
   children,
   threshold,
   duration,
-  delay = '0',
+  delay = '0s',
   x = 0,
   y = 0,
+  style
 }: RevealComponentInterface) {
   y = y || 0
   const ref = useRef(null)
@@ -49,6 +50,7 @@ export default function RevealTextBlock({
         transform: !intersecting
           ? `translate(${x}px, ${y}px)`
           : 'translate(0px, 0px)',
+        ...style
       }}
       className={`transition ${!intersecting ? 'opacity_0' : 'opacity_100'}`}
       ref={ref}
