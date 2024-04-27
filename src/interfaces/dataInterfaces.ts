@@ -1,5 +1,6 @@
 import { ForwardRefExoticComponent, RefAttributes } from 'react'
 import { GroupProps, MeshProps } from '@react-three/fiber'
+import { IconType } from 'react-icons'
 
 import { LogoRefType } from 'types/logoRefType'
 import { ForwardRefGltfGroupInterface } from './r3fInterfaces'
@@ -41,13 +42,14 @@ export interface ProjectDataInterface {
   descriptionsKey: {
     [key: string]: string
   }
+  picture: {
+    [key: string]: string
+  }
   dates: {
     [key: string]: string
   }
-  logos: {
-    main: ProjectsLogoInterface
-    tools: ProjectsLogoInterface[]
-  }
+  roles: string[]
+  tools: IconType[]
 }
 
 export interface ProjectsCardInterface {
