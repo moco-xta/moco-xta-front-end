@@ -10,6 +10,7 @@ import Card from './card'
 import { default as introductionConstants } from '@/constants/introductionConstants.json'
 
 import './index.scss'
+import ToneMapping from './tone_mapping'
 
 export default function IntroductionCardCanvas({
   content,
@@ -38,6 +39,7 @@ export default function IntroductionCardCanvas({
       />
       <Lights />
       <Suspense fallback={null}>
+        <ToneMapping />
         <Card content={content} />
       </Suspense>
     </Canvas>

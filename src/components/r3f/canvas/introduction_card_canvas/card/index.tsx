@@ -1,6 +1,5 @@
 import React, { createRef, useRef } from 'react'
 import * as THREE from 'three'
-import { useThree } from '@react-three/fiber'
 import { Box, Text3D } from '@react-three/drei'
 
 import {
@@ -14,11 +13,6 @@ import { default as introductionConstants } from '@/constants/introductionConsta
 import { default as fontsConstants } from '@/constants/fontsConstants.json'
 
 export default function Card({ content }: IntroductionCardSceneInterface) {
-
-  const { gl } = useThree()
-  gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 4
-
   const introductionCardRef = useRef<THREE.Group>(null!)
   const introductionLogoRef = createRef<ForwardRefGltfGroupInterface>()
 
@@ -26,8 +20,6 @@ export default function Card({ content }: IntroductionCardSceneInterface) {
     introductionCardRef,
     introductionConstants.HANDLE_ON_PONTER_MOVE,
   )
-
-  const text = 'Front-End\n90%'
 
   const textOptions = {
     size: 0.75,

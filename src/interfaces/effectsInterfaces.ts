@@ -17,6 +17,9 @@ export interface RevealComponentInterface {
   delay?: string
   x?: number
   y?: number
+  style?: {
+    [key: string]: string | number
+  }
 }
 
 export interface RevealTextLetterByLetterInterface {

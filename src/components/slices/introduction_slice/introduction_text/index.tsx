@@ -12,8 +12,14 @@ export default function IntroductionText() {
 
   return (
     <div id='introduction_text_container'>
-      <h2>{t('INTRODUCTION.INTRODUCTION_TITLE')}</h2>
-      <p>{t('INTRODUCTION.INTRODUCTION_TEXT')}</p>
+      <RevealTextBlock
+        threshold={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.THRESHOLD}
+        duration={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.DURATION}
+        y={effectsConstants.REVEAL_TEXT_BLOCK.DEFAULT.Y}
+      >
+        <h2>{t('INTRODUCTION.INTRODUCTION_TITLE')}</h2>
+        <p>{t('INTRODUCTION.INTRODUCTION_TEXT')}</p>
+      </RevealTextBlock>
     </div>
   )
 }
