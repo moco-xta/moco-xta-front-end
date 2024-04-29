@@ -26,9 +26,7 @@ export default function IntroductionCards({
             y={50}
             style={{ margin: -40 }}
           >
-            <div
-              className='introduction_card_canvas_container'
-            >
+            <div className='introduction_card_canvas_container'>
               <IntroductionCardCanvas content={content} />
             </div>
           </RevealTextBlock>

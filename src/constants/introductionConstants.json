@@ -52,7 +52,7 @@
   },
   "SCENE": {
     "BLOOM": {
-      "INTENSITY": 1,
+      "INTENSITY": 5,
       "LUMINANCE_THRESHOLD": 0.9,
       "LUMINANCE_SMOOTHING": 0.025,
       "MIPMAP_BLUR": false

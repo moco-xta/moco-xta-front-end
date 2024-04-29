@@ -11,8 +11,10 @@ import { ReviewCanvasInterface } from '@/interfaces/r3fInterfaces'
 
 import Lights from '../../lights'
 import ReviewCard from './review_card'
+import ToneMapping from './tone_mapping'
+import PostProcessing from './post_processing'
 
-import { default as reviewConstants } from '@/constants/reviewConstants.json'
+import { default as reviewConstants } from '@/constants/canvas/reviewConstants.json'
 import { default as imgConstants } from '@/constants/imgConstants.json'
 
 import './index.scss'
@@ -55,8 +57,9 @@ export default function ReviewCanvas({
           files={imgConstants.HDRS.REVIEW_CARD_ENVIRONMENT}
           encoding={THREE.LinearEncoding}
         />
-        {/* <PostProcessing /> */}
         <ReviewCard data={data} />
+        <ToneMapping />
+        <PostProcessing />
       </Suspense>
     </Canvas>
   )

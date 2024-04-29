@@ -21,7 +21,7 @@
   "LIGHTS": [
     {
       "TYPE": "pointLight",
-      "INTENSITY": 100,
+      "INTENSITY": 10,
       "POSITIONS": [
         {
           "X": 2,
@@ -46,6 +46,22 @@
       "POSITIONS": []
     }
   ],
+  "TONE_MAPPING": {
+    "EXPOSURE": 6
+  },
+  "POST_PROCESSING": {
+    "DEPTH_OF_FIELD": {
+      "FOCUS_DISTANCE": 0.15,
+      "FOCUS_LENGTH": 0.25,
+      "BOKEH_SCALE": 1
+    },
+    "BLOOM": {
+      "INTENSITY": 0.05,
+      "LUMINANCE_THRESHOLD": 0.15,
+      "LUMINANCE_SMOOTHING": 0.025,
+      "MIPMAP_BLUR": true
+    }
+  },
   "CARD": {
     "ROTATION": {
       "X": -30,
