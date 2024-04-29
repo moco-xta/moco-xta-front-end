@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from 'react'
 import { isMobile } from 'react-device-detect'
 
-import AboutCanvas from '@/components/r3f/canvas/about_canvas/AboutCanvas'
+import AboutDesktopCanvas from '@/components/r3f/canvas/about_canvas/AboutDesktopCanvas'
+import AboutMobileCanvas from '@/components/r3f/canvas/about_canvas/AboutMobileCanvas'
 
 import './index.scss'
 
@@ -47,11 +48,11 @@ export default function AboutSlice() {
     <section id='about_slice'>
       {!isMobile ? (
         <>
-          <AboutCanvas />
+          <AboutDesktopCanvas />
           <div id='absolute centered cursor'>+</div>
         </>
       ) : (
-        <AboutCanvas />
+        <AboutMobileCanvas />
       )}
     </section>
   )
