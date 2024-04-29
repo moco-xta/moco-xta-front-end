@@ -11,7 +11,7 @@ export default function AboutSlice() {
   const [showInstructions, setShowInstructions] = useState(true)
 
   function HandleShowInstructions() {
-    setShowInstructions(!showInstructions)
+    setShowInstructions(false)
   }
 
   useEffect(() => {
@@ -29,24 +29,26 @@ export default function AboutSlice() {
     }
   })
 
+  function handleKeyPress(e: KeyboardEvent) {
+    console.log("event", e)
+    if(e.code === 'Escape') setShowInstructions(true)
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress, false)
+    document.addEventListener('keyup', handleKeyPress, false)
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress, false)
+      document.removeEventListener('keyup', handleKeyPress, false)
+    }
+  }, [])
+
   return (
     <section id='about_slice'>
       {!isMobile ? (
         <>
           <AboutCanvas />
-          <div className='absolute centered cursor'>+</div>
-          <div
-            id='instructions'
-            className={showInstructions ? 'show' : 'hide'}
-          >
-            Instructions
-            <button
-              id='button'
-              onClick={HandleShowInstructions}
-            >
-              Click To Enter
-            </button>
-          </div>
+          <div id='absolute centered cursor'>+</div>
         </>
       ) : (
         <AboutCanvas />

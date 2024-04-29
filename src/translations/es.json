@@ -174,5 +174,9 @@
       "SUCCESS": "Su reseña ha sido enviada.",
       "ERROR": "Sorry! An error occured. Please try again."
     }
+  },
+  "ABOUT": {
+    "INSTRUCTIONS": "Instrucciones",
+    "CLICK_TO_ENTER": "Haga clic para entrar"
   }
 }

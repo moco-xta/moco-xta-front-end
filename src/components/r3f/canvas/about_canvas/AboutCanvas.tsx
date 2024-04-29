@@ -18,7 +18,6 @@ import Player from '../../controls/Player'
 import { Parquet, Trestle } from '../../models/about'
 
 import { default as controlsConstants } from '@/constants/controlsConstants.json'
-import { degreesToRadians } from '@/helpers/r3fHelpers'
 import { MacBookPro } from '../../models/about/MacBookPro'
 import { SpeakerEnclosure } from '../../models/about/SpeakerEnclosure'
 import { WorldMap } from '../../models/about/WorldMap'
@@ -29,7 +28,8 @@ import { AmorAmorSquare } from '../../models/about/AmorAmorSquare'
 import { CouronneSquare } from '../../models/about/CouronneSquare'
 import { ButterflySquare } from '../../models/about/ButterflySquare'
 import { CelestialMapSquare } from '../../models/about/CelestialMapSquare'
-import ToneMapping from './ToneMapping'
+
+import { default as aboutConstants } from '@/constants/canvas/aboutConstants.json'
 
 function AboutScene() {
   const { gl } = useThree()
@@ -53,13 +53,13 @@ function AboutScene() {
       <Trestle position={[6, 0.06, 10]} />
       <Trestle
         position={[-6, 0.06, 10]}
-        rotation={[0, degreesToRadians(180), 0]}
+        rotation={[0, THREE.MathUtils.degToRad(180), 0]}
       />
       <Parquet />
       <RigidBody colliders='hull'>
         <Plane
           args={[50, 50, 20, 20]}
-          rotation={[degreesToRadians(90), 0, 0]}
+          rotation={[THREE.MathUtils.degToRad(90), 0, 0]}
         />
       </RigidBody>
       <SpeakerEnclosure
@@ -186,13 +186,12 @@ export default function AboutCanvas() {
       {!isMobile ? (
         <KeyboardControls map={keyboardControlsMap}>
           <Canvas
+            dpr={aboutConstants.CANVAS.DPR}
             shadows
-            legacy
             gl={{
-              antialias: true,
-              alpha: true,
-              powerPreference: 'high-performance',
-              /* shadowMapEnabled: true */
+              antialias: aboutConstants.CANVAS.GL.ANTIALIAS,
+              alpha: aboutConstants.CANVAS.GL.ALPHA,
+              powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
             }}
           >
             <PerspectiveCamera
@@ -200,9 +199,10 @@ export default function AboutCanvas() {
               aspect={1200 / 600}
               fov={55}
               position={[0, 0, 0]}
+              rotation={[0, THREE.MathUtils.degToRad(180), 0]}
               onUpdate={(self) => self.updateProjectionMatrix()}
             />
-            <PointerLockControls selector='#button' />
+            <PointerLockControls /* selector='#button' */ />
             <ambientLight intensity={0.5} />
             <pointLight
               position={[10, 10, 10]}
@@ -221,13 +221,12 @@ export default function AboutCanvas() {
         <>
           {permissionGranted ? (
             <Canvas
+              dpr={aboutConstants.CANVAS.DPR}
               shadows
-              legacy
               gl={{
-                antialias: true,
-                alpha: true,
-                powerPreference: 'high-performance',
-                /* shadowMapEnabled: true */
+                antialias: aboutConstants.CANVAS.GL.ANTIALIAS,
+                alpha: aboutConstants.CANVAS.GL.ALPHA,
+                powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
               }}
             >
               <PerspectiveCamera
@@ -235,10 +234,7 @@ export default function AboutCanvas() {
                 aspect={1200 / 600}
                 fov={55}
                 position={[0, 13, 0]}
-                rotation={[0, THREE.MathUtils.degToRad(180), 0]}
-                onUpdate={(self) => {
-                  if(!isMobile) self.updateProjectionMatrix()
-                }}
+                rotation={[0, 0, 0]}
               />
               <DeviceOrientationControls />
               <ambientLight intensity={0.5} />
@@ -250,7 +246,6 @@ export default function AboutCanvas() {
               <Suspense fallback={null}>
                 <Physics debug>
                   <AboutScene />
-                  <ToneMapping />
                 </Physics>
               </Suspense>
             </Canvas>

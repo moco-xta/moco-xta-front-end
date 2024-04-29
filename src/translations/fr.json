@@ -174,5 +174,9 @@
       "SUCCESS": "Votre avis a bien été soumis.",
       "ERROR": "Désolé! Une erreur s'est produite. Veuillez réessayer."
     }
+  },
+  "ABOUT": {
+    "INSTRUCTIONS": "Instructions",
+    "CLICK_TO_ENTER": "Cliquez pour entrer"
   }
 }

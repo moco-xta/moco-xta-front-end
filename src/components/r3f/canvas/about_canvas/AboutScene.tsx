@@ -1,7 +1,5 @@
 import React from 'react'
 
 export default function AboutScene() {
-  return (
-    <div>AboutScene</div>
-  )
+  return <div>AboutScene</div>
 }
