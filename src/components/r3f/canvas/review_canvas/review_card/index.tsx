@@ -95,7 +95,16 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
         </Text>
         <group position={[-0.425 + 0.17 / 2, 0, 0.1]}>
           {[...Array(5)].map((_, index) => {
-            return <RatingStar position={[0.17 * index, 0, 0]} color={data.rating >= index ? new THREE.Color(0xffd700) : new THREE.Color(0x404040)} />
+            return (
+              <RatingStar
+                position={[0.17 * index, 0, 0]}
+                color={
+                  data.rating >= index
+                    ? new THREE.Color(0xffd700)
+                    : new THREE.Color(0x404040)
+                }
+              />
+            )
           })}
         </group>
         <Text

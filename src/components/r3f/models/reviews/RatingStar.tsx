@@ -14,7 +14,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function RatingStar({color, ...props}: RatingStarInterface) {
+export function RatingStar({ color, ...props }: RatingStarInterface) {
   const { nodes } = useGLTF(GltfConstants.RATING_STAR) as GLTFResult
   return (
     <mesh
