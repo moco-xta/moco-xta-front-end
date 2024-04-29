@@ -97,6 +97,7 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
           {[...Array(5)].map((_, index) => {
             return (
               <RatingStar
+                key={`rating_star_review_card_${index}`}
                 position={[0.17 * index, 0, 0]}
                 color={
                   data.rating >= index
