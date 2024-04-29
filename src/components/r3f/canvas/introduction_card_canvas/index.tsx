@@ -11,6 +11,7 @@ import { default as introductionConstants } from '@/constants/introductionConsta
 
 import './index.scss'
 import ToneMapping from './tone_mapping'
+import BloomEffect from './bloom_effect'
 
 export default function IntroductionCardCanvas({
   content,
@@ -39,8 +40,9 @@ export default function IntroductionCardCanvas({
       />
       <Lights />
       <Suspense fallback={null}>
-        <ToneMapping />
         <Card content={content} />
+        <ToneMapping />
+        <BloomEffect />
       </Suspense>
     </Canvas>
   )

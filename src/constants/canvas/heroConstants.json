@@ -24,7 +24,7 @@
     "FOV": 30
   },
   "TONE_MAPPING": {
-    "EXPOSURE": 4
+    "EXPOSURE": 6
   },
   "POST_PROCESSING": {
     "DEPTH_OF_FIELD": {

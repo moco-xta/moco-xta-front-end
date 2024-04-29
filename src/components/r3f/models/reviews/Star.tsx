@@ -1,9 +1,9 @@
 import * as THREE from 'three'
+import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
-import { MeshProps } from '@react-three/fiber'
 
 type GLTFResult = GLTF & {
   nodes: {

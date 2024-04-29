@@ -1,17 +1,18 @@
-import React, { useRef } from 'react'
+import React, { useMemo, useRef } from 'react'
 import * as THREE from 'three'
-import { useThree } from '@react-three/fiber'
-import { RoundedBox, Text } from '@react-three/drei'
-import pointer from 'json-pointer'
+import { Center, RoundedBox, Text, Text3D } from '@react-three/drei'
 import { useTranslations } from 'next-intl'
+import { IoStarSharp } from 'react-icons/io5'
 
 import { ReviewCardInterface } from '@/interfaces/r3fInterfaces'
 
 import useModelHoverEffect from '@/hooks/useModelHoverEffect'
 
 import { Star } from '@/components/r3f/models/reviews/Star'
+import { RatingStar } from '@/components/r3f/models/reviews/RatingStar'
 
-import { default as reviewConstants } from '@/constants/reviewConstants.json'
+import { default as reviewConstants } from '@/constants/canvas/reviewConstants.json'
+import { default as fontsConstants } from '@/constants/fontsConstants.json'
 
 export default function ReviewCard({ data }: ReviewCardInterface) {
   const t = useTranslations('ADD_REVIEW')
@@ -23,9 +24,10 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
     reviewConstants.HANDLE_ON_PONTER_MOVE,
   )
 
-  const { gl } = useThree()
-  gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 6
+  const textOptions = {
+    size: 0.75,
+    depth: 5,
+  }
 
   return (
     <group
@@ -54,13 +56,67 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
         receiveShadow
         castShadow
       >
-        {/* {data.review && <Text scale={[0.1, 0.1, 0.1]}>&quot;</Text>}
-        <Text scale={[0.1, 0.1, 0.1]}>{data.review}</Text>
-        {data.review && <Text scale={[0.1, 0.1, 0.1]}>&quot;</Text>}
-        <Text scale={[0.1, 0.1, 0.1]}>{data.firstName}</Text>
-        {data.role && (
-          <Text scale={[0.1, 0.1, 0.1]}>{t(`ROLES.${data.role}`)}</Text>
+        {/* {data.review && (
+          <Text
+            position={[1, 2, 1]}
+            scale={[0.1, 0.1, 0.1]}
+            color={'black'}
+          >
+            &quot;
+          </Text>
         )} */}
+        <Center>
+          <Text3D
+            font={fontsConstants.JSON.RUBIK_BLACK}
+            receiveShadow
+            castShadow
+            {...textOptions}
+            position={[0, 0.3, 0.05]}
+            scale={[0.1, 0.1, 0.1]}
+            /* textAlign='justify' */
+            /* maxWidth={7} */
+            /* color={'black'} */
+            /* anchorX='center' */
+            /* anchorY='middle' */
+          >
+            &quot;{data.review}&quot;
+          </Text3D>
+        </Center>
+        <Text
+          position={[0, 0.3, 0.05]}
+          scale={[0.1, 0.1, 0.1]}
+          textAlign='justify'
+          maxWidth={7}
+          color={'black'}
+          anchorX='center'
+          anchorY='middle'
+        >
+          &quot;{data.review}&quot;
+        </Text>
+        <group position={[-0.425 + 0.17 / 2, 0, 0.1]}>
+          {[...Array(5)].map((_, index) => {
+            return <RatingStar position={[0.17 * index, 0, 0]} color={data.rating >= index ? new THREE.Color(0xffd700) : new THREE.Color(0x404040)} />
+          })}
+        </group>
+        <Text
+          position={[0, -0.3, 0]}
+          scale={[0.1, 0.1, 0.1]}
+          maxWidth={7}
+          textAlign={'right'}
+          color={'black'}
+          anchorX='center'
+          anchorY='middle'
+        >
+          {data.firstName}
+        </Text>
+        {data.role && (
+          <Text
+            position={[1, 1, 1]}
+            scale={[0.1, 0.1, 0.1]}
+          >
+            {t(`ROLES.${data.role}`)}
+          </Text>
+        )}
         <meshStandardMaterial
           attach='material'
           color={'white'}

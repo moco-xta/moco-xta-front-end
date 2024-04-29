@@ -84,3 +84,7 @@ export interface PadsInterface {
   colorPadIndex: MutableRefObject<number>
   coordinates: THREE.Vector3
 }
+
+export interface RatingStarInterface extends MeshProps {
+  color: THREE.Color
+}
