@@ -16,7 +16,6 @@ import { isMobile } from 'react-device-detect'
 import Player from '../../controls/Player'
 
 import { Parquet, Trestle } from '../../models/about'
-import ToneMapping from './ToneMapping'
 
 import { default as controlsConstants } from '@/constants/controlsConstants.json'
 import { MacBookPro } from '../../models/about/MacBookPro'
@@ -30,7 +29,7 @@ import { CouronneSquare } from '../../models/about/CouronneSquare'
 import { ButterflySquare } from '../../models/about/ButterflySquare'
 import { CelestialMapSquare } from '../../models/about/CelestialMapSquare'
 
-import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
+import { default as aboutConstants } from '@/constants/canvas/aboutConstants.json'
 
 function AboutScene() {
   const { gl } = useThree()
@@ -187,15 +186,12 @@ export default function AboutCanvas() {
       {!isMobile ? (
         <KeyboardControls map={keyboardControlsMap}>
           <Canvas
-            dpr={heroConstants.CANVAS.DPR}
+            dpr={aboutConstants.CANVAS.DPR}
             shadows
-            legacy={heroConstants.CANVAS.LEGACY}
-            linear
-            flat
             gl={{
-              antialias: heroConstants.CANVAS.GL.ANTIALIAS,
-              alpha: heroConstants.CANVAS.GL.ALPHA,
-              powerPreference: heroConstants.CANVAS.GL.POWER_PREFERENCE,
+              antialias: aboutConstants.CANVAS.GL.ANTIALIAS,
+              alpha: aboutConstants.CANVAS.GL.ALPHA,
+              powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
             }}
           >
             <PerspectiveCamera
@@ -203,6 +199,7 @@ export default function AboutCanvas() {
               aspect={1200 / 600}
               fov={55}
               position={[0, 0, 0]}
+              rotation={[0, THREE.MathUtils.degToRad(180), 0]}
               onUpdate={(self) => self.updateProjectionMatrix()}
             />
             <PointerLockControls /* selector='#button' */ />
@@ -224,15 +221,12 @@ export default function AboutCanvas() {
         <>
           {permissionGranted ? (
             <Canvas
-              dpr={heroConstants.CANVAS.DPR}
+              dpr={aboutConstants.CANVAS.DPR}
               shadows
-              legacy={heroConstants.CANVAS.LEGACY}
-              linear
-              flat
               gl={{
-                antialias: heroConstants.CANVAS.GL.ANTIALIAS,
-                alpha: heroConstants.CANVAS.GL.ALPHA,
-                powerPreference: heroConstants.CANVAS.GL.POWER_PREFERENCE,
+                antialias: aboutConstants.CANVAS.GL.ANTIALIAS,
+                alpha: aboutConstants.CANVAS.GL.ALPHA,
+                powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
               }}
             >
               <PerspectiveCamera
@@ -240,10 +234,7 @@ export default function AboutCanvas() {
                 aspect={1200 / 600}
                 fov={55}
                 position={[0, 13, 0]}
-                rotation={[0, THREE.MathUtils.degToRad(180), 0]}
-                onUpdate={(self) => {
-                  if (!isMobile) self.updateProjectionMatrix()
-                }}
+                rotation={[0, 0, 0]}
               />
               <DeviceOrientationControls />
               <ambientLight intensity={0.5} />
@@ -255,7 +246,6 @@ export default function AboutCanvas() {
               <Suspense fallback={null}>
                 <Physics debug>
                   <AboutScene />
-                  <ToneMapping />
                 </Physics>
               </Suspense>
             </Canvas>

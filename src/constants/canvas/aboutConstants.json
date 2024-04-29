@@ -1,15 +1,12 @@
 {
-  "SCENE": {
-    "CANVAS": {
-      "DPR": 1,
-      "ANTIALIAS": true,
-      "POWER_PREFERENCE": "high-performance",
-      "PRESERVE_DRAWING_BUFFER": true,
-      "TONE_MAPPING_EXPOSURE": 1.5
+  "CANVAS": {
+    "DPR": 1,
+    "LEGACY": true,
+    "GL": {
+      "ANTIALIAS": false,
+      "ALPHA": false,
+      "POWER_PREFERENCE": "high-performance"
     }
-  },
-  "TONE_MAPPING": {
-    "EXPOSURE": 6
   },
   "PARQUET": {
     "REPEAT": 1.2,
