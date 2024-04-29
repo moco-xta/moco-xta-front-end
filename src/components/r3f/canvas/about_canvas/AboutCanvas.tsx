@@ -29,6 +29,7 @@ import { AmorAmorSquare } from '../../models/about/AmorAmorSquare'
 import { CouronneSquare } from '../../models/about/CouronneSquare'
 import { ButterflySquare } from '../../models/about/ButterflySquare'
 import { CelestialMapSquare } from '../../models/about/CelestialMapSquare'
+import ToneMapping from './ToneMapping'
 
 function AboutScene() {
   const { gl } = useThree()
@@ -55,12 +56,12 @@ function AboutScene() {
         rotation={[0, degreesToRadians(180), 0]}
       />
       <Parquet />
-      {/* <RigidBody colliders='hull'>
+      <RigidBody colliders='hull'>
         <Plane
           args={[50, 50, 20, 20]}
           rotation={[degreesToRadians(90), 0, 0]}
         />
-      </RigidBody> */}
+      </RigidBody>
       <SpeakerEnclosure
         position={[9.9, 0, 12.5]}
         rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180))}
@@ -182,47 +183,84 @@ export default function AboutCanvas() {
 
   return (
     <>
-      {permissionGranted ? (
-        <Canvas
-          shadows
-          legacy
-          gl={{
-            antialias: true,
-            alpha: true,
-            powerPreference: 'high-performance',
-            /* shadowMapEnabled: true */
-          }}
-        >
-          <PerspectiveCamera
-            makeDefault
-            aspect={1200 / 600}
-            fov={55}
-            position={[0, 13, 0]}
-            rotation={[0, THREE.MathUtils.degToRad(180), 0]}
-            /* onUpdate={(self) => {
-              if(!isMobile) self.updateProjectionMatrix()
-            }} */
-          />
-          {/* {!isMobile && <PointerLockControls selector='#button' />} */}
-          <DeviceOrientationControls />
-          <ambientLight intensity={0.5} />
-          <pointLight
-            position={[10, 10, 10]}
-            intensity={20}
-            castShadow
-          />
-          <Suspense fallback={null}>
-            {/* <Physics debug>
-              {!isMobile && <Player />} */}
-            <AboutScene />
-            {/* </Physics> */}
-          </Suspense>
-        </Canvas>
+      {!isMobile ? (
+        <KeyboardControls map={keyboardControlsMap}>
+          <Canvas
+            shadows
+            legacy
+            gl={{
+              antialias: true,
+              alpha: true,
+              powerPreference: 'high-performance',
+              /* shadowMapEnabled: true */
+            }}
+          >
+            <PerspectiveCamera
+              makeDefault
+              aspect={1200 / 600}
+              fov={55}
+              position={[0, 0, 0]}
+              onUpdate={(self) => self.updateProjectionMatrix()}
+            />
+            <PointerLockControls selector='#button' />
+            <ambientLight intensity={0.5} />
+            <pointLight
+              position={[10, 10, 10]}
+              intensity={20}
+              castShadow
+            />
+            <Suspense fallback={null}>
+              <Physics debug>
+                <Player />
+                <AboutScene />
+              </Physics>
+            </Suspense>
+          </Canvas>
+        </KeyboardControls>
       ) : (
-        <Accelerometer
-          permissionGranted={permissionGranted}
-          setPermissionGranted={setPermissionGranted}
-        />
+        <>
+          {permissionGranted ? (
+            <Canvas
+              shadows
+              legacy
+              gl={{
+                antialias: true,
+                alpha: true,
+                powerPreference: 'high-performance',
+                /* shadowMapEnabled: true */
+              }}
+            >
+              <PerspectiveCamera
+                makeDefault
+                aspect={1200 / 600}
+                fov={55}
+                position={[0, 13, 0]}
+                rotation={[0, THREE.MathUtils.degToRad(180), 0]}
+                onUpdate={(self) => {
+                  if(!isMobile) self.updateProjectionMatrix()
+                }}
+              />
+              <DeviceOrientationControls />
+              <ambientLight intensity={0.5} />
+              <pointLight
+                position={[10, 10, 10]}
+                intensity={20}
+                castShadow
+              />
+              <Suspense fallback={null}>
+                <Physics debug>
+                  <AboutScene />
+                  <ToneMapping />
+                </Physics>
+              </Suspense>
+            </Canvas>
+          ) : (
+            <Accelerometer
+              permissionGranted={permissionGranted}
+              setPermissionGranted={setPermissionGranted}
+            />
+          )}
+        </>
       )}
     </>
   )
