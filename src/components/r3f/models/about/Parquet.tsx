@@ -14,10 +14,7 @@ export function Parquet() {
   const map = useTextureLoader(texturesConstants.PARQUET_DIFFUSE)
   map.wrapS = THREE.RepeatWrapping
   map.wrapT = THREE.RepeatWrapping
-  map.repeat.set(
-    AboutConstants.PARQUET.REPEAT,
-    AboutConstants.PARQUET.REPEAT,
-  )
+  map.repeat.set(AboutConstants.PARQUET.REPEAT, AboutConstants.PARQUET.REPEAT)
 
   const bumpMap = useTextureLoader(texturesConstants.PARQUET_BUMP)
   bumpMap.wrapS = THREE.RepeatWrapping

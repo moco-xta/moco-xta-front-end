@@ -70,3 +70,8 @@ export interface ScrollDownInterface {
   top: string
   color: string
 }
+
+export interface InstructionsInterface {
+  showInstructions: boolean
+  HandleShowInstructions: () => void
+}

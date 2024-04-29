@@ -19,7 +19,6 @@ import { Parquet, Trestle } from '../../models/about'
 import ToneMapping from './ToneMapping'
 
 import { default as controlsConstants } from '@/constants/controlsConstants.json'
-import { degreesToRadians } from '@/helpers/r3fHelpers'
 import { MacBookPro } from '../../models/about/MacBookPro'
 import { SpeakerEnclosure } from '../../models/about/SpeakerEnclosure'
 import { WorldMap } from '../../models/about/WorldMap'
@@ -55,13 +54,13 @@ function AboutScene() {
       <Trestle position={[6, 0.06, 10]} />
       <Trestle
         position={[-6, 0.06, 10]}
-        rotation={[0, degreesToRadians(180), 0]}
+        rotation={[0, THREE.MathUtils.degToRad(180), 0]}
       />
       <Parquet />
       <RigidBody colliders='hull'>
         <Plane
           args={[50, 50, 20, 20]}
-          rotation={[degreesToRadians(90), 0, 0]}
+          rotation={[THREE.MathUtils.degToRad(90), 0, 0]}
         />
       </RigidBody>
       <SpeakerEnclosure
@@ -206,7 +205,7 @@ export default function AboutCanvas() {
               position={[0, 0, 0]}
               onUpdate={(self) => self.updateProjectionMatrix()}
             />
-            <PointerLockControls selector='#button' />
+            <PointerLockControls /* selector='#button' */ />
             <ambientLight intensity={0.5} />
             <pointLight
               position={[10, 10, 10]}
@@ -243,7 +242,7 @@ export default function AboutCanvas() {
                 position={[0, 13, 0]}
                 rotation={[0, THREE.MathUtils.degToRad(180), 0]}
                 onUpdate={(self) => {
-                  if(!isMobile) self.updateProjectionMatrix()
+                  if (!isMobile) self.updateProjectionMatrix()
                 }}
               />
               <DeviceOrientationControls />

@@ -9,7 +9,7 @@
     }
   },
   "TONE_MAPPING": {
-    "EXPOSURE": 1.5
+    "EXPOSURE": 6
   },
   "PARQUET": {
     "REPEAT": 1.2,
