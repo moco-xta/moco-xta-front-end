@@ -16,6 +16,7 @@ import { isMobile } from 'react-device-detect'
 import Player from '../../controls/Player'
 
 import { Parquet, Trestle } from '../../models/about'
+import ToneMapping from './ToneMapping'
 
 import { default as controlsConstants } from '@/constants/controlsConstants.json'
 import { degreesToRadians } from '@/helpers/r3fHelpers'
@@ -29,7 +30,8 @@ import { AmorAmorSquare } from '../../models/about/AmorAmorSquare'
 import { CouronneSquare } from '../../models/about/CouronneSquare'
 import { ButterflySquare } from '../../models/about/ButterflySquare'
 import { CelestialMapSquare } from '../../models/about/CelestialMapSquare'
-import ToneMapping from './ToneMapping'
+
+import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
 function AboutScene() {
   const { gl } = useThree()
@@ -186,13 +188,15 @@ export default function AboutCanvas() {
       {!isMobile ? (
         <KeyboardControls map={keyboardControlsMap}>
           <Canvas
+            dpr={heroConstants.CANVAS.DPR}
             shadows
-            legacy
+            legacy={heroConstants.CANVAS.LEGACY}
+            linear
+            flat
             gl={{
-              antialias: true,
-              alpha: true,
-              powerPreference: 'high-performance',
-              /* shadowMapEnabled: true */
+              antialias: heroConstants.CANVAS.GL.ANTIALIAS,
+              alpha: heroConstants.CANVAS.GL.ALPHA,
+              powerPreference: heroConstants.CANVAS.GL.POWER_PREFERENCE,
             }}
           >
             <PerspectiveCamera
@@ -221,13 +225,15 @@ export default function AboutCanvas() {
         <>
           {permissionGranted ? (
             <Canvas
+              dpr={heroConstants.CANVAS.DPR}
               shadows
-              legacy
+              legacy={heroConstants.CANVAS.LEGACY}
+              linear
+              flat
               gl={{
-                antialias: true,
-                alpha: true,
-                powerPreference: 'high-performance',
-                /* shadowMapEnabled: true */
+                antialias: heroConstants.CANVAS.GL.ANTIALIAS,
+                alpha: heroConstants.CANVAS.GL.ALPHA,
+                powerPreference: heroConstants.CANVAS.GL.POWER_PREFERENCE,
               }}
             >
               <PerspectiveCamera
