@@ -13,6 +13,7 @@ import AboutScene from './AboutScene'
 
 import { default as controlsConstants } from '@/constants/controlsConstants.json'
 import { default as aboutConstants } from '@/constants/canvas/aboutConstants.json'
+import Lights from './Lights'
 
 export default function AboutDesktopCanvas() {
   const keyboardControlsMap = useMemo(
@@ -49,17 +50,7 @@ export default function AboutDesktopCanvas() {
           onUpdate={(self) => self.updateProjectionMatrix()}
         />
         <PointerLockControls />
-        <ambientLight intensity={0.5} />
-        <pointLight
-          position={[10, 10, 10]}
-          intensity={20}
-          castShadow
-        />
-        <pointLight
-          position={[-10, 10, 10]}
-          intensity={20}
-          castShadow
-        />
+        <Lights />
         <Suspense fallback={null}>
           <Physics debug>
             <Player />
