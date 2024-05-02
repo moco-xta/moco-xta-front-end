@@ -44,7 +44,7 @@ export default function Player() {
       const frontVector = new THREE.Vector3(
         0,
         0,
-        (backward ? 1 : 0) - (forward ? 1 : 0),
+        (backward ? 10 : 0) - (forward ? 10 : 0),
       )
       const sideVector = new THREE.Vector3(
         (left ? 1 : 0) - (right ? 1 : 0),

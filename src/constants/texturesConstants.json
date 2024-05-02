@@ -4,5 +4,10 @@
   "PARQUET_NORMAL": "/img/jpg/textures/parquet_normal.jpg",
   "PARQUET_ROUGHNESS": "/img/jpg/textures/parquet_roughness.jpg",
 
+  "SQUARES": {
+    "BRAIN": "/img/textures/brain/brain.jpg",
+    "TRINITY": "/img/textures/trinity/trinity.jpg"
+  },
+
   "TRESTLE_DIFFUSE": "/img/jpg/textures/tretle_diffuse.jpg"
 }

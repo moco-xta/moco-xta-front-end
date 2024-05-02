@@ -47,7 +47,7 @@
     }
   ],
   "TONE_MAPPING": {
-    "EXPOSURE": 6
+    "EXPOSURE": 3
   },
   "POST_PROCESSING": {
     "DEPTH_OF_FIELD": {
