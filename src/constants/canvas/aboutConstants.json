@@ -8,6 +8,9 @@
       "POWER_PREFERENCE": "high-performance"
     }
   },
+  "TONE_MAPPING": {
+    "EXPOSURE": 3
+  },
   "PARQUET": {
     "REPEAT": 1.2,
     "GREY_GRADIENT": [

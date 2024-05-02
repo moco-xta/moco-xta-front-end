@@ -13,21 +13,22 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "AmorAmorSquare"
+      "name": "TrinityGlass"
     }
   ],
   "meshes": [
     {
-      "name": "AmorAmorSquare",
+      "name": "TrinityGlass",
       "primitives": [
         {
           "attributes": {
             "POSITION": 0,
             "NORMAL": 1,
             "TEXCOORD_0": 2,
-            "TEXCOORD_1": 3
+            "TEXCOORD_1": 3,
+            "COLOR_0": 4
           },
-          "indices": 4
+          "indices": 5
         }
       ]
     }
@@ -36,74 +37,84 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 80,
-      "max": [3.701336145401001, 12.165122985839844, 0.4055044949054718],
-      "min": [
-        -3.800490617752075, -1.430511474609375e-6, -4.6014827148610493e-7
-      ],
+      "count": 4,
+      "max": [-14.653998374938965, 22.39999771118164, -14.40212345123291],
+      "min": [-16.705997467041016, 19.39999771118164, -14.402124404907227],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 80,
+      "count": 4,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 80,
+      "count": 4,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5126,
-      "count": 80,
+      "count": 4,
       "type": "VEC2"
     },
     {
       "bufferView": 4,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
       "componentType": 5123,
-      "count": 120,
+      "count": 6,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 960,
+      "byteLength": 48,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 960,
-      "byteOffset": 960,
+      "byteLength": 48,
+      "byteOffset": 48,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 640,
-      "byteOffset": 1920,
+      "byteLength": 32,
+      "byteOffset": 96,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 640,
-      "byteOffset": 2560,
+      "byteLength": 32,
+      "byteOffset": 128,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 240,
-      "byteOffset": 3200,
+      "byteLength": 48,
+      "byteOffset": 160,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 12,
+      "byteOffset": 208,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 3440,
-      "uri": "AmorAmorSquare.bin"
+      "byteLength": 220,
+      "uri": "TrinityGlass.bin"
     }
   ]
 }

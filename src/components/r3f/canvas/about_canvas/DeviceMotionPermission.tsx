@@ -2,7 +2,10 @@ import React, { useEffect } from 'react'
 
 import { DeviceMotionPermissionInterface } from '@/interfaces/componentsInterfaces'
 
-export default function DeviceMotionPermission({ permissionGranted, setPermissionGranted }: DeviceMotionPermissionInterface) {
+export default function DeviceMotionPermission({
+  permissionGranted,
+  setPermissionGranted,
+}: DeviceMotionPermissionInterface) {
   useEffect(() => {
     // @ts-ignore
     if (typeof DeviceMotionEvent.requestPermission === 'function') {

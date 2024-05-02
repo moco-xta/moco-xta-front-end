@@ -1,9 +1,6 @@
 import React, { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import {
-  DeviceOrientationControls,
-  PerspectiveCamera,
-} from '@react-three/drei'
+import { DeviceOrientationControls, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import AboutScene from './AboutScene'

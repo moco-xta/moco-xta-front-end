@@ -108,7 +108,11 @@
   "GRAPHICS_PACK": "/gltf/skills/GraphicsPack.gltf",
   "GRAPHICS_SKILLS": "/gltf/skills/GraphicsSkills.gltf",
 
-  "AMOR_AMOR_SQUARE": "/gltf/about/AmorAmorSquare.gltf",
+  "AMOR_LLAMA_AMOR": "/gltf/about/AmorLlamaAmor.gltf",
+  "AMOR_LLAMA_AMOR_GLASS": "/gltf/about/AmorLlamaAmorGlass.gltf",
+  "MUR_NORD": "/gltf/about/MurNord.gltf",
+  "TRINITY": "/gltf/about/Trinity.gltf",
+
   "BRAIN_SQUARE": "/gltf/about/BrainSquare.gltf",
   "BUTTERFLY_SQUARE": "/gltf/about/ButterflySquare.gltf",
   "CELESTIAL_MAP_SQUARE": "/gltf/about/CelestialMapSquare.gltf",
@@ -118,7 +122,33 @@
   "MAC_BOOK_PRO": "/gltf/about/MacBookPro.gltf",
   "SPEAKER": "/gltf/about/Speaker.gltf",
   "SPEAKER_ENCLOSURE": "/gltf/about/SpeakerEnclosure.gltf",
-  "TRINITY_SQUARE": "/gltf/about/TrinitySquare.gltf",
   "WOODEN_SHELF": "/gltf/about/WoodenShelf.gltf",
-  "WORLD_MAP": "/gltf/about/WorldMap.gltf"
+  "WORLD_MAP": "/gltf/about/WorldMap.gltf",
+
+  "ABOUT": {
+    "SQUARES": {
+      "AMOR_LLAMA_AMOR": {
+        "GLASS": "/gltf/about/squares/brain/BrainGlass.gltf",
+        "PICTURE": "/gltf/about/squares/amor_llama_amor/AmorLlamaAmor.gltf",
+        "SQUARE": "/gltf/about/squares/amor_llama_amor/AmorLlamaAmorSquare.gltf"
+      },
+      "BRAIN": {
+        "GLASS": "/gltf/about/squares/brain/BrainGlass.gltf",
+        "PICTURE": "/gltf/about/squares/brain/Brain.gltf",
+        "SQUARE": "/gltf/about/squares/brain/BrainSquare.gltf"
+      },
+      "BUTTERFLY": {
+        "BACKGROUND": "/gltf/about/squares/butterfly/ButterflyBackground.gltf",
+        "GLASS": "/gltf/about/squares/butterfly/ButterflyGlass.gltf",
+        "PICTURE": "/gltf/about/squares/butterfly/Butterfly.gltf",
+        "SQUARE": "/gltf/about/squares/butterfly/ButterflySquare.gltf"
+      },
+      "COURONNES": "/gltf/about/squares/couronnes/Couronnes.gltf",
+      "TRINITY": {
+        "GLASS": "/gltf/about/squares/trinity/TrinityGlass.gltf",
+        "PICTURE": "/gltf/about/squares/trinity/Trinity.gltf",
+        "SQUARE": "/gltf/about/squares/trinity/TrinitySquare.gltf"
+      }
+    }
+  }
 }
