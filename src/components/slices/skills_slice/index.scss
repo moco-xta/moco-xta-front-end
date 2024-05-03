@@ -1,11 +1,8 @@
 #skills_slice {
-  position: absolute;
+  position: relative;
   width: 100vw;
-  padding: 100px;
-  background-color: black;
-
-  .skills_block {
-    display: flex;
-    flex-direction: row;
-  }
+  height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
 }

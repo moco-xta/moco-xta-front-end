@@ -4,6 +4,7 @@ import {
   CompanyOrSchollDataInterface,
   IntroductionCardDataInterface,
   ProjectDataInterface,
+  SkillsCategoryInterface,
 } from '@/interfaces/dataInterfaces'
 
 export interface AuthenticationComponentsInterface {
@@ -18,6 +19,11 @@ export interface SignUpSignInInterface {
 export interface IntroductionCardsInterface {
   data: IntroductionCardDataInterface[]
   type: string
+}
+
+export interface SkillsSectionInterface {
+  category: string
+  content: SkillsCategoryInterface
 }
 
 export interface LastProjectsCardInterface {

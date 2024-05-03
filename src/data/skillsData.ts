@@ -1,62 +1,261 @@
-import { ForwardRefExoticComponent, RefAttributes, lazy } from 'react'
-import * as THREE from 'three'
-import { GroupProps } from '@react-three/fiber'
-import pointer from 'json-pointer'
+import { SkillsDataInterface } from '@/interfaces/dataInterfaces'
 
-import { SkillsLogoInterface } from '@/interfaces/dataInterfaces'
-import { SkillsLogoJsonInterface } from '@/interfaces/constantsInterfaces'
+import { default as imgConstants } from '@/constants/imgConstants.json'
 
-import { default as skillsConstants } from '@/constants/skillsConstants.json'
-
-import { degreesToRadians } from '@/helpers/r3fHelpers'
-
-interface ComponentsInterface {
-  [key: string]: ForwardRefExoticComponent<
-    Omit<GroupProps, 'ref'> & RefAttributes<THREE.Group<THREE.Object3DEventMap>>
-  >
+export const skillsData: SkillsDataInterface = {
+  graphics: {
+    pictures: [
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_PHOTOSHOP,
+          alt: 'logo_photoshop',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_ILLUSTRATOR,
+          alt: 'logo_illustrator',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_BLENDER,
+          alt: 'logo_blender',
+        },
+      ],
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_CSS,
+          alt: 'logo_css',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_SASS,
+          alt: 'logo_sass',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_TAILWIND,
+          alt: 'logo_tailwind',
+        },
+      ],
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_GSAP,
+          alt: 'logo_gsap',
+        },
+      ],
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_THREEJS,
+          alt: 'logo_threejs',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_REACT_THREE_DREI,
+          alt: 'logo_react_three_drei',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_BABYLONJS,
+          alt: 'logo_babylonjs',
+        },
+      ],
+    ],
+    titleKey: 'GRAPHICS.TITLE',
+    descriptionKey: 'GRAPHICS.DESCRIPTION',
+    backgroundColor: '#d9ed92',
+  },
+  frontEnd: {
+    pictures: [
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_REACT,
+          alt: 'logo_react',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_NEXTJS,
+          alt: 'logo_nextjs',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_ANGULAR,
+          alt: 'logo_angular',
+        },
+      ],
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_REACT_NATIVE,
+          alt: 'logo_react_native',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_IONIC,
+          alt: 'logo_ionic',
+        },
+      ],
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_NPM,
+          alt: 'logo_npm',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_YARN,
+          alt: 'logo_yarn',
+        },
+      ],
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_HTML,
+          alt: 'logo_html',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_JAVASCRIPT,
+          alt: 'logo_javascript',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_TYPESCRIPT,
+          alt: 'logo_typescript',
+        },
+      ],
+    ],
+    titleKey: 'FRONT_END.TITLE',
+    descriptionKey: 'FRONT_END.DESCRIPTION',
+    backgroundColor: '#b5e48c',
+  },
+  frontEndLibrairies: {
+    pictures: [
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_FORMIK,
+          alt: 'logo_formik',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_GOOGLE_MAPS,
+          alt: 'logo_google_maps',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_GRAPHQL,
+          alt: 'logo_graphql',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_MUI,
+          alt: 'logo_mui',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_NEXT_INTL,
+          alt: 'logo_next_intl',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_REDUX,
+          alt: 'logo_redux',
+        },
+      ],
+    ],
+    titleKey: 'FRONT_END_LIBRAIRIES.TITLE',
+    descriptionKey: 'FRONT_END_LIBRAIRIES.DESCRIPTION',
+    backgroundColor: '#99d98c',
+  },
+  backEnd: {
+    pictures: [
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_SPRING,
+          alt: 'logo_spring',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_DJANGO,
+          alt: 'logo_django',
+        },
+      ],
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_JAVA,
+          alt: 'logo_java',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_PYTHON,
+          alt: 'logo_python',
+        },
+      ],
+    ],
+    titleKey: 'BACK_END.TITLE',
+    descriptionKey: 'BACK_END.DESCRIPTION',
+    backgroundColor: '#76c893',
+  },
+  database: {
+    pictures: [
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_POSTGRESQL,
+          alt: 'logo_postgresql',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_MYSQL,
+          alt: 'logo_mysql',
+        },
+      ],
+    ],
+    titleKey: 'DATABASE.TITLE',
+    descriptionKey: 'DATABASE.DESCRIPTION',
+    backgroundColor: '#52b69a',
+  },
+  devOps: {
+    pictures: [
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_AWS,
+          alt: 'logo_aws',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_HOSTINGER,
+          alt: 'logo_hostinger',
+        },
+      ],
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_DOCKER,
+          alt: 'logo_docker',
+        },
+      ],
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_NGINX,
+          alt: 'logo_nginx',
+        },
+      ],
+    ],
+    titleKey: 'DEV_OPS.TITLE',
+    descriptionKey: 'DEV_OPS.DESCRIPTION',
+    backgroundColor: '#34a0a4',
+  },
+  tools: {
+    pictures: [
+      [
+        {
+          src: imgConstants.SKILLS.LOGO_POSTMAN,
+          alt: 'logo_postman',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_GITHUB,
+          alt: 'logo_github',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_FIGMA,
+          alt: 'logo_figma',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_GOOGLE_ANALYTICS,
+          alt: 'logo_google_analytics',
+        },
+        {
+          src: imgConstants.SKILLS.LOGO_CHAT_GPT,
+          alt: 'logo_chat_gpt',
+        },
+      ],
+    ],
+    titleKey: 'TOOLS.TITLE',
+    descriptionKey: 'TOOLS.DESCRIPTION',
+    backgroundColor: '#168aad',
+  },
 }
 
-const components = Array.from(skillsConstants.LOGOS.DATA).reduce(
-  (object: ComponentsInterface, logo) => {
-    const Component = lazy(
-      () =>
-        new Promise((resolve, reject) => {
-          import(`../components/r3f/models/logos/${logo.COMPONENT}`)
-            .then((result) =>
-              resolve(result.default ? result : { default: result }),
-            )
-            .catch(reject)
-        }),
-    )
-    object[logo.COMPONENT] = Component
-    return object
-  },
-  {},
-)
 
-export const skillsData: SkillsLogoInterface[] = Array.from(
-  skillsConstants.LOGOS.DATA,
-).map((logo: SkillsLogoJsonInterface) => {
-  return {
-    name: logo.NAME,
-    category: pointer(skillsConstants, logo.CATEGORY),
-    component: components[logo.COMPONENT],
-    geometry: {
-      position: new THREE.Vector3(
-        logo.GEOMETRY.POSITION.X,
-        logo.GEOMETRY.POSITION.Z,
-        logo.GEOMETRY.POSITION.Y,
-      ),
-      rotation: new THREE.Euler(
-        degreesToRadians(logo.GEOMETRY.ROTATION.X),
-        degreesToRadians(logo.GEOMETRY.ROTATION.Z),
-        degreesToRadians(logo.GEOMETRY.ROTATION.Y),
-      ),
-      scale: new THREE.Vector3(
-        logo.GEOMETRY.SCALE.X,
-        logo.GEOMETRY.SCALE.Z,
-        logo.GEOMETRY.SCALE.Y,
-      ),
-    },
-  }
-})
+
+/* const sections = [
+  { backgroundColor: '#f72585' },
+  { backgroundColor: '#7209b7' },
+  { backgroundColor: '#480ca8' },
+  { backgroundColor: '#3f37c9' },
+  { backgroundColor: '#4895ef' },
+] */

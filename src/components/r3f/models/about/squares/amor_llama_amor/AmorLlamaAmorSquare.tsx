@@ -14,7 +14,9 @@ type GLTFResult = GLTF & {
   }
 }
 
-export default function AmorLlamaAmorSquare(props: JSX.IntrinsicElements['mesh']) {
+export default function AmorLlamaAmorSquare(
+  props: JSX.IntrinsicElements['mesh'],
+) {
   const { nodes, materials } = useGLTF(
     gltfConstants.ABOUT.SQUARES.AMOR_LLAMA_AMOR.SQUARE,
   ) as GLTFResult
