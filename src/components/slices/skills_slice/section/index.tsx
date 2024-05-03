@@ -20,7 +20,7 @@ export function SkillsSection({ category, content }: SkillsSectionInterface) {
             <div
               key={`logo_pictures_wrapper_${category}_${index}`}
               className='logo_pictures_wrapper'
-              style={{ marginTop: `${200 * index}px` }}
+              style={{ marginTop: `${150 * index}px` }}
             >
               {picture_group.map((picture) => {
                 return (
@@ -28,8 +28,8 @@ export function SkillsSection({ category, content }: SkillsSectionInterface) {
                     key={picture.alt}
                     className={'logo_picture'}
                     src={picture.src}
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={300}
                     alt={picture.alt}
                   />
                 )
