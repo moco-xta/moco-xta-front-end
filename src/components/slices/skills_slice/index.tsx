@@ -1,52 +1,27 @@
 'use client'
 
-import React, {
-  ReactNode,
-  forwardRef,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import React from 'react'
+
+import { skillsData } from '@/data/skillsData'
+
+import { SkillsSection } from './section'
 
 import './index.scss'
 
-const sections = [
-  { backgroundColor: '#f72585' },
-  { backgroundColor: '#7209b7' },
-  { backgroundColor: '#480ca8' },
-  { backgroundColor: '#3f37c9' },
-  { backgroundColor: '#4895ef' },
-]
- 
-interface SectionInterface {
-  index: number
-  backgroundColor: string
-}
-
-function Section({ index, backgroundColor }: SectionInterface) {
-  return (
-    <section
-      style={{ backgroundColor: backgroundColor }}
-    >
-      Section {index}
-    </section>
-  )
-}
-
 export default function SkillsSlice() {
-
   return (
     <div id='skills_slice'>
-      {sections.map((section, index) => {
-        return (
-          <Section
-            key={`skills_section_${index}`}
-            index={index}
-            backgroundColor={section.backgroundColor}
-          />
-        )
-      })}
+      {Object.entries(skillsData).map(
+        ([category_key, category_values], index) => {
+          return (
+            <SkillsSection
+              key={`skills_section_${category_key}`}
+              category={category_key}
+              content={category_values}
+            />
+          )
+        },
+      )}
     </div>
   )
 }

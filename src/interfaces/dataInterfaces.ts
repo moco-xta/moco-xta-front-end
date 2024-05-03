@@ -27,6 +27,22 @@ export interface IntroductionCardDataInterface {
   }
 }
 
+interface ImageInterface {
+  src: string
+  alt: string
+}
+
+export interface SkillsCategoryInterface {
+  pictures: ImageInterface[][]
+  titleKey: string
+  descriptionKey: string
+  backgroundColor: string
+}
+
+export interface SkillsDataInterface {
+  [key: string]: SkillsCategoryInterface
+}
+
 interface ProjectsLogoInterface {
   component: ForwardRefExoticComponent<
     Omit<GroupProps, 'ref'> & RefAttributes<ForwardRefGltfGroupInterface>

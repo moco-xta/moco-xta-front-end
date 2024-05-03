@@ -24,6 +24,7 @@
       "@/components/*": ["components/*"],
       "@/constants/*": ["constants/*"],
       "@/data/*": ["data/*"],
+      "@/fonts/*": ["fonts/*"],
       "@/helpers/*": ["helpers/*"],
       "@/hooks/*": ["hooks/*"],
       "@/interfaces/*": ["interfaces/*"],
