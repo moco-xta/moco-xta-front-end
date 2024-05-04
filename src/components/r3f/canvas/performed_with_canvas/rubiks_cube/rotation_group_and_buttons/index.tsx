@@ -5,7 +5,7 @@ import { RotationGroupInterface } from '@/interfaces/r3fInterfaces'
 
 import { Button } from '@/components/r3f/models/rubiks_cube/Button'
 
-import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 import {
   handleBackCCW,

@@ -21,7 +21,7 @@ import './index.scss'
 
 export default function SignIn({
   setIsSignIn,
-  setAuthenticationIsOpen,
+  handleSetAuthenticationIsOpen,
 }: SignUpSignInInterface) {
   const t = useTranslations()
 
@@ -35,10 +35,6 @@ export default function SignIn({
   const initialValues: SignInPayloadInterface = {
     email: '',
     password: '',
-  }
-
-  function handleCloseAuthentication() {
-    setAuthenticationIsOpen(false)
   }
 
   return (
@@ -56,7 +52,7 @@ export default function SignIn({
               resetForm({ values: initialValues })
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
-              handleCloseAuthentication()
+              handleSetAuthenticationIsOpen()
               return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
             },
             error: (response) => {
@@ -66,14 +62,12 @@ export default function SignIn({
           })
         }}
       >
-        {/* TODO: fix it */}
         {/* @ts-ignore */}
         <SignInForm
           submitButtonIsDisabled={submitButtonIsDisabled}
           setIsSignIn={setIsSignIn}
         />
       </Formik>
-      <button onClick={handleCloseAuthentication}>Close</button>
     </div>
   )
 }

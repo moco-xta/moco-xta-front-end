@@ -1,7 +1,7 @@
 import { ComponentType, lazy } from 'react'
 import { MeshProps } from '@react-three/fiber'
 
-import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 type LazyPadType = React.LazyExoticComponent<ComponentType<MeshProps>>
 

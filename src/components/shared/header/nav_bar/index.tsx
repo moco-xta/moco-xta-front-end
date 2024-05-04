@@ -1,13 +1,11 @@
 'use client'
 
-import React, { forwardRef, useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
-
-import useIsDesktop from '@/hooks/useIsDesktop'
 
 import HamburgerMenu from '@/components/buttons/hamburger_menu'
 import LocaleSwitcher from '@/components/shared/header/locale_switcher'
@@ -16,34 +14,30 @@ import AuthenticationButton from '@/components/buttons/authentication_button'
 
 import './index.scss'
 
-export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
+export function NavBar() {
   const t = useTranslations('ROUTES')
+
   const pathname = usePathname()
-
-  const { isDesktop } = useIsDesktop()
-
-  window.scrollTo(0, 0)
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
 
   function handleSetMenuIsOpen() {
     setMenuIsOpen(!menuIsOpen)
+    setAuthenticationIsOpen(false)
+  }
+
+  function handleSetAuthenticationIsOpen() {
+    setAuthenticationIsOpen(false)
   }
 
   return (
     <>
       <div
-        ref={ref}
         id='nav_wrapper'
         className={`${menuIsOpen ? 'open' : ''}`}
       >
-        <nav
-          style={{
-            marginTop: pathname === '/' && isDesktop ? '20px' : '0px',
-            marginRight: pathname === '/' && isDesktop ? '20px' : '0px',
-          }}
-        >
+        <nav>
           <ul>
             {Routes.filter((route) => route.hasOwnProperty('index'))
               // @ts-ignore
@@ -53,10 +47,6 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
                   <li
                     key={`navBarLink_${route.key}`}
                     className='li_nav'
-                    style={{
-                      marginRight:
-                        pathname === '/' && isDesktop ? '20px' : '0px',
-                    }}
                   >
                     <span
                       className='span_link_wrapper'
@@ -74,17 +64,19 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
                   </li>
                 )
               })}
-            <LocaleSwitcher />
             <AuthenticationButton
               setAuthenticationIsOpen={setAuthenticationIsOpen}
+              setMenuIsOpen={setMenuIsOpen}
             />
+            <LocaleSwitcher />
           </ul>
         </nav>
       </div>
-      <HamburgerMenu handleSetMenuIsOpen={handleSetMenuIsOpen} />
-      {authenticationIsOpen && (
-        <Authentication setAuthenticationIsOpen={setAuthenticationIsOpen} />
-      )}
+      <HamburgerMenu menuIsOpen={menuIsOpen} handleSetMenuIsOpen={handleSetMenuIsOpen} />
+      <Authentication
+        authenticationIsOpen={authenticationIsOpen}
+        handleSetAuthenticationIsOpen={handleSetAuthenticationIsOpen}
+      />
     </>
   )
-})
+}

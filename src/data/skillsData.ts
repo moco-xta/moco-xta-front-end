@@ -250,8 +250,6 @@ export const skillsData: SkillsDataInterface = {
   },
 }
 
-
-
 /* const sections = [
   { backgroundColor: '#f72585' },
   { backgroundColor: '#7209b7' },

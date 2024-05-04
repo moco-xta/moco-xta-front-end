@@ -16,6 +16,19 @@
     },
     "FOV": 55
   },
+  "POST_PROCESSING": {
+    "DEPTH_OF_FIELD": {
+      "FOCUS_DISTANCE": 0.003,
+      "FOCAL_LENGTH": 0.0025,
+      "BOKEH_SCALE": 5
+    },
+    "BLOOM": {
+      "INTENSITY": 1,
+      "LUMINANCE_THRESHOLD": 0.9,
+      "LUMINANCE_SMOOTHING": 0.025,
+      "MIPMAP_BLUR": false
+    }
+  },
   "LIGHTS": [
     {
       "TYPE": "pointLight",

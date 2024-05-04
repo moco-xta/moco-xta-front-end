@@ -8,12 +8,13 @@ import {
 } from '@/interfaces/dataInterfaces'
 
 export interface AuthenticationComponentsInterface {
-  setAuthenticationIsOpen: (value: boolean) => void
+  authenticationIsOpen: boolean
+  handleSetAuthenticationIsOpen: () => void
 }
 
 export interface SignUpSignInInterface {
   setIsSignIn: (value: boolean) => void
-  setAuthenticationIsOpen: (value: boolean) => void
+  handleSetAuthenticationIsOpen: () => void
 }
 
 export interface IntroductionCardsInterface {

@@ -2,9 +2,8 @@
 
 #nav_wrapper {
   nav {
-    transition:
-      margin-top 0.5s,
-      margin-right 0.5s;
+    margin-top: 20px;
+    margin-right: 20px;
 
     ul li {
       padding: 0px;
@@ -15,7 +14,7 @@
     }
 
     .li_nav {
-      transition: margin-right 0.5s;
+      margin-right: 20px;
 
       .span_link_wrapper,
       a {
@@ -43,14 +42,10 @@
         visibility: hidden;
       }
     }
-
-    #authentication_icon {
-      cursor: pointer;
-    }
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: $desktop_limit) {
   #nav_wrapper {
     z-index: 9;
     position: fixed;
@@ -77,6 +72,10 @@
         flex-direction: column;
         align-items: center;
 
+        .li_nav {
+          margin-right: 0px;
+        }
+
         .span_link_wrapper {
           padding: 0 0;
 
@@ -87,10 +86,6 @@
         }
       }
     }
-  }
-
-  #authentication_icon {
-    padding: 0;
   }
 
   #nav_wrapper.open {

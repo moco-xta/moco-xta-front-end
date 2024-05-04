@@ -1,9 +1,7 @@
-import React, { CSSProperties, useEffect, useState } from 'react'
-import { usePathname, useRouter } from 'next/navigation'
+import React, { CSSProperties, useEffect, useRef, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { TiArrowSortedUp } from 'react-icons/ti'
-
-import useIsDesktop from '@/hooks/useIsDesktop'
 
 import { default as LocalesConstants } from '@/constants/localesConstants.json'
 
@@ -13,11 +11,11 @@ import './index.scss'
 
 export default function LocaleSwitcher() {
   const t = useTranslations('HEADER')
+
   const locale = useLocale()
   const router = useRouter()
-  const pathname = usePathname()
 
-  const { isDesktop } = useIsDesktop()
+  const dropdown = useRef<HTMLLIElement>(null)
 
   const [isActive, setIsActive] = useState(false)
   const [selected, setSelected] = useState('en')
@@ -37,9 +35,22 @@ export default function LocaleSwitcher() {
     router.refresh()
   }
 
+  useEffect(() => {
+    if (!isActive) return
+    function handleClick(e: Event) {
+      // @ts-ignore
+      if (dropdown.current && !dropdown.current.contains(e.target)) {
+        setIsActive(false)
+      }
+    }
+    window.addEventListener('click', handleClick)
+    return () => window.removeEventListener('click', handleClick)
+  }, [isActive])
+
   return (
     <li
       id='dropdown'
+      ref={dropdown}
       className={`li_nav ${isActive ? 'active' : ''}`}
       onClick={handleSetIsActive}
     >
@@ -58,9 +69,10 @@ export default function LocaleSwitcher() {
           id='options'
           className='flex_column'
         >
-          {LocalesConstants.LOCALES.filter(
-            (locale_constant) => locale_constant !== locale,
-          )
+          {LocalesConstants.LOCALES
+            .filter(
+              (locale_constant) => locale_constant !== locale,
+            )
             .sort((a, b) =>
               t(`LOCALES.${a.toUpperCase()}`).localeCompare(
                 t(`LOCALES.${b.toUpperCase()}`),
