@@ -45,7 +45,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: $desktop_limit) {
   #nav_wrapper {
     z-index: 9;
     position: fixed;
@@ -71,6 +71,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .li_nav {
+          margin-right: 0px;
+        }
 
         .span_link_wrapper {
           padding: 0 0;

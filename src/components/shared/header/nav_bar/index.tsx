@@ -64,11 +64,11 @@ export function NavBar() {
                   </li>
                 )
               })}
-            <LocaleSwitcher />
             <AuthenticationButton
               setAuthenticationIsOpen={setAuthenticationIsOpen}
               setMenuIsOpen={setMenuIsOpen}
             />
+            <LocaleSwitcher />
           </ul>
         </nav>
       </div>
