@@ -21,7 +21,7 @@ import './index.scss'
 
 export default function SignUp({
   setIsSignIn,
-  setAuthenticationIsOpen,
+  handleSetAuthenticationIsOpen,
 }: SignUpSignInInterface) {
   const t = useTranslations()
 
@@ -38,10 +38,6 @@ export default function SignUp({
     email: '',
     password: '',
     confirmPassword: '',
-  }
-
-  function handleCloseAuthentication() {
-    setAuthenticationIsOpen(false)
   }
 
   return (
@@ -66,7 +62,7 @@ export default function SignUp({
               resetForm({ values: initialValues })
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
-              handleCloseAuthentication()
+              handleSetAuthenticationIsOpen()
               return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
             },
             error: (response) => {
