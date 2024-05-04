@@ -1,4 +1,4 @@
-import React, { CSSProperties, useEffect, useState } from 'react'
+import React, { CSSProperties, useEffect, useRef, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { TiArrowSortedUp } from 'react-icons/ti'
@@ -15,9 +15,8 @@ export default function LocaleSwitcher() {
   const t = useTranslations('HEADER')
   const locale = useLocale()
   const router = useRouter()
-  const pathname = usePathname()
 
-  const { isDesktop } = useIsDesktop()
+  const dropdown = useRef<HTMLLIElement>(null)
 
   const [isActive, setIsActive] = useState(false)
   const [selected, setSelected] = useState('en')
@@ -37,9 +36,22 @@ export default function LocaleSwitcher() {
     router.refresh()
   }
 
+  useEffect(() => {
+    if (!isActive) return
+    function handleClick(e: Event) {
+      // @ts-ignore
+      if (dropdown.current && !dropdown.current.contains(e.target)) {
+        setIsActive(false)
+      }
+    }
+    window.addEventListener('click', handleClick)
+    return () => window.removeEventListener('click', handleClick)
+  }, [isActive])
+
   return (
     <li
       id='dropdown'
+      ref={dropdown}
       className={`li_nav ${isActive ? 'active' : ''}`}
       onClick={handleSetIsActive}
     >
