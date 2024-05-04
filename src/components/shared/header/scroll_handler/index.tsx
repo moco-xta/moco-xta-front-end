@@ -15,7 +15,7 @@ function ScrollHandler({ navWrapperRef }: ScrollHandlerInterface) {
     const nav = navWrapperRef.current.querySelector('nav')
     // @ts-ignore
     const lis_nav = navWrapperRef.current.querySelectorAll('.li_nav')
-    if (y < 100 && pathname === '/') {
+    if (y < 100 /* && pathname === '/' */) {
       nav!.style.marginTop = '20px'
       nav!.style.marginRight = '20px'
       lis_nav.forEach((li_nav) => {

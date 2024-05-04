@@ -22,7 +22,7 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
 
   const { isDesktop } = useIsDesktop()
 
-  window.scrollTo(0, 0)
+  /* window.scrollTo(0, 0) */
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
@@ -40,8 +40,8 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
       >
         <nav
           style={{
-            marginTop: pathname === '/' && isDesktop ? '20px' : '0px',
-            marginRight: pathname === '/' && isDesktop ? '20px' : '0px',
+            marginTop: /* pathname === '/' && */ isDesktop ? '20px' : '0px',
+            marginRight: /* pathname === '/' && */ isDesktop ? '20px' : '0px',
           }}
         >
           <ul>

@@ -40,7 +40,9 @@ export function SkillsSection({ category, content }: SkillsSectionInterface) {
       </div>
       <div className='skills_description_and_title'>
         <p className='skills_description'>{t(content.descriptionKey)}</p>
-        <div className={`${MontserratBlack.className} skills_title`}>{t(content.titleKey)}</div>
+        <div className={`${MontserratBlack.className} skills_title`}>
+          {t(content.titleKey)}
+        </div>
       </div>
     </section>
   )

@@ -10,7 +10,7 @@ import Controls from './controls'
 import PostProcessing from './post_processing'
 import { ToneMapping } from './tone_mapping'
 
-import { default as rubiksCubeConstants } from '@/constants/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 export default function PerformedWithCanvas() {
   return (
