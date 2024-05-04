@@ -5,7 +5,7 @@
   margin-left: 20px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: $desktop_limit) {
   #hamburger_menu_icon {
     z-index: 10;
     display: block;

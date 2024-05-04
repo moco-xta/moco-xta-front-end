@@ -7,8 +7,6 @@ import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
 
-import useIsDesktop from '@/hooks/useIsDesktop'
-
 import HamburgerMenu from '@/components/buttons/hamburger_menu'
 import LocaleSwitcher from '@/components/shared/header/locale_switcher'
 import Authentication from '@/components/shared/authentication'
@@ -16,7 +14,7 @@ import AuthenticationButton from '@/components/buttons/authentication_button'
 
 import './index.scss'
 
-export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
+export function NavBar() {
   const t = useTranslations('ROUTES')
 
   const pathname = usePathname()
@@ -31,7 +29,6 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
   return (
     <>
       <div
-        ref={ref}
         id='nav_wrapper'
         className={`${menuIsOpen ? 'open' : ''}`}
       >
@@ -75,4 +72,4 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
       )}
     </>
   )
-})
+}

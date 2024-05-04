@@ -66,7 +66,6 @@ export default function SignIn({
           })
         }}
       >
-        {/* TODO: fix it */}
         {/* @ts-ignore */}
         <SignInForm
           submitButtonIsDisabled={submitButtonIsDisabled}

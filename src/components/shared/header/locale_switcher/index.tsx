@@ -1,9 +1,7 @@
 import React, { CSSProperties, useEffect, useRef, useState } from 'react'
-import { usePathname, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { TiArrowSortedUp } from 'react-icons/ti'
-
-import useIsDesktop from '@/hooks/useIsDesktop'
 
 import { default as LocalesConstants } from '@/constants/localesConstants.json'
 
@@ -13,6 +11,7 @@ import './index.scss'
 
 export default function LocaleSwitcher() {
   const t = useTranslations('HEADER')
+  
   const locale = useLocale()
   const router = useRouter()
 

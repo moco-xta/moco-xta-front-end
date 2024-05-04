@@ -90,6 +90,8 @@ $gradient_text_rgba_100percent: rgba(4, 151, 202, 1);
 
 $background_dark: #01000f;
 
+$desktop_limit: 1200px;
+
 :export {
   black: $black;
   grey_01: $grey_01;
@@ -153,4 +155,6 @@ $background_dark: #01000f;
   gradient_text_rgba_100percent: $gradient_text_rgba_100percent;
 
   background_dark: $background_dark;
+
+  desktop_limit: $desktop_limit;
 }
