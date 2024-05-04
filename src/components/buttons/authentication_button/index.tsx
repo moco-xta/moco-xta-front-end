@@ -16,6 +16,7 @@ import './index.scss'
 
 export default function AuthenticationButton({
   setAuthenticationIsOpen,
+  setMenuIsOpen,
 }: AuthenticationButtonInterface) {
   const t = useTranslations('ROUTES')
 
@@ -29,6 +30,7 @@ export default function AuthenticationButton({
 
   function handleAuthenticationIsOpen() {
     setAuthenticationIsOpen(true)
+    setMenuIsOpen(false)
   }
 
   function handleLogOut() {

@@ -11,7 +11,7 @@ import './index.scss'
 
 export default function LocaleSwitcher() {
   const t = useTranslations('HEADER')
-  
+
   const locale = useLocale()
   const router = useRouter()
 

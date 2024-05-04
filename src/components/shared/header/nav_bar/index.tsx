@@ -1,6 +1,6 @@
 'use client'
 
-import React, { forwardRef, useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
@@ -24,6 +24,11 @@ export function NavBar() {
 
   function handleSetMenuIsOpen() {
     setMenuIsOpen(!menuIsOpen)
+    setAuthenticationIsOpen(false)
+  }
+
+  function handleSetAuthenticationIsOpen() {
+    setAuthenticationIsOpen(false)
   }
 
   return (
@@ -62,14 +67,16 @@ export function NavBar() {
             <LocaleSwitcher />
             <AuthenticationButton
               setAuthenticationIsOpen={setAuthenticationIsOpen}
+              setMenuIsOpen={setMenuIsOpen}
             />
           </ul>
         </nav>
       </div>
-      <HamburgerMenu handleSetMenuIsOpen={handleSetMenuIsOpen} />
-      {authenticationIsOpen && (
-        <Authentication setAuthenticationIsOpen={setAuthenticationIsOpen} />
-      )}
+      <HamburgerMenu menuIsOpen={menuIsOpen} handleSetMenuIsOpen={handleSetMenuIsOpen} />
+      <Authentication
+        authenticationIsOpen={authenticationIsOpen}
+        handleSetAuthenticationIsOpen={handleSetAuthenticationIsOpen}
+      />
     </>
   )
 }

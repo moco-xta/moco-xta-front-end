@@ -5,21 +5,23 @@ import { HamburgerMenuInterface } from '@/interfaces/buttonsInterfaces'
 import './index.scss'
 
 export default function HamburgerMenu({
+  menuIsOpen,
   handleSetMenuIsOpen,
 }: HamburgerMenuInterface) {
   return (
     <div id='hamburger_menu_icon'>
       <input
         type='checkbox'
-        id='burger_input'
-        className='burger_input'
+        id='hamburger_menu_input'
+        className='hamburger_menu_input'
+        checked={menuIsOpen}
         onClick={handleSetMenuIsOpen}
       />
       <label
-        htmlFor='burger_input'
-        className='burger_label'
+        htmlFor='hamburger_menu_input'
+        className='hamburger_menu_label'
       >
-        <span className='burger_line' />
+        <span className='hamburger_menu_line' />
       </label>
     </div>
   )

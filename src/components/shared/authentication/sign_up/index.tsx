@@ -83,7 +83,6 @@ export default function SignUp({
           setIsSignIn={setIsSignIn}
         />
       </Formik>
-      <button onClick={handleCloseAuthentication}>Close</button>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { AddReviewValuesInterface } from './reduxApiInterfaces'
 
 export interface AuthenticationButtonInterface {
   setAuthenticationIsOpen: (value: boolean) => void
+  setMenuIsOpen: (value: boolean) => void
 }
 
 export interface InternalLinkInterface {
@@ -17,7 +18,12 @@ export interface ExternalLinkinterface {
 }
 
 export interface HamburgerMenuInterface {
+  menuIsOpen: boolean
   handleSetMenuIsOpen: () => void
+}
+
+export interface ClosingArrowInterface {
+  handleSetAuthenticationIsOpen: () => void
 }
 
 export interface SubmitButtonInterface {
