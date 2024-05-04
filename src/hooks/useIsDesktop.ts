@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
+import { isMobile } from 'react-device-detect'
 
 export default function useIsDesktop() {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 700)
+  const [isDesktop, setDesktop] = useState(!isMobile || window.innerWidth > 1200)
 
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 700)
+    setDesktop(!isMobile || window.innerWidth > 1200)
   }
 
   useEffect(() => {

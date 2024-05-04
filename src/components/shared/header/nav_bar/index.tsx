@@ -18,11 +18,8 @@ import './index.scss'
 
 export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
   const t = useTranslations('ROUTES')
+
   const pathname = usePathname()
-
-  const { isDesktop } = useIsDesktop()
-
-  /* window.scrollTo(0, 0) */
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
@@ -38,12 +35,7 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
         id='nav_wrapper'
         className={`${menuIsOpen ? 'open' : ''}`}
       >
-        <nav
-          style={{
-            marginTop: /* pathname === '/' && */ isDesktop ? '20px' : '0px',
-            marginRight: /* pathname === '/' && */ isDesktop ? '20px' : '0px',
-          }}
-        >
+        <nav>
           <ul>
             {Routes.filter((route) => route.hasOwnProperty('index'))
               // @ts-ignore
@@ -53,10 +45,6 @@ export const NavBar = forwardRef<HTMLDivElement, {}>(function NavBar(_, ref) {
                   <li
                     key={`navBarLink_${route.key}`}
                     className='li_nav'
-                    style={{
-                      marginRight:
-                        pathname === '/' && isDesktop ? '20px' : '0px',
-                    }}
                   >
                     <span
                       className='span_link_wrapper'
