@@ -1,19 +1,19 @@
-#logo {
+#logo_container {
   margin-top: 20px;
   margin-left: 20px;
 
-  #logo_test {
+  #logo {
     width: 109px;
     height: 70px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  #logo {
+  #logo_container {
     margin-top: 0;
     margin-left: 0;
 
-    #logo_test {
+    #logo {
       width: 55px;
       height: 35px;
     }
