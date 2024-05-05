@@ -12,6 +12,7 @@ export default function CleffyScene() {
       <group rotation={new THREE.Euler(0, 0, THREE.MathUtils.degToRad(0))}>
         {[...Array(5)].map((_, index) => (
           <StringElement
+            key={`first_string_${index}`}
             position={new THREE.Vector3(0, -2.4 * index - 7, 0)}
             rotation={
               new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index), 0)
@@ -23,6 +24,7 @@ export default function CleffyScene() {
       <group rotation={new THREE.Euler(0, 0, THREE.MathUtils.degToRad(-30))}>
         {[...Array(5)].map((_, index) => (
           <StringElement
+            key={`second_string_${index}`}
             position={new THREE.Vector3(0, -2.4 * index - 7, 0)}
             rotation={
               new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index), 0)
