@@ -1,35 +1,36 @@
 import React from 'react'
 import Image from 'next/image'
 import localFont from 'next/font/local'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { SkillsSectionInterface } from '@/interfaces/componentsInterfaces'
 
-import './index.scss'
+import { default as skillsConstants } from '@/constants/skillsConstants.json'
 
+import './index.scss'
 const MontserratBlack = localFont({ src: './Montserrat-Black.otf' })
 
-export function SkillsSection({ category, content }: SkillsSectionInterface) {
+export function SkillsSection({ index, category, content }: SkillsSectionInterface) {
   const t = useTranslations('SKILLS.CATEGORIES')
 
+  const locale = useLocale()
+
   return (
-    <section style={{ backgroundColor: content.backgroundColor }}>
+    <section style={{ backgroundColor: skillsConstants.BACKGROUND_COLORS[index] }}>
       <div className='logo_pictures_wrapper_container'>
         {content.pictures.map((picture_group, index) => {
           return (
             <div
               key={`logo_pictures_wrapper_${category}_${index}`}
               className='logo_pictures_wrapper'
-              style={{ marginTop: `${150 * index}px` }}
+              style={{ marginTop: `${10 * index}vw` }}
             >
               {picture_group.map((picture) => {
                 return (
-                  <Image
+                  <img
                     key={picture.alt}
                     className={'logo_picture'}
                     src={picture.src}
-                    width={300}
-                    height={300}
                     alt={picture.alt}
                   />
                 )
@@ -39,9 +40,16 @@ export function SkillsSection({ category, content }: SkillsSectionInterface) {
         })}
       </div>
       <div className='skills_description_and_title'>
-        <p className='skills_description'>{t(content.descriptionKey)}</p>
-        <div className={`${MontserratBlack.className} skills_title`}>
-          {t(content.titleKey)}
+        <p className='skills_description'>
+          {t(`${content.categoryKey}.DESCRIPTION`)}
+        </p>
+        <div
+          className={`${MontserratBlack.className} skills_title`}
+          style={{
+            fontSize: `${content.titleFontSizes && content.titleFontSizes[locale] ? content.titleFontSizes[locale] : 15}vw`,
+          }}
+        >
+          {t(`${content.categoryKey}.TITLE`)}
         </div>
       </div>
     </section>

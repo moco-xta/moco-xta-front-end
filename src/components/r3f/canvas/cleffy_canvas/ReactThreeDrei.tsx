@@ -16,16 +16,18 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function ReactThreeDrei({
-  position,
-}: ReactThreeDreiInterface) {
+export function ReactThreeDrei({ position }: ReactThreeDreiInterface) {
   const { nodes } = useGLTF(GltfConstants.CLEFFY.REACT_THREE_DREI) as GLTFResult
 
   const rigidBodyRef = useRef<RapierRigidBody>(null)
 
   function applyImpulse(e: any) {
     console.log('e', e)
-    if(rigidBodyRef.current) rigidBodyRef.current.applyImpulse({ x: -e.normal.x * 100, y: -e.normal.y * 100, z: -e.normal.z * 100 }, true)
+    if (rigidBodyRef.current)
+      rigidBodyRef.current.applyImpulse(
+        { x: -e.normal.x * 100, y: -e.normal.y * 100, z: -e.normal.z * 100 },
+        true,
+      )
   }
 
   return (
@@ -41,7 +43,7 @@ export function ReactThreeDrei({
         onClick={applyImpulse}
       >
         <meshStandardMaterial
-          color={0xF10055}
+          color={0xf10055}
           metalness={1}
           roughness={1}
         />

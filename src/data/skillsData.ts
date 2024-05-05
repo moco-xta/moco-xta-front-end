@@ -54,9 +54,7 @@ export const skillsData: SkillsDataInterface = {
         },
       ],
     ],
-    titleKey: 'GRAPHICS.TITLE',
-    descriptionKey: 'GRAPHICS.DESCRIPTION',
-    backgroundColor: '#d9ed92',
+    categoryKey: 'GRAPHICS',
   },
   frontEnd: {
     pictures: [
@@ -109,9 +107,7 @@ export const skillsData: SkillsDataInterface = {
         },
       ],
     ],
-    titleKey: 'FRONT_END.TITLE',
-    descriptionKey: 'FRONT_END.DESCRIPTION',
-    backgroundColor: '#b5e48c',
+    categoryKey: 'FRONT_END',
   },
   frontEndLibrairies: {
     pictures: [
@@ -142,9 +138,12 @@ export const skillsData: SkillsDataInterface = {
         },
       ],
     ],
-    titleKey: 'FRONT_END_LIBRAIRIES.TITLE',
-    descriptionKey: 'FRONT_END_LIBRAIRIES.DESCRIPTION',
-    backgroundColor: '#99d98c',
+    categoryKey: 'FRONT_END_LIBRAIRIES',
+    titleFontSizes: {
+      en: 12,
+      es: 10,
+      fr: 12,
+    },
   },
   backEnd: {
     pictures: [
@@ -169,9 +168,7 @@ export const skillsData: SkillsDataInterface = {
         },
       ],
     ],
-    titleKey: 'BACK_END.TITLE',
-    descriptionKey: 'BACK_END.DESCRIPTION',
-    backgroundColor: '#76c893',
+    categoryKey: 'BACK_END',
   },
   database: {
     pictures: [
@@ -186,9 +183,11 @@ export const skillsData: SkillsDataInterface = {
         },
       ],
     ],
-    titleKey: 'DATABASE.TITLE',
-    descriptionKey: 'DATABASE.DESCRIPTION',
-    backgroundColor: '#52b69a',
+    categoryKey: 'DATABASE',
+    titleFontSizes: {
+      es: 13,
+      fr: 12,
+    },
   },
   devOps: {
     pictures: [
@@ -215,9 +214,7 @@ export const skillsData: SkillsDataInterface = {
         },
       ],
     ],
-    titleKey: 'DEV_OPS.TITLE',
-    descriptionKey: 'DEV_OPS.DESCRIPTION',
-    backgroundColor: '#34a0a4',
+    categoryKey: 'DEV_OPS',
   },
   tools: {
     pictures: [
@@ -244,16 +241,9 @@ export const skillsData: SkillsDataInterface = {
         },
       ],
     ],
-    titleKey: 'TOOLS.TITLE',
-    descriptionKey: 'TOOLS.DESCRIPTION',
-    backgroundColor: '#168aad',
+    categoryKey: 'TOOLS',
+    titleFontSizes: {
+      es: 11,
+    },
   },
 }
-
-/* const sections = [
-  { backgroundColor: '#f72585' },
-  { backgroundColor: '#7209b7' },
-  { backgroundColor: '#480ca8' },
-  { backgroundColor: '#3f37c9' },
-  { backgroundColor: '#4895ef' },
-] */

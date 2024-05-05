@@ -23,6 +23,7 @@ export interface IntroductionCardsInterface {
 }
 
 export interface SkillsSectionInterface {
+  index: number
   category: string
   content: SkillsCategoryInterface
 }

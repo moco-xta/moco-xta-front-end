@@ -12,7 +12,9 @@ section {
     top: 50px;
 
     .logo_picture {
-      margin-right: -80px;
+      width: 20vw;
+      height: 20vw;
+      margin-right: -8vw;
     }
   }
 
@@ -24,10 +26,6 @@ section {
     .skills_description {
       width: 30%;
       text-align: justify;
-    }
-
-    .skills_title {
-      font-size: 15rem;
     }
   }
 }
