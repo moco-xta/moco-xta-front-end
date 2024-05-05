@@ -1,9 +1,9 @@
-import { ComponentType, lazy } from 'react'
+import { ComponentType, LazyExoticComponent, lazy } from 'react'
 import { MeshProps } from '@react-three/fiber'
 
 import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
-type LazyPadType = React.LazyExoticComponent<ComponentType<MeshProps>>
+type LazyPadType = LazyExoticComponent<ComponentType<MeshProps>>
 
 const loadComponent = (component: string): LazyPadType =>
   lazy(
@@ -26,8 +26,6 @@ const padsComponents: Record<string, LazyPadType> = Array.from(
   },
   {} as Record<string, LazyPadType>,
 )
-
-console.log(padsComponents)
 
 interface PadDataInterface {
   name: string

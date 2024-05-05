@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function Ring({
-  rigidBodyType,
-}: RingInterface) {
+export function Ring({ rigidBodyType }: RingInterface) {
   const { nodes } = useGLTF(GltfConstants.CLEFFY.RING) as GLTFResult
 
   return (

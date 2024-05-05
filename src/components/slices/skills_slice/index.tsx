@@ -16,6 +16,7 @@ export default function SkillsSlice() {
           return (
             <SkillsSection
               key={`skills_section_${category_key}`}
+              index={index}
               category={category_key}
               content={category_values}
             />

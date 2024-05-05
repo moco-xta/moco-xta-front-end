@@ -34,9 +34,10 @@ interface ImageInterface {
 
 export interface SkillsCategoryInterface {
   pictures: ImageInterface[][]
-  titleKey: string
-  descriptionKey: string
-  backgroundColor: string
+  categoryKey: string
+  titleFontSizes?: {
+    [key: string]: number
+  }
 }
 
 export interface SkillsDataInterface {
