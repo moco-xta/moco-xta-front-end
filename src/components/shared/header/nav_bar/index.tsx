@@ -72,7 +72,10 @@ export function NavBar() {
           </ul>
         </nav>
       </div>
-      <HamburgerMenu menuIsOpen={menuIsOpen} handleSetMenuIsOpen={handleSetMenuIsOpen} />
+      <HamburgerMenu
+        menuIsOpen={menuIsOpen}
+        handleSetMenuIsOpen={handleSetMenuIsOpen}
+      />
       <Authentication
         authenticationIsOpen={authenticationIsOpen}
         handleSetAuthenticationIsOpen={handleSetAuthenticationIsOpen}

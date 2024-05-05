@@ -150,5 +150,11 @@
         "SQUARE": "/gltf/about/squares/trinity/TrinitySquare.gltf"
       }
     }
+  },
+
+  "CLEFFY": {
+    "REACT_THREE_DREI": "/gltf/cleffy/ReactThreeDrei.gltf",
+    "RING": "/gltf/cleffy/Ring.gltf",
+    "STRING_ELEMENT": "/gltf/cleffy/StringElement.gltf"
   }
 }

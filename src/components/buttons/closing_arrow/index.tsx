@@ -7,7 +7,6 @@ import './index.scss'
 export default function ClosingArrow({
   handleSetAuthenticationIsOpen,
 }: ClosingArrowInterface) {
-
   return (
     <div id='closing_arrow_icon'>
       <input

@@ -57,12 +57,16 @@
     transform: translateY(6px);
   }
 
-  .closing_arrow_input:checked + .closing_arrow_label .closing_arrow_line::before {
+  .closing_arrow_input:checked
+    + .closing_arrow_label
+    .closing_arrow_line::before {
     width: 60%;
     transform: translateX(13px) translateY(0px) rotate(30deg);
   }
 
-  .closing_arrow_input:checked + .closing_arrow_label .closing_arrow_line::after {
+  .closing_arrow_input:checked
+    + .closing_arrow_label
+    .closing_arrow_line::after {
     width: 60%;
     transform: translateX(13px) translateY(-4px) rotate(-30deg);
   }

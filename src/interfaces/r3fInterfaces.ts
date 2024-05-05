@@ -88,3 +88,16 @@ export interface PadsInterface {
 export interface RatingStarInterface extends MeshProps {
   color: THREE.Color
 }
+
+export interface ReactThreeDreiInterface {
+  position: THREE.Vector3
+}
+
+export interface RingInterface {
+  rigidBodyType: 'fixed'
+}
+
+export interface StringElementInterface {
+  position: THREE.Vector3
+  rotation: THREE.Euler
+}

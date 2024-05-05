@@ -19,7 +19,9 @@ export default function Authentication({
       id='authentication'
       className={`${authenticationIsOpen ? 'open' : ''}`}
     >
-      <ClosingArrow handleSetAuthenticationIsOpen={handleSetAuthenticationIsOpen} />
+      <ClosingArrow
+        handleSetAuthenticationIsOpen={handleSetAuthenticationIsOpen}
+      />
       <div id='authentication_forms_container'>
         {isSignIn ? (
           <SignIn

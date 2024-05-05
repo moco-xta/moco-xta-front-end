@@ -69,10 +69,9 @@ export default function LocaleSwitcher() {
           id='options'
           className='flex_column'
         >
-          {LocalesConstants.LOCALES
-            .filter(
-              (locale_constant) => locale_constant !== locale,
-            )
+          {LocalesConstants.LOCALES.filter(
+            (locale_constant) => locale_constant !== locale,
+          )
             .sort((a, b) =>
               t(`LOCALES.${a.toUpperCase()}`).localeCompare(
                 t(`LOCALES.${b.toUpperCase()}`),
