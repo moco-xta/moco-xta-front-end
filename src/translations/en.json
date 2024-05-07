@@ -8,6 +8,7 @@
   },
   "HOME": {
     "HERO": {
+      "FRONT_END_DEVELOPER": "Front-End \n Developer",
       "CREATIVE_DEVELOPER": {
         "CREATIVE": "Creative",
         "DEVELOPER": "Developer"
@@ -47,7 +48,8 @@
       "SEE_ALL_REVIEWS": "See all reviews"
     },
     "PERFORMED_WITH": {
-      "PERFORMED_WITH": "Performed with:"
+      "TITLE": "Performed with:",
+      "TEXT": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
   },
   "SKILLS": {

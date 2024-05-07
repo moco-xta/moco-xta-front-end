@@ -9,17 +9,19 @@ type GLTFResult = GLTF & {
     Smiley: THREE.Mesh
   }
   materials: {
-    ['Material.001']: THREE.MeshStandardMaterial
+    ['smiley']: THREE.MeshStandardMaterial
   }
 }
 
 export function Smiley({ position, rotation }: JSX.IntrinsicElements['mesh']) {
   const { nodes, materials } = useGLTF(GltfConstants.SMILEY) as GLTFResult
 
+  materials.smiley.envMapIntensity = 1.5
+
   return (
     <mesh
       geometry={nodes.Smiley.geometry}
-      material={materials['Material.001']}
+      material={materials['smiley']}
     />
   )
 }

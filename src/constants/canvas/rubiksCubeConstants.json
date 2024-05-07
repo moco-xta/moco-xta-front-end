@@ -32,7 +32,7 @@
   "LIGHTS": [
     {
       "TYPE": "pointLight",
-      "INTENSITY": 40,
+      "INTENSITY": 50,
       "POSITIONS": [
         {
           "X": 5,

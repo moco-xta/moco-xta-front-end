@@ -18,8 +18,8 @@ export default function Home() {
         <HeroSlice />
         {/* <CleffySlice /> */}
         <IntroductionSlice />
-        <LastProjectsSlice />
-        <LastReviewsSlice />
+        {/* <LastProjectsSlice /> */}
+        {/* <LastReviewsSlice /> */}
         <PerformedWithSlice />
         <Footer />
       </div>

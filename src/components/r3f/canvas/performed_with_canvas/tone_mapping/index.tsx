@@ -4,7 +4,7 @@ import { useThree } from '@react-three/fiber'
 export function ToneMapping() {
   const { gl } = useThree()
   gl.toneMapping = THREE.ACESFilmicToneMapping
-  gl.toneMappingExposure = 6
+  gl.toneMappingExposure = 10
 
   return null
 }

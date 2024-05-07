@@ -153,6 +153,7 @@
   },
 
   "CLEFFY": {
+    "NEXTJS": "/gltf/cleffy/Nextjs.gltf",
     "REACT_THREE_DREI": "/gltf/cleffy/ReactThreeDrei.gltf",
     "RING": "/gltf/cleffy/Ring.gltf",
     "STRING_ELEMENT": "/gltf/cleffy/StringElement.gltf"

@@ -19,8 +19,17 @@ export default function Footer() {
 
   return (
     <footer>
-      <div id='links_and_contact_container'>
-        <div id='links_container'>
+    {/* <div id='footer_logo_container'>
+      <Image
+        id='footer_logo'
+        src='/img/png/moco_logo_turquoise_h300.png'
+        width={466}
+        height={300}
+        alt='Logo footer'
+      />
+    </div> */}
+      {/* <div id='links_and_contact_container'> */}
+        {/* <div id='links_container'> */}
           {/* {Routes.filter((route) => route.hasOwnProperty('index'))
             // @ts-ignore
             .sort((a, b) => a.index - b.index)
@@ -34,17 +43,8 @@ export default function Footer() {
                 {t(route.key)}
               </Link>
             ))} */}
-        </div>
-        <div id='contact_and_logo_container'>
-          <div id='footer_logo_container'>
-            <Image
-              id='footer_logo'
-              src='/img/png/moco_logo_turquoise_h300.png'
-              width={466}
-              height={300}
-              alt='Logo footer'
-            />
-          </div>
+        {/* </div> */}
+        {/* <div id='contact_and_logo_container'>
           <div className='contact_container'>
             <p>+33 6 35 67 87 75</p>
             <CiMobile1
@@ -81,8 +81,8 @@ export default function Footer() {
               size={30}
             />
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
       <div id='copyright_container'>
         <p id='copyright'>
           © Copyright 2024 Federico Desmoulin - All rights reserved

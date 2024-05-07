@@ -11,7 +11,7 @@
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
       "IS_NOT_MOBILE": {
-        "X": -0.08,
+        "X": -0.04,
         "Y": 0,
         "Z": 3
       },
@@ -28,9 +28,9 @@
   },
   "POST_PROCESSING": {
     "DEPTH_OF_FIELD": {
-      "FOCUS_DISTANCE": 0.15,
-      "FOCUS_LENGTH": 0.25,
-      "BOKEH_SCALE": 1
+      "FOCUS_DISTANCE": 0.03,
+      "FOCAL_LENGTH": 0.025,
+      "BOKEH_SCALE": 5
     },
     "BLOOM": {
       "INTENSITY": 2.5,

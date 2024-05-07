@@ -2,6 +2,8 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import { heliumMaterial } from '../../materials/heliumMaterial'
+
 import { default as GltfConstants } from '@/constants/gltfConstants.json'
 
 type GLTFResult = GLTF & {
@@ -22,13 +24,8 @@ export function OHeliumBalloon({
       position={position}
       rotation={rotation}
       geometry={nodes.OHeliumBalloon.geometry}
-    >
-      <meshStandardMaterial
-        color={0x888888}
-        metalness={1}
-        roughness={0.2}
-      />
-    </mesh>
+      material={heliumMaterial}
+    />
   )
 }
 

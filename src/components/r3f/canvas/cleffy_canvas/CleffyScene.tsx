@@ -4,6 +4,7 @@ import * as THREE from 'three'
 import { ReactThreeDrei } from './ReactThreeDrei'
 import { Ring } from '../../models/cleffy/Ring'
 import { StringElement } from '../../models/cleffy/StringElement'
+import { Nextjs } from './Nextjs'
 
 export default function CleffyScene() {
   return (
@@ -15,11 +16,11 @@ export default function CleffyScene() {
             key={`first_string_${index}`}
             position={new THREE.Vector3(0, -2.4 * index - 7, 0)}
             rotation={
-              new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index), 0)
+              new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index + 90), 0)
             }
           />
         ))}
-        <ReactThreeDrei position={new THREE.Vector3(0, -26.92, 0)} />
+        <ReactThreeDrei position={new THREE.Vector3(0, -27, 0)} />
       </group>
       <group rotation={new THREE.Euler(0, 0, THREE.MathUtils.degToRad(-30))}>
         {[...Array(5)].map((_, index) => (
@@ -27,10 +28,11 @@ export default function CleffyScene() {
             key={`second_string_${index}`}
             position={new THREE.Vector3(0, -2.4 * index - 7, 0)}
             rotation={
-              new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index), 0)
+              new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index + 90), 0)
             }
           />
         ))}
+        <Nextjs position={new THREE.Vector3(0, -27, 0)} />
       </group>
     </group>
   )
