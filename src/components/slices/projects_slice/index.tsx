@@ -84,7 +84,7 @@ export default function ProjectsSlice() {
       <section id='project_slice'>
         {projectsData.map((project, index) => {
           return (
-            <div className={`transition ${index === currentProject ? 'intersecting' : 'not_intersecting'} project_card`}>
+            <div key={`project_card_${index}`} className={`transition ${index === currentProject ? 'intersecting' : 'not_intersecting'} project_card`}>
               Project {index}
             </div>
           )
