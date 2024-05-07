@@ -25,7 +25,7 @@ export default function PostProcessing() {
         focusDistance={
           heroConstants.POST_PROCESSING.DEPTH_OF_FIELD.FOCUS_DISTANCE
         }
-        focalLength={heroConstants.POST_PROCESSING.DEPTH_OF_FIELD.FOCUS_LENGTH}
+        focalLength={heroConstants.POST_PROCESSING.DEPTH_OF_FIELD.FOCAL_LENGTH}
         bokehScale={heroConstants.POST_PROCESSING.DEPTH_OF_FIELD.BOKEH_SCALE}
       />
     </EffectComposer>
