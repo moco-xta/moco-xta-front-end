@@ -5,13 +5,15 @@ footer {
   position: relative;
   width: 100vw;
   height: 70vh;
-  padding: 100px;
+  /* padding: 100px 100px 0 100px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #eff87a;
-  background-image: url('/img/png/moco_logo_perspective_footer_noise.png');
-  background-size: cover;
+  background-color: #F2A6CF;
+  background-image: url('/img/png/footer/moco_logo_perspective_normal_noise.png');
+  background-size: contain;
+  background-position: 15%;
+  background-repeat: no-repeat;
 
   #links_and_contact_container {
     width: 100%;
@@ -78,10 +80,21 @@ footer {
     }
   }
 
-  #copyright_container {
+  /* #copyright_container {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    color: $grey_03;
+    align-items: flex-end;
+    color: $white;
+  } */
+
+  #copyright_container {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    color: $white;
   }
 }

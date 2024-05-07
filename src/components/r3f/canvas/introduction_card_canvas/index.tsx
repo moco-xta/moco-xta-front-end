@@ -42,7 +42,7 @@ export default function IntroductionCardCanvas({
       <Suspense fallback={null}>
         <Card content={content} />
         <ToneMapping />
-        <BloomEffect />
+        {/* <BloomEffect /> */}
       </Suspense>
     </Canvas>
   )

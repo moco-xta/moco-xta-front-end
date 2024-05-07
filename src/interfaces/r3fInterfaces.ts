@@ -18,6 +18,7 @@ export interface ForwardRefGltfGroupInterface extends THREE.Group {
 
 interface LightsByCategoryInterface {
   TYPE: string
+  COLOR?: string
   INTENSITY: number
   POSITIONS: CoordinatesInterface[]
 }

@@ -45,7 +45,7 @@ export default function CleffyCanvas() {
       <Suspense>
         <Physics
           /* debug */
-          gravity={[0, -1, 0]}
+          gravity={[0, -0.5, 0]}
         >
           <CleffyScene />
           <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />

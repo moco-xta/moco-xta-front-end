@@ -41,14 +41,14 @@ export default function HeroCanvas() {
       <PerspectiveCamera
         makeDefault
         position={[
-          heroConstants.PERSPECTIVE_CAMERA.POSITION[dimensionsType].X,
-          heroConstants.PERSPECTIVE_CAMERA.POSITION[dimensionsType].Y,
-          heroConstants.PERSPECTIVE_CAMERA.POSITION[dimensionsType].Z,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.X,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Y,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Z,
         ]}
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      <OrbitControls />
-      <ambientLight />
+      {/* <OrbitControls /> */}
+      <ambientLight intensity={2} />
       <Suspense>
         <Physics
           /* debug */

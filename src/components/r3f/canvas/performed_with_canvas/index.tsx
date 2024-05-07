@@ -42,8 +42,8 @@ export default function PerformedWithCanvas() {
       />
       <Suspense>
         <RubiksCube />
-        <ToneMapping />
         <PostProcessing />
+        <ToneMapping />
       </Suspense>
     </Canvas>
   )

@@ -6,6 +6,7 @@ import Image from 'next/image'
 import HeadText from './head_text'
 import HeroCanvas from '@/components/r3f/canvas/hero_canvas/HeroCanvas'
 import ScrollDown from '@/components/shared/scroll_down'
+import FrontEndDeveloper from './front_end_developer'
 
 import { default as imgConstants } from '@/constants/imgConstants.json'
 
@@ -15,7 +16,8 @@ import './index.scss'
 export default function HeroSlice() {
   return (
     <section id='hero_slice'>
-      <HeadText />
+      {/* <HeadText /> */}
+      <FrontEndDeveloper />
       <div id='hero_canvas_container'>
         <HeroCanvas />
       </div>
@@ -26,11 +28,11 @@ export default function HeroSlice() {
           height={imgConstants.HERO.ARIES.DIMENSIONS.HEIGHT}
           alt='Aries'
         />
-        <ScrollDown
-          top={'85vh'}
-          color={variables.white}
-        />
       </> */}
+      <ScrollDown
+        top={'85vh'}
+        color={variables.white}
+      />
     </section>
   )
 }

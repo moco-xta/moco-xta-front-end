@@ -3,21 +3,34 @@
 #performed_with_slice {
   z-index: 1;
   position: relative;
-  height: 100vh;
+  height: 70vh;
   padding-top: 100px;
   display: flex;
   flex-direction: row;
-  background-color: $background_black;
+  background-color: #BDC1DB;
 
   #performed_with_text_block {
-    /* position: relative; */
-    width: 30vw;
+    height: 100%;
     padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #performed_with_title {
+      width: 30vw;
+      margin-bottom: 50px;
+    }
+
+    #performed_with_text {
+      width: 30vw;
+      text-align: justify;
+    }
   }
 
   #perform_with_canvas_container {
     /* position: absolute; */
-    width: 70vw;
+    width: 80vw;
     height: 100vh;
+    margin-top: -300px;
   }
 }
