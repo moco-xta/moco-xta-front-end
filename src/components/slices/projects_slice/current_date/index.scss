@@ -1,6 +1,8 @@
 #current_date_container {
+  position: absolute;
   width: 30%;
   height: 100%;
+  right: 0;
   padding-right: 50px;
   display: flex;
   flex-direction: column;

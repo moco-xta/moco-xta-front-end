@@ -29,7 +29,11 @@ export default function ProjectsSlice() {
     currentDate,
   } = useProjectsTimeline(projectsData, companiesAndSchollData)
 
-  const projectsRefs = useMemo(
+  useEffect(() => {
+    console.log('currentProject', currentProject)
+  }, [currentProject])
+
+  /* const projectsRefs = useMemo(
     () =>
       projectsData.map(() => ({
         ref: createRef<HTMLDivElement>(),
@@ -73,12 +77,19 @@ export default function ProjectsSlice() {
       }
     })
     // eslint-disable-next-line
-  }, [currentCompanyOrSchool, companiesAndSchoolRefs])
+  }, [currentCompanyOrSchool, companiesAndSchoolRefs]) */
 
   return (
     <div id='project_timeline_container'>
       <section id='project_slice'>
-        <CompaniesOrSchoolContainer
+        {projectsData.map((project, index) => {
+          return (
+            <div className={`transition ${index === currentProject ? 'intersecting' : 'not_intersecting'} project_card`}>
+              Project {index}
+            </div>
+          )
+        })}
+        {/* <CompaniesOrSchoolContainer
           companiesAndSchoolRefs={companiesAndSchoolRefs}
           companiesAndSchollData={companiesAndSchollData}
           currentCompanyOrSchool={currentCompanyOrSchool}
@@ -87,7 +98,7 @@ export default function ProjectsSlice() {
           projectsRefs={projectsRefs}
           projectsData={projectsData}
           currentProject={currentProject}
-        />
+        /> */}
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
         <ScrollDown
           top={'65vh'}
