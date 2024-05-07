@@ -5,5 +5,5 @@ export const heliumMaterial = new THREE.MeshPhysicalMaterial({
   metalness: 1,
   roughness: 0.2,
   reflectivity: 10,
-  envMapIntensity: 1.2
+  envMapIntensity: 1.2,
 })

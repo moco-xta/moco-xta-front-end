@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer>
-    {/* <div id='footer_logo_container'>
+      {/* <div id='footer_logo_container'>
       <Image
         id='footer_logo'
         src='/img/png/moco_logo_turquoise_h300.png'
@@ -29,8 +29,8 @@ export default function Footer() {
       />
     </div> */}
       {/* <div id='links_and_contact_container'> */}
-        {/* <div id='links_container'> */}
-          {/* {Routes.filter((route) => route.hasOwnProperty('index'))
+      {/* <div id='links_container'> */}
+      {/* {Routes.filter((route) => route.hasOwnProperty('index'))
             // @ts-ignore
             .sort((a, b) => a.index - b.index)
             .map((route) => (
@@ -43,8 +43,8 @@ export default function Footer() {
                 {t(route.key)}
               </Link>
             ))} */}
-        {/* </div> */}
-        {/* <div id='contact_and_logo_container'>
+      {/* </div> */}
+      {/* <div id='contact_and_logo_container'>
           <div className='contact_container'>
             <p>+33 6 35 67 87 75</p>
             <CiMobile1

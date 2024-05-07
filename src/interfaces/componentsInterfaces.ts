@@ -33,13 +33,11 @@ export interface LastProjectsCardInterface {
 }
 
 export interface ProjectsContainerInterface {
-  projectsRefs: { ref: RefObject<HTMLDivElement> }[]
   projectsData: ProjectDataInterface[]
   currentProject: number
 }
 
 export interface CompagniesAndSchoolContainerInterface {
-  companiesAndSchoolRefs: { ref: RefObject<HTMLDivElement> }[]
   companiesAndSchollData: CompanyOrSchollDataInterface[]
   currentCompanyOrSchool: number
 }
