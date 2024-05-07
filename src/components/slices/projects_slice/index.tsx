@@ -10,8 +10,8 @@ import useProjectsTimeline from '@/hooks/useProjectsTimeline'
 import { isValidDate } from '@/helpers/dateHelpers'
 
 import CurrentDate from './current_date'
-import ProjectsCards from './project_cards'
-import CompanyOrSchoolCards from './company_or_school_cards'
+import ProjectsCards from './projects_container'
+import CompanyOrSchoolCards from './companies_or_school_container'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
 import ScrollDown from '../../shared/scroll_down'
 
@@ -19,8 +19,11 @@ import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function ProjectsSlice() {
-  const { currentProject, currentCompanyOrSchool, currentDate } =
-    useProjectsTimeline(projectsData, companiesAndSchollData)
+  const {
+    currentProject,
+    currentCompanyOrSchool,
+    currentDate,
+  } = useProjectsTimeline(projectsData, companiesAndSchollData)
 
   return (
     <div id='project_timeline_container'>
