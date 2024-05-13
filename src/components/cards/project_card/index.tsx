@@ -1,11 +1,11 @@
 import React from 'react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 
 import { ProjectCardInterface } from '@/interfaces/r3fInterfaces'
 
 import './index.scss'
-import Image from 'next/image'
 
 export default function ProjectCard({
   index,
@@ -20,24 +20,25 @@ export default function ProjectCard({
       className={`transition ${index === currentProject ? 'intersecting_project' : 'not_intersecting_project'} project_card`}
       style={{ backgroundColor: projectData.backgroundColor.card }}
     >
-      <a
-        className='project_name_and_external_link_container'
-        href={projectData.url}
-        target='_blank'
-      >
-        <h2>{projectData.name}</h2>
-        <FaExternalLinkAlt className='external_link_icon' />
-      </a>
       <div>
+        <a
+          className='project_name_and_external_link_container'
+          href={projectData.url}
+          target='_blank'
+        >
+          <h2>{projectData.name}</h2>
+          <FaExternalLinkAlt className='external_link_icon' />
+        </a>
         <Image
+          className='project_image'
           src={projectData.image}
           width={619}
           height={400}
           alt={`${projectData.key}_image`}
         />
-      </div>
-      <div className='project_description'>
-        {t(projectData.descriptionsKey)}
+        <div className='project_description'>
+          {t(projectData.descriptionsKey)}
+        </div>
       </div>
       <div className='tools_container'>
         {projectData.tools.map((ToolLogo, index) => (
