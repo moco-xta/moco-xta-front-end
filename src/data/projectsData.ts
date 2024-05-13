@@ -1,6 +1,7 @@
 import { FaReact } from 'react-icons/fa'
 import { FaAngular } from 'react-icons/fa'
 import { SiDjango } from 'react-icons/si'
+import { SiSpring } from "react-icons/si";
 
 import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
@@ -11,80 +12,102 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'moco_xta',
     name: 'Moco.xta',
     url: 'https://lento.eu/en',
-    logoUrl: imgConstants.PROJECTS.LOGO_MOKO_XTA,
-    descriptionsKey: {
-      lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.LENTO',
-      project: 'CARDS.DESCRIPTIONS.LENTO',
-    },
-    picture: {
-      deskstop: '/img/jpg/projects/1200x756/lento_home_screenshot.jpg',
-      mobile: '/img/jpg/projects/360x227/lento_home_screenshot.jpg',
-    },
+    image: '/img/jpg/projects/moco_xta.jpg',
+    descriptionsKey: 'DESCRIPTIONS.LENTO',
     dates: {
       to: '2024-04-07',
       from: '2024-01-01',
     },
     roles: ['Real-time 3D', 'Full Stack'],
     tools: [FaReact, SiDjango],
+    backgroundColor: {
+      page: '#fc799d',
+      card: '#5b9ff6'
+    }
   },
   {
     key: 'abwerkt',
     name: 'AB Werkt',
     url: 'https://www.ab-werkt.eu/home',
-    logoUrl: imgConstants.PROJECTS.LOGO_ABWERKT,
-    descriptionsKey: {
-      lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
-      project: 'CARDS.DESCRIPTIONS.ABWERKT',
-    },
-    picture: {
-      deskstop: '/img/jpg/projects/1200x756/abwerkt_home_screenshot.jpg',
-      mobile: '/img/jpg/projects/360x227/abwerkt_home_screenshot.jpg',
-    },
+    image: '/img/jpg/projects/openclassrooms.jpg',
+    descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
       to: '2023-11-31',
       from: '2023-03-01',
     },
     roles: ['Front End'],
     tools: [FaReact, FaAngular, SiDjango],
+    backgroundColor: {
+      page: '#aec700',
+      card: '#076865'
+    }
   },
   {
     key: 'lento',
     name: 'Lento.eu',
     url: 'https://lento.eu/en',
-    logoUrl: imgConstants.PROJECTS.LOGO_LENTO,
-    descriptionsKey: {
-      lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
-      project: 'CARDS.DESCRIPTIONS.ABWERKT',
-    },
-    picture: {
-      deskstop: '/img/jpg/projects/1200x756/lento_home_screenshot.jpg',
-      mobile: '/img/jpg/projects/360x227/lento_home_screenshot.jpg',
-    },
+    image: '/img/jpg/projects/moco_xta.jpg',
+    descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
       to: '2023-02-28',
-      from: '2019-04-17',
+      from: '2021-11-01',
     },
     roles: ['Front End'],
     tools: [FaReact, SiDjango],
+    backgroundColor: {
+      page: '#5397d4',
+      card: '#ecbaa2'
+    }
   },
   {
-    key: 'abwerkt',
-    name: 'AB Werkt',
-    url: 'https://www.ab-werkt.eu/home',
-    logoUrl: imgConstants.PROJECTS.LOGO_MOKO_XTA,
-    descriptionsKey: {
-      lastProject: 'PROJECTS.CARDS.DESCRIPTIONS.ABWERKT',
-      project: 'CARDS.DESCRIPTIONS.ABWERKT',
-    },
-    picture: {
-      deskstop: '/img/jpg/projects/1200x756/abwerkt_home_screenshot.jpg',
-      mobile: '/img/jpg/projects/360x227/abwerkt_home_screenshot.jpg',
-    },
+    key: 'hundred_hands',
+    name: '100 Hands',
+    url: 'https://www.100hands.nl/',
+    image: '/img/jpg/projects/openclassrooms.jpg',
+    descriptionsKey: 'DESCRIPTIONS.HUNDRED_HANDS',
     dates: {
-      to: '2019-04-16',
-      from: '2018-03-01',
+      to: '2021-10-31',
+      from: '2021-09-01',
     },
     roles: ['Front End'],
     tools: [FaReact, FaAngular, SiDjango],
+    backgroundColor: {
+      page: '#ffffff',
+      card: '#000000'
+    }
+  },
+  {
+    key: 'wpme',
+    name: 'WPME',
+    url: 'https://wpme.group/',
+    image: '/img/jpg/projects/openclassrooms.jpg',
+    descriptionsKey: 'DESCRIPTIONS.WPME',
+    dates: {
+      to: '2021-08-30',
+      from: '2021-05-17',
+    },
+    roles: ['Front End'],
+    tools: [FaReact, FaAngular, SiDjango],
+    backgroundColor: {
+      page: '#000000',
+      card: '#f32730'
+    }
+  },
+  {
+    key: 'openclassrooms',
+    name: 'openclassrooms',
+    url: 'https://openclassrooms.com/en/',
+    image: '/img/jpg/projects/openclassrooms.jpg',
+    descriptionsKey: 'DESCRIPTIONS.OPENCLASSROOMS',
+    dates: {
+      to: '2021-05-17',
+      from: '2019-09-01',
+    },
+    roles: ['Back End'],
+    tools: [SiSpring],
+    backgroundColor: {
+      page: '#ffffff',
+      card: '#7450eb'
+    }
   },
 ]

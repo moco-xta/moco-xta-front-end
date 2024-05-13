@@ -33,25 +33,29 @@ export interface LastProjectsCardInterface {
 }
 
 export interface ProjectsContainerInterface {
-  projectsRefs: { ref: RefObject<HTMLDivElement> }[]
   projectsData: ProjectDataInterface[]
   currentProject: number
 }
 
 export interface CompagniesAndSchoolContainerInterface {
-  companiesAndSchoolRefs: { ref: RefObject<HTMLDivElement> }[]
   companiesAndSchollData: CompanyOrSchollDataInterface[]
   currentCompanyOrSchool: number
+  currentProject: number
+  projectsData: ProjectDataInterface[]
 }
 
 export interface CompanyOrSchoolCardInterface {
-  content: CompanyOrSchollDataInterface
   index: number
   currentCompanyOrSchool: number
+  companyOrSchoolData: CompanyOrSchollDataInterface
+  currentProject: number
+  projectsData: ProjectDataInterface[]
 }
 
 export interface TimelineInterface {
   currentDate: Date
+  currentProject: number
+  projectsData: ProjectDataInterface[]
 }
 
 export interface ReviewDataInterface {

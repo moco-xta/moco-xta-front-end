@@ -1,86 +1,62 @@
-import React, { forwardRef, useEffect, useState } from 'react'
-import { FaPlus } from 'react-icons/fa'
+import React from 'react'
 import { useTranslations } from 'next-intl'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
-import { ProjectsCardInterface } from '@/interfaces/dataInterfaces'
+import { ProjectCardInterface } from '@/interfaces/r3fInterfaces'
 
 import './index.scss'
+import Image from 'next/image'
 
-export const ProjectCard = forwardRef<HTMLDivElement, ProjectsCardInterface>(
-  function ProjectCard({ content, index, currentProject }, ref) {
-    const t = useTranslations('PROJECTS')
+export default function ProjectCard({
+  index,
+  currentProject,
+  projectData,
+}: ProjectCardInterface) {
+  const t = useTranslations('PROJECTS')
 
-    const [isActive, setIsActive] = useState<boolean>(false)
-    const [displayPlus, setDisplayPlus] = useState<boolean>(true)
-    const [displayDescription, setDisplayDescription] = useState<boolean>(false)
-
-    useEffect(() => {
-      currentProject === index ? setIsActive(true) : setIsActive(false)
-    }, [currentProject, index])
-
-    function handleMouseOver() {
-      if (isActive) {
-        setDisplayPlus(false)
-        setDisplayDescription(true)
-      }
-    }
-
-    function handleMouseLeave() {
-      setDisplayDescription(false)
-      setDisplayPlus(true)
-    }
-
-    return (
-      <div
-        ref={ref}
-        className='project_card card_background_gradient'
-        style={{ opacity: isActive ? '1' : '0.5' }}
+  return (
+    <div
+      key={`project_card_${index}`}
+      className={`transition ${index === currentProject ? 'intersecting_project' : 'not_intersecting_project'} project_card`}
+      style={{ backgroundColor: projectData.backgroundColor.card }}
+    >
+      <a
+        className='project_name_and_external_link_container'
+        href={projectData.url}
+        target='_blank'
       >
-        <div className='project_card_details'>
-          <a
-            href={content.url}
-            target='_blank'
-          >
-            <h3 className='project_title'>{content.name}</h3>
-          </a>
-          <div className='project_tools'>
-            {content.tools.map((Logo, index) => (
-              <Logo
-                key={`projects_tools_${content.key}_${index}`}
-                className='tool_icon'
-              />
-            ))}
-          </div>
-          {/* <div>
-            <p>{content.dates.from}</p>
-            <p>{content.dates.to}</p>
-          </div> */}
-          <div className='project_roles'>
-            {content.roles.map((role, index) => (
-              <p
-                key={`role_${content.key}_${index}`}
-                className='role'
-              >
-                {role}
-              </p>
-            ))}
-          </div>
-        </div>
-        <div className='project_card_description'>
-          <div
-            className={`project_description_container ${isActive ? 'is_active' : ''}`}
-            onMouseOver={handleMouseOver}
-            onMouseLeave={handleMouseLeave}
-          >
-            {displayPlus && <FaPlus className='plus_icon' />}
-            {displayDescription && (
-              <p className='project_description scrollbar'>
-                {t(content.descriptionsKey.project)}
-              </p>
-            )}
-          </div>
-        </div>
+        <h2>{projectData.name}</h2>
+        <FaExternalLinkAlt className='external_link_icon' />
+      </a>
+      <div>
+        <Image
+          src={projectData.image}
+          width={619}
+          height={400}
+          alt={`${projectData.key}_image`}
+        />
       </div>
-    )
-  },
-)
+      <div className='project_description'>
+        {t(projectData.descriptionsKey)}
+      </div>
+      <div className='tools_container'>
+        {projectData.tools.map((ToolLogo, index) => (
+          <ToolLogo
+            key={`projects_tools_${projectData.key}_${index}`}
+            className='tool_logo'
+          />
+        ))}
+      </div>
+      <div className='roles_container'>
+        {projectData.roles.map((role, index) => (
+          <p
+            key={`role_${projectData.key}_${index}`}
+            className='role'
+          >
+            {role}
+          </p>
+        ))}
+      </div>
+    </div>
+  )
+}

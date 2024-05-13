@@ -8,8 +8,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  /* font-family: 'HelveticaNeue-Black'; */
   font-weight: bold;
+  transition: background-color 1s linear;
 
   #day_of_the_week {
     font-size: 35px;

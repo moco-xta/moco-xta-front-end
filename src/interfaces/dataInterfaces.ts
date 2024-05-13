@@ -56,18 +56,17 @@ export interface ProjectDataInterface {
   key: string
   url: string
   name: string
-  logoUrl: string
-  descriptionsKey: {
-    [key: string]: string
-  }
-  picture: {
-    [key: string]: string
-  }
+  image: string
+  descriptionsKey: string
   dates: {
     [key: string]: string
   }
   roles: string[]
   tools: IconType[]
+  backgroundColor: {
+    page: string
+    card: string
+  }
 }
 
 export interface ProjectsCardInterface {
@@ -79,27 +78,12 @@ export interface ProjectsCardInterface {
 export interface CompanyOrSchollDataInterface {
   name: string
   logo: {
-    component:
-      | ForwardRefExoticComponent<
-          Omit<MeshProps, 'ref'> & RefAttributes<LogoRefType>
-        >
-      | ForwardRefExoticComponent<
-          Omit<MeshProps, 'ref'> & RefAttributes<THREE.Mesh>
-        >
-    position: {
-      [key: string]: number
-    }
-    scale: {
-      [key: string]: number
-    }
+    src: string
+    width: number
+    height: number
   }
   url: string
-  as: {
-    key: 'STUDENT' | 'INTERN' | 'EMPLOYEE'
-    position: {
-      [key: string]: number
-    }
-  }
+  as: string
   dates: {
     [key: string]: string
   }

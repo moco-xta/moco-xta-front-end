@@ -22,7 +22,11 @@ export default function Lights({ canvasName, data }: LightsInterface) {
                       <pointLight
                         key={`point_light_${canvasName}_${index}`}
                         position={vector3Position}
-                        color={lightByCategory?.COLOR ? lightByCategory.COLOR : 0xffffff}
+                        color={
+                          lightByCategory?.COLOR
+                            ? lightByCategory.COLOR
+                            : 0xffffff
+                        }
                         intensity={lightByCategory.INTENSITY}
                         castShadow
                       />

@@ -41,7 +41,9 @@ export interface ProjectCardCanvasInterface {
 }
 
 export interface ProjectCardInterface {
-  content: ProjectDataInterface
+  index: number
+  currentProject: number
+  projectData: ProjectDataInterface
 }
 
 export interface ProjectCardSceneInterface {

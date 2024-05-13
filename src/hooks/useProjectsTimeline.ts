@@ -13,7 +13,7 @@ export default function useProjectsTimeline(
   projectsData: ProjectDataInterface[],
   companiesAndSchollData: CompanyOrSchollDataInterface[],
 ) {
-  const { y, offsetHeight, clientHeight, scrollFlow } = useScroll()
+  const { y, offsetHeight, clientHeight } = useScroll()
 
   const [currentProject, setCurrentProject] = useState<number>(0)
   const [currentCompanyOrSchool, setCurrentCompanyOrSchool] =
@@ -64,8 +64,6 @@ export default function useProjectsTimeline(
   }, [currentDate, projectsData, companiesAndSchollData])
 
   return {
-    clientHeight,
-    scrollFlow,
     currentProject,
     currentCompanyOrSchool,
     currentDate,

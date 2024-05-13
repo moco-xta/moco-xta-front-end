@@ -9,6 +9,11 @@ export default function FrontEndDeveloper() {
   const t = useTranslations('HOME')
 
   return (
-    <div id='front_end_developer' className={`${HelveticaNeueBlack.className}`}>{t('HERO.FRONT_END_DEVELOPER')}</div>
+    <div
+      id='front_end_developer'
+      className={`${HelveticaNeueBlack.className}`}
+    >
+      {t('HERO.FRONT_END_DEVELOPER')}
+    </div>
   )
 }
