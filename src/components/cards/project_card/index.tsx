@@ -7,13 +7,18 @@ import { ProjectCardInterface } from '@/interfaces/r3fInterfaces'
 import './index.scss'
 import Image from 'next/image'
 
-export default function ProjectCard({ index, currentProject, projectData }: ProjectCardInterface) {
+export default function ProjectCard({
+  index,
+  currentProject,
+  projectData,
+}: ProjectCardInterface) {
   const t = useTranslations('PROJECTS')
 
   return (
     <div
       key={`project_card_${index}`}
       className={`transition ${index === currentProject ? 'intersecting_project' : 'not_intersecting_project'} project_card`}
+      style={{ backgroundColor: projectData.backgroundColor.card }}
     >
       <a
         className='project_name_and_external_link_container'
@@ -23,16 +28,16 @@ export default function ProjectCard({ index, currentProject, projectData }: Proj
         <h2>{projectData.name}</h2>
         <FaExternalLinkAlt className='external_link_icon' />
       </a>
-      {/* <div>
+      <div>
         <Image
-          src={projectData.logoUrl}
-          width={200}
-          height={200}
-          alt={`${projectData.key}_logo`}
+          src={projectData.image}
+          width={619}
+          height={400}
+          alt={`${projectData.key}_image`}
         />
-      </div> */}
+      </div>
       <div className='project_description'>
-        {t(projectData.descriptionsKey.project)}
+        {t(projectData.descriptionsKey)}
       </div>
       <div className='tools_container'>
         {projectData.tools.map((ToolLogo, index) => (

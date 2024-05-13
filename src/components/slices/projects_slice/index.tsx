@@ -19,15 +19,15 @@ import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function ProjectsSlice() {
-  const {
-    currentProject,
-    currentCompanyOrSchool,
-    currentDate,
-  } = useProjectsTimeline(projectsData, companiesAndSchollData)
+  const { currentProject, currentCompanyOrSchool, currentDate } =
+    useProjectsTimeline(projectsData, companiesAndSchollData)
 
   return (
     <div id='project_timeline_container'>
-      <section id='project_slice'>
+      <section
+        id='project_slice'
+        style={{ backgroundColor: projectsData[currentProject].backgroundColor.page }}
+      >
         <ProjectsCards
           projectsData={projectsData}
           currentProject={currentProject}
@@ -35,8 +35,10 @@ export default function ProjectsSlice() {
         <CompanyOrSchoolCards
           companiesAndSchollData={companiesAndSchollData}
           currentCompanyOrSchool={currentCompanyOrSchool}
+          projectsData={projectsData}
+          currentProject={currentProject}
         />
-        {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
+        {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} currentProject={currentProject} projectsData={projectsData} />}
         <ScrollDown
           top={'65vh'}
           color={variables.grey_05}

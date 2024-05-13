@@ -1,94 +1,40 @@
-import React, { Suspense, forwardRef, useEffect, useState } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera, Text } from '@react-three/drei'
+import React from 'react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import { CompanyOrSchoolCardInterface } from '@/interfaces/componentsInterfaces'
 
-import { default as projectsConstants } from '@/constants/projectsConstants.json'
-
 import './index.scss'
 
-export const CompanyOrSchoolCard = forwardRef<
-  HTMLDivElement,
-  CompanyOrSchoolCardInterface
->(function CompanyOrSchoolCard(
-  { content, index, currentCompanyOrSchool },
-  ref,
-) {
+export default function CompanyOrSchoolCard({
+  index,
+  currentCompanyOrSchool,
+  companyOrSchoolData,
+  projectsData,
+  currentProject
+}: CompanyOrSchoolCardInterface) {
   const t = useTranslations('PROJECTS')
 
-  const Logo = content.logo.component
-
-  const [isActive, setIsActive] = useState<boolean>(false)
-
-  useEffect(() => {
-    currentCompanyOrSchool === index ? setIsActive(true) : setIsActive(false)
-  }, [currentCompanyOrSchool, index])
-
   function handleOnClick() {
-    window.open(content.url, '_blank')
+    window.open(companyOrSchoolData.url, '_blank')
   }
 
   return (
     <div
-      ref={ref}
-      className='company_or_school_card'
-      style={{ opacity: isActive ? '1' : '0.5' }}
+      key={`project_card_${index}`}
+      className={`transition ${index === currentCompanyOrSchool ? 'intersecting_company_or_school' : 'not_intersecting_company_or_school'} companie_or_school_card`}
     >
-      <Canvas
-        dpr={projectsConstants.COMPANY_OR_SCHOOL_CARDS.SCENE.CANVAS.DPR}
-        shadows
-        legacy
-        gl={{
-          antialias:
-            projectsConstants.COMPANY_OR_SCHOOL_CARDS.SCENE.CANVAS.ANTIALIAS,
-          alpha: projectsConstants.COMPANY_OR_SCHOOL_CARDS.SCENE.CANVAS.ALPHA,
-          powerPreference:
-            projectsConstants.COMPANY_OR_SCHOOL_CARDS.SCENE.CANVAS
-              .POWER_PREFERENCE,
-        }}
-      >
-        <PerspectiveCamera
-          makeDefault
-          position={[0, -0.1, 5.5]}
-          fov={15}
-        />
-        <ambientLight intensity={0.5} />
-        <pointLight
-          position={[0, 0, 3]}
-          intensity={20}
-        />
-        <Suspense fallback={null}>
-          <Logo
-            position={[
-              content.logo.position.x,
-              content.logo.position.z,
-              content.logo.position.y,
-            ]}
-            scale={[
-              content.logo.scale.x,
-              content.logo.scale.z,
-              content.logo.scale.y,
-            ]}
-            onClick={handleOnClick}
-          />
-          <Text
-            /* font={descriptionFont} */
-            textAlign={'center'}
-            fontSize={projectsConstants.COMPANY_OR_SCHOOL_CARDS.AS.FONT_SIZE}
-            position={[
-              content.as.position.x,
-              content.as.position.z,
-              content.as.position.y,
-            ]}
-            receiveShadow
-            castShadow
-          >
-            {t(`AS.${content.as.key}`)}
-          </Text>
-        </Suspense>
-      </Canvas>
+      <Image
+        className='company_or_school_logo'
+        src={companyOrSchoolData.logo.src}
+        width={companyOrSchoolData.logo.width}
+        height={companyOrSchoolData.logo.height}
+        onClick={handleOnClick}
+        alt={`logo_${companyOrSchoolData.name}_${companyOrSchoolData.as.toLowerCase()}`}
+      />
+      <p className='company_or_school_as'
+      style={{ color: projectsData[currentProject].backgroundColor.page !== '#ffffff' ? '#ffffff' : '#000000' }}
+      >{t(companyOrSchoolData.as).toUpperCase()}</p>
     </div>
   )
-})
+}

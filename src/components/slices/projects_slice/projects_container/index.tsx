@@ -11,7 +11,13 @@ export default function ProjectCards({
   return (
     <>
       {projectsData.map((projectData, index) => {
-        return <ProjectCard index={index} currentProject={currentProject} projectData={projectData} />
+        return (
+          <ProjectCard
+            index={index}
+            currentProject={currentProject}
+            projectData={projectData}
+          />
+        )
       })}
     </>
   )

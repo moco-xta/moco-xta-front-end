@@ -40,16 +40,22 @@ export interface ProjectsContainerInterface {
 export interface CompagniesAndSchoolContainerInterface {
   companiesAndSchollData: CompanyOrSchollDataInterface[]
   currentCompanyOrSchool: number
+  currentProject: number
+  projectsData: ProjectDataInterface[]
 }
 
 export interface CompanyOrSchoolCardInterface {
-  content: CompanyOrSchollDataInterface
   index: number
   currentCompanyOrSchool: number
+  companyOrSchoolData: CompanyOrSchollDataInterface
+  currentProject: number
+  projectsData: ProjectDataInterface[]
 }
 
 export interface TimelineInterface {
   currentDate: Date
+  currentProject: number
+  projectsData: ProjectDataInterface[]
 }
 
 export interface ReviewDataInterface {
