@@ -12,7 +12,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'moco_xta',
     name: 'Moco.xta',
     url: 'https://lento.eu/en',
-    image: '/img/jpg/projects/moco_xta.jpg',
+    image: '/img/png/projects/moco_xta.png',
     descriptionsKey: 'DESCRIPTIONS.LENTO',
     dates: {
       to: '2024-04-07',
@@ -29,7 +29,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'abwerkt',
     name: 'AB Werkt',
     url: 'https://www.ab-werkt.eu/home',
-    image: '/img/jpg/projects/openclassrooms.jpg',
+    image: '/img/png/projects/abwerkt.png',
     descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
       to: '2023-11-31',
@@ -46,7 +46,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'lento',
     name: 'Lento.eu',
     url: 'https://lento.eu/en',
-    image: '/img/jpg/projects/moco_xta.jpg',
+    image: '/img/png/projects/lento.png',
     descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
       to: '2023-02-28',
@@ -63,7 +63,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'hundred_hands',
     name: '100 Hands',
     url: 'https://www.100hands.nl/',
-    image: '/img/jpg/projects/openclassrooms.jpg',
+    image: '/img/png/projects/hundred_hands.png',
     descriptionsKey: 'DESCRIPTIONS.HUNDRED_HANDS',
     dates: {
       to: '2021-10-31',
@@ -80,7 +80,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'wpme',
     name: 'WPME',
     url: 'https://wpme.group/',
-    image: '/img/jpg/projects/openclassrooms.jpg',
+    image: '/img/png/projects/wpme.png',
     descriptionsKey: 'DESCRIPTIONS.WPME',
     dates: {
       to: '2021-08-30',
@@ -97,7 +97,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'openclassrooms',
     name: 'openclassrooms',
     url: 'https://openclassrooms.com/en/',
-    image: '/img/jpg/projects/openclassrooms.jpg',
+    image: '/img/png/projects/openclassrooms.png',
     descriptionsKey: 'DESCRIPTIONS.OPENCLASSROOMS',
     dates: {
       to: '2021-05-17',
