@@ -5,8 +5,7 @@ import { useTranslations } from 'next-intl'
 
 import { AuthenticationButtonInterface } from '@/interfaces/buttonsInterfaces'
 
-import { RootState } from '@/redux/store'
-import { AppDispatch } from '@/redux/store'
+import { AppDispatch, RootState } from '@/redux/store'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 import { useLogOutMutation } from '@/redux/api/authenticationApi'
 

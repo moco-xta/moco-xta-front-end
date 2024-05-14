@@ -11,7 +11,7 @@ export default function CompanyOrSchoolCard({
   currentCompanyOrSchool,
   companyOrSchoolData,
   projectsData,
-  currentProject
+  currentProject,
 }: CompanyOrSchoolCardInterface) {
   const t = useTranslations('PROJECTS')
 
@@ -32,9 +32,17 @@ export default function CompanyOrSchoolCard({
         onClick={handleOnClick}
         alt={`logo_${companyOrSchoolData.name}_${companyOrSchoolData.as.toLowerCase()}`}
       />
-      <p className='company_or_school_as'
-      style={{ color: projectsData[currentProject].backgroundColor.page !== '#ffffff' ? '#ffffff' : '#000000' }}
-      >{t(companyOrSchoolData.as).toUpperCase()}</p>
+      <p
+        className='company_or_school_as'
+        style={{
+          color:
+            projectsData[currentProject].backgroundColor.page !== '#ffffff'
+              ? '#ffffff'
+              : '#000000',
+        }}
+      >
+        {t(companyOrSchoolData.as).toUpperCase()}
+      </p>
     </div>
   )
 }

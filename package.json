@@ -23,6 +23,7 @@
     "@types/three": "^0.161.2",
     "formik": "^2.4.5",
     "gsap": "^3.12.5",
+    "immer": "^10.1.1",
     "json-pointer": "^0.6.2",
     "json-refs": "^3.0.15",
     "lamina": "^1.1.23",

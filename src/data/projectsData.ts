@@ -1,7 +1,7 @@
 import { FaReact } from 'react-icons/fa'
 import { FaAngular } from 'react-icons/fa'
 import { SiDjango } from 'react-icons/si'
-import { SiSpring } from "react-icons/si";
+import { SiSpring } from 'react-icons/si'
 
 import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
@@ -22,8 +22,8 @@ export const projectsData: ProjectDataInterface[] = [
     tools: [FaReact, SiDjango],
     backgroundColor: {
       page: '#fc799d',
-      card: '#5b9ff6'
-    }
+      card: '#5b9ff6',
+    },
   },
   {
     key: 'abwerkt',
@@ -39,8 +39,8 @@ export const projectsData: ProjectDataInterface[] = [
     tools: [FaReact, FaAngular, SiDjango],
     backgroundColor: {
       page: '#aec700',
-      card: '#076865'
-    }
+      card: '#076865',
+    },
   },
   {
     key: 'lento',
@@ -56,8 +56,8 @@ export const projectsData: ProjectDataInterface[] = [
     tools: [FaReact, SiDjango],
     backgroundColor: {
       page: '#5397d4',
-      card: '#ecbaa2'
-    }
+      card: '#ecbaa2',
+    },
   },
   {
     key: 'hundred_hands',
@@ -73,8 +73,8 @@ export const projectsData: ProjectDataInterface[] = [
     tools: [FaReact, FaAngular, SiDjango],
     backgroundColor: {
       page: '#ffffff',
-      card: '#000000'
-    }
+      card: '#000000',
+    },
   },
   {
     key: 'wpme',
@@ -90,8 +90,8 @@ export const projectsData: ProjectDataInterface[] = [
     tools: [FaReact, FaAngular, SiDjango],
     backgroundColor: {
       page: '#000000',
-      card: '#f32730'
-    }
+      card: '#f32730',
+    },
   },
   {
     key: 'openclassrooms',
@@ -107,7 +107,7 @@ export const projectsData: ProjectDataInterface[] = [
     tools: [SiSpring],
     backgroundColor: {
       page: '#ffffff',
-      card: '#7450eb'
-    }
+      card: '#7450eb',
+    },
   },
 ]

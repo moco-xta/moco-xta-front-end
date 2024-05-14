@@ -26,7 +26,9 @@ export default function ProjectsSlice() {
     <div id='project_timeline_container'>
       <section
         id='project_slice'
-        style={{ backgroundColor: projectsData[currentProject].backgroundColor.page }}
+        style={{
+          backgroundColor: projectsData[currentProject].backgroundColor.page,
+        }}
       >
         <ProjectsCards
           projectsData={projectsData}
@@ -38,7 +40,13 @@ export default function ProjectsSlice() {
           projectsData={projectsData}
           currentProject={currentProject}
         />
-        {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} currentProject={currentProject} projectsData={projectsData} />}
+        {isValidDate(currentDate) && (
+          <CurrentDate
+            currentDate={currentDate}
+            currentProject={currentProject}
+            projectsData={projectsData}
+          />
+        )}
         <ScrollDown
           top={'65vh'}
           color={variables.grey_05}
