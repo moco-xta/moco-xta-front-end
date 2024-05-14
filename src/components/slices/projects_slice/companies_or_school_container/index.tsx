@@ -10,7 +10,7 @@ export default function CompanyOrSchoolCards({
   companiesAndSchollData,
   currentCompanyOrSchool,
   projectsData,
-  currentProject
+  currentProject,
 }: CompagniesAndSchoolContainerInterface) {
   return (
     <>

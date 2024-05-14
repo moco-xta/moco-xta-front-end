@@ -2,12 +2,14 @@
 
 import { configureStore } from '@reduxjs/toolkit'
 
-import authenticationSlice from './slice/authenticationSlice'
 import apiSlice from '@/redux/slice/apiSlice'
+import authenticationSlice from './slice/authenticationSlice'
+import lifeGameSlice from './slice/lifeGameSlice'
 
 export const store = configureStore({
   reducer: {
     authentication: authenticationSlice,
+    lifeGame: lifeGameSlice,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
