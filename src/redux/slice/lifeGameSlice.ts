@@ -2,8 +2,13 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
 import { lifeGameInterface } from '@/interfaces/reduxSlicesInterfaces'
 
-const GRID_COLUMNS = 30
-const GRID_ROWS = 30
+const GRID_COLUMNS = Math.round(window.innerWidth / 60)
+const GRID_ROWS = Math.round(window.innerHeight / 60)
+
+console.log(
+  Math.round(window.innerWidth / 60),
+  Math.round(window.innerHeight / 60),
+)
 
 const OPERATIONS = [
   [0, 1],
@@ -13,14 +18,16 @@ const OPERATIONS = [
   [1, 1],
   [-1, -1],
   [1, 0],
-  [-1, 0]
+  [-1, 0],
 ]
 
 const generateEmptyGrid = () => {
   const rows: number[][] = []
   for (let i = 0; i < GRID_COLUMNS; i++) {
-    /* rows.push(Array.from(Array(GRID_ROWS), () => (Math.random() >= 0.5 ? 1 : 0))); */
-    rows.push(Array.from(Array(GRID_ROWS), () => 0))
+    rows.push(
+      Array.from(Array(GRID_ROWS), () => (Math.random() >= 0.5 ? 1 : 0)),
+    )
+    /* rows.push(Array.from(Array(GRID_ROWS), () => 0)) */
   }
   return rows
 }
@@ -71,7 +78,7 @@ const lifeGameSlice = createSlice({
         }
       }
       state.grid = newGrid
-    }
+    },
   },
 })
 

@@ -1,20 +1,153 @@
+@import '@/styles/variables.module.scss';
+
 #contact_slice {
+  z-index: 1;
+  position: absolute;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  /* background-color: white; */
 
-  #grid_container {
+  #socials_container {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    bottom: 300px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 
-    .column {
-      display: flex;
-      flex-direction: column;
+    #socials_picture {
+      margin-right: -120px;
+    }
 
-      .row {
-        width: 30px;
-        height: 30px;
-        border: solid 1px black;
+    #social_icons_container {
+      margin: 50px;
+    }
+  }
+
+  #contact_content {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: rgba(10, 10, 10, 0.7);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+
+    #fur_moco_lucky_cat_container {
+      padding: 50px;
+
+      #fur_moco {
+        margin-right: -80px;
+        margin-bottom: -30px;
       }
     }
+
+    /* #socials_container {
+      margin-bottom: 60px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      .social_container {
+        margin-bottom: 8px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        color: $white_op80;
+        color: $white;
+        cursor: pointer;
+      }
+
+      .social_container:hover {
+        color: $white;
+      }
+
+      /* #linkedin_container {
+        background-color: #00f40266;
+      }
+
+      #twitter_container {
+        background-color: #f501f566;
+      }
+
+      #instagram_container {
+        background-color: #f4020266;
+      }
+
+      #facebook_container {
+        background-color: #0100f466;
+      }
+
+      #github_container {
+        background-color: #00000066;
+      }
+
+      .social_icon {
+        margin-right: 10px;
+      }
+    } */
+  }
+}
+
+.noise_background {
+  z-index: 0;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    /* url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0; */
+  background-repeat: repeat;
+  animation: noise-background-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+@keyframes noise-background-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
   }
 }

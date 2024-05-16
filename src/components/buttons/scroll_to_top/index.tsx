@@ -30,7 +30,10 @@ export default function ScrollToTop() {
   }
 
   return (
-    <div ref={scrollToTopRef} id='scroll_to_top'>
+    <div
+      ref={scrollToTopRef}
+      id='scroll_to_top'
+    >
       <div
         ref={progressRef}
         id='progress'

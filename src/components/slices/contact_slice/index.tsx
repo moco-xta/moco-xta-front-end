@@ -1,84 +1,104 @@
-import React, { useCallback, useRef, useState } from 'react'
-import { useSelector } from 'react-redux'
+import React from 'react'
+import Image from 'next/image'
+import { FaFacebookF } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
+import { FaTwitter } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { IoLogoGithub } from 'react-icons/io'
+import { CiMobile1 } from 'react-icons/ci'
+import { MdOutlineEmail } from 'react-icons/md'
 
-import { AppDispatch, RootState } from '@/redux/store'
-import { setCellState, setNextState } from '@/redux/slice/lifeGameSlice'
+import LifeGame from './lifeGame'
 
 import './index.scss'
-import { useDispatch } from 'react-redux'
-
-const GRID_LENGTH = 12
-const GRID_WIDTH = 12
-
-const OPERATIONS = [
-  [0, 1],
-  [0, -1],
-  [1, -1],
-  [-1, 1],
-  [1, 1],
-  [-1, -1],
-  [1, 0],
-  [-1, 0]
-]
 
 export default function ContactSlice() {
-
-  const dispatch = useDispatch<AppDispatch>()
-  const grid = useSelector(
-    (state: RootState) => state.lifeGame.grid,
-  )
-
-
-  /* const [grid, setGrid] = useState<number[][]>(generateEmptyGrid()) */
-  const [running, setRunning] = useState<boolean>(false)
-
-  const runningRef = useRef<boolean>(running)
-  runningRef.current = running
-
-  function handleRunningClick() {
-    setRunning(!running)
-    if (!running) {
-      runningRef.current = true
-      runSimulation()
-    }
-  }
-
-  const runSimulation = useCallback(() => {
-    if (!runningRef.current) return
-    dispatch(setNextState())
-    setTimeout(runSimulation, 1000)
-  }, [])
-
   return (
-    <div id='contact_slice'>
-      <div id='grid_container'>
-        {grid.map((column, columnIndex) => {
-          return (
+    <>
+      <div id='contact_slice'>
+        <div id='socials_container'>
+          <Image
+            id='socials_picture'
+            src='/img/png/contact/socials.png'
+            width={700}
+            height={400}
+            alt=''
+          />
+          <div id='social_icons_container'>
             <div
-              key={`column_${columnIndex}`}
-              className='column'
+              id='linkedin_container'
+              className='social_container'
             >
-              {column.map((row, rowIndex) => {
-                const handleRowClick = () => {
-                  dispatch(setCellState({ columnIndex: columnIndex, rowIndex: rowIndex }))
-                }
-
-                return (
-                  <div
-                    key={`row_${columnIndex}_${rowIndex}`}
-                    className='row'
-                    style={{ backgroundColor: row === 1 ? 'black' : 'white' }}
-                    onClick={handleRowClick}
-                  />
-                )
-              })}
+              <FaLinkedinIn
+                className='social_icon'
+                size={50}
+              />
             </div>
-          )
-        })}
+            <div
+              id='github_container'
+              className='social_container'
+            >
+              <IoLogoGithub
+                className='social_icon'
+                size={50}
+              />
+            </div>
+            <div
+              id='twitter_container'
+              className='social_container'
+            >
+              <FaTwitter
+                className='social_icon'
+                size={50}
+              />
+            </div>
+          </div>
+        </div>
+        <div id='contact_content'>
+          <Image
+            id='monkey_phone'
+            src='/img/gif/monkey_phone.gif'
+            width={240}
+            height={135}
+            alt='Monkey phone'
+          />
+          <div>
+          <h2>Contact</h2>
+          <div className='contact_container'>
+            <CiMobile1
+              className='contact_icon'
+              size={30}
+            />
+            <p>+33 6 35 67 87 75</p>
+          </div>
+          <div className='contact_container'>
+            <MdOutlineEmail
+              className='contact_icon'
+              size={30}
+            />
+            <p>moco.xta@gmail.com</p>
+          </div>
+        </div>
+          <div id='fur_moco_lucky_cat_container'>
+            <Image
+              id='fur_moco'
+              src='/img/png/moco_logo_fur_back_ligths.png'
+              width={450}
+              height={300}
+              alt=''
+            />
+            <Image
+              id='lucky_cat'
+              src='/img/gif/lucky_cat_2.gif'
+              width={100}
+              height={100}
+              alt='Lucky cat'
+            />
+          </div>
+        </div>
+        <LifeGame />
       </div>
-      <button onClick={handleRunningClick}>
-        {!running ? 'Start' : 'Pause'}
-      </button>
-    </div>
+      <div className='noise_background'></div>
+    </>
   )
 }
