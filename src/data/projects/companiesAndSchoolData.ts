@@ -1,6 +1,22 @@
+import moment from 'moment'
+
 import { CompanyOrSchollDataInterface } from '@/interfaces/dataInterfaces'
 
 export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
+  {
+    name: 'moco',
+    logo: {
+      src: '/img/png/projects/logo_moco_xta.png',
+      width: 200,
+      height: 128,
+    },
+    url: 'https://moco-xta.com/',
+    as: 'AS.SELF_EMPLOYED',
+    dates: {
+      to: moment(new Date()).format('YYYY-MM-DD'),
+      from: '2024-01-01',
+    },
+  },
   {
     name: 'ponthus',
     logo: {

@@ -1,7 +1,10 @@
+import moment from 'moment'
 import { FaReact } from 'react-icons/fa'
 import { FaAngular } from 'react-icons/fa'
 import { SiDjango } from 'react-icons/si'
 import { SiSpring } from 'react-icons/si'
+import { TbBrandThreejs } from "react-icons/tb";
+import { TbBrandNextjs } from "react-icons/tb";
 
 import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
@@ -15,11 +18,11 @@ export const projectsData: ProjectDataInterface[] = [
     image: '/img/png/projects/moco_xta.png',
     descriptionsKey: 'DESCRIPTIONS.LENTO',
     dates: {
-      to: '2024-04-07',
+      to: moment(new Date()).format('YYYY-MM-DD'),
       from: '2024-01-01',
     },
     roles: ['Real-time 3D', 'Full Stack'],
-    tools: [FaReact, SiDjango],
+    tools: [TbBrandThreejs, TbBrandNextjs, SiSpring],
     backgroundColor: {
       page: '#fc799d',
       card: '#5b9ff6',
@@ -70,7 +73,7 @@ export const projectsData: ProjectDataInterface[] = [
       from: '2021-09-01',
     },
     roles: ['Front End'],
-    tools: [FaReact, FaAngular, SiDjango],
+    tools: [TbBrandThreejs, FaReact],
     backgroundColor: {
       page: '#ffffff',
       card: '#000000',
@@ -87,7 +90,7 @@ export const projectsData: ProjectDataInterface[] = [
       from: '2021-05-17',
     },
     roles: ['Front End'],
-    tools: [FaReact, FaAngular, SiDjango],
+    tools: [TbBrandThreejs, FaReact],
     backgroundColor: {
       page: '#000000',
       card: '#f32730',

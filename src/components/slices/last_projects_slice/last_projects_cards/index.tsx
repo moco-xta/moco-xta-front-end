@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { projectsData } from '@/data/projectsData'
+import { projectsData } from '@/data/projects/projectsData'
 
 import { LastProjectCard } from '@/components/cards/last_project_card'
 
