@@ -20,7 +20,6 @@
     justify-content: space-between;
 
     .name_image_description_project {
-
       .project_name {
         margin-bottom: 20px;
         display: flex;
@@ -28,13 +27,13 @@
         align-items: center;
         cursor: pointer;
       }
-  
+
       .project_image {
         margin-left: -15px;
         margin-bottom: 20px;
         padding: 0;
       }
-    
+
       .project_description {
         /* padding-right: 130px; */
         text-align: justify;
@@ -44,12 +43,12 @@
     .roles_container {
       font-weight: bold;
       line-height: 50px;
-  
+
       .role {
         font-size: $font_size_large;
         margin-bottom: 15px;
       }
-  
+
       .role:last-child {
         font-size: $font_size_extra_large;
         line-height: 85px;
@@ -67,7 +66,7 @@
     .tool_logo {
       width: 70px;
       height: 70px;
-      margin-bottom: 10px;
+      margin-bottom: -10px;
     }
   }
 }

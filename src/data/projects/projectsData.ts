@@ -3,8 +3,8 @@ import { FaReact } from 'react-icons/fa'
 import { FaAngular } from 'react-icons/fa'
 import { SiDjango } from 'react-icons/si'
 import { SiSpring } from 'react-icons/si'
-import { TbBrandThreejs } from "react-icons/tb";
-import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandThreejs } from 'react-icons/tb'
+import { TbBrandNextjs } from 'react-icons/tb'
 
 import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
@@ -22,7 +22,15 @@ export const projectsData: ProjectDataInterface[] = [
       from: '2024-01-01',
     },
     roles: ['Real-time 3D', 'Full Stack'],
-    tools: [TbBrandThreejs, TbBrandNextjs, SiSpring],
+    tools: [
+      '/img/png/projects/logo_blender.png',
+      '/img/png/projects/logo_react_three_drei.png',
+      '/img/png/projects/logo_nextjs.png',
+      '/img/png/projects/logo_spring.png',
+      '/img/png/projects/logo_postgresql.png',
+      '/img/png/projects/logo_docker.png',
+      '/img/png/projects/logo_hostinger.png',
+    ],
     backgroundColor: {
       page: '#fc799d',
       card: '#5b9ff6',
@@ -39,7 +47,12 @@ export const projectsData: ProjectDataInterface[] = [
       from: '2023-03-01',
     },
     roles: ['Front End'],
-    tools: [FaReact, FaAngular, SiDjango],
+    tools: [
+      '/img/png/projects/logo_react-three-drei.png',
+      '/img/png/projects/logo_nextjs.png',
+      '/img/png/projects/logo_spring.png',
+      '/img/png/projects/logo_postgresql.png',
+    ],
     backgroundColor: {
       page: '#aec700',
       card: '#076865',
@@ -56,7 +69,11 @@ export const projectsData: ProjectDataInterface[] = [
       from: '2021-11-01',
     },
     roles: ['Front End'],
-    tools: [FaReact, SiDjango],
+    tools: [
+      '/img/png/projects/logo_react-three-drei.png',
+      '/img/png/projects/logo_nextjs.png',
+      '/img/png/projects/logo_spring.png',
+    ],
     backgroundColor: {
       page: '#5397d4',
       card: '#ecbaa2',
@@ -73,7 +90,11 @@ export const projectsData: ProjectDataInterface[] = [
       from: '2021-09-01',
     },
     roles: ['Front End'],
-    tools: [TbBrandThreejs, FaReact],
+    tools: [
+      '/img/png/projects/logo_react-three-drei.png',
+      '/img/png/projects/logo_nextjs.png',
+      '/img/png/projects/logo_spring.png',
+    ],
     backgroundColor: {
       page: '#ffffff',
       card: '#000000',
@@ -90,7 +111,11 @@ export const projectsData: ProjectDataInterface[] = [
       from: '2021-05-17',
     },
     roles: ['Front End'],
-    tools: [TbBrandThreejs, FaReact],
+    tools: [
+      '/img/png/projects/logo_react-three-drei.png',
+      '/img/png/projects/logo_nextjs.png',
+      '/img/png/projects/logo_spring.png',
+    ],
     backgroundColor: {
       page: '#000000',
       card: '#f32730',
@@ -107,7 +132,10 @@ export const projectsData: ProjectDataInterface[] = [
       from: '2019-09-01',
     },
     roles: ['Back End'],
-    tools: [SiSpring],
+    tools: [
+      '/img/png/projects/logo_spring.png',
+      '/img/png/projects/logo_postgresql.png',
+    ],
     backgroundColor: {
       page: '#ffffff',
       card: '#7450eb',

@@ -67,10 +67,14 @@ export default function ProjectCard({
         </div>
       </div>
       <div className='tools_container'>
-        {projectData.tools.map((ToolLogo, index) => (
-          <ToolLogo
+        {projectData.tools.map((picture, index) => (
+          <Image
             key={`projects_tools_${projectData.key}_${index}`}
             className='tool_logo'
+            src={picture}
+            width={200}
+            height={200}
+            alt={''}
           />
         ))}
       </div>
