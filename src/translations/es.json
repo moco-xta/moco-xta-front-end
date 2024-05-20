@@ -118,7 +118,8 @@
     "AS": {
       "STUDENT": "Alumno",
       "INTERN": "Interno",
-      "EMPLOYEE": "Empleado"
+      "EMPLOYEE": "Empleado",
+      "SELF_EMPLOYED": "Trabajador por cuenta propia"
     }
   },
   "AUTHENTICATION": {

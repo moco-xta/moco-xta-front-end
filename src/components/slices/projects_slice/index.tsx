@@ -2,8 +2,8 @@
 
 import React from 'react'
 
-import { projectsData } from '@/data/projectsData'
-import { companiesAndSchollData } from '@/data/companiesAndSchoolData'
+import { projectsData } from '@/data/projects/projectsData'
+import { companiesAndSchollData } from '@/data/projects/companiesAndSchoolData'
 
 import useProjectsTimeline from '@/hooks/useProjectsTimeline'
 

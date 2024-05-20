@@ -62,7 +62,7 @@ export interface ProjectDataInterface {
     [key: string]: string
   }
   roles: string[]
-  tools: IconType[]
+  tools: string[]
   backgroundColor: {
     page: string
     card: string

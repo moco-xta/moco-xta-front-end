@@ -129,7 +129,8 @@
     "AS": {
       "STUDENT": "Student",
       "INTERN": "Intern",
-      "EMPLOYEE": "Employee"
+      "EMPLOYEE": "Employee",
+      "SELF_EMPLOYED": "Self-employed"
     }
   },
   "AUTHENTICATION": {

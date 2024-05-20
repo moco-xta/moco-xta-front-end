@@ -2,41 +2,58 @@
 
 .project_card {
   position: absolute;
-  width: 50%;
-  height: 75%;
-  left: 0;
-  margin-left: 100px;
+  width: 90%;
+  height: 85%;
   padding: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   border-radius: 20px;
   transition: all 2s ease-in-out;
 
-  .project_name_and_external_link_container {
-    margin-bottom: 20px;
+  .project_card_left_panel {
+    position: absolute;
+    width: 75%;
+    height: 95%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
 
-    .external_link_icon {
-      width: 30px;
-      height: 30px;
-      margin-left: 10px;
-      margin-bottom: -6px;
+    .name_image_description_project {
+      .project_name {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .project_image {
+        margin-left: -15px;
+        margin-bottom: 20px;
+        padding: 0;
+      }
+
+      .project_description {
+        /* padding-right: 130px; */
+        text-align: justify;
+      }
     }
-  }
 
-  .project_image {
-    margin-left: -15px;
-    margin-bottom: 20px;
-    padding: 0;
-  }
+    .roles_container {
+      font-weight: bold;
+      line-height: 50px;
 
-  .project_description {
-    padding-right: 130px;
-    text-align: justify;
+      .role {
+        font-size: $font_size_large;
+        margin-bottom: 15px;
+      }
+
+      .role:last-child {
+        font-size: $font_size_extra_large;
+        line-height: 85px;
+      }
+    }
   }
 
   .tools_container {
@@ -49,21 +66,7 @@
     .tool_logo {
       width: 70px;
       height: 70px;
-      margin-bottom: 10px;
-    }
-  }
-
-  .roles_container {
-    font-weight: bold;
-    line-height: 50px;
-
-    .role {
-      font-size: $font_size_large;
-      margin-bottom: 15px;
-    }
-
-    .role:last-child {
-      font-size: $font_size_extra_large;
+      margin-bottom: -10px;
     }
   }
 }

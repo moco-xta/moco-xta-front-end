@@ -1,7 +1,7 @@
 .companie_or_school_card {
   position: absolute;
-  left: 60%;
-  bottom: 150px;
+  left: 65%;
+  bottom: 5%;
 }
 
 .not_intersecting_company_or_school {
@@ -13,4 +13,10 @@
   opacity: 1;
   transition-delay: 0.5s;
   transform: translate(0px, 0px);
+}
+
+@media screen and (min-width: 1650px) {
+  .companie_or_school_card {
+    left: 1050px;
+  }
 }

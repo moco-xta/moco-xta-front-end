@@ -63,22 +63,22 @@ export default function ContactSlice() {
             alt='Monkey phone'
           />
           <div>
-          <h2>Contact</h2>
-          <div className='contact_container'>
-            <CiMobile1
-              className='contact_icon'
-              size={30}
-            />
-            <p>+33 6 35 67 87 75</p>
+            <h2>Contact</h2>
+            <div className='contact_container'>
+              <CiMobile1
+                className='contact_icon'
+                size={30}
+              />
+              <p>+33 6 35 67 87 75</p>
+            </div>
+            <div className='contact_container'>
+              <MdOutlineEmail
+                className='contact_icon'
+                size={30}
+              />
+              <p>moco.xta@gmail.com</p>
+            </div>
           </div>
-          <div className='contact_container'>
-            <MdOutlineEmail
-              className='contact_icon'
-              size={30}
-            />
-            <p>moco.xta@gmail.com</p>
-          </div>
-        </div>
           <div id='fur_moco_lucky_cat_container'>
             <Image
               id='fur_moco'
