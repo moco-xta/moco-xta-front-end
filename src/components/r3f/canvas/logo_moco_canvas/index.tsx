@@ -1,22 +1,13 @@
-import React, { Suspense, useRef } from 'react'
-import * as THREE from 'three'
+import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
-import useModelHoverEffect from '@/hooks/useModelHoverEffect'
-
-import { LogoMoco } from '../../models/logos/LogoMoco'
+import LogoMocoScene from './logo_moco_scene'
+import PostProcessing from './post_processing'
 
 import { default as logoMocoConstants } from '@/constants/canvas/logoMocoConstants.json'
 
 export default function LogoMocoCanvas() {
-
-  const logoMocoRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)
-
-  const { handleOnPointerMove, handleOnPointerLeave } = useModelHoverEffect(
-    logoMocoRef,
-    logoMocoConstants.HANDLE_ON_PONTER_MOVE,
-  )
 
   return (
     <Canvas
@@ -42,21 +33,8 @@ export default function LogoMocoCanvas() {
       />
       <ambientLight intensity={2} />
       <Suspense>
-        <group
-          ref={logoMocoRef}
-          rotation={
-            new THREE.Euler(
-              THREE.MathUtils.degToRad(logoMocoConstants.CARD.ROTATION.X),
-              THREE.MathUtils.degToRad(logoMocoConstants.CARD.ROTATION.Y),
-              THREE.MathUtils.degToRad(logoMocoConstants.CARD.ROTATION.Z),
-            )
-          }
-        >
-          <LogoMoco
-            handleOnPointerMove={handleOnPointerMove}
-            handleOnPointerLeave={handleOnPointerLeave}
-          />
-        </group>
+        <LogoMocoScene />
+        <PostProcessing />
       </Suspense>
     </Canvas>
   )
