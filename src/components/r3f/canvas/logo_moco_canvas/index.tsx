@@ -34,7 +34,7 @@ export default function LogoMocoCanvas() {
       <ambientLight intensity={2} />
       <Suspense>
         <LogoMocoScene />
-        <PostProcessing />
+        {/* <PostProcessing /> */}
       </Suspense>
     </Canvas>
   )

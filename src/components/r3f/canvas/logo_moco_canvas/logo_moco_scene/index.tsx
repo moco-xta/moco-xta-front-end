@@ -38,7 +38,7 @@ export default function LogoMocoScene() {
       }
     >
 
-      <Annaglyph enabled={true} />
+      {/* <Annaglyph enabled={true} /> */}
       <LogoMoco
         handleOnPointerMove={handleOnPointerMove}
         handleOnPointerLeave={handleOnPointerLeave}
