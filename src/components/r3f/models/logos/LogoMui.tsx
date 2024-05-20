@@ -3,7 +3,7 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { default as GltfConstants } from '@/constants/gltfConstants.json'
+import { default as gltfConstants } from '@/constants/gltfConstants.json'
 
 import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
 
@@ -21,7 +21,7 @@ const LogoMui = forwardRef<
   JSX.IntrinsicElements['group']
 >(function LogoMui({ position, rotation, scale }, ref) {
   const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_MUI,
+    gltfConstants.LOGO_MUI,
   ) as GLTFResult
 
   useLayoutEffect(() => {
@@ -48,6 +48,6 @@ const LogoMui = forwardRef<
   )
 })
 
-useGLTF.preload(GltfConstants.LOGO_MUI)
+useGLTF.preload(gltfConstants.LOGO_MUI)
 
 export default LogoMui

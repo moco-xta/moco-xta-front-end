@@ -1,50 +1,49 @@
 import * as THREE from 'three'
-import React, { forwardRef, useLayoutEffect } from 'react'
+import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import { default as gltfConstants } from '@/constants/gltfConstants.json'
 import { ForwardRefGltfGroupInterface } from '@/interfaces/r3fInterfaces'
-
-import { default as GltfConstants } from '@/constants/gltfConstants.json'
+import { GroupProps, MeshProps } from '@react-three/fiber'
 
 type GLTFResult = GLTF & {
   nodes: {
     LogoMoco: THREE.Mesh
   }
   materials: {
-    ['a.001']: THREE.MeshStandardMaterial
+    logo_moco_normal_texture_diffuse: THREE.MeshStandardMaterial
   }
 }
 
-const LogoMoco = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoMoco({ position, rotation, scale }, ref) {
-  const { nodes, materials } = useGLTF(GltfConstants.LOGO_MOCO) as GLTFResult
+interface StarInterface extends MeshProps {
+  handleOnPointerMove: any
+  handleOnPointerLeave: any
+}
+
+export function LogoMoco({
+  position,
+  rotation,
+  handleOnPointerMove,
+  handleOnPointerLeave,
+}: StarInterface) {
+  const { nodes } = useGLTF(gltfConstants.LOGO_MOCO) as GLTFResult
 
   return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
+    <mesh
+      geometry={nodes.LogoMoco.geometry}
+      onPointerMove={handleOnPointerMove}
+      onPointerOut={handleOnPointerLeave}
     >
-      <mesh
-        geometry={nodes.LogoMoco.geometry}
-        material={materials['a.001']}
-        receiveShadow
-        castShadow
-      >
-        <meshNormalMaterial
-          attach='material'
-          /* color={'white'} */
-        />
-      </mesh>
-    </group>
+      <meshNormalMaterial attach='material' />
+    </mesh>
   )
-})
+}
 
-useGLTF.preload(GltfConstants.LOGO_MOCO)
+useGLTF.preload(gltfConstants.LOGO_MOCO)
 
-export default LogoMoco
+
+interface LogoMocoInterface extends GroupProps {
+  handleOnPointerMove: any
+  handleOnPointerLeave: any
+}

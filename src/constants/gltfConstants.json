@@ -1,5 +1,5 @@
 {
-  "MOCO_LOGO": "/gltf/moco_logo/MocoLogo.gltf",
+  "LOGO_MOCO": "/gltf/logos/LogoMoco.gltf",
 
   "M_HELIUM_BALLOON": "/gltf/hero/MHeliumBalloon.gltf",
   "O_HELIUM_BALLOON": "/gltf/hero/OHeliumBalloon.gltf",
@@ -79,7 +79,6 @@
   "LOGO_JAVA": "/gltf/logos/LogoJava.gltf",
   "LOGO_JAVASCRIPT": "/gltf/logos/LogoJavascript.gltf",
   "LOGO_LENTO": "/gltf/logos/Logolento.gltf",
-  "LOGO_MOCO": "/gltf/logos/LogoMoco.gltf",
   "LOGO_MUI": "/gltf/logos/LogoMui.gltf",
   "LOGO_MYSQL": "/gltf/logos/LogoMysql.gltf",
   "LOGO_NEXTJS": "/gltf/logos/LogoNextjs.gltf",
