@@ -1,1 +1,35 @@
+// BACKGROUND-COLOR
+
 $background_color: #151416;
+$blured_background_color: rgba(21, 20, 22, 0.7);
+
+// GREY GRADIENT
+
+$white: #ffffff;
+$grey_lighter: #d8d8d8;
+$grey_light: #a8a8a8;
+$grey_medium: #7b7b7b;
+$grey_dark: #515151;
+$grey_darker: #292929;
+$black: #000000;
+
+$desktop_limit: 1200px;
+
+$blur: 3px;
+
+:export {
+  background_color: $background_color;
+  blured_background_color: $blured_background_color;
+
+  white: $white;
+  grey_lighter: $grey_lighter;
+  grey_light: $grey_light;
+  grey_medium: $grey_medium;
+  grey_dark: $grey_dark;
+  grey_darker: $grey_darker;
+  black: $black;
+
+  desktop_limit: $desktop_limit;
+
+  blur: $blur;
+}
