@@ -50,19 +50,19 @@ export default function LocaleSwitcher() {
       className={`lis ${isOpen ? 'open' : ''}`}
       onClick={handleSetIsOpen}
     >
-      <div
-        id='current_locale'
-      >
+      <div id='current_locale'>
         <FaArrowRight
           id='caret'
           size={15}
         />
-        <span id='selected'>{isDesktop ? currentLocale.toUpperCase() : t(`LOCALES.${currentLocale.toUpperCase()}`)}</span>
+        <span id='selected'>
+          {isDesktop
+            ? currentLocale.toUpperCase()
+            : t(`LOCALES.${currentLocale.toUpperCase()}`)}
+        </span>
       </div>
       {isOpen && (
-        <ul
-          id='locale_options'
-        >
+        <ul id='locale_options'>
           {localesConstants.LOCALES.filter(
             (locale_constant) => locale_constant !== locale,
           )
@@ -83,9 +83,7 @@ export default function LocaleSwitcher() {
                   style={cssVar}
                   onClick={() => handleSetCurrentLocale(locale_constant)}
                 >
-                  <span>
-                    {t(`LOCALES.${locale_constant.toUpperCase()}`)}
-                  </span>
+                  <span>{t(`LOCALES.${locale_constant.toUpperCase()}`)}</span>
                 </li>
               )
             })}

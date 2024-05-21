@@ -8,7 +8,6 @@ export default function Hamburger({
   menuIsOpen,
   handleSetMenuIsOpen,
 }: HamburgerInterface) {
-
   return (
     <div id='hamburger_icon'>
       <input

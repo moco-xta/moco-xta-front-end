@@ -9,7 +9,7 @@ import {
   PerformedWithSlice,
   LastReviewsSlice,
   CleffySlice,
-  Reviews
+  Reviews,
 } from '@/components/slices'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
 import Footer from '@/components/shared/footer'

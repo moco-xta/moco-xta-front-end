@@ -8,7 +8,6 @@ import PostProcessing from './post_processing'
 import { default as logoMocoConstants } from '@/constants/canvas/logoMocoConstants.json'
 
 export default function LogoMocoCanvas() {
-
   return (
     <Canvas
       dpr={logoMocoConstants.CANVAS.DPR}

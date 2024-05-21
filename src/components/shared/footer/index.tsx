@@ -20,14 +20,14 @@ export default function Footer() {
   return (
     <footer>
       <div id='footer_logo_container'>
-      <Image
-        id='footer_logo'
-        src='/img/png/footer/moco_logo_perspective_normal_blender_with_noise.png'
-        width={1182}
-        height={1060}
-        alt='Logo footer'
-      />
-    </div>
+        <Image
+          id='footer_logo'
+          src='/img/png/footer/moco_logo_perspective_normal_blender_with_noise.png'
+          width={1182}
+          height={1060}
+          alt='Logo footer'
+        />
+      </div>
       {/* <div id='links_and_contact_container'> */}
       {/* <div id='links_container'> */}
       {/* {Routes.filter((route) => route.hasOwnProperty('index'))

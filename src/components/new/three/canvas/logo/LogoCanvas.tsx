@@ -7,7 +7,6 @@ import LogoMoco from '../../models/logos/LogoMoco'
 import { default as logoConstants } from '@/constants/new/canvas/logoConstants.json'
 
 export default function LogoCanvas() {
-
   return (
     <Canvas
       dpr={logoConstants.CANVAS.DPR}

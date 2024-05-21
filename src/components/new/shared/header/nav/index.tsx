@@ -62,7 +62,7 @@ export default function Nav() {
                   </li>
                 )
               })}
-              <LocaleSwitcher />
+            <LocaleSwitcher />
           </ul>
         </nav>
       </div>

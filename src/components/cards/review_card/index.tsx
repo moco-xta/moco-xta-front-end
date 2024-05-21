@@ -28,7 +28,6 @@ export default function ReviewCard({ review }: ReviewCardInterface) {
       <ReviewCanvas data={data} />
     </div> */
 
-
   return (
     <div
       ref={cardRef}

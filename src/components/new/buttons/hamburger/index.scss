@@ -62,16 +62,12 @@
       transform: translateY(6px);
     }
 
-    .hamburger_input:checked
-      + .hamburger_label
-      .hamburger_line::before {
+    .hamburger_input:checked + .hamburger_label .hamburger_line::before {
       width: 60%;
       transform: translateX(13px) translateY(0px) rotate(30deg);
     }
 
-    .hamburger_input:checked
-      + .hamburger_label
-      .hamburger_line::after {
+    .hamburger_input:checked + .hamburger_label .hamburger_line::after {
       width: 60%;
       transform: translateX(13px) translateY(-4px) rotate(-30deg);
     }
