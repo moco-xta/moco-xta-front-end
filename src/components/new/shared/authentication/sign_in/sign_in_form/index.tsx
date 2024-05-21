@@ -13,7 +13,7 @@ import './index.scss'
 export default function SignInForm({
   submitButtonIsDisabled,
   resetButtonIsDisabled,
-  setIsSignIn
+  setIsSignIn,
 }: AuthenticationFormsInterface) {
   const t = useTranslations()
 
@@ -68,9 +68,11 @@ export default function SignInForm({
           <SubmitButton submitButtonIsDisabled={submitButtonIsDisabled} />
           <ResetButton resetForm={handleResetForm} />
         </div>
-        <button onClick={handleSwitchSignUp}>
-          {t('AUTHENTICATION.SIGN_IN.SIGN_UP')}
-        </button>
+        <div className='sign_in_sign_up_switch_button_container'>
+          <button onClick={handleSwitchSignUp}>
+            {t('AUTHENTICATION.SIGN_IN.SIGN_UP')}
+          </button>
+        </div>
       </form>
     </div>
   )

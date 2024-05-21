@@ -1,4 +1,4 @@
-import AuthenticationButton from "./authentication_button";
+import AuthenticationButton from './authentication_button'
 import ClosingArrow from './closing_arrow'
 import Hamburger from './hamburger'
 import LocaleSwitcher from './locale_switcher'
@@ -11,5 +11,5 @@ export {
   Hamburger,
   LocaleSwitcher,
   ResetButton,
-  SubmitButton
+  SubmitButton,
 }

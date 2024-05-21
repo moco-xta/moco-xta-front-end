@@ -8,7 +8,5 @@ export default function SignUp({
   setIsSignIn,
   handleSetAuthenticationIsOpen,
 }: SignUpSignInInterface) {
-  return (
-    <div>Sign UP</div>
-  )
+  return <div>Sign UP</div>
 }
