@@ -10,6 +10,7 @@ import LastReviewsSlice from '@/components/slices/last_reviews_slice'
 import PerformedWithSlice from '@/components/slices/performed_with_slice'
 import PhotographySlice from '@/components/slices/photography_slice'
 import ProjectsSlice from '@/components/slices/projects_slice'
+import Reviews from '@/components/slices/reviews'
 import SkillsSlice from '@/components/slices/skills_slice'
 
 export {
@@ -24,5 +25,6 @@ export {
   PerformedWithSlice,
   PhotographySlice,
   ProjectsSlice,
+  Reviews,
   SkillsSlice,
 }
