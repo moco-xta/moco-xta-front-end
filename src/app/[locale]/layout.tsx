@@ -6,10 +6,9 @@ import { Toaster } from 'sonner'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
-import Header from '@/components/shared/header'
+import Header from '@/components/new/shared/header'
 
-import '@/styles/globals.scss'
-import { IsClientContextProvider } from 'contexts/IsClientContext'
+import '@/styles/new/globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,7 +30,6 @@ export default function RootLayout({
     <>
       <html lang={locale}>
         <body className={inter.className}>
-          {/* <IsClientContextProvider> */}
           <GoogleAnalytics
             gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
@@ -50,17 +48,11 @@ export default function RootLayout({
                     error: 'toaster toaster_error',
                   },
                 }}
-                /* icons={{
-                  loading: <LoadingIcon />,
-                  success: <SuccessIcon />,
-                  error: <ErrorIcon />,
-                }} */
               />
               <Header />
               {children}
             </NextIntlClientProvider>
           </ReduxProvider>
-          {/* </IsClientContextProvider> */}
         </body>
       </html>
     </>

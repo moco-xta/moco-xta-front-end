@@ -22,7 +22,7 @@ export default function Home() {
         {/* <LastProjectsSlice /> */}
         {/* <LastReviewsSlice /> */}
         {/* <PerformedWithSlice /> */}
-        <Reviews />
+        {/* <Reviews /> */}
         {/* <Footer /> */}
       </div>
       <div className='scroll_to_top_container'>
