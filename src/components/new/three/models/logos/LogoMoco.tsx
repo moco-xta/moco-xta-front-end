@@ -5,9 +5,10 @@ import { GLTF } from 'three-stdlib'
 
 import useModelHoverEffect from '@/hooks/useModelHoverEffect'
 
+import Anaglyph from '../../post_processing/Anaglyph'
+
 import { default as logoConstants } from '@/constants/new/canvas/logoConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import Anaglyph from '../../post_processing/Anaglyph'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -31,9 +32,9 @@ export default function LogoMoco() {
       ref={logoMocoRef}
       rotation={
         new THREE.Euler(
-          THREE.MathUtils.degToRad(logoConstants.CARD.ROTATION.X),
-          THREE.MathUtils.degToRad(logoConstants.CARD.ROTATION.Y),
-          THREE.MathUtils.degToRad(logoConstants.CARD.ROTATION.Z),
+          THREE.MathUtils.degToRad(logoConstants.LOGO.ROTATION.X),
+          THREE.MathUtils.degToRad(logoConstants.LOGO.ROTATION.Y),
+          THREE.MathUtils.degToRad(logoConstants.LOGO.ROTATION.Z),
         )
       }
     >

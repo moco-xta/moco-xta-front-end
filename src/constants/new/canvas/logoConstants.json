@@ -10,9 +10,9 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "X": 0,
+      "X": -0.1,
       "Y": 0,
-      "Z": 9.5
+      "Z": 10.5
     },
     "FOV": 15
   },
@@ -34,7 +34,7 @@
       "MIPMAP_BLUR": false
     }
   },
-  "CARD": {
+  "LOGO": {
     "ROTATION": {
       "X": 0,
       "Y": 0,
@@ -43,7 +43,7 @@
   },
   "HANDLE_ON_PONTER_MOVE": {
     "ROTATION": {
-      "FACTOR": 0.0015,
+      "FACTOR": 0.004,
       "INITIAL": {
         "X": 0,
         "Y": 0,
