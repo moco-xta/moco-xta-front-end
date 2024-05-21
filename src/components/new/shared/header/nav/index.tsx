@@ -19,14 +19,24 @@ export default function Nav() {
 
   const { isDesktop } = useResize()
 
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+  const [localeSwitcherIsOpen, setLocaleSwitcherIsOpen] = useState(false)
+
   useEffect(() => {
     if (isDesktop) setMenuIsOpen(false)
+    setLocaleSwitcherIsOpen(false)
   }, [isDesktop])
 
-  const [menuIsOpen, setMenuIsOpen] = useState(false)
+  useEffect(() => {
+    if (!menuIsOpen) setLocaleSwitcherIsOpen(false)
+  }, [menuIsOpen])
 
   function handleSetMenuIsOpen() {
     setMenuIsOpen(!menuIsOpen)
+  }
+
+  function handleSetLocaleSwitcherIsOpen() {
+    setLocaleSwitcherIsOpen(!localeSwitcherIsOpen)
   }
 
   return (
@@ -62,7 +72,10 @@ export default function Nav() {
                   </li>
                 )
               })}
-            <LocaleSwitcher />
+            <LocaleSwitcher
+              localeSwitcherIsOpen={localeSwitcherIsOpen}
+              handleSetLocaleSwitcherIsOpen={handleSetLocaleSwitcherIsOpen}
+            />
           </ul>
         </nav>
       </div>

@@ -3,6 +3,8 @@ import { useRouter } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { FaArrowRight } from 'react-icons/fa6'
 
+import { LocaleSwitcherInterface } from '@/interfaces/new/buttonsInterfaces'
+
 import useResize from '@/hooks/new/useResize'
 
 import { getCookieByName } from '@/helpers/new/cookiesHelper'
@@ -11,7 +13,10 @@ import { default as localesConstants } from '@/constants/new/localesConstants.js
 
 import './index.scss'
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcher({
+  localeSwitcherIsOpen,
+  handleSetLocaleSwitcherIsOpen,
+}: LocaleSwitcherInterface) {
   const t = useTranslations('HEADER')
 
   const locale = useLocale()
@@ -19,27 +24,18 @@ export default function LocaleSwitcher() {
 
   const { isDesktop } = useResize()
 
-  useEffect(() => {
-    setIsOpen(false)
-  }, [isDesktop])
-
   const dropdown = useRef<HTMLLIElement>(null)
 
   const [currentLocale, setCurrentLocale] = useState('en')
-  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     setCurrentLocale(getCookieByName('NEXT_LOCALE') || locale)
   }, [locale])
 
-  function handleSetIsOpen() {
-    setIsOpen(!isOpen)
-  }
-
   function handleSetCurrentLocale(locale: string) {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`
     setCurrentLocale(locale)
-    setIsOpen(false)
+    handleSetLocaleSwitcherIsOpen()
     router.refresh()
   }
 
@@ -47,8 +43,8 @@ export default function LocaleSwitcher() {
     <li
       id='locale_dropdown'
       ref={dropdown}
-      className={`lis ${isOpen ? 'open' : ''}`}
-      onClick={handleSetIsOpen}
+      className={`lis ${localeSwitcherIsOpen ? 'open' : ''}`}
+      onClick={handleSetLocaleSwitcherIsOpen}
     >
       <div id='current_locale'>
         <FaArrowRight
@@ -61,7 +57,7 @@ export default function LocaleSwitcher() {
             : t(`LOCALES.${currentLocale.toUpperCase()}`)}
         </span>
       </div>
-      {isOpen && (
+      {localeSwitcherIsOpen && (
         <ul id='locale_options'>
           {localesConstants.LOCALES.filter(
             (locale_constant) => locale_constant !== locale,
