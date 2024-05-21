@@ -7,8 +7,10 @@ import { Routes } from '@/routes/new/routes'
 
 import useResize from '@/hooks/new/useResize'
 
+import { AuthenticationButton } from '@/components/new/buttons'
 import LocaleSwitcher from '@/components/new/buttons/locale_switcher'
 import Hamburger from '@/components/new/buttons/hamburger'
+import Authentication from '../../authentication'
 
 import './index.scss'
 
@@ -20,6 +22,7 @@ export default function Nav() {
   const { isDesktop } = useResize()
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)
+  const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
   const [localeSwitcherIsOpen, setLocaleSwitcherIsOpen] = useState(false)
 
   useEffect(() => {
@@ -33,6 +36,10 @@ export default function Nav() {
 
   function handleSetMenuIsOpen() {
     setMenuIsOpen(!menuIsOpen)
+  }
+
+  function handleSetAuthenticationIsOpen() {
+    setAuthenticationIsOpen(!authenticationIsOpen)
   }
 
   function handleSetLocaleSwitcherIsOpen() {
@@ -72,6 +79,10 @@ export default function Nav() {
                   </li>
                 )
               })}
+            <AuthenticationButton
+              setMenuIsOpen={setMenuIsOpen}
+              setAuthenticationIsOpen={setAuthenticationIsOpen}
+            />
             <LocaleSwitcher
               localeSwitcherIsOpen={localeSwitcherIsOpen}
               handleSetLocaleSwitcherIsOpen={handleSetLocaleSwitcherIsOpen}
@@ -82,6 +93,10 @@ export default function Nav() {
       <Hamburger
         menuIsOpen={menuIsOpen}
         handleSetMenuIsOpen={handleSetMenuIsOpen}
+      />
+      <Authentication
+        authenticationIsOpen={authenticationIsOpen}
+        handleSetAuthenticationIsOpen={handleSetAuthenticationIsOpen}
       />
     </>
   )

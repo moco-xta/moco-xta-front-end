@@ -49,7 +49,7 @@ export default function LocaleSwitcher({
       <div id='current_locale'>
         <FaArrowRight
           id='caret'
-          size={15}
+          size={14}
         />
         <span id='selected'>
           {isDesktop

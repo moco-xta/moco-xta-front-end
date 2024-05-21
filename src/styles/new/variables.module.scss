@@ -1,8 +1,3 @@
-// BACKGROUND-COLOR
-
-$background_color: #151416;
-$blured_background_color: rgba(21, 20, 22, 0.7);
-
 // GREY GRADIENT
 
 $white: #ffffff;
@@ -13,11 +8,47 @@ $grey_dark: #515151;
 $grey_darker: #292929;
 $black: #000000;
 
+$success_light_color: #37ae47;
+$success_dark_color: #298c36;
+$alert_light_color: #ec2a5f;
+$alert_dark_color: #8c0101;
+
+// TEXTS
+
+$text_alert: $alert_light_color;
+
+// INPUTS
+
+$input_background: #00000050;
+$input_radio_checked_color: #bfbfbf;
+$input_border: 1px solid #2d2c2e;
+$input_radio_border: 1px solid #bfbfbf;
+
+$input_border_alert: 1px solid $alert_light_color;
+
+// BACKGROUND-COLOR
+
+$background_color: #151416;
+$blured_background_color: rgba(21, 20, 22, 0.7);
+$success_background: $success_light_color;
+$alert_background: $alert_light_color;
+
+// SIZES
+
+$font_size_alert: 0.8em;
+
+$small_limit: 800px;
 $desktop_limit: 1200px;
+$large_limit: 1600px;
+
+// EFFECTS
 
 $blur: 3px;
 
+// TRANSITIONS
+
 $transition: 0.3s;
+$hover_transition: 0.2s;
 
 :export {
   background_color: $background_color;
@@ -36,4 +67,5 @@ $transition: 0.3s;
   blur: $blur;
 
   transition: $transition;
+  hover_transition: $hover_transition;
 }

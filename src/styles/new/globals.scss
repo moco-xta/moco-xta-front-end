@@ -17,6 +17,73 @@ body {
   background-color: $background_color;
 }
 
+// BUTTONS
+
+.submit_reset_buttons_container {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+// FONT_SIZES
+
+h1 {
+  font-size: 4rem;
+}
+
+.form_title {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: $small_limit) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .form_title {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: $desktop_limit) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .form_title {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: $large_limit) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  .form_title {
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+}
+
 // LINKS
 
 a {
@@ -26,5 +93,6 @@ a {
 
 // Z-INDEX
 
+// authentication: 8
 // nav_container (!isDesktop): 9
 // header: 10

@@ -1,0 +1,28 @@
+@import '@/styles/new/variables.module.scss';
+
+#authentication {
+  z-index: 8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  color: $white;
+  background-color: $blured_background_color;
+  -webkit-backdrop-filter: blur($blur);
+  backdrop-filter: blur($blur);
+  transform: translateX(-100%);
+  transition: $transition transform ease-in-out;
+
+  #authentication_forms_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#authentication.open {
+  transform: initial;
+}

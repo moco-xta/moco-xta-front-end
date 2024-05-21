@@ -4,6 +4,7 @@
   transform: initial;
 
   nav {
+    margin: 0;
     margin-top: 20px;
     margin-right: 20px;
 
@@ -17,13 +18,13 @@
 
     .lis {
       margin-right: 20px;
+      color: $grey_light;
+      cursor: pointer;
 
       .span_link_wrapper,
       a {
         display: inline-block;
-        color: $grey_light;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
+        transition: color $hover_transition ease-in-out;
       }
 
       .span_link_wrapper {
@@ -34,6 +35,11 @@
           color: $white;
           font-weight: bold;
         }
+      }
+
+      .span_link_wrapper:hover {
+        color: $white;
+        font-weight: bold;
       }
 
       .span_link_wrapper::before {
