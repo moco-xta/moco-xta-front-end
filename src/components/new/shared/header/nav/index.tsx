@@ -7,6 +7,7 @@ import { Routes } from '@/routes/new/routes'
 
 import useResize from '@/hooks/new/useResize'
 
+import LocaleSwitcher from '@/components/new/buttons/locale_switcher'
 import Hamburger from '@/components/new/buttons/hamburger'
 
 import './index.scss'
@@ -61,6 +62,7 @@ export default function Nav() {
                   </li>
                 )
               })}
+              <LocaleSwitcher />
           </ul>
         </nav>
       </div>

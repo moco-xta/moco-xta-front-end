@@ -17,6 +17,8 @@ $desktop_limit: 1200px;
 
 $blur: 3px;
 
+$transition: 0.3s;
+
 :export {
   background_color: $background_color;
   blured_background_color: $blured_background_color;
@@ -32,4 +34,6 @@ $blur: 3px;
   desktop_limit: $desktop_limit;
 
   blur: $blur;
+
+  transition: $transition;
 }

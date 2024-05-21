@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { default as globalConstants } from '@/constants/new/globalConstants.json'
 
 export default function useResize() {
-  const [isDesktop, setisDesktop] = useState<boolean>(true)
+  const [isDesktop, setisDesktop] = useState<boolean>(window.innerWidth > globalConstants.DESKTOP_LIMIT)
   const [innerWidth, setInnerWidth] = useState<number>(0)
   const [innerHeight, setInnerHeight] = useState<number>(0)
 
