@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import { HeroSlice } from '@/components/new/slices'
+import { HeroSlice, MainSkillsSlice } from '@/components/new/slices'
 import {
   /* HeroSlice, */
   IntroductionSlice,
@@ -20,6 +20,7 @@ export default function Home() {
     <>
       <div id='home_container'>
         <HeroSlice />
+        <MainSkillsSlice />
         {/* <HeroSlice /> */}
         {/* <CleffySlice /> */}
         {/* <IntroductionSlice /> */}

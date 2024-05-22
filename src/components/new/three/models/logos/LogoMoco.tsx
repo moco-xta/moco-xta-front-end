@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import useModelHoverEffect from '@/hooks/useModelHoverEffect'
+import useModelHoverEffect from '@/hooks/new/useModelHoverEffect'
 
 import Anaglyph from '../../post_processing/Anaglyph'
 

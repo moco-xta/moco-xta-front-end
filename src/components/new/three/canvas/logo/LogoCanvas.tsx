@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
-import LogoMoco from '../../models/logos/LogoMoco'
+import { LogoMoco } from '../../models/logos'
 
 import { default as logoConstants } from '@/constants/new/canvas/logoConstants.json'
 
