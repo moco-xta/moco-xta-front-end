@@ -10,6 +10,7 @@ import { SignUpValuesInterface } from '@/interfaces/new/reduxApiInterfaces'
 import { AppDispatch } from '@/redux/store'
 import { useSignUpMutation } from '@/redux/api/authenticationApi'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
+import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
 
 import { signUpValidationSchema } from 'validations/signUpValidationSchema'
 
@@ -21,7 +22,6 @@ import './index.scss'
 
 export default function SignUp({
   setIsSignIn,
-  handleSetAuthenticationIsOpen,
 }: SignUpSignInInterface) {
   const t = useTranslations()
 
@@ -40,6 +40,10 @@ export default function SignUp({
     email: '',
     password: '',
     confirmPassword: '',
+  }
+
+  const handleSetAuthenticationIsOpen = () => {
+    dispatch(setAuthenticationIsOpen(false))
   }
 
   return (

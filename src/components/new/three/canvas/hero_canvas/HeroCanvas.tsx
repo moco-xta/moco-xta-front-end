@@ -19,11 +19,16 @@ export default function HeroCanvas() {
 
   // TODO: Improve function
   const setCameraZPosition = (innerWidth: number) => {
-    return 15 - (innerWidth / 500) * heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Z
+    return (
+      15 -
+      (innerWidth / 500) *
+        heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Z
+    )
   }
 
   useEffect(() => {
-    if (perspectiveCameraRef.current) perspectiveCameraRef.current.position.z = setCameraZPosition(innerWidth)
+    if (perspectiveCameraRef.current)
+      perspectiveCameraRef.current.position.z = setCameraZPosition(innerWidth)
   }, [innerWidth])
 
   return (
@@ -45,7 +50,7 @@ export default function HeroCanvas() {
         position={[
           heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.X,
           heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Y,
-          setCameraZPosition(window.innerWidth)
+          setCameraZPosition(window.innerWidth),
         ]}
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />

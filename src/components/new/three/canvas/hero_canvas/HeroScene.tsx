@@ -17,7 +17,7 @@ export default function HeroScene() {
           <DesktopBalloonsWrapper />
           <DesktopHeliumBalloons />
         </group>
-      ): (
+      ) : (
         <group>
           <MobileBalloonsWrapper />
           <MobileHeliumBalloons />
