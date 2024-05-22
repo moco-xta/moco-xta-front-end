@@ -20,9 +20,7 @@ import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 
 import './index.scss'
 
-export default function SignUp({
-  setIsSignIn,
-}: SignUpSignInInterface) {
+export default function SignUp({ setIsSignIn }: SignUpSignInInterface) {
   const t = useTranslations()
 
   const dispatch = useDispatch<AppDispatch>()

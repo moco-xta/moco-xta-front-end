@@ -1,0 +1,11 @@
+#main_skills_slice {
+  display: flex;
+  flex-direction: column;
+
+  #main_skills_canvas {
+    canvas {
+      width: 100%;
+      height: 60vh;
+    }
+  }
+}
