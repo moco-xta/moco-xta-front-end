@@ -6,7 +6,7 @@ button[type='submit'] {
   padding: 12px 20px;
   display: flex;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 0 0 0 15px;
   color: $success_dark_color;
   background-color: $success_background;
   cursor: pointer;
@@ -19,4 +19,5 @@ button[type='submit'].disabled {
 
 button[type='submit']:hover {
   color: $white;
+  box-shadow: $success_box_shadow;
 }

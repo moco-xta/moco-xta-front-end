@@ -11,7 +11,7 @@ $black: #000000;
 $success_light_color: #37ae47;
 $success_dark_color: #298c36;
 $alert_light_color: #ec2a5f;
-$alert_dark_color: #8c0101;
+$alert_dark_color: #bb204a;
 
 // TEXTS
 
@@ -32,6 +32,11 @@ $background_color: #151416;
 $blured_background_color: rgba(21, 20, 22, 0.7);
 $success_background: $success_light_color;
 $alert_background: $alert_light_color;
+
+// SHADOWS
+
+$success_box_shadow: rgba(0, 250, 0, 0.25) 0px 25px 50px -12px;
+$alert_box_shadow: rgba(250, 0, 0, 0.25) 0px 25px 50px -12px;
 
 // SIZES
 
