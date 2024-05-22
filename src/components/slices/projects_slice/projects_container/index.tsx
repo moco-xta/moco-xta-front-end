@@ -15,6 +15,7 @@ export default function ProjectCards({
       {projectsData.map((projectData, index) => {
         return (
           <ProjectCard
+            key={`project_card_${index}`}
             index={index}
             currentProject={currentProject}
             projectData={projectData}

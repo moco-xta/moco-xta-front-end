@@ -8,7 +8,7 @@ export default function Anaglyph({ enabled = false }) {
 
   const [effect] = useState(() => new AnaglyphEffect(gl))
 
-  useEffect(() => void effect.setSize(size.width, size.height), [size])
+  useEffect(() => void effect.setSize(size.width, size.height), [effect, size])
 
   return useFrame(() => (enabled ? effect : gl).render(scene, camera), 1)
 }

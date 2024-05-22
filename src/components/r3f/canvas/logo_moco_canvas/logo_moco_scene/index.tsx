@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
+// @ts-ignore
 import { AnaglyphEffect } from 'three/examples/jsm/effects/AnaglyphEffect'
 
 import useModelHoverEffect from '@/hooks/useModelHoverEffect'
@@ -14,7 +15,7 @@ function Annaglyph({ enabled = false }) {
   console.log('size', size)
 
   const [effect] = useState(() => new AnaglyphEffect(gl))
-  useEffect(() => void effect.setSize(size.width, size.height), [size])
+  useEffect(() => void effect.setSize(size.width, size.height), [effect, size])
   return useFrame(() => (enabled ? effect : gl).render(scene, camera), 1)
 }
 
