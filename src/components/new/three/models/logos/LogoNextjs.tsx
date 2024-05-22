@@ -5,6 +5,10 @@ import { GLTF } from 'three-stdlib'
 
 import useModelHoverEffect from '@/hooks/useModelHoverEffect'
 
+import IntersectCube from './IntersectCube'
+
+import { mainSkillsLogoMaterial } from '../../materials/mainSkillsLogoMaterial'
+
 import { default as mainSkillsConstants } from '@/constants/new/canvas/mainSkillsConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
@@ -16,10 +20,8 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export default function LogoNextjs({ position, rotation, scale}: THREE.Group) {
-  const { nodes } = useGLTF(
-    gltfConstants.LOGOS.LOGO_NEXTJS,
-  ) as GLTFResult
+export default function LogoNextjs({ position, rotation, scale }: THREE.Group) {
+  const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_NEXTJS) as GLTFResult
 
   const logoNextjsRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)
 
@@ -35,33 +37,23 @@ export default function LogoNextjs({ position, rotation, scale}: THREE.Group) {
       position={position}
       rotation={rotation}
       scale={scale}
-      onPointerMove={handleOnPointerMove}
-      onPointerOut={handleOnPointerLeave}
     >
+      <IntersectCube
+        handleOnPointerMove={handleOnPointerMove}
+        handleOnPointerLeave={handleOnPointerLeave}
+      />
       <mesh
         geometry={nodes.LogoNextjs_1.geometry}
+        material={mainSkillsLogoMaterial('#000000')}
         receiveShadow
         castShadow
-      >
-        <meshStandardMaterial
-          attach='material'
-          color={0x000000}
-          roughness={0.5}
-          metalness={0.5}
-        />
-      </mesh>
+      />
       <mesh
         geometry={nodes.LogoNextjs_2.geometry}
+        material={mainSkillsLogoMaterial('#ffffff')}
         receiveShadow
         castShadow
-      >
-        <meshStandardMaterial
-          attach='material'
-          color={0xffffff}
-          roughness={0.5}
-          metalness={0.5}
-        />
-      </mesh>
+      />
     </group>
   )
 }
