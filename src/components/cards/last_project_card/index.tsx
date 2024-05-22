@@ -27,7 +27,7 @@ export function LastProjectCard({ content }: LastProjectsCardInterface) {
       <div className='project_card_details'>
         <div className='external_link_and_logo_container'>
           <Image
-            src={content.logoUrl}
+            src={content.image}
             width={120}
             height={120}
             alt={`Logo ${content.name}`}
@@ -41,7 +41,6 @@ export function LastProjectCard({ content }: LastProjectsCardInterface) {
           {content.tools.map((Logo, index) => (
             <Logo
               key={`last_projects_tools_${content.key}_${index}`}
-              className='tool_icon'
             />
           ))}
         </div>

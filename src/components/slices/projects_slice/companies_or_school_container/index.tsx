@@ -17,6 +17,7 @@ export default function CompanyOrSchoolCards({
       {companiesAndSchollData.map((companyOrSchoolData, index) => {
         return (
           <CompanyOrSchoolCard
+            key={`company_or_school_card_${index}`}
             index={index}
             currentCompanyOrSchool={currentCompanyOrSchool}
             companyOrSchoolData={companyOrSchoolData}

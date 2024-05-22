@@ -60,7 +60,7 @@ export interface ReviewCanvasInterface {
 }
 
 export interface ReviewCardInterface {
-  review: ReviewDataInterface
+  data: ReviewDataInterface
 }
 
 export interface ColorPadAndArrowInterface {

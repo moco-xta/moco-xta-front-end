@@ -20,14 +20,13 @@ export default function ProjectCard({
   const { innerWidth, innerHeight } = useResize()
 
   useEffect(() => {
+    const getPictureRatio = () => {
+      if (innerWidth > 1366) return 1
+      else if (innerWidth > 1280) return 0.85
+      else return 0.7
+    }
     setProjectImageRatio(getPictureRatio())
   }, [innerWidth])
-
-  const getPictureRatio = () => {
-    if (innerWidth > 1366) return 1
-    else if (innerWidth > 1280) return 0.85
-    else return 0.7
-  }
 
   return (
     <div

@@ -28,6 +28,12 @@ export default function LifeGame() {
   const runningRef = useRef<boolean>(running)
   runningRef.current = running
 
+  const runSimulation = useCallback(() => {
+    if (!runningRef.current) return
+    dispatch(setNextState())
+    setTimeout(runSimulation, 60000 / 72)
+  }, [dispatch])
+
   useEffect(() => {
     if (!running) {
       setRunning(!running)
@@ -36,13 +42,7 @@ export default function LifeGame() {
         runSimulation()
       }
     }
-  }, [grid])
-
-  const runSimulation = useCallback(() => {
-    if (!runningRef.current) return
-    dispatch(setNextState())
-    setTimeout(runSimulation, 60000 / 72)
-  }, [])
+  }, [grid, runSimulation, running])
 
   return (
     <div id='grid_container'>

@@ -13,7 +13,7 @@ import { default as effectsConstants } from '@/constants/effectsConstants.json'
 
 import './index.scss'
 
-export default function ReviewCard({ review }: ReviewCardInterface) {
+export default function ReviewCard({ data }: ReviewCardInterface) {
   const t = useTranslations('ADD_REVIEW')
 
   const cardRef = useRef<HTMLDivElement>(null)
@@ -33,17 +33,17 @@ export default function ReviewCard({ review }: ReviewCardInterface) {
       ref={cardRef}
       /* id='review_card' */
     >
-      {review && <p className='quote_up'>&quot;</p>}
-      <p className='review'>{review.review}</p>
-      {review && <p className='quote_down'>&quot;</p>}
-      {review.rating !== 0 && (
+      {data && <p className='quote_up'>&quot;</p>}
+      <p className='review'>{data.review}</p>
+      {data && <p className='quote_down'>&quot;</p>}
+      {data.rating !== 0 && (
         <div className='rating_stars_container'>
-          <RatingStars rating={review.rating} />
+          <RatingStars rating={data.rating} />
         </div>
       )}
       <div className='name_role_container'>
-        <p className='name'>{review.firstName}</p>
-        {review.role && <p className='role'>{t(`ROLES.${review.role}`)}</p>}
+        <p className='name'>{data.firstName}</p>
+        {data.role && <p className='role'>{t(`ROLES.${data.role}`)}</p>}
       </div>
     </div>
   )
