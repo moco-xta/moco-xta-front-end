@@ -42,7 +42,6 @@ export function LogoMoco({
 
 useGLTF.preload(gltfConstants.LOGO_MOCO)
 
-
 interface LogoMocoInterface extends GroupProps {
   handleOnPointerMove: any
   handleOnPointerLeave: any

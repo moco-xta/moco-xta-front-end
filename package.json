@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@gsap/react": "^2.1.1",
+    "@mui/icons-material": "^5.15.18",
     "@next/third-parties": "^14.1.4",
     "@react-three/drei": "^9.97.6",
     "@react-three/fiber": "^8.15.16",

@@ -1,0 +1,11 @@
+{
+  "LOGOS": {
+    "LOGO_MOCO": "/new/gltf/logos/LogoMoco.gltf"
+  },
+  "HERO": {
+    "M_HELIUM_BALLOON": "/new/gltf/hero/MHeliumBalloon.gltf",
+    "O_HELIUM_BALLOON": "/new/gltf/hero/OHeliumBalloon.gltf",
+    "C_HELIUM_BALLOON": "/new/gltf/hero/CHeliumBalloon.gltf",
+    "SMILEY": "/new/gltf/hero/Smiley.gltf"
+  }
+}

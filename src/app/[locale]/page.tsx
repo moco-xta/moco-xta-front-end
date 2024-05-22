@@ -1,13 +1,16 @@
+'use client'
+
 import React from 'react'
 
+import { HeroSlice } from '@/components/new/slices'
 import {
-  HeroSlice,
+  /* HeroSlice, */
   IntroductionSlice,
   LastProjectsSlice,
   PerformedWithSlice,
   LastReviewsSlice,
   CleffySlice,
-  Reviews
+  Reviews,
 } from '@/components/slices'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
 import Footer from '@/components/shared/footer'
@@ -16,13 +19,14 @@ export default function Home() {
   return (
     <>
       <div id='home_container'>
+        <HeroSlice />
         {/* <HeroSlice /> */}
         {/* <CleffySlice /> */}
         {/* <IntroductionSlice /> */}
         {/* <LastProjectsSlice /> */}
         {/* <LastReviewsSlice /> */}
         {/* <PerformedWithSlice /> */}
-        <Reviews />
+        {/* <Reviews /> */}
         {/* <Footer /> */}
       </div>
       <div className='scroll_to_top_container'>

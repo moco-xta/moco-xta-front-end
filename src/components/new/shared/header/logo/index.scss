@@ -1,0 +1,17 @@
+@import '@/styles/new/variables.module.scss';
+
+#logo {
+  z-index: 11;
+  width: 160px;
+  height: 120px;
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: $desktop_limit) {
+  #logo {
+    width: 100px;
+    height: 75px;
+    margin-top: 10px;
+  }
+}

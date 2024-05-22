@@ -1,0 +1,23 @@
+@import '@/styles/new/variables.module.scss';
+
+#rating_stars_container {
+  display: flex;
+  flex-direction: column;
+
+  .rating_stars_wrapper {
+    display: flex;
+    flex-direction: row;
+
+    input[type='radio'] {
+      display: none;
+    }
+
+    .rating_star {
+      cursor: pointer;
+    }
+
+    .rating_star.disabled {
+      cursor: default;
+    }
+  }
+}
