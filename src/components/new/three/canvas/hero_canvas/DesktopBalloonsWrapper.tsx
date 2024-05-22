@@ -5,7 +5,7 @@ import { RigidBody } from '@react-three/rapier'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
-export default function BalloonsWrapper() {
+export default function DesktopBalloonsWrapper() {
   return (
     <group>
       <RigidBody type='fixed'>

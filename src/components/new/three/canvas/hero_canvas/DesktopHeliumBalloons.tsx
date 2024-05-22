@@ -7,9 +7,14 @@ import useMouseMove from '@/hooks/useMouseMove'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { addForce, applyImpulse } from '@/helpers/heroCanvasHelpers'
-import { CHeliumBalloon, MHeliumBalloon, OHeliumBalloon, Smiley } from '../../models/hero'
+import {
+  CHeliumBalloon,
+  MHeliumBalloon,
+  OHeliumBalloon,
+  Smiley,
+} from '../../models/hero'
 
-export default function HeliumBalloons() {
+export default function DesktopHeliumBalloons() {
   const { deltaX, deltaY } = useMouseMove()
 
   const timeRef = useRef<number>(0)

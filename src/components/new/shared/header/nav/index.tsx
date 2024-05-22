@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useDispatch, useSelector } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/new/routes'
 
 import useResize from '@/hooks/new/useResize'
+
+import { AppDispatch, RootState } from '@/redux/store'
+import {
+  setLocaleSwitcherIsOpen,
+  setMenuIsOpen,
+} from '@/redux/slice/appStateSlice'
 
 import { AuthenticationButton } from '@/components/new/buttons'
 import LocaleSwitcher from '@/components/new/buttons/locale_switcher'
@@ -19,11 +26,13 @@ export default function Nav() {
 
   const pathname = usePathname()
 
+  const dispatch = useDispatch<AppDispatch>()
+
   const { isDesktop } = useResize()
 
-  const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
-  const [localeSwitcherIsOpen, setLocaleSwitcherIsOpen] = useState(false)
+  const menuIsOpen = useSelector(
+    (state: RootState) => state.appState.menuIsOpen,
+  )
 
   useEffect(() => {
     if (isDesktop) setMenuIsOpen(false)
@@ -35,15 +44,7 @@ export default function Nav() {
   }, [menuIsOpen])
 
   function handleSetMenuIsOpen() {
-    setMenuIsOpen(!menuIsOpen)
-  }
-
-  function handleSetAuthenticationIsOpen() {
-    setAuthenticationIsOpen(!authenticationIsOpen)
-  }
-
-  function handleSetLocaleSwitcherIsOpen() {
-    setLocaleSwitcherIsOpen(!localeSwitcherIsOpen)
+    dispatch(setMenuIsOpen(!menuIsOpen))
   }
 
   return (
@@ -79,25 +80,13 @@ export default function Nav() {
                   </li>
                 )
               })}
-            <AuthenticationButton
-              setMenuIsOpen={setMenuIsOpen}
-              setAuthenticationIsOpen={setAuthenticationIsOpen}
-            />
-            <LocaleSwitcher
-              localeSwitcherIsOpen={localeSwitcherIsOpen}
-              handleSetLocaleSwitcherIsOpen={handleSetLocaleSwitcherIsOpen}
-            />
+            <AuthenticationButton />
+            <LocaleSwitcher />
           </ul>
         </nav>
       </div>
-      <Hamburger
-        menuIsOpen={menuIsOpen}
-        handleSetMenuIsOpen={handleSetMenuIsOpen}
-      />
-      <Authentication
-        authenticationIsOpen={authenticationIsOpen}
-        handleSetAuthenticationIsOpen={handleSetAuthenticationIsOpen}
-      />
+      <Hamburger />
+      <Authentication />
     </>
   )
 }

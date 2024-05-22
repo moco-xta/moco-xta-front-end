@@ -1,12 +1,9 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense, useEffect, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
-import {
-  Environment,
-  PerspectiveCamera,
-} from '@react-three/drei'
+import { Environment, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
-import useIsMobile from '@/hooks/useIsMobile'
+import useResize from '@/hooks/new/useResize'
 
 import HeroScene from './HeroScene'
 import ToneMapping from './ToneMapping'
@@ -16,13 +13,23 @@ import { default as heroConstants } from '@/constants/new/canvas/heroConstants.j
 import { default as imgConstants } from '@/constants/new/assets/imgConstants.json'
 
 export default function HeroCanvas() {
-  const { dimensionsType } = useIsMobile()
+  const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
+
+  const { innerWidth } = useResize()
+
+  // TODO: Improve function
+  const setCameraZPosition = (innerWidth: number) => {
+    return (
+      15 -
+      (innerWidth / 500) *
+        heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Z
+    )
+  }
 
   useEffect(() => {
-    console.log('dimensionsType', dimensionsType)
-  }, [dimensionsType])
-
-  if (!dimensionsType) return null
+    if (perspectiveCameraRef.current)
+      perspectiveCameraRef.current.position.z = setCameraZPosition(innerWidth)
+  }, [innerWidth])
 
   return (
     <Canvas
@@ -38,11 +45,12 @@ export default function HeroCanvas() {
       }}
     >
       <PerspectiveCamera
+        ref={perspectiveCameraRef}
         makeDefault
         position={[
           heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.X,
           heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Y,
-          heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Z,
+          setCameraZPosition(window.innerWidth),
         ]}
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />

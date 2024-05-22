@@ -1,13 +1,22 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { HamburgerInterface } from '@/interfaces/new/buttonsInterfaces'
+import { AppDispatch, RootState } from '@/redux/store'
+import { setMenuIsOpen } from '@/redux/slice/appStateSlice'
 
 import './index.scss'
 
-export default function Hamburger({
-  menuIsOpen,
-  handleSetMenuIsOpen,
-}: HamburgerInterface) {
+export default function Hamburger({}) {
+  const dispatch = useDispatch<AppDispatch>()
+
+  const menuIsOpen = useSelector(
+    (state: RootState) => state.appState.menuIsOpen,
+  )
+
+  const handleSetMenuIsOpen = () => {
+    dispatch(setMenuIsOpen(!menuIsOpen))
+  }
+
   return (
     <div id='hamburger_icon'>
       <input

@@ -1,18 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import { useThree } from '@react-three/fiber'
+import React from 'react'
 
-import BalloonsWrapper from './BalloonsWrapper'
-import HeliumBalloons from './HeliumBalloons'
+import useResize from '@/hooks/new/useResize'
 
-import { default as heroConstants } from '@/constants/new/canvas/heroConstants.json'
+import DesktopBalloonsWrapper from './DesktopBalloonsWrapper'
+import DesktopHeliumBalloons from './DesktopHeliumBalloons'
+import MobileBalloonsWrapper from './MobileBalloonsWrapper'
+import MobileHeliumBalloons from './MobileHeliumBalloons'
 
 export default function HeroScene() {
-  const { viewport } = useThree()
+  const { isDesktop } = useResize()
 
   return (
-    <group scale={viewport.width / heroConstants.HELIUM_BALLOONS.SCALE_RATIO.IS_NOT_MOBILE}>
-      <BalloonsWrapper />
-      <HeliumBalloons />
-    </group>
+    <>
+      {isDesktop ? (
+        <group>
+          <DesktopBalloonsWrapper />
+          <DesktopHeliumBalloons />
+        </group>
+      ) : (
+        <group>
+          <MobileBalloonsWrapper />
+          <MobileHeliumBalloons />
+        </group>
+      )}
+    </>
   )
 }
