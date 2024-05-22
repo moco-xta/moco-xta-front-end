@@ -1,9 +1,6 @@
 import React, { Suspense, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
-import {
-  Environment,
-  PerspectiveCamera,
-} from '@react-three/drei'
+import { Environment, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import useIsMobile from '@/hooks/useIsMobile'

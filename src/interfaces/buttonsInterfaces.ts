@@ -22,10 +22,6 @@ export interface HamburgerMenuInterface {
   handleSetMenuIsOpen: () => void
 }
 
-export interface ClosingArrowInterface {
-  handleSetAuthenticationIsOpen: () => void
-}
-
 export interface SubmitButtonInterface {
   submitButtonIsDisabled: boolean
 }

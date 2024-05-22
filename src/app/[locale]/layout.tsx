@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { Toaster } from 'sonner'
 
@@ -11,6 +12,11 @@ import Header from '@/components/new/shared/header'
 import '@/styles/new/globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const karmaticArcade = localFont({
+  src: '../../fonts/ttf/karmatic_arcade.ttf',
+  variable: '--font-karmatic-arcade',
+})
 
 export const metadata: Metadata = {
   title: 'Moco.xta',
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <>
       <html lang={locale}>
-        <body className={inter.className}>
+        <body className={`${inter.className} ${karmaticArcade.variable}`}>
           <GoogleAnalytics
             gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />

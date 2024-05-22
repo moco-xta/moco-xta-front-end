@@ -10,7 +10,11 @@ export default function HeroScene() {
   const { viewport } = useThree()
 
   return (
-    <group scale={viewport.width / heroConstants.HELIUM_BALLOONS.SCALE_RATIO.IS_NOT_MOBILE}>
+    <group
+      scale={
+        viewport.width / heroConstants.HELIUM_BALLOONS.SCALE_RATIO.IS_NOT_MOBILE
+      }
+    >
       <BalloonsWrapper />
       <HeliumBalloons />
     </group>

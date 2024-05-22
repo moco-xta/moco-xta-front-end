@@ -1,12 +1,18 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 
-import { ClosingArrowInterface } from '@/interfaces/buttonsInterfaces'
+import { AppDispatch } from '@/redux/store'
+import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
 
 import './index.scss'
 
-export default function ClosingArrow({
-  handleSetAuthenticationIsOpen,
-}: ClosingArrowInterface) {
+export default function ClosingArrow() {
+  const dispatch = useDispatch<AppDispatch>()
+
+  const handleSetAuthenticationIsOpen = () => {
+    dispatch(setAuthenticationIsOpen(false))
+  }
+
   return (
     <div id='closing_arrow_icon'>
       <input

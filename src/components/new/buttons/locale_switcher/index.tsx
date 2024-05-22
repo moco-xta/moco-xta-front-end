@@ -1,11 +1,13 @@
 import React, { CSSProperties, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useDispatch, useSelector } from 'react-redux'
 import { useLocale, useTranslations } from 'next-intl'
 import { FaArrowRight } from 'react-icons/fa6'
 
-import { LocaleSwitcherInterface } from '@/interfaces/new/buttonsInterfaces'
-
 import useResize from '@/hooks/new/useResize'
+
+import { AppDispatch, RootState } from '@/redux/store'
+import { setLocaleSwitcherIsOpen } from '@/redux/slice/appStateSlice'
 
 import { getCookieByName } from '@/helpers/new/cookiesHelper'
 
@@ -13,14 +15,17 @@ import { default as localesConstants } from '@/constants/new/localesConstants.js
 
 import './index.scss'
 
-export default function LocaleSwitcher({
-  localeSwitcherIsOpen,
-  handleSetLocaleSwitcherIsOpen,
-}: LocaleSwitcherInterface) {
+export default function LocaleSwitcher() {
   const t = useTranslations('HEADER')
 
   const locale = useLocale()
   const router = useRouter()
+
+  const dispatch = useDispatch<AppDispatch>()
+
+  const localeSwitcherIsOpen = useSelector(
+    (state: RootState) => state.appState.localeSwitcherIsOpen,
+  )
 
   const { isDesktop } = useResize()
 
@@ -31,6 +36,10 @@ export default function LocaleSwitcher({
   useEffect(() => {
     setCurrentLocale(getCookieByName('NEXT_LOCALE') || locale)
   }, [locale])
+
+  const handleSetLocaleSwitcherIsOpen = () => {
+    dispatch(setLocaleSwitcherIsOpen(!localeSwitcherIsOpen))
+  }
 
   function handleSetCurrentLocale(locale: string) {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`

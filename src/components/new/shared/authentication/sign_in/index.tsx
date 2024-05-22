@@ -10,6 +10,7 @@ import { SignInPayloadInterface } from '@/interfaces/new/reduxApiInterfaces'
 import { AppDispatch } from '@/redux/store'
 import { useSignInMutation } from '@/redux/api/authenticationApi'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
+import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
 
 import { signInValidationSchema } from 'validations/signInValidationSchema'
 
@@ -19,10 +20,7 @@ import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 
 import './index.scss'
 
-export default function SignIn({
-  setIsSignIn,
-  handleSetAuthenticationIsOpen,
-}: SignUpSignInInterface) {
+export default function SignIn({ setIsSignIn }: SignUpSignInInterface) {
   const t = useTranslations()
 
   const dispatch = useDispatch<AppDispatch>()
@@ -37,6 +35,10 @@ export default function SignIn({
   const initialValues: SignInPayloadInterface = {
     email: '',
     password: '',
+  }
+
+  const handleSetAuthenticationIsOpen = () => {
+    dispatch(setAuthenticationIsOpen(false))
   }
 
   return (

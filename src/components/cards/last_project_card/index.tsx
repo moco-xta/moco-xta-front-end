@@ -39,9 +39,7 @@ export function LastProjectCard({ content }: LastProjectsCardInterface) {
         </div>
         <div className='project_tools'>
           {content.tools.map((Logo, index) => (
-            <Logo
-              key={`last_projects_tools_${content.key}_${index}`}
-            />
+            <Logo key={`last_projects_tools_${content.key}_${index}`} />
           ))}
         </div>
         <div className='project_roles'>
