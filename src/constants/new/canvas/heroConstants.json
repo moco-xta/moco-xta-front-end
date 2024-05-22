@@ -52,10 +52,6 @@
     }
   },
   "HELIUM_BALLOONS": {
-    "SCALE_RATIO": {
-      "IS_NOT_MOBILE": 2.8,
-      "IS_MOBILE": 1
-    },
     "WRAPPER": {
       "DIMENSIONS": {
         "IS_NOT_MOBILE": {

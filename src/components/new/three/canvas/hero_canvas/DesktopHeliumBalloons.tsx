@@ -14,7 +14,7 @@ import {
   Smiley,
 } from '../../models/hero'
 
-export default function HeliumBalloons() {
+export default function DesktopHeliumBalloons() {
   const { deltaX, deltaY } = useMouseMove()
 
   const timeRef = useRef<number>(0)

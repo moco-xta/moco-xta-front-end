@@ -5,20 +5,20 @@ import { RigidBody } from '@react-three/rapier'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
-export default function BalloonsWrapper() {
+export default function MobileBalloonsWrapper() {
   return (
     <group>
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .WIDTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .DEPTH,
           ]}
           position={[
             0,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .HEIGHT / 2,
             0,
           ]}
@@ -33,14 +33,14 @@ export default function BalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .WIDTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .DEPTH,
           ]}
           position={[
             0,
-            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .HEIGHT / 2,
             0,
           ]}
@@ -55,15 +55,15 @@ export default function BalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .WIDTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .HEIGHT,
           ]}
           position={[
             0,
             0,
-            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .DEPTH / 2,
           ]}
         >
@@ -76,15 +76,15 @@ export default function BalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .WIDTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .HEIGHT,
           ]}
           position={[
             0,
             0,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .DEPTH / 2,
           ]}
         >
@@ -97,13 +97,13 @@ export default function BalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .DEPTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .HEIGHT,
           ]}
           position={[
-            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .WIDTH / 2,
             0,
             0,
@@ -119,13 +119,13 @@ export default function BalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .DEPTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .HEIGHT,
           ]}
           position={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_MOBILE
               .WIDTH / 2,
             0,
             0,
