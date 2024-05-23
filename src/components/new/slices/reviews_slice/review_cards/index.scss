@@ -1,9 +1,21 @@
 @import '@/styles/new/variables.module.scss';
 
-
 #review_cards_container {
   margin: 50px;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
+  padding: 0 0 50px 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+  gap: $gap_medium;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.snap_inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 30px;
+}
+
+.snap_inline > * {
+  scroll-snap-align: start;
 }
