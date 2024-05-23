@@ -20,3 +20,12 @@ export interface AddReviewValuesInterface {
   rating: number
   date: Date
 }
+
+export interface ReviewPayloadInterface {
+  id?: number
+  firstName: string
+  role: string
+  review: string
+  rating: number
+  date: Date
+}

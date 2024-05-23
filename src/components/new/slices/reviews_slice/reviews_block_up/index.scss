@@ -1,0 +1,19 @@
+@import '@/styles/new/variables.module.scss';
+
+#reviews_block_up {
+  display: flex;
+  flex-direction: row;
+
+  #reviews_text_block {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $desktop_limit) {
+  #reviews_block_up {
+
+    #reviews_text_block {
+      width: 90%;
+    }
+  }
+}

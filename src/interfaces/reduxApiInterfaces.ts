@@ -43,5 +43,5 @@ export interface ReviewPayloadInterface {
   role: string
   review: string
   rating: number
-  date: Date
+  date?: Date
 }

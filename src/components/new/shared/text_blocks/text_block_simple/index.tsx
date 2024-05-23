@@ -3,7 +3,10 @@ import { useTranslations } from 'next-intl'
 
 import { TextBlockSimpleInterface } from '@/interfaces/new/componentsInterfaces'
 
+import './index.scss'
+
 export default function TextBlockSimple({
+  id,
   title,
   paragraph,
   blockStyle,
@@ -14,6 +17,7 @@ export default function TextBlockSimple({
 
   return (
     <div
+      id={id}
       className='text_block'
       style={blockStyle}
     >

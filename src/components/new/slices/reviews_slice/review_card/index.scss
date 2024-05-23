@@ -1,14 +1,12 @@
 @import '@/styles/new/variables.module.scss';
 
-.text_block {
-  width: 100%;
+.review_card {
+  aspect-ratio: 2 / 2.5;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
-  h3 {
-    margin-bottom: 20px;
-  }
+  border-radius: 10px;
+  background-color: red;
 
   p {
     text-align: justify;

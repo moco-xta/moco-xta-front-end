@@ -1,20 +1,10 @@
 @import '@/styles/new/variables.module.scss';
 
-#main_skills_wrapper {
+#main_skills_container {
   width: 100%;
   padding: 0 $left_right_margin 50px $left_right_margin;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 10%;
-
-  .main_skills {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    p {
-      text-align: justify;
-    }
-  }
 }

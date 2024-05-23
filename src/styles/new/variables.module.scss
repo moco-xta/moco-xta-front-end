@@ -50,6 +50,10 @@ $large_limit: 1600px;
 
 $left_right_margin: 200px;
 
+// GAPS
+
+$gap_medium: 30px;
+
 // EFFECTS
 
 $blur: 3px;
@@ -74,6 +78,8 @@ $hover_transition: 0.2s;
   desktop_limit: $desktop_limit;
 
   left_right_margin: $left_right_margin;
+
+  gap_medium: $gap_medium;
 
   blur: $blur;
 
