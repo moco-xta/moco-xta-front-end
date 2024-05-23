@@ -1,0 +1,35 @@
+@import '@/styles/new/variables.module.scss';
+
+#reviews_container {
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  transform: translateX(100vw);
+  transition: $transition transform ease-in-out;
+  background-color: blue;
+
+  #reviews {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#reviews_container.open {
+  transform: translateX(0);
+}
+
+@media screen and (max-width: $desktop_limit) {
+  #reviews_container {
+    min-height: 100vh;
+  
+    #reviews {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

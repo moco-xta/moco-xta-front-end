@@ -68,7 +68,7 @@ const reviews: ReviewPayloadInterface[] = [
 export default function ReviewCards() {
   return (
     <div
-      id='review_cards_container'
+      id='review_cards'
       className='snap_inline'
     >
       {reviews.map((review, index) => (

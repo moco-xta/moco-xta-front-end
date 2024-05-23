@@ -1,10 +1,11 @@
-import { ReviewPayloadInterface } from '../reduxApiInterfaces'
+import { AddReviewValuesInterface, ReviewPayloadInterface } from '../reduxApiInterfaces'
 
 export interface SignUpSignInInterface {
   setIsSignIn: (value: boolean) => void
 }
 
 export interface TextBlockSimpleInterface {
+  id?: string
   title: string
   paragraph: string
   blockStyle?: {
@@ -19,5 +20,8 @@ export interface TextBlockSimpleInterface {
 }
 
 export interface ReviewCardInterface {
-  review: ReviewPayloadInterface
+  review: ReviewPayloadInterface | AddReviewValuesInterface
+  reviewCardStyle?: {
+    [key: string]: string | number
+  }
 }

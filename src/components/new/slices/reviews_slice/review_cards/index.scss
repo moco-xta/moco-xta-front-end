@@ -1,6 +1,7 @@
 @import '@/styles/new/variables.module.scss';
 
-#review_cards_container {
+#review_cards {
+  width: 90vw;
   padding: 0 0 50px 0;
   display: grid;
   grid-auto-flow: column;
@@ -17,4 +18,11 @@
 
 .snap_inline > * {
   scroll-snap-align: start;
+}
+
+@media screen and (max-width: $desktop_limit) {
+  #review_cards {
+    width: 100vw;
+    grid-auto-columns: 30%;
+  }
 }

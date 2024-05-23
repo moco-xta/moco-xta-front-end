@@ -1,0 +1,19 @@
+@import '@/styles/new/variables.module.scss';
+
+#add_review_container {
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  transform: translateX(-100vw);
+  transition: $transition transform ease-in-out;
+
+  #add_review {
+    width: 90%;
+  }
+}
+
+#add_review_container.open {
+  transform: initial;
+}

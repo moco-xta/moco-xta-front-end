@@ -22,7 +22,7 @@ export default function AddReviewButton() {
       id='add_review_button'
       onClick={handleSetAddReviewIsOpen}
     >
-      OPEN
+      {!addReviewIsOpen ? 'OPEN' : 'CLOSE'}
     </div>
   )
 }
