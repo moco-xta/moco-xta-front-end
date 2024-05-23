@@ -16,7 +16,7 @@ import { default as localesConstants } from '@/constants/new/localesConstants.js
 import './index.scss'
 
 export default function LocaleSwitcher() {
-  const t = useTranslations('HEADER')
+  const t = useTranslations('LOCALE')
 
   const locale = useLocale()
   const router = useRouter()
@@ -88,7 +88,7 @@ export default function LocaleSwitcher() {
                   style={cssVar}
                   onClick={() => handleSetCurrentLocale(locale_constant)}
                 >
-                  <span>{t(`LOCALES.${locale_constant.toUpperCase()}`)}</span>
+                  <span>{t(`${locale_constant.toUpperCase()}`)}</span>
                 </li>
               )
             })}

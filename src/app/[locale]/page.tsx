@@ -2,18 +2,13 @@
 
 import React from 'react'
 
-import { HeroSlice, MainSkillsSlice } from '@/components/new/slices'
 import {
-  /* HeroSlice, */
-  IntroductionSlice,
-  LastProjectsSlice,
+  HeroSlice,
+  MainSkillsSlice,
   PerformedWithSlice,
-  LastReviewsSlice,
-  CleffySlice,
-  Reviews,
-} from '@/components/slices'
+  ReviewsSlice,
+} from '@/components/new/slices'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
-import Footer from '@/components/shared/footer'
 
 export default function Home() {
   return (
@@ -21,14 +16,8 @@ export default function Home() {
       <div id='home_container'>
         <HeroSlice />
         <MainSkillsSlice />
-        {/* <HeroSlice /> */}
-        {/* <CleffySlice /> */}
-        {/* <IntroductionSlice /> */}
-        {/* <LastProjectsSlice /> */}
-        {/* <LastReviewsSlice /> */}
-        {/* <PerformedWithSlice /> */}
-        {/* <Reviews /> */}
-        {/* <Footer /> */}
+        <PerformedWithSlice />
+        <ReviewsSlice />
       </div>
       <div className='scroll_to_top_container'>
         <ScrollToTop />

@@ -1,6 +1,8 @@
+@import '@/styles/new/variables.module.scss';
+
 #main_skills_wrapper {
   width: 100%;
-  padding: 0 10% 50px 10%;
+  padding: 0 $left_right_margin 50px $left_right_margin;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

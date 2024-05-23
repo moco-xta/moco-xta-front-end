@@ -46,6 +46,10 @@ $small_limit: 800px;
 $desktop_limit: 1200px;
 $large_limit: 1600px;
 
+// MARGINS
+
+$left_right_margin: 200px;
+
 // EFFECTS
 
 $blur: 3px;
@@ -68,6 +72,8 @@ $hover_transition: 0.2s;
   black: $black;
 
   desktop_limit: $desktop_limit;
+
+  left_right_margin: $left_right_margin;
 
   blur: $blur;
 
