@@ -1,0 +1,94 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "ColorPadFormik"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "ColorPadFormik",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 804,
+      "max": [0.7937999963760376, 1.0290000438690186, 0.7937999963760376],
+      "min": [-0.7937999963760376, 0.9800000190734863, -0.7937999963760376],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 804,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 804,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 1812,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 9648,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9648,
+      "byteOffset": 9648,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6432,
+      "byteOffset": 19296,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3624,
+      "byteOffset": 25728,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 29352,
+      "uri": "ColorPadFormik.bin"
+    }
+  ]
+}

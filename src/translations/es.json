@@ -1,24 +1,46 @@
 {
-  "HEADER": {
-    "LOCALES": {
-      "EN": "Inglés",
-      "ES": "Español",
-      "FR": "Francés"
-    }
+  "ROUTES": {
+    "ABOUT": "A proposito",
+    "BLOG": "Blog",
+    "CONTACT": "Contacto",
+    "HOME": "Home",
+    "PHOTOGRAPHY": "Fotografía",
+    "PROJECTS": "Proyectos",
+    "SKILLS": "Habilidades"
+  },
+  "LOCALES": {
+    "EN": "Inglés",
+    "ES": "Español",
+    "FR": "Francés"
   },
   "HOME": {
     "HERO": {
-      "FRONT_END_DEVELOPER": "Desarrollador \n Front-End",
-      "CREATIVE_DEVELOPER": {
-        "CREATIVE": "Creative",
-        "DEVELOPER": "Developer"
-      },
-      "HI_I_AM": "Hola, soy ",
-      "SUBHEADING": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      "FRONT_END_DEVELOPER": "Desarrollador \n Front-End"
     },
+    "MAIN_SKILLS": {
+      "INTRODUCTION": {
+        "TITLE": "Introducción",
+        "PARAGRAPH": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source."
+      },
+      "MAIN_SKILLS": {
+        "NEXTJS": {
+          "TITLE": "NextJS",
+          "PARAGRAPH": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout."
+        },
+        "ANGULAR": {
+          "TITLE": "Angular",
+          "PARAGRAPH": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout."
+        },
+        "SPRING": {
+          "TITLE": "Spring",
+          "PARAGRAPH": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout."
+        }
+      }
+    },
+
     "INTRODUCTION": {
       "INTRODUCTION_TITLE": "Introducción",
-      "INTRODUCTION_TEXT": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "INTRODUCTION_TEXT": "",
       "MAIN_SKILLS_TITLE": "Habilidades principales",
       "MAIN_SKILLS_TEXT": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
       "SEE_MORE": "Ver más",
@@ -154,15 +176,6 @@
   },
   "ALL_REVIEWS": {
     "ALL_REVIEWS": "todas las reseñas"
-  },
-  "ROUTES": {
-    "ABOUT": "A proposito",
-    "BLOG": "Blog",
-    "CONTACT": "Contacto",
-    "HOME": "Home",
-    "PHOTOGRAPHY": "Fotografía",
-    "PROJECTS": "Proyectos",
-    "SKILLS": "Habilidades"
   },
   "FORMS": {
     "SUBMIT": "Someter",
