@@ -14,9 +14,9 @@ export default function Home() {
   return (
     <>
       <div id='home_container'>
-        <HeroSlice />
+        {/* <HeroSlice />
         <MainSkillsSlice />
-        <PerformedWithSlice />
+        <PerformedWithSlice /> */}
         <ReviewsSlice />
       </div>
       <div className='scroll_to_top_container'>

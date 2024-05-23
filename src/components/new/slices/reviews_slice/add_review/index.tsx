@@ -4,26 +4,23 @@ import { useSelector } from 'react-redux'
 import { RootState } from '@/redux/store'
 
 import AddReviewButton from '@/components/new/buttons/add_review_button'
-import ReviewsTextBlock from '../reviews_text_bloc'
-import ReviewCards from '../review_cards'
 
 import './index.scss'
 
-export default function Reviews() {
+export default function AddReview() {
   const addReviewIsOpen = useSelector(
     (state: RootState) => state.appState.addReviewIsOpen,
   )
 
   return (
     <div
-      id='reviews_container'
-      className={addReviewIsOpen ? '' : 'open'}
+      id='add_review_container'
+      className={addReviewIsOpen ? 'open' : ''}
     >
-      <AddReviewButton />
-      <div id='reviews'>
-        <ReviewsTextBlock />
-        <ReviewCards />
+      <div id='add_review'>
+        ADD REVIEW
       </div>
+      <AddReviewButton />
     </div>
   )
 }

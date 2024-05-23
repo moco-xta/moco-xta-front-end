@@ -1,0 +1,22 @@
+@import '@/styles/new/variables.module.scss';
+
+#reviews_container {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: row;
+  transform: translateX(100vw);
+  transition: $transition transform ease-in-out;
+  background-color: blue;
+
+  #reviews {
+    width: 90%!important;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#reviews_container.open {
+  transform: translateX(0);
+}

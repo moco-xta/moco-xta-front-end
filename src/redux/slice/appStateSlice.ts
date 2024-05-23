@@ -6,6 +6,7 @@ const initialState: AppStateSliceInterface = {
   menuIsOpen: false,
   authenticationIsOpen: false,
   localeSwitcherIsOpen: false,
+  addReviewIsOpen: false,
 }
 
 const appStateSlice = createSlice({
@@ -21,6 +22,9 @@ const appStateSlice = createSlice({
     setLocaleSwitcherIsOpen: (state, action: PayloadAction<boolean>) => {
       state.localeSwitcherIsOpen = action.payload
     },
+    setAddReviewIsOpen: (state, action: PayloadAction<boolean>) => {
+      state.addReviewIsOpen = action.payload
+    },
   },
 })
 
@@ -28,6 +32,7 @@ export const {
   setMenuIsOpen,
   setAuthenticationIsOpen,
   setLocaleSwitcherIsOpen,
+  setAddReviewIsOpen,
 } = appStateSlice.actions
 
 export default appStateSlice.reducer
