@@ -3,6 +3,8 @@ import { useTranslations } from 'next-intl'
 
 import { TextBlockSimpleInterface } from '@/interfaces/new/componentsInterfaces'
 
+import './index.scss'
+
 export default function TextBlockSimple({
   title,
   paragraph,

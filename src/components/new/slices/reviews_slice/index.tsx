@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ReviewsTextBlock from './reviews_text_block'
+import ReviewsTextBlock from './reviews'
 
 import './index.scss'
 
