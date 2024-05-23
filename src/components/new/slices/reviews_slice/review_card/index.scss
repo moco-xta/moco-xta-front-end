@@ -1,0 +1,14 @@
+@import '@/styles/new/variables.module.scss';
+
+
+.review_card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: red;
+
+  p {
+    text-align: justify;
+  }
+}

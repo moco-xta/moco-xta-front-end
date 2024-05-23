@@ -7,7 +7,7 @@ export default function Reviews() {
     <TextBlockSimple
       title={'HOME.REVIEWS.TITLE'}
       paragraph={'HOME.REVIEWS.PARAGRAPH'}
-      blockStyle={{ padding: '50px 35% 0 35%' }}
+      blockStyle={{ padding: '50px 35% 50px 35%' }}
     />
   )
 }

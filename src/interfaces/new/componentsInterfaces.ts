@@ -1,3 +1,5 @@
+import { ReviewPayloadInterface } from "../reduxApiInterfaces"
+
 export interface SignUpSignInInterface {
   setIsSignIn: (value: boolean) => void
 }
@@ -14,4 +16,8 @@ export interface TextBlockSimpleInterface {
   paragraphStyle?: {
     [key: string]: string | number
   }
+}
+
+export interface ReviewCardInterface {
+  review: ReviewPayloadInterface
 }

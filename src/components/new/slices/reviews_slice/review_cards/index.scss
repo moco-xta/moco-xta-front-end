@@ -1,0 +1,9 @@
+@import '@/styles/new/variables.module.scss';
+
+
+#review_cards_container {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
