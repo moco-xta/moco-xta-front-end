@@ -37,6 +37,10 @@
         }
       }
     },
+    "PERFORMED_WITH": {
+      "TITLE": "Performed with:",
+      "PARAGRAPH": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
 
     "INTRODUCTION": {
       "INTRODUCTION_TITLE": "",
@@ -68,9 +72,6 @@
       "LAST_REVIEWS": "Derniers avis",
       "ADD_A_REVIEW": "Laisser un avis",
       "SEE_ALL_REVIEWS": "Voir tous les avis"
-    },
-    "PERFORMED_WITH": {
-      "PERFORMED_WITH": "Réalisé avec:"
     }
   },
   "SKILLS": {

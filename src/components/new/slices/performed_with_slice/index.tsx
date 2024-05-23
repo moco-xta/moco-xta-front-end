@@ -11,8 +11,8 @@ export default function PerformedWithSlice() {
     <section id='performed_with_slice'>
       <RubiksCubeCanvas />
       <TextBlockSimple
-        title={'HOME.MAIN_SKILLS.INTRODUCTION.TITLE'}
-        paragraph={'HOME.MAIN_SKILLS.INTRODUCTION.PARAGRAPH'}
+        title={'HOME.PERFORMED_WITH.TITLE'}
+        paragraph={'HOME.PERFORMED_WITH.PARAGRAPH'}
         blockStyle={{
           width: '30%',
           padding: `0 ${variables.left_right_margin} 0 0`,
