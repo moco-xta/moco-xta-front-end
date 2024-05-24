@@ -41,6 +41,10 @@ export default function LocaleSwitcher() {
     dispatch(setLocaleSwitcherIsOpen(!localeSwitcherIsOpen))
   }
 
+  useEffect(() => {
+    dispatch(setLocaleSwitcherIsOpen(false))
+  }, [isDesktop])
+
   function handleSetCurrentLocale(locale: string) {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`
     setCurrentLocale(locale)
@@ -63,7 +67,7 @@ export default function LocaleSwitcher() {
         <span id='selected'>
           {isDesktop
             ? currentLocale.toUpperCase()
-            : t(`LOCALES.${currentLocale.toUpperCase()}`)}
+            : t(currentLocale.toUpperCase())}
         </span>
       </div>
       {localeSwitcherIsOpen && (

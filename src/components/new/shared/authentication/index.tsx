@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { RootState } from '@/redux/store'
+import useResize from '@/hooks/new/useResize'
+
+import { AppDispatch, RootState } from '@/redux/store'
+import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
 
 import ClosingArrow from '../../shared/buttons/closing_arrow'
 import SignIn from './sign_in'
@@ -10,9 +13,17 @@ import SignUp from './sign_up'
 import './index.scss'
 
 export default function Authentication() {
+  const dispatch = useDispatch<AppDispatch>()
+
   const authenticationIsOpen = useSelector(
     (state: RootState) => state.appState.authenticationIsOpen,
   )
+
+  const { isDesktop } = useResize()
+
+  useEffect(() => {
+    dispatch(setAuthenticationIsOpen(false))
+  }, [isDesktop])
 
   const [isSignIn, setIsSignIn] = useState(true)
 
