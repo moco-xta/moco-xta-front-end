@@ -19,3 +19,12 @@
     }
   }
 }
+
+@media screen and (max-width: $desktop_limit) {
+  #add_review_form {
+  
+    #add_review_first_block {
+      width: 100%;
+    }
+  }
+}

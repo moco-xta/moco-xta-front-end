@@ -19,9 +19,12 @@ $text_alert: $alert_light_color;
 
 // INPUTS
 
-$input_background: #00000050;
+$input_height_small: 400px;
+
+$input_background: #00000080;
 $input_radio_checked_color: #bfbfbf;
-$input_border: 1px solid $black;
+$input_border_light: 1px solid $grey_medium;
+$input_border_dark: 1px solid $black;
 $input_radio_border: 1px solid #bfbfbf;
 
 $input_border_alert: 1px solid $alert_light_color;
@@ -74,6 +77,12 @@ $hover_transition: 0.2s;
   grey_dark: $grey_dark;
   grey_darker: $grey_darker;
   black: $black;
+
+  input_background: $input_background;
+  input_radio_checked_color: $input_radio_checked_color;
+  input_border_light: $input_border_light;
+  input_border_dark: $input_border_dark;
+  input_radio_border: $input_radio_border;
 
   desktop_limit: $desktop_limit;
 

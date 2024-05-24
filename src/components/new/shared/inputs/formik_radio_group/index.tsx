@@ -23,6 +23,7 @@ export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
     error,
     helperText,
     disabled,
+    inputStyle
   } = props
 
   const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
@@ -56,6 +57,7 @@ export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
           >
             <input
               className={`${error ? 'error' : ''}`}
+              style={inputStyle}
               type='radio'
               id={option.name}
               name={name}

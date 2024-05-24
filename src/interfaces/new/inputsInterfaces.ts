@@ -18,15 +18,21 @@ export interface FormikTextInterface extends FormikInputsInterface {
   value: string
   storeValue?: boolean | undefined
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
+  inputStyle?: {
+    [key: string]: string
+  }
 }
 
 export interface FormikTextareaInterface extends FormikInputsInterface {
   value: string
-  cols: number
-  rows: number
+  cols?: number
+  rows?: number
   maxLength: number
   handleChange: (e: ChangeEvent<HTMLTextAreaElement>) => void
   disabled: boolean
+  inputStyle?: {
+    [key: string]: string
+  }
 }
 
 interface RadioGroupOptions {
@@ -41,6 +47,9 @@ export interface FormikRadioGroupInterface extends FormikInputsInterface {
   translationKeyPrefix: string
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void
   disabled: boolean
+  inputStyle?: {
+    [key: string]: string
+  }
 }
 
 export interface FormikRatingStarsInterface extends FormikInputsInterface {

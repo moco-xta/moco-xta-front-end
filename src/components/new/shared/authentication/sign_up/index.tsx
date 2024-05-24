@@ -46,7 +46,6 @@ export default function SignUp({ setIsSignIn }: SignUpSignInInterface) {
 
   return (
     <div id='sign_in_container'>
-      <h1 className='form_title'>Sign up</h1>
       <Formik
         initialValues={initialValues}
         validationSchema={signUpValidationSchema}

@@ -12,10 +12,10 @@ button[type='submit'] {
   cursor: pointer;
 }
 
-button[type='submit'].disabled {
+/* button[type='submit'].disabled {
   background-color: $alert_background;
   cursor: default;
-}
+} */
 
 button[type='submit']:hover {
   color: $white;

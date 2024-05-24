@@ -8,6 +8,7 @@ import { SignInPayloadInterface } from '@/interfaces/new/reduxApiInterfaces'
 import { FormikTextField } from '@/components/new/shared/inputs'
 import { ResetButton, SubmitButton } from '@/components/new/shared/buttons'
 
+import variables from '@/styles/new/variables.module.scss'
 import './index.scss'
 
 export default function SignInForm({
@@ -43,6 +44,7 @@ export default function SignInForm({
 
   return (
     <div id='sign_in_form_container'>
+      <h2 className='form_title'>Sign in</h2>
       <form onSubmit={handleSubmit}>
         <FormikTextField
           label={t('AUTHENTICATION.SIGN_IN.EMAIL')}
