@@ -14,9 +14,9 @@ import {
   setMenuIsOpen,
 } from '@/redux/slice/appStateSlice'
 
-import { AuthenticationButton } from '@/components/new/shared/buttons'
-import LocaleSwitcher from '@/components/new/shared/buttons/locale_switcher'
-import Hamburger from '@/components/new/shared/buttons/hamburger'
+import { AuthenticationButton } from '@/components/new/buttons'
+import LocaleSwitcher from '@/components/new/buttons/locale_switcher'
+import Hamburger from '@/components/new/buttons/hamburger'
 import Authentication from '../../authentication'
 
 import './index.scss'

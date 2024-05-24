@@ -5,8 +5,8 @@ import { useTranslations } from 'next-intl'
 import { AuthenticationFormsInterface } from '@/interfaces/new/formsInterfaces'
 import { SignUpValuesInterface } from '@/interfaces/new/reduxApiInterfaces'
 
-import { FormikTextField } from '@/components/new/shared/inputs'
-import { ResetButton, SubmitButton } from '@/components/new/shared/buttons'
+import { FormikTextField } from '@/components/new/inputs'
+import { ResetButton, SubmitButton } from '@/components/new/buttons'
 
 import './index.scss'
 

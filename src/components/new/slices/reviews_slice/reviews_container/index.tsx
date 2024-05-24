@@ -5,7 +5,7 @@ import { RootState } from '@/redux/store'
 
 import useResize from '@/hooks/new/useResize'
 
-import AddReviewButton from '@/components/new/shared/buttons/add_review_button'
+import AddReviewButton from '@/components/new/buttons/add_review_button'
 import Reviews from '../reviews'
 
 import './index.scss'

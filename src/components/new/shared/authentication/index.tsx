@@ -6,7 +6,7 @@ import useResize from '@/hooks/new/useResize'
 import { AppDispatch, RootState } from '@/redux/store'
 import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
 
-import ClosingArrow from '../../shared/buttons/closing_arrow'
+import ClosingArrow from '../../buttons/closing_arrow'
 import SignIn from './sign_in'
 import SignUp from './sign_up'
 

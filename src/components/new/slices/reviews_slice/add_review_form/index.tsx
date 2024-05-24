@@ -14,8 +14,8 @@ import {
   FormikRadioGroup,
   FormikRatingStars,
   FormikTextarea,
-} from '@/components/new/shared/inputs'
-import { ResetButton, SubmitButton } from '@/components/new/shared/buttons'
+} from '@/components/new/inputs'
+import { ResetButton, SubmitButton } from '@/components/new/buttons'
 import ReviewCard from '../review_card'
 
 import { reviewRolesData } from '@/data/reviewRolesData'

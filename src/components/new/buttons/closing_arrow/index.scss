@@ -2,8 +2,9 @@
 
 #closing_arrow_container {
   z-index: 8;
-  margin-top: 40px;
-  margin-right: 25px;
+  position: absolute;
+  top: 40px;
+  right: 25px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -19,7 +20,8 @@
 
 @media screen and (max-width: $desktop_limit) {
   #closing_arrow_container {
-    position: absolute;
+    top: unset;
+    right: unset;
     left: 35px;
     bottom: 20px;
     justify-content: flex-start;
