@@ -1,7 +1,10 @@
 @import '@/styles/new/variables.module.scss';
 
 #reviews_slice {
+  position: relative;
   width: 200vw;
+  height: 80vh;
   display: flex;
   flex-direction: row;
+  background-color: $black;
 }

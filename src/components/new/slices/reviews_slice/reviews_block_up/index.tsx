@@ -17,7 +17,10 @@ export default function ReviewsBlockUp() {
         id={'reviews_text_block'}
         title={'HOME.REVIEWS.TITLE'}
         paragraph={'HOME.REVIEWS.PARAGRAPH'}
-        blockStyle={{ width: isDesktop ? '100%' : '90%', padding: '50px 35% 50px 35%' }}
+        blockStyle={{
+          width: isDesktop ? '100%' : '90%',
+          padding: '50px 35% 50px 35%',
+        }}
       />
     </div>
   )
