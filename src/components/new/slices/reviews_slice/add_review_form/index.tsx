@@ -71,7 +71,7 @@ export default function AddReviewForm({
             helperText={touched.review && errors.review}
             disabled={!isAuthenticated}
             inputStyle={{
-              border: variables.input_border_light
+              border: variables.input_border_light,
             }}
           />
           <FormikRadioGroup
@@ -86,7 +86,7 @@ export default function AddReviewForm({
             helperText={touched.role && errors.role}
             disabled={!isAuthenticated}
             inputStyle={{
-              border: variables.input_border_light
+              border: variables.input_border_light,
             }}
           />
           <FormikRatingStars

@@ -69,7 +69,11 @@ export default function FormikRatingStars({
                 <IoStarSharp
                   className={`rating_star ${disabled ? 'disabled' : ''}`}
                   size={30}
-                  color={currentRating <= (hover || value) ? 'gold' : variables.grey_medium}
+                  color={
+                    currentRating <= (hover || value)
+                      ? 'gold'
+                      : variables.grey_medium
+                  }
                   onMouseEnter={() => {
                     if (!disabled) setHover(currentRating)
                   }}

@@ -69,10 +69,10 @@ export default function AddReview() {
           })
         }}
       >
-      <AddReviewForm
-        submitButtonIsDisabled={submitButtonIsDisabled}
-        resetButtonIsDisabled={resetButtonIsDisabled}
-      />
+        <AddReviewForm
+          submitButtonIsDisabled={submitButtonIsDisabled}
+          resetButtonIsDisabled={resetButtonIsDisabled}
+        />
       </Formik>
     </div>
   )

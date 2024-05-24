@@ -8,7 +8,7 @@ import { AppDispatch, RootState } from '@/redux/store'
 import {
   setAuthenticationIsOpen,
   setMenuIsOpen,
-  setLocaleSwitcherIsOpen
+  setLocaleSwitcherIsOpen,
 } from '@/redux/slice/appStateSlice'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 import { useLogOutMutation } from '@/redux/api/authenticationApi'

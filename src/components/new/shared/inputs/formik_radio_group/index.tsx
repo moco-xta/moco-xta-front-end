@@ -23,7 +23,7 @@ export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
     error,
     helperText,
     disabled,
-    inputStyle
+    inputStyle,
   } = props
 
   const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
