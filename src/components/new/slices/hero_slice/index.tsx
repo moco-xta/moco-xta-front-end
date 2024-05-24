@@ -1,6 +1,6 @@
 import React from 'react'
 
-import HeadText from './head_text'
+import HeadTextBlock from './head_text_block'
 import HeroCanvas from '../../three/canvas/hero_canvas/HeroCanvas'
 import ScrollDown from '@/components/new/shared/scroll_down'
 
@@ -10,7 +10,7 @@ import './index.scss'
 export default function HeroSlice() {
   return (
     <section id='hero_slice'>
-      <HeadText />
+      <HeadTextBlock />
       <HeroCanvas />
       <ScrollDown
         top={'65vh'}
