@@ -21,7 +21,7 @@ import { reviewRolesData } from '@/data/reviewRolesData'
 import './index.scss'
 
 export default function AddReviewForm({
-  submitButtonIsDisabled
+  submitButtonIsDisabled,
 }: FormsInterface) {
   const t = useTranslations()
 
@@ -53,9 +53,7 @@ export default function AddReviewForm({
     <div id='add_review_form'>
       <div id='add_review_first_block'>
         <h2>{t('ADD_REVIEW.ADD_A_REVIEW')}</h2>
-        <form
-          onSubmit={handleSubmit}
-        >
+        <form onSubmit={handleSubmit}>
           <FormikTextarea
             label={t('ADD_REVIEW.REVIEW')}
             name={'review'}
@@ -93,13 +91,14 @@ export default function AddReviewForm({
           />
           <div className='submit_reset_buttons_container'>
             <SubmitButton submitButtonIsDisabled={submitButtonIsDisabled} />
-            <ResetButton
-              resetForm={handleResetForm}
-            />
+            <ResetButton resetForm={handleResetForm} />
           </div>
         </form>
       </div>
-      <ReviewCard review={values} reviewCardStyle={{ margin: '0 auto 0 auto'}} />
+      <ReviewCard
+        review={values}
+        reviewCardStyle={{ margin: '0 auto 0 auto' }}
+      />
     </div>
   )
 }

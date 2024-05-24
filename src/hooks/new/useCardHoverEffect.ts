@@ -19,8 +19,7 @@ export default function useCardHoverEffect(
     gsap.to(ref.current, {
       duration: cardHoverConstants.DURATION,
       ease: cardHoverConstants.EASE,
-      transformPerspective:
-      cardHoverConstants.TRANSFORM_PERSPECTIVE,
+      transformPerspective: cardHoverConstants.TRANSFORM_PERSPECTIVE,
       scale: constantsEffect.SCALE_FACTOR,
       rotationX: y * constantsEffect.ROTATION_FACTOR.X,
       rotationY: x * constantsEffect.ROTATION_FACTOR.Y,
@@ -31,8 +30,7 @@ export default function useCardHoverEffect(
     gsap.to(ref.current, {
       duration: cardHoverConstants.DURATION,
       ease: cardHoverConstants.EASE,
-      transformPerspective:
-      cardHoverConstants.TRANSFORM_PERSPECTIVE,
+      transformPerspective: cardHoverConstants.TRANSFORM_PERSPECTIVE,
       scale: constantsEffect.INITIAL_SCALE,
       rotationX: constantsEffect.INITIAL_ROTATION.X,
       rotationY: constantsEffect.INITIAL_ROTATION.Y,

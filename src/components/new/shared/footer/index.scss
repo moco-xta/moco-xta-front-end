@@ -1,0 +1,11 @@
+@import '@/styles/new/variables.module.scss';
+
+footer {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  background-image: url('/new/img/png/footer/moco_logo_perspective_normal_noise.png');
+  background-size: contain;
+  background-position: 15%;
+  background-repeat: no-repeat;
+}

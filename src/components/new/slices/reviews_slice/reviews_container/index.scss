@@ -8,7 +8,6 @@
   flex-direction: row;
   transform: translateX(100vw);
   transition: $transition transform ease-in-out;
-  background-color: blue;
 
   #reviews {
     width: 90%;
@@ -25,7 +24,7 @@
 @media screen and (max-width: $desktop_limit) {
   #reviews_container {
     min-height: 100vh;
-  
+
     #reviews {
       width: 100%;
       display: flex;
