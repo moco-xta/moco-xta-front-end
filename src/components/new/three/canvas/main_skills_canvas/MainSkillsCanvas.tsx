@@ -39,19 +39,16 @@ export default function MainSkillsCanvas() {
         intensity={5}
         castShadow
       />{' '}
-      // TODO: Remove hardcoded value
       <pointLight
         position={[-1.2, 1, 1]}
         intensity={5}
         castShadow
       />{' '}
-      // TODO: Remove hardcoded value
       <pointLight
         position={[0, -1, 2]}
         intensity={5}
         castShadow
       />{' '}
-      // TODO: Remove hardcoded value
       <Suspense>
         <MainSkillsScene />
       </Suspense>

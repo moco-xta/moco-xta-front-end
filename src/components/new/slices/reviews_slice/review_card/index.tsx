@@ -22,11 +22,11 @@ export default function ReviewCard({
       className='review_card'
       style={reviewCardStyle}
     >
-      <p>"{review.review}"</p>
+      <p>&quot;{review.review}&quot;</p>
       <div>{review.rating}</div>
-      {/* @ts-ignore */}
       <span>
         {review.hasOwnProperty('firstName')
+          /* @ts-ignore */
           ? review.firstName
           : 'firstName test'}
       </span>

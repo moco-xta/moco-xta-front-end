@@ -11,6 +11,7 @@ import { mainSkillsLogoMaterial } from '../../materials/mainSkillsLogoMaterial'
 
 import { default as mainSkillsConstants } from '@/constants/new/canvas/mainSkillsConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { GroupProps } from '@react-three/fiber'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -20,7 +21,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export default function LogoNextjs({ position, rotation, scale }: THREE.Group) {
+export default function LogoNextjs({ position, rotation, scale }: GroupProps) {
   const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_NEXTJS) as GLTFResult
 
   const logoNextjsRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)

@@ -3,7 +3,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { ColorPadInterface } from '@/interfaces/new/r3fInterfaces'
+import { ColorPadInterface } from '@/interfaces/new/threeInterfaces'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
