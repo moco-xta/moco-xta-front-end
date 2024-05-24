@@ -10,15 +10,19 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "X": 0,
-      "Y": 0,
-      "Z": 6
+      "Z": 60
     },
     "FOV": 30
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
       "INTENSITY": 1
+    }
+  },
+  "SNAKE_GAME": {
+    "BOARD": {
+      "WIDTH": 30,
+      "HEIGHT": 20
     }
   }
 }

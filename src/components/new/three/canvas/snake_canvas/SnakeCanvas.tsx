@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
+import { PerspectiveCamera } from '@react-three/drei'
+
+import SnakeScene from './SnakeScene'
 
 import { default as snakeConstants } from '@/constants/new/canvas/snakeConstants.json'
-import { PerspectiveCamera } from '@react-three/drei'
-import SnakeScene from './SnakeScene'
 
 export default function SnakeCanvas() {
   return (
@@ -23,8 +24,8 @@ export default function SnakeCanvas() {
       <PerspectiveCamera
         makeDefault
         position={[
-          snakeConstants.PERSPECTIVE_CAMERA.POSITION.X,
-          snakeConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          snakeConstants.SNAKE_GAME.BOARD.WIDTH / 2,
+          snakeConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
           snakeConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
         fov={snakeConstants.PERSPECTIVE_CAMERA.FOV}
