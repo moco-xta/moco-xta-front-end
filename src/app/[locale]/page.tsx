@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <div id='home_container'>
         <HeroSlice />
-        {/* <MainSkillsSlice /> */}
+        <MainSkillsSlice />
         {/* <PerformedWithSlice /> */}
         {/* <ReviewsSlice /> */}
         {/* <Footer /> */}
