@@ -36,10 +36,10 @@ export default function LastReviewsCards() {
                 key={`review_card_${index}`}
                 className='review_container'
               >
-                <ReviewCanvas
+                {/* <ReviewCanvas
                   reviewIndex={index}
                   data={review}
-                />
+                /> */}
               </div>
             )
           })}

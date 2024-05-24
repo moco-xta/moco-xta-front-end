@@ -1,5 +1,5 @@
 import { MutableRefObject, Ref } from 'react'
-import { ThreeEvent } from '@react-three/fiber'
+import { MeshProps, ThreeEvent } from '@react-three/fiber'
 
 export interface IntersectCubeInterface {
   handleOnPointerMove: (event: ThreeEvent<PointerEvent>) => void
@@ -18,4 +18,11 @@ export interface PadsInterface {
 
 export interface RotationGroupInterface {
   rubiksCubeRef: Ref<THREE.Group>
+}
+
+export interface RoundedCubeInterface extends MeshProps {}
+
+
+export interface ColorPadInterface extends MeshProps {
+  color: THREE.Color
 }

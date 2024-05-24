@@ -11,6 +11,7 @@ import { mainSkillsLogoMaterial } from '../../materials/mainSkillsLogoMaterial'
 
 import { default as mainSkillsConstants } from '@/constants/new/canvas/mainSkillsConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { GroupProps } from '@react-three/fiber'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -25,7 +26,7 @@ export default function LogoAngular({
   position,
   rotation,
   scale,
-}: THREE.Group) {
+}: GroupProps) {
   const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_ANGULAR) as GLTFResult
 
   const logoAngularRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)

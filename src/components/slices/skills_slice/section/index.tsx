@@ -32,6 +32,7 @@ export function SkillsSection({
             >
               {picture_group.map((picture) => {
                 return (
+                  // @ts-ignore
                   <img
                     key={picture.alt}
                     className={'logo_picture'}

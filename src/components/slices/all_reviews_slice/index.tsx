@@ -26,7 +26,7 @@ export default function AllReviewsSlice() {
         {t('REQUESTS.AN_ERROR_OCCURED')}
       </div>
     )
-  if (data)
+  /* if (data)
     content = (
       <>
         {data?.map((review, index) => {
@@ -38,7 +38,7 @@ export default function AllReviewsSlice() {
           )
         })}
       </>
-    )
+    ) */
   return (
     <section id='all_reviews_slice'>
       <div id='all_reviews_content'>

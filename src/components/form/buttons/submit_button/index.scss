@@ -1,0 +1,17 @@
+@import '@/styles/variables.module.scss';
+
+button[type='submit'] {
+  all: unset;
+  width: 40%;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #2d2c2e;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button[type='submit'].disabled {
+  background-color: $alert_background;
+  cursor: default;
+}

@@ -36,11 +36,11 @@ export default function Nav() {
 
   useEffect(() => {
     dispatch(setMenuIsOpen(false))
-  }, [isDesktop])
+  }, [dispatch, isDesktop])
 
   useEffect(() => {
     if (!menuIsOpen) dispatch(setLocaleSwitcherIsOpen(false))
-  }, [menuIsOpen])
+  }, [dispatch, menuIsOpen])
 
   function handleSetMenuIsOpen() {
     dispatch(setMenuIsOpen(!menuIsOpen))

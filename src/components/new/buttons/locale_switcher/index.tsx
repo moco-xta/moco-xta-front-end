@@ -43,7 +43,7 @@ export default function LocaleSwitcher() {
 
   useEffect(() => {
     dispatch(setLocaleSwitcherIsOpen(false))
-  }, [isDesktop])
+  }, [dispatch, isDesktop])
 
   function handleSetCurrentLocale(locale: string) {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`

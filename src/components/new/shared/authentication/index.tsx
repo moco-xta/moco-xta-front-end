@@ -23,7 +23,7 @@ export default function Authentication() {
 
   useEffect(() => {
     dispatch(setAuthenticationIsOpen(false))
-  }, [isDesktop])
+  }, [dispatch, isDesktop])
 
   const [isSignIn, setIsSignIn] = useState(true)
 
