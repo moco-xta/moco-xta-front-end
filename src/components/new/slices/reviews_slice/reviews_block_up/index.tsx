@@ -2,7 +2,7 @@ import React from 'react'
 
 import useResize from '@/hooks/new/useResize'
 
-import AddReviewButton from '@/components/new/buttons/add_review_button'
+import AddReviewButton from '@/components/new/shared/buttons/add_review_button'
 import TextBlockSimple from '@/components/new/shared/text_blocks/text_block_simple'
 
 import './index.scss'

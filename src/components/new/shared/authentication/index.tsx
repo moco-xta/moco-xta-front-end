@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 import { RootState } from '@/redux/store'
 
-import ClosingArrow from '../../buttons/closing_arrow'
+import ClosingArrow from '../../shared/buttons/closing_arrow'
 import SignIn from './sign_in'
 import SignUp from './sign_up'
 

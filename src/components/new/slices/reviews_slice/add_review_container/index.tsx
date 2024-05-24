@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from '@/redux/store'
 
 import AddReview from '../add_review'
-import AddReviewButton from '@/components/new/buttons/add_review_button'
+import AddReviewButton from '@/components/new/shared/buttons/add_review_button'
 
 import './index.scss'
 
