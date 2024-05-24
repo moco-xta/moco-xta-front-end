@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { FaArrowLeft } from 'react-icons/fa'
 
 import { AppDispatch } from '@/redux/store'
 import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
@@ -14,20 +15,12 @@ export default function ClosingArrow() {
   }
 
   return (
-    <div id='closing_arrow_icon'>
-      <input
-        type='checkbox'
-        id='closing_arrow_input'
-        className='closing_arrow_input'
-        checked={true}
-        onClick={handleSetAuthenticationIsOpen}
-      />
-      <label
-        htmlFor='closing_arrow_input'
-        className='closing_arrow_label'
-      >
-        <span className='closing_arrow_line' />
-      </label>
+    <div
+      id='closing_arrow_container'
+      onClick={handleSetAuthenticationIsOpen}
+    >
+      <FaArrowLeft />
+      <span>Close</span>
     </div>
   )
 }

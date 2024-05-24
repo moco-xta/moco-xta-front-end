@@ -9,9 +9,9 @@ $grey_darker: #292929;
 $black: #000000;
 
 $success_light_color: #37ae47;
-$success_dark_color: #298c36;
+$success_dark_color: #0A7A18;
 $alert_light_color: #ec2a5f;
-$alert_dark_color: #bb204a;
+$alert_dark_color: #B20030;
 
 // TEXTS
 
@@ -19,9 +19,12 @@ $text_alert: $alert_light_color;
 
 // INPUTS
 
-$input_background: #00000050;
+$input_height_small: 400px;
+
+$input_background: #00000080;
 $input_radio_checked_color: #bfbfbf;
-$input_border: 1px solid $black;
+$input_border_light: 1px solid $grey_medium;
+$input_border_dark: 1px solid $black;
 $input_radio_border: 1px solid #bfbfbf;
 
 $input_border_alert: 1px solid $alert_light_color;
@@ -35,8 +38,8 @@ $alert_background: $alert_light_color;
 
 // SHADOWS
 
-$success_box_shadow: rgba(0, 250, 0, 0.25) 0px 25px 50px -12px;
-$alert_box_shadow: rgba(250, 0, 0, 0.25) 0px 25px 50px -12px;
+$success_box_shadow: rgba(55, 174, 71, 0.25) 0px 25px 50px -12px;
+$alert_box_shadow: rgba(246, 42, 95, 0.25) 0px 25px 50px -12px;
 
 // SIZES
 
@@ -74,6 +77,12 @@ $hover_transition: 0.2s;
   grey_dark: $grey_dark;
   grey_darker: $grey_darker;
   black: $black;
+
+  input_background: $input_background;
+  input_radio_checked_color: $input_radio_checked_color;
+  input_border_light: $input_border_light;
+  input_border_dark: $input_border_dark;
+  input_radio_border: $input_radio_border;
 
   desktop_limit: $desktop_limit;
 

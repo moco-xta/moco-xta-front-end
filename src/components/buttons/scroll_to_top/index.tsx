@@ -5,7 +5,6 @@ import { FaArrowUp } from 'react-icons/fa'
 
 import useScroll from '@/hooks/useScroll'
 
-import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function ScrollToTop() {

@@ -21,6 +21,7 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
     error,
     helperText,
     disabled,
+    inputStyle,
   } = props
 
   const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
@@ -48,6 +49,7 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
       </label>
       <textarea
         className={`${error ? 'error' : ''} ${disabled ? 'disabled' : ''}`}
+        style={inputStyle}
         id={name}
         name={name}
         cols={cols}

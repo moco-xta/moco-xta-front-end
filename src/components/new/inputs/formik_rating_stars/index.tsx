@@ -9,7 +9,7 @@ import useStoreInputValueInLocalStorage from '@/hooks/new/useStoreInputValueInLo
 
 import Error from '../../errors'
 
-import variables from '@/styles/variables.module.scss'
+import variables from '@/styles/new/variables.module.scss'
 import './index.scss'
 
 export default function FormikRatingStars({
@@ -69,7 +69,11 @@ export default function FormikRatingStars({
                 <IoStarSharp
                   className={`rating_star ${disabled ? 'disabled' : ''}`}
                   size={30}
-                  color={currentRating <= (hover || value) ? 'gold' : 'grey'}
+                  color={
+                    currentRating <= (hover || value)
+                      ? 'gold'
+                      : variables.grey_medium
+                  }
                   onMouseEnter={() => {
                     if (!disabled) setHover(currentRating)
                   }}

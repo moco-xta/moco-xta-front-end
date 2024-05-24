@@ -43,6 +43,7 @@ export default function SignUpForm({
 
   return (
     <div id='sign_in_form_container'>
+      <h2 className='form_title'>Sign up</h2>
       <form onSubmit={handleSubmit}>
         <FormikTextField
           label={t('AUTHENTICATION.SIGN_UP.FIRST_NAME')}

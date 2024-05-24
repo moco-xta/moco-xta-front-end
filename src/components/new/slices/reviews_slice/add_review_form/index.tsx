@@ -6,6 +6,8 @@ import { useTranslations } from 'next-intl'
 import { FormsInterface } from '@/interfaces/formsInterfaces'
 import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
+import useResize from '@/hooks/new/useResize'
+
 import { RootState } from '@/redux/store'
 
 import {
@@ -18,6 +20,7 @@ import ReviewCard from '../review_card'
 
 import { reviewRolesData } from '@/data/reviewRolesData'
 
+import variables from '@/styles/new/variables.module.scss'
 import './index.scss'
 
 export default function AddReviewForm({
@@ -28,6 +31,8 @@ export default function AddReviewForm({
   const isAuthenticated = useSelector(
     (state: RootState) => state.authentication.isAuthenticated,
   )
+
+  const { isDesktop } = useResize()
 
   const {
     errors,
@@ -52,12 +57,11 @@ export default function AddReviewForm({
   return (
     <div id='add_review_form'>
       <div id='add_review_first_block'>
-        <h2>{t('ADD_REVIEW.ADD_A_REVIEW')}</h2>
+        <h2 className='form_title'>{t('HOME.REVIEWS.ADD_REVIEW')}</h2>
         <form onSubmit={handleSubmit}>
           <FormikTextarea
             label={t('ADD_REVIEW.REVIEW')}
             name={'review'}
-            cols={50}
             rows={4}
             maxLength={150}
             handleChange={handleChange}
@@ -66,6 +70,9 @@ export default function AddReviewForm({
             error={touched.review && Boolean(errors.review)}
             helperText={touched.review && errors.review}
             disabled={!isAuthenticated}
+            inputStyle={{
+              border: variables.input_border_light,
+            }}
           />
           <FormikRadioGroup
             label={t('ADD_REVIEW.ROLE')}
@@ -78,6 +85,9 @@ export default function AddReviewForm({
             error={touched.role && Boolean(errors.role)}
             helperText={touched.role && errors.role}
             disabled={!isAuthenticated}
+            inputStyle={{
+              border: variables.input_border_light,
+            }}
           />
           <FormikRatingStars
             label={t('ADD_REVIEW.RATING')}
@@ -95,10 +105,12 @@ export default function AddReviewForm({
           </div>
         </form>
       </div>
-      <ReviewCard
-        review={values}
-        reviewCardStyle={{ margin: '0 auto 0 auto' }}
-      />
+      {isDesktop && (
+        <ReviewCard
+          review={values}
+          reviewCardStyle={{ width: '100%', margin: '0 0 0 20px' }}
+        />
+      )}
     </div>
   )
 }

@@ -9,8 +9,6 @@ import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
 import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
-import useResize from '@/hooks/new/useResize'
-
 import { addNewReviewValidationSchema } from 'validations/addNewReviewValidationSchema'
 
 import AddReviewForm from '../add_review_form'
@@ -25,8 +23,6 @@ export default function AddReview() {
   const isAuthenticated = useSelector(
     (state: RootState) => state.authentication.isAuthenticated,
   )
-
-  const { isDesktop } = useResize()
 
   const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(
     !isAuthenticated ? true : false,
@@ -73,12 +69,10 @@ export default function AddReview() {
           })
         }}
       >
-        {isDesktop && (
-          <AddReviewForm
-            submitButtonIsDisabled={submitButtonIsDisabled}
-            resetButtonIsDisabled={resetButtonIsDisabled}
-          />
-        )}
+        <AddReviewForm
+          submitButtonIsDisabled={submitButtonIsDisabled}
+          resetButtonIsDisabled={resetButtonIsDisabled}
+        />
       </Formik>
     </div>
   )

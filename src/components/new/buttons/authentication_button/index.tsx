@@ -8,6 +8,7 @@ import { AppDispatch, RootState } from '@/redux/store'
 import {
   setAuthenticationIsOpen,
   setMenuIsOpen,
+  setLocaleSwitcherIsOpen,
 } from '@/redux/slice/appStateSlice'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 import { useLogOutMutation } from '@/redux/api/authenticationApi'
@@ -24,6 +25,7 @@ export default function AuthenticationButton() {
   function handleAuthenticationIsOpen() {
     dispatch(setAuthenticationIsOpen(true))
     dispatch(setMenuIsOpen(false))
+    dispatch(setLocaleSwitcherIsOpen(false))
   }
 
   return (
