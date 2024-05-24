@@ -22,11 +22,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export default function LogoAngular({
-  position,
-  rotation,
-  scale,
-}: GroupProps) {
+export default function LogoAngular({ position, rotation, scale }: GroupProps) {
   const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_ANGULAR) as GLTFResult
 
   const logoAngularRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)

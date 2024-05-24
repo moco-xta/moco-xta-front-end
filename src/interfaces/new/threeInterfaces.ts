@@ -22,7 +22,6 @@ export interface RotationGroupInterface {
 
 export interface RoundedCubeInterface extends MeshProps {}
 
-
 export interface ColorPadInterface extends MeshProps {
   color: THREE.Color
 }

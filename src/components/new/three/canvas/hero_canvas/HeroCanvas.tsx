@@ -12,17 +12,18 @@ import PostProcessing from './PostProcessing'
 import { default as heroConstants } from '@/constants/new/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/new/assets/imgConstants.json'
 
+import variables from '@/styles/new/variables.module.scss'
+
 export default function HeroCanvas() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
 
-  const { innerWidth } = useResize()
+  const { isDesktop, innerWidth } = useResize()
 
-  // TODO: Improve function
   const setCameraZPosition = (innerWidth: number) => {
     return (
-      15 -
-      (innerWidth / 500) *
-        heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Z
+      heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MIN_POSITION -
+      ((heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MIN_POSITION - heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MAX_POSITION) / (heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.LARGE_LIMIT - heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.DESKTOP_LIMIT)) *
+        (innerWidth - heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.DESKTOP_LIMIT)
     )
   }
 
@@ -47,11 +48,17 @@ export default function HeroCanvas() {
       <PerspectiveCamera
         ref={perspectiveCameraRef}
         makeDefault
-        position={[
-          heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.X,
-          heroConstants.PERSPECTIVE_CAMERA.POSITION.IS_NOT_MOBILE.Y,
-          setCameraZPosition(window.innerWidth),
-        ]}
+        position={
+          isDesktop ? [
+            heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.INITIAL_POSITION.X,
+            heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.INITIAL_POSITION.Y,
+            setCameraZPosition(window.innerWidth),
+          ] : [
+            heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.X,
+            heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.Y,
+            heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.Z,
+          ]
+        }
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <ambientLight intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />

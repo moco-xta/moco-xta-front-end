@@ -9,17 +9,21 @@
     }
   },
   "PERSPECTIVE_CAMERA": {
-    "POSITION": {
-      "IS_NOT_MOBILE": {
-        "X": -0.04,
+    "IS_DESKTOP": {
+      "DESKTOP_LIMIT": 1200,
+      "LARGE_LIMIT": 2000,
+      "MIN_POSITION": 6,
+      "MAX_POSITION": 4,
+      "INITIAL_POSITION": {
+        "X": 0,
         "Y": 0,
-        "Z": 3
-      },
-      "IS_MOBILE": {
-        "X": -0.04,
-        "Y": 0,
-        "Z": 1.5
+        "Z": 0
       }
+    },
+    "IS_NOT_DESKTOP_POSITION": {
+      "X": -0.04,
+      "Y": -0.15,
+      "Z": 1.5
     },
     "FOV": 30
   },

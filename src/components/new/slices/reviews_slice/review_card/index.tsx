@@ -26,8 +26,8 @@ export default function ReviewCard({
       <div>{review.rating}</div>
       <span>
         {review.hasOwnProperty('firstName')
-          /* @ts-ignore */
-          ? review.firstName
+          ? /* @ts-ignore */
+            review.firstName
           : 'firstName test'}
       </span>
       <span>{review.role}</span>
