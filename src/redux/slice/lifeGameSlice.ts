@@ -38,7 +38,7 @@ const initialState: lifeGameInterface = {
   rows: GRID_ROWS,
 }
 
-interface SetCellstateInterface {
+interface SetCellStateInterface {
   columnIndex: number
   rowIndex: number
 }
@@ -47,7 +47,7 @@ const lifeGameSlice = createSlice({
   name: 'LifeGame',
   initialState,
   reducers: {
-    setCellState: (state, action: PayloadAction<SetCellstateInterface>) => {
+    setCellState: (state, action: PayloadAction<SetCellStateInterface>) => {
       state.grid[action.payload.columnIndex][action.payload.rowIndex] =
         state.grid[action.payload.columnIndex][action.payload.rowIndex] === 0
           ? 1

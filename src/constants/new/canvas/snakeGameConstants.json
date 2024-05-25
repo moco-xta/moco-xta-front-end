@@ -20,9 +20,19 @@
     }
   },
   "SNAKE_GAME": {
+    "INITIAL_SPEED": 500,
     "BOARD": {
       "WIDTH": 30,
       "HEIGHT": 20
+    },
+    "SNAKE": {
+      "CELL": {
+        "SCALE": 0.8
+      },
+      "DEFAULT": {
+        "LENGTH": 5,
+        "DIRECTION": "RIGHT"
+      }
     }
   }
 }

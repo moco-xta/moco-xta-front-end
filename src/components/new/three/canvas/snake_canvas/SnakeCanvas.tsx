@@ -1,36 +1,38 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
 import SnakeScene from './SnakeScene'
 
-import { default as snakeConstants } from '@/constants/new/canvas/snakeConstants.json'
+import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
 export default function SnakeCanvas() {
   return (
     <Canvas
       id='main_skills_canvas'
-      dpr={snakeConstants.CANVAS.DPR}
+      dpr={snakeGameConstants.CANVAS.DPR}
       shadows
-      legacy={snakeConstants.CANVAS.LEGACY}
+      legacy={snakeGameConstants.CANVAS.LEGACY}
       linear
       flat
       gl={{
-        antialias: snakeConstants.CANVAS.GL.ANTIALIAS,
-        alpha: snakeConstants.CANVAS.GL.ALPHA,
-        powerPreference: snakeConstants.CANVAS.GL.POWER_PREFERENCE,
+        antialias: snakeGameConstants.CANVAS.GL.ANTIALIAS,
+        alpha: snakeGameConstants.CANVAS.GL.ALPHA,
+        powerPreference: snakeGameConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
       <PerspectiveCamera
         makeDefault
         position={[
-          snakeConstants.SNAKE_GAME.BOARD.WIDTH / 2,
-          snakeConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
-          snakeConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+          snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2,
+          snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
+          snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
-        fov={snakeConstants.PERSPECTIVE_CAMERA.FOV}
+        fov={snakeGameConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      <ambientLight intensity={snakeConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
+      <ambientLight
+        intensity={snakeGameConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
+      />
       <pointLight
         position={[1.2, 1, 1]}
         intensity={5}
@@ -46,6 +48,7 @@ export default function SnakeCanvas() {
         intensity={5}
         castShadow
       />{' '}
+      <OrbitControls />
       <Suspense>
         <SnakeScene />
       </Suspense>

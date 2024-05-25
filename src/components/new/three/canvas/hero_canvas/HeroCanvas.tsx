@@ -22,7 +22,10 @@ export default function HeroCanvas() {
   const setCameraZPosition = (innerWidth: number) => {
     return (
       heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MIN_POSITION -
-      ((heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MIN_POSITION - heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MAX_POSITION) / (heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.LARGE_LIMIT - heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.DESKTOP_LIMIT)) *
+      ((heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MIN_POSITION -
+        heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MAX_POSITION) /
+        (heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.LARGE_LIMIT -
+          heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.DESKTOP_LIMIT)) *
         (innerWidth - heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.DESKTOP_LIMIT)
     )
   }
@@ -49,15 +52,17 @@ export default function HeroCanvas() {
         ref={perspectiveCameraRef}
         makeDefault
         position={
-          isDesktop ? [
-            heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.INITIAL_POSITION.X,
-            heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.INITIAL_POSITION.Y,
-            setCameraZPosition(window.innerWidth),
-          ] : [
-            heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.X,
-            heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.Y,
-            heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.Z,
-          ]
+          isDesktop
+            ? [
+                heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.INITIAL_POSITION.X,
+                heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.INITIAL_POSITION.Y,
+                setCameraZPosition(window.innerWidth),
+              ]
+            : [
+                heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.X,
+                heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.Y,
+                heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.Z,
+              ]
         }
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />
