@@ -45,3 +45,8 @@ export interface GenerateSnakeBodyInterface {
   length: number
   direction: string
 }
+
+export interface SetSnakeDirectionActionInterface {
+  initialSnakeDirection: string
+  key: string
+}

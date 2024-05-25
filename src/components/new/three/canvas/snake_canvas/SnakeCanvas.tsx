@@ -37,18 +37,18 @@ export default function SnakeCanvas() {
         position={[1.2, 1, 1]}
         intensity={5}
         castShadow
-      />{' '}
+      />
       <pointLight
         position={[-1.2, 1, 1]}
         intensity={5}
         castShadow
-      />{' '}
+      />
       <pointLight
         position={[0, -1, 2]}
         intensity={5}
         castShadow
-      />{' '}
-      <OrbitControls />
+      />
+      {/* <OrbitControls /> */}
       <Suspense>
         <SnakeScene />
       </Suspense>
