@@ -7,10 +7,11 @@ import Cell from './Cell'
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
 export default function Grid() {
-  const { grid, snake, food, length, handleSetSnake } = useSnakeGame()
+  const { grid, snake, handleNextStep } = useSnakeGame()
 
   const nextStep = setInterval(() => {
-    handleSetSnake(snake)
+    handleNextStep(snake)
+    /* handleSetSnake(snake) */
   }, snakeGameConstants.SNAKE_GAME.INITIAL_SPEED)
 
   useEffect(() => {
