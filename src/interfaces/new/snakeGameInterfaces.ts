@@ -50,3 +50,11 @@ export interface SetSnakeDirectionActionInterface {
   initialSnakeDirection: string
   key: string
 }
+
+export interface FoodInterface {
+  position: {
+    x: number
+    y: number
+    z: number
+  }
+}
