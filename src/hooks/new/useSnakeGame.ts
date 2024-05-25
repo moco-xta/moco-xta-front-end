@@ -52,12 +52,12 @@ export default function useSnakeGame() {
   function testFoodPosition(food: FoodInterface, snake: SnakeCellInterface[]) {
     let foodPositionIsValid: boolean = true
     snake.forEach((snakeCell) => {
-      if (snakeCell === food) foodPositionIsValid = false
+      if (snakeCell.position.x === food.position.x && snakeCell.position.y === food.position.y) foodPositionIsValid = false
     })
     return foodPositionIsValid
   }
   
-  function generateFood() {
+  function generateFood(snake: SnakeCellInterface[]) {
     let newFood: FoodInterface
     do {
       newFood = {
@@ -86,7 +86,7 @@ export default function useSnakeGame() {
       snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.LENGTH,
     ),
   )
-  const [food, setFood] = useState<FoodInterface>(generateFood())
+  const [food, setFood] = useState<FoodInterface>(generateFood(snake))
   const [length, setLength] = useState<number>(
     snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.LENGTH,
   )
@@ -95,6 +95,15 @@ export default function useSnakeGame() {
   )
 
   // UPDATE FUNCTIONS
+
+  useEffect(() => {
+    console.log('GENERATE FOOD')
+    setFood(generateFood(snake))
+  }, [length])
+
+  useEffect(() => {
+    updateGrid(snake)
+  }, [food])
 
   function updateSnakeHead(snake: SnakeCellInterface[]) {
     const newSnakeHead: SnakeCellInterface = {
@@ -124,17 +133,14 @@ export default function useSnakeGame() {
         z: 0,
       },
     }
-    if(newSnakeHead.position === food.position) {
-      setLength(length + 1)
-      generateFood()
-    }
+    if(newSnakeHead.position.x === food.position.x && newSnakeHead.position.y === food.position.y) setLength(length + 1)
     return newSnakeHead
   }
 
   function updateSnake(snake: SnakeCellInterface[]) {
     const newSnake: SnakeCellInterface[] = []
     newSnake[0] = updateSnakeHead(snake)
-    for (let i = 1; i < snake.length; i++) {
+    for (let i = 1; i < length; i++) {
       newSnake[i] = snake[i - 1]
     }
     console.log('newSnake', newSnake[1].position)
