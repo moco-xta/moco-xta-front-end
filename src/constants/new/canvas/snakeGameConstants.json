@@ -20,7 +20,7 @@
     }
   },
   "SNAKE_GAME": {
-    "INITIAL_SPEED": 500,
+    "INITIAL_SPEED": 200,
     "BOARD": {
       "WIDTH": 30,
       "HEIGHT": 20

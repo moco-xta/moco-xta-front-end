@@ -30,26 +30,32 @@ export default function SnakeCanvas() {
         ]}
         fov={snakeGameConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      <ambientLight
+      {/* <ambientLight
         intensity={snakeGameConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
-      />
+      /> */}
       <pointLight
         position={[1.2, 1, 1]}
-        intensity={5}
+        intensity={1}
         castShadow
       />
       <pointLight
         position={[-1.2, 1, 1]}
-        intensity={5}
+        intensity={1}
         castShadow
       />
       <pointLight
         position={[0, -1, 2]}
-        intensity={5}
+        intensity={1}
         castShadow
       />
-      {/* <OrbitControls /> */}
+      <OrbitControls />
       <Suspense>
+      {/* <directionalLight
+        position={[0, 5, 2]}
+        castShadow
+        color={0x602376}
+        intensity={1.0}
+      /> */}
         <SnakeScene />
       </Suspense>
     </Canvas>

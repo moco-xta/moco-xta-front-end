@@ -4,11 +4,12 @@ import * as THREE from 'three'
 import Grid from './Grid'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { Plane } from '@react-three/drei'
 
 export default function SnakeScene() {
   return (
     <>
-      <mesh
+      {/* <mesh
         position={[
           snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2,
           snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
@@ -28,8 +29,17 @@ export default function SnakeScene() {
           side={THREE.DoubleSide}
           wireframe
         />
-      </mesh>
+      </mesh> */}
       <Grid />
+      <Plane
+        args={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT]}
+        position={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2, -0.5]}
+        material={new THREE.MeshBasicMaterial({
+          color: '#c2bd03'
+        })}
+        receiveShadow
+        castShadow
+      />
     </>
   )
 }
