@@ -19,12 +19,11 @@ export default function Cell({ cell }: CellComponentInterface) {
 
   const { direction } = useSnakeGame()
 
-
   function setCameraRotation(direction: string) {
     switch (direction) {
-      case 'RIGHT': 
+      case 'RIGHT':
         return -Math.PI / 2
-      case 'BOTTOM': 
+      case 'BOTTOM':
         return -Math.PI / 4
       /* case 'RIGHT': 
         return -Math.PI / 2
@@ -33,16 +32,14 @@ export default function Cell({ cell }: CellComponentInterface) {
     }
   }
 
-  useEffect(() => {
-
-  }, [])
+  useEffect(() => {}, [])
 
   return (
     <>
       {cell.status === 'FOOD' && (
         <Box
-          key={`cell_box_${cell.position.x}_${cell.position.y}`}
-          position={[cell.position.x, cell.position.y, 0]}
+          key={`cell_box_${cell.position.x}_${cell.position.z}`}
+          position={[cell.position.x, cell.position.z, 0]}
           scale={snakeGameConstants.SNAKE_GAME.SNAKE.CELL.SCALE}
           material={
             new THREE.MeshBasicMaterial({
@@ -55,7 +52,7 @@ export default function Cell({ cell }: CellComponentInterface) {
           castShadow
         />
       )}
-      {cell.status === 'SNAKE_HEAD' && (
+      {/* {cell.status === 'SNAKE_HEAD' && (
         <SnakeCell
           key={`cell_box_${cell.position.x}_${cell.position.y}`}
           position={[cell.position.x, cell.position.y, 0]}
@@ -67,17 +64,17 @@ export default function Cell({ cell }: CellComponentInterface) {
               ref={cameraRef}
               fov={35}
               rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-              /* rotation={[Math.PI / 2, setCameraRotation(direction), 0]} */
+              rotation={[Math.PI / 2, setCameraRotation(direction), 0]}
               makeDefault={true}
               position={[-6, 0, 0.5]}
             />
           </group>
         </SnakeCell>
-      )}
-      {cell.status === 'SNAKE' && (
+      )} */}
+      {(cell.status === 'SNAKE' || cell.status === 'SNAKE_HEAD') && (
         <SnakeCell
-          key={`cell_box_${cell.position.x}_${cell.position.y}`}
-          position={[cell.position.x, cell.position.y, 0]}
+          key={`cell_box_${cell.position.x}_${cell.position.z}`}
+          position={[cell.position.x, 0, cell.position.z]}
           receiveShadow
           castShadow
         />

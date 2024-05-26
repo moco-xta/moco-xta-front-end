@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { RootState } from '@/redux/store'
 
 import useSnakeGame from '@/hooks/new/useSnakeGame'
 
@@ -7,10 +10,11 @@ import Cell from './Cell'
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
 export default function Grid() {
-  const { grid, snake, handleNextStep } = useSnakeGame()
+  const isPlaying = useSelector((state: RootState) => state.snakeGame.isPlaying)
+  const grid = useSelector((state: RootState) => state.snakeGame.grid)
 
   const nextStep = setInterval(() => {
-    handleNextStep(snake)
+    if (isPlaying) console.log('PLAYING')
   }, snakeGameConstants.SNAKE_GAME.INITIAL_SPEED)
 
   useEffect(() => {

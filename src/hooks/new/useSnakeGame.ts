@@ -18,7 +18,7 @@ export default function useSnakeGame() {
       for (let j = 0; j < height; j++) {
         const newCell: GridCellInterface = {
           status: 'EMPTY',
-          position: { x: i, y: j },
+          position: { x: i, z: j },
         }
         grid[i].push(newCell)
       }
@@ -160,8 +160,10 @@ export default function useSnakeGame() {
       snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT,
     )
     snake.forEach((snakeCell, index) => {
-      index === 0 ? newGrid[snakeCell.position.x][snakeCell.position.y].status = 'SNAKE_HEAD' : newGrid[snakeCell.position.x][snakeCell.position.y].status = 'SNAKE'
-      
+      index === 0
+        ? (newGrid[snakeCell.position.x][snakeCell.position.y].status =
+            'SNAKE_HEAD')
+        : (newGrid[snakeCell.position.x][snakeCell.position.y].status = 'SNAKE')
     })
     newGrid[food.position.x][food.position.y].status = 'FOOD'
     return newGrid

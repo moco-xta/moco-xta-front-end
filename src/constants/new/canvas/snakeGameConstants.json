@@ -10,7 +10,7 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "Z": 2
+      "Y": 3
     },
     "FOV": 30
   },

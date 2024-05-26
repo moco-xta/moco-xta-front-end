@@ -7,32 +7,31 @@ import {
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-export function generateGrid(width: number, height: number) {
+export function generateGrid() {
   const grid: GridCellInterface[][] = []
-  for (let i = 0; i < width; i++) {
+  for (let x = 0; x < snakeGameConstants.SNAKE_GAME.BOARD.WIDTH; x++) {
     grid.push([])
-    for (let j = 0; j < height; j++) {
+    for (let z = 0; z < snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT; z++) {
       const newCell: GridCellInterface = {
-        status: 'EMPTY',
-        position: { x: i, y: j },
+        status: 'SNAKE',
+        position: { x: x, z: z },
       }
-      grid[i].push(newCell)
+      grid[x].push(newCell)
     }
   }
   return grid
 }
 
-export function generateSnake(
-  boardWidth: number,
-  boardHeight: number,
-  length: number,
-) {
+export function generateSnake() {
   const snake: SnakeCellInterface[] = []
   for (let i = 0; i < length; i++) {
     snake.push({
       position: {
-        x: i === 0 ? boardWidth / 2 : boardWidth / 2 - i,
-        y: boardHeight / 2,
+        x:
+          i === 0
+            ? snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2
+            : snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2 - i,
+        y: snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
         z: 0,
       },
     })
@@ -63,10 +62,7 @@ export function generateFood(snake: SnakeCellInterface[]) {
 }
 
 export function updateGrid(snake: SnakeCellInterface[], food: FoodInterface) {
-  const newGrid: GridCellInterface[][] = generateGrid(
-    snakeGameConstants.SNAKE_GAME.BOARD.WIDTH,
-    snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT,
-  )
+  const newGrid: GridCellInterface[][] = generateGrid()
   snake.forEach((snakeCell) => {
     newGrid[snakeCell.position.x][snakeCell.position.y].status = 'SNAKE'
   })
