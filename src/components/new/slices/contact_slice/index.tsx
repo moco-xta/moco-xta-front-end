@@ -1,13 +1,13 @@
 import React from 'react'
 
-import SnakeCanvas from '../../three/canvas/snake_canvas/SnakeCanvas'
+import SnakeGameCanvas from '../../three/canvas/snake_game_canvas/SnakeGameCanvas'
 
 import './index.scss'
 
 export default function ContactSlice() {
   return (
     <section id='contact_slice'>
-      <SnakeCanvas />
+      <SnakeGameCanvas />
     </section>
   )
 }

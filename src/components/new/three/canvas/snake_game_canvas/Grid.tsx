@@ -11,7 +11,6 @@ export default function Grid() {
 
   const nextStep = setInterval(() => {
     handleNextStep(snake)
-    /* handleSetSnake(snake) */
   }, snakeGameConstants.SNAKE_GAME.INITIAL_SPEED)
 
   useEffect(() => {
@@ -19,7 +18,7 @@ export default function Grid() {
   }, [nextStep])
 
   return (
-    <>
+    <group>
       {grid.map((cellsColumn, columnIndex) =>
         cellsColumn.map((cell, rowIndex) => (
           <Cell
@@ -28,6 +27,6 @@ export default function Grid() {
           />
         )),
       )}
-    </>
+    </group>
   )
 }

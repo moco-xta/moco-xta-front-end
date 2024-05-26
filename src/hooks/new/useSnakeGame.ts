@@ -9,7 +9,6 @@ import {
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
 export default function useSnakeGame() {
-
   // GENERATE FUNCTIONS
 
   function generateGrid(width: number, height: number) {
@@ -52,11 +51,15 @@ export default function useSnakeGame() {
   function testFoodPosition(food: FoodInterface, snake: SnakeCellInterface[]) {
     let foodPositionIsValid: boolean = true
     snake.forEach((snakeCell) => {
-      if (snakeCell.position.x === food.position.x && snakeCell.position.y === food.position.y) foodPositionIsValid = false
+      if (
+        snakeCell.position.x === food.position.x &&
+        snakeCell.position.y === food.position.y
+      )
+        foodPositionIsValid = false
     })
     return foodPositionIsValid
   }
-  
+
   function generateFood(snake: SnakeCellInterface[]) {
     let newFood: FoodInterface
     do {
@@ -133,7 +136,11 @@ export default function useSnakeGame() {
         z: 0,
       },
     }
-    if(newSnakeHead.position.x === food.position.x && newSnakeHead.position.y === food.position.y) setLength(length + 1)
+    if (
+      newSnakeHead.position.x === food.position.x &&
+      newSnakeHead.position.y === food.position.y
+    )
+      setLength(length + 1)
     return newSnakeHead
   }
 
@@ -152,8 +159,9 @@ export default function useSnakeGame() {
       snakeGameConstants.SNAKE_GAME.BOARD.WIDTH,
       snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT,
     )
-    snake.forEach((snakeCell) => {
-      newGrid[snakeCell.position.x][snakeCell.position.y].status = 'SNAKE'
+    snake.forEach((snakeCell, index) => {
+      index === 0 ? newGrid[snakeCell.position.x][snakeCell.position.y].status = 'SNAKE_HEAD' : newGrid[snakeCell.position.x][snakeCell.position.y].status = 'SNAKE'
+      
     })
     newGrid[food.position.x][food.position.y].status = 'FOOD'
     return newGrid
@@ -206,8 +214,6 @@ export default function useSnakeGame() {
     }
   }, [handleKeyDown])
 
-
-
   /* 
 
   useEffect(() => {
@@ -221,5 +227,5 @@ export default function useSnakeGame() {
     }
   } */
 
-  return { grid, snake, handleNextStep }
+  return { grid, snake, direction, handleNextStep }
 }

@@ -43,5 +43,8 @@
     "COLOR_PAD_TYPESCRIPT": "/new/gltf/rubiks_cube/ColorPadTypescript.gltf",
     "COLOR_PAD_WEBGL": "/new/gltf/rubiks_cube/ColorPadWebgl.gltf",
     "ROUNDED_CUBE": "/new/gltf/rubiks_cube/RoundedCube.gltf"
+  },
+  "SNAKE_GAME": {
+    "SNAKE_CELL": "/new/gltf/snake_game/SnakeCell.gltf"
   }
 }

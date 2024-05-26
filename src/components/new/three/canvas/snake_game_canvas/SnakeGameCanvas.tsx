@@ -1,12 +1,17 @@
 import React, { Suspense } from 'react'
+import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera } from '@react-three/drei'
 
-import SnakeScene from './SnakeScene'
+import useSnakeGame from '@/hooks/new/useSnakeGame'
+
+import SnakeScene from './SnakeGameScene'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-export default function SnakeCanvas() {
+export default function SnakeGameCanvas() {
+  const { snake } = useSnakeGame()
+
   return (
     <Canvas
       id='main_skills_canvas'
@@ -21,15 +26,18 @@ export default function SnakeCanvas() {
         powerPreference: snakeGameConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
-      <PerspectiveCamera
+      {/* <PerspectiveCamera
         makeDefault
         position={[
           snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2,
           snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
           snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
+        rotation={[THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(90), 0]}
         fov={snakeGameConstants.PERSPECTIVE_CAMERA.FOV}
-      />
+        // @ts-ignore
+        lookAt={new THREE.Vector3(snake[0].position.x, snake[0].position.y, snake[0].position.z)}
+      /> */}
       {/* <ambientLight
         intensity={snakeGameConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
       /> */}
@@ -48,9 +56,9 @@ export default function SnakeCanvas() {
         intensity={1}
         castShadow
       />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <Suspense>
-      {/* <directionalLight
+        {/* <directionalLight
         position={[0, 5, 2]}
         castShadow
         color={0x602376}

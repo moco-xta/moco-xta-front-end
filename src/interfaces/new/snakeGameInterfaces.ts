@@ -1,5 +1,5 @@
 export interface GridCellInterface {
-  status: 'EMPTY' | 'SNAKE' | 'FOOD'
+  status: 'EMPTY' | 'SNAKE' | 'SNAKE_HEAD' | 'FOOD'
   position: {
     x: number
     y: number

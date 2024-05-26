@@ -10,7 +10,7 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "Z": 60
+      "Z": 2
     },
     "FOV": 30
   },
@@ -32,6 +32,13 @@
       "DEFAULT": {
         "LENGTH": 5,
         "DIRECTION": "RIGHT"
+      }
+    },
+    "MODELS": {
+      "SNAKE_CELL": {
+        "COLOR": "#393939",
+        "ROUGHNESS": 1,
+        "OPACITY": 0.9
       }
     }
   }
