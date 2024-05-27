@@ -28,6 +28,20 @@
   }
 }
 
+@media screen and (max-width: $small_limit) {
+  #review_cards {
+    width: 100vw;
+    grid-auto-columns: 45%;
+  }
+}
+
+@media screen and (max-width: $smaller_limit) {
+  #review_cards {
+    width: 100vw;
+    grid-auto-columns: 80%;
+  }
+}
+
 @media screen and (min-width: $large_limit) {
   #review_cards {
     grid-auto-columns: 20%;
