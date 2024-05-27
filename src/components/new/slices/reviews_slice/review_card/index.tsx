@@ -8,10 +8,7 @@ import { default as cardHoverConstants } from '@/constants/new/cardHoverConstant
 
 import './index.scss'
 
-export default function ReviewCard({
-  review,
-  cardStyle,
-}: ReviewCardInterface) {
+export default function ReviewCard({ review, cardStyle }: ReviewCardInterface) {
   const cardRef = useRef<HTMLDivElement>(null)
 
   useCardHoverEffect(cardRef, cardHoverConstants)

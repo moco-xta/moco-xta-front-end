@@ -23,7 +23,11 @@ export default function Grid() {
                 receiveShadow
                 castShadow
               >
-                <meshStandardMaterial attach='material' color={variables.gameboy_light} roughness={1} />
+                <meshStandardMaterial
+                  attach='material'
+                  color={variables.gameboy_light}
+                  roughness={1}
+                />
               </Box>
             )
           },
@@ -42,7 +46,11 @@ export default function Grid() {
                   snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
                 ]}
               >
-                <meshStandardMaterial attach='material' color={variables.gameboy_light} roughness={1} />
+                <meshStandardMaterial
+                  attach='material'
+                  color={variables.gameboy_light}
+                  roughness={1}
+                />
               </Box>
             )
           },

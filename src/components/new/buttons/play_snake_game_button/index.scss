@@ -1,0 +1,17 @@
+@import '@/styles/new/variables.module.scss';
+
+#play_snake_game_button_container {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+
+  #play_snake_game_button {
+    all: unset;
+    padding: 20px 40px;
+    border: 10px solid $gameboy_medium;
+    cursor: pointer;
+  }
+}
