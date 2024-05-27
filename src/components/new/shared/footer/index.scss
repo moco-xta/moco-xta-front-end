@@ -8,4 +8,24 @@ footer {
   background-size: contain;
   background-position: 15%;
   background-repeat: no-repeat;
+
+  #footer_socials {
+    position: absolute;
+    width: 100%;
+    bottom: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  #copyright {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
 }
