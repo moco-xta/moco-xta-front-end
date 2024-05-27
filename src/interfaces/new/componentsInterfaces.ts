@@ -24,7 +24,7 @@ export interface TextBlockSimpleInterface {
 
 export interface ReviewCardInterface {
   review: ReviewPayloadInterface | AddReviewValuesInterface
-  reviewCardStyle?: {
+  cardStyle?: {
     [key: string]: string | number
   }
 }

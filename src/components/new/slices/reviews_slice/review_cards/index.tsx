@@ -75,6 +75,9 @@ export default function ReviewCards() {
         <ReviewCard
           key={`review_card_${index}`}
           review={review}
+          cardStyle={{
+            margin: '30px 10px'
+          }}
         />
       ))}
     </div>
