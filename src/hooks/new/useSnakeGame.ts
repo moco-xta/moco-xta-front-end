@@ -8,7 +8,7 @@ export default function useSnakeGame() {
   const dispatch = useDispatch<AppDispatch>()
 
   function handleKeyDown(event: KeyboardEvent) {
-    console.log('event.code', event.code )
+    console.log('event.code', event.code)
     if (
       event.code === 'ArrowUp' ||
       event.code === 'ArrowLeft' ||
@@ -16,9 +16,7 @@ export default function useSnakeGame() {
     ) {
       dispatch(setNextMove(event.code))
     }
-    if (
-      event.code === 'Space'
-    ) {
+    if (event.code === 'Space') {
       dispatch(setIsPlaying())
     }
   }
