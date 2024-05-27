@@ -91,6 +91,10 @@ function updateDirection(direction: string, nextMove: string) {
   return newDirection
 }
 
+function isEating(snakeHead: SnakeCellInterface, food: FoodInterface | null) {
+  return snakeHead.position.x === food!.position.x && snakeHead.position.z === food!.position.z
+}
+
 function updateSnakeHead(
   snakeHead: SnakeCellInterface,
   food: FoodInterface | null,
@@ -131,6 +135,7 @@ function updateSnakeHead(
     newSnakeHead: newSnakeHead,
     newDirection: newDirection,
     newNextMove: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.NEXT_MOVE,
+    needFood: isEating(newSnakeHead, food)
   }
 }
 
@@ -141,14 +146,14 @@ function updateSnake(
   nextMove: string,
 ) {
   const newSnake: SnakeCellInterface[] = []
-  const { newSnakeHead, newDirection, newNextMove } = updateSnakeHead(
+  const { newSnakeHead, newDirection, newNextMove, needFood } = updateSnakeHead(
     snake[0],
     food,
     direction,
     nextMove,
   )
   newSnake[0] = newSnakeHead
-  for (let i = 1; i < snake.length; i++) {
+  for (let i = 1; i < snake.length + Number(needFood); i++) {
     newSnake[i] = snake[i - 1]
   }
 
