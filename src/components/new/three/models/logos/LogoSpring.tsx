@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import React, { useRef } from 'react'
+import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -11,7 +12,6 @@ import { mainSkillsLogoMaterial } from '../../materials/mainSkillsLogoMaterial'
 
 import { default as mainSkillsConstants } from '@/constants/new/canvas/mainSkillsConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { GroupProps } from '@react-three/fiber'
 
 type GLTFResult = GLTF & {
   nodes: {

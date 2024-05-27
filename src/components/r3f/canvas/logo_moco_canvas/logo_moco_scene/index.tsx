@@ -12,8 +12,6 @@ import { useFrame, useThree } from '@react-three/fiber'
 function Annaglyph({ enabled = false }) {
   const { gl, scene, camera, size } = useThree()
 
-  console.log('size', size)
-
   const [effect] = useState(() => new AnaglyphEffect(gl))
   useEffect(() => void effect.setSize(size.width, size.height), [effect, size])
   return useFrame(() => (enabled ? effect : gl).render(scene, camera), 1)

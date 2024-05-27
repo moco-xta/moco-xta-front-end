@@ -22,7 +22,6 @@ export function ReactThreeDrei({ position }: ReactThreeDreiInterface) {
   const rigidBodyRef = useRef<RapierRigidBody>(null)
 
   function applyImpulse(e: any) {
-    console.log('e', e)
     if (rigidBodyRef.current)
       rigidBodyRef.current.applyImpulse(
         { x: -e.normal.x * 100, y: -e.normal.y * 100, z: -e.normal.z * 100 },

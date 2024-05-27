@@ -1,0 +1,95 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "SnakeCell"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "snake_cell_#393939",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.040914930403232574, 0.04091523587703705, 0.040915217250585556,
+          0.8999999761581421
+        ],
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SnakeCell",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 2112,
+      "max": [0.4686979651451111, 0.4686979055404663, 0.4686979055404663],
+      "min": [-0.46869784593582153, -0.4686979055404663, -0.4686979055404663],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 2112,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 7236,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 25344,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 25344,
+      "byteOffset": 25344,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 14472,
+      "byteOffset": 50688,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 65160,
+      "uri": "SnakeCell.bin"
+    }
+  ]
+}

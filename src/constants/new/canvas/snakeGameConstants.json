@@ -1,0 +1,47 @@
+{
+  "CANVAS": {
+    "DPR": 1,
+    "LEGACY": false,
+    "GL": {
+      "ANTIALIAS": true,
+      "ALPHA": true,
+      "POWER_PREFERENCE": "high-performance"
+    }
+  },
+  "PERSPECTIVE_CAMERA": {
+    "POSITION": {
+      "Y": 2,
+      "DISTANCE_FROM_SNAKE_HEAD": 10
+    },
+    "FOV": 50
+  },
+  "LIGHTS": {
+    "AMBIENT_LIGHT": {
+      "INTENSITY": 1
+    }
+  },
+  "SNAKE_GAME": {
+    "INITIAL_SPEED": 200,
+    "BOARD": {
+      "WIDTH": 30,
+      "HEIGHT": 20
+    },
+    "SNAKE": {
+      "CELL": {
+        "SCALE": 0.8
+      },
+      "DEFAULT": {
+        "LENGTH": 5,
+        "DIRECTION": "RIGHT",
+        "NEXT_MOVE": "ArrowUp"
+      }
+    },
+    "MODELS": {
+      "SNAKE_CELL": {
+        "COLOR": "#393939",
+        "ROUGHNESS": 1,
+        "OPACITY": 0.9
+      }
+    }
+  }
+}

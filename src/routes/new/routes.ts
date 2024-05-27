@@ -16,6 +16,11 @@ export const Routes: RoutesInterface[] = [
     path: '/blog',
   },
   {
+    index: 4,
+    key: 'CONTACT',
+    path: '/contact',
+  },
+  {
     index: 2,
     key: 'PHOTOGRAPHY',
     path: '/photography',

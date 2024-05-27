@@ -5,11 +5,6 @@ import { lifeGameInterface } from '@/interfaces/reduxSlicesInterfaces'
 const GRID_COLUMNS = Math.round(window.innerWidth / 60)
 const GRID_ROWS = Math.round(window.innerHeight / 60)
 
-console.log(
-  Math.round(window.innerWidth / 60),
-  Math.round(window.innerHeight / 60),
-)
-
 const OPERATIONS = [
   [0, 1],
   [0, -1],
@@ -38,7 +33,7 @@ const initialState: lifeGameInterface = {
   rows: GRID_ROWS,
 }
 
-interface SetCellstateInterface {
+interface SetCellStateInterface {
   columnIndex: number
   rowIndex: number
 }
@@ -47,7 +42,7 @@ const lifeGameSlice = createSlice({
   name: 'LifeGame',
   initialState,
   reducers: {
-    setCellState: (state, action: PayloadAction<SetCellstateInterface>) => {
+    setCellState: (state, action: PayloadAction<SetCellStateInterface>) => {
       state.grid[action.payload.columnIndex][action.payload.rowIndex] =
         state.grid[action.payload.columnIndex][action.payload.rowIndex] === 0
           ? 1
