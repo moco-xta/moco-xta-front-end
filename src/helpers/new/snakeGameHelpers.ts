@@ -92,7 +92,10 @@ function updateDirection(direction: string, nextMove: string) {
 }
 
 function isEating(snakeHead: SnakeCellInterface, food: FoodInterface | null) {
-  return snakeHead.position.x === food!.position.x && snakeHead.position.z === food!.position.z
+  return (
+    snakeHead.position.x === food!.position.x &&
+    snakeHead.position.z === food!.position.z
+  )
 }
 
 function updateSnakeHead(
@@ -135,7 +138,7 @@ function updateSnakeHead(
     newSnakeHead: newSnakeHead,
     newDirection: newDirection,
     newNextMove: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.NEXT_MOVE,
-    needFood: isEating(newSnakeHead, food)
+    needFood: isEating(newSnakeHead, food),
   }
 }
 
@@ -161,7 +164,7 @@ function updateSnake(
     newSnake: newSnake,
     newDirection: newDirection,
     newNextMove: newNextMove,
-    needFood: needFood
+    needFood: needFood,
   }
 }
 
@@ -184,7 +187,9 @@ export function nextStep(state: SnakeGameInterface) {
     state.direction,
     state.nextMove,
   )
-  const newFood: FoodInterface | null = !needFood ? state.food : generateFood(newSnake) 
+  const newFood: FoodInterface | null = !needFood
+    ? state.food
+    : generateFood(newSnake)
   const newGrid = updateGrid(newSnake, newFood)
 
   return {

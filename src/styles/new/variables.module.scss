@@ -45,13 +45,16 @@ $alert_box_shadow: rgba(246, 42, 95, 0.25) 0px 25px 50px -12px;
 
 $font_size_alert: 0.8em;
 
+$smaller_limit: 600px;
 $small_limit: 800px;
 $desktop_limit: 1200px;
 $large_limit: 1600px;
 
 // MARGINS
 
-$left_right_margin: 200px;
+$left_right_margin_smaller: 50px;
+$left_right_margin_small: 100px;
+$left_right_margin_medium: 200px;
 
 // GAPS
 
@@ -84,9 +87,14 @@ $hover_transition: 0.2s;
   input_border_dark: $input_border_dark;
   input_radio_border: $input_radio_border;
 
+  smaller_limit: $smaller_limit;
+  small_limit: $small_limit;
   desktop_limit: $desktop_limit;
+  large_limit: $large_limit;
 
-  left_right_margin: $left_right_margin;
+  left_right_margin_smaller: $left_right_margin_smaller;
+  left_right_margin_small: $left_right_margin_small;
+  left_right_margin_medium: $left_right_margin_medium;
 
   gap_medium: $gap_medium;
 

@@ -11,7 +11,7 @@ export default function PerformedWith() {
       paragraph={'HOME.PERFORMED_WITH.PARAGRAPH'}
       blockStyle={{
         width: '30%',
-        padding: `0 ${variables.left_right_margin} 0 0`,
+        padding: `0 ${variables.left_right_margin_medium} 0 0`,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
