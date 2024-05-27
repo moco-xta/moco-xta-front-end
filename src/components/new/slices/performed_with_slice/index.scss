@@ -15,7 +15,6 @@
 @media screen and (max-width: $desktop_limit) {
   #performed_with_slice {
     flex-direction: column;
-    height: 250vh;
 
     canvas {
       width: 100% !important;
