@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
 import { AppDispatch } from '@/redux/store'
+import { setIsPlaying } from '@/redux/slice/snakeGameSlice'
 
 import './index.scss'
-import { setIsPlaying } from '@/redux/slice/snakeGameSlice'
 
 export default function PlaySnakeGameButton() {
   const t = useTranslations()
