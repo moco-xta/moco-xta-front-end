@@ -161,6 +161,7 @@ function updateSnake(
     newSnake: newSnake,
     newDirection: newDirection,
     newNextMove: newNextMove,
+    needFood: needFood
   }
 }
 
@@ -177,19 +178,20 @@ export function updateGrid(
 }
 
 export function nextStep(state: SnakeGameInterface) {
-  const { newSnake, newDirection, newNextMove } = updateSnake(
+  const { newSnake, newDirection, newNextMove, needFood } = updateSnake(
     state.snake,
     state.food,
     state.direction,
     state.nextMove,
   )
-  const newGrid = updateGrid(newSnake, state.food)
+  const newFood: FoodInterface | null = !needFood ? state.food : generateFood(newSnake) 
+  const newGrid = updateGrid(newSnake, newFood)
 
   return {
     newIsPlaying: state.isPlaying,
     newSnake: newSnake,
     newGrid: newGrid,
-    newFood: state.food,
+    newFood: newFood,
     newDirection: newDirection,
     newNextMove: newNextMove,
   }
