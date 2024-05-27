@@ -8,6 +8,8 @@ import { SnakeCell } from '../../models/snake_game/SnakeCell'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
+import variables from '@/styles/new/variables.module.scss'
+
 export default function Cell({ cell }: CellComponentInterface) {
   return (
     <>
@@ -18,7 +20,7 @@ export default function Cell({ cell }: CellComponentInterface) {
           scale={snakeGameConstants.SNAKE_GAME.SNAKE.CELL.SCALE}
           material={
             new THREE.MeshBasicMaterial({
-              color: 'green',
+              color: variables.gameboy_darker,
               transparent: true,
               opacity: 0.9,
             })

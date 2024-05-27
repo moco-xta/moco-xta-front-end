@@ -17,7 +17,7 @@ export default function PerformedWithTextBlock() {
         isDesktop
           ? {
               width: '30%',
-              padding: `0 ${variables.left_right_margin_medium} 0 0`,
+              padding: `0 ${variables.left_right_margin_small} 0 0`,
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
@@ -25,7 +25,7 @@ export default function PerformedWithTextBlock() {
             }
           : {
               width: '100%',
-              padding: `0 ${variables.left_right_margin_medium} 0  ${variables.left_right_margin_medium}`,
+              padding: `0 ${variables.left_right_margin_smaller} 0  ${variables.left_right_margin_smaller}`,
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
