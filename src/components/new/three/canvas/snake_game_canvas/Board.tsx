@@ -18,7 +18,7 @@ export default function Board() {
 
   useEffect(() => {
     dispatch(setSnakeGame())
-  }, [])
+  }, [dispatch])
 
   const nextStep = setInterval(() => {
     if (snakeGameState.isPlaying) {
