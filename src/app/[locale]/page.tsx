@@ -19,7 +19,7 @@ export default function Home() {
         <MainSkillsSlice />
         <PerformedWithSlice />
         <ReviewsSlice />
-        {/* <Footer /> */}
+        <Footer />
       </div>
       <div className='scroll_to_top_container'>
         <ScrollToTop />
