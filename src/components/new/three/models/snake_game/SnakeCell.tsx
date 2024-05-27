@@ -6,6 +6,8 @@ import { GLTF } from 'three-stdlib'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
+import variables from '@/styles/new/variables.module.scss'
+
 type GLTFResult = GLTF & {
   nodes: {
     SnakeCell: THREE.Mesh
@@ -27,9 +29,9 @@ export function SnakeCell(props: JSX.IntrinsicElements['mesh']) {
     >
       <meshPhysicalMaterial
         attach='material'
-        color={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.COLOR}
+        color={variables.gameboy_dark}
         roughness={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.ROUGHNESS}
-        metalness={0.9}
+        metalness={0}
         transparent
         opacity={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.OPACITY}
       />

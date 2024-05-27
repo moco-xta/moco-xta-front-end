@@ -13,6 +13,14 @@ $success_dark_color: #0a7a18;
 $alert_light_color: #ec2a5f;
 $alert_dark_color: #b20030;
 
+// GAMEBOY
+
+$gameboy_lighter: #c9db9f;
+$gameboy_light: #9bbc0f;
+$gameboy_medium: #8bac0d;
+$gameboy_dark: #306230;
+$gameboy_darker: #0f3810;
+
 // TEXTS
 
 $text_alert: $alert_light_color;
@@ -80,6 +88,12 @@ $hover_transition: 0.2s;
   grey_dark: $grey_dark;
   grey_darker: $grey_darker;
   black: $black;
+
+  gameboy_lighter: $gameboy_lighter;
+  gameboy_light: $gameboy_light;
+  gameboy_medium: $gameboy_medium;
+  gameboy_dark: $gameboy_dark;
+  gameboy_darker: $gameboy_darker;
 
   input_background: $input_background;
   input_radio_checked_color: $input_radio_checked_color;

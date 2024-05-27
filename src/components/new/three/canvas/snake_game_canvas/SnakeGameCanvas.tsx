@@ -36,6 +36,7 @@ export default function SnakeGameCanvas() {
       }}
     >
       <SnakeGamePerspectiveCamera />
+      <ambientLight intensity={4} />
       <Suspense>
         <Physics debug>
           <SnakeScene />

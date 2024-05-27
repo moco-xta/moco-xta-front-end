@@ -3,6 +3,8 @@ import { Box } from '@react-three/drei'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
+import variables from '@/styles/new/variables.module.scss'
+
 export default function Grid() {
   return (
     <>
@@ -18,7 +20,11 @@ export default function Grid() {
                   -0.5,
                   index,
                 ]}
-              />
+                receiveShadow
+                castShadow
+              >
+                <meshStandardMaterial attach='material' color={variables.gameboy_light} roughness={1} />
+              </Box>
             )
           },
         )}
@@ -35,7 +41,9 @@ export default function Grid() {
                   -0.5,
                   snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
                 ]}
-              />
+              >
+                <meshStandardMaterial attach='material' color={variables.gameboy_light} roughness={1} />
+              </Box>
             )
           },
         )}
