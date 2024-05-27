@@ -16,7 +16,9 @@ type GLTFResult = GLTF & {
 }
 
 export function SnakeCell(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes, materials } = useGLTF(gltfConstants.SNAKE_GAME.SNAKE_CELL) as GLTFResult
+  const { nodes, materials } = useGLTF(
+    gltfConstants.SNAKE_GAME.SNAKE_CELL,
+  ) as GLTFResult
   return (
     <mesh
       geometry={nodes.SnakeCell.geometry}

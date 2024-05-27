@@ -5,7 +5,6 @@ import {
   GridCellInterface,
   SnakeCellInterface,
   SnakeGameInterface,
-  SnakeInterface,
 } from '@/interfaces/new/snakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
@@ -74,16 +73,16 @@ function updateDirection(direction: string, nextMove: string) {
   let newDirection: string = ''
   switch (direction) {
     case 'TOP':
-      newDirection = nextMove === 'ArrowLeft' ? 'LEFT' : 'RIGHT'
-      break
-    case 'BOTTOM':
       newDirection = nextMove === 'ArrowLeft' ? 'RIGHT' : 'LEFT'
       break
+    case 'BOTTOM':
+      newDirection = nextMove === 'ArrowLeft' ? 'LEFT' : 'RIGHT'
+      break
     case 'LEFT':
-      newDirection = nextMove === 'ArrowLeft' ? 'BOTTOM' : 'TOP'
+      newDirection = nextMove === 'ArrowLeft' ? 'TOP' : 'BOTTOM'
       break
     case 'RIGHT':
-      newDirection = nextMove === 'ArrowLeft' ? 'TOP' : 'BOTTOM'
+      newDirection = nextMove === 'ArrowLeft' ? 'BOTTOM' : 'TOP'
       break
     default:
       newDirection = direction
@@ -208,7 +207,10 @@ export function updateCamera(snakeHead: SnakeCellInterface, direction: string) {
       newPosition = {
         x: snakeHead.position.x,
         y: snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        z: snakeHead.position.z - snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.DISTANCE_FROM_SNAKE_HEAD
+        z:
+          snakeHead.position.z -
+          snakeGameConstants.PERSPECTIVE_CAMERA.POSITION
+            .DISTANCE_FROM_SNAKE_HEAD,
       }
       newRotation.y = THREE.MathUtils.degToRad(180)
       break
@@ -216,23 +218,32 @@ export function updateCamera(snakeHead: SnakeCellInterface, direction: string) {
       newPosition = {
         x: snakeHead.position.x,
         y: snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        z: snakeHead.position.z + snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.DISTANCE_FROM_SNAKE_HEAD
+        z:
+          snakeHead.position.z +
+          snakeGameConstants.PERSPECTIVE_CAMERA.POSITION
+            .DISTANCE_FROM_SNAKE_HEAD,
       }
       newRotation.y = THREE.MathUtils.degToRad(0)
       break
     case 'LEFT':
       newPosition = {
-        x: snakeHead.position.x + snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.DISTANCE_FROM_SNAKE_HEAD,
+        x:
+          snakeHead.position.x +
+          snakeGameConstants.PERSPECTIVE_CAMERA.POSITION
+            .DISTANCE_FROM_SNAKE_HEAD,
         y: snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        z: snakeHead.position.z
+        z: snakeHead.position.z,
       }
       newRotation.y = THREE.MathUtils.degToRad(90)
       break
     case 'RIGHT':
       newPosition = {
-        x: snakeHead.position.x - snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.DISTANCE_FROM_SNAKE_HEAD,
+        x:
+          snakeHead.position.x -
+          snakeGameConstants.PERSPECTIVE_CAMERA.POSITION
+            .DISTANCE_FROM_SNAKE_HEAD,
         y: snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        z: snakeHead.position.z
+        z: snakeHead.position.z,
       }
       newRotation.y = THREE.MathUtils.degToRad(-90)
       break
@@ -242,6 +253,6 @@ export function updateCamera(snakeHead: SnakeCellInterface, direction: string) {
 
   return {
     position: newPosition,
-    rotation: newRotation
+    rotation: newRotation,
   }
 }

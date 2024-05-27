@@ -14,7 +14,10 @@ export default function SnakeGamePerspectiveCamera() {
   const snakeGameState = useSelector((state: RootState) => state.snakeGame)
 
   useFrame((state) => {
-    const { position, rotation } = updateCamera(snakeGameState.snake[0], snakeGameState.direction)
+    const { position, rotation } = updateCamera(
+      snakeGameState.snake[0],
+      snakeGameState.direction,
+    )
     state.camera.position.set(position.x, position.y, position.z)
     state.camera.rotation.set(rotation.x, rotation.y, rotation.z)
   })
@@ -27,7 +30,11 @@ export default function SnakeGamePerspectiveCamera() {
         1,
         snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
       ]}
-      rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(-90), THREE.MathUtils.degToRad(0)]}
+      rotation={[
+        THREE.MathUtils.degToRad(0),
+        THREE.MathUtils.degToRad(-90),
+        THREE.MathUtils.degToRad(0),
+      ]}
       fov={snakeGameConstants.PERSPECTIVE_CAMERA.FOV}
     />
   )

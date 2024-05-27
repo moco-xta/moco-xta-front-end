@@ -1,18 +1,12 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import * as THREE from 'three'
-import {
-  Box,
-  PerspectiveCamera,
-  PointerLockControls,
-  Sphere,
-} from '@react-three/drei'
+import { Box } from '@react-three/drei'
 
 import { CellComponentInterface } from '@/interfaces/new/snakeGameInterfaces'
 
 import { SnakeCell } from '../../models/snake_game/SnakeCell'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
-import useSnakeGame from '@/hooks/new/useSnakeGame'
 
 export default function Cell({ cell }: CellComponentInterface) {
   return (

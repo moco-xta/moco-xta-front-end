@@ -1,26 +1,25 @@
 import { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { useDispatch } from 'react-redux'
-import { setNextMove } from '@/redux/slice/snakeGameSlice'
+import { setIsPlaying, setNextMove } from '@/redux/slice/snakeGameSlice'
 
 export default function useSnakeGame() {
   const dispatch = useDispatch<AppDispatch>()
 
-  const nextMove = useSelector((state: RootState) => state.snakeGame.nextMove)
-
-  useEffect(() => {
-    console.log('nextMove', nextMove)
-  }, [nextMove])
-
   function handleKeyDown(event: KeyboardEvent) {
+    console.log('event.code', event.code )
     if (
-      event.key === 'ArrowUp' ||
-      event.key === 'ArrowLeft' ||
-      event.key === 'ArrowRight'
+      event.code === 'ArrowUp' ||
+      event.code === 'ArrowLeft' ||
+      event.code === 'ArrowRight'
     ) {
-      dispatch(setNextMove(event.key))
+      dispatch(setNextMove(event.code))
+    }
+    if (
+      event.code === 'Space'
+    ) {
+      dispatch(setIsPlaying())
     }
   }
 

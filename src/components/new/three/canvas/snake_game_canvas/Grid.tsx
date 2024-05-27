@@ -7,24 +7,36 @@ export default function Grid() {
   return (
     <>
       <>
-        {[...Array(snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT + 1)].map((_, index) => {
-          return (
-            <Box
-              args={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH, 0.02, 0.02]}
-              position={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2, -0.5, index]}
-            />
-          )
-        })}
+        {[...Array(snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT + 1)].map(
+          (_, index) => {
+            return (
+              <Box
+                args={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH, 0.02, 0.02]}
+                position={[
+                  snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2,
+                  -0.5,
+                  index,
+                ]}
+              />
+            )
+          },
+        )}
       </>
       <>
-        {[...Array(snakeGameConstants.SNAKE_GAME.BOARD.WIDTH + 1)].map((_, index) => {
-          return (
-            <Box
-              args={[0.02, 0.02, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT]}
-              position={[index, -0.5, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2]}
-            />
-          )
-        })}
+        {[...Array(snakeGameConstants.SNAKE_GAME.BOARD.WIDTH + 1)].map(
+          (_, index) => {
+            return (
+              <Box
+                args={[0.02, 0.02, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT]}
+                position={[
+                  index,
+                  -0.5,
+                  snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
+                ]}
+              />
+            )
+          },
+        )}
       </>
     </>
   )

@@ -21,9 +21,9 @@ export default function Board() {
   }, [])
 
   const nextStep = setInterval(() => {
-    /* if (snakeGameState.isPlaying) { */
-    dispatch(setNextStep())
-    /* } */
+    if (snakeGameState.isPlaying) {
+      dispatch(setNextStep())
+    }
   }, snakeGameConstants.SNAKE_GAME.INITIAL_SPEED)
 
   useEffect(() => {
