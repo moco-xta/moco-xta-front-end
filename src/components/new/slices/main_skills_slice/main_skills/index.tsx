@@ -8,6 +8,7 @@ import TextBlockSimple from '@/components/new/shared/text_blocks/text_block_simp
 
 import { isEven } from '@/helpers/new/mathHelpers'
 
+import variables from '@/styles/new/variables.module.scss'
 import './index.scss'
 
 export default function MainSkills() {
@@ -25,7 +26,8 @@ export default function MainSkills() {
               ? {}
               : {
                   height: '60vh',
-                  padding: `0 ${isEven(index) ? '20%' : '50%'} 0 ${isEven(index) ? '50%' : '20%'}`, // TODO: MARGIN VARIABLE
+                  maxHeight: '500px',
+                  padding: `0 ${isEven(index) ? `${variables.left_right_margin_small}` : '50%'} 0 ${isEven(index) ? '50%' : `${variables.left_right_margin_small}`}`, // TODO: MARGIN VARIABLE
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
