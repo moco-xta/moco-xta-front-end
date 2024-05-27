@@ -3,10 +3,12 @@ export interface SnakeGameInterface {
   grid: GridCellInterface[][]
   snake: SnakeCellInterface[]
   food: FoodInterface | null
+  direction: string
+  nextMove: string
 }
 
 export interface GridCellInterface {
-  status: 'EMPTY' | 'SNAKE' | 'SNAKE_HEAD' | 'FOOD'
+  status: 'EMPTY' | 'SNAKE' | 'FOOD'
   position: {
     x: number
     z: number
@@ -20,7 +22,6 @@ export interface CellComponentInterface {
 export interface SnakeCellInterface {
   position: {
     x: number
-    y: number
     z: number
   }
 }
@@ -29,14 +30,6 @@ export interface SnakeInterface {
   length: number
   direction: string
   snakeBody: SnakeCellInterface[]
-}
-
-export interface SnakeCellInterface {
-  position: {
-    x: number
-    y: number
-    z: number
-  }
 }
 
 export interface GenerateSnakeBodyInterface {
@@ -56,7 +49,6 @@ export interface SetSnakeDirectionActionInterface {
 export interface FoodInterface {
   position: {
     x: number
-    y: number
     z: number
   }
 }

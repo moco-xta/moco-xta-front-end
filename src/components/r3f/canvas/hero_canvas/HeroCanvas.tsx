@@ -19,10 +19,6 @@ import { default as imgConstants } from '@/constants/imgConstants.json'
 export default function HeroCanvas() {
   const { dimensionsType } = useIsMobile()
 
-  useEffect(() => {
-    console.log('dimensionsType', dimensionsType)
-  }, [dimensionsType])
-
   if (!dimensionsType) return null
 
   return (

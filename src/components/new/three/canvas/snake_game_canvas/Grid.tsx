@@ -1,36 +1,31 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-
-import { RootState } from '@/redux/store'
-
-import useSnakeGame from '@/hooks/new/useSnakeGame'
-
-import Cell from './Cell'
+import React from 'react'
+import { Box } from '@react-three/drei'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
 export default function Grid() {
-  const isPlaying = useSelector((state: RootState) => state.snakeGame.isPlaying)
-  const grid = useSelector((state: RootState) => state.snakeGame.grid)
-
-  const nextStep = setInterval(() => {
-    if (isPlaying) console.log('PLAYING')
-  }, snakeGameConstants.SNAKE_GAME.INITIAL_SPEED)
-
-  useEffect(() => {
-    return () => clearInterval(nextStep)
-  }, [nextStep])
-
   return (
-    <group>
-      {grid.map((cellsColumn, columnIndex) =>
-        cellsColumn.map((cell, rowIndex) => (
-          <Cell
-            key={`grid_cell_${columnIndex}_${rowIndex}`}
-            cell={cell}
-          />
-        )),
-      )}
-    </group>
+    <>
+      <>
+        {[...Array(snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT + 1)].map((_, index) => {
+          return (
+            <Box
+              args={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH, 0.02, 0.02]}
+              position={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2, -0.5, index]}
+            />
+          )
+        })}
+      </>
+      <>
+        {[...Array(snakeGameConstants.SNAKE_GAME.BOARD.WIDTH + 1)].map((_, index) => {
+          return (
+            <Box
+              args={[0.02, 0.02, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT]}
+              position={[index, -0.5, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2]}
+            />
+          )
+        })}
+      </>
+    </>
   )
 }

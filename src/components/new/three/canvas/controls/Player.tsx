@@ -2,16 +2,24 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import { Box } from '@react-three/drei'
-import * as RAPIER from "@dimforge/rapier3d-compat"
-import { CapsuleCollider, RapierRigidBody, RigidBody, useRapier } from '@react-three/rapier'
+import * as RAPIER from '@dimforge/rapier3d-compat'
+import {
+  CapsuleCollider,
+  RapierRigidBody,
+  RigidBody,
+  useRapier,
+} from '@react-three/rapier'
 
 import { usePlayer } from '@/hooks/new/usePlayer'
+import { useDispatch, useSelector } from 'react-redux'
+import { AppDispatch, RootState } from '@/redux/store'
+import { setIsPlaying } from '@/redux/slice/snakeGameSlice'
 
-const MOVE_SPEED = 5;
-const direction = new THREE.Vector3();
-const frontVector = new THREE.Vector3();
-const sideVector = new THREE.Vector3();
-const rotation = new THREE.Vector3();
+const MOVE_SPEED = 5
+const direction = new THREE.Vector3()
+const frontVector = new THREE.Vector3()
+const sideVector = new THREE.Vector3()
+const rotation = new THREE.Vector3()
 
 export default function Player() {
   const { forward, backward, left, right, jump } = usePlayer()
@@ -20,6 +28,9 @@ export default function Player() {
   const objectInHandRef = useRef<THREE.Group>(null!)
 
   const rapier = useRapier()
+
+  const dispatch = useDispatch<AppDispatch>()
+  const isPlaying = useSelector((state: RootState) => state.snakeGame.isPlaying)
 
   useFrame((state) => {
     if (!playerRef.current) return
@@ -36,11 +47,14 @@ export default function Player() {
       .applyEuler(state.camera.rotation)
 
     playerRef.current.wakeUp()
-    playerRef.current.setLinvel({
-      x: direction.x,
-      y: velocity.y,
-      z: direction.z,
-    }, true)
+    playerRef.current.setLinvel(
+      {
+        x: direction.x,
+        y: velocity.y,
+        z: direction.z,
+      },
+      true,
+    )
 
     // jumping
     /* const world = rapier.world
@@ -63,7 +77,12 @@ export default function Player() {
   })
 
   const doJump = () => {
-    if (playerRef.current) playerRef.current.setLinvel({ x: 0, y: 8, z: 0 }, true)
+    if (playerRef.current)
+      playerRef.current.setLinvel({ x: 0, y: 8, z: 0 }, true)
+  }
+
+  const handleOnClick = () => {
+    dispatch(setIsPlaying())
   }
 
   return (
@@ -83,9 +102,16 @@ export default function Player() {
       </RigidBody>
       <group ref={objectInHandRef}>
         <Box
-          position={[0.3, -0.1, 0.3]}
+          args={[0.3, 0.3, 0.3]}
+          position={[0, -0.4, 0.1]}
           scale={0.3}
-        />
+          onClick={handleOnClick}
+        >
+          <meshBasicMaterial
+            attach='material'
+            color={isPlaying ? 0xff0000 : 0x00ffff}
+          />
+        </Box>
       </group>
     </>
   )

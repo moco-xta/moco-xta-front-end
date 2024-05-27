@@ -26,10 +26,6 @@ export const usePlayer = () => {
   }
 
   useEffect(() => {
-    console.log('movement', movement)
-  }, [movement])
-
-  useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       setMovementStatus(getMove(event.code), true)
     }

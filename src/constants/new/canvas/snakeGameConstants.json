@@ -10,9 +10,10 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "Y": 3
+      "Y": 2,
+      "DISTANCE_FROM_SNAKE_HEAD": 10
     },
-    "FOV": 30
+    "FOV": 50
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
@@ -31,7 +32,8 @@
       },
       "DEFAULT": {
         "LENGTH": 5,
-        "DIRECTION": "RIGHT"
+        "DIRECTION": "RIGHT",
+        "NEXT_MOVE": "ArrowUp"
       }
     },
     "MODELS": {

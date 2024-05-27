@@ -31,7 +31,6 @@ export default function AboutSlice() {
   })
 
   function handleKeyPress(e: KeyboardEvent) {
-    console.log('event', e)
     if (e.code === 'Escape') setShowInstructions(true)
   }
 

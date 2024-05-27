@@ -10,25 +10,27 @@ type GLTFResult = GLTF & {
   nodes: {
     SnakeCell: THREE.Mesh
   }
-  materials: {}
+  materials: {
+    ['snake_cell_#393939']: THREE.MeshStandardMaterial
+  }
 }
 
 export function SnakeCell(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.SNAKE_GAME.SNAKE_CELL) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.SNAKE_GAME.SNAKE_CELL) as GLTFResult
   return (
     <mesh
       geometry={nodes.SnakeCell.geometry}
+      material={materials['snake_cell_#393939']}
       {...props}
     >
-      <meshPhysicalMaterial
+      {/* <meshPhysicalMaterial
         attach='material'
         color={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.COLOR}
         roughness={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.ROUGHNESS}
         metalness={0.9}
         transparent
         opacity={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.OPACITY}
-      />
-      {props.children}
+      /> */}
     </mesh>
   )
 }

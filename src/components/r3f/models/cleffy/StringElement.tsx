@@ -21,7 +21,6 @@ export function StringElement({ position, rotation }: StringElementInterface) {
   const rigidBodyRef = useRef<RapierRigidBody>(null)
 
   function applyImpulse(e: any) {
-    console.log('e')
     if (rigidBodyRef.current)
       rigidBodyRef.current.applyImpulse(
         { x: -e.normal.x * 100, y: -e.normal.y * 100, z: -e.normal.z * 100 },
