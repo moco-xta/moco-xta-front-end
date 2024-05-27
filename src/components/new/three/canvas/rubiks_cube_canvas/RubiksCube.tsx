@@ -53,6 +53,7 @@ export default function RubiksCube() {
                     coordinates.z === 0
                   ) && (
                     <CubeGroup
+                      key={`cube_group_${x}_${y}_${z}`}
                       colorPadIndex={colorPadIndex}
                       coordinates={coordinates}
                     />

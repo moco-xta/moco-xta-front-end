@@ -35,7 +35,7 @@ export default function MainSkills() {
                   backgroundImage: `url(${skill.backgroundImage})`,
                   backgroundSize: 'contain',
                   backgroundPositionX: isEven(index) ? 'left' : 'right',
-                  backgroundRepeat: 'no-repeat'
+                  backgroundRepeat: 'no-repeat',
                 }
           }
         />
