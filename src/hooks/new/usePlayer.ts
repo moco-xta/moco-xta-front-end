@@ -11,8 +11,6 @@ export const usePlayer = () => {
     Space: 'jump',
   }
 
-  const getMove = (code: string) => moves[code]
-
   const [movement, setMovement] = useState({
     forward: false,
     backward: false,
@@ -26,6 +24,8 @@ export const usePlayer = () => {
   }
 
   useEffect(() => {
+    const getMove = (code: string) => moves[code]
+
     const handleKeyDown = (event: KeyboardEvent) => {
       setMovementStatus(getMove(event.code), true)
     }

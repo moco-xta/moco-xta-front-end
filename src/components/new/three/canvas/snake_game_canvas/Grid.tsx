@@ -11,6 +11,7 @@ export default function Grid() {
           (_, index) => {
             return (
               <Box
+                key={`grid_row_${index}`}
                 args={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH, 0.02, 0.02]}
                 position={[
                   snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2,
@@ -27,6 +28,7 @@ export default function Grid() {
           (_, index) => {
             return (
               <Box
+                key={`grid_column_${index}`}
                 args={[0.02, 0.02, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT]}
                 position={[
                   index,

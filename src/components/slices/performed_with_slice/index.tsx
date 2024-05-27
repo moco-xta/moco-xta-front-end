@@ -3,7 +3,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import PerformedWithCanvas from '@/components/r3f/canvas/performed_with_canvas'
+/* import PerformedWithCanvas from '@/components/r3f/canvas/performed_with_canvas' */
 
 import './index.scss'
 
@@ -16,7 +16,7 @@ export default function PerformedWith() {
         <div id='performed_with_text'>{t('PERFORMED_WITH.TEXT')}</div>
       </div>
       <div id='perform_with_canvas_container'>
-        <PerformedWithCanvas />
+        {/* <PerformedWithCanvas /> */}
       </div>
     </div>
   )
