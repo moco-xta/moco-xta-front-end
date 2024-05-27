@@ -78,6 +78,10 @@
       "SEE_ALL_REVIEWS": "Ver todas las reseñas"
     }
   },
+  "BUTTONS": {
+    "OPEN": "Open",
+    "CLOSE": "Close"
+  },
   "SKILLS": {
     "SKILLS": "Skills",
     "CATEGORIES": {
