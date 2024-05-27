@@ -1,0 +1,8 @@
+@import '@/styles/new/variables.module.scss';
+
+#snake_game_data {
+  z-index: 1;
+  position: absolute;
+  margin-top: $left_right_margin_medium;
+  margin-left: $left_right_margin_small;
+}

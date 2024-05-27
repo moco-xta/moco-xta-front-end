@@ -8,7 +8,7 @@ import './index.scss'
 
 export default function ReviewsTextBlock() {
   const { isDesktop } = useResize()
-  
+
   return (
     <TextBlockSimple
       id={'reviews_text_block'}

@@ -103,6 +103,7 @@ function updateSnakeHead(
   food: FoodInterface | null,
   direction: string,
   nextMove: string,
+  score: number,
 ) {
   let newDirection: string = direction
   if (nextMove !== 'ArrowUp')
@@ -139,6 +140,7 @@ function updateSnakeHead(
     newDirection: newDirection,
     newNextMove: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.NEXT_MOVE,
     needFood: isEating(newSnakeHead, food),
+    newScore: !isEating(newSnakeHead, food) ? score : score + 5,
   }
 }
 
@@ -147,13 +149,15 @@ function updateSnake(
   food: FoodInterface | null,
   direction: string,
   nextMove: string,
+  score: number,
 ) {
   const newSnake: SnakeCellInterface[] = []
-  const { newSnakeHead, newDirection, newNextMove, needFood } = updateSnakeHead(
+  const { newSnakeHead, newDirection, newNextMove, needFood, newScore } = updateSnakeHead(
     snake[0],
     food,
     direction,
     nextMove,
+    score,
   )
   newSnake[0] = newSnakeHead
   for (let i = 1; i < snake.length + Number(needFood); i++) {
@@ -165,6 +169,7 @@ function updateSnake(
     newDirection: newDirection,
     newNextMove: newNextMove,
     needFood: needFood,
+    newScore: newScore,
   }
 }
 
@@ -181,11 +186,12 @@ export function updateGrid(
 }
 
 export function nextStep(state: SnakeGameInterface) {
-  const { newSnake, newDirection, newNextMove, needFood } = updateSnake(
+  const { newSnake, newDirection, newNextMove, needFood, newScore } = updateSnake(
     state.snake,
     state.food,
     state.direction,
     state.nextMove,
+    state.score,
   )
   const newFood: FoodInterface | null = !needFood
     ? state.food
@@ -199,6 +205,7 @@ export function nextStep(state: SnakeGameInterface) {
     newFood: newFood,
     newDirection: newDirection,
     newNextMove: newNextMove,
+    newScore: newScore,
   }
 }
 

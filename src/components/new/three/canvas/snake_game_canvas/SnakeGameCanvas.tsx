@@ -1,22 +1,13 @@
 import React, { Suspense } from 'react'
-import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import {
-  OrbitControls,
-  PerspectiveCamera,
-  Plane,
-  PointerLockControls,
-} from '@react-three/drei'
+import { Physics } from '@react-three/rapier'
 
-import useSnakeGame from '@/hooks/new/useSnakeGame'
+import { usePlayer } from '@/hooks/new/usePlayer'
 
+import SnakeGamePerspectiveCamera from './SnakeGamePerspectiveCamera'
 import SnakeScene from './SnakeGameScene'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
-import SnakeGamePerspectiveCamera from './SnakeGamePerspectiveCamera'
-import { usePlayer } from '@/hooks/new/usePlayer'
-import Player from '../controls/Player'
-import { Physics, RigidBody } from '@react-three/rapier'
 
 export default function SnakeGameCanvas() {
   usePlayer()

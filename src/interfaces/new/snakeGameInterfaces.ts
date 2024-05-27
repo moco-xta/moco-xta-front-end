@@ -5,6 +5,8 @@ export interface SnakeGameInterface {
   food: FoodInterface | null
   direction: string
   nextMove: string
+  score: number
+  level: number
 }
 
 export interface GridCellInterface {

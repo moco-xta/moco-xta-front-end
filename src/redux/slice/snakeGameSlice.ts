@@ -1,9 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import {
-  SnakeCellInterface,
-  SnakeGameInterface,
-} from '@/interfaces/new/snakeGameInterfaces'
+import { SnakeGameInterface } from '@/interfaces/new/snakeGameInterfaces'
 
 import {
   generateFood,
@@ -22,6 +19,8 @@ const initialState: SnakeGameInterface = {
   food: null,
   direction: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.DIRECTION,
   nextMove: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.NEXT_MOVE,
+  score: 0,
+  level: 1
 }
 
 const snakeGameSlice = createSlice({
@@ -46,6 +45,7 @@ const snakeGameSlice = createSlice({
         newFood,
         newDirection,
         newNextMove,
+        newScore
       } = nextStep(state)
       state.isPlaying = newIsPlaying
       state.snake = newSnake
@@ -53,6 +53,7 @@ const snakeGameSlice = createSlice({
       state.food = newFood
       state.direction = newDirection
       state.nextMove = newNextMove
+      state.score = newScore
     },
   },
 })
