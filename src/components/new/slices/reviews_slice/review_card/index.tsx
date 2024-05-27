@@ -10,7 +10,7 @@ import './index.scss'
 
 export default function ReviewCard({
   review,
-  reviewCardStyle,
+  cardStyle,
 }: ReviewCardInterface) {
   const cardRef = useRef<HTMLDivElement>(null)
 
@@ -20,7 +20,7 @@ export default function ReviewCard({
     <div
       ref={cardRef}
       className='review_card'
-      style={reviewCardStyle}
+      style={cardStyle}
     >
       <p>&quot;{review.review}&quot;</p>
       <div>{review.rating}</div>

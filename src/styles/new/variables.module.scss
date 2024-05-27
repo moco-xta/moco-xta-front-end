@@ -57,6 +57,7 @@ $smaller_limit: 600px;
 $small_limit: 800px;
 $desktop_limit: 1200px;
 $large_limit: 1600px;
+$larger_limit: 2000px;
 
 // MARGINS
 
@@ -105,6 +106,7 @@ $hover_transition: 0.2s;
   small_limit: $small_limit;
   desktop_limit: $desktop_limit;
   large_limit: $large_limit;
+  larger_limit: $larger_limit;
 
   left_right_margin_smaller: $left_right_margin_smaller;
   left_right_margin_small: $left_right_margin_small;
