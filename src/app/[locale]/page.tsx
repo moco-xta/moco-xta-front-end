@@ -10,6 +10,7 @@ import {
 } from '@/components/new/slices'
 import Footer from '@/components/new/shared/footer'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
+import NewReviewsSlice from '@/components/new/slices/new_reviews_slice'
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
         <HeroSlice />
         <MainSkillsSlice />
         <PerformedWithSlice />
-        <ReviewsSlice />
+        <NewReviewsSlice />
         <Footer />
       </div>
       <div className='scroll_to_top_container'>

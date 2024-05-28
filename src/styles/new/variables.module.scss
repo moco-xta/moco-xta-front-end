@@ -82,6 +82,14 @@ $blur: 3px;
 $transition: 0.3s;
 $hover_transition: 0.2s;
 
+// REVIEWS
+
+$reviews_slice_height_larger: 80vh;
+$reviews_slice_height_large: 90vh;
+$reviews_slice_height_medium: 100vh;
+$reviews_slice_height_small: 110vh;
+$reviews_slice_height_smaller: 120vh;
+
 :export {
   background_color: $background_color;
   blured_background_color: $blured_background_color;

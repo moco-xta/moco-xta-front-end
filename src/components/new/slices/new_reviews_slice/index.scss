@@ -1,0 +1,63 @@
+@import '@/styles/new/variables.module.scss';
+
+#new_reviews_slice {
+  width: 200vw;
+  height: $reviews_slice_height_larger;
+
+  .reviews_containers {
+    height: $reviews_slice_height_larger;
+    /* background-color: DarkSeaGreen; */
+  }
+}
+
+@media screen and (min-width: $large_limit) {
+  #new_reviews_slice {
+    height: $reviews_slice_height_larger;
+    
+    .reviews_containers {
+      height: $reviews_slice_height_larger;
+      /* background-color: chocolate; */
+    }
+  }
+}
+
+@media screen and (min-width: $larger_limit) {
+  #new_reviews_slice {
+    height: $reviews_slice_height_larger;
+
+    .reviews_containers {
+      height: $reviews_slice_height_larger;
+      /* background-color: BlueViolet; */
+    }
+  }
+}
+
+@media screen and (max-width: $desktop_limit) {
+  #new_reviews_slice {
+
+    .reviews_containers {
+      /* background-color: azure; */
+    }
+  }
+}
+
+@media screen and (max-width: $small_limit) {
+  #new_reviews_slice {
+    height: $reviews_slice_height_medium;
+
+    .reviews_containers {
+      height: $reviews_slice_height_medium;
+
+      /* background-color: DarkGreen */;
+    }
+  }
+}
+
+@media screen and (max-width: $smaller_limit) {
+  #new_reviews_slice {
+
+    .reviews_containers {
+      /* background-color: crimson; */
+    }
+  }
+}

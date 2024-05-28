@@ -1,7 +1,7 @@
 @import '@/styles/new/variables.module.scss';
 
 .review_card {
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 3 / 2;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -37,8 +37,7 @@
 
 @media screen and (max-width: $desktop_limit) {
   .review_card {
-    aspect-ratio: 3 / 2;
-    background-color: azure;
+    background-color: MediumSpringGreen;
   
     p {
       font-size: 19px;
@@ -48,6 +47,7 @@
 
 @media screen and (max-width: $small_limit) {
   .review_card {
+    aspect-ratio: 2 / 3;
     background-color: DarkGreen;
   
     p {

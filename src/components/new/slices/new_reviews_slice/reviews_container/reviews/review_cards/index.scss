@@ -6,7 +6,7 @@
   padding: 50px 0 50px 0;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 25%;
+  grid-auto-columns: 40%;
   gap: $gap_medium;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
@@ -23,13 +23,13 @@
 
 @media screen and (min-width: $large_limit) {
   #review_cards {
-    grid-auto-columns: 20%;
+  grid-auto-columns: 35%;
   }
 }
 
 @media screen and (min-width: $larger_limit) {
   #review_cards {
-    grid-auto-columns: 20%;
+  grid-auto-columns: 30%;
   }
 }
 
@@ -37,14 +37,14 @@
 @media screen and (max-width: $desktop_limit) {
   #review_cards {
     width: 100vw;
-    grid-auto-columns: 30%;
+    grid-auto-columns: 55%;
   }
 }
 
 @media screen and (max-width: $small_limit) {
   #review_cards {
     width: 100vw;
-    grid-auto-columns: 45%;
+    grid-auto-columns: 55%;
   }
 }
 
