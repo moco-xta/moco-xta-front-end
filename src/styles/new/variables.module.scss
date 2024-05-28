@@ -64,6 +64,7 @@ $larger_limit: 2000px;
 $top_bottom_margin_smaller: 25px;
 $top_bottom_margin_small: 50px;
 $top_bottom_margin_medium: 100px;
+$top_bottom_margin_large: 200px;
 
 $left_right_margin_smaller: 50px;
 $left_right_margin_small: 100px;
@@ -123,6 +124,7 @@ $reviews_slice_height_smaller: 120vh;
   top_bottom_margin_smaller: $top_bottom_margin_smaller;
   top_bottom_margin_small: $top_bottom_margin_small;
   top_bottom_margin_medium: $top_bottom_margin_medium;
+  top_bottom_margin_large: $top_bottom_margin_large;
 
   left_right_margin_smaller: $left_right_margin_smaller;
   left_right_margin_small: $left_right_margin_small;

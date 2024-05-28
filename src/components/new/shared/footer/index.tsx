@@ -12,10 +12,10 @@ export default function Footer() {
   return (
     <footer>
       <div id='footer_socials'>
-        <IoLogoGithub size={SIZE} />
-        <FaTwitter size={SIZE} />
-        <FaInstagram size={SIZE} />
-        <FaLinkedinIn size={SIZE} />
+        <IoLogoGithub />
+        <FaTwitter />
+        <FaInstagram />
+        <FaLinkedinIn />
       </div>
       <p id='copyright'>
         © Copyright 2024 Federico Desmoulin - All rights reserved
