@@ -9,7 +9,9 @@ export default function RealTime3DTextBlock() {
     <TextBlockSimple
       title={'HOME.MAIN_SKILLS.REAL_TIME_3D.TITLE'}
       paragraph={'HOME.MAIN_SKILLS.REAL_TIME_3D.PARAGRAPH'}
-      blockStyle={{ padding: `${variables.top_bottom_margin_medium} 35% 0 35%` }}
+      blockStyle={{
+        padding: `${variables.top_bottom_margin_medium} 35% 0 35%`,
+      }}
     />
   )
 }

@@ -20,7 +20,7 @@ const initialState: SnakeGameInterface = {
   direction: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.DIRECTION,
   nextMove: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.NEXT_MOVE,
   score: 0,
-  level: 1
+  level: 1,
 }
 
 const snakeGameSlice = createSlice({
@@ -45,7 +45,7 @@ const snakeGameSlice = createSlice({
         newFood,
         newDirection,
         newNextMove,
-        newScore
+        newScore,
       } = nextStep(state)
       state.isPlaying = newIsPlaying
       state.snake = newSnake

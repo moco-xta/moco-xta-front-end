@@ -40,7 +40,9 @@ export default function RootLayout({
   return (
     <>
       <html lang={locale}>
-        <body className={`${inter.className} ${karmaticArcade.variable} ${upheavtt.variable}`}>
+        <body
+          className={`${inter.className} ${karmaticArcade.variable} ${upheavtt.variable}`}
+        >
           <GoogleAnalytics
             gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />

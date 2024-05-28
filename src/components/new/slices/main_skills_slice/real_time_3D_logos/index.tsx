@@ -1,15 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { default as imgConstants } from '@/constants/new/assets/imgConstants.json'
+import realTime3DLogosPng from '@/assets/img/png/main_skills/real_time_3D_logos.png'
 
 export default function RealTime3DLogos() {
   return (
     <Image
-      src={imgConstants.HERO.MAIN_SKILLS.REAL_TIME_3D_LOGOS}
-      width={950}
-      height={115}
-      alt=''
+      src={realTime3DLogosPng}
+      alt='Real-time 3D logos'
+      sizes='100vw'
+      style={{
+        width: '60%',
+        height: 'auto',
+      }}
     />
   )
 }
