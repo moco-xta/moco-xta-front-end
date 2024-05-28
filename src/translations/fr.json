@@ -86,6 +86,17 @@
     "OPEN": "Open",
     "CLOSE": "Close"
   },
+  "CONTACT": {
+    "SNAKE_GAME": {
+      "SCORE": "Score",
+      "LEVEL": "Level",
+      "PLAY": "Play",
+      "PAUSE": "Pause",
+      "EMAIL": "Email",
+      "PHONE_NUMBER": "Phone number",
+      "I_DONT_WANT_TO_PLAY": "I don't want to play :("
+    }
+  },
   "SKILLS": {
     "SKILLS": "Skills",
     "CATEGORIES": {

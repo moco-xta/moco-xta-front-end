@@ -16,7 +16,7 @@ export default function ControlSnakeGameButtons() {
   function handleOnClickRight() {
     dispatch(setNextMove('ArrowRight'))
   }
-  
+
   return (
     <div id='controls_snake_game_buttons'>
       <span onClick={handleOnClickLeft}>{'<'}</span>
