@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useTranslations } from 'next-intl'
 
 import { RootState } from '@/redux/store'
 
@@ -11,6 +12,8 @@ import Reviews from './reviews'
 import './index.scss'
 
 export default function ReviewsContainer() {
+  const t = useTranslations('BUTTONS')
+
   const addReviewIsOpen = useSelector(
     (state: RootState) => state.appState.addReviewIsOpen,
   )
@@ -22,7 +25,7 @@ export default function ReviewsContainer() {
       id='reviews_container'
       className={`reviews_containers ${addReviewIsOpen ? '' : 'open'}`}
     >
-      {isDesktop && <AddReviewButton />}
+      {isDesktop && <AddReviewButton text={t('OPEN')} />}
       <Reviews />
     </div>
   )

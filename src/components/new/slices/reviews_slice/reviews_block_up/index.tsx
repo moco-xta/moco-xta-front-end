@@ -12,7 +12,7 @@ export default function ReviewsBlockUp() {
 
   return (
     <div id='reviews_block_up'>
-      {!isDesktop && <AddReviewButton />}
+      {!isDesktop && <AddReviewButton text={'old'} />}
       <ReviewsTextBlock />
     </div>
   )

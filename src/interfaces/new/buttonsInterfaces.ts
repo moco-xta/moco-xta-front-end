@@ -11,3 +11,7 @@ export interface ResetButtonInterface {
     nextState?: Partial<FormikState<AddReviewValuesInterface>> | undefined,
   ) => void
 }
+
+export interface AddReviewButtonInterface {
+  text: string
+}

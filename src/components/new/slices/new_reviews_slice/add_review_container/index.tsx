@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useTranslations } from 'next-intl'
 
 import { RootState } from '@/redux/store'
 
@@ -9,6 +10,8 @@ import AddReviewButton from '@/components/new/buttons/add_review_button'
 import './index.scss'
 
 export default function AddReviewContainer() {
+  const t = useTranslations('BUTTONS')
+  
   const addReviewIsOpen = useSelector(
     (state: RootState) => state.appState.addReviewIsOpen,
   )
@@ -19,7 +22,7 @@ export default function AddReviewContainer() {
       className={`reviews_containers ${addReviewIsOpen ? 'open' : ''}`}
     >
       <AddReview />
-      <AddReviewButton />
+      <AddReviewButton text={t('CLOSE')} />
     </div>
   )
 }
