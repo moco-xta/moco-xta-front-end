@@ -37,7 +37,6 @@ footer {
 @media screen and (min-width: $large_limit) {
   footer {
     height: 80vh;
-    background-color: chocolate;
 
     #footer_socials {
       font-size: 50px;
@@ -51,7 +50,6 @@ footer {
 @media screen and (min-width: $larger_limit) {
   footer {
     height: 80vh;
-    background-color: BlueViolet;
 
     #footer_socials {
     }
@@ -63,7 +61,6 @@ footer {
 
 @media screen and (max-width: $desktop_limit) {
   .review_card {
-    background-color: MediumSpringGreen;
 
     #footer_socials {
       font-size: 45px;
@@ -77,7 +74,6 @@ footer {
 @media screen and (max-width: $small_limit) {
   footer {
     height: 50vh;
-    background-color: DarkGreen;
 
     #footer_socials {
       bottom: $top_bottom_margin_medium;
@@ -94,7 +90,6 @@ footer {
 @media screen and (max-width: $smaller_limit) {
   footer {
     height: 40vh;
-    background-color: crimson;
 
     #footer_socials {
       font-size: 30px;
