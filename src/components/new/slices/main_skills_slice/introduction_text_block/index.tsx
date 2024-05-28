@@ -2,7 +2,7 @@ import React from 'react'
 
 import TextBlockSimple from '@/components/new/shared/text_blocks/text_block_simple'
 
-export default function Introduction() {
+export default function IntroductionTextBlock() {
   return (
     <TextBlockSimple
       title={'HOME.MAIN_SKILLS.INTRODUCTION.TITLE'}

@@ -61,6 +61,10 @@ $larger_limit: 2000px;
 
 // MARGINS
 
+$top_bottom_margin_smaller: 25px;
+$top_bottom_margin_small: 50px;
+$top_bottom_margin_medium: 100px;
+
 $left_right_margin_smaller: 50px;
 $left_right_margin_small: 100px;
 $left_right_margin_medium: 200px;
@@ -107,6 +111,10 @@ $hover_transition: 0.2s;
   desktop_limit: $desktop_limit;
   large_limit: $large_limit;
   larger_limit: $larger_limit;
+  
+  top_bottom_margin_smaller: $top_bottom_margin_smaller;
+  top_bottom_margin_small: $top_bottom_margin_small;
+  top_bottom_margin_medium: $top_bottom_margin_medium;
 
   left_right_margin_smaller: $left_right_margin_smaller;
   left_right_margin_small: $left_right_margin_small;

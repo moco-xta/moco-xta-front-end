@@ -1,0 +1,9 @@
+@import '@/styles/new/variables.module.scss';
+
+#real_time_3D {
+  margin: $top_bottom_margin_medium 0 $top_bottom_margin_medium 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

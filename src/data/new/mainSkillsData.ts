@@ -1,18 +1,20 @@
 import { MainSkillsDataInterface } from '@/interfaces/new/dataInterfaces'
 
+import { default as imgConstants } from '@/constants/new/assets/imgConstants.json'
+
 export const mainSkillsData: MainSkillsDataInterface = {
   mainSkills: [
     {
       key: 'NEXTJS',
-      backgroundImage: '/new/img/png/main_skills/logo_nextjs.png',
+      backgroundImage: imgConstants.HERO.MAIN_SKILLS.LOGO_NEXTJS,
     },
     {
       key: 'ANGULAR',
-      backgroundImage: '/new/img/png/main_skills/logo_angular.png',
+      backgroundImage: imgConstants.HERO.MAIN_SKILLS.LOGO_ANGULAR,
     },
     {
       key: 'SPRING',
-      backgroundImage: '/new/img/png/main_skills/logo_spring.png',
+      backgroundImage: imgConstants.HERO.MAIN_SKILLS.LOGO_SPRING,
     },
   ],
 }
