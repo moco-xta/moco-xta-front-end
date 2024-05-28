@@ -2,18 +2,20 @@
 
 #new_reviews_slice {
   width: 200vw;
-  height: 80vh;
+  height: $reviews_slice_height_larger;
 
   .reviews_containers {
-    height: 80vh;
+    height: $reviews_slice_height_larger;
     /* background-color: DarkSeaGreen; */
   }
 }
 
 @media screen and (min-width: $large_limit) {
   #new_reviews_slice {
+    height: $reviews_slice_height_larger;
     
     .reviews_containers {
+      height: $reviews_slice_height_larger;
       /* background-color: chocolate; */
     }
   }
@@ -21,8 +23,10 @@
 
 @media screen and (min-width: $larger_limit) {
   #new_reviews_slice {
+    height: $reviews_slice_height_larger;
 
     .reviews_containers {
+      height: $reviews_slice_height_larger;
       /* background-color: BlueViolet; */
     }
   }
@@ -39,10 +43,10 @@
 
 @media screen and (max-width: $small_limit) {
   #new_reviews_slice {
-    height: 100vh;
+    height: $reviews_slice_height_medium;
 
     .reviews_containers {
-      height: 100vh;
+      height: $reviews_slice_height_medium;
 
       /* background-color: DarkGreen */;
     }
