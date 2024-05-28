@@ -152,13 +152,8 @@ function updateSnake(
   score: number,
 ) {
   const newSnake: SnakeCellInterface[] = []
-  const { newSnakeHead, newDirection, newNextMove, needFood, newScore } = updateSnakeHead(
-    snake[0],
-    food,
-    direction,
-    nextMove,
-    score,
-  )
+  const { newSnakeHead, newDirection, newNextMove, needFood, newScore } =
+    updateSnakeHead(snake[0], food, direction, nextMove, score)
   newSnake[0] = newSnakeHead
   for (let i = 1; i < snake.length + Number(needFood); i++) {
     newSnake[i] = snake[i - 1]
@@ -186,13 +181,14 @@ export function updateGrid(
 }
 
 export function nextStep(state: SnakeGameInterface) {
-  const { newSnake, newDirection, newNextMove, needFood, newScore } = updateSnake(
-    state.snake,
-    state.food,
-    state.direction,
-    state.nextMove,
-    state.score,
-  )
+  const { newSnake, newDirection, newNextMove, needFood, newScore } =
+    updateSnake(
+      state.snake,
+      state.food,
+      state.direction,
+      state.nextMove,
+      state.score,
+    )
   const newFood: FoodInterface | null = !needFood
     ? state.food
     : generateFood(newSnake)

@@ -1,4 +1,11 @@
 {
+  "HERO": {
+    "MAIN_SKILLS": {
+      "LOGO_NEXTJS": "/new/img/png/main_skills/logo_nextjs.png",
+      "LOGO_ANGULAR": "/new/img/png/main_skills/logo_angular.png",
+      "LOGO_SPRING": "/new/img/png/main_skills/logo_spring.png"
+    }
+  },
   "HDRS": {
     "HERO_ENVIRONMENT": "/new/img/hdr/peppermint_powerplant_2_1k.hdr"
   }
