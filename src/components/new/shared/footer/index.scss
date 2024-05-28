@@ -3,20 +3,22 @@
 footer {
   position: relative;
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
   background-image: url('/new/img/png/footer/moco_logo_perspective_normal_noise.png');
   background-size: contain;
   background-position: 15%;
+  background-position-y: bottom;
   background-repeat: no-repeat;
 
   #footer_socials {
     position: absolute;
     width: 100%;
-    bottom: 200px;
+    bottom: $top_bottom_margin_large;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 15px;
+    font-size: 45px;
   }
 
   #copyright {
@@ -29,5 +31,77 @@ footer {
     gap: 10px;
     font-size: 15px;
     opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: $large_limit) {
+  footer {
+    height: 80vh;
+    background-color: chocolate;
+
+    #footer_socials {
+      font-size: 50px;
+    }
+
+    #copyright {
+    }
+  }
+}
+
+@media screen and (min-width: $larger_limit) {
+  footer {
+    height: 80vh;
+    background-color: BlueViolet;
+
+    #footer_socials {
+    }
+
+    #copyright {
+    }
+  }
+}
+
+@media screen and (max-width: $desktop_limit) {
+  .review_card {
+    background-color: MediumSpringGreen;
+
+    #footer_socials {
+      font-size: 45px;
+    }
+
+    #copyright {
+    }
+  }
+}
+
+@media screen and (max-width: $small_limit) {
+  footer {
+    height: 50vh;
+    background-color: DarkGreen;
+
+    #footer_socials {
+      bottom: $top_bottom_margin_medium;
+      font-size: 35px;
+    }
+
+    #copyright {
+      bottom: $top_bottom_margin_small;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: $smaller_limit) {
+  footer {
+    height: 40vh;
+    background-color: crimson;
+
+    #footer_socials {
+      font-size: 30px;
+    }
+
+    #copyright {
+      font-size: 12px;
+    }
   }
 }
