@@ -3,11 +3,13 @@
 #reviews_container {
   position: absolute;
   width: 100vw;
-  /* transform: translateX(100vw); */
+  display: flex;
+  flex-direction: row;
+  transform: translateX(100vw);
   transition: $transition transform ease-in-out;
   background-color: blue;
 }
 
-#add_review_container.open {
+#reviews_container.open {
   transform: translateX(0);
 }

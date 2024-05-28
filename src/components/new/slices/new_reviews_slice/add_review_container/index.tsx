@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux'
 
 import { RootState } from '@/redux/store'
 
+import AddReview from './add_review'
+import AddReviewButton from '@/components/new/buttons/add_review_button'
+
 import './index.scss'
 
 export default function AddReviewContainer() {
@@ -15,7 +18,8 @@ export default function AddReviewContainer() {
       id='add_review_container'
       className={`reviews_containers ${addReviewIsOpen ? 'open' : ''}`}
     >
-      ADD REVIEW
+      {/* <AddReview /> */}
+      <AddReviewButton />
     </div>
   )
 }
