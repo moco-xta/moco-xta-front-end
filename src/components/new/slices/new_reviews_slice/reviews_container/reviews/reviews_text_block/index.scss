@@ -1,0 +1,15 @@
+@import '@/styles/new/variables.module.scss';
+
+#reviews_text_block {
+  width: 100%;
+  height: 50%;
+
+  background-color: LemonChiffon;
+}
+
+@media screen and (max-width: $desktop_limit) {
+  #reviews_text_block {
+    width: 100%;
+    height: 30%;
+  }
+}
