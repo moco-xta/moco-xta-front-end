@@ -108,7 +108,7 @@ export default function AddReviewForm({
       {isDesktop && (
         <ReviewCard
           review={values}
-          reviewCardStyle={{ width: '100%', margin: '0 0 0 20px' }}
+          /* reviewCardStyle={{ width: '100%', margin: '0 0 0 20px' }} */
         />
       )}
     </div>

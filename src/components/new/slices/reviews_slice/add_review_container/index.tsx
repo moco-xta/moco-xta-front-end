@@ -19,7 +19,7 @@ export default function AddReviewContainer() {
       className={addReviewIsOpen ? 'open' : ''}
     >
       <AddReview />
-      <AddReviewButton />
+      <AddReviewButton text={'OPEN'} />
     </div>
   )
 }
