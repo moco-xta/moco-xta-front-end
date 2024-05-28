@@ -21,6 +21,19 @@
   scroll-snap-align: start;
 }
 
+@media screen and (min-width: $large_limit) {
+  #review_cards {
+    grid-auto-columns: 20%;
+  }
+}
+
+@media screen and (min-width: $larger_limit) {
+  #review_cards {
+    grid-auto-columns: 20%;
+  }
+}
+
+
 @media screen and (max-width: $desktop_limit) {
   #review_cards {
     width: 100vw;
@@ -39,17 +52,5 @@
   #review_cards {
     width: 100vw;
     grid-auto-columns: 80%;
-  }
-}
-
-@media screen and (min-width: $large_limit) {
-  #review_cards {
-    grid-auto-columns: 20%;
-  }
-}
-
-@media screen and (min-width: $larger_limit) {
-  #review_cards {
-    grid-auto-columns: 15%;
   }
 }
