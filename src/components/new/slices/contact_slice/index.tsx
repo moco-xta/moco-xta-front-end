@@ -3,6 +3,7 @@ import { RootState } from '@/redux/store'
 
 import SnakeGameData from './snake_game_data'
 import PlaySnakeGameButton from '../../buttons/play_snake_game_button'
+import ControlSnakeGameButtons from '../../buttons/control_snake_game_buttons'
 import SnakeGameCanvas from '../../three/canvas/snake_game_canvas/SnakeGameCanvas'
 
 import './index.scss'
@@ -15,6 +16,7 @@ export default function ContactSlice() {
     <section id='contact_slice'>
       <SnakeGameData />
       {!isPlaying && <PlaySnakeGameButton />}
+      {isPlaying && <ControlSnakeGameButtons />}
       <SnakeGameCanvas />
     </section>
   )

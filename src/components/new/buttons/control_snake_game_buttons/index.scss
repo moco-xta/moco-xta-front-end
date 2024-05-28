@@ -1,0 +1,19 @@
+@import '@/styles/new/variables.module.scss';
+
+#controls_snake_game_buttons {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: var(--font-upheavtt);
+  font-size: 250px;
+  color: $gameboy_darker;
+  
+  span {
+    cursor: pointer;
+  }
+}
