@@ -1,13 +1,15 @@
 import React from 'react'
 
-import ReviewsTextBlock from './reviews_text_block'
+import ReviewsTextBlockContainer from './reviews_text_block_container'
+import ReviewCards from './review_cards'
 
 import './index.scss'
 
 export default function Reviews() {
   return (
     <div id='reviews'>
-      <ReviewsTextBlock />
+      <ReviewsTextBlockContainer />
+      <ReviewCards />
     </div>
   )
 }

@@ -15,17 +15,17 @@ export default function ReviewsTextBlock() {
   const { isDesktop } = useResize()
 
   return (
-    <div id='reviews_text_block'>
+    <div id='reviews_text_block_container'>
       {!isDesktop && <AddReviewButton text={t('OPEN')} />}
       <TextBlockSimple
-        id={'reviews_text_block'}
+        id='reviews_text_block'
         title={'HOME.REVIEWS.TEXT_BLOCK.TITLE'}
         paragraph={'HOME.REVIEWS.TEXT_BLOCK.PARAGRAPH'}
         blockStyle={
           isDesktop ? {
             padding: `${variables.top_bottom_margin_medium} 35% 0 35%`,
           } : {
-            padding: `${variables.top_bottom_margin_small} ${variables.left_right_margin_small} 0 ${variables.left_right_margin_small}`,
+            padding: `${variables.top_bottom_margin_small} ${variables.left_right_margin_smaller} 0 ${variables.left_right_margin_smaller}`,
             display: 'flex',
             flexDirection: 'column'
           }}
