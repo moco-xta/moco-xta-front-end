@@ -18,7 +18,7 @@ export default function AddReviewContainer() {
       id='add_review_container'
       className={`reviews_containers ${addReviewIsOpen ? 'open' : ''}`}
     >
-      {/* <AddReview /> */}
+      <AddReview />
       <AddReviewButton />
     </div>
   )
