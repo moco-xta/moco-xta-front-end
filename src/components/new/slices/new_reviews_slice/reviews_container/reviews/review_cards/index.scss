@@ -23,16 +23,15 @@
 
 @media screen and (min-width: $large_limit) {
   #review_cards {
-  grid-auto-columns: 35%;
+    grid-auto-columns: 35%;
   }
 }
 
 @media screen and (min-width: $larger_limit) {
   #review_cards {
-  grid-auto-columns: 30%;
+    grid-auto-columns: 30%;
   }
 }
-
 
 @media screen and (max-width: $desktop_limit) {
   #review_cards {

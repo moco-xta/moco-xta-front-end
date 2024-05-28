@@ -5,7 +5,8 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  padding: $snake_game_margin_large $snake_game_margin_medium $snake_game_margin_small  $snake_game_margin_medium;
+  padding: $snake_game_margin_large $snake_game_margin_medium
+    $snake_game_margin_small $snake_game_margin_medium;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -50,7 +51,8 @@
 
 @media screen and (max-width: $smaller_limit) {
   #dashboard {
-    padding: $snake_game_margin_medium $snake_game_margin_smaller $snake_game_margin_smaller $snake_game_margin_smaller;
+    padding: $snake_game_margin_medium $snake_game_margin_smaller
+      $snake_game_margin_smaller $snake_game_margin_smaller;
     /* background-color: crimson; */
   }
 }

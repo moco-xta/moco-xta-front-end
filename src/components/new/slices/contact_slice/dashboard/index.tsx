@@ -20,7 +20,9 @@ export default function Dashboard() {
         <Contacts />
       </div>
       {!isPlaying && <PlaySnakeGameButton />}
-      {/* {isPlaying &&  */}<ControlSnakeGameButtons />{/* } */}
+      {/* {isPlaying &&  */}
+      <ControlSnakeGameButtons />
+      {/* } */}
     </div>
   )
 }

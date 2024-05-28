@@ -16,14 +16,17 @@ export default function ReviewsTextBlock() {
       title={'HOME.REVIEWS.TEXT_BLOCK.TITLE'}
       paragraph={'HOME.REVIEWS.TEXT_BLOCK.PARAGRAPH'}
       blockStyle={
-        isDesktop ? {
-          padding: `${variables.top_bottom_margin_medium} 35% 0 35%`,
-        } : {
-          padding: `${variables.top_bottom_margin_small} 0 0 0`,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center'
-        }}
+        isDesktop
+          ? {
+              padding: `${variables.top_bottom_margin_medium} 35% 0 35%`,
+            }
+          : {
+              padding: `${variables.top_bottom_margin_small} 0 0 0`,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }
+      }
     />
   )
 }
