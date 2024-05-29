@@ -7,7 +7,7 @@ export default function IntroductionTextBlock() {
     <TextBlockSimple
       title={'HOME.MAIN_SKILLS.INTRODUCTION.TITLE'}
       paragraph={'HOME.MAIN_SKILLS.INTRODUCTION.PARAGRAPH'}
-      blockStyle={{ padding: '50px 35% 0 35%' }}
+      className={'centered_text_block'}
     />
   )
 }

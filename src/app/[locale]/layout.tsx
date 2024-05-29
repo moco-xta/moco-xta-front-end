@@ -10,6 +10,7 @@ import ReduxProvider from '@/redux/ReduxProvider'
 import Header from '@/components/new/shared/header'
 
 import '@/styles/new/globals.scss'
+import '@/styles/new/text_blocks.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 

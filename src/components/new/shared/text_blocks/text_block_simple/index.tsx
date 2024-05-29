@@ -9,20 +9,17 @@ export default function TextBlockSimple({
   id,
   title,
   paragraph,
-  blockStyle,
-  titleStyle,
-  paragraphStyle,
+  className,
 }: TextBlockSimpleInterface) {
   const t = useTranslations()
 
   return (
     <div
       id={id}
-      className='text_block'
-      style={blockStyle}
+      className={`text_block ${className}`}
     >
-      <h3 style={titleStyle}>{t(title)}</h3>
-      <p style={paragraphStyle}>{t(paragraph)}</p>
+      <h3>{t(title)}</h3>
+      <p>{t(paragraph)}</p>
     </div>
   )
 }

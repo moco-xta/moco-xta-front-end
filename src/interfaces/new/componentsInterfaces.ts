@@ -11,15 +11,7 @@ export interface TextBlockSimpleInterface {
   id?: string
   title: string
   paragraph: string
-  blockStyle?: {
-    [key: string]: string | number
-  }
-  titleStyle?: {
-    [key: string]: string | number
-  }
-  paragraphStyle?: {
-    [key: string]: string | number
-  }
+  className: string
 }
 
 export interface ReviewCardInterface {

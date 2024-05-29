@@ -3,11 +3,60 @@
 #main_skills_slice {
   display: flex;
   flex-direction: column;
+  background-color: SlateGray;
 
   #main_skills_canvas {
     canvas {
       width: 100%;
       height: 60vh;
     }
+  }
+}
+
+@media screen and (max-width: $break_point_XXS) {
+  #main_skills_slice {
+    background-color: Lime;
+  }
+}
+
+@media screen and (min-width: $break_point_XXS) {
+  #main_skills_slice {
+    background-color: Tomato;
+  }
+}
+
+@media screen and (min-width: $break_point_XS) {
+  #main_skills_slice {
+    background-color: violet;
+  }
+}
+
+@media screen and (min-width: $break_point_S) {
+  #main_skills_slice {
+    background-color: crimson;
+  }
+}
+
+@media screen and (min-width: $break_point_L) {
+  #main_skills_slice {
+    background-color: DarkGreen;
+  }
+}
+
+@media screen and (min-width: $break_point_XL) {
+  #main_skills_slice {
+    background-color: gold;
+  }
+}
+
+@media screen and (min-width: $break_point_XXL) {
+  #main_skills_slice {
+    background-color: BlueViolet;
+  }
+}
+
+@media screen and (min-width: $break_point_XXXL) {
+  #main_skills_slice {
+    background-color: chocolate;
   }
 }
