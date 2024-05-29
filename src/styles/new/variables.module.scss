@@ -66,6 +66,15 @@ $larger_limit: 2000px;
 
 // MARGINS
 
+$percent_margin_XXXL: 45%;
+$percent_margin_XXL: 35%;
+$percent_margin_XL: 35%;
+$percent_margin_L: 25%;
+$percent_margin_M: 20%;
+$percent_margin_S: 15%;
+$percent_margin_XS: 10%;
+$percent_margin_XXS: 5%;
+
 $top_bottom_margin_smaller: 25px;
 $top_bottom_margin_small: 50px;
 $top_bottom_margin_medium: 100px;
@@ -146,6 +155,17 @@ $gameboy_darker: #0f3810;
   desktop_limit: $desktop_limit;
   large_limit: $large_limit;
   larger_limit: $larger_limit;
+
+  // MARGINS
+
+  percent_margin_XXXL: $percent_margin_XXXL;
+  percent_margin_XXL: $percent_margin_XXL;
+  percent_margin_XL: $percent_margin_XL;
+  percent_margin_L: $percent_margin_L;
+  percent_margin_M: $percent_margin_M;
+  percent_margin_S: $percent_margin_S;
+  percent_margin_XS: $percent_margin_XS;
+  percent_margin_XXS: $percent_margin_XXS;
 
   top_bottom_margin_smaller: $top_bottom_margin_smaller;
   top_bottom_margin_small: $top_bottom_margin_small;

@@ -1,41 +1,47 @@
 @import './variables.module.scss';
 
 .centered_text_block {
-  padding: 50px 35% 0 35%
+  padding: 50px $percent_margin_M 0 $percent_margin_M;
 }
 
 @media screen and (max-width: $breakpoint_XXS) {
   .centered_text_block {
+    padding: 50px $percent_margin_XXS 0 $percent_margin_XXS;
     background-color: Lime;
   }
 }
 
 @media screen and (min-width: $breakpoint_XXS) {
   .centered_text_block {
+    padding: 50px $percent_margin_XS 0 $percent_margin_XS;
     background-color: Tomato;
   }
 }
 
 @media screen and (min-width: $breakpoint_XS) {
   .centered_text_block {
+    padding: 50px $percent_margin_S 0 $percent_margin_S;
     background-color: violet;
   }
 }
 
 @media screen and (min-width: $breakpoint_S) {
   .centered_text_block {
+    padding: 50px $percent_margin_L 0 $percent_margin_L;
     background-color: crimson;
   }
 }
 
 @media screen and (min-width: $breakpoint_L) {
   .centered_text_block {
+    padding: 50px $percent_margin_XL 0 $percent_margin_XL;
     background-color: DarkGreen;
   }
 }
 
 @media screen and (min-width: $breakpoint_XL) {
   .centered_text_block {
+    padding: 50px $percent_margin_XXL 0 $percent_margin_XXL;
     background-color: gold;
   }
 }
