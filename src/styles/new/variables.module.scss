@@ -43,14 +43,14 @@ $alert_box_shadow: rgba(246, 42, 95, 0.25) 0px 25px 50px -12px;
 
 // BREAK POINTS
 
-$break_point_XXXL: 2560px;
-$break_point_XXL: 1920px;
-$break_point_XL: 1600px;
-$break_point_L: 1440px;
-$break_point_M: 1280px;
-$break_point_S: 810px;
-$break_point_XS: 400px;
-$break_point_XXS: 360px;
+$breakpoint_XXXL: 2560px;
+$breakpoint_XXL: 1920px;
+$breakpoint_XL: 1600px;
+$breakpoint_L: 1440px;
+$breakpoint_M: 1280px;
+$breakpoint_S: 810px;
+$breakpoint_XS: 400px;
+$breakpoint_XXS: 360px;
 
 // SIZES
 
@@ -128,14 +128,14 @@ $gameboy_darker: #0f3810;
 
   // BREAK POINTS
 
-  break_point_XXXL: $break_point_XXXL;
-  break_point_XXL: $break_point_XXL;
-  break_point_XL: $break_point_XL;
-  break_point_L: $break_point_L;
-  break_point_M: $break_point_M;
-  break_point_S: $break_point_S;
-  break_point_XS: $break_point_XS;
-  break_point_XXS: $break_point_XXS;
+  breakpoint_XXXL: $breakpoint_XXXL;
+  breakpoint_XXL: $breakpoint_XXL;
+  breakpoint_XL: $breakpoint_XL;
+  breakpoint_L: $breakpoint_L;
+  breakpoint_M: $breakpoint_M;
+  breakpoint_S: $breakpoint_S;
+  breakpoint_XS: $breakpoint_XS;
+  breakpoint_XXS: $breakpoint_XXS;
 
   // SIZES
 

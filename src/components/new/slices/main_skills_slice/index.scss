@@ -13,50 +13,50 @@
   }
 }
 
-@media screen and (max-width: $break_point_XXS) {
+@media screen and (max-width: $breakpoint_XXS) {
   #main_skills_slice {
-    background-color: Lime;
+    /* background-color: Lime; */
   }
 }
 
-@media screen and (min-width: $break_point_XXS) {
+@media screen and (min-width: $breakpoint_XXS) {
   #main_skills_slice {
-    background-color: Tomato;
+    /* background-color: Tomato; */
   }
 }
 
-@media screen and (min-width: $break_point_XS) {
+@media screen and (min-width: $breakpoint_XS) {
   #main_skills_slice {
-    background-color: violet;
+    /* background-color: violet; */
   }
 }
 
-@media screen and (min-width: $break_point_S) {
+@media screen and (min-width: $breakpoint_S) {
   #main_skills_slice {
-    background-color: crimson;
+    /* background-color: crimson; */
   }
 }
 
-@media screen and (min-width: $break_point_L) {
+@media screen and (min-width: $breakpoint_L) {
   #main_skills_slice {
-    background-color: DarkGreen;
+    /* background-color: DarkGreen; */
   }
 }
 
-@media screen and (min-width: $break_point_XL) {
+@media screen and (min-width: $breakpoint_XL) {
   #main_skills_slice {
-    background-color: gold;
+    /* background-color: gold; */
   }
 }
 
-@media screen and (min-width: $break_point_XXL) {
+@media screen and (min-width: $breakpoint_XXL) {
   #main_skills_slice {
-    background-color: BlueViolet;
+    /* background-color: BlueViolet; */
   }
 }
 
-@media screen and (min-width: $break_point_XXXL) {
+@media screen and (min-width: $breakpoint_XXXL) {
   #main_skills_slice {
-    background-color: chocolate;
+    /* background-color: chocolate; */
   }
 }

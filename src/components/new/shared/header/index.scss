@@ -1,7 +1,10 @@
+@import '@/styles/new/variables.module.scss';
+
 header {
   z-index: 10;
   position: fixed;
   width: 100vw;
+  max-width: $breakpoint_XXL;
   height: fit-content;
   display: flex;
   justify-content: space-between;
