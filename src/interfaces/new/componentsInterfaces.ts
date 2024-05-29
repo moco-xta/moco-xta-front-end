@@ -10,6 +10,9 @@ export interface SignUpSignInInterface {
 export interface TextBlockSimpleInterface {
   id?: string
   title: string
+  divStyle?: {
+    [key: string]: string
+  }
   paragraph: string
   className?: string
 }

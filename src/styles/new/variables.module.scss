@@ -79,7 +79,8 @@ $px_margin_XXS: 10px;
 $px_margin_XS: 25px;
 $px_margin_S: 50px;
 $px_margin_M: 100px;
-$px_margin_L: 200px;
+$px_margin_L: 150px;
+$px_margin_XL: 200px;
 
 $top_bottom_margin_smaller: 25px;
 $top_bottom_margin_small: 50px;
@@ -92,6 +93,7 @@ $left_right_margin_medium: 200px;
 
 // GAPS
 
+$gap_XXL: 200px;
 $gap_XL: 100px;
 $gap_L: 50px;
 $gap_M: 30px;
@@ -209,6 +211,7 @@ $responsive_XXXS: #f72585;
 
   // GAPS
 
+  gap_XXL: $gap_XXL;
   gap_XL: $gap_XL;
   gap_L: $gap_L;
   gap_M: $gap_M;

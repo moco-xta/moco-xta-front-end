@@ -13,7 +13,7 @@ export default function MainSkillsSlice() {
   const { isDesktop } = useResize()
 
   return (
-    <section id='main_skills_slice'>
+    <section id='main_skills_slice'/*  className='responsive_background' */>
       <IntroductionTextBlock />
       {isDesktop && <MainSkillsCanvas />}
       <MainSkillsTextBlocks />

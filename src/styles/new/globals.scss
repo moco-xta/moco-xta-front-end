@@ -99,6 +99,62 @@ a {
   margin-bottom: 20px;
 }
 
+// RESPONSIVE
+
+@media screen and (max-width: $breakpoint_XXS) {
+  .responsive_background {
+    background-color: $responsive_XXXS;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXS) {
+  .responsive_background {
+    background-color: $responsive_XXS;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XS) {
+  .responsive_background {
+    background-color: $responsive_XS;
+  }
+}
+
+@media screen and (min-width: $breakpoint_S) {
+  .responsive_background {
+    background-color: $responsive_S;
+  }
+}
+
+@media screen and (min-width: $breakpoint_M) {
+  .responsive_background {
+    background-color: $responsive_M;
+  }
+}
+
+@media screen and (min-width: $breakpoint_L) {
+  .responsive_background {
+    background-color: $responsive_L;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XL) {
+  .responsive_background {
+    background-color: $responsive_XL;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXL) {
+  .responsive_background {
+    background-color: $responsive_XXL;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXL) {
+  .responsive_background {
+    background-color: $responsive_XXXL;
+  }
+}
+
 // Z-INDEX
 
 // authentication: 8

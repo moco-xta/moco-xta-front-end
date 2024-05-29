@@ -3,65 +3,124 @@
 #main_skills_container {
   display: flex;
   flex-direction: column;
+
+  .main_skills {
+
+  }
+
+  .even {
+    background-position-x: left;
+  }
+
+  .odd {
+    background-position-x: right;
+  }
 }
 
 @media screen and (max-width: $breakpoint_XXS) {
   #main_skills_container {
-    background-color: $responsive_XXXS;
+
+    .main_skills {
+  
+    }
+  
+    .even {
+      
+    }
+  
+    .odd {
+      
+    }
   }
 }
 
 @media screen and (min-width: $breakpoint_XXS) {
   #main_skills_container {
-    background-color: $responsive_XXS;
+
+    .main_skills {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  
+    .even {
+      
+    }
+  
+    .odd {
+      
+    }
   }
 }
 
 @media screen and (min-width: $breakpoint_XS) {
   #main_skills_container {
-    background-color: $responsive_XS;
+
+    .main_skills {
+  
+    }
+  
+    .even {
+      
+    }
+  
+    .odd {
+      
+    }
   }
 }
 
 @media screen and (min-width: $breakpoint_S) {
   #main_skills_container {
-    background-color: $responsive_S;
+
+    .main_skills {
+      height: 90vh;
+      margin-bottom: -300px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .even {
+      padding: 0 10% 0 50%;
+    }
+  
+    .odd {
+      padding: 0 50% 0 10%;
+    }
   }
 }
 
 @media screen and (min-width: $breakpoint_M) {
   #main_skills_container {
-    padding: 0 $percent_margin_XS;
+    padding-bottom: $px_margin_XL;
+    padding-left: $percent_margin_XS;
+    padding-right: $percent_margin_XS;
     flex-direction: row;
     justify-content: space-between;
     gap: $gap_L;
-    background-color: $responsive_M;
   }
 }
 
 @media screen and (min-width: $breakpoint_L) {
   #main_skills_container {
     gap: $gap_XL;
-    background-color: $responsive_L;
   }
 }
 
 @media screen and (min-width: $breakpoint_XL) {
   #main_skills_container {
-    background-color: $responsive_XL;
+    padding-left: $percent_margin_XS;
+    padding-right: $percent_margin_XS;
   }
 }
 
 @media screen and (min-width: $breakpoint_XXL) {
   #main_skills_container {
-    padding: 0 $percent_margin_M;
-    gap: $gap_XL;
-    background-color: $responsive_XXL;
+    padding-left: $percent_margin_M;
+    padding-right: $percent_margin_M;
   }
 }
 
 @media screen and (min-width: $breakpoint_XXXL) {
   #main_skills_container {
-    background-color: $responsive_XXXL;
   }
 }
