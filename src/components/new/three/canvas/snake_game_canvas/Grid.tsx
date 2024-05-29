@@ -27,6 +27,7 @@ export default function Grid() {
                   attach='material'
                   color={variables.snake_game_grid}
                   roughness={1}
+                  metalness={0}
                 />
               </Box>
             )

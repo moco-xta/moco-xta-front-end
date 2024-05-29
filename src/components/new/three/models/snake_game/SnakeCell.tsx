@@ -25,11 +25,13 @@ export function SnakeCell(props: JSX.IntrinsicElements['mesh']) {
     <mesh
       geometry={nodes.SnakeCell.geometry}
       /* material={materials['snake_cell_#393939']} */
+      receiveShadow
+      castShadow
       {...props}
     >
       <meshPhysicalMaterial
         attach='material'
-        color={variables.gameboy_dark}
+        color={variables.snake_game_snake_cell}
         roughness={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.ROUGHNESS}
         metalness={0}
         transparent

@@ -5,7 +5,6 @@
   flex-direction: column;
 
   .main_skills {
-
   }
 
   .even {
@@ -19,70 +18,58 @@
 
 @media screen and (max-width: $breakpoint_XXS) {
   #main_skills_container {
-
     .main_skills {
-  
     }
-  
+
     .even {
-      
     }
-  
+
     .odd {
-      
     }
   }
 }
 
 @media screen and (min-width: $breakpoint_XXS) {
   #main_skills_container {
-
     .main_skills {
       background-size: contain;
       background-repeat: no-repeat;
     }
-  
+
     .even {
-      
     }
-  
+
     .odd {
-      
     }
   }
 }
 
 @media screen and (min-width: $breakpoint_XS) {
   #main_skills_container {
-
     .main_skills {
-  
     }
-  
+
     .even {
-      
     }
-  
+
     .odd {
-      
     }
   }
 }
 
 @media screen and (min-width: $breakpoint_S) {
   #main_skills_container {
-
     .main_skills {
       height: 90vh;
       margin-bottom: -300px;
       display: flex;
       justify-content: center;
     }
-  
+
     .even {
       padding: 0 10% 0 50%;
     }
-  
+
     .odd {
       padding: 0 50% 0 10%;
     }
