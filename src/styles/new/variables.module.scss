@@ -144,9 +144,24 @@ $gameboy_medium: #8bac0d;
 $gameboy_dark: #306230;
 $gameboy_darker: #0f3810;
 
-$snake_game_background: $nokia_0;
-$snake_game_snake_cell: $nokia_3;
-$snake_game_grid: $nokia_1;
+$dawnbringer32_blue_light: #5ecde4;
+$dawnbringer32_blue_dark: #306082;
+$dawnbringer32_green: #69be30;
+$dawnbringer32_pink: #d77bba;
+$dawnbringer32_red: #d95663;
+$dawnbringer32_red_dark: #ac3232;
+$dawnbringer32_violet: #3F3F73;
+$dawnbringer32_violet_dark: #222034;
+
+$snake_game_background: $dawnbringer32_violet;
+$snake_game_snake_cell: $dawnbringer32_green;
+$snake_game_fruit: $dawnbringer32_red;
+$snake_game_grid: $dawnbringer32_pink;
+$snake_game_default_text: $dawnbringer32_violet_dark;
+$snake_game_hidden_text: $dawnbringer32_blue_dark;
+$snake_game_revealed_text: $dawnbringer32_blue_light;
+$snake_game_i_dont_want_to_play: $dawnbringer32_red_dark;
+// $snake_game_: $;
 
 // RESPONSIVE
 
@@ -267,6 +282,11 @@ $responsive_XXXS: #f72585;
   gameboy_darker: $gameboy_darker;
 
   snake_game_background: $snake_game_background;
-  snake_game_grid: $snake_game_grid;
   snake_game_snake_cell: $snake_game_snake_cell;
+  snake_game_fruit: $snake_game_fruit;
+  snake_game_grid: $snake_game_grid;
+  snake_game_default_text: $snake_game_default_text;
+  snake_game_hidden_text: $snake_game_hidden_text;
+  snake_game_revealed_text: $snake_game_revealed_text;
+  snake_game_i_dont_want_to_play: $snake_game_i_dont_want_to_play;
 }

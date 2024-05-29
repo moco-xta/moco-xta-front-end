@@ -15,27 +15,29 @@ export default function Contacts() {
     <div id='contacts'>
       <p>{t('EMAIL')}</p>
       <p>
-        <span>{score >= 5 ? 'moco' : '####'}</span>
-        <span>.</span>
-        <span>{score >= 10 ? 'xta' : '###'}</span>
-        <span>@</span>
-        <span>{score >= 15 ? 'gmail' : '#####'}</span>
-        <span>.</span>
-        <span>{score >= 15 ? 'com' : '###'}</span>
+        {score >= 5 ? <span className='revealed_text'>moco</span> : <span className='hidden_text'>####</span>}
+        <span className='revealed_text'>.</span>
+        {score >= 10 ? <span className='revealed_text'>xta</span> : <span className='hidden_text'>###</span>}
+        <span className='revealed_text'>@</span>
+        {score >= 15 ? <span className='revealed_text'>gmail</span> : <span className='hidden_text'>#####</span>}
+        <span className='revealed_text'>.</span>
+        {score >= 15 ? <span className='revealed_text'>com</span> : <span className='hidden_text'>###</span>}
       </p>
       <div>{t('PHONE_NUMBER')}</div>
       <p>
-        <span>{score >= 20 ? '06' : '##'}</span>
-        <span>-</span>
-        <span>{score >= 25 ? '06' : '##'}</span>
-        <span>-</span>
-        <span>{score >= 30 ? '06' : '##'}</span>
-        <span>-</span>
-        <span>{score >= 35 ? '06' : '##'}</span>
-        <span>-</span>
-        <span>{score >= 40 ? '06' : '##'}</span>
+        <span className='revealed_text'>+33</span>
+        <span className='revealed_text'> </span>
+        {score >= 20 ? <span className='revealed_text'>6</span> : <span className='hidden_text'>##</span>}
+        <span className='revealed_text'> </span>
+        {score >= 25 ? <span className='revealed_text'>06</span> : <span className='hidden_text'>##</span>}
+        <span className='revealed_text'> </span>
+        {score >= 30 ? <span className='revealed_text'>06</span> : <span className='hidden_text'>##</span>}
+        <span className='revealed_text'> </span>
+        {score >= 35 ? <span className='revealed_text'>06</span> : <span className='hidden_text'>##</span>}
+        <span className='revealed_text'> </span>
+        {score >= 40 ? <span className='revealed_text'>06</span> : <span className='hidden_text'>##</span>}
       </p>
-      <p>{t('I_DONT_WANT_TO_PLAY')}</p>
+      <p id='i_dont_want_to_play'>{t('I_DONT_WANT_TO_PLAY')}</p>
     </div>
   )
 }

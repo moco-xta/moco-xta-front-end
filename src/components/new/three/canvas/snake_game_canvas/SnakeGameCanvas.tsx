@@ -8,8 +8,9 @@ import SnakeGamePerspectiveCamera from './SnakeGamePerspectiveCamera'
 import SnakeScene from './SnakeGameScene'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { EffectComposer, Pixelation } from '@react-three/postprocessing'
 
-const INTENSITY = 250
+const INTENSITY = 500
 
 export default function SnakeGameCanvas() {
   usePlayer()
@@ -60,7 +61,7 @@ export default function SnakeGameCanvas() {
         intensity={100}
         castShadow
       /> */}
-      <ambientLight intensity={2 } />
+      <ambientLight intensity={2} />
       <pointLight
         position={[0, 20, 0]} 
         intensity={INTENSITY}
@@ -85,6 +86,9 @@ export default function SnakeGameCanvas() {
         <Physics debug>
           <SnakeScene />
         </Physics>
+        <EffectComposer>
+          <Pixelation granularity={1} />
+        </EffectComposer>
       </Suspense>
     </Canvas>
   )
