@@ -66,6 +66,22 @@ $larger_limit: 2000px;
 
 // MARGINS
 
+$percent_margin_XXXL: 45%;
+$percent_margin_XXL: 35%;
+$percent_margin_XL: 35%;
+$percent_margin_L: 25%;
+$percent_margin_M: 20%;
+$percent_margin_S: 15%;
+$percent_margin_XS: 10%;
+$percent_margin_XXS: 5%;
+
+$px_margin_XXS: 10px;
+$px_margin_XS: 25px;
+$px_margin_S: 50px;
+$px_margin_M: 100px;
+$px_margin_L: 150px;
+$px_margin_XL: 200px;
+
 $top_bottom_margin_smaller: 25px;
 $top_bottom_margin_small: 50px;
 $top_bottom_margin_medium: 100px;
@@ -76,6 +92,14 @@ $left_right_margin_small: 100px;
 $left_right_margin_medium: 200px;
 
 // GAPS
+
+$gap_XXL: 200px;
+$gap_XL: 100px;
+$gap_L: 50px;
+$gap_M: 30px;
+$gap_S: 20px;
+$gap_XS: 10px;
+$gap_XXS: 5px;
 
 $gap_medium: 30px;
 
@@ -109,6 +133,18 @@ $gameboy_light: #9bbc0f;
 $gameboy_medium: #8bac0d;
 $gameboy_dark: #306230;
 $gameboy_darker: #0f3810;
+
+// RESPONSIVE
+
+$responsive_XXXL: #4cc9f0;
+$responsive_XXL: #4895ef;
+$responsive_XL: #4361ee;
+$responsive_L: #3f37c9;
+$responsive_M: gold;
+$responsive_S: #480ca8;
+$responsive_XS: #7209b7;
+$responsive_XXS: #b5179e;
+$responsive_XXXS: #f72585;
 
 :export {
   background_color: $background_color;
@@ -147,6 +183,23 @@ $gameboy_darker: #0f3810;
   large_limit: $large_limit;
   larger_limit: $larger_limit;
 
+  // MARGINS
+
+  percent_margin_XXXL: $percent_margin_XXXL;
+  percent_margin_XXL: $percent_margin_XXL;
+  percent_margin_XL: $percent_margin_XL;
+  percent_margin_L: $percent_margin_L;
+  percent_margin_M: $percent_margin_M;
+  percent_margin_S: $percent_margin_S;
+  percent_margin_XS: $percent_margin_XS;
+  percent_margin_XXS: $percent_margin_XXS;
+
+  px_margin_XXS: $px_margin_XXS;
+  px_margin_XS: $px_margin_XS;
+  px_margin_S: $px_margin_S;
+  px_margin_M: $px_margin_M;
+  px_margin_L: $px_margin_L;
+
   top_bottom_margin_smaller: $top_bottom_margin_smaller;
   top_bottom_margin_small: $top_bottom_margin_small;
   top_bottom_margin_medium: $top_bottom_margin_medium;
@@ -156,7 +209,19 @@ $gameboy_darker: #0f3810;
   left_right_margin_small: $left_right_margin_small;
   left_right_margin_medium: $left_right_margin_medium;
 
+  // GAPS
+
+  gap_XXL: $gap_XXL;
+  gap_XL: $gap_XL;
+  gap_L: $gap_L;
+  gap_M: $gap_M;
+  gap_S: $gap_S;
+  gap_XS: $gap_XS;
+  gap_XXS: $gap_XXS;
+
   gap_medium: $gap_medium;
+
+  // EFFECTS
 
   blur: $blur;
 

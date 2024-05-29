@@ -13,7 +13,7 @@ export default function PerformedWithTextBlock() {
     <TextBlockSimple
       title={'HOME.PERFORMED_WITH.TITLE'}
       paragraph={'HOME.PERFORMED_WITH.PARAGRAPH'}
-      blockStyle={
+      /* blockStyle={
         isDesktop
           ? {
               width: '30%',
@@ -31,7 +31,7 @@ export default function PerformedWithTextBlock() {
               justifyContent: 'center',
               alignItems: 'flex-start',
             }
-      }
+      } */
     />
   )
 }

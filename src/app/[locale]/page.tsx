@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <div id='home_page'>
-        {/* <HeroSlice /> */}
+        <HeroSlice />
         <MainSkillsSlice />
         <PerformedWithSlice />
         <NewReviewsSlice />

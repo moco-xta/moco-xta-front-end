@@ -7,9 +7,10 @@ import './index.scss'
 
 export default function TextBlockSimple({
   id,
+  className,
+  divStyle,
   title,
   paragraph,
-  className,
 }: TextBlockSimpleInterface) {
   const t = useTranslations()
 
@@ -17,6 +18,7 @@ export default function TextBlockSimple({
     <div
       id={id}
       className={`text_block ${className}`}
+      style={divStyle}
     >
       <h3>{t(title)}</h3>
       <p>{t(paragraph)}</p>

@@ -2,6 +2,9 @@
 @import '@/styles/new/text_blocks.module.scss';
 
 .text_block {
+  display: flex;
+  flex-direction: column;
+  
   h3 {
     margin-bottom: 20px;
   }

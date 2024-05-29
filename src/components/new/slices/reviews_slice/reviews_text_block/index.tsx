@@ -15,7 +15,7 @@ export default function ReviewsTextBlock() {
       id={'reviews_text_block'}
       title={'HOME.REVIEWS.TEXT_BLOCK.TITLE'}
       paragraph={'HOME.REVIEWS.TEXT_BLOCK.PARAGRAPH'}
-      blockStyle={
+      /* blockStyle={
         isDesktop
           ? {
               padding: `${variables.top_bottom_margin_medium} 35% 0 35%`,
@@ -26,7 +26,7 @@ export default function ReviewsTextBlock() {
               flexDirection: 'column',
               alignItems: 'center',
             }
-      }
+      } */
     />
   )
 }
