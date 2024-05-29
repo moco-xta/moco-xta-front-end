@@ -2,9 +2,7 @@ import React from 'react'
 
 import TextBlockSimple from '@/components/new/shared/text_blocks/text_block_simple'
 
-import variables from '@/styles/new/variables.module.scss'
-
-export default function RealTime3DTextBlock() {
+export default function MainSkillsTextBlocks() {
   return (
     <TextBlockSimple
       title={'HOME.MAIN_SKILLS.REAL_TIME_3D.TITLE'}

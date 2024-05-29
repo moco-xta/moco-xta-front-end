@@ -19,6 +19,7 @@ export default function MainSkills() {
       {mainSkillsData.mainSkills.map((skill, index) => (
         <TextBlockSimple
           key={`main_skills_text_block_${skill.key}`}
+          className={'main_skills'}
           title={`HOME.MAIN_SKILLS.MAIN_SKILLS.${skill.key}.TITLE`}
           paragraph={`HOME.MAIN_SKILLS.MAIN_SKILLS.${skill.key}.PARAGRAPH`}
           /* blockStyle={

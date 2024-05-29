@@ -2,7 +2,7 @@ import React from 'react'
 
 import IntroductionTextBlock from './introduction_text_block'
 import MainSkillsCanvas from '../../three/canvas/main_skills_canvas/MainSkillsCanvas'
-import MainSkills from './main_skills'
+import MainSkillsTextBlocks from './main_skills_text_blocks'
 import RealTime3D from './real_time_3D'
 
 import useResize from '@/hooks/new/useResize'
@@ -16,7 +16,7 @@ export default function MainSkillsSlice() {
     <section id='main_skills_slice'>
       <IntroductionTextBlock />
       {isDesktop && <MainSkillsCanvas />}
-      <MainSkills />
+      <MainSkillsTextBlocks />
       <RealTime3D />
     </section>
   )

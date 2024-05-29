@@ -7,9 +7,9 @@ import './index.scss'
 
 export default function TextBlockSimple({
   id,
+  className,
   title,
   paragraph,
-  className,
 }: TextBlockSimpleInterface) {
   const t = useTranslations()
 
