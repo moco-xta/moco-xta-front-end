@@ -128,11 +128,24 @@ $snake_game_margin_medium: 100px;
 $snake_game_margin_large: 150px;
 $snake_game_margin_larger: 200px;
 
+$nokia_0: #a8df02;
+$nokia_1: #b3bb00;
+$nokia_2: #b39900;
+$nokia_3: #aa7a15;
+$nokia_4: #995d21;
+$nokia_5: #814527;
+$nokia_6: #653227;
+$nokia_7: #462222;
+$nokia_8: #261517;
+
 $gameboy_lighter: #c9db9f;
 $gameboy_light: #9bbc0f;
 $gameboy_medium: #8bac0d;
 $gameboy_dark: #306230;
 $gameboy_darker: #0f3810;
+
+$snake_game_background: $nokia_0;
+$snake_game_grid: $nokia_1;
 
 // RESPONSIVE
 
@@ -235,10 +248,22 @@ $responsive_XXXS: #f72585;
   snake_game_margin_medium: $snake_game_margin_medium;
   snake_game_margin_large: $snake_game_margin_large;
   snake_game_margin_larger: $snake_game_margin_larger;
+  
+  nokia_0: $nokia_0;
+  nokia_1: $nokia_1;
+  nokia_2: $nokia_2;
+  nokia_3: $nokia_3;
+  nokia_4: $nokia_4;
+  nokia_5: $nokia_5;
+  nokia_6: $nokia_6;
+  nokia_7: $nokia_7;
+  nokia_8: $nokia_8;
 
   gameboy_lighter: $gameboy_lighter;
   gameboy_light: $gameboy_light;
   gameboy_medium: $gameboy_medium;
   gameboy_dark: $gameboy_dark;
   gameboy_darker: $gameboy_darker;
+
+  snake_game_grid: $snake_game_grid;
 }

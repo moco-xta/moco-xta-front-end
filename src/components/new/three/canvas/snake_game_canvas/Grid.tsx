@@ -25,7 +25,7 @@ export default function Grid() {
               >
                 <meshStandardMaterial
                   attach='material'
-                  color={variables.gameboy_light}
+                  color={variables.snake_game_grid}
                   roughness={1}
                 />
               </Box>
@@ -48,7 +48,7 @@ export default function Grid() {
               >
                 <meshStandardMaterial
                   attach='material'
-                  color={variables.gameboy_light}
+                  color={variables.snake_game_grid}
                   roughness={1}
                 />
               </Box>

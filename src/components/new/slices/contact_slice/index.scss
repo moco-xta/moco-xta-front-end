@@ -4,10 +4,9 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: $gameboy_lighter;
+  background-color: $snake_game_background;
   font-family: var(--font-upheavtt);
   font-size: 50px;
-  color: $gameboy_medium;
 
   canvas {
     z-index: 0;
