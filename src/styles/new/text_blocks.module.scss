@@ -1,0 +1,53 @@
+@import './variables.module.scss';
+
+.centered_text_block {
+  padding: 50px 35% 0 35%
+}
+
+@media screen and (max-width: $breakpoint_XXS) {
+  .centered_text_block {
+    background-color: Lime;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXS) {
+  .centered_text_block {
+    background-color: Tomato;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XS) {
+  .centered_text_block {
+    background-color: violet;
+  }
+}
+
+@media screen and (min-width: $breakpoint_S) {
+  .centered_text_block {
+    background-color: crimson;
+  }
+}
+
+@media screen and (min-width: $breakpoint_L) {
+  .centered_text_block {
+    background-color: DarkGreen;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XL) {
+  .centered_text_block {
+    background-color: gold;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXL) {
+  .centered_text_block {
+    background-color: BlueViolet;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXL) {
+  .centered_text_block {
+    background-color: chocolate;
+  }
+}
