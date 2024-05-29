@@ -21,7 +21,7 @@ export default function MainSkills() {
           key={`main_skills_text_block_${skill.key}`}
           title={`HOME.MAIN_SKILLS.MAIN_SKILLS.${skill.key}.TITLE`}
           paragraph={`HOME.MAIN_SKILLS.MAIN_SKILLS.${skill.key}.PARAGRAPH`}
-          blockStyle={
+          /* blockStyle={
             isDesktop
               ? {}
               : {
@@ -37,7 +37,7 @@ export default function MainSkills() {
                   backgroundPositionX: isEven(index) ? 'left' : 'right',
                   backgroundRepeat: 'no-repeat',
                 }
-          }
+          } */
         />
       ))}
     </div>

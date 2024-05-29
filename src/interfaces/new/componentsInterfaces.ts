@@ -11,7 +11,7 @@ export interface TextBlockSimpleInterface {
   id?: string
   title: string
   paragraph: string
-  className: string
+  className?: string
 }
 
 export interface ReviewCardInterface {
