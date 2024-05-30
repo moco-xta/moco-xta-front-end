@@ -1,91 +1,81 @@
 {
-	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.1.62",
-		"version":"2.0"
-	},
-	"scene":0,
-	"scenes":[
-		{
-			"name":"Scene",
-			"nodes":[
-				0
-			]
-		}
-	],
-	"nodes":[
-		{
-			"mesh":0,
-			"name":"Fruit"
-		}
-	],
-	"meshes":[
-		{
-			"name":"Fruit",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":0,
-						"NORMAL":1
-					},
-					"indices":2
-				}
-			]
-		}
-	],
-	"accessors":[
-		{
-			"bufferView":0,
-			"componentType":5126,
-			"count":2184,
-			"max":[
-				0.8333336710929871,
-				0.8333333730697632,
-				0.8333330750465393
-			],
-			"min":[
-				-0.8333330750465393,
-				-0.8333333730697632,
-				-0.8333336710929871
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":1,
-			"componentType":5126,
-			"count":2184,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":2,
-			"componentType":5123,
-			"count":5796,
-			"type":"SCALAR"
-		}
-	],
-	"bufferViews":[
-		{
-			"buffer":0,
-			"byteLength":26208,
-			"byteOffset":0,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":26208,
-			"byteOffset":26208,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":11592,
-			"byteOffset":52416,
-			"target":34963
-		}
-	],
-	"buffers":[
-		{
-			"byteLength":64008,
-			"uri":"Fruit.bin"
-		}
-	]
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Fruit"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Fruit",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 2184,
+      "max": [0.8333336710929871, 0.8333333730697632, 0.8333330750465393],
+      "min": [-0.8333330750465393, -0.8333333730697632, -0.8333336710929871],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 2184,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 5796,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 26208,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 26208,
+      "byteOffset": 26208,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11592,
+      "byteOffset": 52416,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 64008,
+      "uri": "Fruit.bin"
+    }
+  ]
 }
