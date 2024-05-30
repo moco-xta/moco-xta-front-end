@@ -18,6 +18,7 @@
 
 @media screen and (max-width: $breakpoint_XXS) {
   #main_skills_container {
+
     .main_skills {
     }
 
@@ -46,6 +47,7 @@
 
 @media screen and (min-width: $breakpoint_XS) {
   #main_skills_container {
+
     .main_skills {
     }
 
@@ -59,6 +61,7 @@
 
 @media screen and (min-width: $breakpoint_S) {
   #main_skills_container {
+
     .main_skills {
       height: 90vh;
       margin-bottom: -300px;
@@ -84,6 +87,11 @@
     flex-direction: row;
     justify-content: space-between;
     gap: $gap_L;
+
+    .main_skills {
+      height: unset;
+      margin: 0;
+    }
   }
 }
 
