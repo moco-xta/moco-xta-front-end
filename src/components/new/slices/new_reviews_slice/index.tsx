@@ -7,7 +7,7 @@ import './index.scss'
 
 export default function NewReviewsSlice() {
   return (
-    <div id='new_reviews_slice'>
+    <div id='new_reviews_slice' className='responsive_background'>
       <AddReviewContainer />
       <ReviewsContainer />
     </div>
