@@ -10,7 +10,7 @@ export interface SnakeGameInterface {
 }
 
 export interface GridCellInterface {
-  status: 'EMPTY' | 'SNAKE' | 'FOOD'
+  status: 'EMPTY' | 'SNAKE_HEAD' | 'SNAKE' | 'FOOD'
   position: {
     x: number
     z: number
@@ -22,6 +22,7 @@ export interface CellComponentInterface {
 }
 
 export interface SnakeCellInterface {
+  head: boolean
   position: {
     x: number
     z: number

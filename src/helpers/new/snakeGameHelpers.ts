@@ -30,6 +30,7 @@ export function generateSnake() {
   const snake: SnakeCellInterface[] = []
   for (let i = 0; i < snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.LENGTH; i++) {
     snake.push({
+      head: i === 0,
       position: {
         x:
           i === 0
@@ -110,6 +111,7 @@ function updateSnakeHead(
     newDirection = updateDirection(direction, nextMove)
   let newSnakeHead: SnakeCellInterface
   newSnakeHead = {
+    head: true,
     position: {
       x:
         newDirection === 'LEFT' || newDirection === 'RIGHT'
@@ -156,6 +158,7 @@ function updateSnake(
     updateSnakeHead(snake[0], food, direction, nextMove, score)
   newSnake[0] = newSnakeHead
   for (let i = 1; i < snake.length + Number(needFood); i++) {
+    snake[i - 1].head = false
     newSnake[i] = snake[i - 1]
   }
 
@@ -174,7 +177,7 @@ export function updateGrid(
 ) {
   const newGrid: GridCellInterface[][] = generateGrid()
   snake.forEach((snakeCell) => {
-    newGrid[snakeCell.position.x][snakeCell.position.z].status = 'SNAKE'
+    newGrid[snakeCell.position.x][snakeCell.position.z].status = snakeCell.head ? 'SNAKE_HEAD' : 'SNAKE'
   })
   newGrid[food!.position.x][food!.position.z].status = 'FOOD'
   return newGrid

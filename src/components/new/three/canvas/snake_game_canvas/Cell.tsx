@@ -5,6 +5,7 @@ import { Box } from '@react-three/drei'
 import { CellComponentInterface } from '@/interfaces/new/snakeGameInterfaces'
 
 import { SnakeCell } from '../../models/snake_game/SnakeCell'
+import { SnakeHead } from '../../models/snake_game/SnakeHead'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
@@ -22,10 +23,20 @@ export default function Cell({ cell }: CellComponentInterface) {
           castShadow
         />
       )}
+      {cell.status === 'SNAKE_HEAD' && (
+        <SnakeHead
+          key={`snake_cell_${cell.position.x}_${cell.position.z}`}
+          position={[cell.position.x, 0, cell.position.z]}
+          scale={0.5}
+          receiveShadow
+          castShadow
+        />
+      )}
       {cell.status === 'SNAKE' && (
         <SnakeCell
           key={`snake_cell_${cell.position.x}_${cell.position.z}`}
           position={[cell.position.x, 0, cell.position.z]}
+          scale={0.5}
           receiveShadow
           castShadow
         />
