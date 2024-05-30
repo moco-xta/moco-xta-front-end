@@ -11,7 +11,10 @@ export default function Plan() {
   return (
     <div id='plan'>
       {snakeGameState.grid.map((cellsColumn, columnIndex) => (
-        <div className='column'>
+        <div
+          key={`column_plan_${columnIndex}`}
+          className='column'
+        >
           {cellsColumn.map((cell, rowIndex) => (
             <div
               key={`cell_plan_${columnIndex}_${rowIndex}`}
