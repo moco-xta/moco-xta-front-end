@@ -19,22 +19,12 @@ export default function MainSkills() {
       {mainSkillsData.mainSkills.map((skill, index) => (
         <TextBlockSimple
           key={`main_skills_text_block_${skill.key}`}
-          className={`main_skills ${!isDesktop ? isEven(index) ? 'even' : 'odd' : ''}`}
+          className={`main_skills ${!isDesktop ? (isEven(index) ? 'even' : 'odd') : ''}`}
           divStyle={
             isDesktop
               ? {}
               : {
                   backgroundImage: `url(${skill.backgroundImage})`,
-                  /* padding: `0 ${isEven(index) ? `${variables.left_right_margin_small}` : '50%'} 0 ${isEven(index) ? '50%' : `${variables.left_right_margin_small}`}`, // TODO: MARGIN VARIABLE
-                  height: '60vh',
-                  maxHeight: '500px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  backgroundSize: 'contain',
-                  backgroundPositionX: isEven(index) ? 'left' : 'right',
-                  backgroundRepeat: 'no-repeat', */
                 }
           }
           title={`HOME.MAIN_SKILLS.MAIN_SKILLS.${skill.key}.TITLE`}
