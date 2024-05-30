@@ -8,7 +8,6 @@ import TextBlockSimple from '@/components/new/shared/text_blocks/text_block_simp
 
 import { isEven } from '@/helpers/new/mathHelpers'
 
-import variables from '@/styles/new/variables.module.scss'
 import './index.scss'
 
 export default function MainSkills() {

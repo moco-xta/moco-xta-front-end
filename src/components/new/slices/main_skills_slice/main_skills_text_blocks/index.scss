@@ -20,6 +20,8 @@
 
 @media screen and (max-width: $breakpoint_XXXS) {
   #main_skills_container {
+    margin-top: $px_margin_XS;
+
     .main_skills {
       height: 40vh;
       margin-bottom: -50px;
@@ -39,6 +41,8 @@
 
 @media screen and (min-width: $breakpoint_XXXS) {
   #main_skills_container {
+    margin-top: $px_margin_S;
+
     .main_skills {
       height: 50vh;
       display: flex;
@@ -46,9 +50,11 @@
     }
 
     .even {
+      padding: 0 10% 0 10%;
     }
 
     .odd {
+      padding: 0 10% 0 10%;
     }
   }
 }
@@ -56,20 +62,25 @@
 @media screen and (min-width: $breakpoint_XXS) {
   #main_skills_container {
     .main_skills {
+      margin-bottom: -100px;
       display: flex;
       justify-content: center;
     }
 
     .even {
+      padding: 0 10% 0 10%;
     }
 
     .odd {
+      padding: 0 10% 0 10%;
     }
   }
 }
 
 @media screen and (min-width: $breakpoint_XS) {
   #main_skills_container {
+    margin-top: $px_margin_M;
+
     .main_skills {
       height: 70vh;
       margin-bottom: -150px;
@@ -89,6 +100,8 @@
 
 @media screen and (min-width: $breakpoint_S) {
   #main_skills_container {
+    margin-top: $px_margin_M;
+
     .main_skills {
       height: 80vh;
       margin-bottom: -200px;

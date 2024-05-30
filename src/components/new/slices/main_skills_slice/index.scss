@@ -14,37 +14,29 @@
 
 @media screen and (max-width: $breakpoint_XXS) {
   #main_skills_slice {
-    #main_skills_canvas {
-      canvas {
-      }
-    }
+    padding-top: $px_margin_S;
+    padding-bottom: $px_margin_S;
   }
 }
 
 @media screen and (min-width: $breakpoint_XXS) {
   #main_skills_slice {
-    #main_skills_canvas {
-      canvas {
-      }
-    }
+    padding-top: $px_margin_M;
+    padding-bottom: $px_margin_M;
   }
 }
 
 @media screen and (min-width: $breakpoint_XS) {
   #main_skills_slice {
-    #main_skills_canvas {
-      canvas {
-      }
-    }
+    padding-top: $px_margin_M;
+    padding-bottom: $px_margin_M;
   }
 }
 
 @media screen and (min-width: $breakpoint_S) {
   #main_skills_slice {
-    #main_skills_canvas {
-      canvas {
-      }
-    }
+    padding-top: $px_margin_M;
+    padding-bottom: $px_margin_M;
   }
 }
 
