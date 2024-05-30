@@ -49,8 +49,9 @@ $breakpoint_XL: 1600px;
 $breakpoint_L: 1440px;
 $breakpoint_M: 1280px;
 $breakpoint_S: 810px;
-$breakpoint_XS: 400px;
-$breakpoint_XXS: 360px;
+$breakpoint_XS: 600px;
+$breakpoint_XXS: 400px;
+$breakpoint_XXXS: 360px;
 
 $app_max_width: $breakpoint_XXXL;
 
@@ -170,10 +171,11 @@ $responsive_XXL: #4895ef;
 $responsive_XL: #4361ee;
 $responsive_L: #3f37c9;
 $responsive_M: gold;
-$responsive_S: #480ca8;
-$responsive_XS: #7209b7;
-$responsive_XXS: #b5179e;
-$responsive_XXXS: #f72585;
+$responsive_S: #3a0ca3;
+$responsive_XS: #480ca8;
+$responsive_XXS: #7209b7;
+$responsive_XXXS: #b5179e;
+$responsive_XXXXS: #f72585;
 
 :export {
   background_color: $background_color;
@@ -203,6 +205,7 @@ $responsive_XXXS: #f72585;
   breakpoint_S: $breakpoint_S;
   breakpoint_XS: $breakpoint_XS;
   breakpoint_XXS: $breakpoint_XXS;
+  breakpoint_XXXS: $breakpoint_XXXS;
 
   // SIZES
 
