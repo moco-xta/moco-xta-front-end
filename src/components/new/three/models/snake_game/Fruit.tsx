@@ -10,28 +10,26 @@ import variables from '@/styles/new/variables.module.scss'
 
 type GLTFResult = GLTF & {
   nodes: {
-    SnakeCell: THREE.Mesh
+    Fruit: THREE.Mesh
   }
-  materials: {
-    ['snake_cell_#393939']: THREE.MeshStandardMaterial
-  }
+  materials: {}
 }
 
-export function SnakeCell(props: JSX.IntrinsicElements['mesh']) {
+export function Fruit(props: JSX.IntrinsicElements['mesh']) {
   const { nodes, materials } = useGLTF(
-    gltfConstants.SNAKE_GAME.SNAKE_CELL,
+    gltfConstants.SNAKE_GAME.FRUIT,
   ) as GLTFResult
   return (
     <mesh
-      geometry={nodes.SnakeCell.geometry}
-      /* material={materials['snake_cell_#393939']} */
+      geometry={nodes.Fruit.geometry}
+      scale={0.5}
       receiveShadow
       castShadow
       {...props}
     >
       <meshPhysicalMaterial
         attach='material'
-        color={variables.snake_game_snake_cell}
+        color={variables.snake_game_fruit}
         roughness={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.ROUGHNESS}
         metalness={0}
         transparent
@@ -41,4 +39,4 @@ export function SnakeCell(props: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(gltfConstants.SNAKE_GAME.SNAKE_CELL)
+useGLTF.preload(gltfConstants.SNAKE_GAME.FRUIT)

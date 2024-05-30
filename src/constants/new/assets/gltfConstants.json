@@ -45,6 +45,7 @@
     "ROUNDED_CUBE": "/new/gltf/rubiks_cube/RoundedCube.gltf"
   },
   "SNAKE_GAME": {
+    "FRUIT": "/new/gltf/snake_game/Fruit.gltf",
     "SNAKE_CELL": "/new/gltf/snake_game/SnakeCell.gltf"
   }
 }

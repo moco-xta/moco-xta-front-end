@@ -2,19 +2,16 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
 
-import { usePlayer } from '@/hooks/new/usePlayer'
-
 import SnakeGamePerspectiveCamera from './SnakeGamePerspectiveCamera'
+import Lights from './Lights'
 import SnakeScene from './SnakeGameScene'
+import PostProcessing from './PostProcessing'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
 export default function SnakeGameCanvas() {
-  usePlayer()
-
   return (
     <Canvas
-      id='main_skills_canvas'
       dpr={snakeGameConstants.CANVAS.DPR}
       shadows
       legacy={snakeGameConstants.CANVAS.LEGACY}
@@ -27,11 +24,12 @@ export default function SnakeGameCanvas() {
       }}
     >
       <SnakeGamePerspectiveCamera />
-      <ambientLight intensity={4} />
+      <Lights />
       <Suspense>
         <Physics debug>
           <SnakeScene />
         </Physics>
+        <PostProcessing />
       </Suspense>
     </Canvas>
   )

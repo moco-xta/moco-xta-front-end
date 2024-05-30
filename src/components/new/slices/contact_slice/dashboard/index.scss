@@ -1,7 +1,7 @@
 @import '@/styles/new/variables.module.scss';
 
 #dashboard {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -12,7 +12,7 @@
   justify-content: space-between;
   font-family: var(--font-upheavtt);
   font-size: 35px;
-  color: $gameboy_darker;
+  color: $snake_game_default_text;
 
   #top_dashboard {
     display: flex;
@@ -24,13 +24,11 @@
 @media screen and (min-width: $large_limit) {
   #dashboard {
     font-size: 50px;
-    /* background-color: chocolate; */
   }
 }
 
 @media screen and (min-width: $larger_limit) {
   #dashboard {
-    /* background-color: BlueViolet; */
   }
 }
 
@@ -38,14 +36,12 @@
   #dashboard {
     padding: $snake_game_margin_medium $snake_game_margin_small;
     font-size: 30px;
-    /* background-color: azure; */
   }
 }
 
 @media screen and (max-width: $small_limit) {
   #dashboard {
     font-size: 25px;
-    /* background-color: DarkGreen; */
   }
 }
 
@@ -53,6 +49,5 @@
   #dashboard {
     padding: $snake_game_margin_medium $snake_game_margin_smaller
       $snake_game_margin_smaller $snake_game_margin_smaller;
-    /* background-color: crimson; */
   }
 }

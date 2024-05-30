@@ -10,10 +10,13 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "Y": 2,
-      "DISTANCE_FROM_SNAKE_HEAD": 10
+      "Y": 3,
+      "DISTANCE_FROM_SNAKE_HEAD": 5
     },
-    "FOV": 50
+    "ROTATION": {
+      "TILT": 40
+    },
+    "FOV": 70
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
@@ -40,7 +43,7 @@
       "SNAKE_CELL": {
         "COLOR": "#393939",
         "ROUGHNESS": 1,
-        "OPACITY": 0.9
+        "OPACITY": 1
       }
     }
   }
