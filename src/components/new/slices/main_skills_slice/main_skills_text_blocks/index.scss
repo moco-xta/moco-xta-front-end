@@ -47,12 +47,18 @@
 @media screen and (min-width: $breakpoint_XS) {
   #main_skills_container {
     .main_skills {
+      height: 90vw;
+      margin-bottom: -200px;
+      display: flex;
+      justify-content: center;
     }
 
     .even {
+      padding: 0 10% 0 50%;
     }
 
     .odd {
+      padding: 0 50% 0 10%;
     }
   }
 }
@@ -62,8 +68,6 @@
     .main_skills {
       height: 90vh;
       margin-bottom: -300px;
-      display: flex;
-      justify-content: center;
     }
 
     .even {

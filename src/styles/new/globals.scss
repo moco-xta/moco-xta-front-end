@@ -101,7 +101,13 @@ a {
 
 // RESPONSIVE
 
-@media screen and (max-width: $breakpoint_XXS) {
+@media screen and (max-width: $breakpoint_XXXS) {
+  .responsive_background {
+    background-color: $responsive_XXXXS;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXS) {
   .responsive_background {
     background-color: $responsive_XXXS;
   }
