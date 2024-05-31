@@ -6,7 +6,6 @@
   flex-direction: column;
 
   canvas {
-    width: 100% !important;
     height: 80vh !important;
   }
 }
@@ -54,10 +53,10 @@
 @media screen and (min-width: $breakpoint_M) {
   #performed_with_slice {
     flex-direction: row;
+    gap: 0;
 
     canvas {
-      width: 70%;
-      height: 100%;
+      width: 60%;
     }
   }
 }
@@ -70,8 +69,8 @@
 }
 
 @media screen and (min-width: $breakpoint_XL) {
-  #new_reviews_slice {
-    .reviews_containers {
+  #performed_with_slice {
+    canvas {
     }
   }
 }
@@ -79,6 +78,7 @@
 @media screen and (min-width: $breakpoint_XXL) {
   #performed_with_slice {
     canvas {
+      width: 50%;
     }
   }
 }
