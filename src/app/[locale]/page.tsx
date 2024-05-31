@@ -10,7 +10,7 @@ import {
 } from '@/components/new/slices'
 import Footer from '@/components/new/shared/footer'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
-import NewReviewsSlice from '@/components/new/slices/new_reviews_slice'
+import NewReviewsSlice from '@/components/new/slices/reviews_slice'
 
 import './index.scss'
 

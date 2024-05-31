@@ -5,11 +5,14 @@ import ReviewsContainer from './reviews_container'
 
 import './index.scss'
 
-export default function ReviewsSlice() {
+export default function NewReviewsSlice() {
   return (
-    <section id='reviews_slice'>
+    <div
+      id='new_reviews_slice'
+      className='responsive_background'
+    >
       <AddReviewContainer />
       <ReviewsContainer />
-    </section>
+    </div>
   )
 }
