@@ -11,6 +11,7 @@ export default function PerformedWithTextBlock() {
 
   return (
     <TextBlockSimple
+      className={`${isDesktop ? '' : 'centered_text_block'}`}
       title={'HOME.PERFORMED_WITH.TITLE'}
       paragraph={'HOME.PERFORMED_WITH.PARAGRAPH'}
       /* blockStyle={

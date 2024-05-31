@@ -177,7 +177,9 @@ export function updateGrid(
 ) {
   const newGrid: GridCellInterface[][] = generateGrid()
   snake.forEach((snakeCell) => {
-    newGrid[snakeCell.position.x][snakeCell.position.z].status = snakeCell.head ? 'SNAKE_HEAD' : 'SNAKE'
+    newGrid[snakeCell.position.x][snakeCell.position.z].status = snakeCell.head
+      ? 'SNAKE_HEAD'
+      : 'SNAKE'
   })
   newGrid[food!.position.x][food!.position.z].status = 'FOOD'
   return newGrid
