@@ -16,9 +16,7 @@ type GLTFResult = GLTF & {
 }
 
 export function SnakeHead(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(
-    gltfConstants.SNAKE_GAME.SNAKE_HEAD,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.SNAKE_GAME.SNAKE_HEAD) as GLTFResult
   return (
     <mesh
       geometry={nodes.SnakeHead.geometry}

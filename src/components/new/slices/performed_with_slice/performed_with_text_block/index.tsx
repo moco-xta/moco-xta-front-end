@@ -4,13 +4,15 @@ import useResize from '@/hooks/new/useResize'
 
 import TextBlockSimple from '@/components/new/shared/text_blocks/text_block_simple'
 
-import variables from '@/styles/new/variables.module.scss'
+import './index.scss'
 
 export default function PerformedWithTextBlock() {
   const { isDesktop } = useResize()
 
   return (
     <TextBlockSimple
+      id='performed_with_text_block'
+      className={`${isDesktop ? '' : 'centered_text_block'}`}
       title={'HOME.PERFORMED_WITH.TITLE'}
       paragraph={'HOME.PERFORMED_WITH.PARAGRAPH'}
       /* blockStyle={
