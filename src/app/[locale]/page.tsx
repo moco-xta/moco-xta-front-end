@@ -6,11 +6,10 @@ import {
   HeroSlice,
   MainSkillsSlice,
   PerformedWithSlice,
-  ReviewsSlice,
+  ReviewsSliceNew,
 } from '@/components/new/slices'
 import Footer from '@/components/new/shared/footer'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
-import NewReviewsSlice from '@/components/new/slices/reviews_slice'
 
 import './index.scss'
 
@@ -18,11 +17,11 @@ export default function Home() {
   return (
     <>
       <div id='home_page'>
-        <HeroSlice />
-        <MainSkillsSlice />
-        <PerformedWithSlice />
-        <NewReviewsSlice />
-        <Footer />
+        {/* <HeroSlice /> */}
+        {/* <MainSkillsSlice /> */}
+        {/* <PerformedWithSlice /> */}
+        <ReviewsSliceNew />
+        {/* <Footer /> */}
       </div>
       <div className='scroll_to_top_container'>
         <ScrollToTop />

@@ -5,7 +5,7 @@ import ReviewsContainer from './reviews_container'
 
 import './index.scss'
 
-export default function NewReviewsSlice() {
+export default function ReviewsSlice() {
   return (
     <div
       id='new_reviews_slice'

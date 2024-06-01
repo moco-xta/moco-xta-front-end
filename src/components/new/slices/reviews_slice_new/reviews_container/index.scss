@@ -1,0 +1,52 @@
+@import '@/styles/new/variables.module.scss';
+
+#reviews_container {
+  width: 100vw;
+  display: flex;
+}
+
+@media screen and (max-width: $breakpoint_XXS) {
+  #reviews_container {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXS) {
+  #reviews_container {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XS) {
+  #reviews_container {
+  }
+}
+
+@media screen and (min-width: $breakpoint_S) {
+  #reviews_container {
+  }
+}
+
+@media screen and (min-width: $breakpoint_M) {
+  #reviews_container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: $breakpoint_L) {
+  #reviews_container {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XL) {
+  #reviews_container {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXL) {
+  #reviews_container {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXL) {
+  #reviews_container {
+  }
+}
