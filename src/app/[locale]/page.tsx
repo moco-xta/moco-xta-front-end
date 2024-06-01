@@ -17,11 +17,11 @@ export default function Home() {
   return (
     <>
       <div id='home_page'>
-        {/* <HeroSlice /> */}
-        {/* <MainSkillsSlice /> */}
-        {/* <PerformedWithSlice /> */}
+        <HeroSlice />
+        <MainSkillsSlice />
+        <PerformedWithSlice />
         <ReviewsSliceNew />
-        {/* <Footer /> */}
+        <Footer />
       </div>
       <div className='scroll_to_top_container'>
         <ScrollToTop />

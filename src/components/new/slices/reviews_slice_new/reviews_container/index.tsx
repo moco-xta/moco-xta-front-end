@@ -17,15 +17,15 @@ export default function ReviewsContainer() {
   return (
     <>
       {isDesktop ? (
-        <div id='reviews_container'>
+        <div id='reviews_container_with_button'>
           <AddReviewButton text={t('OPEN')} />
-          <div>
+          <div id='reviews_container'>
             <ReviewsTextBlockContainer />
             <ReviewCards />
           </div>
         </div>
       ) : (
-        <div>
+        <div id='reviews_container'>
           <ReviewsTextBlockContainer />
           <ReviewCards />
         </div>
