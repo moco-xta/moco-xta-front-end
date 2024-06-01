@@ -48,32 +48,30 @@ export default function AddReview() {
   const [addReview] = useAddReviewMutation()
 
   return (
-    <div id='add_review'>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={addNewReviewValidationSchema}
-        onSubmit={(values, { resetForm }) => {
-          setSubmitButtonIsDisabled(true)
-          toast.promise(addReview(values).unwrap(), {
-            loading: t('TOASTERS.ADD_REVIEW.LOADING'),
-            success: () => {
-              resetForm({ values: initialValues })
-              clearFormStoredValues(initialValues)
-              setSubmitButtonIsDisabled(false)
-              return t('TOASTERS.ADD_REVIEW.SUCCESS')
-            },
-            error: () => {
-              setSubmitButtonIsDisabled(false)
-              return t('TOASTERS.ADD_REVIEW.ERROR')
-            },
-          })
-        }}
-      >
-        <AddReviewForm
-          submitButtonIsDisabled={submitButtonIsDisabled}
-          resetButtonIsDisabled={resetButtonIsDisabled}
-        />
-      </Formik>
-    </div>
+    <Formik
+      initialValues={initialValues}
+      validationSchema={addNewReviewValidationSchema}
+      onSubmit={(values, { resetForm }) => {
+        setSubmitButtonIsDisabled(true)
+        toast.promise(addReview(values).unwrap(), {
+          loading: t('TOASTERS.ADD_REVIEW.LOADING'),
+          success: () => {
+            resetForm({ values: initialValues })
+            clearFormStoredValues(initialValues)
+            setSubmitButtonIsDisabled(false)
+            return t('TOASTERS.ADD_REVIEW.SUCCESS')
+          },
+          error: () => {
+            setSubmitButtonIsDisabled(false)
+            return t('TOASTERS.ADD_REVIEW.ERROR')
+          },
+        })
+      }}
+    >
+      <AddReviewForm
+        submitButtonIsDisabled={submitButtonIsDisabled}
+        resetButtonIsDisabled={resetButtonIsDisabled}
+      />
+    </Formik>
   )
 }

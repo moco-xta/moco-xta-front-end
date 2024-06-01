@@ -1,8 +1,10 @@
 @import '@/styles/new/variables.module.scss';
 
 #add_review_form {
+  width: 90%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 
   form {
     display: flex;
