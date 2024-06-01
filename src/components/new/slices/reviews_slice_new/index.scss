@@ -2,6 +2,7 @@
 
 #reviews_slice {
   width: 200vw;
+  height: $reviews_slice_height_S;
 
   .reviews_containers {
     height: $reviews_slice_height_S;
@@ -10,6 +11,7 @@
 
 @media screen and (max-width: $breakpoint_XXS) {
   #reviews_slice {
+    height: $reviews_slice_height_XL;
   
     .reviews_containers {
       height: $reviews_slice_height_XL;
@@ -19,6 +21,7 @@
 
 @media screen and (min-width: $breakpoint_XXS) {
   #reviews_slice {
+    height: $reviews_slice_height_XL;
   
     .reviews_containers {
       height: $reviews_slice_height_XL;
@@ -37,6 +40,7 @@
 
 @media screen and (min-width: $breakpoint_S) {
   #reviews_slice {
+    height: $reviews_slice_height_XL;
   
     .reviews_containers {
       height: $reviews_slice_height_XL;
@@ -62,6 +66,7 @@
 
 @media screen and (min-width: $breakpoint_XL) {
   #reviews_slice {
+    height: $reviews_slice_height_M;
   
     .reviews_containers {
       height: $reviews_slice_height_M;
@@ -71,6 +76,7 @@
 
 @media screen and (min-width: $breakpoint_XXL) {
   #reviews_slice {
+    height: $reviews_slice_height_L;
   
     .reviews_containers {
       height: $reviews_slice_height_L;
