@@ -2,12 +2,12 @@ import React from 'react'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-const INTENSITY = 500
+const INTENSITY = 300
 
 export default function Lights() {
   return (
     <>
-      <ambientLight intensity={2} />
+      <ambientLight intensity={1} />
       <pointLight
         position={[0, 20, 0]}
         intensity={INTENSITY}

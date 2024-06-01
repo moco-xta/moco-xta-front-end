@@ -19,12 +19,11 @@
   "materials": [
     {
       "doubleSided": true,
-      "name": "snake_cell_#393939",
+      "name": "snake_cell_texture",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.040914930403232574, 0.04091523587703705, 0.040915217250585556,
-          0.8999999761581421
-        ],
+        "baseColorTexture": {
+          "index": 0
+        },
         "metallicFactor": 0
       }
     }
@@ -36,59 +35,91 @@
         {
           "attributes": {
             "POSITION": 0,
-            "NORMAL": 1
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
           },
-          "indices": 2,
+          "indices": 3,
           "material": 0
         }
       ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ],
+  "images": [
+    {
+      "mimeType": "image/png",
+      "name": "snake_cell_texture",
+      "uri": "snake_cell_texture.png"
     }
   ],
   "accessors": [
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 2112,
-      "max": [0.4686979651451111, 0.4686979055404663, 0.4686979055404663],
-      "min": [-0.46869784593582153, -0.4686979055404663, -0.4686979055404663],
+      "count": 256,
+      "max": [0.8999999761581421, 0.8999999761581421, 0.8999999761581421],
+      "min": [-0.8999999761581421, -0.8999999761581421, -0.8999999761581421],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 2112,
+      "count": 256,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
+      "componentType": 5126,
+      "count": 256,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
       "componentType": 5123,
-      "count": 7236,
+      "count": 852,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 25344,
+      "byteLength": 3072,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 25344,
-      "byteOffset": 25344,
+      "byteLength": 3072,
+      "byteOffset": 3072,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 14472,
-      "byteOffset": 50688,
+      "byteLength": 2048,
+      "byteOffset": 6144,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1704,
+      "byteOffset": 8192,
       "target": 34963
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987
     }
   ],
   "buffers": [
     {
-      "byteLength": 65160,
+      "byteLength": 9896,
       "uri": "SnakeCell.bin"
     }
   ]

@@ -19,6 +19,7 @@ export function generateGrid() {
       const newCell: GridCellInterface = {
         status: 'EMPTY',
         position: { x: x, z: z },
+        snakeCellDirection: null,
       }
       grid[x].push(newCell)
     }
@@ -38,6 +39,7 @@ export function generateSnake() {
             : snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2 - i,
         z: snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
       },
+      direction: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.DIRECTION,
     })
   }
   return snake
@@ -136,6 +138,7 @@ function updateSnakeHead(
               : snakeHead.position.z - 1
           : snakeHead.position.z,
     },
+    direction: newDirection,
   }
   return {
     newSnakeHead: newSnakeHead,
@@ -180,6 +183,8 @@ export function updateGrid(
     newGrid[snakeCell.position.x][snakeCell.position.z].status = snakeCell.head
       ? 'SNAKE_HEAD'
       : 'SNAKE'
+    newGrid[snakeCell.position.x][snakeCell.position.z].snakeCellDirection =
+      snakeCell.direction
   })
   newGrid[food!.position.x][food!.position.z].status = 'FOOD'
   return newGrid
@@ -292,5 +297,20 @@ export function updateCamera(snakeHead: SnakeCellInterface, direction: string) {
     newGroupPosition: newGroupPosition,
     newGroupRotation: newGroupRotation,
     newCameraRotation: newCameraRotation,
+  }
+}
+
+export function setSnakeCellRotation(direction: string) {
+  switch (direction) {
+    case 'TOP':
+      return new THREE.Euler(0, THREE.MathUtils.degToRad(-90), 0)
+    case 'BOTTOM':
+      return new THREE.Euler(0, THREE.MathUtils.degToRad(90), 0)
+    case 'LEFT':
+      return new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)
+    case 'RIGHT':
+      return new THREE.Euler(0, THREE.MathUtils.degToRad(0), 0)
+    default:
+      return new THREE.Euler(0, 0, 0)
   }
 }

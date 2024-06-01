@@ -15,6 +15,7 @@ export interface GridCellInterface {
     x: number
     z: number
   }
+  snakeCellDirection: string | null
 }
 
 export interface CellComponentInterface {
@@ -27,6 +28,7 @@ export interface SnakeCellInterface {
     x: number
     z: number
   }
+  direction: string
 }
 
 export interface SnakeInterface {

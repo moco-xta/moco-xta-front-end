@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setNextStep, setSnakeGame } from '@/redux/slice/snakeGameSlice'
 
 import { AppDispatch, RootState } from '@/redux/store'
+import { setNextStep, setSnakeGame } from '@/redux/slice/snakeGameSlice'
 
 import useSnakeGame from '@/hooks/new/useSnakeGame'
 

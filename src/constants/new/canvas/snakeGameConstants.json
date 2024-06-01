@@ -34,7 +34,7 @@
         "SCALE": 0.8
       },
       "DEFAULT": {
-        "LENGTH": 5,
+        "LENGTH": 14,
         "DIRECTION": "RIGHT",
         "NEXT_MOVE": "ArrowUp"
       }
