@@ -2,4 +2,86 @@
 
 #reviews_slice {
   width: 200vw;
+
+  .reviews_containers {
+    height: $reviews_slice_height_S;
+  }
+}
+
+@media screen and (max-width: $breakpoint_XXS) {
+  #reviews_slice {
+  
+    .reviews_containers {
+      height: $reviews_slice_height_XL;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXS) {
+  #reviews_slice {
+  
+    .reviews_containers {
+      height: $reviews_slice_height_XL;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XS) {
+  #reviews_slice {
+  
+    .reviews_containers {
+      height: $reviews_slice_height_L;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_S) {
+  #reviews_slice {
+  
+    .reviews_containers {
+      height: $reviews_slice_height_XL;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_M) {
+  #reviews_slice {
+  
+    .reviews_containers {
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_L) {
+  #reviews_slice {
+  
+    .reviews_containers {
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XL) {
+  #reviews_slice {
+  
+    .reviews_containers {
+      height: $reviews_slice_height_M;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXL) {
+  #reviews_slice {
+  
+    .reviews_containers {
+      height: $reviews_slice_height_L;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXL) {
+  #reviews_slice {
+  
+    .reviews_containers {
+    }
+  }
 }

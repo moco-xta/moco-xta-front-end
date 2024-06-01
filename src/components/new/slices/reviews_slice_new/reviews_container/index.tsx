@@ -26,7 +26,8 @@ export default function ReviewsContainer() {
       {isDesktop ? (
         <div
           id='reviews_container_desktop'
-          className={`${addReviewIsOpen ? '' : 'open'}`}
+          className={`reviews_containers ${addReviewIsOpen ? '' : 'open'}`}
+          /* className={`reviews_containers ${addReviewIsOpen ? '' : 'open'} responsive_background`} */
         >
           <AddReviewButton text={t('OPEN')} />
           <div id='reviews_container'>
@@ -37,7 +38,8 @@ export default function ReviewsContainer() {
       ) : (
         <div
           id='reviews_container_not_desktop'
-          className={`${addReviewIsOpen ? '' : 'open'}`}
+          className={`reviews_containers ${addReviewIsOpen ? '' : 'open'}`}
+          /* className={`reviews_containers ${addReviewIsOpen ? '' : 'open'} responsive_background`} */
         >
           <ReviewsTextBlockContainer />
           <ReviewCards />

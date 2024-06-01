@@ -28,36 +28,36 @@
 
 @media screen and (min-width: $breakpoint_S) {
   #review_cards {
-    grid-auto-columns: 38%;
+    grid-auto-columns: 28%;
   }
 }
 
 @media screen and (min-width: $breakpoint_M) {
   #review_cards {
-    grid-auto-columns: 24%;
+    grid-auto-columns: 33%;
   }
 }
 
 @media screen and (min-width: $breakpoint_L) {
   #review_cards {
-    grid-auto-columns: 23%;
+    grid-auto-columns: 33%;
   }
 }
 
 @media screen and (min-width: $breakpoint_XL) {
   #review_cards {
-    grid-auto-columns: 21%;
+    grid-auto-columns: 30%;
   }
 }
 
 @media screen and (min-width: $breakpoint_XXL) {
   #review_cards {
-    grid-auto-columns: 18%;
+    grid-auto-columns: 30%;
   }
 }
 
 @media screen and (min-width: $breakpoint_XXXL) {
   #review_cards {
-    grid-auto-columns: 15%;
+    grid-auto-columns: 30%;
   }
 }

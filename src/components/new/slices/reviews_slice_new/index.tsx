@@ -11,7 +11,7 @@ export default function ReviewsSliceNew() {
       id='reviews_slice'
       className='responsive_background'
     >
-      {/* <AddReviewContainer /> */}
+      <AddReviewContainer />
       <ReviewsContainer />
     </section>
   )
