@@ -2,20 +2,23 @@
 
 .review_card {
   aspect-ratio: 3 / 2;
-  width: 300px;
-  background-color: hotpink;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: $grey_dark;
 }
 
 @media screen and (max-width: $breakpoint_XXS) {
   .review_card {
-    width: 250px;
     aspect-ratio: 2 / 3;
   }
 }
 
 @media screen and (min-width: $breakpoint_XXS) {
   .review_card {
-    width: 250px;
+    /* width: 250px; */
     aspect-ratio: 2 / 3;
   }
 }

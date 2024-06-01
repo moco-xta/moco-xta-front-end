@@ -4,6 +4,8 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 27%;
+  overflow-x: auto;
+  gap: $gap_medium;
 }
 
 @media screen and (max-width: $breakpoint_XXS) {
