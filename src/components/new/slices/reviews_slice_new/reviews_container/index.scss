@@ -1,9 +1,11 @@
 @import '@/styles/new/variables.module.scss';
 
-#reviews_container_with_button {
+#reviews_container_desktop {
   width: 100vw;
   display: flex;
   flex-direction: row;
+  transform: translateX(100vw);
+  transition: $transition transform ease-in-out;
 
   #reviews_container {
     width: 90%;
@@ -13,8 +15,18 @@
   }
 }
 
-#reviews_container {
+#reviews_container_desktop.open {
+  transform: translateX(0);
+}
+
+#reviews_container_not_desktop {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  transform: translateX(100vw);
+  transition: $transition transform ease-in-out;
+}
+
+#reviews_container_not_desktop.open {
+  transform: translateX(0);
 }
