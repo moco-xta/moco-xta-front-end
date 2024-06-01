@@ -5,3 +5,53 @@
   width: 300px;
   background-color: hotpink;
 }
+
+@media screen and (max-width: $breakpoint_XXS) {
+  .review_card {
+    width: 250px;
+    aspect-ratio: 2 / 3;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXS) {
+  .review_card {
+    width: 250px;
+    aspect-ratio: 2 / 3;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XS) {
+  .review_card {
+  }
+}
+
+@media screen and (min-width: $breakpoint_S) {
+  .review_card {
+  }
+}
+
+@media screen and (min-width: $breakpoint_M) {
+  .review_card {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+@media screen and (min-width: $breakpoint_L) {
+  .review_card {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XL) {
+  .review_card {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXL) {
+  .review_card {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXL) {
+  .review_card {
+  }
+}
