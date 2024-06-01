@@ -74,10 +74,10 @@ export default function ReviewCards() {
       {REVIEWS_TEST.map((review, index) => (
         <ReviewCard
           key={`review_card_${index}`}
-          /* review={review} */
-          /* cardStyle={{
+          review={review}
+          cardStyle={{
             margin: '30px 10px',
-          }} */
+          }}
         />
       ))}
     </div>

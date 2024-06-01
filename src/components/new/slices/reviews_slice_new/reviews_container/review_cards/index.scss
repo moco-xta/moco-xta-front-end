@@ -1,1 +1,63 @@
 @import '@/styles/new/variables.module.scss';
+
+#review_cards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 27%;
+  overflow-x: auto;
+  gap: $gap_medium;
+}
+
+@media screen and (max-width: $breakpoint_XXS) {
+  #review_cards {
+    grid-auto-columns: 85%;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXS) {
+  #review_cards {
+    grid-auto-columns: 70%;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XS) {
+  #review_cards {
+    grid-auto-columns: 46%;
+  }
+}
+
+@media screen and (min-width: $breakpoint_S) {
+  #review_cards {
+    grid-auto-columns: 28%;
+  }
+}
+
+@media screen and (min-width: $breakpoint_M) {
+  #review_cards {
+    grid-auto-columns: 33%;
+  }
+}
+
+@media screen and (min-width: $breakpoint_L) {
+  #review_cards {
+    grid-auto-columns: 33%;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XL) {
+  #review_cards {
+    grid-auto-columns: 30%;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXL) {
+  #review_cards {
+    grid-auto-columns: 30%;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXL) {
+  #review_cards {
+    grid-auto-columns: 30%;
+  }
+}
