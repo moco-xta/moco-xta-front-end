@@ -6,11 +6,10 @@ import {
   HeroSlice,
   MainSkillsSlice,
   PerformedWithSlice,
-  ReviewsSlice,
+  ReviewsSliceNew,
 } from '@/components/new/slices'
 import Footer from '@/components/new/shared/footer'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
-import NewReviewsSlice from '@/components/new/slices/new_reviews_slice'
 
 import './index.scss'
 
@@ -21,7 +20,7 @@ export default function Home() {
         <HeroSlice />
         <MainSkillsSlice />
         <PerformedWithSlice />
-        <NewReviewsSlice />
+        <ReviewsSliceNew />
         <Footer />
       </div>
       <div className='scroll_to_top_container'>

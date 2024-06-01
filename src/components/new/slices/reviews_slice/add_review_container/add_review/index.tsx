@@ -11,7 +11,7 @@ import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
 import { addNewReviewValidationSchema } from 'validations/addNewReviewValidationSchema'
 
-import AddReviewForm from '../add_review_form'
+import AddReviewForm from './add_review_form'
 
 import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 

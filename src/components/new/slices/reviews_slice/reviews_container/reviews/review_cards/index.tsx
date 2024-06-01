@@ -2,7 +2,7 @@ import React from 'react'
 
 import { ReviewPayloadInterface } from '@/interfaces/new/reduxApiInterfaces'
 
-import ReviewCard from './review_card'
+import ReviewCard from '../../../review_card'
 
 import './index.scss'
 

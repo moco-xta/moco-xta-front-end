@@ -2,11 +2,11 @@ import React from 'react'
 
 import { ReviewPayloadInterface } from '@/interfaces/new/reduxApiInterfaces'
 
-import ReviewCard from '../review_card'
+import ReviewCard from '../../review_card'
 
 import './index.scss'
 
-const reviews: ReviewPayloadInterface[] = [
+const REVIEWS_TEST: ReviewPayloadInterface[] = [
   {
     firstName: 'Federico',
     role: 'DEVELOPER',
@@ -71,13 +71,13 @@ export default function ReviewCards() {
       id='review_cards'
       className='snap_inline'
     >
-      {reviews.map((review, index) => (
+      {REVIEWS_TEST.map((review, index) => (
         <ReviewCard
           key={`review_card_${index}`}
-          review={review}
-          cardStyle={{
+          /* review={review} */
+          /* cardStyle={{
             margin: '30px 10px',
-          }}
+          }} */
         />
       ))}
     </div>
