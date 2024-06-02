@@ -1,8 +1,10 @@
-export function setGridCellStatus(snakeCellType: 'HEAD' | 'STRAIGHT' | 'CORNER') {
+export function setGridCellStatus(
+  snakeCellType: 'HEAD' | 'STRAIGHT' | 'CORNER',
+) {
   switch (snakeCellType) {
-    case 'HEAD': 
+    case 'HEAD':
       return 'SNAKE_HEAD'
-    case 'STRAIGHT': 
+    case 'STRAIGHT':
       return 'SNAKE_STRAIGHT'
     default:
       return 'SNAKE_CORNER'

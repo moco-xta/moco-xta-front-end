@@ -1,4 +1,4 @@
-import { GridCellInterface } from "@/interfaces/new/newSnakeGameInterfaces"
+import { GridCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
@@ -12,8 +12,8 @@ export function generateGrid() {
         position: { x: x, z: z },
         snake: {
           direction: null,
-          corner: null
-        }
+          corner: null,
+        },
       }
       grid[x].push(newCell)
     }

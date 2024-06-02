@@ -35,8 +35,6 @@ export default function SnakeGamePerspectiveCamera() {
         newCameraRotation.z,
       )
     }
-    /* state.camera.position.set(position.x, position.y, position.z)
-     */
   })
 
   return (
