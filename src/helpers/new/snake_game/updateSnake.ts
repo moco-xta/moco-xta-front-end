@@ -19,10 +19,7 @@ export function updateSnake(
   newSnake[0] = newSnakeHead
   for (let i = 1; i < snake.length + Number(needFood); i++) {
     const newSnakeCell: SnakeCellInterface = {
-      type: setSnakeCellType(
-        snake[i - 1],
-        i === 1 ? newSnake[0] : snake[i - 2],
-      ),
+      type: i === 1 ? setSnakeCellType(snake[i - 1], newSnake[0]) : snake[i - 1].type,
       position: {
         x: snake[i - 1].position.x,
         z: snake[i - 1].position.z,
