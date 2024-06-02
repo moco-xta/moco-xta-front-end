@@ -49,6 +49,33 @@ export const fruitRedXD = new THREE.MeshStandardMaterial({
   roughness: 1,
 })
 
+// GRASS GREEN
+
+export const grassGreenXL = new THREE.MeshStandardMaterial({
+  color: '#5B8B32',
+  roughness: 1,
+})
+
+export const grassGreenL = new THREE.MeshStandardMaterial({
+  color: '#5B8730',
+  roughness: 1,
+})
+
+export const grassGreenM = new THREE.MeshStandardMaterial({
+  color: '#527A2D',
+  roughness: 1,
+})
+
+export const grassGreenD = new THREE.MeshStandardMaterial({
+  color: '#4A6F28',
+  roughness: 1,
+})
+
+export const grassGreenXD = new THREE.MeshStandardMaterial({
+  color: '#3F5C21',
+  roughness: 1,
+})
+
 // SNAKE GREEN
 
 export const snakeGreenXL = new THREE.MeshStandardMaterial({
