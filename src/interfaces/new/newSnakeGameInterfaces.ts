@@ -29,12 +29,55 @@ export interface GridCellInterface {
   position: PositionInterface
   snake: {
     direction: string | null
-    // direction: 'NORTH' | 'SOUTH' | 'WEST' | 'EAST',
     corner: string | null
-    // corner?: 'NORTH_TO_WEST' | 'NORTH_TO_EAST' | 'SOUTH_TO_EAST' | 'SOUTH_TO_WEST' | 'WEST_TO_SOUTH' | 'WEST_TO_NORTH' | 'EAST_TO_NORTH' | 'EAST_TO_SOUTH'
   }
 }
 
 export interface CellComponentInterface {
   cell: GridCellInterface
+}
+
+export interface NextStepInterface {
+  newIsPlaying: boolean
+  newSnake: SnakeCellInterface[]
+  newFood: FoodInterface
+  newGrid: GridCellInterface[][]
+  newDirection: string
+  newNextMove: string
+  newScore: number
+  newLevel: number
+}
+
+export interface UpdateCameraInterface {
+  newGroupPosition: {
+    x: number
+    y: number
+    z: number
+  }
+  newGroupRotation: {
+    x: number
+    y: number
+    z: number
+  }
+  newCameraRotation: {
+    x: number
+    y: number
+    z: number
+  }
+}
+
+export interface UpdateSnakeInterface {
+  newSnake: SnakeCellInterface[]
+  newDirection: string
+  newNextMove: string
+  needFood: boolean
+  newScore: number
+}
+
+export interface UpdateSnakeHeadInterface {
+  newSnakeHead: SnakeCellInterface
+  newDirection: string
+  newNextMove: string
+  needFood: boolean
+  newScore: number
 }

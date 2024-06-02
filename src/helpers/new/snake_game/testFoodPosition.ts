@@ -6,7 +6,7 @@ import {
 export function testFoodPosition(
   food: FoodInterface,
   snake: SnakeCellInterface[],
-) {
+): boolean {
   let foodPositionIsValid: boolean = true
   snake.forEach((snakeCell) => {
     if (

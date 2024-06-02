@@ -2,7 +2,7 @@ import { GridCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-export function generateGrid() {
+export function generateGrid(): GridCellInterface[][] {
   const grid: GridCellInterface[][] = []
   for (let x = 0; x < snakeGameConstants.SNAKE_GAME.BOARD.WIDTH; x++) {
     grid.push([])

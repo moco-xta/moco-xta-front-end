@@ -1,10 +1,16 @@
 import * as THREE from 'three'
 
-import { SnakeCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import {
+  SnakeCellInterface,
+  UpdateCameraInterface,
+} from '@/interfaces/new/newSnakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-export function updateCamera(snakeHead: SnakeCellInterface, direction: string) {
+export function updateCamera(
+  snakeHead: SnakeCellInterface,
+  direction: string,
+): UpdateCameraInterface {
   let newGroupPosition = {
     x: 0,
     y: 0,
@@ -86,5 +92,5 @@ export function updateCamera(snakeHead: SnakeCellInterface, direction: string) {
     newGroupPosition: newGroupPosition,
     newGroupRotation: newGroupRotation,
     newCameraRotation: newCameraRotation,
-  }
+  } as UpdateCameraInterface
 }

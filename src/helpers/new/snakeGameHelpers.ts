@@ -10,7 +10,7 @@ import {
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
 // GENERATE
-
+/* 
 export function generateGrid() {
   const grid: GridCellInterface[][] = []
   for (let x = 0; x < snakeGameConstants.SNAKE_GAME.BOARD.WIDTH; x++) {
@@ -25,9 +25,9 @@ export function generateGrid() {
     }
   }
   return grid
-}
+} */
 
-export function generateSnake() {
+/* export function generateSnake() {
   const snake: SnakeCellInterface[] = []
   for (let i = 0; i < snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.LENGTH; i++) {
     snake.push({
@@ -43,21 +43,21 @@ export function generateSnake() {
     })
   }
   return snake
-}
+} */
 
-function testFoodPosition(food: FoodInterface, snake: SnakeCellInterface[]) {
+/* function testFoodPosition(food: FoodInterface, snake: SnakeCellInterface[]) {
   let foodPositionIsValid: boolean = true
   snake.forEach((snakeCell) => {
     if (snakeCell === food) foodPositionIsValid = false
   })
   return foodPositionIsValid
-}
+} */
 
-function getRandomPosition(max: number) {
+/* function getRandomPosition(max: number) {
   return Math.floor(Math.random() * max)
-}
+} */
 
-export function generateFood(snake: SnakeCellInterface[]) {
+/* export function generateFood(snake: SnakeCellInterface[]) {
   let newFood: FoodInterface
   do {
     newFood = {
@@ -68,11 +68,11 @@ export function generateFood(snake: SnakeCellInterface[]) {
     }
   } while (!testFoodPosition(newFood, snake))
   return newFood
-}
+} */
 
 // UPDATE
 
-function updateDirection(direction: string, nextMove: string) {
+/* function updateDirection(direction: string, nextMove: string) {
   let newDirection: string = ''
   switch (direction) {
     case 'TOP':
@@ -92,16 +92,16 @@ function updateDirection(direction: string, nextMove: string) {
       break
   }
   return newDirection
-}
+} */
 
-function isEating(snakeHead: SnakeCellInterface, food: FoodInterface | null) {
+/* function isEating(snakeHead: SnakeCellInterface, food: FoodInterface | null) {
   return (
     snakeHead.position.x === food!.position.x &&
     snakeHead.position.z === food!.position.z
   )
-}
+} */
 
-function updateSnakeHead(
+/* function updateSnakeHead(
   snakeHead: SnakeCellInterface,
   food: FoodInterface | null,
   direction: string,
@@ -147,9 +147,9 @@ function updateSnakeHead(
     needFood: isEating(newSnakeHead, food),
     newScore: !isEating(newSnakeHead, food) ? score : score + 5,
   }
-}
+} */
 
-function updateSnake(
+/* function updateSnake(
   snake: SnakeCellInterface[],
   food: FoodInterface | null,
   direction: string,
@@ -172,9 +172,9 @@ function updateSnake(
     needFood: needFood,
     newScore: newScore,
   }
-}
+} */
 
-export function updateGrid(
+/* export function updateGrid(
   snake: SnakeCellInterface[],
   food: FoodInterface | null,
 ) {
@@ -188,9 +188,9 @@ export function updateGrid(
   })
   newGrid[food!.position.x][food!.position.z].status = 'FOOD'
   return newGrid
-}
+} */
 
-export function nextStep(state: SnakeGameInterface) {
+/* export function nextStep(state: SnakeGameInterface) {
   const { newSnake, newDirection, newNextMove, needFood, newScore } =
     updateSnake(
       state.snake,
@@ -213,9 +213,9 @@ export function nextStep(state: SnakeGameInterface) {
     newNextMove: newNextMove,
     newScore: newScore,
   }
-}
+} */
 
-export function updateCamera(snakeHead: SnakeCellInterface, direction: string) {
+/* export function updateCamera(snakeHead: SnakeCellInterface, direction: string) {
   let newGroupPosition = {
     x: 0,
     y: 0,
@@ -298,9 +298,9 @@ export function updateCamera(snakeHead: SnakeCellInterface, direction: string) {
     newGroupRotation: newGroupRotation,
     newCameraRotation: newCameraRotation,
   }
-}
+} */
 
-export function setSnakeCellRotation(direction: string) {
+/* export function setSnakeCellRotation(direction: string) {
   switch (direction) {
     case 'TOP':
       return new THREE.Euler(0, THREE.MathUtils.degToRad(-90), 0)
@@ -313,4 +313,4 @@ export function setSnakeCellRotation(direction: string) {
     default:
       return new THREE.Euler(0, 0, 0)
   }
-}
+} */

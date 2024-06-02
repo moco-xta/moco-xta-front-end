@@ -1,11 +1,8 @@
-import {
-  FoodInterface,
-  SnakeCellInterface,
-} from '@/interfaces/new/newSnakeGameInterfaces'
+import { SnakeCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-export function generateSnake() {
+export function generateSnake(): SnakeCellInterface[] {
   const snake: SnakeCellInterface[] = []
   for (let i = 0; i < snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.LENGTH; i++) {
     snake.push({

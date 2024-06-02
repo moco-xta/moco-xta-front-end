@@ -1,3 +1,5 @@
+import { SnakeGameInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+
 import {
   generateFood,
   generateSnake,
@@ -6,13 +8,10 @@ import {
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-export function generateSnakeGame() {
+export function generateSnakeGame(): SnakeGameInterface {
   const snake = generateSnake()
   const food = generateFood(snake)
   const grid = updateGrid(snake, food)
-  console.log('snake', snake)
-  console.log('food', food)
-  console.log('grid', grid)
   return {
     isPlaying: false,
     snake: snake,
