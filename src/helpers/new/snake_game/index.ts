@@ -8,6 +8,7 @@ import { nextStep } from '@/helpers/new/snake_game/nextStep'
 import { setGridCellStatus } from '@/helpers/new/snake_game/setGridCellStatus'
 import { setSnakeCellRotation } from '@/helpers/new/snake_game/setSnakeCellRotation'
 import { setSnakeCellType } from '@/helpers/new/snake_game/setSnakeCellType'
+import { setSnakeCellCornerType } from '@/helpers/new/snake_game/setSnakeCellCornerType'
 import { testFoodPosition } from '@/helpers/new/snake_game/testFoodPosition'
 import { updateCamera } from '@/helpers/new/snake_game/updateCamera'
 import { updateDirection } from '@/helpers/new/snake_game/updateDirection'
@@ -26,6 +27,7 @@ export {
   setGridCellStatus,
   setSnakeCellRotation,
   setSnakeCellType,
+  setSnakeCellCornerType,
   testFoodPosition,
   updateCamera,
   updateDirection,

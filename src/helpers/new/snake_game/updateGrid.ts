@@ -16,6 +16,8 @@ export function updateGrid(
       setGridCellStatus(snakeCell.type)
     newGrid[snakeCell.position.x][snakeCell.position.z].snake.direction =
       snakeCell.direction
+    newGrid[snakeCell.position.x][snakeCell.position.z].snake.cornerType =
+      snakeCell.cornerType
   })
   newGrid[food!.position.x][food!.position.z].status = 'FOOD'
   return newGrid

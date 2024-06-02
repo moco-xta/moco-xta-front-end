@@ -1,10 +1,15 @@
 import {
   FoodInterface,
+  PositionInterface,
   SnakeCellInterface,
   UpdateSnakeInterface,
 } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import { setSnakeCellType, updateSnakeHead } from '@/helpers/new/snake_game'
+import {
+  setSnakeCellType,
+  setSnakeCellCornerType,
+  updateSnakeHead,
+} from '@/helpers/new/snake_game'
 
 export function updateSnake(
   snake: SnakeCellInterface[],
@@ -18,13 +23,27 @@ export function updateSnake(
     updateSnakeHead(snake[0], food, direction, nextMove, score)
   newSnake[0] = newSnakeHead
   for (let i = 1; i < snake.length + Number(needFood); i++) {
+    const newSnakeCellType: 'STRAIGHT' | 'CORNER' | 'HEAD' =
+      i === 1 ? setSnakeCellType(snake[i - 1], newSnake[0]) : snake[i - 1].type
+    const newSnakeCellPosition: PositionInterface = {
+      x: snake[i - 1].position.x,
+      z: snake[i - 1].position.z,
+    }
+    const newSnakeCellDirection: string = snake[i - 1].direction
+    const newSnakeCellCornerType =
+      i === 1 && newSnakeCellType === 'CORNER'
+        ? setSnakeCellCornerType(
+            newSnakeCellDirection,
+            newSnakeCellPosition,
+            newSnake[0].position,
+          )
+        : null
+
     const newSnakeCell: SnakeCellInterface = {
-      type: i === 1 ? setSnakeCellType(snake[i - 1], newSnake[0]) : snake[i - 1].type,
-      position: {
-        x: snake[i - 1].position.x,
-        z: snake[i - 1].position.z,
-      },
-      direction: snake[i - 1].direction,
+      type: newSnakeCellType,
+      position: { ...newSnakeCellPosition },
+      direction: newSnakeCellDirection,
+      cornerType: newSnakeCellCornerType,
     }
     newSnake[i] = newSnakeCell
   }

@@ -15,6 +15,7 @@ export function generateSnake(): SnakeCellInterface[] {
         z: snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
       },
       direction: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.DIRECTION,
+      cornerType: null,
     })
   }
   return snake

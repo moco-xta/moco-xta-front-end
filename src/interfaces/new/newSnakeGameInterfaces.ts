@@ -1,4 +1,4 @@
-interface PositionInterface {
+export interface PositionInterface {
   x: number
   z: number
 }
@@ -18,6 +18,7 @@ export interface SnakeCellInterface {
   type: 'HEAD' | 'STRAIGHT' | 'CORNER'
   position: PositionInterface
   direction: string
+  cornerType: string | null
 }
 
 export interface FoodInterface {
@@ -29,7 +30,7 @@ export interface GridCellInterface {
   position: PositionInterface
   snake: {
     direction: string | null
-    corner: string | null
+    cornerType: string | null
   }
 }
 
