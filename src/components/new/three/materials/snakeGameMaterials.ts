@@ -102,3 +102,10 @@ export const snakeYellowXD = new THREE.MeshStandardMaterial({
   color: '#A0892C',
   roughness: 1,
 })
+
+// ARROW TEST PINK
+
+export const arrowTestPink = new THREE.MeshStandardMaterial({
+  color: '#FF69B4',
+  roughness: 1,
+})

@@ -5,9 +5,13 @@ import { CellComponentInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 import { Fruit } from '../../models/snake_game/Fruit'
 import { SnakeCellStraight } from '../../models/snake_game/SnakeCellStraight'
 import { SnakeCellCorner } from '../../models/snake_game/SnakeCellCorner'
+import { ArrowTest } from '../../models/snake_game/ArrowTest'
 
-import { setSnakeCellRotation } from '@/helpers/new/snake_game'
-import { Box } from '@react-three/drei'
+import {
+  setSnakeCellCornerRotation,
+  setSnakeCellCornerScale,
+  setSnakeCellRotation,
+} from '@/helpers/new/snake_game'
 
 export default function NewCell({ cell }: CellComponentInterface) {
   return (
@@ -39,10 +43,11 @@ export default function NewCell({ cell }: CellComponentInterface) {
         />
       )}
       {cell.status === 'SNAKE_CORNER' && (
-        <SnakeCellCorner
+        <ArrowTest
           key={`snake_cell_${cell.position.x}_${cell.position.z}`}
           position={[cell.position.x, 0, cell.position.z]}
-          rotation={setSnakeCellRotation(cell.snake.direction!)}
+          rotation={setSnakeCellCornerRotation(cell.snake.direction!)}
+          scale={setSnakeCellCornerScale(cell.snake.cornerType!)}
           receiveShadow
           castShadow
         />
