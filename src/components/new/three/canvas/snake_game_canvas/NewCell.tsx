@@ -43,10 +43,10 @@ export default function NewCell({ cell }: CellComponentInterface) {
         />
       )}
       {cell.status === 'SNAKE_CORNER' && (
-        <ArrowTest
+        <SnakeCellCorner
           key={`snake_cell_${cell.position.x}_${cell.position.z}`}
           position={[cell.position.x, 0, cell.position.z]}
-          rotation={setSnakeCellCornerRotation(cell.snake.direction!)}
+          rotation={setSnakeCellCornerRotation(cell.snake.cornerType!)}
           scale={setSnakeCellCornerScale(cell.snake.cornerType!)}
           receiveShadow
           castShadow

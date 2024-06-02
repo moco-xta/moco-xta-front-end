@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export function ArrowTest(props: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(
-    gltfConstants.SNAKE_GAME.ARROW_TEST,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.SNAKE_GAME.ARROW_TEST) as GLTFResult
   return (
     <group
       {...props}
