@@ -4,6 +4,7 @@ import { CellComponentInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
 import { Fruit } from '../../models/snake_game/Fruit'
 import { SnakeCellStraight } from '../../models/snake_game/SnakeCellStraight'
+import { SnakeCellCorner } from '../../models/snake_game/SnakeCellCorner'
 
 import { setSnakeCellRotation } from '@/helpers/new/snake_game'
 import { Box } from '@react-three/drei'
@@ -38,16 +39,13 @@ export default function NewCell({ cell }: CellComponentInterface) {
         />
       )}
       {cell.status === 'SNAKE_CORNER' && (
-        <Box
+        <SnakeCellCorner
           key={`snake_cell_${cell.position.x}_${cell.position.z}`}
           position={[cell.position.x, 0, cell.position.z]}
-          scale={0.5}
-        >
-          <meshStandardMaterial
-            attach='material'
-            color={'red'}
-          />
-        </Box>
+          rotation={setSnakeCellRotation(cell.snake.direction!)}
+          receiveShadow
+          castShadow
+        />
       )}
     </>
   )
