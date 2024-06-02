@@ -3,9 +3,19 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import {
+  fruitGreenL,
+  fruitGreenM,
+  fruitGreenD,
+  fruitRedXLL,
+  fruitRedXL,
+  fruitRedL,
+  fruitRedM,
+  fruitRedD,
+  fruitRedXD,
+} from '../../materials/snakeGameMaterials'
 
-import variables from '@/styles/new/variables.module.scss'
+import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -19,17 +29,7 @@ type GLTFResult = GLTF & {
     Fruit_8: THREE.Mesh
     Fruit_9: THREE.Mesh
   }
-  materials: {
-    fruit_red_M: THREE.MeshStandardMaterial
-    fruit_red_L: THREE.MeshStandardMaterial
-    fruit_red_D: THREE.MeshStandardMaterial
-    fruit_red_XD: THREE.MeshStandardMaterial
-    fruit_red_XL: THREE.MeshStandardMaterial
-    fruit_red_XXL: THREE.MeshStandardMaterial
-    fruit_green_M: THREE.MeshStandardMaterial
-    fruit_green_L: THREE.MeshStandardMaterial
-    fruit_green_D: THREE.MeshStandardMaterial
-  }
+  materials: {}
 }
 
 export function Fruit(props: JSX.IntrinsicElements['group']) {
@@ -40,43 +40,60 @@ export function Fruit(props: JSX.IntrinsicElements['group']) {
     <group
       {...props}
       dispose={null}
-      scale={0.5}
     >
       <mesh
         geometry={nodes.Fruit_1.geometry}
-        material={materials.fruit_red_M}
+        material={fruitRedM}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.Fruit_2.geometry}
-        material={materials.fruit_red_L}
+        material={fruitRedL}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.Fruit_3.geometry}
-        material={materials.fruit_red_D}
+        material={fruitRedD}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.Fruit_4.geometry}
-        material={materials.fruit_red_XD}
+        material={fruitRedXD}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.Fruit_5.geometry}
-        material={materials.fruit_red_XL}
+        material={fruitRedXL}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.Fruit_6.geometry}
-        material={materials.fruit_red_XXL}
+        material={fruitRedXLL}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.Fruit_7.geometry}
-        material={materials.fruit_green_M}
+        material={fruitGreenM}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.Fruit_8.geometry}
-        material={materials.fruit_green_L}
+        material={fruitGreenL}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.Fruit_9.geometry}
-        material={materials.fruit_green_D}
+        material={fruitGreenD}
+        receiveShadow
+        castShadow
       />
     </group>
   )

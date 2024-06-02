@@ -47,6 +47,7 @@
   "SNAKE_GAME": {
     "FRUIT": "/new/gltf/snake_game/Fruit.gltf",
     "SNAKE_CELL": "/new/gltf/snake_game/SnakeCell.gltf",
+    "SNAKE_CELL_STRAIGHT": "/new/gltf/snake_game/SnakeCellStraight.gltf",
     "SNAKE_HEAD": "/new/gltf/snake_game/SnakeHead.gltf"
   }
 }
