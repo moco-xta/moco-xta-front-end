@@ -182,7 +182,7 @@ export function updateGrid(
   snake.forEach((snakeCell) => {
     newGrid[snakeCell.position.x][snakeCell.position.z].status = snakeCell.head
       ? 'SNAKE_HEAD'
-      : 'SNAKE'
+      : 'SNAKE_STRAIGHT'
     newGrid[snakeCell.position.x][snakeCell.position.z].snakeCellDirection =
       snakeCell.direction
   })

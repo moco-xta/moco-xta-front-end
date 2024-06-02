@@ -1,18 +1,18 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { SnakeGameInterface } from '@/interfaces/new/snakeGameInterfaces'
+import { SnakeGameInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
 import {
   generateFood,
   generateGrid,
-  generateSnake,
   nextStep,
   updateGrid,
 } from '@/helpers/new/snakeGameHelpers'
+import { generateSnake, generateSnakeGame } from '@/helpers/new/snake_game'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-const initialState: SnakeGameInterface = {
+/* const initialState: SnakeGameInterface = {
   isPlaying: false,
   snake: generateSnake(),
   grid: generateGrid(),
@@ -21,18 +21,20 @@ const initialState: SnakeGameInterface = {
   nextMove: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.NEXT_MOVE,
   score: 0,
   level: 1,
-}
+} */
+
+const initialState: SnakeGameInterface = generateSnakeGame()
 
 const snakeGameSlice = createSlice({
   name: 'SnakeGame',
   initialState,
   reducers: {
-    setSnakeGame: (state) => {
-      state.food = generateFood(state.snake)
-      state.grid = updateGrid(state.snake, state.food)
-    },
     setIsPlaying: (state) => {
       state.isPlaying = !state.isPlaying
+    },
+    /* setSnakeGame: (state) => {
+      state.food = generateFood(state.snake)
+      state.grid = updateGrid(state.snake, state.food)
     },
     setNextMove: (state, action: PayloadAction<string>) => {
       state.nextMove = action.payload
@@ -54,11 +56,12 @@ const snakeGameSlice = createSlice({
       state.direction = newDirection
       state.nextMove = newNextMove
       state.score = newScore
-    },
+    }, */
   },
 })
 
-export const { setIsPlaying, setNextMove, setNextStep, setSnakeGame } =
-  snakeGameSlice.actions
+export const {
+  /* setIsPlaying, setNextMove, setNextStep, setSnakeGame */
+} = snakeGameSlice.actions
 
 export default snakeGameSlice.reducer
