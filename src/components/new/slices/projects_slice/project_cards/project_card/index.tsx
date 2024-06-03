@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslations } from 'next-intl'
 
 import { ProjectCardInterface } from '@/interfaces/new/projectsInterfaces'
 
@@ -9,7 +10,16 @@ export default function ProjectCard({
   currentProject,
   projectData,
 }: ProjectCardInterface) {
+  const t = useTranslations('PROJECTS')
+
   return (
-    <div className='project_card'>ProjectCard {index} {currentProject}</div>
+    <div
+      key={`project_card_${index}`}
+      className={`transition ${index === currentProject ? 'intersecting_project' : 'not_intersecting_project'} project_card`}
+      style={{ backgroundColor: projectData.backgroundColor.card }}
+    >
+      <div>Left</div>
+      <div>Right</div>
+    </div>
   )
 }

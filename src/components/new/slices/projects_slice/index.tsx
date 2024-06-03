@@ -6,6 +6,7 @@ import { projectsData } from '@/data/projects/projectsData'
 import { companiesAndSchollData } from '@/data/projects/companiesAndSchoolData'
 
 import ProjectCards from './project_cards'
+import CompanyOrSchoolCards from './company_or_school_cards'
 import CurrentDate from './current_date'
 
 import { isValidDate } from '@/helpers/new/dateHelpers'
@@ -25,8 +26,12 @@ export default function ProjectsSlice() {
         }} */
         className='responsive_background'
       >
-        <ProjectCards
-            currentProject={currentProject}
+        <ProjectCards currentProject={currentProject} />
+        <CompanyOrSchoolCards
+        /* companiesAndSchollData={companiesAndSchollData}
+          currentCompanyOrSchool={currentCompanyOrSchool}
+          projectsData={projectsData}
+          currentProject={currentProject} */
         />
         {isValidDate(currentDate) && (
           <CurrentDate
