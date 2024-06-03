@@ -13,6 +13,14 @@ $success_dark_color: #0a7a18;
 $alert_light_color: #ec2a5f;
 $alert_dark_color: #b20030;
 
+// FONTS
+
+$font_size_small: 1em;
+$font_size_medium: 1.5em;
+$font_size_large: 3em;
+$font_size_extra_large: 6em;
+$font_size_alert: 0.8em;
+
 // TEXTS
 
 $text_alert: $alert_light_color;
@@ -119,6 +127,11 @@ $reviews_slice_height_XL: 80vh;
 $reviews_slice_height_L: 70vh;
 $reviews_slice_height_M: 60vh;
 $reviews_slice_height_S: 55vh;
+
+// PROJECTS
+
+$projects_margin_top: 10vh;
+$projects_margin_left: 5vw;
 
 // SNAKE GAME
 

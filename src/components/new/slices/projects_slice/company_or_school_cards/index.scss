@@ -1,0 +1,8 @@
+@import '@/styles/new/variables.module.scss';
+
+#company_or_school_cards {
+  z-index: 1;
+  position: absolute;
+  margin-top: $projects_margin_top;
+  margin-left: 60vw;
+}
