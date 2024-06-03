@@ -4,16 +4,15 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import {
-  snakeGreenXL,
-  snakeGreenL,
-  snakeGreenM,
-  snakeGreenD,
-  snakeGreenXD,
-  snakeYellowXL,
-  snakeYellowL,
-  snakeYellowM,
-  snakeYellowD,
-  snakeYellowXD,
+  snakeTurquoiseL,
+  snakeTurquoiseD,
+  snakeBlack,
+  snakeBlue,
+  snakeBrown,
+  snakeOrangeL,
+  snakeOrangeD,
+  snakeRedM,
+  snakeRedXXL,
 } from '../../materials/snakeGameMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
@@ -29,7 +28,6 @@ type GLTFResult = GLTF & {
     SnakeCellStraight_7: THREE.Mesh
     SnakeCellStraight_8: THREE.Mesh
     SnakeCellStraight_9: THREE.Mesh
-    SnakeCellStraight_10: THREE.Mesh
   }
   materials: {}
 }
@@ -46,61 +44,55 @@ export function SnakeCellStraight(props: JSX.IntrinsicElements['group']) {
     >
       <mesh
         geometry={nodes.SnakeCellStraight_1.geometry}
-        material={snakeGreenM}
+        material={snakeBlack}
         receiveShadow
         castShadow
       />
       <mesh
         geometry={nodes.SnakeCellStraight_2.geometry}
-        material={snakeGreenXL}
+        material={snakeTurquoiseD}
         receiveShadow
         castShadow
       />
       <mesh
         geometry={nodes.SnakeCellStraight_3.geometry}
-        material={snakeGreenXD}
+        material={snakeOrangeD}
         receiveShadow
         castShadow
       />
       <mesh
         geometry={nodes.SnakeCellStraight_4.geometry}
-        material={snakeGreenD}
+        material={snakeBrown}
         receiveShadow
         castShadow
       />
       <mesh
         geometry={nodes.SnakeCellStraight_5.geometry}
-        material={snakeGreenL}
+        material={snakeBlue}
         receiveShadow
         castShadow
       />
       <mesh
         geometry={nodes.SnakeCellStraight_6.geometry}
-        material={snakeYellowXL}
+        material={snakeRedM}
         receiveShadow
         castShadow
       />
       <mesh
         geometry={nodes.SnakeCellStraight_7.geometry}
-        material={snakeYellowXD}
+        material={snakeRedXXL}
         receiveShadow
         castShadow
       />
       <mesh
         geometry={nodes.SnakeCellStraight_8.geometry}
-        material={snakeYellowD}
+        material={snakeTurquoiseL}
         receiveShadow
         castShadow
       />
       <mesh
         geometry={nodes.SnakeCellStraight_9.geometry}
-        material={snakeYellowM}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.SnakeCellStraight_10.geometry}
-        material={snakeYellowL}
+        material={snakeOrangeL}
         receiveShadow
         castShadow
       />

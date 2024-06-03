@@ -76,6 +76,58 @@ export const grassGreenXD = new THREE.MeshStandardMaterial({
   roughness: 1,
 })
 
+// SNAKE CALIFORNIA RED SIDED GARTER SNAKE
+
+export const snakeTurquoiseL = new THREE.MeshStandardMaterial({
+  color: '#37C8AB',
+  roughness: 1,
+})
+
+export const snakeTurquoiseD = new THREE.MeshStandardMaterial({
+  color: '#307F76',
+  roughness: 1,
+})
+
+export const snakeBlack = new THREE.MeshStandardMaterial({
+  color: '#000000',
+  roughness: 1,
+})
+
+export const snakeBlue = new THREE.MeshStandardMaterial({
+  color: '#09164E',
+  roughness: 1,
+})
+
+export const snakeBrown = new THREE.MeshStandardMaterial({
+  color: '#4E1301',
+  roughness: 1,
+})
+
+export const snakeOrangeL = new THREE.MeshStandardMaterial({
+  color: '#FF6600',
+  roughness: 1,
+})
+
+export const snakeOrangeD = new THREE.MeshStandardMaterial({
+  color: '#AE4A16',
+  roughness: 1,
+})
+
+export const snakeRedXXL = new THREE.MeshStandardMaterial({
+  color: '#FF8080',
+  roughness: 1,
+})
+
+export const snakeRedM = new THREE.MeshStandardMaterial({
+  color: '#FF0000',
+  roughness: 1,
+})
+
+export const snakeRedXD = new THREE.MeshStandardMaterial({
+  color: '#AA0000',
+  roughness: 1,
+})
+
 // SNAKE GREEN
 
 export const snakeGreenXL = new THREE.MeshStandardMaterial({

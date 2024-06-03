@@ -3,14 +3,33 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import {
+  snakeTurquoiseL,
+  snakeTurquoiseD,
+  snakeBlack,
+  snakeBlue,
+  snakeBrown,
+  snakeOrangeL,
+  snakeOrangeD,
+  snakeRedXXL,
+  snakeRedM,
+  snakeRedXD,
+} from '../../materials/snakeGameMaterials'
 
-import variables from '@/styles/new/variables.module.scss'
+import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
-    SnakeHead: THREE.Mesh
+    SnakeHead_1: THREE.Mesh
+    SnakeHead_2: THREE.Mesh
+    SnakeHead_3: THREE.Mesh
+    SnakeHead_4: THREE.Mesh
+    SnakeHead_5: THREE.Mesh
+    SnakeHead_6: THREE.Mesh
+    SnakeHead_7: THREE.Mesh
+    SnakeHead_8: THREE.Mesh
+    SnakeHead_9: THREE.Mesh
+    SnakeHead_10: THREE.Mesh
   }
   materials: {}
 }
@@ -18,21 +37,71 @@ type GLTFResult = GLTF & {
 export function SnakeHead(props: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(gltfConstants.SNAKE_GAME.SNAKE_HEAD) as GLTFResult
   return (
-    <mesh
-      geometry={nodes.SnakeHead.geometry}
-      receiveShadow
-      castShadow
+    <group
       {...props}
+      dispose={null}
     >
-      <meshPhysicalMaterial
-        attach='material'
-        color={variables.snake_game_snake_cell}
-        roughness={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.ROUGHNESS}
-        metalness={0}
-        transparent
-        opacity={snakeGameConstants.SNAKE_GAME.MODELS.SNAKE_CELL.OPACITY}
+      <mesh
+        geometry={nodes.SnakeHead_1.geometry}
+        material={snakeBlack}
+        receiveShadow
+        castShadow
       />
-    </mesh>
+      <mesh
+        geometry={nodes.SnakeHead_2.geometry}
+        material={snakeTurquoiseD}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.SnakeHead_3.geometry}
+        material={snakeOrangeD}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.SnakeHead_4.geometry}
+        material={snakeBrown}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.SnakeHead_5.geometry}
+        material={snakeBlue}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.SnakeHead_6.geometry}
+        material={snakeRedM}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.SnakeHead_7.geometry}
+        material={snakeRedXD}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.SnakeHead_8.geometry}
+        material={snakeRedXXL}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.SnakeHead_9.geometry}
+        material={snakeTurquoiseL}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.SnakeHead_10.geometry}
+        material={snakeOrangeL}
+        receiveShadow
+        castShadow
+      />
+    </group>
   )
 }
 
