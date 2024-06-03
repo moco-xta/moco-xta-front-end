@@ -12,7 +12,7 @@ export function generateGrid(): GridCellInterface[][] {
         position: { x: x, z: z },
         snake: {
           direction: null,
-          corner: null,
+          cornerType: null,
         },
       }
       grid[x].push(newCell)

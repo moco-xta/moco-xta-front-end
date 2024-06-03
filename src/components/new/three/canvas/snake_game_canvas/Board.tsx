@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { setNextStep, setSnakeGame } from '@/redux/slice/snakeGameSlice'
+import { setNextStep /* setSnakeGame */ } from '@/redux/slice/snakeGameSlice'
 
 import useSnakeGame from '@/hooks/new/useSnakeGameKeyboard'
 
@@ -17,7 +17,7 @@ export default function Board() {
   useSnakeGame()
 
   useEffect(() => {
-    dispatch(setSnakeGame())
+    /* dispatch(setSnakeGame()) */
   }, [dispatch])
 
   const nextStep = setInterval(() => {
@@ -32,14 +32,14 @@ export default function Board() {
 
   return (
     <group>
-      {snakeGameState.grid.map((cellsColumn, columnIndex) =>
+      {/* {snakeGameState.grid.map((cellsColumn, columnIndex) =>
         cellsColumn.map((cell, rowIndex) => (
           <Cell
             key={`grid_cell_${columnIndex}_${rowIndex}`}
             cell={cell}
           />
         )),
-      )}
+      )} */}
     </group>
   )
 }

@@ -46,6 +46,7 @@ export function updateSnakeHead(
           : snakeHead.position.z,
     },
     direction: newDirection,
+    cornerType: null,
   }
   return {
     newSnakeHead: newSnakeHead,
