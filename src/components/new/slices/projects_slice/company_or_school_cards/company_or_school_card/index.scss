@@ -1,23 +1,16 @@
-.companie_or_school_card {
+@import '@/styles/new/variables.module.scss';
+
+.company_or_school_card {
   position: absolute;
-  left: 60%;
-  bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  .company_or_school_logo {
-    margin-bottom: 30px;
-    cursor: pointer;
-  }
-
-  .company_or_school_as {
-  }
+  gap: $gap_S;
 }
 
 .not_intersecting_company_or_school {
   opacity: 0;
-  transform: translate(20px, 50px);
+  transform: translate(50px, 20px);
 }
 
 .intersecting_company_or_school {

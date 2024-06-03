@@ -28,10 +28,8 @@ export default function ProjectsSlice() {
       >
         <ProjectCards currentProject={currentProject} />
         <CompanyOrSchoolCards
-        /* companiesAndSchollData={companiesAndSchollData}
           currentCompanyOrSchool={currentCompanyOrSchool}
-          projectsData={projectsData}
-          currentProject={currentProject} */
+          currentProject={currentProject}
         />
         {isValidDate(currentDate) && (
           <CurrentDate
