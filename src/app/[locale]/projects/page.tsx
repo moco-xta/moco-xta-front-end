@@ -1,7 +1,7 @@
 import React from 'react'
 
-import ProjectSlice from '@/components/slices/projects_slice'
+import ProjectsSlice from '@/components/new/slices/projects_slice'
 
 export default function Projects() {
-  return <ProjectSlice />
+  return <ProjectsSlice />
 }
