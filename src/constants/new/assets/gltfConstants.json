@@ -45,8 +45,11 @@
     "ROUNDED_CUBE": "/new/gltf/rubiks_cube/RoundedCube.gltf"
   },
   "SNAKE_GAME": {
+    "ARROW_TEST": "/new/gltf/snake_game/ArrowTest.gltf",
     "FRUIT": "/new/gltf/snake_game/Fruit.gltf",
-    "SNAKE_CELL": "/new/gltf/snake_game/SnakeCell.gltf",
+    "GRASS": "/new/gltf/snake_game/Grass.gltf",
+    "SNAKE_CELL_CORNER": "/new/gltf/snake_game/SnakeCellCorner.gltf",
+    "SNAKE_CELL_STRAIGHT": "/new/gltf/snake_game/SnakeCellStraight.gltf",
     "SNAKE_HEAD": "/new/gltf/snake_game/SnakeHead.gltf"
   }
 }

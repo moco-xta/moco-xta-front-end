@@ -24,7 +24,12 @@
     }
   },
   "SNAKE_GAME": {
-    "INITIAL_SPEED": 200,
+    "DEFAULT": {
+      "LENGTH": 10,
+      "DIRECTION": "EAST",
+      "NEXT_MOVE": "ArrowUp",
+      "SPEED": 200
+    },
     "BOARD": {
       "WIDTH": 30,
       "HEIGHT": 20
@@ -34,8 +39,8 @@
         "SCALE": 0.8
       },
       "DEFAULT": {
-        "LENGTH": 5,
-        "DIRECTION": "RIGHT",
+        "LENGTH": 14,
+        "DIRECTION": "EAST",
         "NEXT_MOVE": "ArrowUp"
       }
     },

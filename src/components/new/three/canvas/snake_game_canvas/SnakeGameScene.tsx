@@ -1,13 +1,15 @@
 import React from 'react'
 
-import Board from './Board'
+import NewBoard from './NewBoard'
+import Ground from './Ground'
 import Grid from './Grid'
 
 export default function SnakeGameScene() {
   return (
     <>
-      <Board />
-      <Grid />
+      <NewBoard />
+      <Ground />
+      {/* <Grid /> */}
     </>
   )
 }

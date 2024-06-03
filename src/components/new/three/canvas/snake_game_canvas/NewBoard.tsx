@@ -1,24 +1,20 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
+import useSnakeGameKeyboard from '@/hooks/new/useSnakeGameKeyboard'
+
 import { AppDispatch, RootState } from '@/redux/store'
-import { setNextStep, setSnakeGame } from '@/redux/slice/snakeGameSlice'
+import { setNextStep } from '@/redux/slice/snakeGameSlice'
 
-import useSnakeGame from '@/hooks/new/useSnakeGameKeyboard'
-
-import Cell from './Cell'
+import NewCell from './NewCell'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-export default function Board() {
+export default function NewBoard() {
   const dispatch = useDispatch<AppDispatch>()
   const snakeGameState = useSelector((state: RootState) => state.snakeGame)
 
-  useSnakeGame()
-
-  useEffect(() => {
-    dispatch(setSnakeGame())
-  }, [dispatch])
+  const {} = useSnakeGameKeyboard()
 
   const nextStep = setInterval(() => {
     if (snakeGameState.isPlaying) {
@@ -34,7 +30,7 @@ export default function Board() {
     <group>
       {snakeGameState.grid.map((cellsColumn, columnIndex) =>
         cellsColumn.map((cell, rowIndex) => (
-          <Cell
+          <NewCell
             key={`grid_cell_${columnIndex}_${rowIndex}`}
             cell={cell}
           />

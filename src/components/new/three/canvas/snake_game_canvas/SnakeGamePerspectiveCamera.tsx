@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 
 import { RootState } from '@/redux/store'
 
-import { updateCamera } from '@/helpers/new/snakeGameHelpers'
+import { updateCamera } from '@/helpers/new/snake_game'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
@@ -35,8 +35,6 @@ export default function SnakeGamePerspectiveCamera() {
         newCameraRotation.z,
       )
     }
-    /* state.camera.position.set(position.x, position.y, position.z)
-     */
   })
 
   return (

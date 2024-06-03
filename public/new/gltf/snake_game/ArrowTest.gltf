@@ -13,32 +13,31 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "SnakeCell"
+      "name": "ArrowTest",
+      "translation": [0, 0, -1]
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "name": "snake_cell_#393939",
+      "name": "arrow_test_pink",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.040914930403232574, 0.04091523587703705, 0.040915217250585556,
-          0.8999999761581421
-        ],
+        "baseColorFactor": [1, 0.1412632018327713, 0.45641112327575684, 1],
         "metallicFactor": 0
       }
     }
   ],
   "meshes": [
     {
-      "name": "SnakeCell",
+      "name": "ArrowTest",
       "primitives": [
         {
           "attributes": {
             "POSITION": 0,
-            "NORMAL": 1
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
           },
-          "indices": 2,
+          "indices": 3,
           "material": 0
         }
       ]
@@ -48,48 +47,60 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 2112,
-      "max": [0.4686979651451111, 0.4686979055404663, 0.4686979055404663],
-      "min": [-0.46869784593582153, -0.4686979055404663, -0.4686979055404663],
+      "count": 72,
+      "max": [0.27000001072883606, 0.44999998807907104, 0.09000000357627869],
+      "min": [-0.44999998807907104, -0.44999998807907104, -0.44999998807907104],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 2112,
+      "count": 72,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
+      "componentType": 5126,
+      "count": 72,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
       "componentType": 5123,
-      "count": 7236,
+      "count": 144,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 25344,
+      "byteLength": 864,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 25344,
-      "byteOffset": 25344,
+      "byteLength": 864,
+      "byteOffset": 864,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 14472,
-      "byteOffset": 50688,
+      "byteLength": 576,
+      "byteOffset": 1728,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 2304,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 65160,
-      "uri": "SnakeCell.bin"
+      "byteLength": 2592,
+      "uri": "ArrowTest.bin"
     }
   ]
 }
