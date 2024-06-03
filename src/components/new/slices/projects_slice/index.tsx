@@ -25,7 +25,9 @@ export default function ProjectsSlice() {
         }} */
         className='responsive_background'
       >
-        <ProjectCards />
+        <ProjectCards
+            currentProject={currentProject}
+        />
         {isValidDate(currentDate) && (
           <CurrentDate
             currentDate={currentDate}

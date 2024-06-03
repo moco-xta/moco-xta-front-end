@@ -20,3 +20,13 @@ export interface TimelineInterface {
   currentProject: number
   projectsData: ProjectDataInterface[]
 }
+
+export interface ProjectCardsInterface {
+  currentProject: number
+}
+
+export interface ProjectCardInterface {
+  index: number
+  currentProject: number
+  projectData: ProjectDataInterface
+}
