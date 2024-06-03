@@ -5,6 +5,7 @@ import useProjectsTimeline from '@/hooks/new/useProjectsTimeline'
 import { projectsData } from '@/data/projects/projectsData'
 import { companiesAndSchollData } from '@/data/projects/companiesAndSchoolData'
 
+import ProjectCards from './project_cards'
 import CurrentDate from './current_date'
 
 import { isValidDate } from '@/helpers/new/dateHelpers'
@@ -24,6 +25,7 @@ export default function ProjectsSlice() {
         }} */
         className='responsive_background'
       >
+        <ProjectCards />
         {isValidDate(currentDate) && (
           <CurrentDate
             currentDate={currentDate}
