@@ -18,7 +18,7 @@ export default function Plan() {
           {cellsColumn.map((cell, rowIndex) => (
             <div
               key={`cell_plan_${columnIndex}_${rowIndex}`}
-              /* className={`cell ${cell.status === 'FOOD' ? 'food' : cell.status === 'SNAKE' ? 'snake_cell' : ''}`} */
+              className={`cell ${cell.status === 'FOOD' ? 'food' : cell.status === 'SNAKE_HEAD' || cell.status === 'SNAKE_STRAIGHT' || cell.status === 'SNAKE_CORNER' ? 'snake_cell' : ''}`}
             />
           ))}
         </div>

@@ -15,13 +15,13 @@ export default function Dashboard() {
 
   return (
     <div id='dashboard'>
-      <div id='top_dashboard'>
+      {/* <div id='top_dashboard'>
         <SnakeGameData />
         <Contacts />
-      </div>
-      {!isPlaying && <PlaySnakeGameButton />}
+      </div> */}
+      {/* {!isPlaying && <PlaySnakeGameButton />} */}
       {/* {isPlaying &&  */}
-      <ControlSnakeGameButtons />
+      {/* <ControlSnakeGameButtons /> */}
       {/* } */}
     </div>
   )
