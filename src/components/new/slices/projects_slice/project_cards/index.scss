@@ -2,6 +2,7 @@
 
 #project_cards {
   width: 60%;
+  max-width: 1000px;
   height: 100%;
-  background-color: lime;
+  padding: $projects_margin_top 0 0 $projects_margin_left;
 }

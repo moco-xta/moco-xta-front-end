@@ -1,13 +1,48 @@
 @import '@/styles/new/variables.module.scss';
 
-@import '@/styles/variables.module.scss';
-
 .project_card {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-radius: 20px;
   transition: all 2s ease-in-out;
+
+  .project_card_left_panel {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .home_page_img {
+      width: 100%;
+      height: auto;
+      margin-left: -15px;
+    }
+
+    .project_description {
+      text-align: justify;
+      margin-right: 28px;
+    }
+
+    .roles {
+      font-weight: bold;
+      line-height: 50px;
+
+      .role {
+        font-size: $font_size_large;
+        margin-bottom: 15px;
+      }
+
+      .role:last-child {
+        font-size: $font_size_extra_large;
+        line-height: 85px;
+      }
+    }
+  }
 }
 
 .transition {

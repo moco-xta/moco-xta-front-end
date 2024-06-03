@@ -123,7 +123,7 @@ export const projectsData: ProjectDataInterface[] = [
   },
   {
     key: 'openclassrooms',
-    name: 'openclassrooms',
+    name: 'Openclassrooms',
     url: 'https://openclassrooms.com/en/',
     image: '/new/img/png/projects/home_pages/openclassrooms.png',
     descriptionsKey: 'DESCRIPTIONS.OPENCLASSROOMS',
