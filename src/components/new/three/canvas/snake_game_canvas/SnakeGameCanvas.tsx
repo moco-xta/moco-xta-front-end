@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
 
-import SnakeGamePerspectiveCamera from './SnakeGamePerspectiveCamera'
+import SnakeGameCamera from './SnakeGameCamera'
 import Lights from './Lights'
 import SnakeScene from './SnakeGameScene'
 import PostProcessing from './PostProcessing'
@@ -23,7 +23,7 @@ export default function SnakeGameCanvas() {
         powerPreference: snakeGameConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
-      <SnakeGamePerspectiveCamera />
+      <SnakeGameCamera />
       <Lights />
       <Suspense>
         <Physics debug>
