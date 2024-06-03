@@ -1,2 +1,15 @@
 @import '@/styles/new/variables.module.scss';
 
+#project_timeline_container {
+  width: 100vww;
+  height: 800vh;
+
+  #project_slice {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    // transition: background-color 1s linear;
+  }
+}
