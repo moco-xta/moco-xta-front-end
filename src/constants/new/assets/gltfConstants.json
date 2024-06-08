@@ -5,7 +5,8 @@
     "LOGO_MOCO_2": "/new/gltf/logos/LogoMoco2.gltf",
     "LOGO_MOCO_3": "/new/gltf/logos/LogoMoco3.gltf",
     "LOGO_NEXTJS": "/new/gltf/logos/LogoNextjs.gltf",
-    "LOGO_SPRING": "/new/gltf/logos/LogoSpring.gltf"
+    "LOGO_SPRING": "/new/gltf/logos/LogoSpring.gltf",
+    "LOGO_TWITTER": "/new/gltf/logos/LogoTwitter.gltf"
   },
   "HERO": {
     "M_HELIUM_BALLOON": "/new/gltf/hero/MHeliumBalloon.gltf",

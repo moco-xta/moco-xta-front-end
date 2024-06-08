@@ -11,7 +11,7 @@ import {
 
 import { Routes } from '@/routes/new/routes'
 
-import LogoCanvas from '@/components/new/three/canvas/logo/LogoCanvas'
+import LogoCanvas from '@/components/new/three/canvas/logo_canvas/LogoCanvas'
 
 import './index.scss'
 
