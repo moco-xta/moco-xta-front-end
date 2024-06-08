@@ -4,16 +4,15 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import {
-  snakeGreenXL,
-  snakeGreenL,
-  snakeGreenM,
-  snakeGreenD,
-  snakeGreenXD,
-  snakeYellowXL,
-  snakeYellowL,
-  snakeYellowM,
-  snakeYellowD,
-  snakeYellowXD,
+  snakeTurquoiseL,
+  snakeTurquoiseD,
+  snakeBlack,
+  snakeBlue,
+  snakeBrown,
+  snakeOrangeL,
+  snakeOrangeD,
+  snakeRedM,
+  snakeRedXXL,
 } from '../../materials/snakeGameMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
@@ -29,7 +28,6 @@ type GLTFResult = GLTF & {
     SnakeCellCorner_7: THREE.Mesh
     SnakeCellCorner_8: THREE.Mesh
     SnakeCellCorner_9: THREE.Mesh
-    SnakeCellCorner_10: THREE.Mesh
   }
   materials: {}
 }
@@ -46,43 +44,57 @@ export function SnakeCellCorner(props: JSX.IntrinsicElements['group']) {
     >
       <mesh
         geometry={nodes.SnakeCellCorner_1.geometry}
-        material={snakeGreenM}
+        material={snakeTurquoiseD}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.SnakeCellCorner_2.geometry}
-        material={snakeGreenL}
+        material={snakeBlack}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.SnakeCellCorner_3.geometry}
-        material={snakeGreenXL}
+        material={snakeRedM}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.SnakeCellCorner_4.geometry}
-        material={snakeGreenD}
+        material={snakeRedXXL}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.SnakeCellCorner_5.geometry}
-        material={snakeGreenXD}
+        material={snakeBlue}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.SnakeCellCorner_6.geometry}
-        material={snakeYellowM}
+        material={snakeBrown}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.SnakeCellCorner_7.geometry}
-        material={snakeYellowL}
+        material={snakeOrangeD}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.SnakeCellCorner_8.geometry}
-        material={snakeYellowXL}
+        material={snakeTurquoiseL}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.SnakeCellCorner_9.geometry}
-        material={snakeYellowD}
-      />
-      <mesh
-        geometry={nodes.SnakeCellCorner_10.geometry}
-        material={snakeYellowXD}
+        material={snakeOrangeL}
+        receiveShadow
+        castShadow
       />
     </group>
   )

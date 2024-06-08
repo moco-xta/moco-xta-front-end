@@ -13,14 +13,9 @@ import '@/styles/new/globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const karmaticArcade = localFont({
-  src: '../../fonts/ttf/karmatic_arcade.ttf',
-  variable: '--font-karmatic-arcade',
-})
-
-const upheavtt = localFont({
-  src: '../../fonts/ttf/upheavtt.ttf',
-  variable: '--font-upheavtt',
+const retorGaming = localFont({
+  src: '../../fonts/ttf/Retro Gaming.ttf',
+  variable: '--font-retro-gaming',
 })
 
 export const metadata: Metadata = {
@@ -40,9 +35,7 @@ export default function RootLayout({
   return (
     <>
       <html lang={locale}>
-        <body
-          className={`${inter.className} ${karmaticArcade.variable} ${upheavtt.variable}`}
-        >
+        <body className={`${inter.className} ${retorGaming.variable}`}>
           <GoogleAnalytics
             gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />

@@ -21,10 +21,10 @@ export default function ProjectsSlice() {
     <div id='project_timeline_container'>
       <section
         id='project_slice'
-        /* style={{
+        style={{
           backgroundColor: projectsData[currentProject].backgroundColor.page,
-        }} */
-        className='responsive_background'
+        }}
+        /* className='responsive_background' */
       >
         <ProjectCards currentProject={currentProject} />
         <CompanyOrSchoolCards
