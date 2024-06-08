@@ -14,9 +14,9 @@
       "DISTANCE_FROM_SNAKE_HEAD": 5
     },
     "ROTATION": {
-      "TILT": 40
+      "TILT": 35
     },
-    "FOV": 70
+    "FOV": 60
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
@@ -39,7 +39,7 @@
         "SCALE": 0.8
       },
       "DEFAULT": {
-        "LENGTH": 14,
+        "LENGTH": 5,
         "DIRECTION": "EAST",
         "NEXT_MOVE": "ArrowUp"
       }

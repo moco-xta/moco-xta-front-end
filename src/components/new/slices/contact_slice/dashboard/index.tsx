@@ -11,13 +11,17 @@ import ControlSnakeGameButtons from '@/components/new/buttons/control_snake_game
 import './index.scss'
 
 export default function Dashboard() {
-  const isPlaying = useSelector((state: RootState) => state.snakeGame.isPlaying)
+  const snakeGameState = useSelector((state: RootState) => state.snakeGame)
 
   return (
     <div id='dashboard'>
+      <div>
+        <p>Score: {snakeGameState.score}</p>
+        <p>Level: {snakeGameState.level}</p>
+      </div>
+      <Contacts />
       {/* <div id='top_dashboard'>
         <SnakeGameData />
-        <Contacts />
       </div> */}
       {/* {!isPlaying && <PlaySnakeGameButton />} */}
       {/* {isPlaying &&  */}

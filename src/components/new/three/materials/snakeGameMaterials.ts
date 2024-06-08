@@ -19,56 +19,58 @@ export const fruitGreenD = new THREE.MeshStandardMaterial({
 
 // FRUIT RED
 
+const FRUIT_RED_ROUGHNESS = 0.2
+
 export const fruitRedXLL = new THREE.MeshStandardMaterial({
   color: '#FF99A0',
-  roughness: 1,
+  roughness: FRUIT_RED_ROUGHNESS,
 })
 
 export const fruitRedXL = new THREE.MeshStandardMaterial({
   color: '#FF2732',
-  roughness: 1,
+  roughness: FRUIT_RED_ROUGHNESS,
 })
 
 export const fruitRedL = new THREE.MeshStandardMaterial({
   color: '#DF212C',
-  roughness: 1,
+  roughness: FRUIT_RED_ROUGHNESS,
 })
 
 export const fruitRedM = new THREE.MeshStandardMaterial({
   color: '#B71E27',
-  roughness: 1,
+  roughness: FRUIT_RED_ROUGHNESS,
 })
 
 export const fruitRedD = new THREE.MeshStandardMaterial({
   color: '#A01B1F',
-  roughness: 1,
+  roughness: FRUIT_RED_ROUGHNESS,
 })
 
 export const fruitRedXD = new THREE.MeshStandardMaterial({
   color: '#5A1215',
-  roughness: 1,
+  roughness: FRUIT_RED_ROUGHNESS,
 })
 
 // GRASS GREEN
 
 export const grassGreenXL = new THREE.MeshStandardMaterial({
   color: '#5B8B32',
-  roughness: 1,
+  roughness: 0.35,
 })
 
 export const grassGreenL = new THREE.MeshStandardMaterial({
   color: '#5B8730',
-  roughness: 1,
+  roughness: 0.5,
 })
 
 export const grassGreenM = new THREE.MeshStandardMaterial({
   color: '#527A2D',
-  roughness: 1,
+  roughness: 0.7,
 })
 
 export const grassGreenD = new THREE.MeshStandardMaterial({
   color: '#4A6F28',
-  roughness: 1,
+  roughness: 0.9,
 })
 
 export const grassGreenXD = new THREE.MeshStandardMaterial({
@@ -78,54 +80,67 @@ export const grassGreenXD = new THREE.MeshStandardMaterial({
 
 // SNAKE CALIFORNIA RED SIDED GARTER SNAKE
 
-export const snakeTurquoiseL = new THREE.MeshStandardMaterial({
+const SNAKE_CALIFORNIA_ROUGHNESS = 0.5
+const SNAKE_CALIFORNIA_METALNESS = 0.6
+
+export const snakeTurquoiseL = new THREE.MeshPhysicalMaterial({
   color: '#37C8AB',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
-export const snakeTurquoiseD = new THREE.MeshStandardMaterial({
+export const snakeTurquoiseD = new THREE.MeshPhysicalMaterial({
   color: '#307F76',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
-export const snakeBlack = new THREE.MeshStandardMaterial({
+export const snakeBlack = new THREE.MeshPhysicalMaterial({
   color: '#000000',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
-export const snakeBlue = new THREE.MeshStandardMaterial({
+export const snakeBlue = new THREE.MeshPhysicalMaterial({
   color: '#09164E',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
-export const snakeBrown = new THREE.MeshStandardMaterial({
+export const snakeBrown = new THREE.MeshPhysicalMaterial({
   color: '#4E1301',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
-export const snakeOrangeL = new THREE.MeshStandardMaterial({
+export const snakeOrangeL = new THREE.MeshPhysicalMaterial({
   color: '#FF6600',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
-export const snakeOrangeD = new THREE.MeshStandardMaterial({
+export const snakeOrangeD = new THREE.MeshPhysicalMaterial({
   color: '#AE4A16',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
-export const snakeRedXXL = new THREE.MeshStandardMaterial({
+export const snakeRedXXL = new THREE.MeshPhysicalMaterial({
   color: '#FF8080',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
-export const snakeRedM = new THREE.MeshStandardMaterial({
+export const snakeRedM = new THREE.MeshPhysicalMaterial({
   color: '#FF0000',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
-export const snakeRedXD = new THREE.MeshStandardMaterial({
+export const snakeRedXD = new THREE.MeshPhysicalMaterial({
   color: '#AA0000',
-  roughness: 1,
+  roughness: SNAKE_CALIFORNIA_ROUGHNESS,
+  metalness: SNAKE_CALIFORNIA_METALNESS,
 })
 
 // SNAKE GREEN
