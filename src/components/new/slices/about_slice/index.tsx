@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { isMobile } from 'react-device-detect'
 
+import AboutCanvas from '../../three/canvas/about_canvas/AboutCanvas'
 import DeviceMotionPermission from './device_motion_permission'
 
 import './index.scss'
@@ -11,7 +12,7 @@ export default function AboutSlice() {
   return (
     <section id='about_slice'>
       {!isMobile || (isMobile && permissionGranted) ? (
-        <p>!isMobile || (isMobile && permissionGranted)</p>
+        <AboutCanvas />
       ) : (
         <DeviceMotionPermission
           permissionGranted={permissionGranted}
