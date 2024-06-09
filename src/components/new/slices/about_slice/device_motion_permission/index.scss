@@ -1,8 +1,9 @@
 @import '@/styles/new/variables.module.scss';
 
-#about_slice {
+#device_motion_permission_modal {
   z-index: 2;
   position: absolute;
   width: 100vw;
   height: 100vh;
+  background-color: hotpink;
 }
