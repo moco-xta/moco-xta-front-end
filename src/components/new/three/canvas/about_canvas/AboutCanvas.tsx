@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import {
   DeviceOrientationControls,
+  PerspectiveCamera,
   PointerLockControls,
 } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
@@ -32,7 +33,16 @@ export default function AboutCanvas() {
               <PointerLockControls />
             </>
           ) : (
-            <DeviceOrientationControls />
+            <>
+              <PerspectiveCamera
+                makeDefault
+                aspect={1200 / 600}
+                fov={55}
+                position={[0, 13, 0]}
+                rotation={[0, 0, 0]}
+              />
+              <DeviceOrientationControls />
+            </>
           )}
           <AboutScene />
         </Physics>
