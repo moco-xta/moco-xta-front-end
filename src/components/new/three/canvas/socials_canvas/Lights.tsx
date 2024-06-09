@@ -20,11 +20,7 @@ export default function Lights() {
   useHelper(directionalLightTRRef, THREE.DirectionalLightHelper, 1, 'red')
   useHelper(directionalLightFRef, THREE.DirectionalLightHelper, 1, 'red')
 
-  const directionalLightTarget = new THREE.Vector3(
-    0,
-    0,
-    0,
-  )
+  const directionalLightTarget = new THREE.Vector3(0, 0, 0)
 
   return (
     <>

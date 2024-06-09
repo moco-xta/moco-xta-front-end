@@ -15,11 +15,11 @@ export default function AddReviewContainer() {
   const addReviewIsOpen = useSelector(
     (state: RootState) => state.appState.addReviewIsOpen,
   )
-
   return (
     <div
       id='add_review_container'
       className={`reviews_containers ${addReviewIsOpen ? 'open' : ''}`}
+      /* className={`reviews_containers ${addReviewIsOpen ? 'open' : ''} responsive_background`} */
     >
       <AddReview />
       <AddReviewButton text={t('CLOSE')} />

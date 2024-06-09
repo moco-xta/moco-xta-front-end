@@ -16,12 +16,12 @@ import {
   FormikTextarea,
 } from '@/components/new/inputs'
 import { ResetButton, SubmitButton } from '@/components/new/buttons'
+import ReviewCard from '../../../review_card'
 
 import { reviewRolesData } from '@/data/reviewRolesData'
 
 import variables from '@/styles/new/variables.module.scss'
 import './index.scss'
-import ReviewCard from '../../../review_card'
 
 export default function AddReviewForm({
   submitButtonIsDisabled,

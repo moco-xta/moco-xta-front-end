@@ -7,7 +7,8 @@ import { RootState } from '@/redux/store'
 import useResize from '@/hooks/new/useResize'
 
 import AddReviewButton from '@/components/new/buttons/add_review_button'
-import Reviews from './reviews'
+import ReviewsTextBlockContainer from './reviews_text_block_container'
+import ReviewCards from './review_cards'
 
 import './index.scss'
 
@@ -21,12 +22,29 @@ export default function ReviewsContainer() {
   const { isDesktop } = useResize()
 
   return (
-    <div
-      id='reviews_container'
-      className={`reviews_containers ${addReviewIsOpen ? '' : 'open'}`}
-    >
-      {isDesktop && <AddReviewButton text={t('OPEN')} />}
-      <Reviews />
-    </div>
+    <>
+      {isDesktop ? (
+        <div
+          id='reviews_container_desktop'
+          className={`reviews_containers ${addReviewIsOpen ? '' : 'open'}`}
+          /* className={`reviews_containers ${addReviewIsOpen ? '' : 'open'} responsive_background`} */
+        >
+          <AddReviewButton text={t('OPEN')} />
+          <div id='reviews_container'>
+            <ReviewsTextBlockContainer />
+            <ReviewCards />
+          </div>
+        </div>
+      ) : (
+        <div
+          id='reviews_container_not_desktop'
+          className={`reviews_containers ${addReviewIsOpen ? '' : 'open'}`}
+          /* className={`reviews_containers ${addReviewIsOpen ? '' : 'open'} responsive_background`} */
+        >
+          <ReviewsTextBlockContainer />
+          <ReviewCards />
+        </div>
+      )}
+    </>
   )
 }
