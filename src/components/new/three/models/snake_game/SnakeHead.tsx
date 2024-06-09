@@ -34,7 +34,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function SnakeHead(props: JSX.IntrinsicElements['mesh']) {
+export function SnakeHead(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.SNAKE_GAME.SNAKE_HEAD) as GLTFResult
   return (
     <group
