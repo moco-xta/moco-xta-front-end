@@ -1,6 +1,9 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { DeviceOrientationControls } from '@react-three/drei'
+import {
+  DeviceOrientationControls,
+  PointerLockControls,
+} from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 import { isMobile } from 'react-device-detect'
 
@@ -24,7 +27,10 @@ export default function AboutCanvas() {
       <Suspense fallback={null}>
         <Physics debug>
           {!isMobile ? (
-            <Player />
+            <>
+              <Player />
+              <PointerLockControls />
+            </>
           ) : (
             <DeviceOrientationControls />
           )}
