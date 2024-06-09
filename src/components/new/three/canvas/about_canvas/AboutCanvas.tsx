@@ -1,6 +1,9 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { DeviceOrientationControls, PointerLockControls } from '@react-three/drei'
+import {
+  DeviceOrientationControls,
+  PointerLockControls,
+} from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 import { isMobile } from 'react-device-detect'
 

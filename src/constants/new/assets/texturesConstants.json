@@ -1,0 +1,10 @@
+{
+  "ABOUT": {
+    "PARQUET": {
+      "PARQUET_DIFFUSE": "/new/img/textures/about/parquet/parquet_diffuse.jpg",
+      "PARQUET_BUMP": "/new/img/textures/about/parquet/parquet_bump.jpg",
+      "PARQUET_NORMAL": "/new/img/textures/about/parquet/parquet_normal.jpg",
+      "PARQUET_ROUGHNESS": "/new/img/textures/about/parquet/parquet_roughness.jpg"
+    }
+  }
+}

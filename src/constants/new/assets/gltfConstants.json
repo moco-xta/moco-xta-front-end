@@ -49,6 +49,9 @@
     "COLOR_PAD_WEBGL": "/new/gltf/rubiks_cube/ColorPadWebgl.gltf",
     "ROUNDED_CUBE": "/new/gltf/rubiks_cube/RoundedCube.gltf"
   },
+  "ABOUT": {
+    "PARQUET": "/new/gltf/about/Parquet.gltf"
+  },
   "SNAKE_GAME": {
     "ARROW_TEST": "/new/gltf/snake_game/ArrowTest.gltf",
     "FRUIT": "/new/gltf/snake_game/Fruit.gltf",
