@@ -1,11 +1,14 @@
 {
   "LOGOS": {
     "LOGO_ANGULAR": "/new/gltf/logos/LogoAngular.gltf",
+    "LOGO_GIT_HUB": "/new/gltf/logos/LogoGitHub.gltf",
+    "LOGO_LINKED_IN": "/new/gltf/logos/LogoLinkedIn.gltf",
     "LOGO_MOCO": "/new/gltf/logos/LogoMoco.gltf",
     "LOGO_MOCO_2": "/new/gltf/logos/LogoMoco2.gltf",
     "LOGO_MOCO_3": "/new/gltf/logos/LogoMoco3.gltf",
     "LOGO_NEXTJS": "/new/gltf/logos/LogoNextjs.gltf",
-    "LOGO_SPRING": "/new/gltf/logos/LogoSpring.gltf"
+    "LOGO_SPRING": "/new/gltf/logos/LogoSpring.gltf",
+    "LOGO_TWITTER": "/new/gltf/logos/LogoTwitter.gltf"
   },
   "HERO": {
     "M_HELIUM_BALLOON": "/new/gltf/hero/MHeliumBalloon.gltf",
