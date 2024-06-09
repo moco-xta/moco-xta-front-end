@@ -7,6 +7,7 @@ import { isMobile } from 'react-device-detect'
 import AboutScene from './AboutScene'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+import Player from '../../controls/Player'
 
 export default function AboutCanvas() {
   return (
@@ -19,10 +20,14 @@ export default function AboutCanvas() {
         powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
-      {isMobile && <DeviceOrientationControls />}
       <ambientLight intensity={1} />
       <Suspense fallback={null}>
         <Physics debug>
+          {!isMobile ? (
+            <Player />
+          ) : (
+            <DeviceOrientationControls />
+          )}
           <AboutScene />
         </Physics>
       </Suspense>
