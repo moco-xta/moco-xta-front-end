@@ -15,12 +15,12 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"LogoTwitter"
+			"name":"LogoLinkedIn"
 		}
 	],
 	"meshes":[
 		{
-			"name":"LogoTwitter",
+			"name":"LogoLinkedIn",
 			"primitives":[
 				{
 					"attributes":{
@@ -37,15 +37,15 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":428,
+			"count":538,
 			"max":[
-				1.231131911277771,
-				1.0000004768371582,
-				0.20000004768371582
+				0.9995200634002686,
+				1.0000005960464478,
+				0.20000001788139343
 			],
 			"min":[
-				-1.231131911277771,
-				-1.0000003576278687,
+				-0.9878733158111572,
+				-1.000000238418579,
 				-0.20000004768371582
 			],
 			"type":"VEC3"
@@ -53,52 +53,52 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":428,
+			"count":538,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":428,
+			"count":538,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":1164,
+			"count":1500,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":5136,
+			"byteLength":6456,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":5136,
-			"byteOffset":5136,
+			"byteLength":6456,
+			"byteOffset":6456,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3424,
-			"byteOffset":10272,
+			"byteLength":4304,
+			"byteOffset":12912,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2328,
-			"byteOffset":13696,
+			"byteLength":3000,
+			"byteOffset":17216,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":16024,
-			"uri":"LogoTwitter.bin"
+			"byteLength":20216,
+			"uri":"LogoLinkedIn.bin"
 		}
 	]
 }
