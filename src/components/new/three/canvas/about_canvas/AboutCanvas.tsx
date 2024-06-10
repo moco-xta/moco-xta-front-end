@@ -9,10 +9,10 @@ import {
 import { Physics } from '@react-three/rapier'
 import { isMobile } from 'react-device-detect'
 
+import Player from '../../controls/Player'
 import AboutScene from './AboutScene'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
-import Player from '../../controls/Player'
 
 export default function AboutCanvas() {
   return (
@@ -25,25 +25,22 @@ export default function AboutCanvas() {
         powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
+      <PerspectiveCamera
+        makeDefault
+        aspect={1200 / 600}
+        fov={aboutConstants.PERSPECTIVE_CAMERA.FOV}
+        position={[aboutConstants.PERSPECTIVE_CAMERA.POSITION.X, aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y, aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z]}
+      />
       <ambientLight intensity={1} />
       <Suspense fallback={null}>
         <Physics debug>
           {!isMobile ? (
             <>
-              <Player rigidBodyPosition={new THREE.Vector3(0, 15, 0)} cuboidColliderArgs={[0.5, 13, 0.5]} />
+              <Player rigidBodyPosition={new THREE.Vector3(aboutConstants.PERSPECTIVE_CAMERA.POSITION.X, aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y + 2, aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z)} cuboidColliderArgs={[0.5, aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y, 0.5]} />
               <PointerLockControls />
             </>
           ) : (
-            <>
-              <PerspectiveCamera
-                makeDefault
-                aspect={1200 / 600}
-                fov={55}
-                position={[0, 13, 0]}
-                rotation={[0, 0, 0]}
-              />
-              <DeviceOrientationControls />
-            </>
+            <DeviceOrientationControls />
           )}
           <AboutScene />
         </Physics>
