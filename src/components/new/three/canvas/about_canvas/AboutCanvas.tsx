@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import {
   DeviceOrientationControls,
@@ -29,7 +30,7 @@ export default function AboutCanvas() {
         <Physics debug>
           {!isMobile ? (
             <>
-              <Player />
+              <Player rigidBodyPosition={new THREE.Vector3(0, 15, 0)} cuboidColliderArgs={[0.5, 13, 0.5]} />
               <PointerLockControls />
             </>
           ) : (

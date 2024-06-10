@@ -5,15 +5,18 @@ import { Box } from '@react-three/drei'
 import * as RAPIER from '@dimforge/rapier3d-compat'
 import {
   CapsuleCollider,
+  CuboidCollider,
   RapierRigidBody,
   RigidBody,
   useRapier,
 } from '@react-three/rapier'
 
+import { PlayerInterface } from '@/interfaces/new/threeInterfaces'
+
 import { usePlayer } from '@/hooks/new/usePlayer'
-import { useDispatch, useSelector } from 'react-redux'
-import { AppDispatch, RootState } from '@/redux/store'
-import { setIsPlaying } from '@/redux/slice/snakeGameSlice'
+
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '@/redux/store'
 
 const MOVE_SPEED = 5
 const direction = new THREE.Vector3()
@@ -21,7 +24,7 @@ const frontVector = new THREE.Vector3()
 const sideVector = new THREE.Vector3()
 const rotation = new THREE.Vector3()
 
-export default function Player() {
+export default function Player({ rigidBodyPosition, cuboidColliderArgs }: PlayerInterface) {
   const { forward, backward, left, right, jump } = usePlayer()
 
   const playerRef = useRef<RapierRigidBody>(null!)
@@ -30,12 +33,10 @@ export default function Player() {
   const rapier = useRapier()
 
   const dispatch = useDispatch<AppDispatch>()
-  const isPlaying = useSelector((state: RootState) => state.snakeGame.isPlaying)
 
   useFrame((state) => {
     if (!playerRef.current) return
 
-    // moving player0
     const velocity = playerRef.current.linvel()
 
     frontVector.set(0, 0, Number(backward) - Number(forward))
@@ -56,7 +57,6 @@ export default function Player() {
       true,
     )
 
-    // jumping
     /* const world = rapier.world
     const ray = world.castRay(
       new RAPIER.Ray(playerRef.current.translation(), { x: 0, y: -1, z: 0 }),
@@ -65,24 +65,18 @@ export default function Player() {
 
     if (jump && grounded) doJump() */
 
-    // moving camera
     const { x, y, z } = playerRef.current.translation()
     state.camera.position.set(x, y, z)
 
-    // moving object in hand for the player
-    objectInHandRef.current.rotation.copy(state.camera.rotation)
+    /* objectInHandRef.current.rotation.copy(state.camera.rotation)
     objectInHandRef.current.position
       .copy(state.camera.position)
-      .add(state.camera.getWorldDirection(rotation))
+      .add(state.camera.getWorldDirection(rotation)) */
   })
 
   const doJump = () => {
     if (playerRef.current)
       playerRef.current.setLinvel({ x: 0, y: 8, z: 0 }, true)
-  }
-
-  const handleOnClick = () => {
-    dispatch(setIsPlaying())
   }
 
   return (
@@ -93,26 +87,24 @@ export default function Player() {
         mass={1}
         type='dynamic'
         lockRotations
-        position={[20, 15, 2]}
+        position={rigidBodyPosition}
       >
-        <mesh castShadow>
-          <capsuleGeometry args={[0.5, 0.5]} />
-          <CapsuleCollider args={[0.75, 0.5]} />
-        </mesh>
+        <CuboidCollider
+          args={cuboidColliderArgs}
+          position={[0, 0, 0]}
+        />
       </RigidBody>
-      <group ref={objectInHandRef}>
+      {/* <group ref={objectInHandRef}>
         <Box
           args={[0.3, 0.3, 0.3]}
           position={[0, -0.4, 0.1]}
           scale={0.3}
-          onClick={handleOnClick}
         >
           <meshBasicMaterial
             attach='material'
-            color={isPlaying ? 0xff0000 : 0x00ffff}
           />
         </Box>
-      </group>
+      </group> */}
     </>
   )
 }
