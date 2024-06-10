@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CubeAndColorPadsInterface } from '@/interfaces/new/threeInterfaces'
+import { CubeAndColorPadsInterface } from '@/interfaces/new/rubiksCubeInterfaces'
 
 import { RoundedCube } from '../../models/rubiks_cube/RoundedCube'
 import Pads from './Pads'

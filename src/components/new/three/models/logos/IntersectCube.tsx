@@ -1,7 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 
-import { IntersectCubeInterface } from '@/interfaces/new/threeInterfaces'
+import { IntersectCubeInterface } from '@/interfaces/new/rubiksCubeInterfaces'
 
 export default function IntersectCube({
   handleOnPointerMove,

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PadsInterface } from '@/interfaces/new/threeInterfaces'
+import { PadsInterface } from '@/interfaces/new/rubiksCubeInterfaces'
 
 import { padsData } from '@/data/padsData'
 
