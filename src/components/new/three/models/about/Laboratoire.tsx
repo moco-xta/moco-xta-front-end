@@ -68,6 +68,18 @@ type GLTFResult = GLTF & {
 export function Laboratoire(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE) as GLTFResult
 
+  const northWallElementsMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.NORTH_WALL_ELEMENTS)
+  northWallElementsMapTexture.flipY = false
+  northWallElementsMapTexture.encoding = THREE.sRGBEncoding
+
+  const speakersMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.SPEAKERS)
+  speakersMapTexture.flipY = false
+  speakersMapTexture.encoding = THREE.sRGBEncoding
+
+
+
+
+
   const elementsMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.ELEMENTS)
   elementsMapTexture.flipY = false
   elementsMapTexture.encoding = THREE.sRGBEncoding
@@ -79,6 +91,18 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
   const wallsMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.WALLS)
   wallsMapTexture.flipY = false
   wallsMapTexture.encoding = THREE.sRGBEncoding
+
+  const northWallElementsMaterial = new THREE.MeshStandardMaterial({
+    map: northWallElementsMapTexture,
+  })
+
+  const speakersMaterial = new THREE.MeshStandardMaterial({
+    map: speakersMapTexture,
+  })
+
+
+
+
 
   const elementsMaterial = new THREE.MeshStandardMaterial({
     map: elementsMapTexture,
@@ -216,67 +240,67 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='Shelf'
         geometry={nodes.Shelf.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[0, 18, -16]}
       />
       <mesh
         name='VirgenDeGuadalupe'
         geometry={nodes.VirgenDeGuadalupe.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[-4.512, 18.127, -15.546]}
       />
       <mesh
         name='PabloEscobar'
         geometry={nodes.PabloEscobar.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[4.936, 18.127, -15.546]}
       />
       <mesh
         name='Tetrahedron'
         geometry={nodes.Tetrahedron.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[4.034, 18.12, -15.305]}
       />
       <mesh
         name='Cube'
         geometry={nodes.Cube.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[4.377, 18.12, -14.612]}
       />
       <mesh
         name='Dodecahedron'
         geometry={nodes.Dodecahedron.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[3.82, 18.12, -14.48]}
       />
       <mesh
         name='Octahedron'
         geometry={nodes.Octahedron.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[3.414, 18.12, -14.86]}
       />
       <mesh
         name='Icosahedron'
         geometry={nodes.Icosahedron.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[3.621, 18.12, -15.221]}
       />
       <mesh
         name='SpeakerLeft'
         geometry={nodes.SpeakerLeft.geometry}
-        material={elementsMaterial}
+        material={speakersMaterial}
         position={[-12.275, 0, -14.251]}
       />
       <mesh
         name='SpeakerRight'
         geometry={nodes.SpeakerRight.geometry}
-        material={elementsMaterial}
+        material={speakersMaterial}
         position={[12.725, 0, -14.325]}
       />
       <mesh
         name='WorldMap'
         geometry={nodes.WorldMap.geometry}
-        material={elementsMaterial}
+        material={speakersMaterial}
         position={[-12.2, 10.333, -14.1]}
       />
       <mesh
@@ -373,44 +397,44 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='AmorLlamaAmor'
         geometry={nodes.AmorLlamaAmor.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[-11.2, 10, -16]}
         scale={[0.99, 1, 1]}
       />
       <mesh
         name='Brain'
         geometry={nodes.Brain.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[-19.06, 10, -16]}
       />
       <mesh
         name='Trinity'
         geometry={nodes.Trinity.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[-17.09, 19.2, -16]}
       />
       <mesh
         name='Couronnes'
         geometry={nodes.Couronnes.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[0, 25.6, -16]}
       />
       <mesh
         name='NicotianaRustica'
         geometry={nodes.NicotianaRustica.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[10.2, 14.9, -16]}
       />
       <mesh
         name='CelestialMap'
         geometry={nodes.CelestialMap.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[10.1, 10.2, -16]}
       />
       <mesh
         name='VerbalShoota'
         geometry={nodes.VerbalShoota.geometry}
-        material={elementsMaterial}
+        material={northWallElementsMaterial}
         position={[19.032, 14.9, -16]}
       />
       <mesh

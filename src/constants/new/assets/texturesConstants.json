@@ -1,6 +1,9 @@
 {
   "ABOUT": {
     "LABORATOIRE": {
+      "NORTH_WALL_ELEMENTS": "/new/img/textures/about/north_wall_elements_diffuse.jpg",
+      "SPEAKERS": "/new/img/textures/about/speakers_diffuse.jpg",
+
       "ELEMENTS": "/new/img/textures/about/elements_diffuse.jpg",
       "PARQUET": "/new/img/textures/about/parquet_diffuse.jpg",
       "WALLS": "/new/img/textures/about/walls_diffuse.jpg"
