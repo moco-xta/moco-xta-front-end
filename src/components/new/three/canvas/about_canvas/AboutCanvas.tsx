@@ -35,7 +35,7 @@ export default function AboutCanvas() {
           aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
       />
-      <ambientLight intensity={1} />
+      <ambientLight intensity={2} />
       <Suspense fallback={null}>
         <Physics debug>
           {!isMobile ? (

@@ -20,7 +20,7 @@
     "EXPOSURE": 3
   },
   "PARQUET": {
-    "REPEAT": 1.2,
+    "REPEAT": 1,
     "GREY_GRADIENT": [
       "0x111111",
       "0x121212",

@@ -1,6 +1,10 @@
 {
   "ABOUT": {
-    "LABORATOIRE": "/new/img/textures/about/laboratoire_baking.jpg",
+    "LABORATOIRE": {
+      "ELEMENTS": "/new/img/textures/about/elements_diffuse.jpg",
+      "PARQUET": "/new/img/textures/about/parquet_diffuse.jpg",
+      "WALLS": "/new/img/textures/about/walls_diffuse.jpg"
+    },
     "PARQUET": {
       "PARQUET_DIFFUSE": "/new/img/textures/about/parquet/parquet_diffuse.jpg",
       "PARQUET_BUMP": "/new/img/textures/about/parquet/parquet_bump.jpg",
