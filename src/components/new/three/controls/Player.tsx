@@ -24,7 +24,10 @@ const frontVector = new THREE.Vector3()
 const sideVector = new THREE.Vector3()
 const rotation = new THREE.Vector3()
 
-export default function Player({ rigidBodyPosition, cuboidColliderArgs }: PlayerInterface) {
+export default function Player({
+  rigidBodyPosition,
+  cuboidColliderArgs,
+}: PlayerInterface) {
   const { forward, backward, left, right, jump } = usePlayer()
 
   const playerRef = useRef<RapierRigidBody>(null!)
