@@ -3,6 +3,8 @@ import * as THREE from 'three'
 import { useGLTF, useTexture } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import { ceilingLightMaterial, glassMaterial, tableLampMaterial } from '../../materials/laboratoireMaterials'
+
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
@@ -66,17 +68,28 @@ type GLTFResult = GLTF & {
 export function Laboratoire(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE) as GLTFResult
 
-  const mapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE)
-  mapTexture.flipY = false
-  /* mapTexture.wrapS = THREE.RepeatWrapping */
-  /* mapTexture.wrapT = THREE.RepeatWrapping */
-  /* mapTexture.repeat.set(
-    aboutConstants.PARQUET.REPEAT,
-    aboutConstants.PARQUET.REPEAT,
-  ) */
-  mapTexture.encoding = THREE.sRGBEncoding
-  const laboratoireMaterial = new THREE.MeshStandardMaterial({
-    map: mapTexture,
+  const elementsMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.ELEMENTS)
+  elementsMapTexture.flipY = false
+  elementsMapTexture.encoding = THREE.sRGBEncoding
+
+  const parquetMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.PARQUET)
+  parquetMapTexture.flipY = false
+  parquetMapTexture.encoding = THREE.sRGBEncoding
+
+  const wallsMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.WALLS)
+  wallsMapTexture.flipY = false
+  wallsMapTexture.encoding = THREE.sRGBEncoding
+
+  const elementsMaterial = new THREE.MeshStandardMaterial({
+    map: elementsMapTexture,
+  })
+
+  const parquetMaterial = new THREE.MeshStandardMaterial({
+    map: parquetMapTexture,
+  })
+
+  const wallsMaterial = new THREE.MeshStandardMaterial({
+    map: wallsMapTexture,
   })
 
   return (
@@ -87,57 +100,57 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='TrestleLeft'
         geometry={nodes.TrestleLeft.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-7.5, 0.02, -10]}
       />
       <mesh
         name='TrestleRight'
         geometry={nodes.TrestleRight.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[7.5, 0.02, -10]}
       />
       <mesh
         name='MacBookPro'
         geometry={nodes.MacBookPro.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[0, 9.182, -8]}
       />
       <mesh
         name='Screen'
         geometry={nodes.Screen.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[0, 9.182, -14.4]}
       />
       <mesh
         name='NotebookTop'
         geometry={nodes.NotebookTop.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[5.572, 9.222, -9.098]}
       />
       <mesh
         name='NotebookBottom'
         geometry={nodes.NotebookBottom.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[5.772, 9.182, -8.898]}
       />
       <mesh
         name='DeskChair'
         geometry={nodes.DeskChair.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[0, 0.02, 0]}
         rotation={[-Math.PI, 1.067, -Math.PI]}
       />
       <mesh
         name='TransfertBoxes001'
         geometry={nodes.TransfertBoxes001.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-6.441, 1.583, -11.819]}
         scale={1.2}
       />
       <mesh
         name='TransfertBoxes002'
         geometry={nodes.TransfertBoxes002.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-6.385, 1.583, -11.019]}
         rotation={[0, 0.047, 0]}
         scale={1.2}
@@ -145,7 +158,7 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='TransfertBoxes003'
         geometry={nodes.TransfertBoxes003.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-6.528, 1.583, -10.035]}
         rotation={[0, -0.043, 0]}
         scale={1.2}
@@ -153,31 +166,31 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='VinylDisc'
         geometry={nodes.VinylDisc.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[7.5, 1.575, -7.45]}
       />
       <mesh
         name='DoorHandle'
         geometry={nodes.DoorHandle.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-29, 0, -10]}
       />
       <mesh
         name='Door'
         geometry={nodes.Door.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-29, 0, -10]}
       />
       <mesh
         name='DoorFrame'
         geometry={nodes.DoorFrame.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-29, 0, -10]}
       />
       <mesh
         name='TableLamp'
         geometry={nodes.TableLamp.geometry}
-        material={laboratoireMaterial}
+        material={tableLampMaterial}
         position={[11.776, 1.012, -9.08]}
         rotation={[0, -Math.PI / 2, 0]}
         scale={1.618}
@@ -185,134 +198,134 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='CeilingLampFrame'
         geometry={nodes.CeilingLampFrame.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[0, 28.6, 0]}
       />
       <mesh
         name='CeilingLamp'
         geometry={nodes.CeilingLamp.geometry}
-        material={laboratoireMaterial}
+        material={ceilingLightMaterial}
         position={[0, 28.6, 0]}
       />
       <mesh
         name='Parquet'
         geometry={nodes.Parquet.geometry}
-        material={laboratoireMaterial}
+        material={parquetMaterial}
         position={[0, -0.158, 0]}
       />
       <mesh
         name='Shelf'
         geometry={nodes.Shelf.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[0, 18, -16]}
       />
       <mesh
         name='VirgenDeGuadalupe'
         geometry={nodes.VirgenDeGuadalupe.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-4.512, 18.127, -15.546]}
       />
       <mesh
         name='PabloEscobar'
         geometry={nodes.PabloEscobar.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[4.936, 18.127, -15.546]}
       />
       <mesh
         name='Tetrahedron'
         geometry={nodes.Tetrahedron.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[4.034, 18.12, -15.305]}
       />
       <mesh
         name='Cube'
         geometry={nodes.Cube.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[4.377, 18.12, -14.612]}
       />
       <mesh
         name='Dodecahedron'
         geometry={nodes.Dodecahedron.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[3.82, 18.12, -14.48]}
       />
       <mesh
         name='Octahedron'
         geometry={nodes.Octahedron.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[3.414, 18.12, -14.86]}
       />
       <mesh
         name='Icosahedron'
         geometry={nodes.Icosahedron.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[3.621, 18.12, -15.221]}
       />
       <mesh
         name='SpeakerLeft'
         geometry={nodes.SpeakerLeft.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-12.275, 0, -14.251]}
       />
       <mesh
         name='SpeakerRight'
         geometry={nodes.SpeakerRight.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[12.725, 0, -14.325]}
       />
       <mesh
         name='WorldMap'
         geometry={nodes.WorldMap.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-12.2, 10.333, -14.1]}
       />
       <mesh
         name='Ceiling'
         geometry={nodes.Ceiling.geometry}
-        material={laboratoireMaterial}
+        material={wallsMaterial}
         scale={[10, 8.938, 11.189]}
       />
       <mesh
         name='NorthWall'
         geometry={nodes.NorthWall.geometry}
-        material={laboratoireMaterial}
+        material={wallsMaterial}
       />
       <mesh
         name='WestWall'
         geometry={nodes.WestWall.geometry}
-        material={laboratoireMaterial}
+        material={wallsMaterial}
       />
       <mesh
         name='PlinthNorth'
         geometry={nodes.PlinthNorth.geometry}
-        material={laboratoireMaterial}
+        material={wallsMaterial}
         position={[-28.6, 0, -16]}
         rotation={[0, -Math.PI / 2, 0]}
       />
       <mesh
         name='PlinthWestLarge'
         geometry={nodes.PlinthWestLarge.geometry}
-        material={laboratoireMaterial}
+        material={wallsMaterial}
         position={[-28.6, 0, 16]}
         rotation={[0, -Math.PI / 2, 0]}
       />
       <mesh
         name='PlinthWestSmall'
         geometry={nodes.PlinthWestSmall.geometry}
-        material={laboratoireMaterial}
+        material={wallsMaterial}
         position={[-28.6, 0, -16]}
         rotation={[0, -Math.PI / 2, 0]}
       />
       <mesh
         name='VideoProjectorScreen'
         geometry={nodes.VideoProjectorScreen.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-28.6, 25, 5.5]}
       />
       <mesh
         name='SecondHand'
         geometry={nodes.SecondHand.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-28.331, 25.4, -10.007]}
         rotation={[-Math.PI / 4, 0, -Math.PI / 2]}
         scale={0.7}
@@ -320,7 +333,7 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='HourHand'
         geometry={nodes.HourHand.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-28.366, 25.4, -10.007]}
         rotation={[2.531, 0, -Math.PI / 2]}
         scale={0.7}
@@ -328,7 +341,7 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='MinuteHand'
         geometry={nodes.MinuteHand.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-28.345, 25.4, -10.007]}
         rotation={[0.698, 0, -Math.PI / 2]}
         scale={0.7}
@@ -336,7 +349,7 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='WallClockGlass'
         geometry={nodes.WallClockGlass.geometry}
-        material={laboratoireMaterial}
+        material={glassMaterial}
         position={[-28.583, 25.4, -10.007]}
         rotation={[Math.PI / 2, 0, -Math.PI / 2]}
         scale={0.7}
@@ -344,7 +357,7 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='WallClock'
         geometry={nodes.WallClock.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-28.583, 25.4, -10.007]}
         rotation={[Math.PI / 2, 0, -Math.PI / 2]}
         scale={0.7}
@@ -352,7 +365,7 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='HourAndMinuteMarkers'
         geometry={nodes.HourAndMinuteMarkers.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-28.372, 25.4, -10.007]}
         rotation={[Math.PI / 2, 0, -Math.PI / 2]}
         scale={0.7}
@@ -360,50 +373,50 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='AmorLlamaAmor'
         geometry={nodes.AmorLlamaAmor.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-11.2, 10, -16]}
         scale={[0.99, 1, 1]}
       />
       <mesh
         name='Brain'
         geometry={nodes.Brain.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-19.06, 10, -16]}
       />
       <mesh
         name='Trinity'
         geometry={nodes.Trinity.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[-17.09, 19.2, -16]}
       />
       <mesh
         name='Couronnes'
         geometry={nodes.Couronnes.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[0, 25.6, -16]}
       />
       <mesh
         name='NicotianaRustica'
         geometry={nodes.NicotianaRustica.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[10.2, 14.9, -16]}
       />
       <mesh
         name='CelestialMap'
         geometry={nodes.CelestialMap.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[10.1, 10.2, -16]}
       />
       <mesh
         name='VerbalShoota'
         geometry={nodes.VerbalShoota.geometry}
-        material={laboratoireMaterial}
+        material={elementsMaterial}
         position={[19.032, 14.9, -16]}
       />
       <mesh
         name='FrameGlasses'
         geometry={nodes.FrameGlasses.geometry}
-        material={laboratoireMaterial}
+        material={glassMaterial}
         position={[-19.06, 10, -16]}
       />
     </group>
