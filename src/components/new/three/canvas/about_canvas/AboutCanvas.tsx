@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import {
   DeviceOrientationControls,
+  Environment,
   PerspectiveCamera,
   PointerLockControls,
 } from '@react-three/drei'
@@ -13,6 +14,7 @@ import Player from '../../controls/Player'
 import AboutScene from './AboutScene'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+import { default as imgConstants } from '@/constants/new/assets/imgConstants.json'
 
 export default function AboutCanvas() {
   return (
@@ -35,7 +37,8 @@ export default function AboutCanvas() {
           aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
       />
-      <ambientLight intensity={1} />
+      <ambientLight intensity={1.8} />
+      {/* <rectAreaLight args={[10, 10]} position={[0, 20, 0]} /> */}
       <Suspense fallback={null}>
         <Physics debug>
           {!isMobile ? (
@@ -60,6 +63,7 @@ export default function AboutCanvas() {
             <DeviceOrientationControls />
           )}
           <AboutScene />
+          {/* <Environment files={imgConstants.HDRS.LABORATOIRE_ENVIRONMENT} /> */}
         </Physics>
       </Suspense>
     </Canvas>

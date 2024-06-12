@@ -12,6 +12,7 @@
     }
   },
   "HDRS": {
+    "LABORATOIRE_ENVIRONMENT": "/new/img/hdr/laboratoire.hdr",
     "HERO_ENVIRONMENT": "/new/img/hdr/peppermint_powerplant_2_1k.hdr"
   }
 }
