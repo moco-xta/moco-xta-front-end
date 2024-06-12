@@ -717,18 +717,20 @@
         {
           "attributes": {
             "POSITION": 62,
-            "NORMAL": 63
+            "NORMAL": 63,
+            "TEXCOORD_0": 64
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
               "bufferView": 16,
               "attributes": {
                 "POSITION": 0,
-                "NORMAL": 1
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
               }
             }
           },
-          "indices": 64,
+          "indices": 65,
           "mode": 4
         }
       ]
@@ -738,10 +740,10 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 65,
-            "NORMAL": 66,
-            "TEXCOORD_0": 67,
-            "TEXCOORD_1": 68
+            "POSITION": 66,
+            "NORMAL": 67,
+            "TEXCOORD_0": 68,
+            "TEXCOORD_1": 69
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -754,7 +756,7 @@
               }
             }
           },
-          "indices": 69,
+          "indices": 70,
           "mode": 4
         }
       ]
@@ -764,9 +766,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 70,
-            "NORMAL": 71,
-            "TEXCOORD_0": 72
+            "POSITION": 71,
+            "NORMAL": 72,
+            "TEXCOORD_0": 73
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -778,7 +780,7 @@
               }
             }
           },
-          "indices": 73,
+          "indices": 74,
           "mode": 4
         }
       ]
@@ -788,9 +790,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 74,
-            "NORMAL": 75,
-            "TEXCOORD_0": 76
+            "POSITION": 75,
+            "NORMAL": 76,
+            "TEXCOORD_0": 77
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -802,7 +804,7 @@
               }
             }
           },
-          "indices": 77,
+          "indices": 78,
           "mode": 4
         }
       ]
@@ -812,9 +814,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 78,
-            "NORMAL": 79,
-            "TEXCOORD_0": 80
+            "POSITION": 79,
+            "NORMAL": 80,
+            "TEXCOORD_0": 81
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -826,7 +828,7 @@
               }
             }
           },
-          "indices": 81,
+          "indices": 82,
           "mode": 4
         }
       ]
@@ -836,9 +838,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 82,
-            "NORMAL": 83,
-            "TEXCOORD_0": 84
+            "POSITION": 83,
+            "NORMAL": 84,
+            "TEXCOORD_0": 85
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -850,7 +852,7 @@
               }
             }
           },
-          "indices": 81,
+          "indices": 82,
           "mode": 4
         }
       ]
@@ -860,9 +862,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 85,
-            "NORMAL": 86,
-            "TEXCOORD_0": 87
+            "POSITION": 86,
+            "NORMAL": 87,
+            "TEXCOORD_0": 88
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -874,7 +876,7 @@
               }
             }
           },
-          "indices": 88,
+          "indices": 89,
           "mode": 4
         }
       ]
@@ -884,9 +886,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 89,
-            "NORMAL": 90,
-            "TEXCOORD_0": 91
+            "POSITION": 90,
+            "NORMAL": 91,
+            "TEXCOORD_0": 92
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -898,7 +900,7 @@
               }
             }
           },
-          "indices": 92,
+          "indices": 93,
           "mode": 4
         }
       ]
@@ -908,9 +910,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 93,
-            "NORMAL": 94,
-            "TEXCOORD_0": 95
+            "POSITION": 94,
+            "NORMAL": 95,
+            "TEXCOORD_0": 96
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -922,7 +924,7 @@
               }
             }
           },
-          "indices": 96,
+          "indices": 97,
           "mode": 4
         }
       ]
@@ -932,9 +934,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 97,
-            "NORMAL": 98,
-            "TEXCOORD_0": 99
+            "POSITION": 98,
+            "NORMAL": 99,
+            "TEXCOORD_0": 100
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -946,7 +948,7 @@
               }
             }
           },
-          "indices": 100,
+          "indices": 101,
           "mode": 4
         }
       ]
@@ -956,9 +958,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 101,
-            "NORMAL": 102,
-            "TEXCOORD_0": 103
+            "POSITION": 102,
+            "NORMAL": 103,
+            "TEXCOORD_0": 104
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -970,7 +972,7 @@
               }
             }
           },
-          "indices": 104,
+          "indices": 105,
           "mode": 4
         }
       ]
@@ -980,9 +982,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 105,
-            "NORMAL": 106,
-            "TEXCOORD_0": 107
+            "POSITION": 106,
+            "NORMAL": 107,
+            "TEXCOORD_0": 108
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -994,7 +996,7 @@
               }
             }
           },
-          "indices": 108,
+          "indices": 109,
           "mode": 4
         }
       ]
@@ -1004,9 +1006,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 109,
-            "NORMAL": 110,
-            "TEXCOORD_0": 111
+            "POSITION": 110,
+            "NORMAL": 111,
+            "TEXCOORD_0": 112
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1018,7 +1020,7 @@
               }
             }
           },
-          "indices": 108,
+          "indices": 109,
           "mode": 4
         }
       ]
@@ -1028,9 +1030,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 112,
-            "NORMAL": 113,
-            "TEXCOORD_0": 114
+            "POSITION": 113,
+            "NORMAL": 114,
+            "TEXCOORD_0": 115
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1042,7 +1044,7 @@
               }
             }
           },
-          "indices": 115,
+          "indices": 116,
           "mode": 4
         }
       ]
@@ -1052,9 +1054,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 116,
-            "NORMAL": 117,
-            "TEXCOORD_0": 118
+            "POSITION": 117,
+            "NORMAL": 118,
+            "TEXCOORD_0": 119
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1066,7 +1068,7 @@
               }
             }
           },
-          "indices": 119,
+          "indices": 120,
           "mode": 4
         }
       ]
@@ -1076,9 +1078,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 120,
-            "NORMAL": 121,
-            "TEXCOORD_0": 122
+            "POSITION": 121,
+            "NORMAL": 122,
+            "TEXCOORD_0": 123
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1090,7 +1092,7 @@
               }
             }
           },
-          "indices": 123,
+          "indices": 124,
           "mode": 4
         }
       ]
@@ -1100,9 +1102,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 124,
-            "NORMAL": 125,
-            "TEXCOORD_0": 126
+            "POSITION": 125,
+            "NORMAL": 126,
+            "TEXCOORD_0": 127
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1114,7 +1116,7 @@
               }
             }
           },
-          "indices": 127,
+          "indices": 128,
           "mode": 4
         }
       ]
@@ -1124,9 +1126,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 128,
-            "NORMAL": 129,
-            "TEXCOORD_0": 130
+            "POSITION": 129,
+            "NORMAL": 130,
+            "TEXCOORD_0": 131
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1138,7 +1140,7 @@
               }
             }
           },
-          "indices": 131,
+          "indices": 132,
           "mode": 4
         }
       ]
@@ -1148,9 +1150,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 132,
-            "NORMAL": 133,
-            "TEXCOORD_0": 134
+            "POSITION": 133,
+            "NORMAL": 134,
+            "TEXCOORD_0": 135
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1162,7 +1164,7 @@
               }
             }
           },
-          "indices": 135,
+          "indices": 136,
           "mode": 4
         }
       ]
@@ -1172,9 +1174,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 136,
-            "NORMAL": 137,
-            "TEXCOORD_0": 138
+            "POSITION": 137,
+            "NORMAL": 138,
+            "TEXCOORD_0": 139
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1186,7 +1188,7 @@
               }
             }
           },
-          "indices": 139,
+          "indices": 140,
           "mode": 4
         }
       ]
@@ -1196,9 +1198,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 140,
-            "NORMAL": 141,
-            "TEXCOORD_0": 142
+            "POSITION": 141,
+            "NORMAL": 142,
+            "TEXCOORD_0": 143
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1210,7 +1212,7 @@
               }
             }
           },
-          "indices": 139,
+          "indices": 140,
           "mode": 4
         }
       ]
@@ -1220,10 +1222,10 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 143,
-            "NORMAL": 144,
-            "TEXCOORD_0": 145,
-            "TEXCOORD_1": 146
+            "POSITION": 144,
+            "NORMAL": 145,
+            "TEXCOORD_0": 146,
+            "TEXCOORD_1": 147
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1236,7 +1238,7 @@
               }
             }
           },
-          "indices": 147,
+          "indices": 148,
           "mode": 4
         }
       ]
@@ -1246,9 +1248,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 148,
-            "NORMAL": 149,
-            "TEXCOORD_0": 150
+            "POSITION": 149,
+            "NORMAL": 150,
+            "TEXCOORD_0": 151
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1260,7 +1262,7 @@
               }
             }
           },
-          "indices": 151,
+          "indices": 152,
           "mode": 4
         }
       ]
@@ -1270,9 +1272,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 152,
-            "NORMAL": 153,
-            "TEXCOORD_0": 154
+            "POSITION": 153,
+            "NORMAL": 154,
+            "TEXCOORD_0": 155
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1284,7 +1286,7 @@
               }
             }
           },
-          "indices": 155,
+          "indices": 156,
           "mode": 4
         }
       ]
@@ -1294,9 +1296,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 156,
-            "NORMAL": 157,
-            "TEXCOORD_0": 158
+            "POSITION": 157,
+            "NORMAL": 158,
+            "TEXCOORD_0": 159
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1308,7 +1310,7 @@
               }
             }
           },
-          "indices": 159,
+          "indices": 160,
           "mode": 4
         }
       ]
@@ -1318,9 +1320,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 160,
-            "NORMAL": 161,
-            "TEXCOORD_0": 162
+            "POSITION": 161,
+            "NORMAL": 162,
+            "TEXCOORD_0": 163
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1332,7 +1334,7 @@
               }
             }
           },
-          "indices": 163,
+          "indices": 164,
           "mode": 4
         }
       ]
@@ -1342,10 +1344,10 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 164,
-            "NORMAL": 165,
-            "TEXCOORD_0": 166,
-            "COLOR_0": 167
+            "POSITION": 165,
+            "NORMAL": 166,
+            "TEXCOORD_0": 167,
+            "COLOR_0": 168
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1358,7 +1360,7 @@
               }
             }
           },
-          "indices": 168,
+          "indices": 169,
           "mode": 4
         }
       ]
@@ -1368,9 +1370,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 169,
-            "NORMAL": 170,
-            "TEXCOORD_0": 171
+            "POSITION": 170,
+            "NORMAL": 171,
+            "TEXCOORD_0": 172
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1382,7 +1384,7 @@
               }
             }
           },
-          "indices": 172,
+          "indices": 173,
           "mode": 4
         }
       ]
@@ -1392,9 +1394,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 173,
-            "NORMAL": 174,
-            "TEXCOORD_0": 175
+            "POSITION": 174,
+            "NORMAL": 175,
+            "TEXCOORD_0": 176
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1406,7 +1408,7 @@
               }
             }
           },
-          "indices": 176,
+          "indices": 177,
           "mode": 4
         }
       ]
@@ -1416,9 +1418,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 177,
-            "NORMAL": 178,
-            "TEXCOORD_0": 179
+            "POSITION": 178,
+            "NORMAL": 179,
+            "TEXCOORD_0": 180
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1430,7 +1432,7 @@
               }
             }
           },
-          "indices": 180,
+          "indices": 181,
           "mode": 4
         }
       ]
@@ -1440,9 +1442,9 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 181,
-            "NORMAL": 182,
-            "TEXCOORD_0": 183
+            "POSITION": 182,
+            "NORMAL": 183,
+            "TEXCOORD_0": 184
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1454,7 +1456,7 @@
               }
             }
           },
-          "indices": 184,
+          "indices": 185,
           "mode": 4
         }
       ]
@@ -1464,10 +1466,10 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 185,
-            "NORMAL": 186,
-            "TEXCOORD_0": 187,
-            "TEXCOORD_1": 188
+            "POSITION": 186,
+            "NORMAL": 187,
+            "TEXCOORD_0": 188,
+            "TEXCOORD_1": 189
           },
           "extensions": {
             "KHR_draco_mesh_compression": {
@@ -1480,7 +1482,7 @@
               }
             }
           },
-          "indices": 189,
+          "indices": 190,
           "mode": 4
         }
       ]
@@ -1842,6 +1844,11 @@
       "componentType": 5126,
       "count": 264,
       "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 264,
+      "type": "VEC2"
     },
     {
       "componentType": 5123,
@@ -2635,168 +2642,168 @@
     },
     {
       "buffer": 0,
-      "byteLength": 1102,
+      "byteLength": 1635,
       "byteOffset": 235312
     },
     {
       "buffer": 0,
       "byteLength": 577,
-      "byteOffset": 236416
+      "byteOffset": 236948
     },
     {
       "buffer": 0,
       "byteLength": 23876,
-      "byteOffset": 236996
+      "byteOffset": 237528
     },
     {
       "buffer": 0,
-      "byteLength": 15756,
-      "byteOffset": 260872
+      "byteLength": 16336,
+      "byteOffset": 261404
     },
     {
       "buffer": 0,
       "byteLength": 187,
-      "byteOffset": 276628
+      "byteOffset": 277740
     },
     {
       "buffer": 0,
       "byteLength": 184,
-      "byteOffset": 276816
+      "byteOffset": 277928
     },
     {
       "buffer": 0,
-      "byteLength": 266,
-      "byteOffset": 277000
+      "byteLength": 270,
+      "byteOffset": 278112
     },
     {
       "buffer": 0,
-      "byteLength": 341,
-      "byteOffset": 277268
+      "byteLength": 349,
+      "byteOffset": 278384
     },
     {
       "buffer": 0,
-      "byteLength": 716,
-      "byteOffset": 277612
+      "byteLength": 715,
+      "byteOffset": 278736
     },
     {
       "buffer": 0,
-      "byteLength": 378,
-      "byteOffset": 278328
+      "byteLength": 386,
+      "byteOffset": 279452
     },
     {
       "buffer": 0,
-      "byteLength": 686,
-      "byteOffset": 278708
+      "byteLength": 700,
+      "byteOffset": 279840
     },
     {
       "buffer": 0,
       "byteLength": 176436,
-      "byteOffset": 279396
+      "byteOffset": 280540
     },
     {
       "buffer": 0,
       "byteLength": 176389,
-      "byteOffset": 455832
+      "byteOffset": 456976
     },
     {
       "buffer": 0,
       "byteLength": 212180,
-      "byteOffset": 632224
+      "byteOffset": 633368
     },
     {
       "buffer": 0,
       "byteLength": 1820,
-      "byteOffset": 844404
+      "byteOffset": 845548
     },
     {
       "buffer": 0,
       "byteLength": 804,
-      "byteOffset": 846224
+      "byteOffset": 847368
     },
     {
       "buffer": 0,
       "byteLength": 182,
-      "byteOffset": 847028
+      "byteOffset": 848172
     },
     {
       "buffer": 0,
       "byteLength": 7390,
-      "byteOffset": 847212
+      "byteOffset": 848356
     },
     {
       "buffer": 0,
       "byteLength": 2221,
-      "byteOffset": 854604
+      "byteOffset": 855748
     },
     {
       "buffer": 0,
       "byteLength": 342,
-      "byteOffset": 856828
+      "byteOffset": 857972
     },
     {
       "buffer": 0,
       "byteLength": 340,
-      "byteOffset": 857172
+      "byteOffset": 858316
     },
     {
       "buffer": 0,
       "byteLength": 4349,
-      "byteOffset": 857512
+      "byteOffset": 858656
     },
     {
       "buffer": 0,
       "byteLength": 45824,
-      "byteOffset": 861864
+      "byteOffset": 863008
     },
     {
       "buffer": 0,
       "byteLength": 6691,
-      "byteOffset": 907688
+      "byteOffset": 908832
     },
     {
       "buffer": 0,
-      "byteLength": 488,
-      "byteOffset": 914380
+      "byteLength": 485,
+      "byteOffset": 915524
     },
     {
       "buffer": 0,
-      "byteLength": 11251,
-      "byteOffset": 914868
+      "byteLength": 11269,
+      "byteOffset": 916012
     },
     {
       "buffer": 0,
-      "byteLength": 3027,
-      "byteOffset": 926120
+      "byteLength": 3021,
+      "byteOffset": 927284
     },
     {
       "buffer": 0,
-      "byteLength": 6255,
-      "byteOffset": 929148
+      "byteLength": 6246,
+      "byteOffset": 930308
     },
     {
       "buffer": 0,
-      "byteLength": 5867,
-      "byteOffset": 935404
+      "byteLength": 5887,
+      "byteOffset": 936556
     },
     {
       "buffer": 0,
-      "byteLength": 3475,
-      "byteOffset": 941272
+      "byteLength": 3474,
+      "byteOffset": 942444
     },
     {
       "buffer": 0,
-      "byteLength": 471,
-      "byteOffset": 944748
+      "byteLength": 468,
+      "byteOffset": 945920
     },
     {
       "buffer": 0,
       "byteLength": 416,
-      "byteOffset": 945220
+      "byteOffset": 946388
     }
   ],
   "buffers": [
     {
-      "byteLength": 945636,
+      "byteLength": 946804,
       "uri": "Laboratoire.bin"
     }
   ]
