@@ -38,7 +38,10 @@ export default function AboutCanvas() {
         ]}
       />
       <ambientLight intensity={1.8} />
-      {/* <rectAreaLight args={[10, 10]} position={[0, 20, 0]} /> */}
+      <rectAreaLight
+        args={[10, 10]}
+        position={[0, 20, 0]}
+      />
       <Suspense fallback={null}>
         <Physics debug>
           {!isMobile ? (

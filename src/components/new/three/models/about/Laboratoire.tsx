@@ -73,128 +73,115 @@ type GLTFResult = GLTF & {
 export function Laboratoire(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE) as GLTFResult
 
-  const northWallElementsMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.NORTH_WALL_ELEMENTS,
-  )
-  northWallElementsMapTexture.flipY = false
-  northWallElementsMapTexture.encoding = THREE.sRGBEncoding
-
-  const speakersMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.SPEAKERS,
-  )
-  speakersMapTexture.flipY = false
-  speakersMapTexture.encoding = THREE.sRGBEncoding
-
-  const deskMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DESK)
-  deskMapTexture.flipY = false
-  deskMapTexture.encoding = THREE.sRGBEncoding
-
-  const deskChairMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.DESK_CHAIR,
-  )
-  deskChairMapTexture.flipY = false
-  deskChairMapTexture.encoding = THREE.sRGBEncoding
-
-  const doorMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DOOR)
-  doorMapTexture.flipY = false
-  doorMapTexture.encoding = THREE.sRGBEncoding
-
-  const northWallMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.NORTH_WALL,
-  )
-  northWallMapTexture.flipY = false
-  northWallMapTexture.encoding = THREE.sRGBEncoding
-
-  const westWallMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.WEST_WALL,
-  )
-  westWallMapTexture.flipY = false
-  westWallMapTexture.encoding = THREE.sRGBEncoding
-
-  const wallClockMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.WALL_CLOCK,
-  )
-  wallClockMapTexture.flipY = false
-  wallClockMapTexture.encoding = THREE.sRGBEncoding
-
   const ceilingMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.CEILING,
+    texturesConstants.ABOUT.LABORATOIRE.CEILING.DIFFUSE.ONE_K,
   )
   ceilingMapTexture.flipY = false
   ceilingMapTexture.encoding = THREE.sRGBEncoding
-
-  const videoProjectorMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.VIDEO_PROJECTOR,
-  )
-  videoProjectorMapTexture.flipY = false
-  videoProjectorMapTexture.encoding = THREE.sRGBEncoding
-
-  const northWallElementsMaterial = new THREE.MeshStandardMaterial({
-    map: northWallElementsMapTexture,
-  })
-
-  const speakersMaterial = new THREE.MeshStandardMaterial({
-    map: speakersMapTexture,
-  })
-
-  const deskMaterial = new THREE.MeshStandardMaterial({
-    map: deskMapTexture,
-  })
-
-  const deskChairMaterial = new THREE.MeshStandardMaterial({
-    map: deskChairMapTexture,
-  })
-
-  const doorMaterial = new THREE.MeshStandardMaterial({
-    map: doorMapTexture,
-  })
-
-  const northWallMaterial = new THREE.MeshStandardMaterial({
-    map: northWallMapTexture,
-  })
-
-  const westWallMaterial = new THREE.MeshStandardMaterial({
-    map: westWallMapTexture,
-  })
-
-  const wallClockMaterial = new THREE.MeshStandardMaterial({
-    map: wallClockMapTexture,
-  })
-
   const ceilingMaterial = new THREE.MeshStandardMaterial({
     map: ceilingMapTexture,
   })
 
-  const videoProjectorMaterial = new THREE.MeshStandardMaterial({
-    map: videoProjectorMapTexture,
+  const ceilingLampFrameMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.CEILING.DIFFUSE.ONE_K,
+  )
+  ceilingLampFrameMapTexture.flipY = false
+  ceilingLampFrameMapTexture.encoding = THREE.sRGBEncoding
+  const ceilingLampFrameMaterial = new THREE.MeshStandardMaterial({
+    map: ceilingLampFrameMapTexture,
   })
 
-  const wallsMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.WALLS)
-  wallsMapTexture.flipY = false
-  wallsMapTexture.encoding = THREE.sRGBEncoding
+  const deskMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DESK.DIFFUSE.ONE_K)
+  deskMapTexture.flipY = false
+  deskMapTexture.encoding = THREE.sRGBEncoding
+  const deskMaterial = new THREE.MeshStandardMaterial({
+    map: deskMapTexture,
+  })
 
-  const elementsMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.ELEMENTS,
+  const deskChairMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.DESK_CHAIR.DIFFUSE.ONE_K,
   )
-  elementsMapTexture.flipY = false
-  elementsMapTexture.encoding = THREE.sRGBEncoding
+  deskChairMapTexture.flipY = false
+  deskChairMapTexture.encoding = THREE.sRGBEncoding
+  const deskChairMaterial = new THREE.MeshStandardMaterial({
+    map: deskChairMapTexture,
+  })
+
+  const doorMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DOOR.DIFFUSE.ONE_K)
+  doorMapTexture.flipY = false
+  doorMapTexture.encoding = THREE.sRGBEncoding
+  const doorMaterial = new THREE.MeshStandardMaterial({
+    map: doorMapTexture,
+  })
+
+  const framesMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.FRAMES.DIFFUSE.ONE_K,
+  )
+  framesMapTexture.flipY = false
+  framesMapTexture.encoding = THREE.sRGBEncoding
+  const framesMaterial = new THREE.MeshStandardMaterial({
+    map: framesMapTexture,
+  })
+
+  const northWallMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.NORTH_WALL.DIFFUSE.ONE_K,
+  )
+  northWallMapTexture.flipY = false
+  northWallMapTexture.encoding = THREE.sRGBEncoding
+  const northWallMaterial = new THREE.MeshStandardMaterial({
+    map: northWallMapTexture,
+  })
 
   const parquetMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.PARQUET,
+    texturesConstants.ABOUT.LABORATOIRE.PARQUET.DIFFUSE.ONE_K,
   )
   parquetMapTexture.flipY = false
   parquetMapTexture.encoding = THREE.sRGBEncoding
-
-  const elementsMaterial = new THREE.MeshStandardMaterial({
-    map: elementsMapTexture,
-  })
-
   const parquetMaterial = new THREE.MeshStandardMaterial({
     map: parquetMapTexture,
   })
 
-  const wallsMaterial = new THREE.MeshStandardMaterial({
-    map: wallsMapTexture,
+  const shelfMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.SHELF.DIFFUSE.ONE_K)
+  shelfMapTexture.flipY = false
+  shelfMapTexture.encoding = THREE.sRGBEncoding
+  const shelfMaterial = new THREE.MeshStandardMaterial({
+    map: shelfMapTexture,
+  })
+
+  const speakersMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.SPEAKERS.DIFFUSE.ONE_K,
+  )
+  speakersMapTexture.flipY = false
+  speakersMapTexture.encoding = THREE.sRGBEncoding
+  const speakersMaterial = new THREE.MeshStandardMaterial({
+    map: speakersMapTexture,
+  })
+
+  const videoProjectorMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.VIDEO_PROJECTOR.DIFFUSE.ONE_K,
+  )
+  videoProjectorMapTexture.flipY = false
+  videoProjectorMapTexture.encoding = THREE.sRGBEncoding
+  const videoProjectorMaterial = new THREE.MeshStandardMaterial({
+    map: videoProjectorMapTexture,
+  })
+
+  const wallClockMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.WALL_CLOCK.DIFFUSE.ONE_K,
+  )
+  wallClockMapTexture.flipY = false
+  wallClockMapTexture.encoding = THREE.sRGBEncoding
+  const wallClockMaterial = new THREE.MeshStandardMaterial({
+    map: wallClockMapTexture,
+  })
+
+  const westWallMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.WEST_WALL.DIFFUSE.ONE_K,
+  )
+  westWallMapTexture.flipY = false
+  westWallMapTexture.encoding = THREE.sRGBEncoding
+  const westWallMaterial = new THREE.MeshStandardMaterial({
+    map: westWallMapTexture,
   })
 
   return (
@@ -309,7 +296,7 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='CeilingLampFrame'
         geometry={nodes.CeilingLampFrame.geometry}
-        material={elementsMaterial}
+        material={ceilingLampFrameMaterial}
         position={[0, 28.6, 0]}
       />
       <mesh
@@ -327,49 +314,49 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='Shelf'
         geometry={nodes.Shelf.geometry}
-        material={northWallElementsMaterial}
+        material={shelfMaterial}
         position={[0, 18, -16]}
       />
       <mesh
         name='VirgenDeGuadalupe'
         geometry={nodes.VirgenDeGuadalupe.geometry}
-        material={northWallElementsMaterial}
+        material={shelfMaterial}
         position={[-4.512, 18.127, -15.546]}
       />
       <mesh
         name='PabloEscobar'
         geometry={nodes.PabloEscobar.geometry}
-        material={northWallElementsMaterial}
+        material={shelfMaterial}
         position={[4.936, 18.127, -15.546]}
       />
       <mesh
         name='Tetrahedron'
         geometry={nodes.Tetrahedron.geometry}
-        material={northWallElementsMaterial}
+        material={shelfMaterial}
         position={[4.034, 18.12, -15.305]}
       />
       <mesh
         name='Cube'
         geometry={nodes.Cube.geometry}
-        material={northWallElementsMaterial}
+        material={shelfMaterial}
         position={[4.377, 18.12, -14.612]}
       />
       <mesh
         name='Dodecahedron'
         geometry={nodes.Dodecahedron.geometry}
-        material={northWallElementsMaterial}
+        material={shelfMaterial}
         position={[3.82, 18.12, -14.48]}
       />
       <mesh
         name='Octahedron'
         geometry={nodes.Octahedron.geometry}
-        material={northWallElementsMaterial}
+        material={shelfMaterial}
         position={[3.414, 18.12, -14.86]}
       />
       <mesh
         name='Icosahedron'
         geometry={nodes.Icosahedron.geometry}
-        material={northWallElementsMaterial}
+        material={shelfMaterial}
         position={[3.621, 18.12, -15.221]}
       />
       <mesh
@@ -462,44 +449,44 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='AmorLlamaAmor'
         geometry={nodes.AmorLlamaAmor.geometry}
-        material={northWallElementsMaterial}
+        material={framesMaterial}
         position={[-11.2, 10, -16]}
         scale={[0.99, 1, 1]}
       />
       <mesh
         name='Brain'
         geometry={nodes.Brain.geometry}
-        material={northWallElementsMaterial}
+        material={framesMaterial}
         position={[-19.06, 10, -16]}
       />
       <mesh
         name='Trinity'
         geometry={nodes.Trinity.geometry}
-        material={northWallElementsMaterial}
+        material={framesMaterial}
         position={[-17.09, 19.2, -16]}
       />
       <mesh
         name='Couronnes'
         geometry={nodes.Couronnes.geometry}
-        material={northWallElementsMaterial}
+        material={framesMaterial}
         position={[0, 25.6, -16]}
       />
       <mesh
         name='NicotianaRustica'
         geometry={nodes.NicotianaRustica.geometry}
-        material={northWallElementsMaterial}
+        material={framesMaterial}
         position={[10.2, 14.9, -16]}
       />
       <mesh
         name='CelestialMap'
         geometry={nodes.CelestialMap.geometry}
-        material={northWallElementsMaterial}
+        material={framesMaterial}
         position={[10.1, 10.2, -16]}
       />
       <mesh
         name='VerbalShoota'
         geometry={nodes.VerbalShoota.geometry}
-        material={northWallElementsMaterial}
+        material={framesMaterial}
         position={[19.032, 14.9, -16]}
       />
       <mesh
