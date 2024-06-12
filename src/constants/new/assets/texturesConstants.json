@@ -1,8 +1,16 @@
 {
   "ABOUT": {
     "LABORATOIRE": {
+      "CEILING": "/new/img/textures/about/ceiling_diffuse.jpg",
+      "DESK": "/new/img/textures/about/desk_diffuse.jpg",
+      "DESK_CHAIR": "/new/img/textures/about/desk_chair_diffuse.jpg",
+      "DOOR": "/new/img/textures/about/door_diffuse.jpg",
+      "NORTH_WALL": "/new/img/textures/about/north_wall_diffuse.jpg",
       "NORTH_WALL_ELEMENTS": "/new/img/textures/about/north_wall_elements_diffuse.jpg",
       "SPEAKERS": "/new/img/textures/about/speakers_diffuse.jpg",
+      "VIDEO_PROJECTOR": "/new/img/textures/about/video_projector_diffuse.jpg",
+      "WALL_CLOCK": "/new/img/textures/about/wall_clock_diffuse.jpg",
+      "WEST_WALL": "/new/img/textures/about/west_wall_diffuse.jpg",
 
       "ELEMENTS": "/new/img/textures/about/elements_diffuse.jpg",
       "PARQUET": "/new/img/textures/about/parquet_diffuse.jpg",

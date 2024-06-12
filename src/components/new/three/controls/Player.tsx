@@ -53,9 +53,9 @@ export default function Player({
     playerRef.current.wakeUp()
     playerRef.current.setLinvel(
       {
-        x: direction.x,
-        y: velocity.y,
-        z: direction.z,
+        x: direction.x * 2,
+        y: velocity.y * 2,
+        z: direction.z * 2,
       },
       true,
     )
