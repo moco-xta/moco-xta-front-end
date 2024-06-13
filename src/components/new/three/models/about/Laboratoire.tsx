@@ -91,7 +91,9 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
     map: ceilingLampFrameMapTexture,
   })
 
-  const deskMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DESK.DIFFUSE.ONE_K)
+  const deskMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.DESK.DIFFUSE.ONE_K,
+  )
   deskMapTexture.flipY = false
   deskMapTexture.encoding = THREE.sRGBEncoding
   const deskMaterial = new THREE.MeshStandardMaterial({
@@ -107,7 +109,9 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
     map: deskChairMapTexture,
   })
 
-  const doorMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DOOR.DIFFUSE.ONE_K)
+  const doorMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.DOOR.DIFFUSE.ONE_K,
+  )
   doorMapTexture.flipY = false
   doorMapTexture.encoding = THREE.sRGBEncoding
   const doorMaterial = new THREE.MeshStandardMaterial({
@@ -141,7 +145,9 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
     map: parquetMapTexture,
   })
 
-  const shelfMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.SHELF.DIFFUSE.ONE_K)
+  const shelfMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.SHELF.DIFFUSE.ONE_K,
+  )
   shelfMapTexture.flipY = false
   shelfMapTexture.encoding = THREE.sRGBEncoding
   const shelfMaterial = new THREE.MeshStandardMaterial({

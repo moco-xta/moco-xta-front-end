@@ -21,17 +21,17 @@ export default function ContactCanvas() {
     >
       <PerspectiveCamera
         makeDefault
-        position={
-            [
-                contactConstants.PERSPECTIVE_CAMERA.POSITION.X,
-                contactConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-                contactConstants.PERSPECTIVE_CAMERA.POSITION.Z,
-              ]
-        }
+        position={[
+          contactConstants.PERSPECTIVE_CAMERA.POSITION.X,
+          contactConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          contactConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+        ]}
         fov={contactConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <OrbitControls />
-      <ambientLight intensity={contactConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
+      <ambientLight
+        intensity={contactConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
+      />
       <Suspense>
         <ContactScene />
       </Suspense>
