@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import ContactSlice from '@/components/new/slices/contact_slice'
+import { ContactSlice } from '@/components/new/slices'
 
 export default function Contact() {
   return <ContactSlice />
