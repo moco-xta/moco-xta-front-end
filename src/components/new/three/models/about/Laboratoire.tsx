@@ -1,6 +1,6 @@
 import React from 'react'
 import * as THREE from 'three'
-import { useGLTF, useTexture } from '@react-three/drei'
+import { MeshTransmissionMaterial, useGLTF, useTexture } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import {
@@ -200,7 +200,23 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
         geometry={nodes.DeskTray.geometry}
         material={glassMaterial}
         position={[0, 9.092, -10.05]}
-      />
+      >
+        <MeshTransmissionMaterial
+          color={"#fff"}
+          roughness={0}
+          ior={1.5}
+          thickness={0.035}
+          transmission={1}
+          anisotropy={1}
+          distortion={0}
+          distortionScale={0}
+          backside={true}
+          attenuationDistance={0.2}
+          attenuationColor={"#ffffff"}
+          chromaticAberration={0.1}
+          samples={10}
+        />
+      </mesh>
       <mesh
         name='TrestleLeft'
         geometry={nodes.TrestleLeft.geometry}

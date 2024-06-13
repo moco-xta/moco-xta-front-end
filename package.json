@@ -24,6 +24,7 @@
     "@theatre/studio": "^0.7.0",
     "@types/react-redux": "^7.1.33",
     "@types/three": "^0.161.2",
+    "dat.gui": "^0.7.9",
     "formik": "^2.4.5",
     "gsap": "^3.12.5",
     "immer": "^10.1.1",
