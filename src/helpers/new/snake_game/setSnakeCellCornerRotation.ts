@@ -1,7 +1,6 @@
 import * as THREE from 'three'
 
 export function setSnakeCellCornerRotation(cornerType: string) {
-  console.log('cornerType: ', cornerType)
   switch (cornerType) {
     case 'NORTH_TO_WEST':
       return new THREE.Euler(0, THREE.MathUtils.degToRad(90), 0)
