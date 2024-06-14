@@ -1,10 +1,11 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
-/* import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js' */
 import { GUI } from 'dat.gui'
 
 import vertexShader from '../../shaders/default_shaders/vertexShader.glsl'
 import fragmentShader from '../../shaders/default_shaders/fragmentShader.glsl'
+
+import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
 export default class ContactClass {
   constructor(props) {
@@ -12,6 +13,11 @@ export default class ContactClass {
 
     this.isPlaying = true
     this.time = 0
+    this.speed = 0;
+    this.targetSpeed = 0;
+    this.mouse = new THREE.Vector2();
+    this.followMouse = new THREE.Vector2();
+    this.prevMouse = new THREE.Vector2();
 
     this.container = container
 
@@ -19,6 +25,8 @@ export default class ContactClass {
 
     this.width = window.innerWidth
     this.height = window.innerHeight
+    this.imgWidth = 3
+    this.imgHeight = 4
 
     this.renderer = new THREE.WebGLRenderer({
       alpha: true,
@@ -43,14 +51,9 @@ export default class ContactClass {
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement)
     
-    /* const loader = new GLTFLoader()
-    loader.load('path', (gltf) => {
-      this.model = gltf.scene
-      console.log(gltf)
-    }) */
-
     this.addObjects()
     this.addLights()
+    this.mouseMove()
     this.render()
 
     this.setupResize()
@@ -58,7 +61,15 @@ export default class ContactClass {
   }
 
   addObjects() {
-    const geometry = new THREE.PlaneGeometry(1, 1)
+    // GEOMETRY
+    const geometry = new THREE.PlaneGeometry(this.imgWidth, this.imgHeight, this.imgWidth * 20, this.imgHeight * 20)
+
+    // TEXTURE
+    const uTexture1 = new THREE.TextureLoader().load(texturesConstants.CONTACT.PROFIL_PICTURE)
+    uTexture1.minFilter = THREE.LinearFilter
+    uTexture1.needsUpdate = true
+
+    // MATERIAL
     this.material = new THREE.ShaderMaterial({
       extensions: {
         derivates: 'extensions GL_OES_derivates: enable'
@@ -67,6 +78,8 @@ export default class ContactClass {
       transparent: true,
       uniforms: {
         time: { value: 0 },
+        uTexture1: { type: 't', value: uTexture1 },
+        uResolution: { type: 'v4', value: new THREE.Vector4(300, 400, 1, 1) },
       },
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
@@ -84,8 +97,32 @@ export default class ContactClass {
     this.scene.add(this.directionnal)
   }
 
+  mouseMove() {
+    window.addEventListener('mousemove', (event) => {
+      this.mouse.x = event.clientX / window.innerWidth
+      this.mouse.y = 1 - event.clientY / window.innerHeight
+    })
+  }
+
+  getSpeed() {
+    this.speed = Math.sqrt(
+      (this.prevMouse.x - this.mouse.x) ** 2 +
+        (this.prevMouse.y - this.mouse.y) ** 2,
+    )
+
+    this.targetSpeed -= 0.1 * (this.targetSpeed - this.speed)
+    this.followMouse.x -= 0.1 * (this.followMouse.x - this.mouse.x)
+    this.followMouse.y -= 0.1 * (this.followMouse.y - this.mouse.y)
+
+    this.prevMouse.x = this.mouse.x
+    this.prevMouse.y = this.mouse.y
+
+    console.log('this.speed', this.speed)
+  }
+
   render() {
     if (!this.isPlaying) return
+    this.getSpeed()
     this.time += 0.05
     this.material.uniforms.time.value = this.time
     requestAnimationFrame(this.render.bind(this))

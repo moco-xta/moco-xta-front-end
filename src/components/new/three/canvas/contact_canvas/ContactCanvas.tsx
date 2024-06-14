@@ -1,14 +1,14 @@
 import React, { Component, createRef, RefObject } from 'react'
 
-import DefaultThreeClass from './ContactClass.js'
+import ContactScene from './ContactScene.js'
 
-interface DefaultThreeSceneState {
+interface ContactSceneState {
   initialized: boolean
 }
 
 export default class DefaultThreeScene extends Component<
   {},
-  DefaultThreeSceneState
+  ContactSceneState
 > {
   private canvasRef: RefObject<HTMLDivElement>
 
@@ -22,7 +22,7 @@ export default class DefaultThreeScene extends Component<
   }
 
   init = () => {
-    new DefaultThreeClass({
+    new ContactScene({
       container: this.canvasRef.current,
     })
   }
