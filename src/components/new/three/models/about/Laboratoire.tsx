@@ -1,6 +1,10 @@
 import React from 'react'
 import * as THREE from 'three'
-import { useGLTF, useTexture } from '@react-three/drei'
+import {
+  MeshTransmissionMaterial,
+  useGLTF,
+  useTexture,
+} from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import {
@@ -91,7 +95,9 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
     map: ceilingLampFrameMapTexture,
   })
 
-  const deskMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DESK.DIFFUSE.ONE_K)
+  const deskMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.DESK.DIFFUSE.ONE_K,
+  )
   deskMapTexture.flipY = false
   deskMapTexture.encoding = THREE.sRGBEncoding
   const deskMaterial = new THREE.MeshStandardMaterial({
@@ -107,7 +113,9 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
     map: deskChairMapTexture,
   })
 
-  const doorMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DOOR.DIFFUSE.ONE_K)
+  const doorMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.DOOR.DIFFUSE.ONE_K,
+  )
   doorMapTexture.flipY = false
   doorMapTexture.encoding = THREE.sRGBEncoding
   const doorMaterial = new THREE.MeshStandardMaterial({
@@ -141,7 +149,9 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
     map: parquetMapTexture,
   })
 
-  const shelfMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.SHELF.DIFFUSE.ONE_K)
+  const shelfMapTexture = useTexture(
+    texturesConstants.ABOUT.LABORATOIRE.SHELF.DIFFUSE.ONE_K,
+  )
   shelfMapTexture.flipY = false
   shelfMapTexture.encoding = THREE.sRGBEncoding
   const shelfMaterial = new THREE.MeshStandardMaterial({
@@ -194,7 +204,23 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
         geometry={nodes.DeskTray.geometry}
         material={glassMaterial}
         position={[0, 9.092, -10.05]}
-      />
+      >
+        <MeshTransmissionMaterial
+          color={'#fff'}
+          roughness={0}
+          ior={1.5}
+          thickness={0.035}
+          transmission={1}
+          anisotropy={1}
+          distortion={0}
+          distortionScale={0}
+          backside={true}
+          attenuationDistance={0.2}
+          attenuationColor={'#ffffff'}
+          chromaticAberration={0.1}
+          samples={10}
+        />
+      </mesh>
       <mesh
         name='TrestleLeft'
         geometry={nodes.TrestleLeft.geometry}

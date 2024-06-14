@@ -106,5 +106,8 @@
       "PARQUET_NORMAL": "/new/img/textures/about/parquet/parquet_normal.jpg",
       "PARQUET_ROUGHNESS": "/new/img/textures/about/parquet/parquet_roughness.jpg"
     }
+  },
+  "CONTACT": {
+    "PROFIL_PICTURE": "/new/img/textures/contact/profil_picture.jpg"
   }
 }

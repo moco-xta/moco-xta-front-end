@@ -1,9 +1,6 @@
 @import '@/styles/new/variables.module.scss';
 
-#contact_slice {
-  position: fixed;
+canvas {
   width: 100vw;
   height: 100vh;
-  font-family: var(--font-retro-gaming);
-  font-size: 50px;
 }

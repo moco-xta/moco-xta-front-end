@@ -30,4 +30,9 @@ export const Routes: RoutesInterface[] = [
     key: 'PROJECTS',
     path: '/projects',
   },
+  {
+    index: 5,
+    key: 'SNAKE',
+    path: '/snake',
+  },
 ]
