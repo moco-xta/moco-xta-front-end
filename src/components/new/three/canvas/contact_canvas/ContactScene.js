@@ -7,8 +7,8 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js'
 
 import { CustomPass } from './CustomPass'
 
-import vertexShader from '../../shaders/default_shaders/vertexShader.glsl'
-import fragmentShader from '../../shaders/default_shaders/fragmentShader.glsl'
+import vertexShader from '../../shaders/contact/material_shaders/vertexShader.glsl'
+import fragmentShader from '../../shaders/contact/material_shaders/fragmentShader.glsl'
 
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
@@ -77,14 +77,12 @@ export default class ContactClass {
       this.imgHeight * 20,
     )
 
-    // TEXTURE
     const uTexture1 = new THREE.TextureLoader().load(
       texturesConstants.CONTACT.PROFIL_PICTURE,
     )
     uTexture1.minFilter = THREE.LinearFilter
     uTexture1.needsUpdate = true
 
-    // MATERIAL
     this.material = new THREE.ShaderMaterial({
       extensions: {
         derivates: 'extensions GL_OES_derivates: enable',

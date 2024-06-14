@@ -9,7 +9,5 @@ const float pi = 3.1415925;
 
 void main() {
   vUv = uv;
-  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0 );
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
 }
-
-
