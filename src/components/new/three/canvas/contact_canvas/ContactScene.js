@@ -4,10 +4,8 @@ import { GUI } from 'dat.gui'
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
-import { RGBShiftShader } from 'three/addons/shaders/RGBShiftShader.js';
-import { DotScreenShader } from 'three/addons/shaders/DotScreenShader.js';
-import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 
+import { CustomPass } from './CustomPass';
 
 import vertexShader from '../../shaders/default_shaders/vertexShader.glsl'
 import fragmentShader from '../../shaders/default_shaders/fragmentShader.glsl'
@@ -117,16 +115,9 @@ export default class ContactClass {
     this.composer = new EffectComposer( this.renderer );
     this.composer.addPass( new RenderPass( this.scene, this.camera ) );
 
-    const effect1 = new ShaderPass( DotScreenShader );
+    const effect1 = new ShaderPass( CustomPass );
     effect1.uniforms[ 'scale' ].value = 4;
     this.composer.addPass( effect1 );
-
-    const effect2 = new ShaderPass( RGBShiftShader );
-    effect2.uniforms[ 'amount' ].value = 0.0015;
-    this.composer.addPass( effect2 );
-
-    const effect3 = new OutputPass();
-    this.composer.addPass( effect3 );
   }
 
   getSpeed() {
@@ -153,7 +144,7 @@ export default class ContactClass {
     requestAnimationFrame(this.render.bind(this))
     /* this.renderer.render(this.scene, this.camera) */
     if(this.composer) this.composer.render()
-  }
+  } 
 
   setupResize() {
     window.addEventListener('resize', this.resize.bind(this))
