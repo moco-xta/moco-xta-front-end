@@ -1,6 +1,13 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { GUI } from 'dat.gui'
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { RGBShiftShader } from 'three/addons/shaders/RGBShiftShader.js';
+import { DotScreenShader } from 'three/addons/shaders/DotScreenShader.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
 
 import vertexShader from '../../shaders/default_shaders/vertexShader.glsl'
 import fragmentShader from '../../shaders/default_shaders/fragmentShader.glsl'
@@ -22,6 +29,7 @@ export default class ContactClass {
     this.container = container
 
     this.scene = new THREE.Scene()
+    this.composer
 
     this.width = window.innerWidth
     this.height = window.innerHeight
@@ -54,6 +62,7 @@ export default class ContactClass {
     this.addObjects()
     this.addLights()
     this.mouseMove()
+    this.initPost()
     this.render()
 
     this.setupResize()
@@ -104,6 +113,22 @@ export default class ContactClass {
     })
   }
 
+  initPost() {
+    this.composer = new EffectComposer( this.renderer );
+    this.composer.addPass( new RenderPass( this.scene, this.camera ) );
+
+    const effect1 = new ShaderPass( DotScreenShader );
+    effect1.uniforms[ 'scale' ].value = 4;
+    this.composer.addPass( effect1 );
+
+    const effect2 = new ShaderPass( RGBShiftShader );
+    effect2.uniforms[ 'amount' ].value = 0.0015;
+    this.composer.addPass( effect2 );
+
+    const effect3 = new OutputPass();
+    this.composer.addPass( effect3 );
+  }
+
   getSpeed() {
     this.speed = Math.sqrt(
       (this.prevMouse.x - this.mouse.x) ** 2 +
@@ -126,7 +151,8 @@ export default class ContactClass {
     this.time += 0.05
     this.material.uniforms.time.value = this.time
     requestAnimationFrame(this.render.bind(this))
-    this.renderer.render(this.scene, this.camera)
+    /* this.renderer.render(this.scene, this.camera) */
+    if(this.composer) this.composer.render()
   }
 
   setupResize() {
