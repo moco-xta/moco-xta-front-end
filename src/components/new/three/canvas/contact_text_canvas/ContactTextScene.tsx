@@ -3,7 +3,7 @@ import { debounce } from 'lodash'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
-import CustomShaderMaterial from "three-custom-shader-material";
+import CustomShaderMaterial from 'three-custom-shader-material'
 import html2canvas from 'html2canvas'
 
 import useMouseMove from '@/hooks/new/useMouseMove'
@@ -40,46 +40,48 @@ const useDomToCanvas = (domEl) => {
 }
 
 export default function ContactTextScene() {
-  const state = useThree();
+  const state = useThree()
   state.gl.setClearColor(0x000000, 0)
-  const { width, height } = state.viewport;
-  const [domEl, setDomEl] = useState(null);
+  const { width, height } = state.viewport
+  const [domEl, setDomEl] = useState(null)
 
-  const materialRef = useRef(null);
-  const textureDOM = useDomToCanvas(domEl);
+  const materialRef = useRef(null)
+  const textureDOM = useDomToCanvas(domEl)
 
   const uniforms = useMemo(
     () => ({
       uTexture: { value: textureDOM },
       uMouse: { value: new THREE.Vector2(0, 0) },
     }),
-    [textureDOM]
-  );
+    [textureDOM],
+  )
 
-  const mouseLerped = useRef({ x: 0, y: 0 });
-
-  useEffect(() => {
-    console.log('mouseLerped', mouseLerped)
-  }, [mouseLerped.current])
+  const mouseLerped = useRef({ x: 0, y: 0 })
 
   const { mouseX, mouseY } = useMouseMove()
 
-  useFrame((state, delta) => {
-    /* const mouse = state.mouse; */
-    const x = (1 / (window.innerWidth / 2)) * (mouseX - (window.innerWidth / 2))
-    const y = (1 / (window.innerHeight / 2)) * -(mouseY - (window.innerHeight / 2))
-    mouseLerped.current.x = THREE.MathUtils.lerp(mouseLerped.current.x, x, 0.1);
-    mouseLerped.current.y = THREE.MathUtils.lerp(mouseLerped.current.y, y, 0.1);
-    console.log('mouseLerped', mouseLerped.current)
-    materialRef.current.uniforms.uMouse.value.x = mouseLerped.current.x;
-    materialRef.current.uniforms.uMouse.value.y = mouseLerped.current.y;
-  });
+  useFrame(() => {
+    const x = (1 / (window.innerWidth / 2)) * (mouseX - window.innerWidth / 2)
+    const y =
+      (1 / (window.innerHeight / 2)) * -(mouseY - window.innerHeight / 2)
+    mouseLerped.current.x = THREE.MathUtils.lerp(mouseLerped.current.x, x, 0.1)
+    mouseLerped.current.y = THREE.MathUtils.lerp(mouseLerped.current.y, y, 0.1)
+    materialRef.current.uniforms.uMouse.value.x = mouseLerped.current.x
+    materialRef.current.uniforms.uMouse.value.y = mouseLerped.current.y
+  })
 
   return (
     <>
-      <Html zIndexRange={[-1, -10]} prepend fullscreen>
-        <div ref={(el) => setDomEl(el)} className="dom-element">
-          <p className="flex flex-col">
+      <Html
+        zIndexRange={[-1, -10]}
+        prepend
+        fullscreen
+      >
+        <div
+          ref={(el) => setDomEl(el)}
+          className='dom-element'
+        >
+          <p className='flex flex-col'>
             WHEN <br />
             WILL <br />
             WE <br />
@@ -101,5 +103,5 @@ export default function ContactTextScene() {
         <Lights />
       </mesh>
     </>
-  );
+  )
 }
