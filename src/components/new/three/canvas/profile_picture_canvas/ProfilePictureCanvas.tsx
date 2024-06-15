@@ -28,6 +28,11 @@ export default class ProfilePictureCanvas extends Component<
   }
 
   render() {
-    return <div ref={this.canvasRef} />
+    return (
+      <div
+        style={{ position: 'absolute' }}
+        ref={this.canvasRef}
+      />
+    )
   }
 }
