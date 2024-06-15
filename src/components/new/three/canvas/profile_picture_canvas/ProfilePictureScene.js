@@ -12,7 +12,7 @@ import fragmentShader from '../../shaders/contact/material_shaders/fragmentShade
 
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
-export default class ContactClass {
+export default class ProfilePictureScene {
   constructor(props) {
     const { container } = props
 

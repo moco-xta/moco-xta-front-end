@@ -1,9 +1,11 @@
 import React from 'react'
 
-import ContactCanvas from '../../three/canvas/contact_canvas/ContactCanvas'
+import ProfilePictureCanvas from '../../three/canvas/profile_picture_canvas/ProfilePictureCanvas'
 
 import './index.scss'
 
 export default function ContactSlice() {
-  return <ContactCanvas />
+  return (
+    <ProfilePictureCanvas />
+  )
 }
