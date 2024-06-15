@@ -41,7 +41,7 @@ export default class ProfilePictureScene {
     })
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     this.renderer.setSize(this.width, this.height)
-    this.renderer.setClearColor(0x000000, 1)
+    this.renderer.setClearColor(0x000000, 0)
 
     this.raycaster = new THREE.Raycaster()
     this.pointer = new THREE.Vector2()

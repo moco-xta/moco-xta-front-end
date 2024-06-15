@@ -1,8 +1,11 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Box } from '@react-three/drei'
 
-export default function ProfilePictureCanvas() {
+import ContactTextScene from './ContactTextScene'
+import { OrbitControls } from '@react-three/drei'
+import { Lights } from './Lights'
+
+export default function ContactTextCanvas() {
   return (
     <Canvas
       style={{ position: 'absolute' }}
@@ -17,7 +20,9 @@ export default function ProfilePictureCanvas() {
         far: 200,
       }}
     >
-      <Box />
+      <OrbitControls />
+      <Lights />
+      <ContactTextScene />
     </Canvas>
   )
 }
