@@ -1,14 +1,14 @@
 import React, { Component, createRef, RefObject } from 'react'
 
-import ContactScene from './ContactScene.js'
+import ProfilePictureScene from './ProfilePictureScene.js'
 
-interface ContactSceneState {
+interface ProfilePictureSceneState {
   initialized: boolean
 }
 
-export default class DefaultThreeScene extends Component<
+export default class ProfilePictureCanvas extends Component<
   {},
-  ContactSceneState
+  ProfilePictureSceneState
 > {
   private canvasRef: RefObject<HTMLDivElement>
 
@@ -22,12 +22,17 @@ export default class DefaultThreeScene extends Component<
   }
 
   init = () => {
-    new ContactScene({
+    new ProfilePictureScene({
       container: this.canvasRef.current,
     })
   }
 
   render() {
-    return <div ref={this.canvasRef} />
+    return (
+      <div
+        style={{ position: 'absolute' }}
+        ref={this.canvasRef}
+      />
+    )
   }
 }
