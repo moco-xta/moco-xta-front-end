@@ -1,14 +1,13 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 
 import ContactTextScene from './ContactTextScene'
-import { OrbitControls } from '@react-three/drei'
-import { Lights } from './Lights'
 
 export default function ContactTextCanvas() {
   return (
     <Canvas
-      style={{ position: 'absolute' }}
+      style={{ zIndex: '0', position: 'absolute', top: '0px', left: '0px' }}
       dpr={[1, 2]}
       gl={{
         antialias: true,
@@ -21,7 +20,6 @@ export default function ContactTextCanvas() {
       }}
     >
       <OrbitControls />
-      <Lights />
       <ContactTextScene />
     </Canvas>
   )

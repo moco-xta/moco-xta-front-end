@@ -34,21 +34,21 @@ vec2 hash2d(vec2 p) {
 
 void main()	{
 	vec2 newUV = vUv;
-	vec4 color = vec4(1., 0., 0., 1.);
+	vec4 color = vec4(1., 0., 0., .5);
 	
 	if(uType == 0) {
 		float c = circle(newUV, uMouse, 0.0, 0.2);
 		float r = texture2D(tDiffuse, newUV.xy += c * (uVelocity * .5)).x;
 		float g = texture2D(tDiffuse, newUV.xy += c * (uVelocity * .525)).y;
 		float b = texture2D(tDiffuse, newUV.xy += c * (uVelocity * .55)).z;
-		color = vec4(r, g, b, 1.);
+		color = vec4(r, g, b, .5);
 	}
 
 	if(uType == 1) {
 		float c = circle(newUV, uMouse, 0.0, 0.1 + uVelocity * 2.) * 40. * uVelocity;
 		vec2 offsetVector = normalize(uMouse - vUv);
 		vec2 warpedUV = mix(vUv, uMouse, c * 0.99);
-		color = texture2D(tDiffuse, warpedUV) + texture2D(tDiffuse, warpedUV)*vec4(vec3(c), 1.);
+		color = texture2D(tDiffuse, warpedUV) + texture2D(tDiffuse, warpedUV)*vec4(vec3(c), .5);
 	}
 
 	if(uType == 2) {
@@ -56,7 +56,7 @@ void main()	{
 		float c = circle(newUV, uMouse, 0.0, 0.1 + uVelocity * 0.01) * 10. * uVelocity;
 		vec2 offsetVector = normalize(uMouse - vUv);
 		vec2 warpedUV = vUv + vec2(hash - 0.5) * c;
-		color = texture2D(tDiffuse, warpedUV) + texture2D(tDiffuse, warpedUV)*vec4(vec3(c), 1.);
+		color = texture2D(tDiffuse, warpedUV) + texture2D(tDiffuse, warpedUV)*vec4(vec3(c), .5);
 	}
 
 	gl_FragColor = color;
