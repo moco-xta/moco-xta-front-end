@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
 import { SocialsCanvasInterface } from '@/interfaces/new/threeInterfaces'
 
@@ -10,7 +11,6 @@ import SocialsScene from './SocialsScene'
 import { default as socialsConstants } from '@/constants/new/canvas/socialsConstants.json'
 
 import './index.scss'
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
 export default function SocialsCanvas({ className }: SocialsCanvasInterface) {
   return (
@@ -30,7 +30,7 @@ export default function SocialsCanvas({ className }: SocialsCanvasInterface) {
     >
       <PerspectiveCamera
         makeDefault
-        position={[0, 0, 5]}
+        position={[0, 0, 50]}
         fov={55}
         near={0.1}
         far={1000}

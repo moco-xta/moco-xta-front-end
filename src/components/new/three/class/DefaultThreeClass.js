@@ -42,7 +42,7 @@ export default class DefaultThreeClass {
     this.camera.position.set(0, 0, 4)
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement)
-    
+
     /* const loader = new GLTFLoader()
     loader.load('path', (gltf) => {
       this.model = gltf.scene
@@ -61,7 +61,7 @@ export default class DefaultThreeClass {
     const geometry = new THREE.PlaneGeometry(1, 1)
     this.material = new THREE.ShaderMaterial({
       extensions: {
-        derivates: 'extensions GL_OES_derivates: enable'
+        derivates: 'extensions GL_OES_derivates: enable',
       },
       side: THREE.DoubleSide,
       transparent: true,
@@ -77,8 +77,8 @@ export default class DefaultThreeClass {
   }
 
   addLights() {
-    this.ambient = new THREE.AmbientLight(0xFFFFFF, 0.15)
-    this.directionnal = new THREE.DirectionalLight(0xFFFFFF, 0.75)
+    this.ambient = new THREE.AmbientLight(0xffffff, 0.15)
+    this.directionnal = new THREE.DirectionalLight(0xffffff, 0.75)
     this.directionnal.position.set(0, 2, 2)
     this.scene.add(this.ambient)
     this.scene.add(this.directionnal)

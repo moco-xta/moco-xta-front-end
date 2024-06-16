@@ -4,8 +4,7 @@ import { shaderMaterial } from '@react-three/drei'
 import vertexShader from '@/components/new/three/shaders/default/vertexShader.glsl'
 import fragmentShader from '@/components/new/three/shaders/default/fragmentShader.glsl'
 
-const uniforms = {
-}
+const uniforms = {}
 
 export const DefaultShaderMaterial = shaderMaterial(
   uniforms,
