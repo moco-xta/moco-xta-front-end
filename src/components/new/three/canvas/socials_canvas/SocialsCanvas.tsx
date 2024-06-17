@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera } from '@react-three/drei'
 
 import { SocialsCanvasInterface } from '@/interfaces/new/threeInterfaces'
 
@@ -16,7 +16,6 @@ export default function SocialsCanvas({ className }: SocialsCanvasInterface) {
   return (
     <Canvas
       className={`${className}`}
-      /* style={{ zIndex: '3', position: 'absolute', width: '300px',  }} */
       dpr={socialsConstants.CANVAS.DPR}
       shadows={{ type: THREE.PCFSoftShadowMap }}
       legacy={socialsConstants.CANVAS.LEGACY}
@@ -35,7 +34,6 @@ export default function SocialsCanvas({ className }: SocialsCanvasInterface) {
         near={0.1}
         far={1000}
       />
-      {/* <OrbitControls /> */}
       <Lights />
       <Suspense>
         <SocialsScene />
