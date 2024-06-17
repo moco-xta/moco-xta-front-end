@@ -30,12 +30,12 @@ export default function SocialsCanvas({ className }: SocialsCanvasInterface) {
     >
       <PerspectiveCamera
         makeDefault
-        position={[0, 0, 50]}
+        position={[0, 0, 5]}
         fov={55}
         near={0.1}
         far={1000}
       />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <Lights />
       <Suspense>
         <SocialsScene />

@@ -33,23 +33,23 @@ export const deformGeometryShaderMaterial = new THREE.ShaderMaterial({
 export default function SocialsScene() {
   const icosahedronRef = useRef<THREE.Mesh>(null!)
 
-  useFrame((state, delta, xrFrame) => {
+  /* useFrame((state, delta, xrFrame) => {
     // @ts-ignore
     icosahedronRef.current.material.uniforms.time = delta
-    /* console.log(icosahedronRef.current.material) */
-  })
+    console.log(icosahedronRef.current.material)
+  }) */
 
   return (
     <>
-      {/* <LogoTwitter />
+      <LogoTwitter />
       <LogoLinkedIn position={[2.5, 0, 0]} />
-      <LogoGitHub position={[-2.5, 0, 0]} /> */}
-      <mesh ref={icosahedronRef} material={deformGeometryShaderMaterial}>
+      <LogoGitHub position={[-2.5, 0, 0]} />
+      {/* <mesh ref={icosahedronRef} material={deformGeometryShaderMaterial}>
         <icosahedronGeometry
           attach='geometry'
-          args={[20, 20]}
+          args={[20, 200]}
         />
-      </mesh>
+      </mesh> */}
     </>
   )
 }
