@@ -16,7 +16,7 @@ import { default as localesConstants } from '@/constants/new/localesConstants.js
 import './index.scss'
 
 export default function LocaleSwitcher() {
-  const t = useTranslations('LOCALES')
+  const t = useTranslations('ABOUT')
 
   const locale = useLocale()
   const router = useRouter()

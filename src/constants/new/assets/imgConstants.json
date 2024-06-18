@@ -14,5 +14,9 @@
   "HDRS": {
     "LABORATOIRE_ENVIRONMENT": "/new/img/hdr/laboratoire.hdr",
     "HERO_ENVIRONMENT": "/new/img/hdr/peppermint_powerplant_2_1k.hdr"
+  },
+  "QR_CODES": {
+    "TO_ABOUT": "/new/img/png/qr_codes/qr_code_to_home.png",
+    "TO_HOME": "/new/img/png/qr_codes/qr_code_to_home.png"
   }
 }

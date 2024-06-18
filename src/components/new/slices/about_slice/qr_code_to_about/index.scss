@@ -1,0 +1,8 @@
+@import '@/styles/new/variables.module.scss';
+
+#qr_code_to_about_card {
+  z-index: 3;
+  position: absolute;
+  left: $px_margin_S;
+  bottom: $px_margin_S;
+}

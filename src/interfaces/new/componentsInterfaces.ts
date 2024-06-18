@@ -23,3 +23,7 @@ export interface ReviewCardInterface {
     [key: string]: string | number
   }
 }
+
+export interface InstructionsInterface {
+  showInstructions: boolean
+}

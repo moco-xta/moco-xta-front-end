@@ -1,0 +1,64 @@
+@import '@/styles/new/variables.module.scss';
+
+#desktop_instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  #desktop_instructions_title {
+    margin-bottom: $top_bottom_margin_smaller;
+  }
+
+  #displacement_desktop_instructions {
+    margin-bottom: $top_bottom_margin_smaller;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $gap_M;
+
+    #displacement_keyboard_keys {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $gap_XS;
+
+      .keyboard_key {
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ffffff90;
+        border-radius: 10px;
+        background-color: #ffffff10;
+      }
+
+      #left_down_right_keys {
+        display: flex;
+        flex-direction: row;
+        gap: $gap_XS;
+      }
+    }
+
+    p {
+      max-width: 150px;
+      text-align: justify;
+    }
+  }
+
+  #camera_orientation_desktop_instructions {
+    margin-bottom: $top_bottom_margin_smaller;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    #mouse_pointer_icon {
+      margin: 0 $gap_XXXS 0 $gap_XXS;
+    }
+
+    #touchpad_icon {
+      margin: 0 $gap_XS 0 $gap_XS;
+    }
+  }
+}
