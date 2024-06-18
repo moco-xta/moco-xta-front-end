@@ -11,6 +11,7 @@ import { defaultMaterial } from '../../materials/standardsMaterials'
 
 import { default as socialsConstants } from '@/constants/new/canvas/socialsConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as externalLinksConstants } from '@/constants/new/externalLinksConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -29,6 +30,13 @@ export function LogoTwitter(props: JSX.IntrinsicElements['group']) {
     socialsConstants.HANDLE_ON_PONTER_MOVE,
   )
 
+  const handleOnClick = () => {
+    let a = document.createElement('a')
+    a.target = '_blank'
+    a.href = `${externalLinksConstants.SOCIALS.TWITTER}`
+    a.click()
+  }
+
   return (
     <group
       ref={logoTwitterRef}
@@ -44,6 +52,7 @@ export function LogoTwitter(props: JSX.IntrinsicElements['group']) {
         material={defaultMaterial}
         receiveShadow
         castShadow
+        onClick={handleOnClick}
       />
     </group>
   )

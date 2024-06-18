@@ -12,7 +12,7 @@ export default function IntersectCube({
 
   const intersectMaterial = new THREE.MeshBasicMaterial({
     color: 'red',
-    visible: false
+    visible: false,
   })
 
   return (
