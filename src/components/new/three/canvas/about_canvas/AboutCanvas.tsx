@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import {
@@ -13,12 +13,32 @@ import { isMobile } from 'react-device-detect'
 import Player from '../../controls/Player'
 import AboutScene from './AboutScene'
 
-import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
-import { default as imgConstants } from '@/constants/new/assets/imgConstants.json'
+import { AboutCanvasInterface } from '@/interfaces/new/threeInterfaces'
 
-export default function AboutCanvas() {
+import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+
+export default function AboutCanvas({
+  showInstructions,
+  setShowInstructions,
+}: AboutCanvasInterface) {
+  function pointerlockchange() {
+    setShowInstructions(!showInstructions)
+  }
+
+  useEffect(() => {
+    document.addEventListener('pointerlockchange', pointerlockchange, false)
+    return () => {
+      document.removeEventListener(
+        'pointerlockchange',
+        pointerlockchange,
+        false,
+      )
+    }
+  })
+
   return (
     <Canvas
+      style={{ zIndex: 0, position: 'absolute' }}
       dpr={aboutConstants.CANVAS.DPR}
       shadows
       gl={{
@@ -60,7 +80,7 @@ export default function AboutCanvas() {
                   0.5,
                 ]}
               />
-              <PointerLockControls />
+              <PointerLockControls selector='#button' />
             </>
           ) : (
             <DeviceOrientationControls />

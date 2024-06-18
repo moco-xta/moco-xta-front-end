@@ -15,3 +15,8 @@ export interface ResetButtonInterface {
 export interface AddReviewButtonInterface {
   text: string
 }
+
+export interface IsClayRenderToggleButtonInterface {
+  isClayRender: boolean
+  setIsClayRender: (value: boolean) => void
+}

@@ -1,0 +1,23 @@
+@import '@/styles/new/variables.module.scss';
+
+#instructions {
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $blured_background_color;
+}
+
+.show_instructions {
+  transition: opacity $transition linear;
+  opacity: 1;
+}
+
+.hide_instructions {
+  transition: opacity $transition linear;
+  opacity: 0;
+}

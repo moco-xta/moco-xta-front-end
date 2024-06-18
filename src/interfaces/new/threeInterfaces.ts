@@ -6,3 +6,8 @@ export interface PlayerInterface {
 export interface SocialsCanvasInterface {
   className: string
 }
+
+export interface AboutCanvasInterface {
+  showInstructions: boolean
+  setShowInstructions: (value: boolean) => void
+}

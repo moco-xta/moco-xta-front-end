@@ -99,6 +99,33 @@ a {
   margin-bottom: 20px;
 }
 
+// QR CODE CARDS
+
+.qr_code_card {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border-radius: 10px;
+  background-color: $white;
+
+  .qr_code {
+    width: 100px;
+    aspect-ratio: 1;
+  }
+
+  .qr_code_card_text {
+    max-width: 100px;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: $black;
+  }
+}
+
 // RESPONSIVE
 
 @media screen and (max-width: $breakpoint_XXXS) {
