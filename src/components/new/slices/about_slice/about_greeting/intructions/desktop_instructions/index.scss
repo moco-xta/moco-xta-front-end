@@ -1,15 +1,15 @@
 @import '@/styles/new/variables.module.scss';
 
-#instructions {
+#desktop_instructions {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
-  #instructions_title {
+  #desktop_instructions_title {
     margin-bottom: $top_bottom_margin_smaller;
   }
 
-  #displacement_instructions {
+  #displacement_desktop_instructions {
     margin-bottom: $top_bottom_margin_smaller;
     display: flex;
     flex-direction: row;
@@ -43,10 +43,11 @@
 
     p {
       max-width: 150px;
+      text-align: justify;
     }
   }
 
-  #camera_orientation_instructions {
+  #camera_orientation_desktop_instructions {
     margin-bottom: $top_bottom_margin_smaller;
     display: flex;
     flex-direction: row;

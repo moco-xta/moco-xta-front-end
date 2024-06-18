@@ -1,0 +1,23 @@
+@import '@/styles/new/variables.module.scss';
+
+#mobile_instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap_XS;
+
+  p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+    #rotate_3D_icon {
+      margin: 0 $gap_XS 0 $gap_XS;
+    }
+  }
+
+  #displacement_mobile_instructions {
+    color: $alert_light_color;
+  }
+}

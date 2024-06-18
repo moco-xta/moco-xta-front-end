@@ -5,11 +5,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  padding: 0 $px_margin_S 0 $px_margin_S;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   background-color: $blured_background_color;
 }
 
@@ -21,4 +17,18 @@
 .hide_about_greeting {
   transition: opacity $transition linear;
   opacity: 0;
+}
+
+.is_desktop_about_greeting {
+  padding: 0 $px_margin_S 0 $px_margin_S;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.is_mobile_about_greeting {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $gap_M;
 }
