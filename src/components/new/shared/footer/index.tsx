@@ -13,7 +13,7 @@ const SIZE = 50
 export default function Footer() {
   return (
     <footer>
-      <SocialsCanvas />
+      <SocialsCanvas className='footer_socials_canvas' />
       <div id='footer_socials'>
         <IoLogoGithub />
         <FaTwitter />

@@ -109,5 +109,8 @@
   },
   "CONTACT": {
     "PROFIL_PICTURE": "/new/img/textures/contact/profil_picture.jpg"
+  },
+  "SHADERS": {
+    "EXPLOSION": "/new/img/png/shaders/explosion.png"
   }
 }

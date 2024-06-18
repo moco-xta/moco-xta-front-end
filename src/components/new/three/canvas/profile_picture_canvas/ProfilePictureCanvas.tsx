@@ -30,7 +30,7 @@ export default class ProfilePictureCanvas extends Component<
   render() {
     return (
       <div
-        style={{ position: 'absolute' }}
+        style={{ zIndex: '1', position: 'absolute', top: '0px', left: '0px' }}
         ref={this.canvasRef}
       />
     )

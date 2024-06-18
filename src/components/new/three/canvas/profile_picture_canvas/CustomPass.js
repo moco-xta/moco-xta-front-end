@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 
-import vertexShader from '../../shaders/contact/postprocessing_shaders/vertexShader.glsl'
-import fragmentShader from '../../shaders/contact/postprocessing_shaders/fragmentShader.glsl'
+import vertexShader from '../../shaders/contact/profile_picture/postprocessing_shaders/vertexShader.glsl'
+import fragmentShader from '../../shaders/contact/profile_picture/postprocessing_shaders/fragmentShader.glsl'
 
 const CustomPass = {
   name: 'CustomPass',
