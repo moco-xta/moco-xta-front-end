@@ -49,7 +49,7 @@ export default function DesktopInstructions({
         {t('TO_DIRECT_THE_CAMERA')}
       </p>
       <p id='render_mode_desktop_instructions'>
-        Choose between clay or final render
+        {t('CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER')}
       </p>
       <IsClayRenderToggleButton handleSetIsClayRender={handleSetIsClayRender} />
       <AboutEnterButton />
