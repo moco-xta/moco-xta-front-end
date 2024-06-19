@@ -41,9 +41,13 @@ export default function Player({
   const { camera } = useThree()
 
   useEffect(() => {
-    camera.rotation.set(cameraRotation.x, cameraRotation.y, cameraRotation.z, 'YXZ')
+    camera.rotation.set(
+      cameraRotation.x,
+      cameraRotation.y,
+      cameraRotation.z,
+      'YXZ',
+    )
   }, [camera.rotation, cameraRotation.x, cameraRotation.y, cameraRotation.z])
-  
 
   useFrame((state) => {
     if (!playerRef.current) return

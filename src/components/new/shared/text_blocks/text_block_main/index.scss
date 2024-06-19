@@ -1,15 +1,13 @@
 @import '@/styles/new/variables.module.scss';
 @import '@/styles/new/text_blocks.module.scss';
 
-.text_block_simple {
+.text_block_main {
   display: flex;
   flex-direction: column;
-
-  h3 {
-    margin-bottom: 20px;
-  }
+  gap: $gap_M;
 
   p {
+    max-width: 35%;
     text-align: justify;
   }
 }

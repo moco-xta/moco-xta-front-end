@@ -1,7 +1,7 @@
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 
-import { InstructionsInterface } from '@/interfaces/new/componentsInterfaces'
+import { AboutGreetingInterface } from '@/interfaces/new/componentsInterfaces'
 
 import AboutIntroductionTextBlock from './about_introduction_text_block'
 import Instructions from './intructions'
@@ -10,7 +10,8 @@ import './index.scss'
 
 export default function AboutGreeting({
   showInstructions,
-}: InstructionsInterface) {
+  handleSetIsClayRender,
+}: AboutGreetingInterface) {
   return (
     <div
       id='about_greeting'
@@ -20,7 +21,7 @@ export default function AboutGreeting({
       `}
     >
       <AboutIntroductionTextBlock />
-      <Instructions />
+      <Instructions handleSetIsClayRender={handleSetIsClayRender} />
     </div>
   )
 }

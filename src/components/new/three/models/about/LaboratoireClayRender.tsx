@@ -74,7 +74,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function Laboratoire(props: JSX.IntrinsicElements['group']) {
+export function LaboratoireClayRender(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE) as GLTFResult
 
   const ceilingMapTexture = useTexture(

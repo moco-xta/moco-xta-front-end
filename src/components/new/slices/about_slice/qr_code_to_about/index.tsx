@@ -18,9 +18,7 @@ export default function QRCodeToAbout() {
         src={imgConstants.QR_CODES.TO_ABOUT}
         alt='qr_code_to_about'
       />
-      <p className='qr_code_card_text'>
-        {t('SCAN_THE_QR_CODE_TO_TEST_IT_IN_MOBILE')}
-      </p>
+      <p className='qr_code_card_text'>{t('TRY_IT_ON_MOBILE')}</p>
     </div>
   )
 }

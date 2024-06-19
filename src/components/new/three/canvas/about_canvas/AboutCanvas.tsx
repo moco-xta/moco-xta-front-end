@@ -20,6 +20,7 @@ import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants
 export default function AboutCanvas({
   showInstructions,
   setShowInstructions,
+  isClayRender,
 }: AboutCanvasInterface) {
   function pointerlockchange() {
     setShowInstructions(!showInstructions)
@@ -63,15 +64,21 @@ export default function AboutCanvas({
         position={[0, 20, 0]}
       />
       <Suspense fallback={null}>
-        <Physics debug>
+        <Physics /* debug */>
           {!isMobile ? (
             <>
               <Player
                 cameraRotation={
                   new THREE.Euler(
-                    THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X),
-                    THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
-                    THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
+                    THREE.MathUtils.degToRad(
+                      aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X,
+                    ),
+                    THREE.MathUtils.degToRad(
+                      aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y,
+                    ),
+                    THREE.MathUtils.degToRad(
+                      aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z,
+                    ),
                   )
                 }
                 rigidBodyPosition={
@@ -87,12 +94,12 @@ export default function AboutCanvas({
                   0.5,
                 ]}
               />
-              <PointerLockControls selector='#button' />
+              <PointerLockControls selector='#about_enter_button' />
             </>
           ) : (
             <DeviceOrientationControls />
           )}
-          <AboutScene />
+          <AboutScene isClayRender={isClayRender} />
           {/* <Environment files={imgConstants.HDRS.LABORATOIRE_ENVIRONMENT} /> */}
         </Physics>
       </Suspense>

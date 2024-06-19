@@ -17,6 +17,16 @@ export interface TextBlockSimpleInterface {
   className?: string
 }
 
+export interface TextBlockMainInterface {
+  id?: string
+  title: string
+  divStyle?: {
+    [key: string]: string
+  }
+  paragraph: string
+  className?: string
+}
+
 export interface ReviewCardInterface {
   review: ReviewPayloadInterface | AddReviewValuesInterface
   cardStyle?: {
@@ -24,6 +34,19 @@ export interface ReviewCardInterface {
   }
 }
 
-export interface InstructionsInterface {
+export interface PressEscToLeaveInterface {
   showInstructions: boolean
+}
+
+export interface DesktopInstructionsInterface {
+  handleSetIsClayRender: () => void
+}
+
+export interface InstructionsInterface {
+  handleSetIsClayRender: () => void
+}
+
+export interface AboutGreetingInterface {
+  showInstructions: boolean
+  handleSetIsClayRender: () => void
 }

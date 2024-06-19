@@ -1,0 +1,25 @@
+@import '@/styles/new/variables.module.scss';
+
+#press_esc_to_leave {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  bottom: $px_margin_S;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #esc_keyboard_key {
+    margin: 0 $gap_XS;
+  }
+}
+
+.show_press_esc {
+  transition: opacity $transition_XXL linear;
+  opacity: 1;
+}
+
+.hide_press_esc {
+  transition: opacity $transition_M linear;
+  opacity: 0;
+}

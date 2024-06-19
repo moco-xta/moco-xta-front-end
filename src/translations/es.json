@@ -82,9 +82,23 @@
       "SEE_ALL_REVIEWS": "Ver todas las reseñas"
     }
   },
+  "ABOUT": {
+    "TITLE": "About title",
+    "PARAGRAPH": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "INSTRUCTIONS": "Instrucciones",
+    "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "Usa las flechas del teclado para moverte",
+    "USE": "Usa",
+    "OR": "o",
+    "TO_DIRECT_THE_CAMERA": "para dirigir la cámara",
+    "CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER": "Elija entre renderizado 'clay' o 'final'",
+    "PRESS": "Prensa",
+    "TO_LEAVE": "para salir",
+    "TRY_IT_ON_MOBILE": "Pruébalo en el móvil"
+  },
   "BUTTONS": {
     "OPEN": "Open",
-    "CLOSE": "Close"
+    "CLOSE": "Close",
+    "ENTER": "Entrar"
   },
   "CONTACT": {
     "SNAKE_GAME": {
@@ -227,9 +241,5 @@
       "SUCCESS": "Su reseña ha sido enviada.",
       "ERROR": "Sorry! An error occured. Please try again."
     }
-  },
-  "ABOUT": {
-    "INSTRUCTIONS": "Instrucciones",
-    "CLICK_TO_ENTER": "Haga clic para entrar"
   }
 }

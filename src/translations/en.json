@@ -86,9 +86,17 @@
     }
   },
   "ABOUT": {
-    "SCAN_THE_QR_CODE_TO_TEST_IT_IN_MOBILE": "Scan the QR code to test it in mobile",
+    "TITLE": "About title",
+    "PARAGRAPH": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     "INSTRUCTIONS": "Instructions",
-    "CLICK_TO_ENTER": "Click to enter"
+    "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "Use the keyboard arrows to move",
+    "USE": "Use",
+    "OR": "or",
+    "TO_DIRECT_THE_CAMERA": "to direct the camera",
+    "CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER": "Choose between clay and final render",
+    "PRESS": "Press",
+    "TO_LEAVE": "to leave",
+    "TRY_IT_ON_MOBILE": "Try it on mobile!"
   },
   "CONTACT": {
     "SNAKE_GAME": {
@@ -103,7 +111,8 @@
   },
   "BUTTONS": {
     "OPEN": "Open",
-    "CLOSE": "Close"
+    "CLOSE": "Close",
+    "ENTER": "Enter"
   },
   "SKILLS": {
     "SKILLS": "Skills",

@@ -82,9 +82,23 @@
       "SEE_ALL_REVIEWS": "Voir tous les avis"
     }
   },
+  "ABOUT": {
+    "TITLE": "About title",
+    "PARAGRAPH": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "INSTRUCTIONS": "Instructions",
+    "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "Utilisez les flèches du clavier pour vous déplacer",
+    "USE": "Utilisez",
+    "OR": "ou",
+    "TO_DIRECT_THE_CAMERA": "pour orienter la caméra",
+    "CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER": "Choisissez entre le rendu 'clay' ou 'final'",
+    "PRESS": "Appuyer sur",
+    "TO_LEAVE": "pour quitter",
+    "TRY_IT_ON_MOBILE": "Essayez-le sur mobile"
+  },
   "BUTTONS": {
     "OPEN": "Open",
-    "CLOSE": "Close"
+    "CLOSE": "Close",
+    "ENTER": "Entrer"
   },
   "CONTACT": {
     "SNAKE_GAME": {
@@ -227,9 +241,5 @@
       "SUCCESS": "Votre avis a bien été soumis.",
       "ERROR": "Désolé! Une erreur s'est produite. Veuillez réessayer."
     }
-  },
-  "ABOUT": {
-    "INSTRUCTIONS": "Instructions",
-    "CLICK_TO_ENTER": "Cliquez pour entrer"
   }
 }
