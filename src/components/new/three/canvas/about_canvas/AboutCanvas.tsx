@@ -67,6 +67,13 @@ export default function AboutCanvas({
           {!isMobile ? (
             <>
               <Player
+                cameraRotation={
+                  new THREE.Euler(
+                    THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X),
+                    THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
+                    THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
+                  )
+                }
                 rigidBodyPosition={
                   new THREE.Vector3(
                     aboutConstants.PERSPECTIVE_CAMERA.POSITION.X,

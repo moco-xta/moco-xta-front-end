@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useThree } from '@react-three/fiber'
 import { Box } from '@react-three/drei'
 import * as RAPIER from '@dimforge/rapier3d-compat'
 import {
@@ -25,6 +25,7 @@ const sideVector = new THREE.Vector3()
 const rotation = new THREE.Vector3()
 
 export default function Player({
+  cameraRotation,
   rigidBodyPosition,
   cuboidColliderArgs,
 }: PlayerInterface) {
@@ -36,6 +37,13 @@ export default function Player({
   const rapier = useRapier()
 
   const dispatch = useDispatch<AppDispatch>()
+
+  const { camera } = useThree()
+
+  useEffect(() => {
+    camera.rotation.set(cameraRotation.x, cameraRotation.y, cameraRotation.z, 'YXZ')
+  }, [])
+  
 
   useFrame((state) => {
     if (!playerRef.current) return

@@ -10,8 +10,13 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "X": 0,
-      "Y": 18,
+      "X": 21,
+      "Y": 17,
+      "Z": 6
+    },
+    "ROTATION": {
+      "X": -20,
+      "Y": 52,
       "Z": 0
     },
     "FOV": 55
