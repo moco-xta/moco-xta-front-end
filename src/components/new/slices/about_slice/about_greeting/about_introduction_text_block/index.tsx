@@ -6,8 +6,8 @@ export default function AboutIntroductionTextBlock() {
   return (
     <TextBlockMain
       className={'start_text_block'}
-      title={'ABOUT.TITLE'}
-      paragraph={'ABOUT.PARAGRAPH'}
+      title={'ABOUT.INTRODUCTION_TEXT_BLOCK.TITLE'}
+      paragraph={'ABOUT.INTRODUCTION_TEXT_BLOCK.PARAGRAPH'}
     />
   )
 }

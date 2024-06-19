@@ -42,6 +42,10 @@ export interface DesktopInstructionsInterface {
   handleSetIsClayRender: () => void
 }
 
+export interface MobileInstructionsInterface {
+  handleSetIsClayRender: () => void
+}
+
 export interface InstructionsInterface {
   handleSetIsClayRender: () => void
 }
