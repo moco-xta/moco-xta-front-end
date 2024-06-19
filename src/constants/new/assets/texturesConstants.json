@@ -105,6 +105,11 @@
       "PARQUET_BUMP": "/new/img/textures/about/parquet/parquet_bump.jpg",
       "PARQUET_NORMAL": "/new/img/textures/about/parquet/parquet_normal.jpg",
       "PARQUET_ROUGHNESS": "/new/img/textures/about/parquet/parquet_roughness.jpg"
+    },
+    "TRESTLE": {
+      "DIFFUSE": {
+        "FOUR_K": "/new/img/textures/about/trestle_diffuse_4K.jpg"
+      }
     }
   },
   "CONTACT": {
