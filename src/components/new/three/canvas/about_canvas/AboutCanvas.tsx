@@ -12,6 +12,7 @@ import { isMobile } from 'react-device-detect'
 
 import Player from '../../controls/Player'
 import AboutScene from './AboutScene'
+import ToneMapping from './ToneMapping'
 
 import { AboutCanvasInterface } from '@/interfaces/new/threeInterfaces'
 
@@ -41,6 +42,7 @@ export default function AboutCanvas({
     <Canvas
       style={{ zIndex: 0, position: 'absolute' }}
       dpr={aboutConstants.CANVAS.DPR}
+      legacy={aboutConstants.CANVAS.LEGACY}
       shadows
       gl={{
         antialias: aboutConstants.CANVAS.GL.ANTIALIAS,
@@ -59,10 +61,6 @@ export default function AboutCanvas({
         ]}
       />
       <ambientLight intensity={1.8} />
-      <rectAreaLight
-        args={[10, 10]}
-        position={[0, 20, 0]}
-      />
       <Suspense fallback={null}>
         <Physics /* debug */>
           {!isMobile ? (
@@ -102,6 +100,7 @@ export default function AboutCanvas({
           <AboutScene isClayRender={isClayRender} />
           {/* <Environment files={imgConstants.HDRS.LABORATOIRE_ENVIRONMENT} /> */}
         </Physics>
+        <ToneMapping />
       </Suspense>
     </Canvas>
   )

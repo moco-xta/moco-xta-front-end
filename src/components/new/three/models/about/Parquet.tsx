@@ -4,6 +4,11 @@ import * as THREE from 'three'
 import useGltfLoader from '@/hooks/new/useGltfLoader'
 import useTextureLoader from '@/hooks/new/useTextureLoader'
 
+import {
+  generateRandomHexGrey,
+  generateRandomRgbGrey,
+} from '@/helpers/new/threeHelpers'
+
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
@@ -53,18 +58,7 @@ export default function Parquet() {
         object.material.bumpMap = bumpMap
         object.material.normalMap = normalMap
         object.material.roughnessMap = roughnessMap
-        object.material.color = new THREE.Color(
-          parseInt(
-            aboutConstants.PARQUET.GREY_GRADIENT[
-              Math.floor(
-                Math.random() *
-                  (aboutConstants.PARQUET.MAX_GREY_GRADIENT_RANGE -
-                    aboutConstants.PARQUET.MIN_GREY_GRADIENT_RANGE) +
-                  aboutConstants.PARQUET.MIN_GREY_GRADIENT_RANGE,
-              )
-            ],
-          ),
-        )
+        object.material.color = generateRandomHexGrey(80, 110)
         object.material.envMapIntensity = 0
       }
     })
