@@ -7,7 +7,17 @@
   gap: $gap_M;
 
   p {
-    max-width: 35%;
     text-align: justify;
   }
+}
+
+#desktop_about_introduction_text_block {
+
+  p {
+    max-width: 35%;
+  }
+}
+
+#mobile_about_introduction_text_block {
+
 }

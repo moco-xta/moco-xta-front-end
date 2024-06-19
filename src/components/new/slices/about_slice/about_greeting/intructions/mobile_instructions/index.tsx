@@ -28,7 +28,7 @@ export default function MobileInstructions({
         {t('INSTRUCTIONS.DISPLACEMENT_IS_COMING_SOON')}! :&#41;
       </p>
       <p id='render_mode_desktop_instructions'>
-        {t('CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER')}
+        {t('INSTRUCTIONS.CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER')}
       </p>
       <IsClayRenderToggleButton handleSetIsClayRender={handleSetIsClayRender} />
       <AboutEnterButton />
