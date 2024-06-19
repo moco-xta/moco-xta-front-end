@@ -15,11 +15,22 @@ const SHADOW_BIAS = 0.0001
 export default function LaboratoireFinalRenderLights() {
   const directionalLightCeilingLeftRef = useRef<THREE.DirectionalLight>(null!)
   const directionalLightCeilingRightRef = useRef<THREE.DirectionalLight>(null!)
-  useHelper(directionalLightCeilingLeftRef, THREE.DirectionalLightHelper, 1, 'blue')
-  useHelper(directionalLightCeilingRightRef, THREE.DirectionalLightHelper, 1, 'red')
+  useHelper(
+    directionalLightCeilingLeftRef,
+    THREE.DirectionalLightHelper,
+    1,
+    'blue',
+  )
+  useHelper(
+    directionalLightCeilingRightRef,
+    THREE.DirectionalLightHelper,
+    1,
+    'red',
+  )
 
   return (
     <>
+      <ambientLight intensity={1} />
       <directionalLight
         ref={directionalLightCeilingLeftRef}
         position={[-5, 28.6, 0]}

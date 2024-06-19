@@ -52,6 +52,7 @@
   "ABOUT": {
     "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf",
     "PARQUET": "/new/gltf/about/Parquet.gltf",
+    "TRANSFERT_BOX": "/new/gltf/about/TransfertBox.gltf",
     "TRESTLE": "/new/gltf/about/Trestle.gltf"
   },
   "SNAKE_GAME": {

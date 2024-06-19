@@ -13,13 +13,12 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "Trestle",
-      "translation": [0, 0.019999999552965164, 0]
+      "name": "TransfertBox"
     }
   ],
   "meshes": [
     {
-      "name": "Trestle",
+      "name": "TransfertBox",
       "primitives": [
         {
           "attributes": {
@@ -36,60 +35,60 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 544,
-      "max": [2.8999969959259033, 9.071700096130371, 4.828176498413086],
-      "min": [-2.8999969959259033, -3.939237174302446e-14, -4.828176498413086],
+      "count": 219,
+      "max": [0.003448534058406949, 3.487151622772217, -0.012142754159867764],
+      "min": [-2.5592992305755615, 0.005372735671699047, -0.732143223285675],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 544,
+      "count": 219,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 544,
+      "count": 219,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 1104,
+      "count": 354,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 6528,
+      "byteLength": 2628,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 6528,
-      "byteOffset": 6528,
+      "byteLength": 2628,
+      "byteOffset": 2628,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 4352,
-      "byteOffset": 13056,
+      "byteLength": 1752,
+      "byteOffset": 5256,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 2208,
-      "byteOffset": 17408,
+      "byteLength": 708,
+      "byteOffset": 7008,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 19616,
-      "uri": "Trestle.bin"
+      "byteLength": 7716,
+      "uri": "TransfertBox.bin"
     }
   ]
 }
