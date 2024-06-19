@@ -42,7 +42,7 @@ export default function Player({
 
   useEffect(() => {
     camera.rotation.set(cameraRotation.x, cameraRotation.y, cameraRotation.z, 'YXZ')
-  }, [])
+  }, [camera.rotation, cameraRotation.x, cameraRotation.y, cameraRotation.z])
   
 
   useFrame((state) => {

@@ -1,15 +1,6 @@
 import { useEffect, useState } from 'react'
 
 export const usePlayer = () => {
-  const moves: {
-    [key: string]: string
-  } = {
-    ArrowUp: 'forward',
-    ArrowDown: 'backward',
-    ArrowLeft: 'left',
-    ArrowRight: 'right',
-    Space: 'jump',
-  }
 
   const [movement, setMovement] = useState({
     forward: false,
@@ -24,6 +15,16 @@ export const usePlayer = () => {
   }
 
   useEffect(() => {
+    const moves: {
+      [key: string]: string
+    } = {
+      ArrowUp: 'forward',
+      ArrowDown: 'backward',
+      ArrowLeft: 'left',
+      ArrowRight: 'right',
+      Space: 'jump',
+    }
+    
     const getMove = (code: string) => moves[code]
 
     const handleKeyDown = (event: KeyboardEvent) => {
