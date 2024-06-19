@@ -37,3 +37,7 @@ export interface ReviewCardInterface {
 export interface InstructionsInterface {
   showInstructions: boolean
 }
+
+export interface PressEscToLeaveInterface {
+  showInstructions: boolean
+}

@@ -22,18 +22,6 @@
       align-items: center;
       gap: $gap_XS;
 
-      .keyboard_key {
-        width: 50px;
-        height: 50px;
-        padding: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #ffffff90;
-        border-radius: 10px;
-        background-color: #ffffff10;
-      }
-
       #left_down_right_keys {
         display: flex;
         flex-direction: row;

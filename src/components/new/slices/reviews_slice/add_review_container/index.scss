@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   transform: translateX(-100vw);
-  transition: $transition transform ease-in-out;
+  transition: $transition_M transform ease-in-out;
 }
 
 #add_review_container.open {

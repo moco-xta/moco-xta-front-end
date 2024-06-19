@@ -21,6 +21,4 @@ export interface IsClayRenderToggleButtonInterface {
   setIsClayRender: (value: boolean) => void
 }
 
-export interface AboutEnterButtonInterface {
-  
-}
+export interface AboutEnterButtonInterface {}

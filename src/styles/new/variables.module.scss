@@ -9,7 +9,7 @@ $grey_darker: #292929;
 $black: #000000;
 
 $primary_light_color: #408aca;
-$primary_dark_color: #0A569A;
+$primary_dark_color: #0a569a;
 $success_light_color: #37ae47;
 $success_dark_color: #0a7a18;
 $alert_light_color: #ec2a5f;
@@ -123,7 +123,11 @@ $blur: 3px;
 
 // TRANSITIONS
 
-$transition: 0.3s;
+$transition_XXL: 2s;
+$transition_XL: 1s;
+$transition_L: 0.5s;
+$transition_M: 0.3s;
+
 $hover_transition: 0.2s;
 
 // REVIEWS
@@ -274,7 +278,7 @@ $responsive_XXXXS: #f72585;
 
   blur: $blur;
 
-  transition: $transition;
+  transition: $transition_M;
   hover_transition: $hover_transition;
 
   // SNAKE GAME

@@ -4,6 +4,7 @@ import { isMobile } from 'react-device-detect'
 import AboutGreeting from './about_greeting'
 /* import IsClayRenderToggleButton from '../../buttons/is_clay_render_toggle_button' */
 import QRCodeToAbout from './qr_code_to_about'
+import PressEscToLeave from './press_esc_to_leave'
 import AboutCanvas from '../../three/canvas/about_canvas/AboutCanvas'
 import DeviceMotionPermission from './device_motion_permission'
 
@@ -23,7 +24,12 @@ export default function AboutSlice() {
             isClayRender={isClayRender}
             setIsClayRender={setIsClayRender}
           /> */}
-          {!isMobile && <QRCodeToAbout />}
+          {!isMobile && (
+            <>
+              <QRCodeToAbout />
+              <PressEscToLeave showInstructions={showInstructions} />
+            </>
+          )}
           <AboutCanvas
             showInstructions={showInstructions}
             setShowInstructions={setShowInstructions}

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 
 export const usePlayer = () => {
-
   const [movement, setMovement] = useState({
     forward: false,
     backward: false,
@@ -24,7 +23,7 @@ export const usePlayer = () => {
       ArrowRight: 'right',
       Space: 'jump',
     }
-    
+
     const getMove = (code: string) => moves[code]
 
     const handleKeyDown = (event: KeyboardEvent) => {
