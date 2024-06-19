@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
 import { DeviceMotionPermissionInterface } from '@/interfaces/new/aboutInterfaces'
 
@@ -8,6 +9,8 @@ export default function DeviceMotionPermission({
   permissionGranted,
   setPermissionGranted,
 }: DeviceMotionPermissionInterface) {
+  const t = useTranslations('ABOUT')
+
   useEffect(() => {
     // @ts-ignore
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
@@ -41,12 +44,20 @@ export default function DeviceMotionPermission({
     <>
       {!permissionGranted && (
         <div id='device_motion_permission_modal'>
-          <h2>Allow access to device motion and orientation</h2>
-          <p>
-            This app requires access to device motion and orientation to
-            function properly.
+          <h2>
+            {t(
+              'GRANT_PERMISSION.ALLOW_ACCESS_TO_DEVICE_MOTION_AND_ORIENTATION',
+            )}
+          </h2>
+          <p id='this_app_requires_access'>
+            {t('GRANT_PERMISSION.THIS_APP_REQUIRES_ACCESS')}
           </p>
-          <button onClick={handlePermissionGranted}>Grant Permission</button>
+          <button
+            id='grant_permission_button'
+            onClick={handlePermissionGranted}
+          >
+            {t('GRANT_PERMISSION.GRANT_PERMISSION')}
+          </button>
         </div>
       )}
     </>

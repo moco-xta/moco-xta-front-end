@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { isMobile } from 'react-device-detect'
 
 import AboutGreeting from './about_greeting'
-import IsClayRenderToggleButton from '../../buttons/is_clay_render_toggle_button'
 import QRCodeToAbout from './qr_code_to_about'
 import PressEscToLeave from './press_esc_to_leave'
 import AboutCanvas from '../../three/canvas/about_canvas/AboutCanvas'
