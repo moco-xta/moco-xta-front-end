@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box } from '@react-three/drei'
+
+import Parquet from './Parquet'
 
 export default function LaboratoireFinalRender() {
-  return <Box />
+  return <Parquet />
 }

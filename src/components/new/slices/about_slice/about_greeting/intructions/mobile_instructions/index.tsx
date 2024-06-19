@@ -16,6 +16,7 @@ export default function MobileInstructions({
 
   return (
     <div id='mobile_instructions'>
+      <h2 id='desktop_instructions_title'>{t('INSTRUCTIONS.INSTRUCTIONS')}</h2>
       <p>
         {t('INSTRUCTIONS.ROTATE')}{' '}
         <LuRotate3D
