@@ -6,11 +6,8 @@ import './index.scss'
 
 export default function IsClayRenderToggleButton({
   isClayRender,
-  setIsClayRender,
+  handleOnClick,
 }: IsClayRenderToggleButtonInterface) {
-  const handleOnClick = (event: MouseEvent<HTMLButtonElement>) => {
-    setIsClayRender(!setIsClayRender)
-  }
 
   return (
     <button

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { isMobile } from 'react-device-detect'
 
 import AboutGreeting from './about_greeting'
@@ -15,6 +15,10 @@ export default function AboutSlice() {
   const [showInstructions, setShowInstructions] = useState<boolean>(true)
   const [isClayRender, setIsClayRender] = useState<boolean>(true)
 
+  const handleOnClick = () => {
+    setIsClayRender(!isClayRender)
+  }
+
   return (
     <section id='about_slice'>
       {!isMobile || (isMobile && permissionGranted) ? (
@@ -22,7 +26,7 @@ export default function AboutSlice() {
           <AboutGreeting showInstructions={showInstructions} />
           <IsClayRenderToggleButton
             isClayRender={isClayRender}
-            setIsClayRender={setIsClayRender}
+            handleOnClick={handleOnClick}
           />
           {!isMobile && (
             <>
