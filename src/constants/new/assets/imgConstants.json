@@ -16,7 +16,7 @@
     "HERO_ENVIRONMENT": "/new/img/hdr/peppermint_powerplant_2_1k.hdr"
   },
   "QR_CODES": {
-    "TO_ABOUT": "/new/img/png/qr_codes/qr_code_to_home.png",
+    "TO_ABOUT": "/new/img/png/qr_codes/qr_code_to_about.png",
     "TO_HOME": "/new/img/png/qr_codes/qr_code_to_home.png"
   }
 }
