@@ -19,7 +19,7 @@ export default function QRCodeToAbout() {
         alt='qr_code_to_about'
       />
       <p className='qr_code_card_text'>
-        {t('SCAN_THE_QR_CODE_TO_TEST_IT_IN_MOBILE')}
+        {t('TRY_IT_ON_MOBILE')}
       </p>
     </div>
   )

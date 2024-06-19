@@ -88,8 +88,7 @@
     "USE": "Usa",
     "OR": "o",
     "TO_DIRECT_THE_CAMERA": "para dirigir la cámara",
-    "SCAN_THE_QR_CODE_TO_TEST_IT_IN_MOBILE": "Scan the QR code to test it in mobile",
-    "CLICK_TO_ENTER": "Click to enter"
+    "TRY_IT_ON_MOBILE": "Pruébalo en el móvil"
   },
   "BUTTONS": {
     "OPEN": "Open",
