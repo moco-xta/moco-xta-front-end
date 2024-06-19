@@ -16,7 +16,7 @@ export default function Instructions({
       {!isMobile ? (
         <DesktopInstructions handleSetIsClayRender={handleSetIsClayRender} />
       ) : (
-        <MobileInstructions />
+        <MobileInstructions handleSetIsClayRender={handleSetIsClayRender} />
       )}
     </>
   )
