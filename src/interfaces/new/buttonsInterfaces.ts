@@ -17,8 +17,7 @@ export interface AddReviewButtonInterface {
 }
 
 export interface IsClayRenderToggleButtonInterface {
-  isClayRender: boolean
-  handleOnClick: () => void
+  handleSetIsClayRender: () => void
 }
 
 export interface AboutEnterButtonInterface {}

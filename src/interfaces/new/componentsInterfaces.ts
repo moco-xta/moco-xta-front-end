@@ -34,10 +34,19 @@ export interface ReviewCardInterface {
   }
 }
 
-export interface InstructionsInterface {
+export interface PressEscToLeaveInterface {
   showInstructions: boolean
 }
 
-export interface PressEscToLeaveInterface {
+export interface DesktopInstructionsInterface {
+  handleSetIsClayRender: () => void
+}
+
+export interface InstructionsInterface {
+  handleSetIsClayRender: () => void
+}
+
+export interface AboutGreetingInterface {
   showInstructions: boolean
+  handleSetIsClayRender: () => void
 }

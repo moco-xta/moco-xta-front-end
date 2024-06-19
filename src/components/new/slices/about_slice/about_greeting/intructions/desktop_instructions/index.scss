@@ -36,7 +36,7 @@
   }
 
   #camera_orientation_desktop_instructions {
-    margin-bottom: $px_margin_S;
+    margin-bottom: $px_margin_XS;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -49,4 +49,11 @@
       margin: 0 $gap_XS 0 $gap_XS;
     }
   }
+}
+
+#render_mode_desktop_instructions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: $px_margin_XXS;
 }

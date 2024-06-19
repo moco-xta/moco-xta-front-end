@@ -9,11 +9,7 @@ import Ground from './Ground'
 export default function AboutScene({ isClayRender }: AboutSceneInterface) {
   return (
     <>
-      {isClayRender ? (
-        <LaboratoireClayRender />
-      ) : (
-        <LaboratoireFinalRender />
-      )}
+      {isClayRender ? <LaboratoireClayRender /> : <LaboratoireFinalRender />}
       <Ground />
     </>
   )

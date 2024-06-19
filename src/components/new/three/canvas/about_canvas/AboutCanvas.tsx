@@ -99,9 +99,7 @@ export default function AboutCanvas({
           ) : (
             <DeviceOrientationControls />
           )}
-          <AboutScene
-            isClayRender={isClayRender}
-          />
+          <AboutScene isClayRender={isClayRender} />
           {/* <Environment files={imgConstants.HDRS.LABORATOIRE_ENVIRONMENT} /> */}
         </Physics>
       </Suspense>

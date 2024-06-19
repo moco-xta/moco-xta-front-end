@@ -9,11 +9,16 @@ import {
 import { LuTouchpad } from 'react-icons/lu'
 import { useTranslations } from 'next-intl'
 
+import { DesktopInstructionsInterface } from '@/interfaces/new/componentsInterfaces'
+
+import IsClayRenderToggleButton from '@/components/new/buttons/is_clay_render_toggle_button'
 import AboutEnterButton from '@/components/new/buttons/about_enter_button'
 
 import './index.scss'
 
-export default function DesktopInstructions() {
+export default function DesktopInstructions({
+  handleSetIsClayRender,
+}: DesktopInstructionsInterface) {
   const t = useTranslations('ABOUT')
 
   return (
@@ -43,6 +48,10 @@ export default function DesktopInstructions() {
         />{' '}
         {t('TO_DIRECT_THE_CAMERA')}
       </p>
+      <p id='render_mode_desktop_instructions'>
+        Choose between clay or final render
+      </p>
+      <IsClayRenderToggleButton handleSetIsClayRender={handleSetIsClayRender} />
       <AboutEnterButton />
     </div>
   )

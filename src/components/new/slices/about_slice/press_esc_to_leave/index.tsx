@@ -5,7 +5,9 @@ import { PressEscToLeaveInterface } from '@/interfaces/new/componentsInterfaces'
 
 import './index.scss'
 
-export default function PressEscToLeave({ showInstructions }: PressEscToLeaveInterface) {
+export default function PressEscToLeave({
+  showInstructions,
+}: PressEscToLeaveInterface) {
   const t = useTranslations('ABOUT')
 
   return (

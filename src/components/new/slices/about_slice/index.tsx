@@ -15,7 +15,7 @@ export default function AboutSlice() {
   const [showInstructions, setShowInstructions] = useState<boolean>(true)
   const [isClayRender, setIsClayRender] = useState<boolean>(true)
 
-  const handleOnClick = () => {
+  const handleSetIsClayRender = () => {
     setIsClayRender(!isClayRender)
   }
 
@@ -23,10 +23,9 @@ export default function AboutSlice() {
     <section id='about_slice'>
       {!isMobile || (isMobile && permissionGranted) ? (
         <>
-          <AboutGreeting showInstructions={showInstructions} />
-          <IsClayRenderToggleButton
-            isClayRender={isClayRender}
-            handleOnClick={handleOnClick}
+          <AboutGreeting
+            showInstructions={showInstructions}
+            handleSetIsClayRender={handleSetIsClayRender}
           />
           {!isMobile && (
             <>
