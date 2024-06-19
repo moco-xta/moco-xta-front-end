@@ -64,7 +64,7 @@ export default function AboutCanvas({
         position={[0, 20, 0]}
       />
       <Suspense fallback={null}>
-        <Physics debug>
+        <Physics /* debug */>
           {!isMobile ? (
             <>
               <Player

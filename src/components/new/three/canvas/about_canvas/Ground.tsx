@@ -3,8 +3,6 @@ import * as THREE from 'three'
 import { Plane } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 
-import Parquet from '../../models/about/Parquet'
-
 export default function Ground() {
   return (
     <>
