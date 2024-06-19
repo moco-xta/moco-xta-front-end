@@ -8,6 +8,8 @@ $grey_dark: #515151;
 $grey_darker: #292929;
 $black: #000000;
 
+$primary_light_color: #408aca;
+$primary_dark_color: #0A569A;
 $success_light_color: #37ae47;
 $success_dark_color: #0a7a18;
 $alert_light_color: #ec2a5f;
@@ -41,11 +43,13 @@ $input_border_alert: 1px solid $alert_light_color;
 
 $background_color: #151416;
 $blured_background_color: rgba(21, 20, 22, 0.7);
+$primary_background: $primary_light_color;
 $success_background: $success_light_color;
 $alert_background: $alert_light_color;
 
 // SHADOWS
 
+$primary_box_shadow: rgba(64, 138, 202, 0.25) 0px 25px 50px -12px;
 $success_box_shadow: rgba(55, 174, 71, 0.25) 0px 25px 50px -12px;
 $alert_box_shadow: rgba(246, 42, 95, 0.25) 0px 25px 50px -12px;
 

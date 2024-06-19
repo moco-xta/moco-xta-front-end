@@ -87,7 +87,7 @@ export default function AboutCanvas({
                   0.5,
                 ]}
               />
-              <PointerLockControls selector='#button' />
+              <PointerLockControls selector='#about_enter_button' />
             </>
           ) : (
             <DeviceOrientationControls />

@@ -8,6 +8,8 @@ import {
 } from 'react-icons/fa'
 import { LuTouchpad } from 'react-icons/lu'
 
+import AboutEnterButton from '@/components/new/buttons/about_enter_button'
+
 import './index.scss'
 
 export default function DesktopInstructions() {
@@ -38,7 +40,7 @@ export default function DesktopInstructions() {
         />{' '}
         pour orienter la camera
       </p>
-      <button id='button'>Enter</button>
+      <AboutEnterButton />
     </div>
   )
 }
