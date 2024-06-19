@@ -107,6 +107,11 @@
     "ESCAPE_POINTER_LOCK": {
       "PRESS": "Press",
       "TO_LEAVE": "to leave"
+    },
+    "GRANT_PERMISSION": {
+      "ALLOW_ACCESS_TO_DEVICE_MOTION_AND_ORIENTATION": "Allow access to device motion and orientation",
+      "THIS_APP_REQUIRES_ACCESS": "This app requires access to device motion and orientation to function properly",
+      "GRANT_PERMISSION": "Grant Permission"
     }
   },
   "CONTACT": {
