@@ -86,8 +86,12 @@
     }
   },
   "ABOUT": {
-    "SCAN_THE_QR_CODE_TO_TEST_IT_IN_MOBILE": "Scan the QR code to test it in mobile",
     "INSTRUCTIONS": "Instructions",
+    "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "Use the keyboard arrows to move",
+    "USE": "Use",
+    "OR": "or",
+    "TO_DIRECT_THE_CAMERA": "to direct the camera",
+    "SCAN_THE_QR_CODE_TO_TEST_IT_IN_MOBILE": "Scan the QR code to test it in mobile",
     "CLICK_TO_ENTER": "Click to enter"
   },
   "CONTACT": {
@@ -103,7 +107,8 @@
   },
   "BUTTONS": {
     "OPEN": "Open",
-    "CLOSE": "Close"
+    "CLOSE": "Close",
+    "ENTER": "Enter"
   },
   "SKILLS": {
     "SKILLS": "Skills",

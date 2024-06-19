@@ -6,7 +6,7 @@
   align-items: flex-end;
 
   #desktop_instructions_title {
-    margin-bottom: $px_margin_S;
+    margin-bottom: $px_margin_XS;
   }
 
   #displacement_desktop_instructions {
@@ -43,7 +43,7 @@
 
     p {
       max-width: 150px;
-      text-align: justify;
+      text-align: end;
     }
   }
 
