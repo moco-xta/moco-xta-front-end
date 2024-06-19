@@ -17,6 +17,16 @@ export interface TextBlockSimpleInterface {
   className?: string
 }
 
+export interface TextBlockMainInterface {
+  id?: string
+  title: string
+  divStyle?: {
+    [key: string]: string
+  }
+  paragraph: string
+  className?: string
+}
+
 export interface ReviewCardInterface {
   review: ReviewPayloadInterface | AddReviewValuesInterface
   cardStyle?: {

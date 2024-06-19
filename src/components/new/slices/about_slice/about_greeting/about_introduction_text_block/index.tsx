@@ -1,7 +1,13 @@
 import React from 'react'
 
-import './index.scss'
+import TextBlockMain from '@/components/new/shared/text_blocks/text_block_main'
 
 export default function AboutIntroductionTextBlock() {
-  return <div>AboutIntroductionTextBlock</div>
+  return (
+    <TextBlockMain
+      className={'start_text_block'}
+      title={'ABOUT.TITLE'}
+      paragraph={'ABOUT.PARAGRAPH'}
+    />
+  )
 }

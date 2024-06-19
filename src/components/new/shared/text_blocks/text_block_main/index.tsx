@@ -1,26 +1,26 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { TextBlockSimpleInterface } from '@/interfaces/new/componentsInterfaces'
+import { TextBlockMainInterface } from '@/interfaces/new/componentsInterfaces'
 
 import './index.scss'
 
-export default function TextBlockSimple({
+export default function TextBlockMain({
   id,
   className,
   divStyle,
   title,
   paragraph,
-}: TextBlockSimpleInterface) {
+}: TextBlockMainInterface) {
   const t = useTranslations()
 
   return (
     <div
       id={id}
-      className={`text_block_simple ${className}`}
+      className={`text_block_main ${className}`}
       style={divStyle}
     >
-      <h3>{t(title)}</h3>
+      <h2>{t(title)}</h2>
       <p>{t(paragraph)}</p>
     </div>
   )
