@@ -20,4 +20,7 @@ export interface IsClayRenderToggleButtonInterface {
   handleSetIsClayRender: () => void
 }
 
-export interface AboutEnterButtonInterface {}
+export interface ToggleButtonInterface {
+  label: string[]
+  handleOnClick: () => void
+}
