@@ -9,7 +9,9 @@ import AboutEnterButton from '@/components/new/buttons/about_enter_button'
 
 import './index.scss'
 
-export default function MobileInstructions({ handleSetIsClayRender }: MobileInstructionsInterface) {
+export default function MobileInstructions({
+  handleSetIsClayRender,
+}: MobileInstructionsInterface) {
   const t = useTranslations('ABOUT')
 
   return (
@@ -20,7 +22,7 @@ export default function MobileInstructions({ handleSetIsClayRender }: MobileInst
           id='rotate_3D_icon'
           size={35}
         />{' '}
-        {t('INSTRUCTIONS.YOUR_PHONE')}{' '}{t('INSTRUCTIONS.TO_DIRECT_THE_CAMERA')}
+        {t('INSTRUCTIONS.YOUR_PHONE')} {t('INSTRUCTIONS.TO_DIRECT_THE_CAMERA')}
       </p>
       <p id='displacement_mobile_instructions'>
         {t('INSTRUCTIONS.DISPLACEMENT_IS_COMING_SOON')}! :&#41;
