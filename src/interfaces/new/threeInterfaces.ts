@@ -11,4 +11,9 @@ export interface SocialsCanvasInterface {
 export interface AboutCanvasInterface {
   showInstructions: boolean
   setShowInstructions: (value: boolean) => void
+  isClayRender: boolean
+}
+
+export interface AboutSceneInterface {
+  isClayRender: boolean
 }

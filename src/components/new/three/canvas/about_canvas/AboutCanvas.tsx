@@ -20,6 +20,7 @@ import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants
 export default function AboutCanvas({
   showInstructions,
   setShowInstructions,
+  isClayRender,
 }: AboutCanvasInterface) {
   function pointerlockchange() {
     setShowInstructions(!showInstructions)
@@ -98,7 +99,9 @@ export default function AboutCanvas({
           ) : (
             <DeviceOrientationControls />
           )}
-          <AboutScene />
+          <AboutScene
+            isClayRender={isClayRender}
+          />
           {/* <Environment files={imgConstants.HDRS.LABORATOIRE_ENVIRONMENT} /> */}
         </Physics>
       </Suspense>

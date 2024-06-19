@@ -1,13 +1,19 @@
 import React from 'react'
-import { Box } from '@react-three/drei'
 
+import { AboutSceneInterface } from '@/interfaces/new/threeInterfaces'
+
+import { LaboratoireClayRender } from '../../models/about/LaboratoireClayRender'
+import LaboratoireFinalRender from '../../models/about/LaboratoireFinalRender'
 import Ground from './Ground'
-import { Laboratoire } from '../../models/about/Laboratoire'
 
-export default function AboutScene() {
+export default function AboutScene({ isClayRender }: AboutSceneInterface) {
   return (
     <>
-      <Laboratoire />
+      {isClayRender ? (
+        <LaboratoireClayRender />
+      ) : (
+        <LaboratoireFinalRender />
+      )}
       <Ground />
     </>
   )
