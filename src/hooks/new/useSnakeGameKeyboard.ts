@@ -8,25 +8,25 @@ export default function useSnakeGameKeyboard() {
   const dispatch = useDispatch<AppDispatch>()
   const isPlaying = useSelector((state: RootState) => state.snakeGame.isPlaying)
 
-  function handleKeyDown(event: KeyboardEvent) {
-    if (
-      event.code === 'ArrowUp' ||
-      event.code === 'ArrowLeft' ||
-      event.code === 'ArrowRight'
-    ) {
-      if (isPlaying) dispatch(setNextMove(event.code))
-    }
-    if (event.code === 'Space') {
-      dispatch(setIsPlaying())
-    }
-  }
-
   useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (
+        event.code === 'ArrowUp' ||
+        event.code === 'ArrowLeft' ||
+        event.code === 'ArrowRight'
+      ) {
+        if (isPlaying) dispatch(setNextMove(event.code))
+      }
+      if (event.code === 'Space') {
+        dispatch(setIsPlaying())
+      }
+    }
+
     document.addEventListener('keydown', handleKeyDown)
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [handleKeyDown])
+  }, [dispatch, isPlaying])
 
   return {}
 }
