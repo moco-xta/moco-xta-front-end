@@ -86,17 +86,28 @@
     }
   },
   "ABOUT": {
-    "TITLE": "About title",
-    "PARAGRAPH": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "INSTRUCTIONS": "Instructions",
-    "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "Use the keyboard arrows to move",
-    "USE": "Use",
-    "OR": "or",
-    "TO_DIRECT_THE_CAMERA": "to direct the camera",
-    "CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER": "Choose between clay and final render",
-    "PRESS": "Press",
-    "TO_LEAVE": "to leave",
-    "TRY_IT_ON_MOBILE": "Try it on mobile!"
+    "INTRODUCTION_TEXT_BLOCK": {
+      "TITLE": "About title",
+      "PARAGRAPH": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    "INSTRUCTIONS": {
+      "INSTRUCTIONS": "Instructions",
+      "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "Use the keyboard arrows to move",
+      "USE": "Use",
+      "OR": "or",
+      "TO_DIRECT_THE_CAMERA": "to direct the camera",
+      "CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER": "Choose between clay and final render",
+      "ROTATE": "Rotate",
+      "YOUR PHONE": "your phone",
+      "DISPLACEMENT_IS_COMING_SOON": "Displacement is coming soon"
+    },
+    "QR_CODE": {
+      "TRY_IT_ON_MOBILE": "Try it on mobile!"
+    },
+    "ESCAPE_POINTER_LOCK": {
+      "PRESS": "Press",
+      "TO_LEAVE": "to leave"
+    }
   },
   "CONTACT": {
     "SNAKE_GAME": {

@@ -15,14 +15,14 @@ export default function PressEscToLeave({
       id='press_esc_to_leave'
       className={`${showInstructions ? 'hide_press_esc' : 'show_press_esc'}`}
     >
-      {t('PRESS')}
+      {t('ESCAPE_POINTER_LOCK.PRESS')}
       <span
         id='esc_keyboard_key'
         className='keyboard_key'
       >
         ESC
       </span>
-      {t('TO_LEAVE')}
+      {t('ESCAPE_POINTER_LOCK.TO_LEAVE')}
     </div>
   )
 }

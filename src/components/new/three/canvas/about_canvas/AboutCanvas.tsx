@@ -22,16 +22,16 @@ export default function AboutCanvas({
   setShowInstructions,
   isClayRender,
 }: AboutCanvasInterface) {
-  function pointerlockchange() {
+  function pointerLockChange() {
     setShowInstructions(!showInstructions)
   }
 
   useEffect(() => {
-    document.addEventListener('pointerlockchange', pointerlockchange, false)
+    document.addEventListener('pointerlockchange', pointerLockChange, false)
     return () => {
       document.removeEventListener(
         'pointerlockchange',
-        pointerlockchange,
+        pointerLockChange,
         false,
       )
     }
