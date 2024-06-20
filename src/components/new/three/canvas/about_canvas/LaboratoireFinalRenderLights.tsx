@@ -17,7 +17,7 @@ export default function LaboratoireFinalRenderLights() {
   const directionalLightCeilingNEtRef = useRef<THREE.DirectionalLight>(null!)
   const directionalLightCeilingSWtRef = useRef<THREE.DirectionalLight>(null!)
   const directionalLightCeilingSEtRef = useRef<THREE.DirectionalLight>(null!)
-  useHelper( 
+  useHelper(
     directionalLightCeilingNWRef,
     THREE.DirectionalLightHelper,
     1,

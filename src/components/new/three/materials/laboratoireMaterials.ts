@@ -3,7 +3,7 @@ import * as THREE from 'three'
 export const wallSimpleMaterial = new THREE.MeshStandardMaterial({
   color: '#e7e7e7',
   roughness: 1,
-  side: THREE.DoubleSide
+  side: THREE.DoubleSide,
 })
 
 export const ceilingLightMaterial = new THREE.MeshStandardMaterial({
