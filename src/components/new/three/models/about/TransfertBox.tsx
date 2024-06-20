@@ -25,7 +25,7 @@ export function TransfertBox({
   const { nodes } = useGLTF(gltfConstants.ABOUT.TRANSFERT_BOX) as GLTFResult
 
   const map = useTextureLoader(
-    texturesConstants.ABOUT.TRANSFERT_BOX.DIFFUSE.ONE_K,
+    texturesConstants.ABOUT.FINAL.TRANSFERT_BOX.DIFFUSE.ONE_K,
   )
   map.flipY = false
 

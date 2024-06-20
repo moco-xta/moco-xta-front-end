@@ -16,12 +16,12 @@ import { default as texturesConstants } from '@/constants/new/assets/texturesCon
 export default function Parquet() {
   const gltf = useGltfLoader(gltfConstants.ABOUT.PARQUET)
 
-  const map = useTextureLoader(texturesConstants.ABOUT.PARQUET.PARQUET_DIFFUSE)
+  const map = useTextureLoader(texturesConstants.ABOUT.FINAL.PARQUET.PARQUET_DIFFUSE)
   map.wrapS = THREE.RepeatWrapping
   map.wrapT = THREE.RepeatWrapping
   map.repeat.set(aboutConstants.PARQUET.REPEAT, aboutConstants.PARQUET.REPEAT)
 
-  const bumpMap = useTextureLoader(texturesConstants.ABOUT.PARQUET.PARQUET_BUMP)
+  const bumpMap = useTextureLoader(texturesConstants.ABOUT.FINAL.PARQUET.PARQUET_BUMP)
   bumpMap.wrapS = THREE.RepeatWrapping
   bumpMap.wrapT = THREE.RepeatWrapping
   bumpMap.repeat.set(
@@ -30,7 +30,7 @@ export default function Parquet() {
   )
 
   const normalMap = useTextureLoader(
-    texturesConstants.ABOUT.PARQUET.PARQUET_NORMAL,
+    texturesConstants.ABOUT.FINAL.PARQUET.PARQUET_NORMAL,
   )
   normalMap.wrapS = THREE.RepeatWrapping
   normalMap.wrapT = THREE.RepeatWrapping
@@ -40,7 +40,7 @@ export default function Parquet() {
   )
 
   const roughnessMap = useTextureLoader(
-    texturesConstants.ABOUT.PARQUET.PARQUET_ROUGHNESS,
+    texturesConstants.ABOUT.FINAL.PARQUET.PARQUET_ROUGHNESS,
   )
   roughnessMap.wrapS = THREE.RepeatWrapping
   roughnessMap.wrapT = THREE.RepeatWrapping

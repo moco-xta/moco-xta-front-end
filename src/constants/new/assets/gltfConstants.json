@@ -55,6 +55,7 @@
     "NORTH_BASEBOARD": "/new/gltf/about/NorthBaseboard.gltf",
     "NORTH_WALL": "/new/gltf/about/NorthWall.gltf",
     "PARQUET": "/new/gltf/about/Parquet.gltf",
+    "SHELF": "/new/gltf/about/Shelf.gltf",
     "TRANSFERT_BOX": "/new/gltf/about/TransfertBox.gltf",
     "TRESTLE": "/new/gltf/about/Trestle.gltf"
   },

@@ -8,7 +8,7 @@ import { Trestle } from '../../models/about/Trestle'
 export default function Desk() {
   return (
     <>
-      <DeskTray position={[0, 9.092, -10.05]} />
+      {/* <DeskTray position={[0, 9.092, -10.05]} /> */}
       <TransfertBox
         position={new THREE.Vector3(-6.44055, 1.58283, -11.8189)}
         rotation={new THREE.Euler(0, 0, 0)}

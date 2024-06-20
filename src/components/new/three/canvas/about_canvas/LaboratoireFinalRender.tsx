@@ -2,6 +2,7 @@ import React from 'react'
 
 import Desk from './Desk'
 import Parquet from '../../models/about/Parquet'
+import ShelfGroup from './ShelfGroup'
 import Walls from './Walls'
 
 export default function LaboratoireFinalRender() {
@@ -9,6 +10,7 @@ export default function LaboratoireFinalRender() {
     <>
       <Desk />
       <Parquet />
+      <ShelfGroup />
       <Walls />
     </>
   )

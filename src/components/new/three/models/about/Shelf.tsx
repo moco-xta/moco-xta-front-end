@@ -10,20 +10,26 @@ import { default as texturesConstants } from '@/constants/new/assets/texturesCon
 
 type GLTFResult = GLTF & {
   nodes: {
-    Trestle: THREE.Mesh
+    Shelf: THREE.Mesh
   }
   materials: {}
 }
 
-export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.TRESTLE) as GLTFResult
+export function Shelf({ position }: JSX.IntrinsicElements['mesh']) {
+  const { nodes } = useGLTF(gltfConstants.ABOUT.SHELF) as GLTFResult
 
-  const map = useTextureLoader(texturesConstants.ABOUT.FINAL.TRESTLE.DIFFUSE.FOUR_K)
+  const map = useTextureLoader(texturesConstants.ABOUT.FINAL.SHELF.DIFFUSE.ONE_K)
   map.flipY = false
+
+  const roughnessMap = useTextureLoader(texturesConstants.ABOUT.FINAL.SHELF.ROUGHNESS.ONE_K)
+  roughnessMap.flipY = false
+
+  const normalMap = useTextureLoader(texturesConstants.ABOUT.FINAL.SHELF.NORMAL.ONE_K)
+  normalMap.flipY = false
 
   return (
     <mesh
-      geometry={nodes.Trestle.geometry}
+      geometry={nodes.Shelf.geometry}
       position={position}
       receiveShadow
       castShadow
@@ -31,9 +37,11 @@ export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
       <meshStandardMaterial
         attach='material'
         map={map}
+        roughnessMap={roughnessMap}
+        normalMap={normalMap}
       />
     </mesh>
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.TRESTLE)
+useGLTF.preload(gltfConstants.ABOUT.SHELF)
