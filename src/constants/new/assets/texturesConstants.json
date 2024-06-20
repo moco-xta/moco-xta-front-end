@@ -108,7 +108,16 @@
     },
     "TRESTLE": {
       "DIFFUSE": {
-        "FOUR_K": "/new/img/textures/about/trestle_diffuse_4K.jpg"
+        "FOUR_K": "/new/img/textures/about/trestle_diffuse_4K.jpg",
+        "TWO_K": "/new/img/textures/about/trestle_diffuse_2K.jpg",
+        "ONE_K": "/new/img/textures/about/trestle_diffuse_1K.jpg"
+      }
+    },
+    "TRANSFERT_BOX": {
+      "DIFFUSE": {
+        "FOUR_K": "/new/img/textures/about/transfert_box_diffuse_4K.jpg",
+        "TWO_K": "/new/img/textures/about/transfert_box_diffuse_2K.jpg",
+        "ONE_K": "/new/img/textures/about/transfert_box_diffuse_1K.jpg"
       }
     }
   },

@@ -57,6 +57,7 @@ export default function Parquet() {
         object.material.map = map
         object.material.bumpMap = bumpMap
         object.material.normalMap = normalMap
+        object.material.roughness = 1
         object.material.roughnessMap = roughnessMap
         object.material.color = generateRandomHexGrey(80, 110)
         object.material.envMapIntensity = 0
