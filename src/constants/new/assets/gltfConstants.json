@@ -52,6 +52,8 @@
   "ABOUT": {
     "DESK_TRAY": "/new/gltf/about/DeskTray.gltf",
     "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf",
+    "NORTH_BASEBOARD": "/new/gltf/about/NorthBaseboard.gltf",
+    "NORTH_WALL": "/new/gltf/about/NorthWall.gltf",
     "PARQUET": "/new/gltf/about/Parquet.gltf",
     "TRANSFERT_BOX": "/new/gltf/about/TransfertBox.gltf",
     "TRESTLE": "/new/gltf/about/Trestle.gltf"

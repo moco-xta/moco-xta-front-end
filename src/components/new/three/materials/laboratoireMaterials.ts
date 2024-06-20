@@ -1,5 +1,10 @@
 import * as THREE from 'three'
 
+export const wallSimpleMaterial = new THREE.MeshStandardMaterial({
+  color: 'white',
+  roughness: 1,
+})
+
 export const ceilingLightMaterial = new THREE.MeshStandardMaterial({
   color: 'white',
   emissive: 'white',
