@@ -50,6 +50,7 @@
     "ROUNDED_CUBE": "/new/gltf/rubiks_cube/RoundedCube.gltf"
   },
   "ABOUT": {
+    "DESK_TRAY": "/new/gltf/about/DeskTray.gltf",
     "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf",
     "PARQUET": "/new/gltf/about/Parquet.gltf",
     "TRANSFERT_BOX": "/new/gltf/about/TransfertBox.gltf",
