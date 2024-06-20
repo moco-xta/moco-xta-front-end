@@ -137,6 +137,11 @@
           "TWO_K": "/new/img/textures/about/final/shelf_normal_2K.jpg",
           "ONE_K": "/new/img/textures/about/final/shelf_normal_1K.jpg"
         }
+      },
+      "VIRGEN_DE_GUADALUPE": {
+        "DIFFUSE": {
+          "ONE_K": "/new/img/textures/about/final/virgen_de_guadalupe_diffuse_1K.jpg"
+        }
       }
     }
   },

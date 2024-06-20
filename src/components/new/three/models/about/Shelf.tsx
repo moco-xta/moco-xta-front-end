@@ -18,13 +18,19 @@ type GLTFResult = GLTF & {
 export function Shelf({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.SHELF) as GLTFResult
 
-  const map = useTextureLoader(texturesConstants.ABOUT.FINAL.SHELF.DIFFUSE.ONE_K)
+  const map = useTextureLoader(
+    texturesConstants.ABOUT.FINAL.SHELF.DIFFUSE.ONE_K,
+  )
   map.flipY = false
 
-  const roughnessMap = useTextureLoader(texturesConstants.ABOUT.FINAL.SHELF.ROUGHNESS.ONE_K)
+  const roughnessMap = useTextureLoader(
+    texturesConstants.ABOUT.FINAL.SHELF.ROUGHNESS.ONE_K,
+  )
   roughnessMap.flipY = false
 
-  const normalMap = useTextureLoader(texturesConstants.ABOUT.FINAL.SHELF.NORMAL.ONE_K)
+  const normalMap = useTextureLoader(
+    texturesConstants.ABOUT.FINAL.SHELF.NORMAL.ONE_K,
+  )
   normalMap.flipY = false
 
   return (
@@ -36,6 +42,7 @@ export function Shelf({ position }: JSX.IntrinsicElements['mesh']) {
     >
       <meshStandardMaterial
         attach='material'
+        color='white'
         map={map}
         roughnessMap={roughnessMap}
         normalMap={normalMap}

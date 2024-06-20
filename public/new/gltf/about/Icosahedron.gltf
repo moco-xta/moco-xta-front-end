@@ -13,13 +13,13 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "Shelf",
-      "translation": [0, 18, -16]
+      "name": "Icosahedron",
+      "translation": [3.62099552154541, 18.119998931884766, -15.220860481262207]
     }
   ],
   "meshes": [
     {
-      "name": "Shelf",
+      "name": "Icosahedron",
       "primitives": [
         {
           "attributes": {
@@ -36,60 +36,60 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 2946,
-      "max": [6, 1.3200000524520874, 2.0400002002716064],
-      "min": [-6, -0.7200000286102295, 2.0489096641540527e-8],
+      "count": 60,
+      "max": [0.14537720382213593, 0.4545445144176483, 0.3932461142539978],
+      "min": [-0.39487650990486145, 0, -0.1517437994480133],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 2946,
+      "count": 60,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 2946,
+      "count": 60,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 4680,
+      "count": 60,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 35352,
+      "byteLength": 720,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 35352,
-      "byteOffset": 35352,
+      "byteLength": 720,
+      "byteOffset": 720,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 23568,
-      "byteOffset": 70704,
+      "byteLength": 480,
+      "byteOffset": 1440,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 9360,
-      "byteOffset": 94272,
+      "byteLength": 120,
+      "byteOffset": 1920,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 103632,
-      "uri": "Shelf.bin"
+      "byteLength": 2040,
+      "uri": "Icosahedron.bin"
     }
   ]
 }

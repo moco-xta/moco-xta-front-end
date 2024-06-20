@@ -22,7 +22,7 @@
     "FOV": 55
   },
   "TONE_MAPPING": {
-    "EXPOSURE": 1
+    "EXPOSURE": 0.5
   },
   "PARQUET": {
     "REPEAT": 1

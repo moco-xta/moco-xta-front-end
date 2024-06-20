@@ -12,7 +12,7 @@ import './index.scss'
 export default function AboutSlice() {
   const [permissionGranted, setPermissionGranted] = useState<boolean>(false)
   const [showInstructions, setShowInstructions] = useState<boolean>(true)
-  const [isClayRender, setIsClayRender] = useState<boolean>(true)
+  const [isClayRender, setIsClayRender] = useState<boolean>(false)
 
   const handleSetIsClayRender = () => {
     setIsClayRender(!isClayRender)

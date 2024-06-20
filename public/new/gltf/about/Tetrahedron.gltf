@@ -13,13 +13,15 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "Shelf",
-      "translation": [0, 18, -16]
+      "name": "Tetrahedron",
+      "translation": [
+        4.033761978149414, 18.119998931884766, -15.304892539978027
+      ]
     }
   ],
   "meshes": [
     {
-      "name": "Shelf",
+      "name": "Tetrahedron",
       "primitives": [
         {
           "attributes": {
@@ -36,60 +38,62 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 2946,
-      "max": [6, 1.3200000524520874, 2.0400002002716064],
-      "min": [-6, -0.7200000286102295, 2.0489096641540527e-8],
+      "count": 12,
+      "max": [0.37557369470596313, 0.5403982400894165, 0.360470175743103],
+      "min": [
+        -0.24878627061843872, -3.4123659133911133e-6, -0.2900397777557373
+      ],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 2946,
+      "count": 12,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 2946,
+      "count": 12,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 4680,
+      "count": 12,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 35352,
+      "byteLength": 144,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 35352,
-      "byteOffset": 35352,
+      "byteLength": 144,
+      "byteOffset": 144,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 23568,
-      "byteOffset": 70704,
+      "byteLength": 96,
+      "byteOffset": 288,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 9360,
-      "byteOffset": 94272,
+      "byteLength": 24,
+      "byteOffset": 384,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 103632,
-      "uri": "Shelf.bin"
+      "byteLength": 408,
+      "uri": "Tetrahedron.bin"
     }
   ]
 }

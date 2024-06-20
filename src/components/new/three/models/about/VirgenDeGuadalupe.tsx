@@ -10,22 +10,24 @@ import { default as texturesConstants } from '@/constants/new/assets/texturesCon
 
 type GLTFResult = GLTF & {
   nodes: {
-    Trestle: THREE.Mesh
+    VirgenDeGuadalupe: THREE.Mesh
   }
   materials: {}
 }
 
-export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.TRESTLE) as GLTFResult
+export function VirgenDeGuadalupe({ position }: JSX.IntrinsicElements['mesh']) {
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.VIRGEN_DE_GUADALUPE,
+  ) as GLTFResult
 
   const map = useTextureLoader(
-    texturesConstants.ABOUT.FINAL.TRESTLE.DIFFUSE.FOUR_K,
+    texturesConstants.ABOUT.FINAL.VIRGEN_DE_GUADALUPE.DIFFUSE.ONE_K,
   )
   map.flipY = false
 
   return (
     <mesh
-      geometry={nodes.Trestle.geometry}
+      geometry={nodes.VirgenDeGuadalupe.geometry}
       position={position}
       receiveShadow
       castShadow
@@ -33,9 +35,11 @@ export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
       <meshStandardMaterial
         attach='material'
         map={map}
+        roughness={0.5}
+        side={THREE.DoubleSide}
       />
     </mesh>
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.TRESTLE)
+useGLTF.preload(gltfConstants.ABOUT.VIRGEN_DE_GUADALUPE)

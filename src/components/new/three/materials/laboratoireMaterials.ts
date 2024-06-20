@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 
 export const wallSimpleMaterial = new THREE.MeshStandardMaterial({
-  color: 'white',
+  color: '#e7e7e7',
   roughness: 1,
 })
 
