@@ -1,5 +1,5 @@
-import * as THREE from 'three'
 import React from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -18,7 +18,9 @@ type GLTFResult = GLTF & {
 export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.TRESTLE) as GLTFResult
 
-  const map = useTextureLoader(texturesConstants.ABOUT.TRESTLE.DIFFUSE.FOUR_K)
+  const map = useTextureLoader(
+    texturesConstants.ABOUT.FINAL.TRESTLE.DIFFUSE.ONE_K,
+  )
   map.flipY = false
 
   return (

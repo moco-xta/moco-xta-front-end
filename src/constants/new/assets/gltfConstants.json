@@ -50,10 +50,28 @@
     "ROUNDED_CUBE": "/new/gltf/rubiks_cube/RoundedCube.gltf"
   },
   "ABOUT": {
+    "CEILING": "/new/gltf/about/Ceiling.gltf",
+    "CUBE": "/new/gltf/about/Cube.gltf",
+    "DESK_CHAIR": "/new/gltf/about/DeskChair.gltf",
+    "DESK_TRAY": "/new/gltf/about/DeskTray.gltf",
+    "DODECAHEDRON": "/new/gltf/about/Dodecahedron.gltf",
+    "DOOR": "/new/gltf/about/Door.gltf",
+    "DOOR_FRAME": "/new/gltf/about/DoorFrame.gltf",
+    "ICOSAHEDRON": "/new/gltf/about/Icosahedron.gltf",
     "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf",
+    "NORTH_BASEBOARD": "/new/gltf/about/NorthBaseboard.gltf",
+    "NORTH_WALL": "/new/gltf/about/NorthWall.gltf",
+    "OCTAHEDRON": "/new/gltf/about/Octahedron.gltf",
     "PARQUET": "/new/gltf/about/Parquet.gltf",
+    "SHELF": "/new/gltf/about/Shelf.gltf",
+    "TETRAHEDRON": "/new/gltf/about/Tetrahedron.gltf",
     "TRANSFERT_BOX": "/new/gltf/about/TransfertBox.gltf",
-    "TRESTLE": "/new/gltf/about/Trestle.gltf"
+    "TRESTLE": "/new/gltf/about/Trestle.gltf",
+    "TRINITY": "/new/gltf/about/Trinity.gltf",
+    "VIRGEN_DE_GUADALUPE": "/new/gltf/about/VirgenDeGuadalupe.gltf",
+    "WALLS": "/new/gltf/about/Walls.gltf",
+    "WETH_BASEBOARD": "/new/gltf/about/WestBaseboard.gltf",
+    "WEST_WALL": "/new/gltf/about/WestWall.gltf"
   },
   "SNAKE_GAME": {
     "ARROW_TEST": "/new/gltf/snake_game/ArrowTest.gltf",

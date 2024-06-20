@@ -6,6 +6,7 @@ import LaboratoireClayRenderLights from './LaboratoireClayRenderLights'
 import { LaboratoireClayRender } from '../../models/about/LaboratoireClayRender'
 import LaboratoireFinalRenderLights from './LaboratoireFinalRenderLights'
 import LaboratoireFinalRender from './LaboratoireFinalRender'
+import PostProcessing from './PostProcessing'
 import Ground from './Ground'
 
 export default function AboutScene({ isClayRender }: AboutSceneInterface) {
@@ -20,6 +21,7 @@ export default function AboutScene({ isClayRender }: AboutSceneInterface) {
         <>
           <LaboratoireFinalRenderLights />
           <LaboratoireFinalRender />
+          <PostProcessing />
         </>
       )}
       <Ground />

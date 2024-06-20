@@ -202,7 +202,6 @@ export function LaboratoireClayRender(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='DeskTray'
         geometry={nodes.DeskTray.geometry}
-        material={glassMaterial}
         position={[0, 9.092, -10.05]}
       >
         <MeshTransmissionMaterial

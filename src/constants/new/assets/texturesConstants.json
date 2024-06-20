@@ -100,15 +100,85 @@
         }
       }
     },
-    "PARQUET": {
-      "PARQUET_DIFFUSE": "/new/img/textures/about/parquet/parquet_diffuse.jpg",
-      "PARQUET_BUMP": "/new/img/textures/about/parquet/parquet_bump.jpg",
-      "PARQUET_NORMAL": "/new/img/textures/about/parquet/parquet_normal.jpg",
-      "PARQUET_ROUGHNESS": "/new/img/textures/about/parquet/parquet_roughness.jpg"
-    },
-    "TRESTLE": {
-      "DIFFUSE": {
-        "FOUR_K": "/new/img/textures/about/trestle_diffuse_4K.jpg"
+    "FINAL": {
+      "PARQUET": {
+        "PARQUET_DIFFUSE": "/new/img/textures/about/final/parquet_diffuse.jpg",
+        "PARQUET_BUMP": "/new/img/textures/about/final/parquet_bump.jpg",
+        "PARQUET_NORMAL": "/new/img/textures/about/final/parquet_normal.jpg",
+        "PARQUET_ROUGHNESS": "/new/img/textures/about/final/parquet_roughness.jpg"
+      },
+      "TRESTLE": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/trestle_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/trestle_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/trestle_diffuse_1K.jpg"
+        }
+      },
+      "TRANSFERT_BOX": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/transfert_box_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/transfert_box_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/transfert_box_diffuse_1K.jpg"
+        }
+      },
+      "SHELF": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/shelf_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/shelf_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/shelf_diffuse_1K.jpg"
+        },
+        "ROUGHNESS": {
+          "FOUR_K": "/new/img/textures/about/final/shelf_roughness_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/shelf_roughness_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/shelf_roughness_1K.jpg"
+        },
+        "NORMAL": {
+          "FOUR_K": "/new/img/textures/about/final/shelf_normal_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/shelf_normal_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/shelf_normal_1K.jpg"
+        }
+      },
+      "VIRGEN_DE_GUADALUPE": {
+        "DIFFUSE": {
+          "ONE_K": "/new/img/textures/about/final/virgen_de_guadalupe_diffuse_1K.jpg"
+        }
+      },
+      "TRINITY": {
+        "DIFFUSE": "/new/img/textures/about/final/trinity_diffuse.jpg"
+      },
+      "TRINITY_FRAME": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/trinity_frame_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/trinity_frame_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/trinity_frame_diffuse_1K.jpg"
+        },
+        "ROUGHNESS": {
+          "FOUR_K": "/new/img/textures/about/final/trinity_frame_roughness_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/trinity_frame_roughness_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/trinity_frame_roughness_1K.jpg"
+        },
+        "NORMAL": {
+          "FOUR_K": "/new/img/textures/about/final/trinity_frame_normal_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/trinity_frame_normal_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/trinity_frame_normal_1K.jpg"
+        }
+      },
+      "DESK_CHAIR_LEATHER": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/desk_chair_leather_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/desk_chair_leather_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/desk_chair_leather_diffuse_1K.jpg"
+        },
+        "ROUGHNESS": {
+          "FOUR_K": "/new/img/textures/about/final/desk_chair_leather_roughness_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/desk_chair_leather_roughness_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/desk_chair_leather_roughness_1K.jpg"
+        },
+        "NORMAL": {
+          "FOUR_K": "/new/img/textures/about/final/desk_chair_leather_normal_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/desk_chair_leather_normal_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/desk_chair_leather_normal_1K.jpg"
+        }
       }
     }
   },

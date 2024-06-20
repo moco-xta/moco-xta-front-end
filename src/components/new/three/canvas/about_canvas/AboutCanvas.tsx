@@ -17,6 +17,7 @@ import ToneMapping from './ToneMapping'
 import { AboutCanvasInterface } from '@/interfaces/new/threeInterfaces'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+import PostProcessing from './PostProcessing'
 
 export default function AboutCanvas({
   showInstructions,

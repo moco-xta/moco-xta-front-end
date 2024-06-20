@@ -1,0 +1,250 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "DeskChair",
+      "rotation": [0, 0.8610487580299377, 0, 0.5085223913192749],
+      "translation": [0, 0.019999999552965164, 0]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "desk_chair_leg",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "desk_chair_leather",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "desk_chair_wheels",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "DeskChair",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 8,
+            "NORMAL": 9,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1786,
+      "max": [2.832797050476074, 4.230917453765869, 2.5171542167663574],
+      "min": [-2.517153739929199, 0.0007708395714871585, -2.7637226581573486],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1786,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1786,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 6312,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 13876,
+      "max": [3.289273500442505, 9.625693321228027, 2.617060661315918],
+      "min": [-3.2892398834228516, 4.109378814697266, -2.950914144515991],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 13876,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 13876,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 71904,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 4994,
+      "max": [2.882305145263672, 0.7415462136268616, 2.6224663257598877],
+      "min": [-2.6224663257598877, 0.0007708395714871585, -2.847506046295166],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 4994,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 4994,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5123,
+      "count": 17352,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 21432,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 21432,
+      "byteOffset": 21432,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 14288,
+      "byteOffset": 42864,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 12624,
+      "byteOffset": 57152,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 166512,
+      "byteOffset": 69776,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 166512,
+      "byteOffset": 236288,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 111008,
+      "byteOffset": 402800,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 143808,
+      "byteOffset": 513808,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 59928,
+      "byteOffset": 657616,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 59928,
+      "byteOffset": 717544,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 39952,
+      "byteOffset": 777472,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 34704,
+      "byteOffset": 817424,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 852128,
+      "uri": "DeskChair.bin"
+    }
+  ]
+}
