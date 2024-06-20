@@ -1,0 +1,108 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Door",
+      "translation": [-28.600000381469727, 0, -10]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Door.001",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3
+          },
+          "indices": 4
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 3449,
+      "max": [0.40825286507606506, 21.76469612121582, 3.7109172344207764],
+      "min": [-1.1440868092904566e-6, 0.03493122756481171, -3.7109172344207764],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3449,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3449,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 3449,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5123,
+      "count": 5583,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 41388,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 41388,
+      "byteOffset": 41388,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 27592,
+      "byteOffset": 82776,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 27592,
+      "byteOffset": 110368,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11166,
+      "byteOffset": 137960,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 149128,
+      "uri": "Door.bin"
+    }
+  ]
+}

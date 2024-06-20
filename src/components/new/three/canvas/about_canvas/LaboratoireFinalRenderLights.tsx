@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
 
-const INTENSITY = 0.5
+const INTENSITY = 0.3
 const MAP_SIZE = [4096, 4096]
 const SHADOW_CAMERA_FAR = 100
 const SHADOW_CAMERA_LEFT = -100
@@ -44,7 +44,7 @@ export default function LaboratoireFinalRenderLights() {
 
   return (
     <>
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={0.2} />
       <directionalLight
         ref={directionalLightCeilingNWRef}
         position={[-5, 28.6, -3]}

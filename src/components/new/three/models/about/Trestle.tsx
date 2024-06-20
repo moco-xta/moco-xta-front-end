@@ -19,7 +19,7 @@ export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.TRESTLE) as GLTFResult
 
   const map = useTextureLoader(
-    texturesConstants.ABOUT.FINAL.TRESTLE.DIFFUSE.FOUR_K,
+    texturesConstants.ABOUT.FINAL.TRESTLE.DIFFUSE.ONE_K,
   )
   map.flipY = false
 

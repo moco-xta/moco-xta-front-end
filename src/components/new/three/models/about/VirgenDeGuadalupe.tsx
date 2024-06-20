@@ -35,7 +35,7 @@ export function VirgenDeGuadalupe({ position }: JSX.IntrinsicElements['mesh']) {
       <meshStandardMaterial
         attach='material'
         map={map}
-        roughness={0.5}
+        roughness={0.2}
         side={THREE.DoubleSide}
       />
     </mesh>
