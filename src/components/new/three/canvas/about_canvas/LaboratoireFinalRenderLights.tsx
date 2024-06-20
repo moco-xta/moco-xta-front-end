@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
 
-const INTENSITY = 0.2
+const INTENSITY = 0.5
 const MAP_SIZE = [4096, 4096]
 const SHADOW_CAMERA_FAR = 100
 const SHADOW_CAMERA_LEFT = -100
