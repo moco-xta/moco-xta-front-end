@@ -50,6 +50,7 @@
     "ROUNDED_CUBE": "/new/gltf/rubiks_cube/RoundedCube.gltf"
   },
   "ABOUT": {
+    "CEILING": "/new/gltf/about/Ceiling.gltf",
     "CUBE": "/new/gltf/about/Cube.gltf",
     "DESK_CHAIR": "/new/gltf/about/DeskChair.gltf",
     "DESK_TRAY": "/new/gltf/about/DeskTray.gltf",
@@ -68,6 +69,7 @@
     "TRESTLE": "/new/gltf/about/Trestle.gltf",
     "TRINITY": "/new/gltf/about/Trinity.gltf",
     "VIRGEN_DE_GUADALUPE": "/new/gltf/about/VirgenDeGuadalupe.gltf",
+    "WALLS": "/new/gltf/about/Walls.gltf",
     "WETH_BASEBOARD": "/new/gltf/about/WestBaseboard.gltf",
     "WEST_WALL": "/new/gltf/about/WestWall.gltf"
   },

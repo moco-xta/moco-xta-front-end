@@ -17,7 +17,7 @@ export default function LaboratoireFinalRenderLights() {
   const directionalLightCeilingNEtRef = useRef<THREE.DirectionalLight>(null!)
   const directionalLightCeilingSWtRef = useRef<THREE.DirectionalLight>(null!)
   const directionalLightCeilingSEtRef = useRef<THREE.DirectionalLight>(null!)
-  /* useHelper(
+  useHelper( 
     directionalLightCeilingNWRef,
     THREE.DirectionalLightHelper,
     1,
@@ -40,14 +40,14 @@ export default function LaboratoireFinalRenderLights() {
     THREE.DirectionalLightHelper,
     1,
     'green',
-  ) */
+  )
 
   return (
     <>
       <ambientLight intensity={0.2} />
       <directionalLight
         ref={directionalLightCeilingNWRef}
-        position={[-5, 28.6, -3]}
+        position={[-5, 28, -3]}
         intensity={INTENSITY}
         target-position={new THREE.Vector3(-15, 0, -13)}
         castShadow
@@ -62,7 +62,7 @@ export default function LaboratoireFinalRenderLights() {
       />
       <directionalLight
         ref={directionalLightCeilingNEtRef}
-        position={[5, 28.6, -3]}
+        position={[5, 28, -3]}
         intensity={INTENSITY}
         target-position={new THREE.Vector3(15, 0, -13)}
         castShadow
@@ -77,7 +77,7 @@ export default function LaboratoireFinalRenderLights() {
       />
       <directionalLight
         ref={directionalLightCeilingSWtRef}
-        position={[-5, 28.6, 3]}
+        position={[-5, 28, 3]}
         intensity={INTENSITY}
         target-position={new THREE.Vector3(-15, 0, 13)}
         castShadow
@@ -92,7 +92,7 @@ export default function LaboratoireFinalRenderLights() {
       />
       <directionalLight
         ref={directionalLightCeilingSEtRef}
-        position={[5, 28.6, 3]}
+        position={[5, 28, 3]}
         intensity={INTENSITY}
         target-position={new THREE.Vector3(15, 0, 13)}
         castShadow

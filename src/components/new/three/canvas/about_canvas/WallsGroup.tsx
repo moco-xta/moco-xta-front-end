@@ -1,21 +1,25 @@
 import React from 'react'
 
+import { Ceiling } from '../../models/about/Ceiling'
 import DoorGroup from './DoorGroup'
 import Frames from './Frames'
 import { NorthBaseboard } from '../../models/about/NorthBaseboard'
 import { NorthWall } from '../../models/about/NorthWall'
 import { WestBaseboard } from '../../models/about/WestBaseboard'
 import { WestWall } from '../../models/about/WestWall'
+import { Walls } from '../../models/about/Walls'
 
-export default function Walls() {
+export default function WallsGroup() {
   return (
     <>
+      {/* <Ceiling /> */}
       <DoorGroup />
       <Frames />
-      <NorthBaseboard />
+      {/* <NorthBaseboard />
       <NorthWall />
       <WestBaseboard />
-      <WestWall />
+      <WestWall /> */}
+      <Walls />
     </>
   )
 }

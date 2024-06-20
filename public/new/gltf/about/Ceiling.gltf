@@ -15,12 +15,12 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"WestWall"
+			"name":"Ceiling"
 		}
 	],
 	"meshes":[
 		{
-			"name":"WestWall",
+			"name":"Ceiling",
 			"primitives":[
 				{
 					"attributes":{
@@ -37,15 +37,15 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":12,
+			"count":4,
 			"max":[
-				-28.599994659423828,
+				28.599998474121094,
 				28.600000381469727,
 				16
 			],
 			"min":[
-				-28.60000228881836,
-				1.600000023841858,
+				-28.599998474121094,
+				28.600000381469727,
 				-16
 			],
 			"type":"VEC3"
@@ -53,52 +53,52 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":12,
+			"count":4,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":12,
+			"count":4,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":30,
+			"count":6,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":144,
+			"byteLength":48,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":144,
-			"byteOffset":144,
+			"byteLength":48,
+			"byteOffset":48,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":96,
-			"byteOffset":288,
+			"byteLength":32,
+			"byteOffset":96,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":60,
-			"byteOffset":384,
+			"byteLength":12,
+			"byteOffset":128,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":444,
-			"uri":"WestWall.bin"
+			"byteLength":140,
+			"uri":"Ceiling.bin"
 		}
 	]
 }
