@@ -10,30 +10,37 @@ import { default as texturesConstants } from '@/constants/new/assets/texturesCon
 
 type GLTFResult = GLTF & {
   nodes: {
-    Trestle: THREE.Mesh
+    TransfertBox: THREE.Mesh
   }
   materials: {}
 }
 
-export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.TRESTLE) as GLTFResult
+export function TransfertBox({
+  position,
+  rotation,
+}: JSX.IntrinsicElements['mesh']) {
+  const { nodes } = useGLTF(gltfConstants.ABOUT.TRANSFERT_BOX) as GLTFResult
 
-  const map = useTextureLoader(texturesConstants.ABOUT.TRESTLE.DIFFUSE.FOUR_K)
-  map.flipY = false
+  /* const map = useTextureLoader(texturesConstants.ABOUT.TRESTLE.DIFFUSE.FOUR_K)
+  map.flipY = false */
 
   return (
     <mesh
-      geometry={nodes.Trestle.geometry}
+      geometry={nodes.TransfertBox.geometry}
       position={position}
+      rotation={rotation}
       receiveShadow
       castShadow
     >
       <meshStandardMaterial
         attach='material'
-        map={map}
+        color={'grey'}
+        roughness={1}
+        side={THREE.DoubleSide}
+        /* map={map} */
       />
     </mesh>
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.TRESTLE)
+useGLTF.preload(gltfConstants.ABOUT.TRANSFERT_BOX)
