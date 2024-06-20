@@ -17,6 +17,7 @@ export default function PostProcessing() {
         rangeFalloff={0.1}
         luminanceInfluence={0.9}
         radius={20}
+        // @ts-ignore
         scale={1}
         bias={-1}
       />
