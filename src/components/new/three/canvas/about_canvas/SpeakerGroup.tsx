@@ -8,5 +8,5 @@ export default function SpeakerGroup() {
       <SpeakerBox position={[-12.2749, 0.02, -14.2514]} />
       <SpeakerBox position={[12.7251, 0.02, -14.3251]} />
     </>
-    )
+  )
 }

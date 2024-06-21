@@ -37,13 +37,13 @@ export function SpeakerBox({ position }: JSX.IntrinsicElements['group']) {
     map: speakerBoxMap,
     roughnessMap: speakerBoxRoughnessMap,
     normalMap: speakerBoxNormalMap,
-    side: THREE.DoubleSide
+    side: THREE.DoubleSide,
   })
 
   const speakerStandMaterial = new THREE.MeshStandardMaterial({
     color: '#404040',
     metalness: 0.8,
-    roughness: 0.5
+    roughness: 0.5,
   })
 
   const speakerGap = 2.25
