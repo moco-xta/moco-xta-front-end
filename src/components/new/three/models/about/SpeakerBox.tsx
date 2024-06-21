@@ -33,10 +33,11 @@ export function SpeakerBox({ position }: JSX.IntrinsicElements['group']) {
   speakerBoxRoughnessMap.flipY = false
   speakerBoxNormalMap.flipY = false
 
-  const speakerBoxMaterial = new THREE.MeshStandardMaterial({
+  const speakerBoxMaterial = new THREE.MeshPhysicalMaterial({
     map: speakerBoxMap,
     roughnessMap: speakerBoxRoughnessMap,
     normalMap: speakerBoxNormalMap,
+    specularColor: '#c6afaf',
     side: THREE.DoubleSide,
   })
 

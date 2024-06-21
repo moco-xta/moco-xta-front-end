@@ -13,20 +13,24 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "WestWall"
+      "name": "WallClockGlass",
+      "translation": [
+        -28.582950592041016, 25.39999771118164, -10.007051467895508
+      ]
     }
   ],
   "meshes": [
     {
-      "name": "WestWall",
+      "name": "Cylinder.002",
       "primitives": [
         {
           "attributes": {
             "POSITION": 0,
             "NORMAL": 1,
-            "TEXCOORD_0": 2
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3
           },
-          "indices": 3
+          "indices": 4
         }
       ]
     }
@@ -35,60 +39,72 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 396,
-      "max": [-28.349994659423828, 28.600000381469727, 16],
-      "min": [-28.60000228881836, 0, -16],
+      "count": 768,
+      "max": [0.3920017182826996, 1.5253212451934814, 1.5253208875656128],
+      "min": [0.3780008852481842, -1.5253212451934814, -1.5253214836120605],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 396,
+      "count": 768,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 396,
+      "count": 768,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
+      "componentType": 5126,
+      "count": 768,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
       "componentType": 5123,
-      "count": 606,
+      "count": 1524,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 4752,
+      "byteLength": 9216,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 4752,
-      "byteOffset": 4752,
+      "byteLength": 9216,
+      "byteOffset": 9216,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 3168,
-      "byteOffset": 9504,
+      "byteLength": 6144,
+      "byteOffset": 18432,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 1212,
-      "byteOffset": 12672,
+      "byteLength": 6144,
+      "byteOffset": 24576,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3048,
+      "byteOffset": 30720,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 13884,
-      "uri": "WestWall.bin"
+      "byteLength": 33768,
+      "uri": "WallClockGlass.bin"
     }
   ]
 }

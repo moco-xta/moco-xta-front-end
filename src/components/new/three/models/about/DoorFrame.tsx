@@ -3,9 +3,10 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { wallSimpleMaterial } from '../../materials/laboratoireMaterials'
+import useTextureLoader from '@/hooks/useTextureLoader'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -17,10 +18,19 @@ type GLTFResult = GLTF & {
 export function DoorFrame({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.DOOR_FRAME) as GLTFResult
 
+  const doorFrameMap = useTextureLoader(
+    texturesConstants.ABOUT.FINAL.DOOR_FRAME.DIFFUSE.FOUR_K,
+  )
+  doorFrameMap.flipY = false
+
+  const doorFrameMaterial = new THREE.MeshStandardMaterial({
+    map: doorFrameMap,
+  })
+
   return (
     <mesh
       geometry={nodes.DoorFrame.geometry}
-      material={wallSimpleMaterial}
+      material={doorFrameMaterial}
       position={position}
       receiveShadow
       castShadow
