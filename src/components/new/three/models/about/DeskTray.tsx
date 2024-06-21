@@ -23,7 +23,7 @@ export function DeskTray({ position }: JSX.IntrinsicElements['mesh']) {
       position={position}
       material={glassSimpleMaterial}
       receiveShadow
-      castShadow
+      /* castShadow */
     />
   )
 }
