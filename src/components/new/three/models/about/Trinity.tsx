@@ -22,14 +22,14 @@ export function Trinity({ position }: JSX.IntrinsicElements['group']) {
   const trinityFrameMap = useTextureLoader(
     texturesConstants.ABOUT.FINAL.TRINITY_FRAME.DIFFUSE.ONE_K,
   )
-  trinityFrameMap.flipY = false
   const trinityFrameRoughnessMap = useTextureLoader(
     texturesConstants.ABOUT.FINAL.TRINITY_FRAME.ROUGHNESS.ONE_K,
   )
-  trinityFrameRoughnessMap.flipY = false
   const trinityFrameNormalMap = useTextureLoader(
     texturesConstants.ABOUT.FINAL.TRINITY_FRAME.NORMAL.ONE_K,
   )
+  trinityFrameMap.flipY = false
+  trinityFrameRoughnessMap.flipY = false
   trinityFrameNormalMap.flipY = false
 
   const trinityFrameMaterial = new THREE.MeshStandardMaterial({
@@ -42,7 +42,7 @@ export function Trinity({ position }: JSX.IntrinsicElements['group']) {
   const trinityMap = useTextureLoader(
     texturesConstants.ABOUT.FINAL.TRINITY.DIFFUSE,
   )
-  trinityFrameMap.flipY = false
+  trinityMap.flipY = false
 
   const trinityMaterial = new THREE.MeshStandardMaterial({
     map: trinityMap,
@@ -51,28 +51,24 @@ export function Trinity({ position }: JSX.IntrinsicElements['group']) {
 
   return (
     <group
+      name='Trinity'
       position={position}
       dispose={null}
     >
-      <group
-        name='Trinity'
-        position={[-17.09, 19.2, -16]}
-      >
-        <mesh
-          name='Trinity_1'
-          geometry={nodes.Trinity_1.geometry}
-          material={trinityFrameMaterial}
-          receiveShadow
-          castShadow
-        />
-        <mesh
-          name='Trinity_2'
-          geometry={nodes.Trinity_2.geometry}
-          material={trinityMaterial}
-          receiveShadow
-          castShadow
-        />
-      </group>
+      <mesh
+        name='Trinity_1'
+        geometry={nodes.Trinity_1.geometry}
+        material={trinityFrameMaterial}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        name='Trinity_2'
+        geometry={nodes.Trinity_2.geometry}
+        material={trinityMaterial}
+        receiveShadow
+        castShadow
+      />
     </group>
   )
 }
