@@ -1,0 +1,95 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Speaker",
+      "translation": [0, 0.019999999552965164, 0]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Speaker",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 7491,
+      "max": [0.9803431034088135, 2.7695422172546387, 1.360799789428711],
+      "min": [-0.9803431034088135, 0.8088565468788147, 0.9199994802474976],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 7491,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 7491,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 11709,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 89892,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 89892,
+      "byteOffset": 89892,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 59928,
+      "byteOffset": 179784,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 23418,
+      "byteOffset": 239712,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 263132,
+      "uri": "Speaker.bin"
+    }
+  ]
+}
