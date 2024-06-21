@@ -146,6 +146,16 @@
       "TRINITY": {
         "DIFFUSE": "/new/img/textures/about/final/trinity_diffuse.jpg"
       },
+      "HOY_SI": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/hoy_si_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/hoy_si_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/hoy_si_diffuse_1K.jpg"
+        }
+      },
+      "AMOR_LLAMA_AMOR": {
+        "DIFFUSE": "/new/img/textures/about/final/amor_llama_amor_diffuse.jpg"
+      },
       "TRINITY_FRAME": {
         "DIFFUSE": {
           "FOUR_K": "/new/img/textures/about/final/trinity_frame_diffuse_4K.jpg",

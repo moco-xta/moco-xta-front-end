@@ -50,6 +50,7 @@
     "ROUNDED_CUBE": "/new/gltf/rubiks_cube/RoundedCube.gltf"
   },
   "ABOUT": {
+    "AMOR_LLAMA_AMOR": "/new/gltf/about/AmorLlamaAmor.gltf",
     "CEILING": "/new/gltf/about/Ceiling.gltf",
     "CUBE": "/new/gltf/about/Cube.gltf",
     "DESK_CHAIR": "/new/gltf/about/DeskChair.gltf",
