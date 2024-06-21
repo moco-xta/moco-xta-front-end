@@ -143,6 +143,11 @@
           "ONE_K": "/new/img/textures/about/final/virgen_de_guadalupe_diffuse_1K.jpg"
         }
       },
+      "BRAIN": {
+        "DIFFUSE": {
+          "ONE_K": "/new/img/textures/about/final/brain_diffuse_1K.jpg"
+        }
+      },
       "TRINITY": {
         "DIFFUSE": "/new/img/textures/about/final/trinity_diffuse.jpg"
       },
@@ -155,6 +160,9 @@
       },
       "AMOR_LLAMA_AMOR": {
         "DIFFUSE": "/new/img/textures/about/final/amor_llama_amor_diffuse.jpg"
+      },
+      "PABLO_ESCOBAR": {
+        "DIFFUSE": "/new/img/textures/about/final/pablo_escobar_diffuse.jpg"
       },
       "TRINITY_FRAME": {
         "DIFFUSE": {
@@ -205,6 +213,23 @@
           "FOUR_K": "/new/img/textures/about/final/speaker_box_normal_4K.jpg",
           "TWO_K": "/new/img/textures/about/final/speaker_box_normal_2K.jpg",
           "ONE_K": "/new/img/textures/about/final/speaker_box_normal_1K.jpg"
+        }
+      },
+      "BRAIN_FRAME": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/brain_frame_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/brain_frame_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/brain_frame_diffuse_1K.jpg"
+        },
+        "ROUGHNESS": {
+          "FOUR_K": "/new/img/textures/about/final/brain_frame_roughness_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/brain_frame_roughness_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/brain_frame_roughness_1K.jpg"
+        },
+        "NORMAL": {
+          "FOUR_K": "/new/img/textures/about/final/brain_frame_normal_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/brain_frame_normal_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/brain_frame_normal_1K.jpg"
         }
       },
       "VINYL_DISCS": {

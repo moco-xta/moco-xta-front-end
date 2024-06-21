@@ -51,6 +51,7 @@
   },
   "ABOUT": {
     "AMOR_LLAMA_AMOR": "/new/gltf/about/AmorLlamaAmor.gltf",
+    "BRAIN": "/new/gltf/about/Brain.gltf",
     "CEILING": "/new/gltf/about/Ceiling.gltf",
     "CUBE": "/new/gltf/about/Cube.gltf",
     "DESK_CHAIR": "/new/gltf/about/DeskChair.gltf",
@@ -64,6 +65,7 @@
     "NORTH_BASEBOARD": "/new/gltf/about/NorthBaseboard.gltf",
     "NORTH_WALL": "/new/gltf/about/NorthWall.gltf",
     "OCTAHEDRON": "/new/gltf/about/Octahedron.gltf",
+    "PABLO_ESCOBAR": "/new/gltf/about/PabloEscobar.gltf",
     "PARQUET": "/new/gltf/about/Parquet.gltf",
     "SHELF": "/new/gltf/about/Shelf.gltf",
     "SPEAKER": "/new/gltf/about/Speaker.gltf",
