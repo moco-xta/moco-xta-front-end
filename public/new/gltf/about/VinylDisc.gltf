@@ -13,14 +13,13 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "AmorLlamaAmor",
-      "translation": [-11.19999885559082, 10, -16]
+      "name": "VinylDisc"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "name": "amor_llama_amor_frame",
+      "name": "vinyl_disc_finira",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
           0.800000011920929, 0.800000011920929, 0.800000011920929, 1
@@ -31,7 +30,7 @@
     },
     {
       "doubleSided": true,
-      "name": "amor_llama_amor",
+      "name": "vinyl_disc_back",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
           0.800000011920929, 0.800000011920929, 0.800000011920929, 1
@@ -43,7 +42,7 @@
   ],
   "meshes": [
     {
-      "name": "AmorLlamaAmor",
+      "name": "VinylDisc",
       "primitives": [
         {
           "attributes": {
@@ -70,112 +69,114 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 40,
-      "max": [3.701336145401001, 12.165122985839844, 0.4055044949054718],
+      "count": 85,
+      "max": [1.6350005865097046, 3.2300007343292236, 0.020000001415610313],
       "min": [
-        -3.800490617752075, -1.430511474609375e-6, -4.6014827148610493e-7
+        -1.6350005865097046, -3.850460075227602e-7, -0.020000001415610313
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 40,
+      "count": 85,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 40,
+      "count": 85,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 72,
+      "count": 288,
       "type": "SCALAR"
     },
     {
       "bufferView": 4,
       "componentType": 5126,
-      "count": 4,
-      "max": [3.5763063430786133, 12.023195266723633, 0.22146879136562347],
-      "min": [-3.6754608154296875, 0.1419239044189453, 0.22146807610988617],
+      "count": 25,
+      "max": [1.6350005865097046, 3.2300007343292236, -0.0040000006556510925],
+      "min": [
+        -1.6350005865097046, -3.850460075227602e-7, -0.020000001415610313
+      ],
       "type": "VEC3"
     },
     {
       "bufferView": 5,
       "componentType": 5126,
-      "count": 4,
+      "count": 25,
       "type": "VEC3"
     },
     {
       "bufferView": 6,
       "componentType": 5126,
-      "count": 4,
+      "count": 25,
       "type": "VEC2"
     },
     {
       "bufferView": 7,
       "componentType": 5123,
-      "count": 6,
+      "count": 96,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 480,
+      "byteLength": 1020,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 480,
-      "byteOffset": 480,
+      "byteLength": 1020,
+      "byteOffset": 1020,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 320,
-      "byteOffset": 960,
+      "byteLength": 680,
+      "byteOffset": 2040,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 144,
-      "byteOffset": 1280,
+      "byteLength": 576,
+      "byteOffset": 2720,
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 48,
-      "byteOffset": 1424,
+      "byteLength": 300,
+      "byteOffset": 3296,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 48,
-      "byteOffset": 1472,
+      "byteLength": 300,
+      "byteOffset": 3596,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 32,
-      "byteOffset": 1520,
+      "byteLength": 200,
+      "byteOffset": 3896,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 12,
-      "byteOffset": 1552,
+      "byteLength": 192,
+      "byteOffset": 4096,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 1564,
-      "uri": "AmorLlamaAmor.bin"
+      "byteLength": 4288,
+      "uri": "VinylDisc.bin"
     }
   ]
 }

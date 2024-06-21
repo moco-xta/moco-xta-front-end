@@ -206,6 +206,11 @@
           "TWO_K": "/new/img/textures/about/final/speaker_box_normal_2K.jpg",
           "ONE_K": "/new/img/textures/about/final/speaker_box_normal_1K.jpg"
         }
+      },
+      "VINYL_DISCS": {
+        "FINIRA": {
+          "DIFFUSE": "/new/img/textures/about/final/vinyl_disc_finira_diffuse.jpg"
+        }
       }
     }
   },

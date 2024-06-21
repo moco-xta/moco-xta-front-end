@@ -27,12 +27,12 @@ export function AmorLlamaAmor({ position }: JSX.IntrinsicElements['mesh']) {
   const amorLlamaAmorMaterial = new THREE.MeshStandardMaterial({
     /* color: '#808080', */
     map: amorllamaAmorMap,
-    roughness: 1
+    roughness: 1,
   })
 
   const amorLlamaAmorFrameMaterial = new THREE.MeshStandardMaterial({
     color: '#000000',
-    roughness: 0.6
+    roughness: 0.6,
   })
 
   return (
