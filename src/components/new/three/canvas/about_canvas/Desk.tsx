@@ -6,6 +6,7 @@ import { TransfertBox } from '../../models/about/TransfertBox'
 import { Trestle } from '../../models/about/Trestle'
 import { DeskChair } from '../../models/about/DeskChair'
 import { MacBookPro } from '../../models/about/MacBookPro'
+import VinylDiscs from './VinylDiscs'
 
 export default function Desk() {
   return (
@@ -30,6 +31,7 @@ export default function Desk() {
       />
       <Trestle position={new THREE.Vector3(-7.5, 0, -10)} />
       <Trestle position={new THREE.Vector3(7.5, 0, -10)} />
+      <VinylDiscs />
     </>
   )
 }

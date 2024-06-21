@@ -35,59 +35,59 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 12,
-      "max": [-28.599994659423828, 28.600000381469727, 16],
-      "min": [-28.60000228881836, 1.600000023841858, -16],
+      "count": 396,
+      "max": [-28.349994659423828, 28.600000381469727, 16],
+      "min": [-28.60000228881836, 0, -16],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 12,
+      "count": 396,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 12,
+      "count": 396,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 30,
+      "count": 606,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 144,
+      "byteLength": 4752,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 144,
-      "byteOffset": 144,
+      "byteLength": 4752,
+      "byteOffset": 4752,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 96,
-      "byteOffset": 288,
+      "byteLength": 3168,
+      "byteOffset": 9504,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 60,
-      "byteOffset": 384,
+      "byteLength": 1212,
+      "byteOffset": 12672,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 444,
+      "byteLength": 13884,
       "uri": "WestWall.bin"
     }
   ]
