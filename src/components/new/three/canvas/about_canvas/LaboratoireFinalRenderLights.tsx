@@ -3,6 +3,8 @@ import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
 import { useControls } from 'leva'
 
+import { TableLamp } from '../../models/about/TableLamp'
+
 const K = 6
 const MAP_SIZE = [1024 * K, 1024 * K]
 
@@ -197,6 +199,7 @@ export default function LaboratoireFinalRenderLights() {
         shadow-mapSize={MAP_SIZE}
         {...spotLigthsConfig}
       />
+      <TableLamp position={[11.776, 1.012, -9.08]} />
     </>
   )
 }
