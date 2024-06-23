@@ -145,24 +145,24 @@
       },
       "BRAIN": {
         "DIFFUSE": {
-          "ONE_K": "/new/img/textures/about/final/brain_diffuse_1K.jpg"
+          "ONE_K": "/new/img/textures/about/final/brain_diffuse_1K_COMPOSITING.jpg"
         }
       },
       "TRINITY": {
-        "DIFFUSE": "/new/img/textures/about/final/trinity_diffuse.jpg"
+        "DIFFUSE": "/new/img/textures/about/final/trinity_diffuse_COMPOSITING.jpg"
       },
       "HOY_SI": {
         "DIFFUSE": {
           "FOUR_K": "/new/img/textures/about/final/hoy_si_diffuse_4K.jpg",
           "TWO_K": "/new/img/textures/about/final/hoy_si_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/hoy_si_diffuse_1K.jpg"
+          "ONE_K": "/new/img/textures/about/final/hoy_si_diffuse_1K_COMPOSITING.jpg"
         }
       },
       "AMOR_LLAMA_AMOR": {
         "DIFFUSE": "/new/img/textures/about/final/amor_llama_amor_diffuse.jpg"
       },
       "PABLO_ESCOBAR": {
-        "DIFFUSE": "/new/img/textures/about/final/pablo_escobar_diffuse.jpg"
+        "DIFFUSE": "/new/img/textures/about/final/pablo_escobar_diffuse_COMPOSITING.jpg"
       },
       "TRINITY_FRAME": {
         "DIFFUSE": {
@@ -291,6 +291,52 @@
           "ONE_K": "/new/img/textures/about/final/wall_clock_brushed_metal_normal_1K.jpg"
         }
       },
+      "NICOTIANA_RUSTICA": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/nicotiana_rustica_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/nicotiana_rustica_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/nicotiana_rustica_diffuse_1K.jpg"
+        }
+      },
+      "NICOTIANA_RUSTICA_FRAME": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/nicotiana_rustica_frame_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/nicotiana_rustica_frame_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/nicotiana_rustica_frame_diffuse_1K.jpg"
+        },
+        "ROUGHNESS": {
+          "FOUR_K": "/new/img/textures/about/final/nicotiana_rustica_frame_roughness_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/nicotiana_rustica_frame_roughness_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/nicotiana_rustica_frame_roughness_1K.jpg"
+        },
+        "NORMAL": {
+          "FOUR_K": "/new/img/textures/about/final/nicotiana_rustica_frame_normal_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/nicotiana_rustica_frame_normal_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/nicotiana_rustica_frame_normal_1K.jpg"
+        }
+      },
+      "CELESTIAL_MAP_FRAME": {
+        "DIFFUSE": {
+          "FOUR_K": "/new/img/textures/about/final/celestial_map_frame_diffuse_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/celestial_map_frame_diffuse_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/celestial_map_frame_diffuse_1K.jpg"
+        },
+        "ROUGHNESS": {
+          "FOUR_K": "/new/img/textures/about/final/celestial_map_frame_roughness_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/celestial_map_frame_roughness_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/celestial_map_frame_roughness_1K.jpg"
+        },
+        "NORMAL": {
+          "FOUR_K": "/new/img/textures/about/final/celestial_map_frame_normal_4K.jpg",
+          "TWO_K": "/new/img/textures/about/final/celestial_map_frame_normal_2K.jpg",
+          "ONE_K": "/new/img/textures/about/final/celestial_map_frame_normal_1K.jpg"
+        }
+      },
+      "CELESTIAL_MAP": {
+        "DIFFUSE": {
+          "ONE_K": "/new/img/textures/about/final/celestial_map_diffuse_1K.jpg"
+        }
+      },
       "COURONNES": {
         "DIFFUSE": "/new/img/textures/about/final/couronnes_diffuse.jpg",
         "ROUGHNESS": "/new/img/textures/about/final/couronnes_roughness.jpg",
@@ -301,6 +347,18 @@
         "FINIRA": {
           "DIFFUSE": "/new/img/textures/about/final/vinyl_disc_finira_diffuse.jpg"
         }
+      },
+      "WORLD_MAP": {
+        "DIFFUSE": "/new/img/textures/about/final/world_map_diffuse_1K.jpg"
+      },
+      "WORLD_MAP_STAND_MARBLE": {
+        "DIFFUSE": "/new/img/textures/about/final/world_map_stand_marble_diffuse_1K.jpg",
+        "ROUGHNESS": "/new/img/textures/about/final/world_map_stand_marble_roughness_1K.jpg",
+        "NORMAL": "/new/img/textures/about/final/world_map_stand_marble_normal_1K.jpg"
+      },
+      "WORLD_MAP_STAND_USED_METAL": {
+        "ROUGHNESS": "/new/img/textures/about/final/world_map_stand_used_metal_roughness_1K.jpg",
+        "NORMAL": "/new/img/textures/about/final/world_map_stand_used_metal_normal_1K.jpg"
       }
     }
   },

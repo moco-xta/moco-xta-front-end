@@ -37,7 +37,7 @@ export function SpeakerBox({ position }: JSX.IntrinsicElements['group']) {
     map: speakerBoxMap,
     roughnessMap: speakerBoxRoughnessMap,
     normalMap: speakerBoxNormalMap,
-    specularColor: '#c6afaf',
+    specularColor: '#b7a68a',
     side: THREE.DoubleSide,
   })
 

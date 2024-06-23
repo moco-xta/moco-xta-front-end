@@ -22,3 +22,11 @@ export const glassSimpleMaterial = new THREE.MeshPhysicalMaterial({
   /* transparent: true,
   opacity: 0.3 */
 })
+
+export const glassFramesMaterial = new THREE.MeshPhysicalMaterial({
+  color: '#333',
+  roughness: 0.05,
+  reflectivity: 3,
+  transparent: true,
+  opacity: 0.4,
+})

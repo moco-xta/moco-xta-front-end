@@ -34,7 +34,9 @@ export function Brain({ position }: JSX.IntrinsicElements['group']) {
 
   const brainFrameMaterial = new THREE.MeshStandardMaterial({
     map: brainFrameMap,
-    roughnessMap: brainFrameRoughnessMap,
+    metalness: 0.2,
+    roughness: 0.2,
+    /* roughnessMap: brainFrameRoughnessMap, */
     normalMap: brainFrameNormalMap,
   })
 

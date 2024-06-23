@@ -29,7 +29,7 @@ export function HourHand({ date, position }: HourHandInterface) {
 
   useEffect(() => {
     hourHandRef.current.rotation.x = THREE.MathUtils.degToRad(
-      360 - date.getHours() * 30,
+      360 - (date.getHours() * 30 + date.getMinutes() * 0.5),
     )
   }, [date])
 

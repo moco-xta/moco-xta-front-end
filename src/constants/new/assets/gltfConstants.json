@@ -53,6 +53,7 @@
     "AMOR_LLAMA_AMOR": "/new/gltf/about/AmorLlamaAmor.gltf",
     "BRAIN": "/new/gltf/about/Brain.gltf",
     "CEILING": "/new/gltf/about/Ceiling.gltf",
+    "CELESTIAL_MAP": "/new/gltf/about/CelestialMap.gltf",
     "COURONNES": "/new/gltf/about/Couronnes.gltf",
     "CUBE": "/new/gltf/about/Cube.gltf",
     "DESK_CHAIR": "/new/gltf/about/DeskChair.gltf",
@@ -60,12 +61,14 @@
     "DODECAHEDRON": "/new/gltf/about/Dodecahedron.gltf",
     "DOOR": "/new/gltf/about/Door.gltf",
     "DOOR_FRAME": "/new/gltf/about/DoorFrame.gltf",
+    "FRAME_GLASSES": "/new/gltf/about/FrameGlasses.gltf",
     "HOUR_AND_MINUTE_MARKERS": "/new/gltf/about/HourAndMinuteMarkers.gltf",
     "HOUR_HAND": "/new/gltf/about/HourHand.gltf",
     "ICOSAHEDRON": "/new/gltf/about/Icosahedron.gltf",
     "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf",
     "MAC_BOOK_PRO": "/new/gltf/about/MacBookPro.gltf",
     "MINUTE_HAND": "/new/gltf/about/MinuteHand.gltf",
+    "NICOTIANA_RUSTICA": "/new/gltf/about/NicotianaRustica.gltf",
     "NORTH_BASEBOARD": "/new/gltf/about/NorthBaseboard.gltf",
     "NORTH_WALL": "/new/gltf/about/NorthWall.gltf",
     "OCTAHEDRON": "/new/gltf/about/Octahedron.gltf",
@@ -86,7 +89,9 @@
     "WALL_CLOCK_GLASS": "/new/gltf/about/WallClockGlass.gltf",
     "WALLS": "/new/gltf/about/Walls.gltf",
     "WETH_BASEBOARD": "/new/gltf/about/WestBaseboard.gltf",
-    "WEST_WALL": "/new/gltf/about/WestWall.gltf"
+    "WEST_WALL": "/new/gltf/about/WestWall.gltf",
+    "WORLD_MAP": "/new/gltf/about/WorldMap.gltf",
+    "WORLD_MAP_STAND": "/new/gltf/about/WorldMapStand.gltf"
   },
   "SNAKE_GAME": {
     "ARROW_TEST": "/new/gltf/snake_game/ArrowTest.gltf",
