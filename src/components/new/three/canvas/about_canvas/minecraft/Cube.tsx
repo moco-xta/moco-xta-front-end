@@ -15,10 +15,10 @@ export const Cube = ({ position, texture }: CubeInterface) => {
 
   const [isHovered, setIsHovered] = useState<boolean>(false)
 
-  const [ref] = useBox<THREE.Mesh>(() => ({
-    type: 'Static',
-    position,
-  }))
+	const [ref] = useBox<THREE.Mesh>(() => ({
+		type: 'Static',
+		position
+	}))
 
   const activeTexture: THREE.Texture = textures[texture + 'Texture']
 
