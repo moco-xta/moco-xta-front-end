@@ -6,7 +6,7 @@ import { useBox } from '@react-three/cannon'
 import { CubeInterface } from '@/interfaces/new/minecraftInterfaces'
 
 import { AppDispatch } from '@/redux/store'
-import { addCube } from '@/redux/slice/minecraftSlice'
+import { addCube, removeCube } from '@/redux/slice/minecraftSlice'
 
 import textures from './textures'
 
@@ -37,7 +37,7 @@ export const Cube = ({ position, texture }: CubeInterface) => {
     const clickedFace = Math.floor(e.faceIndex! / 2)
     const { x, y, z } = ref.current!.position
     if (e.altKey) {
-      /* removeCube(x, y, z) */
+      dispatch(removeCube([x, y, z]))
       return
     } else if (clickedFace === 0) {
       dispatch(addCube([x + 1, y, z]))
