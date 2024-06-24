@@ -29,13 +29,20 @@ const minecraftSlice = createSlice({
         texture: state.texture,
       })
     },
-    removeCube: (state, action: PayloadAction<[x: number, y: number, z: number]>) => {
+    removeCube: (
+      state,
+      action: PayloadAction<[x: number, y: number, z: number]>,
+    ) => {
       console.log('REMOVE CUBE')
-      state.cubes = state.cubes.filter(cube => {
+      state.cubes = state.cubes.filter((cube) => {
         const [X, Y, Z] = cube.position
-        return X !== action.payload[0] || Y !== action.payload[1] || Z !== action.payload[2]
+        return (
+          X !== action.payload[0] ||
+          Y !== action.payload[1] ||
+          Z !== action.payload[2]
+        )
       })
-    }
+    },
   },
 })
 
