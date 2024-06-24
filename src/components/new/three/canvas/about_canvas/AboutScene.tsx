@@ -28,7 +28,7 @@ export default function AboutScene({ isClayRender }: AboutSceneInterface) {
 
   return (
     <>
-      {isClayRender ? (
+      {!isClayRender ? (
         <>
           <LaboratoireClayRenderLights />
           <LaboratoireClayRender />

@@ -4,10 +4,12 @@ import { Canvas } from '@react-three/fiber'
 import {
   DeviceOrientationControls,
   Environment,
+  OrbitControls,
   PerspectiveCamera,
   PointerLockControls,
 } from '@react-three/drei'
-import { Physics } from '@react-three/rapier'
+import { Physics } from '@react-three/cannon'
+/* import { Physics } from '@react-three/rapier' */
 import { isMobile } from 'react-device-detect'
 
 import Player from '../../controls/Player'
@@ -62,10 +64,11 @@ export default function AboutCanvas({
         ]}
       />
       <Suspense fallback={null}>
-        <Physics /* debug */>
+        {/* <Physics> */}
+        <Physics>
           {!isMobile ? (
             <>
-              <Player
+              {/* <Player
                 cameraRotation={
                   new THREE.Euler(
                     THREE.MathUtils.degToRad(
@@ -92,7 +95,8 @@ export default function AboutCanvas({
                   0.5,
                 ]}
               />
-              <PointerLockControls selector='#about_enter_button' />
+              <PointerLockControls selector='#about_enter_button' /> */}
+              <OrbitControls target={[0, 0, 50]} />
             </>
           ) : (
             <DeviceOrientationControls />
