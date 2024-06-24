@@ -5,17 +5,12 @@ import { useSphere } from '@react-three/cannon'
 
 import { useMinecraftKeyboard } from '@/hooks/new/useMinecraftKeyboard'
 
+const JUMP_FORCE = 4;
+
 export const CannonPlayer = () => {
   const { camera } = useThree()
 
-  const actions = useMinecraftKeyboard()
-
-  useEffect(() => {
-    console.log(
-      'actions',
-      Object.entries(actions).filter(([k, v]) => v),
-    )
-  }, [actions])
+  const { moveBackward, moveForward, moveRight, moveLeft, jump } = useMinecraftKeyboard()
 
   const [ref, api] = useSphere<THREE.Mesh>(() => ({
     mass: 1,
@@ -43,7 +38,11 @@ export const CannonPlayer = () => {
       ),
     )
 
-    api.velocity.set(0, 0, 0)
+    /* api.velocity.set(0, 0, 0) */
+
+		if (jump && Math.abs(playerVelocity.current[1]) < 0.05) {
+			api.velocity.set(playerVelocity.current[0], JUMP_FORCE, playerVelocity.current[2])
+		}
   })
 
   return <mesh ref={ref}></mesh>
