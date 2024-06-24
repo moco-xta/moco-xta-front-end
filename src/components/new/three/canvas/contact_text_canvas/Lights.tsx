@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { useControls } from 'leva'
 
 export function Lights() {
-  const pointLightRef = useRef<THREE.PointLight>()
+  const pointLightRef = useRef<THREE.PointLight>(null!)
 
   useHelper(pointLightRef, THREE.PointLightHelper, 0.7, 'cyan')
 

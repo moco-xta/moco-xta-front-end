@@ -11,7 +11,7 @@ export default function Cubes() {
   return (
     <>
       {cubes.map((cube) => (
-        <Cube {...cube} />
+        <Cube key={`minecraft_cube_x${cube.position[0]}_y${cube.position[1]}_z${cube.position[2]}`} {...cube} />
       ))}
     </>
   )

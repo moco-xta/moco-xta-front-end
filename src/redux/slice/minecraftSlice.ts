@@ -7,7 +7,6 @@ const initialState: MinecraftInterface = {
   texture: 'dirt',
   cubes: [
     {
-      key: nanoid(),
       position: [0, 0, 0],
       texture: 'dirt',
     },
@@ -23,7 +22,6 @@ const minecraftSlice = createSlice({
       action: PayloadAction<[x: number, y: number, z: number]>,
     ) => {
       state.cubes.push({
-        key: nanoid(),
         position: action.payload,
         texture: state.texture,
       })

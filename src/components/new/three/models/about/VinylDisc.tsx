@@ -25,6 +25,7 @@ export function VinylDisc({ position, rotation, texture }: VinylDiscInterface) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.VINYL_DISC) as GLTFResult
 
   const vinylDiscMap = useTextureLoader(
+    // @ts-ignore
     texturesConstants.ABOUT.FINAL.VINYL_DISCS[texture].DIFFUSE,
   )
   vinylDiscMap.flipY = false
