@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { isMobile } from 'react-device-detect'
 
 import AboutGreeting from './about_greeting'
 import QRCodeToAbout from './qr_code_to_about'
-import PressEscToLeave from './press_esc_to_leave'
+import AboutDashboard from './about_dahboard'
 import AboutCanvas from '../../three/canvas/about_canvas/AboutCanvas'
 import DeviceMotionPermission from './device_motion_permission'
 
@@ -29,7 +29,7 @@ export default function AboutSlice() {
           {!isMobile && (
             <>
               <QRCodeToAbout />
-              <PressEscToLeave showInstructions={showInstructions} />
+              <AboutDashboard showInstructions={showInstructions} />
             </>
           )}
           <AboutCanvas
