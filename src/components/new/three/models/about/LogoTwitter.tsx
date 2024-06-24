@@ -17,30 +17,30 @@ type GLTFResult = GLTF & {
 export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.LOGO_TWITTER) as GLTFResult
 
-  const [selected, select] = useState(false);
+  const [selected, select] = useState(false)
 
-  const outlineRef = useRef<any>(null!);
+  const outlineRef = useRef<any>(null!)
 
-  const meshRef = useRef<THREE.Mesh>(null!);
+  const meshRef = useRef<THREE.Mesh>(null!)
 
-  const { gl } = useThree();
+  const { gl } = useThree()
 
   useEffect(() => {
     if (meshRef.current && outlineRef.current) {
-      const outlineSelection = outlineRef.current.selection;
+      const outlineSelection = outlineRef.current.selection
 
-      const mesh = meshRef.current;
+      const mesh = meshRef.current
 
       if (selected) {
-        outlineRef.current.clearSelection();
+        outlineRef.current.clearSelection()
         outlineRef.current.update(
-          gl /* inputBuffer: WebGLRenderTarget, deltaTime: Number */
-        );
+          gl /* inputBuffer: WebGLRenderTarget, deltaTime: Number */,
+        )
       } else {
-        outlineSelection.set([mesh]);
+        outlineSelection.set([mesh])
       }
     }
-  }, [selected, gl]);
+  }, [selected, gl])
 
   const logoTwitterMaterial = new THREE.MeshStandardMaterial({
     color: '#1D96E8',

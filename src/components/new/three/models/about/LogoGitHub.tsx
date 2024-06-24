@@ -20,9 +20,7 @@ export function LogoGitHub({ position }: JSX.IntrinsicElements['mesh']) {
   })
 
   return (
-    <group
-      position={position}
-    >
+    <group position={position}>
       <mesh
         geometry={nodes.LogoGitHub.geometry}
         material={logoTwitterMaterial}

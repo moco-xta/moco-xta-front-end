@@ -24,9 +24,7 @@ export function CeilingLamp({ position }: JSX.IntrinsicElements['mesh']) {
   })
 
   return (
-    <group
-      position={position}
-    >
+    <group position={position}>
       <mesh
         geometry={nodes.CeilingLamp.geometry}
         material={ceilingLampMaterial}

@@ -27,9 +27,7 @@ export function Screen({ position }: JSX.IntrinsicElements['mesh']) {
   })
 
   return (
-    <group
-      position={position}
-    >
+    <group position={position}>
       <mesh
         geometry={nodes.Screen_1.geometry}
         material={screenMaterial}

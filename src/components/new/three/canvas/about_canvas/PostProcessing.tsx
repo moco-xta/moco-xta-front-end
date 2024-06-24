@@ -12,7 +12,6 @@ export default function PostProcessing() {
     console.log('scene', scene.getObjectByName('LogoTwitter'))
   }, [scene])
 
-
   return (
     <EffectComposer>
       <SSAO
@@ -30,7 +29,11 @@ export default function PostProcessing() {
         bias={-1}
       />
       <Outline
-        selection={[/* scene.getObjectByName('LogoTwitter') */]} // selection of objects that will be outlined
+        selection={
+          [
+            /* scene.getObjectByName('LogoTwitter') */
+          ]
+        } // selection of objects that will be outlined
         selectionLayer={10} // selection layer
         blendFunction={BlendFunction.SCREEN} // set this to BlendFunction.ALPHA for dark outlines
         patternTexture={null} // a pattern texture
