@@ -1,6 +1,9 @@
-import { Box } from '@react-three/drei'
 import React from 'react'
+import { nanoid } from 'nanoid'
+
+import { Cube } from './Cube'
 import Ground from './Ground'
+import Cubes from './Cubes'
 
 export default function MinecraftScene() {
   return (
@@ -8,7 +11,7 @@ export default function MinecraftScene() {
       position={[0, 0, 60]}
       scale={2}
     >
-      <Box />
+      <Cubes />
       <Ground />
     </group>
   )

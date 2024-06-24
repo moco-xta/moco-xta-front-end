@@ -8,6 +8,7 @@ import AboutCanvas from '../../three/canvas/about_canvas/AboutCanvas'
 import DeviceMotionPermission from './device_motion_permission'
 
 import './index.scss'
+import AboutTarget from './about_dahboard/about_target'
 
 export default function AboutSlice() {
   const [permissionGranted, setPermissionGranted] = useState<boolean>(false)
@@ -26,10 +27,11 @@ export default function AboutSlice() {
             showInstructions={showInstructions}
             handleSetIsClayRender={handleSetIsClayRender}
           />
+          <AboutTarget />
           {!isMobile && (
             <>
-              <QRCodeToAbout />
-              <AboutDashboard showInstructions={showInstructions} />
+              {/* <QRCodeToAbout /> */}
+              {/* <AboutDashboard showInstructions={showInstructions} /> */}
             </>
           )}
           <AboutCanvas

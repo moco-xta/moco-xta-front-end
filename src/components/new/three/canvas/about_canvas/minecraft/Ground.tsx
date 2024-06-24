@@ -6,6 +6,7 @@ import { usePlane } from '@react-three/cannon'
 import useTextureLoader from '@/hooks/new/useTextureLoader'
 
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
+import textures from './textures'
 
 export default function Ground() {
   const [ref] = usePlane<THREE.Mesh>(() => ({
@@ -13,24 +14,18 @@ export default function Ground() {
     rotation: [-Math.PI / 2, 0, 0],
   }))
 
-  const groundMap = useTextureLoader(texturesConstants.MINECRAFT.GRASS)
-  groundMap.magFilter = THREE.NearestFilter
-  groundMap.wrapS = THREE.RepeatWrapping
-  groundMap.wrapT = THREE.RepeatWrapping
+  const groundMap = textures['groundTexture']
   groundMap.repeat.set(100, 100)
 
-  const groundMaterial = new THREE.MeshStandardMaterial({
-    map: groundMap,
-  })
-
   return (
-    <mesh
-      ref={ref}
-      material={groundMaterial}
-    >
+    <mesh ref={ref}>
       <planeGeometry
         attach='geometry'
         args={[100, 100]}
+      />
+      <meshStandardMaterial
+        attach='material'
+        map={groundMap}
       />
     </mesh>
   )
