@@ -10,19 +10,17 @@ import { default as texturesConstants } from '@/constants/new/assets/texturesCon
 export default function Ground() {
   const [ref] = usePlane<THREE.Mesh>(() => ({
     position: [0, 0, 0],
-    rotation: [-Math.PI / 2, 0, 0]
+    rotation: [-Math.PI / 2, 0, 0],
   }))
 
-  const groundMap = useTextureLoader(
-    texturesConstants.MINECRAFT.GRASS,
-  )
+  const groundMap = useTextureLoader(texturesConstants.MINECRAFT.GRASS)
   groundMap.magFilter = THREE.NearestFilter
   groundMap.wrapS = THREE.RepeatWrapping
   groundMap.wrapT = THREE.RepeatWrapping
   groundMap.repeat.set(100, 100)
 
   const groundMaterial = new THREE.MeshStandardMaterial({
-    map: groundMap
+    map: groundMap,
   })
 
   return (
@@ -30,7 +28,10 @@ export default function Ground() {
       ref={ref}
       material={groundMaterial}
     >
-      <planeGeometry attach='geometry' args={[100, 100]} />
+      <planeGeometry
+        attach='geometry'
+        args={[100, 100]}
+      />
     </mesh>
   )
 }

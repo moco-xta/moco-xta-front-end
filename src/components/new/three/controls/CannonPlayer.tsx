@@ -1,26 +1,50 @@
-import { useFrame, useThree } from "@react-three/fiber"
-import { useSphere } from "@react-three/cannon"
-import { useEffect, useRef } from "react"
-import { Vector3 } from "three"
+import { useEffect, useRef } from 'react'
+import * as THREE from 'three'
+import { useFrame, useThree } from '@react-three/fiber'
+import { useSphere } from '@react-three/cannon'
+
+import { useMinecraftKeyboard } from '@/hooks/new/useMinecraftKeyboard'
 
 export const CannonPlayer = () => {
-	const { camera } = useThree()
-	const [ref, api] = useSphere<THREE.Mesh>(() => ({
-		mass: 1,
-		type: 'Dynamic',
-		position: [0, 10, 0],
-	}))
+  const { camera } = useThree()
 
-	const pos = useRef([0, 10, 0])
-	useEffect(() => {
-		api.position.subscribe((p) => pos.current = p)
-	}, [api.position])
+  const actions = useMinecraftKeyboard()
 
-	useFrame(() => {
-		camera.position.copy(new Vector3(pos.current[0], pos.current[1], pos.current[2]))
-	})
+  useEffect(() => {
+    console.log(
+      'actions',
+      Object.entries(actions).filter(([k, v]) => v),
+    )
+  }, [actions])
 
-	return (
-		<mesh ref={ref}></mesh>
-	)
+  const [ref, api] = useSphere<THREE.Mesh>(() => ({
+    mass: 1,
+    type: 'Dynamic',
+    position: [50, 1, 0],
+  }))
+
+  const playerPosition = useRef([50, 1, 0])
+  const playerVelocity = useRef([0, 0, 0])
+
+  useEffect(() => {
+    api.position.subscribe((p) => (playerPosition.current = p))
+  }, [api.position])
+
+  useEffect(() => {
+    api.velocity.subscribe((v) => (playerVelocity.current = v))
+  }, [api.velocity])
+
+  useFrame(() => {
+    camera.position.copy(
+      new THREE.Vector3(
+        playerPosition.current[0],
+        playerPosition.current[1],
+        playerPosition.current[2],
+      ),
+    )
+
+    api.velocity.set(0, 0, 0)
+  })
+
+  return <mesh ref={ref}></mesh>
 }

@@ -11,9 +11,7 @@ export default function PressEscToLeave({
   const t = useTranslations('ABOUT')
 
   return (
-    <div
-      id='press_esc_to_leave'
-    >
+    <div id='press_esc_to_leave'>
       {t('ESCAPE_POINTER_LOCK.PRESS')}
       <span
         id='esc_keyboard_key'
