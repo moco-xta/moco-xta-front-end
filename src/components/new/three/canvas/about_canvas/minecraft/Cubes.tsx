@@ -6,11 +6,11 @@ import { RootState } from '@/redux/store'
 import { Cube } from './Cube'
 
 export default function Cubes() {
-  const minecraftState = useSelector((state: RootState) => state.minecraft)
+  const { cubes } = useSelector((state: RootState) => state.minecraft)
 
   return (
     <>
-      {minecraftState.cubes.map((cube) => (
+      {cubes.map((cube) => (
         <Cube {...cube} />
       ))}
     </>

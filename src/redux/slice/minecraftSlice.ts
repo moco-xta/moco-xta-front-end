@@ -8,7 +8,7 @@ const initialState: MinecraftInterface = {
   cubes: [
     {
       key: nanoid(),
-      position: [0, 5, 0],
+      position: [0, 0.5, 0],
       texture: 'dirt',
     },
   ],
@@ -22,7 +22,6 @@ const minecraftSlice = createSlice({
       state,
       action: PayloadAction<[x: number, y: number, z: number]>,
     ) => {
-      console.log('ADD CUBE')
       state.cubes.push({
         key: nanoid(),
         position: action.payload,
@@ -33,7 +32,6 @@ const minecraftSlice = createSlice({
       state,
       action: PayloadAction<[x: number, y: number, z: number]>,
     ) => {
-      console.log('REMOVE CUBE')
       state.cubes = state.cubes.filter((cube) => {
         const [X, Y, Z] = cube.position
         return (
@@ -43,9 +41,12 @@ const minecraftSlice = createSlice({
         )
       })
     },
+    setTexture: (state, action: PayloadAction<string>) => {
+      state.texture = action.payload
+    },
   },
 })
 
-export const { addCube, removeCube } = minecraftSlice.actions
+export const { addCube, removeCube, setTexture } = minecraftSlice.actions
 
 export default minecraftSlice.reducer

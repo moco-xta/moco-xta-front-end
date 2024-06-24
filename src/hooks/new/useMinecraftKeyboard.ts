@@ -3,15 +3,24 @@ import { useCallback, useEffect, useState } from 'react'
 const actionByKey = (key: string): string => {
   const keyActionMap: { [key: string]: string } = {
     KeyW: 'moveForward',
+    ArrowUp: 'moveForward',
     KeyS: 'moveBackward',
+    ArrowDown: 'moveBackward',
     KeyA: 'moveLeft',
+    ArrowLeft: 'moveLeft',
     KeyD: 'moveRight',
+    ArrowRight: 'moveRight',
     Space: 'jump',
     Digit1: 'dirt',
+    Numpad1: 'dirt',
     Digit2: 'grass',
+    Numpad2: 'grass',
     Digit3: 'glass',
+    Numpad3: 'glass',
     Digit4: 'wood',
+    Numpad4: 'wood',
     Digit5: 'log',
+    Numpad5: 'log',
   }
   return keyActionMap[key]
 }

@@ -8,10 +8,6 @@ import { useThree } from '@react-three/fiber'
 export default function PostProcessing() {
   const { scene } = useThree()
 
-  useEffect(() => {
-    console.log('scene', scene.getObjectByName('LogoTwitter'))
-  }, [scene])
-
   return (
     <EffectComposer>
       <SSAO

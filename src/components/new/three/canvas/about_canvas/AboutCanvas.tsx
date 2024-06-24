@@ -12,6 +12,7 @@ import AboutScene from './AboutScene'
 import ToneMapping from './ToneMapping'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+import { TextureSelector } from './minecraft/TextureSelector'
 
 export default function AboutCanvas({
   showInstructions,

@@ -9,6 +9,7 @@ import DeviceMotionPermission from './device_motion_permission'
 
 import './index.scss'
 import AboutTarget from './about_dahboard/about_target'
+import { TextureSelector } from '../../three/canvas/about_canvas/minecraft/TextureSelector'
 
 export default function AboutSlice() {
   const [permissionGranted, setPermissionGranted] = useState<boolean>(false)
@@ -39,6 +40,7 @@ export default function AboutSlice() {
             setShowInstructions={setShowInstructions}
             isClayRender={isClayRender}
           />
+          <TextureSelector />
         </>
       ) : (
         <DeviceMotionPermission
