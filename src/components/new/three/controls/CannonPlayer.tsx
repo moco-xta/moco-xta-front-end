@@ -6,6 +6,7 @@ import { useSphere } from '@react-three/cannon'
 import { useMinecraftKeyboard } from '@/hooks/new/useMinecraftKeyboard'
 
 const JUMP_FORCE = 4;
+const SPEED = 4;
 
 export const CannonPlayer = () => {
   const { camera } = useThree()
@@ -38,7 +39,28 @@ export const CannonPlayer = () => {
       ),
     )
 
-    /* api.velocity.set(0, 0, 0) */
+		const direction = new THREE.Vector3()
+
+		const frontVector = new THREE.Vector3(
+			0,
+			0,
+			(moveBackward ? 1 : 0) - (moveForward ? 1 : 0)
+		)
+
+		const sideVector = new THREE.Vector3(
+			(moveLeft ? 1 : 0) - (moveRight ? 1 : 0),
+			0,
+			0,
+		)
+
+		direction
+			.subVectors(frontVector, sideVector)
+			.normalize()
+			.multiplyScalar(SPEED)
+			.applyEuler(camera.rotation)
+
+		api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
+
 
 		if (jump && Math.abs(playerVelocity.current[1]) < 0.05) {
 			api.velocity.set(playerVelocity.current[0], JUMP_FORCE, playerVelocity.current[2])
