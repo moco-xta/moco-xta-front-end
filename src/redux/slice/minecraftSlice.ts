@@ -1,16 +1,18 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { nanoid } from 'nanoid'
 
-import { MinecraftInterface } from '@/interfaces/new/minecraftInterfaces'
+import {
+  CubeInterface,
+  MinecraftInterface,
+} from '@/interfaces/new/minecraftInterfaces'
+
+// @ts-ignore
+const getLocalStorage = (key: string) => JSON.parse(localStorage.getItem(key))
+const setLocalStorage = (key: string, value: CubeInterface[]) =>
+  localStorage.setItem(key, JSON.stringify(value))
 
 const initialState: MinecraftInterface = {
   texture: 'dirt',
-  cubes: [
-    {
-      position: [0, 0, 0],
-      texture: 'dirt',
-    },
-  ],
+  cubes: getLocalStorage('cubes') || [],
 }
 
 const minecraftSlice = createSlice({
@@ -25,6 +27,7 @@ const minecraftSlice = createSlice({
         position: action.payload,
         texture: state.texture,
       })
+      setLocalStorage('cubes', state.cubes)
     },
     removeCube: (
       state,
@@ -38,9 +41,16 @@ const minecraftSlice = createSlice({
           Z !== action.payload[2]
         )
       })
+      setLocalStorage('cubes', state.cubes)
     },
     setTexture: (state, action: PayloadAction<string>) => {
       state.texture = action.payload
+    },
+    saveWorld: (state) => {
+      setLocalStorage('cubes', state.cubes)
+    },
+    resetWorld: (state) => {
+      state.cubes = []
     },
   },
 })
