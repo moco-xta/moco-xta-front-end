@@ -15,26 +15,25 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"WallClockGlass",
+			"name":"LogoGitHub",
 			"translation":[
-				-28.582950592041016,
-				25.39999771118164,
-				-10.007051467895508
+				7.328977108001709,
+				14.798259735107422,
+				-13.841562271118164
 			]
 		}
 	],
 	"meshes":[
 		{
-			"name":"Cylinder.002",
+			"name":"LogoGitHub",
 			"primitives":[
 				{
 					"attributes":{
 						"POSITION":0,
 						"NORMAL":1,
-						"TEXCOORD_0":2,
-						"TEXCOORD_1":3
+						"TEXCOORD_0":2
 					},
-					"indices":4
+					"indices":3
 				}
 			]
 		}
@@ -43,80 +42,68 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":128,
+			"count":14295,
 			"max":[
-				0.3920017182826996,
-				1.5253212451934814,
-				1.5253208875656128
+				0.9147595763206482,
+				1.7102593183517456,
+				0.08008293807506561
 			],
 			"min":[
-				0.39200088381767273,
-				-1.5253212451934814,
-				-1.5253214836120605
+				-0.9758063554763794,
+				0.013815314508974552,
+				-0.07489833235740662
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":128,
+			"count":14295,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":128,
+			"count":14295,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
-			"componentType":5126,
-			"count":128,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":4,
 			"componentType":5123,
-			"count":378,
+			"count":27612,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":1536,
+			"byteLength":171540,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1536,
-			"byteOffset":1536,
+			"byteLength":171540,
+			"byteOffset":171540,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1024,
-			"byteOffset":3072,
+			"byteLength":114360,
+			"byteOffset":343080,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1024,
-			"byteOffset":4096,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":756,
-			"byteOffset":5120,
+			"byteLength":55224,
+			"byteOffset":457440,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":5876,
-			"uri":"WallClockGlass.bin"
+			"byteLength":512664,
+			"uri":"LogoGitHub.bin"
 		}
 	]
 }

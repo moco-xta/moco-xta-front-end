@@ -15,17 +15,17 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"WallClockGlass",
+			"name":"CeilingLamp",
 			"translation":[
-				-28.582950592041016,
-				25.39999771118164,
-				-10.007051467895508
+				0,
+				28.600000381469727,
+				0
 			]
 		}
 	],
 	"meshes":[
 		{
-			"name":"Cylinder.002",
+			"name":"CeilingLamp",
 			"primitives":[
 				{
 					"attributes":{
@@ -43,80 +43,80 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":128,
+			"count":44,
 			"max":[
-				0.3920017182826996,
-				1.5253212451934814,
-				1.5253208875656128
+				7.840000152587891,
+				-0.5,
+				4.750000476837158
 			],
 			"min":[
-				0.39200088381767273,
-				-1.5253212451934814,
-				-1.5253214836120605
+				-7.840000152587891,
+				-0.5,
+				-4.750000476837158
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":128,
+			"count":44,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":128,
+			"count":44,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5126,
-			"count":128,
+			"count":44,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":4,
 			"componentType":5123,
-			"count":378,
+			"count":126,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":1536,
+			"byteLength":528,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1536,
-			"byteOffset":1536,
+			"byteLength":528,
+			"byteOffset":528,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1024,
-			"byteOffset":3072,
+			"byteLength":352,
+			"byteOffset":1056,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1024,
-			"byteOffset":4096,
+			"byteLength":352,
+			"byteOffset":1408,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":756,
-			"byteOffset":5120,
+			"byteLength":252,
+			"byteOffset":1760,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":5876,
-			"uri":"WallClockGlass.bin"
+			"byteLength":2012,
+			"uri":"CeilingLamp.bin"
 		}
 	]
 }

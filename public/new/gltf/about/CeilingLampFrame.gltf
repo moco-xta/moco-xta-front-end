@@ -15,26 +15,25 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"WallClockGlass",
+			"name":"CeilingLampFrame",
 			"translation":[
-				-28.582950592041016,
-				25.39999771118164,
-				-10.007051467895508
+				0,
+				28.600000381469727,
+				0
 			]
 		}
 	],
 	"meshes":[
 		{
-			"name":"Cylinder.002",
+			"name":"CeilingLampFrame",
 			"primitives":[
 				{
 					"attributes":{
 						"POSITION":0,
 						"NORMAL":1,
-						"TEXCOORD_0":2,
-						"TEXCOORD_1":3
+						"TEXCOORD_0":2
 					},
-					"indices":4
+					"indices":3
 				}
 			]
 		}
@@ -43,80 +42,68 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":128,
+			"count":264,
 			"max":[
-				0.3920017182826996,
-				1.5253212451934814,
-				1.5253208875656128
+				8.09000015258789,
+				1.1920928955078125e-07,
+				5.000000476837158
 			],
 			"min":[
-				0.39200088381767273,
-				-1.5253212451934814,
-				-1.5253214836120605
+				-8.09000015258789,
+				-0.5,
+				-5.000000476837158
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":128,
+			"count":264,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":128,
+			"count":264,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
-			"componentType":5126,
-			"count":128,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":4,
 			"componentType":5123,
-			"count":378,
+			"count":528,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":1536,
+			"byteLength":3168,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1536,
-			"byteOffset":1536,
+			"byteLength":3168,
+			"byteOffset":3168,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1024,
-			"byteOffset":3072,
+			"byteLength":2112,
+			"byteOffset":6336,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1024,
-			"byteOffset":4096,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":756,
-			"byteOffset":5120,
+			"byteLength":1056,
+			"byteOffset":8448,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":5876,
-			"uri":"WallClockGlass.bin"
+			"byteLength":9504,
+			"uri":"CeilingLampFrame.bin"
 		}
 	]
 }

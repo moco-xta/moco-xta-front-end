@@ -15,26 +15,25 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"WallClockGlass",
+			"name":"LogoTwitter",
 			"translation":[
-				-28.582950592041016,
-				25.39999771118164,
-				-10.007051467895508
+				-2.608908176422119,
+				12.292098045349121,
+				-10.300000190734863
 			]
 		}
 	],
 	"meshes":[
 		{
-			"name":"Cylinder.002",
+			"name":"LogoTwitter",
 			"primitives":[
 				{
 					"attributes":{
 						"POSITION":0,
 						"NORMAL":1,
-						"TEXCOORD_0":2,
-						"TEXCOORD_1":3
+						"TEXCOORD_0":2
 					},
-					"indices":4
+					"indices":3
 				}
 			]
 		}
@@ -43,80 +42,68 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":128,
+			"count":428,
 			"max":[
-				0.3920017182826996,
-				1.5253212451934814,
-				1.5253208875656128
+				0.7386791706085205,
+				0.6000003218650818,
+				0.24000006914138794
 			],
 			"min":[
-				0.39200088381767273,
-				-1.5253212451934814,
-				-1.5253214836120605
+				-0.7386791706085205,
+				-0.600000262260437,
+				-0.24000006914138794
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":128,
+			"count":428,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":128,
+			"count":428,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
-			"componentType":5126,
-			"count":128,
-			"type":"VEC2"
-		},
-		{
-			"bufferView":4,
 			"componentType":5123,
-			"count":378,
+			"count":1164,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":1536,
+			"byteLength":5136,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1536,
-			"byteOffset":1536,
+			"byteLength":5136,
+			"byteOffset":5136,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1024,
-			"byteOffset":3072,
+			"byteLength":3424,
+			"byteOffset":10272,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1024,
-			"byteOffset":4096,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":756,
-			"byteOffset":5120,
+			"byteLength":2328,
+			"byteOffset":13696,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":5876,
-			"uri":"WallClockGlass.bin"
+			"byteLength":16024,
+			"uri":"LogoTwitter.bin"
 		}
 	]
 }

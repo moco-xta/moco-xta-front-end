@@ -4,6 +4,7 @@ import { useHelper } from '@react-three/drei'
 import { useControls } from 'leva'
 
 import { TableLamp } from '../../models/about/TableLamp'
+import { CeilingLamp } from '../../models/about/CeilingLamp'
 
 const K = 6
 const MAP_SIZE = [1024 * K, 1024 * K]
@@ -77,17 +78,17 @@ export default function LaboratoireFinalRenderLights() {
     'position-x': { value: 5, min: 0, max: 40, step: 0.1 },
     'position-y': { value: 26.5, min: 0, max: 40, step: 0.1 },
     'position-z': { value: 3, min: 0, max: 40, step: 0.1 },
-    'target-position-x': { value: 20, min: 0, max: 40, step: 0.1 },
+    'target-position-x': { value: 26.5, min: 0, max: 40, step: 0.1 },
     'target-position-y': { value: 0, min: 0, max: 40, step: 0.1 },
-    'target-position-z': { value: 20, min: 0, max: 40, step: 0.1 },
+    'target-position-z': { value: 26.5, min: 0, max: 40, step: 0.1 },
   })
 
   const spotLigthsConfig = useControls('SPOT LIGHTS: Config', {
     color: '#ffffff',
-    intensity: { value: 35, min: 0, max: 200, step: 0.01 },
-    distance: { value: 42, min: 0, max: 100, step: 1 },
-    angle: { value: 1.44, min: 0, max: 2, step: 0.01 },
-    penumbra: { value: 1, min: 0, max: 2, step: 0.01 },
+    intensity: { value: 25, min: 0, max: 200, step: 0.01 },
+    distance: { value: 52, min: 0, max: 100, step: 1 },
+    angle: { value: 1.87, min: 0, max: 2, step: 0.01 },
+    penumbra: { value: 0.9, min: 0, max: 2, step: 0.01 },
     decay: { value: 1.1, min: 0, max: 10, step: 0.1 },
   })
 
@@ -199,6 +200,7 @@ export default function LaboratoireFinalRenderLights() {
         shadow-mapSize={MAP_SIZE}
         {...spotLigthsConfig}
       />
+      <CeilingLamp position={[0, 28.6, 0]} />
       <TableLamp position={[11.776, 1.012, -9.08]} />
     </>
   )
