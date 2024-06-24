@@ -20,6 +20,7 @@ import { AboutCanvasInterface } from '@/interfaces/new/threeInterfaces'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 import PostProcessing from './PostProcessing'
+import { CannonPlayer } from '../../controls/CannonPlayer'
 
 export default function AboutCanvas({
   showInstructions,
@@ -53,7 +54,7 @@ export default function AboutCanvas({
         powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
-      <PerspectiveCamera
+      {/* <PerspectiveCamera
         makeDefault
         aspect={1200 / 600}
         fov={aboutConstants.PERSPECTIVE_CAMERA.FOV}
@@ -62,7 +63,7 @@ export default function AboutCanvas({
           aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
           aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
-      />
+      /> */}
       <Suspense fallback={null}>
         {/* <Physics> */}
         <Physics>
@@ -96,7 +97,8 @@ export default function AboutCanvas({
                 ]}
               />
               <PointerLockControls selector='#about_enter_button' /> */}
-              <OrbitControls target={[0, 0, 50]} />
+              <CannonPlayer />
+              {/* <OrbitControls target={[0, 0, 50]} /> */}
             </>
           ) : (
             <DeviceOrientationControls />
