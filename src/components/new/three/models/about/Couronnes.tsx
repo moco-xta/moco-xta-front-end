@@ -34,6 +34,9 @@ export function Couronnes({ position }: JSX.IntrinsicElements['mesh']) {
 
   const couronnesMaterial = new THREE.MeshStandardMaterial({
     map: couronnesMap,
+    metalness: 0.3,
+    metalnessMap: couronnesRoughnessMap,
+    roughness: 0.2,
     roughnessMap: couronnesRoughnessMap,
     normalMap: couronnesNormalMap,
   })

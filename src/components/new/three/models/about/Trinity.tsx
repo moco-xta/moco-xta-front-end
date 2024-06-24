@@ -32,11 +32,14 @@ export function Trinity({ position }: JSX.IntrinsicElements['group']) {
   trinityFrameRoughnessMap.flipY = false
   trinityFrameNormalMap.flipY = false
 
-  const trinityFrameMaterial = new THREE.MeshStandardMaterial({
+  const trinityFrameMaterial = new THREE.MeshPhysicalMaterial({
     map: trinityFrameMap,
-    roughness: 0.8,
+    metalness: 0.4,
+    metalnessMap: trinityFrameRoughnessMap,
+    roughness: 0.6,
     roughnessMap: trinityFrameRoughnessMap,
     normalMap: trinityFrameNormalMap,
+    specularColor: '#ffd970',
   })
 
   const trinityMap = useTextureLoader(

@@ -24,10 +24,11 @@ export function AmorLlamaAmor({ position }: JSX.IntrinsicElements['mesh']) {
   )
   amorllamaAmorMap.flipY = false
 
-  const amorLlamaAmorMaterial = new THREE.MeshStandardMaterial({
-    /* color: '#808080', */
+  const amorLlamaAmorMaterial = new THREE.MeshPhysicalMaterial({
+    /* color: '#ddd', */
     map: amorllamaAmorMap,
-    roughness: 1,
+    roughness: 0.5,
+    metalness: 0.2,
   })
 
   const amorLlamaAmorFrameMaterial = new THREE.MeshStandardMaterial({

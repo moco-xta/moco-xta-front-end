@@ -16,8 +16,8 @@ type GLTFResult = GLTF & {
 
 const macBookProMaterial = new THREE.MeshStandardMaterial({
   color: '#7f8081',
-  metalness: 0.2,
-  roughness: 0.2,
+  metalness: 0.4,
+  roughness: 0.4,
 })
 
 const macBookProScreenMaterial = new THREE.MeshStandardMaterial({

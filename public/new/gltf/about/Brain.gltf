@@ -49,18 +49,20 @@
           "attributes": {
             "POSITION": 0,
             "NORMAL": 1,
-            "TEXCOORD_0": 2
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3
           },
-          "indices": 3,
+          "indices": 4,
           "material": 0
         },
         {
           "attributes": {
-            "POSITION": 4,
-            "NORMAL": 5,
-            "TEXCOORD_0": 6
+            "POSITION": 5,
+            "NORMAL": 6,
+            "TEXCOORD_0": 7,
+            "TEXCOORD_1": 8
           },
-          "indices": 7,
+          "indices": 9,
           "material": 1
         }
       ]
@@ -89,12 +91,18 @@
     },
     {
       "bufferView": 3,
+      "componentType": 5126,
+      "count": 1784,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
       "componentType": 5123,
       "count": 2712,
       "type": "SCALAR"
     },
     {
-      "bufferView": 4,
+      "bufferView": 5,
       "componentType": 5126,
       "count": 4,
       "max": [2.678767442703247, 7.886767864227295, 0.10013104230165482],
@@ -102,19 +110,25 @@
       "type": "VEC3"
     },
     {
-      "bufferView": 5,
+      "bufferView": 6,
       "componentType": 5126,
       "count": 4,
       "type": "VEC3"
     },
     {
-      "bufferView": 6,
+      "bufferView": 7,
       "componentType": 5126,
       "count": 4,
       "type": "VEC2"
     },
     {
-      "bufferView": 7,
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 9,
       "componentType": 5123,
       "count": 6,
       "type": "SCALAR"
@@ -141,38 +155,50 @@
     },
     {
       "buffer": 0,
-      "byteLength": 5424,
+      "byteLength": 14272,
       "byteOffset": 57088,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5424,
+      "byteOffset": 71360,
       "target": 34963
     },
     {
       "buffer": 0,
       "byteLength": 48,
-      "byteOffset": 62512,
+      "byteOffset": 76784,
       "target": 34962
     },
     {
       "buffer": 0,
       "byteLength": 48,
-      "byteOffset": 62560,
+      "byteOffset": 76832,
       "target": 34962
     },
     {
       "buffer": 0,
       "byteLength": 32,
-      "byteOffset": 62608,
+      "byteOffset": 76880,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32,
+      "byteOffset": 76912,
       "target": 34962
     },
     {
       "buffer": 0,
       "byteLength": 12,
-      "byteOffset": 62640,
+      "byteOffset": 76944,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 62652,
+      "byteLength": 76956,
       "uri": "Brain.bin"
     }
   ]

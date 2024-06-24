@@ -34,7 +34,8 @@ export function WallClock({ position }: JSX.IntrinsicElements['group']) {
 
   const wallClockBrushedMetalMaterial = new THREE.MeshStandardMaterial({
     map: wallClockBrushedMetalMap,
-    metalness: 0,
+    metalness: 0.3,
+    metalnessMap: wallClockBrushedMetalRoughnessMap,
     roughnessMap: wallClockBrushedMetalRoughnessMap,
     normalMap: wallClockBrushedMetalNormalMap,
   })

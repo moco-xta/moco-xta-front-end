@@ -18,10 +18,10 @@ type GLTFResult = GLTF & {
 export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.TRESTLE) as GLTFResult
 
-  const map = useTextureLoader(
+  const trestleMap = useTextureLoader(
     texturesConstants.ABOUT.FINAL.TRESTLE.DIFFUSE.ONE_K,
   )
-  map.flipY = false
+  trestleMap.flipY = false
 
   return (
     <mesh
@@ -32,7 +32,7 @@ export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
     >
       <meshStandardMaterial
         attach='material'
-        map={map}
+        map={trestleMap}
       />
     </mesh>
   )

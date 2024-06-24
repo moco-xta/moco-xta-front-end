@@ -22,10 +22,11 @@ export function Speaker({ position }: JSX.IntrinsicElements['mesh']) {
       receiveShadow
       castShadow
     >
-      <meshStandardMaterial
+      <meshPhysicalMaterial
         attach='material'
         color={'black'}
-        roughness={0.8}
+        roughness={0.7}
+        specularColor={'#999'}
       />
     </mesh>
   )
