@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Desk from './Desk'
+import MinecraftScene from './minecraft/MinecraftScene'
 import Parquet from '../../models/about/Parquet'
 import ShelfGroup from './ShelfGroup'
 import Socials from './Socials'
@@ -11,6 +12,7 @@ export default function LaboratoireFinalRender() {
   return (
     <>
       <Desk />
+      <MinecraftScene />
       <Parquet />
       <ShelfGroup />
       <Socials />
