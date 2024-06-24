@@ -5,7 +5,7 @@ import Cubes from './Cubes'
 
 export default function MinecraftScene() {
   return (
-    <group/*  position={[0, 0, 60]} */>
+    <group /*  position={[0, 0, 60]} */>
       <Cubes />
       <Ground />
     </group>
