@@ -1,0 +1,23 @@
+@import '@/styles/new/variables.module.scss';
+
+#texture_selector {
+  z-index: 11;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .texture {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
+}
+
+.texture-selector {
+  transform: scale(5);
+}
+
+.texture-selector img.active {
+  border: 2px solid red;
+}

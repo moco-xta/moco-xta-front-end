@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import * as THREE from 'three'
+import { useThree } from '@react-three/fiber'
+import { Sky } from '@react-three/drei'
 
 import { AboutSceneInterface } from '@/interfaces/new/threeInterfaces'
 
@@ -12,7 +15,7 @@ import Ground from './Ground'
 export default function AboutScene({ isClayRender }: AboutSceneInterface) {
   return (
     <>
-      {isClayRender ? (
+      {!isClayRender ? (
         <>
           <LaboratoireClayRenderLights />
           <LaboratoireClayRender />
@@ -21,10 +24,20 @@ export default function AboutScene({ isClayRender }: AboutSceneInterface) {
         <>
           <LaboratoireFinalRenderLights />
           <LaboratoireFinalRender />
+          <Sky
+            sunPosition={[1, 0, 0]}
+            turbidity={8}
+            rayleigh={6}
+            mieCoefficient={0.005}
+            mieDirectionalG={0.8}
+            inclination={0}
+            azimuth={0}
+            /* distance={null} */
+          />
           <PostProcessing />
         </>
       )}
-      <Ground />
+      {/* <Ground /> */}
     </>
   )
 }

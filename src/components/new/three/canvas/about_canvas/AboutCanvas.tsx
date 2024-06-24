@@ -1,23 +1,18 @@
 import React, { Suspense, useEffect } from 'react'
-import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import {
-  DeviceOrientationControls,
-  Environment,
-  PerspectiveCamera,
-  PointerLockControls,
-} from '@react-three/drei'
-import { Physics } from '@react-three/rapier'
+import { DeviceOrientationControls } from '@react-three/drei'
+import { Physics } from '@react-three/cannon'
 import { isMobile } from 'react-device-detect'
-
-import Player from '../../controls/Player'
-import AboutScene from './AboutScene'
-import ToneMapping from './ToneMapping'
 
 import { AboutCanvasInterface } from '@/interfaces/new/threeInterfaces'
 
+import { FirstPersonView } from '../../controls/FirstPersonView'
+import { CannonPlayer } from '../../controls/CannonPlayer'
+import AboutScene from './AboutScene'
+import ToneMapping from './ToneMapping'
+
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
-import PostProcessing from './PostProcessing'
+import { TextureSelector } from './minecraft/TextureSelector'
 
 export default function AboutCanvas({
   showInstructions,
@@ -51,7 +46,7 @@ export default function AboutCanvas({
         powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
-      <PerspectiveCamera
+      {/* <PerspectiveCamera
         makeDefault
         aspect={1200 / 600}
         fov={aboutConstants.PERSPECTIVE_CAMERA.FOV}
@@ -60,12 +55,13 @@ export default function AboutCanvas({
           aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
           aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
-      />
+      /> */}
       <Suspense fallback={null}>
-        <Physics /* debug */>
+        {/* <Physics> */}
+        <Physics>
           {!isMobile ? (
             <>
-              <Player
+              {/* <Player
                 cameraRotation={
                   new THREE.Euler(
                     THREE.MathUtils.degToRad(
@@ -92,7 +88,10 @@ export default function AboutCanvas({
                   0.5,
                 ]}
               />
-              <PointerLockControls selector='#about_enter_button' />
+              <PointerLockControls selector='#about_enter_button' /> */}
+              <FirstPersonView />
+              <CannonPlayer />
+              {/* <OrbitControls target={[0, 0, 50]} /> */}
             </>
           ) : (
             <DeviceOrientationControls />

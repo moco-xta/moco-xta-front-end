@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
+// @ts-ignore
 import { debounce } from 'lodash'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
@@ -15,7 +16,7 @@ import fragmentShader from '../../shaders/contact/contact_text/fragmentShader.gl
 
 import './index.scss'
 
-const useDomToCanvas = (domEl) => {
+const useDomToCanvas = (domEl: any) => {
   const [texture, setTexture] = useState<THREE.CanvasTexture>()
   useEffect(() => {
     if (!domEl) return
@@ -66,7 +67,9 @@ export default function ContactTextScene() {
       (1 / (window.innerHeight / 2)) * -(mouseY - window.innerHeight / 2)
     mouseLerped.current.x = THREE.MathUtils.lerp(mouseLerped.current.x, x, 0.1)
     mouseLerped.current.y = THREE.MathUtils.lerp(mouseLerped.current.y, y, 0.1)
+    // @ts-ignore
     materialRef.current.uniforms.uMouse.value.x = mouseLerped.current.x
+    // @ts-ignore
     materialRef.current.uniforms.uMouse.value.y = mouseLerped.current.y
   })
 
@@ -78,6 +81,7 @@ export default function ContactTextScene() {
         fullscreen
       >
         <div
+          // @ts-ignore
           ref={(el) => setDomEl(el)}
           className='dom-element'
         >

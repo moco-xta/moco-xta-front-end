@@ -1,0 +1,10 @@
+@import '@/styles/new/variables.module.scss';
+
+#about_target {
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}

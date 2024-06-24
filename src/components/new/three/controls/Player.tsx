@@ -32,13 +32,15 @@ export default function Player({
   const { forward, backward, left, right, jump } = usePlayer()
 
   const playerRef = useRef<RapierRigidBody>(null!)
-  const objectInHandRef = useRef<THREE.Group>(null!)
+  /* const objectInHandRef = useRef<THREE.Group>(null!) */
 
-  const rapier = useRapier()
+  /* const rapier = useRapier() */
 
-  const dispatch = useDispatch<AppDispatch>()
+  /* const dispatch = useDispatch<AppDispatch>() */
 
   const { camera } = useThree()
+
+  const playerPosition = useRef<number[]>([0, 0, 0])
 
   useEffect(() => {
     camera.rotation.set(

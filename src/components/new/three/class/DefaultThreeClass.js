@@ -46,7 +46,6 @@ export default class DefaultThreeClass {
     /* const loader = new GLTFLoader()
     loader.load('path', (gltf) => {
       this.model = gltf.scene
-      console.log(gltf)
     }) */
 
     this.addObjects()

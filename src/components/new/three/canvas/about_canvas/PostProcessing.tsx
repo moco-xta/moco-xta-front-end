@@ -8,10 +8,6 @@ import { useThree } from '@react-three/fiber'
 export default function PostProcessing() {
   const { scene } = useThree()
 
-  useEffect(() => {
-    console.log('scene', scene.getObjectByName('LogoTwitter'))
-  }, [scene])
-
   return (
     <EffectComposer>
       <SSAO
@@ -28,25 +24,21 @@ export default function PostProcessing() {
         scale={1}
         bias={-1}
       />
-      <Outline
-        selection={
-          [
-            /* scene.getObjectByName('LogoTwitter') */
-          ]
-        } // selection of objects that will be outlined
-        selectionLayer={10} // selection layer
-        blendFunction={BlendFunction.SCREEN} // set this to BlendFunction.ALPHA for dark outlines
-        patternTexture={null} // a pattern texture
-        edgeStrength={2.5} // the edge strength
-        pulseSpeed={0.0} // a pulse speed. A value of zero disables the pulse effect
-        visibleEdgeColor={0xffffff} // the color of visible edges
-        hiddenEdgeColor={0x22090a} // the color of hidden edges
-        width={10} // render width
-        height={10} // render height
-        kernelSize={KernelSize.LARGE} // blur kernel size
-        blur={false} // whether the outline should be blurred
-        xRay={true} // indicates whether X-Ray outlines are enabled
-      />
+      {/* <Outline
+        selection={[]}
+        selectionLayer={10}
+        blendFunction={BlendFunction.SCREEN}
+        patternTexture={null}
+        edgeStrength={2.5}
+        pulseSpeed={0.0}
+        visibleEdgeColor={0xffffff}
+        hiddenEdgeColor={0x22090a}
+        width={10}
+        height={10}
+        kernelSize={KernelSize.LARGE}
+        blur={false}
+        xRay={true}
+      /> */}
     </EffectComposer>
   )
 }

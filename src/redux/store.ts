@@ -6,6 +6,7 @@ import apiSlice from '@/redux/slice/apiSlice'
 import appStateSlice from './slice/appStateSlice'
 import authenticationSlice from './slice/authenticationSlice'
 import lifeGameSlice from './slice/lifeGameSlice'
+import minecraftSlice from './slice/minecraftSlice'
 import snakeGameSlice from './slice/snakeGameSlice'
 
 export const store = configureStore({
@@ -13,6 +14,7 @@ export const store = configureStore({
     appState: appStateSlice,
     authentication: authenticationSlice,
     lifeGame: lifeGameSlice,
+    minecraft: minecraftSlice,
     snakeGame: snakeGameSlice,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
