@@ -13,19 +13,6 @@ import PostProcessing from './PostProcessing'
 import Ground from './Ground'
 
 export default function AboutScene({ isClayRender }: AboutSceneInterface) {
-  const { raycaster, pointer } = useThree()
-
-  useEffect(() => {
-    console.log('raycaster', raycaster)
-  }, [raycaster])
-
-  useEffect(() => {
-    console.log('pointer', pointer)
-  }, [pointer])
-
-  /* const rayCaster = new THREE.Raycaster(controls.getObject().position, cameraDirection); */
-  /* var intersects = rayCaster.intersectObject(hitMesh, true);  */
-
   return (
     <>
       {!isClayRender ? (

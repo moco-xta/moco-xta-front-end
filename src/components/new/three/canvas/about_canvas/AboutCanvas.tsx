@@ -1,26 +1,17 @@
 import React, { Suspense, useEffect } from 'react'
-import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import {
-  DeviceOrientationControls,
-  Environment,
-  OrbitControls,
-  PerspectiveCamera,
-  PointerLockControls,
-} from '@react-three/drei'
+import { DeviceOrientationControls } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
-/* import { Physics } from '@react-three/rapier' */
 import { isMobile } from 'react-device-detect'
-
-import Player from '../../controls/Player'
-import AboutScene from './AboutScene'
-import ToneMapping from './ToneMapping'
 
 import { AboutCanvasInterface } from '@/interfaces/new/threeInterfaces'
 
-import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
-import PostProcessing from './PostProcessing'
+import { FirstPersonView } from '../../controls/FirstPersonView'
 import { CannonPlayer } from '../../controls/CannonPlayer'
+import AboutScene from './AboutScene'
+import ToneMapping from './ToneMapping'
+
+import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 
 export default function AboutCanvas({
   showInstructions,
@@ -97,6 +88,7 @@ export default function AboutCanvas({
                 ]}
               />
               <PointerLockControls selector='#about_enter_button' /> */}
+              <FirstPersonView />
               <CannonPlayer />
               {/* <OrbitControls target={[0, 0, 50]} /> */}
             </>

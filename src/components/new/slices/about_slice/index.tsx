@@ -22,14 +22,14 @@ export default function AboutSlice() {
     <section id='about_slice'>
       {!isMobile || (isMobile && permissionGranted) ? (
         <>
-          {/* <AboutGreeting
+          <AboutGreeting
             showInstructions={showInstructions}
             handleSetIsClayRender={handleSetIsClayRender}
-          /> */}
+          />
           {!isMobile && (
             <>
               <QRCodeToAbout />
-              {/* <AboutDashboard showInstructions={showInstructions} /> */}
+              <AboutDashboard showInstructions={showInstructions} />
             </>
           )}
           <AboutCanvas
