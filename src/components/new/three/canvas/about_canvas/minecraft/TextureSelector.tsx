@@ -61,7 +61,7 @@ export const TextureSelector = () => {
               key={k}
               src={src}
               alt={k}
-              className={`${k === texture ? 'active' : ''}`}
+              className={`${k === texture ? 'active' : ''} texture`}
             />
           )
         })}

@@ -17,10 +17,10 @@ export const CannonPlayer = () => {
   const [ref, api] = useSphere<THREE.Mesh>(() => ({
     mass: 1,
     type: 'Dynamic',
-    position: [0, 1, 50],
+    position: [0, 1, 0],
   }))
 
-  const playerPosition = useRef([0, 1, 50])
+  const playerPosition = useRef([0, 1, 0])
   const playerVelocity = useRef([0, 0, 0])
 
   useEffect(() => {

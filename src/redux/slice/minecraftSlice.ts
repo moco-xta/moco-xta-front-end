@@ -8,7 +8,7 @@ const initialState: MinecraftInterface = {
   cubes: [
     {
       key: nanoid(),
-      position: [0, 0.5, 0],
+      position: [0, 0, 0],
       texture: 'dirt',
     },
   ],
