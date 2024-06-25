@@ -18,7 +18,9 @@ import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants
 
 export default function AboutCanvas() {
   const dispatch = useDispatch<AppDispatch>()
-  const { showInstructions, isFinalRender } = useSelector((state: RootState) => state.about)
+  const { showInstructions, isFinalRender } = useSelector(
+    (state: RootState) => state.about,
+  )
 
   function pointerLockChange() {
     dispatch(setShowInstructions(!showInstructions))
@@ -61,9 +63,7 @@ export default function AboutCanvas() {
           )}
           <LaboratoireScene />
           <PhysicsGround />
-          {isFinalRender && (
-            <RealTimeSky />
-          )}
+          {isFinalRender && <RealTimeSky />}
         </Physics>
       </Suspense>
     </Canvas>
