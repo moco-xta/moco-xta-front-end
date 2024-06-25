@@ -3,6 +3,26 @@ import * as THREE from 'three'
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
+// DESK CHAIR
+
+const deskChairLeatherMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_CHAIR_LEATHER.DIFFUSE
+    .ONE_K,
+)
+deskChairLeatherMap.flipY = false
+
+const deskChairLeatherRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_CHAIR_LEATHER.ROUGHNESS
+    .ONE_K,
+)
+deskChairLeatherRoughnessMap.flipY = false
+
+const deskChairLeatherNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_CHAIR_LEATHER.NORMAL
+    .ONE_K,
+)
+deskChairLeatherNormalMap.flipY = false
+
 // PARQUET
 
 const parquetMap = new THREE.TextureLoader().load(
@@ -52,9 +72,16 @@ const trestleMap = new THREE.TextureLoader().load(
 )
 trestleMap.flipY = false
 
+// TEXTURES
+
 const laboratoireFinalRenderTextures: {
   [key: string]: { [key: string]: THREE.Texture }
 } = {
+  desk_chair: {
+    map: deskChairLeatherMap,
+    roughnessMap: deskChairLeatherRoughnessMap,
+    normalMap: deskChairLeatherNormalMap,
+  },
   parquet: {
     map: parquetMap,
     bumpMap: parquetBumpMap,
@@ -62,7 +89,7 @@ const laboratoireFinalRenderTextures: {
     roughnessMap: parquetRoughnessMap,
   },
   trestle: {
-    diffuse: trestleMap,
+    map: trestleMap,
   },
 }
 

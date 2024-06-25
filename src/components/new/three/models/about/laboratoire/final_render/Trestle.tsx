@@ -21,6 +21,7 @@ export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
 
   return (
     <mesh
+      name='Trestle'
       geometry={nodes.Trestle.geometry}
       material={trestleMaterial}
       position={position}

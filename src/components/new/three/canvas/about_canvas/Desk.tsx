@@ -1,7 +1,6 @@
 import React from 'react'
 import * as THREE from 'three'
 
-import { DeskChair } from '../../models/about/DeskChair'
 import { MacBookPro } from '../../models/about/MacBookPro'
 import { Screen } from '../../models/about/Screen'
 import { TransfertBox } from '../../models/about/TransfertBox'
@@ -10,10 +9,6 @@ import VinylDiscs from './VinylDiscs'
 export default function Desk() {
   return (
     <>
-      <DeskChair
-        position={[0, 0.02, 0]}
-        rotation={[-Math.PI, 1.067, -Math.PI]}
-      />
       <MacBookPro position={[0, 9.182, -8]} />
       <Screen position={[0, 9.182, -14.4]} />
       <TransfertBox

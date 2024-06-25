@@ -55,6 +55,7 @@
         "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf"
       },
       "FINAL_RENDER": {
+        "DESK_CHAIR": "/new/gltf/about/laboratoire/final_render/desk_collection/DeskChair.gltf",
         "DESK_TRAY": "/new/gltf/about/laboratoire/final_render/desk_collection/DeskTray.gltf",
         "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf",
         "TRESTLE": "/new/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf"
@@ -68,7 +69,6 @@
     "CELESTIAL_MAP": "/new/gltf/about/CelestialMap.gltf",
     "COURONNES": "/new/gltf/about/Couronnes.gltf",
     "CUBE": "/new/gltf/about/Cube.gltf",
-    "DESK_CHAIR": "/new/gltf/about/DeskChair.gltf",
     "DODECAHEDRON": "/new/gltf/about/Dodecahedron.gltf",
     "DOOR": "/new/gltf/about/Door.gltf",
     "DOOR_FRAME": "/new/gltf/about/DoorFrame.gltf",

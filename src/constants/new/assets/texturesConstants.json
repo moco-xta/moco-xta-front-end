@@ -2,6 +2,23 @@
   "ABOUT": {
     "LABORATOIRE": {
       "FINAL_RENDER": {
+        "DESK_CHAIR_LEATHER": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_1K.jpg"
+          },
+          "ROUGHNESS": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_1K.jpg"
+          },
+          "NORMAL": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_1K.jpg"
+          }
+        },
         "PARQUET": {
           "DIFFUSE": {
             "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_2K.jpg",
@@ -193,23 +210,6 @@
           "FOUR_K": "/new/img/textures/about/final/trinity_frame_normal_4K.jpg",
           "TWO_K": "/new/img/textures/about/final/trinity_frame_normal_2K.jpg",
           "ONE_K": "/new/img/textures/about/final/trinity_frame_normal_1K.jpg"
-        }
-      },
-      "DESK_CHAIR_LEATHER": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/desk_chair_leather_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/desk_chair_leather_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/desk_chair_leather_diffuse_1K.jpg"
-        },
-        "ROUGHNESS": {
-          "FOUR_K": "/new/img/textures/about/final/desk_chair_leather_roughness_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/desk_chair_leather_roughness_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/desk_chair_leather_roughness_1K.jpg"
-        },
-        "NORMAL": {
-          "FOUR_K": "/new/img/textures/about/final/desk_chair_leather_normal_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/desk_chair_leather_normal_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/desk_chair_leather_normal_1K.jpg"
         }
       },
       "SPEAKER_BOX": {

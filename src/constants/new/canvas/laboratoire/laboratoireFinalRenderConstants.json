@@ -1,5 +1,17 @@
 {
   "DESK_COLLECTION": {
+    "DESK_CHAIR": {
+      "POSITION": {
+        "X": 0,
+        "Y": 0.02,
+        "Z": 0
+      },
+      "ROTATION": {
+        "X": 0,
+        "Y": 111,
+        "Z": 0
+      }
+    },
     "DESK_TRAY": {
       "POSITION": {
         "X": 0,

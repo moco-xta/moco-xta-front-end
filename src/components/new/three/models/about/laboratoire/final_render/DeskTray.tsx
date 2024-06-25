@@ -21,6 +21,7 @@ export function DeskTray({ position }: JSX.IntrinsicElements['mesh']) {
 
   return (
     <mesh
+      name='DeskTray'
       geometry={nodes.DeskTray.geometry}
       material={glassMaterial}
       position={position}
