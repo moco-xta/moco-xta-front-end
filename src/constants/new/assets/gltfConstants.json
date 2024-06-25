@@ -50,6 +50,14 @@
     "ROUNDED_CUBE": "/new/gltf/rubiks_cube/RoundedCube.gltf"
   },
   "ABOUT": {
+    "LABORATOIRE": {
+      "CLAY_RENDER": {
+        "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf"
+      },
+      "FINAL_RENDER": {
+        "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet/Parquet.gltf"
+      }
+    },
     "AMOR_LLAMA_AMOR": "/new/gltf/about/AmorLlamaAmor.gltf",
     "BRAIN": "/new/gltf/about/Brain.gltf",
     "CEILING": "/new/gltf/about/Ceiling.gltf",
@@ -67,7 +75,6 @@
     "HOUR_AND_MINUTE_MARKERS": "/new/gltf/about/HourAndMinuteMarkers.gltf",
     "HOUR_HAND": "/new/gltf/about/HourHand.gltf",
     "ICOSAHEDRON": "/new/gltf/about/Icosahedron.gltf",
-    "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf",
     "LOGO_GUTHUB": "/new/gltf/about/LogoGitHub.gltf",
     "LOGO_TWITTER": "/new/gltf/about/LogoTwitter.gltf",
     "MAC_BOOK_PRO": "/new/gltf/about/MacBookPro.gltf",
@@ -77,7 +84,6 @@
     "NORTH_WALL": "/new/gltf/about/NorthWall.gltf",
     "OCTAHEDRON": "/new/gltf/about/Octahedron.gltf",
     "PABLO_ESCOBAR": "/new/gltf/about/PabloEscobar.gltf",
-    "PARQUET": "/new/gltf/about/Parquet.gltf",
     "SCREEN": "/new/gltf/about/Screen.gltf",
     "SECOND_HAND": "/new/gltf/about/SecondHand.gltf",
     "SHELF": "/new/gltf/about/Shelf.gltf",

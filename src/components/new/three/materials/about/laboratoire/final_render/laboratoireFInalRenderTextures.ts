@@ -10,7 +10,10 @@ const parquetMap = new THREE.TextureLoader().load(
 )
 parquetMap.wrapS = THREE.RepeatWrapping
 parquetMap.wrapT = THREE.RepeatWrapping
-parquetMap.repeat.set(aboutConstants.PARQUET.REPEAT, aboutConstants.PARQUET.REPEAT)
+parquetMap.repeat.set(
+  aboutConstants.PARQUET.REPEAT,
+  aboutConstants.PARQUET.REPEAT,
+)
 
 const parquetBumpMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET.BUMP.ONE_K,
@@ -42,13 +45,15 @@ parquetRoughnessMap.repeat.set(
   aboutConstants.PARQUET.REPEAT,
 )
 
-const laboratoireFinalRenderTextures: { [key: string]: {[key: string]: THREE.Texture} } = {
+const laboratoireFinalRenderTextures: {
+  [key: string]: { [key: string]: THREE.Texture }
+} = {
   parquet: {
     map: parquetMap,
     bumpMap: parquetBumpMap,
     normalMap: parquetNormalMap,
     roughnessMap: parquetRoughnessMap,
-  }
+  },
 }
 
 export default laboratoireFinalRenderTextures
