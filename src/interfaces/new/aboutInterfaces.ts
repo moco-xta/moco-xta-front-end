@@ -1,4 +1,5 @@
-export interface DeviceMotionPermissionInterface {
-  permissionGranted: boolean
-  setPermissionGranted: (value: boolean) => void
+export interface AboutInterface {
+  accessToDeviceMotionAndOrientationGranted: boolean
+  showInstructions: boolean
+  isFinalRender: boolean
 }

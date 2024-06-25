@@ -41,20 +41,3 @@ export interface AboutDashboardInterface {
 export interface PressEscToLeaveInterface {
   showInstructions: boolean
 }
-
-export interface DesktopInstructionsInterface {
-  handleSetIsClayRender: () => void
-}
-
-export interface MobileInstructionsInterface {
-  handleSetIsClayRender: () => void
-}
-
-export interface InstructionsInterface {
-  handleSetIsClayRender: () => void
-}
-
-export interface AboutGreetingInterface {
-  showInstructions: boolean
-  handleSetIsClayRender: () => void
-}

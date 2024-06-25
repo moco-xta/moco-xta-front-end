@@ -1,18 +1,21 @@
-import React, { MouseEvent } from 'react'
+import React from 'react'
+import { useSelector } from 'react-redux'
 
-import { IsClayRenderToggleButtonInterface } from '@/interfaces/new/buttonsInterfaces'
+import { RootState } from '@/redux/store'
 
 import ToggleButton from '@/components/buttons/toggle_button'
+import { setIsFinalRender } from '@/redux/slice/aboutSlice'
 
 import './index.scss'
 
-export default function IsClayRenderToggleButton({
-  handleSetIsClayRender,
-}: IsClayRenderToggleButtonInterface) {
+export default function IsClayRenderToggleButton() {
+  const { isFinalRender } = useSelector((state: RootState) => state.about)
+
   return (
     <ToggleButton
       label={['CLAY', 'FINAL']}
-      handleOnClick={handleSetIsClayRender}
+      checked={isFinalRender}
+      action={setIsFinalRender}
     />
   )
 }

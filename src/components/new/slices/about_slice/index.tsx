@@ -1,9 +1,38 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { isMobile } from 'react-device-detect'
+
+import { RootState } from '@/redux/store'
+
+import AboutGreeting from './about_greeting'
+import AboutCanvas from '../../three/canvas/about_canvas/AboutCanvas'
+import DeviceMotionPermission from './device_motion_permission'
 
 import './index.scss'
 
 export default function AboutSlice() {
+  const { accessToDeviceMotionAndOrientationGranted } = useSelector(
+    (state: RootState) => state.about,
+  )
+
   return (
-    <div id='about_slice'>index</div>
+    <>
+      {!isMobile || (isMobile && accessToDeviceMotionAndOrientationGranted) ? (
+        <>
+          <AboutGreeting />
+          <AboutCanvas />
+        </>
+      ) : (
+        <DeviceMotionPermission />
+      )}
+    </>
   )
 }
+
+// ----------------------------------------------------------------
+// INDEXES
+// 0:
+// 1:
+// 2:
+// 3:
+// 4: AboutGreeting
