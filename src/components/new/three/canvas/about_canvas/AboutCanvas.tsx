@@ -6,6 +6,7 @@ import { Physics } from '@react-three/cannon'
 import { AppDispatch, RootState } from '@/redux/store'
 import { setShowInstructions } from '@/redux/slice/aboutSlice'
 
+import AboutCanvasLights from './AboutCanvasLights'
 import { CannonPlayer } from '../../controls/CannonPlayer'
 import LaboratoireScene from './laboratoire/LaboratoireScene'
 import PhysicsGround from './minecraft/PhysicsGround'
@@ -43,6 +44,7 @@ export default function AboutCanvas() {
         powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
+      <AboutCanvasLights />
       <Suspense fallback={null}>
         <Physics>
           <CannonPlayer
