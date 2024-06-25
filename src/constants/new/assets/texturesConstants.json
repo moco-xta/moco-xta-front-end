@@ -1,6 +1,26 @@
 {
   "ABOUT": {
     "LABORATOIRE": {
+      "FINAL_RENDER": {
+        "PARQUET": {
+          "DIFFUSE": {
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_diffuse_1K.jpg"
+          },
+          "BUMP": {
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_bump_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_bump_1K.jpg"
+          },
+          "NORMAL": {
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_normal_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_normal_1K.jpg"
+          },
+          "ROUGHNESS": {
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_roughness_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_roughness_1K.jpg"
+          }
+        }
+      },
       "CEILING": {
         "DIFFUSE": {
           "FOUR_K": "/new/img/textures/about/ceiling_diffuse_4K.jpg",
@@ -101,12 +121,6 @@
       }
     },
     "FINAL": {
-      "PARQUET": {
-        "PARQUET_DIFFUSE": "/new/img/textures/about/final/parquet_diffuse.jpg",
-        "PARQUET_BUMP": "/new/img/textures/about/final/parquet_bump.jpg",
-        "PARQUET_NORMAL": "/new/img/textures/about/final/parquet_normal.jpg",
-        "PARQUET_ROUGHNESS": "/new/img/textures/about/final/parquet_roughness.jpg"
-      },
       "TRESTLE": {
         "DIFFUSE": {
           "FOUR_K": "/new/img/textures/about/final/trestle_diffuse_4K.jpg",
