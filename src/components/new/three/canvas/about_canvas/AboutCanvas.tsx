@@ -2,13 +2,13 @@ import React, { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Canvas } from '@react-three/fiber'
 import { DeviceOrientationControls } from '@react-three/drei'
-import { Physics } from '@react-three/cannon'
+import { Debug, Physics } from '@react-three/cannon'
 import { isMobile } from 'react-device-detect'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setShowInstructions } from '@/redux/slice/aboutSlice'
 
-import AboutCanvasLights from './AboutCanvasLights'
+import Lights from './Lights'
 import { CannonPlayer } from '../../controls/CannonPlayer'
 import LaboratoireScene from './laboratoire/LaboratoireScene'
 import PhysicsGround from './minecraft/PhysicsGround'
@@ -49,7 +49,7 @@ export default function AboutCanvas() {
         powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
-      <AboutCanvasLights />
+      <Lights />
       <Suspense fallback={null}>
         <Physics>
           {!isMobile ? (
@@ -64,6 +64,10 @@ export default function AboutCanvas() {
           <LaboratoireScene />
           <PhysicsGround />
           {isFinalRender && <RealTimeSky />}
+          <Debug
+            color={'red'}
+            scale={1.1}
+          />
         </Physics>
       </Suspense>
     </Canvas>

@@ -1,15 +1,14 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { useSphere } from '@react-three/cannon'
+import { useCylinder, useSphere } from '@react-three/cannon'
 
 import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
 import { useMinecraftKeyboard } from '@/hooks/new/useMinecraftKeyboard'
 import { PointerLockControls } from '@react-three/drei'
 
-const JUMP_FORCE = 4
-const SPEED = 4
+import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 
 export const CannonPlayer = ({
   pointerLockControlsSelector,
@@ -19,14 +18,31 @@ export const CannonPlayer = ({
   const { moveBackward, moveForward, moveRight, moveLeft, jump } =
     useMinecraftKeyboard()
 
-  const [ref, api] = useSphere<THREE.Mesh>(() => ({
+  const [ref, api] = useCylinder<THREE.Mesh>(() => ({
     mass: 1,
     type: 'Dynamic',
-    position: [0, 1, 0],
+    position: [
+      aboutConstants.PERSPECTIVE_CAMERA.POSITION.X,
+      aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y + 1,
+      aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+    ],
   }))
 
-  const playerPosition = useRef([0, 1, 0])
+  const playerPosition = useRef([
+    aboutConstants.PERSPECTIVE_CAMERA.POSITION.X,
+    1,
+    aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+  ])
   const playerVelocity = useRef([0, 0, 0])
+
+  useEffect(() => {
+    camera.rotation.set(
+      THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X),
+      THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
+      THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
+      'YXZ',
+    )
+  }, [camera.rotation])
 
   useEffect(() => {
     api.position.subscribe((p) => (playerPosition.current = p))
@@ -40,7 +56,8 @@ export const CannonPlayer = ({
     camera.position.copy(
       new THREE.Vector3(
         playerPosition.current[0],
-        playerPosition.current[1],
+        playerPosition.current[1] +
+          aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
         playerPosition.current[2],
       ),
     )
@@ -62,7 +79,7 @@ export const CannonPlayer = ({
     direction
       .subVectors(frontVector, sideVector)
       .normalize()
-      .multiplyScalar(SPEED)
+      .multiplyScalar(aboutConstants.PLAYER.SPEED)
       .applyEuler(camera.rotation)
 
     api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
@@ -70,7 +87,7 @@ export const CannonPlayer = ({
     if (jump && Math.abs(playerVelocity.current[1]) < 0.05) {
       api.velocity.set(
         playerVelocity.current[0],
-        JUMP_FORCE,
+        aboutConstants.PLAYER.JUMP_FORCE,
         playerVelocity.current[2],
       )
     }

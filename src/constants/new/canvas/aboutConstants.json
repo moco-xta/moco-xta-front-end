@@ -21,13 +21,39 @@
     },
     "FOV": 55
   },
+  "LIGHTS": {
+    "AMBIENT_LIGHT": {
+      "INTENSITY": 0.25
+    },
+    "LABORATOIRE": {
+      "FINAL_RENDER": {
+        "SPOT_LIGHTS": {
+          "POSITION": {
+            "X": 5,
+            "Y": 26.5,
+            "Z": 3
+          },
+          "TARGET_POSITION": {
+            "X": 26.5,
+            "Y": 0,
+            "Z": 26.5
+          },
+          "COLOR": "#ffffff",
+          "INTENSITY": 25,
+          "DISTANCE": 52,
+          "ANGLE": 1.87,
+          "PENUMBRA": 0.9,
+          "DECAY": 1.1
+        }
+      }
+    }
+  },
   "POINTER_LOCK_CONTROLS": {
     "SELECTOR": "#about_enter_button"
   },
-  "LIGHTS": {
-    "AMBIENT_LIGHT": {
-      "INTENSITY": 1
-    }
+  "PLAYER": {
+    "SPEED": 8,
+    "JUMP_FORCE": 4
   },
   "TONE_MAPPING": {
     "EXPOSURE": 2
