@@ -4,11 +4,13 @@ import { Box } from '@react-three/drei'
 
 export default function LaboratoireFinalRender() {
   return (
-    <Box>
-      <meshStandardMaterial
-        attach='material'
-        color={'red'}
-      />
-    </Box>
+    <>
+      <Box>
+        <meshStandardMaterial
+          attach='material'
+          color={'red'}
+        />
+      </Box>
+    </>
   )
 }

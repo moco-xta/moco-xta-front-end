@@ -12,12 +12,13 @@ import AboutCanvasLights from './AboutCanvasLights'
 import { CannonPlayer } from '../../controls/CannonPlayer'
 import LaboratoireScene from './laboratoire/LaboratoireScene'
 import PhysicsGround from './minecraft/PhysicsGround'
+import RealTimeSky from './RealTimeSky'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 
 export default function AboutCanvas() {
   const dispatch = useDispatch<AppDispatch>()
-  const { showInstructions } = useSelector((state: RootState) => state.about)
+  const { showInstructions, isFinalRender } = useSelector((state: RootState) => state.about)
 
   function pointerLockChange() {
     dispatch(setShowInstructions(!showInstructions))
@@ -60,6 +61,9 @@ export default function AboutCanvas() {
           )}
           <LaboratoireScene />
           <PhysicsGround />
+          {isFinalRender && (
+            <RealTimeSky />
+          )}
         </Physics>
       </Suspense>
     </Canvas>
