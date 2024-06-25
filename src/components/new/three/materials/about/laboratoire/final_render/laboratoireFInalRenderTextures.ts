@@ -48,7 +48,7 @@ parquetRoughnessMap.repeat.set(
 // TRESTLE
 
 const trestleMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRESTLE.DIFFUSE.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRESTLE.DIFFUSE.ONE_K,
 )
 trestleMap.flipY = false
 

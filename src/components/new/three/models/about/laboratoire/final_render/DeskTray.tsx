@@ -3,7 +3,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { glassSimpleMaterial } from '../../materials/standardsMaterials'
+import { glassMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
@@ -15,17 +15,19 @@ type GLTFResult = GLTF & {
 }
 
 export function DeskTray({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.DESK_TRAY) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_TRAY,
+  ) as GLTFResult
 
   return (
     <mesh
       geometry={nodes.DeskTray.geometry}
+      material={glassMaterial}
       position={position}
-      material={glassSimpleMaterial}
       receiveShadow
       /* castShadow */
     />
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.DESK_TRAY)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_TRAY)

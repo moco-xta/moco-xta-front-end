@@ -1,5 +1,12 @@
 {
   "DESK_COLLECTION": {
+    "DESK_TRAY": {
+      "POSITION": {
+        "X": 0,
+        "Y": 9.092,
+        "Z": -10.05
+      }
+    },
     "TRESTLES": {
       "LEFT": {
         "POSITION": {
