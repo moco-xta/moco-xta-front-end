@@ -63,6 +63,8 @@ export const Cube = ({ position, texture }: CubeInterface) => {
   return (
     <mesh
       ref={ref}
+      receiveShadow
+      castShadow
       onPointerMove={handleOnPointerMove}
       onPointerOut={handleOnPointerOut}
       onClick={handleOnClick}

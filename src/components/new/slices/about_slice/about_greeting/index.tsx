@@ -1,17 +1,17 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { isMobile } from 'react-device-detect'
 
-import { AboutGreetingInterface } from '@/interfaces/new/componentsInterfaces'
+import { RootState } from '@/redux/store'
 
 import AboutIntroductionTextBlock from './about_introduction_text_block'
 import Instructions from './intructions'
 
 import './index.scss'
 
-export default function AboutGreeting({
-  showInstructions,
-  handleSetIsClayRender,
-}: AboutGreetingInterface) {
+export default function AboutGreeting() {
+  const { showInstructions } = useSelector((state: RootState) => state.about)
+
   return (
     <div
       id='about_greeting'
@@ -21,7 +21,7 @@ export default function AboutGreeting({
       `}
     >
       <AboutIntroductionTextBlock />
-      <Instructions handleSetIsClayRender={handleSetIsClayRender} />
+      <Instructions />
     </div>
   )
 }

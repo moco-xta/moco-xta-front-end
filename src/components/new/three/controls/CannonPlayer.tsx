@@ -3,13 +3,18 @@ import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useSphere } from '@react-three/cannon'
 
+import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
+
 import { useMinecraftKeyboard } from '@/hooks/new/useMinecraftKeyboard'
+import { PointerLockControls } from '@react-three/drei'
 
 const JUMP_FORCE = 4
 const SPEED = 4
 
-export const CannonPlayer = () => {
-  const { camera } = useThree()
+export const CannonPlayer = ({
+  pointerLockControlsSelector,
+}: CannonPlayerInterface) => {
+  const { camera, gl } = useThree()
 
   const { moveBackward, moveForward, moveRight, moveLeft, jump } =
     useMinecraftKeyboard()
@@ -71,5 +76,13 @@ export const CannonPlayer = () => {
     }
   })
 
-  return <mesh ref={ref}></mesh>
+  return (
+    <>
+      <mesh ref={ref}></mesh>
+      <PointerLockControls
+        selector={pointerLockControlsSelector}
+        args={[camera, gl.domElement]}
+      />
+    </>
+  )
 }

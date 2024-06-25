@@ -1,15 +1,19 @@
 import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
-import { DeviceMotionPermissionInterface } from '@/interfaces/new/aboutInterfaces'
+import { AppDispatch, RootState } from '@/redux/store'
+import { setAccessToDeviceMotionAndOrientationGranted } from '@/redux/slice/aboutSlice'
 
 import './index.scss'
 
-export default function DeviceMotionPermission({
-  permissionGranted,
-  setPermissionGranted,
-}: DeviceMotionPermissionInterface) {
+export default function DeviceMotionPermission() {
   const t = useTranslations('ABOUT')
+
+  const dispatch = useDispatch<AppDispatch>()
+  const { accessToDeviceMotionAndOrientationGranted } = useSelector(
+    (state: RootState) => state.about,
+  )
 
   useEffect(() => {
     // @ts-ignore
@@ -18,12 +22,12 @@ export default function DeviceMotionPermission({
       DeviceMotionEvent.requestPermission()
         .then((permissionState: any) => {
           if (permissionState === 'granted') {
-            setPermissionGranted(true)
+            dispatch(setAccessToDeviceMotionAndOrientationGranted(true))
           }
         })
         .catch(console.error)
     } else {
-      setPermissionGranted(true)
+      dispatch(setAccessToDeviceMotionAndOrientationGranted(true))
     }
     return () => {}
   })
@@ -33,7 +37,7 @@ export default function DeviceMotionPermission({
     DeviceMotionEvent.requestPermission()
       .then((permissionState: any) => {
         if (permissionState === 'granted') {
-          setPermissionGranted(true)
+          dispatch(setAccessToDeviceMotionAndOrientationGranted(true))
           window.location.reload()
         }
       })
@@ -42,7 +46,7 @@ export default function DeviceMotionPermission({
 
   return (
     <>
-      {!permissionGranted && (
+      {!accessToDeviceMotionAndOrientationGranted && (
         <div id='device_motion_permission_modal'>
           <h2>
             {t(

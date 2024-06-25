@@ -2,6 +2,7 @@
 
 import { configureStore } from '@reduxjs/toolkit'
 
+import aboutSlice from '@/redux/slice/aboutSlice'
 import apiSlice from '@/redux/slice/apiSlice'
 import appStateSlice from './slice/appStateSlice'
 import authenticationSlice from './slice/authenticationSlice'
@@ -11,6 +12,7 @@ import snakeGameSlice from './slice/snakeGameSlice'
 
 export const store = configureStore({
   reducer: {
+    about: aboutSlice,
     appState: appStateSlice,
     authentication: authenticationSlice,
     lifeGame: lifeGameSlice,

@@ -1,26 +1,26 @@
 import React, { Suspense, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Canvas } from '@react-three/fiber'
 import { DeviceOrientationControls } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
 import { isMobile } from 'react-device-detect'
 
-import { AboutCanvasInterface } from '@/interfaces/new/threeInterfaces'
+import { AppDispatch, RootState } from '@/redux/store'
+import { setShowInstructions } from '@/redux/slice/aboutSlice'
 
-import { FirstPersonView } from '../../controls/FirstPersonView'
+import AboutCanvasLights from './AboutCanvasLights'
 import { CannonPlayer } from '../../controls/CannonPlayer'
-import AboutScene from './AboutScene'
-import ToneMapping from './ToneMapping'
+import LaboratoireScene from './laboratoire/LaboratoireScene'
+import PhysicsGround from './minecraft/PhysicsGround'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
-import { TextureSelector } from './minecraft/TextureSelector'
 
-export default function AboutCanvas({
-  showInstructions,
-  setShowInstructions,
-  isClayRender,
-}: AboutCanvasInterface) {
+export default function AboutCanvas() {
+  const dispatch = useDispatch<AppDispatch>()
+  const { showInstructions } = useSelector((state: RootState) => state.about)
+
   function pointerLockChange() {
-    setShowInstructions(!showInstructions)
+    dispatch(setShowInstructions(!showInstructions))
   }
 
   useEffect(() => {
@@ -46,60 +46,21 @@ export default function AboutCanvas({
         powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
-      {/* <PerspectiveCamera
-        makeDefault
-        aspect={1200 / 600}
-        fov={aboutConstants.PERSPECTIVE_CAMERA.FOV}
-        position={[
-          aboutConstants.PERSPECTIVE_CAMERA.POSITION.X,
-          aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-          aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
-        ]}
-      /> */}
+      <AboutCanvasLights />
       <Suspense fallback={null}>
-        {/* <Physics> */}
         <Physics>
           {!isMobile ? (
-            <>
-              {/* <Player
-                cameraRotation={
-                  new THREE.Euler(
-                    THREE.MathUtils.degToRad(
-                      aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X,
-                    ),
-                    THREE.MathUtils.degToRad(
-                      aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y,
-                    ),
-                    THREE.MathUtils.degToRad(
-                      aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z,
-                    ),
-                  )
-                }
-                rigidBodyPosition={
-                  new THREE.Vector3(
-                    aboutConstants.PERSPECTIVE_CAMERA.POSITION.X,
-                    aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y + 2,
-                    aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
-                  )
-                }
-                cuboidColliderArgs={[
-                  0.5,
-                  aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-                  0.5,
-                ]}
-              />
-              <PointerLockControls selector='#about_enter_button' /> */}
-              <FirstPersonView />
-              <CannonPlayer />
-              {/* <OrbitControls target={[0, 0, 50]} /> */}
-            </>
+            <CannonPlayer
+              pointerLockControlsSelector={
+                aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR
+              }
+            />
           ) : (
             <DeviceOrientationControls />
           )}
-          <AboutScene isClayRender={isClayRender} />
-          {/* <Environment files={imgConstants.HDRS.LABORATOIRE_ENVIRONMENT} /> */}
+          <LaboratoireScene />
+          <PhysicsGround />
         </Physics>
-        <ToneMapping />
       </Suspense>
     </Canvas>
   )

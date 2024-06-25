@@ -37,7 +37,7 @@ export default function AboutScene({ isClayRender }: AboutSceneInterface) {
           <PostProcessing />
         </>
       )}
-      {/* <Ground /> */}
+      <Ground />
     </>
   )
 }

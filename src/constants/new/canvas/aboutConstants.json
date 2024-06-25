@@ -21,6 +21,14 @@
     },
     "FOV": 55
   },
+  "POINTER_LOCK_CONTROLS": {
+    "SELECTOR": "#about_enter_button"
+  },
+  "LIGHTS": {
+    "AMBIENT_LIGHT": {
+      "INTENSITY": 1
+    }
+  },
   "TONE_MAPPING": {
     "EXPOSURE": 2
   },

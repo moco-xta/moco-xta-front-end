@@ -1,4 +1,5 @@
 import { FormikState } from 'formik'
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit'
 
 import { AddReviewValuesInterface } from './reduxApiInterfaces'
 
@@ -16,11 +17,8 @@ export interface AddReviewButtonInterface {
   text: string
 }
 
-export interface IsClayRenderToggleButtonInterface {
-  handleSetIsClayRender: () => void
-}
-
 export interface ToggleButtonInterface {
   label: string[]
-  handleOnClick: () => void
+  checked: boolean
+  action: ActionCreatorWithPayload<boolean, 'About/setIsFinalRender'>
 }

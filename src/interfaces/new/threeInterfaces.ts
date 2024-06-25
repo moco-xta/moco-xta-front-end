@@ -1,3 +1,7 @@
+export interface CannonPlayerInterface {
+  pointerLockControlsSelector: string
+}
+
 export interface PlayerInterface {
   cameraRotation: THREE.Euler
   rigidBodyPosition: THREE.Vector3
@@ -6,12 +10,6 @@ export interface PlayerInterface {
 
 export interface SocialsCanvasInterface {
   className: string
-}
-
-export interface AboutCanvasInterface {
-  showInstructions: boolean
-  setShowInstructions: (value: boolean) => void
-  isClayRender: boolean
 }
 
 export interface AboutSceneInterface {
