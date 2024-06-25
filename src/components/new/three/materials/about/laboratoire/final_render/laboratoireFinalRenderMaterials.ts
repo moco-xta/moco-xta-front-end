@@ -27,6 +27,26 @@ export const deskChairWheelsMaterial = new THREE.MeshStandardMaterial({
   roughness: 0.6,
 })
 
+// MAC BOOK PRO
+
+export const macBookProMaterial = new THREE.MeshStandardMaterial({
+  color: '#7f8081',
+  metalness: 0.4,
+  roughness: 0.4,
+})
+
+export const macBookProScreenMaterial = new THREE.MeshStandardMaterial({
+  color: '#000',
+  metalness: 0,
+  roughness: 0,
+})
+
+export const macBookProKeyboardMaterial = new THREE.MeshStandardMaterial({
+  color: '#000',
+  metalness: 0.1,
+  roughness: 0.5,
+})
+
 // GLASS
 
 export const glassMaterial = new THREE.MeshPhysicalMaterial({

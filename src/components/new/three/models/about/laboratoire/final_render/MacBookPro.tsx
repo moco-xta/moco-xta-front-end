@@ -3,6 +3,12 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import {
+  macBookProKeyboardMaterial,
+  macBookProMaterial,
+  macBookProScreenMaterial,
+} from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
@@ -14,29 +20,12 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-const macBookProMaterial = new THREE.MeshStandardMaterial({
-  color: '#7f8081',
-  metalness: 0.4,
-  roughness: 0.4,
-})
-
-const macBookProScreenMaterial = new THREE.MeshStandardMaterial({
-  color: '#000',
-  metalness: 0,
-  roughness: 0,
-})
-
-const macBookProKeyboardMaterial = new THREE.MeshStandardMaterial({
-  color: '#000',
-  metalness: 0.1,
-  roughness: 0.5,
-})
-
-export function MacBookPro({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.MAC_BOOK_PRO) as GLTFResult
+export function MacBookPro({ position }: JSX.IntrinsicElements['group']) {
+  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.MAC_BOOK_PRO) as GLTFResult
 
   return (
     <group
+      name='MacBookPro'
       position={position}
       dispose={null}
     >
@@ -65,4 +54,4 @@ export function MacBookPro({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.MAC_BOOK_PRO)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.MAC_BOOK_PRO)

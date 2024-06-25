@@ -9,7 +9,6 @@ import VinylDiscs from './VinylDiscs'
 export default function Desk() {
   return (
     <>
-      <MacBookPro position={[0, 9.182, -8]} />
       <Screen position={[0, 9.182, -14.4]} />
       <TransfertBox
         position={new THREE.Vector3(-6.44055, 1.58283, -11.8189)}

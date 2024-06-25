@@ -9,7 +9,7 @@ import LaboratoireClayRenderLights from './LaboratoireClayRenderLights'
 import { LaboratoireClayRender } from '../../models/about/LaboratoireClayRender'
 import LaboratoireFinalRenderLights from './LaboratoireFinalRenderLights'
 import LaboratoireFinalRender from './LaboratoireFinalRender'
-import PostProcessing from './PostProcessing'
+import PostProcessing from './laboratoire/final/PostProcessing'
 import Ground from './Ground'
 
 export default function AboutScene({ isClayRender }: AboutSceneInterface) {

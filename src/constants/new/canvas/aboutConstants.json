@@ -39,7 +39,7 @@
             "Z": 26.5
           },
           "COLOR": "#ffffff",
-          "INTENSITY": 3,
+          "INTENSITY": 2,
           "DISTANCE": 52,
           "ANGLE": 1.87,
           "PENUMBRA": 0.9,
@@ -56,7 +56,7 @@
     "JUMP_FORCE": 4
   },
   "TONE_MAPPING": {
-    "EXPOSURE": 2
+    "EXPOSURE": 1.5
   },
   "PARQUET": {
     "REPEAT": 1,

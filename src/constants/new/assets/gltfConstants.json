@@ -57,6 +57,7 @@
       "FINAL_RENDER": {
         "DESK_CHAIR": "/new/gltf/about/laboratoire/final_render/desk_collection/DeskChair.gltf",
         "DESK_TRAY": "/new/gltf/about/laboratoire/final_render/desk_collection/DeskTray.gltf",
+        "MAC_BOOK_PRO": "/new/gltf/about/laboratoire/final_render/desk_collection/MacBookPro.gltf",
         "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf",
         "TRESTLE": "/new/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf"
       }
@@ -78,7 +79,6 @@
     "ICOSAHEDRON": "/new/gltf/about/Icosahedron.gltf",
     "LOGO_GUTHUB": "/new/gltf/about/LogoGitHub.gltf",
     "LOGO_TWITTER": "/new/gltf/about/LogoTwitter.gltf",
-    "MAC_BOOK_PRO": "/new/gltf/about/MacBookPro.gltf",
     "MINUTE_HAND": "/new/gltf/about/MinuteHand.gltf",
     "NICOTIANA_RUSTICA": "/new/gltf/about/NicotianaRustica.gltf",
     "NORTH_BASEBOARD": "/new/gltf/about/NorthBaseboard.gltf",

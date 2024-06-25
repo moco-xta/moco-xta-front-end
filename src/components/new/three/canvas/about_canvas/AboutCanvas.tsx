@@ -11,8 +11,9 @@ import { setShowInstructions } from '@/redux/slice/aboutSlice'
 import Lights from './Lights'
 import { CannonPlayer } from '../../controls/CannonPlayer'
 import LaboratoireScene from './laboratoire/LaboratoireScene'
-import PhysicsGround from './minecraft/PhysicsGround'
+import PhysicsGround from './PhysicsGround'
 import RealTimeSky from './RealTimeSky'
+import ToneMapping from './ToneMapping'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 
@@ -69,6 +70,7 @@ export default function AboutCanvas() {
             scale={1.1}
           />
         </Physics>
+        <ToneMapping />
       </Suspense>
     </Canvas>
   )
