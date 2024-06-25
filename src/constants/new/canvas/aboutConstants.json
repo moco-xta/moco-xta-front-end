@@ -39,7 +39,7 @@
             "Z": 26.5
           },
           "COLOR": "#ffffff",
-          "INTENSITY": 25,
+          "INTENSITY": 3,
           "DISTANCE": 52,
           "ANGLE": 1.87,
           "PENUMBRA": 0.9,
@@ -59,6 +59,7 @@
     "EXPOSURE": 2
   },
   "PARQUET": {
-    "REPEAT": 1
+    "REPEAT": 1,
+    "CORRECTION_GREY_RANGE": [150, 180]
   }
 }

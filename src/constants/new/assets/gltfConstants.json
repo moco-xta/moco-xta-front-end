@@ -55,7 +55,8 @@
         "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf"
       },
       "FINAL_RENDER": {
-        "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet/Parquet.gltf"
+        "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf",
+        "TRESTLE": "/new/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf"
       }
     },
     "AMOR_LLAMA_AMOR": "/new/gltf/about/AmorLlamaAmor.gltf",
@@ -92,7 +93,6 @@
     "TABLE_LAMP": "/new/gltf/about/TableLamp.gltf",
     "TETRAHEDRON": "/new/gltf/about/Tetrahedron.gltf",
     "TRANSFERT_BOX": "/new/gltf/about/TransfertBox.gltf",
-    "TRESTLE": "/new/gltf/about/Trestle.gltf",
     "TRINITY": "/new/gltf/about/Trinity.gltf",
     "VINYL_DISC": "/new/gltf/about/VinylDisc.gltf",
     "VIRGEN_DE_GUADALUPE": "/new/gltf/about/VirgenDeGuadalupe.gltf",

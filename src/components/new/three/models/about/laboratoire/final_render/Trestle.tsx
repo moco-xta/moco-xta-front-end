@@ -3,10 +3,9 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import useTextureLoader from '@/hooks/useTextureLoader'
+import { trestleMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -16,26 +15,19 @@ type GLTFResult = GLTF & {
 }
 
 export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.TRESTLE) as GLTFResult
-
-  const trestleMap = useTextureLoader(
-    texturesConstants.ABOUT.FINAL.TRESTLE.DIFFUSE.ONE_K,
-  )
-  trestleMap.flipY = false
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRESTLE,
+  ) as GLTFResult
 
   return (
     <mesh
       geometry={nodes.Trestle.geometry}
+      material={trestleMaterial}
       position={position}
       receiveShadow
       castShadow
-    >
-      <meshStandardMaterial
-        attach='material'
-        map={trestleMap}
-      />
-    </mesh>
+    />
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.TRESTLE)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRESTLE)

@@ -4,20 +4,27 @@
       "FINAL_RENDER": {
         "PARQUET": {
           "DIFFUSE": {
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_diffuse_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_diffuse_1K.jpg"
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_1K.jpg"
           },
           "BUMP": {
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_bump_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_bump_1K.jpg"
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_1K.jpg"
           },
           "NORMAL": {
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_normal_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_normal_1K.jpg"
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_1K.jpg"
           },
           "ROUGHNESS": {
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_roughness_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet/parquet_roughness_1K.jpg"
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_1K.jpg"
+          }
+        },
+        "TRESTLE": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_1K.jpg"
           }
         }
       },
@@ -121,13 +128,6 @@
       }
     },
     "FINAL": {
-      "TRESTLE": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/trestle_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/trestle_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/trestle_diffuse_1K.jpg"
-        }
-      },
       "TRANSFERT_BOX": {
         "DIFFUSE": {
           "FOUR_K": "/new/img/textures/about/final/transfert_box_diffuse_4K.jpg",

@@ -1,3 +1,5 @@
+import { GroupProps } from '@react-three/fiber'
+
 export interface CannonPlayerInterface {
   pointerLockControlsSelector: string
 }

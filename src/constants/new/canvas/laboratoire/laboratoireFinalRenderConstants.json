@@ -1,0 +1,20 @@
+{
+  "DESK_COLLECTION": {
+    "TRESTLES": {
+      "LEFT": {
+        "POSITION": {
+          "X": -7.5,
+          "Y": 0,
+          "Z": -10
+        }
+      },
+      "RIGHT": {
+        "POSITION": {
+          "X": 7.5,
+          "Y": 0,
+          "Z": -10
+        }
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import laboratoireFinalRenderTextures from '@/components/new/three/materials/abo
 
 import { generateRandomHexGrey } from '@/helpers/new/threeHelpers'
 
+import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 export default function Parquet() {
@@ -25,7 +26,10 @@ export default function Parquet() {
           laboratoireFinalRenderTextures.parquet.normalMap
         object.material.roughnessMap =
           laboratoireFinalRenderTextures.parquet.roughnessMap
-        object.material.color = generateRandomHexGrey(80, 110)
+        object.material.color = generateRandomHexGrey(
+          aboutConstants.PARQUET.CORRECTION_GREY_RANGE[0],
+          aboutConstants.PARQUET.CORRECTION_GREY_RANGE[1],
+        )
       }
     })
   }, [gltf])

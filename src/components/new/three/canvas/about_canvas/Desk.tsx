@@ -6,7 +6,6 @@ import { DeskTray } from '../../models/about/DeskTray'
 import { MacBookPro } from '../../models/about/MacBookPro'
 import { Screen } from '../../models/about/Screen'
 import { TransfertBox } from '../../models/about/TransfertBox'
-import { Trestle } from '../../models/about/Trestle'
 import VinylDiscs from './VinylDiscs'
 
 export default function Desk() {
@@ -31,8 +30,6 @@ export default function Desk() {
         position={new THREE.Vector3(-6.52777, 1.58283, -10.0346)}
         rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(-2.49071), 0)}
       />
-      <Trestle position={new THREE.Vector3(-7.5, 0, -10)} />
-      <Trestle position={new THREE.Vector3(7.5, 0, -10)} />
       <VinylDiscs />
     </>
   )

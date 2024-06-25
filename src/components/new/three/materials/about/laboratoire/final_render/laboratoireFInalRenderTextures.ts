@@ -45,6 +45,13 @@ parquetRoughnessMap.repeat.set(
   aboutConstants.PARQUET.REPEAT,
 )
 
+// TRESTLE
+
+const trestleMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRESTLE.DIFFUSE.FOUR_K,
+)
+trestleMap.flipY = false
+
 const laboratoireFinalRenderTextures: {
   [key: string]: { [key: string]: THREE.Texture }
 } = {
@@ -53,6 +60,9 @@ const laboratoireFinalRenderTextures: {
     bumpMap: parquetBumpMap,
     normalMap: parquetNormalMap,
     roughnessMap: parquetRoughnessMap,
+  },
+  trestle: {
+    diffuse: trestleMap,
   },
 }
 
