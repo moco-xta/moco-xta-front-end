@@ -6,6 +6,8 @@ import { GLTF } from 'three-stdlib'
 
 import useTextureLoader from '@/hooks/useTextureLoader'
 
+import { vinylDiscBackMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
@@ -21,12 +23,20 @@ interface VinylDiscInterface extends GroupProps {
   texture: string
 }
 
-export function VinylDisc({ position, rotation, texture }: VinylDiscInterface) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.VINYL_DISC) as GLTFResult
+export function VinylDisc({
+  name,
+  position,
+  rotation,
+  texture,
+}: VinylDiscInterface) {
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.VINYL_DISC,
+  ) as GLTFResult
 
   const vinylDiscMap = useTextureLoader(
     // @ts-ignore
-    texturesConstants.ABOUT.FINAL.VINYL_DISCS[texture].DIFFUSE,
+    texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.VINYL_DISCS[texture]
+      .DIFFUSE,
   )
   vinylDiscMap.flipY = false
 
@@ -35,13 +45,9 @@ export function VinylDisc({ position, rotation, texture }: VinylDiscInterface) {
     roughness: 0.7,
   })
 
-  const vinylDiscBackMaterial = new THREE.MeshStandardMaterial({
-    color: '#000',
-    roughness: 0.7,
-  })
-
   return (
     <group
+      name={name}
       position={position}
       rotation={rotation}
       dispose={null}
@@ -64,4 +70,4 @@ export function VinylDisc({ position, rotation, texture }: VinylDiscInterface) {
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.VINYL_DISC)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.VINYL_DISC)

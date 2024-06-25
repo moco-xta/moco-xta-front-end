@@ -4,7 +4,10 @@ import * as THREE from 'three'
 import { DeskChair } from '@/components/new/three/models/about/laboratoire/final_render/DeskChair'
 import { DeskTray } from '@/components/new/three/models/about/laboratoire/final_render/DeskTray'
 import { MacBookPro } from '@/components/new/three/models/about/laboratoire/final_render/MacBookPro'
+import { Screen } from '@/components/new/three/models/about/laboratoire/final_render/Screen'
+import { TransfertBox } from '@/components/new/three/models/about/laboratoire/final_render/TransfertBox'
 import { Trestle } from '@/components/new/three/models/about/laboratoire/final_render/Trestle'
+import VinylDiscs from './VinylDiscs'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
 
@@ -54,24 +57,53 @@ export default function DeskCollection() {
           )
         }
       />
-      <Trestle
+      <Screen
         position={
           new THREE.Vector3(
-            laboratoireFinalRenderConstants.DESK_COLLECTION.TRESTLES.LEFT.POSITION.X,
-            laboratoireFinalRenderConstants.DESK_COLLECTION.TRESTLES.LEFT.POSITION.Y,
-            laboratoireFinalRenderConstants.DESK_COLLECTION.TRESTLES.LEFT.POSITION.Z,
+            laboratoireFinalRenderConstants.DESK_COLLECTION.SCREEN.POSITION.X,
+            laboratoireFinalRenderConstants.DESK_COLLECTION.SCREEN.POSITION.Y,
+            laboratoireFinalRenderConstants.DESK_COLLECTION.SCREEN.POSITION.Z,
           )
         }
       />
-      <Trestle
-        position={
-          new THREE.Vector3(
-            laboratoireFinalRenderConstants.DESK_COLLECTION.TRESTLES.RIGHT.POSITION.X,
-            laboratoireFinalRenderConstants.DESK_COLLECTION.TRESTLES.RIGHT.POSITION.Y,
-            laboratoireFinalRenderConstants.DESK_COLLECTION.TRESTLES.RIGHT.POSITION.Z,
-          )
-        }
-      />
+      {laboratoireFinalRenderConstants.DESK_COLLECTION.TRANSFERT_BOXES.map(
+        (transfertBox) => (
+          <TransfertBox
+            key={transfertBox.NAME}
+            name={transfertBox.NAME}
+            position={
+              new THREE.Vector3(
+                transfertBox.POSITION.X,
+                transfertBox.POSITION.Y,
+                transfertBox.POSITION.Z,
+              )
+            }
+            rotation={
+              new THREE.Euler(
+                THREE.MathUtils.degToRad(transfertBox.ROTATION.X),
+                THREE.MathUtils.degToRad(transfertBox.ROTATION.Y),
+                THREE.MathUtils.degToRad(transfertBox.ROTATION.Z),
+              )
+            }
+          />
+        ),
+      )}
+      {laboratoireFinalRenderConstants.DESK_COLLECTION.TRESTLES.map(
+        (trestle) => (
+          <Trestle
+            key={trestle.NAME}
+            name={trestle.NAME}
+            position={
+              new THREE.Vector3(
+                trestle.POSITION.X,
+                trestle.POSITION.Y,
+                trestle.POSITION.Z,
+              )
+            }
+          />
+        ),
+      )}
+      <VinylDiscs />
     </>
   )
 }

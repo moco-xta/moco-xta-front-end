@@ -26,21 +26,87 @@
         "Z": -8
       }
     },
-    "TRESTLES": {
-      "LEFT": {
+    "SCREEN": {
+      "POSITION": {
+        "X": 0,
+        "Y": 9.182,
+        "Z": -14.4
+      }
+    },
+    "TRANSFERT_BOXES": [
+      {
+        "NAME": "TransfertBox_001",
+        "POSITION": {
+          "X": -6.44055,
+          "Y": 1.58283,
+          "Z": -11.8189
+        },
+        "ROTATION": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      {
+        "NAME": "TransfertBox_002",
+        "POSITION": {
+          "X": -6.38545,
+          "Y": 1.58283,
+          "Z": -11.0189
+        },
+        "ROTATION": {
+          "X": 0,
+          "Y": 2.67699,
+          "Z": 0
+        }
+      },
+      {
+        "NAME": "TransfertBox_003",
+        "POSITION": {
+          "X": -6.52777,
+          "Y": 1.58283,
+          "Z": -10.0346
+        },
+        "ROTATION": {
+          "X": 0,
+          "Y": -2.49071,
+          "Z": 0
+        }
+      }
+    ],
+    "TRESTLES": [
+      {
+        "NAME": "TrestleLeft",
         "POSITION": {
           "X": -7.5,
           "Y": 0,
           "Z": -10
         }
       },
-      "RIGHT": {
+      {
+        "NAME": "TrestleRight",
         "POSITION": {
           "X": 7.5,
           "Y": 0,
           "Z": -10
         }
       }
-    }
+    ],
+    "VINYL_DISCS": [
+      {
+        "NAME": "VinylDiscFinira",
+        "POSITION": {
+          "X": 7.5,
+          "Y": 1.57452,
+          "Z": -7.45
+        },
+        "ROTATION": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "TEXTURE": "FINIRA"
+      }
+    ]
   }
 }

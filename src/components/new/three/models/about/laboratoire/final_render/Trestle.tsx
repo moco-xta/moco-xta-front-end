@@ -14,14 +14,14 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function Trestle({ position }: JSX.IntrinsicElements['mesh']) {
+export function Trestle({ name, position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
     gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRESTLE,
   ) as GLTFResult
 
   return (
     <mesh
-      name='Trestle'
+      name={name}
       geometry={nodes.Trestle.geometry}
       material={trestleMaterial}
       position={position}

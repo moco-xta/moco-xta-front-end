@@ -59,7 +59,9 @@
         "DESK_TRAY": "/new/gltf/about/laboratoire/final_render/desk_collection/DeskTray.gltf",
         "MAC_BOOK_PRO": "/new/gltf/about/laboratoire/final_render/desk_collection/MacBookPro.gltf",
         "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf",
-        "TRESTLE": "/new/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf"
+        "TRESTLE": "/new/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf",
+        "TRANSFERT_BOX": "/new/gltf/about/laboratoire/final_render/desk_collection/TransfertBox.gltf",
+        "VINYL_DISC": "/new/gltf/about/laboratoire/final_render/desk_collection/VinylDisc.gltf"
       }
     },
     "AMOR_LLAMA_AMOR": "/new/gltf/about/AmorLlamaAmor.gltf",
@@ -92,9 +94,7 @@
     "SPEAKER_BOX": "/new/gltf/about/SpeakerBox.gltf",
     "TABLE_LAMP": "/new/gltf/about/TableLamp.gltf",
     "TETRAHEDRON": "/new/gltf/about/Tetrahedron.gltf",
-    "TRANSFERT_BOX": "/new/gltf/about/TransfertBox.gltf",
     "TRINITY": "/new/gltf/about/Trinity.gltf",
-    "VINYL_DISC": "/new/gltf/about/VinylDisc.gltf",
     "VIRGEN_DE_GUADALUPE": "/new/gltf/about/VirgenDeGuadalupe.gltf",
     "WALL_CLOCK": "/new/gltf/about/WallClock.gltf",
     "WALL_CLOCK_GLASS": "/new/gltf/about/WallClockGlass.gltf",

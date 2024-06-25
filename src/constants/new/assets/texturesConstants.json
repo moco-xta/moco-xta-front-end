@@ -43,6 +43,11 @@
             "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_2K.jpg",
             "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_1K.jpg"
           }
+        },
+        "VINYL_DISCS": {
+          "FINIRA": {
+            "DIFFUSE": "/new/img/textures/about/laboratoire/final_render/desk_collection/vinyl_disc/vinyl_disc_finira_diffuse.jpg"
+          }
         }
       },
       "CEILING": {
@@ -356,11 +361,6 @@
         "ROUGHNESS": "/new/img/textures/about/final/couronnes_roughness.jpg",
         "METALNESS": "/new/img/textures/about/final/couronnes_metalness.jpg",
         "NORMAL": "/new/img/textures/about/final/couronnes_normal.jpg"
-      },
-      "VINYL_DISCS": {
-        "FINIRA": {
-          "DIFFUSE": "/new/img/textures/about/final/vinyl_disc_finira_diffuse.jpg"
-        }
       },
       "WORLD_MAP": {
         "DIFFUSE": "/new/img/textures/about/final/world_map_diffuse_1K.jpg"

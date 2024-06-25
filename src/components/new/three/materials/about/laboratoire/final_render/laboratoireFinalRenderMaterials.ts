@@ -8,10 +8,9 @@ export const deskChairLeatherMaterial = new THREE.MeshStandardMaterial({
   color: '#baa',
   map: laboratoireFinalRenderTextures.desk_chair.map,
   /* metalness: 0.1, */
-  roughness: 0.4,
+  roughness: 0.33,
   /* specularColor: '#fff', */
-  /* roughnessMap:
-    laboratoireFinalRenderTextures.desk_chair.roughness, */
+  roughnessMap: laboratoireFinalRenderTextures.desk_chair.roughness,
   normalMap: laboratoireFinalRenderTextures.desk_chair.normal,
 })
 
@@ -61,8 +60,43 @@ export const glassMaterial = new THREE.MeshPhysicalMaterial({
   opacity: 0.3 */
 })
 
+// IRON
+
+export const ironMaterial = new THREE.MeshStandardMaterial({
+  color: '#E7E7E7',
+  metalness: 1,
+  roughness: 0.5,
+})
+
+// SCREEN
+
+export const screenMaterial = new THREE.MeshStandardMaterial({
+  color: '#000',
+  roughness: 0.5,
+})
+
+export const screenFrameMaterial = new THREE.MeshStandardMaterial({
+  color: '#000',
+  roughness: 0.1,
+})
+
+// TRANSFERT BOX
+
+export const transfertBoxMaterial = new THREE.MeshStandardMaterial({
+  color: '#C5C5C3',
+  roughness: 1,
+  side: THREE.DoubleSide,
+})
+
 // TRESTLE
 
 export const trestleMaterial = new THREE.MeshStandardMaterial({
   map: laboratoireFinalRenderTextures.trestle.map,
+})
+
+// VINYL DISC
+
+export const vinylDiscBackMaterial = new THREE.MeshStandardMaterial({
+  color: '#000',
+  roughness: 0.7,
 })

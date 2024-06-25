@@ -3,6 +3,11 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import {
+  screenFrameMaterial,
+  screenMaterial,
+} from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
@@ -15,16 +20,6 @@ type GLTFResult = GLTF & {
 
 export function Screen({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.SCREEN) as GLTFResult
-
-  const screenMaterial = new THREE.MeshStandardMaterial({
-    color: '#000',
-    roughness: 0.5,
-  })
-
-  const screenFrameMaterial = new THREE.MeshStandardMaterial({
-    color: '#000',
-    roughness: 0.1,
-  })
 
   return (
     <group position={position}>

@@ -3,12 +3,12 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import useTextureLoader from '@/hooks/useTextureLoader'
-
-import { ironSimpleMaterial } from '../../materials/standardsMaterials'
+import {
+  ironMaterial,
+  transfertBoxMaterial,
+} from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -19,18 +19,17 @@ type GLTFResult = GLTF & {
 }
 
 export function TransfertBox({
+  name,
   position,
   rotation,
 }: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.TRANSFERT_BOX) as GLTFResult
-
-  const map = useTextureLoader(
-    texturesConstants.ABOUT.FINAL.TRANSFERT_BOX.DIFFUSE.ONE_K,
-  )
-  map.flipY = false
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRANSFERT_BOX,
+  ) as GLTFResult
 
   return (
     <group
+      name={name}
       position={position}
       rotation={rotation}
       dispose={null}
@@ -38,20 +37,14 @@ export function TransfertBox({
       <mesh
         name='TransfertBox_1'
         geometry={nodes.TransfertBox_1.geometry}
+        material={transfertBoxMaterial}
         receiveShadow
         castShadow
-      >
-        <meshStandardMaterial
-          attach='material'
-          roughness={1}
-          side={THREE.DoubleSide}
-          map={map}
-        />
-      </mesh>
+      />
       <mesh
         name='TransfertBox_2'
         geometry={nodes.TransfertBox_2.geometry}
-        material={ironSimpleMaterial}
+        material={ironMaterial}
         receiveShadow
         castShadow
       />
@@ -59,4 +52,4 @@ export function TransfertBox({
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.TRANSFERT_BOX)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRANSFERT_BOX)

@@ -56,7 +56,7 @@
     "JUMP_FORCE": 4
   },
   "TONE_MAPPING": {
-    "EXPOSURE": 1.5
+    "EXPOSURE": 1.25
   },
   "PARQUET": {
     "REPEAT": 1,
