@@ -30,8 +30,8 @@ export default function AboutSlice() {
 }
 
 // ----------------------------------------------------------------
-// INDEXES
-// 0:
+// Z-INDEXES
+// 0: AboutCanvas
 // 1:
 // 2:
 // 3:

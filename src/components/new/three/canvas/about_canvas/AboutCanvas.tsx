@@ -1,7 +1,9 @@
 import React, { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Canvas } from '@react-three/fiber'
+import { DeviceOrientationControls } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
+import { isMobile } from 'react-device-detect'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setShowInstructions } from '@/redux/slice/aboutSlice'
@@ -47,11 +49,15 @@ export default function AboutCanvas() {
       <AboutCanvasLights />
       <Suspense fallback={null}>
         <Physics>
-          <CannonPlayer
-            pointerLockControlsSelector={
-              aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR
-            }
-          />
+          {!isMobile ? (
+            <CannonPlayer
+              pointerLockControlsSelector={
+                aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR
+              }
+            />
+          ) : (
+            <DeviceOrientationControls />
+          )}
           <LaboratoireScene />
           <PhysicsGround />
         </Physics>
