@@ -35,8 +35,8 @@ export function VinylDisc({
 
   const vinylDiscMap = useTextureLoader(
     // @ts-ignore
-    texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.VINYL_DISCS[texture]
-      .DIFFUSE,
+    texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION
+      .VINYL_DISCS[texture].DIFFUSE,
   )
   vinylDiscMap.flipY = false
 

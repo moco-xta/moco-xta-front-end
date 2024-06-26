@@ -74,6 +74,9 @@
             "DOOR_FRAME": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorFrame.gltf",
             "DOOR_HANDLE": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorHandle.gltf"
           },
+          "FRAMES_COLLECTION": {
+            "TRINITY": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Trinity.gltf"
+          },
           "NORTH_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/NorthWall.gltf",
           "WEST_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/WestWall.gltf"
         }
@@ -104,7 +107,6 @@
     "SPEAKER_BOX": "/new/gltf/about/SpeakerBox.gltf",
     "TABLE_LAMP": "/new/gltf/about/TableLamp.gltf",
     "TETRAHEDRON": "/new/gltf/about/Tetrahedron.gltf",
-    "TRINITY": "/new/gltf/about/Trinity.gltf",
     "VIRGEN_DE_GUADALUPE": "/new/gltf/about/VirgenDeGuadalupe.gltf",
     "WALL_CLOCK": "/new/gltf/about/WallClock.gltf",
     "WALL_CLOCK_GLASS": "/new/gltf/about/WallClockGlass.gltf",

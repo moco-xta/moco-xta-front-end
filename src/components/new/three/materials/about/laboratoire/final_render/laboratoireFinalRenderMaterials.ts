@@ -14,12 +14,12 @@ export const brassMaterial = new THREE.MeshStandardMaterial({
 
 export const deskChairLeatherMaterial = new THREE.MeshStandardMaterial({
   color: '#baa',
-  map: laboratoireFinalRenderTextures.desk_chair.map,
+  map: laboratoireFinalRenderTextures.deskChair.map,
   /* metalness: 0.1, */
   roughness: 0.33,
   /* specularColor: '#fff', */
-  roughnessMap: laboratoireFinalRenderTextures.desk_chair.roughness,
-  normalMap: laboratoireFinalRenderTextures.desk_chair.normal,
+  roughnessMap: laboratoireFinalRenderTextures.deskChair.roughness,
+  normalMap: laboratoireFinalRenderTextures.deskChair.normal,
 })
 
 export const deskChairLegMaterial = new THREE.MeshStandardMaterial({
@@ -107,6 +107,23 @@ export const transfertBoxMaterial = new THREE.MeshStandardMaterial({
 
 export const trestleMaterial = new THREE.MeshStandardMaterial({
   map: laboratoireFinalRenderTextures.trestle.map,
+})
+
+// TRINITY
+
+export const trinityMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.trinity.map,
+  roughness: 1,
+})
+
+export const trinityFrameMaterial = new THREE.MeshPhysicalMaterial({
+  map: laboratoireFinalRenderTextures.trinityFrame.map,
+  metalness: 0.5,
+  /* metalnessMap: laboratoireFinalRenderTextures.trinityFrame.roughnessMap, */
+  /* roughness: 0.6, */
+  roughnessMap: laboratoireFinalRenderTextures.trinityFrame.roughnessMap,
+  normalMap: laboratoireFinalRenderTextures.trinityFrame.normal,
+  specularColor: '#ffd970',
 })
 
 // VINYL DISC

@@ -5,9 +5,6 @@ import { useControls } from 'leva'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 
-const K = 6
-const MAP_SIZE = [1024 * K, 1024 * K]
-
 export default function Lights() {
   const spotLightCeilingNWtRef = useRef<THREE.SpotLight>(null!)
   const spotLightCeilingNEtRef = useRef<THREE.SpotLight>(null!)
@@ -120,7 +117,14 @@ export default function Lights() {
           )
         }
         castShadow
-        shadow-mapSize={MAP_SIZE}
+        shadow-mapSize={[
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_MAP_SIZE *
+            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_MAP_SIZE *
+            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
+        ]}
         {...spotLigthsConfig}
       />
       <spotLight
@@ -138,7 +142,14 @@ export default function Lights() {
           )
         }
         castShadow
-        shadow-mapSize={MAP_SIZE}
+        shadow-mapSize={[
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_MAP_SIZE *
+            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_MAP_SIZE *
+            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
+        ]}
         {...spotLigthsConfig}
       />
       <spotLight
@@ -156,7 +167,14 @@ export default function Lights() {
           )
         }
         castShadow
-        shadow-mapSize={MAP_SIZE}
+        shadow-mapSize={[
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_MAP_SIZE *
+            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_MAP_SIZE *
+            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
+        ]}
         {...spotLigthsConfig}
       />
       <spotLight
@@ -174,7 +192,14 @@ export default function Lights() {
           )
         }
         castShadow
-        shadow-mapSize={MAP_SIZE}
+        shadow-mapSize={[
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_MAP_SIZE *
+            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_MAP_SIZE *
+            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
+        ]}
         {...spotLigthsConfig}
       />
       {/* <CeilingLamp position={[0, 28.6, 0]} />

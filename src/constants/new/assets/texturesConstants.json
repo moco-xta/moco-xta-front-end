@@ -2,51 +2,81 @@
   "ABOUT": {
     "LABORATOIRE": {
       "FINAL_RENDER": {
-        "DESK_CHAIR_LEATHER": {
-          "DIFFUSE": {
-            "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_4K.jpg",
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_1K.jpg"
+        "DESK_COLLECTION": {
+          "DESK_CHAIR_LEATHER": {
+            "DIFFUSE": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_1K.jpg"
+            },
+            "ROUGHNESS": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_1K.jpg"
+            },
+            "NORMAL": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_1K.jpg"
+            }
           },
-          "ROUGHNESS": {
-            "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_4K.jpg",
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_1K.jpg"
+          "TRESTLE": {
+            "DIFFUSE": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_1K.jpg"
+            }
           },
-          "NORMAL": {
-            "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_4K.jpg",
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_1K.jpg"
+          "VINYL_DISCS": {
+            "FINIRA": {
+              "DIFFUSE": "/new/img/textures/about/laboratoire/final_render/desk_collection/vinyl_disc/vinyl_disc_finira_diffuse.jpg"
+            }
           }
         },
-        "PARQUET": {
-          "DIFFUSE": {
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_1K.jpg"
-          },
-          "BUMP": {
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_1K.jpg"
-          },
-          "NORMAL": {
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_1K.jpg"
-          },
-          "ROUGHNESS": {
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_1K.jpg"
+        "PARQUET_COLLECTION": {
+          "PARQUET": {
+            "DIFFUSE": {
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_1K.jpg"
+            },
+            "BUMP": {
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_1K.jpg"
+            },
+            "NORMAL": {
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_1K.jpg"
+            },
+            "ROUGHNESS": {
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_1K.jpg"
+            }
           }
         },
-        "TRESTLE": {
-          "DIFFUSE": {
-            "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_4K.jpg",
-            "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_2K.jpg",
-            "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_1K.jpg"
-          }
-        },
-        "VINYL_DISCS": {
-          "FINIRA": {
-            "DIFFUSE": "/new/img/textures/about/laboratoire/final_render/desk_collection/vinyl_disc/vinyl_disc_finira_diffuse.jpg"
+        "WALLS_COLLECTION": {
+          "FRAMES_COLLECTION": {
+            "TRINITY": {
+              "TRINITY": {
+                "DIFFUSE": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_diffuse.jpg"
+              },
+              "TRINITY_FRAME": {
+                "DIFFUSE": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_diffuse_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_diffuse_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_diffuse_1K.jpg"
+                },
+                "ROUGHNESS": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_roughness_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_roughness_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_roughness_1K.jpg"
+                },
+                "NORMAL": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_normal_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_normal_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_normal_1K.jpg"
+                }
+              }
+            }
           }
         }
       },
@@ -184,9 +214,6 @@
           "ONE_K": "/new/img/textures/about/final/brain_diffuse_1K_COMPOSITING.jpg"
         }
       },
-      "TRINITY": {
-        "DIFFUSE": "/new/img/textures/about/final/trinity_diffuse_COMPOSITING.jpg"
-      },
       "HOY_SI": {
         "DIFFUSE": {
           "FOUR_K": "/new/img/textures/about/final/hoy_si_diffuse_4K.jpg",
@@ -199,23 +226,6 @@
       },
       "PABLO_ESCOBAR": {
         "DIFFUSE": "/new/img/textures/about/final/pablo_escobar_diffuse_COMPOSITING.jpg"
-      },
-      "TRINITY_FRAME": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/trinity_frame_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/trinity_frame_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/trinity_frame_diffuse_1K.jpg"
-        },
-        "ROUGHNESS": {
-          "FOUR_K": "/new/img/textures/about/final/trinity_frame_roughness_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/trinity_frame_roughness_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/trinity_frame_roughness_1K.jpg"
-        },
-        "NORMAL": {
-          "FOUR_K": "/new/img/textures/about/final/trinity_frame_normal_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/trinity_frame_normal_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/trinity_frame_normal_1K.jpg"
-        }
       },
       "SPEAKER_BOX": {
         "DIFFUSE": {

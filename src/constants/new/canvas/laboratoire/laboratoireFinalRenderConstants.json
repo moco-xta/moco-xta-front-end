@@ -132,6 +132,15 @@
           "Z": -10
         }
       }
+    },
+    "FRAMES_COLLECTION": {
+      "TRINITY": {
+        "POSITION": {
+          "X": -17.09,
+          "Y": 19.2,
+          "Z": -16
+        }
+      }
     }
   }
 }

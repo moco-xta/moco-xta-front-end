@@ -43,7 +43,9 @@
           "DISTANCE": 52,
           "ANGLE": 1.87,
           "PENUMBRA": 0.9,
-          "DECAY": 1.1
+          "DECAY": 1.1,
+          "K": 6,
+          "SHADOW_MAP_SIZE": 1024
         }
       }
     }
