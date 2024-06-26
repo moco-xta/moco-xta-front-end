@@ -67,6 +67,20 @@
         "PARQUET_COLLECTION": {
           "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf"
         },
+        "SHELF_COLLECTION": {
+          "SHELF": "/new/gltf/about/laboratoire/final_render/shelf_collection/Shelf.gltf",
+          "PLATONIC_SOLIDS": {
+            "CUBE": "/new/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Cube.gltf",
+            "DODECAHEDRON": "/new/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Dodecahedron.gltf",
+            "ICOSAHEDRON": "/new/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Icosahedron.gltf",
+            "OCTAHEDRON": "/new/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Octahedron.gltf",
+            "TETRAHEDRON": "/new/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Tetrahedron.gltf"
+          }
+        },
+        "SPEAKERS_COLLECTION": {
+          "SPEAKER": "/new/gltf/about/laboratoire/final_render/speakers_collection/Speaker.gltf",
+          "SPEAKER_BOX": "/new/gltf/about/laboratoire/final_render/speakers_collection/SpeakerBox.gltf"
+        },
         "WALLS_COLLECTION": {
           "CEILING": "/new/gltf/about/laboratoire/final_render/walls_collection/Ceiling.gltf",
           "DOOR_COLLECTION": {

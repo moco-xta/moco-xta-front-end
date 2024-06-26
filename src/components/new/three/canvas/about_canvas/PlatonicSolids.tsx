@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Cube } from '../../models/about/Cube'
-import { Dodecahedron } from '../../models/about/Dodecahedron'
-import { Icosahedron } from '../../models/about/Icosahedron'
-import { Octahedron } from '../../models/about/Octahedron'
-import { Tetrahedron } from '../../models/about/Tetrahedron'
+import { Cube } from '../../models/about/laboratoire/final_render/shelf_collection/platonic_solids/Cube'
+import { Dodecahedron } from '../../models/about/laboratoire/final_render/shelf_collection/platonic_solids/Dodecahedron'
+import { Icosahedron } from '../../models/about/laboratoire/final_render/shelf_collection/platonic_solids/Icosahedron'
+import { Octahedron } from '../../models/about/laboratoire/final_render/shelf_collection/platonic_solids/Octahedron'
+import { Tetrahedron } from '../../models/about/laboratoire/final_render/shelf_collection/platonic_solids/Tetrahedron'
 
 export default function PlatonicSolids() {
   return (

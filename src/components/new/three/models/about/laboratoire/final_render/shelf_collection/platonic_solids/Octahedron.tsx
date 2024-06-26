@@ -3,6 +3,8 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import { getPlatonicSolidMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
@@ -13,22 +15,24 @@ type GLTFResult = GLTF & {
 }
 
 export function Octahedron({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.OCTAHEDRON) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
+      .PLATONIC_SOLIDS.OCTAHEDRON,
+  ) as GLTFResult
 
   return (
     <mesh
+      name={'Octahedron'}
       geometry={nodes.Octahedron.geometry}
+      material={getPlatonicSolidMaterial('#1E1A6C')}
       position={position}
       receiveShadow
       castShadow
-    >
-      <meshStandardMaterial
-        attach='material'
-        color={'#1E1A6C'}
-        roughness={0.3}
-      />
-    </mesh>
+    />
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.OCTAHEDRON)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS
+    .OCTAHEDRON,
+)

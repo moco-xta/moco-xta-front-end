@@ -53,6 +53,44 @@
             }
           }
         },
+        "SHELF_COLLECTION": {
+          "SHELF": {
+            "DIFFUSE": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_diffuse_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_diffuse_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_diffuse_1K.jpg"
+            },
+            "ROUGHNESS": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_roughness_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_roughness_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_roughness_1K.jpg"
+            },
+            "NORMAL": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_normal_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_normal_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_normal_1K.jpg"
+            }
+          }
+        },
+        "SPEAKERS_COLLECTION": {
+          "SPEAKER_BOX": {
+            "DIFFUSE": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_diffuse_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_diffuse_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_diffuse_1K.jpg"
+            },
+            "ROUGHNESS": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_roughness_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_roughness_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_roughness_1K.jpg"
+            },
+            "NORMAL": {
+              "FOUR_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_normal_4K.jpg",
+              "TWO_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_normal_2K.jpg",
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_normal_1K.jpg"
+            }
+          }
+        },
         "WALLS_COLLECTION": {
           "FRAMES_COLLECTION": {
             "AMOR_LLAMA_AMOR": {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Shelf } from '../../models/about/Shelf'
+import { Shelf } from '../../models/about/laboratoire/final_render/shelf_collection/Shelf'
 import { PabloEscobar } from '../../models/about/PabloEscobar'
 import PlatonicSolids from './PlatonicSolids'
 import { VirgenDeGuadalupe } from '../../models/about/VirgenDeGuadalupe'

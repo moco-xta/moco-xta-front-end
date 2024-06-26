@@ -109,6 +109,76 @@
       }
     ]
   },
+  "SHELF_COLLECTION": {
+    "PLATONIC_SOLIDS": {
+      "CUBE": {
+        "POSITION": {
+          "X": 4.377,
+          "Y": 18.12,
+          "Z": -14.612
+        }
+      },
+      "DODECAHEDRON": {
+        "POSITION": {
+          "X": 3.82,
+          "Y": 18.12,
+          "Z": -14.48
+        }
+      },
+      "ICOSAHEDRON": {
+        "POSITION": {
+          "X": 3.621,
+          "Y": 18.12,
+          "Z": -15.221
+        }
+      },
+      "OCTAHEDRON": {
+        "POSITION": {
+          "X": 3.414,
+          "Y": 18.12,
+          "Z": -14.86
+        }
+      },
+      "TETRAHEDRON": {
+        "POSITION": {
+          "X": 4.034,
+          "Y": 18.12,
+          "Z": -15.305
+        }
+      }
+    },
+    "SHELF": {
+      "POSITION": {
+        "X": 0,
+        "Y": 18,
+        "Z": -16
+      }
+    }
+  },
+  "SPEAKERS_COLLECTION": {
+    "SPEAKER_BOXES": [
+      {
+        "NAME": "SpeakerBoxLeft",
+        "POSITION": {
+          "X": -12.2749,
+          "Y": 0.02,
+          "Z": -14.2514
+        }
+      },
+      {
+        "NAME": "SpeakerBoxRight",
+        "POSITION": {
+          "X": 12.7251,
+          "Y": 0.02,
+          "Z": -14.3251
+        }
+      }
+    ],
+    "SPEAKERS": {
+      "NUMBER": 4,
+      "GAP": 2.25
+    }
+  },
   "WALLS_COLLECTION": {
     "DOOR_COLLECTION": {
       "DOOR": {

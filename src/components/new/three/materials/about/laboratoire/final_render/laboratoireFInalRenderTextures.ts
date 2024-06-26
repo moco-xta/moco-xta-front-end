@@ -159,6 +159,43 @@ parquetRoughnessMap.repeat.set(
   aboutConstants.PARQUET.REPEAT,
 )
 
+// SHELF
+
+const shelfMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.DIFFUSE.FOUR_K,
+)
+shelfMap.flipY = false
+
+const shelfRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.ROUGHNESS.FOUR_K,
+)
+shelfRoughnessMap.flipY = false
+
+const shelfNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.NORMAL.FOUR_K,
+)
+shelfNormalMap.flipY = false
+
+// SPEAKERS
+
+const speakerBoxMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION
+    .SPEAKER_BOX.DIFFUSE.FOUR_K,
+)
+speakerBoxMap.flipY = false
+
+const speakerBoxRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION
+    .SPEAKER_BOX.ROUGHNESS.FOUR_K,
+)
+speakerBoxRoughnessMap.flipY = false
+
+const speakerBoxNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION
+    .SPEAKER_BOX.NORMAL.FOUR_K,
+)
+speakerBoxNormalMap.flipY = false
+
 // TRESTLE
 
 const trestleMap = new THREE.TextureLoader().load(
@@ -271,6 +308,16 @@ const laboratoireFinalRenderTextures: {
     roughnessMap: parquetRoughnessMap,
     normalMap: parquetNormalMap,
     bumpMap: parquetBumpMap,
+  },
+  shelf: {
+    map: shelfMap,
+    roughnessMap: shelfRoughnessMap,
+    normalMap: shelfNormalMap,
+  },
+  speakerBox: {
+    map: speakerBoxMap,
+    roughnessMap: speakerBoxRoughnessMap,
+    normalMap: speakerBoxNormalMap,
   },
   trestle: {
     map: trestleMap,

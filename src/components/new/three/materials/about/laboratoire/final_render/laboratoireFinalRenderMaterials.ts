@@ -135,6 +135,15 @@ export const monarchShadowMaterial = new THREE.MeshStandardMaterial({
   map: laboratoireFinalRenderTextures.monarchShadow.map,
 })
 
+// PLATONIC SOLIDS
+
+export const getPlatonicSolidMaterial = (color: string) => {
+  return new THREE.MeshStandardMaterial({
+    color: color,
+    roughness: 0.3,
+  })
+}
+
 // PORCELAIN
 
 export const porcelainMaterial = new THREE.MeshStandardMaterial({
@@ -152,6 +161,36 @@ export const screenMaterial = new THREE.MeshStandardMaterial({
 export const screenFrameMaterial = new THREE.MeshStandardMaterial({
   color: '#000',
   roughness: 0.1,
+})
+
+// SHELF
+
+export const shelfMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.shelf.map,
+  roughnessMap: laboratoireFinalRenderTextures.shelf.roughnessMap,
+  normalMap: laboratoireFinalRenderTextures.shelf.normalMap
+})
+
+// SPEAKERS
+
+export const speakerMaterial = new THREE.MeshPhysicalMaterial({
+  color: '#000',
+  roughness: 0.7,
+  specularColor: '#999',
+})
+
+export const speakerBoxMaterial = new THREE.MeshPhysicalMaterial({
+  map: laboratoireFinalRenderTextures.speakerBox.map,
+  roughnessMap: laboratoireFinalRenderTextures.speakerBox.roughnessMap,
+  /* normalMap: laboratoireFinalRenderTextures.speakerBox.normalMap, */
+  specularColor: '#b7a68a',
+  side: THREE.DoubleSide,
+})
+
+export const speakerStandMaterial = new THREE.MeshStandardMaterial({
+  color: '#404040',
+  metalness: 0.8,
+  roughness: 0.5,
 })
 
 // TRANSFERT BOX

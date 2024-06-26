@@ -3,6 +3,8 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import { getPlatonicSolidMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
@@ -13,22 +15,24 @@ type GLTFResult = GLTF & {
 }
 
 export function Icosahedron({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.ICOSAHEDRON) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
+      .PLATONIC_SOLIDS.ICOSAHEDRON,
+  ) as GLTFResult
 
   return (
     <mesh
+      name={'Icosahedron'}
       geometry={nodes.Icosahedron.geometry}
+      material={getPlatonicSolidMaterial('#EF8AF0')}
       position={position}
       receiveShadow
       castShadow
-    >
-      <meshStandardMaterial
-        attach='material'
-        color={'#EF8AF0'}
-        roughness={0.3}
-      />
-    </mesh>
+    />
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.ICOSAHEDRON)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS
+    .ICOSAHEDRON,
+)
