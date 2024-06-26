@@ -1,12 +1,12 @@
 import React from 'react'
 import * as THREE from 'three'
 
-import { DeskChair } from '@/components/new/three/models/about/laboratoire/final_render/DeskChair'
-import { DeskTray } from '@/components/new/three/models/about/laboratoire/final_render/DeskTray'
-import { MacBookPro } from '@/components/new/three/models/about/laboratoire/final_render/MacBookPro'
-import { Screen } from '@/components/new/three/models/about/laboratoire/final_render/Screen'
-import { TransfertBox } from '@/components/new/three/models/about/laboratoire/final_render/TransfertBox'
-import { Trestle } from '@/components/new/three/models/about/laboratoire/final_render/Trestle'
+import { DeskChair } from '@/components/new/three/models/about/laboratoire/final_render/desk_collection/DeskChair'
+import { DeskTray } from '@/components/new/three/models/about/laboratoire/final_render/desk_collection/DeskTray'
+import { MacBookPro } from '@/components/new/three/models/about/laboratoire/final_render/desk_collection/MacBookPro'
+import { Screen } from '@/components/new/three/models/about/laboratoire/final_render/desk_collection/Screen'
+import { TransfertBox } from '@/components/new/three/models/about/laboratoire/final_render/desk_collection/TransfertBox'
+import { Trestle } from '@/components/new/three/models/about/laboratoire/final_render/desk_collection/Trestle'
 import VinylDiscs from './VinylDiscs'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'

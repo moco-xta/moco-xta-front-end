@@ -55,13 +55,26 @@
         "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf"
       },
       "FINAL_RENDER": {
-        "DESK_CHAIR": "/new/gltf/about/laboratoire/final_render/desk_collection/DeskChair.gltf",
-        "DESK_TRAY": "/new/gltf/about/laboratoire/final_render/desk_collection/DeskTray.gltf",
-        "MAC_BOOK_PRO": "/new/gltf/about/laboratoire/final_render/desk_collection/MacBookPro.gltf",
-        "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf",
-        "TRESTLE": "/new/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf",
-        "TRANSFERT_BOX": "/new/gltf/about/laboratoire/final_render/desk_collection/TransfertBox.gltf",
-        "VINYL_DISC": "/new/gltf/about/laboratoire/final_render/desk_collection/VinylDisc.gltf"
+        "DESK_COLLECTION": {
+          "DESK_CHAIR": "/new/gltf/about/laboratoire/final_render/desk_collection/DeskChair.gltf",
+          "DESK_TRAY": "/new/gltf/about/laboratoire/final_render/desk_collection/DeskTray.gltf",
+          "MAC_BOOK_PRO": "/new/gltf/about/laboratoire/final_render/desk_collection/MacBookPro.gltf",
+          "SCREEN": "/new/gltf/about/laboratoire/final_render/desk_collection/Screen.gltf",
+          "TRESTLE": "/new/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf",
+          "TRANSFERT_BOX": "/new/gltf/about/laboratoire/final_render/desk_collection/TransfertBox.gltf",
+          "VINYL_DISC": "/new/gltf/about/laboratoire/final_render/desk_collection/VinylDisc.gltf"
+        },
+        "PARQUET_COLLECTION": {
+          "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf"
+        },
+        "WALLS_COLLECTION": {
+          "DOOR_COLLECTION": {
+            "DOOR": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/Door.gltf",
+            "DOOR_FRAME": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorFrame.gltf"
+          },
+          "NORTH_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/NorthWall.gltf",
+          "WEST_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/WestWall.gltf"
+        }
       }
     },
     "AMOR_LLAMA_AMOR": "/new/gltf/about/AmorLlamaAmor.gltf",
@@ -73,8 +86,6 @@
     "COURONNES": "/new/gltf/about/Couronnes.gltf",
     "CUBE": "/new/gltf/about/Cube.gltf",
     "DODECAHEDRON": "/new/gltf/about/Dodecahedron.gltf",
-    "DOOR": "/new/gltf/about/Door.gltf",
-    "DOOR_FRAME": "/new/gltf/about/DoorFrame.gltf",
     "FRAME_GLASSES": "/new/gltf/about/FrameGlasses.gltf",
     "HOUR_AND_MINUTE_MARKERS": "/new/gltf/about/HourAndMinuteMarkers.gltf",
     "HOUR_HAND": "/new/gltf/about/HourHand.gltf",
@@ -84,10 +95,8 @@
     "MINUTE_HAND": "/new/gltf/about/MinuteHand.gltf",
     "NICOTIANA_RUSTICA": "/new/gltf/about/NicotianaRustica.gltf",
     "NORTH_BASEBOARD": "/new/gltf/about/NorthBaseboard.gltf",
-    "NORTH_WALL": "/new/gltf/about/NorthWall.gltf",
     "OCTAHEDRON": "/new/gltf/about/Octahedron.gltf",
     "PABLO_ESCOBAR": "/new/gltf/about/PabloEscobar.gltf",
-    "SCREEN": "/new/gltf/about/Screen.gltf",
     "SECOND_HAND": "/new/gltf/about/SecondHand.gltf",
     "SHELF": "/new/gltf/about/Shelf.gltf",
     "SPEAKER": "/new/gltf/about/Speaker.gltf",
@@ -100,7 +109,6 @@
     "WALL_CLOCK_GLASS": "/new/gltf/about/WallClockGlass.gltf",
     "WALLS": "/new/gltf/about/Walls.gltf",
     "WETH_BASEBOARD": "/new/gltf/about/WestBaseboard.gltf",
-    "WEST_WALL": "/new/gltf/about/WestWall.gltf",
     "WORLD_MAP": "/new/gltf/about/WorldMap.gltf",
     "WORLD_MAP_STAND": "/new/gltf/about/WorldMapStand.gltf"
   },

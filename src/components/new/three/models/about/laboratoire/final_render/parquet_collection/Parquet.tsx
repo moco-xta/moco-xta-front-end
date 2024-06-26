@@ -12,7 +12,7 @@ import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.j
 
 export default function Parquet() {
   const gltf = useGltfLoader(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET,
   )
 
   useEffect(() => {

@@ -16,7 +16,7 @@ type GLTFResult = GLTF & {
 
 export function Trestle({ name, position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRESTLE,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRESTLE,
   ) as GLTFResult
 
   return (
@@ -31,4 +31,6 @@ export function Trestle({ name, position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.TRESTLE)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRESTLE,
+)

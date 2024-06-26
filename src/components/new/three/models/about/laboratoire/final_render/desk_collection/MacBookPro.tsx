@@ -22,7 +22,7 @@ type GLTFResult = GLTF & {
 
 export function MacBookPro({ position }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.MAC_BOOK_PRO,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.MAC_BOOK_PRO,
   ) as GLTFResult
 
   return (
@@ -56,4 +56,6 @@ export function MacBookPro({ position }: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.MAC_BOOK_PRO)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.MAC_BOOK_PRO,
+)

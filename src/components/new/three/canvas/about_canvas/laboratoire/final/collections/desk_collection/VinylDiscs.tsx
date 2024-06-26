@@ -1,7 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 
-import { VinylDisc } from '@/components/new/three/models/about/laboratoire/final_render/VinylDisc'
+import { VinylDisc } from '@/components/new/three/models/about/laboratoire/final_render/desk_collection/VinylDisc'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
 
@@ -11,6 +11,7 @@ export default function VinylDiscs() {
       {laboratoireFinalRenderConstants.DESK_COLLECTION.VINYL_DISCS.map(
         (vinylDisc) => (
           <VinylDisc
+            key={vinylDisc.NAME}
             position={
               new THREE.Vector3(
                 vinylDisc.POSITION.X,

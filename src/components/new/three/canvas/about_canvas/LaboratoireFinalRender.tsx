@@ -1,7 +1,7 @@
 import React from 'react'
 
 import MinecraftScene from './minecraft/MinecraftScene'
-import Parquet from '../../models/about/laboratoire/final_render/Parquet'
+import Parquet from '../../models/about/laboratoire/final_render/parquet_collection/Parquet'
 import ShelfGroup from './ShelfGroup'
 import Socials from './Socials'
 import SpeakerGroup from './SpeakerGroup'

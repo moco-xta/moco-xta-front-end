@@ -108,5 +108,23 @@
         "TEXTURE": "FINIRA"
       }
     ]
+  },
+  "WALLS_COLLECTION": {
+    "DOOR_COLLECTION": {
+      "DOOR": {
+        "POSITION": {
+          "X": -28.6,
+          "Y": 0,
+          "Z": -10
+        }
+      },
+      "DOOR_FRAME": {
+        "POSITION": {
+          "X": -28.6,
+          "Y": 0,
+          "Z": -10
+        }
+      }
+    }
   }
 }

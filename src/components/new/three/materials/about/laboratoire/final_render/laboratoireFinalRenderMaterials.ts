@@ -100,3 +100,9 @@ export const vinylDiscBackMaterial = new THREE.MeshStandardMaterial({
   color: '#000',
   roughness: 0.7,
 })
+
+// WALLS
+
+export const wWallMaterial = new THREE.MeshStandardMaterial({
+  color: '#fff',
+})

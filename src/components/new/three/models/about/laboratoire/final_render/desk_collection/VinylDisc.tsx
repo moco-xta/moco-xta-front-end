@@ -30,7 +30,7 @@ export function VinylDisc({
   texture,
 }: VinylDiscInterface) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.VINYL_DISC,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.VINYL_DISC,
   ) as GLTFResult
 
   const vinylDiscMap = useTextureLoader(
@@ -70,4 +70,6 @@ export function VinylDisc({
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.VINYL_DISC)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.VINYL_DISC,
+)

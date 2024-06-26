@@ -3,10 +3,9 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import useTextureLoader from '@/hooks/useTextureLoader'
+import { wWallMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -16,21 +15,16 @@ type GLTFResult = GLTF & {
 }
 
 export function Door({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.DOOR) as GLTFResult
-
-  const doorMap = useTextureLoader(
-    texturesConstants.ABOUT.FINAL.DOOR.DIFFUSE.FOUR_K,
-  )
-  doorMap.flipY = false
-
-  const doorMaterial = new THREE.MeshStandardMaterial({
-    map: doorMap,
-  })
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+      .DOOR_COLLECTION.DOOR,
+  ) as GLTFResult
 
   return (
     <mesh
+      name='Door'
       geometry={nodes.Door.geometry}
-      material={doorMaterial}
+      material={wWallMaterial}
       position={position}
       receiveShadow
       castShadow
@@ -38,4 +32,7 @@ export function Door({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.DOOR)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.DOOR_COLLECTION
+    .DOOR,
+)
