@@ -3,10 +3,12 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import useTextureLoader from '@/hooks/useTextureLoader'
+import {
+  amorLlamaAmorFrameMaterial,
+  amorLlamaAmorMaterial,
+} from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -16,25 +18,11 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function AmorLlamaAmor({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.AMOR_LLAMA_AMOR) as GLTFResult
-
-  const amorllamaAmorMap = useTextureLoader(
-    texturesConstants.ABOUT.FINAL.HOY_SI.DIFFUSE.ONE_K,
-  )
-  amorllamaAmorMap.flipY = false
-
-  const amorLlamaAmorMaterial = new THREE.MeshPhysicalMaterial({
-    /* color: '#ddd', */
-    map: amorllamaAmorMap,
-    roughness: 0.5,
-    metalness: 0.2,
-  })
-
-  const amorLlamaAmorFrameMaterial = new THREE.MeshStandardMaterial({
-    color: '#000000',
-    roughness: 0.6,
-  })
+export function AmorLlamaAmor({ position }: JSX.IntrinsicElements['group']) {
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+      .FRAMES_COLLECTION.AMOR_LLAMA_AMOR,
+  ) as GLTFResult
 
   return (
     <group
@@ -60,4 +48,7 @@ export function AmorLlamaAmor({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.AMOR_LLAMA_AMOR)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.AMOR_LLAMA_AMOR,
+)

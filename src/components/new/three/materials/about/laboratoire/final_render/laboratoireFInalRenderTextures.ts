@@ -3,6 +3,14 @@ import * as THREE from 'three'
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
+// AMOR LLAMA AMOR
+
+const amorllamaAmorMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.AMOR_LLAMA_AMOR.HOY_SI.DIFFUSE.ONE_K,
+)
+amorllamaAmorMap.flipY = false
+
 // BRAIN
 
 const brainMap = new THREE.TextureLoader().load(
@@ -166,6 +174,9 @@ wallClockBrushedMetalBumpMap.flipY = false
 const laboratoireFinalRenderTextures: {
   [key: string]: { [key: string]: THREE.Texture }
 } = {
+  amorllamaAmor: {
+    map: amorllamaAmorMap,
+  },
   brain: {
     map: brainMap,
   },

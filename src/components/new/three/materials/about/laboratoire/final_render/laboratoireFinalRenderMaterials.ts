@@ -2,6 +2,19 @@ import * as THREE from 'three'
 
 import laboratoireFinalRenderTextures from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFInalRenderTextures'
 
+// AMOR LLAMA AMOR
+
+export const amorLlamaAmorMaterial = new THREE.MeshPhysicalMaterial({
+  color: '#ccc',
+  map: laboratoireFinalRenderTextures.amorllamaAmor.map,
+  roughness: 1,
+})
+
+export const amorLlamaAmorFrameMaterial = new THREE.MeshStandardMaterial({
+  color: '#000000',
+  roughness: 0.4,
+})
+
 // BRAIN
 
 export const brainMaterial = new THREE.MeshStandardMaterial({

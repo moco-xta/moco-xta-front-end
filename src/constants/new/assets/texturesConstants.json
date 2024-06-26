@@ -55,6 +55,13 @@
         },
         "WALLS_COLLECTION": {
           "FRAMES_COLLECTION": {
+            "AMOR_LLAMA_AMOR": {
+              "HOY_SI": {
+                "DIFFUSE": {
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/amor_llama_amor/hoy_si_diffuse_1K.jpg"
+                }
+              }
+            },
             "BRAIN": {
               "BRAIN": {
                 "DIFFUSE": {

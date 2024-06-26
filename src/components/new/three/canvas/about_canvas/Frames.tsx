@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { AmorLlamaAmor } from '../../models/about/AmorLlamaAmor'
 import { Brain } from '../../models/about/laboratoire/final_render/walls_collection/frames_collection/Brain'
 import { CelestialMap } from '../../models/about/CelestialMap'
 import { Couronnes } from '../../models/about/Couronnes'
@@ -10,7 +9,6 @@ import { NicotianaRustica } from '../../models/about/NicotianaRustica'
 export default function Frames() {
   return (
     <>
-      <AmorLlamaAmor position={[-11.2, 10, -16]} />
       <Brain position={[-19.06, 10, -16]} />
       <CelestialMap position={[10.1, 10.2, -16]} />
       <Couronnes position={[0, 25.6, -16]} />

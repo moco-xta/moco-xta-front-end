@@ -134,6 +134,13 @@
       }
     },
     "FRAMES_COLLECTION": {
+      "AMOR_LLAMA_AMOR": {
+        "POSITION": {
+          "X": -11.2,
+          "Y": 10,
+          "Z": -16
+        }
+      },
       "BRAIN": {
         "POSITION": {
           "X": -19.06,
