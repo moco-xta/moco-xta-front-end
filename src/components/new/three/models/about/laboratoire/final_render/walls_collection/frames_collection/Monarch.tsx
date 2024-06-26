@@ -4,43 +4,52 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import {
-  trinityFrameMaterial,
-  trinityMaterial,
+  monarchBottomMaterial,
+  monarchFrameMaterial,
+  monarchMaterial,
 } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
-    Trinity_1: THREE.Mesh
-    Trinity_2: THREE.Mesh
+    Monarch_1: THREE.Mesh
+    Monarch_2: THREE.Mesh
+    Monarch_3: THREE.Mesh
   }
   materials: {}
 }
 
-export function Trinity({ position }: JSX.IntrinsicElements['group']) {
+export function Monarch({ position }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(
     gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .FRAMES_COLLECTION.TRINITY,
+      .FRAMES_COLLECTION.MONARCH,
   ) as GLTFResult
 
   return (
     <group
-      name='Trinity'
+      name='Monarch'
       position={position}
       dispose={null}
     >
       <mesh
-        name='Trinity_1'
-        geometry={nodes.Trinity_1.geometry}
-        material={trinityFrameMaterial}
+        name='Monarch_1'
+        geometry={nodes.Monarch_1.geometry}
+        material={monarchFrameMaterial}
         receiveShadow
         castShadow
       />
       <mesh
-        name='Trinity_2'
-        geometry={nodes.Trinity_2.geometry}
-        material={trinityMaterial}
+        name='Monarch_2'
+        geometry={nodes.Monarch_2.geometry}
+        material={monarchBottomMaterial}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        name='Monarch_3'
+        geometry={nodes.Monarch_3.geometry}
+        material={monarchMaterial}
         receiveShadow
         castShadow
       />
@@ -50,5 +59,5 @@ export function Trinity({ position }: JSX.IntrinsicElements['group']) {
 
 useGLTF.preload(
   gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .FRAMES_COLLECTION.TRINITY,
+    .FRAMES_COLLECTION.MONARCH,
 )

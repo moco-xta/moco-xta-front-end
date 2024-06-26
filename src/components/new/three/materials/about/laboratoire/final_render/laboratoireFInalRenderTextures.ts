@@ -57,6 +57,62 @@ const deskChairLeatherNormalMap = new THREE.TextureLoader().load(
 )
 deskChairLeatherNormalMap.flipY = false
 
+// MONARCH
+
+const monarchMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.MONARCH.MONARCH.DIFFUSE.ONE_K,
+)
+monarchMap.flipY = false
+
+const monarchFrameMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.MONARCH.MONARCH_FRAME.DIFFUSE.ONE_K,
+)
+monarchFrameMap.flipY = false
+
+const monarchFrameRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.MONARCH.MONARCH_FRAME.ROUGHNESS.ONE_K,
+)
+monarchFrameRoughnessMap.flipY = false
+
+const monarchFrameNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.MONARCH.MONARCH_FRAME.NORMAL.ONE_K,
+)
+monarchFrameNormalMap.flipY = false
+
+const monarchFrameBumpMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.MONARCH.MONARCH_FRAME.BUMP.ONE_K,
+)
+monarchFrameBumpMap.flipY = false
+
+const monarchBottomMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.MONARCH.MONARCH_BOTTOM.DIFFUSE.ONE_K,
+)
+monarchBottomMap.flipY = false
+
+const monarchBottomRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.MONARCH.MONARCH_BOTTOM.ROUGHNESS.ONE_K,
+)
+monarchBottomRoughnessMap.flipY = false
+
+const monarchBottomNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.MONARCH.MONARCH_BOTTOM.NORMAL.ONE_K,
+)
+monarchBottomNormalMap.flipY = false
+
+const monarchShadowMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.MONARCH.MONARCH_SHADOW.DIFFUSE.FOUR_K,
+)
+monarchShadowMap.flipY = false
+
 // PARQUET
 
 const parquetMap = new THREE.TextureLoader().load(
@@ -141,7 +197,7 @@ trinityFrameNormalMap.flipY = false
 
 const mondaineWallClockMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .WALL_CLOCK_COLLECTION.MONDAINE_WALL_CLOCK.DIFFUSE.FOUR_K,
+    .WALL_CLOCK_COLLECTION.MONDAINE_WALL_CLOCK.DIFFUSE.ONE_K,
 )
 mondaineWallClockMap.flipY = false
 
@@ -189,6 +245,23 @@ const laboratoireFinalRenderTextures: {
     map: deskChairLeatherMap,
     roughnessMap: deskChairLeatherRoughnessMap,
     normalMap: deskChairLeatherNormalMap,
+  },
+  monarch: {
+    map: monarchMap,
+  },
+  monarchFrame: {
+    map: monarchFrameMap,
+    roughnessMap: monarchFrameRoughnessMap,
+    normalMap: monarchFrameNormalMap,
+    bumpMap: monarchFrameBumpMap,
+  },
+  monarchBottom: {
+    map: monarchBottomMap,
+    roughnessMap: monarchBottomRoughnessMap,
+    normalMap: monarchBottomNormalMap,
+  },
+  monarchShadow: {
+    map: monarchShadowMap,
   },
   mondaineWallClock: {
     map: mondaineWallClockMap,

@@ -12,7 +12,7 @@ export const amorLlamaAmorMaterial = new THREE.MeshPhysicalMaterial({
 
 export const amorLlamaAmorFrameMaterial = new THREE.MeshStandardMaterial({
   color: '#000000',
-  roughness: 0.4,
+  roughness: 0.3,
 })
 
 // BRAIN
@@ -37,6 +37,10 @@ export const brassMaterial = new THREE.MeshStandardMaterial({
   metalness: 0.2,
   roughness: 0.5,
 })
+
+// DEFAULT MATERIAL
+
+export const defaultMaterial = new THREE.MeshStandardMaterial({})
 
 // DESK CHAIR
 
@@ -92,8 +96,8 @@ export const glassMaterial = new THREE.MeshPhysicalMaterial({
   /* thickness: 0.2, */
   specularIntensity: 1,
   clearcoat: 1,
-  /* transparent: true,
-  opacity: 0.3 */
+  transparent: true,
+  /* opacity: 0.3 */
 })
 
 // IRON
@@ -102,6 +106,33 @@ export const ironMaterial = new THREE.MeshStandardMaterial({
   color: '#E7E7E7',
   metalness: 1,
   roughness: 0.5,
+})
+
+// MONARCH
+
+export const monarchMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.monarch.map,
+  transparent: true,
+})
+
+export const monarchFrameMaterial = new THREE.MeshPhysicalMaterial({
+  /* color: 'red', */
+  map: laboratoireFinalRenderTextures.monarchFrame.map,
+  metalness: 0.6,
+  roughness: 0,
+  roughnessMap: laboratoireFinalRenderTextures.monarchFrame.roughnessMap,
+  normalMap: laboratoireFinalRenderTextures.monarchFrame.normalMap,
+  /* bumpMap: laboratoireFinalRenderTextures.monarch.bumpMap, */
+  specularColor: '#ff8c00',
+  specularIntensity: 2,
+})
+
+export const monarchBottomMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.monarchBottom.map,
+})
+
+export const monarchShadowMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.monarchShadow.map,
 })
 
 // PORCELAIN

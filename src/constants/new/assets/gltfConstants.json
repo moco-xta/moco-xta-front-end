@@ -77,6 +77,7 @@
           "FRAMES_COLLECTION": {
             "AMOR_LLAMA_AMOR": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/AmorLlamaAmor.gltf",
             "BRAIN": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Brain.gltf",
+            "MONARCH": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Monarch.gltf",
             "TRINITY": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Trinity.gltf"
           },
           "NORTH_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/NorthWall.gltf",

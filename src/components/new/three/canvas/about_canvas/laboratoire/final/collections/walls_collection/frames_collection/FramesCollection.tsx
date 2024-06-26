@@ -3,6 +3,7 @@ import * as THREE from 'three'
 
 import { AmorLlamaAmor } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/AmorLlamaAmor'
 import { Brain } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Brain'
+import { Monarch } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Monarch'
 import { Trinity } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Trinity'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
@@ -25,6 +26,15 @@ export default function FramesCollection() {
             laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.POSITION.X,
             laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.POSITION.Y,
             laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.POSITION.Z,
+          )
+        }
+      />
+      <Monarch
+        position={
+          new THREE.Vector3(
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.POSITION.X,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.POSITION.Y,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.POSITION.Z,
           )
         }
       />

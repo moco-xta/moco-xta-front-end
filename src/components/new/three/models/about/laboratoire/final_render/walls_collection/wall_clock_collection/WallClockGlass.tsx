@@ -25,8 +25,6 @@ export function WallClockGlass({}: JSX.IntrinsicElements['mesh']) {
       name='WallClockGlass'
       geometry={nodes.WallClockGlass.geometry}
       material={glassMaterial}
-      receiveShadow
-      castShadow
     />
   )
 }
