@@ -2,6 +2,21 @@ import * as THREE from 'three'
 
 import laboratoireFinalRenderTextures from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFInalRenderTextures'
 
+// BRAIN
+
+export const brainMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.brain.map,
+  roughness: 1,
+})
+
+export const brainFrameMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.brainFrame.map,
+  metalness: 0.2,
+  roughness: 0.2,
+  /* roughnessMap: laboratoireFinalRenderTextures.brainFrame.roughnessMap, */
+  normalMap: laboratoireFinalRenderTextures.brainFrame.normalMap,
+})
+
 // BRASS
 
 export const brassMaterial = new THREE.MeshStandardMaterial({

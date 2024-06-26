@@ -1,6 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 
+import { Brain } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Brain'
 import { Trinity } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Trinity'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
@@ -8,6 +9,15 @@ import { default as laboratoireFinalRenderConstants } from '@/constants/new/canv
 export default function FramesCollection() {
   return (
     <>
+      <Brain
+        position={
+          new THREE.Vector3(
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.POSITION.X,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.POSITION.Y,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.POSITION.Z,
+          )
+        }
+      />
       <Trinity
         position={
           new THREE.Vector3(

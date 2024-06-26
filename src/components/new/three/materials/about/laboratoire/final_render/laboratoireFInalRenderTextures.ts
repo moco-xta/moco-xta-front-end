@@ -3,6 +3,32 @@ import * as THREE from 'three'
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
+// BRAIN
+
+const brainMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.BRAIN.BRAIN.DIFFUSE.ONE_K,
+)
+brainMap.flipY = false
+
+const brainFrameMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.DIFFUSE.ONE_K,
+)
+brainFrameMap.flipY = false
+
+const brainFrameRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.ROUGHNESS.ONE_K,
+)
+brainFrameRoughnessMap.flipY = false
+
+const brainFrameNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.NORMAL.ONE_K,
+)
+brainFrameNormalMap.flipY = false
+
 // DESK CHAIR
 
 const deskChairLeatherMap = new THREE.TextureLoader().load(
@@ -140,6 +166,14 @@ wallClockBrushedMetalBumpMap.flipY = false
 const laboratoireFinalRenderTextures: {
   [key: string]: { [key: string]: THREE.Texture }
 } = {
+  brain: {
+    map: brainMap,
+  },
+  brainFrame: {
+    map: brainFrameMap,
+    roughnessMap: brainFrameRoughnessMap,
+    normalMap: brainFrameNormalMap,
+  },
   deskChair: {
     map: deskChairLeatherMap,
     roughnessMap: deskChairLeatherRoughnessMap,

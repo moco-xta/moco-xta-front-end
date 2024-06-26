@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { AmorLlamaAmor } from '../../models/about/AmorLlamaAmor'
-import { Brain } from '../../models/about/Brain'
+import { Brain } from '../../models/about/laboratoire/final_render/walls_collection/frames_collection/Brain'
 import { CelestialMap } from '../../models/about/CelestialMap'
 import { Couronnes } from '../../models/about/Couronnes'
 import { FrameGlasses } from '../../models/about/FrameGlasses'

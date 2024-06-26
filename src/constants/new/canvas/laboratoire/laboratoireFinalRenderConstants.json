@@ -134,6 +134,13 @@
       }
     },
     "FRAMES_COLLECTION": {
+      "BRAIN": {
+        "POSITION": {
+          "X": -19.06,
+          "Y": 10,
+          "Z": -16
+        }
+      },
       "TRINITY": {
         "POSITION": {
           "X": -17.09,

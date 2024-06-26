@@ -75,6 +75,7 @@
             "DOOR_HANDLE": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorHandle.gltf"
           },
           "FRAMES_COLLECTION": {
+            "BRAIN": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Brain.gltf",
             "TRINITY": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Trinity.gltf"
           },
           "NORTH_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/NorthWall.gltf",
