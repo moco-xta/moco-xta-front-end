@@ -68,6 +68,7 @@
           "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf"
         },
         "WALLS_COLLECTION": {
+          "CEILING": "/new/gltf/about/laboratoire/final_render/walls_collection/Ceiling.gltf",
           "DOOR_COLLECTION": {
             "DOOR": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/Door.gltf",
             "DOOR_FRAME": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorFrame.gltf",
@@ -80,7 +81,6 @@
     },
     "AMOR_LLAMA_AMOR": "/new/gltf/about/AmorLlamaAmor.gltf",
     "BRAIN": "/new/gltf/about/Brain.gltf",
-    "CEILING": "/new/gltf/about/Ceiling.gltf",
     "CEILING_LAMP": "/new/gltf/about/CeilingLamp.gltf",
     "CEILING_LAMP_FRAME": "/new/gltf/about/CeilingLampFrame.gltf",
     "CELESTIAL_MAP": "/new/gltf/about/CelestialMap.gltf",

@@ -3,10 +3,9 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import useTextureLoader from '@/hooks/useTextureLoader'
+import { wallMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -16,21 +15,13 @@ type GLTFResult = GLTF & {
 }
 
 export function Ceiling({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.CEILING) as GLTFResult
-
-  const ceilingMap = useTextureLoader(
-    texturesConstants.ABOUT.FINAL.CEILING.DIFFUSE.FOUR_K,
-  )
-  ceilingMap.flipY = false
-
-  const ceilingMaterial = new THREE.MeshStandardMaterial({
-    map: ceilingMap,
-  })
+  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.CEILING) as GLTFResult
 
   return (
     <mesh
+      name='Ceiling'
       geometry={nodes.Ceiling.geometry}
-      material={ceilingMaterial}
+      material={wallMaterial}
       position={position}
       receiveShadow
       castShadow
@@ -38,4 +29,4 @@ export function Ceiling({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.CEILING)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.CEILING)

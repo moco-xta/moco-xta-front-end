@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Ceiling } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/Ceiling'
 import DoorCollection from './door_collection/DoorCollection'
 import { NorthWall } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/NorthWall'
 import { WestWall } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/WestWall'
@@ -7,6 +8,7 @@ import { WestWall } from '@/components/new/three/models/about/laboratoire/final_
 export default function WallsCollection() {
   return (
     <>
+      <Ceiling />
       <DoorCollection />
       <NorthWall />
       <WestWall />
