@@ -2,6 +2,14 @@ import * as THREE from 'three'
 
 import laboratoireFinalRenderTextures from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFInalRenderTextures'
 
+// BRASS
+
+export const brassMaterial = new THREE.MeshStandardMaterial({
+  color: '#cfa748',
+  metalness: 0.2,
+  roughness: 0.5,
+})
+
 // DESK CHAIR
 
 export const deskChairLeatherMaterial = new THREE.MeshStandardMaterial({
@@ -68,6 +76,13 @@ export const ironMaterial = new THREE.MeshStandardMaterial({
   roughness: 0.5,
 })
 
+// PORCELAIN
+
+export const porcelainMaterial = new THREE.MeshStandardMaterial({
+  color: '#fff',
+  roughness: 0,
+})
+
 // SCREEN
 
 export const screenMaterial = new THREE.MeshStandardMaterial({
@@ -103,6 +118,6 @@ export const vinylDiscBackMaterial = new THREE.MeshStandardMaterial({
 
 // WALLS
 
-export const wWallMaterial = new THREE.MeshStandardMaterial({
+export const wallMaterial = new THREE.MeshStandardMaterial({
   color: '#fff',
 })

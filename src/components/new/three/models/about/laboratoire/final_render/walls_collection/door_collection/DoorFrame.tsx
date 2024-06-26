@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { wWallMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+import { wallMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
@@ -23,7 +23,7 @@ export function DoorFrame({ position }: JSX.IntrinsicElements['mesh']) {
   return (
     <mesh
       geometry={nodes.DoorFrame.geometry}
-      material={wWallMaterial}
+      material={wallMaterial}
       position={position}
       receiveShadow
       castShadow

@@ -70,7 +70,8 @@
         "WALLS_COLLECTION": {
           "DOOR_COLLECTION": {
             "DOOR": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/Door.gltf",
-            "DOOR_FRAME": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorFrame.gltf"
+            "DOOR_FRAME": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorFrame.gltf",
+            "DOOR_HANDLE": "/new/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorHandle.gltf"
           },
           "NORTH_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/NorthWall.gltf",
           "WEST_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/WestWall.gltf"
