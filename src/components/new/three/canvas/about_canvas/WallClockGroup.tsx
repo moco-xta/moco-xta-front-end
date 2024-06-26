@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 
-import { HourAndMinuteMarkers } from '../../models/about/laboratoire/final_render/walls_collection/wall_clock_collection/HourAndMinuteMarkers'
-import { WallClock } from '../../models/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClock'
 import { WallClockGlass } from './WallClockGlass'
 
 export default function WallClockGroup() {
@@ -17,7 +15,6 @@ export default function WallClockGroup() {
 
   return (
     <>
-      <WallClock position={[-28.583, 25.4, -10.007]} />
       <WallClockGlass position={[-28.583, 25.4, -10.007]} />
     </>
   )

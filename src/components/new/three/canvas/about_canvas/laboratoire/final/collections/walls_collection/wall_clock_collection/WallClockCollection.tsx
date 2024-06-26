@@ -6,6 +6,7 @@ import { HourHand } from '@/components/new/three/models/about/laboratoire/final_
 import { MinuteHand } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/wall_clock_collection/MinuteHand'
 import { SecondHand } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/wall_clock_collection/SecondHand'
 import { WallClock } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClock'
+import { WallClockGlass } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClockGlass'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
 
@@ -35,6 +36,7 @@ export default function WallClockCollection() {
       <MinuteHand date={date} />
       <SecondHand date={date} />
       <WallClock />
+      <WallClockGlass />
     </group>
   )
 }

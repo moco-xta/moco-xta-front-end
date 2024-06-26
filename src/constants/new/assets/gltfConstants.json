@@ -82,7 +82,8 @@
             "HOUR_HAND": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/HourHand.gltf",
             "MINUTE_HAND": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/MinuteHand.gltf",
             "SECOND_HAND": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/SecondHand.gltf",
-            "WALL_CLOCK": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClock.gltf"
+            "WALL_CLOCK": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClock.gltf",
+            "WALL_CLOCK_GLASS": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClockGlass.gltf"
           },
           "WEST_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/WestWall.gltf"
         }
