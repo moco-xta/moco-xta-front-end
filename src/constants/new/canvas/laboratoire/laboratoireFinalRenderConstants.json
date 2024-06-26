@@ -141,6 +141,15 @@
           "Z": -16
         }
       }
+    },
+    "WALL_CLOCK_COLLECTION": {
+      "WALL_CLOCK": {
+        "POSITION": {
+          "X": -28.331,
+          "Y": 25.4,
+          "Z": -10.007
+        }
+      }
     }
   }
 }

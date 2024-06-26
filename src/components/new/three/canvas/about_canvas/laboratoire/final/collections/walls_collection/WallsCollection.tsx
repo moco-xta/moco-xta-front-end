@@ -4,6 +4,7 @@ import { Ceiling } from '@/components/new/three/models/about/laboratoire/final_r
 import DoorCollection from './door_collection/DoorCollection'
 import FramesCollection from './frames_collection/FramesCollection'
 import { NorthWall } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/NorthWall'
+import WallClockCollection from './wall_clock_collection/WallClockCollection'
 import { WestWall } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/WestWall'
 
 export default function WallsCollection() {
@@ -13,6 +14,7 @@ export default function WallsCollection() {
       <DoorCollection />
       <FramesCollection />
       <NorthWall />
+      <WallClockCollection />
       <WestWall />
     </>
   )

@@ -12,9 +12,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function HourAndMinuteMarkers({
-  position,
-}: JSX.IntrinsicElements['mesh']) {
+export function HourAndMinuteMarkers({}: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
     gltfConstants.ABOUT.HOUR_AND_MINUTE_MARKERS,
   ) as GLTFResult
@@ -28,7 +26,6 @@ export function HourAndMinuteMarkers({
     <mesh
       geometry={nodes.HourAndMinuteMarkers.geometry}
       material={hourAndMinuteMarkersMaterial}
-      position={position}
       receiveShadow
       castShadow
     />

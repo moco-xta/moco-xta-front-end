@@ -98,7 +98,7 @@ export const screenFrameMaterial = new THREE.MeshStandardMaterial({
 // TRANSFERT BOX
 
 export const transfertBoxMaterial = new THREE.MeshStandardMaterial({
-  color: '#C5C5C3',
+  color: '#eee',
   roughness: 1,
   side: THREE.DoubleSide,
 })
@@ -123,7 +123,7 @@ export const trinityFrameMaterial = new THREE.MeshPhysicalMaterial({
   /* roughness: 0.6, */
   roughnessMap: laboratoireFinalRenderTextures.trinityFrame.roughnessMap,
   normalMap: laboratoireFinalRenderTextures.trinityFrame.normal,
-  specularColor: '#ffd970',
+  specularColor: '#B99445',
 })
 
 // VINYL DISC
@@ -131,6 +131,32 @@ export const trinityFrameMaterial = new THREE.MeshPhysicalMaterial({
 export const vinylDiscBackMaterial = new THREE.MeshStandardMaterial({
   color: '#000',
   roughness: 0.7,
+})
+
+// WALL CLOCK
+
+export const mondaineWallClockMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.mondaineWallClock.map,
+})
+
+export const wallClockBrushedMetalMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.wallClockBrushedMetal.map,
+  /* metalness: 0.3, */
+  /* metalnessMap: laboratoireFinalRenderTextures.wallClockBrushedMetal.roughnessMap, */
+  roughnessMap:
+    laboratoireFinalRenderTextures.wallClockBrushedMetal.roughnessMap,
+  normalMap: laboratoireFinalRenderTextures.wallClockBrushedMetal.normalMap,
+  bumpMap: laboratoireFinalRenderTextures.wallClockBrushedMetal.bumpMap,
+})
+
+export const wallClockPlaticRedMaterial = new THREE.MeshStandardMaterial({
+  color: '#C23C3E',
+  roughness: 1,
+})
+
+export const wallClockPlaticBlackMaterial = new THREE.MeshStandardMaterial({
+  color: '#000',
+  roughness: 1,
 })
 
 // WALLS

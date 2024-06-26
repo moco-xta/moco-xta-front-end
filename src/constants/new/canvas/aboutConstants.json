@@ -44,8 +44,15 @@
           "ANGLE": 1.87,
           "PENUMBRA": 0.9,
           "DECAY": 1.1,
-          "K": 6,
-          "SHADOW_MAP_SIZE": 1024
+          "K": 8,
+          "SHADOW_MAP_SIZE": 1024,
+          "SHADOW_CAMERA_FAR": 500,
+          "SHADOW_CAMERA_LEFT": -500,
+          "SHADOW_CAMERA_RIGHT": 500,
+          "SHADOW_CAMERA_TOP": 500,
+          "SHADOW_CAMERA_BOTTOM": -500,
+          "SHADOW_RADIUS": 3,
+          "SHADOW_BIAS": 0.0001
         }
       }
     }

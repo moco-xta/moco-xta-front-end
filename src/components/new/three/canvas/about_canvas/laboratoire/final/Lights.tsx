@@ -125,6 +125,33 @@ export default function Lights() {
             .SHADOW_MAP_SIZE *
             aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
         ]}
+        shadow-camera-far={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_FAR
+        }
+        shadow-camera-left={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_LEFT
+        }
+        shadow-camera-right={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_RIGHT
+        }
+        shadow-camera-top={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_TOP
+        }
+        shadow-camera-bottom={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_BOTTOM
+        }
+        shadow-radius={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_RADIUS
+        }
+        shadow-bias={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.SHADOW_BIAS
+        }
         {...spotLigthsConfig}
       />
       <spotLight
@@ -150,6 +177,33 @@ export default function Lights() {
             .SHADOW_MAP_SIZE *
             aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
         ]}
+        shadow-camera-far={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_FAR
+        }
+        shadow-camera-left={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_LEFT
+        }
+        shadow-camera-right={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_RIGHT
+        }
+        shadow-camera-top={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_TOP
+        }
+        shadow-camera-bottom={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_BOTTOM
+        }
+        shadow-radius={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_RADIUS
+        }
+        shadow-bias={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.SHADOW_BIAS
+        }
         {...spotLigthsConfig}
       />
       <spotLight
@@ -175,6 +229,33 @@ export default function Lights() {
             .SHADOW_MAP_SIZE *
             aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
         ]}
+        shadow-camera-far={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_FAR
+        }
+        shadow-camera-left={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_LEFT
+        }
+        shadow-camera-right={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_RIGHT
+        }
+        shadow-camera-top={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_TOP
+        }
+        shadow-camera-bottom={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_BOTTOM
+        }
+        shadow-radius={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_RADIUS
+        }
+        shadow-bias={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.SHADOW_BIAS
+        }
         {...spotLigthsConfig}
       />
       <spotLight
@@ -200,6 +281,33 @@ export default function Lights() {
             .SHADOW_MAP_SIZE *
             aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.K,
         ]}
+        shadow-camera-far={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_FAR
+        }
+        shadow-camera-left={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_LEFT
+        }
+        shadow-camera-right={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_RIGHT
+        }
+        shadow-camera-top={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_TOP
+        }
+        shadow-camera-bottom={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_CAMERA_BOTTOM
+        }
+        shadow-radius={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
+            .SHADOW_RADIUS
+        }
+        shadow-bias={
+          aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS.SHADOW_BIAS
+        }
         {...spotLigthsConfig}
       />
       {/* <CeilingLamp position={[0, 28.6, 0]} />

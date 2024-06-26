@@ -103,6 +103,38 @@ const trinityFrameNormalMap = new THREE.TextureLoader().load(
 )
 trinityFrameNormalMap.flipY = false
 
+// WALL CLOCK
+
+const mondaineWallClockMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .WALL_CLOCK_COLLECTION.MONDAINE_WALL_CLOCK.DIFFUSE.FOUR_K,
+)
+mondaineWallClockMap.flipY = false
+
+const wallClockBrushedMetalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .WALL_CLOCK_COLLECTION.WALL_CLOCK_BRUSHED_METAL.DIFFUSE.ONE_K,
+)
+wallClockBrushedMetalMap.flipY = false
+
+const wallClockBrushedMetalRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .WALL_CLOCK_COLLECTION.WALL_CLOCK_BRUSHED_METAL.ROUGHNESS.ONE_K,
+)
+wallClockBrushedMetalRoughnessMap.flipY = false
+
+const wallClockBrushedMetalNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .WALL_CLOCK_COLLECTION.WALL_CLOCK_BRUSHED_METAL.NORMAL.ONE_K,
+)
+wallClockBrushedMetalNormalMap.flipY = false
+
+const wallClockBrushedMetalBumpMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .WALL_CLOCK_COLLECTION.WALL_CLOCK_BRUSHED_METAL.BUMP.ONE_K,
+)
+wallClockBrushedMetalBumpMap.flipY = false
+
 // TEXTURES
 
 const laboratoireFinalRenderTextures: {
@@ -113,11 +145,14 @@ const laboratoireFinalRenderTextures: {
     roughnessMap: deskChairLeatherRoughnessMap,
     normalMap: deskChairLeatherNormalMap,
   },
+  mondaineWallClock: {
+    map: mondaineWallClockMap,
+  },
   parquet: {
     map: parquetMap,
-    bumpMap: parquetBumpMap,
-    normalMap: parquetNormalMap,
     roughnessMap: parquetRoughnessMap,
+    normalMap: parquetNormalMap,
+    bumpMap: parquetBumpMap,
   },
   trestle: {
     map: trestleMap,
@@ -129,6 +164,12 @@ const laboratoireFinalRenderTextures: {
     map: trinityFrameMap,
     roughnessMap: trinityFrameRoughnessMap,
     normalMap: trinityFrameNormalMap,
+  },
+  wallClockBrushedMetal: {
+    map: wallClockBrushedMetalMap,
+    roughnessMap: wallClockBrushedMetalRoughnessMap,
+    normalMap: wallClockBrushedMetalNormalMap,
+    bumpMap: wallClockBrushedMetalBumpMap,
   },
 }
 

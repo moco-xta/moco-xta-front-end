@@ -77,6 +77,37 @@
                 }
               }
             }
+          },
+          "WALL_CLOCK_COLLECTION": {
+            "MONDAINE_WALL_CLOCK": {
+              "DIFFUSE": {
+                "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/mondaine_wall_clock_diffuse_4K.jpg",
+                "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/mondaine_wall_clockl_diffuse_2K.jpg",
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/mondaine_wall_clockl_diffuse_1K.jpg"
+              }
+            },
+            "WALL_CLOCK_BRUSHED_METAL": {
+              "DIFFUSE": {
+                "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_diffuse_4K.jpg",
+                "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_diffuse_2K.jpg",
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_diffuse_1K.jpg"
+              },
+              "ROUGHNESS": {
+                "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_roughness_4K.jpg",
+                "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_roughness_2K.jpg",
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_roughness_1K.jpg"
+              },
+              "NORMAL": {
+                "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_normal_4K.jpg",
+                "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_normal_2K.jpg",
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_normal_1K.jpg"
+              },
+              "BUMP": {
+                "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_bump_4K.jpg",
+                "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_bump_2K.jpg",
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/wall_clock_collection/wall_clock_brushed_metal_bump_1K.jpg"
+              }
+            }
           }
         }
       },

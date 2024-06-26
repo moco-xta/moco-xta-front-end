@@ -4,6 +4,8 @@ import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import { wallClockPlaticRedMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
@@ -17,13 +19,11 @@ interface SecondHandInterface extends MeshProps {
   date: Date
 }
 
-export function SecondHand({ date, position }: SecondHandInterface) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.SECOND_HAND) as GLTFResult
-
-  const secondHandMaterial = new THREE.MeshStandardMaterial({
-    color: '#C23C3E',
-    roughness: 1,
-  })
+export function SecondHand({ date }: SecondHandInterface) {
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+      .WALL_CLOCK_COLLECTION.SECOND_HAND,
+  ) as GLTFResult
 
   const secondHandRef = useRef<THREE.Mesh>(null!)
 
@@ -35,14 +35,17 @@ export function SecondHand({ date, position }: SecondHandInterface) {
 
   return (
     <mesh
+      name='SecondHand'
       ref={secondHandRef}
       geometry={nodes.SecondHand.geometry}
-      material={secondHandMaterial}
-      position={position}
+      material={wallClockPlaticRedMaterial}
       receiveShadow
       castShadow
     />
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.SECOND_HAND)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .WALL_CLOCK_COLLECTION.SECOND_HAND,
+)

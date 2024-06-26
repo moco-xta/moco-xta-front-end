@@ -4,6 +4,8 @@ import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+import { wallClockPlaticBlackMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
@@ -17,13 +19,11 @@ interface HourHandInterface extends MeshProps {
   date: Date
 }
 
-export function HourHand({ date, position }: HourHandInterface) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.HOUR_HAND) as GLTFResult
-
-  const hourHandMaterial = new THREE.MeshStandardMaterial({
-    color: '#000',
-    roughness: 1,
-  })
+export function HourHand({ date }: HourHandInterface) {
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+      .WALL_CLOCK_COLLECTION.HOUR_HAND,
+  ) as GLTFResult
 
   const hourHandRef = useRef<THREE.Mesh>(null!)
 
@@ -37,12 +37,14 @@ export function HourHand({ date, position }: HourHandInterface) {
     <mesh
       ref={hourHandRef}
       geometry={nodes.HourHand.geometry}
-      material={hourHandMaterial}
-      position={position}
+      material={wallClockPlaticBlackMaterial}
       receiveShadow
       castShadow
     />
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.HOUR_HAND)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .WALL_CLOCK_COLLECTION.HOUR_HAND,
+)
