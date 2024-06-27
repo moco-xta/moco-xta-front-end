@@ -8,7 +8,7 @@ import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
 import { useMinecraftKeyboard } from '@/hooks/new/useMinecraftKeyboard'
 import { PointerLockControls } from '@react-three/drei'
 
-import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
 
 export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterface) => {
   const { camera, gl } = useThree()

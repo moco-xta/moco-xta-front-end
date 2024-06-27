@@ -1,7 +1,7 @@
 import React from 'react'
 import { useControls } from 'leva'
 
-import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
 
 export default function AboutCanvasLights() {
   const ambientLigthsConfig = useControls('AMBIENT LIGHTS: Config', {

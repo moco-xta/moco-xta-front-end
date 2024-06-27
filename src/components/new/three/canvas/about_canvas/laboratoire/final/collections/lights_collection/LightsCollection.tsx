@@ -6,7 +6,7 @@ import { useControls } from 'leva'
 
 import { RootState } from '@/redux/store'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function LightsCollection() {
   const { debug } = useSelector((state: RootState) => state.about)

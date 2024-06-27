@@ -10,7 +10,7 @@ import { Monarch } from '@/components/new/three/models/about/laboratoire/final_r
 import { NicotianaRustica } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/NicotianaRustica'
 import { Trinity } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Trinity'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function FramesCollection() {
   return (

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { EffectComposer, Outline, SSAO } from '@react-three/postprocessing'
 import { BlendFunction, KernelSize, Resizer } from 'postprocessing'
 
-import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
 import { useThree } from '@react-three/fiber'
 
 export default function PostProcessing() {

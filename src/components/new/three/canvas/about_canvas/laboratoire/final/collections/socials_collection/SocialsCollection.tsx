@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { LogoGitHub } from '@/components/new/three/models/about/laboratoire/final_render/socials_collection/LogoGitHub'
 import { LogoTwitter } from '@/components/new/three/models/about/laboratoire/final_render/socials_collection/LogoTwitter'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function SocialsCollection() {
   return (

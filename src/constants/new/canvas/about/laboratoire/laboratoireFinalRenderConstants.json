@@ -144,6 +144,12 @@
       }
     }
   },
+  "PARQUET_COLLECTION": {
+    "PARQUET": {
+      "REPEAT": 1,
+      "CORRECTION_GREY_RANGE": [150, 180]
+    }
+  },
   "SHELF_COLLECTION": {
     "PABLO_ESCOBAR": {
       "POSITION": {

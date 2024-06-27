@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 
-import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
 // AMOR LLAMA AMOR
@@ -189,28 +190,40 @@ const parquetMap = new THREE.TextureLoader().load(
 )
 parquetMap.wrapS = THREE.RepeatWrapping
 parquetMap.wrapT = THREE.RepeatWrapping
-parquetMap.repeat.set(aboutConstants.PARQUET.REPEAT, aboutConstants.PARQUET.REPEAT)
+parquetMap.repeat.set(
+  laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.REPEAT,
+  laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.REPEAT,
+)
 
 const parquetBumpMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.BUMP.ONE_K,
 )
 parquetBumpMap.wrapS = THREE.RepeatWrapping
 parquetBumpMap.wrapT = THREE.RepeatWrapping
-parquetBumpMap.repeat.set(aboutConstants.PARQUET.REPEAT, aboutConstants.PARQUET.REPEAT)
+parquetBumpMap.repeat.set(
+  laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.REPEAT,
+  laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.REPEAT,
+)
 
 const parquetNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.NORMAL.ONE_K,
 )
 parquetNormalMap.wrapS = THREE.RepeatWrapping
 parquetNormalMap.wrapT = THREE.RepeatWrapping
-parquetNormalMap.repeat.set(aboutConstants.PARQUET.REPEAT, aboutConstants.PARQUET.REPEAT)
+parquetNormalMap.repeat.set(
+  laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.REPEAT,
+  laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.REPEAT,
+)
 
 const parquetRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.ROUGHNESS.ONE_K,
 )
 parquetRoughnessMap.wrapS = THREE.RepeatWrapping
 parquetRoughnessMap.wrapT = THREE.RepeatWrapping
-parquetRoughnessMap.repeat.set(aboutConstants.PARQUET.REPEAT, aboutConstants.PARQUET.REPEAT)
+parquetRoughnessMap.repeat.set(
+  laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.REPEAT,
+  laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.REPEAT,
+)
 
 // SHELF
 

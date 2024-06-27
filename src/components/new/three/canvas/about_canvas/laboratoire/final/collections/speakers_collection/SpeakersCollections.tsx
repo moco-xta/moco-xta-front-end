@@ -5,7 +5,7 @@ import { SpeakerBox } from '@/components/new/three/models/about/laboratoire/fina
 import { WorldMap } from '@/components/new/three/models/about/laboratoire/final_render/speakers_collection/WorldMap'
 import { WorldMapStand } from '@/components/new/three/models/about/laboratoire/final_render/speakers_collection/WorldMapStand'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function SpeakersCollections() {
   return (

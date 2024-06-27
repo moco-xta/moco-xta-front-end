@@ -35,9 +35,5 @@
   },
   "TONE_MAPPING": {
     "EXPOSURE": 1.25
-  },
-  "PARQUET": {
-    "REPEAT": 1,
-    "CORRECTION_GREY_RANGE": [150, 180]
   }
 }

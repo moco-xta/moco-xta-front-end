@@ -15,7 +15,7 @@ import PhysicsGround from './PhysicsGround'
 import RealTimeSky from './RealTimeSky'
 import ToneMapping from './ToneMapping'
 
-import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
 
 export default function AboutCanvas() {
   const dispatch = useDispatch<AppDispatch>()

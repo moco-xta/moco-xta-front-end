@@ -5,7 +5,6 @@ import { GLTF } from 'three-stdlib'
 
 import { ceilingLightMaterial, glassMaterial, tableLampMaterial } from '../../materials/laboratoireMaterials'
 
-import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 

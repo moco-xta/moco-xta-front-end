@@ -7,7 +7,7 @@ import { Icosahedron } from '@/components/new/three/models/about/laboratoire/fin
 import { Octahedron } from '@/components/new/three/models/about/laboratoire/final_render/shelf_collection/platonic_solids/Octahedron'
 import { Tetrahedron } from '@/components/new/three/models/about/laboratoire/final_render/shelf_collection/platonic_solids/Tetrahedron'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function PlatonicSolids() {
   return (
