@@ -73,7 +73,7 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 588,
+      "count": 524,
       "max": [1.0006474256515503, 0.22464020550251007, 1.0006475448608398],
       "min": [-1.0006473064422607, 1.2397762816362956e-7, -1.000646948814392],
       "type": "VEC3"
@@ -81,13 +81,13 @@
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 588,
+      "count": 524,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 588,
+      "count": 524,
       "type": "VEC2"
     },
     {
@@ -99,7 +99,7 @@
     {
       "bufferView": 4,
       "componentType": 5126,
-      "count": 2232,
+      "count": 2292,
       "max": [0.7108649611473083, 4.099164009094238, 0.7108650803565979],
       "min": [-1.1693249940872192, 0.22464019060134888, -1.3802274465560913],
       "type": "VEC3"
@@ -107,13 +107,13 @@
     {
       "bufferView": 5,
       "componentType": 5126,
-      "count": 2232,
+      "count": 2292,
       "type": "VEC3"
     },
     {
       "bufferView": 6,
       "componentType": 5126,
-      "count": 2232,
+      "count": 2292,
       "type": "VEC2"
     },
     {
@@ -126,56 +126,56 @@
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 7056,
+      "byteLength": 6288,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 7056,
-      "byteOffset": 7056,
+      "byteLength": 6288,
+      "byteOffset": 6288,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 4704,
-      "byteOffset": 14112,
+      "byteLength": 4192,
+      "byteOffset": 12576,
       "target": 34962
     },
     {
       "buffer": 0,
       "byteLength": 4608,
-      "byteOffset": 18816,
+      "byteOffset": 16768,
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 26784,
-      "byteOffset": 23424,
+      "byteLength": 27504,
+      "byteOffset": 21376,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 26784,
-      "byteOffset": 50208,
+      "byteLength": 27504,
+      "byteOffset": 48880,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 17856,
-      "byteOffset": 76992,
+      "byteLength": 18336,
+      "byteOffset": 76384,
       "target": 34962
     },
     {
       "buffer": 0,
       "byteLength": 18420,
-      "byteOffset": 94848,
+      "byteOffset": 94720,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 113268,
+      "byteLength": 113140,
       "uri": "WorldMapStand.bin"
     }
   ]

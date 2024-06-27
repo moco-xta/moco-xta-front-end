@@ -3,10 +3,9 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import useTextureLoader from '@/hooks/useTextureLoader'
+import { virgenDeGuadalupematerial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -17,29 +16,23 @@ type GLTFResult = GLTF & {
 
 export function VirgenDeGuadalupe({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.VIRGEN_DE_GUADALUPE,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
+      .VIRGEN_DE_GUADALUPE,
   ) as GLTFResult
-
-  const map = useTextureLoader(
-    texturesConstants.ABOUT.FINAL.VIRGEN_DE_GUADALUPE.DIFFUSE.ONE_K,
-  )
-  map.flipY = false
 
   return (
     <mesh
+      name='VirgenDeGuadalupe'
       geometry={nodes.VirgenDeGuadalupe.geometry}
+      material={virgenDeGuadalupematerial}
       position={position}
       receiveShadow
       castShadow
-    >
-      <meshStandardMaterial
-        attach='material'
-        map={map}
-        roughness={0.2}
-        side={THREE.DoubleSide}
-      />
-    </mesh>
+    />
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.VIRGEN_DE_GUADALUPE)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
+    .VIRGEN_DE_GUADALUPE,
+)

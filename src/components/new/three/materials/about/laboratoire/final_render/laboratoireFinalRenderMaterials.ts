@@ -135,6 +135,14 @@ export const monarchShadowMaterial = new THREE.MeshStandardMaterial({
   map: laboratoireFinalRenderTextures.monarchShadow.map,
 })
 
+// PABLO ESCOBAR
+
+export const pabloEscobarMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.pabloEscobar.map,
+  roughness: 0.3,
+  side: THREE.DoubleSide,
+})
+
 // PLATONIC SOLIDS
 
 export const getPlatonicSolidMaterial = (color: string) => {
@@ -168,7 +176,7 @@ export const screenFrameMaterial = new THREE.MeshStandardMaterial({
 export const shelfMaterial = new THREE.MeshStandardMaterial({
   map: laboratoireFinalRenderTextures.shelf.map,
   roughnessMap: laboratoireFinalRenderTextures.shelf.roughnessMap,
-  normalMap: laboratoireFinalRenderTextures.shelf.normalMap
+  normalMap: laboratoireFinalRenderTextures.shelf.normalMap,
 })
 
 // SPEAKERS
@@ -231,6 +239,14 @@ export const vinylDiscBackMaterial = new THREE.MeshStandardMaterial({
   roughness: 0.7,
 })
 
+// VIRGEN DE GUADALUPE
+
+export const virgenDeGuadalupematerial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.virgenDeGuadalupe.map,
+  roughness: 0.5,
+  side: THREE.DoubleSide,
+})
+
 // WALL CLOCK
 
 export const mondaineWallClockMaterial = new THREE.MeshStandardMaterial({
@@ -261,4 +277,29 @@ export const wallClockPlaticBlackMaterial = new THREE.MeshStandardMaterial({
 
 export const wallMaterial = new THREE.MeshStandardMaterial({
   color: '#fff',
+})
+
+// WORLD MAP
+
+export const worldMapMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.worldMap.map,
+  metalness: 0.1,
+  roughness: 0.6,
+})
+
+export const worldMapStandMarbleMaterial = new THREE.MeshStandardMaterial({
+  /* color: '#555', */
+  map: laboratoireFinalRenderTextures.worldMapStandMarble.map,
+  metalness: 0.2,
+  /* metalnessMap: laboratoireFinalRenderTextures.worldMapStandMarble.roughnessMap, */
+  /* roughness: 0.2, */
+  roughnessMap: laboratoireFinalRenderTextures.worldMapStandMarble.roughnessMap,
+  normalMap: laboratoireFinalRenderTextures.worldMapStandMarble.normalMap,
+})
+
+export const worldMapStandUsedMetalMaterial = new THREE.MeshStandardMaterial({
+  metalness: 0.6,
+  roughnessMap:
+    laboratoireFinalRenderTextures.worldMapStandUsedMetal.roughnessMap,
+  normalMap: laboratoireFinalRenderTextures.worldMapStandUsedMetal.normalMap,
 })

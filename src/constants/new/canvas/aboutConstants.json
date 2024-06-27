@@ -23,7 +23,7 @@
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
-      "INTENSITY": 0.25
+      "INTENSITY": 0.2
     },
     "LABORATOIRE": {
       "FINAL_RENDER": {
@@ -39,7 +39,7 @@
             "Z": 26.5
           },
           "COLOR": "#ffffff",
-          "INTENSITY": 10,
+          "INTENSITY": 6,
           "DISTANCE": 52,
           "ANGLE": 1.87,
           "PENUMBRA": 0.9,

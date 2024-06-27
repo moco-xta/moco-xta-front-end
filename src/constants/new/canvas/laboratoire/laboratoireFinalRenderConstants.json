@@ -110,6 +110,13 @@
     ]
   },
   "SHELF_COLLECTION": {
+    "PABLO_ESCOBAR": {
+      "POSITION": {
+        "X": 4.936,
+        "Y": 18.127,
+        "Z": -15.546
+      }
+    },
     "PLATONIC_SOLIDS": {
       "CUBE": {
         "POSITION": {
@@ -153,6 +160,13 @@
         "Y": 18,
         "Z": -16
       }
+    },
+    "VIRGEN_DE_GUADALUPE": {
+      "POSITION": {
+        "X": -4.512,
+        "Y": 18.127,
+        "Z": -15.546
+      }
     }
   },
   "SPEAKERS_COLLECTION": {
@@ -177,6 +191,30 @@
     "SPEAKERS": {
       "NUMBER": 4,
       "GAP": 2.25
+    },
+    "WORLD_MAP": {
+      "POSITION": {
+        "X": -12.188,
+        "Y": 12.685,
+        "Z": -14.096
+      },
+      "ROTATION": {
+        "X": 0,
+        "Y": -20,
+        "Z": 15.011494
+      }
+    },
+    "WORLD_MAP_STAND": {
+      "POSITION": {
+        "X": -12.2,
+        "Y": 10.333,
+        "Z": -14.1
+      },
+      "ROTATION": {
+        "X": 0,
+        "Y": 30,
+        "Z": 0
+      }
     }
   },
   "WALLS_COLLECTION": {

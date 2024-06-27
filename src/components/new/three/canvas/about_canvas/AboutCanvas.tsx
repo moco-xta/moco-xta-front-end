@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Canvas } from '@react-three/fiber'
-import { DeviceOrientationControls } from '@react-three/drei'
+import { DeviceOrientationControls, PerspectiveCamera } from '@react-three/drei'
 import { Debug, Physics } from '@react-three/cannon'
 import { isMobile } from 'react-device-detect'
 
@@ -50,6 +50,10 @@ export default function AboutCanvas() {
         powerPreference: aboutConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
+      <PerspectiveCamera
+        makeDefault
+        fov={aboutConstants.PERSPECTIVE_CAMERA.FOV}
+      />
       <Lights />
       <Suspense fallback={null}>
         <Physics>

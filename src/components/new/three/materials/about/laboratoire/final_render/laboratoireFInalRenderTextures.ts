@@ -113,6 +113,14 @@ const monarchShadowMap = new THREE.TextureLoader().load(
 )
 monarchShadowMap.flipY = false
 
+// PABALO ESCOBAR
+
+const pabloEscobarMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
+    .PABLO_ESCOBAR.DIFFUSE,
+)
+pabloEscobarMap.flipY = false
+
 // PARQUET
 
 const parquetMap = new THREE.TextureLoader().load(
@@ -162,17 +170,20 @@ parquetRoughnessMap.repeat.set(
 // SHELF
 
 const shelfMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.DIFFUSE.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF
+    .DIFFUSE.FOUR_K,
 )
 shelfMap.flipY = false
 
 const shelfRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.ROUGHNESS.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF
+    .ROUGHNESS.FOUR_K,
 )
 shelfRoughnessMap.flipY = false
 
 const shelfNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.NORMAL.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.NORMAL
+    .FOUR_K,
 )
 shelfNormalMap.flipY = false
 
@@ -230,6 +241,14 @@ const trinityFrameNormalMap = new THREE.TextureLoader().load(
 )
 trinityFrameNormalMap.flipY = false
 
+// VIRGEN DE GUADALUPE
+
+const virgenDeGuadalupeMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
+    .VIRGEN_DE_GUADALUPE.DIFFUSE.ONE_K,
+)
+virgenDeGuadalupeMap.flipY = false
+
 // WALL CLOCK
 
 const mondaineWallClockMap = new THREE.TextureLoader().load(
@@ -261,6 +280,44 @@ const wallClockBrushedMetalBumpMap = new THREE.TextureLoader().load(
     .WALL_CLOCK_COLLECTION.WALL_CLOCK_BRUSHED_METAL.BUMP.ONE_K,
 )
 wallClockBrushedMetalBumpMap.flipY = false
+
+// WORLD MAP
+
+const worldMapMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP
+    .DIFFUSE.ONE_K,
+)
+worldMapMap.flipY = false
+
+const worldMapStandMarbleMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION
+    .WORLD_MAP_STAND.MARBLE.DIFFUSE.FOUR_K,
+)
+worldMapStandMarbleMap.flipY = false
+
+const worldMapStandMarbleRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION
+    .WORLD_MAP_STAND.MARBLE.ROUGHNESS.FOUR_K,
+)
+worldMapStandMarbleRoughnessMap.flipY = false
+
+const worldMapStandMarbleNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION
+    .WORLD_MAP_STAND.MARBLE.NORMAL.FOUR_K,
+)
+worldMapStandMarbleNormalMap.flipY = false
+
+const worldMapStandUsedMetalRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION
+    .WORLD_MAP_STAND.USED_METAL.ROUGHNESS.FOUR_K,
+)
+worldMapStandUsedMetalRoughnessMap.flipY = false
+
+const worldMapStandUsedMetalNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION
+    .WORLD_MAP_STAND.USED_METAL.NORMAL.FOUR_K,
+)
+worldMapStandUsedMetalNormalMap.flipY = false
 
 // TEXTURES
 
@@ -303,6 +360,9 @@ const laboratoireFinalRenderTextures: {
   mondaineWallClock: {
     map: mondaineWallClockMap,
   },
+  pabloEscobar: {
+    map: pabloEscobarMap,
+  },
   parquet: {
     map: parquetMap,
     roughnessMap: parquetRoughnessMap,
@@ -330,11 +390,26 @@ const laboratoireFinalRenderTextures: {
     roughnessMap: trinityFrameRoughnessMap,
     normalMap: trinityFrameNormalMap,
   },
+  virgenDeGuadalupe: {
+    map: virgenDeGuadalupeMap,
+  },
   wallClockBrushedMetal: {
     map: wallClockBrushedMetalMap,
     roughnessMap: wallClockBrushedMetalRoughnessMap,
     normalMap: wallClockBrushedMetalNormalMap,
     bumpMap: wallClockBrushedMetalBumpMap,
+  },
+  worldMap: {
+    map: worldMapMap,
+  },
+  worldMapStandMarble: {
+    map: worldMapStandMarbleMap,
+    roughnessMap: worldMapStandMarbleRoughnessMap,
+    normalMap: worldMapStandMarbleNormalMap,
+  },
+  worldMapStandUsedMetal: {
+    roughnessMap: worldMapStandUsedMetalRoughnessMap,
+    normalMap: worldMapStandUsedMetalNormalMap,
   },
 }
 
