@@ -95,6 +95,7 @@
           "FRAMES_COLLECTION": {
             "AMOR_LLAMA_AMOR": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/AmorLlamaAmor.gltf",
             "BRAIN": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Brain.gltf",
+            "CELESTIAL_MAP": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/CelestialMap.gltf",
             "MONARCH": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Monarch.gltf",
             "TRINITY": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Trinity.gltf"
           },

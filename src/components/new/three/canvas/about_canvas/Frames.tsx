@@ -9,7 +9,6 @@ import { NicotianaRustica } from '../../models/about/NicotianaRustica'
 export default function Frames() {
   return (
     <>
-      <Brain position={[-19.06, 10, -16]} />
       <CelestialMap position={[10.1, 10.2, -16]} />
       <Couronnes position={[0, 25.6, -16]} />
       <FrameGlasses position={[-19.06, 10, -16]} />

@@ -38,6 +38,21 @@ export const brassMaterial = new THREE.MeshStandardMaterial({
   roughness: 0.5,
 })
 
+// CELESTIAL MAP
+
+export const celestialMapMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.celestialMap.map,
+})
+
+export const celestialMapFrameMaterial = new THREE.MeshStandardMaterial({
+  /* color: '#433', */
+  map: laboratoireFinalRenderTextures.celestialMapFrame.map,
+  /* metalnessMap: laboratoireFinalRenderTextures.celestialMapFrame.roughnessMap, */
+  /* roughness: 0.3, */
+  roughnessMap: laboratoireFinalRenderTextures.celestialMapFrame.roughnessMap,
+  normalMap: laboratoireFinalRenderTextures.celestialMapFrame.normalMap,
+})
+
 // DEFAULT MATERIAL
 
 export const defaultMaterial = new THREE.MeshStandardMaterial({})

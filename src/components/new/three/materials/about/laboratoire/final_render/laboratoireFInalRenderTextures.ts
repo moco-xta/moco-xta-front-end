@@ -37,6 +37,32 @@ const brainFrameNormalMap = new THREE.TextureLoader().load(
 )
 brainFrameNormalMap.flipY = false
 
+// CELESTIAL MAP
+
+const celestialMapMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP.DIFFUSE,
+)
+celestialMapMap.flipY = false
+
+const celestialMapFrameMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME.DIFFUSE.FOUR_K,
+)
+celestialMapFrameMap.flipY = false
+
+const celestialMapFrameRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME.ROUGHNESS.FOUR_K,
+)
+celestialMapFrameRoughnessMap.flipY = false
+
+const celestialMapFrameNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME.NORMAL.FOUR_K,
+)
+celestialMapFrameNormalMap.flipY = false
+
 // DESK CHAIR
 
 const deskChairLeatherMap = new THREE.TextureLoader().load(
@@ -334,6 +360,14 @@ const laboratoireFinalRenderTextures: {
     map: brainFrameMap,
     roughnessMap: brainFrameRoughnessMap,
     normalMap: brainFrameNormalMap,
+  },
+  celestialMap: {
+    map: celestialMapMap,
+  },
+  celestialMapFrame: {
+    map: celestialMapFrameMap,
+    roughnessMap: celestialMapFrameRoughnessMap,
+    normalMap: celestialMapFrameNormalMap,
   },
   deskChair: {
     map: deskChairLeatherMap,

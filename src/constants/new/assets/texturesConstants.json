@@ -173,6 +173,28 @@
                 }
               }
             },
+            "CELESTIAL_MAP": {
+              "CELESTIAL_MAP": {
+                "DIFFUSE": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_diffuse.jpg"
+              },
+              "CELESTIAL_MAP_FRAME": {
+                "DIFFUSE": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_diffuse_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_diffuse_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_diffuse_1K.jpg"
+                },
+                "ROUGHNESS": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_roughness_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_roughness_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_roughness_1K.jpg"
+                },
+                "NORMAL": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_normal_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_normal_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_normal_1K.jpg"
+                }
+              }
+            },
             "MONARCH": {
               "MONARCH": {
                 "DIFFUSE": {

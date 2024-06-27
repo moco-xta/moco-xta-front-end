@@ -3,6 +3,7 @@ import * as THREE from 'three'
 
 import { AmorLlamaAmor } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/AmorLlamaAmor'
 import { Brain } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Brain'
+import { CelestialMap } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/CelestialMap'
 import { Monarch } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Monarch'
 import { Trinity } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Trinity'
 
@@ -26,6 +27,15 @@ export default function FramesCollection() {
             laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.POSITION.X,
             laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.POSITION.Y,
             laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.POSITION.Z,
+          )
+        }
+      />
+      <CelestialMap
+        position={
+          new THREE.Vector3(
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.POSITION.X,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.POSITION.Y,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.POSITION.Z,
           )
         }
       />
