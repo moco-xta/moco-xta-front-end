@@ -21,9 +21,7 @@ const ColorPadRedux = forwardRef<
   >,
   MeshProps
 >(function ColorPadRedux({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.COLOR_PAD_REDUX,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_REDUX) as GLTFResult
   return (
     <mesh
       name={name}

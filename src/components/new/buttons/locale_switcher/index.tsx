@@ -23,9 +23,7 @@ export default function LocaleSwitcher() {
 
   const dispatch = useDispatch<AppDispatch>()
 
-  const localeSwitcherIsOpen = useSelector(
-    (state: RootState) => state.appState.localeSwitcherIsOpen,
-  )
+  const localeSwitcherIsOpen = useSelector((state: RootState) => state.appState.localeSwitcherIsOpen)
 
   const { isDesktop } = useResize()
 
@@ -64,22 +62,12 @@ export default function LocaleSwitcher() {
           id='caret'
           size={14}
         />
-        <span id='selected'>
-          {isDesktop
-            ? currentLocale.toUpperCase()
-            : t(currentLocale.toUpperCase())}
-        </span>
+        <span id='selected'>{isDesktop ? currentLocale.toUpperCase() : t(currentLocale.toUpperCase())}</span>
       </div>
       {localeSwitcherIsOpen && (
         <ul id='locale_options'>
-          {localesConstants.LOCALES.filter(
-            (locale_constant) => locale_constant !== locale,
-          )
-            .sort((a, b) =>
-              t(`LOCALES.${a.toUpperCase()}`).localeCompare(
-                t(`LOCALES.${b.toUpperCase()}`),
-              ),
-            )
+          {localesConstants.LOCALES.filter((locale_constant) => locale_constant !== locale)
+            .sort((a, b) => t(`LOCALES.${a.toUpperCase()}`).localeCompare(t(`LOCALES.${b.toUpperCase()}`)))
             .map((locale_constant, index) => {
               const cssVar = {
                 '--i': localesConstants.LOCALES.length - index,

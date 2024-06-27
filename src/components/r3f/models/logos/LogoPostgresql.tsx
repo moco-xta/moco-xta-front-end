@@ -20,13 +20,11 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoPostgresql = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoPostgresql({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_POSTGRESQL,
-  ) as GLTFResult
+const LogoPostgresql = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoPostgresql(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_POSTGRESQL) as GLTFResult
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

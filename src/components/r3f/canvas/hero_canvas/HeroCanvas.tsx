@@ -1,10 +1,6 @@
 import React, { Suspense, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
-import {
-  Environment,
-  OrbitControls,
-  PerspectiveCamera,
-} from '@react-three/drei'
+import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import useIsMobile from '@/hooks/useIsMobile'
@@ -48,11 +44,7 @@ export default function HeroCanvas() {
       <Suspense>
         <Physics
           /* debug */
-          gravity={[
-            heroConstants.PHYSICS.GRAVITY.X,
-            heroConstants.PHYSICS.GRAVITY.Y,
-            heroConstants.PHYSICS.GRAVITY.Z,
-          ]}
+          gravity={[heroConstants.PHYSICS.GRAVITY.X, heroConstants.PHYSICS.GRAVITY.Y, heroConstants.PHYSICS.GRAVITY.Z]}
         >
           <HeroScene />
           <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />

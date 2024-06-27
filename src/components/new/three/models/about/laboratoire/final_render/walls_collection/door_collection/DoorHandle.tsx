@@ -20,8 +20,7 @@ type GLTFResult = GLTF & {
 
 export function DoorHandle({ position }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .DOOR_COLLECTION.DOOR_HANDLE,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.DOOR_COLLECTION.DOOR_HANDLE,
   ) as GLTFResult
 
   return (
@@ -48,7 +47,4 @@ export function DoorHandle({ position }: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.DOOR_COLLECTION
-    .DOOR_HANDLE,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.DOOR_COLLECTION.DOOR_HANDLE)

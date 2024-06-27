@@ -10,13 +10,10 @@ import { PointerLockControls } from '@react-three/drei'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 
-export const CannonPlayer = ({
-  pointerLockControlsSelector,
-}: CannonPlayerInterface) => {
+export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterface) => {
   const { camera, gl } = useThree()
 
-  const { moveBackward, moveForward, moveRight, moveLeft, jump } =
-    useMinecraftKeyboard()
+  const { moveBackward, moveForward, moveRight, moveLeft, jump } = useMinecraftKeyboard()
 
   const [ref, api] = useCylinder<THREE.Mesh>(() => ({
     mass: 1,
@@ -56,25 +53,16 @@ export const CannonPlayer = ({
     camera.position.copy(
       new THREE.Vector3(
         playerPosition.current[0],
-        playerPosition.current[1] +
-          aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+        playerPosition.current[1] + aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
         playerPosition.current[2],
       ),
     )
 
     const direction = new THREE.Vector3()
 
-    const frontVector = new THREE.Vector3(
-      0,
-      0,
-      (moveBackward ? 1 : 0) - (moveForward ? 1 : 0),
-    )
+    const frontVector = new THREE.Vector3(0, 0, (moveBackward ? 1 : 0) - (moveForward ? 1 : 0))
 
-    const sideVector = new THREE.Vector3(
-      (moveLeft ? 1 : 0) - (moveRight ? 1 : 0),
-      0,
-      0,
-    )
+    const sideVector = new THREE.Vector3((moveLeft ? 1 : 0) - (moveRight ? 1 : 0), 0, 0)
 
     direction
       .subVectors(frontVector, sideVector)
@@ -85,11 +73,7 @@ export const CannonPlayer = ({
     api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
 
     if (jump && Math.abs(playerVelocity.current[1]) < 0.05) {
-      api.velocity.set(
-        playerVelocity.current[0],
-        aboutConstants.PLAYER.JUMP_FORCE,
-        playerVelocity.current[2],
-      )
+      api.velocity.set(playerVelocity.current[0], aboutConstants.PLAYER.JUMP_FORCE, playerVelocity.current[2])
     }
   })
 

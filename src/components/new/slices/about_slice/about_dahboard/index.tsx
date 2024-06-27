@@ -7,9 +7,7 @@ import PressEscToLeave from './press_esc_to_leave'
 
 import './index.scss'
 
-export default function AboutDashboard({
-  showInstructions,
-}: AboutDashboardInterface) {
+export default function AboutDashboard({ showInstructions }: AboutDashboardInterface) {
   return (
     <div
       id='about_dashboard'

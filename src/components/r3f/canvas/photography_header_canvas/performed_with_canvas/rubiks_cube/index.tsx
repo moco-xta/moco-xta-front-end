@@ -12,9 +12,7 @@ export default function RubiksCube() {
   const rubiksCubeRef = useRef<THREE.Group>(null!)
   let colorPadIndex = useRef<number>(0)
 
-  const colors: string[] = rubiksCubeConstants.RUBIKS_CUBE.COLORS.map(
-    (color) => color,
-  )
+  const colors: string[] = rubiksCubeConstants.RUBIKS_CUBE.COLORS.map((color) => color)
 
   useEffect(() => {
     const colorPads: THREE.Object3D<THREE.Object3DEventMap>[] = []
@@ -24,12 +22,7 @@ export default function RubiksCube() {
         .forEach((child) => {
           colorPads.push(child)
           const normal = new THREE.Vector3(0, 1, 0)
-          const euler = new THREE.Euler(
-            child.rotation.x,
-            child.rotation.y,
-            child.rotation.z,
-            'XYZ',
-          )
+          const euler = new THREE.Euler(child.rotation.x, child.rotation.y, child.rotation.z, 'XYZ')
           normal.applyEuler(euler)
           // @ts-ignore
           child.material.color = setPadColor(normal, colors)
@@ -47,11 +40,7 @@ export default function RubiksCube() {
 
               return (
                 <>
-                  {!(
-                    coordinates.x === 0 &&
-                    coordinates.y === 0 &&
-                    coordinates.z === 0
-                  ) && (
+                  {!(coordinates.x === 0 && coordinates.y === 0 && coordinates.z === 0) && (
                     <CubeGroup
                       colorPadIndex={colorPadIndex}
                       coordinates={coordinates}

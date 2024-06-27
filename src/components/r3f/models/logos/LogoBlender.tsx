@@ -20,13 +20,11 @@ type GltfResultType = GLTF & {
   }
 }
 
-const LogoBlender = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoBlender({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_BLENDER,
-  ) as GltfResultType
+const LogoBlender = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoBlender(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_BLENDER) as GltfResultType
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

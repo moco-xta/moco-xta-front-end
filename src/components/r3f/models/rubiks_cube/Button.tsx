@@ -22,13 +22,7 @@ interface ButtonInterface extends GroupProps {
   isRotating: boolean
 }
 
-export function Button({
-  position,
-  rotation,
-  onClick,
-  arrow,
-  isRotating,
-}: ButtonInterface) {
+export function Button({ position, rotation, onClick, arrow, isRotating }: ButtonInterface) {
   const { nodes, materials } = useGLTF(gltfConstants.BUTTON) as GLTFResult
 
   const [hovered, setHovered] = useState<boolean>(false)

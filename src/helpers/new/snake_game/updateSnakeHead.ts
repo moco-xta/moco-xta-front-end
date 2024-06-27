@@ -1,8 +1,4 @@
-import {
-  FoodInterface,
-  SnakeCellInterface,
-  UpdateSnakeHeadInterface,
-} from '@/interfaces/new/newSnakeGameInterfaces'
+import { FoodInterface, SnakeCellInterface, UpdateSnakeHeadInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
 import { isEating, updateDirection } from '@/helpers/new/snake_game'
 
@@ -16,8 +12,7 @@ export function updateSnakeHead(
   score: number,
 ): UpdateSnakeHeadInterface {
   let newDirection: string = direction
-  if (nextMove !== 'ArrowUp')
-    newDirection = updateDirection(direction, nextMove)
+  if (nextMove !== 'ArrowUp') newDirection = updateDirection(direction, nextMove)
   let newSnakeHead: SnakeCellInterface
   newSnakeHead = {
     type: 'HEAD',
@@ -28,16 +23,14 @@ export function updateSnakeHead(
             ? snakeHead.position.x - 1 < 0
               ? snakeGameConstants.SNAKE_GAME.BOARD.WIDTH - 1
               : snakeHead.position.x - 1
-            : snakeHead.position.x + 1 >=
-                snakeGameConstants.SNAKE_GAME.BOARD.WIDTH
+            : snakeHead.position.x + 1 >= snakeGameConstants.SNAKE_GAME.BOARD.WIDTH
               ? 0
               : snakeHead.position.x + 1
           : snakeHead.position.x,
       z:
         newDirection === 'NORTH' || newDirection === 'SOUTH'
           ? newDirection === 'NORTH'
-            ? snakeHead.position.z + 1 >=
-              snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT
+            ? snakeHead.position.z + 1 >= snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT
               ? 0
               : snakeHead.position.z + 1
             : snakeHead.position.z - 1 < 0

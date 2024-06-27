@@ -29,50 +29,22 @@ import AmorLlamaAmorSquare from '../../models/about/squares/amor_llama_amor/Amor
 export default function AboutScene() {
   return (
     <>
-      <Trinity
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <TrinityGlass
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <TrinitySquare
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
+      <Trinity rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <TrinityGlass rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <TrinitySquare rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
       <Brain rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
-      <BrainGlass
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <BrainSquare
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <Couronnes
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <Butterfly
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <ButterflyGlass
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <ButterflyBackground
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <ButterflySquare
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
+      <BrainGlass rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <BrainSquare rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <Couronnes rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <Butterfly rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <ButterflyGlass rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <ButterflyBackground rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <ButterflySquare rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
 
-      <AmorLlamaAmor
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <AmorLlamaAmorGlass
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <AmorLlamaAmorSquare
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
-      <MurNord
-        rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)}
-      />
+      <AmorLlamaAmor rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <AmorLlamaAmorGlass rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <AmorLlamaAmorSquare rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
+      <MurNord rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(180), 0)} />
 
       <MacBookPro />
       <Box

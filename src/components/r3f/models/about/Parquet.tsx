@@ -19,26 +19,17 @@ export function Parquet() {
   const bumpMap = useTextureLoader(texturesConstants.PARQUET_BUMP)
   bumpMap.wrapS = THREE.RepeatWrapping
   bumpMap.wrapT = THREE.RepeatWrapping
-  bumpMap.repeat.set(
-    AboutConstants.PARQUET.REPEAT,
-    AboutConstants.PARQUET.REPEAT,
-  )
+  bumpMap.repeat.set(AboutConstants.PARQUET.REPEAT, AboutConstants.PARQUET.REPEAT)
 
   const normalMap = useTextureLoader(texturesConstants.PARQUET_NORMAL)
   normalMap.wrapS = THREE.RepeatWrapping
   normalMap.wrapT = THREE.RepeatWrapping
-  normalMap.repeat.set(
-    AboutConstants.PARQUET.REPEAT,
-    AboutConstants.PARQUET.REPEAT,
-  )
+  normalMap.repeat.set(AboutConstants.PARQUET.REPEAT, AboutConstants.PARQUET.REPEAT)
 
   const roughnessMap = useTextureLoader(texturesConstants.PARQUET_ROUGHNESS)
   roughnessMap.wrapS = THREE.RepeatWrapping
   roughnessMap.wrapT = THREE.RepeatWrapping
-  roughnessMap.repeat.set(
-    AboutConstants.PARQUET.REPEAT,
-    AboutConstants.PARQUET.REPEAT,
-  )
+  roughnessMap.repeat.set(AboutConstants.PARQUET.REPEAT, AboutConstants.PARQUET.REPEAT)
 
   useEffect(() => {
     gltf.scene.traverse((object) => {
@@ -54,8 +45,7 @@ export function Parquet() {
             AboutConstants.PARQUET.GREY_GRADIENT[
               Math.floor(
                 Math.random() *
-                  (AboutConstants.PARQUET.MAX_GREY_GRADIENT_RANGE -
-                    AboutConstants.PARQUET.MIN_GREY_GRADIENT_RANGE) +
+                  (AboutConstants.PARQUET.MAX_GREY_GRADIENT_RANGE - AboutConstants.PARQUET.MIN_GREY_GRADIENT_RANGE) +
                   AboutConstants.PARQUET.MIN_GREY_GRADIENT_RANGE,
               )
             ],

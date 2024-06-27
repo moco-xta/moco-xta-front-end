@@ -24,16 +24,10 @@ import './index.scss'
 export default function AddReviewSlice() {
   const t = useTranslations()
 
-  const isAuthenticated = useSelector(
-    (state: RootState) => state.authentication.isAuthenticated,
-  )
+  const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
-  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(
-    !isAuthenticated ? true : false,
-  )
-  const [resetButtonIsDisabled, setResetButtonIsDisabled] = useState<boolean>(
-    !isAuthenticated ? true : false,
-  )
+  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(!isAuthenticated ? true : false)
+  const [resetButtonIsDisabled, setResetButtonIsDisabled] = useState<boolean>(!isAuthenticated ? true : false)
 
   useEffect(() => {
     if (isAuthenticated) {

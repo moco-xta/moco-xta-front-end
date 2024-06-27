@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_gsap_#87cf01",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.24232159554958344, 0.6239334940910339, 0.0003036604612134397, 1
-        ],
+        "baseColorFactor": [0.24232159554958344, 0.6239334940910339, 0.0003036604612134397, 1],
         "metallicFactor": 0
       }
     }

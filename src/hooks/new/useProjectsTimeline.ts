@@ -2,10 +2,7 @@ import { useEffect, useState } from 'react'
 
 import useScroll from '@/hooks/useScroll'
 
-import {
-  CompanyOrSchollDataInterface,
-  ProjectDataInterface,
-} from '@/interfaces/dataInterfaces'
+import { CompanyOrSchollDataInterface, ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
 import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 
@@ -16,14 +13,10 @@ export default function useProjectsTimeline(
   const { y, offsetHeight, clientHeight } = useScroll()
 
   const [currentProject, setCurrentProject] = useState<number>(0)
-  const [currentCompanyOrSchool, setCurrentCompanyOrSchool] =
-    useState<number>(0)
+  const [currentCompanyOrSchool, setCurrentCompanyOrSchool] = useState<number>(0)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
-    getDifferenceBetweenTwoDatesInDays(
-      new Date(),
-      new Date(projectsData[projectsData.length - 1].dates.from),
-    ),
+    getDifferenceBetweenTwoDatesInDays(new Date(), new Date(projectsData[projectsData.length - 1].dates.from)),
   )
   const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
 
@@ -36,13 +29,7 @@ export default function useProjectsTimeline(
 
   useEffect(() => {
     const differenceBetweenTodayAndCurrentDate = Math.round(y / deltaPerDay)
-    setCurrentDate(
-      new Date(
-        new Date().setDate(
-          new Date().getDate() - differenceBetweenTodayAndCurrentDate,
-        ),
-      ),
-    )
+    setCurrentDate(new Date(new Date().setDate(new Date().getDate() - differenceBetweenTodayAndCurrentDate)))
   }, [y, deltaPerDay])
 
   useEffect(() => {
@@ -55,8 +42,7 @@ export default function useProjectsTimeline(
     })
     companiesAndSchollData.forEach((companyOrSchool, index) => {
       if (
-        currentDate.getTime() >
-          new Date(companyOrSchool.dates.from).getTime() &&
+        currentDate.getTime() > new Date(companyOrSchool.dates.from).getTime() &&
         currentDate.getTime() < new Date(companyOrSchool.dates.to).getTime()
       )
         setCurrentCompanyOrSchool(index)

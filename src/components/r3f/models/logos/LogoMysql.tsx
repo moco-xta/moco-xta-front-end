@@ -18,13 +18,11 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoMysql = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoMysql({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_MYSQL,
-  ) as GLTFResult
+const LogoMysql = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoMysql(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_MYSQL) as GLTFResult
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

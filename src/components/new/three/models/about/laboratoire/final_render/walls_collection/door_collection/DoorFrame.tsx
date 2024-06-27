@@ -16,8 +16,7 @@ type GLTFResult = GLTF & {
 
 export function DoorFrame({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .DOOR_COLLECTION.DOOR_FRAME,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.DOOR_COLLECTION.DOOR_FRAME,
   ) as GLTFResult
 
   return (
@@ -31,7 +30,4 @@ export function DoorFrame({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.DOOR_COLLECTION
-    .DOOR_FRAME,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.DOOR_COLLECTION.DOOR_FRAME)

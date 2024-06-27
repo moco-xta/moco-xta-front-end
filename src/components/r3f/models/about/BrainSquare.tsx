@@ -15,10 +15,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function BrainSquare({
-  position,
-  rotation,
-}: JSX.IntrinsicElements['group']) {
+export function BrainSquare({ position, rotation }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.BRAIN_SQUARE) as GLTFResult
   return (
     <mesh

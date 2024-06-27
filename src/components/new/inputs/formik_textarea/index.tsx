@@ -24,10 +24,7 @@ export default function FormikTextarea(props: FormikTextareaInterface) {
     inputStyle,
   } = props
 
-  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
-    name,
-    value,
-  )
+  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(name, value)
 
   useEffect(() => {
     if (storedValue) setFieldValue(name, storedValue)

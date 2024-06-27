@@ -1,36 +1,18 @@
 'use client'
 
-import {
-  ReactNode,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from 'react'
+import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
 
 import Loading from '../app/[locale]/loading'
 
 const IsClientContext = createContext(false)
 
-export const IsClientContextProvider = ({
-  children,
-}: {
-  children: ReactNode
-}) => {
+export const IsClientContextProvider = ({ children }: { children: ReactNode }) => {
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => setIsClient(true), [])
 
   return (
-    <>
-      {!isClient ? (
-        <Loading />
-      ) : (
-        <IsClientContext.Provider value={isClient}>
-          {children}
-        </IsClientContext.Provider>
-      )}
-    </>
+    <>{!isClient ? <Loading /> : <IsClientContext.Provider value={isClient}>{children}</IsClientContext.Provider>}</>
   )
 }
 

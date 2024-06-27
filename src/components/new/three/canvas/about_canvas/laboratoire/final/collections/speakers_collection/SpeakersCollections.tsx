@@ -10,21 +10,13 @@ import { default as laboratoireFinalRenderConstants } from '@/constants/new/canv
 export default function SpeakersCollections() {
   return (
     <>
-      {laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.SPEAKER_BOXES.map(
-        (speakerBox) => (
-          <SpeakerBox
-            key={speakerBox.NAME}
-            name={speakerBox.NAME}
-            position={
-              new THREE.Vector3(
-                speakerBox.POSITION.X,
-                speakerBox.POSITION.Y,
-                speakerBox.POSITION.Z,
-              )
-            }
-          />
-        ),
-      )}
+      {laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.SPEAKER_BOXES.map((speakerBox) => (
+        <SpeakerBox
+          key={speakerBox.NAME}
+          name={speakerBox.NAME}
+          position={new THREE.Vector3(speakerBox.POSITION.X, speakerBox.POSITION.Y, speakerBox.POSITION.Z)}
+        />
+      ))}
       <WorldMap
         position={
           new THREE.Vector3(
@@ -35,18 +27,9 @@ export default function SpeakersCollections() {
         }
         rotation={
           new THREE.Euler(
-            THREE.MathUtils.degToRad(
-              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP
-                .ROTATION.X,
-            ),
-            THREE.MathUtils.degToRad(
-              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP
-                .ROTATION.Y,
-            ),
-            THREE.MathUtils.degToRad(
-              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP
-                .ROTATION.Z,
-            ),
+            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP.ROTATION.X),
+            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP.ROTATION.Y),
+            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP.ROTATION.Z),
           )
         }
       />
@@ -60,18 +43,9 @@ export default function SpeakersCollections() {
         }
         rotation={
           new THREE.Euler(
-            THREE.MathUtils.degToRad(
-              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION
-                .WORLD_MAP_STAND.ROTATION.X,
-            ),
-            THREE.MathUtils.degToRad(
-              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION
-                .WORLD_MAP_STAND.ROTATION.Y,
-            ),
-            THREE.MathUtils.degToRad(
-              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION
-                .WORLD_MAP_STAND.ROTATION.Z,
-            ),
+            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP_STAND.ROTATION.X),
+            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP_STAND.ROTATION.Y),
+            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP_STAND.ROTATION.Z),
           )
         }
       />

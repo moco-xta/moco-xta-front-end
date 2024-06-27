@@ -16,10 +16,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function CouronneSquare({
-  position,
-  rotation,
-}: JSX.IntrinsicElements['group']) {
+export function CouronneSquare({ position, rotation }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.COURONNE_SQUARE) as GLTFResult
   return (
     <group

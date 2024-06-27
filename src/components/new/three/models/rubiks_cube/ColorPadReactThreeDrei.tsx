@@ -21,9 +21,7 @@ const ColorPadReactThreeDrei = forwardRef<
   >,
   MeshProps
 >(function ColorPadReactThreeDrei({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.COLOR_PAD_REACT_THREE_DREI,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_REACT_THREE_DREI) as GLTFResult
   return (
     <mesh
       name={name}

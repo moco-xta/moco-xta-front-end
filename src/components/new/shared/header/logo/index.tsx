@@ -3,11 +3,7 @@ import Link from 'next/link'
 import { useDispatch } from 'react-redux'
 
 import { AppDispatch } from '@/redux/store'
-import {
-  setAuthenticationIsOpen,
-  setLocaleSwitcherIsOpen,
-  setMenuIsOpen,
-} from '@/redux/slice/appStateSlice'
+import { setAuthenticationIsOpen, setLocaleSwitcherIsOpen, setMenuIsOpen } from '@/redux/slice/appStateSlice'
 
 import { Routes } from '@/routes/new/routes'
 

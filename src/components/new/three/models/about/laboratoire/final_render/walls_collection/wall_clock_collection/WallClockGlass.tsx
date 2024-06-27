@@ -16,8 +16,7 @@ type GLTFResult = GLTF & {
 
 export function WallClockGlass({}: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .WALL_CLOCK_COLLECTION.WALL_CLOCK_GLASS,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.WALL_CLOCK_GLASS,
   ) as GLTFResult
 
   return (
@@ -29,7 +28,4 @@ export function WallClockGlass({}: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .WALL_CLOCK_COLLECTION.WALL_CLOCK_GLASS,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.WALL_CLOCK_GLASS)

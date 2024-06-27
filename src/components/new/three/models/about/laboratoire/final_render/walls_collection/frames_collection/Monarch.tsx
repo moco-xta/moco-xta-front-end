@@ -22,8 +22,7 @@ type GLTFResult = GLTF & {
 
 export function Monarch({ position }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .FRAMES_COLLECTION.MONARCH,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH,
   ) as GLTFResult
 
   return (
@@ -57,7 +56,4 @@ export function Monarch({ position }: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .FRAMES_COLLECTION.MONARCH,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH)

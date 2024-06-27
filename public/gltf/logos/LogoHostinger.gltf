@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_hostinger_#6746c7",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.13563226163387299, 0.06124590337276459, 0.5711250901222229, 1
-        ],
+        "baseColorFactor": [0.13563226163387299, 0.06124590337276459, 0.5711250901222229, 1],
         "metallicFactor": 0
       }
     }

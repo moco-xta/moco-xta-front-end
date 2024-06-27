@@ -19,18 +19,14 @@ import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 
 import './index.scss'
 
-export default function SignIn({
-  setIsSignIn,
-  handleSetAuthenticationIsOpen,
-}: SignUpSignInInterface) {
+export default function SignIn({ setIsSignIn, handleSetAuthenticationIsOpen }: SignUpSignInInterface) {
   const t = useTranslations()
 
   const dispatch = useDispatch<AppDispatch>()
 
   const [signIn] = useSignInMutation()
 
-  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] =
-    useState<boolean>(false)
+  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(false)
 
   const initialValues: SignInPayloadInterface = {
     email: '',

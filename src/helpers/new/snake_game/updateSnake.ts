@@ -5,11 +5,7 @@ import {
   UpdateSnakeInterface,
 } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import {
-  setSnakeCellType,
-  setSnakeCellCornerType,
-  updateSnakeHead,
-} from '@/helpers/new/snake_game'
+import { setSnakeCellType, setSnakeCellCornerType, updateSnakeHead } from '@/helpers/new/snake_game'
 
 export function updateSnake(
   snake: SnakeCellInterface[],
@@ -19,8 +15,13 @@ export function updateSnake(
   score: number,
 ): UpdateSnakeInterface {
   const newSnake: SnakeCellInterface[] = []
-  const { newSnakeHead, newDirection, newNextMove, needFood, newScore } =
-    updateSnakeHead(snake[0], food, direction, nextMove, score)
+  const { newSnakeHead, newDirection, newNextMove, needFood, newScore } = updateSnakeHead(
+    snake[0],
+    food,
+    direction,
+    nextMove,
+    score,
+  )
   newSnake[0] = newSnakeHead
   for (let i = 1; i < snake.length + Number(needFood); i++) {
     const newSnakeCellType: 'STRAIGHT' | 'CORNER' | 'HEAD' =
@@ -33,11 +34,7 @@ export function updateSnake(
     const newSnakeCellCornerType =
       newSnakeCellType === 'CORNER'
         ? i === 1
-          ? setSnakeCellCornerType(
-              newSnakeCellDirection,
-              newSnakeCellPosition,
-              newSnake[0].position,
-            )
+          ? setSnakeCellCornerType(newSnakeCellDirection, newSnakeCellPosition, newSnake[0].position)
           : snake[i - 1].cornerType
         : null
 

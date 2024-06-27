@@ -1,17 +1,9 @@
 import React from 'react'
 import * as THREE from 'three'
-import {
-  MeshTransmissionMaterial,
-  useGLTF,
-  useTexture,
-} from '@react-three/drei'
+import { MeshTransmissionMaterial, useGLTF, useTexture } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import {
-  ceilingLightMaterial,
-  glassMaterial,
-  tableLampMaterial,
-} from '../../materials/laboratoireMaterials'
+import { ceilingLightMaterial, glassMaterial, tableLampMaterial } from '../../materials/laboratoireMaterials'
 
 import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants.json'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
@@ -77,117 +69,91 @@ type GLTFResult = GLTF & {
 export function LaboratoireClayRender(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE) as GLTFResult
 
-  const ceilingMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.CEILING.DIFFUSE.ONE_K,
-  )
+  const ceilingMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.CEILING.DIFFUSE.ONE_K)
   ceilingMapTexture.flipY = false
   ceilingMapTexture.encoding = THREE.sRGBEncoding
   const ceilingMaterial = new THREE.MeshStandardMaterial({
     map: ceilingMapTexture,
   })
 
-  const ceilingLampFrameMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.CEILING.DIFFUSE.ONE_K,
-  )
+  const ceilingLampFrameMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.CEILING.DIFFUSE.ONE_K)
   ceilingLampFrameMapTexture.flipY = false
   ceilingLampFrameMapTexture.encoding = THREE.sRGBEncoding
   const ceilingLampFrameMaterial = new THREE.MeshStandardMaterial({
     map: ceilingLampFrameMapTexture,
   })
 
-  const deskMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.DESK.DIFFUSE.ONE_K,
-  )
+  const deskMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DESK.DIFFUSE.ONE_K)
   deskMapTexture.flipY = false
   deskMapTexture.encoding = THREE.sRGBEncoding
   const deskMaterial = new THREE.MeshStandardMaterial({
     map: deskMapTexture,
   })
 
-  const deskChairMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.DESK_CHAIR.DIFFUSE.ONE_K,
-  )
+  const deskChairMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DESK_CHAIR.DIFFUSE.ONE_K)
   deskChairMapTexture.flipY = false
   deskChairMapTexture.encoding = THREE.sRGBEncoding
   const deskChairMaterial = new THREE.MeshStandardMaterial({
     map: deskChairMapTexture,
   })
 
-  const doorMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.DOOR.DIFFUSE.ONE_K,
-  )
+  const doorMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.DOOR.DIFFUSE.ONE_K)
   doorMapTexture.flipY = false
   doorMapTexture.encoding = THREE.sRGBEncoding
   const doorMaterial = new THREE.MeshStandardMaterial({
     map: doorMapTexture,
   })
 
-  const framesMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.FRAMES.DIFFUSE.ONE_K,
-  )
+  const framesMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.FRAMES.DIFFUSE.ONE_K)
   framesMapTexture.flipY = false
   framesMapTexture.encoding = THREE.sRGBEncoding
   const framesMaterial = new THREE.MeshStandardMaterial({
     map: framesMapTexture,
   })
 
-  const northWallMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.NORTH_WALL.DIFFUSE.ONE_K,
-  )
+  const northWallMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.NORTH_WALL.DIFFUSE.ONE_K)
   northWallMapTexture.flipY = false
   northWallMapTexture.encoding = THREE.sRGBEncoding
   const northWallMaterial = new THREE.MeshStandardMaterial({
     map: northWallMapTexture,
   })
 
-  const parquetMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.PARQUET.DIFFUSE.ONE_K,
-  )
+  const parquetMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.PARQUET.DIFFUSE.ONE_K)
   parquetMapTexture.flipY = false
   parquetMapTexture.encoding = THREE.sRGBEncoding
   const parquetMaterial = new THREE.MeshStandardMaterial({
     map: parquetMapTexture,
   })
 
-  const shelfMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.SHELF.DIFFUSE.ONE_K,
-  )
+  const shelfMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.SHELF.DIFFUSE.ONE_K)
   shelfMapTexture.flipY = false
   shelfMapTexture.encoding = THREE.sRGBEncoding
   const shelfMaterial = new THREE.MeshStandardMaterial({
     map: shelfMapTexture,
   })
 
-  const speakersMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.SPEAKERS.DIFFUSE.ONE_K,
-  )
+  const speakersMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.SPEAKERS.DIFFUSE.ONE_K)
   speakersMapTexture.flipY = false
   speakersMapTexture.encoding = THREE.sRGBEncoding
   const speakersMaterial = new THREE.MeshStandardMaterial({
     map: speakersMapTexture,
   })
 
-  const videoProjectorMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.VIDEO_PROJECTOR.DIFFUSE.ONE_K,
-  )
+  const videoProjectorMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.VIDEO_PROJECTOR.DIFFUSE.ONE_K)
   videoProjectorMapTexture.flipY = false
   videoProjectorMapTexture.encoding = THREE.sRGBEncoding
   const videoProjectorMaterial = new THREE.MeshStandardMaterial({
     map: videoProjectorMapTexture,
   })
 
-  const wallClockMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.WALL_CLOCK.DIFFUSE.ONE_K,
-  )
+  const wallClockMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.WALL_CLOCK.DIFFUSE.ONE_K)
   wallClockMapTexture.flipY = false
   wallClockMapTexture.encoding = THREE.sRGBEncoding
   const wallClockMaterial = new THREE.MeshStandardMaterial({
     map: wallClockMapTexture,
   })
 
-  const westWallMapTexture = useTexture(
-    texturesConstants.ABOUT.LABORATOIRE.WEST_WALL.DIFFUSE.ONE_K,
-  )
+  const westWallMapTexture = useTexture(texturesConstants.ABOUT.LABORATOIRE.WEST_WALL.DIFFUSE.ONE_K)
   westWallMapTexture.flipY = false
   westWallMapTexture.encoding = THREE.sRGBEncoding
   const westWallMaterial = new THREE.MeshStandardMaterial({

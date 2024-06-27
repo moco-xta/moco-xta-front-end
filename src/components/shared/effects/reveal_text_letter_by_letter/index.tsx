@@ -8,9 +8,7 @@ import { splitTextInArrayOfLetters } from '@/helpers/textHelpers'
 
 import './index.scss'
 
-export default function RevealTextLetterByLetter({
-  text,
-}: RevealTextLetterByLetterInterface) {
+export default function RevealTextLetterByLetter({ text }: RevealTextLetterByLetterInterface) {
   gsap.registerPlugin(useGSAP)
   const timeline = gsap.timeline()
 

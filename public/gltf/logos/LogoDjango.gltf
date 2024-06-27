@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_django_#0b4b33",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.003346437821164727, 0.07036019116640091, 0.033104799687862396, 1
-        ],
+        "baseColorFactor": [0.003346437821164727, 0.07036019116640091, 0.033104799687862396, 1],
         "metallicFactor": 0
       }
     }

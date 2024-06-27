@@ -23,10 +23,7 @@ export function ReactThreeDrei({ position }: ReactThreeDreiInterface) {
 
   function applyImpulse(e: any) {
     if (rigidBodyRef.current)
-      rigidBodyRef.current.applyImpulse(
-        { x: -e.normal.x * 100, y: -e.normal.y * 100, z: -e.normal.z * 100 },
-        true,
-      )
+      rigidBodyRef.current.applyImpulse({ x: -e.normal.x * 100, y: -e.normal.y * 100, z: -e.normal.z * 100 }, true)
   }
 
   return (

@@ -7,10 +7,7 @@ interface DefaultThreeSceneState {
   initialized: boolean
 }
 
-export default class DefaultThreeScene extends Component<
-  {},
-  DefaultThreeSceneState
-> {
+export default class DefaultThreeScene extends Component<{}, DefaultThreeSceneState> {
   private canvasRef: RefObject<HTMLDivElement>
 
   constructor(props: any) {

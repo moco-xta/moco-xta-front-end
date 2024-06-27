@@ -34,9 +34,7 @@ type GLTFResult = GLTF & {
 }
 
 export function GraphicsPack(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.GRAPHICS_PACK,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.GRAPHICS_PACK) as GLTFResult
 
   return (
     <>

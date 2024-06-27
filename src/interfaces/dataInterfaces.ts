@@ -45,9 +45,7 @@ export interface SkillsDataInterface {
 }
 
 interface ProjectsLogoInterface {
-  component: ForwardRefExoticComponent<
-    Omit<GroupProps, 'ref'> & RefAttributes<ForwardRefGltfGroupInterface>
-  >
+  component: ForwardRefExoticComponent<Omit<GroupProps, 'ref'> & RefAttributes<ForwardRefGltfGroupInterface>>
   position: { [key: string]: number }
   scale: number
 }
@@ -97,10 +95,7 @@ export interface IconsDataInterface {
 export interface PerformedWithLogoInterface {
   name: string
   logo: {
-    component: ForwardRefExoticComponent<
-      Omit<GroupProps, 'ref'> &
-        RefAttributes<THREE.Group<THREE.Object3DEventMap>>
-    >
+    component: ForwardRefExoticComponent<Omit<GroupProps, 'ref'> & RefAttributes<THREE.Group<THREE.Object3DEventMap>>>
     rotation: THREE.Euler
     scale: THREE.Vector3
   }
@@ -109,9 +104,7 @@ export interface PerformedWithLogoInterface {
 export interface SkillsLogoInterface {
   name: string
   category: string
-  component: ForwardRefExoticComponent<
-    Omit<GroupProps, 'ref'> & RefAttributes<THREE.Group<THREE.Object3DEventMap>>
-  >
+  component: ForwardRefExoticComponent<Omit<GroupProps, 'ref'> & RefAttributes<THREE.Group<THREE.Object3DEventMap>>>
   geometry: {
     position: THREE.Vector3
     rotation: THREE.Euler

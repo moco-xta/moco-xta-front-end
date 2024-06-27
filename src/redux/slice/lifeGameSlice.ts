@@ -19,9 +19,7 @@ const OPERATIONS = [
 const generateEmptyGrid = () => {
   const rows: number[][] = []
   for (let i = 0; i < GRID_COLUMNS; i++) {
-    rows.push(
-      Array.from(Array(GRID_ROWS), () => (Math.random() >= 0.5 ? 1 : 0)),
-    )
+    rows.push(Array.from(Array(GRID_ROWS), () => (Math.random() >= 0.5 ? 1 : 0)))
     /* rows.push(Array.from(Array(GRID_ROWS), () => 0)) */
   }
   return rows
@@ -44,9 +42,7 @@ const lifeGameSlice = createSlice({
   reducers: {
     setCellState: (state, action: PayloadAction<SetCellStateInterface>) => {
       state.grid[action.payload.columnIndex][action.payload.rowIndex] =
-        state.grid[action.payload.columnIndex][action.payload.rowIndex] === 0
-          ? 1
-          : 0
+        state.grid[action.payload.columnIndex][action.payload.rowIndex] === 0 ? 1 : 0
     },
     setNextState: (state, action: PayloadAction) => {
       const newGrid: number[][] = [...state.grid]
@@ -56,12 +52,7 @@ const lifeGameSlice = createSlice({
           OPERATIONS.forEach(([x, y]) => {
             const newI = i + x
             const newJ = j + y
-            if (
-              newI >= 0 &&
-              newI < GRID_COLUMNS &&
-              newJ >= 0 &&
-              newJ < GRID_ROWS
-            ) {
+            if (newI >= 0 && newI < GRID_COLUMNS && newJ >= 0 && newJ < GRID_ROWS) {
               neighbours += [...state.grid][newI][newJ]
             }
           })

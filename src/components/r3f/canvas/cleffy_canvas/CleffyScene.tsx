@@ -15,9 +15,7 @@ export default function CleffyScene() {
           <StringElement
             key={`first_string_${index}`}
             position={new THREE.Vector3(0, -2.4 * index - 7, 0)}
-            rotation={
-              new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index + 90), 0)
-            }
+            rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index + 90), 0)}
           />
         ))}
         <ReactThreeDrei position={new THREE.Vector3(0, -27, 0)} />
@@ -27,9 +25,7 @@ export default function CleffyScene() {
           <StringElement
             key={`second_string_${index}`}
             position={new THREE.Vector3(0, -2.4 * index - 7, 0)}
-            rotation={
-              new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index + 90), 0)
-            }
+            rotation={new THREE.Euler(0, THREE.MathUtils.degToRad(90 * index + 90), 0)}
           />
         ))}
         <Nextjs position={new THREE.Vector3(0, -27, 0)} />

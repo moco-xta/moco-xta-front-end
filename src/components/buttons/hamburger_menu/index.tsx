@@ -4,10 +4,7 @@ import { HamburgerMenuInterface } from '@/interfaces/buttonsInterfaces'
 
 import './index.scss'
 
-export default function HamburgerMenu({
-  menuIsOpen,
-  handleSetMenuIsOpen,
-}: HamburgerMenuInterface) {
+export default function HamburgerMenu({ menuIsOpen, handleSetMenuIsOpen }: HamburgerMenuInterface) {
   return (
     <div id='hamburger_menu_icon'>
       <input

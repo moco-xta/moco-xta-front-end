@@ -20,8 +20,7 @@ type GLTFResult = GLTF & {
 
 export function CelestialMap({ position }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .FRAMES_COLLECTION.CELESTIAL_MAP,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP,
   ) as GLTFResult
 
   return (
@@ -48,7 +47,4 @@ export function CelestialMap({ position }: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .FRAMES_COLLECTION.CELESTIAL_MAP,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP)

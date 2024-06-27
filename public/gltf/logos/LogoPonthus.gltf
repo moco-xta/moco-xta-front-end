@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_ponthus_#2b2460",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.02416163496673107, 0.01764114573597908, 0.11696220934391022, 1
-        ],
+        "baseColorFactor": [0.02416163496673107, 0.01764114573597908, 0.11696220934391022, 1],
         "metallicFactor": 0
       }
     }

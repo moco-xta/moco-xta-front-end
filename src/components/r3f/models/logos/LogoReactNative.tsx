@@ -16,37 +16,34 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoReactNative = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoReactNative({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_REACT_NATIVE,
-  ) as GLTFResult
+const LogoReactNative = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoReactNative({ position, rotation, scale }, ref) {
+    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_REACT_NATIVE) as GLTFResult
 
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene)
-    // @ts-ignore
-    ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [scene, ref])
+    useLayoutEffect(() => {
+      const box = new THREE.Box3().setFromObject(scene)
+      // @ts-ignore
+      ref.current.width = box.getSize(new THREE.Vector3()).x
+    }, [scene, ref])
 
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoReactNative.geometry}
-        material={materials['logo_react_native_#61d9fb']}
-        receiveShadow
-        castShadow
-      />
-    </group>
-  )
-})
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+      >
+        <mesh
+          geometry={nodes.LogoReactNative.geometry}
+          material={materials['logo_react_native_#61d9fb']}
+          receiveShadow
+          castShadow
+        />
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_REACT_NATIVE)
 

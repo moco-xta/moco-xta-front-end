@@ -30,9 +30,7 @@
       },
       "name": "icon_photoshop_#051e37",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.0015176329761743546, 0.012983032502233982, 0.038204375654459, 1
-        ],
+        "baseColorFactor": [0.0015176329761743546, 0.012983032502233982, 0.038204375654459, 1],
         "metallicFactor": 0
       }
     },

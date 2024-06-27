@@ -20,8 +20,7 @@ type GLTFResult = GLTF & {
 
 export function Couronnes({ position }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .FRAMES_COLLECTION.COURONNES,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES,
   ) as GLTFResult
 
   return (
@@ -48,7 +47,4 @@ export function Couronnes({ position }: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .FRAMES_COLLECTION.COURONNES,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES)

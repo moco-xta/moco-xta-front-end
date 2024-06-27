@@ -2,10 +2,7 @@ import React, { createRef, useRef } from 'react'
 import * as THREE from 'three'
 import { Box, Text3D } from '@react-three/drei'
 
-import {
-  ForwardRefGltfGroupInterface,
-  IntroductionCardSceneInterface,
-} from '@/interfaces/r3fInterfaces'
+import { ForwardRefGltfGroupInterface, IntroductionCardSceneInterface } from '@/interfaces/r3fInterfaces'
 
 import useModelHoverEffect from '@/hooks/useModelHoverEffect'
 
@@ -26,10 +23,7 @@ export default function Card({ content }: IntroductionCardSceneInterface) {
     depth: 5,
   }
 
-  const colors = [
-    0xbf1421, 0xe94e21, 0xef9309, 0xfab236, 0xf6e91e, 0xdcdc03, 0x94c01f,
-    0x3ba934, 0x1b8d3b,
-  ]
+  const colors = [0xbf1421, 0xe94e21, 0xef9309, 0xfab236, 0xf6e91e, 0xdcdc03, 0x94c01f, 0x3ba934, 0x1b8d3b]
 
   return (
     <group ref={introductionCardRef}>
@@ -60,11 +54,7 @@ export default function Card({ content }: IntroductionCardSceneInterface) {
         receiveShadow
         castShadow
         {...textOptions}
-        position={[
-          content.rate.position.x,
-          content.rate.position.y,
-          content.rate.position.z,
-        ]}
+        position={[content.rate.position.x, content.rate.position.y, content.rate.position.z]}
       >
         {`${content.rate.value}%`}
         <meshStandardMaterial

@@ -1,7 +1,6 @@
 import { ElementType, HTMLAttributes, ReactNode } from 'react'
 
-export interface TextBlockTransitionNineInterface
-  extends HTMLAttributes<HTMLOrSVGElement> {
+export interface TextBlockTransitionNineInterface extends HTMLAttributes<HTMLOrSVGElement> {
   tag: ElementType
   id: string
   className: string

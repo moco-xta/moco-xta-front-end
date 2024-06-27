@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export function WestWall({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WEST_WALL,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WEST_WALL) as GLTFResult
 
   return (
     <mesh
@@ -31,6 +29,4 @@ export function WestWall({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WEST_WALL,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WEST_WALL)

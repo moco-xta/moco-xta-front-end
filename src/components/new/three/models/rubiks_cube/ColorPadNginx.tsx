@@ -21,9 +21,7 @@ const ColorPadNginx = forwardRef<
   >,
   MeshProps
 >(function ColorPadNginx({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.COLOR_PAD_NGINX,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_NGINX) as GLTFResult
   return (
     <mesh
       name={name}

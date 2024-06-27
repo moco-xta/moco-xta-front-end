@@ -10,11 +10,7 @@ export default function useSnakeGameKeyboard() {
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
-      if (
-        event.code === 'ArrowUp' ||
-        event.code === 'ArrowLeft' ||
-        event.code === 'ArrowRight'
-      ) {
+      if (event.code === 'ArrowUp' || event.code === 'ArrowLeft' || event.code === 'ArrowRight') {
         if (isPlaying) dispatch(setNextMove(event.code))
       }
       if (event.code === 'Space') {

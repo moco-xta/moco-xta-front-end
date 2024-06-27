@@ -26,15 +26,10 @@ type GLTFResult = GLTF & {
   }
 }
 
-type ContextType = Record<
-  string,
-  React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>
->
+type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
 
 export function GraphicsSkills(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.GRAPHICS_SKILLS,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.GRAPHICS_SKILLS) as GLTFResult
   return (
     <>
       <mesh

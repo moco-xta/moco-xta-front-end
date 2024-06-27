@@ -11,17 +11,10 @@ export default function DesktopBalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .WIDTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .DEPTH,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.WIDTH,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.DEPTH,
           ]}
-          position={[
-            0,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .HEIGHT / 2,
-            0,
-          ]}
+          position={[0, heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.HEIGHT / 2, 0]}
           rotation={[THREE.MathUtils.degToRad(90), 0, 0]} // Remove hardcoded values
         >
           <meshStandardMaterial
@@ -33,17 +26,10 @@ export default function DesktopBalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .WIDTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .DEPTH,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.WIDTH,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.DEPTH,
           ]}
-          position={[
-            0,
-            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .HEIGHT / 2,
-            0,
-          ]}
+          position={[0, -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.HEIGHT / 2, 0]}
           rotation={[THREE.MathUtils.degToRad(90), 0, 0]} // Remove hardcoded values
         >
           <meshStandardMaterial
@@ -55,17 +41,10 @@ export default function DesktopBalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .WIDTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .HEIGHT,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.WIDTH,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.HEIGHT,
           ]}
-          position={[
-            0,
-            0,
-            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .DEPTH / 2,
-          ]}
+          position={[0, 0, -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.DEPTH / 2]}
         >
           <meshStandardMaterial
             transparent
@@ -76,17 +55,10 @@ export default function DesktopBalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .WIDTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .HEIGHT,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.WIDTH,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.HEIGHT,
           ]}
-          position={[
-            0,
-            0,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .DEPTH / 2,
-          ]}
+          position={[0, 0, heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.DEPTH / 2]}
         >
           <meshStandardMaterial
             transparent
@@ -97,17 +69,10 @@ export default function DesktopBalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .DEPTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .HEIGHT,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.DEPTH,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.HEIGHT,
           ]}
-          position={[
-            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .WIDTH / 2,
-            0,
-            0,
-          ]}
+          position={[-heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.WIDTH / 2, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(90), 0]} // Remove hardcoded values
         >
           <meshStandardMaterial
@@ -119,17 +84,10 @@ export default function DesktopBalloonsWrapper() {
       <RigidBody type='fixed'>
         <Plane
           args={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .DEPTH,
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .HEIGHT,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.DEPTH,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.HEIGHT,
           ]}
-          position={[
-            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE
-              .WIDTH / 2,
-            0,
-            0,
-          ]}
+          position={[heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.WIDTH / 2, 0, 0]}
           rotation={[0, THREE.MathUtils.degToRad(-90), 0]} // Remove hardcoded values
         >
           <meshStandardMaterial

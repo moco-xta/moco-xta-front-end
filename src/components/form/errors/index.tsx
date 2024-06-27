@@ -8,7 +8,5 @@ import './index.scss'
 export default function Error({ error, helperText }: FormikErrorInterface) {
   const t = useTranslations()
 
-  return (
-    <>{error && <span className='input_error'>{t(`${helperText}`)}</span>}</>
-  )
+  return <>{error && <span className='input_error'>{t(`${helperText}`)}</span>}</>
 }

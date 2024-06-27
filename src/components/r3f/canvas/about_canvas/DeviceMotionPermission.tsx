@@ -45,10 +45,7 @@ export default function DeviceMotionPermission({
         >
           <div>
             <h2>Allow access to device motion and orientation</h2>
-            <p>
-              This app requires access to device motion and orientation to
-              function properly.
-            </p>
+            <p>This app requires access to device motion and orientation to function properly.</p>
             <button
               className='btn'
               onClick={handlePermissionGranted}

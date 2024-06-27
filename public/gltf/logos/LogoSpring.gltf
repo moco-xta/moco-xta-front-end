@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_spring_#74b61d",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.17464618384838104, 0.46778443455696106, 0.012286596931517124, 1
-        ],
+        "baseColorFactor": [0.17464618384838104, 0.46778443455696106, 0.012286596931517124, 1],
         "metallicFactor": 0
       }
     },

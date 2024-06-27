@@ -16,13 +16,11 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoSass = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoSass({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_SASS,
-  ) as GLTFResult
+const LogoSass = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoSass(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_SASS) as GLTFResult
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

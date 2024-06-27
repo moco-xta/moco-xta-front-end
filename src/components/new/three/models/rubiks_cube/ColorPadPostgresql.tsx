@@ -21,9 +21,7 @@ const ColorPadPostgresql = forwardRef<
   >,
   MeshProps
 >(function ColorPadPostgresql({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.COLOR_PAD_POSTGRESQL,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_POSTGRESQL) as GLTFResult
   return (
     <mesh
       name={name}

@@ -8,28 +8,20 @@ import { default as laboratoireFinalRenderConstants } from '@/constants/new/canv
 export default function VinylDiscs() {
   return (
     <>
-      {laboratoireFinalRenderConstants.DESK_COLLECTION.VINYL_DISCS.map(
-        (vinylDisc) => (
-          <VinylDisc
-            key={vinylDisc.NAME}
-            position={
-              new THREE.Vector3(
-                vinylDisc.POSITION.X,
-                vinylDisc.POSITION.Y,
-                vinylDisc.POSITION.Z,
-              )
-            }
-            rotation={
-              new THREE.Euler(
-                THREE.MathUtils.degToRad(vinylDisc.ROTATION.X),
-                THREE.MathUtils.degToRad(vinylDisc.ROTATION.Y),
-                THREE.MathUtils.degToRad(vinylDisc.ROTATION.Z),
-              )
-            }
-            texture={vinylDisc.TEXTURE}
-          />
-        ),
-      )}
+      {laboratoireFinalRenderConstants.DESK_COLLECTION.VINYL_DISCS.map((vinylDisc) => (
+        <VinylDisc
+          key={vinylDisc.NAME}
+          position={new THREE.Vector3(vinylDisc.POSITION.X, vinylDisc.POSITION.Y, vinylDisc.POSITION.Z)}
+          rotation={
+            new THREE.Euler(
+              THREE.MathUtils.degToRad(vinylDisc.ROTATION.X),
+              THREE.MathUtils.degToRad(vinylDisc.ROTATION.Y),
+              THREE.MathUtils.degToRad(vinylDisc.ROTATION.Z),
+            )
+          }
+          texture={vinylDisc.TEXTURE}
+        />
+      ))}
     </>
   )
 }

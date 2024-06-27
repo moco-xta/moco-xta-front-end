@@ -8,10 +8,7 @@ export function generateSnake(): SnakeCellInterface[] {
     snake.push({
       type: i === 0 ? 'HEAD' : 'STRAIGHT',
       position: {
-        x:
-          i === 0
-            ? snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2
-            : snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2 - i,
+        x: i === 0 ? snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2 : snakeGameConstants.SNAKE_GAME.BOARD.WIDTH / 2 - i,
         z: snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT / 2,
       },
       direction: snakeGameConstants.SNAKE_GAME.SNAKE.DEFAULT.DIRECTION,

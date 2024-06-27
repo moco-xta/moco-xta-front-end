@@ -17,12 +17,7 @@ interface StarInterface extends MeshProps {
   handleOnPointerLeave: any
 }
 
-export function Star({
-  position,
-  rotation,
-  handleOnPointerMove,
-  handleOnPointerLeave,
-}: StarInterface) {
+export function Star({ position, rotation, handleOnPointerMove, handleOnPointerLeave }: StarInterface) {
   const { nodes } = useGLTF(GltfConstants.STAR) as GLTFResult
 
   return (

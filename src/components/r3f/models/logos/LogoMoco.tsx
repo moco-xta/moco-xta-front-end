@@ -21,12 +21,7 @@ interface StarInterface extends MeshProps {
   handleOnPointerLeave: any
 }
 
-export function LogoMoco({
-  position,
-  rotation,
-  handleOnPointerMove,
-  handleOnPointerLeave,
-}: StarInterface) {
+export function LogoMoco({ position, rotation, handleOnPointerMove, handleOnPointerLeave }: StarInterface) {
   const { nodes } = useGLTF(gltfConstants.LOGO_MOCO) as GLTFResult
 
   return (

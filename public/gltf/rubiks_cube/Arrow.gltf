@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "arrow_material",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0
       }
     }

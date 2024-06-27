@@ -9,9 +9,5 @@ import LaboratoireClayRender from './clay/LaboratoireClayRender'
 export default function LaboratoireScene() {
   const { isFinalRender } = useSelector((state: RootState) => state.about)
 
-  return (
-    <>
-      {isFinalRender ? <LaboratoireFinalRender /> : <LaboratoireClayRender />}
-    </>
-  )
+  return <>{isFinalRender ? <LaboratoireFinalRender /> : <LaboratoireClayRender />}</>
 }

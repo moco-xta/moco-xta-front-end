@@ -22,9 +22,7 @@
       "doubleSided": true,
       "name": "amor_llama_amor_frame",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0,
         "roughnessFactor": 0.5
       }
@@ -33,9 +31,7 @@
       "doubleSided": true,
       "name": "amor_llama_amor",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0,
         "roughnessFactor": 0.5
       }
@@ -72,9 +68,7 @@
       "componentType": 5126,
       "count": 40,
       "max": [3.701336145401001, 12.165122985839844, 0.4055044949054718],
-      "min": [
-        -3.800490617752075, -1.430511474609375e-6, -4.6014827148610493e-7
-      ],
+      "min": [-3.800490617752075, -1.430511474609375e-6, -4.6014827148610493e-7],
       "type": "VEC3"
     },
     {

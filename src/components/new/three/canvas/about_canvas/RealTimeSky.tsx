@@ -30,9 +30,7 @@ export default function RealTimeSky() {
             longitude: position.coords.longitude,
           }),
         )
-        console.log(
-          `Latitude: ${location.latitude}, Longitude: ${location.longitude}`,
-        )
+        console.log(`Latitude: ${location.latitude}, Longitude: ${location.longitude}`)
       })
     } else {
       console.log('Geolocation is not supported by this browser.')
@@ -49,13 +47,7 @@ export default function RealTimeSky() {
     if (time) {
       console.log('time', time)
       setSunriseStr(time.sunrise.getHours() + ':' + time.sunrise.getMinutes())
-      setSunrisePos(
-        SunCalc.getPosition(
-          time.sunrise,
-          location.latitude,
-          location.longitude,
-        ),
-      )
+      setSunrisePos(SunCalc.getPosition(time.sunrise, location.latitude, location.longitude))
     }
   }, [time])
 

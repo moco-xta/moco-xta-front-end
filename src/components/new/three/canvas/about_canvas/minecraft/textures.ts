@@ -4,24 +4,12 @@ import useTextureLoader from '@/hooks/new/useTextureLoader'
 
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 
-const dirtTexture = new THREE.TextureLoader().load(
-  texturesConstants.MINECRAFT.DIRT,
-)
-const logTexture = new THREE.TextureLoader().load(
-  texturesConstants.MINECRAFT.LOG,
-)
-const grassTexture = new THREE.TextureLoader().load(
-  texturesConstants.MINECRAFT.GRASS,
-)
-const glassTexture = new THREE.TextureLoader().load(
-  texturesConstants.MINECRAFT.GLASS,
-)
-const woodTexture = new THREE.TextureLoader().load(
-  texturesConstants.MINECRAFT.WOOD,
-)
-const groundTexture = new THREE.TextureLoader().load(
-  texturesConstants.MINECRAFT.GRASS,
-)
+const dirtTexture = new THREE.TextureLoader().load(texturesConstants.MINECRAFT.DIRT)
+const logTexture = new THREE.TextureLoader().load(texturesConstants.MINECRAFT.LOG)
+const grassTexture = new THREE.TextureLoader().load(texturesConstants.MINECRAFT.GRASS)
+const glassTexture = new THREE.TextureLoader().load(texturesConstants.MINECRAFT.GLASS)
+const woodTexture = new THREE.TextureLoader().load(texturesConstants.MINECRAFT.WOOD)
+const groundTexture = new THREE.TextureLoader().load(texturesConstants.MINECRAFT.GRASS)
 
 dirtTexture.magFilter = THREE.NearestFilter
 glassTexture.magFilter = THREE.NearestFilter

@@ -18,14 +18,8 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function TransfertBox({
-  name,
-  position,
-  rotation,
-}: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRANSFERT_BOX,
-  ) as GLTFResult
+export function TransfertBox({ name, position, rotation }: JSX.IntrinsicElements['group']) {
+  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRANSFERT_BOX) as GLTFResult
 
   return (
     <group
@@ -52,6 +46,4 @@ export function TransfertBox({
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRANSFERT_BOX,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRANSFERT_BOX)

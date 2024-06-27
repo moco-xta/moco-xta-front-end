@@ -20,10 +20,7 @@ const aboutSlice = createSlice({
   name: 'About',
   initialState,
   reducers: {
-    setAccessToDeviceMotionAndOrientationGranted: (
-      state,
-      action: PayloadAction<boolean>,
-    ) => {
+    setAccessToDeviceMotionAndOrientationGranted: (state, action: PayloadAction<boolean>) => {
       state.accessToDeviceMotionAndOrientationGranted = action.payload
     },
     setShowInstructions: (state, action: PayloadAction<boolean>) => {
@@ -38,11 +35,7 @@ const aboutSlice = createSlice({
   },
 })
 
-export const {
-  setAccessToDeviceMotionAndOrientationGranted,
-  setShowInstructions,
-  setIsFinalRender,
-  setLocation,
-} = aboutSlice.actions
+export const { setAccessToDeviceMotionAndOrientationGranted, setShowInstructions, setIsFinalRender, setLocation } =
+  aboutSlice.actions
 
 export default aboutSlice.reducer

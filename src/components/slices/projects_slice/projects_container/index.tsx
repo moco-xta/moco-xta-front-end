@@ -6,10 +6,7 @@ import ProjectCard from '@/components/cards/project_card'
 
 import './index.scss'
 
-export default function ProjectCards({
-  projectsData,
-  currentProject,
-}: ProjectsContainerInterface) {
+export default function ProjectCards({ projectsData, currentProject }: ProjectsContainerInterface) {
   return (
     <div id='project_cards_container'>
       {projectsData.map((projectData, index) => {

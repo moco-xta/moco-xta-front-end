@@ -17,15 +17,8 @@ export default function SignUpForm({
 }: AuthenticationFormsInterface) {
   const t = useTranslations()
 
-  const {
-    errors,
-    handleChange,
-    values,
-    resetForm,
-    setFieldValue,
-    submitForm,
-    touched,
-  } = useFormikContext<SignUpValuesInterface>()
+  const { errors, handleChange, values, resetForm, setFieldValue, submitForm, touched } =
+    useFormikContext<SignUpValuesInterface>()
 
   function handleSubmit(e: SyntheticEvent) {
     e.preventDefault()
@@ -101,9 +94,7 @@ export default function SignUpForm({
           <ResetButton resetForm={handleResetForm} />
         </div>
         <div className='sign_in_sign_up_switch_button_container'>
-          <button onClick={handleSwitchSignUp}>
-            {t('AUTHENTICATION.SIGN_UP.SIGN_IN')}
-          </button>
+          <button onClick={handleSwitchSignUp}>{t('AUTHENTICATION.SIGN_UP.SIGN_IN')}</button>
         </div>
       </form>
     </div>

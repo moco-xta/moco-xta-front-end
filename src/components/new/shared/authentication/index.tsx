@@ -15,9 +15,7 @@ import './index.scss'
 export default function Authentication() {
   const dispatch = useDispatch<AppDispatch>()
 
-  const authenticationIsOpen = useSelector(
-    (state: RootState) => state.appState.authenticationIsOpen,
-  )
+  const authenticationIsOpen = useSelector((state: RootState) => state.appState.authenticationIsOpen)
 
   const { isDesktop } = useResize()
 
@@ -34,11 +32,7 @@ export default function Authentication() {
     >
       <ClosingArrow />
       <div id='authentication_forms_container'>
-        {isSignIn ? (
-          <SignIn setIsSignIn={setIsSignIn} />
-        ) : (
-          <SignUp setIsSignIn={setIsSignIn} />
-        )}
+        {isSignIn ? <SignIn setIsSignIn={setIsSignIn} /> : <SignUp setIsSignIn={setIsSignIn} />}
       </div>
     </div>
   )

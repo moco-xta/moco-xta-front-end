@@ -26,10 +26,7 @@ export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
     inputStyle,
   } = props
 
-  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
-    name,
-    value,
-  )
+  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(name, value)
 
   useEffect(() => {
     if (storedValue) setFieldValue(name, storedValue)
@@ -66,9 +63,7 @@ export default function FormikRadioGroup(props: FormikRadioGroupInterface) {
               checked={value === option.value || value === option.name}
               disabled={disabled}
             />
-            <label htmlFor={option.name}>
-              {t(`${translationKeyPrefix}.${option.name}`)}
-            </label>
+            <label htmlFor={option.name}>{t(`${translationKeyPrefix}.${option.name}`)}</label>
           </div>
         ))}
       </div>

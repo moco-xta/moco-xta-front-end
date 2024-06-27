@@ -14,12 +14,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function ColorPad({
-  type,
-  position,
-  rotation,
-  color,
-}: ColorPadInterface) {
+export function ColorPad({ type, position, rotation, color }: ColorPadInterface) {
   const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD) as GLTFResult
   return (
     <mesh

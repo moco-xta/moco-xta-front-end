@@ -19,9 +19,7 @@ import { default as aboutConstants } from '@/constants/new/canvas/aboutConstants
 
 export default function AboutCanvas() {
   const dispatch = useDispatch<AppDispatch>()
-  const { showInstructions, isFinalRender } = useSelector(
-    (state: RootState) => state.about,
-  )
+  const { showInstructions, isFinalRender } = useSelector((state: RootState) => state.about)
 
   function pointerLockChange() {
     dispatch(setShowInstructions(!showInstructions))
@@ -30,11 +28,7 @@ export default function AboutCanvas() {
   useEffect(() => {
     document.addEventListener('pointerlockchange', pointerLockChange, false)
     return () => {
-      document.removeEventListener(
-        'pointerlockchange',
-        pointerLockChange,
-        false,
-      )
+      document.removeEventListener('pointerlockchange', pointerLockChange, false)
     }
   })
 
@@ -58,11 +52,7 @@ export default function AboutCanvas() {
       <Suspense fallback={null}>
         <Physics>
           {!isMobile ? (
-            <CannonPlayer
-              pointerLockControlsSelector={
-                aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR
-              }
-            />
+            <CannonPlayer pointerLockControlsSelector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR} />
           ) : (
             <DeviceOrientationControls />
           )}

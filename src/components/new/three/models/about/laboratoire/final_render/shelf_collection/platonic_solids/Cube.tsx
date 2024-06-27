@@ -16,8 +16,7 @@ type GLTFResult = GLTF & {
 
 export function Cube({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
-      .PLATONIC_SOLIDS.CUBE,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS.CUBE,
   ) as GLTFResult
 
   return (
@@ -32,7 +31,4 @@ export function Cube({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS
-    .CUBE,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS.CUBE)

@@ -21,16 +21,13 @@ interface SecondHandInterface extends MeshProps {
 
 export function SecondHand({ date }: SecondHandInterface) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .WALL_CLOCK_COLLECTION.SECOND_HAND,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.SECOND_HAND,
   ) as GLTFResult
 
   const secondHandRef = useRef<THREE.Mesh>(null!)
 
   useEffect(() => {
-    secondHandRef.current.rotation.x = THREE.MathUtils.degToRad(
-      360 - date.getSeconds() * 6,
-    )
+    secondHandRef.current.rotation.x = THREE.MathUtils.degToRad(360 - date.getSeconds() * 6)
   }, [date])
 
   return (
@@ -45,7 +42,4 @@ export function SecondHand({ date }: SecondHandInterface) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .WALL_CLOCK_COLLECTION.SECOND_HAND,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.SECOND_HAND)

@@ -23,20 +23,12 @@ interface VinylDiscInterface extends GroupProps {
   texture: string
 }
 
-export function VinylDisc({
-  name,
-  position,
-  rotation,
-  texture,
-}: VinylDiscInterface) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.VINYL_DISC,
-  ) as GLTFResult
+export function VinylDisc({ name, position, rotation, texture }: VinylDiscInterface) {
+  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.VINYL_DISC) as GLTFResult
 
   const vinylDiscMap = useTextureLoader(
     // @ts-ignore
-    texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION
-      .VINYL_DISCS[texture].DIFFUSE,
+    texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.VINYL_DISCS[texture].DIFFUSE,
   )
   vinylDiscMap.flipY = false
 
@@ -70,6 +62,4 @@ export function VinylDisc({
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.VINYL_DISC,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.VINYL_DISC)

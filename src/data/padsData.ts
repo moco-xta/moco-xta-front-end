@@ -10,16 +10,12 @@ const loadComponent = (component: string): LazyPadType =>
     () =>
       new Promise((resolve, reject) => {
         import(`../components/r3f/models/rubiks_cube/${component}`)
-          .then((result) =>
-            resolve(result.default ? result : { default: result }),
-          )
+          .then((result) => resolve(result.default ? result : { default: result }))
           .catch(reject)
       }),
   )
 
-const padsComponents: Record<string, LazyPadType> = Array.from(
-  rubiksCubeConstants.RUBIKS_CUBE.PADS,
-).reduce(
+const padsComponents: Record<string, LazyPadType> = Array.from(rubiksCubeConstants.RUBIKS_CUBE.PADS).reduce(
   (object, pad) => {
     object[pad.COMPONENT] = loadComponent(pad.COMPONENT)
     return object
@@ -37,11 +33,11 @@ interface PadJsonInterface {
   COMPONENT: string
 }
 
-export const padsData: PadDataInterface[] = Array.from(
-  rubiksCubeConstants.RUBIKS_CUBE.PADS,
-).map((pad: PadJsonInterface) => {
-  return {
-    name: pad.NAME,
-    component: padsComponents[pad.COMPONENT],
-  }
-})
+export const padsData: PadDataInterface[] = Array.from(rubiksCubeConstants.RUBIKS_CUBE.PADS).map(
+  (pad: PadJsonInterface) => {
+    return {
+      name: pad.NAME,
+      component: padsComponents[pad.COMPONENT],
+    }
+  },
+)

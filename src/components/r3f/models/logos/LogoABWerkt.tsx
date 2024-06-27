@@ -20,10 +20,10 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoABWerkt = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoABWerkt({ position, rotation, scale }, ref) {
+const LogoABWerkt = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoABWerkt(
+  { position, rotation, scale },
+  ref,
+) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_ABWERKT) as GLTFResult
   return (
     <group

@@ -187,8 +187,7 @@ export const nicotianaRusticaFrameMaterial = new THREE.MeshStandardMaterial({
   /* metalness: 0.5, */
   /* metalnessMap: laboratoireFinalRenderTextures.nicotianaRusticaFrame.roughnessMap, */
   roughness: 0.3,
-  roughnessMap:
-    laboratoireFinalRenderTextures.nicotianaRusticaFrame.roughnessMap,
+  roughnessMap: laboratoireFinalRenderTextures.nicotianaRusticaFrame.roughnessMap,
   normalMap: laboratoireFinalRenderTextures.nicotianaRusticaFrame.normalMap,
 })
 
@@ -314,8 +313,7 @@ export const wallClockBrushedMetalMaterial = new THREE.MeshStandardMaterial({
   map: laboratoireFinalRenderTextures.wallClockBrushedMetal.map,
   /* metalness: 0.3, */
   /* metalnessMap: laboratoireFinalRenderTextures.wallClockBrushedMetal.roughnessMap, */
-  roughnessMap:
-    laboratoireFinalRenderTextures.wallClockBrushedMetal.roughnessMap,
+  roughnessMap: laboratoireFinalRenderTextures.wallClockBrushedMetal.roughnessMap,
   normalMap: laboratoireFinalRenderTextures.wallClockBrushedMetal.normalMap,
   bumpMap: laboratoireFinalRenderTextures.wallClockBrushedMetal.bumpMap,
 })
@@ -356,7 +354,6 @@ export const worldMapStandMarbleMaterial = new THREE.MeshStandardMaterial({
 
 export const worldMapStandUsedMetalMaterial = new THREE.MeshStandardMaterial({
   metalness: 0.6,
-  roughnessMap:
-    laboratoireFinalRenderTextures.worldMapStandUsedMetal.roughnessMap,
+  roughnessMap: laboratoireFinalRenderTextures.worldMapStandUsedMetal.roughnessMap,
   normalMap: laboratoireFinalRenderTextures.worldMapStandUsedMetal.normalMap,
 })

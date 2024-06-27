@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Ceiling({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.CEILING,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.CEILING) as GLTFResult
 
   return (
     <mesh
@@ -31,6 +29,4 @@ export function Ceiling({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.CEILING,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.CEILING)

@@ -23,10 +23,7 @@ type GLTFResult = GLTF & {
 export function OwlSticker(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(GltfConstants.OWL_STICKER) as GLTFResult
 
-  const normalMap = useLoader(
-    THREE.TextureLoader,
-    '/img/jpg/textures/glitter_normal.jpg',
-  )
+  const normalMap = useLoader(THREE.TextureLoader, '/img/jpg/textures/glitter_normal.jpg')
   /* normalMap.magFilter = THREE.NearestFilter
   normalMap.minFilter = THREE.LinearMipMapLinearFilter */
   normalMap.wrapS = THREE.RepeatWrapping

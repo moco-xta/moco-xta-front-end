@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Arrow({ position, rotation }: JSX.IntrinsicElements['mesh']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.ARROW,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.RUBIKS_CUBE.ARROW) as GLTFResult
   return (
     <mesh
       geometry={nodes.Cube.geometry}

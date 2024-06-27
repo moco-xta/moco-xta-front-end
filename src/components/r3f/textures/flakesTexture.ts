@@ -27,8 +27,7 @@ export function flakesTexture() {
     ny /= l
     nz /= l
 
-    context!.fillStyle =
-      'rgb(' + (nx * 127 + 127) + ',' + (ny * 127 + 127) + ',' + nz * 255 + ')'
+    context!.fillStyle = 'rgb(' + (nx * 127 + 127) + ',' + (ny * 127 + 127) + ',' + nz * 255 + ')'
     context!.beginPath()
     context!.arc(x, y, r, 0, Math.PI * 2)
     context!.fill()

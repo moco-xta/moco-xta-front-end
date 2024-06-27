@@ -13,10 +13,7 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-export function OHeliumBalloon({
-  position,
-  rotation,
-}: JSX.IntrinsicElements['mesh']) {
+export function OHeliumBalloon({ position, rotation }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(GltfConstants.O_HELIUM_BALLOON) as GLTFResult
 
   return (

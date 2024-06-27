@@ -18,9 +18,7 @@ type GLTFResult = GLTF & {
 }
 
 export function HeartThreeD(props: GroupProps) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.HEART_THREE_D,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.HEART_THREE_D) as GLTFResult
   return (
     <group
       dispose={null}

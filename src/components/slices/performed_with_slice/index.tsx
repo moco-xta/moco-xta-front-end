@@ -15,9 +15,7 @@ export default function PerformedWith() {
         <h2 id='performed_with_title'>{t('PERFORMED_WITH.TITLE')}</h2>
         <div id='performed_with_text'>{t('PERFORMED_WITH.TEXT')}</div>
       </div>
-      <div id='perform_with_canvas_container'>
-        {/* <PerformedWithCanvas /> */}
-      </div>
+      <div id='perform_with_canvas_container'>{/* <PerformedWithCanvas /> */}</div>
     </div>
   )
 }

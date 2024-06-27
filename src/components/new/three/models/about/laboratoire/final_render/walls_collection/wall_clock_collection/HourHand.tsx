@@ -21,16 +21,13 @@ interface HourHandInterface extends MeshProps {
 
 export function HourHand({ date }: HourHandInterface) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .WALL_CLOCK_COLLECTION.HOUR_HAND,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.HOUR_HAND,
   ) as GLTFResult
 
   const hourHandRef = useRef<THREE.Mesh>(null!)
 
   useEffect(() => {
-    hourHandRef.current.rotation.x = THREE.MathUtils.degToRad(
-      360 - (date.getHours() * 30 + date.getMinutes() * 0.5),
-    )
+    hourHandRef.current.rotation.x = THREE.MathUtils.degToRad(360 - (date.getHours() * 30 + date.getMinutes() * 0.5))
   }, [date])
 
   return (
@@ -44,7 +41,4 @@ export function HourHand({ date }: HourHandInterface) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .WALL_CLOCK_COLLECTION.HOUR_HAND,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.HOUR_HAND)

@@ -22,9 +22,7 @@
       "doubleSided": true,
       "name": "logo_aws_#252f3e",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.0185000728815794, 0.02842606045305729, 0.04817185178399086, 1
-        ],
+        "baseColorFactor": [0.0185000728815794, 0.02842606045305729, 0.04817185178399086, 1],
         "metallicFactor": 0
       }
     },

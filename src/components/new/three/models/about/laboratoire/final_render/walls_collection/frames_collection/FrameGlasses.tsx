@@ -16,8 +16,7 @@ type GLTFResult = GLTF & {
 
 export function FrameGlasses({}: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .FRAMES_COLLECTION.FRAME_GLASSES,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.FRAME_GLASSES,
   ) as GLTFResult
 
   return (
@@ -29,7 +28,4 @@ export function FrameGlasses({}: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .FRAMES_COLLECTION.FRAME_GLASSES,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.FRAME_GLASSES)

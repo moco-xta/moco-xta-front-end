@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_postman_#000000",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0
       }
     },
@@ -31,9 +29,7 @@
       "doubleSided": true,
       "name": "logo_postman_#fe6c37",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.991097092628479, 0.14995990693569183, 0.03820443153381348, 1
-        ],
+        "baseColorFactor": [0.991097092628479, 0.14995990693569183, 0.03820443153381348, 1],
         "metallicFactor": 0
       }
     }

@@ -16,10 +16,7 @@ type GLTFResult = GLTF & {
 }
 
 export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION
-      .LOGO_TWITTER,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION.LOGO_TWITTER) as GLTFResult
 
   const [selected, setSelected] = useState(false)
 
@@ -52,9 +49,7 @@ export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
 
       if (selected) {
         outlineRef.current.clearSelection()
-        outlineRef.current.update(
-          gl /* inputBuffer: WebGLRenderTarget, deltaTime: Number */,
-        )
+        outlineRef.current.update(gl /* inputBuffer: WebGLRenderTarget, deltaTime: Number */)
       } else {
         outlineSelection.set([mesh])
       }
@@ -95,6 +90,4 @@ export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION.LOGO_TWITTER,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION.LOGO_TWITTER)

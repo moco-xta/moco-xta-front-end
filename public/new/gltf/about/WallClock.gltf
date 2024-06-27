@@ -14,9 +14,7 @@
     {
       "mesh": 0,
       "name": "WallClock",
-      "translation": [
-        -28.582950592041016, 25.39999771118164, -10.007051467895508
-      ]
+      "translation": [-28.582950592041016, 25.39999771118164, -10.007051467895508]
     }
   ],
   "materials": [
@@ -24,9 +22,7 @@
       "doubleSided": true,
       "name": "wall_clock_brushed_metal",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0,
         "roughnessFactor": 0.5
       }
@@ -35,9 +31,7 @@
       "doubleSided": true,
       "name": "mondaine_wall_clock",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0,
         "roughnessFactor": 0.5
       }

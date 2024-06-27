@@ -1,7 +1,4 @@
-import {
-  AddReviewValuesInterface,
-  ReviewPayloadInterface,
-} from '../reduxApiInterfaces'
+import { AddReviewValuesInterface, ReviewPayloadInterface } from '../reduxApiInterfaces'
 
 export interface SignUpSignInInterface {
   setIsSignIn: (value: boolean) => void

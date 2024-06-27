@@ -16,17 +16,9 @@ export default function AboutSlice() {
   }
 
   useEffect(() => {
-    document.addEventListener(
-      'HandleShowInstructions',
-      HandleShowInstructions,
-      false,
-    )
+    document.addEventListener('HandleShowInstructions', HandleShowInstructions, false)
     return () => {
-      document.removeEventListener(
-        'HandleShowInstructions',
-        HandleShowInstructions,
-        false,
-      )
+      document.removeEventListener('HandleShowInstructions', HandleShowInstructions, false)
     }
   })
 

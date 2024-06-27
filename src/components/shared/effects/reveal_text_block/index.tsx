@@ -47,9 +47,7 @@ export default function RevealTextBlock({
       style={{
         transitionDuration: duration,
         transitionDelay: delay,
-        transform: !intersecting
-          ? `translate(${x}px, ${y}px)`
-          : 'translate(0px, 0px)',
+        transform: !intersecting ? `translate(${x}px, ${y}px)` : 'translate(0px, 0px)',
         ...style,
       }}
       className={`transition ${!intersecting ? 'opacity_0' : 'opacity_100'}`}

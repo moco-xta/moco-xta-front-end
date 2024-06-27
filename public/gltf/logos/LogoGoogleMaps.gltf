@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_google_maps_#1b72e8",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.010959387756884098, 0.1682693213224411, 0.8069526553153992, 1
-        ],
+        "baseColorFactor": [0.010959387756884098, 0.1682693213224411, 0.8069526553153992, 1],
         "metallicFactor": 0
       }
     },
@@ -31,9 +29,7 @@
       "doubleSided": true,
       "name": "logo_google_maps_#ea4335",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.8227817416191101, 0.05612844601273537, 0.03560136258602142, 1
-        ],
+        "baseColorFactor": [0.8227817416191101, 0.05612844601273537, 0.03560136258602142, 1],
         "metallicFactor": 0
       }
     },
@@ -41,9 +37,7 @@
       "doubleSided": true,
       "name": "logo_google_maps_#fabc05",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.9559681415557861, 0.5028870105743408, 0.0015177669702097774, 1
-        ],
+        "baseColorFactor": [0.9559681415557861, 0.5028870105743408, 0.0015177669702097774, 1],
         "metallicFactor": 0
       }
     },
@@ -51,9 +45,7 @@
       "doubleSided": true,
       "name": "logo_google_maps_#4284f3",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.054479245096445084, 0.23074005544185638, 0.896269679069519, 1
-        ],
+        "baseColorFactor": [0.054479245096445084, 0.23074005544185638, 0.896269679069519, 1],
         "metallicFactor": 0,
         "roughnessFactor": 0.5
       }
@@ -62,9 +54,7 @@
       "doubleSided": true,
       "name": "logo_google_maps_#33a852",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.033104222267866135, 0.3915730118751526, 0.08437632769346237, 1
-        ],
+        "baseColorFactor": [0.033104222267866135, 0.3915730118751526, 0.08437632769346237, 1],
         "metallicFactor": 0
       }
     }

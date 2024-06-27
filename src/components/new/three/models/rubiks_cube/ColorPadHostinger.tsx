@@ -21,9 +21,7 @@ const ColorPadHostinger = forwardRef<
   >,
   MeshProps
 >(function ColorPadHostinger({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.COLOR_PAD_HOSTINGER,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_HOSTINGER) as GLTFResult
   return (
     <mesh
       name={name}

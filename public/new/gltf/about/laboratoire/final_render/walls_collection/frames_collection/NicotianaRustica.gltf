@@ -22,9 +22,7 @@
       "doubleSided": true,
       "name": "nicotiana_rustica_frame",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0,
         "roughnessFactor": 0.5
       }
@@ -33,9 +31,7 @@
       "doubleSided": true,
       "name": "nicotiana_rustica",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0,
         "roughnessFactor": 0.5
       }
@@ -72,9 +68,7 @@
       "componentType": 5126,
       "count": 524,
       "max": [2.827199935913086, 8.06399917602539, 0.22618335485458374],
-      "min": [
-        -2.8271989822387695, 1.6391277313232422e-7, -1.1976808309555054e-5
-      ],
+      "min": [-2.8271989822387695, 1.6391277313232422e-7, -1.1976808309555054e-5],
       "type": "VEC3"
     },
     {

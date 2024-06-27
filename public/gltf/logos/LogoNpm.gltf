@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_npm_#cc3533",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.6039296388626099, 0.03559969738125801, 0.033102404326200485, 1
-        ],
+        "baseColorFactor": [0.6039296388626099, 0.03559969738125801, 0.033102404326200485, 1],
         "metallicFactor": 0
       }
     },

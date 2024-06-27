@@ -16,8 +16,7 @@ type GLTFResult = GLTF & {
 
 export function Dodecahedron({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
-      .PLATONIC_SOLIDS.DODECAHEDRON,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS.DODECAHEDRON,
   ) as GLTFResult
 
   return (
@@ -32,7 +31,4 @@ export function Dodecahedron({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS
-    .DODECAHEDRON,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS.DODECAHEDRON)

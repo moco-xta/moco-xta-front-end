@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "fruit_red_M",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.4735291302204132, 0.012982983142137527, 0.02028857357800007, 1
-        ],
+        "baseColorFactor": [0.4735291302204132, 0.012982983142137527, 0.02028857357800007, 1],
         "metallicFactor": 0
       }
     },
@@ -31,9 +29,7 @@
       "doubleSided": true,
       "name": "fruit_red_L",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.7379068732261658, 0.015208435244858265, 0.02518688328564167, 1
-        ],
+        "baseColorFactor": [0.7379068732261658, 0.015208435244858265, 0.02518688328564167, 1],
         "metallicFactor": 0
       }
     },
@@ -41,9 +37,7 @@
       "doubleSided": true,
       "name": "fruit_red_D",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.35153084993362427, 0.010960059240460396, 0.013702093623578548, 1
-        ],
+        "baseColorFactor": [0.35153084993362427, 0.010960059240460396, 0.013702093623578548, 1],
         "metallicFactor": 0
       }
     },
@@ -51,9 +45,7 @@
       "doubleSided": true,
       "name": "fruit_red_XD",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.10224122554063797, 0.006048825569450855, 0.007499035447835922, 1
-        ],
+        "baseColorFactor": [0.10224122554063797, 0.006048825569450855, 0.007499035447835922, 1],
         "metallicFactor": 0
       }
     },
@@ -77,9 +69,7 @@
       "doubleSided": true,
       "name": "fruit_green_M",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.1356325000524521, 0.18782104551792145, 0.015208562836050987, 1
-        ],
+        "baseColorFactor": [0.1356325000524521, 0.18782104551792145, 0.015208562836050987, 1],
         "metallicFactor": 0
       }
     },
@@ -87,9 +77,7 @@
       "doubleSided": true,
       "name": "fruit_green_L",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.2501567304134369, 0.35153308510780334, 0.025186948478221893, 1
-        ],
+        "baseColorFactor": [0.2501567304134369, 0.35153308510780334, 0.025186948478221893, 1],
         "metallicFactor": 0
       }
     },
@@ -97,9 +85,7 @@
       "doubleSided": true,
       "name": "fruit_green_D",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.05780505761504173, 0.08021994680166245, 0.008023212663829327, 1
-        ],
+        "baseColorFactor": [0.05780505761504173, 0.08021994680166245, 0.008023212663829327, 1],
         "metallicFactor": 0
       }
     }

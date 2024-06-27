@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export default function Butterfly(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.ABOUT.SQUARES.BUTTERFLY.PICTURE,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.ABOUT.SQUARES.BUTTERFLY.PICTURE) as GLTFResult
 
   materials.butterfly.transparent = true
 

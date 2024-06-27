@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_figma_#f24d1d",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.8880735635757446, 0.07421021908521652, 0.012285638600587845, 1
-        ],
+        "baseColorFactor": [0.8880735635757446, 0.07421021908521652, 0.012285638600587845, 1],
         "metallicFactor": 0
       }
     },
@@ -39,9 +37,7 @@
       "doubleSided": true,
       "name": "logo_figma_#19bcfe",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.009721769951283932, 0.5028643012046814, 0.9910305142402649, 1
-        ],
+        "baseColorFactor": [0.009721769951283932, 0.5028643012046814, 0.9910305142402649, 1],
         "metallicFactor": 0
       }
     },
@@ -49,9 +45,7 @@
       "doubleSided": true,
       "name": "logo_figma_#a259ff",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.3613673448562622, 0.09989400207996368, 0.9999274015426636, 1
-        ],
+        "baseColorFactor": [0.3613673448562622, 0.09989400207996368, 0.9999274015426636, 1],
         "metallicFactor": 0
       }
     },
@@ -59,9 +53,7 @@
       "doubleSided": true,
       "name": "logo_figma_#0dcf82",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.004024668131023645, 0.6239334940910339, 0.22321194410324097, 1
-        ],
+        "baseColorFactor": [0.004024668131023645, 0.6239334940910339, 0.22321194410324097, 1],
         "metallicFactor": 0
       }
     }

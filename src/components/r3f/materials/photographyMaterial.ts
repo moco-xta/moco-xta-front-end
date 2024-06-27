@@ -9,11 +9,7 @@ const uniforms = {
   uTexture: null,
 }
 
-export const PhotographyMaterial = shaderMaterial(
-  uniforms,
-  vertexShader,
-  fragmentShader,
-)
+export const PhotographyMaterial = shaderMaterial(uniforms, vertexShader, fragmentShader)
 
 declare global {
   namespace JSX {

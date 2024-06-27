@@ -21,9 +21,7 @@ const ColorPadBlender = forwardRef<
   >,
   MeshProps
 >(function ColorPadBlender({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.COLOR_PAD_BLENDER,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_BLENDER) as GLTFResult
   return (
     <mesh
       ref={ref}

@@ -20,8 +20,7 @@ type GLTFResult = GLTF & {
 
 export function NicotianaRustica({ position }: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .FRAMES_COLLECTION.NICOTIANA_RUSTICA,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA,
   ) as GLTFResult
 
   return (
@@ -48,7 +47,4 @@ export function NicotianaRustica({ position }: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .FRAMES_COLLECTION.NICOTIANA_RUSTICA,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA)

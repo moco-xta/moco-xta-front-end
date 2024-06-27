@@ -25,10 +25,7 @@ type GLTFResult = GLTF & {
 }
 
 export function SpeakerBox({ name, position }: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION
-      .SPEAKER_BOX,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX) as GLTFResult
 
   return (
     <group
@@ -50,26 +47,15 @@ export function SpeakerBox({ name, position }: JSX.IntrinsicElements['group']) {
         receiveShadow
         castShadow
       />
-      {[
-        ...Array(
-          laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.SPEAKERS.NUMBER,
-        ),
-      ].map((_, index) => (
+      {[...Array(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.SPEAKERS.NUMBER)].map((_, index) => (
         <Speaker
           key={`speaker_${name}_${index}`}
           name={`speaker_${name}_${index}`}
-          position={[
-            0,
-            laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.SPEAKERS.GAP *
-              index,
-            0,
-          ]}
+          position={[0, laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.SPEAKERS.GAP * index, 0]}
         />
       ))}
     </group>
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX)

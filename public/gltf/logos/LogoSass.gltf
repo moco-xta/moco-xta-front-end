@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "icon_sass_#ce679b",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.6173110604286194, 0.13562729954719543, 0.327754408121109, 1
-        ],
+        "baseColorFactor": [0.6173110604286194, 0.13562729954719543, 0.327754408121109, 1],
         "metallicFactor": 0
       }
     }

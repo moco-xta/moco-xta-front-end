@@ -16,9 +16,7 @@ export default function Instructions() {
     <div id={`${!isMobile ? 'desktop_instructions' : 'mobile_instructions'}`}>
       <h2 id='instructions_title'>{t('INSTRUCTIONS.INSTRUCTIONS')}</h2>
       {!isMobile ? <DesktopInstructions /> : <MobileInstructions />}
-      <p id='render_mode_instructions'>
-        {t('INSTRUCTIONS.CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER')}
-      </p>
+      <p id='render_mode_instructions'>{t('INSTRUCTIONS.CHOOSE_BETWEEN_CLAY_AND_FINAL_RENDER')}</p>
       <IsClayRenderToggleButton />
       <AboutEnterButton />
     </div>

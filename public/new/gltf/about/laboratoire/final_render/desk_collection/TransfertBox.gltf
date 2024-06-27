@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "transfert_box",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.5583368539810181, 0.5583409667015076, 0.5457249283790588, 1
-        ],
+        "baseColorFactor": [0.5583368539810181, 0.5583409667015076, 0.5457249283790588, 1],
         "metallicFactor": 0
       }
     },
@@ -31,9 +29,7 @@
       "doubleSided": true,
       "name": "iron_simple",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0.5,
         "roughnessFactor": 0.5
       }

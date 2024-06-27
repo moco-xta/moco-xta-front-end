@@ -14,10 +14,7 @@ import './index.scss'
 export function LastProjectCard({ content }: LastProjectsCardInterface) {
   const cardRef = useRef<HTMLDivElement>(null)
 
-  useCardHoverEffect(
-    cardRef,
-    effectsConstants.CARD_HOVER_EFFECT.LAST_PROJECTS_CARDS,
-  )
+  useCardHoverEffect(cardRef, effectsConstants.CARD_HOVER_EFFECT.LAST_PROJECTS_CARDS)
 
   return (
     <div

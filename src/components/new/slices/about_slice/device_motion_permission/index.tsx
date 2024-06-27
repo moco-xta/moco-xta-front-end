@@ -11,9 +11,7 @@ export default function DeviceMotionPermission() {
   const t = useTranslations('ABOUT')
 
   const dispatch = useDispatch<AppDispatch>()
-  const { accessToDeviceMotionAndOrientationGranted } = useSelector(
-    (state: RootState) => state.about,
-  )
+  const { accessToDeviceMotionAndOrientationGranted } = useSelector((state: RootState) => state.about)
 
   useEffect(() => {
     // @ts-ignore
@@ -48,14 +46,8 @@ export default function DeviceMotionPermission() {
     <>
       {!accessToDeviceMotionAndOrientationGranted && (
         <div id='device_motion_permission_modal'>
-          <h2>
-            {t(
-              'GRANT_PERMISSION.ALLOW_ACCESS_TO_DEVICE_MOTION_AND_ORIENTATION',
-            )}
-          </h2>
-          <p id='this_app_requires_access'>
-            {t('GRANT_PERMISSION.THIS_APP_REQUIRES_ACCESS')}
-          </p>
+          <h2>{t('GRANT_PERMISSION.ALLOW_ACCESS_TO_DEVICE_MOTION_AND_ORIENTATION')}</h2>
+          <p id='this_app_requires_access'>{t('GRANT_PERMISSION.THIS_APP_REQUIRES_ACCESS')}</p>
           <button
             id='grant_permission_button'
             onClick={handlePermissionGranted}

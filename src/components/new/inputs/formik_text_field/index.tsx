@@ -9,22 +9,9 @@ import Error from '../../errors'
 import './index.scss'
 
 export default function FormikTextField(props: FormikTextInterface) {
-  const {
-    label,
-    type,
-    name,
-    handleChange,
-    setFieldValue,
-    value,
-    storeValue = true,
-    error,
-    helperText,
-  } = props
+  const { label, type, name, handleChange, setFieldValue, value, storeValue = true, error, helperText } = props
 
-  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
-    name,
-    value,
-  )
+  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(name, value)
 
   useEffect(() => {
     if (storedValue) setFieldValue(name, storedValue)

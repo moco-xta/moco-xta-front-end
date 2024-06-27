@@ -16,8 +16,7 @@ type GLTFResult = GLTF & {
 
 export function Octahedron({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
-      .PLATONIC_SOLIDS.OCTAHEDRON,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS.OCTAHEDRON,
   ) as GLTFResult
 
   return (
@@ -32,7 +31,4 @@ export function Octahedron({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS
-    .OCTAHEDRON,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PLATONIC_SOLIDS.OCTAHEDRON)

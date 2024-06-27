@@ -1,12 +1,7 @@
 import React, { Suspense, useMemo } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import {
-  FlyControls,
-  KeyboardControls,
-  PerspectiveCamera,
-  PointerLockControls,
-} from '@react-three/drei'
+import { FlyControls, KeyboardControls, PerspectiveCamera, PointerLockControls } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import Player from '../../controls/Player'

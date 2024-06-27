@@ -15,9 +15,7 @@
       "mesh": 0,
       "name": "WorldMapStand",
       "rotation": [0, 0.258819043636322, 0, 0.965925931930542],
-      "translation": [
-        -12.199999809265137, 10.332998275756836, -14.100000381469727
-      ]
+      "translation": [-12.199999809265137, 10.332998275756836, -14.100000381469727]
     }
   ],
   "materials": [
@@ -25,9 +23,7 @@
       "doubleSided": true,
       "name": "world_map_stand_marble",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0,
         "roughnessFactor": 0.5
       }
@@ -36,9 +32,7 @@
       "doubleSided": true,
       "name": "world_map_stand_used_metal",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0,
         "roughnessFactor": 0.5
       }

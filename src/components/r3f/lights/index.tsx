@@ -8,11 +8,7 @@ export default function Lights({ canvasName, data }: LightsInterface) {
     <>
       {data.map((lightByCategory) => {
         return lightByCategory.POSITIONS.map((position, index) => {
-          const vector3Position = new THREE.Vector3(
-            position.X,
-            position.Y,
-            position.Z,
-          )
+          const vector3Position = new THREE.Vector3(position.X, position.Y, position.Z)
           return (
             <>
               {(() => {
@@ -22,11 +18,7 @@ export default function Lights({ canvasName, data }: LightsInterface) {
                       <pointLight
                         key={`point_light_${canvasName}_${index}`}
                         position={vector3Position}
-                        color={
-                          lightByCategory?.COLOR
-                            ? lightByCategory.COLOR
-                            : 0xffffff
-                        }
+                        color={lightByCategory?.COLOR ? lightByCategory.COLOR : 0xffffff}
                         intensity={lightByCategory.INTENSITY}
                         castShadow
                       />

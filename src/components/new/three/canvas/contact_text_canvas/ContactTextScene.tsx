@@ -63,8 +63,7 @@ export default function ContactTextScene() {
 
   useFrame(() => {
     const x = (1 / (window.innerWidth / 2)) * (mouseX - window.innerWidth / 2)
-    const y =
-      (1 / (window.innerHeight / 2)) * -(mouseY - window.innerHeight / 2)
+    const y = (1 / (window.innerHeight / 2)) * -(mouseY - window.innerHeight / 2)
     mouseLerped.current.x = THREE.MathUtils.lerp(mouseLerped.current.x, x, 0.1)
     mouseLerped.current.y = THREE.MathUtils.lerp(mouseLerped.current.y, y, 0.1)
     // @ts-ignore

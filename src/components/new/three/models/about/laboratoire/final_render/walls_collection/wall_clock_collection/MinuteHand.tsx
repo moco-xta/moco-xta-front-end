@@ -20,16 +20,13 @@ interface MinuteHandInterface extends MeshProps {
 
 export function MinuteHand({ date }: MinuteHandInterface) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-      .WALL_CLOCK_COLLECTION.MINUTE_HAND,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.MINUTE_HAND,
   ) as GLTFResult
 
   const minuteHandRef = useRef<THREE.Mesh>(null!)
 
   useEffect(() => {
-    minuteHandRef.current.rotation.x = THREE.MathUtils.degToRad(
-      360 - date.getMinutes() * 6,
-    )
+    minuteHandRef.current.rotation.x = THREE.MathUtils.degToRad(360 - date.getMinutes() * 6)
   }, [date])
 
   return (
@@ -43,7 +40,4 @@ export function MinuteHand({ date }: MinuteHandInterface) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
-    .WALL_CLOCK_COLLECTION.MINUTE_HAND,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.MINUTE_HAND)

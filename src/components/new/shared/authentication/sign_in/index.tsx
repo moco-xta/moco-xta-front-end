@@ -27,10 +27,8 @@ export default function SignIn({ setIsSignIn }: SignUpSignInInterface) {
 
   const [signIn] = useSignInMutation()
 
-  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] =
-    useState<boolean>(false)
-  const [resetButtonIsDisabled, setResetButtonIsDisabled] =
-    useState<boolean>(true)
+  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(false)
+  const [resetButtonIsDisabled, setResetButtonIsDisabled] = useState<boolean>(true)
 
   const initialValues: SignInPayloadInterface = {
     email: '',

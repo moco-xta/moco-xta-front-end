@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export function DeskTray({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_TRAY,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_TRAY) as GLTFResult
 
   return (
     <mesh
@@ -31,6 +29,4 @@ export function DeskTray({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_TRAY,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_TRAY)

@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export default function TrinitySquare(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.ABOUT.SQUARES.TRINITY.SQUARE,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.ABOUT.SQUARES.TRINITY.SQUARE) as GLTFResult
 
   return (
     <mesh

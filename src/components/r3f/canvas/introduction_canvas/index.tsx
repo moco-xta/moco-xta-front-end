@@ -1,14 +1,7 @@
 import { Suspense, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import {
-  OrbitControls,
-  useFBO,
-  Float,
-  Text3D,
-  PerspectiveCamera,
-  useGLTF,
-} from '@react-three/drei'
+import { OrbitControls, useFBO, Float, Text3D, PerspectiveCamera, useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import { Leva, folder, useControls } from 'leva'
 
@@ -105,10 +98,9 @@ const Geometries = () => {
         value: new THREE.Vector3(-1.0, 1.0, 1.0),
       },
       winResolution: {
-        value: new THREE.Vector2(
-          window.innerWidth,
-          window.innerHeight,
-        ).multiplyScalar(Math.min(window.devicePixelRatio, 2)),
+        value: new THREE.Vector2(window.innerWidth, window.innerHeight).multiplyScalar(
+          Math.min(window.devicePixelRatio, 2),
+        ),
       },
     }),
     [],
@@ -123,11 +115,7 @@ const Geometries = () => {
     // @ts-ignore
     mesh.current.material.uniforms.uShininess.value = shininess
     // @ts-ignore
-    mesh.current.material.uniforms.uLight.value = new THREE.Vector3(
-      light.x,
-      light.y,
-      light.z,
-    )
+    mesh.current.material.uniforms.uLight.value = new THREE.Vector3(light.x, light.y, light.z)
     // @ts-ignore
     mesh.current.material.uniforms.uFresnelPower.value = fresnelPower
 
@@ -147,8 +135,7 @@ const Geometries = () => {
     // @ts-ignore
     mesh.current.material.uniforms.uSaturation.value = saturation
     // @ts-ignore
-    mesh.current.material.uniforms.uChromaticAberration.value =
-      chromaticAberration
+    mesh.current.material.uniforms.uChromaticAberration.value = chromaticAberration
     // @ts-ignore
     mesh.current.material.uniforms.uRefractPower.value = refraction
 

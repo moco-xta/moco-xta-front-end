@@ -16,13 +16,11 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoMui = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoMui({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    gltfConstants.LOGO_MUI,
-  ) as GLTFResult
+const LogoMui = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoMui(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(gltfConstants.LOGO_MUI) as GLTFResult
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

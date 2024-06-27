@@ -16,10 +16,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function Spring({
-  onPointerMove,
-  onPointerOut,
-}: JSX.IntrinsicElements['group']) {
+export function Spring({ onPointerMove, onPointerOut }: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(gltfConstants.SPRING) as GLTFResult
   return (
     <group

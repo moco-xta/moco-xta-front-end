@@ -16,8 +16,7 @@ type GLTFResult = GLTF & {
 
 export function VirgenDeGuadalupe({ position }: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(
-    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
-      .VIRGEN_DE_GUADALUPE,
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.VIRGEN_DE_GUADALUPE,
   ) as GLTFResult
 
   return (
@@ -32,7 +31,4 @@ export function VirgenDeGuadalupe({ position }: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(
-  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION
-    .VIRGEN_DE_GUADALUPE,
-)
+useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.VIRGEN_DE_GUADALUPE)

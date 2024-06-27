@@ -5,10 +5,7 @@ import { ResetButtonInterface } from '@/interfaces/buttonsInterfaces'
 
 import './index.scss'
 
-export default function ResetButton({
-  resetForm,
-  resetButtonIsDisabled,
-}: ResetButtonInterface) {
+export default function ResetButton({ resetForm, resetButtonIsDisabled }: ResetButtonInterface) {
   const t = useTranslations()
 
   return (

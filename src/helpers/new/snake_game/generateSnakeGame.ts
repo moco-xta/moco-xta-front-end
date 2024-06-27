@@ -1,10 +1,6 @@
 import { SnakeGameInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import {
-  generateFood,
-  generateSnake,
-  updateGrid,
-} from '@/helpers/new/snake_game'
+import { generateFood, generateSnake, updateGrid } from '@/helpers/new/snake_game'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 

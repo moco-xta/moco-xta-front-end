@@ -24,18 +24,9 @@ export default function DeskCollection() {
         }
         rotation={
           new THREE.Euler(
-            THREE.MathUtils.degToRad(
-              laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR
-                .ROTATION.X,
-            ),
-            THREE.MathUtils.degToRad(
-              laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR
-                .ROTATION.Y,
-            ),
-            THREE.MathUtils.degToRad(
-              laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR
-                .ROTATION.Z,
-            ),
+            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR.ROTATION.X),
+            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR.ROTATION.Y),
+            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR.ROTATION.Z),
           )
         }
       />
@@ -66,43 +57,27 @@ export default function DeskCollection() {
           )
         }
       />
-      {laboratoireFinalRenderConstants.DESK_COLLECTION.TRANSFERT_BOXES.map(
-        (transfertBox) => (
-          <TransfertBox
-            key={transfertBox.NAME}
-            name={transfertBox.NAME}
-            position={
-              new THREE.Vector3(
-                transfertBox.POSITION.X,
-                transfertBox.POSITION.Y,
-                transfertBox.POSITION.Z,
-              )
-            }
-            rotation={
-              new THREE.Euler(
-                THREE.MathUtils.degToRad(transfertBox.ROTATION.X),
-                THREE.MathUtils.degToRad(transfertBox.ROTATION.Y),
-                THREE.MathUtils.degToRad(transfertBox.ROTATION.Z),
-              )
-            }
-          />
-        ),
-      )}
-      {laboratoireFinalRenderConstants.DESK_COLLECTION.TRESTLES.map(
-        (trestle) => (
-          <Trestle
-            key={trestle.NAME}
-            name={trestle.NAME}
-            position={
-              new THREE.Vector3(
-                trestle.POSITION.X,
-                trestle.POSITION.Y,
-                trestle.POSITION.Z,
-              )
-            }
-          />
-        ),
-      )}
+      {laboratoireFinalRenderConstants.DESK_COLLECTION.TRANSFERT_BOXES.map((transfertBox) => (
+        <TransfertBox
+          key={transfertBox.NAME}
+          name={transfertBox.NAME}
+          position={new THREE.Vector3(transfertBox.POSITION.X, transfertBox.POSITION.Y, transfertBox.POSITION.Z)}
+          rotation={
+            new THREE.Euler(
+              THREE.MathUtils.degToRad(transfertBox.ROTATION.X),
+              THREE.MathUtils.degToRad(transfertBox.ROTATION.Y),
+              THREE.MathUtils.degToRad(transfertBox.ROTATION.Z),
+            )
+          }
+        />
+      ))}
+      {laboratoireFinalRenderConstants.DESK_COLLECTION.TRESTLES.map((trestle) => (
+        <Trestle
+          key={trestle.NAME}
+          name={trestle.NAME}
+          position={new THREE.Vector3(trestle.POSITION.X, trestle.POSITION.Y, trestle.POSITION.Z)}
+        />
+      ))}
       <VinylDiscs />
     </>
   )
