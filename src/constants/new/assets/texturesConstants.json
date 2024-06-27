@@ -195,6 +195,25 @@
                 }
               }
             },
+            "COURONNES": {
+              "COURONNES": {
+                "DIFFUSE": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_diffuse_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_diffuse_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_diffuse_1K.jpg"
+                },
+                "ROUGHNESS": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_roughness_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_roughness_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_roughness_1K.jpg"
+                },
+                "NORMAL": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_normal_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_normal_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_normal_1K.jpg"
+                }
+              }
+            },
             "MONARCH": {
               "MONARCH": {
                 "DIFFUSE": {
@@ -245,6 +264,30 @@
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_shadow_diffuse_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_shadow_diffuse_2K.jpg",
                   "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_shadow_diffuse_1K.jpg"
+                }
+              }
+            },
+            "NICOTIANA_RUSTICA": {
+              "NICOTIANA_RUSTICA": {
+                "DIFFUSE": {
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_diffuse_1K.jpg"
+                }
+              },
+              "NICOTIANA_RUSTICA_FRAME": {
+                "DIFFUSE": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_diffuse_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_diffuse_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_diffuse_1K.jpg"
+                },
+                "ROUGHNESS": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_roughness_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_roughness_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_roughness_1K.jpg"
+                },
+                "NORMAL": {
+                  "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_normal_4K.jpg",
+                  "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_normal_2K.jpg",
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_normal_1K.jpg"
                 }
               }
             },

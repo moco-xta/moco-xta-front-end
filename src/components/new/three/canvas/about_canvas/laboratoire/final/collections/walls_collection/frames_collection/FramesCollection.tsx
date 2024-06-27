@@ -4,7 +4,10 @@ import * as THREE from 'three'
 import { AmorLlamaAmor } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/AmorLlamaAmor'
 import { Brain } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Brain'
 import { CelestialMap } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/CelestialMap'
+import { Couronnes } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Couronnes'
+import { FrameGlasses } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/FrameGlasses'
 import { Monarch } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Monarch'
+import { NicotianaRustica } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/NicotianaRustica'
 import { Trinity } from '@/components/new/three/models/about/laboratoire/final_render/walls_collection/frames_collection/Trinity'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/laboratoire/laboratoireFinalRenderConstants.json'
@@ -39,12 +42,31 @@ export default function FramesCollection() {
           )
         }
       />
+      <Couronnes
+        position={
+          new THREE.Vector3(
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.POSITION.X,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.POSITION.Y,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.POSITION.Z,
+          )
+        }
+      />
+      <FrameGlasses />
       <Monarch
         position={
           new THREE.Vector3(
             laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.POSITION.X,
             laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.POSITION.Y,
             laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.POSITION.Z,
+          )
+        }
+      />
+      <NicotianaRustica
+        position={
+          new THREE.Vector3(
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA.POSITION.X,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA.POSITION.Y,
+            laboratoireFinalRenderConstants.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA.POSITION.Z,
           )
         }
       />

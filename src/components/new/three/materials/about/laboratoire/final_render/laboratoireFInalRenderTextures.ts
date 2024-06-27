@@ -63,6 +63,26 @@ const celestialMapFrameNormalMap = new THREE.TextureLoader().load(
 )
 celestialMapFrameNormalMap.flipY = false
 
+// COURONNES
+
+const couronnesMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.COURONNES.COURONNES.DIFFUSE.FOUR_K,
+)
+couronnesMap.flipY = false
+
+const couronnesRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.COURONNES.COURONNES.ROUGHNESS.FOUR_K,
+)
+couronnesRoughnessMap.flipY = false
+
+const couronnesNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.COURONNES.COURONNES.NORMAL.FOUR_K,
+)
+couronnesNormalMap.flipY = false
+
 // DESK CHAIR
 
 const deskChairLeatherMap = new THREE.TextureLoader().load(
@@ -138,6 +158,33 @@ const monarchShadowMap = new THREE.TextureLoader().load(
     .FRAMES_COLLECTION.MONARCH.MONARCH_SHADOW.DIFFUSE.FOUR_K,
 )
 monarchShadowMap.flipY = false
+
+// NICOTIANA RUSTICA
+
+const nicotianaRusticaMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.NICOTIANA_RUSTICA.NICOTIANA_RUSTICA.DIFFUSE.ONE_K,
+)
+nicotianaRusticaMap.flipY = false
+
+const nicotianaRusticaFrameMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.NICOTIANA_RUSTICA.NICOTIANA_RUSTICA_FRAME.DIFFUSE.FOUR_K,
+)
+nicotianaRusticaFrameMap.flipY = false
+
+const nicotianaRusticaFrameRoughnessMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.NICOTIANA_RUSTICA.NICOTIANA_RUSTICA_FRAME.ROUGHNESS
+    .FOUR_K,
+)
+nicotianaRusticaFrameRoughnessMap.flipY = false
+
+const nicotianaRusticaFrameNormalMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION
+    .FRAMES_COLLECTION.NICOTIANA_RUSTICA.NICOTIANA_RUSTICA_FRAME.NORMAL.FOUR_K,
+)
+nicotianaRusticaFrameNormalMap.flipY = false
 
 // PABALO ESCOBAR
 
@@ -369,6 +416,11 @@ const laboratoireFinalRenderTextures: {
     roughnessMap: celestialMapFrameRoughnessMap,
     normalMap: celestialMapFrameNormalMap,
   },
+  couronnes: {
+    map: couronnesMap,
+    roughnessMap: couronnesRoughnessMap,
+    normalMap: couronnesNormalMap,
+  },
   deskChair: {
     map: deskChairLeatherMap,
     roughnessMap: deskChairLeatherRoughnessMap,
@@ -393,6 +445,14 @@ const laboratoireFinalRenderTextures: {
   },
   mondaineWallClock: {
     map: mondaineWallClockMap,
+  },
+  nicotianaRustica: {
+    map: nicotianaRusticaMap,
+  },
+  nicotianaRusticaFrame: {
+    map: nicotianaRusticaFrameMap,
+    roughnessMap: nicotianaRusticaFrameRoughnessMap,
+    normalMap: nicotianaRusticaFrameNormalMap,
   },
   pabloEscobar: {
     map: pabloEscobarMap,

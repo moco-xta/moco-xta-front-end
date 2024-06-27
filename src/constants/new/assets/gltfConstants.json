@@ -96,7 +96,10 @@
             "AMOR_LLAMA_AMOR": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/AmorLlamaAmor.gltf",
             "BRAIN": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Brain.gltf",
             "CELESTIAL_MAP": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/CelestialMap.gltf",
+            "COURONNES": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Couronnes.gltf",
+            "FRAME_GLASSES": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/FrameGlasses.gltf",
             "MONARCH": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Monarch.gltf",
+            "NICOTIANA_RUSTICA": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/NicotianaRustica.gltf",
             "TRINITY": "/new/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Trinity.gltf"
           },
           "NORTH_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/NorthWall.gltf",

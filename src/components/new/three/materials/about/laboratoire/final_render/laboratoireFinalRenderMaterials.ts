@@ -45,12 +45,24 @@ export const celestialMapMaterial = new THREE.MeshStandardMaterial({
 })
 
 export const celestialMapFrameMaterial = new THREE.MeshStandardMaterial({
-  /* color: '#433', */
+  color: '#baa',
   map: laboratoireFinalRenderTextures.celestialMapFrame.map,
+  metalness: 0.1,
   /* metalnessMap: laboratoireFinalRenderTextures.celestialMapFrame.roughnessMap, */
-  /* roughness: 0.3, */
+  roughness: 0.25,
   roughnessMap: laboratoireFinalRenderTextures.celestialMapFrame.roughnessMap,
   normalMap: laboratoireFinalRenderTextures.celestialMapFrame.normalMap,
+})
+
+// COURONNES
+
+export const couronnesMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.couronnes.map,
+  metalness: 0.1,
+  metalnessMap: laboratoireFinalRenderTextures.couronnes.roughnessMap,
+  roughness: 0.35,
+  roughnessMap: laboratoireFinalRenderTextures.couronnes.roughnessMap,
+  normalMap: laboratoireFinalRenderTextures.couronnes.normalMap,
 })
 
 // DEFAULT MATERIAL
@@ -104,15 +116,15 @@ export const macBookProKeyboardMaterial = new THREE.MeshStandardMaterial({
 // GLASS
 
 export const glassMaterial = new THREE.MeshPhysicalMaterial({
-  color: '#ffffff',
+  color: '#777',
   roughness: 0,
-  transmission: 1,
+  /* transmission: 1, */
   ior: 1.5,
   /* thickness: 0.2, */
   specularIntensity: 1,
   clearcoat: 1,
   transparent: true,
-  /* opacity: 0.3 */
+  opacity: 0.3,
 })
 
 // IRON
@@ -148,6 +160,22 @@ export const monarchBottomMaterial = new THREE.MeshStandardMaterial({
 
 export const monarchShadowMaterial = new THREE.MeshStandardMaterial({
   map: laboratoireFinalRenderTextures.monarchShadow.map,
+})
+
+// NICOTIANA RUSTICA
+
+export const nicotianaRusticaMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.nicotianaRustica.map,
+})
+
+export const nicotianaRusticaFrameMaterial = new THREE.MeshStandardMaterial({
+  map: laboratoireFinalRenderTextures.nicotianaRusticaFrame.map,
+  /* metalness: 0.5, */
+  /* metalnessMap: laboratoireFinalRenderTextures.nicotianaRusticaFrame.roughnessMap, */
+  roughness: 0.3,
+  roughnessMap:
+    laboratoireFinalRenderTextures.nicotianaRusticaFrame.roughnessMap,
+  normalMap: laboratoireFinalRenderTextures.nicotianaRusticaFrame.normalMap,
 })
 
 // PABLO ESCOBAR
