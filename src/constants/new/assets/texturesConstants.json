@@ -654,11 +654,11 @@
     }
   },
   "MINECRAFT": {
-    "DIRT": "/new/img/textures/minecraft/dirt.jpg",
-    "GLASS": "/new/img/textures/minecraft/glass.png",
-    "GRASS": "/new/img/textures/minecraft/grass.jpg",
-    "LOG": "/new/img/textures/minecraft/log.jpg",
-    "WOOD": "/new/img/textures/minecraft/wood.png"
+    "DIRT": "/new/img/textures/about/minecraft/dirt.jpg",
+    "GLASS": "/new/img/textures/about/minecraft/glass.png",
+    "GRASS": "/new/img/textures/about/minecraft/grass.jpg",
+    "LOG": "/new/img/textures/about/minecraft/log.jpg",
+    "WOOD": "/new/img/textures/about/minecraft/wood.png"
   },
   "CONTACT": {
     "PROFIL_PICTURE": "/new/img/textures/contact/profil_picture.jpg"

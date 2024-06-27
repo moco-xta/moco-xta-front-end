@@ -65,10 +65,6 @@ export const couronnesMaterial = new THREE.MeshStandardMaterial({
   normalMap: laboratoireFinalRenderTextures.couronnes.normalMap,
 })
 
-// DEFAULT MATERIAL
-
-export const defaultMaterial = new THREE.MeshStandardMaterial({})
-
 // DESK CHAIR
 
 export const deskChairLeatherMaterial = new THREE.MeshStandardMaterial({

@@ -16,6 +16,7 @@ import RealTimeSky from './RealTimeSky'
 import ToneMapping from './ToneMapping'
 
 import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
+import MinecraftScene from './minecraft/MinecraftScene'
 
 export default function AboutCanvas() {
   const dispatch = useDispatch<AppDispatch>()
@@ -57,12 +58,13 @@ export default function AboutCanvas() {
             <DeviceOrientationControls />
           )}
           <LaboratoireScene />
+          <MinecraftScene />
           <PhysicsGround />
           {isFinalRender && <RealTimeSky />}
-          <Debug
+          {/* <Debug
             color={'red'}
             scale={1.1}
-          />
+          /> */}
         </Physics>
         <ToneMapping />
       </Suspense>

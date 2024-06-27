@@ -8,7 +8,9 @@ import { CubeInterface } from '@/interfaces/new/minecraftInterfaces'
 import { AppDispatch } from '@/redux/store'
 import { addCube, removeCube } from '@/redux/slice/minecraftSlice'
 
-import textures from './textures'
+import minecraftTextures from '../../../materials/about/minecraft/minecraftTextures'
+
+import { default as minecraftConstants } from '@/constants/new/canvas/about/minecraft/minecraftConstants.json'
 
 export const Cube = ({ position, texture }: CubeInterface) => {
   const dispatch = useDispatch<AppDispatch>()
@@ -20,7 +22,7 @@ export const Cube = ({ position, texture }: CubeInterface) => {
     position,
   }))
 
-  const activeTexture: THREE.Texture = textures[texture + 'Texture']
+  const activeTexture: THREE.Texture = minecraftTextures[texture + 'Texture']
 
   const handleOnPointerMove = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation()
@@ -40,22 +42,22 @@ export const Cube = ({ position, texture }: CubeInterface) => {
       dispatch(removeCube([x, y, z]))
       return
     } else if (clickedFace === 0) {
-      dispatch(addCube([x + 1, y, z]))
+      dispatch(addCube([x + minecraftConstants.SCALE, y, z]))
       return
     } else if (clickedFace === 1) {
-      dispatch(addCube([x - 1, y, z]))
+      dispatch(addCube([x - minecraftConstants.SCALE, y, z]))
       return
     } else if (clickedFace === 2) {
-      dispatch(addCube([x, y + 1, z]))
+      dispatch(addCube([x, y + minecraftConstants.SCALE, z]))
       return
     } else if (clickedFace === 3) {
-      dispatch(addCube([x, y - 1, z]))
+      dispatch(addCube([x, y - minecraftConstants.SCALE, z]))
       return
     } else if (clickedFace === 4) {
-      dispatch(addCube([x, y, z + 1]))
+      dispatch(addCube([x, y, z + minecraftConstants.SCALE]))
       return
     } else if (clickedFace === 5) {
-      dispatch(addCube([x, y, z - 1]))
+      dispatch(addCube([x, y, z - minecraftConstants.SCALE]))
       return
     }
   }
@@ -69,7 +71,7 @@ export const Cube = ({ position, texture }: CubeInterface) => {
       onPointerOut={handleOnPointerOut}
       onClick={handleOnClick}
     >
-      <boxGeometry attach='geometry' />
+      <boxGeometry attach='geometry' args={[minecraftConstants.SCALE, minecraftConstants.SCALE, minecraftConstants.SCALE]}/>
       <meshStandardMaterial
         attach='material'
         color={isHovered ? 'grey' : 'white'}
