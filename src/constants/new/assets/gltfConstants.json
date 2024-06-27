@@ -79,6 +79,10 @@
           "SHELF": "/new/gltf/about/laboratoire/final_render/shelf_collection/Shelf.gltf",
           "VIRGEN_DE_GUADALUPE": "/new/gltf/about/laboratoire/final_render/shelf_collection/VirgenDeGuadalupe.gltf"
         },
+        "SOCIALS_COLLECTION": {
+          "LOGO_GITHUB": "/new/gltf/about/laboratoire/final_render/socials_collection/LogoGitHub.gltf",
+          "LOGO_TWITTER": "/new/gltf/about/laboratoire/final_render/socials_collection/LogoTwitter.gltf"
+        },
         "SPEAKERS_COLLECTION": {
           "SPEAKER": "/new/gltf/about/laboratoire/final_render/speakers_collection/Speaker.gltf",
           "SPEAKER_BOX": "/new/gltf/about/laboratoire/final_render/speakers_collection/SpeakerBox.gltf",

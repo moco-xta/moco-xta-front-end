@@ -169,6 +169,22 @@
       }
     }
   },
+  "SOCIALS_COLLECTION": {
+    "LOGO_GITHUB": {
+      "POSITION": {
+        "X": 7.329,
+        "Y": 14.798,
+        "Z": -13.842
+      }
+    },
+    "LOGO_TWITTER": {
+      "POSITION": {
+        "X": -2.609,
+        "Y": 12.292,
+        "Z": -10.3
+      }
+    }
+  },
   "SPEAKERS_COLLECTION": {
     "SPEAKER_BOXES": [
       {

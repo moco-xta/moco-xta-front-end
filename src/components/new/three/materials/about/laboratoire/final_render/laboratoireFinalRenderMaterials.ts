@@ -135,6 +135,20 @@ export const ironMaterial = new THREE.MeshStandardMaterial({
   roughness: 0.5,
 })
 
+// LOGO GITHUB
+
+export const logoGitHubMaterial = new THREE.MeshStandardMaterial({
+  color: '#fff',
+})
+
+// LOGO TWITTER
+
+export const getLogoTwitterMaterial = (isHovered: boolean) => {
+  return new THREE.MeshStandardMaterial({
+    color: isHovered ? 'red' : '#1D96E8',
+  })
+}
+
 // MONARCH
 
 export const monarchMaterial = new THREE.MeshStandardMaterial({

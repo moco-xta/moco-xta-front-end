@@ -6,6 +6,7 @@ import { GLTF } from 'three-stdlib'
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 import { ThreeEvent, useThree } from '@react-three/fiber'
 import { EffectComposer, Outline } from '@react-three/postprocessing'
+import { getLogoTwitterMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -15,7 +16,10 @@ type GLTFResult = GLTF & {
 }
 
 export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LOGO_TWITTER) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION
+      .LOGO_TWITTER,
+  ) as GLTFResult
 
   const [selected, setSelected] = useState(false)
 
@@ -57,29 +61,27 @@ export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
     }
   }, [selected, gl])
 
-  const logoTwitterMaterial = new THREE.MeshStandardMaterial({
-    color: '#1D96E8',
-  })
-
   return (
     <>
       <mesh
         name='LogoTwitter'
         ref={meshRef}
         geometry={nodes.LogoTwitter.geometry}
+        material={getLogoTwitterMaterial(isHovered)}
         position={position}
         receiveShadow
         castShadow
         onPointerMove={handleOnPointerMove}
         onPointerOut={handleOnPointerOut}
         /* onPointerOver={() => setSelected(!selected)} */
-      >
+      />
+      {/* >
         <meshStandardMaterial
           attach='material'
           color={isHovered ? 'red' : '#1D96E8'}
         />
-      </mesh>
-      <EffectComposer>
+      </mesh> */}
+      {/* <EffectComposer>
         <Outline
           xRay
           edgeStrength={100}
@@ -88,9 +90,11 @@ export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
           hiddenEdgeColor={0x000000}
           ref={outlineRef}
         />
-      </EffectComposer>
+      </EffectComposer> */}
     </>
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.LOGO_TWITTER)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION.LOGO_TWITTER,
+)

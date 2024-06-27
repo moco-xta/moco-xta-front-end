@@ -3,7 +3,10 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { nicotianaRusticaFrameMaterial, nicotianaRusticaMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+import {
+  nicotianaRusticaFrameMaterial,
+  nicotianaRusticaMaterial,
+} from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
