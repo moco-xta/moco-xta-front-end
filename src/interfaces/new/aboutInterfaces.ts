@@ -5,4 +5,7 @@ export interface AboutInterface {
   showInstructions: boolean
   isFinalRender: boolean
   location: LocationInterface
+  debug: {
+    lights: boolean
+  }
 }

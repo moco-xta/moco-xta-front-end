@@ -11,6 +11,9 @@ const initialState: AboutInterface = {
     latitude: 0,
     longitude: 0,
   },
+  debug: {
+    lights: true,
+  },
 }
 
 const aboutSlice = createSlice({

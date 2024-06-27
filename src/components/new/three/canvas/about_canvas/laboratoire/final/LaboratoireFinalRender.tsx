@@ -1,7 +1,7 @@
 import React from 'react'
 
 import DeskCollection from './collections/desk_collection/DeskCollection'
-import Lights from './Lights'
+import LightsCollection from './collections/lights_collection/LightsCollection'
 import ParquetCollection from './collections/parquet_collection/ParquetCollection'
 import ShelfCollection from './collections/shelf_collection/ShelfCollection'
 import SocialsCollection from './collections/socials_collection/SocialsCollection'
@@ -13,7 +13,7 @@ export default function LaboratoireFinalRender() {
   return (
     <>
       <DeskCollection />
-      <Lights />
+      <LightsCollection />
       <ParquetCollection />
       <ShelfCollection />
       <SocialsCollection />
