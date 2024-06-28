@@ -21,9 +21,7 @@ const ColorPadChatGpt = forwardRef<
   >,
   MeshProps
 >(function ColorPadChatGpt({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.COLOR_PAD_CHAT_GPT,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_CHAT_GPT) as GLTFResult
   return (
     <mesh
       name={name}

@@ -30,9 +30,7 @@
       },
       "name": "logo_python_#fdd94b",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.9824164509773254, 0.6938416957855225, 0.07035520672798157, 1
-        ],
+        "baseColorFactor": [0.9824164509773254, 0.6938416957855225, 0.07035520672798157, 1],
         "metallicFactor": 0
       }
     },
@@ -48,9 +46,7 @@
       },
       "name": "logo_python_#3771a1",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.03821047022938728, 0.16512492299079895, 0.3563743233680725, 1
-        ],
+        "baseColorFactor": [0.03821047022938728, 0.16512492299079895, 0.3563743233680725, 1],
         "metallicFactor": 0
       }
     }

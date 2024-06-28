@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_abwerkt_#e32017",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.768147349357605, 0.014443760737776756, 0.008568146266043186, 1
-        ],
+        "baseColorFactor": [0.768147349357605, 0.014443760737776756, 0.008568146266043186, 1],
         "metallicFactor": 0
       }
     },
@@ -40,9 +38,7 @@
       "doubleSided": true,
       "name": "logo_abwerkt_#036361",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.0009103940683417022, 0.12477193772792816, 0.11953850835561752, 1
-        ],
+        "baseColorFactor": [0.0009103940683417022, 0.12477193772792816, 0.11953850835561752, 1],
         "metallicFactor": 0
       }
     }

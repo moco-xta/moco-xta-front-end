@@ -30,9 +30,7 @@
       },
       "name": "logo_css_#ebebeb",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.8307700157165527, 0.8307698369026184, 0.8307698965072632, 1
-        ],
+        "baseColorFactor": [0.8307700157165527, 0.8307698369026184, 0.8307698965072632, 1],
         "metallicFactor": 0
       }
     },
@@ -40,9 +38,7 @@
       "doubleSided": true,
       "name": "logo_css_#3769b2",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.038204342126846313, 0.14126336574554443, 0.44520121812820435, 1
-        ],
+        "baseColorFactor": [0.038204342126846313, 0.14126336574554443, 0.44520121812820435, 1],
         "metallicFactor": 0
       }
     },
@@ -58,9 +54,7 @@
       },
       "name": "logo_css_#499fd8",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.06662589311599731, 0.3467041254043579, 0.68668532371521, 1
-        ],
+        "baseColorFactor": [0.06662589311599731, 0.3467041254043579, 0.68668532371521, 1],
         "metallicFactor": 0
       }
     },

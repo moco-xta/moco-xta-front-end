@@ -5,9 +5,7 @@ import { SubmitButtonInterface } from '@/interfaces/new/buttonsInterfaces'
 
 import './index.scss'
 
-export default function SubmitButton({
-  submitButtonIsDisabled,
-}: SubmitButtonInterface) {
+export default function SubmitButton({ submitButtonIsDisabled }: SubmitButtonInterface) {
   const t = useTranslations()
 
   return (

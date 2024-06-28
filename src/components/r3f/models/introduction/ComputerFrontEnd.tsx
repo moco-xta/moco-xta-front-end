@@ -18,9 +18,7 @@ type GLTFResult = GLTF & {
 }
 
 export function ComputerFrontEnd(props: GroupProps) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.COMPUTER_FRONT_END,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.COMPUTER_FRONT_END) as GLTFResult
   return (
     <group
       dispose={null}

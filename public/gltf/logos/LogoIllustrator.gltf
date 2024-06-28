@@ -38,9 +38,7 @@
       },
       "name": "icon_illustrator_#f89a01",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.9386860132217407, 0.32314324378967285, 0.00030355527997016907, 1
-        ],
+        "baseColorFactor": [0.9386860132217407, 0.32314324378967285, 0.00030355527997016907, 1],
         "metallicFactor": 0
       }
     }

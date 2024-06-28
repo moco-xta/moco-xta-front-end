@@ -21,9 +21,7 @@ const ColorPadGoogleAnalytics = forwardRef<
   >,
   MeshProps
 >(function ColorPadGoogleAnalytics({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.COLOR_PAD_GOOGLE_ANALYTICS,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.COLOR_PAD_GOOGLE_ANALYTICS) as GLTFResult
   return (
     <mesh
       name={name}

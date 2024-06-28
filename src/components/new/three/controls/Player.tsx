@@ -3,13 +3,7 @@ import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { Box } from '@react-three/drei'
 import * as RAPIER from '@dimforge/rapier3d-compat'
-import {
-  CapsuleCollider,
-  CuboidCollider,
-  RapierRigidBody,
-  RigidBody,
-  useRapier,
-} from '@react-three/rapier'
+import { CapsuleCollider, CuboidCollider, RapierRigidBody, RigidBody, useRapier } from '@react-three/rapier'
 
 import { PlayerInterface } from '@/interfaces/new/threeInterfaces'
 
@@ -24,11 +18,7 @@ const frontVector = new THREE.Vector3()
 const sideVector = new THREE.Vector3()
 const rotation = new THREE.Vector3()
 
-export default function Player({
-  cameraRotation,
-  rigidBodyPosition,
-  cuboidColliderArgs,
-}: PlayerInterface) {
+export default function Player({ cameraRotation, rigidBodyPosition, cuboidColliderArgs }: PlayerInterface) {
   const { forward, backward, left, right, jump } = usePlayer()
 
   const playerRef = useRef<RapierRigidBody>(null!)
@@ -43,12 +33,7 @@ export default function Player({
   const playerPosition = useRef<number[]>([0, 0, 0])
 
   useEffect(() => {
-    camera.rotation.set(
-      cameraRotation.x,
-      cameraRotation.y,
-      cameraRotation.z,
-      'YXZ',
-    )
+    camera.rotation.set(cameraRotation.x, cameraRotation.y, cameraRotation.z, 'YXZ')
   }, [camera.rotation, cameraRotation.x, cameraRotation.y, cameraRotation.z])
 
   useFrame((state) => {
@@ -92,8 +77,7 @@ export default function Player({
   })
 
   const doJump = () => {
-    if (playerRef.current)
-      playerRef.current.setLinvel({ x: 0, y: 8, z: 0 }, true)
+    if (playerRef.current) playerRef.current.setLinvel({ x: 0, y: 8, z: 0 }, true)
   }
 
   return (

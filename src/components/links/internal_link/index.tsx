@@ -9,10 +9,7 @@ import { Routes } from '@/routes/routes'
 
 import './index.scss'
 
-export default function InternalLink({
-  routeKey,
-  translationKey,
-}: InternalLinkInterface) {
+export default function InternalLink({ routeKey, translationKey }: InternalLinkInterface) {
   const t = useTranslations()
 
   return (

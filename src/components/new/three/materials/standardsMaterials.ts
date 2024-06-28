@@ -5,12 +5,6 @@ export const defaultMaterial = new THREE.MeshStandardMaterial({
   roughness: 1,
 })
 
-export const ironSimpleMaterial = new THREE.MeshStandardMaterial({
-  color: '#E7E7E7',
-  metalness: 1,
-  roughness: 0.5,
-})
-
 export const glassSimpleMaterial = new THREE.MeshPhysicalMaterial({
   color: '#ffffff',
   roughness: 0,

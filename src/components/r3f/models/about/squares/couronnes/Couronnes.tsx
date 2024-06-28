@@ -16,9 +16,7 @@ type GLTFResult = GLTF & {
 }
 
 export default function Couronnes(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.ABOUT.SQUARES.COURONNES,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.ABOUT.SQUARES.COURONNES) as GLTFResult
 
   return (
     <group

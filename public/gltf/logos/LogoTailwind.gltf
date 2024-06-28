@@ -24,9 +24,7 @@
       "doubleSided": true,
       "name": "logo_tailwind_#1cA4bc",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.01161155290901661, 0.3712380826473236, 0.5028865933418274, 1
-        ],
+        "baseColorFactor": [0.01161155290901661, 0.3712380826473236, 0.5028865933418274, 1],
         "metallicFactor": 0
       }
     }

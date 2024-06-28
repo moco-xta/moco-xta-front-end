@@ -21,9 +21,7 @@ const ColorPadIllustrator = forwardRef<
   >,
   MeshProps
 >(function ColorPadIllustrator({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.COLOR_PAD_ILLUSTRATOR,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_ILLUSTRATOR) as GLTFResult
   return (
     <mesh
       name={name}

@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export default function ButterflyGlass(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.SQUARES.BUTTERFLY.GLASS,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.ABOUT.SQUARES.BUTTERFLY.GLASS) as GLTFResult
 
   return (
     <mesh

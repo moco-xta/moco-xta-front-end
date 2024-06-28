@@ -31,8 +31,6 @@ export interface SubmitButtonInterface {
 }
 
 export interface ResetButtonInterface {
-  resetForm: (
-    nextState?: Partial<FormikState<AddReviewValuesInterface>> | undefined,
-  ) => void
+  resetForm: (nextState?: Partial<FormikState<AddReviewValuesInterface>> | undefined) => void
   resetButtonIsDisabled: boolean
 }

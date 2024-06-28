@@ -1,11 +1,7 @@
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import {
-  Environment,
-  OrbitControls,
-  PerspectiveCamera,
-} from '@react-three/drei'
+import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
 import { ReviewCanvasInterface } from '@/interfaces/r3fInterfaces'
 
@@ -19,10 +15,7 @@ import { default as imgConstants } from '@/constants/imgConstants.json'
 
 import './index.scss'
 
-export default function ReviewCanvas({
-  reviewIndex,
-  data,
-}: ReviewCanvasInterface) {
+export default function ReviewCanvas({ reviewIndex, data }: ReviewCanvasInterface) {
   return (
     <Canvas
       dpr={reviewConstants.CANVAS.DPR}

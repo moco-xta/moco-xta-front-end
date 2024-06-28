@@ -6,10 +6,7 @@ interface ProfilePictureSceneState {
   initialized: boolean
 }
 
-export default class ProfilePictureCanvas extends Component<
-  {},
-  ProfilePictureSceneState
-> {
+export default class ProfilePictureCanvas extends Component<{}, ProfilePictureSceneState> {
   private canvasRef: RefObject<HTMLDivElement>
 
   constructor(props: any) {

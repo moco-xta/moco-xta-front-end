@@ -5,11 +5,7 @@ import { ProjectCardInterface } from '@/interfaces/new/projectsInterfaces'
 
 import './index.scss'
 
-export default function ProjectCard({
-  index,
-  currentProject,
-  projectData,
-}: ProjectCardInterface) {
+export default function ProjectCard({ index, currentProject, projectData }: ProjectCardInterface) {
   const t = useTranslations('PROJECTS')
 
   return (
@@ -33,9 +29,7 @@ export default function ProjectCard({
             height={400}
             alt={`${projectData.key}_image`}
           />
-          <div className='project_description'>
-            {t(projectData.descriptionsKey)}
-          </div>
+          <div className='project_description'>{t(projectData.descriptionsKey)}</div>
         </div>
         <div className='roles'>
           {projectData.roles.map((role, index) => (

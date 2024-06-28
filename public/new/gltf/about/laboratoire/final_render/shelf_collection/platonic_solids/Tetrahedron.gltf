@@ -1,0 +1,95 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Tetrahedron",
+      "translation": [4.033761978149414, 18.119998931884766, -15.304892539978027]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Tetrahedron",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 12,
+      "max": [0.37557369470596313, 0.5403982400894165, 0.360470175743103],
+      "min": [-0.24878627061843872, -3.4123659133911133e-6, -0.2900397777557373],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 12,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 12,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 12,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 144,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 144,
+      "byteOffset": 144,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 96,
+      "byteOffset": 288,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24,
+      "byteOffset": 384,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 408,
+      "uri": "Tetrahedron.bin"
+    }
+  ]
+}

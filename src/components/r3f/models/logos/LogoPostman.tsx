@@ -18,13 +18,11 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoPostman = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoPostman({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_POSTMAN,
-  ) as GLTFResult
+const LogoPostman = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoPostman(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_POSTMAN) as GLTFResult
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

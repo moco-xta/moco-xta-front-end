@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_openclassrooms_#7450ea",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.17467649281024933, 0.08021604269742966, 0.822726309299469, 1
-        ],
+        "baseColorFactor": [0.17467649281024933, 0.08021604269742966, 0.822726309299469, 1],
         "metallicFactor": 0
       }
     }

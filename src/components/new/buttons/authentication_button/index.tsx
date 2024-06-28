@@ -5,11 +5,7 @@ import { useTranslations } from 'next-intl'
 /* import Face5Icon from '@mui/icons-material/Face5' */
 
 import { AppDispatch, RootState } from '@/redux/store'
-import {
-  setAuthenticationIsOpen,
-  setMenuIsOpen,
-  setLocaleSwitcherIsOpen,
-} from '@/redux/slice/appStateSlice'
+import { setAuthenticationIsOpen, setMenuIsOpen, setLocaleSwitcherIsOpen } from '@/redux/slice/appStateSlice'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 import { useLogOutMutation } from '@/redux/api/authenticationApi'
 
@@ -18,9 +14,7 @@ import { getAccessToken, removeTokens } from '@/helpers/localStorageHelpers'
 export default function AuthenticationButton() {
   const dispatch = useDispatch<AppDispatch>()
 
-  const isAuthenticated = useSelector(
-    (state: RootState) => state.authentication.isAuthenticated,
-  )
+  const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
   function handleAuthenticationIsOpen() {
     dispatch(setAuthenticationIsOpen(true))

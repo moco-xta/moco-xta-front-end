@@ -33,9 +33,7 @@ type GLTFResult = GLTF & {
 }
 
 export function SnakeCellCorner(props: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(
-    gltfConstants.SNAKE_GAME.SNAKE_CELL_CORNER,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.SNAKE_GAME.SNAKE_CELL_CORNER) as GLTFResult
 
   return (
     <group

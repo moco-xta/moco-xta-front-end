@@ -16,13 +16,11 @@ type GltfResultType = GLTF & {
   }
 }
 
-const LogoWebgl = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoWebgl({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    gltfConstants.LOGO_WEBGL,
-  ) as GltfResultType
+const LogoWebgl = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoWebgl(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(gltfConstants.LOGO_WEBGL) as GltfResultType
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

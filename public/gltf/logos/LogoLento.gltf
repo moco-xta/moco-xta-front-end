@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_lento_#303435",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.0295566413551569, 0.034339845180511475, 0.03560134023427963, 1
-        ],
+        "baseColorFactor": [0.0295566413551569, 0.034339845180511475, 0.03560134023427963, 1],
         "metallicFactor": 0
       }
     },
@@ -31,9 +29,7 @@
       "doubleSided": true,
       "name": "logo_lento_#eab39b",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.8227812051773071, 0.4507862627506256, 0.32777827978134155, 1
-        ],
+        "baseColorFactor": [0.8227812051773071, 0.4507862627506256, 0.32777827978134155, 1],
         "metallicFactor": 0
       }
     }

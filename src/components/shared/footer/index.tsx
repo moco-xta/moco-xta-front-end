@@ -84,9 +84,7 @@ export default function Footer() {
         </div> */}
       {/* </div> */}
       <div id='copyright_container'>
-        <p id='copyright'>
-          © Copyright 2024 Federico Desmoulin - All rights reserved
-        </p>
+        <p id='copyright'>© Copyright 2024 Federico Desmoulin - All rights reserved</p>
       </div>
     </footer>
   )

@@ -15,17 +15,11 @@ export function addForce(
   o2Ref: MutableRefObject<RapierRigidBody>,
 ) {
   timeRef.current += delta * 2
-  xRef.current =
-    Math.cos(timeRef.current) *
-    heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
-  yRef.current =
-    Math.sin(timeRef.current) *
-    heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
+  xRef.current = Math.cos(timeRef.current) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
+  yRef.current = Math.sin(timeRef.current) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
   zRef.current =
-    -Math.cos(
-      timeRef.current +
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.Z_THRESHOLD,
-    ) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
+    -Math.cos(timeRef.current + heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.Z_THRESHOLD) *
+    heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
   if (mRef.current)
     // @ts-ignore
     mRef.current.addForce(
@@ -80,87 +74,51 @@ export function applyImpulse(
     if (deltaX > 0)
       // @ts-ignore
       mRef.current.applyImpulse({
-        x:
-          deltaX *
-          heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS
-            .APPLY_IMPULSE_INTENSITY,
-        y:
-          -deltaY *
-          heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS
-            .APPLY_IMPULSE_INTENSITY,
+        x: deltaX * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+        y: -deltaY * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
         z: 0,
       })
     // @ts-ignore
     o1Ref.current.applyImpulse({
-      x:
-        deltaX *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
-      y:
-        -deltaY *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      x: deltaX * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      y: -deltaY * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
       z: 0,
     })
     // @ts-ignore
     cRef.current.applyImpulse({
-      x:
-        deltaX *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
-      y:
-        -deltaY *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      x: deltaX * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      y: -deltaY * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
       z: 0,
     })
     // @ts-ignore
     o2Ref.current.applyImpulse({
-      x:
-        deltaX *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
-      y:
-        -deltaY *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      x: deltaX * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      y: -deltaY * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
       z: 0,
     })
     if (deltaX < 0)
       // @ts-ignore
       mRef.current.applyImpulse({
-        x:
-          deltaX *
-          heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS
-            .APPLY_IMPULSE_INTENSITY,
-        y:
-          -deltaY *
-          heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS
-            .APPLY_IMPULSE_INTENSITY,
+        x: deltaX * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+        y: -deltaY * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
         z: 0,
       })
     // @ts-ignore
     o1Ref.current.applyImpulse({
-      x:
-        deltaX *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
-      y:
-        -deltaY *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      x: deltaX * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      y: -deltaY * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
       z: 0,
     })
     // @ts-ignore
     cRef.current.applyImpulse({
-      x:
-        deltaX *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
-      y:
-        -deltaY *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      x: deltaX * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      y: -deltaY * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
       z: 0,
     })
     // @ts-ignore
     o2Ref.current.applyImpulse({
-      x:
-        deltaX *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
-      y:
-        -deltaY *
-        heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      x: deltaX * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
+      y: -deltaY * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.APPLY_IMPULSE_INTENSITY,
       z: 0,
     })
   }

@@ -22,16 +22,8 @@ interface ButtonInterface extends GroupProps {
   isRotating: boolean
 }
 
-export function Button({
-  position,
-  rotation,
-  onClick,
-  arrow,
-  isRotating,
-}: ButtonInterface) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.BUTTON,
-  ) as GLTFResult
+export function Button({ position, rotation, onClick, arrow, isRotating }: ButtonInterface) {
+  const { nodes, materials } = useGLTF(gltfConstants.RUBIKS_CUBE.BUTTON) as GLTFResult
 
   const [hovered, setHovered] = useState<boolean>(false)
 

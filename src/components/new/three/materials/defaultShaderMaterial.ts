@@ -6,11 +6,7 @@ import fragmentShader from '@/components/new/three/shaders/default/fragmentShade
 
 const uniforms = {}
 
-export const DefaultShaderMaterial = shaderMaterial(
-  uniforms,
-  vertexShader,
-  fragmentShader,
-)
+export const DefaultShaderMaterial = shaderMaterial(uniforms, vertexShader, fragmentShader)
 
 declare global {
   namespace JSX {

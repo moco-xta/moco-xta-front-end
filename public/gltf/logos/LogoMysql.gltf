@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_mysql_#147993",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.00699502881616354, 0.191201850771904, 0.2917707860469818, 1
-        ],
+        "baseColorFactor": [0.00699502881616354, 0.191201850771904, 0.2917707860469818, 1],
         "metallicFactor": 0
       }
     },
@@ -31,9 +29,7 @@
       "doubleSided": true,
       "name": "logo_mysql_#f3941f",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.8962646722793579, 0.29613858461380005, 0.013702169060707092, 1
-        ],
+        "baseColorFactor": [0.8962646722793579, 0.29613858461380005, 0.013702169060707092, 1],
         "metallicFactor": 0
       }
     }

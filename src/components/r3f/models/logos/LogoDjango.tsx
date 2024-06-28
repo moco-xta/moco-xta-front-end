@@ -16,13 +16,11 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoDjango = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoDjango({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_DJANGO,
-  ) as GLTFResult
+const LogoDjango = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoDjango(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_DJANGO) as GLTFResult
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

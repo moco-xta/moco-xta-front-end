@@ -41,9 +41,7 @@
       "doubleSided": true,
       "name": "MacBookPro__GrisSideral",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.11953767389059067, 0.1195385605096817, 0.11953850835561752, 1
-        ],
+        "baseColorFactor": [0.11953767389059067, 0.1195385605096817, 0.11953850835561752, 1],
         "metallicFactor": 0.20000000298023224,
         "roughnessFactor": 0.5
       }

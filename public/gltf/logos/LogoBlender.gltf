@@ -30,9 +30,7 @@
       },
       "name": "icon_blender_#265787",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.01938232034444809, 0.09530752152204514, 0.24228113889694214, 1
-        ],
+        "baseColorFactor": [0.01938232034444809, 0.09530752152204514, 0.24228113889694214, 1],
         "metallicFactor": 0
       }
     },

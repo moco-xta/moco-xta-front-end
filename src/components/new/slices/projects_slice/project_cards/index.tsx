@@ -8,9 +8,7 @@ import ProjectCard from './project_card'
 
 import './index.scss'
 
-export default function ProjectCards({
-  currentProject,
-}: ProjectCardsInterface) {
+export default function ProjectCards({ currentProject }: ProjectCardsInterface) {
   return (
     <div id='project_cards'>
       {projectsData.map((projectData, index) => {

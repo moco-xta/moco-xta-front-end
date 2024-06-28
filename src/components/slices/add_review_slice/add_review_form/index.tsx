@@ -8,36 +8,20 @@ import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
 import { RootState } from '@/redux/store'
 
-import {
-  FormikRadioGroup,
-  FormikRatingStars,
-  FormikTextarea,
-} from '@/components/form/inputs'
+import { FormikRadioGroup, FormikRatingStars, FormikTextarea } from '@/components/form/inputs'
 import { ResetButton, SubmitButton } from '@/components/form/buttons'
 
 import { reviewRolesData } from '@/data/reviewRolesData'
 
 import './index.scss'
 
-export default function AddReviewForm({
-  submitButtonIsDisabled,
-  resetButtonIsDisabled,
-}: FormsInterface) {
+export default function AddReviewForm({ submitButtonIsDisabled, resetButtonIsDisabled }: FormsInterface) {
   const t = useTranslations()
 
-  const isAuthenticated = useSelector(
-    (state: RootState) => state.authentication.isAuthenticated,
-  )
+  const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
-  const {
-    errors,
-    handleChange,
-    values,
-    resetForm,
-    setFieldValue,
-    submitForm,
-    touched,
-  } = useFormikContext<AddReviewValuesInterface>()
+  const { errors, handleChange, values, resetForm, setFieldValue, submitForm, touched } =
+    useFormikContext<AddReviewValuesInterface>()
 
   function handleSubmit(e: SyntheticEvent) {
     e.preventDefault()

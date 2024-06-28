@@ -1,16 +1,10 @@
 import * as THREE from 'three'
 
-import {
-  SnakeCellInterface,
-  UpdateCameraInterface,
-} from '@/interfaces/new/newSnakeGameInterfaces'
+import { SnakeCellInterface, UpdateCameraInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
 
-export function updateCamera(
-  snakeHead: SnakeCellInterface,
-  direction: string,
-): UpdateCameraInterface {
+export function updateCamera(snakeHead: SnakeCellInterface, direction: string): UpdateCameraInterface {
   let newGroupPosition = {
     x: 0,
     y: 0,
@@ -32,56 +26,36 @@ export function updateCamera(
       newGroupPosition = {
         x: snakeHead.position.x,
         y: snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        z:
-          snakeHead.position.z -
-          snakeGameConstants.PERSPECTIVE_CAMERA.POSITION
-            .DISTANCE_FROM_SNAKE_HEAD,
+        z: snakeHead.position.z - snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.DISTANCE_FROM_SNAKE_HEAD,
       }
-      newGroupRotation.x = THREE.MathUtils.degToRad(
-        snakeGameConstants.PERSPECTIVE_CAMERA.ROTATION.TILT,
-      )
+      newGroupRotation.x = THREE.MathUtils.degToRad(snakeGameConstants.PERSPECTIVE_CAMERA.ROTATION.TILT)
       newCameraRotation.y = THREE.MathUtils.degToRad(180)
       break
     case 'SOUTH':
       newGroupPosition = {
         x: snakeHead.position.x,
         y: snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        z:
-          snakeHead.position.z +
-          snakeGameConstants.PERSPECTIVE_CAMERA.POSITION
-            .DISTANCE_FROM_SNAKE_HEAD,
+        z: snakeHead.position.z + snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.DISTANCE_FROM_SNAKE_HEAD,
       }
-      newGroupRotation.x = THREE.MathUtils.degToRad(
-        -snakeGameConstants.PERSPECTIVE_CAMERA.ROTATION.TILT,
-      )
+      newGroupRotation.x = THREE.MathUtils.degToRad(-snakeGameConstants.PERSPECTIVE_CAMERA.ROTATION.TILT)
       newCameraRotation.y = THREE.MathUtils.degToRad(0)
       break
     case 'WEST':
       newGroupPosition = {
-        x:
-          snakeHead.position.x +
-          snakeGameConstants.PERSPECTIVE_CAMERA.POSITION
-            .DISTANCE_FROM_SNAKE_HEAD,
+        x: snakeHead.position.x + snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.DISTANCE_FROM_SNAKE_HEAD,
         y: snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Y,
         z: snakeHead.position.z,
       }
-      newGroupRotation.z = THREE.MathUtils.degToRad(
-        snakeGameConstants.PERSPECTIVE_CAMERA.ROTATION.TILT,
-      )
+      newGroupRotation.z = THREE.MathUtils.degToRad(snakeGameConstants.PERSPECTIVE_CAMERA.ROTATION.TILT)
       newCameraRotation.y = THREE.MathUtils.degToRad(90)
       break
     case 'EAST':
       newGroupPosition = {
-        x:
-          snakeHead.position.x -
-          snakeGameConstants.PERSPECTIVE_CAMERA.POSITION
-            .DISTANCE_FROM_SNAKE_HEAD,
+        x: snakeHead.position.x - snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.DISTANCE_FROM_SNAKE_HEAD,
         y: snakeGameConstants.PERSPECTIVE_CAMERA.POSITION.Y,
         z: snakeHead.position.z,
       }
-      newGroupRotation.z = THREE.MathUtils.degToRad(
-        -snakeGameConstants.PERSPECTIVE_CAMERA.ROTATION.TILT,
-      )
+      newGroupRotation.z = THREE.MathUtils.degToRad(-snakeGameConstants.PERSPECTIVE_CAMERA.ROTATION.TILT)
       newCameraRotation.y = THREE.MathUtils.degToRad(-90)
       break
     default:

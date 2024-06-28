@@ -19,8 +19,10 @@ import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function ProjectsSlice() {
-  const { currentProject, currentCompanyOrSchool, currentDate } =
-    useProjectsTimeline(projectsData, companiesAndSchollData)
+  const { currentProject, currentCompanyOrSchool, currentDate } = useProjectsTimeline(
+    projectsData,
+    companiesAndSchollData,
+  )
 
   return (
     <div id='project_timeline_container'>

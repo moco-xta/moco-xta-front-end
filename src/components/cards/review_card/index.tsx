@@ -18,10 +18,7 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
 
   const cardRef = useRef<HTMLDivElement>(null)
 
-  useCardHoverEffect(
-    cardRef,
-    effectsConstants.CARD_HOVER_EFFECT.LAST_REVIEWS_CARDS,
-  )
+  useCardHoverEffect(cardRef, effectsConstants.CARD_HOVER_EFFECT.LAST_REVIEWS_CARDS)
 
   /* return (
     <div className='star_canvas_container'>

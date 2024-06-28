@@ -10,11 +10,7 @@ import useResize from '@/hooks/new/useResize'
 
 import { RootState } from '@/redux/store'
 
-import {
-  FormikRadioGroup,
-  FormikRatingStars,
-  FormikTextarea,
-} from '@/components/new/inputs'
+import { FormikRadioGroup, FormikRatingStars, FormikTextarea } from '@/components/new/inputs'
 import { ResetButton, SubmitButton } from '@/components/new/buttons'
 import ReviewCard from '../../../review_card'
 
@@ -23,26 +19,15 @@ import { reviewRolesData } from '@/data/reviewRolesData'
 import variables from '@/styles/new/variables.module.scss'
 import './index.scss'
 
-export default function AddReviewForm({
-  submitButtonIsDisabled,
-}: FormsInterface) {
+export default function AddReviewForm({ submitButtonIsDisabled }: FormsInterface) {
   const t = useTranslations()
 
-  const isAuthenticated = useSelector(
-    (state: RootState) => state.authentication.isAuthenticated,
-  )
+  const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
   const { isDesktop } = useResize()
 
-  const {
-    errors,
-    handleChange,
-    values,
-    resetForm,
-    setFieldValue,
-    submitForm,
-    touched,
-  } = useFormikContext<AddReviewValuesInterface>()
+  const { errors, handleChange, values, resetForm, setFieldValue, submitForm, touched } =
+    useFormikContext<AddReviewValuesInterface>()
 
   function handleSubmit(e: SyntheticEvent) {
     e.preventDefault()

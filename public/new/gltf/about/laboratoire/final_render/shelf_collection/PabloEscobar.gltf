@@ -1,0 +1,95 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "PabloEscobar",
+      "translation": [4.93646240234375, 18.127243041992188, -15.545852661132812]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "PabloEscobar",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "max": [0.6524024605751038, 1.7139796018600464, 0.004664940759539604],
+      "min": [-0.6524024605751038, -0.0008416678756475449, -0.31376510858535767],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 6,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 48,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 48,
+      "byteOffset": 48,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32,
+      "byteOffset": 96,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 12,
+      "byteOffset": 128,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 140,
+      "uri": "PabloEscobar.bin"
+    }
+  ]
+}

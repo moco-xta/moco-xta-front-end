@@ -24,10 +24,7 @@ export default function FormikRatingStars({
 }: FormikRatingStarsInterface) {
   const t = useTranslations()
 
-  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
-    name,
-    value,
-  )
+  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(name, value)
 
   const [hover, setHover] = useState<number | null>(null)
 
@@ -69,11 +66,7 @@ export default function FormikRatingStars({
                 <IoStarSharp
                   className={`rating_star ${disabled ? 'disabled' : ''}`}
                   size={30}
-                  color={
-                    currentRating <= (hover || value)
-                      ? 'gold'
-                      : variables.grey_medium
-                  }
+                  color={currentRating <= (hover || value) ? 'gold' : variables.grey_medium}
                   onMouseEnter={() => {
                     if (!disabled) setHover(currentRating)
                   }}

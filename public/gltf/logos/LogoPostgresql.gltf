@@ -61,9 +61,7 @@
       },
       "name": "logo_postgresql_#336791",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.033110082149505615, 0.1356273889541626, 0.2831282913684845, 1
-        ],
+        "baseColorFactor": [0.033110082149505615, 0.1356273889541626, 0.2831282913684845, 1],
         "metallicFactor": 0
       }
     }

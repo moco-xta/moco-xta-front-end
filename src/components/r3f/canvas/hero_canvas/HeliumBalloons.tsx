@@ -50,15 +50,7 @@ export default function HeliumBalloons() {
         colliders='hull'
         restitution={heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
       >
-        <MHeliumBalloon
-          rotation={[
-            0,
-            THREE.MathUtils.degToRad(
-              heroConstants.HELIUM_BALLOONS.BALLOONS.ROTATION,
-            ),
-            0,
-          ]}
-        />
+        <MHeliumBalloon rotation={[0, THREE.MathUtils.degToRad(heroConstants.HELIUM_BALLOONS.BALLOONS.ROTATION), 0]} />
       </RigidBody>
       <RigidBody
         ref={o1Ref}
@@ -70,15 +62,7 @@ export default function HeliumBalloons() {
         colliders='hull'
         restitution={heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
       >
-        <OHeliumBalloon
-          rotation={[
-            0,
-            THREE.MathUtils.degToRad(
-              heroConstants.HELIUM_BALLOONS.BALLOONS.ROTATION,
-            ),
-            0,
-          ]}
-        />
+        <OHeliumBalloon rotation={[0, THREE.MathUtils.degToRad(heroConstants.HELIUM_BALLOONS.BALLOONS.ROTATION), 0]} />
       </RigidBody>
       <RigidBody
         ref={cRef}
@@ -90,15 +74,7 @@ export default function HeliumBalloons() {
         colliders='hull'
         restitution={heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
       >
-        <CHeliumBalloon
-          rotation={[
-            0,
-            THREE.MathUtils.degToRad(
-              heroConstants.HELIUM_BALLOONS.BALLOONS.ROTATION,
-            ),
-            0,
-          ]}
-        />
+        <CHeliumBalloon rotation={[0, THREE.MathUtils.degToRad(heroConstants.HELIUM_BALLOONS.BALLOONS.ROTATION), 0]} />
       </RigidBody>
       <RigidBody
         ref={o2Ref}
@@ -110,15 +86,7 @@ export default function HeliumBalloons() {
         colliders='hull'
         restitution={heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
       >
-        <group
-          rotation={[
-            0,
-            THREE.MathUtils.degToRad(
-              heroConstants.HELIUM_BALLOONS.BALLOONS.ROTATION,
-            ),
-            0,
-          ]}
-        >
+        <group rotation={[0, THREE.MathUtils.degToRad(heroConstants.HELIUM_BALLOONS.BALLOONS.ROTATION), 0]}>
           <OHeliumBalloon />
           <Smiley />
         </group>

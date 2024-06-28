@@ -16,10 +16,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function Nextjs({
-  onPointerMove,
-  onPointerOut,
-}: JSX.IntrinsicElements['group']) {
+export function Nextjs({ onPointerMove, onPointerOut }: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(gltfConstants.NEXTJS) as GLTFResult
   return (
     <group

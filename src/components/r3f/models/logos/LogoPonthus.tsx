@@ -16,10 +16,10 @@ type GltfResultType = GLTF & {
   }
 }
 
-export const LogoPonthus = forwardRef<
-  LogoRefType,
-  JSX.IntrinsicElements['mesh']
->(function LogoPonthus({ position, scale, onClick }, ref) {
+export const LogoPonthus = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(function LogoPonthus(
+  { position, scale, onClick },
+  ref,
+) {
   const gltf = useGLTF(GltfConstants.LOGO_PONTHUS) as GltfResultType
 
   const [hovered, setHovered] = useState(false)

@@ -99,11 +99,7 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
               <RatingStar
                 key={`rating_star_review_card_${index}`}
                 position={[0.17 * index, 0, 0]}
-                color={
-                  data.rating >= index
-                    ? new THREE.Color(0xffd700)
-                    : new THREE.Color(0x404040)
-                }
+                color={data.rating >= index ? new THREE.Color(0xffd700) : new THREE.Color(0x404040)}
               />
             )
           })}

@@ -1,7 +1,4 @@
-import {
-  AddReviewValuesInterface,
-  ReviewPayloadInterface,
-} from '../reduxApiInterfaces'
+import { AddReviewValuesInterface, ReviewPayloadInterface } from '../reduxApiInterfaces'
 
 export interface SignUpSignInInterface {
   setIsSignIn: (value: boolean) => void
@@ -32,12 +29,4 @@ export interface ReviewCardInterface {
   cardStyle?: {
     [key: string]: string | number
   }
-}
-
-export interface AboutDashboardInterface {
-  showInstructions: boolean
-}
-
-export interface PressEscToLeaveInterface {
-  showInstructions: boolean
 }

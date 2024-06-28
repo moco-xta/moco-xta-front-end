@@ -46,9 +46,7 @@
       },
       "name": "logo_javascript_#f4e11e",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.904655933380127, 0.7529432773590088, 0.012983220629394054, 1
-        ],
+        "baseColorFactor": [0.904655933380127, 0.7529432773590088, 0.012983220629394054, 1],
         "metallicFactor": 0
       }
     }

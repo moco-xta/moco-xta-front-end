@@ -9,10 +9,7 @@ import { Routes } from '@/routes/new/routes'
 import useResize from '@/hooks/new/useResize'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import {
-  setLocaleSwitcherIsOpen,
-  setMenuIsOpen,
-} from '@/redux/slice/appStateSlice'
+import { setLocaleSwitcherIsOpen, setMenuIsOpen } from '@/redux/slice/appStateSlice'
 
 import { AuthenticationButton } from '@/components/new/buttons'
 import LocaleSwitcher from '@/components/new/buttons/locale_switcher'
@@ -30,9 +27,7 @@ export default function Nav() {
 
   const { isDesktop } = useResize()
 
-  const menuIsOpen = useSelector(
-    (state: RootState) => state.appState.menuIsOpen,
-  )
+  const menuIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
 
   useEffect(() => {
     dispatch(setMenuIsOpen(false))

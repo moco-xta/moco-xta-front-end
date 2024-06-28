@@ -18,9 +18,7 @@ type GLTFResult = GLTF & {
 }
 
 export function ServerBackEnd(props: GroupProps) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.SERVER_BACK_END,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.SERVER_BACK_END) as GLTFResult
   return (
     <group
       dispose={null}

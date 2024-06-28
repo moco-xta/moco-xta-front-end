@@ -16,13 +16,11 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoRedux = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoRedux({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_REDUX,
-  ) as GLTFResult
+const LogoRedux = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoRedux(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_REDUX) as GLTFResult
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

@@ -10,21 +10,11 @@ import { ResetButton, SubmitButton } from '@/components/form/buttons'
 
 import './index.scss'
 
-export default function SignUpForm({
-  submitButtonIsDisabled,
-  setIsSignIn,
-}: AuthenticationFormsInterface) {
+export default function SignUpForm({ submitButtonIsDisabled, setIsSignIn }: AuthenticationFormsInterface) {
   const t = useTranslations()
 
-  const {
-    errors,
-    handleChange,
-    values,
-    resetForm,
-    setFieldValue,
-    submitForm,
-    touched,
-  } = useFormikContext<SignUpValuesInterface>()
+  const { errors, handleChange, values, resetForm, setFieldValue, submitForm, touched } =
+    useFormikContext<SignUpValuesInterface>()
 
   function handleSubmit(e: SyntheticEvent) {
     e.preventDefault()
@@ -99,9 +89,7 @@ export default function SignUpForm({
           {/* TODO: fix it */}
           {/* @ts-ignore */}
           <ResetButton resetForm={handleResetForm} />
-          <button onClick={handleSwitchSignUp}>
-            {t('AUTHENTICATION.SIGN_UP.SIGN_IN')}
-          </button>
+          <button onClick={handleSwitchSignUp}>{t('AUTHENTICATION.SIGN_UP.SIGN_IN')}</button>
         </div>
       </form>
     </div>

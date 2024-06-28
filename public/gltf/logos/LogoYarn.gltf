@@ -27,9 +27,7 @@
       "doubleSided": true,
       "name": "logo_yarn_#ffffff",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0
       }
     },
@@ -37,9 +35,7 @@
       "doubleSided": true,
       "name": "logo_yarn_#358fb9",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.035600606352090836, 0.2746775448322296, 0.4851500689983368, 1
-        ],
+        "baseColorFactor": [0.035600606352090836, 0.2746775448322296, 0.4851500689983368, 1],
         "metallicFactor": 0
       }
     }

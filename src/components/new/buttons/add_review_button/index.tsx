@@ -11,9 +11,7 @@ import './index.scss'
 export default function AddReviewButton({ text }: AddReviewButtonInterface) {
   const dispatch = useDispatch<AppDispatch>()
 
-  const addReviewIsOpen = useSelector(
-    (state: RootState) => state.appState.addReviewIsOpen,
-  )
+  const addReviewIsOpen = useSelector((state: RootState) => state.appState.addReviewIsOpen)
 
   const handleSetAddReviewIsOpen = () => {
     dispatch(setAddReviewIsOpen(!addReviewIsOpen))

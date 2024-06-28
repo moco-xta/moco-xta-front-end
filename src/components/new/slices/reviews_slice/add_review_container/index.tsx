@@ -12,9 +12,7 @@ import './index.scss'
 export default function AddReviewContainer() {
   const t = useTranslations('BUTTONS')
 
-  const addReviewIsOpen = useSelector(
-    (state: RootState) => state.appState.addReviewIsOpen,
-  )
+  const addReviewIsOpen = useSelector((state: RootState) => state.appState.addReviewIsOpen)
   return (
     <div
       id='add_review_container'

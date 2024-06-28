@@ -24,13 +24,11 @@ type GltfResultType = GLTF & {
   }
 }
 
-const LogoBabylonjs = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoBabylonjs({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_BABYLONJS,
-  ) as GltfResultType
+const LogoBabylonjs = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoBabylonjs(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_BABYLONJS) as GltfResultType
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

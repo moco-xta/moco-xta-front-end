@@ -22,9 +22,7 @@
       "doubleSided": true,
       "name": "logo_graphql_#f7159f",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.930105984210968, 0.007498790509998798, 0.3467041254043579, 1
-        ],
+        "baseColorFactor": [0.930105984210968, 0.007498790509998798, 0.3467041254043579, 1],
         "metallicFactor": 0
       }
     }

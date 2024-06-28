@@ -41,13 +41,13 @@ export default function Lights() {
         target-position={directionalLightTarget}
         castShadow
         shadow-mapSize={MAP_SIZE}
-        shadow-camera-far={SHADOW_CAMERA_FAR}
+        /* shadow-camera-far={SHADOW_CAMERA_FAR}
         shadow-camera-left={SHADOW_CAMERA_LEFT}
         shadow-camera-right={SHADOW_CAMERA_RIGHT}
         shadow-camera-top={SHADOW_CAMERA_TOP}
-        shadow-camera-bottom={SHADOW_CAMERA_BOTTOM}
-        shadow-radius={SHADOW_RADIUS}
-        shadow-bias={SHADOW_BIAS}
+        shadow-camera-bottom={SHADOW_CAMERA_BOTTOM} */
+        /* shadow-radius={SHADOW_RADIUS}
+        shadow-bias={SHADOW_BIAS} */
       />
       <directionalLight
         ref={directionalLightSERef}
@@ -56,32 +56,28 @@ export default function Lights() {
         target-position={directionalLightTarget}
         castShadow
         shadow-mapSize={MAP_SIZE}
-        shadow-camera-far={SHADOW_CAMERA_FAR}
+        /* shadow-camera-far={SHADOW_CAMERA_FAR}
         shadow-camera-left={SHADOW_CAMERA_LEFT}
         shadow-camera-right={SHADOW_CAMERA_RIGHT}
         shadow-camera-top={SHADOW_CAMERA_TOP}
-        shadow-camera-bottom={SHADOW_CAMERA_BOTTOM}
-        shadow-radius={SHADOW_RADIUS}
-        shadow-bias={SHADOW_BIAS}
+        shadow-camera-bottom={SHADOW_CAMERA_BOTTOM} */
+        /* shadow-radius={SHADOW_RADIUS}
+        shadow-bias={SHADOW_BIAS} */
       />
       <directionalLight
         ref={directionalLightNERef}
-        position={[
-          snakeGameConstants.SNAKE_GAME.BOARD.WIDTH,
-          20,
-          snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT,
-        ]}
+        position={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH, 20, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT]}
         intensity={INTENSITY}
         target-position={directionalLightTarget}
         castShadow
         shadow-mapSize={MAP_SIZE}
-        shadow-camera-far={SHADOW_CAMERA_FAR}
+        /* shadow-camera-far={SHADOW_CAMERA_FAR}
         shadow-camera-left={SHADOW_CAMERA_LEFT}
         shadow-camera-right={SHADOW_CAMERA_RIGHT}
         shadow-camera-top={SHADOW_CAMERA_TOP}
-        shadow-camera-bottom={SHADOW_CAMERA_BOTTOM}
-        shadow-radius={SHADOW_RADIUS}
-        shadow-bias={SHADOW_BIAS}
+        shadow-camera-bottom={SHADOW_CAMERA_BOTTOM} */
+        /* shadow-radius={SHADOW_RADIUS}
+        shadow-bias={SHADOW_BIAS} */
       />
       <directionalLight
         ref={directionalLightNWRef}
@@ -90,13 +86,13 @@ export default function Lights() {
         target-position={directionalLightTarget}
         castShadow
         shadow-mapSize={MAP_SIZE}
-        shadow-camera-far={SHADOW_CAMERA_FAR}
+        /* shadow-camera-far={SHADOW_CAMERA_FAR}
         shadow-camera-left={SHADOW_CAMERA_LEFT}
         shadow-camera-right={SHADOW_CAMERA_RIGHT}
         shadow-camera-top={SHADOW_CAMERA_TOP}
-        shadow-camera-bottom={SHADOW_CAMERA_BOTTOM}
-        shadow-radius={SHADOW_RADIUS}
-        shadow-bias={SHADOW_BIAS}
+        shadow-camera-bottom={SHADOW_CAMERA_BOTTOM} */
+        /* shadow-radius={SHADOW_RADIUS}
+        shadow-bias={SHADOW_BIAS} */
       />
     </>
   )

@@ -1,9 +1,5 @@
 import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
-import {
-  SignInPayloadInterface,
-  SignUpValuesInterface,
-  TokensInterface,
-} from '@/interfaces/reduxApiInterfaces'
+import { SignInPayloadInterface, SignUpValuesInterface, TokensInterface } from '@/interfaces/reduxApiInterfaces'
 
 export function storeTokens(tokens: TokensInterface) {
   Object.entries(tokens).forEach(([key, value]) => {
@@ -21,10 +17,7 @@ export function removeTokens() {
 }
 
 export function clearFormStoredValues(
-  initialValues:
-    | SignUpValuesInterface
-    | SignInPayloadInterface
-    | AddReviewValuesInterface,
+  initialValues: SignUpValuesInterface | SignInPayloadInterface | AddReviewValuesInterface,
 ) {
   Object.entries(initialValues).forEach(([key, _]) => {
     localStorage.removeItem(key)

@@ -14,10 +14,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function RoundedCard({
-  onPointerMove,
-  onPointerOut,
-}: JSX.IntrinsicElements['mesh']) {
+export function RoundedCard({ onPointerMove, onPointerOut }: JSX.IntrinsicElements['mesh']) {
   const { nodes, materials } = useGLTF(GltfConstants.ROUNDED_CARD) as GLTFResult
 
   return (

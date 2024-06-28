@@ -16,10 +16,10 @@ type GltfResultType = GLTF & {
   }
 }
 
-export const LogoTheBrink = forwardRef<
-  LogoRefType,
-  JSX.IntrinsicElements['mesh']
->(function LogoTheBrink({ position, scale }, ref) {
+export const LogoTheBrink = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(function LogoTheBrink(
+  { position, scale },
+  ref,
+) {
   const gltf = useGLTF(GltfConstants.LOGO_THE_BRINK) as GltfResultType
 
   const [hovered, setHovered] = useState(false)

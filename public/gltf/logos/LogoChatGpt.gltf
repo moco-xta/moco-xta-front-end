@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_chat_gpt_#75ab9d",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.1779179871082306, 0.4072225093841553, 0.3371392488479614, 1
-        ],
+        "baseColorFactor": [0.1779179871082306, 0.4072225093841553, 0.3371392488479614, 1],
         "metallicFactor": 0
       }
     }

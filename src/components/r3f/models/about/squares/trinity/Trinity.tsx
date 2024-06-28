@@ -16,9 +16,7 @@ type GLTFResult = GLTF & {
 }
 
 export default function Trinity(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.SQUARES.TRINITY.PICTURE,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.ABOUT.SQUARES.TRINITY.PICTURE) as GLTFResult
 
   const map = useTextureLoader(texturesConstants.SQUARES.TRINITY)
   map.wrapS = THREE.RepeatWrapping

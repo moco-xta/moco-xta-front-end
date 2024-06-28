@@ -7,11 +7,7 @@ import { AppDispatch } from '@/redux/store'
 
 import './index.scss'
 
-export default function ToggleButton({
-  label,
-  checked,
-  action,
-}: ToggleButtonInterface) {
+export default function ToggleButton({ label, checked, action }: ToggleButtonInterface) {
   const dispatch = useDispatch<AppDispatch>()
 
   const handleOnClick = () => {

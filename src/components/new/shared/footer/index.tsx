@@ -20,9 +20,7 @@ export default function Footer() {
         <FaInstagram />
         <FaLinkedinIn />
       </div>
-      <p id='copyright'>
-        © Copyright 2024 Federico Desmoulin - All rights reserved
-      </p>
+      <p id='copyright'>© Copyright 2024 Federico Desmoulin - All rights reserved</p>
     </footer>
   )
 }

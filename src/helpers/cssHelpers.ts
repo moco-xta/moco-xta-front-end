@@ -5,11 +5,8 @@ export function getUvMousePositionOnDiv(e: MouseEvent) {
   const width = currentTarget.offsetWidth
   const height = currentTarget.offsetHeight
   return {
-    x:
-      ((e.clientX - boundingClientRect.left - width / 2) * (width / 200)) / 100,
-    y:
-      (-(e.clientY - boundingClientRect.top - height / 2) * (height / 200)) /
-      100,
+    x: ((e.clientX - boundingClientRect.left - width / 2) * (width / 200)) / 100,
+    y: (-(e.clientY - boundingClientRect.top - height / 2) * (height / 200)) / 100,
   }
 }
 

@@ -132,10 +132,7 @@ export const projectsData: ProjectDataInterface[] = [
       from: '2019-09-01',
     },
     roles: ['Back End'],
-    tools: [
-      '/new/img/png/projects/home_pages/logo_spring.png',
-      '/new/img/png/projects/home_pages/logo_postgresql.png',
-    ],
+    tools: ['/new/img/png/projects/home_pages/logo_spring.png', '/new/img/png/projects/home_pages/logo_postgresql.png'],
     backgroundColor: {
       page: '#ffffff',
       card: '#7450eb',

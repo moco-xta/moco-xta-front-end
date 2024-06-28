@@ -1,0 +1,365 @@
+{
+  "DESK_COLLECTION": {
+    "DESK_CHAIR": {
+      "POSITION": {
+        "X": 0,
+        "Y": 0.02,
+        "Z": 0
+      },
+      "ROTATION": {
+        "X": 0,
+        "Y": 111,
+        "Z": 0
+      }
+    },
+    "DESK_TRAY": {
+      "POSITION": {
+        "X": 0,
+        "Y": 9.092,
+        "Z": -10.05
+      }
+    },
+    "MAC_BOOK_PRO": {
+      "POSITION": {
+        "X": 0,
+        "Y": 9.182,
+        "Z": -8
+      }
+    },
+    "SCREEN": {
+      "POSITION": {
+        "X": 0,
+        "Y": 9.182,
+        "Z": -14.4
+      }
+    },
+    "TRANSFERT_BOXES": [
+      {
+        "NAME": "TransfertBox_001",
+        "POSITION": {
+          "X": -6.44055,
+          "Y": 1.58283,
+          "Z": -11.8189
+        },
+        "ROTATION": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      {
+        "NAME": "TransfertBox_002",
+        "POSITION": {
+          "X": -6.38545,
+          "Y": 1.58283,
+          "Z": -11.0189
+        },
+        "ROTATION": {
+          "X": 0,
+          "Y": 2.67699,
+          "Z": 0
+        }
+      },
+      {
+        "NAME": "TransfertBox_003",
+        "POSITION": {
+          "X": -6.52777,
+          "Y": 1.58283,
+          "Z": -10.0346
+        },
+        "ROTATION": {
+          "X": 0,
+          "Y": -2.49071,
+          "Z": 0
+        }
+      }
+    ],
+    "TRESTLES": [
+      {
+        "NAME": "TrestleLeft",
+        "POSITION": {
+          "X": -7.5,
+          "Y": 0,
+          "Z": -10
+        }
+      },
+      {
+        "NAME": "TrestleRight",
+        "POSITION": {
+          "X": 7.5,
+          "Y": 0,
+          "Z": -10
+        }
+      }
+    ],
+    "VINYL_DISCS": [
+      {
+        "NAME": "VinylDiscFinira",
+        "POSITION": {
+          "X": 7.5,
+          "Y": 1.57452,
+          "Z": -7.45
+        },
+        "ROTATION": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "TEXTURE": "FINIRA"
+      }
+    ]
+  },
+  "LIGHTS": {
+    "AMBIENT_LIGHT": {
+      "INTENSITY": 0.2
+    },
+    "CEILING_SPOT_LIGHTS": {
+      "ANGLE": 1.87,
+      "COLOR": "#fff",
+      "DECAY": 1.1,
+      "DISTANCE": 52,
+      "INTENSITY": 6,
+      "K": 8,
+      "ORIENTATION": [
+        [-1, 1, -1],
+        [1, 1, -1],
+        [-1, 1, 1],
+        [1, 1, 1]
+      ],
+      "PENUMBRA": 0.9,
+      "POSITION": {
+        "X": 5,
+        "Y": 26.5,
+        "Z": 3
+      },
+      "SHADOW_MAP_SIZE": 1024,
+      "SHADOW_CAMERA_FAR": 100,
+      "SHADOW_CAMERA_LEFT": -100,
+      "SHADOW_CAMERA_RIGHT": 100,
+      "SHADOW_CAMERA_TOP": 100,
+      "SHADOW_CAMERA_BOTTOM": -100,
+      "SHADOW_RADIUS": 3,
+      "SHADOW_BIAS": 0.0001,
+      "TARGET_POSITION": {
+        "X": 26.5,
+        "Y": 0,
+        "Z": 26.5
+      }
+    }
+  },
+  "PARQUET_COLLECTION": {
+    "PARQUET": {
+      "REPEAT": 1,
+      "CORRECTION_GREY_RANGE": [150, 180]
+    }
+  },
+  "SHELF_COLLECTION": {
+    "PABLO_ESCOBAR": {
+      "POSITION": {
+        "X": 4.936,
+        "Y": 18.127,
+        "Z": -15.546
+      }
+    },
+    "PLATONIC_SOLIDS": {
+      "CUBE": {
+        "POSITION": {
+          "X": 4.377,
+          "Y": 18.12,
+          "Z": -14.612
+        }
+      },
+      "DODECAHEDRON": {
+        "POSITION": {
+          "X": 3.82,
+          "Y": 18.12,
+          "Z": -14.48
+        }
+      },
+      "ICOSAHEDRON": {
+        "POSITION": {
+          "X": 3.621,
+          "Y": 18.12,
+          "Z": -15.221
+        }
+      },
+      "OCTAHEDRON": {
+        "POSITION": {
+          "X": 3.414,
+          "Y": 18.12,
+          "Z": -14.86
+        }
+      },
+      "TETRAHEDRON": {
+        "POSITION": {
+          "X": 4.034,
+          "Y": 18.12,
+          "Z": -15.305
+        }
+      }
+    },
+    "SHELF": {
+      "POSITION": {
+        "X": 0,
+        "Y": 18,
+        "Z": -16
+      }
+    },
+    "VIRGEN_DE_GUADALUPE": {
+      "POSITION": {
+        "X": -4.512,
+        "Y": 18.127,
+        "Z": -15.546
+      }
+    }
+  },
+  "SOCIALS_COLLECTION": {
+    "LOGO_GITHUB": {
+      "POSITION": {
+        "X": 7.329,
+        "Y": 14.798,
+        "Z": -13.842
+      }
+    },
+    "LOGO_TWITTER": {
+      "POSITION": {
+        "X": -2.609,
+        "Y": 12.292,
+        "Z": -10.3
+      }
+    }
+  },
+  "SPEAKERS_COLLECTION": {
+    "SPEAKER_BOXES": [
+      {
+        "NAME": "SpeakerBoxLeft",
+        "POSITION": {
+          "X": -12.2749,
+          "Y": 0.02,
+          "Z": -14.2514
+        }
+      },
+      {
+        "NAME": "SpeakerBoxRight",
+        "POSITION": {
+          "X": 12.7251,
+          "Y": 0.02,
+          "Z": -14.3251
+        }
+      }
+    ],
+    "SPEAKERS": {
+      "NUMBER": 4,
+      "GAP": 2.25
+    },
+    "WORLD_MAP": {
+      "POSITION": {
+        "X": -12.188,
+        "Y": 12.685,
+        "Z": -14.096
+      },
+      "ROTATION": {
+        "X": 0,
+        "Y": -20,
+        "Z": 15.011494
+      }
+    },
+    "WORLD_MAP_STAND": {
+      "POSITION": {
+        "X": -12.2,
+        "Y": 10.333,
+        "Z": -14.1
+      },
+      "ROTATION": {
+        "X": 0,
+        "Y": 30,
+        "Z": 0
+      }
+    }
+  },
+  "WALLS_COLLECTION": {
+    "DOOR_COLLECTION": {
+      "DOOR": {
+        "POSITION": {
+          "X": -28.6,
+          "Y": 0,
+          "Z": -10
+        }
+      },
+      "DOOR_FRAME": {
+        "POSITION": {
+          "X": -28.6,
+          "Y": 0,
+          "Z": -10
+        }
+      },
+      "DOOR_HANDLE": {
+        "POSITION": {
+          "X": -28.6,
+          "Y": 0,
+          "Z": -10
+        }
+      }
+    },
+    "FRAMES_COLLECTION": {
+      "AMOR_LLAMA_AMOR": {
+        "POSITION": {
+          "X": -11.2,
+          "Y": 10,
+          "Z": -16
+        }
+      },
+      "BRAIN": {
+        "POSITION": {
+          "X": -19.06,
+          "Y": 10,
+          "Z": -16
+        }
+      },
+      "CELESTIAL_MAP": {
+        "POSITION": {
+          "X": 10.1,
+          "Y": 10.2,
+          "Z": -16
+        }
+      },
+      "COURONNES": {
+        "POSITION": {
+          "X": 0,
+          "Y": 25.6,
+          "Z": -16
+        }
+      },
+      "MONARCH": {
+        "POSITION": {
+          "X": -16.8511,
+          "Y": 8.2,
+          "Z": -16
+        }
+      },
+      "NICOTIANA_RUSTICA": {
+        "POSITION": {
+          "X": 10.2,
+          "Y": 14.9,
+          "Z": -16
+        }
+      },
+      "TRINITY": {
+        "POSITION": {
+          "X": -17.09,
+          "Y": 19.2,
+          "Z": -16
+        }
+      }
+    },
+    "WALL_CLOCK_COLLECTION": {
+      "WALL_CLOCK": {
+        "POSITION": {
+          "X": -28.331,
+          "Y": 25.4,
+          "Z": -10.007
+        }
+      }
+    }
+  }
+}

@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_mui_#147dfe",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.006994578987360001, 0.20507864654064178, 0.9911024570465088, 1
-        ],
+        "baseColorFactor": [0.006994578987360001, 0.20507864654064178, 0.9911024570465088, 1],
         "metallicFactor": 0
       }
     }

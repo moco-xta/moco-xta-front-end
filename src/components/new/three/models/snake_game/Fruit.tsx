@@ -33,9 +33,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Fruit(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.SNAKE_GAME.FRUIT,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.SNAKE_GAME.FRUIT) as GLTFResult
   return (
     <group
       {...props}

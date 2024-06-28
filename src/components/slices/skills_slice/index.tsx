@@ -11,18 +11,16 @@ import './index.scss'
 export default function SkillsSlice() {
   return (
     <div id='skills_slice'>
-      {Object.entries(skillsData).map(
-        ([category_key, category_values], index) => {
-          return (
-            <SkillsSection
-              key={`skills_section_${category_key}`}
-              index={index}
-              category={category_key}
-              content={category_values}
-            />
-          )
-        },
-      )}
+      {Object.entries(skillsData).map(([category_key, category_values], index) => {
+        return (
+          <SkillsSection
+            key={`skills_section_${category_key}`}
+            index={index}
+            category={category_key}
+            content={category_values}
+          />
+        )
+      })}
     </div>
   )
 }

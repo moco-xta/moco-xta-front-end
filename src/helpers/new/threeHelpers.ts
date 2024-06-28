@@ -8,7 +8,5 @@ export function generateRandomRgbGrey(min: number, max: number) {
 export function generateRandomHexGrey(min: number, max: number) {
   const decimalValue = Math.round(Math.random() * (max - min) + min)
   var hexadecimalValue = decimalValue.toString(16)
-  return new THREE.Color(
-    '#' + hexadecimalValue + hexadecimalValue + hexadecimalValue,
-  )
+  return new THREE.Color('#' + hexadecimalValue + hexadecimalValue + hexadecimalValue)
 }

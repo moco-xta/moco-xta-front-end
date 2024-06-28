@@ -21,9 +21,7 @@ const ColorPadDocker = forwardRef<
   >,
   MeshProps
 >(function ColorPadDocker({ name, position, rotation }, ref) {
-  const { nodes } = useGLTF(
-    gltfConstants.RUBIKS_CUBE.COLOR_PAD_DOCKER,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_DOCKER) as GLTFResult
   return (
     <mesh
       name={name}

@@ -21,9 +21,7 @@
       "doubleSided": true,
       "name": "logo_nginx_#0a974d",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.0030349413864314556, 0.30946940183639526, 0.07421363890171051, 1
-        ],
+        "baseColorFactor": [0.0030349413864314556, 0.30946940183639526, 0.07421363890171051, 1],
         "metallicFactor": 0
       }
     }

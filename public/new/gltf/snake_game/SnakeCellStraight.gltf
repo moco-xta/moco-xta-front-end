@@ -29,9 +29,7 @@
       "doubleSided": true,
       "name": "snake_turquoise_D",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.02955639734864235, 0.21223096549510956, 0.18116432428359985, 1
-        ],
+        "baseColorFactor": [0.02955639734864235, 0.21223096549510956, 0.18116432428359985, 1],
         "metallicFactor": 0
       }
     },
@@ -39,9 +37,7 @@
       "doubleSided": true,
       "name": "snake_orange_D",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.4232655167579651, 0.06847822666168213, 0.0080232173204422, 1
-        ],
+        "baseColorFactor": [0.4232655167579651, 0.06847822666168213, 0.0080232173204422, 1],
         "metallicFactor": 0
       }
     },
@@ -49,9 +45,7 @@
       "doubleSided": true,
       "name": "snake_brown",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.07618501037359238, 0.006512091029435396, 0.0003035300178453326, 1
-        ],
+        "baseColorFactor": [0.07618501037359238, 0.006512091029435396, 0.0003035300178453326, 1],
         "metallicFactor": 0
       }
     },
@@ -59,9 +53,7 @@
       "doubleSided": true,
       "name": "snake_blue",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.0027316738851368427, 0.008023172616958618, 0.07618542015552521, 1
-        ],
+        "baseColorFactor": [0.0027316738851368427, 0.008023172616958618, 0.07618542015552521, 1],
         "metallicFactor": 0
       }
     },
@@ -85,9 +77,7 @@
       "doubleSided": true,
       "name": "snake_turquoise_L",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.03820342943072319, 0.5775811076164246, 0.40724048018455505, 1
-        ],
+        "baseColorFactor": [0.03820342943072319, 0.5775811076164246, 0.40724048018455505, 1],
         "metallicFactor": 0
       }
     },

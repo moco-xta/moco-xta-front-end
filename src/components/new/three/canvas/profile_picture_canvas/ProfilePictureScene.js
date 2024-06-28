@@ -48,12 +48,7 @@ export default class ProfilePictureScene {
 
     this.container.appendChild(this.renderer.domElement)
 
-    this.camera = new THREE.PerspectiveCamera(
-      70,
-      this.width / this.height,
-      0.01,
-      1000,
-    )
+    this.camera = new THREE.PerspectiveCamera(70, this.width / this.height, 0.01, 1000)
     this.camera.position.set(0, 0, 4)
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement)
@@ -70,16 +65,9 @@ export default class ProfilePictureScene {
 
   addObjects() {
     // GEOMETRY
-    const geometry = new THREE.PlaneGeometry(
-      this.imgWidth,
-      this.imgHeight,
-      this.imgWidth * 20,
-      this.imgHeight * 20,
-    )
+    const geometry = new THREE.PlaneGeometry(this.imgWidth, this.imgHeight, this.imgWidth * 20, this.imgHeight * 20)
 
-    const uTexture1 = new THREE.TextureLoader().load(
-      texturesConstants.CONTACT.PROFIL_PICTURE,
-    )
+    const uTexture1 = new THREE.TextureLoader().load(texturesConstants.CONTACT.PROFIL_PICTURE)
     uTexture1.minFilter = THREE.LinearFilter
     uTexture1.needsUpdate = true
 
@@ -127,10 +115,7 @@ export default class ProfilePictureScene {
   }
 
   getSpeed() {
-    this.speed = Math.sqrt(
-      (this.prevMouse.x - this.mouse.x) ** 2 +
-        (this.prevMouse.y - this.mouse.y) ** 2,
-    )
+    this.speed = Math.sqrt((this.prevMouse.x - this.mouse.x) ** 2 + (this.prevMouse.y - this.mouse.y) ** 2)
 
     this.targetSpeed -= 0.1 * (this.targetSpeed - this.speed)
     this.followMouse.x -= 0.1 * (this.followMouse.x - this.mouse.x)

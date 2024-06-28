@@ -24,10 +24,7 @@ export default function FormikRatingStars({
 }: FormikRatingStarsInterface) {
   const t = useTranslations()
 
-  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(
-    name,
-    value,
-  )
+  const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(name, value)
 
   const [hover, setHover] = useState<number | null>(null)
 

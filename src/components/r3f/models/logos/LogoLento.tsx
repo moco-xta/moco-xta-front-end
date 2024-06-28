@@ -18,10 +18,10 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoLento = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoLento({ position, rotation, scale }, ref) {
+const LogoLento = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoLento(
+  { position, rotation, scale },
+  ref,
+) {
   const { nodes, materials } = useGLTF(GltfConstants.LOGO_LENTO) as GLTFResult
   return (
     <group

@@ -29,9 +29,7 @@
       "doubleSided": true,
       "name": "Material.004",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.022312013432383537, 0.0031378916464746, 0.07239659875631332, 1
-        ],
+        "baseColorFactor": [0.022312013432383537, 0.0031378916464746, 0.07239659875631332, 1],
         "metallicFactor": 0
       }
     },
@@ -39,9 +37,7 @@
       "doubleSided": true,
       "name": "white",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.800000011920929, 0.800000011920929, 0.800000011920929, 1
-        ],
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
         "metallicFactor": 0
       }
     }

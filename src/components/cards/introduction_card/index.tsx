@@ -9,10 +9,7 @@ import { default as effectsConstants } from '@/constants/effectsConstants.json'
 
 import './index.scss'
 
-export default function IntroductionCards({
-  data,
-  type,
-}: IntroductionCardsInterface) {
+export default function IntroductionCards({ data, type }: IntroductionCardsInterface) {
   return (
     <div className='introduction_cards_container'>
       {data.map((content, index) => {

@@ -8,11 +8,7 @@ import { ProjectCardInterface } from '@/interfaces/r3fInterfaces'
 import './index.scss'
 import useResize from '@/hooks/useResize'
 
-export default function ProjectCard({
-  index,
-  currentProject,
-  projectData,
-}: ProjectCardInterface) {
+export default function ProjectCard({ index, currentProject, projectData }: ProjectCardInterface) {
   const t = useTranslations('PROJECTS')
 
   const [projectImageRatio, setProjectImageRatio] = useState<number>(1)
@@ -50,9 +46,7 @@ export default function ProjectCard({
             height={400 * projectImageRatio}
             alt={`${projectData.key}_image`}
           />
-          <div className='project_description'>
-            {t(projectData.descriptionsKey)}
-          </div>
+          <div className='project_description'>{t(projectData.descriptionsKey)}</div>
         </div>
         <div className='roles_container'>
           {projectData.roles.map((role, index) => (

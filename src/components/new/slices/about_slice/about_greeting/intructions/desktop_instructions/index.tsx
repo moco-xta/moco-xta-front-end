@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  FaArrowDown,
-  FaArrowLeft,
-  FaArrowRight,
-  FaArrowUp,
-  FaMousePointer,
-} from 'react-icons/fa'
+import { FaArrowDown, FaArrowLeft, FaArrowRight, FaArrowUp, FaMousePointer } from 'react-icons/fa'
 import { LuTouchpad } from 'react-icons/lu'
 import { useTranslations } from 'next-intl'
 

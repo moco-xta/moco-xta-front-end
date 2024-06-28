@@ -1,0 +1,175 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "CelestialMap",
+      "translation": [10.100000381469727, 10.19999885559082, -16]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "celestial_map_frame",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "celestial_map",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "CelestialMap",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 496,
+      "max": [2.735004425048828, 4, 0.15388871729373932],
+      "min": [-2.7350053787231445, -4.808249354226746e-9, -8.742277657347586e-8],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 496,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 496,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 744,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 4,
+      "max": [2.275005340576172, 3.5399999618530273, 0.020000994205474854],
+      "min": [-2.275005340576172, 0.46000003814697266, 0.02000086009502411],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 6,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 5952,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5952,
+      "byteOffset": 5952,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3968,
+      "byteOffset": 11904,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1488,
+      "byteOffset": 15872,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 48,
+      "byteOffset": 17360,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 48,
+      "byteOffset": 17408,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32,
+      "byteOffset": 17456,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 12,
+      "byteOffset": 17488,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 17500,
+      "uri": "CelestialMap.bin"
+    }
+  ]
+}

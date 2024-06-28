@@ -20,13 +20,11 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoAngular = forwardRef<
-  ForwardRefGltfGroupInterface,
-  JSX.IntrinsicElements['group']
->(function LogoAngular({ position, rotation, scale }, ref) {
-  const { scene, nodes, materials } = useGLTF(
-    GltfConstants.LOGO_ANGULAR,
-  ) as GLTFResult
+const LogoAngular = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoAngular(
+  { position, rotation, scale },
+  ref,
+) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_ANGULAR) as GLTFResult
 
   useLayoutEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)

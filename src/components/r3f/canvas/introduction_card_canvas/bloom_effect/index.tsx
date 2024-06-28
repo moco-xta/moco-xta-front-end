@@ -11,12 +11,8 @@ export default function BloomEffect() {
         intensity={introductionConstants.SCENE.BLOOM.INTENSITY}
         blurPass={undefined}
         kernelSize={KernelSize.LARGE}
-        luminanceThreshold={
-          introductionConstants.SCENE.BLOOM.LUMINANCE_THRESHOLD
-        }
-        luminanceSmoothing={
-          introductionConstants.SCENE.BLOOM.LUMINANCE_SMOOTHING
-        }
+        luminanceThreshold={introductionConstants.SCENE.BLOOM.LUMINANCE_THRESHOLD}
+        luminanceSmoothing={introductionConstants.SCENE.BLOOM.LUMINANCE_SMOOTHING}
         mipmapBlur={introductionConstants.SCENE.BLOOM.MIPMAP_BLUR}
         resolutionX={Resolution.AUTO_SIZE}
         resolutionY={Resolution.AUTO_SIZE}

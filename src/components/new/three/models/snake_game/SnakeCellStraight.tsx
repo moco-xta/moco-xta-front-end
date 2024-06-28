@@ -33,9 +33,7 @@ type GLTFResult = GLTF & {
 }
 
 export function SnakeCellStraight(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.SNAKE_GAME.SNAKE_CELL_STRAIGHT,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.SNAKE_GAME.SNAKE_CELL_STRAIGHT) as GLTFResult
 
   return (
     <group

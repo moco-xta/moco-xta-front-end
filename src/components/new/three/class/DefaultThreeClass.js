@@ -33,12 +33,7 @@ export default class DefaultThreeClass {
 
     this.container.appendChild(this.renderer.domElement)
 
-    this.camera = new THREE.PerspectiveCamera(
-      70,
-      this.width / this.height,
-      0.01,
-      1000,
-    )
+    this.camera = new THREE.PerspectiveCamera(70, this.width / this.height, 0.01, 1000)
     this.camera.position.set(0, 0, 4)
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement)

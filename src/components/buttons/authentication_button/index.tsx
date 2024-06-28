@@ -21,9 +21,7 @@ export default function AuthenticationButton({
 
   const dispatch = useDispatch<AppDispatch>()
 
-  const isAuthenticated = useSelector(
-    (state: RootState) => state.authentication.isAuthenticated,
-  )
+  const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
   const [logOut] = useLogOutMutation()
 

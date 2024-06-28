@@ -1,10 +1,6 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import {
-  Environment,
-  OrbitControls,
-  PerspectiveCamera,
-} from '@react-three/drei'
+import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import CleffyScene from './CleffyScene'

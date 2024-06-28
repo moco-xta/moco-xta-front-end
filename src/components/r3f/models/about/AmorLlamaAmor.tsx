@@ -20,9 +20,7 @@ type GLTFResult = GLTF & {
 }
 
 export function AmorLlamaAmor(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.AMOR_LLAMA_AMOR,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.AMOR_LLAMA_AMOR) as GLTFResult
   return (
     <group
       {...props}

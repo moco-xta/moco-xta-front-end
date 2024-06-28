@@ -30,9 +30,7 @@
       },
       "name": "icon_typescript_#2f78c7",
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.02842537872493267, 0.18782083690166473, 0.5711251497268677, 1
-        ],
+        "baseColorFactor": [0.02842537872493267, 0.18782083690166473, 0.5711251497268677, 1],
         "metallicFactor": 0
       }
     },

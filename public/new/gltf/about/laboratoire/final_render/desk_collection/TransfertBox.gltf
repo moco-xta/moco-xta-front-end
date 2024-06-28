@@ -1,0 +1,173 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "TransfertBox"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "transfert_box",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.5583368539810181, 0.5583409667015076, 0.5457249283790588, 1],
+        "metallicFactor": 0
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "iron_simple",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
+        "metallicFactor": 0.5,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "TransfertBox",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 77,
+      "max": [0.003448534058406949, 3.487151622772217, -0.012142754159867764],
+      "min": [-2.5488429069519043, 0.005372735671699047, -0.732143223285675],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 77,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 77,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 132,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 142,
+      "max": [-2.501516103744507, 2.7893927097320557, -0.2281428426504135],
+      "min": [-2.5592992305755615, 2.5013930797576904, -0.5161431431770325],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 142,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 142,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 222,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 924,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 924,
+      "byteOffset": 924,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 616,
+      "byteOffset": 1848,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 264,
+      "byteOffset": 2464,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1704,
+      "byteOffset": 2728,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1704,
+      "byteOffset": 4432,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1136,
+      "byteOffset": 6136,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 444,
+      "byteOffset": 7272,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 7716,
+      "uri": "TransfertBox.bin"
+    }
+  ]
+}

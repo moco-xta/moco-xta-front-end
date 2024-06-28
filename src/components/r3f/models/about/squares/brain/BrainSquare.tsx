@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export default function BrainSquare(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes, materials } = useGLTF(
-    gltfConstants.ABOUT.SQUARES.BRAIN.SQUARE,
-  ) as GLTFResult
+  const { nodes, materials } = useGLTF(gltfConstants.ABOUT.SQUARES.BRAIN.SQUARE) as GLTFResult
 
   return (
     <mesh

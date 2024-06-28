@@ -15,9 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export default function BrainGlass(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(
-    gltfConstants.ABOUT.SQUARES.BRAIN.GLASS,
-  ) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.ABOUT.SQUARES.BRAIN.GLASS) as GLTFResult
 
   return (
     <mesh
