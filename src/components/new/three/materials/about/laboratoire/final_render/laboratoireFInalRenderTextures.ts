@@ -1,6 +1,5 @@
 import * as THREE from 'three'
 
-import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 

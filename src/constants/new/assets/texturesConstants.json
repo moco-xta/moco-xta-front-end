@@ -1,6 +1,106 @@
 {
   "ABOUT": {
     "LABORATOIRE": {
+      "CLAY_RENDER": {
+        "CEILING": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/ceiling_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/ceiling_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/ceiling_diffuse_1K.jpg"
+          }
+        },
+        "CEILING_LAMP_FRAME": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/ceiling_lamp_frame_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/ceiling_lamp_frame_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/ceiling_lamp_frame_diffuse_1K.jpg"
+          }
+        },
+        "DESK": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/desk_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/desk_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/desk_diffuse_1K.jpg"
+          }
+        },
+        "DESK_CHAIR": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/desk_chair_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/desk_chair_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/desk_chair_diffuse_1K.jpg"
+          }
+        },
+        "DOOR": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/door_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/door_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/door_diffuse_1K.jpg"
+          }
+        },
+        "FRAMES": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/frames_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/frames_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/frames_diffuse_1K.jpg"
+          }
+        },
+        "NORTH_WALL": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/north_wall_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/north_wall_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/north_wall_diffuse_1K.jpg"
+          }
+        },
+        "NORTH_WALL_ELEMENTS": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/north_wall_elements_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/north_wall_elements_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/north_wall_elements_diffuse_1K.jpg"
+          }
+        },
+        "PARQUET": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/parquet_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/parquet_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/parquet_diffuse_1K.jpg"
+          }
+        },
+        "SHELF": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/shelf_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/shelf_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/shelf_diffuse_1K.jpg"
+          }
+        },
+        "SPEAKERS": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/speakers_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/speakers_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/speakers_diffuse_1K.jpg"
+          }
+        },
+        "VIDEO_PROJECTOR": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/video_projector_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/video_projector_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/video_projector_diffuse_1K.jpg"
+          }
+        },
+        "WALL_CLOCK": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/wall_clock_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/wall_clock_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/wall_clock_diffuse_1K.jpg"
+          }
+        },
+        "WEST_WALL": {
+          "DIFFUSE": {
+            "FOUR_K": "/new/img/textures/about/laboratoire/clay_render/west_wall_diffuse_4K.jpg",
+            "TWO_K": "/new/img/textures/about/laboratoire/clay_render/west_wall_diffuse_2K.jpg",
+            "ONE_K": "/new/img/textures/about/laboratoire/clay_render/west_wall_diffuse_1K.jpg"
+          }
+        }
+      },
       "FINAL_RENDER": {
         "DESK_COLLECTION": {
           "DESK_CHAIR_LEATHER": {
@@ -346,310 +446,6 @@
             }
           }
         }
-      },
-      "CEILING": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/ceiling_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/ceiling_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/ceiling_diffuse_1K.jpg"
-        }
-      },
-      "CEILING_LAMP_FRAME": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/ceiling_lamp_frame_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/ceiling_lamp_frame_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/ceiling_lamp_frame_diffuse_1K.jpg"
-        }
-      },
-      "DESK": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/desk_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/desk_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/desk_diffuse_1K.jpg"
-        }
-      },
-      "DESK_CHAIR": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/desk_chair_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/desk_chair_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/desk_chair_diffuse_1K.jpg"
-        }
-      },
-      "DOOR": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/door_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/door_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/door_diffuse_1K.jpg"
-        }
-      },
-      "FRAMES": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/frames_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/frames_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/frames_diffuse_1K.jpg"
-        }
-      },
-      "NORTH_WALL": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/north_wall_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/north_wall_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/north_wall_diffuse_1K.jpg"
-        }
-      },
-      "NORTH_WALL_ELEMENTS": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/north_wall_elements_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/north_wall_elements_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/north_wall_elements_diffuse_1K.jpg"
-        }
-      },
-      "PARQUET": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/parquet_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/parquet_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/parquet_diffuse_1K.jpg"
-        }
-      },
-      "SHELF": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/shelf_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/shelf_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/shelf_diffuse_1K.jpg"
-        }
-      },
-      "SPEAKERS": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/speakers_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/speakers_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/speakers_diffuse_1K.jpg"
-        }
-      },
-      "VIDEO_PROJECTOR": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/video_projector_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/video_projector_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/video_projector_diffuse_1K.jpg"
-        }
-      },
-      "WALL_CLOCK": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/wall_clock_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/wall_clock_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/wall_clock_diffuse_1K.jpg"
-        }
-      },
-      "WEST_WALL": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/west_wall_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/west_wall_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/west_wall_diffuse_1K.jpg"
-        }
-      }
-    },
-    "FINAL": {
-      "TRANSFERT_BOX": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/transfert_box_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/transfert_box_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/transfert_box_diffuse_1K.jpg"
-        }
-      },
-      "SHELF": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/shelf_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/shelf_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/shelf_diffuse_1K.jpg"
-        },
-        "ROUGHNESS": {
-          "FOUR_K": "/new/img/textures/about/final/shelf_roughness_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/shelf_roughness_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/shelf_roughness_1K.jpg"
-        },
-        "NORMAL": {
-          "FOUR_K": "/new/img/textures/about/final/shelf_normal_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/shelf_normal_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/shelf_normal_1K.jpg"
-        }
-      },
-      "VIRGEN_DE_GUADALUPE": {
-        "DIFFUSE": {
-          "ONE_K": "/new/img/textures/about/final/virgen_de_guadalupe_diffuse_1K.jpg"
-        }
-      },
-      "BRAIN": {
-        "DIFFUSE": {
-          "ONE_K": "/new/img/textures/about/final/brain_diffuse_1K_COMPOSITING.jpg"
-        }
-      },
-      "HOY_SI": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/hoy_si_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/hoy_si_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/hoy_si_diffuse_1K_COMPOSITING.jpg"
-        }
-      },
-      "AMOR_LLAMA_AMOR": {
-        "DIFFUSE": "/new/img/textures/about/final/amor_llama_amor_diffuse.jpg"
-      },
-      "PABLO_ESCOBAR": {
-        "DIFFUSE": "/new/img/textures/about/final/pablo_escobar_diffuse_COMPOSITING.jpg"
-      },
-      "SPEAKER_BOX": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/speaker_box_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/speaker_box_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/speaker_box_diffuse_1K.jpg"
-        },
-        "ROUGHNESS": {
-          "FOUR_K": "/new/img/textures/about/final/speaker_box_roughness_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/speaker_box_roughness_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/speaker_box_roughness_1K.jpg"
-        },
-        "NORMAL": {
-          "FOUR_K": "/new/img/textures/about/final/speaker_box_normal_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/speaker_box_normal_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/speaker_box_normal_1K.jpg"
-        }
-      },
-      "CEILING": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/ceiling_ambient_occlusion_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/ceiling_ambient_occlusion_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/ceiling_ambient_occlusion_diffuse_1K.jpg"
-        }
-      },
-      "NORTH_WALL": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/north_wall_ambient_occlusion_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/north_wall_ambient_occlusion_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/north_wall_ambient_occlusion_diffuse_1K.jpg"
-        }
-      },
-      "WEST_WALL": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/west_wall_ambient_occlusion_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/west_wall_ambient_occlusion_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/west_wall_ambient_occlusion_diffuse_1K.jpg"
-        }
-      },
-      "DOOR": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/door_ambient_occlusion_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/door_wall_ambient_occlusion_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/door_wall_ambient_occlusion_diffuse_1K.jpg"
-        }
-      },
-      "DOOR_FRAME": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/door_frame_ambient_occlusion_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/door_frame_ambient_occlusion_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/door_frame_ambient_occlusion_diffuse_1K.jpg"
-        }
-      },
-      "BRAIN_FRAME": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/brain_frame_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/brain_frame_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/brain_frame_diffuse_1K.jpg"
-        },
-        "ROUGHNESS": {
-          "FOUR_K": "/new/img/textures/about/final/brain_frame_roughness_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/brain_frame_roughness_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/brain_frame_roughness_1K.jpg"
-        },
-        "NORMAL": {
-          "FOUR_K": "/new/img/textures/about/final/brain_frame_normal_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/brain_frame_normal_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/brain_frame_normal_1K.jpg"
-        }
-      },
-      "MONDAINE_WALL_CLOCK": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/mondaine_wall_clock_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/mondaine_wall_clock_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/mondaine_wall_clock_diffuse_1K.jpg"
-        }
-      },
-      "WALL_CLOCK_BRUSHED_METAL": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/wall_clock_brushed_metal_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/wall_clock_brushed_metal_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/wall_clock_brushed_metal_diffuse_1K.jpg"
-        },
-        "ROUGHNESS": {
-          "FOUR_K": "/new/img/textures/about/final/wall_clock_brushed_metal_roughness_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/wall_clock_brushed_metal_roughness_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/wall_clock_brushed_metal_roughness_1K.jpg"
-        },
-        "NORMAL": {
-          "FOUR_K": "/new/img/textures/about/final/wall_clock_brushed_metal_normal_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/wall_clock_brushed_metal_normal_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/wall_clock_brushed_metal_normal_1K.jpg"
-        }
-      },
-      "NICOTIANA_RUSTICA": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/nicotiana_rustica_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/nicotiana_rustica_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/nicotiana_rustica_diffuse_1K.jpg"
-        }
-      },
-      "NICOTIANA_RUSTICA_FRAME": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/nicotiana_rustica_frame_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/nicotiana_rustica_frame_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/nicotiana_rustica_frame_diffuse_1K.jpg"
-        },
-        "ROUGHNESS": {
-          "FOUR_K": "/new/img/textures/about/final/nicotiana_rustica_frame_roughness_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/nicotiana_rustica_frame_roughness_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/nicotiana_rustica_frame_roughness_1K.jpg"
-        },
-        "NORMAL": {
-          "FOUR_K": "/new/img/textures/about/final/nicotiana_rustica_frame_normal_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/nicotiana_rustica_frame_normal_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/nicotiana_rustica_frame_normal_1K.jpg"
-        }
-      },
-      "CELESTIAL_MAP_FRAME": {
-        "DIFFUSE": {
-          "FOUR_K": "/new/img/textures/about/final/celestial_map_frame_diffuse_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/celestial_map_frame_diffuse_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/celestial_map_frame_diffuse_1K.jpg"
-        },
-        "ROUGHNESS": {
-          "FOUR_K": "/new/img/textures/about/final/celestial_map_frame_roughness_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/celestial_map_frame_roughness_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/celestial_map_frame_roughness_1K.jpg"
-        },
-        "NORMAL": {
-          "FOUR_K": "/new/img/textures/about/final/celestial_map_frame_normal_4K.jpg",
-          "TWO_K": "/new/img/textures/about/final/celestial_map_frame_normal_2K.jpg",
-          "ONE_K": "/new/img/textures/about/final/celestial_map_frame_normal_1K.jpg"
-        }
-      },
-      "CELESTIAL_MAP": {
-        "DIFFUSE": {
-          "ONE_K": "/new/img/textures/about/final/celestial_map_diffuse_1K.jpg"
-        }
-      },
-      "COURONNES": {
-        "DIFFUSE": "/new/img/textures/about/final/couronnes_diffuse.jpg",
-        "ROUGHNESS": "/new/img/textures/about/final/couronnes_roughness.jpg",
-        "METALNESS": "/new/img/textures/about/final/couronnes_metalness.jpg",
-        "NORMAL": "/new/img/textures/about/final/couronnes_normal.jpg"
-      },
-      "WORLD_MAP": {
-        "DIFFUSE": "/new/img/textures/about/final/world_map_diffuse_1K.jpg"
-      },
-      "WORLD_MAP_STAND_MARBLE": {
-        "DIFFUSE": "/new/img/textures/about/final/world_map_stand_marble_diffuse_1K.jpg",
-        "ROUGHNESS": "/new/img/textures/about/final/world_map_stand_marble_roughness_1K.jpg",
-        "NORMAL": "/new/img/textures/about/final/world_map_stand_marble_normal_1K.jpg"
-      },
-      "WORLD_MAP_STAND_USED_METAL": {
-        "ROUGHNESS": "/new/img/textures/about/final/world_map_stand_used_metal_roughness_1K.jpg",
-        "NORMAL": "/new/img/textures/about/final/world_map_stand_used_metal_normal_1K.jpg"
       }
     }
   },

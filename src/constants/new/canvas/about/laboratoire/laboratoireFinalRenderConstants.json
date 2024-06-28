@@ -109,7 +109,10 @@
       }
     ]
   },
-  "LIGHTS_COLLECTION": {
+  "LIGHTS": {
+    "AMBIENT_LIGHT": {
+      "INTENSITY": 0.2
+    },
     "CEILING_SPOT_LIGHTS": {
       "ANGLE": 1.87,
       "COLOR": "#fff",

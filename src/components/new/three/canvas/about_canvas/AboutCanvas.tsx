@@ -8,7 +8,6 @@ import { isMobile } from 'react-device-detect'
 import { AppDispatch, RootState } from '@/redux/store'
 import { setShowInstructions } from '@/redux/slice/aboutSlice'
 
-import Lights from './Lights'
 import { CannonPlayer } from '../../controls/CannonPlayer'
 import LaboratoireScene from './laboratoire/LaboratoireScene'
 import PhysicsGround from './PhysicsGround'
@@ -49,7 +48,6 @@ export default function AboutCanvas() {
         makeDefault
         fov={aboutConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      <Lights />
       <Suspense fallback={null}>
         <Physics>
           {!isMobile ? (

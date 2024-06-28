@@ -3,10 +3,8 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import {
-  couronnesMaterial,
-  defaultMaterial,
-} from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+import { couronnesMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+import { defaultMaterial } from '@/components/new/three/materials/defaultMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 

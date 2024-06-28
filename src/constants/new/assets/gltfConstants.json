@@ -52,7 +52,7 @@
   "ABOUT": {
     "LABORATOIRE": {
       "CLAY_RENDER": {
-        "LABORATOIRE": "/new/gltf/about/Laboratoire.gltf"
+        "LABORATOIRE": "/new/gltf/about/laboratoire/clay_render/Laboratoire.gltf"
       },
       "FINAL_RENDER": {
         "DESK_COLLECTION": {
@@ -63,6 +63,11 @@
           "TRESTLE": "/new/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf",
           "TRANSFERT_BOX": "/new/gltf/about/laboratoire/final_render/desk_collection/TransfertBox.gltf",
           "VINYL_DISC": "/new/gltf/about/laboratoire/final_render/desk_collection/VinylDisc.gltf"
+        },
+        "LIGHTS_COLLECTION": {
+          "CEILING_LAMP": "/new/gltf/about/laboratoire/final_render/lights_collection/CeilingLamp.gltf",
+          "CEILING_LAMP_FRAME": "/new/gltf/about/laboratoire/final_render/lights_collection/CeilingLampFrame.gltf",
+          "TABLE_LAMP": "/new/gltf/about/laboratoire/final_render/lights_collection/TableLamp.gltf"
         },
         "PARQUET_COLLECTION": {
           "PARQUET": "/new/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf"
@@ -109,6 +114,7 @@
           "NORTH_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/NorthWall.gltf",
           "WALL_CLOCK_COLLECTION": {
             "HOUR_HAND": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/HourHand.gltf",
+            "HOUR_AND_MINUTE_MARKERS": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/HourAndMinuteMarkers.gltf",
             "MINUTE_HAND": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/MinuteHand.gltf",
             "SECOND_HAND": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/SecondHand.gltf",
             "WALL_CLOCK": "/new/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClock.gltf",
@@ -117,39 +123,7 @@
           "WEST_WALL": "/new/gltf/about/laboratoire/final_render/walls_collection/WestWall.gltf"
         }
       }
-    },
-    "AMOR_LLAMA_AMOR": "/new/gltf/about/AmorLlamaAmor.gltf",
-    "BRAIN": "/new/gltf/about/Brain.gltf",
-    "CEILING_LAMP": "/new/gltf/about/CeilingLamp.gltf",
-    "CEILING_LAMP_FRAME": "/new/gltf/about/CeilingLampFrame.gltf",
-    "CELESTIAL_MAP": "/new/gltf/about/CelestialMap.gltf",
-    "COURONNES": "/new/gltf/about/Couronnes.gltf",
-    "CUBE": "/new/gltf/about/Cube.gltf",
-    "DODECAHEDRON": "/new/gltf/about/Dodecahedron.gltf",
-    "FRAME_GLASSES": "/new/gltf/about/FrameGlasses.gltf",
-    "HOUR_AND_MINUTE_MARKERS": "/new/gltf/about/HourAndMinuteMarkers.gltf",
-    "HOUR_HAND": "/new/gltf/about/HourHand.gltf",
-    "ICOSAHEDRON": "/new/gltf/about/Icosahedron.gltf",
-    "LOGO_GUTHUB": "/new/gltf/about/LogoGitHub.gltf",
-    "LOGO_TWITTER": "/new/gltf/about/LogoTwitter.gltf",
-    "MINUTE_HAND": "/new/gltf/about/MinuteHand.gltf",
-    "NICOTIANA_RUSTICA": "/new/gltf/about/NicotianaRustica.gltf",
-    "NORTH_BASEBOARD": "/new/gltf/about/NorthBaseboard.gltf",
-    "OCTAHEDRON": "/new/gltf/about/Octahedron.gltf",
-    "PABLO_ESCOBAR": "/new/gltf/about/PabloEscobar.gltf",
-    "SECOND_HAND": "/new/gltf/about/SecondHand.gltf",
-    "SHELF": "/new/gltf/about/Shelf.gltf",
-    "SPEAKER": "/new/gltf/about/Speaker.gltf",
-    "SPEAKER_BOX": "/new/gltf/about/SpeakerBox.gltf",
-    "TABLE_LAMP": "/new/gltf/about/TableLamp.gltf",
-    "TETRAHEDRON": "/new/gltf/about/Tetrahedron.gltf",
-    "VIRGEN_DE_GUADALUPE": "/new/gltf/about/VirgenDeGuadalupe.gltf",
-    "WALL_CLOCK": "/new/gltf/about/WallClock.gltf",
-    "WALL_CLOCK_GLASS": "/new/gltf/about/WallClockGlass.gltf",
-    "WALLS": "/new/gltf/about/Walls.gltf",
-    "WETH_BASEBOARD": "/new/gltf/about/WestBaseboard.gltf",
-    "WORLD_MAP": "/new/gltf/about/WorldMap.gltf",
-    "WORLD_MAP_STAND": "/new/gltf/about/WorldMapStand.gltf"
+    }
   },
   "SNAKE_GAME": {
     "ARROW_TEST": "/new/gltf/snake_game/ArrowTest.gltf",

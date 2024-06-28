@@ -109,20 +109,6 @@ export const macBookProKeyboardMaterial = new THREE.MeshStandardMaterial({
   roughness: 0.5,
 })
 
-// GLASS
-
-export const glassMaterial = new THREE.MeshPhysicalMaterial({
-  color: '#777',
-  roughness: 0,
-  /* transmission: 1, */
-  ior: 1.5,
-  /* thickness: 0.2, */
-  specularIntensity: 1,
-  clearcoat: 1,
-  transparent: true,
-  opacity: 0.3,
-})
-
 // IRON
 
 export const ironMaterial = new THREE.MeshStandardMaterial({

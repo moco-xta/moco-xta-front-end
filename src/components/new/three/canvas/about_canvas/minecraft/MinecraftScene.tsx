@@ -1,10 +1,9 @@
 import React from 'react'
 
-import Cubes from './Cubes'
+import MinecraftCubes from './MinecraftCubes'
 import MinecraftGround from './MinecraftGround'
 
 import { default as minecraftConstants } from '@/constants/new/canvas/about/minecraft/minecraftConstants.json'
-import { Box } from '@react-three/drei'
 
 export default function MinecraftScene() {
   return (
@@ -12,9 +11,8 @@ export default function MinecraftScene() {
       position={[minecraftConstants.OFFSET[0], minecraftConstants.OFFSET[1], minecraftConstants.OFFSET[2]]}
       scale={minecraftConstants.SCALE}
     >
-      <Cubes />
+      <MinecraftCubes />
       <MinecraftGround />
-      <Box scale={minecraftConstants.SCALE} />
     </group>
   )
 }

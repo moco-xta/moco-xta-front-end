@@ -13,7 +13,9 @@ type GLTFResult = GLTF & {
 }
 
 export function HourAndMinuteMarkers({}: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.HOUR_AND_MINUTE_MARKERS) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.HOUR_AND_MINUTE_MARKERS,
+  ) as GLTFResult
 
   const hourAndMinuteMarkersMaterial = new THREE.MeshStandardMaterial({
     color: '#000',
@@ -30,4 +32,6 @@ export function HourAndMinuteMarkers({}: JSX.IntrinsicElements['mesh']) {
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.HOUR_AND_MINUTE_MARKERS)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.HOUR_AND_MINUTE_MARKERS,
+)

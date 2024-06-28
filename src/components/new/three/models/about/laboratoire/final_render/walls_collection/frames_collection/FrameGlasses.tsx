@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { glassMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
+import { glassMaterial } from '@/components/new/three/materials/about/laboratoire/laboratoireMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 

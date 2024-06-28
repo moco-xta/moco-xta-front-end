@@ -1,0 +1,31 @@
+{
+  "LIGHTS": {
+    "AMBIENT_LIGHT": {
+      "INTENSITY": 2
+    },
+    "CEILING_SPOT_LIGHTS": {
+      "ANGLE": 1.87,
+      "COLOR": "#fff",
+      "DECAY": 1.1,
+      "DISTANCE": 52,
+      "INTENSITY": 10,
+      "ORIENTATION": [
+        [-1, 1, -1],
+        [1, 1, -1],
+        [-1, 1, 1],
+        [1, 1, 1]
+      ],
+      "PENUMBRA": 0.9,
+      "POSITION": {
+        "X": 5,
+        "Y": 26.5,
+        "Z": 3
+      },
+      "TARGET_POSITION": {
+        "X": 26.5,
+        "Y": 0,
+        "Z": 26.5
+      }
+    }
+  }
+}
