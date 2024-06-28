@@ -15,21 +15,17 @@ export default function MinecraftGround() {
 
   const handleOnPointerMove = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation()
-    /* console.log(
-      'e.point',
-      Object.values(e.point).map((val) => Math.ceil(val)),
-    ) */
   }
 
   const handleOnClick = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation()
-    console.log('e.point', e.point)
-    console.log(
-      'e.point',
-      Object.values(e.point).map((val) => Math.round(val)),
+    const [x, y, z] = Object.values(e.point).map(
+      (val, index) =>
+        Math.round(
+          ((val - minecraftConstants.OFFSET[index]) / minecraftConstants.SCALE) * (1 / minecraftConstants.SCALE),
+        ) * minecraftConstants.SCALE,
     )
-    const [x, y, z] = Object.values(e.point).map((val) => Math.ceil(val - 0.5))
-    dispatch(addCube([x + minecraftConstants.OFFSET.X, 0, z + minecraftConstants.OFFSET.Z]))
+    dispatch(addCube([x, 0, z]))
   }
 
   return (

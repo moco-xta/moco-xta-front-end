@@ -71,7 +71,10 @@ export const Cube = ({ position, texture }: CubeInterface) => {
       onPointerOut={handleOnPointerOut}
       onClick={handleOnClick}
     >
-      <boxGeometry attach='geometry' args={[minecraftConstants.SCALE, minecraftConstants.SCALE, minecraftConstants.SCALE]}/>
+      <boxGeometry
+        attach='geometry'
+        args={[minecraftConstants.SCALE, minecraftConstants.SCALE, minecraftConstants.SCALE]}
+      />
       <meshStandardMaterial
         attach='material'
         color={isHovered ? 'grey' : 'white'}

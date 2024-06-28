@@ -30,39 +30,39 @@ export default function RealTimeSky() {
             longitude: position.coords.longitude,
           }),
         )
-        console.log(`Latitude: ${location.latitude}, Longitude: ${location.longitude}`)
+        /* console.log(`Latitude: ${location.latitude}, Longitude: ${location.longitude}`) */
       })
     } else {
-      console.log('Geolocation is not supported by this browser.')
+      /* console.log('Geolocation is not supported by this browser.') */
     }
   }, [])
 
   useEffect(() => {
-    console.log('GET TIME')
-    console.log('location', location)
+    /* console.log('GET TIME') */
+    /* console.log('location', location) */
     setTime(SunCalc.getTimes(new Date(), location.latitude, location.longitude))
   }, [location.latitude, location.longitude])
 
   useEffect(() => {
     if (time) {
-      console.log('time', time)
+      /* console.log('time', time) */
       setSunriseStr(time.sunrise.getHours() + ':' + time.sunrise.getMinutes())
       setSunrisePos(SunCalc.getPosition(time.sunrise, location.latitude, location.longitude))
     }
   }, [time])
 
-  useEffect(() => {
+  /* useEffect(() => {
     console.log('sunriseStr', sunriseStr)
     console.log('sunrisePos', sunrisePos)
-  }, [sunriseStr])
+  }, [sunriseStr]) */
 
   useEffect(() => {
     if (sunrisePos) setSunriseAzimuth((sunrisePos.azimuth * 180) / Math.PI)
   }, [sunrisePos])
 
-  useEffect(() => {
+  /* useEffect(() => {
     console.log('sunriseAzimuth', sunriseAzimuth)
-  }, [sunriseAzimuth])
+  }, [sunriseAzimuth]) */
 
   return (
     <Sky

@@ -1,11 +1,9 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { PressEscToLeaveInterface } from '@/interfaces/new/componentsInterfaces'
-
 import './index.scss'
 
-export default function PressEscToLeave({ showInstructions }: PressEscToLeaveInterface) {
+export default function PressEscToLeave() {
   const t = useTranslations('ABOUT')
 
   return (

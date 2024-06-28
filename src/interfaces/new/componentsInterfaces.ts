@@ -30,11 +30,3 @@ export interface ReviewCardInterface {
     [key: string]: string | number
   }
 }
-
-export interface AboutDashboardInterface {
-  showInstructions: boolean
-}
-
-export interface PressEscToLeaveInterface {
-  showInstructions: boolean
-}

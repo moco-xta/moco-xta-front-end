@@ -1,19 +1,10 @@
 {
-  "SCALE": 0.5,
-  "OFFSET": {
-    "X": 0,
-    "Y": 10,
-    "Z": 0
-  },
+  "SCALE": 0.4,
+  "OFFSET": [7.2, 9.3, -10],
   "GROUND": {
     "SIZE": {
-      "WIDTH": 20,
-      "DEPTH": 40
-    },
-    "MATERIAL": {
-      "MAP": {
-        "REPEAT": 100
-      }
+      "WIDTH": 10,
+      "DEPTH": 20
     }
   }
 }
