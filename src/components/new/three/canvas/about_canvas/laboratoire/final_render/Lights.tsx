@@ -1,4 +1,4 @@
-import React, { Ref, createRef, useEffect, useRef } from 'react'
+import React, { Ref, createRef, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
@@ -16,11 +16,6 @@ export default function Lights() {
       createRef<THREE.SpotLight>(),
     ),
   )
-
-  useEffect(() => {
-    // @ts-ignore
-    console.log('ref', ref.current[0].current)
-  }, [ref.current[0]])
 
   const ambientLigthsConfig = useControls('AMBIENT LIGHTS: Config', {
     color: '#fcf8ef',
