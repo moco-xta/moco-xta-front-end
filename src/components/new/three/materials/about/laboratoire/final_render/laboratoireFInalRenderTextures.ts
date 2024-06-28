@@ -43,19 +43,19 @@ celestialMapMap.flipY = false
 
 const celestialMapFrameMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME
-    .DIFFUSE.FOUR_K,
+    .DIFFUSE.ONE_K,
 )
 celestialMapFrameMap.flipY = false
 
 const celestialMapFrameRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME
-    .ROUGHNESS.FOUR_K,
+    .ROUGHNESS.ONE_K,
 )
 celestialMapFrameRoughnessMap.flipY = false
 
 const celestialMapFrameNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME
-    .NORMAL.FOUR_K,
+    .NORMAL.ONE_K,
 )
 celestialMapFrameNormalMap.flipY = false
 
@@ -63,18 +63,18 @@ celestialMapFrameNormalMap.flipY = false
 
 const couronnesMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.DIFFUSE
-    .FOUR_K,
+    .ONE_K,
 )
 couronnesMap.flipY = false
 
 const couronnesRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.ROUGHNESS
-    .FOUR_K,
+    .ONE_K,
 )
 couronnesRoughnessMap.flipY = false
 
 const couronnesNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.NORMAL.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.NORMAL.ONE_K,
 )
 couronnesNormalMap.flipY = false
 
@@ -159,19 +159,19 @@ nicotianaRusticaMap.flipY = false
 
 const nicotianaRusticaFrameMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA
-    .NICOTIANA_RUSTICA_FRAME.DIFFUSE.FOUR_K,
+    .NICOTIANA_RUSTICA_FRAME.DIFFUSE.ONE_K,
 )
 nicotianaRusticaFrameMap.flipY = false
 
 const nicotianaRusticaFrameRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA
-    .NICOTIANA_RUSTICA_FRAME.ROUGHNESS.FOUR_K,
+    .NICOTIANA_RUSTICA_FRAME.ROUGHNESS.ONE_K,
 )
 nicotianaRusticaFrameRoughnessMap.flipY = false
 
 const nicotianaRusticaFrameNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA
-    .NICOTIANA_RUSTICA_FRAME.NORMAL.FOUR_K,
+    .NICOTIANA_RUSTICA_FRAME.NORMAL.ONE_K,
 )
 nicotianaRusticaFrameNormalMap.flipY = false
 
@@ -227,34 +227,34 @@ parquetRoughnessMap.repeat.set(
 // SHELF
 
 const shelfMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.DIFFUSE.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.DIFFUSE.ONE_K,
 )
 shelfMap.flipY = false
 
 const shelfRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.ROUGHNESS.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.ROUGHNESS.ONE_K,
 )
 shelfRoughnessMap.flipY = false
 
 const shelfNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.NORMAL.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.NORMAL.ONE_K,
 )
 shelfNormalMap.flipY = false
 
 // SPEAKERS
 
 const speakerBoxMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.DIFFUSE.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.DIFFUSE.ONE_K,
 )
 speakerBoxMap.flipY = false
 
 const speakerBoxRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.ROUGHNESS.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.ROUGHNESS.ONE_K,
 )
 speakerBoxRoughnessMap.flipY = false
 
 const speakerBoxNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.NORMAL.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.NORMAL.ONE_K,
 )
 speakerBoxNormalMap.flipY = false
 
@@ -337,27 +337,27 @@ const worldMapMap = new THREE.TextureLoader().load(
 worldMapMap.flipY = false
 
 const worldMapStandMarbleMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.DIFFUSE.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.DIFFUSE.ONE_K,
 )
 worldMapStandMarbleMap.flipY = false
 
 const worldMapStandMarbleRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.ROUGHNESS.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.ROUGHNESS.ONE_K,
 )
 worldMapStandMarbleRoughnessMap.flipY = false
 
 const worldMapStandMarbleNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.NORMAL.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.NORMAL.ONE_K,
 )
 worldMapStandMarbleNormalMap.flipY = false
 
 const worldMapStandUsedMetalRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.USED_METAL.ROUGHNESS.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.USED_METAL.ROUGHNESS.ONE_K,
 )
 worldMapStandUsedMetalRoughnessMap.flipY = false
 
 const worldMapStandUsedMetalNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.USED_METAL.NORMAL.FOUR_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.USED_METAL.NORMAL.ONE_K,
 )
 worldMapStandUsedMetalNormalMap.flipY = false
 
