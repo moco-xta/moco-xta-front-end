@@ -37,7 +37,7 @@ export const TextureSelector = () => {
     if (pressedTexture) {
       dispatch(setTexture(pressedTexture[0]))
     }
-  }, [setTexture, dirt, grass, glass, wood, log])
+  }, [dirt, grass, glass, wood, log, dispatch])
 
   useEffect(() => {
     const visibilityTimeout = setTimeout(() => {
