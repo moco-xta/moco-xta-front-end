@@ -81,7 +81,7 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
   })
 
   const handleDevicemotion = useCallback((e: any) => {
-    api.velocity.set(e.acceleration.x * 1000, e.acceleration.y * 1000, e.acceleration.z * 1000)
+    api.velocity.set(e.acceleration.x * 10000, e.acceleration.y * 10000, e.acceleration.z * 10000)
   }, [api.velocity])
 
   useEffect(() => {
