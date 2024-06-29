@@ -81,20 +81,8 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
   })
 
   const handleDevicemotion = useCallback((e: any) => {
-    const direction = new THREE.Vector3()
-
-    const frontVector = new THREE.Vector3(0, 0, e.acceleration.x.toFixed(2) ? 1 : 0)
-    /* const verticalVector = new THREE.Vector3(0, (e.acceleration.x.toFixed(2) ? 1 : 0), 0) */
-    const sideVector = new THREE.Vector3(e.acceleration.z.toFixed(2) ? 1 : 0, 0, 0)
-
-    direction
-      .subVectors(frontVector, sideVector)
-      .normalize()
-      .multiplyScalar(aboutConstants.PLAYER.SPEED)
-      .applyEuler(camera.rotation)
-
-    api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
-  }, [api.velocity, camera.rotation])
+    api.velocity.set(e.acceleration.x * 100, e.acceleration.y * 100, e.acceleration.z * 100)
+  }, [api.velocity])
 
   useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)

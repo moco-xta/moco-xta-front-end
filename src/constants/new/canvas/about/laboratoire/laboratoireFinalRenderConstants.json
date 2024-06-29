@@ -119,7 +119,7 @@
       "COLOR": "#fff",
       "DECAY": 0.9,
       "DISTANCE": 52,
-      "INTENSITY": 6,
+      "INTENSITY": 5,
       "K": {
         "IS_DESKTOP": 8,
         "IS_MOBILE": 2
