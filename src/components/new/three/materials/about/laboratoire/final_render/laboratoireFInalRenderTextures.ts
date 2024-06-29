@@ -44,37 +44,37 @@ celestialMapMap.flipY = false
 
 const celestialMapFrameMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME
-    .DIFFUSE.FOUR_K,
+    .DIFFUSE.HALF_K,
 )
 celestialMapFrameMap.flipY = false
 
 const celestialMapFrameRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME
-    .ROUGHNESS.FOUR_K,
+    .ROUGHNESS.HALF_K,
 )
 celestialMapFrameRoughnessMap.flipY = false
 
 const celestialMapFrameNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME
-    .NORMAL.FOUR_K,
+    .NORMAL.HALF_K,
 )
 celestialMapFrameNormalMap.flipY = false
 
 // COURONNES
 
 const couronnesMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.DIFFUSE.HALF_K,
 )
 couronnesMap.flipY = false
 
 const couronnesRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.ROUGHNESS
-    .ONE_K,
+    .HALF_K,
 )
 couronnesRoughnessMap.flipY = false
 
 const couronnesNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.NORMAL.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.NORMAL.HALF_K,
 )
 couronnesNormalMap.flipY = false
 
@@ -121,7 +121,7 @@ const monarchFrameNormalMap = new THREE.TextureLoader().load(
 monarchFrameNormalMap.flipY = false
 
 const monarchFrameBumpMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH_FRAME.BUMP.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH_FRAME.BUMP.HALF_K,
 )
 monarchFrameBumpMap.flipY = false
 
@@ -153,25 +153,25 @@ monarchShadowMap.flipY = false
 
 const nicotianaRusticaMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA
-    .NICOTIANA_RUSTICA.DIFFUSE.ONE_K,
+    .NICOTIANA_RUSTICA.DIFFUSE.HALF_K,
 )
 nicotianaRusticaMap.flipY = false
 
 const nicotianaRusticaFrameMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA
-    .NICOTIANA_RUSTICA_FRAME.DIFFUSE.ONE_K,
+    .NICOTIANA_RUSTICA_FRAME.DIFFUSE.HALF_K,
 )
 nicotianaRusticaFrameMap.flipY = false
 
 const nicotianaRusticaFrameRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA
-    .NICOTIANA_RUSTICA_FRAME.ROUGHNESS.ONE_K,
+    .NICOTIANA_RUSTICA_FRAME.ROUGHNESS.HALF_K,
 )
 nicotianaRusticaFrameRoughnessMap.flipY = false
 
 const nicotianaRusticaFrameNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.NICOTIANA_RUSTICA
-    .NICOTIANA_RUSTICA_FRAME.NORMAL.ONE_K,
+    .NICOTIANA_RUSTICA_FRAME.NORMAL.HALF_K,
 )
 nicotianaRusticaFrameNormalMap.flipY = false
 
@@ -301,31 +301,31 @@ virgenDeGuadalupeMap.flipY = false
 
 const mondaineWallClockMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.MONDAINE_WALL_CLOCK.DIFFUSE
-    .ONE_K,
+    .HALF_K,
 )
 mondaineWallClockMap.flipY = false
 
 const wallClockBrushedMetalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.WALL_CLOCK_BRUSHED_METAL
-    .DIFFUSE.ONE_K,
+    .DIFFUSE.HALF_K,
 )
 wallClockBrushedMetalMap.flipY = false
 
 const wallClockBrushedMetalRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.WALL_CLOCK_BRUSHED_METAL
-    .ROUGHNESS.ONE_K,
+    .ROUGHNESS.HALF_K,
 )
 wallClockBrushedMetalRoughnessMap.flipY = false
 
 const wallClockBrushedMetalNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.WALL_CLOCK_BRUSHED_METAL
-    .NORMAL.ONE_K,
+    .NORMAL.HALF_K,
 )
 wallClockBrushedMetalNormalMap.flipY = false
 
 const wallClockBrushedMetalBumpMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.WALL_CLOCK_COLLECTION.WALL_CLOCK_BRUSHED_METAL.BUMP
-    .ONE_K,
+    .HALF_K,
 )
 wallClockBrushedMetalBumpMap.flipY = false
 
