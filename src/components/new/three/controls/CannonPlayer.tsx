@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useCylinder, useSphere } from '@react-three/cannon'
+import { isMobile } from 'react-device-detect'
 
 import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
@@ -50,19 +51,41 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
   }, [api.velocity])
 
   useFrame(() => {
-    camera.position.copy(
-      new THREE.Vector3(
-        playerPosition.current[0],
-        playerPosition.current[1] + aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        playerPosition.current[2],
-      ),
-    )
+    if (!isMobile) {
+      camera.position.copy(
+        new THREE.Vector3(
+          playerPosition.current[0],
+          playerPosition.current[1] + aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          playerPosition.current[2],
+        ),
+      )
 
+      const direction = new THREE.Vector3()
+
+      const frontVector = new THREE.Vector3(0, 0, (moveBackward ? 1 : 0) - (moveForward ? 1 : 0))
+
+      const sideVector = new THREE.Vector3((moveLeft ? 1 : 0) - (moveRight ? 1 : 0), 0, 0)
+
+      direction
+        .subVectors(frontVector, sideVector)
+        .normalize()
+        .multiplyScalar(aboutConstants.PLAYER.SPEED)
+        .applyEuler(camera.rotation)
+
+      api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
+
+      if (jump && Math.abs(playerVelocity.current[1]) < 0.05) {
+        api.velocity.set(playerVelocity.current[0], aboutConstants.PLAYER.JUMP_FORCE, playerVelocity.current[2])
+      }
+    }
+  })
+
+  const handleDevicemotion = useCallback((e: any) => {
     const direction = new THREE.Vector3()
 
-    const frontVector = new THREE.Vector3(0, 0, (moveBackward ? 1 : 0) - (moveForward ? 1 : 0))
-
-    const sideVector = new THREE.Vector3((moveLeft ? 1 : 0) - (moveRight ? 1 : 0), 0, 0)
+    const frontVector = new THREE.Vector3(0, 0, e.acceleration.x.toFixed(2) ? 1 : 0)
+    /* const verticalVector = new THREE.Vector3(0, (e.acceleration.x.toFixed(2) ? 1 : 0), 0) */
+    const sideVector = new THREE.Vector3(e.acceleration.z.toFixed(2) ? 1 : 0, 0, 0)
 
     direction
       .subVectors(frontVector, sideVector)
@@ -71,11 +94,14 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
       .applyEuler(camera.rotation)
 
     api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
+  }, [])
 
-    if (jump && Math.abs(playerVelocity.current[1]) < 0.05) {
-      api.velocity.set(playerVelocity.current[0], aboutConstants.PLAYER.JUMP_FORCE, playerVelocity.current[2])
+  useEffect(() => {
+    window.addEventListener('devicemotion', handleDevicemotion)
+    return () => {
+      window.removeEventListener('devicemotion', handleDevicemotion)
     }
-  })
+  }, [handleDevicemotion])
 
   return (
     <>

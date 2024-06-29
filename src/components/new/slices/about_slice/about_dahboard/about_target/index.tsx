@@ -3,22 +3,19 @@ import React, { useCallback, useEffect, useState } from 'react'
 import './index.scss'
 
 export default function AboutTarget() {
-  const [acceleration, setAcceleration] = useState<{x: number, y: number, z: number}>({
+  const [acceleration, setAcceleration] = useState<{ x: number; y: number; z: number }>({
     x: 0,
     y: 0,
-    z: 0
+    z: 0,
   })
 
-  const handleDevicemotion = useCallback(
-    (e: any) => {
-      setAcceleration({
-        x: e.acceleration.x > acceleration.x ? e.acceleration.x.toFixed(2) : acceleration.x,
-        y: e.acceleration.y > acceleration.y ? e.acceleration.x.toFixed(2) : acceleration.y,
-        z: e.acceleration.z > acceleration.z ? e.acceleration.x.toFixed(2) : acceleration.z
-      })
-    },
-    [],
-  )
+  const handleDevicemotion = useCallback((e: any) => {
+    setAcceleration({
+      x: e.acceleration.x > acceleration.x ? e.acceleration.x.toFixed(2) : acceleration.x,
+      y: e.acceleration.y > acceleration.y ? e.acceleration.x.toFixed(2) : acceleration.y,
+      z: e.acceleration.z > acceleration.z ? e.acceleration.x.toFixed(2) : acceleration.z,
+    })
+  }, [])
 
   useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)
@@ -30,7 +27,6 @@ export default function AboutTarget() {
   return (
     <div id='about_target_test_block'>
       <span id='about_target'>+</span>
-      <p>TEST</p>
       <p>x: {acceleration.x}</p>
       <p>y: {acceleration.y}</p>
       <p>z: {acceleration.z}</p>
