@@ -51,7 +51,6 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
   }, [api.velocity])
 
   useFrame(() => {
-    if (!isMobile) {
       camera.position.copy(
         new THREE.Vector3(
           playerPosition.current[0],
@@ -77,11 +76,10 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
       if (jump && Math.abs(playerVelocity.current[1]) < 0.05) {
         api.velocity.set(playerVelocity.current[0], aboutConstants.PLAYER.JUMP_FORCE, playerVelocity.current[2])
       }
-    }
   })
 
   const handleDevicemotion = useCallback((e: any) => {
-    api.velocity.set(e.acceleration.x * 10000, e.acceleration.y * 10000, e.acceleration.z * 10000)
+    api.velocity.set(e.acceleration.x * 100000, e.acceleration.y * 100000, e.acceleration.z * 100000)
   }, [api.velocity])
 
   useEffect(() => {
