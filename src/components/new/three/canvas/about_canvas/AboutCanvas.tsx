@@ -50,21 +50,18 @@ export default function AboutCanvas() {
       />
       <Suspense fallback={null}>
         <Physics>
-          {!isMobile ? (
-            <CannonPlayer pointerLockControlsSelector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR} />
-          ) : (
-            <DeviceOrientationControls />
-          )}
+          {isMobile && <DeviceOrientationControls />}
+          <CannonPlayer pointerLockControlsSelector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR} />
           <LaboratoireScene />
           <MinecraftScene />
           <PhysicsGround />
+          {/* <ToneMapping /> */}
           {/* {isFinalRender && <RealTimeSky />} */}
           {/* <Debug
             color={'red'}
             scale={1.1}
           /> */}
         </Physics>
-        <ToneMapping />
       </Suspense>
     </Canvas>
   )

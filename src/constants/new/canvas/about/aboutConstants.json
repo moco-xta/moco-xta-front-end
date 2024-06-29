@@ -34,6 +34,6 @@
     "JUMP_FORCE": 4
   },
   "TONE_MAPPING": {
-    "EXPOSURE": 1.25
+    "EXPOSURE": 50
   }
 }
