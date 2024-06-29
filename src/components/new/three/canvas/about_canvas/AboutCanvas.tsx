@@ -58,7 +58,7 @@ export default function AboutCanvas() {
           <LaboratoireScene />
           <MinecraftScene />
           <PhysicsGround />
-          {isFinalRender && <RealTimeSky />}
+          {/* {isFinalRender && <RealTimeSky />} */}
           {/* <Debug
             color={'red'}
             scale={1.1}
