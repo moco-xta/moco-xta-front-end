@@ -15,7 +15,7 @@ export default function AboutTarget() {
       y: e.acceleration.y > acceleration.y ? e.acceleration.x.toFixed(2) : acceleration.y,
       z: e.acceleration.z > acceleration.z ? e.acceleration.x.toFixed(2) : acceleration.z,
     })
-  }, [])
+  }, [acceleration.x, acceleration.y, acceleration.z])
 
   useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)
