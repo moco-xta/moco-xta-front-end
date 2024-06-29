@@ -119,7 +119,10 @@
       "DECAY": 1.1,
       "DISTANCE": 52,
       "INTENSITY": 8,
-      "K": 8,
+      "K": {
+        "IS_DESKTOP": 8,
+        "IS_MOBILE": 2
+      },
       "ORIENTATION": [
         [-1, 1, -1],
         [1, 1, -1],

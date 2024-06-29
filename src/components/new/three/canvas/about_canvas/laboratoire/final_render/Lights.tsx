@@ -7,6 +7,7 @@ import { useControls } from 'leva'
 import { RootState } from '@/redux/store'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { isMobile } from 'react-device-detect'
 
 export default function Lights() {
   const { debug } = useSelector((state: RootState) => state.about)
@@ -150,12 +151,21 @@ export default function Lights() {
                 )
           }
           castShadow
-          shadow-mapSize={[
-            laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
-              laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K,
-            laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
-              laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K,
-          ]}
+          shadow-mapSize={
+            !isMobile
+              ? [
+                  laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
+                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_DESKTOP,
+                  laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
+                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_DESKTOP,
+                ]
+              : [
+                  laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
+                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_MOBILE,
+                  laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
+                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_MOBILE,
+                ]
+          }
           /* shadow-camera-far={
             aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
               .SHADOW_CAMERA_FAR
