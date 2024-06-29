@@ -94,7 +94,7 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
       .applyEuler(camera.rotation)
 
     api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
-  }, [])
+  }, [api.velocity, camera.rotation])
 
   useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)
