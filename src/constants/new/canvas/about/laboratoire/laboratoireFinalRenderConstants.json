@@ -111,14 +111,14 @@
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
-      "INTENSITY": 0.2
+      "INTENSITY": 0.3
     },
     "CEILING_SPOT_LIGHTS": {
       "ANGLE": 1.87,
       "COLOR": "#fff",
       "DECAY": 1.1,
       "DISTANCE": 52,
-      "INTENSITY": 6,
+      "INTENSITY": 8,
       "K": 8,
       "ORIENTATION": [
         [-1, 1, -1],
@@ -149,6 +149,7 @@
   },
   "PARQUET_COLLECTION": {
     "PARQUET": {
+      "ROUGHNESS": 0.75,
       "REPEAT": 1,
       "CORRECTION_GREY_RANGE": [150, 180]
     }
@@ -360,6 +361,17 @@
           "Z": -10.007
         }
       }
+    }
+  },
+  "POST_PROCESSING": {
+    "NBA": {
+      "COLOR": "black",
+      "AO_RADIUS": 2,
+      "INTENSITY": 1.25
+    },
+    "BRIGHTNESS_CONTRAST": {
+      "BRIGHTNESS": 0.01,
+      "CONTRAST": 0.15
     }
   }
 }

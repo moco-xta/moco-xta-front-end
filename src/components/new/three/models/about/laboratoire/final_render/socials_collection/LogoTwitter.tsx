@@ -70,12 +70,6 @@ export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
         onPointerOut={handleOnPointerOut}
         /* onPointerOver={() => setSelected(!selected)} */
       />
-      {/* >
-        <meshStandardMaterial
-          attach='material'
-          color={isHovered ? 'red' : '#1D96E8'}
-        />
-      </mesh> */}
       {/* <EffectComposer>
         <Outline
           xRay

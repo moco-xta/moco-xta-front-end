@@ -7,29 +7,29 @@ import { default as texturesConstants } from '@/constants/new/assets/texturesCon
 
 const amorllamaAmorMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.AMOR_LLAMA_AMOR.HOY_SI.DIFFUSE
-    .ONE_K,
+    .HALF_K,
 )
 amorllamaAmorMap.flipY = false
 
 // BRAIN
 
 const brainMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN.DIFFUSE.HALF_K,
 )
 brainMap.flipY = false
 
 const brainFrameMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.DIFFUSE.HALF_K,
 )
 brainFrameMap.flipY = false
 
 const brainFrameRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.ROUGHNESS.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.ROUGHNESS.HALF_K,
 )
 brainFrameRoughnessMap.flipY = false
 
 const brainFrameNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.NORMAL.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.NORMAL.HALF_K,
 )
 brainFrameNormalMap.flipY = false
 
@@ -43,27 +43,26 @@ celestialMapMap.flipY = false
 
 const celestialMapFrameMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME
-    .DIFFUSE.ONE_K,
+    .DIFFUSE.FOUR_K,
 )
 celestialMapFrameMap.flipY = false
 
 const celestialMapFrameRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME
-    .ROUGHNESS.ONE_K,
+    .ROUGHNESS.FOUR_K,
 )
 celestialMapFrameRoughnessMap.flipY = false
 
 const celestialMapFrameNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.CELESTIAL_MAP.CELESTIAL_MAP_FRAME
-    .NORMAL.ONE_K,
+    .NORMAL.FOUR_K,
 )
 celestialMapFrameNormalMap.flipY = false
 
 // COURONNES
 
 const couronnesMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.DIFFUSE
-    .ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.COURONNES.COURONNES.DIFFUSE.ONE_K,
 )
 couronnesMap.flipY = false
 
@@ -81,42 +80,42 @@ couronnesNormalMap.flipY = false
 // DESK CHAIR
 
 const deskChairLeatherMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_CHAIR_LEATHER.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_CHAIR_LEATHER.DIFFUSE.HALF_K,
 )
 deskChairLeatherMap.flipY = false
 
 const deskChairLeatherRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_CHAIR_LEATHER.ROUGHNESS.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_CHAIR_LEATHER.ROUGHNESS.HALF_K,
 )
 deskChairLeatherRoughnessMap.flipY = false
 
 const deskChairLeatherNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_CHAIR_LEATHER.NORMAL.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_CHAIR_LEATHER.NORMAL.HALF_K,
 )
 deskChairLeatherNormalMap.flipY = false
 
 // MONARCH
 
 const monarchMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH.DIFFUSE.HALF_K,
 )
 monarchMap.flipY = false
 
 const monarchFrameMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH_FRAME.DIFFUSE
-    .ONE_K,
+    .HALF_K,
 )
 monarchFrameMap.flipY = false
 
 const monarchFrameRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH_FRAME.ROUGHNESS
-    .ONE_K,
+    .HALF_K,
 )
 monarchFrameRoughnessMap.flipY = false
 
 const monarchFrameNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH_FRAME.NORMAL
-    .ONE_K,
+    .HALF_K,
 )
 monarchFrameNormalMap.flipY = false
 
@@ -127,25 +126,25 @@ monarchFrameBumpMap.flipY = false
 
 const monarchBottomMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH_BOTTOM.DIFFUSE
-    .ONE_K,
+    .HALF_K,
 )
 monarchBottomMap.flipY = false
 
 const monarchBottomRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH_BOTTOM.ROUGHNESS
-    .ONE_K,
+    .HALF_K,
 )
 monarchBottomRoughnessMap.flipY = false
 
 const monarchBottomNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH_BOTTOM.NORMAL
-    .ONE_K,
+    .HALF_K,
 )
 monarchBottomNormalMap.flipY = false
 
 const monarchShadowMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH.MONARCH_SHADOW.DIFFUSE
-    .FOUR_K,
+    .HALF_K,
 )
 monarchShadowMap.flipY = false
 
@@ -185,7 +184,7 @@ pabloEscobarMap.flipY = false
 // PARQUET
 
 const parquetMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.DIFFUSE.HALF_K,
 )
 parquetMap.wrapS = THREE.RepeatWrapping
 parquetMap.wrapT = THREE.RepeatWrapping
@@ -195,7 +194,7 @@ parquetMap.repeat.set(
 )
 
 const parquetBumpMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.BUMP.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.BUMP.HALF_K,
 )
 parquetBumpMap.wrapS = THREE.RepeatWrapping
 parquetBumpMap.wrapT = THREE.RepeatWrapping
@@ -205,7 +204,7 @@ parquetBumpMap.repeat.set(
 )
 
 const parquetNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.NORMAL.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.NORMAL.HALF_K,
 )
 parquetNormalMap.wrapS = THREE.RepeatWrapping
 parquetNormalMap.wrapT = THREE.RepeatWrapping
@@ -215,7 +214,7 @@ parquetNormalMap.repeat.set(
 )
 
 const parquetRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.ROUGHNESS.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET.ROUGHNESS.HALF_K,
 )
 parquetRoughnessMap.wrapS = THREE.RepeatWrapping
 parquetRoughnessMap.wrapT = THREE.RepeatWrapping
@@ -227,41 +226,41 @@ parquetRoughnessMap.repeat.set(
 // SHELF
 
 const shelfMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.DIFFUSE.HALF_K,
 )
 shelfMap.flipY = false
 
 const shelfRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.ROUGHNESS.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.ROUGHNESS.HALF_K,
 )
 shelfRoughnessMap.flipY = false
 
 const shelfNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.NORMAL.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF.NORMAL.HALF_K,
 )
 shelfNormalMap.flipY = false
 
 // SPEAKERS
 
 const speakerBoxMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.DIFFUSE.HALF_K,
 )
 speakerBoxMap.flipY = false
 
 const speakerBoxRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.ROUGHNESS.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.ROUGHNESS.HALF_K,
 )
 speakerBoxRoughnessMap.flipY = false
 
 const speakerBoxNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.NORMAL.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER_BOX.NORMAL.HALF_K,
 )
 speakerBoxNormalMap.flipY = false
 
 // TRESTLE
 
 const trestleMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRESTLE.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRESTLE.DIFFUSE.HALF_K,
 )
 trestleMap.flipY = false
 
@@ -274,26 +273,26 @@ trinityMap.flipY = false
 
 const trinityFrameMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.TRINITY.TRINITY_FRAME.DIFFUSE
-    .ONE_K,
+    .HALF_K,
 )
 trinityFrameMap.flipY = false
 
 const trinityFrameRoughnessMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.TRINITY.TRINITY_FRAME.ROUGHNESS
-    .ONE_K,
+    .HALF_K,
 )
 trinityFrameRoughnessMap.flipY = false
 
 const trinityFrameNormalMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.TRINITY.TRINITY_FRAME.NORMAL
-    .ONE_K,
+    .HALF_K,
 )
 trinityFrameNormalMap.flipY = false
 
 // VIRGEN DE GUADALUPE
 
 const virgenDeGuadalupeMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.VIRGEN_DE_GUADALUPE.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.VIRGEN_DE_GUADALUPE.DIFFUSE.HALF_K,
 )
 virgenDeGuadalupeMap.flipY = false
 
@@ -337,27 +336,27 @@ const worldMapMap = new THREE.TextureLoader().load(
 worldMapMap.flipY = false
 
 const worldMapStandMarbleMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.DIFFUSE.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.DIFFUSE.HALF_K,
 )
 worldMapStandMarbleMap.flipY = false
 
 const worldMapStandMarbleRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.ROUGHNESS.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.ROUGHNESS.HALF_K,
 )
 worldMapStandMarbleRoughnessMap.flipY = false
 
 const worldMapStandMarbleNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.NORMAL.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.MARBLE.NORMAL.HALF_K,
 )
 worldMapStandMarbleNormalMap.flipY = false
 
 const worldMapStandUsedMetalRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.USED_METAL.ROUGHNESS.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.USED_METAL.ROUGHNESS.HALF_K,
 )
 worldMapStandUsedMetalRoughnessMap.flipY = false
 
 const worldMapStandUsedMetalNormalMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.USED_METAL.NORMAL.ONE_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP_STAND.USED_METAL.NORMAL.HALF_K,
 )
 worldMapStandUsedMetalNormalMap.flipY = false
 
