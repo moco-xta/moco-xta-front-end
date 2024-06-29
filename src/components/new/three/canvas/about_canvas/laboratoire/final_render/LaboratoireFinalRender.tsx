@@ -9,6 +9,7 @@ import SocialsCollection from './collections/socials_collection/SocialsCollectio
 import SpeakersCollections from './collections/speakers_collection/SpeakersCollections'
 import WallsCollection from './collections/walls_collection/WallsCollection'
 import PostProcessing from './PostProcessing'
+import { isMobile } from 'react-device-detect'
 
 export default function LaboratoireFinalRender() {
   return (
@@ -21,7 +22,7 @@ export default function LaboratoireFinalRender() {
       <SocialsCollection />
       <SpeakersCollections />
       <WallsCollection />
-      <PostProcessing />
+      {isMobile && <PostProcessing />}
     </>
   )
 }
