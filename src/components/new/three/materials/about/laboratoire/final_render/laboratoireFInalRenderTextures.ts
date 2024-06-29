@@ -24,7 +24,8 @@ const brainFrameMap = new THREE.TextureLoader().load(
 brainFrameMap.flipY = false
 
 const brainFrameRoughnessMap = new THREE.TextureLoader().load(
-  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.ROUGHNESS.HALF_K,
+  texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.BRAIN.BRAIN_FRAME.ROUGHNESS
+    .HALF_K,
 )
 brainFrameRoughnessMap.flipY = false
 
