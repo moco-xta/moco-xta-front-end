@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux'
 import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
 import { useControls } from 'leva'
+import { isMobile } from 'react-device-detect'
 
 import { RootState } from '@/redux/store'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
-import { isMobile } from 'react-device-detect'
 
 export default function Lights() {
   const { debug } = useSelector((state: RootState) => state.about)
@@ -19,7 +19,7 @@ export default function Lights() {
   )
 
   const ambientLigthsConfig = useControls('AMBIENT LIGHTS: Config', {
-    color: '#fcf8ef',
+    color: laboratoireFinalRenderConstants.LIGHTS.AMBIENT_LIGHT.COLOR,
     intensity: {
       value: laboratoireFinalRenderConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY,
       min: 0,
@@ -166,33 +166,13 @@ export default function Lights() {
                     laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_MOBILE,
                 ]
           }
-          /* shadow-camera-far={
-            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
-              .SHADOW_CAMERA_FAR
-          }
-          shadow-camera-left={
-            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
-              .SHADOW_CAMERA_LEFT
-          }
-          shadow-camera-right={
-            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
-              .SHADOW_CAMERA_RIGHT
-          }
-          shadow-camera-top={
-            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
-              .SHADOW_CAMERA_TOP
-          }
-          shadow-camera-bottom={
-            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
-              .SHADOW_CAMERA_BOTTOM
-          }
-          shadow-radius={
-            aboutConstants.LIGHTS.LABORATOIRE.FINAL_RENDER.SPOT_LIGHTS
-              .SHADOW_RADIUS
-          }
-          shadow-bias={
-            laboratoireFinalRenderConstants.LIGHTS_COLLECTION.CEILING_SPOT_LIGHTS.SHADOW_BIAS
-          } */
+          shadow-camera-far={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_FAR}
+          shadow-camera-left={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_LEFT}
+          shadow-camera-right={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_RIGHT}
+          shadow-camera-top={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_TOP}
+          shadow-camera-bottom={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_BOTTOM}
+          shadow-radius={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_RADIUS}
+          shadow-bias={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_BIAS}
           {...spotLigthsConfig}
         />
       ))}

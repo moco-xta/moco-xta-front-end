@@ -111,14 +111,15 @@
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
-      "INTENSITY": 0.3
+      "COLOR": "#fff",
+      "INTENSITY": 0.2
     },
     "CEILING_SPOT_LIGHTS": {
       "ANGLE": 1.87,
       "COLOR": "#fff",
-      "DECAY": 1.1,
+      "DECAY": 0.9,
       "DISTANCE": 52,
-      "INTENSITY": 8,
+      "INTENSITY": 6,
       "K": {
         "IS_DESKTOP": 8,
         "IS_MOBILE": 2
@@ -136,13 +137,13 @@
         "Z": 3
       },
       "SHADOW_MAP_SIZE": 1024,
-      "SHADOW_CAMERA_FAR": 100,
-      "SHADOW_CAMERA_LEFT": -100,
-      "SHADOW_CAMERA_RIGHT": 100,
-      "SHADOW_CAMERA_TOP": 100,
-      "SHADOW_CAMERA_BOTTOM": -100,
-      "SHADOW_RADIUS": 3,
-      "SHADOW_BIAS": 0.0001,
+      "SHADOW_CAMERA_FAR": 80,
+      "SHADOW_CAMERA_LEFT": -80,
+      "SHADOW_CAMERA_RIGHT": 80,
+      "SHADOW_CAMERA_TOP": 80,
+      "SHADOW_CAMERA_BOTTOM": -80,
+      "SHADOW_RADIUS": 4,
+      "SHADOW_BIAS": 0.00001,
       "TARGET_POSITION": {
         "X": 26.5,
         "Y": 0,
@@ -374,7 +375,7 @@
     },
     "BRIGHTNESS_CONTRAST": {
       "BRIGHTNESS": 0.01,
-      "CONTRAST": 0.15
+      "CONTRAST": 0.175
     }
   }
 }
