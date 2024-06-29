@@ -107,29 +107,36 @@
             "DIFFUSE": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_diffuse_HALF_K.jpg"
             },
             "ROUGHNESS": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_roughness_HALF_K.jpg"
             },
             "NORMAL": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/desk_chair/desk_chair_leather_normal_HALF_K.jpg"
             }
           },
           "TRESTLE": {
             "DIFFUSE": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/trestle/trestle_diffuse_HALF_K.jpg"
             }
           },
           "VINYL_DISCS": {
             "FINIRA": {
-              "DIFFUSE": "/new/img/textures/about/laboratoire/final_render/desk_collection/vinyl_disc/vinyl_disc_finira_diffuse.jpg"
+              "DIFFUSE": {
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/vinyl_disc/vinyl_disc_finira_diffuse_1K.jpg",
+                "HALF_K": "/new/img/textures/about/laboratoire/final_render/desk_collection/vinyl_disc/vinyl_disc_finira_diffuse_HALF_K.jpg"
+              }
             }
           }
         },
@@ -137,19 +144,23 @@
           "PARQUET": {
             "DIFFUSE": {
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_diffuse_HALF_K.jpg"
             },
             "BUMP": {
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_bump_HALF_K.jpg"
             },
             "NORMAL": {
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_normal_HALF_K.jpg"
             },
             "ROUGHNESS": {
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/parquet_collection/parquet/parquet_roughness_HALF_K.jpg"
             }
           }
         },
@@ -161,22 +172,26 @@
             "DIFFUSE": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_diffuse_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_diffuse_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_diffuse_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_diffuse_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_diffuse_HALF_K.jpg"
             },
             "ROUGHNESS": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_roughness_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_roughness_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_roughness_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_roughness_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_roughness_HALF_K.jpg"
             },
             "NORMAL": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_normal_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_normal_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_normal_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_normal_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/shelf/shelf_normal_HALF_K.jpg"
             }
           },
           "VIRGEN_DE_GUADALUPE": {
             "DIFFUSE": {
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/virgen_de_guadalupe_diffuse_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/virgen_de_guadalupe_diffuse_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/shelf_collection/virgen_de_guadalupe_diffuse_HALF_K.jpg"
             }
           }
         },
@@ -185,22 +200,26 @@
             "DIFFUSE": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_diffuse_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_diffuse_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_diffuse_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_diffuse_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_diffuse_HALF_K.jpg"
             },
             "ROUGHNESS": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_roughness_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_roughness_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_roughness_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_roughness_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_roughness_HALF_K.jpg"
             },
             "NORMAL": {
               "FOUR_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_normal_4K.jpg",
               "TWO_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_normal_2K.jpg",
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_normal_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_normal_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/speaker_box/speaker_box_normal_HALF_K.jpg"
             }
           },
           "WORLD_MAP": {
             "DIFFUSE": {
-              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map/world_map_diffuse_1K.jpg"
+              "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map/world_map_diffuse_1K.jpg",
+              "HALF_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map/world_map_diffuse_HALF_K.jpg"
             }
           },
           "WORLD_MAP_STAND": {
@@ -208,34 +227,40 @@
               "DIFFUSE": {
                 "FOUR_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_diffuse_4K.jpg",
                 "TWO_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_diffuse_2K.jpg",
-                "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_diffuse_1K.jpg"
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_diffuse_1K.jpg",
+                "HALF_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_diffuse_HALF_K.jpg"
               },
               "ROUGHNESS": {
                 "FOUR_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_roughness_4K.jpg",
                 "TWO_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_roughness_2K.jpg",
-                "ONE_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_roughness_1K.jpg"
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_roughness_1K.jpg",
+                "HALF_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_roughness_HALF_K.jpg"
               },
               "NORMAL": {
                 "FOUR_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_normal_4K.jpg",
                 "TWO_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_normal_2K.jpg",
-                "ONE_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_normal_1K.jpg"
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_normal_1K.jpg",
+                "HALF_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_normal_HALF_K.jpg"
               }
             },
             "USED_METAL": {
               "DIFFUSE": {
                 "FOUR_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_diffuse_4K.jpg",
                 "TWO_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_diffuse_2K.jpg",
-                "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_diffuse_1K.jpg"
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_diffuse_1K.jpg",
+                "HALF_K": "/new/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_diffuse_HALF_K.jpg"
               },
               "ROUGHNESS": {
                 "FOUR_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_roughness_4K.jpg",
                 "TWO_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_roughness_2K.jpg",
-                "ONE_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_roughness_1K.jpg"
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_roughness_1K.jpg",
+                "HALF_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_roughness_HALF_K.jpg"
               },
               "NORMAL": {
                 "FOUR_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_normal_4K.jpg",
                 "TWO_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_normal_2K.jpg",
-                "ONE_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_normal_1K.jpg"
+                "ONE_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_normal_1K.jpg",
+                "HALF_K": "/new/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_normal_HALF_K.jpg"
               }
             }
           }
@@ -245,31 +270,36 @@
             "AMOR_LLAMA_AMOR": {
               "HOY_SI": {
                 "DIFFUSE": {
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/amor_llama_amor/hoy_si_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/amor_llama_amor/hoy_si_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/amor_llama_amor/hoy_si_diffuse_HALF_K.jpg"
                 }
               }
             },
             "BRAIN": {
               "BRAIN": {
                 "DIFFUSE": {
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_diffuse_HALF_K.jpg"
                 }
               },
               "BRAIN_FRAME": {
                 "DIFFUSE": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_diffuse_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_diffuse_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_diffuse_HALF_K.jpg"
                 },
                 "ROUGHNESS": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_roughness_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_roughness_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_roughness_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_roughness_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_roughness_HALF_K.jpg"
                 },
                 "NORMAL": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_normal_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_normal_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_normal_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_normal_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/brain/brain_frame_normal_HALF_K.jpg"
                 }
               }
             },
@@ -281,17 +311,20 @@
                 "DIFFUSE": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_diffuse_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_diffuse_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_diffuse_HALF_K.jpg"
                 },
                 "ROUGHNESS": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_roughness_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_roughness_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_roughness_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_roughness_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_roughness_HALF_K.jpg"
                 },
                 "NORMAL": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_normal_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_normal_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_normal_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_normal_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/celestial_map/celestial_map_frame_normal_HALF_K.jpg"
                 }
               }
             },
@@ -300,94 +333,110 @@
                 "DIFFUSE": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_diffuse_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_diffuse_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_diffuse_HALF_K.jpg"
                 },
                 "ROUGHNESS": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_roughness_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_roughness_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_roughness_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_roughness_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_roughness_HALF_K.jpg"
                 },
                 "NORMAL": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_normal_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_normal_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_normal_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_normal_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/couronnes/couronnes_normal_HALF_K.jpg"
                 }
               }
             },
             "MONARCH": {
               "MONARCH": {
                 "DIFFUSE": {
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_diffuse_1K.png"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_diffuse_1K.png",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_diffuse_HALF_K.png"
                 }
               },
               "MONARCH_FRAME": {
                 "DIFFUSE": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_diffuse_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_diffuse_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_diffuse_HALF_K.jpg"
                 },
                 "ROUGHNESS": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_roughness_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_roughness_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_roughness_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_roughness_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_roughness_HALF_K.jpg"
                 },
                 "NORMAL": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_normal_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_normal_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_normal_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_normal_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_normal_HALF_K.jpg"
                 },
                 "BUMP": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_bump_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_bump_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_bump_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_bump_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_frame_bump_HALF_K.jpg"
                 }
               },
               "MONARCH_BOTTOM": {
                 "DIFFUSE": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_diffuse_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_diffuse_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_diffuse_HALF_K.jpg"
                 },
                 "ROUGHNESS": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_roughness_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_roughness_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_roughness_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_roughness_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_roughness_HALF_K.jpg"
                 },
                 "NORMAL": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_normal_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_normal_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_normal_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_normal_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_bottom_normal_HALF_K.jpg"
                 }
               },
               "MONARCH_SHADOW": {
                 "DIFFUSE": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_shadow_diffuse_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_shadow_diffuse_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_shadow_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_shadow_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/monarch/monarch_shadow_diffuse_HALF_K.jpg"
                 }
               }
             },
             "NICOTIANA_RUSTICA": {
               "NICOTIANA_RUSTICA": {
                 "DIFFUSE": {
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_diffuse_HALF_K.jpg"
                 }
               },
               "NICOTIANA_RUSTICA_FRAME": {
                 "DIFFUSE": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_diffuse_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_diffuse_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_diffuse_HALF_K.jpg"
                 },
                 "ROUGHNESS": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_roughness_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_roughness_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_roughness_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_roughness_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_roughness_HALF_K.jpg"
                 },
                 "NORMAL": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_normal_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_normal_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_normal_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_normal_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/nicotiana_rustica/nicotiana_rustica_frame_normal_HALF_K.jpg"
                 }
               }
             },
@@ -399,17 +448,20 @@
                 "DIFFUSE": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_diffuse_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_diffuse_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_diffuse_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_diffuse_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_diffuse_HALF_K.jpg"
                 },
                 "ROUGHNESS": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_roughness_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_roughness_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_roughness_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_roughness_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_roughness_HALF_K.jpg"
                 },
                 "NORMAL": {
                   "FOUR_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_normal_4K.jpg",
                   "TWO_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_normal_2K.jpg",
-                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_normal_1K.jpg"
+                  "ONE_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_normal_1K.jpg",
+                  "HALF_K": "/new/img/textures/about/laboratoire/final_render/walls_collection/frames_collection/trinity/trinity_frame_normal_HALF_K.jpg"
                 }
               }
             }

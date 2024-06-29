@@ -21,7 +21,7 @@ export default function LaboratoireFinalRender() {
       <SocialsCollection />
       <SpeakersCollections />
       <WallsCollection />
-      {/* <PostProcessing /> */}
+      <PostProcessing />
     </>
   )
 }

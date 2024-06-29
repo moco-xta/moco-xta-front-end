@@ -28,7 +28,7 @@ export function VinylDisc({ name, position, rotation, texture }: VinylDiscInterf
 
   const vinylDiscMap = useTextureLoader(
     // @ts-ignore
-    texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.VINYL_DISCS[texture].DIFFUSE,
+    texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.VINYL_DISCS[texture].DIFFUSE.HALF_K,
   )
   vinylDiscMap.flipY = false
 

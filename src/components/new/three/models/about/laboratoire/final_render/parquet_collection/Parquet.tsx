@@ -21,6 +21,7 @@ export default function Parquet() {
         object.material.map = laboratoireFinalRenderTextures.parquet.map
         object.material.bumpMap = laboratoireFinalRenderTextures.parquet.bumpMap
         object.material.normalMap = laboratoireFinalRenderTextures.parquet.normalMap
+        object.material.roughness = laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.ROUGHNESS
         object.material.roughnessMap = laboratoireFinalRenderTextures.parquet.roughnessMap
         object.material.color = generateRandomHexGrey(
           laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.CORRECTION_GREY_RANGE[0],

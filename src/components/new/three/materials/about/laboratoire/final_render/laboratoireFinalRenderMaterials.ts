@@ -242,7 +242,7 @@ export const speakerStandMaterial = new THREE.MeshStandardMaterial({
 // TRANSFERT BOX
 
 export const transfertBoxMaterial = new THREE.MeshStandardMaterial({
-  color: '#eee',
+  color: '#999',
   roughness: 1,
   side: THREE.DoubleSide,
 })
