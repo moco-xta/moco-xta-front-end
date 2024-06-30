@@ -9,13 +9,16 @@ export default function AboutTarget() {
     z: 0,
   })
 
-  const handleDevicemotion = useCallback((e: any) => {
-    setAcceleration({
-      x: e.acceleration.x > acceleration.x ? e.acceleration.x.toFixed(2) : acceleration.x,
-      y: e.acceleration.y > acceleration.y ? e.acceleration.x.toFixed(2) : acceleration.y,
-      z: e.acceleration.z > acceleration.z ? e.acceleration.x.toFixed(2) : acceleration.z,
-    })
-  }, [acceleration.x, acceleration.y, acceleration.z])
+  const handleDevicemotion = useCallback(
+    (e: any) => {
+      setAcceleration({
+        x: e.acceleration.x > acceleration.x ? e.acceleration.x.toFixed(2) : acceleration.x,
+        y: e.acceleration.y > acceleration.y ? e.acceleration.x.toFixed(2) : acceleration.y,
+        z: e.acceleration.z > acceleration.z ? e.acceleration.x.toFixed(2) : acceleration.z,
+      })
+    },
+    [acceleration.x, acceleration.y, acceleration.z],
+  )
 
   useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)
