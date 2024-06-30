@@ -6,7 +6,7 @@ import { isMobile } from 'react-device-detect'
 
 import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
-import { useMinecraftKeyboard } from '@/hooks/new/useMinecraftKeyboard'
+import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
 import { PointerLockControls } from '@react-three/drei'
 
 import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
@@ -14,7 +14,7 @@ import { default as aboutConstants } from '@/constants/new/canvas/about/aboutCon
 export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterface) => {
   const { camera, gl } = useThree()
 
-  const { moveBackward, moveForward, moveRight, moveLeft, jump } = useMinecraftKeyboard()
+  const { moveBackward, moveForward, moveRight, moveLeft, jump } = useAboutKeyboard()
 
   const [ref, api] = useCylinder<THREE.Mesh>(() => ({
     mass: 1,
@@ -32,15 +32,6 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
     aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
   ])
   const playerVelocity = useRef([0, 0, 0])
-
-  useEffect(() => {
-    camera.rotation.set(
-      THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X),
-      THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
-      THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
-      'YXZ',
-    )
-  }, [camera.rotation])
 
   useEffect(() => {
     api.position.subscribe((p) => (playerPosition.current = p))
@@ -82,7 +73,7 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
     return 0.5 * acceleration * speed ** 2
   }
 
-  const handleDevicemotion = useCallback((e: any) => {
+  /* const handleDevicemotion = useCallback((e: any) => {
     const normalizedDistance = new THREE.Vector3()
     const currentPosition = new THREE.Vector3()
     const accX = findDistance(e.acceleration.x, 0.9) // m/s^2 convert to distance <=> 0.5 * acceleration * speed ** 2
@@ -97,7 +88,7 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
     camera.position.copy(currentPosition)
   }, [camera.position])
 
-  /* const handleDevicemotion = useCallback((e: any) => {
+  const handleDevicemotion = useCallback((e: any) => {
     camera.position.copy(
       new THREE.Vector3(
         playerPosition.current[0],
@@ -121,12 +112,12 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
     api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
   }, [api.velocity, camera.position, camera.rotation]) */
 
-  useEffect(() => {
+  /* useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)
     return () => {
       window.removeEventListener('devicemotion', handleDevicemotion)
     }
-  }, [handleDevicemotion])
+  }, [handleDevicemotion]) */
 
   return (
     <>

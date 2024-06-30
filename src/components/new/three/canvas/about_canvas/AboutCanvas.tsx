@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { DeviceOrientationControls, PerspectiveCamera } from '@react-three/drei'
 import { Debug, Physics } from '@react-three/cannon'
@@ -46,6 +47,12 @@ export default function AboutCanvas() {
     >
       <PerspectiveCamera
         makeDefault
+        rotation={new THREE.Euler(
+          THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X),
+          THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
+          THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
+          'YXZ',
+        )}
         fov={aboutConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Suspense fallback={null}>

@@ -25,7 +25,7 @@ const actionByKey = (key: string): string => {
   return keyActionMap[key]
 }
 
-export const useMinecraftKeyboard = () => {
+export const useAboutKeyboard = () => {
   const [actions, setActions] = useState<{ [key: string]: boolean }>({
     moveForward: false,
     moveBackward: false,

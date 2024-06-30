@@ -19,6 +19,8 @@ const sideVector = new THREE.Vector3()
 const rotation = new THREE.Vector3()
 
 export default function Player({ cameraRotation, rigidBodyPosition, cuboidColliderArgs }: PlayerInterface) {
+  const { camera } = useThree()
+
   const { forward, backward, left, right, jump } = usePlayer()
 
   const playerRef = useRef<RapierRigidBody>(null!)
@@ -27,8 +29,6 @@ export default function Player({ cameraRotation, rigidBodyPosition, cuboidCollid
   /* const rapier = useRapier() */
 
   /* const dispatch = useDispatch<AppDispatch>() */
-
-  const { camera } = useThree()
 
   const playerPosition = useRef<number[]>([0, 0, 0])
 
