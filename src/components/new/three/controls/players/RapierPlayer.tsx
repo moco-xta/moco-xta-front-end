@@ -49,9 +49,9 @@ export default function RapierPlayer({
   const handleDevicemotion = useCallback((e: any) => {
     // m/s^2 convert to distance <=> 0.5 * acceleration * speed ** 2
     velocity.current = new THREE.Vector3(
-      findDistance(e.acceleration.x, speed * 20),
-      findDistance(e.acceleration.y, speed * 20),
-      findDistance(e.acceleration.z, speed * 20),
+      findDistance(e.acceleration.x, 0.9),
+      findDistance(e.acceleration.y, 0.9),
+      findDistance(e.acceleration.z, 0.9),
     )
   }, [])
 
