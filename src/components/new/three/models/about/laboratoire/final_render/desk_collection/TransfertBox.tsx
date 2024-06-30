@@ -19,7 +19,9 @@ type GLTFResult = GLTF & {
 }
 
 export function TransfertBox({ name, position, rotation }: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRANSFERT_BOX) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.TRANSFERT_BOX,
+  ) as GLTFResult
 
   return (
     <group

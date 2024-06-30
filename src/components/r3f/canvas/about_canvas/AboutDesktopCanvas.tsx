@@ -1,7 +1,12 @@
 import React, { Suspense, useMemo } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { FlyControls, KeyboardControls, PerspectiveCamera, PointerLockControls } from '@react-three/drei'
+import {
+  FlyControls,
+  KeyboardControls,
+  PerspectiveCamera,
+  PointerLockControls,
+} from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import Player from '../../controls/Player'
@@ -15,14 +20,26 @@ import ToneMapping from './ToneMapping'
 export default function AboutDesktopCanvas() {
   const keyboardControlsMap = useMemo(
     () => [
-      { name: controlsConstants.FORWARD, keys: controlsConstants.FORWARD_KEYS },
+      {
+        name: controlsConstants.FORWARD,
+        keys: controlsConstants.FORWARD_KEYS,
+      },
       {
         name: controlsConstants.BACKWARD,
         keys: controlsConstants.BACKWARD_KEYS,
       },
-      { name: controlsConstants.LEFT, keys: controlsConstants.LEFT_KEYS },
-      { name: controlsConstants.RIGHT, keys: controlsConstants.RIGHT_KEYS },
-      { name: controlsConstants.JUMP, keys: controlsConstants.JUMP_KEY },
+      {
+        name: controlsConstants.LEFT,
+        keys: controlsConstants.LEFT_KEYS,
+      },
+      {
+        name: controlsConstants.RIGHT,
+        keys: controlsConstants.RIGHT_KEYS,
+      },
+      {
+        name: controlsConstants.JUMP,
+        keys: controlsConstants.JUMP_KEY,
+      },
     ],
     [],
   )

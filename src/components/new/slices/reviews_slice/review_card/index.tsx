@@ -22,12 +22,20 @@ export default function ReviewCard({ review, cardStyle }: ReviewCardInterface) {
       style={cardStyle}
     >
       <div>
-        <p>&quot;{review.review}&quot;</p>
+        <p>
+          &quot;
+          {review.review}
+          &quot;
+        </p>
         <RatingStars rating={review.rating} />
       </div>
       <div>
         {/* @ts-ignore */}
-        <p>{review.hasOwnProperty('firstName') ? /* @ts-ignore */ review.firstName : 'firstName test'}</p>
+        <p>
+          {review.hasOwnProperty('firstName')
+            ? /* @ts-ignore */ review.firstName
+            : 'firstName test'}
+        </p>
         <p>{review.role}</p>
       </div>
     </div>

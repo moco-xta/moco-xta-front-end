@@ -15,7 +15,9 @@ type GLTFResult = GLTF & {
 }
 
 export function Speaker({ name, position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.SPEAKER,
+  ) as GLTFResult
 
   return (
     <mesh

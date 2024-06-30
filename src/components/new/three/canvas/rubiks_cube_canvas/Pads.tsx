@@ -14,8 +14,10 @@ export default function Pads({ colorPadIndex, coordinates }: PadsInterface) {
       {[...Array(setRoundedCubeType(coordinates))].map((_, index) => {
         const currentColorPadIndex = colorPadIndex.current
         colorPadIndex.current += 1
-        const Pad = padsData[currentColorPadIndex % rubiksCubeConstants.RUBIKS_CUBE.PADS.length].component
-        const colorPadName = padsData[currentColorPadIndex % rubiksCubeConstants.RUBIKS_CUBE.PADS.length].name
+        const Pad =
+          padsData[currentColorPadIndex % rubiksCubeConstants.RUBIKS_CUBE.PADS.length].component
+        const colorPadName =
+          padsData[currentColorPadIndex % rubiksCubeConstants.RUBIKS_CUBE.PADS.length].name
         return (
           <Pad
             key={`rubiks_cube_pad_${colorPadName}_${currentColorPadIndex}`}

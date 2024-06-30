@@ -51,7 +51,10 @@ export default function PhysicsGround() {
       >
         <planeGeometry
           attach='geometry'
-          args={[aboutConstants.PHYSICS_GROUND.ARGS.WIDTH, aboutConstants.PHYSICS_GROUND.ARGS.DEPTH]}
+          args={[
+            aboutConstants.PHYSICS_GROUND.ARGS.WIDTH,
+            aboutConstants.PHYSICS_GROUND.ARGS.DEPTH,
+          ]}
         />
       </mesh>
     </RigidBody>

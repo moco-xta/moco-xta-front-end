@@ -34,13 +34,19 @@ export function updateSnake(
     const newSnakeCellCornerType =
       newSnakeCellType === 'CORNER'
         ? i === 1
-          ? setSnakeCellCornerType(newSnakeCellDirection, newSnakeCellPosition, newSnake[0].position)
+          ? setSnakeCellCornerType(
+              newSnakeCellDirection,
+              newSnakeCellPosition,
+              newSnake[0].position,
+            )
           : snake[i - 1].cornerType
         : null
 
     const newSnakeCell: SnakeCellInterface = {
       type: newSnakeCellType,
-      position: { ...newSnakeCellPosition },
+      position: {
+        ...newSnakeCellPosition,
+      },
       direction: newSnakeCellDirection,
       cornerType: newSnakeCellCornerType,
     }

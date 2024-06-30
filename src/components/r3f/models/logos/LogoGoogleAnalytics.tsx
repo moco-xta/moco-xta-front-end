@@ -18,40 +18,41 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoGoogleAnalytics = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
-  function LogoGoogleAnalytics({ position, rotation, scale }, ref) {
-    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_GOOGLE_ANALYTICS) as GLTFResult
+const LogoGoogleAnalytics = forwardRef<
+  ForwardRefGltfGroupInterface,
+  JSX.IntrinsicElements['group']
+>(function LogoGoogleAnalytics({ position, rotation, scale }, ref) {
+  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_GOOGLE_ANALYTICS) as GLTFResult
 
-    useLayoutEffect(() => {
-      const box = new THREE.Box3().setFromObject(scene)
-      // @ts-ignore
-      ref.current.width = box.getSize(new THREE.Vector3()).x
-    }, [scene, ref])
+  useLayoutEffect(() => {
+    const box = new THREE.Box3().setFromObject(scene)
+    // @ts-ignore
+    ref.current.width = box.getSize(new THREE.Vector3()).x
+  }, [scene, ref])
 
-    return (
-      <group
-        ref={ref}
-        dispose={null}
-        position={position}
-        rotation={rotation}
-        scale={scale}
-      >
-        <mesh
-          geometry={nodes.LogoGoogleAnalytics_1.geometry}
-          material={materials['logo_google_analytics_#f9aa00']}
-          receiveShadow
-          castShadow
-        />
-        <mesh
-          geometry={nodes.LogoGoogleAnalytics_2.geometry}
-          material={materials['logo_google_analytics_#e37401']}
-          receiveShadow
-          castShadow
-        />
-      </group>
-    )
-  },
-)
+  return (
+    <group
+      ref={ref}
+      dispose={null}
+      position={position}
+      rotation={rotation}
+      scale={scale}
+    >
+      <mesh
+        geometry={nodes.LogoGoogleAnalytics_1.geometry}
+        material={materials['logo_google_analytics_#f9aa00']}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        geometry={nodes.LogoGoogleAnalytics_2.geometry}
+        material={materials['logo_google_analytics_#e37401']}
+        receiveShadow
+        castShadow
+      />
+    </group>
+  )
+})
 
 useGLTF.preload(GltfConstants.LOGO_GOOGLE_ANALYTICS)
 

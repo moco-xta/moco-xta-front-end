@@ -18,41 +18,40 @@ type GltfResultType = GLTF & {
   }
 }
 
-const LogoPhotoshop = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoPhotoshop(
-  { position, rotation, scale },
-  ref,
-) {
-  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_PHOTOSHOP) as GltfResultType
+const LogoPhotoshop = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoPhotoshop({ position, rotation, scale }, ref) {
+    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_PHOTOSHOP) as GltfResultType
 
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene)
-    // @ts-ignore
-    ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [scene, ref])
+    useLayoutEffect(() => {
+      const box = new THREE.Box3().setFromObject(scene)
+      // @ts-ignore
+      ref.current.width = box.getSize(new THREE.Vector3()).x
+    }, [scene, ref])
 
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoPhotoshop_1.geometry}
-        material={materials['icon_photoshop_#051e37']}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.LogoPhotoshop_2.geometry}
-        material={materials['icon_photoshop_#39a9ff']}
-        receiveShadow
-        castShadow
-      />
-    </group>
-  )
-})
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+      >
+        <mesh
+          geometry={nodes.LogoPhotoshop_1.geometry}
+          material={materials['icon_photoshop_#051e37']}
+          receiveShadow
+          castShadow
+        />
+        <mesh
+          geometry={nodes.LogoPhotoshop_2.geometry}
+          material={materials['icon_photoshop_#39a9ff']}
+          receiveShadow
+          castShadow
+        />
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_PHOTOSHOP)
 

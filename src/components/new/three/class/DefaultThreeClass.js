@@ -60,7 +60,9 @@ export default class DefaultThreeClass {
       side: THREE.DoubleSide,
       transparent: true,
       uniforms: {
-        time: { value: 0 },
+        time: {
+          value: 0,
+        },
       },
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,

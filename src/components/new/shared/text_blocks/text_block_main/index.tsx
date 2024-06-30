@@ -5,7 +5,13 @@ import { TextBlockMainInterface } from '@/interfaces/new/componentsInterfaces'
 
 import './index.scss'
 
-export default function TextBlockMain({ id, className, divStyle, title, paragraph }: TextBlockMainInterface) {
+export default function TextBlockMain({
+  id,
+  className,
+  divStyle,
+  title,
+  paragraph,
+}: TextBlockMainInterface) {
   const t = useTranslations()
 
   return (

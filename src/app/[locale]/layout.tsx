@@ -11,7 +11,9 @@ import Header from '@/components/new/shared/header'
 
 import '@/styles/new/globals.scss'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+})
 
 const retorGaming = localFont({
   src: '../../fonts/ttf/Retro Gaming.ttf',
@@ -28,7 +30,9 @@ export default function RootLayout({
   params: { locale },
 }: Readonly<{
   children: React.ReactNode
-  params: { locale: string }
+  params: {
+    locale: string
+  }
 }>) {
   const translations = useMessages()
 

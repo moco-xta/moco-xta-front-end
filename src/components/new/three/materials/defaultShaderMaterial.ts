@@ -19,4 +19,6 @@ declare global {
   }
 }
 
-extend({ DefaultShaderMaterial })
+extend({
+  DefaultShaderMaterial,
+})

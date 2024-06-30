@@ -4,7 +4,9 @@ import { default as texturesConstants } from '@/constants/new/assets/texturesCon
 
 // CEILING
 
-const ceilingMap = new THREE.TextureLoader().load(texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.CEILING.DIFFUSE.ONE_K)
+const ceilingMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.CEILING.DIFFUSE.ONE_K,
+)
 ceilingMap.flipY = false
 ceilingMap.encoding = THREE.sRGBEncoding
 
@@ -32,13 +34,17 @@ deskChairMap.encoding = THREE.sRGBEncoding
 
 // DOOR
 
-const doorMap = new THREE.TextureLoader().load(texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.DOOR.DIFFUSE.ONE_K)
+const doorMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.DOOR.DIFFUSE.ONE_K,
+)
 doorMap.flipY = false
 doorMap.encoding = THREE.sRGBEncoding
 
 //
 
-const framesMap = new THREE.TextureLoader().load(texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.FRAMES.DIFFUSE.ONE_K)
+const framesMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.FRAMES.DIFFUSE.ONE_K,
+)
 framesMap.flipY = false
 framesMap.encoding = THREE.sRGBEncoding
 
@@ -52,13 +58,17 @@ northWallMap.encoding = THREE.sRGBEncoding
 
 // PARQUET
 
-const parquetMap = new THREE.TextureLoader().load(texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.PARQUET.DIFFUSE.ONE_K)
+const parquetMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.PARQUET.DIFFUSE.ONE_K,
+)
 parquetMap.flipY = false
 parquetMap.encoding = THREE.sRGBEncoding
 
 // SHELF
 
-const shelfMap = new THREE.TextureLoader().load(texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.SHELF.DIFFUSE.ONE_K)
+const shelfMap = new THREE.TextureLoader().load(
+  texturesConstants.ABOUT.LABORATOIRE.CLAY_RENDER.SHELF.DIFFUSE.ONE_K,
+)
 shelfMap.flipY = false
 shelfMap.encoding = THREE.sRGBEncoding
 
@@ -97,7 +107,9 @@ westWallMap.encoding = THREE.sRGBEncoding
 // TEXTURES
 
 const laboratoireClayRenderTextures: {
-  [key: string]: { [key: string]: THREE.Texture }
+  [key: string]: {
+    [key: string]: THREE.Texture
+  }
 } = {
   ceiling: {
     map: ceilingMap,

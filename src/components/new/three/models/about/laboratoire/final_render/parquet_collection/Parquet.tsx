@@ -11,7 +11,9 @@ import { default as laboratoireFinalRenderConstants } from '@/constants/new/canv
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 
 export default function Parquet() {
-  const gltf = useGltfLoader(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET)
+  const gltf = useGltfLoader(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.PARQUET_COLLECTION.PARQUET,
+  )
 
   useEffect(() => {
     gltf.scene.traverse((object) => {
@@ -21,7 +23,8 @@ export default function Parquet() {
         object.material.map = laboratoireFinalRenderTextures.parquet.map
         object.material.bumpMap = laboratoireFinalRenderTextures.parquet.bumpMap
         object.material.normalMap = laboratoireFinalRenderTextures.parquet.normalMap
-        object.material.roughness = laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.ROUGHNESS
+        object.material.roughness =
+          laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.ROUGHNESS
         object.material.roughnessMap = laboratoireFinalRenderTextures.parquet.roughnessMap
         object.material.color = generateRandomHexGrey(
           laboratoireFinalRenderConstants.PARQUET_COLLECTION.PARQUET.CORRECTION_GREY_RANGE[0],

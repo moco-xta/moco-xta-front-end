@@ -38,8 +38,8 @@
   },
   "PHYSICS_GROUND": {
     "ARGS": {
-      "WIDTH": 100,
-      "DEPTH": 100
+      "WIDTH": 200,
+      "DEPTH": 200
     },
     "POSITON": {
       "X": 0,

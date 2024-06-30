@@ -38,7 +38,9 @@ export default function Background() {
           }
         ) */
     },
-    { scope: container },
+    {
+      scope: container,
+    },
   )
 
   return (

@@ -11,7 +11,9 @@ export default function DeviceMotionPermission() {
   const t = useTranslations('ABOUT')
 
   const dispatch = useDispatch<AppDispatch>()
-  const { accessToDeviceMotionAndOrientationGranted } = useSelector((state: RootState) => state.about)
+  const { accessToDeviceMotionAndOrientationGranted } = useSelector(
+    (state: RootState) => state.about,
+  )
 
   useEffect(() => {
     // @ts-ignore

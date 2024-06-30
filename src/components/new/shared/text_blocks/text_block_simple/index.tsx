@@ -5,7 +5,13 @@ import { TextBlockSimpleInterface } from '@/interfaces/new/componentsInterfaces'
 
 import './index.scss'
 
-export default function TextBlockSimple({ id, className, divStyle, title, paragraph }: TextBlockSimpleInterface) {
+export default function TextBlockSimple({
+  id,
+  className,
+  divStyle,
+  title,
+  paragraph,
+}: TextBlockSimpleInterface) {
   const t = useTranslations()
 
   return (

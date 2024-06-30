@@ -16,29 +16,28 @@ type GltfResultType = GLTF & {
   }
 }
 
-export const LogoPonthus = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(function LogoPonthus(
-  { position, scale, onClick },
-  ref,
-) {
-  const gltf = useGLTF(GltfConstants.LOGO_PONTHUS) as GltfResultType
+export const LogoPonthus = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
+  function LogoPonthus({ position, scale, onClick }, ref) {
+    const gltf = useGLTF(GltfConstants.LOGO_PONTHUS) as GltfResultType
 
-  const [hovered, setHovered] = useState(false)
+    const [hovered, setHovered] = useState(false)
 
-  useEffect(() => {
-    document.body.style.cursor = hovered ? 'pointer' : 'auto'
-  }, [hovered])
+    useEffect(() => {
+      document.body.style.cursor = hovered ? 'pointer' : 'auto'
+    }, [hovered])
 
-  return (
-    <mesh
-      geometry={gltf.nodes.LogoPonthus.geometry}
-      position={position}
-      scale={scale}
-      material={gltf.materials['logo_ponthus_#2b2460']}
-      onClick={onClick}
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-    />
-  )
-})
+    return (
+      <mesh
+        geometry={gltf.nodes.LogoPonthus.geometry}
+        position={position}
+        scale={scale}
+        material={gltf.materials['logo_ponthus_#2b2460']}
+        onClick={onClick}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      />
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_PONTHUS)

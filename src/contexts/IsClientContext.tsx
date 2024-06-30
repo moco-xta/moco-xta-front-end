@@ -12,7 +12,13 @@ export const IsClientContextProvider = ({ children }: { children: ReactNode }) =
   useEffect(() => setIsClient(true), [])
 
   return (
-    <>{!isClient ? <Loading /> : <IsClientContext.Provider value={isClient}>{children}</IsClientContext.Provider>}</>
+    <>
+      {!isClient ? (
+        <Loading />
+      ) : (
+        <IsClientContext.Provider value={isClient}>{children}</IsClientContext.Provider>
+      )}
+    </>
   )
 }
 

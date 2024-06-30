@@ -18,41 +18,40 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoMysql = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoMysql(
-  { position, rotation, scale },
-  ref,
-) {
-  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_MYSQL) as GLTFResult
+const LogoMysql = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoMysql({ position, rotation, scale }, ref) {
+    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_MYSQL) as GLTFResult
 
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene)
-    // @ts-ignore
-    ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [scene, ref])
+    useLayoutEffect(() => {
+      const box = new THREE.Box3().setFromObject(scene)
+      // @ts-ignore
+      ref.current.width = box.getSize(new THREE.Vector3()).x
+    }, [scene, ref])
 
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoMysql_1.geometry}
-        material={materials['logo_mysql_#147993']}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.LogoMysql_2.geometry}
-        material={materials['logo_mysql_#f3941f']}
-        receiveShadow
-        castShadow
-      />
-    </group>
-  )
-})
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+      >
+        <mesh
+          geometry={nodes.LogoMysql_1.geometry}
+          material={materials['logo_mysql_#147993']}
+          receiveShadow
+          castShadow
+        />
+        <mesh
+          geometry={nodes.LogoMysql_2.geometry}
+          material={materials['logo_mysql_#f3941f']}
+          receiveShadow
+          castShadow
+        />
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_MYSQL)
 

@@ -19,7 +19,9 @@ type GLTFResult = GLTF & {
 }
 
 export function Screen({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.SCREEN) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.SCREEN,
+  ) as GLTFResult
 
   return (
     <group position={position}>

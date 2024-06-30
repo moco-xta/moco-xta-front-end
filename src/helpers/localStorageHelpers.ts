@@ -1,5 +1,9 @@
 import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
-import { SignInPayloadInterface, SignUpValuesInterface, TokensInterface } from '@/interfaces/reduxApiInterfaces'
+import {
+  SignInPayloadInterface,
+  SignUpValuesInterface,
+  TokensInterface,
+} from '@/interfaces/reduxApiInterfaces'
 
 export function storeTokens(tokens: TokensInterface) {
   Object.entries(tokens).forEach(([key, value]) => {

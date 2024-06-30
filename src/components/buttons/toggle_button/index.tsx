@@ -17,7 +17,9 @@ export default function ToggleButton({ label, checked, action }: ToggleButtonInt
   return (
     <div id='toggle_button_container'>
       <div id='toggle_button_label'>
-        {label[0]}&emsp;{label[1]}
+        {label[0]}
+        &emsp;
+        {label[1]}
       </div>
       <div id='toggle_button'>
         <input

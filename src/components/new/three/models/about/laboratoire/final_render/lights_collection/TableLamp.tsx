@@ -16,7 +16,9 @@ const K = 6
 const MAP_SIZE = [1024 * K, 1024 * K]
 
 export function TableLamp({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.LIGHTS_COLLECTION.TABLE_LAMP) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.LIGHTS_COLLECTION.TABLE_LAMP,
+  ) as GLTFResult
 
   return (
     <>

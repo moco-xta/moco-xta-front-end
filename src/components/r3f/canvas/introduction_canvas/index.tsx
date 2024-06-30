@@ -51,14 +51,49 @@ const Geometries = () => {
       value: 8.0,
     },
     ior: folder({
-      iorR: { min: 1.0, max: 2.333, step: 0.001, value: 1.15 },
-      iorY: { min: 1.0, max: 2.333, step: 0.001, value: 1.16 },
-      iorG: { min: 1.0, max: 2.333, step: 0.001, value: 1.18 },
-      iorC: { min: 1.0, max: 2.333, step: 0.001, value: 1.22 },
-      iorB: { min: 1.0, max: 2.333, step: 0.001, value: 1.22 },
-      iorP: { min: 1.0, max: 2.333, step: 0.001, value: 1.22 },
+      iorR: {
+        min: 1.0,
+        max: 2.333,
+        step: 0.001,
+        value: 1.15,
+      },
+      iorY: {
+        min: 1.0,
+        max: 2.333,
+        step: 0.001,
+        value: 1.16,
+      },
+      iorG: {
+        min: 1.0,
+        max: 2.333,
+        step: 0.001,
+        value: 1.18,
+      },
+      iorC: {
+        min: 1.0,
+        max: 2.333,
+        step: 0.001,
+        value: 1.22,
+      },
+      iorB: {
+        min: 1.0,
+        max: 2.333,
+        step: 0.001,
+        value: 1.22,
+      },
+      iorP: {
+        min: 1.0,
+        max: 2.333,
+        step: 0.001,
+        value: 1.22,
+      },
     }),
-    saturation: { value: 1.14, min: 1, max: 1.25, step: 0.01 },
+    saturation: {
+      value: 1.14,
+      min: 1,
+      max: 1.25,
+      step: 0.01,
+    },
     chromaticAberration: {
       value: 0.5,
       min: 0,
@@ -78,22 +113,42 @@ const Geometries = () => {
       uTexture: {
         value: null,
       },
-      uIorR: { value: 1.0 },
-      uIorY: { value: 1.0 },
-      uIorG: { value: 1.0 },
-      uIorC: { value: 1.0 },
-      uIorB: { value: 1.0 },
-      uIorP: { value: 1.0 },
+      uIorR: {
+        value: 1.0,
+      },
+      uIorY: {
+        value: 1.0,
+      },
+      uIorG: {
+        value: 1.0,
+      },
+      uIorC: {
+        value: 1.0,
+      },
+      uIorB: {
+        value: 1.0,
+      },
+      uIorP: {
+        value: 1.0,
+      },
       uRefractPower: {
         value: 0.2,
       },
       uChromaticAberration: {
         value: 1.0,
       },
-      uSaturation: { value: 0.0 },
-      uShininess: { value: 40.0 },
-      uDiffuseness: { value: 0.2 },
-      uFresnelPower: { value: 8.0 },
+      uSaturation: {
+        value: 0.0,
+      },
+      uShininess: {
+        value: 40.0,
+      },
+      uDiffuseness: {
+        value: 0.2,
+      },
+      uFresnelPower: {
+        value: 8.0,
+      },
       uLight: {
         value: new THREE.Vector3(-1.0, 1.0, 1.0),
       },

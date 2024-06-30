@@ -21,7 +21,9 @@ type GLTFResult = GLTF & {
 }
 
 export function DeskChair({ position, rotation }: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_CHAIR) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.DESK_COLLECTION.DESK_CHAIR,
+  ) as GLTFResult
 
   return (
     <group

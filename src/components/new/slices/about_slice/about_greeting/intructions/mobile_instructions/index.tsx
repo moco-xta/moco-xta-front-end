@@ -17,7 +17,9 @@ export default function MobileInstructions() {
         />{' '}
         {t('INSTRUCTIONS.YOUR_PHONE')} {t('INSTRUCTIONS.TO_DIRECT_THE_CAMERA')}
       </p>
-      <p id='displacement_mobile_instructions'>{t('INSTRUCTIONS.DISPLACEMENT_IS_COMING_SOON')}! :&#41;</p>
+      <p id='displacement_mobile_instructions'>
+        {t('INSTRUCTIONS.DISPLACEMENT_IS_COMING_SOON')}! :&#41;
+      </p>
     </>
   )
 }

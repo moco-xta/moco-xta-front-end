@@ -19,7 +19,10 @@ import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 
 import './index.scss'
 
-export default function SignIn({ setIsSignIn, handleSetAuthenticationIsOpen }: SignUpSignInInterface) {
+export default function SignIn({
+  setIsSignIn,
+  handleSetAuthenticationIsOpen,
+}: SignUpSignInInterface) {
   const t = useTranslations()
 
   const dispatch = useDispatch<AppDispatch>()
@@ -45,7 +48,9 @@ export default function SignIn({ setIsSignIn, handleSetAuthenticationIsOpen }: S
             loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
             success: () => {
               dispatch(setIsAuthenticated(true))
-              resetForm({ values: initialValues })
+              resetForm({
+                values: initialValues,
+              })
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
               handleSetAuthenticationIsOpen()

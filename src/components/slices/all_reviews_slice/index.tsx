@@ -14,8 +14,10 @@ export default function AllReviewsSlice() {
   const { data, isLoading, error } = useGetReviewsQuery()
 
   let content = null
-  if (isLoading) content = <div className='request_states_container'>{t('REQUESTS.FETCHING_DATA')}</div>
-  if (error) content = <div className='request_states_container'>{t('REQUESTS.AN_ERROR_OCCURED')}</div>
+  if (isLoading)
+    content = <div className='request_states_container'>{t('REQUESTS.FETCHING_DATA')}</div>
+  if (error)
+    content = <div className='request_states_container'>{t('REQUESTS.AN_ERROR_OCCURED')}</div>
   /* if (data)
     content = (
       <>

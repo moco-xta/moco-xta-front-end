@@ -8,6 +8,10 @@ import { MinecraftCube } from './MinecraftCube'
 export default function MinecraftCubes() {
   const { cubes } = useSelector((state: RootState) => state.minecraft)
 
+  useEffect(() => {
+    console.log('cubes', cubes)
+  }, [cubes])
+
   return (
     <>
       {cubes.map((cube) => (

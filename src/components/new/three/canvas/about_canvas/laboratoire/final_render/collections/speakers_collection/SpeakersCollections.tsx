@@ -14,7 +14,9 @@ export default function SpeakersCollections() {
         <SpeakerBox
           key={speakerBox.NAME}
           name={speakerBox.NAME}
-          position={new THREE.Vector3(speakerBox.POSITION.X, speakerBox.POSITION.Y, speakerBox.POSITION.Z)}
+          position={
+            new THREE.Vector3(speakerBox.POSITION.X, speakerBox.POSITION.Y, speakerBox.POSITION.Z)
+          }
         />
       ))}
       <WorldMap
@@ -27,9 +29,15 @@ export default function SpeakersCollections() {
         }
         rotation={
           new THREE.Euler(
-            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP.ROTATION.X),
-            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP.ROTATION.Y),
-            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP.ROTATION.Z),
+            THREE.MathUtils.degToRad(
+              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP.ROTATION.X,
+            ),
+            THREE.MathUtils.degToRad(
+              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP.ROTATION.Y,
+            ),
+            THREE.MathUtils.degToRad(
+              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP.ROTATION.Z,
+            ),
           )
         }
       />
@@ -43,9 +51,15 @@ export default function SpeakersCollections() {
         }
         rotation={
           new THREE.Euler(
-            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP_STAND.ROTATION.X),
-            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP_STAND.ROTATION.Y),
-            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP_STAND.ROTATION.Z),
+            THREE.MathUtils.degToRad(
+              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP_STAND.ROTATION.X,
+            ),
+            THREE.MathUtils.degToRad(
+              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP_STAND.ROTATION.Y,
+            ),
+            THREE.MathUtils.degToRad(
+              laboratoireFinalRenderConstants.SPEAKERS_COLLECTION.WORLD_MAP_STAND.ROTATION.Z,
+            ),
           )
         }
       />

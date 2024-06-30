@@ -7,7 +7,11 @@ import { TimelineInterface } from '@/interfaces/new/projectsInterfaces'
 
 import './index.scss'
 
-export default function CurrentDate({ currentDate, currentProject, projectsData }: TimelineInterface) {
+export default function CurrentDate({
+  currentDate,
+  currentProject,
+  projectsData,
+}: TimelineInterface) {
   const locale = useLocale()
   const t = useTranslations('PROJECTS')
 
@@ -15,7 +19,8 @@ export default function CurrentDate({ currentDate, currentProject, projectsData 
     <div
       id='current_date'
       style={{
-        color: projectsData[currentProject].backgroundColor.page !== '#ffffff' ? '#ffffff' : '#000000',
+        color:
+          projectsData[currentProject].backgroundColor.page !== '#ffffff' ? '#ffffff' : '#000000',
       }}
     >
       {locale === 'en' ? (

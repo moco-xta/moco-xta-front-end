@@ -37,7 +37,10 @@ export default function AboutCanvas() {
 
   return (
     <Canvas
-      style={{ zIndex: 0, position: 'absolute' }}
+      style={{
+        zIndex: 0,
+        position: 'absolute',
+      }}
       dpr={aboutConstants.CANVAS.DPR}
       legacy={aboutConstants.CANVAS.LEGACY}
       shadows
@@ -49,6 +52,14 @@ export default function AboutCanvas() {
     >
       <PerspectiveCamera
         makeDefault
+        rotation={
+          new THREE.Euler(
+            THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X),
+            THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
+            THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
+            'YXZ',
+          )
+        }
         fov={aboutConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Suspense fallback={null}>
@@ -57,22 +68,16 @@ export default function AboutCanvas() {
           {isMobile && <DeviceOrientationControls />}
           {/* <CannonPlayer pointerLockControlsSelector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR} /> */}
           <RapierPlayer
-            cameraRotation={
-              new THREE.Euler(
-                THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X),
-                THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
-                THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
-                'YXZ',
-              )
-            }
             rigidBodyPosition={
               new THREE.Vector3(
-                aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X,
-                aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y + 20,
-                aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z,
+                aboutConstants.PERSPECTIVE_CAMERA.POSITION.X,
+                aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+                aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
               )
             }
             capsuleColliderArgs={[0.5, aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y]}
+            speed={aboutConstants.PLAYER.SPEED}
+            jumpForce={aboutConstants.PLAYER.JUMP_FORCE}
             pointerLockControlsSelector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR}
           />
           <LaboratoireScene />

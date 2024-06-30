@@ -3,7 +3,13 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { grassGreenXL, grassGreenL, grassGreenM, grassGreenD, grassGreenXD } from '../../materials/snakeGameMaterials'
+import {
+  grassGreenXL,
+  grassGreenL,
+  grassGreenM,
+  grassGreenD,
+  grassGreenXD,
+} from '../../materials/snakeGameMaterials'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 

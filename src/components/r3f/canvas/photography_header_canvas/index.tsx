@@ -1,7 +1,14 @@
 import React, { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, Node, extend, useLoader, useThree } from '@react-three/fiber'
-import { Box, Fisheye, Html, OrbitControls, PerspectiveCamera, shaderMaterial } from '@react-three/drei'
+import {
+  Box,
+  Fisheye,
+  Html,
+  OrbitControls,
+  PerspectiveCamera,
+  shaderMaterial,
+} from '@react-three/drei'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -17,7 +24,9 @@ const uniforms = {
 
 export const PhotographyMaterial = shaderMaterial(uniforms, vertexShader, fragmentShader)
 
-extend({ PhotographyMaterial })
+extend({
+  PhotographyMaterial,
+})
 
 declare global {
   namespace JSX {

@@ -15,7 +15,9 @@ type GLTFResult = GLTF & {
 }
 
 export function LogoGitHub({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION.LOGO_GITHUB) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION.LOGO_GITHUB,
+  ) as GLTFResult
 
   return (
     <mesh

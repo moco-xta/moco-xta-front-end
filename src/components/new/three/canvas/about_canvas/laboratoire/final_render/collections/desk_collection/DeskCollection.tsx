@@ -24,9 +24,15 @@ export default function DeskCollection() {
         }
         rotation={
           new THREE.Euler(
-            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR.ROTATION.X),
-            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR.ROTATION.Y),
-            THREE.MathUtils.degToRad(laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR.ROTATION.Z),
+            THREE.MathUtils.degToRad(
+              laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR.ROTATION.X,
+            ),
+            THREE.MathUtils.degToRad(
+              laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR.ROTATION.Y,
+            ),
+            THREE.MathUtils.degToRad(
+              laboratoireFinalRenderConstants.DESK_COLLECTION.DESK_CHAIR.ROTATION.Z,
+            ),
           )
         }
       />
@@ -61,7 +67,13 @@ export default function DeskCollection() {
         <TransfertBox
           key={transfertBox.NAME}
           name={transfertBox.NAME}
-          position={new THREE.Vector3(transfertBox.POSITION.X, transfertBox.POSITION.Y, transfertBox.POSITION.Z)}
+          position={
+            new THREE.Vector3(
+              transfertBox.POSITION.X,
+              transfertBox.POSITION.Y,
+              transfertBox.POSITION.Z,
+            )
+          }
           rotation={
             new THREE.Euler(
               THREE.MathUtils.degToRad(transfertBox.ROTATION.X),

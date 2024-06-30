@@ -10,7 +10,10 @@ import { ResetButton, SubmitButton } from '@/components/form/buttons'
 
 import './index.scss'
 
-export default function SignUpForm({ submitButtonIsDisabled, setIsSignIn }: AuthenticationFormsInterface) {
+export default function SignUpForm({
+  submitButtonIsDisabled,
+  setIsSignIn,
+}: AuthenticationFormsInterface) {
   const t = useTranslations()
 
   const { errors, handleChange, values, resetForm, setFieldValue, submitForm, touched } =

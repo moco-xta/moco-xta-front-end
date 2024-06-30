@@ -35,7 +35,8 @@ export default function CompanyOrSchoolCard({
       <p
         className='company_or_school_as'
         style={{
-          color: projectsData[currentProject].backgroundColor.page !== '#ffffff' ? '#ffffff' : '#000000',
+          color:
+            projectsData[currentProject].backgroundColor.page !== '#ffffff' ? '#ffffff' : '#000000',
         }}
       >
         {t(companyOrSchoolData.as).toUpperCase()}

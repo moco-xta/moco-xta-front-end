@@ -12,7 +12,9 @@ export default function useModelHoverEffect(
 ) {
   gsap.registerPlugin(useGSAP)
 
-  useGSAP(() => {}, { scope: ref })
+  useGSAP(() => {}, {
+    scope: ref,
+  })
 
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
     const { x, y } = getUvMousePositionOnMesh(event, 'introduction_card')
@@ -49,5 +51,8 @@ export default function useModelHoverEffect(
     })
   }
 
-  return { handleOnPointerMove, handleOnPointerLeave }
+  return {
+    handleOnPointerMove,
+    handleOnPointerLeave,
+  }
 }

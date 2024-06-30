@@ -8,7 +8,11 @@ import { default as minecraftConstants } from '@/constants/new/canvas/about/mine
 export default function MinecraftScene() {
   return (
     <group
-      position={[minecraftConstants.OFFSET[0], minecraftConstants.OFFSET[1], minecraftConstants.OFFSET[2]]}
+      position={[
+        minecraftConstants.OFFSET[0],
+        minecraftConstants.OFFSET[1],
+        minecraftConstants.OFFSET[2],
+      ]}
       scale={minecraftConstants.SCALE}
     >
       <MinecraftCubes />

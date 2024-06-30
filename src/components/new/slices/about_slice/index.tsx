@@ -12,7 +12,9 @@ import DeviceMotionPermission from './device_motion_permission'
 import './index.scss'
 
 export default function AboutSlice() {
-  const { accessToDeviceMotionAndOrientationGranted, showInstructions } = useSelector((state: RootState) => state.about)
+  const { accessToDeviceMotionAndOrientationGranted, showInstructions } = useSelector(
+    (state: RootState) => state.about,
+  )
 
   return (
     <>

@@ -65,7 +65,11 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
     api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
 
     if (jump && Math.abs(playerVelocity.current[1]) < 0.05) {
-      api.velocity.set(playerVelocity.current[0], aboutConstants.PLAYER.JUMP_FORCE, playerVelocity.current[2])
+      api.velocity.set(
+        playerVelocity.current[0],
+        aboutConstants.PLAYER.JUMP_FORCE,
+        playerVelocity.current[2],
+      )
     }
   })
 

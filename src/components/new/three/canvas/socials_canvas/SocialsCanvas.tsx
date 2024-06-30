@@ -17,7 +17,9 @@ export default function SocialsCanvas({ className }: SocialsCanvasInterface) {
     <Canvas
       className={`${className}`}
       dpr={socialsConstants.CANVAS.DPR}
-      shadows={{ type: THREE.PCFSoftShadowMap }}
+      shadows={{
+        type: THREE.PCFSoftShadowMap,
+      }}
       legacy={socialsConstants.CANVAS.LEGACY}
       linear
       flat

@@ -22,7 +22,9 @@ groundTexture.magFilter = THREE.NearestFilter
 groundTexture.wrapS = THREE.RepeatWrapping
 groundTexture.wrapT = THREE.RepeatWrapping
 
-const minecraftTextures: { [key: string]: THREE.Texture } = {
+const minecraftTextures: {
+  [key: string]: THREE.Texture
+} = {
   dirtTexture: dirtTexture,
   glassTexture: glassTexture,
   grassTexture: grassTexture,

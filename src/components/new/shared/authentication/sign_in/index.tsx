@@ -50,7 +50,9 @@ export default function SignIn({ setIsSignIn }: SignUpSignInInterface) {
             loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
             success: () => {
               dispatch(setIsAuthenticated(true))
-              resetForm({ values: initialValues })
+              resetForm({
+                values: initialValues,
+              })
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
               handleSetAuthenticationIsOpen()

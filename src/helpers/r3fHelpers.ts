@@ -58,7 +58,11 @@ export function setPadColor(normal: THREE.Vector3, colors: string[]) {
 
 export function setPadRotation(coordinates: THREE.Vector3, index: number) {
   function createEuler(x: number, y: number, z: number) {
-    return new THREE.Euler(THREE.MathUtils.degToRad(x), THREE.MathUtils.degToRad(y), THREE.MathUtils.degToRad(z))
+    return new THREE.Euler(
+      THREE.MathUtils.degToRad(x),
+      THREE.MathUtils.degToRad(y),
+      THREE.MathUtils.degToRad(z),
+    )
   }
 
   let rotationX = 0,

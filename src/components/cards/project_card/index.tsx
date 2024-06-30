@@ -28,7 +28,9 @@ export default function ProjectCard({ index, currentProject, projectData }: Proj
     <div
       key={`project_card_${index}`}
       className={`transition ${index === currentProject ? 'intersecting_project' : 'not_intersecting_project'} project_card`}
-      style={{ backgroundColor: projectData.backgroundColor.card }}
+      style={{
+        backgroundColor: projectData.backgroundColor.card,
+      }}
     >
       <div className='project_card_left_panel'>
         <div className='name_image_description_project'>

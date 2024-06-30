@@ -15,7 +15,9 @@ import './index.scss'
 export default function Authentication() {
   const dispatch = useDispatch<AppDispatch>()
 
-  const authenticationIsOpen = useSelector((state: RootState) => state.appState.authenticationIsOpen)
+  const authenticationIsOpen = useSelector(
+    (state: RootState) => state.appState.authenticationIsOpen,
+  )
 
   const { isDesktop } = useResize()
 

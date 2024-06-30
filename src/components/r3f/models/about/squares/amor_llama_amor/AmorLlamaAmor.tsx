@@ -15,7 +15,9 @@ type GLTFResult = GLTF & {
 }
 
 export default function AmorLlamaAmor(props: JSX.IntrinsicElements['mesh']) {
-  const { nodes, materials } = useGLTF(gltfConstants.ABOUT.SQUARES.AMOR_LLAMA_AMOR.PICTURE) as GLTFResult
+  const { nodes, materials } = useGLTF(
+    gltfConstants.ABOUT.SQUARES.AMOR_LLAMA_AMOR.PICTURE,
+  ) as GLTFResult
 
   return (
     <mesh
