@@ -82,9 +82,9 @@ export default function RapierPlayer({
     playerRef.current.wakeUp()
     playerRef.current.setLinvel(
       {
-        x: direction.x,
+        x: !isMobile ? direction.x : velocity.current.x,
         y: velocity.current.y,
-        z: direction.z,
+        z: !isMobile ? direction.z : velocity.current.z,
       },
       true,
     )
