@@ -89,9 +89,9 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
 
     const direction = new THREE.Vector3()
 
-    const frontVector = new THREE.Vector3(0, 0, (e.acceleration.x > 0 ? 1 : 0) - (e.acceleration.x < 0 ? 1 : 0))
+    const frontVector = new THREE.Vector3(0, 0, (e.accelerationIncludingGravity.x > 0 ? 1 : 0) - (e.accelerationIncludingGravity.x < 0 ? 1 : 0))
 
-    const sideVector = new THREE.Vector3((e.acceleration.z < 0 ? 1 : 0) - (e.acceleration.z > 0 ? 1 : 0), 0, 0)
+    const sideVector = new THREE.Vector3((e.accelerationIncludingGravity.z < 0 ? 1 : 0) - (e.accelerationIncludingGravity.z > 0 ? 1 : 0), 0, 0)
 
     direction
       .subVectors(frontVector, sideVector)
