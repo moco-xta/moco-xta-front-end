@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { Box } from '@react-three/drei'
+import { Box, PointerLockControls } from '@react-three/drei'
 import * as RAPIER from '@dimforge/rapier3d-compat'
 import { CapsuleCollider, CuboidCollider, RapierRigidBody, RigidBody, useRapier } from '@react-three/rapier'
 
-import { PlayerInterface } from '@/interfaces/new/threeInterfaces'
+import { RapierPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
-import { usePlayer } from '@/hooks/new/usePlayer'
+import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
 
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from '@/redux/store'
@@ -18,10 +18,15 @@ const frontVector = new THREE.Vector3()
 const sideVector = new THREE.Vector3()
 const rotation = new THREE.Vector3()
 
-export default function Player({ cameraRotation, rigidBodyPosition, cuboidColliderArgs }: PlayerInterface) {
-  const { camera } = useThree()
+export default function RapierPlayer({
+  cameraRotation,
+  rigidBodyPosition,
+  capsuleColliderArgs,
+  pointerLockControlsSelector,
+}: RapierPlayerInterface) {
+  const { camera, gl } = useThree()
 
-  const { forward, backward, left, right, jump } = usePlayer()
+  const { moveBackward, moveForward, moveRight, moveLeft, jump } = useAboutKeyboard()
 
   const playerRef = useRef<RapierRigidBody>(null!)
   /* const objectInHandRef = useRef<THREE.Group>(null!) */
@@ -32,17 +37,17 @@ export default function Player({ cameraRotation, rigidBodyPosition, cuboidCollid
 
   const playerPosition = useRef<number[]>([0, 0, 0])
 
-  useEffect(() => {
+  /* useEffect(() => {
     camera.rotation.set(cameraRotation.x, cameraRotation.y, cameraRotation.z, 'YXZ')
-  }, [camera.rotation, cameraRotation.x, cameraRotation.y, cameraRotation.z])
+  }, [camera.rotation, cameraRotation.x, cameraRotation.y, cameraRotation.z]) */
 
   useFrame((state) => {
     if (!playerRef.current) return
 
     const velocity = playerRef.current.linvel()
 
-    frontVector.set(0, 0, Number(backward) - Number(forward))
-    sideVector.set(Number(left) - Number(right), 0, 0)
+    frontVector.set(0, 0, Number(moveBackward) - Number(moveForward))
+    sideVector.set(Number(moveLeft) - Number(moveRight), 0, 0)
     direction
       .subVectors(frontVector, sideVector)
       .normalize()
@@ -82,7 +87,7 @@ export default function Player({ cameraRotation, rigidBodyPosition, cuboidCollid
 
   return (
     <>
-      <RigidBody
+      {/* <RigidBody
         ref={playerRef}
         colliders={false}
         mass={1}
@@ -94,7 +99,21 @@ export default function Player({ cameraRotation, rigidBodyPosition, cuboidCollid
           args={cuboidColliderArgs}
           position={[0, 0, 0]}
         />
+      </RigidBody> */}
+      <RigidBody
+        ref={playerRef}
+        colliders={false}
+        mass={1}
+        type='dynamic'
+        position={rigidBodyPosition}
+        enabledRotations={[false, false, false]}
+      >
+        <CapsuleCollider args={capsuleColliderArgs} />
       </RigidBody>
+      <PointerLockControls
+        selector={pointerLockControlsSelector}
+        args={[camera, gl.domElement]}
+      />
       {/* <group ref={objectInHandRef}>
         <Box
           args={[0.3, 0.3, 0.3]}

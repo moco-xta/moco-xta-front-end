@@ -18,6 +18,7 @@ export default function DesktopBalloonsWrapper() {
           rotation={[THREE.MathUtils.degToRad(90), 0, 0]} // Remove hardcoded values
         >
           <meshStandardMaterial
+            attach='material'
             transparent
             opacity={heroConstants.HELIUM_BALLOONS.WRAPPER.OPACITY}
           />
@@ -33,6 +34,7 @@ export default function DesktopBalloonsWrapper() {
           rotation={[THREE.MathUtils.degToRad(90), 0, 0]} // Remove hardcoded values
         >
           <meshStandardMaterial
+            attach='material'
             transparent
             opacity={heroConstants.HELIUM_BALLOONS.WRAPPER.OPACITY}
           />
@@ -47,6 +49,7 @@ export default function DesktopBalloonsWrapper() {
           position={[0, 0, -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.DEPTH / 2]}
         >
           <meshStandardMaterial
+            attach='material'
             transparent
             opacity={heroConstants.HELIUM_BALLOONS.WRAPPER.OPACITY}
           />
@@ -61,6 +64,7 @@ export default function DesktopBalloonsWrapper() {
           position={[0, 0, heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS.IS_NOT_MOBILE.DEPTH / 2]}
         >
           <meshStandardMaterial
+            attach='material'
             transparent
             opacity={heroConstants.HELIUM_BALLOONS.WRAPPER.OPACITY}
           />
@@ -76,6 +80,7 @@ export default function DesktopBalloonsWrapper() {
           rotation={[0, THREE.MathUtils.degToRad(90), 0]} // Remove hardcoded values
         >
           <meshStandardMaterial
+            attach='material'
             transparent
             opacity={heroConstants.HELIUM_BALLOONS.WRAPPER.OPACITY}
           />
@@ -91,6 +96,7 @@ export default function DesktopBalloonsWrapper() {
           rotation={[0, THREE.MathUtils.degToRad(-90), 0]} // Remove hardcoded values
         >
           <meshStandardMaterial
+            attach='material'
             transparent
             opacity={heroConstants.HELIUM_BALLOONS.WRAPPER.OPACITY}
           />

@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
+import { PointerLockControls } from '@react-three/drei'
 import { useCylinder, useSphere } from '@react-three/cannon'
 import { isMobile } from 'react-device-detect'
 
 import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
 import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
-import { PointerLockControls } from '@react-three/drei'
 
 import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
 
@@ -21,7 +21,7 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
     type: 'Dynamic',
     position: [
       aboutConstants.PERSPECTIVE_CAMERA.POSITION.X,
-      aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y + 1,
+      aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y /*  + 1 */,
       aboutConstants.PERSPECTIVE_CAMERA.POSITION.Z,
     ],
   }))
@@ -45,7 +45,7 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
     camera.position.copy(
       new THREE.Vector3(
         playerPosition.current[0],
-        playerPosition.current[1] + aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+        playerPosition.current[1] /*  + aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y */,
         playerPosition.current[2],
       ),
     )

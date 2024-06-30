@@ -4,10 +4,11 @@ export interface CannonPlayerInterface {
   pointerLockControlsSelector: string
 }
 
-export interface PlayerInterface {
+export interface RapierPlayerInterface {
   cameraRotation: THREE.Euler
   rigidBodyPosition: THREE.Vector3
-  cuboidColliderArgs: [halfWidth: number, halfHeight: number, halfDepth: number]
+  capsuleColliderArgs: [halfHeight: number, radius: number]
+  pointerLockControlsSelector: string
 }
 
 export interface SocialsCanvasInterface {
