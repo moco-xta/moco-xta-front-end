@@ -20,55 +20,54 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoABWerkt = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoABWerkt(
-  { position, rotation, scale },
-  ref,
-) {
-  const { nodes, materials } = useGLTF(GltfConstants.LOGO_ABWERKT) as GLTFResult
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoABWerkt_1.geometry}
-        /* material={materials['logo_abwerkt_#e32017']} */
-        receiveShadow
-        castShadow
+const LogoABWerkt = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoABWerkt({ position, rotation, scale }, ref) {
+    const { nodes, materials } = useGLTF(GltfConstants.LOGO_ABWERKT) as GLTFResult
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
       >
-        <meshStandardMaterial
-          attach='material'
-          color={0xe32017}
-        />
-      </mesh>
-      <mesh
-        geometry={nodes.LogoABWerkt_2.geometry}
-        /* material={materials['logo_abwerkt_#b0c500']} */
-        receiveShadow
-        castShadow
-      >
-        <meshStandardMaterial
-          attach='material'
-          color={0xb0c500}
-        />
-      </mesh>
-      <mesh
-        geometry={nodes.LogoABWerkt_3.geometry}
-        /* material={materials['logo_abwerkt_#036361']} */
-        receiveShadow
-        castShadow
-      >
-        <meshStandardMaterial
-          attach='material'
-          color={0x036361}
-        />
-      </mesh>
-    </group>
-  )
-})
+        <mesh
+          geometry={nodes.LogoABWerkt_1.geometry}
+          /* material={materials['logo_abwerkt_#e32017']} */
+          receiveShadow
+          castShadow
+        >
+          <meshStandardMaterial
+            attach='material'
+            color={0xe32017}
+          />
+        </mesh>
+        <mesh
+          geometry={nodes.LogoABWerkt_2.geometry}
+          /* material={materials['logo_abwerkt_#b0c500']} */
+          receiveShadow
+          castShadow
+        >
+          <meshStandardMaterial
+            attach='material'
+            color={0xb0c500}
+          />
+        </mesh>
+        <mesh
+          geometry={nodes.LogoABWerkt_3.geometry}
+          /* material={materials['logo_abwerkt_#036361']} */
+          receiveShadow
+          castShadow
+        >
+          <meshStandardMaterial
+            attach='material'
+            color={0x036361}
+          />
+        </mesh>
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_ABWERKT)
 

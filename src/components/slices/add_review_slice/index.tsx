@@ -26,8 +26,12 @@ export default function AddReviewSlice() {
 
   const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
-  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(!isAuthenticated ? true : false)
-  const [resetButtonIsDisabled, setResetButtonIsDisabled] = useState<boolean>(!isAuthenticated ? true : false)
+  const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(
+    !isAuthenticated ? true : false,
+  )
+  const [resetButtonIsDisabled, setResetButtonIsDisabled] = useState<boolean>(
+    !isAuthenticated ? true : false,
+  )
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -58,7 +62,9 @@ export default function AddReviewSlice() {
             toast.promise(addReview(values).unwrap(), {
               loading: t('TOASTERS.ADD_REVIEW.LOADING'),
               success: () => {
-                resetForm({ values: initialValues })
+                resetForm({
+                  values: initialValues,
+                })
                 clearFormStoredValues(initialValues)
                 setSubmitButtonIsDisabled(false)
                 return t('TOASTERS.ADD_REVIEW.SUCCESS')

@@ -6,13 +6,21 @@ import fragmentShader from '../../shaders/contact/profile_picture/postprocessing
 const CustomPass = {
   name: 'CustomPass',
   uniforms: {
-    tDiffuse: { value: null },
-    uMouse: { value: new THREE.Vector2(-10, -10) },
+    tDiffuse: {
+      value: null,
+    },
+    uMouse: {
+      value: new THREE.Vector2(-10, -10),
+    },
     uResolution: {
       value: new THREE.Vector2(1, window.innerHeight / window.innerWidth),
     },
-    uType: { value: 0 },
-    uVelocity: { value: 0 },
+    uType: {
+      value: 0,
+    },
+    uVelocity: {
+      value: 0,
+    },
   },
   vertexShader: vertexShader,
   fragmentShader: fragmentShader,

@@ -34,7 +34,9 @@ export default function RevealTextLetterByLetter({ text }: RevealTextLetterByLet
         },
       )
     },
-    { scope: container },
+    {
+      scope: container,
+    },
   )
 
   return (

@@ -16,5 +16,8 @@ export default function useResize() {
     }
   }, [])
 
-  return { innerWidth, innerHeight }
+  return {
+    innerWidth,
+    innerHeight,
+  }
 }

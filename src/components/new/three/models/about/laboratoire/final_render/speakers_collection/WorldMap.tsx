@@ -15,7 +15,9 @@ type GLTFResult = GLTF & {
 }
 
 export function WorldMap({ position, rotation }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SPEAKERS_COLLECTION.WORLD_MAP,
+  ) as GLTFResult
 
   return (
     <mesh

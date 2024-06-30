@@ -9,7 +9,10 @@ export function generateGrid(): GridCellInterface[][] {
     for (let z = 0; z < snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT; z++) {
       const newCell: GridCellInterface = {
         status: 'EMPTY',
-        position: { x: x, z: z },
+        position: {
+          x: x,
+          z: z,
+        },
         snake: {
           direction: null,
           cornerType: null,

@@ -8,7 +8,11 @@ import { SnakeCellStraight } from '../../models/snake_game/SnakeCellStraight'
 import { SnakeCellCorner } from '../../models/snake_game/SnakeCellCorner'
 /* import { ArrowTest } from '../../models/snake_game/ArrowTest' */
 
-import { setSnakeCellCornerRotation, setSnakeCellCornerScale, setSnakeCellRotation } from '@/helpers/new/snake_game'
+import {
+  setSnakeCellCornerRotation,
+  setSnakeCellCornerScale,
+  setSnakeCellRotation,
+} from '@/helpers/new/snake_game'
 
 export default function NewCell({ cell }: CellComponentInterface) {
   return (

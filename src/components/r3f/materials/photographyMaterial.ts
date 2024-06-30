@@ -22,4 +22,6 @@ declare global {
   }
 }
 
-extend({ PhotographyMaterial })
+extend({
+  PhotographyMaterial,
+})

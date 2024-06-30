@@ -18,41 +18,40 @@ type GltfResultType = GLTF & {
   }
 }
 
-const LogoThreejs = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoThreejs(
-  { position, rotation, scale },
-  ref,
-) {
-  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_THREEJS) as GltfResultType
+const LogoThreejs = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoThreejs({ position, rotation, scale }, ref) {
+    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_THREEJS) as GltfResultType
 
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene)
-    // @ts-ignore
-    ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [scene, ref])
+    useLayoutEffect(() => {
+      const box = new THREE.Box3().setFromObject(scene)
+      // @ts-ignore
+      ref.current.width = box.getSize(new THREE.Vector3()).x
+    }, [scene, ref])
 
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoThreejs_1.geometry}
-        material={materials['icon_threejs_#ffffff']}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.LogoThreejs_2.geometry}
-        material={materials['icon_threejs_#000000']}
-        receiveShadow
-        castShadow
-      />
-    </group>
-  )
-})
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+      >
+        <mesh
+          geometry={nodes.LogoThreejs_1.geometry}
+          material={materials['icon_threejs_#ffffff']}
+          receiveShadow
+          castShadow
+        />
+        <mesh
+          geometry={nodes.LogoThreejs_2.geometry}
+          material={materials['icon_threejs_#000000']}
+          receiveShadow
+          castShadow
+        />
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_THREEJS)
 

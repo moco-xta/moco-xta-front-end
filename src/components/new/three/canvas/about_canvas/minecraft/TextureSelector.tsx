@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useMinecraftKeyboard } from '@/hooks/new/useMinecraftKeyboard'
+import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setTexture } from '@/redux/slice/minecraftSlice'
@@ -21,7 +21,7 @@ export const TextureSelector = () => {
   const dispatch = useDispatch<AppDispatch>()
   const { texture } = useSelector((state: RootState) => state.minecraft)
 
-  const { dirt, grass, glass, wood, log } = useMinecraftKeyboard()
+  const { dirt, grass, glass, wood, log } = useAboutKeyboard()
 
   const [visible, setVisible] = useState<boolean>(false)
 

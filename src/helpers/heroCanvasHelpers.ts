@@ -15,11 +15,14 @@ export function addForce(
   o2Ref: MutableRefObject<RapierRigidBody>,
 ) {
   timeRef.current += delta * 2
-  xRef.current = Math.cos(timeRef.current) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
-  yRef.current = Math.sin(timeRef.current) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
+  xRef.current =
+    Math.cos(timeRef.current) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
+  yRef.current =
+    Math.sin(timeRef.current) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
   zRef.current =
-    -Math.cos(timeRef.current + heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.Z_THRESHOLD) *
-    heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
+    -Math.cos(
+      timeRef.current + heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.Z_THRESHOLD,
+    ) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
   if (mRef.current)
     // @ts-ignore
     mRef.current.addForce(

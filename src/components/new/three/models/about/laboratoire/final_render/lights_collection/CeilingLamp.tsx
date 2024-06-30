@@ -15,7 +15,9 @@ type GLTFResult = GLTF & {
 }
 
 export function CeilingLamp({ position }: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.LIGHTS_COLLECTION.CEILING_LAMP) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.LIGHTS_COLLECTION.CEILING_LAMP,
+  ) as GLTFResult
 
   const ceilingLampMaterial = new THREE.MeshStandardMaterial({
     color: '#fff',

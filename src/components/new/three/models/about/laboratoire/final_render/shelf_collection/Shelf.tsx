@@ -15,7 +15,9 @@ type GLTFResult = GLTF & {
 }
 
 export function Shelf({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.SHELF,
+  ) as GLTFResult
 
   return (
     <mesh

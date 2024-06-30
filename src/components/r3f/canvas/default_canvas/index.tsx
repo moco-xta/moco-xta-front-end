@@ -9,7 +9,10 @@ import fragmentShader from '@/components/r3f/shaders/default_shaders/fragmentSha
 
 const shaderMaterial = {
   uniforms: {
-    u_time: { type: 'f', value: 0 },
+    u_time: {
+      type: 'f',
+      value: 0,
+    },
   },
   vertexShader: vertexShader,
   fragmentShader: fragmentShader,

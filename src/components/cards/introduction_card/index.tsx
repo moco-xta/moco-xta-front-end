@@ -21,7 +21,9 @@ export default function IntroductionCards({ data, type }: IntroductionCardsInter
             delay={`${0.2 * (index + 1)}s`}
             x={50}
             y={50}
-            style={{ margin: -40 }}
+            style={{
+              margin: -40,
+            }}
           >
             <div className='introduction_card_canvas_container'>
               <IntroductionCardCanvas content={content} />

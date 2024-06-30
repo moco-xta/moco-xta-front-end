@@ -44,7 +44,11 @@ export default function HeroCanvas() {
       <Suspense>
         <Physics
           /* debug */
-          gravity={[heroConstants.PHYSICS.GRAVITY.X, heroConstants.PHYSICS.GRAVITY.Y, heroConstants.PHYSICS.GRAVITY.Z]}
+          gravity={[
+            heroConstants.PHYSICS.GRAVITY.X,
+            heroConstants.PHYSICS.GRAVITY.Y,
+            heroConstants.PHYSICS.GRAVITY.Z,
+          ]}
         >
           <HeroScene />
           <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />

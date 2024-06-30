@@ -9,7 +9,19 @@ import Error from '../../errors'
 import './index.scss'
 
 export default function FormikTextarea(props: FormikTextareaInterface) {
-  const { label, name, cols, rows, maxLength, handleChange, setFieldValue, value, error, helperText, disabled } = props
+  const {
+    label,
+    name,
+    cols,
+    rows,
+    maxLength,
+    handleChange,
+    setFieldValue,
+    value,
+    error,
+    helperText,
+    disabled,
+  } = props
 
   const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(name, value)
 

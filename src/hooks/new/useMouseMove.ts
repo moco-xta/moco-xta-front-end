@@ -36,5 +36,12 @@ export default function useMouseMove() {
     }
   }, [handleMouseMove])
 
-  return { mouseX, mouseY, deltaX, deltaY, horizontalFlow, verticalFlow }
+  return {
+    mouseX,
+    mouseY,
+    deltaX,
+    deltaY,
+    horizontalFlow,
+    verticalFlow,
+  }
 }

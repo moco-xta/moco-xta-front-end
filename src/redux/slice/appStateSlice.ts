@@ -28,7 +28,11 @@ const appStateSlice = createSlice({
   },
 })
 
-export const { setMenuIsOpen, setAuthenticationIsOpen, setLocaleSwitcherIsOpen, setAddReviewIsOpen } =
-  appStateSlice.actions
+export const {
+  setMenuIsOpen,
+  setAuthenticationIsOpen,
+  setLocaleSwitcherIsOpen,
+  setAddReviewIsOpen,
+} = appStateSlice.actions
 
 export default appStateSlice.reducer

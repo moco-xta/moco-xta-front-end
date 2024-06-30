@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useState } from 'react'
 
 const actionByKey = (key: string): string => {
-  const keyActionMap: { [key: string]: string } = {
+  const keyActionMap: {
+    [key: string]: string
+  } = {
     KeyW: 'moveForward',
     ArrowUp: 'moveForward',
     KeyS: 'moveBackward',
@@ -10,7 +12,7 @@ const actionByKey = (key: string): string => {
     ArrowLeft: 'moveLeft',
     KeyD: 'moveRight',
     ArrowRight: 'moveRight',
-    Space: 'jump',
+    KeyF: 'jump',
     Digit1: 'dirt',
     Numpad1: 'dirt',
     Digit2: 'grass',
@@ -25,8 +27,10 @@ const actionByKey = (key: string): string => {
   return keyActionMap[key]
 }
 
-export const useMinecraftKeyboard = () => {
-  const [actions, setActions] = useState<{ [key: string]: boolean }>({
+export const useAboutKeyboard = () => {
+  const [actions, setActions] = useState<{
+    [key: string]: boolean
+  }>({
     moveForward: false,
     moveBackward: false,
     moveLeft: false,

@@ -4,7 +4,8 @@ import { CubeInterface, MinecraftInterface } from '@/interfaces/new/minecraftInt
 
 // @ts-ignore
 const getLocalStorage = (key: string) => JSON.parse(localStorage.getItem(key))
-const setLocalStorage = (key: string, value: CubeInterface[]) => localStorage.setItem(key, JSON.stringify(value))
+const setLocalStorage = (key: string, value: CubeInterface[]) =>
+  localStorage.setItem(key, JSON.stringify(value))
 
 const initialState: MinecraftInterface = {
   texture: 'dirt',

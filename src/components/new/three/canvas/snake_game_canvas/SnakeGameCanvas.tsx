@@ -15,15 +15,30 @@ import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameC
 export default function SnakeGameCanvas() {
   const { enabled, ...config } = useControls({
     enabled: true,
-    size: { value: 25, min: 0, max: 100 },
-    focus: { value: 0, min: 0, max: 2 },
-    samples: { value: 10, min: 1, max: 20, step: 1 },
+    size: {
+      value: 25,
+      min: 0,
+      max: 100,
+    },
+    focus: {
+      value: 0,
+      min: 0,
+      max: 2,
+    },
+    samples: {
+      value: 10,
+      min: 1,
+      max: 20,
+      step: 1,
+    },
   })
 
   return (
     <Canvas
       dpr={snakeGameConstants.CANVAS.DPR}
-      shadows={{ type: THREE.PCFSoftShadowMap }}
+      shadows={{
+        type: THREE.PCFSoftShadowMap,
+      }}
       legacy={snakeGameConstants.CANVAS.LEGACY}
       linear
       flat

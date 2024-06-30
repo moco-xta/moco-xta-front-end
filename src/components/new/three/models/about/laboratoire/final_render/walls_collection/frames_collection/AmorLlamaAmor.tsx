@@ -47,4 +47,6 @@ export function AmorLlamaAmor({ position }: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.AMOR_LLAMA_AMOR)
+useGLTF.preload(
+  gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.AMOR_LLAMA_AMOR,
+)

@@ -65,7 +65,12 @@ export default class ProfilePictureScene {
 
   addObjects() {
     // GEOMETRY
-    const geometry = new THREE.PlaneGeometry(this.imgWidth, this.imgHeight, this.imgWidth * 20, this.imgHeight * 20)
+    const geometry = new THREE.PlaneGeometry(
+      this.imgWidth,
+      this.imgHeight,
+      this.imgWidth * 20,
+      this.imgHeight * 20,
+    )
 
     const uTexture1 = new THREE.TextureLoader().load(texturesConstants.CONTACT.PROFIL_PICTURE)
     uTexture1.minFilter = THREE.LinearFilter
@@ -78,9 +83,17 @@ export default class ProfilePictureScene {
       side: THREE.DoubleSide,
       transparent: true,
       uniforms: {
-        time: { value: 0 },
-        uTexture1: { type: 't', value: uTexture1 },
-        uResolution: { type: 'v4', value: new THREE.Vector4(300, 400, 1, 1) },
+        time: {
+          value: 0,
+        },
+        uTexture1: {
+          type: 't',
+          value: uTexture1,
+        },
+        uResolution: {
+          type: 'v4',
+          value: new THREE.Vector4(300, 400, 1, 1),
+        },
       },
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
@@ -115,7 +128,9 @@ export default class ProfilePictureScene {
   }
 
   getSpeed() {
-    this.speed = Math.sqrt((this.prevMouse.x - this.mouse.x) ** 2 + (this.prevMouse.y - this.mouse.y) ** 2)
+    this.speed = Math.sqrt(
+      (this.prevMouse.x - this.mouse.x) ** 2 + (this.prevMouse.y - this.mouse.y) ** 2,
+    )
 
     this.targetSpeed -= 0.1 * (this.targetSpeed - this.speed)
     this.followMouse.x -= 0.1 * (this.followMouse.x - this.mouse.x)

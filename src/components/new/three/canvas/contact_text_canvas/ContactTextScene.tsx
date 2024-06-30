@@ -21,7 +21,9 @@ const useDomToCanvas = (domEl: any) => {
   useEffect(() => {
     if (!domEl) return
     const convertDomToCanvas = async () => {
-      const canvas = await html2canvas(domEl, { backgroundColor: null })
+      const canvas = await html2canvas(domEl, {
+        backgroundColor: null,
+      })
       setTexture(new THREE.CanvasTexture(canvas))
     }
 
@@ -51,13 +53,20 @@ export default function ContactTextScene() {
 
   const uniforms = useMemo(
     () => ({
-      uTexture: { value: textureDOM },
-      uMouse: { value: new THREE.Vector2(0, 0) },
+      uTexture: {
+        value: textureDOM,
+      },
+      uMouse: {
+        value: new THREE.Vector2(0, 0),
+      },
     }),
     [textureDOM],
   )
 
-  const mouseLerped = useRef({ x: 0, y: 0 })
+  const mouseLerped = useRef({
+    x: 0,
+    y: 0,
+  })
 
   const { mouseX, mouseY } = useMouseMove()
 
@@ -88,7 +97,8 @@ export default function ContactTextScene() {
             WHEN <br />
             WILL <br />
             WE <br />
-            MEET ?<br />
+            MEET ?
+            <br />
           </p>
         </div>
       </Html>

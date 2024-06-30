@@ -17,7 +17,8 @@ const snakeGameSlice = createSlice({
       state.nextMove = action.payload
     },
     setNextStep: (state) => {
-      const { newIsPlaying, newSnake, newGrid, newFood, newDirection, newNextMove, newScore } = nextStep(state)
+      const { newIsPlaying, newSnake, newGrid, newFood, newDirection, newNextMove, newScore } =
+        nextStep(state)
       state.isPlaying = newIsPlaying
       state.snake = newSnake
       state.grid = newGrid

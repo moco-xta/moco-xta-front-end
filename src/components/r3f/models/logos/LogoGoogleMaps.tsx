@@ -24,59 +24,58 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoGoogleMaps = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoGoogleMaps(
-  { position, rotation, scale },
-  ref,
-) {
-  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_GOOGLE_MAPS) as GLTFResult
+const LogoGoogleMaps = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoGoogleMaps({ position, rotation, scale }, ref) {
+    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_GOOGLE_MAPS) as GLTFResult
 
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene)
-    // @ts-ignore
-    ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [scene, ref])
+    useLayoutEffect(() => {
+      const box = new THREE.Box3().setFromObject(scene)
+      // @ts-ignore
+      ref.current.width = box.getSize(new THREE.Vector3()).x
+    }, [scene, ref])
 
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoGoogleMaps_1.geometry}
-        material={materials['logo_google_maps_#1b72e8']}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.LogoGoogleMaps_2.geometry}
-        material={materials['logo_google_maps_#ea4335']}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.LogoGoogleMaps_3.geometry}
-        material={materials['logo_google_maps_#fabc05']}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.LogoGoogleMaps_4.geometry}
-        material={materials['logo_google_maps_#4284f3']}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.LogoGoogleMaps_5.geometry}
-        material={materials['logo_google_maps_#33a852']}
-        receiveShadow
-        castShadow
-      />
-    </group>
-  )
-})
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+      >
+        <mesh
+          geometry={nodes.LogoGoogleMaps_1.geometry}
+          material={materials['logo_google_maps_#1b72e8']}
+          receiveShadow
+          castShadow
+        />
+        <mesh
+          geometry={nodes.LogoGoogleMaps_2.geometry}
+          material={materials['logo_google_maps_#ea4335']}
+          receiveShadow
+          castShadow
+        />
+        <mesh
+          geometry={nodes.LogoGoogleMaps_3.geometry}
+          material={materials['logo_google_maps_#fabc05']}
+          receiveShadow
+          castShadow
+        />
+        <mesh
+          geometry={nodes.LogoGoogleMaps_4.geometry}
+          material={materials['logo_google_maps_#4284f3']}
+          receiveShadow
+          castShadow
+        />
+        <mesh
+          geometry={nodes.LogoGoogleMaps_5.geometry}
+          material={materials['logo_google_maps_#33a852']}
+          receiveShadow
+          castShadow
+        />
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_GOOGLE_MAPS)
 

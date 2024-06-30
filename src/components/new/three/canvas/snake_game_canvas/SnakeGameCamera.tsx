@@ -21,8 +21,16 @@ export default function SnakeGamePerspectiveCamera() {
         snakeGameState.snake[0],
         snakeGameState.direction,
       )
-      perspectiveCameraGroupRef.current.position.set(newGroupPosition.x, newGroupPosition.y, newGroupPosition.z)
-      perspectiveCameraGroupRef.current.rotation.set(newGroupRotation.x, newGroupRotation.y, newGroupRotation.z)
+      perspectiveCameraGroupRef.current.position.set(
+        newGroupPosition.x,
+        newGroupPosition.y,
+        newGroupPosition.z,
+      )
+      perspectiveCameraGroupRef.current.rotation.set(
+        newGroupRotation.x,
+        newGroupRotation.y,
+        newGroupRotation.z,
+      )
       state.camera.rotation.set(newCameraRotation.x, newCameraRotation.y, newCameraRotation.z)
     }
   })
@@ -30,7 +38,11 @@ export default function SnakeGamePerspectiveCamera() {
   return (
     <group
       ref={perspectiveCameraGroupRef}
-      rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
+      rotation={[
+        THREE.MathUtils.degToRad(0),
+        THREE.MathUtils.degToRad(0),
+        THREE.MathUtils.degToRad(0),
+      ]}
     >
       <PerspectiveCamera
         makeDefault

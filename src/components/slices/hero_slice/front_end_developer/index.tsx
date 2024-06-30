@@ -3,7 +3,9 @@ import localFont from 'next/font/local'
 import { useTranslations } from 'next-intl'
 
 import './index.scss'
-const HelveticaNeueBlack = localFont({ src: './HelveticaNeueBlack.otf' })
+const HelveticaNeueBlack = localFont({
+  src: './HelveticaNeueBlack.otf',
+})
 
 export default function FrontEndDeveloper() {
   const t = useTranslations('HOME')

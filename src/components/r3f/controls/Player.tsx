@@ -33,7 +33,9 @@ export default function Player() {
         rigidBodyRef.current.rotation().z,
       )
 
-      camera.position.copy(new THREE.Vector3(positionRef.current.x, positionRef.current.y + 13, positionRef.current.z))
+      camera.position.copy(
+        new THREE.Vector3(positionRef.current.x, positionRef.current.y + 13, positionRef.current.z),
+      )
 
       const frontVector = new THREE.Vector3(0, 0, (backward ? 10 : 0) - (forward ? 10 : 0))
       const sideVector = new THREE.Vector3((left ? 1 : 0) - (right ? 1 : 0), 0, 0)
@@ -48,7 +50,11 @@ export default function Player() {
 
       if (jump && isOnFloorRef.current && Math.abs(velocityRef.current.y) < 0.05) {
         rigidBodyRef.current.applyImpulse(
-          new THREE.Vector3(velocityRef.current.x, playerConstants.JUMP_FORCE, velocityRef.current.z),
+          new THREE.Vector3(
+            velocityRef.current.x,
+            playerConstants.JUMP_FORCE,
+            velocityRef.current.z,
+          ),
           true,
         )
         /* isOnFloorRef.current = false */

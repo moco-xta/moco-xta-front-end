@@ -16,7 +16,9 @@ export default function TextBlockTransitionNine({
   activeBlock,
 }: TextBlockTransitionNineInterface) {
   useEffect(() => {
-    gsap.set(['.word_active', '.word'], { transformPerspective: 900 })
+    gsap.set(['.word_active', '.word'], {
+      transformPerspective: 900,
+    })
   }, [])
 
   return (
@@ -29,7 +31,8 @@ export default function TextBlockTransitionNine({
           key={`word_${id}_${word_index}`}
           className={`word${activeBlock === blockIndex ? '_active' : ''}`}
         >
-          {word}&nbsp;
+          {word}
+          &nbsp;
         </span>
       ))}
     </Tag>

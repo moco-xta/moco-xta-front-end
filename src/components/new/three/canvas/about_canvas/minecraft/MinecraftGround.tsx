@@ -22,7 +22,8 @@ export default function MinecraftGround() {
     const [x, y, z] = Object.values(e.point).map(
       (val, index) =>
         Math.round(
-          ((val - minecraftConstants.OFFSET[index]) / minecraftConstants.SCALE) * (1 / minecraftConstants.SCALE),
+          ((val - minecraftConstants.OFFSET[index]) / minecraftConstants.SCALE) *
+            (1 / minecraftConstants.SCALE),
         ) * minecraftConstants.SCALE,
     )
     dispatch(addCube([x, 0, z]))
@@ -33,10 +34,10 @@ export default function MinecraftGround() {
       material={minecraftGroundMaterial}
       position={new THREE.Vector3(0, -minecraftConstants.SCALE / 2, 0)}
       rotation={new THREE.Euler(-Math.PI / 2, 0, 0)}
-      onPointerMove={handleOnPointerMove}
-      onClick={handleOnClick}
       receiveShadow
       castShadow
+      onPointerMove={handleOnPointerMove}
+      onClick={handleOnClick}
     >
       <planeGeometry
         attach='geometry'

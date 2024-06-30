@@ -18,51 +18,50 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoSpring = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoSpring(
-  { position, rotation, scale },
-  ref,
-) {
-  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_SPRING) as GLTFResult
+const LogoSpring = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoSpring({ position, rotation, scale }, ref) {
+    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_SPRING) as GLTFResult
 
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene)
-    // @ts-ignore
-    if (ref) ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [scene, ref])
+    useLayoutEffect(() => {
+      const box = new THREE.Box3().setFromObject(scene)
+      // @ts-ignore
+      if (ref) ref.current.width = box.getSize(new THREE.Vector3()).x
+    }, [scene, ref])
 
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoSpring_1.geometry}
-        /* material={materials['logo_spring_#74b61d']} */
-        receiveShadow
-        castShadow
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
       >
-        <meshStandardMaterial
-          attach='material'
-          color={0x74b61d}
-        />
-      </mesh>
-      <mesh
-        geometry={nodes.LogoSpring_2.geometry}
-        /* material={materials['logo_spring_#ffffff']} */
-        receiveShadow
-        castShadow
-      >
-        <meshStandardMaterial
-          attach='material'
-          color={0xffffff}
-        />
-      </mesh>
-    </group>
-  )
-})
+        <mesh
+          geometry={nodes.LogoSpring_1.geometry}
+          /* material={materials['logo_spring_#74b61d']} */
+          receiveShadow
+          castShadow
+        >
+          <meshStandardMaterial
+            attach='material'
+            color={0x74b61d}
+          />
+        </mesh>
+        <mesh
+          geometry={nodes.LogoSpring_2.geometry}
+          /* material={materials['logo_spring_#ffffff']} */
+          receiveShadow
+          castShadow
+        >
+          <meshStandardMaterial
+            attach='material'
+            color={0xffffff}
+          />
+        </mesh>
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_SPRING)
 

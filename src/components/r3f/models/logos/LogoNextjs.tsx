@@ -16,40 +16,39 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoNextjs = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoNextjs(
-  { position, rotation, scale },
-  ref,
-) {
-  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_NEXTJS) as GLTFResult
+const LogoNextjs = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoNextjs({ position, rotation, scale }, ref) {
+    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_NEXTJS) as GLTFResult
 
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene)
-    // @ts-ignore
-    if (ref) ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [scene, ref])
+    useLayoutEffect(() => {
+      const box = new THREE.Box3().setFromObject(scene)
+      // @ts-ignore
+      if (ref) ref.current.width = box.getSize(new THREE.Vector3()).x
+    }, [scene, ref])
 
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoNextjs.geometry}
-        /* material={materials['logo_nextjs_#ffffff']} */
-        receiveShadow
-        castShadow
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
       >
-        <meshStandardMaterial
-          attach='material'
-          color={0xffffff}
-        />
-      </mesh>
-    </group>
-  )
-})
+        <mesh
+          geometry={nodes.LogoNextjs.geometry}
+          /* material={materials['logo_nextjs_#ffffff']} */
+          receiveShadow
+          castShadow
+        >
+          <meshStandardMaterial
+            attach='material'
+            color={0xffffff}
+          />
+        </mesh>
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_NEXTJS)
 

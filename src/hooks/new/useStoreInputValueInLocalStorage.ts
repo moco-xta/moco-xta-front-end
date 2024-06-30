@@ -7,7 +7,10 @@ function getStoredValue(key: string, initialValue: string | number | Date | null
   return initialValue
 }
 
-export default function useStoreInputValueInLocalStorage(key: string, initialValue: string | number | Date | null) {
+export default function useStoreInputValueInLocalStorage(
+  key: string,
+  initialValue: string | number | Date | null,
+) {
   const [storedValue, setValueToStore] = useState(() => {
     return getStoredValue(key, initialValue)
   })

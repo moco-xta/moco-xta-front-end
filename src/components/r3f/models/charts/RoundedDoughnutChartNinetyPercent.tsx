@@ -16,39 +16,40 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-const RoundedDoughnutChartNinetyPercent = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
-  function RoundedDoughnutChartNinetyPercent({ position, rotation, scale }, ref) {
-    const { nodes } = useGLTF(GltfConstants.ROUNDED_DOUGHNUT_CHART_NINETY_PERCENT) as GLTFResult
+const RoundedDoughnutChartNinetyPercent = forwardRef<
+  ForwardRefGltfGroupInterface,
+  JSX.IntrinsicElements['group']
+>(function RoundedDoughnutChartNinetyPercent({ position, rotation, scale }, ref) {
+  const { nodes } = useGLTF(GltfConstants.ROUNDED_DOUGHNUT_CHART_NINETY_PERCENT) as GLTFResult
 
-    return (
-      <group
-        ref={ref}
-        dispose={null}
-        position={position}
-        rotation={rotation}
-        scale={scale}
+  return (
+    <group
+      ref={ref}
+      dispose={null}
+      position={position}
+      rotation={rotation}
+      scale={scale}
+    >
+      <mesh
+        geometry={nodes.RoundedDoughnutChartNinetyPercent.geometry}
+        receiveShadow
+        castShadow
       >
-        <mesh
-          geometry={nodes.RoundedDoughnutChartNinetyPercent.geometry}
-          receiveShadow
-          castShadow
-        >
-          <meshPhysicalMaterial
-            color={'red'}
-            specularColor={'red'}
-            roughness={1}
-            metalness={0}
-            iridescence={1}
-            clearcoat={0}
-            reflectivity={0}
-            emissive={'red'}
-            emissiveIntensity={3.7}
-          />
-        </mesh>
-      </group>
-    )
-  },
-)
+        <meshPhysicalMaterial
+          color={'red'}
+          specularColor={'red'}
+          roughness={1}
+          metalness={0}
+          iridescence={1}
+          clearcoat={0}
+          reflectivity={0}
+          emissive={'red'}
+          emissiveIntensity={3.7}
+        />
+      </mesh>
+    </group>
+  )
+})
 
 useGLTF.preload(GltfConstants.ROUNDED_DOUGHNUT_CHART_NINETY_PERCENT)
 

@@ -35,7 +35,11 @@ const aboutSlice = createSlice({
   },
 })
 
-export const { setAccessToDeviceMotionAndOrientationGranted, setShowInstructions, setIsFinalRender, setLocation } =
-  aboutSlice.actions
+export const {
+  setAccessToDeviceMotionAndOrientationGranted,
+  setShowInstructions,
+  setIsFinalRender,
+  setLocation,
+} = aboutSlice.actions
 
 export default aboutSlice.reducer

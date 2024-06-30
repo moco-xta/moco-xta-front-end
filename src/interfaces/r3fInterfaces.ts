@@ -48,7 +48,9 @@ export interface ProjectCardSceneInterface {
 }
 
 export interface ProjectsSceneInterface {
-  projectsRefs: { ref: RefObject<THREE.Group<THREE.Object3DEventMap>> }[]
+  projectsRefs: {
+    ref: RefObject<THREE.Group<THREE.Object3DEventMap>>
+  }[]
 }
 
 export interface ReviewCanvasInterface {

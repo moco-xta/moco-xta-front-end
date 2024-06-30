@@ -45,7 +45,8 @@ export function Parquet() {
             AboutConstants.PARQUET.GREY_GRADIENT[
               Math.floor(
                 Math.random() *
-                  (AboutConstants.PARQUET.MAX_GREY_GRADIENT_RANGE - AboutConstants.PARQUET.MIN_GREY_GRADIENT_RANGE) +
+                  (AboutConstants.PARQUET.MAX_GREY_GRADIENT_RANGE -
+                    AboutConstants.PARQUET.MIN_GREY_GRADIENT_RANGE) +
                   AboutConstants.PARQUET.MIN_GREY_GRADIENT_RANGE,
               )
             ],

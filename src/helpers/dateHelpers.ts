@@ -1,5 +1,7 @@
 export function getDifferenceBetweenTwoDatesInDays(date_to: Date, date_from: Date): number {
-  const difference_in_days = Math.round((date_to.getTime() - date_from.getTime()) / (1000 * 3600 * 24))
+  const difference_in_days = Math.round(
+    (date_to.getTime() - date_from.getTime()) / (1000 * 3600 * 24),
+  )
   return difference_in_days
 }
 

@@ -7,7 +7,9 @@ import { SkillsSectionInterface } from '@/interfaces/componentsInterfaces'
 import { default as skillsConstants } from '@/constants/skillsConstants.json'
 
 import './index.scss'
-const MontserratBlack = localFont({ src: './Montserrat-Black.otf' })
+const MontserratBlack = localFont({
+  src: './Montserrat-Black.otf',
+})
 
 export function SkillsSection({ index, category, content }: SkillsSectionInterface) {
   const t = useTranslations('SKILLS.CATEGORIES')
@@ -15,14 +17,20 @@ export function SkillsSection({ index, category, content }: SkillsSectionInterfa
   const locale = useLocale()
 
   return (
-    <section style={{ backgroundColor: skillsConstants.BACKGROUND_COLORS[index] }}>
+    <section
+      style={{
+        backgroundColor: skillsConstants.BACKGROUND_COLORS[index],
+      }}
+    >
       <div className='logo_pictures_wrapper_container'>
         {content.pictures.map((picture_group, index) => {
           return (
             <div
               key={`logo_pictures_wrapper_${category}_${index}`}
               className='logo_pictures_wrapper'
-              style={{ marginTop: `${10 * index}vw` }}
+              style={{
+                marginTop: `${10 * index}vw`,
+              }}
             >
               {picture_group.map((picture) => {
                 return (

@@ -27,7 +27,12 @@ export default class ProfilePictureCanvas extends Component<{}, ProfilePictureSc
   render() {
     return (
       <div
-        style={{ zIndex: '1', position: 'absolute', top: '0px', left: '0px' }}
+        style={{
+          zIndex: '1',
+          position: 'absolute',
+          top: '0px',
+          left: '0px',
+        }}
         ref={this.canvasRef}
       />
     )

@@ -15,7 +15,10 @@ import { reviewRolesData } from '@/data/reviewRolesData'
 
 import './index.scss'
 
-export default function AddReviewForm({ submitButtonIsDisabled, resetButtonIsDisabled }: FormsInterface) {
+export default function AddReviewForm({
+  submitButtonIsDisabled,
+  resetButtonIsDisabled,
+}: FormsInterface) {
   const t = useTranslations()
 
   const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)

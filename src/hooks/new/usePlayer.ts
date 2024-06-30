@@ -10,7 +10,10 @@ export const usePlayer = () => {
   })
 
   const setMovementStatus = (code: string, status: boolean) => {
-    setMovement((movement) => ({ ...movement, [code]: status }))
+    setMovement((movement) => ({
+      ...movement,
+      [code]: status,
+    }))
   }
 
   useEffect(() => {

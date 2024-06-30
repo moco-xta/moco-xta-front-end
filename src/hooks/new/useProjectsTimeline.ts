@@ -16,7 +16,10 @@ export default function useProjectsTimeline(
   const [currentCompanyOrSchool, setCurrentCompanyOrSchool] = useState<number>(0)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
-    getDifferenceBetweenTwoDatesInDays(new Date(), new Date(projectsData[projectsData.length - 1].dates.from)),
+    getDifferenceBetweenTwoDatesInDays(
+      new Date(),
+      new Date(projectsData[projectsData.length - 1].dates.from),
+    ),
   )
   const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
 
@@ -29,7 +32,9 @@ export default function useProjectsTimeline(
 
   useEffect(() => {
     const differenceBetweenTodayAndCurrentDate = Math.round(y / deltaPerDay)
-    setCurrentDate(new Date(new Date().setDate(new Date().getDate() - differenceBetweenTodayAndCurrentDate)))
+    setCurrentDate(
+      new Date(new Date().setDate(new Date().getDate() - differenceBetweenTodayAndCurrentDate)),
+    )
   }, [y, deltaPerDay])
 
   useEffect(() => {

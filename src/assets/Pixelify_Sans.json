@@ -2760,8 +2760,18 @@
       "x_max": 422,
       "o": "m 147 410 l 147 475 l 83 475 l 83 553 l 161 553 l 161 489 l 342 489 l 342 604 l 147 604 l 147 668 l 83 668 l 83 811 l 147 811 l 147 876 l 356 876 l 356 811 l 422 811 l 422 475 l 356 475 l 356 410 l 147 410 m 161 682 l 342 682 l 342 799 l 161 799 l 161 682 z "
     },
-    " ": { "ha": 278, "x_min": 0, "x_max": 0, "o": "" },
-    " ": { "ha": 278, "x_min": 0, "x_max": 0, "o": "" },
+    " ": {
+      "ha": 278,
+      "x_min": 0,
+      "x_max": 0,
+      "o": ""
+    },
+    " ": {
+      "ha": 278,
+      "x_min": 0,
+      "x_max": 0,
+      "o": ""
+    },
     ".": {
       "ha": 308,
       "x_min": 83,
@@ -3440,7 +3450,12 @@
   "descender": -389,
   "underlinePosition": -104,
   "underlineThickness": 69,
-  "boundingBox": { "yMin": -344, "xMin": -56, "yMax": 1276, "xMax": 1575 },
+  "boundingBox": {
+    "yMin": -344,
+    "xMin": -56,
+    "yMax": 1276,
+    "xMax": 1575
+  },
   "resolution": 1000,
   "original_font_information": {
     "format": 0,

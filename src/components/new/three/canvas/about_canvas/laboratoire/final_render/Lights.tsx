@@ -13,8 +13,8 @@ export default function Lights() {
   const { debug } = useSelector((state: RootState) => state.about)
 
   const ref = useRef<Ref<THREE.SpotLight>[]>(
-    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.ORIENTATION.map((orientation, index) =>
-      createRef<THREE.SpotLight>(),
+    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.ORIENTATION.map(
+      (orientation, index) => createRef<THREE.SpotLight>(),
     ),
   )
 
@@ -113,69 +113,87 @@ export default function Lights() {
   return (
     <>
       <ambientLight {...ambientLigthsConfig} />
-      {laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.ORIENTATION.map((orientation, index) => (
-        <spotLight
-          key={`spotLightCeiling${index}`}
-          ref={(spotLight) => {
-            // @ts-ignore
-            if (spotLight) ref.current[index] = spotLight
-            // @ts-ignore
-            else delete ref.current[index]
-          }}
-          /* ref={!debug.lights ? null : spotLightCeilingNWtRef} */
-          /* ref={ref.current[index]} */
-          position={
-            !debug.lights
-              ? [
-                  orientation[0] * laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.POSITION.X,
-                  orientation[1] * laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.POSITION.Y,
-                  orientation[2] * laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.POSITION.Z,
-                ]
-              : [
-                  orientation[0] * spotLigthsPosition['position-x'],
-                  orientation[1] * spotLigthsPosition['position-y'],
-                  orientation[2] * spotLigthsPosition['position-z'],
-                ]
-          }
-          target-position={
-            !debug.lights
-              ? new THREE.Vector3(
-                  orientation[0] * laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.TARGET_POSITION.X,
-                  orientation[1] * laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.TARGET_POSITION.Y,
-                  orientation[2] * laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.TARGET_POSITION.Z,
-                )
-              : new THREE.Vector3(
-                  orientation[0] * spotLigthsPosition['target-position-x'],
-                  orientation[1] * spotLigthsPosition['target-position-y'],
-                  orientation[2] * spotLigthsPosition['target-position-z'],
-                )
-          }
-          castShadow
-          shadow-mapSize={
-            !isMobile
-              ? [
-                  laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
-                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_DESKTOP,
-                  laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
-                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_DESKTOP,
-                ]
-              : [
-                  laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
-                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_MOBILE,
-                  laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
-                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_MOBILE,
-                ]
-          }
-          shadow-camera-far={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_FAR}
-          shadow-camera-left={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_LEFT}
-          shadow-camera-right={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_RIGHT}
-          shadow-camera-top={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_TOP}
-          shadow-camera-bottom={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_BOTTOM}
-          shadow-radius={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_RADIUS}
-          shadow-bias={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_BIAS}
-          {...spotLigthsConfig}
-        />
-      ))}
+      {laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.ORIENTATION.map(
+        (orientation, index) => (
+          <spotLight
+            key={`spotLightCeiling${index}`}
+            ref={(spotLight) => {
+              // @ts-ignore
+              if (spotLight) ref.current[index] = spotLight
+              // @ts-ignore
+              else delete ref.current[index]
+            }}
+            /* ref={!debug.lights ? null : spotLightCeilingNWtRef} */
+            /* ref={ref.current[index]} */
+            position={
+              !debug.lights
+                ? [
+                    orientation[0] *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.POSITION.X,
+                    orientation[1] *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.POSITION.Y,
+                    orientation[2] *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.POSITION.Z,
+                  ]
+                : [
+                    orientation[0] * spotLigthsPosition['position-x'],
+                    orientation[1] * spotLigthsPosition['position-y'],
+                    orientation[2] * spotLigthsPosition['position-z'],
+                  ]
+            }
+            target-position={
+              !debug.lights
+                ? new THREE.Vector3(
+                    orientation[0] *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.TARGET_POSITION.X,
+                    orientation[1] *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.TARGET_POSITION.Y,
+                    orientation[2] *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.TARGET_POSITION.Z,
+                  )
+                : new THREE.Vector3(
+                    orientation[0] * spotLigthsPosition['target-position-x'],
+                    orientation[1] * spotLigthsPosition['target-position-y'],
+                    orientation[2] * spotLigthsPosition['target-position-z'],
+                  )
+            }
+            castShadow
+            shadow-mapSize={
+              !isMobile
+                ? [
+                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_DESKTOP,
+                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_DESKTOP,
+                  ]
+                : [
+                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_MOBILE,
+                    laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_MAP_SIZE *
+                      laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.K.IS_MOBILE,
+                  ]
+            }
+            shadow-camera-far={
+              laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_FAR
+            }
+            shadow-camera-left={
+              laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_LEFT
+            }
+            shadow-camera-right={
+              laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_RIGHT
+            }
+            shadow-camera-top={
+              laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_TOP
+            }
+            shadow-camera-bottom={
+              laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_CAMERA_BOTTOM
+            }
+            shadow-radius={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_RADIUS}
+            shadow-bias={laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.SHADOW_BIAS}
+            {...spotLigthsConfig}
+          />
+        ),
+      )}
     </>
   )
 }

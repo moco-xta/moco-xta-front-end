@@ -79,7 +79,9 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
             /* anchorX='center' */
             /* anchorY='middle' */
           >
-            &quot;{data.review}&quot;
+            &quot;
+            {data.review}
+            &quot;
           </Text3D>
         </Center>
         <Text
@@ -91,7 +93,9 @@ export default function ReviewCard({ data }: ReviewCardInterface) {
           anchorX='center'
           anchorY='middle'
         >
-          &quot;{data.review}&quot;
+          &quot;
+          {data.review}
+          &quot;
         </Text>
         <group position={[-0.425 + 0.17 / 2, 0, 0.1]}>
           {[...Array(5)].map((_, index) => {

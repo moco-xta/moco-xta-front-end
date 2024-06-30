@@ -22,7 +22,14 @@ export function StringElement({ position, rotation }: StringElementInterface) {
 
   function applyImpulse(e: any) {
     if (rigidBodyRef.current)
-      rigidBodyRef.current.applyImpulse({ x: -e.normal.x * 100, y: -e.normal.y * 100, z: -e.normal.z * 100 }, true)
+      rigidBodyRef.current.applyImpulse(
+        {
+          x: -e.normal.x * 100,
+          y: -e.normal.y * 100,
+          z: -e.normal.z * 100,
+        },
+        true,
+      )
     /* if(rigidBodyRef.current) rigidBodyRef.current.applyImpulse({ x: 0, y: 10, z: 0 }, true) */
   }
 

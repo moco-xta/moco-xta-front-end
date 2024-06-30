@@ -56,7 +56,9 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: RotationGroup
             {buttonCategory.GEOMETRIES.map((button, buttonIndex) => (
               <Button
                 key={`rubiks_cube_button_${buttonCategoryIndex}_${buttonIndex}`}
-                position={new THREE.Vector3(button.POSITION.X, button.POSITION.Y, button.POSITION.Z)}
+                position={
+                  new THREE.Vector3(button.POSITION.X, button.POSITION.Y, button.POSITION.Z)
+                }
                 rotation={
                   new THREE.Euler(
                     THREE.MathUtils.degToRad(button.ROTATION.X),
@@ -64,7 +66,9 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: RotationGroup
                     THREE.MathUtils.degToRad(button.ROTATION.Z),
                   )
                 }
-                onClick={(e) => buttonFunction(e, rubiksCubeRef, rotationGroupRef, isRotating, setIsRotating)}
+                onClick={(e) =>
+                  buttonFunction(e, rubiksCubeRef, rotationGroupRef, isRotating, setIsRotating)
+                }
                 arrow={buttonCategory.ARROW}
                 isRotating={isRotating}
               />

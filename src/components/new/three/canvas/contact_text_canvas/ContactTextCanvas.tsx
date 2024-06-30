@@ -7,7 +7,12 @@ import ContactTextScene from './ContactTextScene'
 export default function ContactTextCanvas() {
   return (
     <Canvas
-      style={{ zIndex: '0', position: 'absolute', top: '0px', left: '0px' }}
+      style={{
+        zIndex: '0',
+        position: 'absolute',
+        top: '0px',
+        left: '0px',
+      }}
       dpr={[1, 2]}
       gl={{
         antialias: true,

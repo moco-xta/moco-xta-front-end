@@ -1,4 +1,8 @@
-import { FoodInterface, SnakeCellInterface, UpdateSnakeHeadInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import {
+  FoodInterface,
+  SnakeCellInterface,
+  UpdateSnakeHeadInterface,
+} from '@/interfaces/new/newSnakeGameInterfaces'
 
 import { isEating, updateDirection } from '@/helpers/new/snake_game'
 

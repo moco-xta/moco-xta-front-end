@@ -16,40 +16,39 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoDjango = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoDjango(
-  { position, rotation, scale },
-  ref,
-) {
-  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_DJANGO) as GLTFResult
+const LogoDjango = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoDjango({ position, rotation, scale }, ref) {
+    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_DJANGO) as GLTFResult
 
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene)
-    // @ts-ignore
-    if (ref) ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [scene, ref])
+    useLayoutEffect(() => {
+      const box = new THREE.Box3().setFromObject(scene)
+      // @ts-ignore
+      if (ref) ref.current.width = box.getSize(new THREE.Vector3()).x
+    }, [scene, ref])
 
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoDjango.geometry}
-        material={materials['logo_django_#0b4b33']}
-        receiveShadow
-        castShadow
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
       >
-        <meshStandardMaterial
-          attach='material'
-          color={0x0b4b33}
-        />
-      </mesh>
-    </group>
-  )
-})
+        <mesh
+          geometry={nodes.LogoDjango.geometry}
+          material={materials['logo_django_#0b4b33']}
+          receiveShadow
+          castShadow
+        >
+          <meshStandardMaterial
+            attach='material'
+            color={0x0b4b33}
+          />
+        </mesh>
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_DJANGO)
 

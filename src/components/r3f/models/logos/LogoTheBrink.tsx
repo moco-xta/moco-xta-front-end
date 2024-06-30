@@ -16,28 +16,27 @@ type GltfResultType = GLTF & {
   }
 }
 
-export const LogoTheBrink = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(function LogoTheBrink(
-  { position, scale },
-  ref,
-) {
-  const gltf = useGLTF(GltfConstants.LOGO_THE_BRINK) as GltfResultType
+export const LogoTheBrink = forwardRef<LogoRefType, JSX.IntrinsicElements['mesh']>(
+  function LogoTheBrink({ position, scale }, ref) {
+    const gltf = useGLTF(GltfConstants.LOGO_THE_BRINK) as GltfResultType
 
-  const [hovered, setHovered] = useState(false)
+    const [hovered, setHovered] = useState(false)
 
-  useEffect(() => {
-    document.body.style.cursor = hovered ? 'pointer' : 'auto'
-  }, [hovered])
+    useEffect(() => {
+      document.body.style.cursor = hovered ? 'pointer' : 'auto'
+    }, [hovered])
 
-  return (
-    <mesh
-      geometry={gltf.nodes.LogoTheBrink.geometry}
-      position={position}
-      scale={scale}
-      material={gltf.materials['logo_the_brink_#ff4407']}
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-    />
-  )
-})
+    return (
+      <mesh
+        geometry={gltf.nodes.LogoTheBrink.geometry}
+        position={position}
+        scale={scale}
+        material={gltf.materials['logo_the_brink_#ff4407']}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      />
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_THE_BRINK)

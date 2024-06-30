@@ -31,7 +31,8 @@ export default function HeroCanvas() {
   }
 
   useEffect(() => {
-    if (perspectiveCameraRef.current) perspectiveCameraRef.current.position.z = setCameraZPosition(innerWidth)
+    if (perspectiveCameraRef.current)
+      perspectiveCameraRef.current.position.z = setCameraZPosition(innerWidth)
   }, [innerWidth])
 
   return (
@@ -69,7 +70,11 @@ export default function HeroCanvas() {
       <Suspense>
         <Physics
           /* debug */
-          gravity={[heroConstants.PHYSICS.GRAVITY.X, heroConstants.PHYSICS.GRAVITY.Y, heroConstants.PHYSICS.GRAVITY.Z]}
+          gravity={[
+            heroConstants.PHYSICS.GRAVITY.X,
+            heroConstants.PHYSICS.GRAVITY.Y,
+            heroConstants.PHYSICS.GRAVITY.Z,
+          ]}
         >
           <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
           <HeroScene />

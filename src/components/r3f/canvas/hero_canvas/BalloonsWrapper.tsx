@@ -20,7 +20,11 @@ export default function BalloonsWrapper() {
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].WIDTH,
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].DEPTH,
           ]}
-          position={[0, heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].HEIGHT / 2, 0]}
+          position={[
+            0,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].HEIGHT / 2,
+            0,
+          ]}
           rotation={[THREE.MathUtils.degToRad(90), 0, 0]}
         >
           <meshStandardMaterial
@@ -35,7 +39,11 @@ export default function BalloonsWrapper() {
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].WIDTH,
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].DEPTH,
           ]}
-          position={[0, -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].HEIGHT / 2, 0]}
+          position={[
+            0,
+            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].HEIGHT / 2,
+            0,
+          ]}
           rotation={[THREE.MathUtils.degToRad(90), 0, 0]}
         >
           <meshStandardMaterial
@@ -50,7 +58,11 @@ export default function BalloonsWrapper() {
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].WIDTH,
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].HEIGHT,
           ]}
-          position={[0, 0, -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].DEPTH / 2]}
+          position={[
+            0,
+            0,
+            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].DEPTH / 2,
+          ]}
         >
           <meshStandardMaterial
             transparent
@@ -64,7 +76,11 @@ export default function BalloonsWrapper() {
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].WIDTH,
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].HEIGHT,
           ]}
-          position={[0, 0, heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].DEPTH / 2]}
+          position={[
+            0,
+            0,
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].DEPTH / 2,
+          ]}
         >
           <meshStandardMaterial
             transparent
@@ -78,7 +94,11 @@ export default function BalloonsWrapper() {
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].DEPTH,
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].HEIGHT,
           ]}
-          position={[-heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].WIDTH / 2, 0, 0]}
+          position={[
+            -heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].WIDTH / 2,
+            0,
+            0,
+          ]}
           rotation={[0, THREE.MathUtils.degToRad(90), 0]}
         >
           <meshStandardMaterial
@@ -93,7 +113,11 @@ export default function BalloonsWrapper() {
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].DEPTH,
             heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].HEIGHT,
           ]}
-          position={[heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].WIDTH / 2, 0, 0]}
+          position={[
+            heroConstants.HELIUM_BALLOONS.WRAPPER.DIMENSIONS[dimensionsType].WIDTH / 2,
+            0,
+            0,
+          ]}
           rotation={[0, THREE.MathUtils.degToRad(-90), 0]}
         >
           <meshStandardMaterial

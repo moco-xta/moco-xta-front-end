@@ -15,7 +15,13 @@ type GLTFResult = GLTF & {
 
 type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
 
-export function RoundedCube({ name, position, rotation, onPointerMove, onPointerLeave }: RoundedCubeInterface) {
+export function RoundedCube({
+  name,
+  position,
+  rotation,
+  onPointerMove,
+  onPointerLeave,
+}: RoundedCubeInterface) {
   const { nodes, materials } = useGLTF(gltfConstants.ROUNDED_CUBE) as GLTFResult
   return (
     <mesh

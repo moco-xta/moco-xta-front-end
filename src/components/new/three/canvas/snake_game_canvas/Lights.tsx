@@ -66,7 +66,11 @@ export default function Lights() {
       />
       <directionalLight
         ref={directionalLightNERef}
-        position={[snakeGameConstants.SNAKE_GAME.BOARD.WIDTH, 20, snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT]}
+        position={[
+          snakeGameConstants.SNAKE_GAME.BOARD.WIDTH,
+          20,
+          snakeGameConstants.SNAKE_GAME.BOARD.HEIGHT,
+        ]}
         intensity={INTENSITY}
         target-position={directionalLightTarget}
         castShadow

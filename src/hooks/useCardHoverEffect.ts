@@ -8,7 +8,10 @@ import { getUvMousePositionOnDiv } from '@/helpers/cssHelpers'
 
 import { default as effectsConstants } from '@/constants/effectsConstants.json'
 
-export default function useCardHoverEffect(ref: RefObject<HTMLDivElement>, constantsEffect: CardHoverEffectInterface) {
+export default function useCardHoverEffect(
+  ref: RefObject<HTMLDivElement>,
+  constantsEffect: CardHoverEffectInterface,
+) {
   gsap.registerPlugin(useGSAP)
 
   function handleMouseMove(event: MouseEvent) {

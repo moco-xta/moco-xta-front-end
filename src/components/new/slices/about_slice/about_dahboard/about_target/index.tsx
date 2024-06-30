@@ -3,7 +3,11 @@ import React, { useCallback, useEffect, useState } from 'react'
 import './index.scss'
 
 export default function AboutTarget() {
-  const [acceleration, setAcceleration] = useState<{ x: number; y: number; z: number }>({
+  const [acceleration, setAcceleration] = useState<{
+    x: number
+    y: number
+    z: number
+  }>({
     x: 0,
     y: 0,
     z: 0,

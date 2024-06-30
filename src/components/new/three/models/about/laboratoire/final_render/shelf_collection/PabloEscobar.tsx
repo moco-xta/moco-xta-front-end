@@ -15,7 +15,9 @@ type GLTFResult = GLTF & {
 }
 
 export function PabloEscobar({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PABLO_ESCOBAR) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SHELF_COLLECTION.PABLO_ESCOBAR,
+  ) as GLTFResult
 
   return (
     <mesh

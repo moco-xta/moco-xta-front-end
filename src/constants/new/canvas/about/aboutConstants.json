@@ -35,5 +35,21 @@
   },
   "TONE_MAPPING": {
     "EXPOSURE": 50
+  },
+  "PHYSICS_GROUND": {
+    "ARGS": {
+      "WIDTH": 200,
+      "DEPTH": 200
+    },
+    "POSITON": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "ROTATION": {
+      "X": 90,
+      "Y": 0,
+      "Z": 0
+    }
   }
 }

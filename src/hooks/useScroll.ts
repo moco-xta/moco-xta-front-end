@@ -37,5 +37,11 @@ export default function useScroll() {
     }
   }, [handleScroll])
 
-  return { y, offsetHeight, clientHeight, scrollPercentage, scrollFlow }
+  return {
+    y,
+    offsetHeight,
+    clientHeight,
+    scrollPercentage,
+    scrollFlow,
+  }
 }

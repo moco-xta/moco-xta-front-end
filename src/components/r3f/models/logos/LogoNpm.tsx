@@ -18,41 +18,40 @@ type GLTFResult = GLTF & {
   }
 }
 
-const LogoNpm = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(function LogoNpm(
-  { position, rotation, scale },
-  ref,
-) {
-  const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_NPM) as GLTFResult
+const LogoNpm = forwardRef<ForwardRefGltfGroupInterface, JSX.IntrinsicElements['group']>(
+  function LogoNpm({ position, rotation, scale }, ref) {
+    const { scene, nodes, materials } = useGLTF(GltfConstants.LOGO_NPM) as GLTFResult
 
-  useLayoutEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene)
-    // @ts-ignore
-    ref.current.width = box.getSize(new THREE.Vector3()).x
-  }, [scene, ref])
+    useLayoutEffect(() => {
+      const box = new THREE.Box3().setFromObject(scene)
+      // @ts-ignore
+      ref.current.width = box.getSize(new THREE.Vector3()).x
+    }, [scene, ref])
 
-  return (
-    <group
-      ref={ref}
-      dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={scale}
-    >
-      <mesh
-        geometry={nodes.LogoNpm_1.geometry}
-        material={materials['logo_npm_#cc3533']}
-        receiveShadow
-        castShadow
-      />
-      <mesh
-        geometry={nodes.LogoNpm_2.geometry}
-        material={materials['logo_npm_#ffffff']}
-        receiveShadow
-        castShadow
-      />
-    </group>
-  )
-})
+    return (
+      <group
+        ref={ref}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+      >
+        <mesh
+          geometry={nodes.LogoNpm_1.geometry}
+          material={materials['logo_npm_#cc3533']}
+          receiveShadow
+          castShadow
+        />
+        <mesh
+          geometry={nodes.LogoNpm_2.geometry}
+          material={materials['logo_npm_#ffffff']}
+          receiveShadow
+          castShadow
+        />
+      </group>
+    )
+  },
+)
 
 useGLTF.preload(GltfConstants.LOGO_NPM)
 

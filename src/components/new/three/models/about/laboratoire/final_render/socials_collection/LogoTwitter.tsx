@@ -16,7 +16,9 @@ type GLTFResult = GLTF & {
 }
 
 export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
-  const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION.LOGO_TWITTER) as GLTFResult
+  const { nodes } = useGLTF(
+    gltfConstants.ABOUT.LABORATOIRE.FINAL_RENDER.SOCIALS_COLLECTION.LOGO_TWITTER,
+  ) as GLTFResult
 
   const [selected, setSelected] = useState(false)
 
