@@ -11,6 +11,8 @@ import { RapierPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
 /* import { AppDispatch } from '@/redux/store' */
 
+import useLocation from '@/hooks/new/useLocation'
+
 import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
 
 const direction = new THREE.Vector3()
@@ -30,6 +32,7 @@ export default function RapierPlayer({
   const rapier = useRapier()
 
   const { moveBackward, moveForward, moveRight, moveLeft, jump } = useAboutKeyboard()
+  useLocation()
 
   const playerRef = useRef<RapierRigidBody>(null!)
   const velocity = useRef<THREE.Vector3>(new THREE.Vector3())

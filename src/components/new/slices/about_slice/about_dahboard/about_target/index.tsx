@@ -1,8 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+
+import { RootState } from '@/redux/store'
 
 import './index.scss'
 
 export default function AboutTarget() {
+  const { location } = useSelector((state: RootState) => state.about)
+
   const [acceleration, setAcceleration] = useState<{
     x: number
     y: number
@@ -31,16 +36,15 @@ export default function AboutTarget() {
     }
   }, [handleDevicemotion])
 
-  return (
-    <span id='about_target'>+</span>
-  )
-
   /* return (
+    <span id='about_target'>+</span>
+  ) */
+
+  return (
     <div id='about_target_test_block'>
       <span id='about_target'>+</span>
-      <p>x: {acceleration.x}</p>
-      <p>y: {acceleration.y}</p>
-      <p>z: {acceleration.z}</p>
+      <p>Latitude: {location.latitude}</p>
+      <p>Longitude: {location.longitude}</p>
     </div>
-  ) */
+  )
 }
