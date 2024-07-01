@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import * as THREE from 'three'
-import { Canvas, useThree } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import {
   DeviceOrientationControls,
   PerspectiveCamera,
@@ -16,6 +16,7 @@ import { setShowInstructions } from '@/redux/slice/aboutSlice'
 
 import RapierPlayer from '../../controls/players/RapierPlayer'
 /* import { CannonPlayer } from '../../controls/players/CannonPlayer' */
+import PointerLockControlsComponent from '../../controls/PointerLockControls'
 import LaboratoireScene from './laboratoire/LaboratoireScene'
 import MinecraftScene from './minecraft/MinecraftScene'
 import PhysicsGround from './PhysicsGround'
@@ -25,7 +26,6 @@ import PhysicsGround from './PhysicsGround'
 import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
 
 export default function AboutCanvas() {
-  const { camera, gl } = useThree()
   const dispatch = useDispatch<AppDispatch>()
   const { showInstructions } = useSelector((state: RootState) => state.about)
 
@@ -63,10 +63,7 @@ export default function AboutCanvas() {
         <Physics debug>
           {/* <Physics> */}
           {!isMobile ? (
-            <PointerLockControls
-              selector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR}
-              args={[camera, gl.domElement]}
-            />
+            <PointerLockControlsComponent pointerLockControlsSelector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR} />
           ) : (
             <DeviceOrientationControls />
           )}
