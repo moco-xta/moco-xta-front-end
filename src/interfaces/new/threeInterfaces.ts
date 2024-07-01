@@ -13,6 +13,10 @@ export interface RapierPlayerInterface {
   pointerLockControlsSelector: string
 }
 
+export interface PointerLockControlsComponentInterface {
+  pointerLockControlsSelector: string
+}
+
 export interface SocialsCanvasInterface {
   className: string
 }
