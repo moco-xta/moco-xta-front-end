@@ -63,7 +63,7 @@ export default function AboutCanvas() {
         <Physics debug>
           {/* <Physics> */}
           {!isMobile ? (
-            <PointerLockControlsComponent pointerLockControlsSelector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR} />
+            <PointerLockControlsComponent pointerLockControlsSelector={`#${aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR}`} />
           ) : (
             <DeviceOrientationControls />
           )}

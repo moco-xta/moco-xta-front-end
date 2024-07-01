@@ -9,7 +9,7 @@ import { isMobile } from 'react-device-detect'
 
 import { RapierPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
-import { AppDispatch } from '@/redux/store'
+/* import { AppDispatch } from '@/redux/store' */
 
 import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
 
