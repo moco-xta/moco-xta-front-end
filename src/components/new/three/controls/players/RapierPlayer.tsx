@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 /* import { useDispatch } from 'react-redux' */
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
@@ -9,7 +10,8 @@ import { isMobile } from 'react-device-detect'
 
 import { RapierPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
-/* import { AppDispatch } from '@/redux/store' */
+import { AppDispatch } from '@/redux/store'
+import { setLocation } from '@/redux/slice/aboutSlice'
 
 import useLocation from '@/hooks/new/useLocation'
 
@@ -30,6 +32,7 @@ export default function RapierPlayer({
 }: RapierPlayerInterface) {
   const { camera, gl } = useThree()
   const rapier = useRapier()
+  const dispatch = useDispatch<AppDispatch>()
 
   const { moveBackward, moveForward, moveRight, moveLeft, jump } = useAboutKeyboard()
   useLocation()
@@ -55,6 +58,16 @@ export default function RapierPlayer({
       findDistance(e.acceleration.y, 5),
       findDistance(e.acceleration.z, 5),
     )
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        dispatch(
+          setLocation({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          }),
+        )
+      })
+    }
   }, [])
 
   useEffect(() => {
