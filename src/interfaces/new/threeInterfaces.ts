@@ -5,6 +5,7 @@ export interface CannonPlayerInterface {
 }
 
 export interface RapierPlayerInterface {
+  cameraRotation: THREE.Euler
   rigidBodyPosition: THREE.Vector3
   capsuleColliderArgs: [halfHeight: number, radius: number]
   speed: number

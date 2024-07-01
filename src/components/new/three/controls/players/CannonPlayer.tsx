@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { PointerLockControls } from '@react-three/drei'
 import { useCylinder } from '@react-three/cannon'
 
 import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
@@ -72,13 +71,5 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
     }
   })
 
-  return (
-    <>
-      <mesh ref={ref}></mesh>
-      <PointerLockControls
-        selector={pointerLockControlsSelector}
-        args={[camera, gl.domElement]}
-      />
-    </>
-  )
+  return <mesh ref={ref}></mesh>
 }

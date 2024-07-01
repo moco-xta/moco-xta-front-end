@@ -16,6 +16,7 @@ export default function AboutGreeting() {
     <div
       id='about_greeting'
       className={`
+        prevent_select
         ${showInstructions ? 'show_about_greeting' : 'hide_about_greeting'}
         ${!isMobile ? 'is_desktop_about_greeting' : 'is_mobile_about_greeting'}
       `}

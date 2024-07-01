@@ -1,8 +1,12 @@
 import React, { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import * as THREE from 'three'
-import { Canvas } from '@react-three/fiber'
-import { DeviceOrientationControls, PerspectiveCamera } from '@react-three/drei'
+import { Canvas, useThree } from '@react-three/fiber'
+import {
+  DeviceOrientationControls,
+  PerspectiveCamera,
+  PointerLockControls,
+} from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 /* import { Debug, Physics } from '@react-three/cannon' */
 import { isMobile } from 'react-device-detect'
@@ -13,14 +17,15 @@ import { setShowInstructions } from '@/redux/slice/aboutSlice'
 import RapierPlayer from '../../controls/players/RapierPlayer'
 /* import { CannonPlayer } from '../../controls/players/CannonPlayer' */
 import LaboratoireScene from './laboratoire/LaboratoireScene'
+import MinecraftScene from './minecraft/MinecraftScene'
 import PhysicsGround from './PhysicsGround'
 /* import RealTimeSky from './RealTimeSky' */
 /* import ToneMapping from './ToneMapping' */
 
 import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
-import MinecraftScene from './minecraft/MinecraftScene'
 
 export default function AboutCanvas() {
+  const { camera, gl } = useThree()
   const dispatch = useDispatch<AppDispatch>()
   const { showInstructions } = useSelector((state: RootState) => state.about)
 
@@ -52,22 +57,29 @@ export default function AboutCanvas() {
     >
       <PerspectiveCamera
         makeDefault
-        rotation={
-          new THREE.Euler(
-            THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X),
-            THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
-            THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
-            'YXZ',
-          )
-        }
         fov={aboutConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Suspense fallback={null}>
         <Physics debug>
           {/* <Physics> */}
-          {isMobile && <DeviceOrientationControls />}
+          {!isMobile ? (
+            <PointerLockControls
+              selector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR}
+              args={[camera, gl.domElement]}
+            />
+          ) : (
+            <DeviceOrientationControls />
+          )}
           {/* <CannonPlayer pointerLockControlsSelector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR} /> */}
           <RapierPlayer
+            cameraRotation={
+              new THREE.Euler(
+                THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.X),
+                THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
+                THREE.MathUtils.degToRad(aboutConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
+                'YXZ',
+              )
+            }
             rigidBodyPosition={
               new THREE.Vector3(
                 aboutConstants.PERSPECTIVE_CAMERA.POSITION.X,
