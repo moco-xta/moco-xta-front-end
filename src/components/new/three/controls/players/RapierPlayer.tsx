@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useRef } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 /* import { useDispatch } from 'react-redux' */
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { PointerLockControls } from '@react-three/drei'
+import { PerspectiveCamera, PointerLockControls } from '@react-three/drei'
 import * as RAPIER from '@dimforge/rapier3d-compat'
 import { CapsuleCollider, RapierRigidBody, RigidBody, useRapier } from '@react-three/rapier'
 import { isMobile } from 'react-device-detect'
@@ -24,6 +24,7 @@ const sideVector = new THREE.Vector3()
 
 export default function RapierPlayer({
   cameraRotation,
+  fov,
   rigidBodyPosition,
   capsuleColliderArgs,
   speed,
@@ -141,6 +142,10 @@ export default function RapierPlayer({
 
   return (
     <>
+      <PerspectiveCamera
+        makeDefault
+        fov={fov}
+      />
       <RigidBody
         ref={playerRef}
         colliders={false}

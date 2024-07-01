@@ -12,16 +12,8 @@ import './index.scss'
 export default function AboutGreeting() {
   const { showInstructions } = useSelector((state: RootState) => state.about)
 
-  const aboutGreetingRef = useRef<HTMLDivElement>(null!)
-
-  /* useEffect(() => {
-    if (aboutGreetingRef.current) aboutGreetingRef.current.style.display =  Number(aboutGreetingRef.current.style.opacity) === 0 ? 'none' : 'flex'
-    console.log('aboutGreetingRef.current', aboutGreetingRef)
-  }, [aboutGreetingRef.current]) */
-
   return (
     <div
-      ref={aboutGreetingRef}
       id='about_greeting'
       className={`
         prevent_select
