@@ -32,11 +32,15 @@ export default function AboutTarget() {
   }, [handleDevicemotion])
 
   return (
+    <span id='about_target'>+</span>
+  )
+
+  /* return (
     <div id='about_target_test_block'>
       <span id='about_target'>+</span>
       <p>x: {acceleration.x}</p>
       <p>y: {acceleration.y}</p>
       <p>z: {acceleration.z}</p>
     </div>
-  )
+  ) */
 }
