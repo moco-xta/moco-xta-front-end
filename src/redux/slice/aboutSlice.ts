@@ -12,7 +12,7 @@ const initialState: AboutInterface = {
     longitude: 0,
   },
   debug: {
-    lights: true,
+    lights: false,
   },
 }
 

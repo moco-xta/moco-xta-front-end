@@ -2,7 +2,7 @@ import React, { Ref, createRef, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
-import { useControls } from 'leva'
+import { Leva, useControls } from 'leva'
 import { isMobile } from 'react-device-detect'
 
 import { RootState } from '@/redux/store'
@@ -112,6 +112,7 @@ export default function Lights() {
 
   return (
     <>
+      <Leva hidden />
       <ambientLight {...ambientLigthsConfig} />
       {laboratoireFinalRenderConstants.LIGHTS.CEILING_SPOT_LIGHTS.ORIENTATION.map(
         (orientation, index) => (

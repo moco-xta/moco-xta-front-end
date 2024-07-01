@@ -4,12 +4,7 @@ import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { PointerLockControls } from '@react-three/drei'
 import * as RAPIER from '@dimforge/rapier3d-compat'
-import {
-  CapsuleCollider,
-  RapierRigidBody,
-  RigidBody,
-  useRapier,
-} from '@react-three/rapier'
+import { CapsuleCollider, RapierRigidBody, RigidBody, useRapier } from '@react-three/rapier'
 import { isMobile } from 'react-device-detect'
 
 import { RapierPlayerInterface } from '@/interfaces/new/threeInterfaces'
