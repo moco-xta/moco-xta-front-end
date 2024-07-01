@@ -27,7 +27,7 @@
     }
   },
   "POINTER_LOCK_CONTROLS": {
-    "SELECTOR": "#about_enter_button"
+    "SELECTOR": "about_enter_button"
   },
   "PLAYER": {
     "SPEED": 8,

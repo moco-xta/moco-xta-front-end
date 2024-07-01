@@ -6,6 +6,8 @@ import { useTranslations } from 'next-intl'
 import { AppDispatch } from '@/redux/store'
 import { setShowInstructions } from '@/redux/slice/aboutSlice'
 
+import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
+
 import './index.scss'
 
 export default function AboutEnterButton() {
@@ -19,7 +21,7 @@ export default function AboutEnterButton() {
 
   return (
     <button
-      id='about_enter_button'
+      id={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR}
       onClick={handleOnClick}
     >
       {t('ENTER')}
