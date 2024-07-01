@@ -19,6 +19,7 @@ const sideVector = new THREE.Vector3()
 /* const rotation = new THREE.Vector3() */
 
 export default function RapierPlayer({
+  cameraRotation,
   rigidBodyPosition,
   capsuleColliderArgs,
   speed,
@@ -35,6 +36,10 @@ export default function RapierPlayer({
   /* const objectInHandRef = useRef<THREE.Group>(null!) */
 
   /* const dispatch = useDispatch<AppDispatch>() */
+
+  useEffect(() => {
+    camera.rotation.set(cameraRotation.x, cameraRotation.y, cameraRotation.z, 'YXZ')
+  }, [camera.rotation, cameraRotation.x, cameraRotation.y, cameraRotation.z])
 
   const findDistance = (acceleration: number, speed: number) => {
     return 0.5 * acceleration * speed ** 2

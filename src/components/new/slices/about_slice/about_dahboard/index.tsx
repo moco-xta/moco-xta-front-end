@@ -14,7 +14,7 @@ export default function AboutDashboard() {
   return (
     <div
       id='about_dashboard'
-      className={`${showInstructions ? 'hide_about_dashboard' : 'show_about_dashboard'}`}
+      className={`prevent_select ${showInstructions ? 'hide_about_dashboard' : 'show_about_dashboard'}`}
     >
       <AboutTarget />
       <PressEscToLeave />

@@ -137,6 +137,14 @@ a {
   }
 }
 
+// PREVENT HTML SELECTION
+
+.prevent_select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 // RESPONSIVE
 
 @media screen and (max-width: $breakpoint_XXXS) {
