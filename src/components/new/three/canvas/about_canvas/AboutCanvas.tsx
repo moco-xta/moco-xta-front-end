@@ -5,17 +5,14 @@ import { Canvas } from '@react-three/fiber'
 import {
   DeviceOrientationControls,
   PerspectiveCamera,
-  PointerLockControls,
 } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
-/* import { Debug, Physics } from '@react-three/cannon' */
 import { isMobile } from 'react-device-detect'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setShowInstructions } from '@/redux/slice/aboutSlice'
 
 import RapierPlayer from '../../controls/players/RapierPlayer'
-/* import { CannonPlayer } from '../../controls/players/CannonPlayer' */
 import PointerLockControlsComponent from '../../controls/PointerLockControls'
 import LaboratoireScene from './laboratoire/LaboratoireScene'
 import MinecraftScene from './minecraft/MinecraftScene'
@@ -61,13 +58,11 @@ export default function AboutCanvas() {
       />
       <Suspense fallback={null}>
         <Physics debug>
-          {/* <Physics> */}
           {!isMobile ? (
             <PointerLockControlsComponent pointerLockControlsSelector={`#${aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR}`} />
           ) : (
             <DeviceOrientationControls />
           )}
-          {/* <CannonPlayer pointerLockControlsSelector={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR} /> */}
           <RapierPlayer
             cameraRotation={
               new THREE.Euler(
