@@ -20,8 +20,11 @@ export default function AboutSlice() {
     <>
       {!isMobile || (isMobile && accessToDeviceMotionAndOrientationGranted) ? (
         <>
-          <AboutGreeting />
-          {!showInstructions && <AboutDashboard />}
+          {showInstructions ? (
+            <AboutGreeting />
+          ) : (
+            <AboutDashboard />
+          )}
           <AboutCanvas />
         </>
       ) : (
