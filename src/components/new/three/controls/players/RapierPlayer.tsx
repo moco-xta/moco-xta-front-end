@@ -1,28 +1,22 @@
 import React, { useCallback, useEffect, useRef } from 'react'
-import { useDispatch } from 'react-redux'
+/* import { useDispatch } from 'react-redux' */
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { Box, PointerLockControls } from '@react-three/drei'
+import { PointerLockControls } from '@react-three/drei'
 import * as RAPIER from '@dimforge/rapier3d-compat'
-import {
-  CapsuleCollider,
-  CuboidCollider,
-  RapierRigidBody,
-  RigidBody,
-  useRapier,
-} from '@react-three/rapier'
+import { CapsuleCollider, RapierRigidBody, RigidBody, useRapier } from '@react-three/rapier'
+import { isMobile } from 'react-device-detect'
 
 import { RapierPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
-import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
-
 import { AppDispatch } from '@/redux/store'
-import { isMobile } from 'react-device-detect'
+
+import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
 
 const direction = new THREE.Vector3()
 const frontVector = new THREE.Vector3()
 const sideVector = new THREE.Vector3()
-const rotation = new THREE.Vector3()
+/* const rotation = new THREE.Vector3() */
 
 export default function RapierPlayer({
   rigidBodyPosition,
@@ -126,19 +120,6 @@ export default function RapierPlayer({
 
   return (
     <>
-      {/* <RigidBody
-        ref={playerRef}
-        colliders={false}
-        mass={1}
-        type='dynamic'
-        lockRotations
-        position={rigidBodyPosition}
-      >
-        <CuboidCollider
-          args={cuboidColliderArgs}
-          position={[0, 0, 0]}
-        />
-      </RigidBody> */}
       <RigidBody
         ref={playerRef}
         colliders={false}

@@ -2,8 +2,7 @@ import { useCallback, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { PointerLockControls } from '@react-three/drei'
-import { useCylinder, useSphere } from '@react-three/cannon'
-import { isMobile } from 'react-device-detect'
+import { useCylinder } from '@react-three/cannon'
 
 import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
@@ -45,7 +44,7 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
     camera.position.copy(
       new THREE.Vector3(
         playerPosition.current[0],
-        playerPosition.current[1] /*  + aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y */,
+        playerPosition.current[1],
         playerPosition.current[2],
       ),
     )
@@ -72,56 +71,6 @@ export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterf
       )
     }
   })
-
-  const findDistance = (acceleration: number, speed: number) => {
-    return 0.5 * acceleration * speed ** 2
-  }
-
-  /* const handleDevicemotion = useCallback((e: any) => {
-    const normalizedDistance = new THREE.Vector3()
-    const currentPosition = new THREE.Vector3()
-    const accX = findDistance(e.acceleration.x, 0.9) // m/s^2 convert to distance <=> 0.5 * acceleration * speed ** 2
-    const accY = findDistance(e.acceleration.y, 0.9)
-    const accZ = findDistance(e.acceleration.z, 0.9)
-
-    normalizedDistance.copy(new THREE.Vector3(accX, accY, accZ))
-    const angleRad = THREE.MathUtils.degToRad(0)
-
-    currentPosition.copy(normalizedDistance.applyAxisAngle(new THREE.Vector3(0, 1, 0), angleRad))
-
-    camera.position.copy(currentPosition)
-  }, [camera.position])
-
-  const handleDevicemotion = useCallback((e: any) => {
-    camera.position.copy(
-      new THREE.Vector3(
-        playerPosition.current[0],
-        playerPosition.current[1] + aboutConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        playerPosition.current[2],
-      ),
-    )
-
-    const direction = new THREE.Vector3()
-
-    const frontVector = new THREE.Vector3(0, 0, (e.accelerationIncludingGravity.x > 0 ? 1 : 0) - (e.accelerationIncludingGravity.x < 0 ? 1 : 0))
-
-    const sideVector = new THREE.Vector3((e.accelerationIncludingGravity.z < 0 ? 1 : 0) - (e.accelerationIncludingGravity.z > 0 ? 1 : 0), 0, 0)
-
-    direction
-      .subVectors(frontVector, sideVector)
-      .normalize()
-      .multiplyScalar(aboutConstants.PLAYER.SPEED)
-      .applyEuler(camera.rotation)
-
-    api.velocity.set(direction.x, playerVelocity.current[1], direction.z)
-  }, [api.velocity, camera.position, camera.rotation]) */
-
-  /* useEffect(() => {
-    window.addEventListener('devicemotion', handleDevicemotion)
-    return () => {
-      window.removeEventListener('devicemotion', handleDevicemotion)
-    }
-  }, [handleDevicemotion]) */
 
   return (
     <>

@@ -34,7 +34,7 @@ export default function ReviewCard({ review, cardStyle }: ReviewCardInterface) {
         <p>
           {review.hasOwnProperty('firstName')
             ? /* @ts-ignore */
-            review.firstName
+              review.firstName
             : 'firstName test'}
         </p>
         <p>{review.role}</p>

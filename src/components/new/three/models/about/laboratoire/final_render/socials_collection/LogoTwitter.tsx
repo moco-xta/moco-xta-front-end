@@ -5,7 +5,7 @@ import { GLTF } from 'three-stdlib'
 
 import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
 import { ThreeEvent, useThree } from '@react-three/fiber'
-import { EffectComposer, Outline } from '@react-three/postprocessing'
+/* import { EffectComposer, Outline } from '@react-three/postprocessing' */
 import { getLogoTwitterMaterial } from '@/components/new/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 type GLTFResult = GLTF & {
@@ -29,6 +29,10 @@ export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
   const { gl } = useThree()
 
   const [isHovered, setIsHovered] = useState<boolean>(false)
+
+  const handleOnClick = (e: ThreeEvent<MouseEvent>) => {
+    if (meshRef.current) meshRef.current.position.y += 2
+  }
 
   const handleOnPointerMove = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation()
@@ -68,6 +72,7 @@ export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
         position={position}
         receiveShadow
         castShadow
+        onClick={handleOnClick}
         onPointerMove={handleOnPointerMove}
         onPointerOut={handleOnPointerOut}
         /* onPointerOver={() => setSelected(!selected)} */
