@@ -19,7 +19,15 @@
   "materials": [
     {
       "doubleSided": true,
-      "name": "logo_nextjs_#ffffff",
+      "name": "logo_nextjs_simple_#000000",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0, 0, 0, 1],
+        "metallicFactor": 0
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "logo_nextjs_simple_#ffffff",
       "pbrMetallicRoughness": {
         "metallicFactor": 0
       }
@@ -37,6 +45,15 @@
           },
           "indices": 3,
           "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
         }
       ]
     }
@@ -46,8 +63,8 @@
       "bufferView": 0,
       "componentType": 5126,
       "count": 256,
-      "max": [4.200000762939453, 0.9999995827674866, 0.19999481737613678],
-      "min": [-4.199999809265137, -1.000001072883606, -0.19999603927135468],
+      "max": [0.9999999403953552, 0.9999999403953552, 0.10000023990869522],
+      "min": [-0.9999999403953552, -1, -0.20000025629997253],
       "type": "VEC3"
     },
     {
@@ -65,7 +82,33 @@
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 456,
+      "count": 756,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 337,
+      "max": [0.5412793159484863, 0.3986559510231018, 0.20000004768371582],
+      "min": [-0.37600773572921753, -0.8796659708023071, 0.09999998658895493],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 337,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 337,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 969,
       "type": "SCALAR"
     }
   ],
@@ -90,14 +133,38 @@
     },
     {
       "buffer": 0,
-      "byteLength": 912,
+      "byteLength": 1512,
       "byteOffset": 8192,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4044,
+      "byteOffset": 9704,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4044,
+      "byteOffset": 13748,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2696,
+      "byteOffset": 17792,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1938,
+      "byteOffset": 20488,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 9104,
+      "byteLength": 22428,
       "uri": "LogoNextjs.bin"
     }
   ]

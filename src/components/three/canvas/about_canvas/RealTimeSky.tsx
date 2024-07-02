@@ -35,7 +35,7 @@ export default function RealTimeSky() {
     } else {
       /* console.log('Geolocation is not supported by this browser.') */
     }
-  }, [dispatch])
+  }, [dispatch, location.latitude, location.longitude])
 
   useEffect(() => {
     /* console.log('GET TIME') */

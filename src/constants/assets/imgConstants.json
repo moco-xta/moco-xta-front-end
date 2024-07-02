@@ -1,22 +1,22 @@
 {
   "HERO": {
     "MAIN_SKILLS": {
-      "LOGO_NEXTJS": "/new/img/png/main_skills/logo_nextjs.png",
-      "LOGO_ANGULAR": "/new/img/png/main_skills/logo_angular.png",
-      "LOGO_SPRING": "/new/img/png/main_skills/logo_spring.png"
+      "LOGO_NEXTJS": "/img/png/main_skills/logo_nextjs.png",
+      "LOGO_ANGULAR": "/img/png/main_skills/logo_angular.png",
+      "LOGO_SPRING": "/img/png/main_skills/logo_spring.png"
     }
   },
   "SNAKE_GAME": {
     "TEXTURES": {
-      "SNAKE_CELL": "/new/img/png/snake_game/snake_cell_texture.png"
+      "SNAKE_CELL": "/img/png/snake_game/snake_cell_texture.png"
     }
   },
   "HDRS": {
-    "LABORATOIRE_ENVIRONMENT": "/new/img/hdr/laboratoire.hdr",
-    "HERO_ENVIRONMENT": "/new/img/hdr/peppermint_powerplant_2_1k.hdr"
+    "LABORATOIRE_ENVIRONMENT": "/img/hdr/laboratoire.hdr",
+    "HERO_ENVIRONMENT": "/img/hdr/peppermint_powerplant_2_1k.hdr"
   },
   "QR_CODES": {
-    "TO_ABOUT": "/new/img/png/qr_codes/qr_code_to_about.png",
-    "TO_HOME": "/new/img/png/qr_codes/qr_code_to_home.png"
+    "TO_ABOUT": "/img/png/qr_codes/qr_code_to_about.png",
+    "TO_HOME": "/img/png/qr_codes/qr_code_to_home.png"
   }
 }

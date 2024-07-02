@@ -69,7 +69,7 @@ export default function RapierPlayer({
         )
       })
     }
-  }, [])
+  }, [dispatch])
 
   useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)

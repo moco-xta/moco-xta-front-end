@@ -6,7 +6,7 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
   {
     name: 'moco',
     logo: {
-      src: '/img/png/projects/logo_moco_xta.png',
+      src: '/img/png/projects/scholl_or_companies/logo_moco_xta.png',
       width: 200,
       height: 128,
     },
@@ -20,7 +20,7 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
   {
     name: 'ponthus',
     logo: {
-      src: '/img/png/projects/logo_ponthus.png',
+      src: '/img/png/projects/scholl_or_companies/logo_ponthus.png',
       width: 200,
       height: 145,
     },
@@ -34,7 +34,7 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
   {
     name: 'the_brink',
     logo: {
-      src: '/img/png/projects/logo_the_brink.png',
+      src: '/img/png/projects/scholl_or_companies/logo_the_brink.png',
       width: 400,
       height: 39,
     },
@@ -48,7 +48,7 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
   {
     name: 'the_brink',
     logo: {
-      src: '/img/png/projects/logo_the_brink.png',
+      src: '/img/png/projects/scholl_or_companies/logo_the_brink.png',
       width: 400,
       height: 39,
     },
@@ -62,7 +62,7 @@ export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
   {
     name: 'openclassrooms',
     logo: {
-      src: '/img/png/projects/logo_openclassrooms.png',
+      src: '/img/png/projects/scholl_or_companies/logo_openclassrooms.png',
       width: 400,
       height: 30,
     },

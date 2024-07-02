@@ -4,7 +4,7 @@ footer {
   position: relative;
   width: 100vw;
   height: 70vh;
-  background-image: url('/new/img/png/footer/logo_moco.png');
+  background-image: url('/img/png/footer/logo_moco.png');
   background-size: contain;
   background-position: center;
   background-position-y: bottom;
@@ -13,7 +13,7 @@ footer {
   #footer_socials {
     position: absolute;
     width: 100%;
-    bottom: $top_bottom_margin_large;
+    bottom: $px_margin_L;
     display: flex;
     flex-direction: row;
     justify-content: center;
