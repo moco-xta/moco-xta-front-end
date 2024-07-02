@@ -9,7 +9,7 @@ import ProjectCards from './project_cards'
 import CompanyOrSchoolCards from './company_or_school_cards'
 import CurrentDate from './current_date'
 
-import { isValidDate } from '@/helpers/new/dateHelpers'
+import { isValidDate } from '@/helpers/dateHelpers'
 
 import './index.scss'
 

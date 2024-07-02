@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import CubeGroup from './CubeGroup'
 import RotationGroupAndButtons from './RotationGroupAndButtons'
 
-import { setCubeGroupCoordinates, setPadColor } from '@/helpers/r3fHelpers'
+import { setCubeGroupCoordinates, setPadColor } from '@/helpers/rubiks_cube/rubiksCubeHelpers'
 
 import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 

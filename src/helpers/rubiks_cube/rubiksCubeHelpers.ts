@@ -3,30 +3,6 @@ import { ThreeEvent } from '@react-three/fiber'
 import * as THREE from 'three'
 import gsap from 'gsap'
 
-export function radiansToDegrees(radians: number) {
-  return radians * (180 / Math.PI)
-}
-
-export function degreesToRadians(degrees: number) {
-  return (degrees * Math.PI) / 180
-}
-
-export function getUvMousePositionOnMesh(event: ThreeEvent<PointerEvent>, name: string) {
-  const pointCoordinates = event.point
-  const max = {
-    // @ts-ignore
-    // prettier-ignore
-    x: event.intersections.find((object) => (object.object.name = name)).object.geometry.boundingBox.max.x,
-    // @ts-ignore
-    // prettier-ignore
-    y: event.intersections.find((object) => (object.object.name = name)).object.geometry.boundingBox.max.y,
-  }
-  return {
-    x: (100 * pointCoordinates.x) / max.x,
-    y: (100 * pointCoordinates.y) / max.y,
-  }
-}
-
 export function setCubeGroupCoordinates(x: number, y: number, z: number) {
   function setCoordinate(value: number) {
     return value * 2 - 2

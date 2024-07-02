@@ -11,7 +11,7 @@ import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConst
 
 import variables from '@/styles/new/variables.module.scss'
 import { Fruit } from '../../models/snake_game/Fruit'
-/* import { setSnakeCellRotation } from '@/helpers/new/snakeGameHelpers' */
+/* import { setSnakeCellRotation } from '@/helpers/snakeGameHelpers' */
 
 export default function Cell({ cell }: CellComponentInterface) {
   return (

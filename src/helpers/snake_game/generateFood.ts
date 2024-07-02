@@ -1,6 +1,6 @@
 import { FoodInterface, SnakeCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import { getRandomPosition, testFoodPosition } from '@/helpers/new/snake_game'
+import { getRandomPosition, testFoodPosition } from '@/helpers/snake_game'
 
 import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 

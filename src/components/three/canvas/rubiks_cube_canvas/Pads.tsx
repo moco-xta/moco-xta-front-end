@@ -6,7 +6,7 @@ import { padsData } from '@/data/rubiks_cube/padsData'
 
 import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
-import { setPadRotation, setRoundedCubeType } from '@/helpers/r3fHelpers'
+import { setPadRotation, setRoundedCubeType } from '@/helpers/rubiks_cube/rubiksCubeHelpers'
 
 export default function Pads({ colorPadIndex, coordinates }: PadsInterface) {
   return (

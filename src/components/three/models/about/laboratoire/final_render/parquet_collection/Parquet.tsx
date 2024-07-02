@@ -5,7 +5,7 @@ import useGltfLoader from '@/hooks/new/useGltfLoader'
 
 import laboratoireFinalRenderTextures from '@/components/three/materials/about/laboratoire/final_render/laboratoireFInalRenderTextures'
 
-import { generateRandomHexGrey } from '@/helpers/new/threeHelpers'
+import { generateRandomHexGrey } from '@/helpers/threeHelpers'
 
 import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'

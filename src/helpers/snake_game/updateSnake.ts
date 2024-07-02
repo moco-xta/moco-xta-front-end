@@ -5,7 +5,7 @@ import {
   UpdateSnakeInterface,
 } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import { setSnakeCellType, setSnakeCellCornerType, updateSnakeHead } from '@/helpers/new/snake_game'
+import { setSnakeCellType, setSnakeCellCornerType, updateSnakeHead } from '@/helpers/snake_game'
 
 export function updateSnake(
   snake: SnakeCellInterface[],

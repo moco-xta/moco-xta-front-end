@@ -4,7 +4,7 @@ import {
   UpdateSnakeHeadInterface,
 } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import { isEating, updateDirection } from '@/helpers/new/snake_game'
+import { isEating, updateDirection } from '@/helpers/snake_game'
 
 import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 

@@ -6,7 +6,7 @@ import { mainSkillsData } from '@/data/main_skills/mainSkillsData'
 
 import TextBlockSimple from '@/components/shared/text_blocks/text_block_simple'
 
-import { isEven } from '@/helpers/new/mathHelpers'
+import { isEven } from '@/helpers/mathHelpers'
 
 import './index.scss'
 

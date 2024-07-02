@@ -4,7 +4,7 @@ import {
   SnakeCellInterface,
 } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import { generateGrid, setGridCellStatus } from '@/helpers/new/snake_game'
+import { generateGrid, setGridCellStatus } from '@/helpers/snake_game'
 
 export function updateGrid(
   snake: SnakeCellInterface[],

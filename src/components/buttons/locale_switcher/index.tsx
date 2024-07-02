@@ -9,7 +9,7 @@ import useResize from '@/hooks/new/useResize'
 import { AppDispatch, RootState } from '@/redux/store'
 import { setLocaleSwitcherIsOpen } from '@/redux/slice/appStateSlice'
 
-import { getCookieByName } from '@/helpers/new/cookiesHelpers'
+import { getCookieByName } from '@/helpers/cookiesHelpers'
 
 import { default as localesConstants } from '@/constants/localesConstants.json'
 

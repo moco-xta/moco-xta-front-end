@@ -16,7 +16,7 @@ const inter = Inter({
 })
 
 const retorGaming = localFont({
-  src: '../../fonts/ttf/Retro Gaming.ttf',
+  src: '../../assets/fonts/ttf/Retro Gaming.ttf',
   variable: '--font-retro-gaming',
 })
 

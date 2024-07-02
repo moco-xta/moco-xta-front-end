@@ -12,7 +12,7 @@ import {
   setSnakeCellCornerRotation,
   setSnakeCellCornerScale,
   setSnakeCellRotation,
-} from '@/helpers/new/snake_game'
+} from '@/helpers/snake_game'
 
 export default function NewCell({ cell }: CellComponentInterface) {
   return (

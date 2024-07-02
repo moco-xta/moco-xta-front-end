@@ -4,7 +4,7 @@ import {
   SnakeGameInterface,
 } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import { generateFood, updateGrid, updateSnake } from '@/helpers/new/snake_game'
+import { generateFood, updateGrid, updateSnake } from '@/helpers/snake_game'
 
 export function nextStep(state: SnakeGameInterface): NextStepInterface {
   const { newSnake, newDirection, newNextMove, needFood, newScore } = updateSnake(

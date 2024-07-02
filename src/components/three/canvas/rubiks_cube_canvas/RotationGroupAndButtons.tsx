@@ -18,7 +18,7 @@ import {
   handleRightCW,
   handleTopCCW,
   handleTopCW,
-} from '@/helpers/r3fHelpers'
+} from '@/helpers/rubiks_cube/rubiksCubeHelpers'
 
 import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
