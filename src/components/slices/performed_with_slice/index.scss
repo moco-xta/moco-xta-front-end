@@ -1,35 +1,91 @@
-@import '@/styles/variables.module.scss';
+@import '@/styles/new/variables.module.scss';
 
 #performed_with_slice {
-  z-index: 1;
-  position: relative;
-  height: 70vh;
-  padding-top: 100px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-  #performed_with_text_block {
-    height: 100%;
-    padding-left: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  canvas {
+    height: 80vh !important;
+  }
+}
 
-    #performed_with_title {
-      width: 30vw;
-      margin-bottom: 50px;
-    }
+@media screen and (max-width: $breakpoint_XXS) {
+  #performed_with_slice {
+    padding-bottom: $px_margin_S;
+    gap: $px_margin_XS;
 
-    #performed_with_text {
-      width: 30vw;
-      text-align: justify;
+    canvas {
     }
   }
+}
 
-  #perform_with_canvas_container {
-    /* position: absolute; */
-    width: 80vw;
-    height: 100vh;
-    margin-top: -300px;
+@media screen and (min-width: $breakpoint_XXS) {
+  #performed_with_slice {
+    padding-bottom: $px_margin_M;
+    gap: $px_margin_S;
+
+    canvas {
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XS) {
+  #performed_with_slice {
+    padding-bottom: $px_margin_M;
+    gap: $px_margin_S;
+
+    canvas {
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_S) {
+  #performed_with_slice {
+    padding-bottom: $px_margin_M;
+    gap: $px_margin_S;
+
+    canvas {
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_M) {
+  #performed_with_slice {
+    flex-direction: row;
+    gap: 0;
+
+    canvas {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_L) {
+  #performed_with_slice {
+    canvas {
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XL) {
+  #performed_with_slice {
+    canvas {
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXL) {
+  #performed_with_slice {
+    canvas {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXL) {
+  #performed_with_slice {
+    canvas {
+    }
   }
 }

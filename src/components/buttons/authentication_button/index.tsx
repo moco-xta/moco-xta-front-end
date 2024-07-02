@@ -2,69 +2,51 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
-
-import { AuthenticationButtonInterface } from '@/interfaces/buttonsInterfaces'
+/* import Face5Icon from '@mui/icons-material/Face5' */
 
 import { AppDispatch, RootState } from '@/redux/store'
+import {
+  setAuthenticationIsOpen,
+  setMenuIsOpen,
+  setLocaleSwitcherIsOpen,
+} from '@/redux/slice/appStateSlice'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 import { useLogOutMutation } from '@/redux/api/authenticationApi'
 
 import { getAccessToken, removeTokens } from '@/helpers/localStorageHelpers'
 
-import './index.scss'
-
-export default function AuthenticationButton({
-  setAuthenticationIsOpen,
-  setMenuIsOpen,
-}: AuthenticationButtonInterface) {
-  const t = useTranslations('ROUTES')
-
+export default function AuthenticationButton() {
   const dispatch = useDispatch<AppDispatch>()
 
   const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
-  const [logOut] = useLogOutMutation()
-
   function handleAuthenticationIsOpen() {
-    setAuthenticationIsOpen(true)
-    setMenuIsOpen(false)
-  }
-
-  function handleLogOut() {
-    if (getAccessToken()) {
-      toast.promise(
-        logOut({
-          access_token: getAccessToken()!,
-        }).unwrap(),
-        {
-          loading: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.LOADING'),
-          success: () => {
-            dispatch(setIsAuthenticated(false))
-            return t('TOASTERS.AUTHENTIFICATION.LOG_OUT.SUCCESS')
-          },
-          error: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.ERROR'),
-        },
-      )
-    }
-    removeTokens()
+    dispatch(setAuthenticationIsOpen(true))
+    dispatch(setMenuIsOpen(false))
+    dispatch(setLocaleSwitcherIsOpen(false))
   }
 
   return (
-    <li>
+    <li
+      id='authentication_button'
+      className='lis'
+    >
+      {/* <Face5Icon id='authentication_icon' style={{  height: '14px' }} /> */}
       {!isAuthenticated ? (
-        <button
-          className='authentication_button small_border_radius'
+        <span
+          className='span_link_wrapper'
+          title={'Login'}
           onClick={handleAuthenticationIsOpen}
         >
-          Login
-        </button>
+          Log in
+        </span>
       ) : (
-        <button
-          className='authentication_button small_border_radius'
-          onClick={handleLogOut}
+        <span
+          className='span_link_wrapper'
+          title={'Logout'}
         >
           Log out
-        </button>
+        </span>
       )}
     </li>
   )

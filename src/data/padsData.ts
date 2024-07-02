@@ -1,7 +1,7 @@
 import { ComponentType, LazyExoticComponent, lazy } from 'react'
 import { MeshProps } from '@react-three/fiber'
 
-import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/new/canvas/rubiksCubeConstants.json'
 
 type LazyPadType = LazyExoticComponent<ComponentType<MeshProps>>
 
@@ -9,7 +9,7 @@ const loadComponent = (component: string): LazyPadType =>
   lazy(
     () =>
       new Promise((resolve, reject) => {
-        import(`../components/r3f/models/rubiks_cube/${component}`)
+        import(`../components/three/models/rubiks_cube/${component}`)
           .then((result) =>
             resolve(
               result.default

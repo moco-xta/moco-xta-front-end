@@ -7,7 +7,7 @@ import { Toaster } from 'sonner'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
-import Header from '@/components/new/shared/header'
+import Header from '@/components/shared/header'
 
 import '@/styles/new/globals.scss'
 

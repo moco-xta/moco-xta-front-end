@@ -4,12 +4,13 @@ import { Formik } from 'formik'
 import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
 
-import { SignUpSignInInterface } from '@/interfaces/componentsInterfaces'
-import { SignUpValuesInterface } from '@/interfaces/reduxApiInterfaces'
+import { SignUpSignInInterface } from '@/interfaces/new/componentsInterfaces'
+import { SignUpValuesInterface } from '@/interfaces/new/reduxApiInterfaces'
 
 import { AppDispatch } from '@/redux/store'
 import { useSignUpMutation } from '@/redux/api/authenticationApi'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
+import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
 
 import { signUpValidationSchema } from 'validations/signUpValidationSchema'
 
@@ -19,10 +20,7 @@ import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 
 import './index.scss'
 
-export default function SignUp({
-  setIsSignIn,
-  handleSetAuthenticationIsOpen,
-}: SignUpSignInInterface) {
+export default function SignUp({ setIsSignIn }: SignUpSignInInterface) {
   const t = useTranslations()
 
   const dispatch = useDispatch<AppDispatch>()
@@ -30,6 +28,7 @@ export default function SignUp({
   const [signUp] = useSignUpMutation()
 
   const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(false)
+  const [resetButtonIsDisabled, setResetButtonIsDisabled] = useState<boolean>(true)
 
   const initialValues: SignUpValuesInterface = {
     firstName: '',
@@ -39,9 +38,12 @@ export default function SignUp({
     confirmPassword: '',
   }
 
+  const handleSetAuthenticationIsOpen = () => {
+    dispatch(setAuthenticationIsOpen(false))
+  }
+
   return (
     <div id='sign_in_container'>
-      <h1>Sign up</h1>
       <Formik
         initialValues={initialValues}
         validationSchema={signUpValidationSchema}
@@ -73,10 +75,9 @@ export default function SignUp({
           })
         }}
       >
-        {/* TODO: fix it */}
-        {/* @ts-ignore */}
         <SignUpForm
           submitButtonIsDisabled={submitButtonIsDisabled}
+          resetButtonIsDisabled={resetButtonIsDisabled}
           setIsSignIn={setIsSignIn}
         />
       </Formik>

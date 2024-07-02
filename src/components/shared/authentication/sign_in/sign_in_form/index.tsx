@@ -2,16 +2,18 @@ import React, { SyntheticEvent } from 'react'
 import { useFormikContext } from 'formik'
 import { useTranslations } from 'next-intl'
 
-import { AuthenticationFormsInterface } from '@/interfaces/formsInterfaces'
-import { SignInPayloadInterface } from '@/interfaces/reduxApiInterfaces'
+import { AuthenticationFormsInterface } from '@/interfaces/new/formsInterfaces'
+import { SignInPayloadInterface } from '@/interfaces/new/reduxApiInterfaces'
 
-import { FormikTextField } from '@/components/form/inputs'
-import { ResetButton, SubmitButton } from '@/components/form/buttons'
+import { FormikTextField } from '@/components/inputs'
+import { ResetButton, SubmitButton } from '@/components/buttons'
 
+import variables from '@/styles/new/variables.module.scss'
 import './index.scss'
 
 export default function SignInForm({
   submitButtonIsDisabled,
+  resetButtonIsDisabled,
   setIsSignIn,
 }: AuthenticationFormsInterface) {
   const t = useTranslations()
@@ -35,6 +37,7 @@ export default function SignInForm({
 
   return (
     <div id='sign_in_form_container'>
+      <h2 className='form_title'>Sign in</h2>
       <form onSubmit={handleSubmit}>
         <FormikTextField
           label={t('AUTHENTICATION.SIGN_IN.EMAIL')}
@@ -58,9 +61,9 @@ export default function SignInForm({
         />
         <div className='submit_reset_buttons_container'>
           <SubmitButton submitButtonIsDisabled={submitButtonIsDisabled} />
-          {/* TODO: fix it */}
-          {/* @ts-ignore */}
           <ResetButton resetForm={handleResetForm} />
+        </div>
+        <div className='sign_in_sign_up_switch_button_container'>
           <button onClick={handleSwitchSignUp}>{t('AUTHENTICATION.SIGN_IN.SIGN_UP')}</button>
         </div>
       </form>

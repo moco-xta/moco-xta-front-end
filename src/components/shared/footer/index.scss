@@ -1,100 +1,101 @@
-@import '@/styles/variables.module.scss';
+@import '@/styles/new/variables.module.scss';
 
 footer {
-  z-index: 0;
   position: relative;
   width: 100vw;
   height: 70vh;
-  /* padding: 100px 100px 0 100px; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #f2a6cf;
-  /* background-image: url('/img/png/footer/moco_logo_perspective_normal_noise.png');
+  background-image: url('/new/img/png/footer/logo_moco.png');
   background-size: contain;
-  background-position: 15%;
-  background-repeat: no-repeat; */
+  background-position: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
 
-  #links_and_contact_container {
+  #footer_socials {
+    position: absolute;
     width: 100%;
+    bottom: $top_bottom_margin_large;
     display: flex;
     flex-direction: row;
-    color: $grey_05;
-
-    #links_container {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      color: $grey_07;
-
-      .footer_link {
-        cursor: pointer;
-      }
-
-      .footer_link:hover {
-        color: $white;
-      }
-    }
-
-    #contact_and_logo_container {
-      width: 50%;
-      height: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-
-      #footer_logo_container {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 50px;
-      }
-
-      .contact_container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 10px;
-
-        .contact_icon {
-          margin-left: 10px;
-        }
-      }
-
-      #footer_socials_container {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 10px;
-
-        .social_icon {
-          cursor: pointer;
-        }
-
-        .social_icon:hover {
-          color: $white;
-        }
-      }
-    }
+    justify-content: center;
+    gap: 15px;
+    font-size: 45px;
   }
 
-  /* #copyright_container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    color: $white;
-  } */
-
-  #copyright_container {
+  #copyright {
     position: absolute;
     width: 100%;
     bottom: 100px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    color: $white;
+    gap: 10px;
+    font-size: 15px;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: $large_limit) {
+  footer {
+    height: 80vh;
+
+    #footer_socials {
+      font-size: 50px;
+    }
+
+    #copyright {
+    }
+  }
+}
+
+@media screen and (min-width: $larger_limit) {
+  footer {
+    height: 80vh;
+
+    #footer_socials {
+    }
+
+    #copyright {
+    }
+  }
+}
+
+@media screen and (max-width: $desktop_limit) {
+  .review_card {
+    #footer_socials {
+      font-size: 45px;
+    }
+
+    #copyright {
+    }
+  }
+}
+
+@media screen and (max-width: $small_limit) {
+  footer {
+    height: 50vh;
+
+    #footer_socials {
+      bottom: $top_bottom_margin_medium;
+      font-size: 35px;
+    }
+
+    #copyright {
+      bottom: $top_bottom_margin_small;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: $smaller_limit) {
+  footer {
+    height: 40vh;
+
+    #footer_socials {
+      font-size: 30px;
+    }
+
+    #copyright {
+      font-size: 12px;
+    }
   }
 }
