@@ -9,3 +9,7 @@ export interface AboutInterface {
     lights: boolean
   }
 }
+
+export interface AboutDesktopCanvasInterface {
+  children: JSX.Element
+}
