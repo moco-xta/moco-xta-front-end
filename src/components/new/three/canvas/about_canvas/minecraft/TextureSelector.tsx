@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setTexture } from '@/redux/slice/minecraftSlice'
+
+import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
 
 import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
 

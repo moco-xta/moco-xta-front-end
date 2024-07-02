@@ -12,7 +12,7 @@ const actionByKey = (key: string): string => {
     ArrowLeft: 'moveLeft',
     KeyD: 'moveRight',
     ArrowRight: 'moveRight',
-    KeyF: 'jump',
+    Space: 'jump',
     Digit1: 'dirt',
     Numpad1: 'dirt',
     Digit2: 'grass',
@@ -41,9 +41,11 @@ export const useAboutKeyboard = () => {
     glass: false,
     wood: false,
     log: false,
+    escape: false,
   })
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    /* console.log('e.code', e.code) */
     const action = actionByKey(e.code)
     if (action) {
       setActions((prev) => {
@@ -56,6 +58,7 @@ export const useAboutKeyboard = () => {
   }, [])
 
   const handleKeyUp = useCallback((e: KeyboardEvent) => {
+    /* console.log('e.code', e.code) */
     const action = actionByKey(e.code)
     if (action) {
       setActions((prev) => {

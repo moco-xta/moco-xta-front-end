@@ -1,6 +1,5 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { isMobile } from 'react-device-detect'
 import { useTranslations } from 'next-intl'
 
 import { AppDispatch } from '@/redux/store'
@@ -16,7 +15,7 @@ export default function AboutEnterButton() {
   const dispatch = useDispatch<AppDispatch>()
 
   const handleOnClick = () => {
-    if (isMobile) dispatch(setShowInstructions(false))
+    dispatch(setShowInstructions(false))
   }
 
   return (

@@ -1,11 +1,14 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Box } from '@react-three/drei'
 import { isMobile } from 'react-device-detect'
 
 import { RootState } from '@/redux/store'
 
 import AboutDashboard from './about_dahboard'
 import AboutGreeting from './about_greeting'
+import AboutDesktopCanvas from '../../three/canvas/about_canvas/AboutDesktopCanvas'
+import AboutScene from '../../three/canvas/about_canvas/AboutScene'
 import AboutCanvas from '../../three/canvas/about_canvas/AboutCanvas'
 import DeviceMotionPermission from './device_motion_permission'
 
@@ -18,20 +21,33 @@ export default function AboutSlice() {
 
   return (
     <>
+      {!isMobile  ? (
+        <>
+          <AboutGreeting />
+          {!showInstructions && <AboutDashboard />}
+          <AboutDesktopCanvas>
+            <AboutScene />
+          </AboutDesktopCanvas>
+        </>
+      ) : (
+        <Box />
+      )}
+    </>
+  )
+
+  /* return (
+    <>
       {!isMobile || (isMobile && accessToDeviceMotionAndOrientationGranted) ? (
         <>
-          {showInstructions ? (
-            <AboutGreeting />
-          ) : (
-            <AboutDashboard />
-          )}
+          <AboutGreeting />
+          {!showInstructions && <AboutDashboard />}
           <AboutCanvas />
         </>
       ) : (
         <DeviceMotionPermission />
       )}
     </>
-  )
+  ) */
 }
 
 // ----------------------------------------------------------------
