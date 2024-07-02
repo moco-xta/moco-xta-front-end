@@ -2,7 +2,7 @@ import React from 'react'
 
 import { PadsInterface } from '@/interfaces/new/rubiksCubeInterfaces'
 
-import { padsData } from '@/data/padsData'
+import { padsData } from '@/data/rubiks_cube/padsData'
 
 import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 

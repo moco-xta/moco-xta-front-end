@@ -2,7 +2,7 @@ import React from 'react'
 
 import { CompagnyOrSchoolCardsInterface } from '@/interfaces/new/projectsInterfaces'
 
-import { companiesAndSchollData } from '@/data/projects/companiesAndSchoolData'
+import { companiesAndSchollData } from '@/data/projects/companiesAndSchollData'
 
 import CompanyOrSchoolCard from './company_or_school_card'
 

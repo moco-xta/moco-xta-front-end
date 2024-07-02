@@ -1,14 +1,6 @@
 import moment from 'moment'
-import { FaReact } from 'react-icons/fa'
-import { FaAngular } from 'react-icons/fa'
-import { SiDjango } from 'react-icons/si'
-import { SiSpring } from 'react-icons/si'
-import { TbBrandThreejs } from 'react-icons/tb'
-import { TbBrandNextjs } from 'react-icons/tb'
 
 import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
-
-import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 export const projectsData: ProjectDataInterface[] = [
   {

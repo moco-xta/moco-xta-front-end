@@ -9,7 +9,7 @@ const loadComponent = (component: string): LazyPadType =>
   lazy(
     () =>
       new Promise((resolve, reject) => {
-        import(`../components/three/models/rubiks_cube/${component}`)
+        import(`../../components/three/models/rubiks_cube/${component}`)
           .then((result) =>
             resolve(
               result.default

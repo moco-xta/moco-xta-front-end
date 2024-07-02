@@ -14,7 +14,7 @@ import { FormikRadioGroup, FormikRatingStars, FormikTextarea } from '@/component
 import { ResetButton, SubmitButton } from '@/components/buttons'
 import ReviewCard from '../../../review_card'
 
-import { reviewRolesData } from '@/data/reviewRolesData'
+import { reviewRolesData } from '@/data/reviews/reviewRolesData'
 
 import variables from '@/styles/new/variables.module.scss'
 import './index.scss'

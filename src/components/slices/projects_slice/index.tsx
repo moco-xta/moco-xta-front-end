@@ -3,7 +3,7 @@ import React from 'react'
 import useProjectsTimeline from '@/hooks/new/useProjectsTimeline'
 
 import { projectsData } from '@/data/projects/projectsData'
-import { companiesAndSchollData } from '@/data/projects/companiesAndSchoolData'
+import { companiesAndSchollData } from '@/data/projects/companiesAndSchollData'
 
 import ProjectCards from './project_cards'
 import CompanyOrSchoolCards from './company_or_school_cards'

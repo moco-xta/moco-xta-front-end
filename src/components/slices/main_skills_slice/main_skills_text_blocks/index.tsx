@@ -2,7 +2,7 @@ import React from 'react'
 
 import useResize from '@/hooks/new/useResize'
 
-import { mainSkillsData } from '@/data/new/mainSkillsData'
+import { mainSkillsData } from '@/data/main_skills/mainSkillsData'
 
 import TextBlockSimple from '@/components/shared/text_blocks/text_block_simple'
 
