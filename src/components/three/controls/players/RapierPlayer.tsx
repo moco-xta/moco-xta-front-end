@@ -52,24 +52,27 @@ export default function RapierPlayer({
     return 0.5 * acceleration * speed ** 2
   }
 
-  const handleDevicemotion = useCallback((e: any) => {
-    // m/s^2 convert to distance <=> 0.5 * acceleration * speed ** 2
-    velocity.current = new THREE.Vector3(
-      findDistance(-e.accelerationIncludingGravity.x, 5),
-      findDistance(e.accelerationIncludingGravity.y, 5),
-      findDistance(e.accelerationIncludingGravity.z, 5),
-    )
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        dispatch(
-          setLocation({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          }),
-        )
-      })
-    }
-  }, [dispatch])
+  const handleDevicemotion = useCallback(
+    (e: any) => {
+      // m/s^2 convert to distance <=> 0.5 * acceleration * speed ** 2
+      velocity.current = new THREE.Vector3(
+        findDistance(-e.accelerationIncludingGravity.x, 5),
+        findDistance(e.accelerationIncludingGravity.y, 5),
+        findDistance(e.accelerationIncludingGravity.z, 5),
+      )
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          dispatch(
+            setLocation({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+            }),
+          )
+        })
+      }
+    },
+    [dispatch],
+  )
 
   useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)
