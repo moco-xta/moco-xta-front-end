@@ -7,7 +7,7 @@ import { Html } from '@react-three/drei'
 import CustomShaderMaterial from 'three-custom-shader-material'
 import html2canvas from 'html2canvas'
 
-import useMouseMove from '@/hooks/new/useMouseMove'
+import useMouseMove from '@/hooks/useMouseMove'
 
 import { Lights } from './Lights'
 

@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 
 import { RootState } from '@/redux/store'
 
-import useResize from '@/hooks/new/useResize'
+import useResize from '@/hooks/useResize'
 
 import AddReviewButton from '@/components/buttons/add_review_button'
 import ReviewsTextBlockContainer from './reviews_text_block_container'

@@ -13,9 +13,9 @@ import { RapierPlayerInterface } from '@/interfaces/new/threeInterfaces'
 import { AppDispatch } from '@/redux/store'
 import { setLocation } from '@/redux/slice/aboutSlice'
 
-import useLocation from '@/hooks/new/useLocation'
+import useLocation from '@/hooks/useLocation'
 
-import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
+import { useAboutKeyboard } from '@/hooks/useAboutKeyboard'
 
 const direction = new THREE.Vector3()
 const frontVector = new THREE.Vector3()

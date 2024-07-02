@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import * as THREE from 'three'
 
-import useGltfLoader from '@/hooks/new/useGltfLoader'
+import useGltfLoader from '@/hooks/useGltfLoader'
 
 import laboratoireFinalRenderTextures from '@/components/three/materials/about/laboratoire/final_render/laboratoireFInalRenderTextures'
 

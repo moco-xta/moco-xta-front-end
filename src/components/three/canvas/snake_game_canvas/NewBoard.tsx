@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import useSnakeGameKeyboard from '@/hooks/new/useSnakeGameKeyboard'
+import useSnakeGameKeyboard from '@/hooks/useSnakeGameKeyboard'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setNextStep } from '@/redux/slice/snakeGameSlice'

@@ -5,7 +5,7 @@ import { useCylinder } from '@react-three/cannon'
 
 import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
 
-import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
+import { useAboutKeyboard } from '@/hooks/useAboutKeyboard'
 
 import { default as aboutConstants } from '@/constants/canvas/about/aboutConstants.json'
 

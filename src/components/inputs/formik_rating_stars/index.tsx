@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 
 import { FormikRatingStarsInterface } from '@/interfaces/new/inputsInterfaces'
 
-import useStoreInputValueInLocalStorage from '@/hooks/new/useStoreInputValueInLocalStorage'
+import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
 import Error from '../../errors'
 

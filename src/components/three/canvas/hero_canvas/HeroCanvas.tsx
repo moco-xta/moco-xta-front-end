@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
-import useResize from '@/hooks/new/useResize'
+import useResize from '@/hooks/useResize'
 
 import HeroScene from './HeroScene'
 import ToneMapping from './ToneMapping'

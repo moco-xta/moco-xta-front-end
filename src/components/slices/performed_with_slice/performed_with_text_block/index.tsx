@@ -1,6 +1,6 @@
 import React from 'react'
 
-import useResize from '@/hooks/new/useResize'
+import useResize from '@/hooks/useResize'
 
 import TextBlockSimple from '@/components/shared/text_blocks/text_block_simple'
 

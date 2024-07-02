@@ -5,7 +5,7 @@ import MainSkillsCanvas from '../../three/canvas/main_skills_canvas/MainSkillsCa
 import MainSkillsTextBlocks from './main_skills_text_blocks'
 import RealTime3D from './real_time_3D'
 
-import useResize from '@/hooks/new/useResize'
+import useResize from '@/hooks/useResize'
 
 import './index.scss'
 

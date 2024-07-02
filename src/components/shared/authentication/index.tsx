@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import useResize from '@/hooks/new/useResize'
+import useResize from '@/hooks/useResize'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'

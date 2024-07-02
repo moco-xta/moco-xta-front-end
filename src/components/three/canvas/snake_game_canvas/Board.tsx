@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '@/redux/store'
 import { setNextStep /* setSnakeGame */ } from '@/redux/slice/snakeGameSlice'
 
-import useSnakeGame from '@/hooks/new/useSnakeGameKeyboard'
+import useSnakeGame from '@/hooks/useSnakeGameKeyboard'
 
 import Cell from './Cell'
 

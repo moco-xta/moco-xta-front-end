@@ -8,7 +8,7 @@ import { PointerLockControlsComponentInterface } from '@/interfaces/new/threeInt
 import { AppDispatch, RootState } from '@/redux/store'
 import { setShowInstructions } from '@/redux/slice/aboutSlice'
 
-import { useAboutKeyboard } from '@/hooks/new/useAboutKeyboard'
+import { useAboutKeyboard } from '@/hooks/useAboutKeyboard'
 
 import { PointerLockControls } from '@react-three/drei'
 

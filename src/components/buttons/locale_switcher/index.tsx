@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useLocale, useTranslations } from 'next-intl'
 import { FaArrowRight } from 'react-icons/fa6'
 
-import useResize from '@/hooks/new/useResize'
+import useResize from '@/hooks/useResize'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setLocaleSwitcherIsOpen } from '@/redux/slice/appStateSlice'

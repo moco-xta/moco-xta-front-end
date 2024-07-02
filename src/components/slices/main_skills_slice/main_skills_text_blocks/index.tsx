@@ -1,6 +1,6 @@
 import React from 'react'
 
-import useResize from '@/hooks/new/useResize'
+import useResize from '@/hooks/useResize'
 
 import { mainSkillsData } from '@/data/main_skills/mainSkillsData'
 

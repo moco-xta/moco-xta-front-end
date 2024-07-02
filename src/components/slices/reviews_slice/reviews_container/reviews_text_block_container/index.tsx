@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import useResize from '@/hooks/new/useResize'
+import useResize from '@/hooks/useResize'
 
 import AddReviewButton from '@/components/buttons/add_review_button'
 import TextBlockSimple from '@/components/shared/text_blocks/text_block_simple'

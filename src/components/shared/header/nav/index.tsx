@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/new/routes'
 
-import useResize from '@/hooks/new/useResize'
+import useResize from '@/hooks/useResize'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setLocaleSwitcherIsOpen, setMenuIsOpen } from '@/redux/slice/appStateSlice'

@@ -2,11 +2,11 @@ import { RefObject, useEffect } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { CardHoverEffectInterface } from '@/interfaces/effectsInterfaces'
+import { CardHoverEffectInterface } from '@/interfaces/new/hooksInterfaces'
 
 import { getUvMousePositionOnDiv } from '@/helpers/cssHelpers'
 
-import { default as effectsConstants } from '@/constants/effectsConstants.json'
+import { default as cardHoverConstants } from '@/constants/cardHoverConstants.json'
 
 export default function useCardHoverEffect(
   ref: RefObject<HTMLDivElement>,
@@ -17,9 +17,9 @@ export default function useCardHoverEffect(
   function handleMouseMove(event: MouseEvent) {
     const { x, y } = getUvMousePositionOnDiv(event)
     gsap.to(ref.current, {
-      duration: effectsConstants.CARD_HOVER_EFFECT.DURATION,
-      ease: effectsConstants.CARD_HOVER_EFFECT.EASE,
-      transformPerspective: effectsConstants.CARD_HOVER_EFFECT.TRANSFORM_PERSPECTIVE,
+      duration: cardHoverConstants.DURATION,
+      ease: cardHoverConstants.EASE,
+      transformPerspective: cardHoverConstants.TRANSFORM_PERSPECTIVE,
       scale: constantsEffect.SCALE_FACTOR,
       rotationX: y * constantsEffect.ROTATION_FACTOR.X,
       rotationY: x * constantsEffect.ROTATION_FACTOR.Y,
@@ -28,9 +28,9 @@ export default function useCardHoverEffect(
 
   function handleMouseLeave(event: MouseEvent): void {
     gsap.to(ref.current, {
-      duration: effectsConstants.CARD_HOVER_EFFECT.DURATION,
-      ease: effectsConstants.CARD_HOVER_EFFECT.EASE,
-      transformPerspective: effectsConstants.CARD_HOVER_EFFECT.TRANSFORM_PERSPECTIVE,
+      duration: cardHoverConstants.DURATION,
+      ease: cardHoverConstants.EASE,
+      transformPerspective: cardHoverConstants.TRANSFORM_PERSPECTIVE,
       scale: constantsEffect.INITIAL_SCALE,
       rotationX: constantsEffect.INITIAL_ROTATION.X,
       rotationY: constantsEffect.INITIAL_ROTATION.Y,
