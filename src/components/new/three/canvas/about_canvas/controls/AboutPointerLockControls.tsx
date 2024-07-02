@@ -21,9 +21,9 @@ export default function AboutPointerLockControls({
 
   const dispatch = useDispatch<AppDispatch>()
   const { showInstructions } = useSelector((state: RootState) => state.about)
-  
+
   const controlsRef = useRef<PointerLockControlsImpl>(null!)
-  
+
   /* useEffect(() => {
     function pointerLockChange() {
       dispatch(setShowInstructions(!showInstructions))
@@ -44,7 +44,7 @@ export default function AboutPointerLockControls({
     console.log('showInstructions', showInstructions)
     if (showInstructions) {
       controlsRef.current.unlock()
-    }/*  else {
+    } /*  else {
       controlsRef.current.lock()
     } */
   }, [showInstructions])

@@ -21,7 +21,7 @@ export default function AboutSlice() {
 
   return (
     <>
-      {!isMobile  ? (
+      {!isMobile ? (
         <>
           <AboutGreeting />
           {!showInstructions && <AboutDashboard />}
