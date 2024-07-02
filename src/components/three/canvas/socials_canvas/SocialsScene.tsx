@@ -10,7 +10,7 @@ import { LogoGitHub } from '../../models/logos/LogoGitHub'
 import vertexShader from '@/components/three/shaders/deform_geometry/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/deform_geometry/fragmentShader.glsl'
 
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
+import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 const uniforms = {
   tExplosion: {

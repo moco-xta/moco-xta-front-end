@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { useThree } from '@react-three/fiber'
 
-import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/canvas/about/aboutConstants.json'
 
 export default function ToneMapping() {
   const { gl } = useThree()

@@ -4,7 +4,7 @@ import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 import { wallClockPlaticBlackMaterial } from '@/components/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
 type GLTFResult = GLTF & {

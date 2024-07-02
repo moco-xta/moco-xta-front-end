@@ -11,7 +11,7 @@ import { setLocaleSwitcherIsOpen } from '@/redux/slice/appStateSlice'
 
 import { getCookieByName } from '@/helpers/new/cookiesHelpers'
 
-import { default as localesConstants } from '@/constants/new/localesConstants.json'
+import { default as localesConstants } from '@/constants/localesConstants.json'
 
 import './index.scss'
 

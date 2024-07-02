@@ -1,7 +1,7 @@
 import React from 'react'
 import { EffectComposer, N8AO, BrightnessContrast } from '@react-three/postprocessing'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function PostProcessing() {
   return (

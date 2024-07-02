@@ -6,7 +6,7 @@ import {
 
 import { isEating, updateDirection } from '@/helpers/new/snake_game'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 export function updateSnakeHead(
   snakeHead: SnakeCellInterface,

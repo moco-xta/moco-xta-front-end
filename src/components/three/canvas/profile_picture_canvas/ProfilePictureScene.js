@@ -10,7 +10,7 @@ import { CustomPass } from './CustomPass'
 import vertexShader from '../../shaders/contact/profile_picture/material_shaders/vertexShader.glsl'
 import fragmentShader from '../../shaders/contact/profile_picture/material_shaders/fragmentShader.glsl'
 
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
+import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 export default class ProfilePictureScene {
   constructor(props) {

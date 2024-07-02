@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 import { ThreeEvent, useThree } from '@react-three/fiber'
 /* import { EffectComposer, Outline } from '@react-three/postprocessing' */
 import { getLogoTwitterMaterial } from '@/components/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'

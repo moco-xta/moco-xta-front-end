@@ -7,8 +7,8 @@ import laboratoireFinalRenderTextures from '@/components/three/materials/about/l
 
 import { generateRandomHexGrey } from '@/helpers/new/threeHelpers'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 export default function Parquet() {
   const gltf = useGltfLoader(

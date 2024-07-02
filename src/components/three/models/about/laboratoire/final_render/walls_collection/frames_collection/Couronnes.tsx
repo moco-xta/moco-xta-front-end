@@ -6,7 +6,7 @@ import { GLTF } from 'three-stdlib'
 import { couronnesMaterial } from '@/components/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 import { defaultMaterial } from '@/components/three/materials/defaultMaterials'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

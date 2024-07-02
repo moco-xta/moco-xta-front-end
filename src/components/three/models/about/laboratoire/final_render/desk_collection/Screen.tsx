@@ -8,7 +8,7 @@ import {
   screenMaterial,
 } from '@/components/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

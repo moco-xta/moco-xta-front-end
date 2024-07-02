@@ -8,7 +8,7 @@ import useSnakeGame from '@/hooks/new/useSnakeGameKeyboard'
 
 import Cell from './Cell'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 export default function Board() {
   const dispatch = useDispatch<AppDispatch>()

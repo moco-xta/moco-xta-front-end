@@ -10,8 +10,8 @@ import IntersectCube from './IntersectCube'
 
 import { mainSkillsLogoMaterial } from '../../materials/mainSkillsLogoMaterial'
 
-import { default as mainSkillsConstants } from '@/constants/new/canvas/mainSkillsConstants.json'
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as mainSkillsConstants } from '@/constants/canvas/mainSkillsConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

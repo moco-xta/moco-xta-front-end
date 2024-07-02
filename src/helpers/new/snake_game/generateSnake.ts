@@ -1,6 +1,6 @@
 import { SnakeCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 export function generateSnake(): SnakeCellInterface[] {
   const snake: SnakeCellInterface[] = []

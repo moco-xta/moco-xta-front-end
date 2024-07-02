@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { default as globalConstants } from '@/constants/new/globalConstants.json'
+import { default as globalConstants } from '@/constants/globalConstants.json'
 
 export default function useResize() {
   const [isDesktop, setisDesktop] = useState<boolean>(

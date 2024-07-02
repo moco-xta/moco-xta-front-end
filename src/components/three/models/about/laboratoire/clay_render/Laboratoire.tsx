@@ -24,7 +24,7 @@ import {
   westWallMaterial,
 } from '@/components/three/materials/about/laboratoire/clay_render/laboratoireClayRenderMaterials'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

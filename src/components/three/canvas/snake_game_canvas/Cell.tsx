@@ -7,7 +7,7 @@ import { CellComponentInterface } from '@/interfaces/new/snakeGameInterfaces'
 /* import { SnakeCell } from '../../models/snake_game/SnakeCell' */
 import { SnakeHead } from '../../models/snake_game/SnakeHead'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 import variables from '@/styles/new/variables.module.scss'
 import { Fruit } from '../../models/snake_game/Fruit'

@@ -3,7 +3,7 @@ import { DepthOfField, EffectComposer } from '@react-three/postprocessing'
 import { Bloom } from '@react-three/postprocessing'
 import { KernelSize, Resolution } from 'postprocessing'
 
-import { default as rubiksCubeConstants } from '@/constants/new/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 export default function PostProcessing() {
   return (

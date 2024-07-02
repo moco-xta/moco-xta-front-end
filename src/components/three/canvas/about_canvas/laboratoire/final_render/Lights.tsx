@@ -7,7 +7,7 @@ import { isMobile } from 'react-device-detect'
 
 import { RootState } from '@/redux/store'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function Lights() {
   const { debug } = useSelector((state: RootState) => state.about)

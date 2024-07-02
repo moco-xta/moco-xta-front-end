@@ -5,7 +5,7 @@ import { RigidBody } from '@react-three/rapier'
 
 import { physicsGroundMaterial } from '../../materials/about/aboutMaterials'
 
-import { default as aboutConstants } from '@/constants/new/canvas/about/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/canvas/about/aboutConstants.json'
 
 export default function PhysicsGround() {
   /* const [ref] = usePlane<THREE.Mesh>(() => ({

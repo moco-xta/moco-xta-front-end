@@ -10,7 +10,7 @@ import { addCube, removeCube } from '@/redux/slice/minecraftSlice'
 
 import minecraftTextures from '../../../materials/about/minecraft/minecraftTextures'
 
-import { default as minecraftConstants } from '@/constants/new/canvas/about/minecraft/minecraftConstants.json'
+import { default as minecraftConstants } from '@/constants/canvas/about/minecraft/minecraftConstants.json'
 
 export const MinecraftCube = ({ position, texture }: CubeInterface) => {
   const dispatch = useDispatch<AppDispatch>()

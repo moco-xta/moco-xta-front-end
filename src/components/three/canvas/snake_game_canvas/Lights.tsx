@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 const INTENSITY = 1.8
 const MAP_SIZE = [4096, 4096]

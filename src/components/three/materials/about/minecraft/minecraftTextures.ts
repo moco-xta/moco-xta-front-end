@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
+import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 const dirtTexture = new THREE.TextureLoader().load(texturesConstants.MINECRAFT.DIRT)
 dirtTexture.magFilter = THREE.NearestFilter

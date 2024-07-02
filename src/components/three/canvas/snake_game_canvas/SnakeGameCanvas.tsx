@@ -10,7 +10,7 @@ import Lights from './Lights'
 import SnakeScene from './SnakeGameScene'
 import PostProcessing from './PostProcessing'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 export default function SnakeGameCanvas() {
   const { enabled, ...config } = useControls({

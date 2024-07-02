@@ -8,7 +8,7 @@ import { RootState } from '@/redux/store'
 
 import { updateCamera } from '@/helpers/new/snake_game'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 export default function SnakeGamePerspectiveCamera() {
   const perspectiveCameraGroupRef = useRef<THREE.Group>(null!)

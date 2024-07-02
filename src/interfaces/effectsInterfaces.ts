@@ -1,13 +1,4 @@
-import { ElementType, HTMLAttributes, ReactNode } from 'react'
-
-export interface TextBlockTransitionNineInterface extends HTMLAttributes<HTMLOrSVGElement> {
-  tag: ElementType
-  id: string
-  className: string
-  text: string
-  blockIndex: number
-  activeBlock: number
-}
+import { ReactNode } from 'react'
 
 export interface RevealComponentInterface {
   children: ReactNode

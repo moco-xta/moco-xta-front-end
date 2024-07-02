@@ -5,7 +5,7 @@ import { GLTF } from 'three-stdlib'
 
 import { RoundedCubeInterface } from '@/interfaces/new/rubiksCubeInterfaces'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

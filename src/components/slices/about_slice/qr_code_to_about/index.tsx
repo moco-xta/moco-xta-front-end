@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { default as imgConstants } from '@/constants/new/assets/imgConstants.json'
+import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 import './index.scss'
 

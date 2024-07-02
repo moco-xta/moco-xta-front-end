@@ -6,7 +6,7 @@ import useCardHoverEffect from '@/hooks/new/useCardHoverEffect'
 
 import RatingStars from './rating_stars'
 
-import { default as cardHoverConstants } from '@/constants/new/cardHoverConstants.json'
+import { default as cardHoverConstants } from '@/constants/cardHoverConstants.json'
 
 import './index.scss'
 

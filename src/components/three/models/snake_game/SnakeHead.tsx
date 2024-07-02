@@ -16,7 +16,7 @@ import {
   snakeRedXD,
 } from '../../materials/snakeGameMaterials'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

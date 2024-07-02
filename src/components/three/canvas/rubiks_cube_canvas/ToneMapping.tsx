@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { useThree } from '@react-three/fiber'
 
-import { default as rubiksCubeConstants } from '@/constants/new/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 export function ToneMapping() {
   const { gl } = useThree()

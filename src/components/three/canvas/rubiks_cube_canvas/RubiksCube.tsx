@@ -6,7 +6,7 @@ import RotationGroupAndButtons from './RotationGroupAndButtons'
 
 import { setCubeGroupCoordinates, setPadColor } from '@/helpers/r3fHelpers'
 
-import { default as rubiksCubeConstants } from '@/constants/new/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 export default function RubiksCube() {
   const rubiksCubeRef = useRef<THREE.Group>(null!)

@@ -4,7 +4,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 
 import MainSkillsScene from './MainSkillsScene'
 
-import { default as heroConstants } from '@/constants/new/canvas/mainSkillsConstants.json'
+import { default as heroConstants } from '@/constants/canvas/mainSkillsConstants.json'
 
 export default function MainSkillsCanvas() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)

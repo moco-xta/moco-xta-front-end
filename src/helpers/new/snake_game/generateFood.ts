@@ -2,7 +2,7 @@ import { FoodInterface, SnakeCellInterface } from '@/interfaces/new/newSnakeGame
 
 import { getRandomPosition, testFoodPosition } from '@/helpers/new/snake_game'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 export function generateFood(snake: SnakeCellInterface[]): FoodInterface {
   let newFood: FoodInterface

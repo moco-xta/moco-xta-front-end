@@ -6,7 +6,7 @@ import { CardHoverEffectInterface } from '@/interfaces/new/hooksInterfaces'
 
 import { getUvMousePositionOnDiv } from '@/helpers/cssHelpers'
 
-import { default as cardHoverConstants } from '@/constants/new/cardHoverConstants.json'
+import { default as cardHoverConstants } from '@/constants/cardHoverConstants.json'
 
 export default function useCardHoverEffect(
   ref: RefObject<HTMLDivElement>,

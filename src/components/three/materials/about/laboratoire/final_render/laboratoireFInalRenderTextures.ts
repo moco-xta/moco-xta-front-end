@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 // AMOR LLAMA AMOR
 

@@ -8,7 +8,7 @@ import { TbBrandNextjs } from 'react-icons/tb'
 
 import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
-import { default as imgConstants } from '@/constants/imgConstants.json'
+import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 export const projectsData: ProjectDataInterface[] = [
   {

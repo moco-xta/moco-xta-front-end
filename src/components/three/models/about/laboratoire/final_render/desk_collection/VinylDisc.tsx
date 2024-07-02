@@ -8,8 +8,8 @@ import useTextureLoader from '@/hooks/useTextureLoader'
 
 import { vinylDiscBackMaterial } from '@/components/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
+import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

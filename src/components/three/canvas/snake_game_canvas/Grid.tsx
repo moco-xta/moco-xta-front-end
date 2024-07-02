@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@react-three/drei'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 import variables from '@/styles/new/variables.module.scss'
 

@@ -3,15 +3,12 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import useTextureLoader from '@/hooks/useTextureLoader'
-
 import {
   mondaineWallClockMaterial,
   wallClockBrushedMetalMaterial,
 } from '@/components/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as texturesConstants } from '@/constants/new/assets/texturesConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

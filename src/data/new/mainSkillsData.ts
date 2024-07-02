@@ -1,6 +1,6 @@
 import { MainSkillsDataInterface } from '@/interfaces/new/dataInterfaces'
 
-import { default as imgConstants } from '@/constants/new/assets/imgConstants.json'
+import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 export const mainSkillsData: MainSkillsDataInterface = {
   mainSkills: [

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { default as rubiksCubeConstants } from '@/constants/new/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 export default function Lights() {
   return (

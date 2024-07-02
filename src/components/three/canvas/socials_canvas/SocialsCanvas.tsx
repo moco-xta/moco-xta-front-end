@@ -8,7 +8,7 @@ import { SocialsCanvasInterface } from '@/interfaces/new/threeInterfaces'
 import Lights from './Lights'
 import SocialsScene from './SocialsScene'
 
-import { default as socialsConstants } from '@/constants/new/canvas/socialsConstants.json'
+import { default as socialsConstants } from '@/constants/canvas/socialsConstants.json'
 
 import './index.scss'
 

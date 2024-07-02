@@ -9,7 +9,7 @@ import { TransfertBox } from '@/components/three/models/about/laboratoire/final_
 import { Trestle } from '@/components/three/models/about/laboratoire/final_render/desk_collection/Trestle'
 import VinylDiscs from './VinylDiscs'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/new/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function DeskCollection() {
   return (

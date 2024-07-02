@@ -8,7 +8,7 @@ import { setNextStep } from '@/redux/slice/snakeGameSlice'
 
 import NewCell from './NewCell'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 export default function NewBoard() {
   const dispatch = useDispatch<AppDispatch>()

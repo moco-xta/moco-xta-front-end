@@ -9,8 +9,8 @@ import HeroScene from './HeroScene'
 import ToneMapping from './ToneMapping'
 import PostProcessing from './PostProcessing'
 
-import { default as heroConstants } from '@/constants/new/canvas/heroConstants.json'
-import { default as imgConstants } from '@/constants/new/assets/imgConstants.json'
+import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
+import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 import variables from '@/styles/new/variables.module.scss'
 

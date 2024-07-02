@@ -8,7 +8,7 @@ import RubiksCube from './RubiksCube'
 import PostProcessing from './PostProcessing'
 import { ToneMapping } from './ToneMapping'
 
-import { default as rubiksCubeConstants } from '@/constants/new/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 export default function RubiksCubeCanvas() {
   return (

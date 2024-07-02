@@ -7,7 +7,7 @@ import {
   SnakeGameInterface,
 } from '@/interfaces/new/snakeGameInterfaces'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 // GENERATE
 /* 

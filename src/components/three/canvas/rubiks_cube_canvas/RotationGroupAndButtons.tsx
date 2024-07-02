@@ -20,7 +20,7 @@ import {
   handleTopCW,
 } from '@/helpers/r3fHelpers'
 
-import { default as rubiksCubeConstants } from '@/constants/new/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 export default function RotationGroupAndButtons({ rubiksCubeRef }: RotationGroupInterface) {
   const rotationGroupRef = useRef<THREE.Group>(null!)

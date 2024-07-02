@@ -3,7 +3,7 @@ import * as THREE from 'three'
 
 import { Grass } from '../../models/snake_game/Grass'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 import { Plane } from '@react-three/drei'
 
 export default function Ground() {

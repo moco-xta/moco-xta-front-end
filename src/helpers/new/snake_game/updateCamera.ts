@@ -2,7 +2,7 @@ import * as THREE from 'three'
 
 import { SnakeCellInterface, UpdateCameraInterface } from '@/interfaces/new/newSnakeGameInterfaces'
 
-import { default as snakeGameConstants } from '@/constants/new/canvas/snakeGameConstants.json'
+import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
 export function updateCamera(
   snakeHead: SnakeCellInterface,

@@ -9,9 +9,9 @@ import IntersectCube from './IntersectCube'
 
 import { defaultMaterial } from '../../materials/standardsMaterials'
 
-import { default as socialsConstants } from '@/constants/new/canvas/socialsConstants.json'
-import { default as gltfConstants } from '@/constants/new/assets/gltfConstants.json'
-import { default as externalLinksConstants } from '@/constants/new/externalLinksConstants.json'
+import { default as socialsConstants } from '@/constants/canvas/socialsConstants.json'
+import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
+import { default as externalLinksConstants } from '@/constants/externalLinksConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

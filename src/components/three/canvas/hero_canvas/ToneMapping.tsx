@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { useThree } from '@react-three/fiber'
 
-import { default as heroConstants } from '@/constants/new/canvas/heroConstants.json'
+import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
 export default function ToneMapping() {
   const { gl } = useThree()
