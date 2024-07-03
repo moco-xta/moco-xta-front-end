@@ -86,7 +86,7 @@ export default function LocaleSwitcher() {
                   style={cssVar}
                   onClick={() => handleSetCurrentLocale(locale_constant)}
                 >
-                  <span>{t(`${locale_constant.toUpperCase()}`)}</span>
+                  <span title={t('HEADER.LOG_OUT')}>{t(`${locale_constant.toUpperCase()}`)}</span>
                 </li>
               )
             })}

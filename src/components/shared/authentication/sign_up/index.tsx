@@ -57,7 +57,7 @@ export default function SignUp({ setIsSignIn }: SignUpSignInInterface) {
             role: 'User',
           }
           toast.promise(signUp(payload).unwrap(), {
-            loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
+            loading: t('TOASTERS.AUTHENTIFICATION.SIGN_UP.LOADING'),
             success: () => {
               dispatch(setIsAuthenticated(true))
               resetForm({
@@ -66,7 +66,7 @@ export default function SignUp({ setIsSignIn }: SignUpSignInInterface) {
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
               handleSetAuthenticationIsOpen()
-              return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
+              return t('TOASTERS.AUTHENTIFICATION.SIGN_UP.SUCCESS')
             },
             error: (response) => {
               setSubmitButtonIsDisabled(false)
