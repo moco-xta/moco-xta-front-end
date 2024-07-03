@@ -64,7 +64,10 @@ export default function LocaleSwitcher() {
           id='caret'
           size={14}
         />
-        <span id='selected'>
+        <span
+          id='selected'
+          title={t('SELECT_YOUR_LANGUAGE')}
+        >
           {isDesktop ? currentLocale.toUpperCase() : t(currentLocale.toUpperCase())}
         </span>
       </div>

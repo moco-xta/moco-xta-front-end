@@ -11,7 +11,8 @@
   "LOCALES": {
     "EN": "Inglés",
     "ES": "Español",
-    "FR": "Francés"
+    "FR": "Francés",
+    "SELECT_YOUR_LANGUAGE": "Elige tu idioma"
   },
   "HOME": {
     "HERO": {
