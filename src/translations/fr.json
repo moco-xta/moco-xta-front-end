@@ -199,6 +199,10 @@
     }
   },
   "AUTHENTICATION": {
+    "HEADER": {
+      "LOG_IN": "Se connecter",
+      "LOG_OUT": "Se déconnecter"
+    },
     "SIGN_IN": {
       "EMAIL": "E-mail",
       "PASSWORD": "Mot-de-passe",

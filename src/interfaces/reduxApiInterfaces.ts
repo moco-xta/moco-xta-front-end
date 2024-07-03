@@ -15,7 +15,7 @@ export interface SignUpValuesInterface extends SignUpPayloadInterface {
 }
 
 export interface LogOutPayloadInterface {
-  access_token: string
+  accessToken: string
 }
 
 export interface AddReviewValuesInterface {
@@ -42,6 +42,10 @@ export interface ReviewPayloadInterface {
 }
 
 export interface TokensInterface {
-  access_token: string
-  refresh_token: string
+  accessToken: string
+  refreshToken: string
+}
+
+export interface LogOutResponseInterface {
+  status: string
 }

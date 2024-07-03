@@ -7,11 +7,12 @@ import {
   SignUpPayloadInterface,
   TokensInterface,
   LogOutPayloadInterface,
+  LogOutResponseInterface,
 } from '@/interfaces/reduxApiInterfaces'
 
 import { default as apiConstants } from '@/constants/apiConstants.json'
 
-import { storeTokens } from '@/helpers/localStorageHelpers'
+import { getAccessToken, removeTokens, storeTokens } from '@/helpers/localStorageHelpers'
 
 const authenticationApi = apiSlice.injectEndpoints({
   endpoints: (build) => ({
@@ -42,12 +43,18 @@ const authenticationApi = apiSlice.injectEndpoints({
       },
       invalidatesTags: ['Authentication'],
     }),
-    logOut: build.mutation<void, LogOutPayloadInterface>({
-      query: (signInPayload) => ({
+    logOut: build.mutation<LogOutResponseInterface, void>({
+      query: () => ({
         url: apiConstants.LOG_OUT,
         method: 'POST',
-        body: signInPayload,
+        body: {
+          accessToken: getAccessToken(),
+        },
       }),
+      transformResponse: (response: LogOutResponseInterface) => {
+        removeTokens()
+        return response
+      },
       transformErrorResponse: (response) => {
         return response
       },

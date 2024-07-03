@@ -60,7 +60,7 @@ export default function SignIn({ setIsSignIn }: SignUpSignInInterface) {
             },
             error: () => {
               setSubmitButtonIsDisabled(false)
-              return 'Authentication failed'
+              return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.ERROR')
             },
           })
         }}

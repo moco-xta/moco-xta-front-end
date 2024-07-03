@@ -2,7 +2,6 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
-/* import Face5Icon from '@mui/icons-material/Face5' */
 
 import { AppDispatch, RootState } from '@/redux/store'
 import {
@@ -10,14 +9,17 @@ import {
   setMenuIsOpen,
   setLocaleSwitcherIsOpen,
 } from '@/redux/slice/appStateSlice'
-import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 import { useLogOutMutation } from '@/redux/api/authenticationApi'
+import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 
-import { getAccessToken, removeTokens } from '@/helpers/localStorageHelpers'
+import './index.scss'
 
 export default function AuthenticationButton() {
-  const dispatch = useDispatch<AppDispatch>()
+  const t = useTranslations('AUTHENTICATION')
 
+  const [logOut] = useLogOutMutation()
+
+  const dispatch = useDispatch<AppDispatch>()
   const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
   function handleAuthenticationIsOpen() {
@@ -26,26 +28,41 @@ export default function AuthenticationButton() {
     dispatch(setLocaleSwitcherIsOpen(false))
   }
 
+  function handleLogOut() {
+    toast.promise(logOut().unwrap(), {
+      loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
+      success: () => {
+        dispatch(setIsAuthenticated(false))
+        return t('TOASTERS.AUTHENTIFICATION.LOG_OUT.SUCCESS')
+      },
+      error: () => {
+        return t('TOASTERS.AUTHENTIFICATION.LOG_OUT.ERROR')
+      },
+    })
+  }
+
   return (
     <li
       id='authentication_button'
       className='lis'
     >
-      {/* <Face5Icon id='authentication_icon' style={{  height: '14px' }} /> */}
       {!isAuthenticated ? (
         <span
+          id='log_in_button'
           className='span_link_wrapper'
-          title={'Login'}
+          title={t('HEADER.LOG_IN')}
           onClick={handleAuthenticationIsOpen}
         >
-          Log in
+          {t('HEADER.LOG_IN')}
         </span>
       ) : (
         <span
+          id='log_out_button'
           className='span_link_wrapper'
-          title={'Logout'}
+          title={t('HEADER.LOG_OUT')}
+          onClick={handleLogOut}
         >
-          Log out
+          {t('HEADER.LOG_OUT')}
         </span>
       )}
     </li>

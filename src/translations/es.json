@@ -199,6 +199,10 @@
     }
   },
   "AUTHENTICATION": {
+    "HEADER": {
+      "LOG_IN": "Iniciar sesión",
+      "LOG_OUT": "Cerrar sesión"
+    },
     "SIGN_IN": {
       "EMAIL": "Correo electrónico",
       "PASSWORD": "Contraseña",

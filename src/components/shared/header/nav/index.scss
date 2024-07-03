@@ -24,7 +24,7 @@
       .span_link_wrapper,
       a {
         display: inline-block;
-        transition: color $hover_transition ease-in-out;
+        transition: all $hover_transition ease-in-out;
       }
 
       .span_link_wrapper {
