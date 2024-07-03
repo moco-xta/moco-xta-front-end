@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { CompanyOrSchoolCardInterface } from '@/interfaces/new/projectsInterfaces'
+import { CompanyOrSchoolCardInterface } from '@/interfaces/projectsInterfaces'
 
 import { projectsData } from '@/data/projects/projectsData'
 

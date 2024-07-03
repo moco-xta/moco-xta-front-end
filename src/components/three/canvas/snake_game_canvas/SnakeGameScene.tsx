@@ -1,6 +1,6 @@
 import React from 'react'
 
-import NewBoard from './NewBoard'
+import NewBoard from './Board'
 import Ground from './Ground'
 import Grid from './Grid'
 

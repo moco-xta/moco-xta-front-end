@@ -1,4 +1,4 @@
-import { PositionInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import { PositionInterface } from '@/interfaces/snakeGameInterfaces'
 
 export function setSnakeCellCornerType(
   direction: string,

@@ -2,7 +2,7 @@ import {
   FoodInterface,
   GridCellInterface,
   SnakeCellInterface,
-} from '@/interfaces/new/newSnakeGameInterfaces'
+} from '@/interfaces/snakeGameInterfaces'
 
 import { generateGrid, setGridCellStatus } from '@/helpers/snake_game'
 

@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
 
-import { AboutDesktopCanvasInterface } from '@/interfaces/new/aboutInterfaces'
+import { AboutDesktopCanvasInterface } from '@/interfaces/aboutInterfaces'
 
 import AboutControls from './controls/AboutControls'
 import LaboratoireScene from './laboratoire/LaboratoireScene'

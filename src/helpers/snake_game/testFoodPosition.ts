@@ -1,4 +1,4 @@
-import { FoodInterface, SnakeCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import { FoodInterface, SnakeCellInterface } from '@/interfaces/snakeGameInterfaces'
 
 export function testFoodPosition(food: FoodInterface, snake: SnakeCellInterface[]): boolean {
   let foodPositionIsValid: boolean = true

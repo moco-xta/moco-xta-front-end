@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { ProjectCardInterface } from '@/interfaces/new/projectsInterfaces'
+import { ProjectCardInterface } from '@/interfaces/projectsInterfaces'
 
 import './index.scss'
 

@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
-import { Routes } from '@/routes/new/routes'
+import { Routes } from '@/routes/routes'
 
 import useResize from '@/hooks/useResize'
 

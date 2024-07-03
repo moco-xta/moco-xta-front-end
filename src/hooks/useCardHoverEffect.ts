@@ -2,7 +2,7 @@ import { RefObject, useEffect } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { CardHoverEffectInterface } from '@/interfaces/new/hooksInterfaces'
+import { CardHoverEffectInterface } from '@/interfaces/hooksInterfaces'
 
 import { getUvMousePositionOnDiv } from '@/helpers/cssHelpers'
 

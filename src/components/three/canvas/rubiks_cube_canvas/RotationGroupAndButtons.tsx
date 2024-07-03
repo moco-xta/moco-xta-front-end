@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import * as THREE from 'three'
 
-import { RotationGroupInterface } from '@/interfaces/new/rubiksCubeInterfaces'
+import { RotationGroupInterface } from '@/interfaces/rubiksCubeInterfaces'
 
 import { Button } from '../../models/rubiks_cube/Button'
 

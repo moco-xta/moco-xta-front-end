@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect } from 'react'
 
-import { FormikTextInterface } from '@/interfaces/new/inputsInterfaces'
+import { FormikTextInterface } from '@/interfaces/inputsInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 

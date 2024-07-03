@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-import { ReviewCardInterface } from '@/interfaces/new/componentsInterfaces'
+import { ReviewCardInterface } from '@/interfaces/componentsInterfaces'
 
 import useCardHoverEffect from '@/hooks/useCardHoverEffect'
 

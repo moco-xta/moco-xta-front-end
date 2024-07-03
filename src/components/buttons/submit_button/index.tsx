@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { SubmitButtonInterface } from '@/interfaces/new/buttonsInterfaces'
+import { SubmitButtonInterface } from '@/interfaces/buttonsInterfaces'
 
 import './index.scss'
 

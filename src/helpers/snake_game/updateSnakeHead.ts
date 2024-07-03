@@ -2,7 +2,7 @@ import {
   FoodInterface,
   SnakeCellInterface,
   UpdateSnakeHeadInterface,
-} from '@/interfaces/new/newSnakeGameInterfaces'
+} from '@/interfaces/snakeGameInterfaces'
 
 import { isEating, updateDirection } from '@/helpers/snake_game'
 

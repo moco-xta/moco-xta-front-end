@@ -2,7 +2,7 @@ import {
   FoodInterface,
   NextStepInterface,
   SnakeGameInterface,
-} from '@/interfaces/new/newSnakeGameInterfaces'
+} from '@/interfaces/snakeGameInterfaces'
 
 import { generateFood, updateGrid, updateSnake } from '@/helpers/snake_game'
 

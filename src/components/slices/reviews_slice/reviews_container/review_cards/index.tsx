@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ReviewPayloadInterface } from '@/interfaces/new/reduxApiInterfaces'
+import { ReviewPayloadInterface } from '@/interfaces/reduxApiInterfaces'
 
 import ReviewCard from '../../review_card'
 

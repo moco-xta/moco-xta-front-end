@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import { SnakeCellInterface, UpdateCameraInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import { SnakeCellInterface, UpdateCameraInterface } from '@/interfaces/snakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 

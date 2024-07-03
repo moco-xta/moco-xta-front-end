@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CompagnyOrSchoolCardsInterface } from '@/interfaces/new/projectsInterfaces'
+import { CompagnyOrSchoolCardsInterface } from '@/interfaces/projectsInterfaces'
 
 import { companiesAndSchollData } from '@/data/projects/companiesAndSchollData'
 

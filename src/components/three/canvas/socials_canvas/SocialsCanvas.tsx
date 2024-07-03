@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
-import { SocialsCanvasInterface } from '@/interfaces/new/threeInterfaces'
+import { SocialsCanvasInterface } from '@/interfaces/threeInterfaces'
 
 import Lights from './Lights'
 import SocialsScene from './SocialsScene'

@@ -1,4 +1,4 @@
-import { MainSkillsDataInterface } from '@/interfaces/new/dataInterfaces'
+import { MainSkillsDataInterface } from '@/interfaces/dataInterfaces'
 
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 

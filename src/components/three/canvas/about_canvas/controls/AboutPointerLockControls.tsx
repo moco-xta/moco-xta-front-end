@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useThree } from '@react-three/fiber'
 import { PointerLockControls as PointerLockControlsImpl } from 'three-stdlib'
 
-import { PointerLockControlsComponentInterface } from '@/interfaces/new/threeInterfaces'
+import { PointerLockControlsComponentInterface } from '@/interfaces/threeInterfaces'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setShowInstructions } from '@/redux/slice/aboutSlice'

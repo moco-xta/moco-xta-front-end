@@ -8,7 +8,7 @@ import * as RAPIER from '@dimforge/rapier3d-compat'
 import { CapsuleCollider, RapierRigidBody, RigidBody, useRapier } from '@react-three/rapier'
 import { isMobile } from 'react-device-detect'
 
-import { RapierPlayerInterface } from '@/interfaces/new/threeInterfaces'
+import { RapierPlayerInterface } from '@/interfaces/threeInterfaces'
 
 import { AppDispatch } from '@/redux/store'
 import { setLocation } from '@/redux/slice/aboutSlice'

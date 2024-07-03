@@ -3,7 +3,7 @@ import {
   PositionInterface,
   SnakeCellInterface,
   UpdateSnakeInterface,
-} from '@/interfaces/new/newSnakeGameInterfaces'
+} from '@/interfaces/snakeGameInterfaces'
 
 import { setSnakeCellType, setSnakeCellCornerType, updateSnakeHead } from '@/helpers/snake_game'
 

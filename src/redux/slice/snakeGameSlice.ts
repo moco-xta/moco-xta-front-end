@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { SnakeGameInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import { SnakeGameInterface } from '@/interfaces/snakeGameInterfaces'
 
 import { generateSnakeGame, nextStep } from '@/helpers/snake_game'
 

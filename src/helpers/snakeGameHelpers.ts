@@ -5,7 +5,7 @@ import {
   GridCellInterface,
   SnakeCellInterface,
   SnakeGameInterface,
-} from '@/interfaces/new/snakeGameInterfaces'
+} from '@/interfaces/snakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 

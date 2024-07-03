@@ -9,7 +9,7 @@ import {
   setMenuIsOpen,
 } from '@/redux/slice/appStateSlice'
 
-import { Routes } from '@/routes/new/routes'
+import { Routes } from '@/routes/routes'
 
 import LogoCanvas from '@/components/three/canvas/logo_canvas/LogoCanvas'
 

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { ThreeEvent } from '@react-three/fiber'
 import { useBox } from '@react-three/cannon'
 
-import { CubeInterface } from '@/interfaces/new/minecraftInterfaces'
+import { CubeInterface } from '@/interfaces/minecraftInterfaces'
 
 import { AppDispatch } from '@/redux/store'
 import { addCube, removeCube } from '@/redux/slice/minecraftSlice'

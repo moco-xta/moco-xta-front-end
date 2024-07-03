@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { TextBlockSimpleInterface } from '@/interfaces/new/componentsInterfaces'
+import { TextBlockSimpleInterface } from '@/interfaces/componentsInterfaces'
 
 import './index.scss'
 

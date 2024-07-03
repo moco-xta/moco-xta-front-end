@@ -3,7 +3,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { RoundedCubeInterface } from '@/interfaces/new/rubiksCubeInterfaces'
+import { RoundedCubeInterface } from '@/interfaces/rubiksCubeInterfaces'
 
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 

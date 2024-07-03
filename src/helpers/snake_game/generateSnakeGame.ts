@@ -1,4 +1,4 @@
-import { SnakeGameInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import { SnakeGameInterface } from '@/interfaces/snakeGameInterfaces'
 
 import { generateFood, generateSnake, updateGrid } from '@/helpers/snake_game'
 

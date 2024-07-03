@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useCylinder } from '@react-three/cannon'
 
-import { CannonPlayerInterface } from '@/interfaces/new/threeInterfaces'
+import { CannonPlayerInterface } from '@/interfaces/threeInterfaces'
 
 import { useAboutKeyboard } from '@/hooks/useAboutKeyboard'
 

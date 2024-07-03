@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { CubeInterface, MinecraftInterface } from '@/interfaces/new/minecraftInterfaces'
+import { CubeInterface, MinecraftInterface } from '@/interfaces/minecraftInterfaces'
 
 // @ts-ignore
 const getLocalStorage = (key: string) => JSON.parse(localStorage.getItem(key))

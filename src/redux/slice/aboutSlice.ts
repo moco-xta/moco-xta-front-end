@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { AboutInterface } from '@/interfaces/new/aboutInterfaces'
-import { LocationInterface } from '@/interfaces/new/locationInterfaces'
+import { AboutInterface } from '@/interfaces/aboutInterfaces'
+import { LocationInterface } from '@/interfaces/locationInterfaces'
 
 const initialState: AboutInterface = {
   accessToDeviceMotionAndOrientationGranted: false,

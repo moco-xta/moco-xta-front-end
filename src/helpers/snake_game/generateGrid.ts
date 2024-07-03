@@ -1,4 +1,4 @@
-import { GridCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import { GridCellInterface } from '@/interfaces/snakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 

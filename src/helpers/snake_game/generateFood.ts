@@ -1,4 +1,4 @@
-import { FoodInterface, SnakeCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import { FoodInterface, SnakeCellInterface } from '@/interfaces/snakeGameInterfaces'
 
 import { getRandomPosition, testFoodPosition } from '@/helpers/snake_game'
 

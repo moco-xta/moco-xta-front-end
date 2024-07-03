@@ -1,4 +1,4 @@
-import { SnakeCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import { SnakeCellInterface } from '@/interfaces/snakeGameInterfaces'
 
 export function setSnakeCellType(
   snakeCell: SnakeCellInterface,

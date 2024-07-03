@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { AddReviewButtonInterface } from '@/interfaces/new/buttonsInterfaces'
+import { AddReviewButtonInterface } from '@/interfaces/buttonsInterfaces'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setAddReviewIsOpen } from '@/redux/slice/appStateSlice'

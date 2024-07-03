@@ -1,4 +1,4 @@
-import { SnakeCellInterface } from '@/interfaces/new/newSnakeGameInterfaces'
+import { SnakeCellInterface } from '@/interfaces/snakeGameInterfaces'
 
 import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
