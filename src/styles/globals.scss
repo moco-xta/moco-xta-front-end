@@ -145,6 +145,32 @@ a {
   user-select: none;
 }
 
+// TOASTERS
+
+.toaster {
+  width: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.toaster_loading {
+  background-color: $primary_light_rgba_color;
+}
+
+.toaster_success {
+  background-color: $success_light_rgba_color;
+}
+
+.toaster_error {
+  background-color: $alert_light_rgba_color;
+}
+
 // RESPONSIVE
 
 @media screen and (max-width: $breakpoint_XXXS) {

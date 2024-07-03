@@ -15,7 +15,7 @@ import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 import './index.scss'
 
 export default function AuthenticationButton() {
-  const t = useTranslations('AUTHENTICATION')
+  const t = useTranslations()
 
   const [logOut] = useLogOutMutation()
 
@@ -30,13 +30,13 @@ export default function AuthenticationButton() {
 
   function handleLogOut() {
     toast.promise(logOut().unwrap(), {
-      loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
+      loading: t('TOASTERS.AUTHENTICATION.LOG_OUT.LOADING'),
       success: () => {
         dispatch(setIsAuthenticated(false))
-        return t('TOASTERS.AUTHENTIFICATION.LOG_OUT.SUCCESS')
+        return t('TOASTERS.AUTHENTICATION.LOG_OUT.SUCCESS')
       },
       error: () => {
-        return t('TOASTERS.AUTHENTIFICATION.LOG_OUT.ERROR')
+        return t('TOASTERS.AUTHENTICATION.LOG_OUT.ERROR')
       },
     })
   }
@@ -50,19 +50,19 @@ export default function AuthenticationButton() {
         <span
           id='log_in_button'
           className='span_link_wrapper'
-          title={t('HEADER.LOG_IN')}
+          title={t('AUTHENTICATION.HEADER.LOG_IN')}
           onClick={handleAuthenticationIsOpen}
         >
-          {t('HEADER.LOG_IN')}
+          {t('AUTHENTICATION.HEADER.LOG_IN')}
         </span>
       ) : (
         <span
           id='log_out_button'
           className='span_link_wrapper'
-          title={t('HEADER.LOG_OUT')}
+          title={t('AUTHENTICATION.HEADER.LOG_OUT')}
           onClick={handleLogOut}
         >
-          {t('HEADER.LOG_OUT')}
+          {t('AUTHENTICATION.HEADER.LOG_OUT')}
         </span>
       )}
     </li>

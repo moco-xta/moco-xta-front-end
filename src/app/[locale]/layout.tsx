@@ -49,7 +49,7 @@ export default function RootLayout({
               <Toaster
                 toastOptions={{
                   unstyled: true,
-                  duration: 50000,
+                  duration: 2000,
                   classNames: {
                     loading: 'toaster toaster_loading',
                     success: 'toaster toaster_success',

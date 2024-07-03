@@ -21,7 +21,7 @@ import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 import './index.scss'
 
 export default function SignIn({ setIsSignIn }: SignUpSignInInterface) {
-  const t = useTranslations()
+  const t = useTranslations('TOASTERS.AUTHENTICATION')
 
   const dispatch = useDispatch<AppDispatch>()
 
@@ -47,7 +47,7 @@ export default function SignIn({ setIsSignIn }: SignUpSignInInterface) {
         onSubmit={(values, { resetForm }) => {
           setSubmitButtonIsDisabled(true)
           toast.promise(signIn(values).unwrap(), {
-            loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
+            loading: t('SIGN_IN.LOADING'),
             success: () => {
               dispatch(setIsAuthenticated(true))
               resetForm({
@@ -56,11 +56,11 @@ export default function SignIn({ setIsSignIn }: SignUpSignInInterface) {
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
               handleSetAuthenticationIsOpen()
-              return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
+              return t('SIGN_IN.SUCCESS')
             },
             error: () => {
               setSubmitButtonIsDisabled(false)
-              return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.ERROR')
+              return t('SIGN_IN.ERROR')
             },
           })
         }}
