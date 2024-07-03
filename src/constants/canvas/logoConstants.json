@@ -12,7 +12,7 @@
     "POSITION": {
       "X": 0,
       "Y": 0,
-      "Z": 10.5
+      "Z": 15
     },
     "FOV": 15
   },
@@ -51,8 +51,8 @@
       }
     },
     "SCALE": {
-      "FACTOR": 0.95,
-      "INITIAL": 0.8
+      "FACTOR": 1.2,
+      "INITIAL": 1
     }
   }
 }
