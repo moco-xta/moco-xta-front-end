@@ -1,7 +1,7 @@
 @import './variables.module.scss';
 
 :root {
-  --max-width: 1100px;
+  --max-width: $app_max_width;
 }
 
 * {
@@ -12,178 +12,203 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: $app_max_width;
   overflow-x: hidden;
+  color: $white;
   background-color: $background_color;
 }
 
-body {
-}
+// BUTTONS
 
-// FONTS
+.submit_reset_buttons_container {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
 
 // FONT_SIZES
 
 h1 {
   font-size: 4rem;
 }
+
+.form_title {
+  margin-bottom: 30px;
+}
+
 h2 {
   font-size: 2rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: $small_limit) {
   h1 {
     font-size: 4rem;
   }
+
+  .form_title {
+    font-size: 4rem;
+  }
+
   h2 {
     font-size: 2rem;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $desktop_limit) {
   h1 {
     font-size: 5rem;
   }
+
+  .form_title {
+    font-size: 5rem;
+    margin-bottom: 20px;
+  }
+
   h2 {
     font-size: 3rem;
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: $large_limit) {
   h1 {
     font-size: 6rem;
   }
+
+  .form_title {
+    font-size: 6rem;
+  }
+
   h2 {
     font-size: 4rem;
   }
 }
+
+// LINKS
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-.card_background_gradient {
-  background: linear-gradient(
-    155deg,
-    $card_background_gradient_light,
-    $card_background_gradient_dark
-  );
+// INPUTS
+
+.formik_input_container {
+  margin-bottom: 20px;
 }
 
-#loading_container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+// KEYBOARD KEYS
+
+.keyboard_key {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff90;
+  border-radius: 10px;
+  background-color: #ffffff10;
 }
 
-.scroll_to_top_container {
-  z-index: 1;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
+// QR CODE CARDS
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.qr_code_card {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border-radius: 10px;
+  background-color: $white;
+
+  .qr_code {
+    width: 100px;
+    aspect-ratio: 1;
+  }
+
+  .qr_code_card_text {
+    max-width: 100px;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: $black;
   }
 }
 
-// FLEX
+// PREVENT HTML SELECTION
 
-.flex_row {
-  display: flex;
-  flex-direction: row;
+.prevent_select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.flex_column {
-  display: flex;
-  flex-direction: column;
+// RESPONSIVE
+
+@media screen and (max-width: $breakpoint_XXXS) {
+  .responsive_background {
+    background-color: $responsive_XXXXS;
+  }
 }
 
-// BLUR BACKGROUNDS
-
-.blur_background_dark {
-  background-color: rgba(10, 10, 10, 0.5);
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
+@media screen and (min-width: $breakpoint_XXXS) {
+  .responsive_background {
+    background-color: $responsive_XXXS;
+  }
 }
 
-.blur_background_medium {
-  background-color: rgba(50, 50, 50, 0.5);
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
+@media screen and (min-width: $breakpoint_XXS) {
+  .responsive_background {
+    background-color: $responsive_XXS;
+  }
 }
 
-.blur_background_medium:hover {
-  background-color: $grey_05_80_rgba;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
+@media screen and (min-width: $breakpoint_XS) {
+  .responsive_background {
+    background-color: $responsive_XS;
+  }
 }
 
-// PADDING
-
-.small_padding {
-  padding: 10px;
+@media screen and (min-width: $breakpoint_S) {
+  .responsive_background {
+    background-color: $responsive_S;
+  }
 }
 
-// BORDER-RADIUS
-
-.small_border_radius {
-  border-radius: 8px;
+@media screen and (min-width: $breakpoint_M) {
+  .responsive_background {
+    background-color: $responsive_M;
+  }
 }
 
-// SCROLLBAR
-
-.scrollbar::-webkit-scrollbar-track {
-  background: none;
+@media screen and (min-width: $breakpoint_L) {
+  .responsive_background {
+    background-color: $responsive_L;
+  }
 }
 
-.scrollbar::-webkit-scrollbar {
-  width: 5px;
-  background: transparent;
+@media screen and (min-width: $breakpoint_XL) {
+  .responsive_background {
+    background-color: $responsive_XL;
+  }
 }
 
-.scrollbar::-webkit-scrollbar-thumb {
-  width: 5px;
-  border-radius: 5px;
-  background-color: $scrollbar_thumb_color;
+@media screen and (min-width: $breakpoint_XXL) {
+  .responsive_background {
+    background-color: $responsive_XXL;
+  }
 }
 
-.scrollbar::-webkit-scrollbar-track-piece:end {
-  margin-bottom: 10px;
+@media screen and (min-width: $breakpoint_XXXL) {
+  .responsive_background {
+    background-color: $responsive_XXXL;
+  }
 }
 
-.scrollbar::-webkit-scrollbar-track-piece:start {
-  margin-top: 10px;
-}
+// Z-INDEX
 
-// TOASTERS
-
-.toaster {
-  width: fit-content;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  border-radius: 10px;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-}
-
-.toaster_loading {
-  background-color: rgba(246, 183, 82, 0.3);
-}
-
-.toaster_success {
-  background-color: rgba(59, 133, 74, 0.3);
-}
-
-.toaster_error {
-  background-color: rgba(199, 65, 57, 0.3);
-}
+// authentication: 8
+// nav_container (!isDesktop): 9
+// header: 10

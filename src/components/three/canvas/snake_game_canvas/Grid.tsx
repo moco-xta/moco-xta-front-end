@@ -3,7 +3,7 @@ import { Box } from '@react-three/drei'
 
 import { default as snakeGameConstants } from '@/constants/canvas/snakeGameConstants.json'
 
-import variables from '@/styles/new/variables.module.scss'
+import variables from '@/styles/variables.module.scss'
 
 export default function Grid() {
   return (

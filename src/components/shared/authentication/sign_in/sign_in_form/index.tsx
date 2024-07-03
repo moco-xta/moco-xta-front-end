@@ -8,7 +8,7 @@ import { SignInPayloadInterface } from '@/interfaces/reduxApiInterfaces'
 import { FormikTextField } from '@/components/inputs'
 import { ResetButton, SubmitButton } from '@/components/buttons'
 
-import variables from '@/styles/new/variables.module.scss'
+import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function SignInForm({

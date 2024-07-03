@@ -9,7 +9,7 @@ import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalS
 
 import Error from '../../errors'
 
-import variables from '@/styles/new/variables.module.scss'
+import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function FormikRatingStars({

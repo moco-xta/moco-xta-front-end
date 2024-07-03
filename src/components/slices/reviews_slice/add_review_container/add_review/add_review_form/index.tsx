@@ -16,7 +16,7 @@ import ReviewCard from '../../../review_card'
 
 import { reviewRolesData } from '@/data/reviews/reviewRolesData'
 
-import variables from '@/styles/new/variables.module.scss'
+import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function AddReviewForm({ submitButtonIsDisabled }: FormsInterface) {

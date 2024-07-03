@@ -4,7 +4,7 @@ import HeadTextBlock from './head_text_block'
 import HeroCanvas from '../../three/canvas/hero_canvas/HeroCanvas'
 import ScrollDown from '@/components/shared/scroll_down'
 
-import variables from '@/styles/new/variables.module.scss'
+import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function HeroSlice() {

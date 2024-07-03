@@ -12,7 +12,7 @@ import PostProcessing from './PostProcessing'
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
-import variables from '@/styles/new/variables.module.scss'
+import variables from '@/styles/variables.module.scss'
 
 export default function HeroCanvas() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
