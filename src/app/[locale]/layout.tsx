@@ -7,16 +7,16 @@ import { Toaster } from 'sonner'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
-import Header from '@/components/new/shared/header'
+import Header from '@/components/shared/header'
 
-import '@/styles/new/globals.scss'
+import '@/styles/globals.scss'
 
 const inter = Inter({
   subsets: ['latin'],
 })
 
 const retorGaming = localFont({
-  src: '../../fonts/ttf/Retro Gaming.ttf',
+  src: '../../assets/fonts/ttf/Retro Gaming.ttf',
   variable: '--font-retro-gaming',
 })
 
@@ -49,7 +49,7 @@ export default function RootLayout({
               <Toaster
                 toastOptions={{
                   unstyled: true,
-                  duration: 50000,
+                  duration: 2000,
                   classNames: {
                     loading: 'toaster toaster_loading',
                     success: 'toaster toaster_success',

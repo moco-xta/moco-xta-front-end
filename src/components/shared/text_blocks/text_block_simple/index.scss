@@ -1,0 +1,15 @@
+@import '@/styles/variables.module.scss';
+@import '@/styles/text_blocks.module.scss';
+
+.text_block_simple {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: justify;
+  }
+}

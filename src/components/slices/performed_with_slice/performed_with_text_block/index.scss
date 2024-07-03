@@ -1,0 +1,57 @@
+@import '@/styles/variables.module.scss';
+
+#performed_with_text_block {
+}
+
+@media screen and (max-width: $breakpoint_XXS) {
+  #performed_with_text_block {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXS) {
+  #performed_with_text_block {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XS) {
+  #performed_with_text_block {
+  }
+}
+
+@media screen and (min-width: $breakpoint_S) {
+  #performed_with_text_block {
+  }
+}
+
+@media screen and (min-width: $breakpoint_M) {
+  #performed_with_text_block {
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    padding-right: $percent_margin_XS;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: $breakpoint_L) {
+  #performed_with_text_block {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XL) {
+  #performed_with_text_block {
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXL) {
+  #performed_with_text_block {
+    width: 50%;
+    padding-right: $percent_margin_M;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXL) {
+  #performed_with_text_block {
+  }
+}

@@ -3,68 +3,67 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
 
-import { AuthenticationButtonInterface } from '@/interfaces/buttonsInterfaces'
-
 import { AppDispatch, RootState } from '@/redux/store'
-import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
+import {
+  setAuthenticationIsOpen,
+  setMenuIsOpen,
+  setLocaleSwitcherIsOpen,
+} from '@/redux/slice/appStateSlice'
 import { useLogOutMutation } from '@/redux/api/authenticationApi'
-
-import { getAccessToken, removeTokens } from '@/helpers/localStorageHelpers'
+import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
 
 import './index.scss'
 
-export default function AuthenticationButton({
-  setAuthenticationIsOpen,
-  setMenuIsOpen,
-}: AuthenticationButtonInterface) {
-  const t = useTranslations('ROUTES')
-
-  const dispatch = useDispatch<AppDispatch>()
-
-  const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
+export default function AuthenticationButton() {
+  const t = useTranslations()
 
   const [logOut] = useLogOutMutation()
 
+  const dispatch = useDispatch<AppDispatch>()
+  const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
+
   function handleAuthenticationIsOpen() {
-    setAuthenticationIsOpen(true)
-    setMenuIsOpen(false)
+    dispatch(setAuthenticationIsOpen(true))
+    dispatch(setMenuIsOpen(false))
+    dispatch(setLocaleSwitcherIsOpen(false))
   }
 
   function handleLogOut() {
-    if (getAccessToken()) {
-      toast.promise(
-        logOut({
-          access_token: getAccessToken()!,
-        }).unwrap(),
-        {
-          loading: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.LOADING'),
-          success: () => {
-            dispatch(setIsAuthenticated(false))
-            return t('TOASTERS.AUTHENTIFICATION.LOG_OUT.SUCCESS')
-          },
-          error: t('TOASTERS.AUTHENTIFICATION.LOG_OUT.ERROR'),
-        },
-      )
-    }
-    removeTokens()
+    toast.promise(logOut().unwrap(), {
+      loading: t('TOASTERS.AUTHENTICATION.LOG_OUT.LOADING'),
+      success: () => {
+        dispatch(setIsAuthenticated(false))
+        return t('TOASTERS.AUTHENTICATION.LOG_OUT.SUCCESS')
+      },
+      error: () => {
+        return t('TOASTERS.AUTHENTICATION.LOG_OUT.ERROR')
+      },
+    })
   }
 
   return (
-    <li>
+    <li
+      id='authentication_button'
+      className='lis'
+    >
       {!isAuthenticated ? (
-        <button
-          className='authentication_button small_border_radius'
+        <span
+          id='log_in_button'
+          className='span_link_wrapper'
+          title={t('AUTHENTICATION.HEADER.LOG_IN')}
           onClick={handleAuthenticationIsOpen}
         >
-          Login
-        </button>
+          {t('AUTHENTICATION.HEADER.LOG_IN')}
+        </span>
       ) : (
-        <button
-          className='authentication_button small_border_radius'
+        <span
+          id='log_out_button'
+          className='span_link_wrapper'
+          title={t('AUTHENTICATION.HEADER.LOG_OUT')}
           onClick={handleLogOut}
         >
-          Log out
-        </button>
+          {t('AUTHENTICATION.HEADER.LOG_OUT')}
+        </span>
       )}
     </li>
   )

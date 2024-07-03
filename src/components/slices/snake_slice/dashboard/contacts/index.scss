@@ -1,0 +1,20 @@
+@import '@/styles/variables.module.scss';
+
+#contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+
+  .revealed_text {
+    color: $snake_game_revealed_text;
+  }
+
+  .hidden_text {
+    color: $snake_game_hidden_text;
+  }
+
+  #i_dont_want_to_play {
+    color: $snake_game_i_dont_want_to_play;
+  }
+}

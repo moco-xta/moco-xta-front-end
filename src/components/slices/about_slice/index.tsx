@@ -1,50 +1,59 @@
-'use client'
-
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { Box } from '@react-three/drei'
 import { isMobile } from 'react-device-detect'
 
-import AboutDesktopCanvas from '@/components/r3f/canvas/about_canvas/AboutDesktopCanvas'
-import AboutMobileCanvas from '@/components/r3f/canvas/about_canvas/AboutMobileCanvas'
+import { RootState } from '@/redux/store'
+
+import AboutDashboard from './about_dahboard'
+import AboutGreeting from './about_greeting'
+import AboutDesktopCanvas from '../../three/canvas/about_canvas/AboutDesktopCanvas'
+import AboutScene from '../../three/canvas/about_canvas/AboutScene'
+import AboutCanvas from '../../three/canvas/about_canvas/AboutCanvas'
+import DeviceMotionPermission from './device_motion_permission'
 
 import './index.scss'
 
 export default function AboutSlice() {
-  const [showInstructions, setShowInstructions] = useState(true)
-
-  function HandleShowInstructions() {
-    setShowInstructions(false)
-  }
-
-  useEffect(() => {
-    document.addEventListener('HandleShowInstructions', HandleShowInstructions, false)
-    return () => {
-      document.removeEventListener('HandleShowInstructions', HandleShowInstructions, false)
-    }
-  })
-
-  function handleKeyPress(e: KeyboardEvent) {
-    if (e.code === 'Escape') setShowInstructions(true)
-  }
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeyPress, false)
-    document.addEventListener('keyup', handleKeyPress, false)
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress, false)
-      document.removeEventListener('keyup', handleKeyPress, false)
-    }
-  }, [])
+  const { accessToDeviceMotionAndOrientationGranted, showInstructions } = useSelector(
+    (state: RootState) => state.about,
+  )
 
   return (
-    <section id='about_slice'>
+    <>
       {!isMobile ? (
         <>
-          <AboutDesktopCanvas />
-          <div id='absolute centered cursor'>+</div>
+          <AboutGreeting />
+          {!showInstructions && <AboutDashboard />}
+          <AboutDesktopCanvas>
+            <AboutScene />
+          </AboutDesktopCanvas>
         </>
       ) : (
-        <AboutMobileCanvas />
+        <Box />
       )}
-    </section>
+    </>
   )
+
+  /* return (
+    <>
+      {!isMobile || (isMobile && accessToDeviceMotionAndOrientationGranted) ? (
+        <>
+          <AboutGreeting />
+          {!showInstructions && <AboutDashboard />}
+          <AboutCanvas />
+        </>
+      ) : (
+        <DeviceMotionPermission />
+      )}
+    </>
+  ) */
 }
+
+// ----------------------------------------------------------------
+// Z-INDEXES
+// 0: AboutCanvas
+// 1:
+// 2:
+// 3:
+// 4: AboutGreeting

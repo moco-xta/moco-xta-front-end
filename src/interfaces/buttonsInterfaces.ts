@@ -1,30 +1,7 @@
 import { FormikState } from 'formik'
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit'
 
 import { AddReviewValuesInterface } from './reduxApiInterfaces'
-
-export interface AuthenticationButtonInterface {
-  setAuthenticationIsOpen: (value: boolean) => void
-  setMenuIsOpen: (value: boolean) => void
-}
-
-export interface InternalLinkInterface {
-  routeKey: string
-  translationKey: string
-}
-
-export interface ExternalLinkinterface {
-  url: string
-  text: string
-}
-
-export interface HamburgerMenuInterface {
-  menuIsOpen: boolean
-  handleSetMenuIsOpen: () => void
-}
-
-export interface ClosingArrowInterface {
-  handleSetAuthenticationIsOpen: () => void
-}
 
 export interface SubmitButtonInterface {
   submitButtonIsDisabled: boolean
@@ -32,5 +9,14 @@ export interface SubmitButtonInterface {
 
 export interface ResetButtonInterface {
   resetForm: (nextState?: Partial<FormikState<AddReviewValuesInterface>> | undefined) => void
-  resetButtonIsDisabled: boolean
+}
+
+export interface AddReviewButtonInterface {
+  text: string
+}
+
+export interface ToggleButtonInterface {
+  label: string[]
+  checked: boolean
+  action: ActionCreatorWithPayload<boolean, 'About/setIsFinalRender'>
 }

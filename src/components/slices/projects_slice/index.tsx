@@ -1,21 +1,16 @@
-'use client'
-
 import React from 'react'
-
-import { projectsData } from '@/data/projects/projectsData'
-import { companiesAndSchollData } from '@/data/projects/companiesAndSchoolData'
 
 import useProjectsTimeline from '@/hooks/useProjectsTimeline'
 
+import { projectsData } from '@/data/projects/projectsData'
+import { companiesAndSchollData } from '@/data/projects/companiesAndSchollData'
+
+import ProjectCards from './project_cards'
+import CompanyOrSchoolCards from './company_or_school_cards'
+import CurrentDate from './current_date'
+
 import { isValidDate } from '@/helpers/dateHelpers'
 
-import CurrentDate from './current_date'
-import ProjectsCards from './projects_container'
-import CompanyOrSchoolCards from './companies_or_school_container'
-import ScrollToTop from '@/components/buttons/scroll_to_top'
-import ScrollDown from '../../shared/scroll_down'
-
-import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function ProjectsSlice() {
@@ -31,15 +26,11 @@ export default function ProjectsSlice() {
         style={{
           backgroundColor: projectsData[currentProject].backgroundColor.page,
         }}
+        /* className='responsive_background' */
       >
-        <ProjectsCards
-          projectsData={projectsData}
-          currentProject={currentProject}
-        />
+        <ProjectCards currentProject={currentProject} />
         <CompanyOrSchoolCards
-          companiesAndSchollData={companiesAndSchollData}
           currentCompanyOrSchool={currentCompanyOrSchool}
-          projectsData={projectsData}
           currentProject={currentProject}
         />
         {isValidDate(currentDate) && (
@@ -49,14 +40,7 @@ export default function ProjectsSlice() {
             projectsData={projectsData}
           />
         )}
-        <ScrollDown
-          top={'65vh'}
-          color={variables.grey_05}
-        />
       </section>
-      <div className='scroll_to_top_container'>
-        <ScrollToTop />
-      </div>
     </div>
   )
 }

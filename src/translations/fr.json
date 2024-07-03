@@ -11,7 +11,8 @@
   "LOCALES": {
     "EN": "Anglais",
     "ES": "Espagnol",
-    "FR": "Français"
+    "FR": "Français",
+    "SELECT_YOUR_LANGUAGE": "Sélectionnez votre langue"
   },
   "HOME": {
     "HERO": {
@@ -199,6 +200,10 @@
     }
   },
   "AUTHENTICATION": {
+    "HEADER": {
+      "LOG_IN": "Se connecter",
+      "LOG_OUT": "Se déconnecter"
+    },
     "SIGN_IN": {
       "EMAIL": "E-mail",
       "PASSWORD": "Mot-de-passe",
@@ -249,7 +254,16 @@
       "SIGN_IN": {
         "LOADING": "Authentification en cours.",
         "SUCCESS": "Vous êtes authentifié.",
-        "ERROR": "Sorry! An error occured. Please try again."
+        "ERROR": "Désolé! Une erreur s'est produite. Veuillez réessayer."
+      },
+      "SIGN_UP": {
+        "LOADING": "Authentification en cours.",
+        "SUCCESS": "Vous êtes authentifié."
+      },
+      "LOG_OUT": {
+        "LOADING": "Logging out in progress.",
+        "SUCCESS": "You have been logged out.",
+        "ERROR": "Désolé! Une erreur s'est produite. Veuillez réessayer."
       }
     },
     "ADD_REVIEW": {

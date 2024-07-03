@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { AppStateSliceInterface } from '@/interfaces/new/reduxSlicesInterfaces'
+import { AppStateSliceInterface } from '@/interfaces/reduxSlicesInterfaces'
 
 const initialState: AppStateSliceInterface = {
   menuIsOpen: false,

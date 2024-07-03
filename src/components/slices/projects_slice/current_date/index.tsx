@@ -3,7 +3,7 @@ import moment from 'moment'
 import { FaArrowLeft } from 'react-icons/fa6'
 import { useLocale, useTranslations } from 'next-intl'
 
-import { TimelineInterface } from '@/interfaces/componentsInterfaces'
+import { TimelineInterface } from '@/interfaces/projectsInterfaces'
 
 import './index.scss'
 
@@ -17,7 +17,7 @@ export default function CurrentDate({
 
   return (
     <div
-      id='current_date_container'
+      id='current_date'
       style={{
         color:
           projectsData[currentProject].backgroundColor.page !== '#ffffff' ? '#ffffff' : '#000000',

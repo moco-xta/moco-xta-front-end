@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ThreeEvent } from '@react-three/fiber'
 
-import { getUvMousePositionOnMesh } from '@/helpers/r3fHelpers'
+import { getUvMousePositionOnMesh } from '@/helpers/threeHelpers'
 
 export default function useModelHoverEffect(
   ref: MutableRefObject<THREE.Group<THREE.Object3DEventMap>>,

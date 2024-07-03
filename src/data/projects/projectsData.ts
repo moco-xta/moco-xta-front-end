@@ -1,21 +1,13 @@
 import moment from 'moment'
-import { FaReact } from 'react-icons/fa'
-import { FaAngular } from 'react-icons/fa'
-import { SiDjango } from 'react-icons/si'
-import { SiSpring } from 'react-icons/si'
-import { TbBrandThreejs } from 'react-icons/tb'
-import { TbBrandNextjs } from 'react-icons/tb'
 
 import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
-
-import { default as imgConstants } from '@/constants/imgConstants.json'
 
 export const projectsData: ProjectDataInterface[] = [
   {
     key: 'moco_xta',
     name: 'Moco.xta',
     url: 'https://lento.eu/en',
-    image: '/new/img/png/projects/home_pages/moco_xta.png',
+    image: '/img/png/projects/home_pages/moco_xta.png',
     descriptionsKey: 'DESCRIPTIONS.LENTO',
     dates: {
       to: moment(new Date()).format('YYYY-MM-DD'),
@@ -23,13 +15,13 @@ export const projectsData: ProjectDataInterface[] = [
     },
     roles: ['Real-time 3D', 'Full Stack'],
     tools: [
-      '/new/img/png/projects/home_pages/logo_blender.png',
-      '/new/img/png/projects/home_pages/logo_react_three_drei.png',
-      '/new/img/png/projects/home_pages/logo_nextjs.png',
-      '/new/img/png/projects/home_pages/logo_spring.png',
-      '/new/img/png/projects/home_pages/logo_postgresql.png',
-      '/new/img/png/projects/home_pages/logo_docker.png',
-      '/new/img/png/projects/home_pages/logo_hostinger.png',
+      '/img/png/projects/home_pages/logo_blender.png',
+      '/img/png/projects/home_pages/logo_react_three_drei.png',
+      '/img/png/projects/home_pages/logo_nextjs.png',
+      '/img/png/projects/home_pages/logo_spring.png',
+      '/img/png/projects/home_pages/logo_postgresql.png',
+      '/img/png/projects/home_pages/logo_docker.png',
+      '/img/png/projects/home_pages/logo_hostinger.png',
     ],
     backgroundColor: {
       page: '#fc799d',
@@ -40,7 +32,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'abwerkt',
     name: 'AB Werkt',
     url: 'https://www.ab-werkt.eu/home',
-    image: '/new/img/png/projects/home_pages/abwerkt.png',
+    image: '/img/png/projects/home_pages/abwerkt.png',
     descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
       to: '2023-11-31',
@@ -48,10 +40,10 @@ export const projectsData: ProjectDataInterface[] = [
     },
     roles: ['Front End'],
     tools: [
-      '/new/img/png/projects/home_pages/logo_react-three-drei.png',
-      '/new/img/png/projects/home_pages/logo_nextjs.png',
-      '/new/img/png/projects/home_pages/logo_spring.png',
-      '/new/img/png/projects/home_pages/logo_postgresql.png',
+      '/img/png/projects/home_pages/logo_react-three-drei.png',
+      '/img/png/projects/home_pages/logo_nextjs.png',
+      '/img/png/projects/home_pages/logo_spring.png',
+      '/img/png/projects/home_pages/logo_postgresql.png',
     ],
     backgroundColor: {
       page: '#aec700',
@@ -62,7 +54,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'lento',
     name: 'Lento.eu',
     url: 'https://lento.eu/en',
-    image: '/new/img/png/projects/home_pages/lento.png',
+    image: '/img/png/projects/home_pages/lento.png',
     descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
       to: '2023-02-28',
@@ -70,9 +62,9 @@ export const projectsData: ProjectDataInterface[] = [
     },
     roles: ['Front End'],
     tools: [
-      '/new/img/png/projects/home_pages/logo_react-three-drei.png',
-      '/new/img/png/projects/home_pages/logo_nextjs.png',
-      '/new/img/png/projects/home_pages/logo_spring.png',
+      '/img/png/projects/home_pages/logo_react-three-drei.png',
+      '/img/png/projects/home_pages/logo_nextjs.png',
+      '/img/png/projects/home_pages/logo_spring.png',
     ],
     backgroundColor: {
       page: '#5397d4',
@@ -83,7 +75,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'hundred_hands',
     name: '100 Hands',
     url: 'https://www.100hands.nl/',
-    image: '/new/img/png/projects/home_pages/hundred_hands.png',
+    image: '/img/png/projects/home_pages/hundred_hands.png',
     descriptionsKey: 'DESCRIPTIONS.HUNDRED_HANDS',
     dates: {
       to: '2021-10-31',
@@ -91,9 +83,9 @@ export const projectsData: ProjectDataInterface[] = [
     },
     roles: ['Front End'],
     tools: [
-      '/new/img/png/projects/home_pages/logo_react-three-drei.png',
-      '/new/img/png/projects/home_pages/logo_nextjs.png',
-      '/new/img/png/projects/home_pages/logo_spring.png',
+      '/img/png/projects/home_pages/logo_react-three-drei.png',
+      '/img/png/projects/home_pages/logo_nextjs.png',
+      '/img/png/projects/home_pages/logo_spring.png',
     ],
     backgroundColor: {
       page: '#ffffff',
@@ -104,7 +96,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'wpme',
     name: 'WPME',
     url: 'https://wpme.group/',
-    image: '/new/img/png/projects/home_pages/wpme.png',
+    image: '/img/png/projects/home_pages/wpme.png',
     descriptionsKey: 'DESCRIPTIONS.WPME',
     dates: {
       to: '2021-08-30',
@@ -112,9 +104,9 @@ export const projectsData: ProjectDataInterface[] = [
     },
     roles: ['Front End'],
     tools: [
-      '/new/img/png/projects/home_pages/logo_react-three-drei.png',
-      '/new/img/png/projects/home_pages/logo_nextjs.png',
-      '/new/img/png/projects/home_pages/logo_spring.png',
+      '/img/png/projects/home_pages/logo_react-three-drei.png',
+      '/img/png/projects/home_pages/logo_nextjs.png',
+      '/img/png/projects/home_pages/logo_spring.png',
     ],
     backgroundColor: {
       page: '#000000',
@@ -125,7 +117,7 @@ export const projectsData: ProjectDataInterface[] = [
     key: 'openclassrooms',
     name: 'Openclassrooms',
     url: 'https://openclassrooms.com/en/',
-    image: '/new/img/png/projects/home_pages/openclassrooms.png',
+    image: '/img/png/projects/home_pages/openclassrooms.png',
     descriptionsKey: 'DESCRIPTIONS.OPENCLASSROOMS',
     dates: {
       to: '2021-05-17',
@@ -133,8 +125,8 @@ export const projectsData: ProjectDataInterface[] = [
     },
     roles: ['Back End'],
     tools: [
-      '/new/img/png/projects/home_pages/logo_spring.png',
-      '/new/img/png/projects/home_pages/logo_postgresql.png',
+      '/img/png/projects/home_pages/logo_spring.png',
+      '/img/png/projects/home_pages/logo_postgresql.png',
     ],
     backgroundColor: {
       page: '#ffffff',

@@ -1,0 +1,33 @@
+@import '@/styles/variables.module.scss';
+
+#plan {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  opacity: 0.5;
+  border: 3px solid green;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+
+    .cell {
+      width: 10px;
+      height: 10px;
+      margin: 1px;
+      /* border: 1px solid white; */
+    }
+
+    .food {
+      background-color: red;
+      border-radius: 50%;
+      /* border: 1px solid red; */
+    }
+
+    .snake_cell {
+      background-color: green;
+      /* border: 1px solid green; */
+    }
+  }
+}

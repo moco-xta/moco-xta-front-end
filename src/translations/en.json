@@ -11,7 +11,8 @@
   "LOCALES": {
     "EN": "English",
     "ES": "Spanish",
-    "FR": "French"
+    "FR": "French",
+    "SELECT_YOUR_LANGUAGE": "Select your language"
   },
   "HOME": {
     "HERO": {
@@ -212,6 +213,10 @@
     }
   },
   "AUTHENTICATION": {
+    "HEADER": {
+      "LOG_IN": "Log in",
+      "LOG_OUT": "Log out"
+    },
     "SIGN_IN": {
       "EMAIL": "Email",
       "PASSWORD": "Password",
@@ -262,6 +267,15 @@
       "SIGN_IN": {
         "LOADING": "Authentication in progress.",
         "SUCCESS": "You are logged in.",
+        "ERROR": "Sorry! An error occured. Please try again."
+      },
+      "SIGN_UP": {
+        "LOADING": "Authentication in progress.",
+        "SUCCESS": "You are logged in."
+      },
+      "LOG_OUT": {
+        "LOADING": "Logging out in progress.",
+        "SUCCESS": "You have been logged out.",
         "ERROR": "Sorry! An error occured. Please try again."
       }
     },

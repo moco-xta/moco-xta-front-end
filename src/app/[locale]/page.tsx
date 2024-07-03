@@ -2,13 +2,8 @@
 
 import React from 'react'
 
-import {
-  HeroSlice,
-  MainSkillsSlice,
-  PerformedWithSlice,
-  ReviewsSlice,
-} from '@/components/new/slices'
-import Footer from '@/components/new/shared/footer'
+import { HeroSlice, MainSkillsSlice, PerformedWithSlice, ReviewsSlice } from '@/components/slices'
+import Footer from '@/components/shared/footer'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
 
 import './index.scss'

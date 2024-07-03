@@ -1,52 +1,24 @@
-$black: #000;
-$grey_01: #070508;
-$grey_02: #141114;
-$grey_03: #2c2a2d;
-$grey_04: #444245;
-$grey_05: #737174;
-$grey_05_80: #73717480;
-$grey_05_80_rgba: rgba(115, 113, 116, 0.5);
-$grey_06: #898787;
-$grey_07: #9a989b;
-$grey_08: #acaaad;
-$grey_09: #c0bfc3;
-$grey_10: #d9d7da;
-$white: #fff;
-$alert_color: #ec2a5f;
+// GREY GRADIENT
 
-$fluorescent_yellow: #dcff00;
+$white: #ffffff;
+$grey_lighter: #d8d8d8;
+$grey_light: #a8a8a8;
+$grey_medium: #7b7b7b;
+$grey_dark: #515151;
+$grey_darker: #292929;
+$black: #000000;
 
-// SPIRAL
-$spiral_green: #d4ff8f;
+$primary_light_color: #408aca;
+$primary_light_rgba_color: rgba(64, 138, 202, 0.5);
+$primary_dark_color: #0a569a;
+$success_light_color: #37ae47;
+$success_light_rgba_color: rgba(55, 174, 71, 0.5);
+$success_dark_color: #0a7a18;
+$alert_light_color: #ec2a5f;
+$alert_light_rgba_color: rgba(236, 42, 95, 0.5);
+$alert_dark_color: #b20030;
 
-// MONTANA
-$vampire_violet: #0f0331;
-
-$background_color: #151416;
-$background_medium_dark: #4f4f4f;
-$background_black: #000;
-$background_white: #fff;
-
-$text_light: #fff;
-$text_medium_light: #bfbfbf;
-$text_medium_dark: #4f4f4f;
-$text_dark: #000;
-$text_alert: $alert_color;
-
-$card_background_gradient_light: #29272a;
-$card_background_gradient_dark: #000;
-
-$input_background: #00000050;
-$input_radio_checked_color: #bfbfbf;
-$input_border: 1px solid #2d2c2e;
-$input_radio_border: 1px solid #bfbfbf;
-$input_border_alert: 1px solid $alert_color;
-$alert_background: $alert_color;
-
-$scrollbar_thumb_color: #bfbfbf50;
-
-$circle_gradient_in: #ef32d9;
-$circle_gradient_out: #89fffd;
+// FONTS
 
 $font_size_small: 1em;
 $font_size_medium: 1.5em;
@@ -54,107 +26,300 @@ $font_size_large: 3em;
 $font_size_extra_large: 6em;
 $font_size_alert: 0.8em;
 
-$phi: calc((1 + sqrt(5)) / 2);
+// TEXTS
 
-$black_op30: #00000030;
+$text_alert: $alert_light_color;
 
-$grey_f2f2f2: #f2f2f2;
-$grey_ededed: #ededed;
-$grey_ccc: #ccc;
-$grey_333: #333;
+// INPUTS
 
-$white_op80: #ffffff80;
+$input_height_small: 400px;
 
-$color-bg1: #01000f;
-$color-bg2: #160b3f;
+$input_background: #00000080;
+$input_radio_checked_color: #bfbfbf;
+$input_border_light: 1px solid $grey_medium;
+$input_border_dark: 1px solid $black;
+$input_radio_border: 1px solid #bfbfbf;
 
-$color1_opbb: #0b0327bb;
-$color1_op00: #0b032700;
-$color2_opbb: #291c5bbb;
-$color2_op00: #291c5b00;
-$color3_opbb: #423576bb;
-$color3_op00: #42357600;
-$color4_opbb: #592e73bb;
-$color4_op00: #592e7300;
-$color5_opbb: #314872bb;
-$color5_op00: #31487200;
-$color_interactive_opbb: #1a3057bb;
-$color_interactive_op00: #1a305700;
-$color-interactive: 26, 48, 87;
-$background_bubble_size: 60%;
-$background_bubble_blending: normal;
+$input_border_alert: 1px solid $alert_light_color;
 
-$gradient_text_rgba_0percent: rgba(129, 85, 219, 1);
-$gradient_text_rgba_50percent: rgba(99, 146, 231, 1);
-$gradient_text_rgba_100percent: rgba(4, 151, 202, 1);
+// BACKGROUND-COLOR
 
-$background_dark: #01000f;
+$background_color: #151416;
+$blured_background_color: rgba(21, 20, 22, 0.7);
+$primary_background: $primary_light_color;
+$success_background: $success_light_color;
+$alert_background: $alert_light_color;
 
+// SHADOWS
+
+$primary_box_shadow: rgba(64, 138, 202, 0.25) 0px 25px 50px -12px;
+$success_box_shadow: rgba(55, 174, 71, 0.25) 0px 25px 50px -12px;
+$alert_box_shadow: rgba(246, 42, 95, 0.25) 0px 25px 50px -12px;
+
+// BREAK POINTS
+
+$breakpoint_XXXL: 2560px;
+$breakpoint_XXL: 1920px;
+$breakpoint_XL: 1600px;
+$breakpoint_L: 1440px;
+$breakpoint_M: 1280px;
+$breakpoint_S: 810px;
+$breakpoint_XS: 600px;
+$breakpoint_XXS: 400px;
+$breakpoint_XXXS: 360px;
+
+$app_max_width: $breakpoint_XXXL;
+
+// SIZES
+
+$font_size_alert: 0.8em;
+
+$smaller_limit: 600px;
+$small_limit: 800px;
 $desktop_limit: 1200px;
+$large_limit: 1600px;
+$larger_limit: 2000px;
+
+// MARGINS
+
+$percent_margin_XXXL: 45%;
+$percent_margin_XXL: 35%;
+$percent_margin_XL: 35%;
+$percent_margin_L: 25%;
+$percent_margin_M: 20%;
+$percent_margin_S: 15%;
+$percent_margin_XS: 10%;
+$percent_margin_XXS: 5%;
+
+$px_margin_XXS: 10px;
+$px_margin_XS: 25px;
+$px_margin_S: 50px;
+$px_margin_M: 100px;
+$px_margin_L: 150px;
+$px_margin_XL: 200px;
+
+$top_bottom_margin_smaller: 25px;
+$top_bottom_margin_small: 50px;
+$top_bottom_margin_medium: 100px;
+$top_bottom_margin_large: 200px;
+
+$left_right_margin_smaller: 50px;
+$left_right_margin_small: 100px;
+$left_right_margin_medium: 200px;
+
+// GAPS
+
+$gap_XXL: 200px;
+$gap_XL: 100px;
+$gap_L: 50px;
+$gap_M: 30px;
+$gap_S: 20px;
+$gap_XS: 10px;
+$gap_XXS: 5px;
+$gap_XXXS: 2px;
+
+$gap_medium: 30px;
+
+// TOGGLE BUTTON
+
+$toogle_button_width: 3.6rem;
+$toogle_button_height: 1.8rem;
+$toogle_button_padding: 0.2rem;
+
+// EFFECTS
+
+$blur: 3px;
+
+// TRANSITIONS
+
+$transition_XXL: 2s;
+$transition_XL: 1s;
+$transition_L: 0.5s;
+$transition_M: 0.3s;
+
+$hover_transition: 0.2s;
+
+// REVIEWS
+
+$reviews_slice_height_XL: 80vh;
+$reviews_slice_height_L: 70vh;
+$reviews_slice_height_M: 60vh;
+$reviews_slice_height_S: 55vh;
+
+// PROJECTS
+
+$projects_margin_top: 10vh;
+$projects_margin_left: 5vw;
+
+// SNAKE GAME
+
+$snake_game_margin_smaller: 25px;
+$snake_game_margin_small: 50px;
+$snake_game_margin_medium: 100px;
+$snake_game_margin_large: 150px;
+$snake_game_margin_larger: 200px;
+
+$nokia_0: #a8df02;
+$nokia_1: #b3bb00;
+$nokia_2: #b39900;
+$nokia_3: #aa7a15;
+$nokia_4: #995d21;
+$nokia_5: #814527;
+$nokia_6: #653227;
+$nokia_7: #462222;
+$nokia_8: #261517;
+
+$gameboy_lighter: #c9db9f;
+$gameboy_light: #9bbc0f;
+$gameboy_medium: #8bac0d;
+$gameboy_dark: #306230;
+$gameboy_darker: #0f3810;
+
+$dawnbringer32_blue_light: #5ecde4;
+$dawnbringer32_blue_dark: #306082;
+$dawnbringer32_green: #69be30;
+$dawnbringer32_pink: #d77bba;
+$dawnbringer32_red: #d95663;
+$dawnbringer32_red_dark: #ac3232;
+$dawnbringer32_violet: #3f3f73;
+$dawnbringer32_violet_dark: #222034;
+
+$snake_game_background: $dawnbringer32_violet;
+$snake_game_snake_cell: $dawnbringer32_green;
+$snake_game_fruit: $dawnbringer32_red;
+$snake_game_grid: $dawnbringer32_pink;
+$snake_game_default_text: $dawnbringer32_violet_dark;
+$snake_game_hidden_text: $dawnbringer32_blue_dark;
+$snake_game_revealed_text: $dawnbringer32_blue_light;
+$snake_game_i_dont_want_to_play: $dawnbringer32_red_dark;
+// $snake_game_: $;
+
+// RESPONSIVE
+
+$responsive_XXXL: #4cc9f0;
+$responsive_XXL: #4895ef;
+$responsive_XL: #4361ee;
+$responsive_L: #3f37c9;
+$responsive_M: gold;
+$responsive_S: #3a0ca3;
+$responsive_XS: #480ca8;
+$responsive_XXS: #7209b7;
+$responsive_XXXS: #b5179e;
+$responsive_XXXXS: #f72585;
 
 :export {
-  black: $black;
-  grey_01: $grey_01;
-  grey_02: $grey_02;
-  grey_03: $grey_03;
-  grey_04: $grey_04;
-  grey_05: $grey_05;
-  grey_06: $grey_06;
-  grey_07: $grey_07;
-  grey_08: $grey_08;
-  grey_09: $grey_09;
-  grey_10: $grey_10;
-  white: $white;
-  alert_color: $alert_color;
-
   background_color: $background_color;
+  blured_background_color: $blured_background_color;
 
-  text_light: $text_light;
-  text_medium_light: $text_medium_light;
-  text_medium_dark: $text_medium_dark;
-  text_dark: $text_dark;
+  white: $white;
+  grey_lighter: $grey_lighter;
+  grey_light: $grey_light;
+  grey_medium: $grey_medium;
+  grey_dark: $grey_dark;
+  grey_darker: $grey_darker;
+  black: $black;
 
-  scrollbar_thumb_color: $scrollbar_thumb_color;
+  input_background: $input_background;
+  input_radio_checked_color: $input_radio_checked_color;
+  input_border_light: $input_border_light;
+  input_border_dark: $input_border_dark;
+  input_radio_border: $input_radio_border;
 
-  circle_gradient_in: $circle_gradient_in;
-  circle_gradient_out: $circle_gradient_out;
+  // BREAK POINTS
 
-  font_size_small: $font_size_small;
-  font_size_medium: $font_size_medium;
-  font_size_large: $font_size_large;
+  breakpoint_XXXL: $breakpoint_XXXL;
+  breakpoint_XXL: $breakpoint_XXL;
+  breakpoint_XL: $breakpoint_XL;
+  breakpoint_L: $breakpoint_L;
+  breakpoint_M: $breakpoint_M;
+  breakpoint_S: $breakpoint_S;
+  breakpoint_XS: $breakpoint_XS;
+  breakpoint_XXS: $breakpoint_XXS;
+  breakpoint_XXXS: $breakpoint_XXXS;
 
-  phi: $phi;
+  // SIZES
 
-  black_op30: $black_op30;
-  grey_f2f2f2: $grey_f2f2f2;
-  grey_ededed: $grey_ededed;
-  grey_ccc: $grey_ccc;
-  grey_333: $grey_333;
-  white_op80: $white_op80;
-
-  color-bg1: $color-bg1;
-  color-bg2: $color-bg2;
-  color1_opbb: $color1_opbb;
-  color1_op00: $color1_op00;
-  color2_opbb: $color2_opbb;
-  color2_op00: $color2_op00;
-  color3_opbb: $color3_opbb;
-  color3_op00: $color3_op00;
-  color4_opbb: $color4_opbb;
-  color4_op00: $color4_op00;
-  color5_opbb: $color5_opbb;
-  color5_op00: $color5_op00;
-  color_interactive_opbb: $color_interactive_opbb;
-  color_interactive_op00: $color_interactive_op00;
-  color-interactive: $color-interactive;
-  background_bubble_size: $background_bubble_size;
-  background_bubble_blending: $background_bubble_blending;
-
-  gradient_text_rgba_0percent: $gradient_text_rgba_0percent;
-  gradient_text_rgba_50percent: $gradient_text_rgba_50percent;
-  gradient_text_rgba_100percent: $gradient_text_rgba_100percent;
-
-  background_dark: $background_dark;
-
+  smaller_limit: $smaller_limit;
+  small_limit: $small_limit;
   desktop_limit: $desktop_limit;
+  large_limit: $large_limit;
+  larger_limit: $larger_limit;
+
+  // MARGINS
+
+  percent_margin_XXXL: $percent_margin_XXXL;
+  percent_margin_XXL: $percent_margin_XXL;
+  percent_margin_XL: $percent_margin_XL;
+  percent_margin_L: $percent_margin_L;
+  percent_margin_M: $percent_margin_M;
+  percent_margin_S: $percent_margin_S;
+  percent_margin_XS: $percent_margin_XS;
+  percent_margin_XXS: $percent_margin_XXS;
+
+  px_margin_XXS: $px_margin_XXS;
+  px_margin_XS: $px_margin_XS;
+  px_margin_S: $px_margin_S;
+  px_margin_M: $px_margin_M;
+  px_margin_L: $px_margin_L;
+
+  top_bottom_margin_smaller: $top_bottom_margin_smaller;
+  top_bottom_margin_small: $top_bottom_margin_small;
+  top_bottom_margin_medium: $top_bottom_margin_medium;
+  top_bottom_margin_large: $top_bottom_margin_large;
+
+  left_right_margin_smaller: $left_right_margin_smaller;
+  left_right_margin_small: $left_right_margin_small;
+  left_right_margin_medium: $left_right_margin_medium;
+
+  // GAPS
+
+  gap_XXL: $gap_XXL;
+  gap_XL: $gap_XL;
+  gap_L: $gap_L;
+  gap_M: $gap_M;
+  gap_S: $gap_S;
+  gap_XS: $gap_XS;
+  gap_XXS: $gap_XXS;
+
+  gap_medium: $gap_medium;
+
+  // EFFECTS
+
+  blur: $blur;
+
+  transition: $transition_M;
+  hover_transition: $hover_transition;
+
+  // SNAKE GAME
+
+  snake_game_margin_smaller: $snake_game_margin_smaller;
+  snake_game_margin_small: $snake_game_margin_small;
+  snake_game_margin_medium: $snake_game_margin_medium;
+  snake_game_margin_large: $snake_game_margin_large;
+  snake_game_margin_larger: $snake_game_margin_larger;
+
+  nokia_0: $nokia_0;
+  nokia_1: $nokia_1;
+  nokia_2: $nokia_2;
+  nokia_3: $nokia_3;
+  nokia_4: $nokia_4;
+  nokia_5: $nokia_5;
+  nokia_6: $nokia_6;
+  nokia_7: $nokia_7;
+  nokia_8: $nokia_8;
+
+  gameboy_lighter: $gameboy_lighter;
+  gameboy_light: $gameboy_light;
+  gameboy_medium: $gameboy_medium;
+  gameboy_dark: $gameboy_dark;
+  gameboy_darker: $gameboy_darker;
+
+  snake_game_background: $snake_game_background;
+  snake_game_snake_cell: $snake_game_snake_cell;
+  snake_game_fruit: $snake_game_fruit;
+  snake_game_grid: $snake_game_grid;
+  snake_game_default_text: $snake_game_default_text;
+  snake_game_hidden_text: $snake_game_hidden_text;
+  snake_game_revealed_text: $snake_game_revealed_text;
+  snake_game_i_dont_want_to_play: $snake_game_i_dont_want_to_play;
 }

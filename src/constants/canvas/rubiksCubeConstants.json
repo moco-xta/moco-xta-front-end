@@ -16,6 +16,9 @@
     },
     "FOV": 55
   },
+  "TONE_MAPPING": {
+    "EXPOSURE": 10
+  },
   "POST_PROCESSING": {
     "DEPTH_OF_FIELD": {
       "FOCUS_DISTANCE": 0.003,
@@ -29,9 +32,8 @@
       "MIPMAP_BLUR": false
     }
   },
-  "LIGHTS": [
-    {
-      "TYPE": "pointLight",
+  "LIGHTS": {
+    "POINT_LIGHTS": {
       "INTENSITY": 50,
       "POSITIONS": [
         {
@@ -76,7 +78,7 @@
         }
       ]
     }
-  ],
+  },
   "RUBIKS_CUBE": {
     "WIDTH": 3,
     "PADS": [

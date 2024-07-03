@@ -1,4 +1,4 @@
-import { RoutesInterface } from '@/interfaces/routesInterface'
+import { RoutesInterface } from '@/interfaces/routesInterfaces'
 
 export const Routes: RoutesInterface[] = [
   {
@@ -6,21 +6,17 @@ export const Routes: RoutesInterface[] = [
     path: '/',
   },
   {
-    index: 4,
+    index: 3,
     key: 'ABOUT',
     path: '/about',
   },
   {
-    key: 'ADD_REVIEW',
-    path: '/add_review',
-  },
-  {
-    index: 3,
+    index: 1,
     key: 'BLOG',
     path: '/blog',
   },
   {
-    index: 5,
+    index: 4,
     key: 'CONTACT',
     path: '/contact',
   },
@@ -30,17 +26,13 @@ export const Routes: RoutesInterface[] = [
     path: '/photography',
   },
   {
-    index: 1,
+    index: 0,
     key: 'PROJECTS',
     path: '/projects',
   },
   {
-    key: 'ALL_REVIEWS',
-    path: '/all_reviews',
-  },
-  {
-    index: 0,
-    key: 'SKILLS',
-    path: '/skills',
+    index: 5,
+    key: 'SNAKE',
+    path: '/snake',
   },
 ]

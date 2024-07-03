@@ -1,0 +1,34 @@
+@import '@/styles/variables.module.scss';
+
+#about_greeting {
+  z-index: 4;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* background-color: $blured_background_color; */
+  background-color: #0000;
+}
+
+.show_about_greeting {
+  transition: opacity $transition_M linear;
+  opacity: 1;
+}
+
+.hide_about_greeting {
+  transition: opacity $transition_M linear;
+  opacity: 0;
+}
+
+.is_desktop_about_greeting {
+  padding: $percent_margin_XS $px_margin_S 0 $px_margin_S;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.is_mobile_about_greeting {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $gap_M;
+}

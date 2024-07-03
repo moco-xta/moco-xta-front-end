@@ -1,0 +1,92 @@
+@import '@/styles/variables.module.scss';
+
+#main_skills_slice {
+  display: flex;
+  flex-direction: column;
+
+  #main_skills_canvas {
+    canvas {
+      width: 100%;
+      height: 60vh;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint_XXS) {
+  #main_skills_slice {
+    padding-top: $px_margin_S;
+    padding-bottom: $px_margin_S;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXS) {
+  #main_skills_slice {
+    padding-top: $px_margin_M;
+    padding-bottom: $px_margin_M;
+  }
+}
+
+@media screen and (min-width: $breakpoint_XS) {
+  #main_skills_slice {
+    padding-top: $px_margin_M;
+    padding-bottom: $px_margin_M;
+  }
+}
+
+@media screen and (min-width: $breakpoint_S) {
+  #main_skills_slice {
+    padding-top: $px_margin_M;
+    padding-bottom: $px_margin_M;
+  }
+}
+
+@media screen and (min-width: $breakpoint_M) {
+  #main_skills_slice {
+    padding-top: $px_margin_L;
+    padding-bottom: $px_margin_L;
+
+    #main_skills_canvas {
+      canvas {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_L) {
+  #main_skills_slice {
+    #main_skills_canvas {
+      canvas {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XL) {
+  #main_skills_slice {
+    padding-top: $px_margin_XL;
+    padding-bottom: $px_margin_XL;
+
+    #main_skills_canvas {
+      canvas {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXL) {
+  #main_skills_slice {
+    #main_skills_canvas {
+      canvas {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_XXXL) {
+  #main_skills_slice {
+    #main_skills_canvas {
+      canvas {
+      }
+    }
+  }
+}

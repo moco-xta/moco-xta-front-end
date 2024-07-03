@@ -1,19 +1,17 @@
-#current_date_container {
+@import '@/styles/variables.module.scss';
+
+#current_date {
+  z-index: 3;
   position: absolute;
   width: 30%;
   height: 100%;
-  right: 0;
-  padding-right: 50px;
+  right: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   font-weight: bolder;
   transition: background-color 1s linear;
-
-  #day_of_the_week {
-    font-size: 35px;
-  }
 
   #month {
     font-size: 70px;

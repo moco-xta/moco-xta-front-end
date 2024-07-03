@@ -10,6 +10,7 @@ import { SignUpValuesInterface } from '@/interfaces/reduxApiInterfaces'
 import { AppDispatch } from '@/redux/store'
 import { useSignUpMutation } from '@/redux/api/authenticationApi'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
+import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
 
 import { signUpValidationSchema } from 'validations/signUpValidationSchema'
 
@@ -19,17 +20,15 @@ import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 
 import './index.scss'
 
-export default function SignUp({
-  setIsSignIn,
-  handleSetAuthenticationIsOpen,
-}: SignUpSignInInterface) {
-  const t = useTranslations()
+export default function SignUp({ setIsSignIn }: SignUpSignInInterface) {
+  const t = useTranslations('TOASTERS.AUTHENTICATION')
 
   const dispatch = useDispatch<AppDispatch>()
 
   const [signUp] = useSignUpMutation()
 
   const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(false)
+  const [resetButtonIsDisabled, setResetButtonIsDisabled] = useState<boolean>(true)
 
   const initialValues: SignUpValuesInterface = {
     firstName: '',
@@ -39,9 +38,12 @@ export default function SignUp({
     confirmPassword: '',
   }
 
+  const handleSetAuthenticationIsOpen = () => {
+    dispatch(setAuthenticationIsOpen(false))
+  }
+
   return (
     <div id='sign_in_container'>
-      <h1>Sign up</h1>
       <Formik
         initialValues={initialValues}
         validationSchema={signUpValidationSchema}
@@ -55,7 +57,7 @@ export default function SignUp({
             role: 'User',
           }
           toast.promise(signUp(payload).unwrap(), {
-            loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
+            loading: t('SIGN_UP.LOADING'),
             success: () => {
               dispatch(setIsAuthenticated(true))
               resetForm({
@@ -64,7 +66,7 @@ export default function SignUp({
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
               handleSetAuthenticationIsOpen()
-              return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
+              return t('SIGN_UP.SUCCESS')
             },
             error: (response) => {
               setSubmitButtonIsDisabled(false)
@@ -73,10 +75,9 @@ export default function SignUp({
           })
         }}
       >
-        {/* TODO: fix it */}
-        {/* @ts-ignore */}
         <SignUpForm
           submitButtonIsDisabled={submitButtonIsDisabled}
+          resetButtonIsDisabled={resetButtonIsDisabled}
           setIsSignIn={setIsSignIn}
         />
       </Formik>

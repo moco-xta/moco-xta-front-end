@@ -1,3 +1,8 @@
+export interface SignInPayloadInterface {
+  email: string
+  password: string
+}
+
 export interface SignUpPayloadInterface {
   firstName: string
   lastName: string
@@ -9,9 +14,8 @@ export interface SignUpValuesInterface extends SignUpPayloadInterface {
   confirmPassword: string
 }
 
-export interface SignInPayloadInterface {
-  email: string
-  password: string
+export interface LogOutPayloadInterface {
+  accessToken: string
 }
 
 export interface AddReviewValuesInterface {
@@ -19,15 +23,6 @@ export interface AddReviewValuesInterface {
   role: 'project_manager' | 'developer' | 'designer' | 'other' | ''
   rating: number
   date: Date
-}
-
-export interface TokensInterface {
-  access_token: string
-  refresh_token: string
-}
-
-export interface LogOutPayloadInterface {
-  access_token: string
 }
 
 export interface AddReviewPayloadInterface {
@@ -43,5 +38,14 @@ export interface ReviewPayloadInterface {
   role: string
   review: string
   rating: number
-  date?: Date
+  date: Date
+}
+
+export interface TokensInterface {
+  accessToken: string
+  refreshToken: string
+}
+
+export interface LogOutResponseInterface {
+  status: string
 }

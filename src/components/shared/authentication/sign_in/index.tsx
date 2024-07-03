@@ -10,6 +10,7 @@ import { SignInPayloadInterface } from '@/interfaces/reduxApiInterfaces'
 import { AppDispatch } from '@/redux/store'
 import { useSignInMutation } from '@/redux/api/authenticationApi'
 import { setIsAuthenticated } from '@/redux/slice/authenticationSlice'
+import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
 
 import { signInValidationSchema } from 'validations/signInValidationSchema'
 
@@ -19,33 +20,34 @@ import { clearFormStoredValues } from '@/helpers/localStorageHelpers'
 
 import './index.scss'
 
-export default function SignIn({
-  setIsSignIn,
-  handleSetAuthenticationIsOpen,
-}: SignUpSignInInterface) {
-  const t = useTranslations()
+export default function SignIn({ setIsSignIn }: SignUpSignInInterface) {
+  const t = useTranslations('TOASTERS.AUTHENTICATION')
 
   const dispatch = useDispatch<AppDispatch>()
 
   const [signIn] = useSignInMutation()
 
   const [submitButtonIsDisabled, setSubmitButtonIsDisabled] = useState<boolean>(false)
+  const [resetButtonIsDisabled, setResetButtonIsDisabled] = useState<boolean>(true)
 
   const initialValues: SignInPayloadInterface = {
     email: '',
     password: '',
   }
 
+  const handleSetAuthenticationIsOpen = () => {
+    dispatch(setAuthenticationIsOpen(false))
+  }
+
   return (
     <div id='sign_in_container'>
-      <h1>Sign in</h1>
       <Formik
         initialValues={initialValues}
         validationSchema={signInValidationSchema}
         onSubmit={(values, { resetForm }) => {
           setSubmitButtonIsDisabled(true)
           toast.promise(signIn(values).unwrap(), {
-            loading: t('TOASTERS.AUTHENTIFICATION.SIGN_IN.LOADING'),
+            loading: t('SIGN_IN.LOADING'),
             success: () => {
               dispatch(setIsAuthenticated(true))
               resetForm({
@@ -54,18 +56,18 @@ export default function SignIn({
               clearFormStoredValues(initialValues)
               setSubmitButtonIsDisabled(false)
               handleSetAuthenticationIsOpen()
-              return t('TOASTERS.AUTHENTIFICATION.SIGN_IN.SUCCESS')
+              return t('SIGN_IN.SUCCESS')
             },
-            error: (response) => {
+            error: () => {
               setSubmitButtonIsDisabled(false)
-              return 'Authentication failed'
+              return t('SIGN_IN.ERROR')
             },
           })
         }}
       >
-        {/* @ts-ignore */}
         <SignInForm
           submitButtonIsDisabled={submitButtonIsDisabled}
+          resetButtonIsDisabled={resetButtonIsDisabled}
           setIsSignIn={setIsSignIn}
         />
       </Formik>

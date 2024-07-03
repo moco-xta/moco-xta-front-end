@@ -5,13 +5,14 @@ import { useTranslations } from 'next-intl'
 import { AuthenticationFormsInterface } from '@/interfaces/formsInterfaces'
 import { SignUpValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
-import { FormikTextField } from '@/components/form/inputs'
-import { ResetButton, SubmitButton } from '@/components/form/buttons'
+import { FormikTextField } from '@/components/inputs'
+import { ResetButton, SubmitButton } from '@/components/buttons'
 
 import './index.scss'
 
 export default function SignUpForm({
   submitButtonIsDisabled,
+  resetButtonIsDisabled,
   setIsSignIn,
 }: AuthenticationFormsInterface) {
   const t = useTranslations()
@@ -35,6 +36,7 @@ export default function SignUpForm({
 
   return (
     <div id='sign_in_form_container'>
+      <h2 className='form_title'>Sign up</h2>
       <form onSubmit={handleSubmit}>
         <FormikTextField
           label={t('AUTHENTICATION.SIGN_UP.FIRST_NAME')}
@@ -89,9 +91,9 @@ export default function SignUpForm({
         />
         <div className='submit_reset_buttons_container'>
           <SubmitButton submitButtonIsDisabled={submitButtonIsDisabled} />
-          {/* TODO: fix it */}
-          {/* @ts-ignore */}
           <ResetButton resetForm={handleResetForm} />
+        </div>
+        <div className='sign_in_sign_up_switch_button_container'>
           <button onClick={handleSwitchSignUp}>{t('AUTHENTICATION.SIGN_UP.SIGN_IN')}</button>
         </div>
       </form>
