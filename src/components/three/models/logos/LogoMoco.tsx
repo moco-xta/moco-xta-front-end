@@ -13,13 +13,13 @@ import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 type GLTFResult = GLTF & {
   nodes: {
     /* LogoMoco2: THREE.Mesh */
-    LogoMoco3: THREE.Mesh
+    LogoMoco: THREE.Mesh
   }
   materials: {}
 }
 
 export default function LogoMoco() {
-  const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_MOCO_3) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_MOCO) as GLTFResult
 
   const logoMocoRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)
 
@@ -41,7 +41,7 @@ export default function LogoMoco() {
     >
       <Anaglyph enabled={false} />
       <mesh
-        geometry={nodes.LogoMoco3.geometry}
+        geometry={nodes.LogoMoco.geometry}
         onPointerMove={handleOnPointerMove}
         onPointerOut={handleOnPointerLeave}
         /* rotation={[0, -Math.PI / 2, 0]} */
@@ -51,3 +51,5 @@ export default function LogoMoco() {
     </group>
   )
 }
+
+useGLTF.preload(gltfConstants.LOGOS.LOGO_MOCO)
