@@ -152,11 +152,11 @@ const monarchBottomNormalMap = new THREE.TextureLoader().load(
 )
 monarchBottomNormalMap.flipY = false
 
-const monarchShadowMap = new THREE.TextureLoader().load(
+/* const monarchShadowMap = new THREE.TextureLoader().load(
   texturesConstants.ABOUT.LABORATOIRE.FINAL_RENDER.WALLS_COLLECTION.FRAMES_COLLECTION.MONARCH
     .MONARCH_SHADOW.DIFFUSE.HALF_K,
 )
-monarchShadowMap.flipY = false
+monarchShadowMap.flipY = false */
 
 // NICOTIANA RUSTICA
 
@@ -428,7 +428,7 @@ const laboratoireFinalRenderTextures: {
     normalMap: monarchBottomNormalMap,
   },
   monarchShadow: {
-    map: monarchShadowMap,
+    /* map: monarchShadowMap, */
   },
   mondaineWallClock: {
     map: mondaineWallClockMap,

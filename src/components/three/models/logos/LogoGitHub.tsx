@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
 }
 
 export function LogoGitHub(props: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_GIT_HUB) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_GITHUB) as GLTFResult
 
   const logoGitHubRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)
 
@@ -49,4 +49,4 @@ export function LogoGitHub(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(gltfConstants.LOGOS.LOGO_GIT_HUB)
+useGLTF.preload(gltfConstants.LOGOS.LOGO_GITHUB)

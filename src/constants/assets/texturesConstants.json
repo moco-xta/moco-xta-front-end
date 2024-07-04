@@ -231,16 +231,16 @@
                 "HALF_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_diffuse_HALF_K.jpg"
               },
               "ROUGHNESS": {
-                "FOUR_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_roughness_4K.jpg",
-                "TWO_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_roughness_2K.jpg",
-                "ONE_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_roughness_1K.jpg",
-                "HALF_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_roughness_HALF_K.jpg"
+                "FOUR_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_roughness_4K.jpg",
+                "TWO_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_roughness_2K.jpg",
+                "ONE_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_roughness_1K.jpg",
+                "HALF_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_roughness_HALF_K.jpg"
               },
               "NORMAL": {
-                "FOUR_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_normal_4K.jpg",
-                "TWO_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_normal_2K.jpg",
-                "ONE_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_normal_1K.jpg",
-                "HALF_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_marble_normal_HALF_K.jpg"
+                "FOUR_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_normal_4K.jpg",
+                "TWO_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_normal_2K.jpg",
+                "ONE_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_normal_1K.jpg",
+                "HALF_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_marble_normal_HALF_K.jpg"
               }
             },
             "USED_METAL": {
@@ -251,16 +251,16 @@
                 "HALF_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_diffuse_HALF_K.jpg"
               },
               "ROUGHNESS": {
-                "FOUR_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_roughness_4K.jpg",
-                "TWO_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_roughness_2K.jpg",
-                "ONE_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_roughness_1K.jpg",
-                "HALF_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_roughness_HALF_K.jpg"
+                "FOUR_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_roughness_4K.jpg",
+                "TWO_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_roughness_2K.jpg",
+                "ONE_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_roughness_1K.jpg",
+                "HALF_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_roughness_HALF_K.jpg"
               },
               "NORMAL": {
-                "FOUR_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_normal_4K.jpg",
-                "TWO_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_normal_2K.jpg",
-                "ONE_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_normal_1K.jpg",
-                "HALF_K": "/img/textures/about/laboratoire/final_render/world_map_stand/world_map_stand_used_metal_normal_HALF_K.jpg"
+                "FOUR_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_normal_4K.jpg",
+                "TWO_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_normal_2K.jpg",
+                "ONE_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_normal_1K.jpg",
+                "HALF_K": "/img/textures/about/laboratoire/final_render/speakers_collection/world_map_stand/world_map_stand_used_metal_normal_HALF_K.jpg"
               }
             }
           }
