@@ -9,9 +9,8 @@
     }
   },
   "PERSPECTIVE_CAMERA": {
-    "IS_DESKTOP": {
-      "DESKTOP_LIMIT": 1200,
-      "LARGE_LIMIT": 2000,
+    "LARGE_SCREEN": {
+      "LARGER_LIMIT": 2000,
       "MIN_POSITION": 6,
       "MAX_POSITION": 4,
       "INITIAL_POSITION": {
@@ -20,10 +19,12 @@
         "Z": 0
       }
     },
-    "IS_NOT_DESKTOP_POSITION": {
-      "X": -0.04,
-      "Y": -0.15,
-      "Z": 1.5
+    "SMALL_SCREEN": {
+      "INITIAL_POSITION": {
+        "X": 0,
+        "Y": 0,
+        "Z": 7
+      }
     },
     "FOV": 30
   },
@@ -58,12 +59,12 @@
   "HELIUM_BALLOONS": {
     "WRAPPER": {
       "DIMENSIONS": {
-        "IS_NOT_MOBILE": {
+        "LARGE_SCREEN": {
           "WIDTH": 2.55,
           "HEIGHT": 1.1,
           "DEPTH": 0.85
         },
-        "IS_MOBILE": {
+        "SMALL_SCREEN": {
           "WIDTH": 1.4,
           "HEIGHT": 2.2,
           "DEPTH": 0.85
@@ -74,48 +75,48 @@
     "BALLOONS": {
       "POSITION": {
         "M": {
-          "IS_NOT_MOBILE": {
+          "LARGE_SCREEN": {
             "X": -0.96,
             "Y": 0,
             "Z": 0
           },
-          "IS_MOBILE": {
+          "SMALL_SCREEN": {
             "X": -0.48,
             "Y": 0.55,
             "Z": 0
           }
         },
         "O1": {
-          "IS_NOT_MOBILE": {
+          "LARGE_SCREEN": {
             "X": -0.32,
             "Y": 0,
             "Z": 0
           },
-          "IS_MOBILE": {
+          "SMALL_SCREEN": {
             "X": 0.32,
             "Y": 0.55,
             "Z": 0
           }
         },
         "C": {
-          "IS_NOT_MOBILE": {
+          "LARGE_SCREEN": {
             "X": 0.32,
             "Y": 0,
             "Z": 0
           },
-          "IS_MOBILE": {
+          "SMALL_SCREEN": {
             "X": -0.32,
             "Y": -0.55,
             "Z": 0
           }
         },
         "O2": {
-          "IS_NOT_MOBILE": {
+          "LARGE_SCREEN": {
             "X": 0.96,
             "Y": 0,
             "Z": 0
           },
-          "IS_MOBILE": {
+          "SMALL_SCREEN": {
             "X": 0.32,
             "Y": -0.55,
             "Z": 0

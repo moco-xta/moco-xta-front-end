@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setAuthenticationIsOpen } from '@/redux/slice/appStateSlice'
@@ -19,11 +19,11 @@ export default function Authentication() {
     (state: RootState) => state.appState.authenticationIsOpen,
   )
 
-  const { isDesktop } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   useEffect(() => {
     dispatch(setAuthenticationIsOpen(false))
-  }, [dispatch, isDesktop])
+  }, [dispatch, isLargeScreen])
 
   const [isSignIn, setIsSignIn] = useState(true)
 

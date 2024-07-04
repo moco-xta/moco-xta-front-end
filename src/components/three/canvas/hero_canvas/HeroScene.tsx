@@ -1,26 +1,26 @@
 import React from 'react'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
-import DesktopBalloonsWrapper from './DesktopBalloonsWrapper'
-import DesktopHeliumBalloons from './DesktopHeliumBalloons'
-import MobileBalloonsWrapper from './MobileBalloonsWrapper'
-import MobileHeliumBalloons from './MobileHeliumBalloons'
+import { default as LargeScreenBalloonsWrapper } from './large_screen/BalloonsWrapper'
+import { default as LargeScreenHeliumBalloons } from './large_screen/HeliumBalloons'
+import { default as SmallScreenBalloonsWrapper } from './small_screen/BalloonsWrapper'
+import { default as SmallScreenHeliumBalloons } from './small_screen/HeliumBalloons'
 
 export default function HeroScene() {
-  const { isDesktop } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   return (
     <>
-      {isDesktop ? (
+      {isLargeScreen ? (
         <group>
-          <DesktopBalloonsWrapper />
-          <DesktopHeliumBalloons />
+          <LargeScreenBalloonsWrapper />
+          <LargeScreenHeliumBalloons />
         </group>
       ) : (
         <group>
-          <MobileBalloonsWrapper />
-          <MobileHeliumBalloons />
+          <SmallScreenBalloonsWrapper />
+          <SmallScreenHeliumBalloons />
         </group>
       )}
     </>

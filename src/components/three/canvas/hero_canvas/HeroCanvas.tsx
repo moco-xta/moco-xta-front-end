@@ -1,39 +1,33 @@
-import React, { Suspense, useEffect, useRef } from 'react'
+import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
 import HeroScene from './HeroScene'
 import ToneMapping from './ToneMapping'
 import PostProcessing from './PostProcessing'
 
+import { default as globalConstants } from '@/constants/globalConstants.json'
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
-
-import variables from '@/styles/variables.module.scss'
 
 export default function HeroCanvas() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
 
-  const { isDesktop, innerWidth } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   const setCameraZPosition = (innerWidth: number) => {
     return (
-      heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MIN_POSITION -
-      ((heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MIN_POSITION -
-        heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.MAX_POSITION) /
-        (heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.LARGE_LIMIT -
-          heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.DESKTOP_LIMIT)) *
-        (innerWidth - heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.DESKTOP_LIMIT)
+      heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.MIN_POSITION -
+      ((heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.MIN_POSITION -
+        heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.MAX_POSITION) /
+        (heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.LARGER_LIMIT -
+          globalConstants.DESKTOP_LIMIT)) *
+        (innerWidth - globalConstants.DESKTOP_LIMIT)
     )
   }
-
-  useEffect(() => {
-    if (perspectiveCameraRef.current)
-      perspectiveCameraRef.current.position.z = setCameraZPosition(innerWidth)
-  }, [innerWidth])
 
   return (
     <Canvas
@@ -52,16 +46,16 @@ export default function HeroCanvas() {
         ref={perspectiveCameraRef}
         makeDefault
         position={
-          isDesktop
+          isLargeScreen
             ? [
-                heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.INITIAL_POSITION.X,
-                heroConstants.PERSPECTIVE_CAMERA.IS_DESKTOP.INITIAL_POSITION.Y,
+                heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.INITIAL_POSITION.X,
+                heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.INITIAL_POSITION.Y,
                 setCameraZPosition(window.innerWidth),
               ]
             : [
-                heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.X,
-                heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.Y,
-                heroConstants.PERSPECTIVE_CAMERA.IS_NOT_DESKTOP_POSITION.Z,
+                heroConstants.PERSPECTIVE_CAMERA.SMALL_SCREEN.INITIAL_POSITION.X,
+                heroConstants.PERSPECTIVE_CAMERA.SMALL_SCREEN.INITIAL_POSITION.Y,
+                heroConstants.PERSPECTIVE_CAMERA.SMALL_SCREEN.INITIAL_POSITION.Z,
               ]
         }
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}

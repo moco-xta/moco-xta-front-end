@@ -5,17 +5,17 @@ import MainSkillsCanvas from '../../three/canvas/main_skills_canvas/MainSkillsCa
 import MainSkillsTextBlocks from './main_skills_text_blocks'
 import RealTime3D from './real_time_3D'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
 import './index.scss'
 
 export default function MainSkillsSlice() {
-  const { isDesktop } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   return (
     <section id='main_skills_slice' /*  className='responsive_background' */>
       <IntroductionTextBlock />
-      {isDesktop && <MainSkillsCanvas />}
+      {isLargeScreen && <MainSkillsCanvas />}
       <MainSkillsTextBlocks />
       <RealTime3D />
     </section>
