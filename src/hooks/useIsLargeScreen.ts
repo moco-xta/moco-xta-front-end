@@ -7,7 +7,9 @@ export default function useIsLargeScreen() {
     window.innerWidth > globalConstants.DESKTOP_LIMIT,
   )
   function handleResize() {
-    window.innerWidth > globalConstants.DESKTOP_LIMIT ? setIsLargeScreen(true) : setIsLargeScreen(false)
+    window.innerWidth > globalConstants.DESKTOP_LIMIT
+      ? setIsLargeScreen(true)
+      : setIsLargeScreen(false)
   }
 
   useEffect(() => {
@@ -18,6 +20,6 @@ export default function useIsLargeScreen() {
   }, [])
 
   return {
-    isLargeScreen
+    isLargeScreen,
   }
 }

@@ -6,5 +6,5 @@ export const snakeCellMaterial = new THREE.MeshStandardMaterial({
   color: variables.nokia_8,
   transparent: true,
   /* opacity: 0.6, */
-  side: THREE.DoubleSide
+  side: THREE.DoubleSide,
 })

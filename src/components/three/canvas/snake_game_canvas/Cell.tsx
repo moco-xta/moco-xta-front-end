@@ -28,7 +28,9 @@ export default function Cell({ cell }: CellComponentInterface) {
           castShadow
         />
       )}
-      {(cell.status === 'SNAKE_HEAD' || cell.status === 'SNAKE_STRAIGHT' || cell.status === 'SNAKE_CORNER') && (
+      {(cell.status === 'SNAKE_HEAD' ||
+        cell.status === 'SNAKE_STRAIGHT' ||
+        cell.status === 'SNAKE_CORNER') && (
         <Box
           key={`snake_cell_${cell.position.x}_${cell.position.z}`}
           position={[cell.position.x, 0, cell.position.z]}
