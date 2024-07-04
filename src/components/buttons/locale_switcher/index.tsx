@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useLocale, useTranslations } from 'next-intl'
 import { FaArrowRight } from 'react-icons/fa6'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setLocaleSwitcherIsOpen } from '@/redux/slice/appStateSlice'
@@ -27,7 +27,7 @@ export default function LocaleSwitcher() {
     (state: RootState) => state.appState.localeSwitcherIsOpen,
   )
 
-  const { isDesktop } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   const dropdown = useRef<HTMLLIElement>(null)
 
@@ -43,7 +43,7 @@ export default function LocaleSwitcher() {
 
   useEffect(() => {
     dispatch(setLocaleSwitcherIsOpen(false))
-  }, [dispatch, isDesktop])
+  }, [dispatch, isLargeScreen])
 
   function handleSetCurrentLocale(locale: string) {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`
@@ -68,7 +68,7 @@ export default function LocaleSwitcher() {
           id='selected'
           title={t('SELECT_YOUR_LANGUAGE')}
         >
-          {isDesktop ? currentLocale.toUpperCase() : t(currentLocale.toUpperCase())}
+          {isLargeScreen ? currentLocale.toUpperCase() : t(currentLocale.toUpperCase())}
         </span>
       </div>
       {localeSwitcherIsOpen && (

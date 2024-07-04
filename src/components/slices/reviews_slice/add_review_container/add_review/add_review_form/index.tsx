@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import { FormsInterface } from '@/interfaces/formsInterfaces'
 import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
 import { RootState } from '@/redux/store'
 
@@ -24,7 +24,7 @@ export default function AddReviewForm({ submitButtonIsDisabled }: FormsInterface
 
   const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
-  const { isDesktop } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   const { errors, handleChange, values, resetForm, setFieldValue, submitForm, touched } =
     useFormikContext<AddReviewValuesInterface>()
@@ -90,7 +90,7 @@ export default function AddReviewForm({ submitButtonIsDisabled }: FormsInterface
           </div>
         </form>
       </div>
-      {isDesktop && (
+      {isLargeScreen && (
         <ReviewCard
           review={values}
           /* reviewCardStyle={{ width: '100%', margin: '0 0 0 20px' }} */

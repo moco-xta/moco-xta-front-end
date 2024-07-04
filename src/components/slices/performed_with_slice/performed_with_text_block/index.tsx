@@ -1,22 +1,22 @@
 import React from 'react'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
 import TextBlockSimple from '@/components/shared/text_blocks/text_block_simple'
 
 import './index.scss'
 
 export default function PerformedWithTextBlock() {
-  const { isDesktop } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   return (
     <TextBlockSimple
       id='performed_with_text_block'
-      className={`${isDesktop ? '' : 'centered_text_block'}`}
+      className={`${isLargeScreen ? '' : 'centered_text_block'}`}
       title={'HOME.PERFORMED_WITH.TITLE'}
       paragraph={'HOME.PERFORMED_WITH.PARAGRAPH'}
       /* blockStyle={
-        isDesktop
+        isLargeScreen
           ? {
               width: '30%',
               padding: `0 ${variables.left_right_margin_small} 0 0`,

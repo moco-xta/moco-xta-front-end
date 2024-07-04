@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 
 import { RootState } from '@/redux/store'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
 import AddReviewButton from '@/components/buttons/add_review_button'
 import ReviewsTextBlockContainer from './reviews_text_block_container'
@@ -17,11 +17,11 @@ export default function ReviewsContainer() {
 
   const addReviewIsOpen = useSelector((state: RootState) => state.appState.addReviewIsOpen)
 
-  const { isDesktop } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   return (
     <>
-      {isDesktop ? (
+      {isLargeScreen ? (
         <div
           id='reviews_container_desktop'
           className={`reviews_containers ${addReviewIsOpen ? '' : 'open'}`}

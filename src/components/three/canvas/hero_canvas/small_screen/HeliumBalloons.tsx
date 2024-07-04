@@ -7,9 +7,9 @@ import useMouseMove from '@/hooks/useMouseMove'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { addForce, applyImpulse } from '@/helpers/heroCanvasHelpers'
-import { CHeliumBalloon, MHeliumBalloon, OHeliumBalloon, Smiley } from '../../models/hero'
+import { CHeliumBalloon, MHeliumBalloon, OHeliumBalloon, Smiley } from '../../../models/hero'
 
-export default function MobileHeliumBalloons() {
+export default function HeliumBalloons() {
   const { deltaX, deltaY } = useMouseMove()
 
   const timeRef = useRef<number>(0)
@@ -35,9 +35,9 @@ export default function MobileHeliumBalloons() {
       <RigidBody
         ref={mRef}
         position={[
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.M.IS_MOBILE.X,
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.M.IS_MOBILE.Y,
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.M.IS_MOBILE.Z,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.M.SMALL_SCREEN.X,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.M.SMALL_SCREEN.Y,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.M.SMALL_SCREEN.Z,
         ]}
         colliders='hull'
         restitution={heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
@@ -53,9 +53,9 @@ export default function MobileHeliumBalloons() {
       <RigidBody
         ref={o1Ref}
         position={[
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O1.IS_MOBILE.X,
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O1.IS_MOBILE.Y,
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O1.IS_MOBILE.Z,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O1.SMALL_SCREEN.X,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O1.SMALL_SCREEN.Y,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O1.SMALL_SCREEN.Z,
         ]}
         colliders='hull'
         restitution={heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
@@ -71,9 +71,9 @@ export default function MobileHeliumBalloons() {
       <RigidBody
         ref={cRef}
         position={[
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.C.IS_MOBILE.X,
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.C.IS_MOBILE.Y,
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.C.IS_MOBILE.Z,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.C.SMALL_SCREEN.X,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.C.SMALL_SCREEN.Y,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.C.SMALL_SCREEN.Z,
         ]}
         colliders='hull'
         restitution={heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
@@ -89,9 +89,9 @@ export default function MobileHeliumBalloons() {
       <RigidBody
         ref={o2Ref}
         position={[
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O2.IS_MOBILE.X,
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O2.IS_MOBILE.Y,
-          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O2.IS_MOBILE.Z,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O2.SMALL_SCREEN.X,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O2.SMALL_SCREEN.Y,
+          heroConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O2.SMALL_SCREEN.Z,
         ]}
         colliders='hull'
         restitution={heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}

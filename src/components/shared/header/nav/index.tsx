@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { setLocaleSwitcherIsOpen, setMenuIsOpen } from '@/redux/slice/appStateSlice'
@@ -25,13 +25,13 @@ export default function Nav() {
 
   const dispatch = useDispatch<AppDispatch>()
 
-  const { isDesktop } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   const menuIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
 
   useEffect(() => {
     dispatch(setMenuIsOpen(false))
-  }, [dispatch, isDesktop])
+  }, [dispatch, isLargeScreen])
 
   useEffect(() => {
     if (!menuIsOpen) dispatch(setLocaleSwitcherIsOpen(false))

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import useResize from '@/hooks/useResize'
+import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
 import { mainSkillsData } from '@/data/main_skills/mainSkillsData'
 
@@ -11,16 +11,16 @@ import { isEven } from '@/helpers/mathHelpers'
 import './index.scss'
 
 export default function MainSkills() {
-  const { isDesktop } = useResize()
+  const { isLargeScreen } = useIsLargeScreen()
 
   return (
     <div id='main_skills_container' /* className='responsive_background' */>
       {mainSkillsData.mainSkills.map((skill, index) => (
         <TextBlockSimple
           key={`main_skills_text_block_${skill.key}`}
-          className={`main_skills ${!isDesktop ? (isEven(index) ? 'even' : 'odd') : ''}`}
+          className={`main_skills ${!isLargeScreen ? (isEven(index) ? 'even' : 'odd') : ''}`}
           divStyle={
-            isDesktop
+            isLargeScreen
               ? {}
               : {
                   backgroundImage: `url(${skill.backgroundImage})`,
