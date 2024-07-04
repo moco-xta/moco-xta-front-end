@@ -1,95 +1,104 @@
 {
-  "asset": {
-    "generator": "Khronos glTF Blender I/O v4.1.62",
-    "version": "2.0"
-  },
-  "scene": 0,
-  "scenes": [
-    {
-      "name": "Scene",
-      "nodes": [0]
-    }
-  ],
-  "nodes": [
-    {
-      "mesh": 0,
-      "name": "LogoGitHub",
-      "translation": [7.328977108001709, 14.798259735107422, -13.841562271118164]
-    }
-  ],
-  "meshes": [
-    {
-      "name": "LogoGitHub",
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 0,
-            "NORMAL": 1,
-            "TEXCOORD_0": 2
-          },
-          "indices": 3
-        }
-      ]
-    }
-  ],
-  "accessors": [
-    {
-      "bufferView": 0,
-      "componentType": 5126,
-      "count": 14295,
-      "max": [0.9147595763206482, 1.7102593183517456, 0.08008293807506561],
-      "min": [-0.9758063554763794, 0.013815314508974552, -0.07489833235740662],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 1,
-      "componentType": 5126,
-      "count": 14295,
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 14295,
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5123,
-      "count": 27612,
-      "type": "SCALAR"
-    }
-  ],
-  "bufferViews": [
-    {
-      "buffer": 0,
-      "byteLength": 171540,
-      "byteOffset": 0,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 171540,
-      "byteOffset": 171540,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 114360,
-      "byteOffset": 343080,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 55224,
-      "byteOffset": 457440,
-      "target": 34963
-    }
-  ],
-  "buffers": [
-    {
-      "byteLength": 512664,
-      "uri": "LogoGitHub.bin"
-    }
-  ]
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v4.1.62",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"mesh":0,
+			"name":"LogoGithub"
+		}
+	],
+	"meshes":[
+		{
+			"name":"LogoGithub",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":0,
+						"NORMAL":1,
+						"TEXCOORD_0":2
+					},
+					"indices":3
+				}
+			]
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"componentType":5126,
+			"count":2756,
+			"max":[
+				0.9349566102027893,
+				0.9876880645751953,
+				0.20000022649765015
+			],
+			"min":[
+				-0.9312335848808289,
+				-0.9829122424125671,
+				-0.20000016689300537
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":1,
+			"componentType":5126,
+			"count":2756,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":2,
+			"componentType":5126,
+			"count":2756,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":3,
+			"componentType":5123,
+			"count":5616,
+			"type":"SCALAR"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":33072,
+			"byteOffset":0,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":33072,
+			"byteOffset":33072,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":22048,
+			"byteOffset":66144,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":11232,
+			"byteOffset":88192,
+			"target":34963
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":99424,
+			"uri":"LogoGitHub.bin"
+		}
+	]
 }
