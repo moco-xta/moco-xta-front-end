@@ -1,6 +1,6 @@
 import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Environment, PerspectiveCamera } from '@react-three/drei'
+import { Environment, Html, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import useIsLargeScreen from '@/hooks/useIsLargeScreen'
@@ -12,6 +12,7 @@ import PostProcessing from './PostProcessing'
 import { default as globalConstants } from '@/constants/globalConstants.json'
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
+import ContactTextScene from '../contact_text_canvas/ContactTextScene'
 
 export default function HeroCanvas() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
@@ -74,6 +75,43 @@ export default function HeroCanvas() {
           <HeroScene />
           <ToneMapping />
           <PostProcessing />
+
+          {/* <ContactTextScene /> */}
+
+          {/* <Html
+            // zIndexRange={[-1, -10]}
+            prepend
+            fullscreen
+            style={{
+              width: '100vw',
+              height: '100vh',
+              fontSize: '220px',
+              fontWeight: 'bold',
+              textAlign: 'start',
+            }}
+          >
+            <div
+            // @ts-ignore
+            // ref={(el) => setDomEl(el)}
+              // className='dom-element'
+            >
+              <p
+                // className='flex flex-col' 
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-start',
+                  alignItems: 'flex-start',
+                }}
+              >
+                FRONT-END <br />
+                DEVELOPER <br />
+                WITH <br />
+                EXTRA SKILLS
+                <br />
+              </p>
+            </div>
+          </Html> */}
         </Physics>
       </Suspense>
     </Canvas>

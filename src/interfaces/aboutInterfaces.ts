@@ -1,8 +1,8 @@
 import { LocationInterface } from './locationInterfaces'
 
 export interface AboutInterface {
-  accessToDeviceMotionAndOrientationGranted: boolean
   showInstructions: boolean
+  accessToDeviceMotionAndOrientationGranted: boolean
   isFinalRender: boolean
   location: LocationInterface
   debug: {

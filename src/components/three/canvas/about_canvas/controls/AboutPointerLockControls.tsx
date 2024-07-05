@@ -17,14 +17,14 @@ export default function AboutPointerLockControls({
 }: PointerLockControlsComponentInterface) {
   const { camera, gl } = useThree()
 
-  const { escape } = useAboutKeyboard()
+  /* const { escape } = useAboutKeyboard() */
 
   const dispatch = useDispatch<AppDispatch>()
   const { showInstructions } = useSelector((state: RootState) => state.about)
 
   const controlsRef = useRef<PointerLockControlsImpl>(null!)
 
-  /* useEffect(() => {
+  useEffect(() => {
     function pointerLockChange() {
       dispatch(setShowInstructions(!showInstructions))
     }
@@ -33,21 +33,21 @@ export default function AboutPointerLockControls({
     return () => {
       document.removeEventListener('pointerlockchange', pointerLockChange, false)
     }
-  }) */
-
-  /* useEffect(() => {
-    console.log('controlsRef.current', controlsRef.current)
-    if (!controlsRef.current.isLocked) dispatch(setShowInstructions(true))
-  }, [controlsRef.current]) */
+  })
 
   useEffect(() => {
+    console.log('controlsRef.current', controlsRef.current)
+    if (!controlsRef.current.isLocked) dispatch(setShowInstructions(true))
+  }, [controlsRef.current])
+
+  /* useEffect(() => {
     console.log('showInstructions', showInstructions)
     if (showInstructions) {
       controlsRef.current.unlock()
-    } /*  else {
+    }  else {
       controlsRef.current.lock()
-    } */
-  }, [showInstructions])
+    }
+  }, [showInstructions]) */
 
   /* const handleKeyDown = useCallback((e: KeyboardEvent) => {
     console.log('e.code', e.code)
@@ -64,7 +64,7 @@ export default function AboutPointerLockControls({
   return (
     <PointerLockControls
       ref={controlsRef}
-      /* selector={pointerLockControlsSelector} */
+      selector={pointerLockControlsSelector}
       args={[camera, gl.domElement]}
     />
   )
