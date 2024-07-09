@@ -56,7 +56,7 @@ export default function SnakeGameCanvas() {
           <SnakeScene />
         </Physics>
         {/* {enabled && <SoftShadows {...config} />} */}
-        <PostProcessing />
+        {/* <PostProcessing /> */}
       </Suspense>
     </Canvas>
   )

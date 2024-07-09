@@ -18,6 +18,7 @@ import './index.scss'
 
 const useDomToCanvas = (domEl: any) => {
   const [texture, setTexture] = useState<THREE.CanvasTexture>()
+
   useEffect(() => {
     if (!domEl) return
     const convertDomToCanvas = async () => {
@@ -48,7 +49,7 @@ export default function ContactTextScene() {
   const { width, height } = state.viewport
   const [domEl, setDomEl] = useState(null)
 
-  const materialRef = useRef(null)
+  const materialRef = useRef(null!)
   const textureDOM = useDomToCanvas(domEl)
 
   const uniforms = useMemo(
@@ -94,15 +95,18 @@ export default function ContactTextScene() {
           className='dom-element'
         >
           <p className='flex flex-col'>
-            WHEN <br />
-            WILL <br />
-            WE <br />
-            MEET ?
+            FRONT-END <br />
+            DEVELOPER <br />
+            WITH <br />
+            EXTRA SKILLS
             <br />
           </p>
         </div>
       </Html>
-      <mesh>
+      <mesh
+        position={[0.5, 0, -1]}
+        scale={2}
+      >
         <planeGeometry args={[width, height, 254, 254]} />
         <CustomShaderMaterial
           ref={materialRef}

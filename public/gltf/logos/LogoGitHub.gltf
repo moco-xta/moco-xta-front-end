@@ -16,16 +16,6 @@
       "name": "LogoGitHub"
     }
   ],
-  "materials": [
-    {
-      "doubleSided": true,
-      "name": "logo_github_#ffffff",
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
-        "metallicFactor": 0
-      }
-    }
-  ],
   "meshes": [
     {
       "name": "LogoGitHub",
@@ -36,8 +26,7 @@
             "NORMAL": 1,
             "TEXCOORD_0": 2
           },
-          "indices": 3,
-          "material": 0
+          "indices": 3
         }
       ]
     }

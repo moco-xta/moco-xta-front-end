@@ -19,7 +19,7 @@ export default function AboutSlice() {
     (state: RootState) => state.about,
   )
 
-  return (
+  /* return (
     <>
       {!isMobile ? (
         <>
@@ -33,9 +33,9 @@ export default function AboutSlice() {
         <Box />
       )}
     </>
-  )
+  ) */
 
-  /* return (
+  return (
     <>
       {!isMobile || (isMobile && accessToDeviceMotionAndOrientationGranted) ? (
         <>
@@ -47,7 +47,7 @@ export default function AboutSlice() {
         <DeviceMotionPermission />
       )}
     </>
-  ) */
+  )
 }
 
 // ----------------------------------------------------------------

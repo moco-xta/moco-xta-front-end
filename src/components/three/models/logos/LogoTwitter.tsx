@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
@@ -25,6 +25,8 @@ export function LogoTwitter(props: JSX.IntrinsicElements['group']) {
 
   const logoTwitterRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)
 
+  const [hovered, setHovered] = useState<boolean>(false)
+
   const { handleOnPointerMove, handleOnPointerLeave } = useModelHoverEffect(
     logoTwitterRef,
     socialsConstants.HANDLE_ON_PONTER_MOVE,
@@ -36,6 +38,10 @@ export function LogoTwitter(props: JSX.IntrinsicElements['group']) {
     a.href = `${externalLinksConstants.SOCIALS.TWITTER}`
     a.click()
   }
+
+  useEffect(() => {
+    document.body.style.cursor = hovered ? 'pointer' : 'auto'
+  }, [hovered])
 
   return (
     <group
@@ -53,6 +59,8 @@ export function LogoTwitter(props: JSX.IntrinsicElements['group']) {
         receiveShadow
         castShadow
         onClick={handleOnClick}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
       />
     </group>
   )

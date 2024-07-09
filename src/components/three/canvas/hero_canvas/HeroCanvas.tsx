@@ -1,6 +1,6 @@
 import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Environment, PerspectiveCamera } from '@react-three/drei'
+import { Environment, Html, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import useIsLargeScreen from '@/hooks/useIsLargeScreen'
@@ -12,6 +12,7 @@ import PostProcessing from './PostProcessing'
 import { default as globalConstants } from '@/constants/globalConstants.json'
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
+import ContactTextScene from '../contact_text_canvas/ContactTextScene'
 
 export default function HeroCanvas() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)

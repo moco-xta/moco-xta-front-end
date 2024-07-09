@@ -17,11 +17,6 @@ export const MinecraftCube = ({ position, texture }: CubeInterface) => {
 
   const [isHovered, setIsHovered] = useState<boolean>(false)
 
-  /* const [ref] = useBox<THREE.Mesh>(() => ({
-    type: 'Static',
-    position,
-  })) */
-
   const ref = useRef<THREE.Mesh>(null!)
 
   const activeTexture: THREE.Texture = minecraftTextures[texture + 'Texture']
@@ -67,6 +62,7 @@ export const MinecraftCube = ({ position, texture }: CubeInterface) => {
   return (
     <mesh
       ref={ref}
+      position={position}
       receiveShadow
       castShadow
       onPointerMove={handleOnPointerMove}

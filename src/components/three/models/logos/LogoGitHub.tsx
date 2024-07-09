@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
@@ -11,6 +11,7 @@ import { defaultMaterial } from '../../materials/standardsMaterials'
 
 import { default as socialsConstants } from '@/constants/canvas/socialsConstants.json'
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
+import { default as externalLinksConstants } from '@/constants/externalLinksConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -24,10 +25,23 @@ export function LogoGitHub(props: JSX.IntrinsicElements['group']) {
 
   const logoGitHubRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)
 
+  const [hovered, setHovered] = useState<boolean>(false)
+
   const { handleOnPointerMove, handleOnPointerLeave } = useModelHoverEffect(
     logoGitHubRef,
     socialsConstants.HANDLE_ON_PONTER_MOVE,
   )
+
+  const handleOnClick = () => {
+    let a = document.createElement('a')
+    a.target = '_blank'
+    a.href = `${externalLinksConstants.SOCIALS.GITHUB}`
+    a.click()
+  }
+
+  useEffect(() => {
+    document.body.style.cursor = hovered ? 'pointer' : 'auto'
+  }, [hovered])
 
   return (
     <group
@@ -44,6 +58,9 @@ export function LogoGitHub(props: JSX.IntrinsicElements['group']) {
         material={defaultMaterial}
         receiveShadow
         castShadow
+        onClick={handleOnClick}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
       />
     </group>
   )

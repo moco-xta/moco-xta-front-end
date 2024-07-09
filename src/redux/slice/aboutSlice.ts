@@ -4,8 +4,8 @@ import { AboutInterface } from '@/interfaces/aboutInterfaces'
 import { LocationInterface } from '@/interfaces/locationInterfaces'
 
 const initialState: AboutInterface = {
-  accessToDeviceMotionAndOrientationGranted: false,
   showInstructions: true,
+  accessToDeviceMotionAndOrientationGranted: false,
   isFinalRender: true,
   location: {
     latitude: 0,
@@ -20,11 +20,11 @@ const aboutSlice = createSlice({
   name: 'About',
   initialState,
   reducers: {
-    setAccessToDeviceMotionAndOrientationGranted: (state, action: PayloadAction<boolean>) => {
-      state.accessToDeviceMotionAndOrientationGranted = action.payload
-    },
     setShowInstructions: (state, action: PayloadAction<boolean>) => {
       state.showInstructions = action.payload
+    },
+    setAccessToDeviceMotionAndOrientationGranted: (state, action: PayloadAction<boolean>) => {
+      state.accessToDeviceMotionAndOrientationGranted = action.payload
     },
     setIsFinalRender: (state, action: PayloadAction<boolean>) => {
       state.isFinalRender = action.payload
@@ -36,8 +36,8 @@ const aboutSlice = createSlice({
 })
 
 export const {
-  setAccessToDeviceMotionAndOrientationGranted,
   setShowInstructions,
+  setAccessToDeviceMotionAndOrientationGranted,
   setIsFinalRender,
   setLocation,
 } = aboutSlice.actions

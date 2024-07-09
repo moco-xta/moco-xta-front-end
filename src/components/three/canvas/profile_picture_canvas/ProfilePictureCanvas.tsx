@@ -32,6 +32,7 @@ export default class ProfilePictureCanvas extends Component<{}, ProfilePictureSc
           position: 'absolute',
           top: '0px',
           left: '0px',
+          /* width: '50vw' */
         }}
         ref={this.canvasRef}
       />

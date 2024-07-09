@@ -1,4 +1,5 @@
 import React from 'react'
+import { Box } from '@react-three/drei'
 
 import { CellComponentInterface } from '@/interfaces/snakeGameInterfaces'
 
@@ -7,6 +8,8 @@ import { SnakeHead } from '../../models/snake_game/SnakeHead'
 import { SnakeCellStraight } from '../../models/snake_game/SnakeCellStraight'
 import { SnakeCellCorner } from '../../models/snake_game/SnakeCellCorner'
 /* import { ArrowTest } from '../../models/snake_game/ArrowTest' */
+
+import { snakeCellMaterial } from '../../materials/snake/snakeMaterials'
 
 import {
   setSnakeCellCornerRotation,
@@ -25,7 +28,20 @@ export default function Cell({ cell }: CellComponentInterface) {
           castShadow
         />
       )}
-      {cell.status === 'SNAKE_HEAD' && (
+      {(cell.status === 'SNAKE_HEAD' ||
+        cell.status === 'SNAKE_STRAIGHT' ||
+        cell.status === 'SNAKE_CORNER') && (
+        <Box
+          key={`snake_cell_${cell.position.x}_${cell.position.z}`}
+          position={[cell.position.x, 0, cell.position.z]}
+          rotation={setSnakeCellRotation(cell.snake.direction!)}
+          scale={0.9}
+          material={snakeCellMaterial}
+          receiveShadow
+          castShadow
+        />
+      )}
+      {/* {cell.status === 'SNAKE_HEAD' && (
         <SnakeHead
           key={`snake_cell_${cell.position.x}_${cell.position.z}`}
           position={[cell.position.x, 0, cell.position.z]}
@@ -52,7 +68,7 @@ export default function Cell({ cell }: CellComponentInterface) {
           receiveShadow
           castShadow
         />
-      )}
+      )} */}
     </>
   )
 }

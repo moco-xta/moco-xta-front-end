@@ -15,9 +15,10 @@ export default function AboutEnterButton() {
   const dispatch = useDispatch<AppDispatch>()
 
   const handleOnClick = () => {
+    console.log('TEST')
     dispatch(setShowInstructions(false))
   }
-
+  ;('')
   return (
     <button
       id={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR}
