@@ -36,7 +36,6 @@ export default function AboutPointerLockControls({
   }, [dispatch])
 
   useEffect(() => {
-    console.log('controlsRef.current', controlsRef.current)
     if (!controlsRef.current.isLocked) dispatch(setShowInstructions(true))
   }, [controlsRef.current])
 

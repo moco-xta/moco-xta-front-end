@@ -30,7 +30,7 @@ const SocialIcon = ({ social, children }: SocialIconInteface) => {
 
 export default function ContactTextBlock() {
   return (
-    <div id='contact_text_block'>
+    <div id={`${!isMobile ? 'contact_text_block_desktop' : 'contact_text_block_mobile'}`}>
       <TextBlockSimple
         title={'Title'}
         paragraph={
