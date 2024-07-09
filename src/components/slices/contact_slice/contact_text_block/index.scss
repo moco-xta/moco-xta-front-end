@@ -1,11 +1,22 @@
 @import '@/styles/variables.module.scss';
 
-#contact_text_block {
+#contact_text_block_desktop {
   z-index: 2;
   position: absolute;
   width: 30vw;
   height: 100vh;
   left: 55%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: $gap_M;
+}
+
+#contact_text_block_mobile {
+  z-index: 2;
+  position: absolute;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   /* align-items: center; */

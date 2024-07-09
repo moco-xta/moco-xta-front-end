@@ -4,6 +4,7 @@ import { GUI } from 'dat.gui'
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js'
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js'
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js'
+import { isMobile } from 'react-device-detect'
 
 import { CustomPass } from './CustomPass'
 
@@ -51,7 +52,7 @@ export default class ProfilePictureScene {
     this.camera = new THREE.PerspectiveCamera(70, this.width / this.height, 0.01, 1000)
     this.camera.position.set(0, 0, 4)
 
-    this.controls = new OrbitControls(this.camera, this.renderer.domElement)
+    /* this.controls = new OrbitControls(this.camera, this.renderer.domElement) */
 
     this.addObjects()
     this.addLights()
@@ -100,7 +101,7 @@ export default class ProfilePictureScene {
     })
 
     const plane = new THREE.Mesh(geometry, this.material)
-    plane.position.set(-1.1, 0, 0)
+    plane.position.set(!isMobile ? -1.1 : 0, 0, 0)
     this.scene.add(plane)
   }
 
