@@ -10,18 +10,33 @@
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
-  gap: $gap_M;
+  gap: $gap_L;
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: $px_margin_XS;
+  }
+
+  #email_address {
+    margin-bottom: $px_margin_XXS;
+  }
 }
 
 #contact_text_block_mobile {
   z-index: 2;
   position: absolute;
   height: 100vh;
+  padding: $px_margin_XS;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
   gap: $gap_M;
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: $px_margin_XS;
+  }
 
   #social_icons_container {
     display: flex;
@@ -36,5 +51,9 @@
     .social_icon:hover {
       cursor: pointer;
     }
+  }
+
+  #email_address {
+    margin-bottom: $px_margin_XXS;
   }
 }
