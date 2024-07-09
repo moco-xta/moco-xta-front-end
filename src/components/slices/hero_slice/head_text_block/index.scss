@@ -1,9 +1,9 @@
 @import '@/styles/variables.module.scss';
 
-#hero_head_text {
+/* #hero_head_text {
   z-index: 2;
   position: absolute;
-  /* width: 100%; */
+  // width: 100%;
   left: $px_margin_S;
   bottom: $px_margin_S;
   // left: 200px;
@@ -16,18 +16,20 @@
   text-align: start;
   font-weight: bold;
   line-height: 50px;
-}
+} */
 
-/* #hero_head_text {
+#hero_head_text {
   z-index: 2;
   position: absolute;
-  width: 100%;
-  bottom: 10%;
+  /* width: 100%; */
+  left: $px_margin_S;
+  bottom: $px_margin_S;
   // left: 200px;
   // bottom: 200px;
   // font-family: var(--font-karmatic-arcade);
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   font-size: 30px;
-  color: Chartreuse;
-} */
+  text-align: left;
+  /* color: Chartreuse; */
+}

@@ -11,16 +11,16 @@ import './index.scss'
 export default function Home() {
   return (
     <>
-      <div id='home_page'>
-        <HeroSlice />
-        <MainSkillsSlice />
+      {/* <div id='home_page'> */}
+      <HeroSlice />
+      {/* <MainSkillsSlice />
         <PerformedWithSlice />
         <ReviewsSlice />
         <Footer />
-      </div>
-      <div className='scroll_to_top_container'>
+      </div> */}
+      {/* <div className='scroll_to_top_container'>
         <ScrollToTop />
-      </div>
+      </div> */}
     </>
   )
 }
