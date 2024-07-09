@@ -16,9 +16,9 @@ export default function Lights() {
   const directionalLightTLRef = useRef<THREE.DirectionalLight>(null!)
   const directionalLightTRRef = useRef<THREE.DirectionalLight>(null!)
   const directionalLightFRef = useRef<THREE.DirectionalLight>(null!)
-  useHelper(directionalLightTLRef, THREE.DirectionalLightHelper, 1, 'red')
+  /* useHelper(directionalLightTLRef, THREE.DirectionalLightHelper, 1, 'red')
   useHelper(directionalLightTRRef, THREE.DirectionalLightHelper, 1, 'red')
-  useHelper(directionalLightFRef, THREE.DirectionalLightHelper, 1, 'red')
+  useHelper(directionalLightFRef, THREE.DirectionalLightHelper, 1, 'red') */
 
   const directionalLightTarget = new THREE.Vector3(0, 0, 0)
 

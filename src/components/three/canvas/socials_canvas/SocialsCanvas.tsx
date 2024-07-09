@@ -31,8 +31,8 @@ export default function SocialsCanvas({ className }: SocialsCanvasInterface) {
     >
       <PerspectiveCamera
         makeDefault
-        position={[0, 0, 5]}
-        fov={55}
+        position={[0, 0, 10]}
+        fov={15}
         near={0.1}
         far={1000}
       />

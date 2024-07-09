@@ -32,7 +32,7 @@ export default class ProfilePictureScene {
 
     this.width = window.innerWidth
     this.height = window.innerHeight
-    this.imgWidth = 3
+    this.imgWidth = 4
     this.imgHeight = 4
 
     this.renderer = new THREE.WebGLRenderer({
@@ -100,6 +100,7 @@ export default class ProfilePictureScene {
     })
 
     const plane = new THREE.Mesh(geometry, this.material)
+    plane.position.set(-1.1, 0, 0)
     this.scene.add(plane)
   }
 
@@ -133,7 +134,7 @@ export default class ProfilePictureScene {
     )
 
     this.targetSpeed -= 0.1 * (this.targetSpeed - this.speed)
-    this.followMouse.x -= 0.1 * (this.followMouse.x - this.mouse.x)
+    this.followMouse.x -= 0.1 * (this.followMouse.x - this.mouse.x / 2)
     this.followMouse.y -= 0.1 * (this.followMouse.y - this.mouse.y)
 
     this.prevMouse.x = this.mouse.x
