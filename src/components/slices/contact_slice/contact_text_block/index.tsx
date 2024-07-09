@@ -29,7 +29,6 @@ const SocialIcon = ({ social, children }: SocialIconInteface) => {
 }
 
 export default function ContactTextBlock() {
-
   return (
     <div id='contact_text_block'>
       <TextBlockSimple
