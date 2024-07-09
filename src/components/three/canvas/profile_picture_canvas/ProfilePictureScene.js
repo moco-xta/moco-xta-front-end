@@ -101,7 +101,7 @@ export default class ProfilePictureScene {
     })
 
     const plane = new THREE.Mesh(geometry, this.material)
-    plane.position.set(!isMobile ? -1.1 : 0, 0, 0)
+    plane.position.set(!isMobile ? -1.1 : 0, !isMobile ? 0 : 1, 0)
     this.scene.add(plane)
   }
 
