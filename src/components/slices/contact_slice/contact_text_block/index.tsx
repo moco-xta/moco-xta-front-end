@@ -37,29 +37,34 @@ export default function ContactTextBlock() {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
         }
       />
-      <h3>Social</h3>
-      {!isMobile ? (
-        <SocialsCanvas className='contact_socials_canvas' />
-      ) : (
-        <div id='social_icons_container'>
-          <SocialIcon social={'GITHUB'}>
-            <IoLogoGithub className='social_icon' />
-          </SocialIcon>
-          <SocialIcon social={'TWITTER'}>
-            <FaTwitter className='social_icon' />
-          </SocialIcon>
-          <SocialIcon social={'INSTAGRAM'}>
-            <FaInstagram className='social_icon' />
-          </SocialIcon>
-          <SocialIcon social={'LINKEDIN'}>
-            <FaLinkedinIn className='social_icon' />
-          </SocialIcon>
+      <div>
+        <h3>Social</h3>
+        {!isMobile ? (
+          <SocialsCanvas className='contact_socials_canvas' />
+        ) : (
+          <div id='social_icons_container'>
+            <SocialIcon social={'GITHUB'}>
+              <IoLogoGithub className='social_icon' />
+            </SocialIcon>
+            <SocialIcon social={'TWITTER'}>
+              <FaTwitter className='social_icon' />
+            </SocialIcon>
+            <SocialIcon social={'INSTAGRAM'}>
+              <FaInstagram className='social_icon' />
+            </SocialIcon>
+            <SocialIcon social={'LINKEDIN'}>
+              <FaLinkedinIn className='social_icon' />
+            </SocialIcon>
+          </div>
+        )}
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <div>
+          <p id='email_address'>moco.xta@gmail.com</p>
+          <p id='phone_number'>+33 6 77 77 77 77</p>
         </div>
-      )}
-      <TextBlockSimple
-        title={'Contact'}
-        paragraph={`moco.xta@gmail.com\n+33 6 77 77 77 77`}
-      />
+      </div>
     </div>
   )
 }
