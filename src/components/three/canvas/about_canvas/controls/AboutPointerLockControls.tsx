@@ -33,7 +33,7 @@ export default function AboutPointerLockControls({
     return () => {
       document.removeEventListener('pointerlockchange', pointerLockChange, false)
     }
-  })
+  }, [dispatch])
 
   useEffect(() => {
     console.log('controlsRef.current', controlsRef.current)
