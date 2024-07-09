@@ -75,43 +75,6 @@ export default function HeroCanvas() {
           <HeroScene />
           <ToneMapping />
           <PostProcessing />
-
-          {/* <ContactTextScene /> */}
-
-          {/* <Html
-            // zIndexRange={[-1, -10]}
-            prepend
-            fullscreen
-            style={{
-              width: '100vw',
-              height: '100vh',
-              fontSize: '220px',
-              fontWeight: 'bold',
-              textAlign: 'start',
-            }}
-          >
-            <div
-            // @ts-ignore
-            // ref={(el) => setDomEl(el)}
-              // className='dom-element'
-            >
-              <p
-                // className='flex flex-col' 
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'flex-start',
-                  alignItems: 'flex-start',
-                }}
-              >
-                FRONT-END <br />
-                DEVELOPER <br />
-                WITH <br />
-                EXTRA SKILLS
-                <br />
-              </p>
-            </div>
-          </Html> */}
         </Physics>
       </Suspense>
     </Canvas>

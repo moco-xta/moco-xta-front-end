@@ -11,8 +11,8 @@
   "PERSPECTIVE_CAMERA": {
     "LARGE_SCREEN": {
       "LARGER_LIMIT": 2000,
-      "MIN_POSITION": 5.5,
-      "MAX_POSITION": 3.5,
+      "MIN_POSITION": 5.7,
+      "MAX_POSITION": 3.7,
       "INITIAL_POSITION": {
         "X": 0,
         "Y": 0,
@@ -43,7 +43,7 @@
       "BOKEH_SCALE": 5
     },
     "BLOOM": {
-      "INTENSITY": 2.5,
+      "INTENSITY": 1.5,
       "LUMINANCE_THRESHOLD": 0.9,
       "LUMINANCE_SMOOTHING": 0.025,
       "MIPMAP_BLUR": true
