@@ -29,9 +29,7 @@ export default function ContactTextBlock() {
       {/* <Socials */}
       <TextBlockSimple
         title={'Contact'}
-        paragraph={
-          `moco.xta@gmail.com\n+33 6 77 77 77 77`
-        }
+        paragraph={`moco.xta@gmail.com\n+33 6 77 77 77 77`}
       />
     </div>
   )

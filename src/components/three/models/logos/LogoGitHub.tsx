@@ -60,7 +60,7 @@ export function LogoGitHub(props: JSX.IntrinsicElements['group']) {
         castShadow
         onClick={handleOnClick}
         onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)} 
+        onPointerOut={() => setHovered(false)}
       />
     </group>
   )
