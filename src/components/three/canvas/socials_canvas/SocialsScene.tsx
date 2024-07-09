@@ -41,9 +41,9 @@ export default function SocialsScene() {
 
   return (
     <>
-      <LogoTwitter />
-      <LogoLinkedIn position={[2.75, 0, 0]} />
-      <LogoGitHub position={[-2.75, 0, 0]} />
+      <LogoTwitter position={[2.75, 0, 0]} />
+      <LogoLinkedIn position={[-2.75, 0, 0]} />
+      <LogoGitHub />
       {/* <mesh ref={icosahedronRef} material={deformGeometryShaderMaterial}>
         <icosahedronGeometry
           attach='geometry'

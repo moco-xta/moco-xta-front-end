@@ -5,9 +5,9 @@ import { FaLinkedinIn } from 'react-icons/fa'
 import { IoLogoGithub } from 'react-icons/io'
 
 import TextBlockSimple from '@/components/shared/text_blocks/text_block_simple'
+import SocialsCanvas from '@/components/three/canvas/socials_canvas/SocialsCanvas'
 
 import './index.scss'
-import SocialsCanvas from '@/components/three/canvas/socials_canvas/SocialsCanvas'
 
 export default function ContactTextBlock() {
   return (
@@ -29,7 +29,9 @@ export default function ContactTextBlock() {
       {/* <Socials */}
       <TextBlockSimple
         title={'Contact'}
-        paragraph={`moco.xta@gmail.com\n+33 6 77 77 77 77`}
+        paragraph={
+          `moco.xta@gmail.com\n+33 6 77 77 77 77`
+        }
       />
     </div>
   )
