@@ -1,4 +1,5 @@
 import React from 'react'
+import { isMobile } from 'react-device-detect'
 import { FaInstagram } from 'react-icons/fa'
 import { FaTwitter } from 'react-icons/fa'
 import { FaLinkedinIn } from 'react-icons/fa'
@@ -7,9 +8,28 @@ import { IoLogoGithub } from 'react-icons/io'
 import TextBlockSimple from '@/components/shared/text_blocks/text_block_simple'
 import SocialsCanvas from '@/components/three/canvas/socials_canvas/SocialsCanvas'
 
+import { default as externalLinksConstants } from '@/constants/externalLinksConstants.json'
+
 import './index.scss'
 
+interface SocialIconInteface {
+  social: 'GITHUB' | 'LINKEDIN' | 'TWITTER' | 'INSTAGRAM'
+  children: JSX.Element
+}
+
+const SocialIcon = ({ social, children }: SocialIconInteface) => {
+  return (
+    <a
+      href={externalLinksConstants.SOCIALS[social]}
+      target='_blank'
+    >
+      {children}
+    </a>
+  )
+}
+
 export default function ContactTextBlock() {
+
   return (
     <div id='contact_text_block'>
       <TextBlockSimple
@@ -19,14 +39,24 @@ export default function ContactTextBlock() {
         }
       />
       <h3>Social</h3>
-      <SocialsCanvas className='contact_socials_canvas' />
-      {/* <div id='footer_socials'>
-        <IoLogoGithub />
-        <FaTwitter />
-        <FaInstagram />
-        <FaLinkedinIn />
-      </div> */}
-      {/* <Socials */}
+      {!isMobile ? (
+        <SocialsCanvas className='contact_socials_canvas' />
+      ) : (
+        <div id='social_icons_container'>
+          <SocialIcon social={'GITHUB'}>
+            <IoLogoGithub className='social_icon' />
+          </SocialIcon>
+          <SocialIcon social={'TWITTER'}>
+            <FaTwitter className='social_icon' />
+          </SocialIcon>
+          <SocialIcon social={'INSTAGRAM'}>
+            <FaInstagram className='social_icon' />
+          </SocialIcon>
+          <SocialIcon social={'LINKEDIN'}>
+            <FaLinkedinIn className='social_icon' />
+          </SocialIcon>
+        </div>
+      )}
       <TextBlockSimple
         title={'Contact'}
         paragraph={`moco.xta@gmail.com\n+33 6 77 77 77 77`}
