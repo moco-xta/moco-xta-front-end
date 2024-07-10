@@ -33,11 +33,11 @@ export default function AboutPointerLockControls({
     return () => {
       document.removeEventListener('pointerlockchange', pointerLockChange, false)
     }
-  }, [dispatch])
+  }, [dispatch, showInstructions])
 
   useEffect(() => {
     if (!controlsRef.current.isLocked) dispatch(setShowInstructions(true))
-  }, [controlsRef.current])
+  }, [dispatch, controlsRef.current])
 
   /* useEffect(() => {
     console.log('showInstructions', showInstructions)
