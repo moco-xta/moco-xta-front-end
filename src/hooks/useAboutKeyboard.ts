@@ -113,7 +113,7 @@ export const useAboutKeyboard = () => {
   return {
     actions,
     handleOnClick: (code: string) => handleOnTouchStart(code),
-    /* handleOnTouchStart: (code: string) => handleOnTouchStart(code), */
+    handleOnTouchStart: (code: string) => handleOnTouchStart(code),
     handleOnTouchEnd: (code: string) => handleOnTouchEnd(code),
   }
 }
