@@ -8,11 +8,14 @@ export default function KeysWithIcons({ Icon, code }: KeysWithIconsInterface) {
   const { handleOnClick, handleOnTouchStart, handleOnTouchEnd } = useAboutKeyboard()
 
   return (
-    <Icon
-      className='keyboard_key'
+    <button
       onClick={() => handleOnClick(code)}
-      onTouchStart={() => handleOnTouchStart(code)}
+      /* onTouchStart={() => handleOnTouchStart(code)} */
       onTouchEnd={() => handleOnTouchEnd(code)}
-    />
+    >
+      <Icon
+      /* className='keyboard_key' */
+      />
+    </button>
   )
 }

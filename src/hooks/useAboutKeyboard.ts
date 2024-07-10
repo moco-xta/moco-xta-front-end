@@ -79,7 +79,8 @@ export const useAboutKeyboard = () => {
     }
   }, [handleKeyDown, handleKeyUp])
 
-  const handleOnTouchStart = (code: string) => {
+  const handleOnTouchStart = useCallback((code: string) => {
+    console.log('code', code)
     const action = actionByKey(code)
     if (action) {
       setActions((prev) => {
@@ -89,9 +90,10 @@ export const useAboutKeyboard = () => {
         }
       })
     }
-  }
+  }, [])
 
-  const handleOnTouchEnd = (code: string) => {
+  const handleOnTouchEnd = useCallback((code: string) => {
+    console.log('code', code)
     const action = actionByKey(code)
     if (action) {
       setActions((prev) => {
@@ -101,7 +103,7 @@ export const useAboutKeyboard = () => {
         }
       })
     }
-  }
+  }, [])
 
   return {
     actions,
