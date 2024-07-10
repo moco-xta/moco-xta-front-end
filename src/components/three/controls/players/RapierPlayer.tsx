@@ -75,12 +75,12 @@ export default function RapierPlayer({
     [dispatch],
   )
 
-  useEffect(() => {
+  /* useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)
     return () => {
       window.removeEventListener('devicemotion', handleDevicemotion)
     }
-  }, [handleDevicemotion])
+  }, [handleDevicemotion]) */
 
   useFrame((state) => {
     if (!playerRef.current) return
