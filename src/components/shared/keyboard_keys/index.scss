@@ -1,0 +1,17 @@
+@import '@/styles/variables.module.scss';
+
+.keyboard_key {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff90;
+  border-radius: 10px;
+  background-color: #ffffff10;
+}
+
+#esc_keyboard_key {
+  margin: 0 $gap_XS;
+}

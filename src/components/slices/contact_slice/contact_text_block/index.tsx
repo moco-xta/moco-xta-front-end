@@ -61,8 +61,18 @@ export default function ContactTextBlock() {
       <div>
         <h3>Contact</h3>
         <div>
-          <p id='email_address' className='contact'>moco.xta@gmail.com</p>
-          <p id='phone_number' className='contact'>+33 6 77 77 77 77</p>
+          <p
+            id='email_address'
+            className='contact'
+          >
+            moco.xta@gmail.com
+          </p>
+          <p
+            id='phone_number'
+            className='contact'
+          >
+            +33 6 77 77 77 77
+          </p>
         </div>
       </div>
     </div>

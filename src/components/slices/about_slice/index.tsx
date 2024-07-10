@@ -19,22 +19,6 @@ export default function AboutSlice() {
     (state: RootState) => state.about,
   )
 
-  /* return (
-    <>
-      {!isMobile ? (
-        <>
-          <AboutGreeting />
-          {!showInstructions && <AboutDashboard />}
-          <AboutDesktopCanvas>
-            <AboutScene />
-          </AboutDesktopCanvas>
-        </>
-      ) : (
-        <Box />
-      )}
-    </>
-  ) */
-
   return (
     <>
       {!isMobile || (isMobile && accessToDeviceMotionAndOrientationGranted) ? (
