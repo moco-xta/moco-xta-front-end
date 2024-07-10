@@ -22,7 +22,8 @@ export const TextureSelector = () => {
   const dispatch = useDispatch<AppDispatch>()
   const { texture } = useSelector((state: RootState) => state.minecraft)
 
-  const { dirt, grass, glass, wood, log } = useAboutKeyboard()
+  const { actions } = useAboutKeyboard()
+  const { dirt, grass, glass, wood, log } = actions
 
   const [visible, setVisible] = useState<boolean>(false)
 

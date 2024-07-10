@@ -35,7 +35,8 @@ export default function RapierPlayer({
   const rapier = useRapier()
   const dispatch = useDispatch<AppDispatch>()
 
-  const { moveBackward, moveForward, moveRight, moveLeft, jump } = useAboutKeyboard()
+  const { actions } = useAboutKeyboard()
+  const { moveBackward, moveForward, moveRight, moveLeft, jump } = actions
   useLocation()
 
   const playerRef = useRef<RapierRigidBody>(null!)

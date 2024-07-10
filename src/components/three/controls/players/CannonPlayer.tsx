@@ -12,7 +12,8 @@ import { default as aboutConstants } from '@/constants/canvas/about/aboutConstan
 export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterface) => {
   const { camera, gl } = useThree()
 
-  const { moveBackward, moveForward, moveRight, moveLeft, jump } = useAboutKeyboard()
+  const { actions } = useAboutKeyboard()
+  const { moveBackward, moveForward, moveRight, moveLeft, jump } = actions
 
   const [ref, api] = useCylinder<THREE.Mesh>(() => ({
     mass: 1,

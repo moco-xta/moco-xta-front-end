@@ -15,7 +15,6 @@ export default function AboutEnterButton() {
   const dispatch = useDispatch<AppDispatch>()
 
   const handleOnClick = () => {
-    console.log('TEST')
     dispatch(setShowInstructions(false))
   }
   ;('')
