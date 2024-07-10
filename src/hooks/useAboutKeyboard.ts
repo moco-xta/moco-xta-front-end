@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
 const actionByKey = (key: string): string => {
+  console.log('key', key)
   const keyActionMap: {
     [key: string]: string
   } = {
@@ -44,8 +45,12 @@ export const useAboutKeyboard = () => {
     escape: false,
   })
 
+  useEffect(() => {
+    console.log('actions', actions)
+  }, [actions])
+
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    console.log('e.code', e.code)
+    /* console.log('e.code', e.code) */
     const action = actionByKey(e.code)
     if (action) {
       setActions((prev) => {
@@ -80,7 +85,7 @@ export const useAboutKeyboard = () => {
   }, [handleKeyDown, handleKeyUp])
 
   const handleOnTouchStart = useCallback((code: string) => {
-    console.log('code', code)
+    /* console.log('code', code) */
     const action = actionByKey(code)
     if (action) {
       setActions((prev) => {
@@ -93,7 +98,7 @@ export const useAboutKeyboard = () => {
   }, [])
 
   const handleOnTouchEnd = useCallback((code: string) => {
-    console.log('code', code)
+    /* console.log('code', code) */
     const action = actionByKey(code)
     if (action) {
       setActions((prev) => {
@@ -108,7 +113,7 @@ export const useAboutKeyboard = () => {
   return {
     actions,
     handleOnClick: (code: string) => handleOnTouchStart(code),
-    handleOnTouchStart: (code: string) => handleOnTouchStart(code),
+    /* handleOnTouchStart: (code: string) => handleOnTouchStart(code), */
     handleOnTouchEnd: (code: string) => handleOnTouchEnd(code),
   }
 }

@@ -5,7 +5,7 @@ import { KeysWithIconsInterface } from '@/interfaces/keyboardKeysInterfaces'
 import { useAboutKeyboard } from '@/hooks/useAboutKeyboard'
 
 export default function KeysWithIcons({ Icon, code }: KeysWithIconsInterface) {
-  const { handleOnClick, handleOnTouchStart, handleOnTouchEnd } = useAboutKeyboard()
+  const { handleOnClick, /* handleOnTouchStart, */ handleOnTouchEnd } = useAboutKeyboard()
 
   return (
     <button
