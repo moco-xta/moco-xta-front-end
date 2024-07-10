@@ -19,7 +19,7 @@ export default function AboutDashboard() {
       className={`prevent_select ${showInstructions ? 'hide_about_dashboard' : 'show_about_dashboard'}`}
     >
       <AboutTarget />
-      {isMobile ? <PressEscToLeave /> : <MobileKeyboard />}
+      {!isMobile ? <PressEscToLeave /> : <MobileKeyboard />}
     </div>
   )
 }
