@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
+import { editable as e } from '@theatre/r3f'
 
 import { heliumBalloonMaterial } from '../../materials/heliumBalloonMaterial'
 
@@ -17,7 +18,8 @@ export function MHeliumBalloon({ position, rotation }: JSX.IntrinsicElements['me
   const { nodes } = useGLTF(gltfConstants.HERO.M_HELIUM_BALLOON) as GLTFResult
 
   return (
-    <mesh
+    <e.mesh
+      theatreKey='MHeliumBalloon'
       position={position}
       rotation={rotation}
       geometry={nodes.MHeliumBalloon.geometry}

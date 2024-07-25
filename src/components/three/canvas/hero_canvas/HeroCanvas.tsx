@@ -1,11 +1,12 @@
 import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Environment, Html, PerspectiveCamera } from '@react-three/drei'
+import { Environment, Html, OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
-import { getProject } from '@theatre/core'
 import studio from '@theatre/studio'
-import { SheetProvider } from '@theatre/r3f'
+import { getProject } from '@theatre/core'
 import extension from '@theatre/r3f/dist/extension'
+import { editable as e, SheetProvider } from '@theatre/r3f'
+
 import { ErrorBoundary } from 'react-error-boundary'
 
 import useIsLargeScreen from '@/hooks/useIsLargeScreen'
@@ -19,12 +20,12 @@ import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 import ContactTextScene from '../contact_text_canvas/ContactTextScene'
 
-const demoSheet = getProject('Demo Project').sheet('Demo Sheet')
-
-studio.initialize()
 studio.extend(extension)
+studio.initialize()
 
 export default function HeroCanvas() {
+  const demoSheet = getProject('Demo Project').sheet('Demo Sheet')
+
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
 
   const { isLargeScreen } = useIsLargeScreen()
@@ -41,7 +42,7 @@ export default function HeroCanvas() {
   }
 
   const handleFallback = () => {
-    return (<h1>Loading...</h1>)
+    return <h1>Loading...</h1>
   }
 
   return (
@@ -57,6 +58,7 @@ export default function HeroCanvas() {
         powerPreference: heroConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
+      {/* <Suspense fallback={null}> */}
       <SheetProvider sheet={demoSheet}>
         <PerspectiveCamera
           ref={perspectiveCameraRef}
@@ -76,7 +78,11 @@ export default function HeroCanvas() {
           }
           fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
         />
-        <ambientLight intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
+        <OrbitControls />
+        <e.ambientLight
+          theatreKey='ambientLight'
+          intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
+        />
         <Physics
           /* debug */
           gravity={[
@@ -91,6 +97,7 @@ export default function HeroCanvas() {
           <PostProcessing />
         </Physics>
       </SheetProvider>
+      {/* </Suspense> */}
     </Canvas>
   )
 }

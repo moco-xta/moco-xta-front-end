@@ -10,12 +10,12 @@ import { addForce, applyImpulse } from '@/helpers/heroCanvasHelpers'
 import { CHeliumBalloon, MHeliumBalloon, OHeliumBalloon, Smiley } from '../../../models/hero'
 
 export default function HeliumBalloons() {
-  const { deltaX, deltaY } = useMouseMove()
+  /* const { deltaX, deltaY } = useMouseMove() */
 
   const timeRef = useRef<number>(0)
-  const xRef = useRef<number>(0)
+  const xRef = useRef<number>(1)
   const yRef = useRef<number>(0)
-  const zRef = useRef<number>(0)
+  const zRef = useRef<number>(1)
 
   const mRef = useRef<RapierRigidBody>(null!)
   const o1Ref = useRef<RapierRigidBody>(null!)
@@ -26,9 +26,9 @@ export default function HeliumBalloons() {
     addForce(timeRef, delta, xRef, yRef, zRef, mRef, o1Ref, cRef, o2Ref)
   })
 
-  useEffect(() => {
+  /* useEffect(() => {
     applyImpulse(deltaX, deltaY, mRef, o1Ref, cRef, o2Ref)
-  }, [deltaX, deltaY])
+  }, [deltaX, deltaY]) */
 
   return (
     <group>
@@ -61,6 +61,7 @@ export default function HeliumBalloons() {
         restitution={heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
       >
         <OHeliumBalloon
+          name={'O1HeliumBalloon'}
           rotation={[
             0,
             THREE.MathUtils.degToRad(heroConstants.HELIUM_BALLOONS.BALLOONS.ROTATION),
@@ -103,7 +104,7 @@ export default function HeliumBalloons() {
             0,
           ]}
         >
-          <OHeliumBalloon />
+          <OHeliumBalloon name={'O2HeliumBalloon'} />
           <Smiley />
         </group>
       </RigidBody>
