@@ -2,6 +2,7 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, Html, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
+import { ErrorBoundary } from 'react-error-boundary'
 
 import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
@@ -28,6 +29,10 @@ export default function HeroCanvas() {
           globalConstants.DESKTOP_LIMIT)) *
         (innerWidth - globalConstants.DESKTOP_LIMIT)
     )
+  }
+
+  const handleFallback = () => {
+    return (<h1>Loading...</h1>)
   }
 
   return (
@@ -62,21 +67,19 @@ export default function HeroCanvas() {
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <ambientLight intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
-      <Suspense>
-        <Physics
-          /* debug */
-          gravity={[
-            heroConstants.PHYSICS.GRAVITY.X,
-            heroConstants.PHYSICS.GRAVITY.Y,
-            heroConstants.PHYSICS.GRAVITY.Z,
-          ]}
-        >
-          <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
-          <HeroScene />
-          <ToneMapping />
-          <PostProcessing />
-        </Physics>
-      </Suspense>
+      <Physics
+        /* debug */
+        gravity={[
+          heroConstants.PHYSICS.GRAVITY.X,
+          heroConstants.PHYSICS.GRAVITY.Y,
+          heroConstants.PHYSICS.GRAVITY.Z,
+        ]}
+      >
+        <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
+        <HeroScene />
+        <ToneMapping />
+        <PostProcessing />
+      </Physics>
     </Canvas>
   )
 }

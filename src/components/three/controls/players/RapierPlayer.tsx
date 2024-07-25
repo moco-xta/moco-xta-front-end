@@ -53,7 +53,7 @@ export default function RapierPlayer({
     return 0.5 * acceleration * speed ** 2
   }
 
-  const handleDevicemotion = useCallback(
+  /* const handleDevicemotion = useCallback(
     (e: any) => {
       // m/s^2 convert to distance <=> 0.5 * acceleration * speed ** 2
       velocity.current = new THREE.Vector3(
@@ -73,7 +73,7 @@ export default function RapierPlayer({
       }
     },
     [dispatch],
-  )
+  ) */
 
   /* useEffect(() => {
     window.addEventListener('devicemotion', handleDevicemotion)
