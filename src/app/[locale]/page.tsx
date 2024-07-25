@@ -21,7 +21,7 @@ export default function Home() {
       {/* <div className='scroll_to_top_container'>
         <ScrollToTop />
       </div> */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

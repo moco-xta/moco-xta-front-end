@@ -2,6 +2,10 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, Html, PerspectiveCamera } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
+import { getProject } from '@theatre/core'
+import studio from '@theatre/studio'
+import { SheetProvider } from '@theatre/r3f'
+import extension from '@theatre/r3f/dist/extension'
 import { ErrorBoundary } from 'react-error-boundary'
 
 import useIsLargeScreen from '@/hooks/useIsLargeScreen'
@@ -14,6 +18,11 @@ import { default as globalConstants } from '@/constants/globalConstants.json'
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 import ContactTextScene from '../contact_text_canvas/ContactTextScene'
+
+const demoSheet = getProject('Demo Project').sheet('Demo Sheet')
+
+studio.initialize()
+studio.extend(extension)
 
 export default function HeroCanvas() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
@@ -48,38 +57,40 @@ export default function HeroCanvas() {
         powerPreference: heroConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
-      <PerspectiveCamera
-        ref={perspectiveCameraRef}
-        makeDefault
-        position={
-          isLargeScreen
-            ? [
-                heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.INITIAL_POSITION.X,
-                heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.INITIAL_POSITION.Y,
-                setCameraZPosition(window.innerWidth),
-              ]
-            : [
-                heroConstants.PERSPECTIVE_CAMERA.SMALL_SCREEN.INITIAL_POSITION.X,
-                heroConstants.PERSPECTIVE_CAMERA.SMALL_SCREEN.INITIAL_POSITION.Y,
-                heroConstants.PERSPECTIVE_CAMERA.SMALL_SCREEN.INITIAL_POSITION.Z,
-              ]
-        }
-        fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
-      />
-      <ambientLight intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
-      <Physics
-        /* debug */
-        gravity={[
-          heroConstants.PHYSICS.GRAVITY.X,
-          heroConstants.PHYSICS.GRAVITY.Y,
-          heroConstants.PHYSICS.GRAVITY.Z,
-        ]}
-      >
-        <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
-        <HeroScene />
-        <ToneMapping />
-        <PostProcessing />
-      </Physics>
+      <SheetProvider sheet={demoSheet}>
+        <PerspectiveCamera
+          ref={perspectiveCameraRef}
+          makeDefault
+          position={
+            isLargeScreen
+              ? [
+                  heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.INITIAL_POSITION.X,
+                  heroConstants.PERSPECTIVE_CAMERA.LARGE_SCREEN.INITIAL_POSITION.Y,
+                  setCameraZPosition(window.innerWidth),
+                ]
+              : [
+                  heroConstants.PERSPECTIVE_CAMERA.SMALL_SCREEN.INITIAL_POSITION.X,
+                  heroConstants.PERSPECTIVE_CAMERA.SMALL_SCREEN.INITIAL_POSITION.Y,
+                  heroConstants.PERSPECTIVE_CAMERA.SMALL_SCREEN.INITIAL_POSITION.Z,
+                ]
+          }
+          fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
+        />
+        <ambientLight intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
+        <Physics
+          /* debug */
+          gravity={[
+            heroConstants.PHYSICS.GRAVITY.X,
+            heroConstants.PHYSICS.GRAVITY.Y,
+            heroConstants.PHYSICS.GRAVITY.Z,
+          ]}
+        >
+          <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
+          <HeroScene />
+          <ToneMapping />
+          <PostProcessing />
+        </Physics>
+      </SheetProvider>
     </Canvas>
   )
 }
