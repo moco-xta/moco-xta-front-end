@@ -5,7 +5,8 @@
     "GL": {
       "ANTIALIAS": true,
       "ALPHA": true,
-      "POWER_PREFERENCE": "high-performance"
+      "POWER_PREFERENCE": "high-performance",
+      "PRESERVE_DRAWING_BUFFER": true
     }
   },
   "PERSPECTIVE_CAMERA": {
