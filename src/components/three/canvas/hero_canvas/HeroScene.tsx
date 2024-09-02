@@ -13,6 +13,8 @@ import { default as SmallScreenHeliumBalloons } from './small_screen/HeliumBallo
 
 import { default as globalConstants } from '@/constants/globalConstants.json'
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
+import { LiraTest001 } from '../../models/lira/LiraTest001'
+import { Face } from '../../models/sketchfab/Face'
 
 export default function HeroScene() {
   const sheet = useCurrentSheet()
@@ -57,7 +59,9 @@ export default function HeroScene() {
         }
         fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      {isLargeScreen ? (
+      <Face />
+      {/* <LiraTest001 /> */}
+      {/* {isLargeScreen ? (
         <group>
           <LargeScreenBalloonsWrapper />
           <LargeScreenHeliumBalloons />
@@ -67,7 +71,7 @@ export default function HeroScene() {
           <SmallScreenBalloonsWrapper />
           <SmallScreenHeliumBalloons />
         </group>
-      )}
+      )} */}
     </>
   )
 }

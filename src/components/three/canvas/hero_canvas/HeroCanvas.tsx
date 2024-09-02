@@ -78,7 +78,7 @@ export default function HeroCanvas() {
             }
             fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
           /> */}
-          {/* <OrbitControls /> */}
+          <OrbitControls />
           <e.ambientLight
             theatreKey='ambientLight'
             intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
@@ -94,7 +94,7 @@ export default function HeroCanvas() {
             <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
             <HeroScene />
             <ToneMapping />
-            <PostProcessing />
+            {/* <PostProcessing /> */}
           </Physics>
         </SheetProvider>
       </ScrollControls>
