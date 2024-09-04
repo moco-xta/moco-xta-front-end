@@ -24,10 +24,10 @@ export function Face(props: JSX.IntrinsicElements['mesh']) {
   const mesh = useRef<THREE.Mesh>(null!)
   /* const renderTarget = useFBO();
   const secondRenderTarget = useFBO(); */
-  const magicScene = new THREE.Scene();
+  const magicScene = new THREE.Scene()
 
-  const renderTargetA = useFBO();
-  const renderTargetB = useFBO();
+  const renderTargetA = useFBO()
+  const renderTargetB = useFBO()
 
   const voxelizedShaderConfig = useControls('Voxelized shader', {
     triScale: {
@@ -59,9 +59,8 @@ export function Face(props: JSX.IntrinsicElements['mesh']) {
     console.log('nodes.Face.geometry', nodes.Face.geometry)
   }, [nodes])
 
-
   useFrame((state, delta) => {
-    const { gl, scene, camera, clock } = state;
+    const { gl, scene, camera, clock } = state
     /* const { gl, scene, camera } = state */
 
     /* time += delta */
@@ -71,17 +70,17 @@ export function Face(props: JSX.IntrinsicElements['mesh']) {
 
     faceRef.current.position.x = 0.5 * Math.sin(clock.elapsedTime * 0.6)
 
-    gl.setRenderTarget(renderTargetA);
-    gl.render(scene, camera);
+    gl.setRenderTarget(renderTargetA)
+    gl.render(scene, camera)
 
-    mesh.current.material.map = renderTargetA.texture;
+    mesh.current.material.map = renderTargetA.texture
 
     /* gl.setRenderTarget(secondRenderTarget);
     gl.render(scene, camera);
 
     mesh.current.material.map = secondRenderTarget.texture; */
 
-    gl.setRenderTarget(null);
+    gl.setRenderTarget(null)
   })
 
   const uniforms = {
