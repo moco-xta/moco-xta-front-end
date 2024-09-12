@@ -10,12 +10,12 @@ import './index.scss'
 export default function HeroSlice() {
   return (
     <section id='hero_slice'>
-      <HeadTextBlock />
+      {/* <HeadTextBlock /> */}
       <HeroCanvas />
-      <ScrollDown
+      {/* <ScrollDown
         top={'65vh'}
         color={variables.grey_dark}
-      />
+      /> */}
     </section>
   )
 }

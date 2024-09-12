@@ -506,6 +506,9 @@
       }
     }
   },
+  "LIRA": {
+    "LIRA_TEST_001": "gltf/lira/LiraTest001.jpg"
+  },
   "MINECRAFT": {
     "DIRT": "/img/textures/about/minecraft/dirt.jpg",
     "GLASS": "/img/textures/about/minecraft/glass.png",

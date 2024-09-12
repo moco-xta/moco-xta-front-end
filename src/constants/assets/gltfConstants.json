@@ -14,6 +14,9 @@
     "C_HELIUM_BALLOON": "/gltf/hero/CHeliumBalloon.gltf",
     "SMILEY": "/gltf/hero/Smiley.gltf"
   },
+  "LIRA": {
+    "LIRA_TEST_001": "gltf/lira/LiraTest001.gltf"
+  },
   "RUBIKS_CUBE": {
     "ARROW": "/gltf/rubiks_cube/Arrow.gltf",
     "BUTTON": "/gltf/rubiks_cube/Button.gltf",
@@ -122,6 +125,9 @@
         }
       }
     }
+  },
+  "SKETCHFAB": {
+    "FACE": "/gltf/sketchfab/Face.gltf"
   },
   "SNAKE_GAME": {
     "ARROW_TEST": "/gltf/snake_game/ArrowTest.gltf",
