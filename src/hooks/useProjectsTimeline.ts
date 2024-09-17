@@ -8,7 +8,7 @@ import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 
 export default function useProjectsTimeline(
   projectsData: ProjectDataInterface[],
-  companiesAndSchollData: CompanyOrSchollDataInterface[],
+  companiesAndSchoolData: CompanyOrSchollDataInterface[],
 ) {
   const { y, offsetHeight, clientHeight } = useScroll()
 
@@ -45,14 +45,14 @@ export default function useProjectsTimeline(
       )
         setCurrentProject(index)
     })
-    companiesAndSchollData.forEach((companyOrSchool, index) => {
+    companiesAndSchoolData.forEach((companyOrSchool, index) => {
       if (
         currentDate.getTime() > new Date(companyOrSchool.dates.from).getTime() &&
         currentDate.getTime() < new Date(companyOrSchool.dates.to).getTime()
       )
         setCurrentCompanyOrSchool(index)
     })
-  }, [currentDate, projectsData, companiesAndSchollData])
+  }, [currentDate, projectsData, companiesAndSchoolData])
 
   return {
     currentProject,

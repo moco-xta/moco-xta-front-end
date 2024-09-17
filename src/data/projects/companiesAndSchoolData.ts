@@ -2,7 +2,7 @@ import moment from 'moment'
 
 import { CompanyOrSchollDataInterface } from '@/interfaces/dataInterfaces'
 
-export const companiesAndSchollData: CompanyOrSchollDataInterface[] = [
+export const companiesAndSchoolData: CompanyOrSchollDataInterface[] = [
   {
     name: 'moco',
     logo: {
