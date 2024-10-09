@@ -2,7 +2,7 @@ import React from 'react'
 
 import { CompagnyOrSchoolCardsInterface } from '@/interfaces/projectsInterfaces'
 
-import { companiesAndSchollData } from '@/data/projects/companiesAndSchollData'
+import { companiesAndSchoolData } from '@/data/projects/companiesAndSchoolData'
 
 import CompanyOrSchoolCard from './company_or_school_card'
 
@@ -14,7 +14,7 @@ export default function CompanyOrSchoolCards({
 }: CompagnyOrSchoolCardsInterface) {
   return (
     <div id='company_or_school_cards'>
-      {companiesAndSchollData.map((companyOrSchoolData, index) => {
+      {companiesAndSchoolData.map((companyOrSchoolData, index) => {
         return (
           <CompanyOrSchoolCard
             key={`company_or_school_card_${index}`}

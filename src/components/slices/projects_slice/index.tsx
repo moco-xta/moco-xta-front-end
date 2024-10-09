@@ -3,7 +3,7 @@ import React from 'react'
 import useProjectsTimeline from '@/hooks/useProjectsTimeline'
 
 import { projectsData } from '@/data/projects/projectsData'
-import { companiesAndSchollData } from '@/data/projects/companiesAndSchollData'
+import { companiesAndSchoolData } from '@/data/projects/companiesAndSchoolData'
 
 import ProjectCards from './project_cards'
 import CompanyOrSchoolCards from './company_or_school_cards'
@@ -16,7 +16,7 @@ import './index.scss'
 export default function ProjectsSlice() {
   const { currentProject, currentCompanyOrSchool, currentDate } = useProjectsTimeline(
     projectsData,
-    companiesAndSchollData,
+    companiesAndSchoolData,
   )
 
   return (
@@ -28,11 +28,17 @@ export default function ProjectsSlice() {
         }}
         /* className='responsive_background' */
       >
-        <ProjectCards currentProject={currentProject} />
+        {/* <ProjectCards currentProject={currentProject} />
         <CompanyOrSchoolCards
           currentCompanyOrSchool={currentCompanyOrSchool}
           currentProject={currentProject}
-        />
+        /> */}
+
+
+        
+
+
+
         {isValidDate(currentDate) && (
           <CurrentDate
             currentDate={currentDate}
