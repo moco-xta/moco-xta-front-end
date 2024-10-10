@@ -16,7 +16,8 @@
   },
   "HOME": {
     "BUILDING_001": "gltf/home/Building001.gltf",
-    "BUILDING_002": "gltf/home/Building002.gltf"
+    "BUILDING_002": "gltf/home/Building002.gltf",
+    "TRUCK_RED": "gltf/home/TruckRed.gltf"
   },
   "LIRA": {
     "LIRA_TEST_001": "gltf/lira/LiraTest001.gltf"
