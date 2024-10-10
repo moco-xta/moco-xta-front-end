@@ -1,6 +1,7 @@
 import AboutSlice from '@/components/slices/about_slice'
 import ContactSlice from '@/components/slices/contact_slice'
 import HeroSlice from '@/components/slices/hero_slice'
+import HomeSlice from '@/components/slices/home_slice'
 import MainSkillsSlice from '@/components/slices/main_skills_slice'
 import PerformedWithSlice from '@/components/slices/performed_with_slice'
 import PhotographySlice from '@/components/slices/photography_slice'
@@ -12,6 +13,7 @@ export {
   AboutSlice,
   ContactSlice,
   HeroSlice,
+  HomeSlice,
   MainSkillsSlice,
   PerformedWithSlice,
   PhotographySlice,
