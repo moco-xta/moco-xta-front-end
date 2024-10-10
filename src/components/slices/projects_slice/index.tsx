@@ -34,11 +34,6 @@ export default function ProjectsSlice() {
           currentProject={currentProject}
         /> */}
 
-
-        
-
-
-
         {isValidDate(currentDate) && (
           <CurrentDate
             currentDate={currentDate}

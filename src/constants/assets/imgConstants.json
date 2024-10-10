@@ -13,7 +13,8 @@
   },
   "HDRS": {
     "LABORATOIRE_ENVIRONMENT": "/img/hdr/laboratoire.hdr",
-    "HERO_ENVIRONMENT": "/img/hdr/peppermint_powerplant_2_1k.hdr"
+    "HERO_ENVIRONMENT": "/img/hdr/peppermint_powerplant_2_1k.hdr",
+    "HOME_ENVIRONMENT": "/img/hdr/the_sky_is_on_fire_4k.exr"
   },
   "QR_CODES": {
     "TO_ABOUT": "/img/png/qr_codes/qr_code_to_about.png",

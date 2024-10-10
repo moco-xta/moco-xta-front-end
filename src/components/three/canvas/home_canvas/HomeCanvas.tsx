@@ -19,6 +19,7 @@ export default function HomeCanvas() {
       }}
     >
       <OrbitControls />
+      <ambientLight />
       <Suspense fallback={null}>
         <HomeScene />
       </Suspense>

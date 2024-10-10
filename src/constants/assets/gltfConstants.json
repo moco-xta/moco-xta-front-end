@@ -14,6 +14,10 @@
     "C_HELIUM_BALLOON": "/gltf/hero/CHeliumBalloon.gltf",
     "SMILEY": "/gltf/hero/Smiley.gltf"
   },
+  "HOME": {
+    "BUILDING_001": "gltf/home/Building001.gltf",
+    "BUILDING_002": "gltf/home/Building002.gltf"
+  },
   "LIRA": {
     "LIRA_TEST_001": "gltf/lira/LiraTest001.gltf"
   },

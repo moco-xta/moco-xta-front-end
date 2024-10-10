@@ -35,12 +35,7 @@ export default class HeroClass {
 
     this.container.appendChild(this.renderer.domElement)
 
-    this.camera = new THREE.PerspectiveCamera(
-      70,
-      this.width / this.height,
-      0.01,
-      1000,
-    )
+    this.camera = new THREE.PerspectiveCamera(70, this.width / this.height, 0.01, 1000)
     this.camera.position.set(0, 0, 4)
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement)
@@ -62,7 +57,7 @@ export default class HeroClass {
     /* const geometry = new THREE.PlaneGeometry(1, 1) */
     this.material = new THREE.ShaderMaterial({
       extensions: {
-        derivates: 'extensions GL_OES_derivates: enable'
+        derivates: 'extensions GL_OES_derivates: enable',
       },
       side: THREE.DoubleSide,
       transparent: true,
@@ -73,14 +68,14 @@ export default class HeroClass {
         triScale: { value: this.settings.triScale },
         resolution: { value: new THREE.Vector4() },
       },
-      
+
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
     })
 
     /* const plane = new THREE.Mesh(geometry, this.material)
     this.scene.add(plane) */
-    
+
     const loader = new GLTFLoader()
     loader.load(gltfConstants.SKETCHFAB.FACE, (gltf) => {
       this.model = gltf.scene.getObjectByName('Face')
@@ -93,7 +88,7 @@ export default class HeroClass {
         let centerX = (pos[i] + pos[i + 3] + pos[i + 6]) / 3
         let centerY = (pos[i + 1] + pos[i + 4] + pos[i + 7]) / 3
         let centerZ = (pos[i + 2] + pos[i + 5] + pos[i + 8]) / 3
-  
+
         centers.push(centerX, centerY, centerZ)
         centers.push(centerX, centerY, centerZ)
         centers.push(centerX, centerY, centerZ)
@@ -109,8 +104,8 @@ export default class HeroClass {
   }
 
   addLights() {
-    this.ambient = new THREE.AmbientLight(0xFFFFFF, 0.15)
-    this.directionnal = new THREE.DirectionalLight(0xFFFFFF, 0.75)
+    this.ambient = new THREE.AmbientLight(0xffffff, 0.15)
+    this.directionnal = new THREE.DirectionalLight(0xffffff, 0.75)
     this.directionnal.position.set(0, 2, 2)
     this.scene.add(this.ambient)
     this.scene.add(this.directionnal)
@@ -128,7 +123,7 @@ export default class HeroClass {
           prev: { value: null },
           start: { value: 0 },
           time: { value: this.time },
-          translate: { value: 0 }
+          translate: { value: 0 },
         },
         side: THREE.DoubleSide,
         vertexShader: `
@@ -161,8 +156,8 @@ export default class HeroClass {
             vec4 color = vec4(mix(prevColor.rgb, currentColor.rgb, 0.2), 1.0);
             gl_FragColor = color;
           }
-        `
-      })
+        `,
+      }),
     )
     this.orthoScene.add(this.postQuad)
 
@@ -171,8 +166,8 @@ export default class HeroClass {
       new THREE.PlaneGeometry(2, 2),
       new THREE.MeshBasicMaterial({
         color: 0xffffff,
-        map: null
-      })
+        map: null,
+      }),
     )
     this.finalScene.add(this.finalQuad)
   }
@@ -180,7 +175,7 @@ export default class HeroClass {
   render() {
     if (!this.isPlaying) return
     this.time += 0.05
-    if(this.model) {
+    if (this.model) {
       /* this.model.position.x = 0.5 * Math.sin(this.time * 0.6) */
       this.postQuad.material.uniforms.time.value = this.time
     }
@@ -189,12 +184,12 @@ export default class HeroClass {
 
     this.renderer.setRenderTarget(this.sourceRenderTarget)
     this.renderer.render(this.scene, this.camera)
-    
+
     this.postQuad.material.uniforms.current.value = this.sourceRenderTarget.texture
     this.postQuad.material.uniforms.prev.value = this.renderTarget1.texture
     this.renderer.setRenderTarget(this.renderTarget2)
     this.renderer.render(this.orthoScene, this.orthoCamera)
-    
+
     this.finalQuad.material.map = this.renderTarget1.texture
     this.renderer.setRenderTarget(null)
     this.renderer.render(this.finalScene, this.orthoCamera)

@@ -115,8 +115,7 @@ function BrainTubes({ brainCurves }: BrainTubesInterface) {
   )
 }
 
-const randonRange = (min: number, max: number) =>
-  Math.random() * (max - min) + min
+const randonRange = (min: number, max: number) => Math.random() * (max - min) + min
 
 const PATHS = data.economics[0].paths
 const brainCurves: THREE.CatmullRomCurve3[] = []
@@ -137,8 +136,7 @@ declare global {
   namespace JSX {
     interface IntrinsicElements {
       brainParticulesMaterial: ReactThreeFiber.Node<
-        typeof BrainParticulesMaterial &
-          JSX.IntrinsicElements['shaderMaterial'],
+        typeof BrainParticulesMaterial & JSX.IntrinsicElements['shaderMaterial'],
         typeof BrainParticulesMaterial
       >
     }
@@ -223,11 +221,8 @@ function BrainParticules({ brainCurves }: BrainParticulesInterface) {
     let curpositions = brainGeoRef.current.attributes.position.array
     for (let i = 0; i < myPointsRef.current.length; i++) {
       myPointsRef.current[i].curPosition += myPointsRef.current[i].speed
-      myPointsRef.current[i].curPosition =
-        myPointsRef.current[i].curPosition % 1
-      const curPoint = myPointsRef.current[i].curve.getPointAt(
-        myPointsRef.current[i].curPosition,
-      )
+      myPointsRef.current[i].curPosition = myPointsRef.current[i].curPosition % 1
+      const curPoint = myPointsRef.current[i].curve.getPointAt(myPointsRef.current[i].curPosition)
       curpositions[i * 3] = curPoint.x
       curpositions[i * 3 + 1] = curPoint.y
       curpositions[i * 3 + 2] = curPoint.z
