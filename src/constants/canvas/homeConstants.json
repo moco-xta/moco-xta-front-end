@@ -1,0 +1,55 @@
+{
+  "CANVAS": {
+    "DPR": 1,
+    "LEGACY": false,
+    "GL": {
+      "ANTIALIAS": true,
+      "ALPHA": true,
+      "POWER_PREFERENCE": "high-performance"
+    }
+  },
+  "PERSPECTIVE_CAMERA": {
+    "POSITION": {
+      "X": 21,
+      "Y": 17,
+      "Z": 6
+    },
+    "ROTATION": {
+      "X": -20,
+      "Y": 52,
+      "Z": 0
+    },
+    "FOV": 55
+  },
+  "LIGHTS": {
+    "AMBIENT_LIGHT": {
+      "INTENSITY": 0.2
+    }
+  },
+  "POINTER_LOCK_CONTROLS": {
+    "SELECTOR": "about_enter_button"
+  },
+  "PLAYER": {
+    "SPEED": 8,
+    "JUMP_FORCE": 4
+  },
+  "TONE_MAPPING": {
+    "EXPOSURE": 50
+  },
+  "PHYSICS_GROUND": {
+    "ARGS": {
+      "WIDTH": 200,
+      "DEPTH": 200
+    },
+    "POSITON": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "ROTATION": {
+      "X": 90,
+      "Y": 0,
+      "Z": 0
+    }
+  }
+}
