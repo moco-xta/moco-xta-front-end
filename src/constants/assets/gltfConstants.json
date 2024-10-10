@@ -17,7 +17,10 @@
   "HOME": {
     "BUILDING_001": "gltf/home/Building001.gltf",
     "BUILDING_002": "gltf/home/Building002.gltf",
-    "TRUCK_RED": "gltf/home/TruckRed.gltf"
+    "TRUCK_RED": "gltf/home/TruckRed.gltf",
+    "TRUCK_WHITE": "gltf/home/TruckWhite.gltf",
+    "BENCH_001": "gltf/home/Bench001.gltf",
+    "PLANE_TREE_001": "gltf/home/PlaneTree001.gltf"
   },
   "LIRA": {
     "LIRA_TEST_001": "gltf/lira/LiraTest001.gltf"

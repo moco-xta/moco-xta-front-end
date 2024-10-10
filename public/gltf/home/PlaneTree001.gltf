@@ -1,0 +1,214 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.2.57",
+    "version": "2.0"
+  },
+  "extensionsUsed": ["KHR_materials_specular"],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "PlaneTree001",
+      "rotation": [0.7071068286895752, 0, 0, 0.7071068286895752],
+      "translation": [-9, 0, 5]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      },
+      "name": "plane_tree_trunck",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "plane_tree_leaves",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "PlaneTree001",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ],
+  "images": [
+    {
+      "mimeType": "image/jpeg",
+      "name": "plane_tree_bark_002",
+      "uri": "plane_tree_bark_002.jpg"
+    },
+    {
+      "mimeType": "image/png",
+      "name": "plane_tree_branch_001",
+      "uri": "plane_tree_branch_001.png"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 377098,
+      "max": [4.902987480163574, 6.62033748626709, 0.13850900530815125],
+      "min": [-6.828866004943848, -5.654533386230469, -16.686105728149414],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 377098,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 377098,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 1736832,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 25186,
+      "max": [5.726262092590332, 7.016392707824707, -3.6287574768066406],
+      "min": [-6.547304153442383, -6.448065757751465, -17.736404418945312],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 25186,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 25186,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 69600,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 4525176,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4525176,
+      "byteOffset": 4525176,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3016784,
+      "byteOffset": 9050352,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6947328,
+      "byteOffset": 12067136,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 302232,
+      "byteOffset": 19014464,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 302232,
+      "byteOffset": 19316696,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 201488,
+      "byteOffset": 19618928,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 139200,
+      "byteOffset": 19820416,
+      "target": 34963
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 19959616,
+      "uri": "PlaneTree001.bin"
+    }
+  ]
+}

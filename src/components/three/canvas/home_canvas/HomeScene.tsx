@@ -4,13 +4,15 @@ import { Environment, Sky, useHelper } from '@react-three/drei'
 
 import { Building001 } from '../../models/home/buildings/Building001'
 import { Building002 } from '../../models/home/buildings/Building002'
+import { TruckRed } from '../../models/home/trucks/TruckRed'
+import { TruckWhite } from '../../models/home/trucks/TruckWhite'
 
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
-import { TruckRed } from '../../models/home/trucks/TruckRed'
+import { Bench001 } from '../../models/home/street_fournitures/Bench001'
+import { PlaneTree001 } from '../../models/home/vegetation/PlaneTree001'
 
 const DirectionalLight = () => {
   const ref = useRef<THREE.DirectionalLight>(null!)
-  // I want to attach  onClickEvent in this lightHelper.
   useHelper(ref, THREE.DirectionalLightHelper)
 
   return (
@@ -30,6 +32,9 @@ export default function HomeScene() {
       <Building001 />
       <Building002 />
       <TruckRed />
+      <TruckWhite />
+      <Bench001 />
+      <PlaneTree001 />
       <DirectionalLight />
       {/* <Sky
         turbidity={8}
