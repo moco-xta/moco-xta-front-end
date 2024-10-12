@@ -1,20 +1,25 @@
 import { useFrame } from '@react-three/fiber'
 import { easing } from 'maath'
+import { useRef } from 'react'
 
-export default function CameraRig() {
+// @ts-ignore
+export default function CameraRig({ children }) {
+  const groupRef = useRef()
+
   useFrame((state, delta) => {
     easing.damp3(
-      state.camera.position,
+      // @ts-ignore
+      groupRef.current.rotation,
       [
-        (state.pointer.x * state.viewport.width) / 8,
-        (1 + state.pointer.y * state.viewport.height) / 8,
-        5.5,
+        (-state.pointer.y * state.viewport.height) / 16,
+        (state.pointer.x * state.viewport.width) / 16,
+        0,
       ],
       0.5,
       delta,
     )
-    state.camera.lookAt(0, 0, 0)
   })
 
-  return null
+  // @ts-ignore
+  return <group ref={groupRef}>{children}</group>
 }

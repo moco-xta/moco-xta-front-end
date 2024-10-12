@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { Environment, Sky, Text, useHelper } from '@react-three/drei'
+import { Billboard, Environment, Float, Sky, Text, useHelper } from '@react-three/drei'
 
 import { Building001 } from '../../models/home/buildings/Building001'
 import { Building002 } from '../../models/home/buildings/Building002'
@@ -30,24 +30,33 @@ const DirectionalLight = () => {
 export default function HomeScene() {
   return (
     <>
-      <Building001 />
-      <Building002 />
-      <TruckRed />
-      <TruckWhite />
-      <Bench001 />
-      <PlaneTree001 />
-      <DirectionalLight />
+      <Float
+        rotation={[-0.8, 0, -Math.PI / 2.5]}
+        floatIntensity={4}
+        rotationIntensity={4}
+      >
+        <Building001 />
+        <Building002 />
+        <TruckRed />
+        <TruckWhite />
+        <Bench001 />
+        <PlaneTree001 />
+        <DirectionalLight />
+      </Float>
 
       <Particles particlesCount={100} />
-      <Text
-        position={[0, 25, 0]}
-        rotation={[0, 0, 0]}
-        fontSize={5}
-        letterSpacing={2}
-        color='#ff0000'
-      >
-        Text
-      </Text>
+
+      <Billboard>
+        <Text
+          position={[0, 25, 0]}
+          rotation={[0, 0, 0]}
+          fontSize={5}
+          letterSpacing={2}
+          color='#ff0000'
+        >
+          Text
+        </Text>
+      </Billboard>
       {/* <Sky
         turbidity={8}
         rayleigh={6}

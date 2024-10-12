@@ -15,6 +15,7 @@ import HomeScene from './HomeScene'
 
 import { default as homeConstants } from '@/constants/canvas/homeConstants.json'
 import CameraRig from './CameraRig'
+import CameraAnimation from './CameraAnimation'
 
 export default function HomeCanvas() {
   return (
@@ -31,12 +32,14 @@ export default function HomeCanvas() {
         powerPreference: homeConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
-      <OrbitControls />
-      {/* <CameraRig /> */}
+      {/* <OrbitControls /> */}
+      <CameraAnimation />
       <ambientLight intensity={0.75} />
       {/* <directionalLight /> */}
       <Suspense fallback={null}>
-        <HomeScene />
+        <CameraRig>
+          <HomeScene />
+        </CameraRig>
 
         <EffectComposer multisampling={2}>
           <SMAA />
