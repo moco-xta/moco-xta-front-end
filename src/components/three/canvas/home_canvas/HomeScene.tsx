@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { Environment, Sky, useHelper } from '@react-three/drei'
+import { Environment, Sky, Text, useHelper } from '@react-three/drei'
 
 import { Building001 } from '../../models/home/buildings/Building001'
 import { Building002 } from '../../models/home/buildings/Building002'
@@ -10,6 +10,7 @@ import { TruckWhite } from '../../models/home/trucks/TruckWhite'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 import { Bench001 } from '../../models/home/street_fournitures/Bench001'
 import { PlaneTree001 } from '../../models/home/vegetation/PlaneTree001'
+import Particles from './Particles'
 
 const DirectionalLight = () => {
   const ref = useRef<THREE.DirectionalLight>(null!)
@@ -36,6 +37,17 @@ export default function HomeScene() {
       <Bench001 />
       <PlaneTree001 />
       <DirectionalLight />
+
+      <Particles particlesCount={100} />
+      <Text
+        position={[0, 25, 0]}
+        rotation={[0, 0, 0]}
+        fontSize={5}
+        letterSpacing={2}
+        color='#ff0000'
+      >
+        Text
+      </Text>
       {/* <Sky
         turbidity={8}
         rayleigh={6}

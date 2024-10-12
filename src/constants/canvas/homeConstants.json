@@ -7,5 +7,20 @@
       "ALPHA": true,
       "POWER_PREFERENCE": "high-performance"
     }
+  },
+  "POST_PROCESSING": {
+    "BLOOM": {
+      "INTENSITY": 0.2,
+      "LEVELS": 9,
+      "LUMINANCE_THRESHOLD": 0.9,
+      "LUMINANCE_SMOOTHING": 1.9,
+      "MIPMAP_BLUR": true,
+      "OPACITY": 0.1
+    },
+    "DEPTH_OF_FIELD": {
+      "FOCUS_DISTANCE": 0.03,
+      "FOCAL_LENGTH": 0.025,
+      "BOKEH_SCALE": 5
+    }
   }
 }

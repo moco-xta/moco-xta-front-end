@@ -12,12 +12,18 @@ type GLTFResult = GLTF & {
   }
   materials: {
     plane_tree_trunck: THREE.MeshStandardMaterial
-    plane_tree_leaves: THREE.MeshStandardMaterial
+    plane_tree_leaves: THREE.MeshPhysicalMaterial
   }
 }
 
 export function PlaneTree001(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(gltfConstants.HOME.PLANE_TREE_001) as GLTFResult
+
+  materials.plane_tree_leaves.side = THREE.DoubleSide
+  materials.plane_tree_leaves.transparent = true
+  materials.plane_tree_leaves.opacity = 1
+  /* materials.plane_tree_leaves.transmission = 0.8 */
+
   return (
     <group
       {...props}
