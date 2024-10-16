@@ -7,9 +7,8 @@ import './index.scss'
 
 export default function HomeSlice() {
   return (
-    <section id='home_slice'>
-      <Overlay />
-      <HomeCanvas />
-    </section>
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
   )
 }
