@@ -1,10 +1,17 @@
 import React from 'react'
 
-import Overlay from './Overlay'
-import HomeCanvas from '@/components/three/canvas/home_canvas/HomeCanvas'
+import Navbar from './Navbar'
+import Hero from './Hero'
+import Highlights from './Highlights'
 
-import './index.scss'
-
-export default function HomeSlice() {
-  return <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+const index = () => {
+  return (
+    <main>
+      <Navbar />
+      <Hero />
+      <Highlights />
+    </main>
+  )
 }
+
+export default index

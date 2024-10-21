@@ -16,6 +16,20 @@
     "HERO_ENVIRONMENT": "/img/hdr/peppermint_powerplant_2_1k.hdr",
     "HOME_ENVIRONMENT": "/img/hdr/the_sky_is_on_fire_4k.exr"
   },
+  "JAVASCRIPT_MASTERY": {
+    "APPLE_SVG": "/assets/images/apple.svg",
+    "BAG_SVG": "/assets/images/bag.svg",
+    "SEARCH_SVG": "/assets/images/search.svg",
+    "RIGHT_SVG": "/assets/images/right.svg",
+    "WATCH_SVG": "/assets/images/watch.svg",
+    "PLAY_SVG": "/assets/images/play.svg",
+    "PAUSE_SVG": "/assets/images/pause.svg",
+    "REPLAY_SVG": "/assets/images/replay.svg",
+    "BLACK_IMG": "/assets/images/black.jpg",
+    "BLUE_IMG": "/assets/images/blue.jpg",
+    "WHITE_IMG": "/assets/images/white.jpg",
+    "YELLOW_IMG": "/assets/images/yellow.jpg"
+  },
   "QR_CODES": {
     "TO_ABOUT": "/img/png/qr_codes/qr_code_to_about.png",
     "TO_HOME": "/img/png/qr_codes/qr_code_to_home.png"

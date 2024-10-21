@@ -1,0 +1,10 @@
+{
+  "JAVASCRIPT_MASTERY": {
+    "HERO_VIDEO": "/assets/videos/hero.mp4",
+    "SMALL_HERO_VIDEO": "/assets/videos/smallHero.mp4",
+    "HIGHTLIGHT_FIRST_MV": "/assets/videos/highlight-first.mp4",
+    "HIGHTLIGHT_SECOND_MV": "/assets/videos/highlight-third.mp4",
+    "HIGHTLIGHT_THIRD_MV": "/assets/videos/highlight-sec.mp4",
+    "HIGHTLIGHT_FOURTH_MV": "/assets/videos/highlight-fourth.mp4"
+  }
+}
