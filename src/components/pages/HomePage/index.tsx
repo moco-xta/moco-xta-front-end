@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { LenisRef } from 'lenis/react'
 
+import { HeroCanvas } from '@/components/three/canvas'
 import { HeroSlice, IntroductionSlice } from '@/components/slices'
 
 import './index.scss'
@@ -48,6 +49,7 @@ export default function HomePage() {
 
   return (
     <div>
+      <HeroCanvas />
       <HeroSlice />
       <IntroductionSlice />
       <div

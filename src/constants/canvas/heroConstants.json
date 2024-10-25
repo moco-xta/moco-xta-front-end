@@ -1,6 +1,6 @@
 {
   "CANVAS": {
-    "DPR": 1,
+    "DPR": 2,
     "LEGACY": false,
     "GL": {
       "ANTIALIAS": true,
@@ -10,134 +10,37 @@
     }
   },
   "PERSPECTIVE_CAMERA": {
-    "LARGE_SCREEN": {
-      "LARGER_LIMIT": 2000,
-      "MIN_POSITION": 5.7,
-      "MAX_POSITION": 3.7,
-      "INITIAL_POSITION": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      }
+    "POSITION": {
+      "X": 0,
+      "Y": 5.5,
+      "Z": 12
     },
-    "SMALL_SCREEN": {
-      "INITIAL_POSITION": {
-        "X": 0,
-        "Y": 0,
-        "Z": 7
-      }
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
     },
     "FOV": 30
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
-      "INTENSITY": 2
-    }
-  },
-  "TONE_MAPPING": {
-    "EXPOSURE": 4
-  },
-  "POST_PROCESSING": {
-    "DEPTH_OF_FIELD": {
-      "FOCUS_DISTANCE": 0.03,
-      "FOCAL_LENGTH": 0.025,
-      "BOKEH_SCALE": 5
+      "INTENSITY": 0.25
     },
-    "BLOOM": {
-      "INTENSITY": 1.5,
-      "LUMINANCE_THRESHOLD": 0.9,
-      "LUMINANCE_SMOOTHING": 0.025,
-      "MIPMAP_BLUR": true
-    }
-  },
-  "PHYSICS": {
-    "GRAVITY": {
-      "X": 0,
-      "Y": 0.05,
-      "Z": 0
-    }
-  },
-  "HELIUM_BALLOONS": {
-    "WRAPPER": {
-      "DIMENSIONS": {
-        "LARGE_SCREEN": {
-          "WIDTH": 2.55,
-          "HEIGHT": 1.1,
-          "DEPTH": 0.85
-        },
-        "SMALL_SCREEN": {
-          "WIDTH": 1.4,
-          "HEIGHT": 2.2,
-          "DEPTH": 0.85
-        }
-      },
-      "OPACITY": 0
-    },
-    "BALLOONS": {
+    "DIRECTIONAL_LIGHT": {
       "POSITION": {
-        "M": {
-          "LARGE_SCREEN": {
-            "X": -0.96,
-            "Y": 0,
-            "Z": 0
-          },
-          "SMALL_SCREEN": {
-            "X": -0.48,
-            "Y": 0.55,
-            "Z": 0
-          }
-        },
-        "O1": {
-          "LARGE_SCREEN": {
-            "X": -0.32,
-            "Y": 0,
-            "Z": 0
-          },
-          "SMALL_SCREEN": {
-            "X": 0.32,
-            "Y": 0.55,
-            "Z": 0
-          }
-        },
-        "C": {
-          "LARGE_SCREEN": {
-            "X": 0.32,
-            "Y": 0,
-            "Z": 0
-          },
-          "SMALL_SCREEN": {
-            "X": -0.32,
-            "Y": -0.55,
-            "Z": 0
-          }
-        },
-        "O2": {
-          "LARGE_SCREEN": {
-            "X": 0.96,
-            "Y": 0,
-            "Z": 0
-          },
-          "SMALL_SCREEN": {
-            "X": 0.32,
-            "Y": -0.55,
-            "Z": 0
-          }
-        }
+        "X": 10,
+        "Y": 10,
+        "Z": 10
       },
-      "ROTATION": 33,
-      "PHYSICS": {
-        "ADD_FORCE": {
-          "INTENSITY": 0.001,
-          "Z_THRESHOLD": 0.5
-        },
-        "APPLY_IMPULSE_INTENSITY": 0.001,
-        "RESTITUTION": 0.2
-      }
-    },
-    "SMILEY": {
-      "MATERIAL": {
-        "ENV_MAP_INTENSITY": 1.5
-      }
+      "INTENSITY": 1,
+      "MAP_SIZE": [4096, 4096],
+      "SHADOW_CAMERA_FAR": 20,
+      "SHADOW_CAMERA_LEFT": -20,
+      "SHADOW_CAMERA_RIGHT": 20,
+      "SHADOW_CAMERA_TOP": 20,
+      "SHADOW_CAMERA_BOTTOM": -20,
+      "SHADOW_RADIUS": 13,
+      "SHADOW_BIAS": 0.0001
     }
   }
 }

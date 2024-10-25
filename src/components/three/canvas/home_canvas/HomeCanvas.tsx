@@ -25,8 +25,6 @@ import ToneMapping from './ToneMapping'
 import { default as homeConstants } from '@/constants/canvas/homeConstants.json'
 import CameraRig from './CameraRig'
 import CameraAnimation from './CameraAnimation'
-import FirstSection from '@/components/home/slices/FirstSection'
-import SecondSection from '@/components/home/slices/SecondSection'
 
 import './index.scss'
 
