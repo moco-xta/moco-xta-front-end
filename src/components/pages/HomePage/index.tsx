@@ -43,6 +43,8 @@ export default function HomePage() {
         trigger: '#introduction_slice',
         scroller: 'body',
         start: 'top 25%',
+        /* toggleActions: 'restart pause reverse pause' */
+        scrub: true,
       },
     })
   })

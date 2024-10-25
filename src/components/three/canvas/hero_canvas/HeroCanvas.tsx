@@ -9,7 +9,10 @@ import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
 export default function HeroCanvas() {
   return (
-    <section className='fullscreen'>
+    <section
+      className='fullscreen'
+      style={{ position: 'fixed' }}
+    >
       <Canvas
         dpr={heroConstants.CANVAS.DPR}
         legacy={heroConstants.CANVAS.LEGACY}
