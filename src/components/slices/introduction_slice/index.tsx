@@ -2,13 +2,13 @@ import React from 'react'
 
 import './index.scss'
 
-export default function HeroSlice() {
+export default function IntroductionSlice() {
   return (
     <section
-      id='hero_slice'
+      id='introduction_slice'
       className='fullscreen'
     >
-      HeroSlice
+      IntroductionSlice
     </section>
   )
 }
