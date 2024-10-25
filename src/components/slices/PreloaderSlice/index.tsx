@@ -25,13 +25,17 @@ export default function PreloaderSlice() {
       stagger: 0.1,
       ease: 'power4.in',
     })
-      .to('h1 span', {
-        y: -150,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.1,
-        ease: 'power4.inOut',
-      })
+      .to(
+        'h1 span',
+        {
+          y: -150,
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: 'power4.inOut',
+        },
+        '+=0.75',
+      )
       .to('#introduction', {
         y: '-100%',
         duration: 0.5,

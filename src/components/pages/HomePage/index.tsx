@@ -60,23 +60,33 @@ export default function HomePage() {
     <div>
       <Parallax
         id='hero_slice_parallax'
-        speed={1}
-        style={{
-          alignSelf: 'flex-start',
-        }}
+        speed={0}
+        style={
+          {
+            /* alignSelf: 'flex-start', */
+          }
+        }
       >
         <HeroSlice />
       </Parallax>
       <Parallax
         id='introduction_slice_parallax'
         speed={-4}
-        style={{
-          alignSelf: 'flex-end',
-          /* overflow: 'hidden', */
-        }}
+        style={
+          {
+            /* alignSelf: 'flex-end', */
+            /* overflow: 'hidden', */
+          }
+        }
       >
         <IntroductionSlice />
       </Parallax>
+      <div
+        className='fullscreen'
+        style={{ background: 'Indigo' }}
+      >
+        TEST
+      </div>
     </div>
   )
 }
