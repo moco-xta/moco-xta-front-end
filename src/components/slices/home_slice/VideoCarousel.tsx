@@ -1,7 +1,6 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
-gsap.registerPlugin(ScrollTrigger)
 import { useEffect, useRef, useState } from 'react'
 
 import { hightlightsSlides } from '../../../constants'
@@ -9,6 +8,10 @@ import { hightlightsSlides } from '../../../constants'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 const VideoCarousel = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+  }, [])
+
   const videoRef = useRef<HTMLVideoElement[] | undefined>([])
   const videoSpanRef = useRef<HTMLSpanElement[] | undefined>([])
   const videoDivRef = useRef<HTMLSpanElement[] | undefined>([])
@@ -100,9 +103,10 @@ const VideoCarousel = () => {
 
       // update the progress bar
       const animUpdate = () => {
-        if(videoRef.current) anim.progress(
-          videoRef.current[videoId].currentTime / hightlightsSlides[videoId].videoDuration,
-        )
+        if (videoRef.current)
+          anim.progress(
+            videoRef.current[videoId].currentTime / hightlightsSlides[videoId].videoDuration,
+          )
       }
 
       if (isPlaying) {
@@ -118,9 +122,9 @@ const VideoCarousel = () => {
   useEffect(() => {
     if (loadedData.length > 3) {
       if (!isPlaying) {
-        if(videoRef.current)videoRef.current[videoId].pause()
+        if (videoRef.current) videoRef.current[videoId].pause()
       } else {
-        if(videoRef.current) startPlay && videoRef.current[videoId].play()
+        if (videoRef.current) startPlay && videoRef.current[videoId].play()
       }
     }
   }, [startPlay, videoId, isPlaying, loadedData])
@@ -129,7 +133,7 @@ const VideoCarousel = () => {
   const handleProcess = (type: string, i?: number) => {
     switch (type) {
       case 'video-end':
-        if(i) setVideo((pre) => ({ ...pre, isEnd: true, videoId: i + 1 }))
+        if (i) setVideo((pre) => ({ ...pre, isEnd: true, videoId: i + 1 }))
         break
 
       case 'video-last':
@@ -173,7 +177,9 @@ const VideoCarousel = () => {
                   className={`${list.id === 2 && 'translate-x-44'} pointer-events-none`}
                   preload='auto'
                   muted
-                  ref={(el) => {if(videoRef.current) (videoRef.current[i] = el)}}
+                  ref={(el) => {
+                    if (videoRef.current) videoRef.current[i] = el
+                  }}
                   onEnded={() =>
                     i !== 3 ? handleProcess('video-end', i) : handleProcess('video-last')
                   }
@@ -204,18 +210,19 @@ const VideoCarousel = () => {
 
       <div className='relative flex-center mt-10'>
         <div className='flex-center py-5 px-7 bg-gray-300 backdrop-blur rounded-full'>
-          {videoRef.current && videoRef.current.map((_, i) => (
-            <span
-              key={i}
-              className='mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer'
-              ref={(el) => (videoDivRef.current[i] = el)}
-            >
+          {videoRef.current &&
+            videoRef.current.map((_, i) => (
               <span
-                className='absolute h-full w-full rounded-full'
-                ref={(el) => (videoSpanRef.current[i] = el)}
-              />
-            </span>
-          ))}
+                key={i}
+                className='mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer'
+                ref={(el) => (videoDivRef.current[i] = el)}
+              >
+                <span
+                  className='absolute h-full w-full rounded-full'
+                  ref={(el) => (videoSpanRef.current[i] = el)}
+                />
+              </span>
+            ))}
         </div>
 
         <button className='control-btn'>

@@ -22,5 +22,8 @@
       "FOCAL_LENGTH": 0.025,
       "BOKEH_SCALE": 5
     }
+  },
+  "TONE_MAPPING": {
+    "EXPOSURE": 2.3
   }
 }

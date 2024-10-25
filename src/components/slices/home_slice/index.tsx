@@ -1,17 +1,18 @@
 import React from 'react'
 
-import Navbar from './Navbar'
-import Hero from './Hero'
-import Highlights from './Highlights'
+import Overlay from './Overlay'
 
-const index = () => {
+import FirstLayer from '@/components/home/layers/FirstLayer'
+import SecondLayer from '@/components/home/layers/SecondLayer'
+
+import './index.scss'
+
+export default function HomeSlice() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <Highlights />
-    </main>
+    <section id='home_slice'>
+      {/* <Overlay /> */}
+      <FirstLayer />
+      <SecondLayer />
+    </section>
   )
 }
-
-export default index

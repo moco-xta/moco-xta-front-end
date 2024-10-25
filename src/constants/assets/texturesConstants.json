@@ -506,6 +506,18 @@
       }
     }
   },
+  "HOME": {
+    "BUILDING_001_WALL": {
+      "DIFFUSE": "/img/textures/home/building_001_wall_DIFFUSE.jpg",
+      "DISPLACEMENT": "/img/textures/home/building_001_wall_DISPLACEMENT.png",
+      "NORMAL": "/img/textures/home/building_001_wall_NORMAL.jpg",
+      "ROUGHNESS": "/img/textures/home/building_001_wall_ROUGHNESS.png"
+    },
+    "EXO_MARKET": {
+      "DIFFUSE": "/img/textures/home/exo_market_DIFFUSE.jpg",
+      "ROUGHNESS": "/img/textures/home/exo_market_ROUGHNESS.png"
+    }
+  },
   "LIRA": {
     "LIRA_TEST_001": "gltf/lira/LiraTest001.jpg"
   },

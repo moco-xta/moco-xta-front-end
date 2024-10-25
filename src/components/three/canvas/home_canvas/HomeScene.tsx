@@ -1,6 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { Billboard, Environment, Float, Sky, Text, useHelper } from '@react-three/drei'
+import { useFrame, useThree } from '@react-three/fiber'
+import { Billboard, Environment, Float, Sky, Text, useHelper, useScroll } from '@react-three/drei'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { Building001 } from '../../models/home/buildings/Building001'
 import { Building002 } from '../../models/home/buildings/Building002'
@@ -11,40 +15,104 @@ import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 import { Bench001 } from '../../models/home/street_fournitures/Bench001'
 import { PlaneTree001 } from '../../models/home/vegetation/PlaneTree001'
 import Particles from './Particles'
-
-const DirectionalLight = () => {
-  const ref = useRef<THREE.DirectionalLight>(null!)
-  useHelper(ref, THREE.DirectionalLightHelper)
-
-  return (
-    <>
-      <directionalLight
-        ref={ref}
-        intensity={2}
-        position={[5, 5, 5]}
-      />
-    </>
-  )
-}
+import { Building001Wall } from '../../models/home/buildings/Building001Wall'
+import { ExoMarket } from '../../models/home/buildings/ExoMarket'
 
 export default function HomeScene() {
+  const { camera } = useThree()
+  /* const scroll = useScroll() */
+  /* const tl = useRef<GSAPTimeline>(null!) */
+
+  useEffect(() => {
+    gsap.registerPlugin(useGSAP)
+  }, [])
+
+  useEffect(() => {
+    /* console.log('camera', camera) */
+  }, [camera])
+
+  useFrame(({ camera }, delta, xrFrame) => {
+    /* tl.current.seek(scroll.offset * tl.current.duration()) */
+    /* console.log('camera.position', camera.position) */
+  })
+
+  useFrame(({ camera }, delta, xrFrame) => {})
+
+  useGSAP(() => {
+    gsap.from(camera.position, {
+      z: 11,
+      duration: 1,
+      delay: 4,
+    })
+    /* gsap.from('#box_test_first_section', {
+      x: 200,
+      rotation: 360,
+      duration: 2,
+      delay: 5,
+    }) */
+    /* gsap.from('#box_test_second_section', {
+      x: 200,
+      rotation: 360,
+      duration: 2,
+      scrollTrigger: {
+        trigger: '.trigger',
+        start: 'top 25%'
+      },
+    }) */
+
+    /* tl.current = gsap.timeline({ defaults: { duration: 2 , ease: 'power1.inOut' } }) */
+
+    /* tl.current */
+    /* .to(camera.position, { x: 1 }, 1) */
+    /* .to(camera.rotation, {y: -1}, 2) */
+    /* .to(camera.position, {x: 1}, 2) */
+
+    /* .to(robot.current.rotation, {y: 1}, 6)    */
+    /* .to(camera.position, { x: -1 }, 6) */
+
+    /* .to(robot.current.rotation, {y: 0}, 11)
+    .to(robot.current.rotation, {x: 1}, 11) */
+    /* .to(camera.position, { x: 0 }, 11) */
+
+    /* .to(robot.current.rotation, {y: 0}, 13)
+    .to(robot.current.rotation, {x: -1}, 13)     */
+    /* .to(camera.position, { x: 0 }, 13) */
+
+    /* .to(robot.current.rotation, {y: 0}, 16)   
+    .to(robot.current.rotation, {x: 0}, 16)  */
+    /* .to(camera.position, { x: 0 }, 16) */
+
+    /* .to(robot.current.rotation, {y: 0}, 20)   
+    .to(robot.current.rotation, {x: 0}, 20)  */
+    /* .to(camera.position, { x: 0 }, 20) */
+  })
+
   return (
     <>
-      <Float
+      {/* <Float
         rotation={[-0.8, 0, -Math.PI / 2.5]}
         floatIntensity={4}
         rotationIntensity={4}
-      >
-        <Building001 />
+      > */}
+      <Building001Wall />
+      {/* <ExoMarket /> */}
+      {/* <Building001 />
         <Building002 />
         <TruckRed />
         <TruckWhite />
         <Bench001 />
-        <PlaneTree001 />
-        <DirectionalLight />
-      </Float>
+        <PlaneTree001 /> */}
+      {/* <hemisphereLight /> */}
+      {/* <spotLight
+        color={0xffa95c}
+        intensity={200}
+        castShadow
+        position={[10, 10, 10]}
+        rotation={new THREE.Euler(THREE.MathUtils.degToRad(30), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(20))}
+      /> */}
+      {/* </Float> */}
 
-      <Particles particlesCount={100} />
+      {/* <Particles particlesCount={100} /> */}
 
       <Billboard>
         <Text

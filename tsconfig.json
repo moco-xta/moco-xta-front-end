@@ -28,6 +28,7 @@
       "@/helpers/*": ["helpers/*"],
       "@/hooks/*": ["hooks/*"],
       "@/interfaces/*": ["interfaces/*"],
+      "@/lenis/*": ["lenis/*"],
       "@/redux/*": ["redux/*"],
       "@/routes/*": ["routes/*"],
       "@/styles/*": ["styles/*"],

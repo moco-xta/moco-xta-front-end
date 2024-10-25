@@ -34,6 +34,7 @@
     "json-pointer": "^0.6.2",
     "json-refs": "^3.0.15",
     "lamina": "^1.1.23",
+    "lenis": "^1.1.14",
     "lodash": "^4.17.21",
     "moment": "^2.30.1",
     "nanoid": "^5.0.7",

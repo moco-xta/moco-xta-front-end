@@ -1,3 +1,7 @@
+// FONTS
+
+$gilroyBlackFont: var(--font-gilroy-black);
+
 // GREY GRADIENT
 
 $white: #ffffff;
@@ -208,6 +212,8 @@ $responsive_XXXS: #b5179e;
 $responsive_XXXXS: #f72585;
 
 :export {
+  gilroy_black_font: $gilroyBlackFont;
+
   background_color: $background_color;
   blured_background_color: $blured_background_color;
 
