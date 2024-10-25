@@ -36,8 +36,6 @@ export default function HomeScene() {
     /* console.log('camera.position', camera.position) */
   })
 
-  useFrame(({ camera }, delta, xrFrame) => {})
-
   useGSAP(() => {
     gsap.from(camera.position, {
       z: 11,
