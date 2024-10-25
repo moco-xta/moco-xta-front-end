@@ -8,7 +8,10 @@ export default function HeroSlice() {
       id='hero_slice'
       className='fullscreen'
     >
-      HeroSlice
+      <div
+        id='box_test_first_section'
+        className='box_test'
+      />
     </section>
   )
 }

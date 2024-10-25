@@ -8,7 +8,10 @@ export default function IntroductionSlice() {
       id='introduction_slice'
       className='fullscreen'
     >
-      IntroductionSlice
+      <div
+        id='box_test_second_section'
+        className='box_test'
+      />
     </section>
   )
 }
