@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 import { LenisRef, useLenis } from 'lenis/react'
 
 import { HomePage } from '@/components/pages'
-import { IntroductionSlice } from '@/components/slices'
+import { PreloaderSlice } from '@/components/slices'
 
 export default function Home() {
   const lenisRef = useRef<LenisRef>(null!)
@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <>
-      <IntroductionSlice />
+      <PreloaderSlice />
       <HomePage />
     </>
   )

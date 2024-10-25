@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
 
-export default function IntroductionSlice() {
+export default function PreloaderSlice() {
   const [splittedText] = useState<string[]>('MOCO.xta'.split(''))
 
   useEffect(() => {
