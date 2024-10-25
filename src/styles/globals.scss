@@ -229,6 +229,12 @@ a {
 // nav_container (!isLargeScreen): 9
 // header: 10 */
 
+// ################################################################
+// ################################################################
+// ################################################################
+
+// *, BODY
+
 * {
   margin: 0;
   padding: 0;
@@ -277,6 +283,13 @@ canvas {
   margin-inline-end: auto;
   position: relative;
   max-width: 1120px;
+}
+
+// FULLSCREEN
+
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
 }
 
 @layer utilities {
