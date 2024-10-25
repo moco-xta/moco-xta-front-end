@@ -4,21 +4,17 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import useWindowSize from '@/hooks/useWindowSize'
 
-import './index.scss'
-
 interface ParallaxInterface {
-  className: string
-  children: JSX.Element
+  id: string
+  className?: string
+  style: {
+    [key: string]: string
+  }
   speed: number
-  id?: string
+  children: JSX.Element
 }
 
-export default function Parallax({
-  className,
-  children,
-  speed = 1,
-  id = 'parallax',
-}: ParallaxInterface) {
+export default function Parallax({ id, className, style, speed = 1, children }: ParallaxInterface) {
   const trigger = useRef<HTMLDivElement>(null!)
   const target = useRef<HTMLDivElement>(null!)
   const timeline = useRef<GSAPTimeline>(null!)
@@ -53,6 +49,7 @@ export default function Parallax({
     <div
       ref={trigger}
       className={className}
+      style={style}
     >
       <div ref={target}>{children}</div>
     </div>

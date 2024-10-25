@@ -5,8 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { LenisRef, useLenis } from 'lenis/react'
 
 import { HeroSlice, IntroductionSlice } from '@/components/slices'
+import Parallax from '@/components/Parallax'
 
 import './index.scss'
+import { overflow } from 'html2canvas/dist/types/css/property-descriptors/overflow'
 
 export default function HomePage() {
   const lenisRef = useRef<LenisRef>(null!)
@@ -48,6 +50,7 @@ export default function HomePage() {
       duration: 2,
       scrollTrigger: {
         trigger: '#introduction_slice',
+        scroller: 'body',
         start: 'top 25%',
       },
     })
@@ -55,8 +58,25 @@ export default function HomePage() {
 
   return (
     <div>
-      <HeroSlice />
-      <IntroductionSlice />
+      <Parallax
+        id='hero_slice_parallax'
+        speed={1}
+        style={{
+          alignSelf: 'flex-start',
+        }}
+      >
+        <HeroSlice />
+      </Parallax>
+      <Parallax
+        id='introduction_slice_parallax'
+        speed={-4}
+        style={{
+          alignSelf: 'flex-end',
+          /* overflow: 'hidden', */
+        }}
+      >
+        <IntroductionSlice />
+      </Parallax>
     </div>
   )
 }
