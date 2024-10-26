@@ -9,24 +9,28 @@ import { HeroSlice, IntroductionSlice } from '@/components/slices'
 
 import './index.scss'
 
-export default function HomePage() {
-  const lenisRef = useRef<LenisRef>(null!)
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
-  useEffect(() => {
-    gsap.registerPlugin(useGSAP, ScrollTrigger)
-  }, [])
+export default function HomePage() {
+  // #################################
+  // #################################
+  // #################################
+
+  const lenisRef = useRef<LenisRef>(null!)
 
   useEffect(() => {
     function update(time: number) {
       lenisRef.current?.lenis?.raf(time * 1000)
     }
-
     gsap.ticker.add(update)
-
     return () => {
       gsap.ticker.remove(update)
     }
   })
+
+  // #################################
+  // #################################
+  // #################################
 
   useGSAP(() => {
     gsap.from('#box_test_first_section', {

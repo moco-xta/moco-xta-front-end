@@ -6,7 +6,7 @@ import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
 export default function Lights() {
   const ref = useRef<THREE.DirectionalLight>(null!)
-  useHelper(ref, THREE.DirectionalLightHelper)
+  /* useHelper(ref, THREE.DirectionalLightHelper) */
 
   return (
     <>

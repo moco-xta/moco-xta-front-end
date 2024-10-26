@@ -18,14 +18,12 @@ import Particles from './Particles'
 import { Building001Wall } from '../../models/home/buildings/Building001Wall'
 import { ExoMarket } from '../../models/home/buildings/ExoMarket'
 
+gsap.registerPlugin(useGSAP)
+
 export default function HomeScene() {
   const { camera } = useThree()
   /* const scroll = useScroll() */
   /* const tl = useRef<GSAPTimeline>(null!) */
-
-  useEffect(() => {
-    gsap.registerPlugin(useGSAP)
-  }, [])
 
   useEffect(() => {
     /* console.log('camera', camera) */

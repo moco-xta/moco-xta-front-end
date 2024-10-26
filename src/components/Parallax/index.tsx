@@ -14,6 +14,8 @@ interface ParallaxInterface {
   children: JSX.Element
 }
 
+gsap.registerPlugin(ScrollTrigger)
+
 export default function Parallax({ id, className, style, speed = 1, children }: ParallaxInterface) {
   const trigger = useRef<HTMLDivElement>(null!)
   const target = useRef<HTMLDivElement>(null!)
@@ -22,8 +24,6 @@ export default function Parallax({ id, className, style, speed = 1, children }: 
   const { width: windowWidth } = useWindowSize()
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
     const y = windowWidth * speed * 0.1
     const setY = gsap.quickSetter(target.current, 'y', 'px')
 

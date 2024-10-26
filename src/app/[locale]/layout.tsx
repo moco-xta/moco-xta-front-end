@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
-import localFont from 'next/font/local'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { Toaster } from 'sonner'
 import { ReactLenis } from 'lenis/react'
@@ -11,19 +10,10 @@ import ReduxProvider from '@/redux/ReduxProvider'
 import Header from '@/components/shared/header'
 
 import '@/styles/globals.scss'
+import { gilroyBlackFont } from '@/assets/fonts/ttf'
 
 const interFont = Inter({
   subsets: ['latin'],
-})
-
-const retorGamingFont = localFont({
-  src: '../../assets/fonts/ttf/Retro Gaming.ttf',
-  variable: '--font-retro-gaming',
-})
-
-const gilroyBlackFont = localFont({
-  src: '../../assets/fonts/ttf/Gilroy-Black.ttf',
-  variable: '--font-gilroy-black',
 })
 
 export const metadata: Metadata = {
@@ -55,9 +45,7 @@ export default function RootLayout({
             touchMultiplier: 2,
           }}
         >
-          <body
-            className={`${interFont.className} ${retorGamingFont.variable} ${gilroyBlackFont.variable}`}
-          >
+          <body className={`${interFont.className} ${gilroyBlackFont.variable}`}>
             <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
             <ReduxProvider>
               <NextIntlClientProvider
