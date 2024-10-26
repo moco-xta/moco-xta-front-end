@@ -1,46 +1,23 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { PerspectiveCamera } from '@theatre/r3f'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { useLenis } from 'lenis/react'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
+
+gsap.registerPlugin(useGSAP)
 
 export default function Camera() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
 
-  const timelineRef = useRef<GSAPTimeline>(gsap.timeline())
-
-  useEffect(() => {
-    gsap.registerPlugin(useGSAP)
-  }, [])
-
-  /* useLenis((lenis) => {
-    timelineRef.current.seek(
-      (100 / (lenis.dimensions.scrollHeight - lenis.dimensions.height)) * lenis.scroll,
-    )
-  })
-
   useGSAP(() => {
     gsap.from(perspectiveCameraRef.current.position, {
       z: 11,
-      duration: 1,
-      delay: 5,
+      duration: 1.5,
+      delay: 4.5,
     })
-
-    timelineRef.current
-      .to(
-        perspectiveCameraRef.current.position,
-        { x: 2, duration: 55, ease: 'power1.out' },
-        25,
-      )
-      .to(
-        perspectiveCameraRef.current.position,
-        { x: 5, duration: 20, ease: 'power1.out' },
-        80,
-      )
-  }) */
+  })
 
   return (
     <PerspectiveCamera

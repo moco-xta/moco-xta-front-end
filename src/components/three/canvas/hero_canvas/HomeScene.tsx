@@ -1,23 +1,17 @@
 import React, { useEffect } from 'react'
-import { useScroll } from '@react-three/drei'
+import { useLenis } from 'lenis/react'
 import { editable as e, useCurrentSheet } from '@theatre/r3f'
-
-import { Building001Wall } from '@/components/three/models/home/buildings/Building001Wall'
-import { useFrame } from '@react-three/fiber'
 import { val } from '@theatre/core'
 
+import { Building001Wall } from '@/components/three/models/home/buildings/Building001Wall'
+
 export default function HomeScene() {
-  const scroll = useScroll()
   const sheet = useCurrentSheet()
 
-  useFrame(() => {
+  useLenis(({ scroll }) => {
     const sequenceLength = val(sheet!.sequence.pointer.length)
-    sheet!.sequence.position = scroll.offset * sequenceLength
+    sheet!.sequence.position = (scroll / 1000) * sequenceLength
   })
-
-  useEffect(() => {
-    console.log('sheet', sheet)
-  }, [sheet])
 
   return (
     <>

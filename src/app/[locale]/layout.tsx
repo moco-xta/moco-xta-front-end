@@ -35,16 +35,16 @@ export default function RootLayout({
   return (
     <>
       <html lang={locale}>
-        {/* <ReactLenis
+        <ReactLenis
           root
           options={{
             lerp: 0.1,
-            // easing: (x: number) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2,
+            //easing: (x: number) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2,
             duration: 1.2,
             smoothWheel: true,
             touchMultiplier: 2,
           }}
-        > */}
+        >
           <body className={`${interFont.className} ${gilroyBlackFont.variable}`}>
             <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
             <ReduxProvider>
@@ -68,7 +68,7 @@ export default function RootLayout({
               </NextIntlClientProvider>
             </ReduxProvider>
           </body>
-        {/* </ReactLenis> */}
+        </ReactLenis>
       </html>
     </>
   )

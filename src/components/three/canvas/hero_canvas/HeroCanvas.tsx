@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Scroll, ScrollControls } from '@react-three/drei'
 import studio from '@theatre/studio'
 import extension from '@theatre/r3f/dist/extension'
 import { SheetProvider } from '@theatre/r3f'
@@ -9,7 +8,6 @@ import { getProject } from '@theatre/core'
 import Camera from './Camera'
 import Lights from './Lights'
 import HomeScene from './HomeScene'
-import Overlay from './Overlay'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
@@ -35,15 +33,11 @@ export default function HeroCanvas() {
         }}
       >
         <Suspense fallback={null}>
-          <ScrollControls pages={5}>
-            <Scroll>
-              <SheetProvider sheet={sheet}>
-                <Camera />
-                <Lights />
-                <HomeScene />
-              </SheetProvider>
-            </Scroll>
-          </ScrollControls>
+          <SheetProvider sheet={sheet}>
+            <Camera />
+            <Lights />
+            <HomeScene />
+          </SheetProvider>
         </Suspense>
       </Canvas>
     </section>

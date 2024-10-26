@@ -12,10 +12,6 @@ import './index.scss'
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export default function HomePage() {
-  // #################################
-  // #################################
-  // #################################
-
   const lenisRef = useRef<LenisRef>(null!)
 
   useEffect(() => {
@@ -27,10 +23,6 @@ export default function HomePage() {
       gsap.ticker.remove(update)
     }
   })
-
-  // #################################
-  // #################################
-  // #################################
 
   useGSAP(() => {
     gsap.from('#box_test_first_section', {
@@ -56,7 +48,7 @@ export default function HomePage() {
   return (
     <div>
       <HeroCanvas />
-      {/* <HomeOverlay /> */}
+      <HomeOverlay />
     </div>
   )
 }
