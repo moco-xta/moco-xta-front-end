@@ -9,7 +9,7 @@ import useModelHoverEffect from '@/hooks/useModelHoverEffect'
 
 import Anaglyph from '../../post_processing/Anaglyph'
 
-import { logoMocoAnimation } from 'animations/header'
+import { logoMocoAnimation } from 'animations/gsap/header'
 
 import { default as logoConstants } from '@/constants/canvas/logoConstants.json'
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'

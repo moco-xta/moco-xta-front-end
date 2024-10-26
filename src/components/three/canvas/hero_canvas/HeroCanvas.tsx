@@ -16,7 +16,7 @@ studio.extend(extension)
 studio.initialize()
 
 export default function HeroCanvas() {
-  const sheet = getProject('Project TEST').sheet('Scene TEST')
+  const sheet = getProject('home_project').sheet('hero_sheet')
 
   useLenis(({ scroll }) => {
     const sequenceLength = val(sheet!.sequence.pointer.length)

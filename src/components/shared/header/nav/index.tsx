@@ -18,7 +18,7 @@ import LocaleSwitcher from '@/components/buttons/locale_switcher'
 import Hamburger from '@/components/buttons/hamburger'
 import Authentication from '../../authentication'
 
-import { navAnimation } from 'animations/header'
+import { navAnimation } from 'animations/gsap/header'
 
 import './index.scss'
 

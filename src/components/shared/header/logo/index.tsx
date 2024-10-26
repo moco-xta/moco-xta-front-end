@@ -15,7 +15,7 @@ import { Routes } from '@/routes/routes'
 
 import LogoCanvas from '@/components/three/canvas/logo_canvas/LogoCanvas'
 
-import { logoMocoAnimation } from 'animations/header'
+import { logoMocoAnimation } from 'animations/gsap/header'
 
 import './index.scss'
 
