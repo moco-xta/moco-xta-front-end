@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
+import { useLenis } from 'lenis/react'
 import studio from '@theatre/studio'
 import extension from '@theatre/r3f/dist/extension'
 import { SheetProvider } from '@theatre/r3f'
-import { getProject } from '@theatre/core'
+import { getProject, val } from '@theatre/core'
 
 import Camera from './Camera'
 import Lights from './Lights'
@@ -16,6 +17,11 @@ studio.initialize()
 
 export default function HeroCanvas() {
   const sheet = getProject('Project TEST').sheet('Scene TEST')
+
+  useLenis(({ scroll }) => {
+    const sequenceLength = val(sheet!.sequence.pointer.length)
+    sheet!.sequence.position = (scroll / 1000) * sequenceLength
+  })
 
   return (
     <section
