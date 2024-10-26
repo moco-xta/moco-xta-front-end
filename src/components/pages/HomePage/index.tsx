@@ -25,12 +25,6 @@ export default function HomePage() {
   })
 
   useGSAP(() => {
-    gsap.from('#box_test_first_section', {
-      x: 200,
-      rotation: 360,
-      duration: 2,
-      delay: 5,
-    })
     gsap.from('#box_test_second_section', {
       x: 200,
       rotation: 360,

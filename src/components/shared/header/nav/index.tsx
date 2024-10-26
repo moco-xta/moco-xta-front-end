@@ -89,8 +89,8 @@ export default function Nav() {
           </ul>
         </nav>
       </div>
-      <Hamburger />
-      <Authentication />
+      {/* <Hamburger />
+      <Authentication /> */}
     </>
   )
 }
