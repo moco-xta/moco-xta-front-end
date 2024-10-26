@@ -16,7 +16,7 @@ export default function HomeScene() {
   return (
     <>
       <Building001Wall />
-      <e.mesh theatreKey='Cube'>
+      <e.mesh theatreKey='Cube' receiveShadow castShadow>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color='orange' />
       </e.mesh>
