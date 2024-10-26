@@ -43,7 +43,7 @@ export default function PreloaderSlice() {
   return (
     <section
       id='introduction'
-      className='fullscreen'
+      className='preloader_zIndex fullscreen'
     >
       <h1
         id='h1_moco'
