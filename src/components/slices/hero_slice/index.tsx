@@ -19,34 +19,26 @@ export default function HeroSlice() {
   })
 
   return (
-    <Parallax
-      id='hero_slice_parallax_wrapper'
-      speed={0}
-      style={{
-        alignSelf: 'flex-end',
-        overflow: 'hidden',
-      }}
+    <div
+      id='hero_slice'
+      className='fullscreen center_content'
+      style={{ /* background: '#ff1377', */ overflow: 'hidden' }}
     >
-      <section
-        id='hero_slice'
-        className='fullscreen center_content'
-      >
-        <h1
-          id='hero_h1'
-          className={`${gilroyBlackFont.className}`}
-        >
-          {splittedText.map((letter, index) => {
-            return (
-              <span
-                key={`moco_letter_${index}`}
-                className='hero_h1_spans'
-              >
-                {letter}
-              </span>
-            )
-          })}
-        </h1>
-      </section>
-    </Parallax>
+    <h1
+      id='hero_h1'
+      className={`${gilroyBlackFont.className}`}
+    >
+      {splittedText.map((letter, index) => {
+        return (
+          <span
+            key={`moco_letter_${index}`}
+            className='hero_h1_spans'
+          >
+            {letter}
+          </span>
+        )
+      })}
+    </h1>
+    </div>
   )
 }

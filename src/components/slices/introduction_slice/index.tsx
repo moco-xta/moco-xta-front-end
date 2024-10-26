@@ -8,7 +8,7 @@ export default function IntroductionSlice() {
   return (
     <Parallax
       id='introduction_slice_parallax'
-      speed={-4}
+      speed={-6}
       style={{
         alignSelf: 'flex-start',
       }}

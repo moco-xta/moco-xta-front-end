@@ -10,7 +10,7 @@ export default function HomeOverlay() {
       <HeroSlice />
       <IntroductionSlice />
       <div
-        className='fullscreen'
+        className='fullscreen center_content'
         style={{ background: 'Indigo' }}
       >
         TEST

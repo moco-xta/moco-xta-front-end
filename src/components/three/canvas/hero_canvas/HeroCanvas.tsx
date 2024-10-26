@@ -18,9 +18,9 @@ studio.initialize()
 export default function HeroCanvas() {
   const sheet = getProject('home_project').sheet('hero_sheet')
 
-  useLenis(({ scroll }) => {
+  useLenis(({ dimensions, scroll }) => {
     const sequenceLength = val(sheet!.sequence.pointer.length)
-    sheet!.sequence.position = (scroll / 1000) * sequenceLength
+    sheet!.sequence.position = (scroll / dimensions.scrollHeight) * sequenceLength
   })
 
   return (
