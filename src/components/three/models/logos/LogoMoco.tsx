@@ -60,8 +60,9 @@ export default function LogoMoco() {
         onPointerOut={handleOnPointerLeave}
       >
         <meshNormalMaterial
-          ref={logoMocoMaterialRef}
           attach='material'
+          ref={logoMocoMaterialRef}
+          side={THREE.DoubleSide}
           transparent
         />
       </mesh>
