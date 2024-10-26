@@ -9,9 +9,9 @@ import './index.scss'
 
 export default function Header() {
   return (
-    <header>
+    <header className='header_zIndex'>
       <Logo />
-      <Nav />
+      {/* <Nav /> */}
     </header>
   )
 }

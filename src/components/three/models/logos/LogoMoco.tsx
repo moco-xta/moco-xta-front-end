@@ -1,32 +1,46 @@
 import * as THREE from 'three'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 import useModelHoverEffect from '@/hooks/useModelHoverEffect'
 
 import Anaglyph from '../../post_processing/Anaglyph'
+
+import { logoMocoAnimation } from 'animations/header'
 
 import { default as logoConstants } from '@/constants/canvas/logoConstants.json'
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
-    /* LogoMoco2: THREE.Mesh */
     LogoMoco: THREE.Mesh
   }
   materials: {}
 }
 
+gsap.registerPlugin(useGSAP)
+
 export default function LogoMoco() {
   const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_MOCO) as GLTFResult
 
   const logoMocoRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)
+  const logoMocoMaterialRef = useRef<THREE.MeshNormalMaterial>(null!)
 
   const { handleOnPointerMove, handleOnPointerLeave } = useModelHoverEffect(
     logoMocoRef,
     logoConstants.HANDLE_ON_PONTER_MOVE,
   )
+
+  useGSAP(() => {
+    gsap.from(logoMocoMaterialRef.current, logoMocoAnimation.opacity.params)
+  })
+
+  useEffect(() => {
+    console.log('logoMocoMaterialRef', logoMocoMaterialRef)
+  }, [logoMocoMaterialRef])
 
   return (
     <group
@@ -44,9 +58,12 @@ export default function LogoMoco() {
         geometry={nodes.LogoMoco.geometry}
         onPointerMove={handleOnPointerMove}
         onPointerOut={handleOnPointerLeave}
-        /* rotation={[0, -Math.PI / 2, 0]} */
       >
-        <meshNormalMaterial attach='material' />
+        <meshNormalMaterial
+          ref={logoMocoMaterialRef}
+          attach='material'
+          transparent
+        />
       </mesh>
     </group>
   )

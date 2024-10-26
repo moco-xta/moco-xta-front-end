@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
+import { preloaderSliceAnimation, preloaderTextAnimation } from 'animations/preloader'
+
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
 
@@ -15,34 +17,18 @@ export default function PreloaderSlice() {
   })
 
   useGSAP(() => {
-    tl.from('h1 span', {
-      y: 150,
-      opacity: 0,
-      duration: 0.5,
-      delay: 1,
-      stagger: 0.1,
-      ease: 'power4.in',
-    })
+    tl.from(preloaderTextAnimation.selector, preloaderTextAnimation.from.params)
       .to(
-        'h1 span',
-        {
-          y: -150,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.1,
-          ease: 'power4.inOut',
-        },
-        '+=0.75',
+        preloaderTextAnimation.selector,
+        preloaderTextAnimation.to.params,
+        preloaderTextAnimation.to.offset_delay,
       )
-      .to('#introduction', {
-        y: '-100%',
-        duration: 0.5,
-      })
+      .to(preloaderSliceAnimation.selector, preloaderSliceAnimation.params)
   })
 
   return (
     <section
-      id='introduction'
+      id='preloader_slice'
       className='preloader_zIndex fullscreen'
     >
       <h1
