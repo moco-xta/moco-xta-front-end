@@ -1,12 +1,12 @@
 {
-  "TEXT": {
-    "SELECTOR": "h1 span",
+  "H1": {
+    "SELECTOR": ".preloader_h1_spans",
     "FROM": {
       "PARAMS": {
         "Y": 150,
         "OPACITY": 0,
-        "DURATION": 0.5,
         "DELAY": 1,
+        "DURATION": 0.5,
         "STAGGER": 0.1,
         "EASE": "power4.in"
       }

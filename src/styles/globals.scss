@@ -66,6 +66,14 @@ canvas {
   height: 100vh;
 }
 
+// CENTER CONTENT
+
+.center_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 // Z-INDEXES
 
 .preloader_zIndex {

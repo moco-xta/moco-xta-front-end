@@ -1,0 +1,13 @@
+{
+  "H1": {
+    "SELECTOR": ".hero_h1_spans",
+    "PARAMS": {
+      "Y": 400,
+      "OPACITY": 0,
+      "DELAY": 2,
+      "DURATION": 0.5,
+      "STAGGER": 0.15,
+      "EASE": "power1.out"
+    }
+  }
+}

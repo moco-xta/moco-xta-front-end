@@ -2,12 +2,9 @@
 
 #preloader_slice {
   position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #000;
 
-  #h1_moco {
+  #preloader_h1 {
     font-size: 12rem;
     overflow: hidden;
 

@@ -1,8 +1,12 @@
 @import '@/styles/variables.module.scss';
 
 #hero_slice {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.5;
+  #hero_h1 {
+    font-size: 35rem;
+    color: $fluorescent_yellow;
+
+    span {
+      display: inline-block;
+    }
+  }
 }

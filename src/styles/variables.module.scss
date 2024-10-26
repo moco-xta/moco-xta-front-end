@@ -2,7 +2,13 @@
 
 $gilroyBlackFont: var(--font-gilroy-black);
 
-// GREY GRADIENT
+$font_size_small: 1em;
+$font_size_medium: 1.5em;
+$font_size_large: 3em;
+$font_size_extra_large: 6em;
+$font_size_alert: 0.8em;
+
+// COLORS
 
 $white: #ffffff;
 $grey_lighter: #d8d8d8;
@@ -22,13 +28,7 @@ $alert_light_color: #ec2a5f;
 $alert_light_rgba_color: rgba(236, 42, 95, 0.5);
 $alert_dark_color: #b20030;
 
-// FONTS
-
-$font_size_small: 1em;
-$font_size_medium: 1.5em;
-$font_size_large: 3em;
-$font_size_extra_large: 6em;
-$font_size_alert: 0.8em;
+$fluorescent_yellow: #dcff00;
 
 // TEXTS
 
@@ -212,10 +212,16 @@ $responsive_XXXS: #b5179e;
 $responsive_XXXXS: #f72585;
 
 :export {
+  // FONTS
+
   gilroy_black_font: $gilroyBlackFont;
+
+  // BACKGROUNDS
 
   background_color: $background_color;
   blured_background_color: $blured_background_color;
+
+  // COLORS
 
   white: $white;
   grey_lighter: $grey_lighter;
@@ -224,6 +230,7 @@ $responsive_XXXXS: #f72585;
   grey_dark: $grey_dark;
   grey_darker: $grey_darker;
   black: $black;
+  fluorescent_yellow: $fluorescent_yellow;
 
   input_background: $input_background;
   input_radio_checked_color: $input_radio_checked_color;

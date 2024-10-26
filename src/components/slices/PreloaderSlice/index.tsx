@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { preloaderSliceAnimation, preloaderTextAnimation } from 'animations/gsap/preloader'
+import { preloaderSliceAnimation, preloaderH1Animation } from 'animations/gsap/preloader'
 
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
@@ -10,18 +10,18 @@ import { gilroyBlackFont } from '@/assets/fonts/ttf'
 gsap.registerPlugin(useGSAP)
 
 export default function PreloaderSlice() {
-  const [splittedText] = useState<string[]>('MOCO.xta'.split(''))
+  const [splittedText] = useState<string[]>('HELLO'.split(''))
 
   const tl = gsap.timeline({
     delay: 1,
   })
 
   useGSAP(() => {
-    tl.from(preloaderTextAnimation.selector, preloaderTextAnimation.from.params)
+    tl.from(preloaderH1Animation.selector, preloaderH1Animation.from.params)
       .to(
-        preloaderTextAnimation.selector,
-        preloaderTextAnimation.to.params,
-        preloaderTextAnimation.to.offset_delay,
+        preloaderH1Animation.selector,
+        preloaderH1Animation.to.params,
+        preloaderH1Animation.to.offset_delay,
       )
       .to(preloaderSliceAnimation.selector, preloaderSliceAnimation.params)
   })
@@ -29,14 +29,21 @@ export default function PreloaderSlice() {
   return (
     <section
       id='preloader_slice'
-      className='preloader_zIndex fullscreen'
+      className='preloader_zIndex fullscreen center_content'
     >
       <h1
-        id='h1_moco'
+        id='preloader_h1'
         className={`${gilroyBlackFont.className}`}
       >
         {splittedText.map((letter, index) => {
-          return <span key={`moco_letter_${index}`}>{letter}</span>
+          return (
+            <span
+              key={`moco_letter_${index}`}
+              className='preloader_h1_spans'
+            >
+              {letter}
+            </span>
+          )
         })}
       </h1>
     </section>

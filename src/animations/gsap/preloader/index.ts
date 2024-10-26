@@ -2,27 +2,27 @@ import { default as preloaderAnimationsConstants } from '@/constants/animations/
 
 // TEXT
 
-export const preloaderTextAnimation = {
-  selector: preloaderAnimationsConstants.TEXT.SELECTOR,
+export const preloaderH1Animation = {
+  selector: preloaderAnimationsConstants.H1.SELECTOR,
   from: {
     params: {
-      y: preloaderAnimationsConstants.TEXT.FROM.PARAMS.Y,
-      opacity: preloaderAnimationsConstants.TEXT.FROM.PARAMS.OPACITY,
-      duration: preloaderAnimationsConstants.TEXT.FROM.PARAMS.DURATION,
-      delay: preloaderAnimationsConstants.TEXT.FROM.PARAMS.DELAY,
-      stagger: preloaderAnimationsConstants.TEXT.FROM.PARAMS.STAGGER,
-      ease: preloaderAnimationsConstants.TEXT.FROM.PARAMS.EASE,
+      y: preloaderAnimationsConstants.H1.FROM.PARAMS.Y,
+      opacity: preloaderAnimationsConstants.H1.FROM.PARAMS.OPACITY,
+      duration: preloaderAnimationsConstants.H1.FROM.PARAMS.DURATION,
+      delay: preloaderAnimationsConstants.H1.FROM.PARAMS.DELAY,
+      stagger: preloaderAnimationsConstants.H1.FROM.PARAMS.STAGGER,
+      ease: preloaderAnimationsConstants.H1.FROM.PARAMS.EASE,
     },
   },
   to: {
     params: {
-      y: preloaderAnimationsConstants.TEXT.TO.PARAMS.Y,
-      opacity: preloaderAnimationsConstants.TEXT.TO.PARAMS.OPACITY,
-      duration: preloaderAnimationsConstants.TEXT.TO.PARAMS.DURATION,
-      stagger: preloaderAnimationsConstants.TEXT.TO.PARAMS.STAGGER,
-      ease: preloaderAnimationsConstants.TEXT.TO.PARAMS.EASE,
+      y: preloaderAnimationsConstants.H1.TO.PARAMS.Y,
+      opacity: preloaderAnimationsConstants.H1.TO.PARAMS.OPACITY,
+      duration: preloaderAnimationsConstants.H1.TO.PARAMS.DURATION,
+      stagger: preloaderAnimationsConstants.H1.TO.PARAMS.STAGGER,
+      ease: preloaderAnimationsConstants.H1.TO.PARAMS.EASE,
     },
-    offset_delay: preloaderAnimationsConstants.TEXT.TO.OFFSET_DELAY,
+    offset_delay: preloaderAnimationsConstants.H1.TO.OFFSET_DELAY,
   },
 }
 
