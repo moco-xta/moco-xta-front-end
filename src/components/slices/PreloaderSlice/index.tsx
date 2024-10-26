@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { preloaderSliceAnimation, preloaderTextAnimation } from 'animations/preloader'
+import { preloaderSliceAnimation, preloaderTextAnimation } from 'animations/gsap/preloader'
 
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
