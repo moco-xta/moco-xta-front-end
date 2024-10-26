@@ -8,7 +8,7 @@ import { PreloaderSlice } from '@/components/slices'
 export default function Home() {
   return (
     <>
-      <PreloaderSlice />
+      {/* <PreloaderSlice /> */}
       <HomePage />
     </>
   )
