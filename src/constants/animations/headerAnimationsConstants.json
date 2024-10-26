@@ -13,5 +13,15 @@
       "DURATION": 1,
       "EASE": "power2.in"
     }
+  },
+  "NAV": {
+    "SELECTOR": "nav ul li",
+    "PARAMS": {
+      "Y": 50,
+      "OPACITY": 0,
+      "DURATION": 0.5,
+      "EASE": "power2.out",
+      "STAGGER": 0.15
+    }
   }
 }

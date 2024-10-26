@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className='header_zIndex'>
       <Logo />
-      {/* <Nav /> */}
+      <Nav />
     </header>
   )
 }

@@ -22,3 +22,15 @@ export const logoMocoAnimation = {
     },
   },
 }
+
+export const navAnimation = {
+  selector: headerAnimationsConstants.NAV.SELECTOR,
+  params: {
+    y: headerAnimationsConstants.NAV.PARAMS.Y,
+    opacity: headerAnimationsConstants.NAV.PARAMS.OPACITY,
+    duration: headerAnimationsConstants.NAV.PARAMS.DURATION,
+    ease: headerAnimationsConstants.NAV.PARAMS.EASE,
+    delay: preloaderAnimationsConstants.DELAY_AFTER_PRELOADER + 1,
+    stagger: headerAnimationsConstants.NAV.PARAMS.STAGGER,
+  },
+}
