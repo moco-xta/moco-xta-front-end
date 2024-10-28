@@ -7,6 +7,7 @@ import { ReactLenis } from 'lenis/react'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
+import Cursor from '@/components/cursor'
 import Header from '@/components/shared/header'
 
 import '@/styles/globals.scss'
@@ -39,7 +40,6 @@ export default function RootLayout({
           root
           options={{
             lerp: 0.1,
-            //easing: (x: number) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2,
             duration: 1.2,
             smoothWheel: true,
             touchMultiplier: 2,
@@ -63,6 +63,7 @@ export default function RootLayout({
                     },
                   }}
                 />
+                <Cursor />
                 <Header />
                 {children}
               </NextIntlClientProvider>

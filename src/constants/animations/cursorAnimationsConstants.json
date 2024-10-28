@@ -1,0 +1,7 @@
+{
+  "SELECTOR": "#cursor",
+  "DEFAULT": {
+    "DURATION": 1,
+    "EASE": "back.out"
+  }
+}
