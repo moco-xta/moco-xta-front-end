@@ -2,6 +2,9 @@
   "HOME": {
     "HERO": {
       "SKY_TEST": "/videos/mp4/sky_test.mp4"
+    },
+    "INTRODUCTION": {
+      "GOUTTE_DOR": "/videos/mp4/goutte_dor_test.mp4"
     }
   },
   "JAVASCRIPT_MASTERY": {

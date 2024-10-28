@@ -41,7 +41,7 @@ export default function HeroSlice() {
       className='fullscreen center_content'
       style={{ /* background: '#ff1377', */ overflow: 'hidden' }}
     >
-      <h1
+      {/* <h1
         id='hero_h1'
         className={`${gilroyBlackFont.className}`}
       >
@@ -55,17 +55,18 @@ export default function HeroSlice() {
             </span>
           )
         })}
-      </h1>
-      {/* <video
+      </h1> */}
+      <video
         width='1920'
         height='1080'
         autoPlay
+        muted
       >
         <source
           src={videosConstants.HOME.HERO.SKY_TEST}
           type='video/mp4'
         />
-      </video> */}
+      </video>
     </div>
   )
 }
