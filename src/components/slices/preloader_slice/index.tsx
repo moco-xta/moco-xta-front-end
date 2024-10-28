@@ -10,7 +10,7 @@ import { gilroyBlackFont } from '@/assets/fonts/ttf'
 gsap.registerPlugin(useGSAP)
 
 export default function PreloaderSlice() {
-  const [splittedText] = useState<string[]>('HELLO'.split(''))
+  const [splittedText] = useState<string[]>('HELLO!'.split(''))
 
   const tl = gsap.timeline({
     delay: 1,

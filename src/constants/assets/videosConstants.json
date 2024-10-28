@@ -1,4 +1,9 @@
 {
+  "HOME": {
+    "HERO": {
+      "SKY_TEST": "/videos/mp4/sky_test.mp4"
+    }
+  },
   "JAVASCRIPT_MASTERY": {
     "HERO_VIDEO": "/assets/videos/hero.mp4",
     "SMALL_HERO_VIDEO": "/assets/videos/smallHero.mp4",
