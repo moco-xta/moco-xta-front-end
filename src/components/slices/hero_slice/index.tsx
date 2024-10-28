@@ -10,15 +10,21 @@ import { default as videosConstants } from '@/constants/assets/videosConstants.j
 
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
+import { sanitizedData } from '@/helpers/securityHelpers'
 
 gsap.registerPlugin(useGSAP)
 
 export default function HeroSlice() {
   const [splittedText] = useState<string[]>('MOCO'.split(''))
 
+  const cursorRef = useRef<HTMLDivElement>(document.querySelector('#cursor'))
+  const heroH1Ref = useRef<HTMLHeadingElement>(null!)
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline())
 
-  useGSAP(() => {
+  const enterContent = `<span>Test</span>`
+  const leaveContent = `<span></span>`
+
+  useGSAP((context, contextSafe) => {
     timelineRef.current.from(heroH1Animation.selector, heroH1Animation.params)
     /* .to('.hero_h1_spans', {
         y: -500,
@@ -33,6 +39,26 @@ export default function HeroSlice() {
           scrub: true,
         },
       }) */
+
+    const cursor = document.querySelector('#cursor')
+
+    // @ts-ignore
+    const handleMouseEnter = contextSafe(() => {
+      cursor!.innerHTML = sanitizedData(enterContent)
+    })
+
+    // @ts-ignore
+    const handleMouseLeave = contextSafe(() => {
+      cursor!.innerHTML = sanitizedData(leaveContent)
+    })
+
+    heroH1Ref.current.addEventListener('mouseenter', handleMouseEnter)
+    heroH1Ref.current.addEventListener('mouseleave', handleMouseLeave)
+
+    return () => {
+      heroH1Ref.current.removeEventListener('mouseenter', handleMouseEnter)
+      heroH1Ref.current.removeEventListener('mouseleave', handleMouseLeave)
+    }
   })
 
   return (
@@ -41,7 +67,8 @@ export default function HeroSlice() {
       className='fullscreen center_content'
       style={{ /* background: '#ff1377', */ overflow: 'hidden' }}
     >
-      {/* <h1
+      <h1
+        ref={heroH1Ref}
         id='hero_h1'
         className={`${gilroyBlackFont.className}`}
       >
@@ -55,8 +82,8 @@ export default function HeroSlice() {
             </span>
           )
         })}
-      </h1> */}
-      <video
+      </h1>
+      {/* <video
         width='1920'
         height='1080'
         autoPlay
@@ -66,7 +93,7 @@ export default function HeroSlice() {
           src={videosConstants.HOME.HERO.SKY_TEST}
           type='video/mp4'
         />
-      </video>
+      </video> */}
     </div>
   )
 }
