@@ -91,7 +91,7 @@ canvas {
 // INVERT COLOR
 
 .invert_color {
-  opacity: 0.5;
+  opacity: 0.6;
   -webkit-backdrop-filter: invert(1);
   backdrop-filter: invert(1);
 }
@@ -99,10 +99,11 @@ canvas {
 // BLURED BACKGROUND
 
 .blured_background {
-  color: $black;
-  opacity: 0.5;
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
+  // color: #0007;
+  background: rgba(0, 0, 0, 0.8);
+  /* opacity: 0.8; */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 /* // BUTTONS

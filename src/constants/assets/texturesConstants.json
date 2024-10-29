@@ -533,5 +533,8 @@
   },
   "SHADERS": {
     "EXPLOSION": "/img/png/shaders/explosion.png"
+  },
+  "CYLENDER_WORK_SHOWCASE": {
+    "DIFFUSE": "/img/png/cylender_work_showcase_test.png"
   }
 }

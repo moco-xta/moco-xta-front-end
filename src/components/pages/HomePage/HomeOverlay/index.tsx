@@ -8,6 +8,7 @@ import { HeroSlice, IntroductionSlice } from '@/components/slices'
 
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
+import CylenderWorkShowcase from '@/components/slices/cylender_work_showcase'
 
 gsap.registerPlugin(useGSAP)
 
@@ -28,8 +29,6 @@ export default function HomeOverlay() {
 
   const sectionRef = useRef<HTMLElement>(null!)
   const wrapperRef = useRef<HTMLDivElement>(null!)
-
-  const timeline = gsap.timeline()
 
   useGSAP(() => {
     if (verticalFlow === 'up') {
@@ -73,6 +72,7 @@ export default function HomeOverlay() {
     <>
       <HeroSlice />
       <IntroductionSlice />
+      <CylenderWorkShowcase />
       <section
         ref={sectionRef}
         className='fullscreen center_content'
