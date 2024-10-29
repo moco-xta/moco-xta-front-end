@@ -17,9 +17,9 @@ export default function IntroductionSlice() {
     >
       <section
         id='introduction_slice'
-        className='fullscreen'
+        className='fullscreen blured_background'
       >
-        <video
+        {/* <video
           width='1920'
           height='1080'
           autoPlay
@@ -30,7 +30,7 @@ export default function IntroductionSlice() {
             src={videosConstants.HOME.INTRODUCTION.GOUTTE_DOR}
             type='video/mp4'
           />
-        </video>
+        </video> */}
       </section>
     </Parallax>
   )

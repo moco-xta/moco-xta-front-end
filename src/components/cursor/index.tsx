@@ -37,7 +37,7 @@ export default function Cursor() {
   return (
     <div
       id='cursor'
-      className='cursor_zIndex'
+      className='cursor_zIndex invert_color'
     />
   )
 }
