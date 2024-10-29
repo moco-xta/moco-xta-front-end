@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Parallax from '@/components/Parallax_component'
+import Parallax from '@/components/parallax'
 
 import { default as videosConstants } from '@/constants/assets/videosConstants.json'
 
