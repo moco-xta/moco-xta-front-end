@@ -12,12 +12,13 @@ gsap.registerPlugin(useGSAP)
 export default function PreloaderSlice() {
   const [splittedText] = useState<string[]>('HELLO!'.split(''))
 
-  const tl = gsap.timeline({
+  const timeline = gsap.timeline({
     delay: 1,
   })
 
   useGSAP(() => {
-    tl.from(preloaderH1Animation.selector, preloaderH1Animation.from.params)
+    timeline
+      .from(preloaderH1Animation.selector, preloaderH1Animation.from.params)
       .to(
         preloaderH1Animation.selector,
         preloaderH1Animation.to.params,
@@ -35,13 +36,13 @@ export default function PreloaderSlice() {
         id='preloader_h1'
         className={`${gilroyBlackFont.className}`}
       >
-        {splittedText.map((letter, index) => {
+        {splittedText.map((character, index) => {
           return (
             <span
               key={`moco_letter_${index}`}
               className='preloader_h1_spans'
             >
-              {letter}
+              {character}
             </span>
           )
         })}

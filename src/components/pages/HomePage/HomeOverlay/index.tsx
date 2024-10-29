@@ -36,7 +36,7 @@ export default function HomeOverlay() {
       gsap.to('.marque', {
         transform: 'translateX(-200%)',
         delay: 1,
-        duration: 4,
+        duration: 2,
         repeat: -0.5,
         ease: 'none',
       })
@@ -49,7 +49,7 @@ export default function HomeOverlay() {
       gsap.to('.marque', {
         transform: 'translateX(0%)',
         delay: 0.5,
-        duration: 4,
+        duration: 2,
         repeat: -1,
         ease: 'none',
       })
