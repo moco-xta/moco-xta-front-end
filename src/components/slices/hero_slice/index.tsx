@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import Parallax from '@/components/Parallax'
+import Parallax from '@/components/Parallax_component'
 
 import { heroH1Animation } from 'animations/gsap/hero'
 
