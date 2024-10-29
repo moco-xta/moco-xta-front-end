@@ -1,0 +1,12 @@
+@import '@/styles/variables.module.scss';
+
+#cursor {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, -50%);
+  color: pink;
+  background: white;
+  opacity: 1;
+  border-radius: 50%;
+}

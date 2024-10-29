@@ -1,9 +1,14 @@
 @import '@/styles/variables.module.scss';
 
 #hero_slice {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  /* background-image: url('/new/test/castle_landscape.jpeg');
-  background-size: cover; */
+  // background-image: url('/img/jpg/sky_test.jpg');
+
+  #hero_h1 {
+    font-size: 35rem;
+    color: $fluorescent_yellow;
+
+    span {
+      display: inline-block;
+    }
+  }
 }

@@ -1,0 +1,27 @@
+{
+  "LOGO_MOCO": {
+    "TRANSLATION": {
+      "SELECTOR": "#logo",
+      "PARAMS": {
+        "Y": 100,
+        "DURATION": 2,
+        "EASE": "power2.out"
+      }
+    },
+    "OPACITY": {
+      "OPACITY": 0,
+      "DURATION": 1,
+      "EASE": "power2.in"
+    }
+  },
+  "NAV": {
+    "SELECTOR": "nav ul li",
+    "PARAMS": {
+      "Y": 50,
+      "OPACITY": 0,
+      "DURATION": 0.5,
+      "STAGGER": -0.1,
+      "EASE": "power2.out"
+    }
+  }
+}

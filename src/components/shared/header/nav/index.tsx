@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useDispatch, useSelector } from 'react-redux'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
 import { Routes } from '@/routes/routes'
@@ -16,10 +18,18 @@ import LocaleSwitcher from '@/components/buttons/locale_switcher'
 import Hamburger from '@/components/buttons/hamburger'
 import Authentication from '../../authentication'
 
+import { navAnimation } from 'animations/gsap/header'
+
 import './index.scss'
+
+gsap.registerPlugin(useGSAP)
 
 export default function Nav() {
   const t = useTranslations('ROUTES')
+
+  useGSAP(() => {
+    gsap.from(navAnimation.selector, navAnimation.params)
+  })
 
   const pathname = usePathname()
 
@@ -79,8 +89,8 @@ export default function Nav() {
           </ul>
         </nav>
       </div>
-      <Hamburger />
-      <Authentication />
+      {/* <Hamburger />
+      <Authentication /> */}
     </>
   )
 }
