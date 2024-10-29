@@ -11,7 +11,7 @@ import './index.scss'
 gsap.registerPlugin(useGSAP)
 
 export default function Cursor() {
-  useGSAP((context, contextSafe) => {
+  useGSAP((_, contextSafe) => {
     gsap.from(cursorAnimationsConstants.SELECTOR, {
       opacity: 0,
       duration: 3,
@@ -20,8 +20,8 @@ export default function Cursor() {
     // @ts-ignore
     const handleMouseMove = contextSafe((e: MouseEvent) => {
       gsap.to(cursorAnimationsConstants.SELECTOR, {
-        x: e.x,
-        y: e.y,
+        x: e.pageX,
+        y: e.pageY,
         duration: cursorAnimationsConstants.DEFAULT.DURATION,
         ease: cursorAnimationsConstants.DEFAULT.EASE,
       })
@@ -38,6 +38,6 @@ export default function Cursor() {
     <div
       id='cursor'
       className='cursor_zIndex'
-    ></div>
+    />
   )
 }
