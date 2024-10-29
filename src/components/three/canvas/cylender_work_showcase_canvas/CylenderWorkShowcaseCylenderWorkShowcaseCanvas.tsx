@@ -15,9 +15,8 @@ export default function CylenderWorkShowcaseCanvas() {
         position={[10, 10, 10]}
         castShadow
       />
-      <OrbitControls />
+      <OrbitControls enableZoom={false} />
       <CylenderWorkShowcaseScene />
-
       <EffectComposer multisampling={2}>
         <Bloom
           mipmapBlur
