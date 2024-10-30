@@ -22,11 +22,11 @@ export default function ScrollToTop() {
 
   useGSAP(() => {
     gsap.to(svgRef.current, {
-      rotation: 360, 
-      transformOrigin:"center",
+      rotation: 360,
+      transformOrigin: 'center',
       duration: 5,
-      ease: 'none',  
-      repeat:-1
+      ease: 'none',
+      repeat: -1,
     })
   })
 
@@ -77,7 +77,13 @@ export default function ScrollToTop() {
           d='M 10, 50 a 40,40 0 1,1 80,0 40,40 0 1,1 -80,0'
         />
         <text>
-          <textPath href='#circlePath' font-size="1.5em" fill='white'>Scroll to top!</textPath>
+          <textPath
+            href='#circlePath'
+            font-size='1.5em'
+            fill='white'
+          >
+            Scroll to top!
+          </textPath>
         </text>
       </svg>
     </div>
