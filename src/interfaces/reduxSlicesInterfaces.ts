@@ -9,6 +9,8 @@ export interface AuthenticationSliceInterface {
   isAuthenticated: boolean
 }
 
+export interface CursorStateSliceInterface {}
+
 export interface lifeGameInterface {
   grid: number[][]
   columns: number
