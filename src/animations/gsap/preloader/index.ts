@@ -8,8 +8,8 @@ export const preloaderH1Animation = {
     params: {
       y: preloaderAnimationsConstants.H1.FROM.PARAMS.Y,
       opacity: preloaderAnimationsConstants.H1.FROM.PARAMS.OPACITY,
-      duration: preloaderAnimationsConstants.H1.FROM.PARAMS.DURATION,
       delay: preloaderAnimationsConstants.H1.FROM.PARAMS.DELAY,
+      duration: preloaderAnimationsConstants.H1.FROM.PARAMS.DURATION,
       stagger: preloaderAnimationsConstants.H1.FROM.PARAMS.STAGGER,
       ease: preloaderAnimationsConstants.H1.FROM.PARAMS.EASE,
     },

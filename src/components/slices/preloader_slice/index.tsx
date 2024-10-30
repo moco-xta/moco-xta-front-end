@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { preloaderSliceAnimation, preloaderH1Animation } from 'animations/gsap/preloader'
+import { preloaderH1Animation, preloaderSliceAnimation } from 'animations/gsap/preloader'
 
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
@@ -12,9 +12,7 @@ gsap.registerPlugin(useGSAP)
 export default function PreloaderSlice() {
   const [splittedText] = useState<string[]>('HELLO!'.split(''))
 
-  const timeline = gsap.timeline({
-    delay: 1,
-  })
+  const timeline = gsap.timeline()
 
   useGSAP(() => {
     timeline
