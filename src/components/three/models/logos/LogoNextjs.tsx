@@ -26,16 +26,15 @@ type GLTFResult = GLTF & {
 export default function LogoNextjs({ position, rotation, scale }: GroupProps) {
   const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_NEXTJS) as GLTFResult
 
-  const timelineRef = useRef<GSAPTimeline>(gsap.timeline())
   const logoNextjsRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)
   const logoNextjsInRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!)
 
   const mainSkillsSlice = document.getElementById('#main_skills_slice')
 
   useGSAP(() => {
-    timelineRef.current.from(logoNextjsRef.current.position, {
+    gsap.from(logoNextjsRef.current.position, {
       y: -3,
-      duration: 0.2,
+      duration: 0.5,
       scrollTrigger: {
         trigger: '#main_skills_slice',
         scroller: 'body',
@@ -45,9 +44,9 @@ export default function LogoNextjs({ position, rotation, scale }: GroupProps) {
         // scrub: true,
       },
     })
-    timelineRef.current.from(logoNextjsRef.current.rotation, {
+    gsap.from(logoNextjsRef.current.rotation, {
       y: THREE.MathUtils.degToRad(540),
-      duration: 0.2,
+      duration: 0.5,
       scrollTrigger: {
         trigger: '#main_skills_slice',
         scroller: 'body',
@@ -57,9 +56,9 @@ export default function LogoNextjs({ position, rotation, scale }: GroupProps) {
         // scrub: true,
       },
     })
-    timelineRef.current.from(logoNextjsRef.current.scale, {
+    gsap.from(logoNextjsRef.current.scale, {
       x: 0,
-      y: 2,
+      y: 0,
       z: 0,
       duration: 0.5,
       scrollTrigger: {
@@ -71,7 +70,7 @@ export default function LogoNextjs({ position, rotation, scale }: GroupProps) {
         // scrub: true,
       },
     })
-    timelineRef.current.to(logoNextjsInRef.current.rotation, {
+    gsap.to(logoNextjsInRef.current.rotation, {
       y: THREE.MathUtils.degToRad(-360),
       duration: 2,
       repeat: -1,
