@@ -4,7 +4,12 @@ import { useGSAP } from '@gsap/react'
 import { useLenis } from 'lenis/react'
 import { FaArrowRight } from 'react-icons/fa'
 
-import { HeroSlice, IntroductionSlice, MainSkillsSlice } from '@/components/slices'
+import {
+  HeroSlice,
+  IntroductionSlice,
+  MainSkillsSlice,
+  MindBendingScrollAnimation,
+} from '@/components/slices'
 
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
@@ -69,6 +74,7 @@ export default function HomeOverlay() {
   return (
     <>
       <HeroSlice />
+      <MindBendingScrollAnimation />
       <IntroductionSlice />
       <MainSkillsSlice />
       <CylenderWorkShowcase />
