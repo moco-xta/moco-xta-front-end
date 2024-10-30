@@ -8,8 +8,6 @@ import useScroll from '@/hooks/useScroll'
 
 import './index.scss'
 
-gsap.registerPlugin(useGSAP)
-
 export default function ScrollToTop() {
   const svgRef = useRef<SVGSVGElement>(null!)
 

@@ -4,7 +4,6 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { Billboard, Environment, Float, Sky, Text, useHelper, useScroll } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { TruckRed } from '../../models/home/trucks/TruckRed'
 import { TruckWhite } from '../../models/home/trucks/TruckWhite'

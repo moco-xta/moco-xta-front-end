@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import useWindowSize from '@/hooks/useWindowSize'
 
@@ -13,8 +12,6 @@ interface ParallaxInterface {
   speed: number
   children: JSX.Element
 }
-
-gsap.registerPlugin(ScrollTrigger)
 
 export default function Parallax({ id, className, style, speed = 1, children }: ParallaxInterface) {
   const trigger = useRef<HTMLDivElement>(null!)
