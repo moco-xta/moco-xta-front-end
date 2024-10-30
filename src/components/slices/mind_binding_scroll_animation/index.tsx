@@ -13,6 +13,8 @@ import { sanitizedData } from '@/helpers/securityHelpers'
 import './index.scss'
 
 export default function MindBendingScrollAnimation() {
+  const timelineRef = useRef<GSAPTimeline>(gsap.timeline())
+
   const dispatch = useDispatch<AppDispatch>()
 
   const sectionRef = useRef<HTMLElement>(null!)
@@ -35,6 +37,36 @@ export default function MindBendingScrollAnimation() {
       })
     })
 
+    timelineRef.current
+      .to('.revealer', {
+        y: '30vh',
+        rotate: 360,
+        scrollTrigger: {
+          trigger: '#mind_binding_scroll_animation_slice',
+          start: 'top top',
+          end: '+=400',
+          scrub: true,
+        },
+      })
+      .to('.revealer_1, .revealer_2', {
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+        scrollTrigger: {
+          trigger: '#mind_binding_scroll_animation_slice',
+          start: 'top top',
+          end: '+=400',
+          scrub: true,
+        },
+      })
+      .to('.revealer', {
+        x: '20vw',
+        scrollTrigger: {
+          trigger: '#mind_binding_scroll_animation_slice',
+          start: '+=400',
+          end: '+=600',
+          scrub: true,
+        },
+      })
+
     // @ts-ignore
     const handleMouseLeave = contextSafe(() => {
       dispatch(setState('default'))
@@ -52,7 +84,7 @@ export default function MindBendingScrollAnimation() {
 
   return (
     <Parallax
-      id='introduction_slice_parallax'
+      id='mind_binding_scroll_animation_slice_parallax'
       speed={0}
       style={{
         alignSelf: 'flex-start',
@@ -60,9 +92,14 @@ export default function MindBendingScrollAnimation() {
     >
       <section
         ref={sectionRef}
-        id='mind_bending_scroll_animation_slice'
+        id='mind_binding_scroll_animation_slice'
         className='fullscreen'
-      ></section>
+      >
+        <div className='revealer'>
+          <div className='revealer_1'></div>
+          <div className='revealer_2'></div>
+        </div>
+      </section>
     </Parallax>
   )
 }

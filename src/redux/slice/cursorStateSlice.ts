@@ -21,8 +21,6 @@ const cursorStateSlice = createSlice({
   },
 })
 
-export const {
-  setState
-} = cursorStateSlice.actions
+export const { setState } = cursorStateSlice.actions
 
 export default cursorStateSlice.reducer
