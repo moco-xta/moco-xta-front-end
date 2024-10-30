@@ -92,8 +92,8 @@ canvas {
 
 .invert_color {
   opacity: 0.6;
-  -webkit-backdrop-filter: invert(1);
-  backdrop-filter: invert(1);
+  -webkit-backdrop-filter: invert(80%);
+  backdrop-filter: invert(80%);
 }
 
 // BLURED BACKGROUND
