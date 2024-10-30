@@ -9,7 +9,13 @@ export interface AuthenticationSliceInterface {
   isAuthenticated: boolean
 }
 
-export interface CursorStateSliceInterface {}
+export interface CursorStateSliceInterface {
+  state: 'default' | 'mind_bending'
+  position: {
+    x: number
+    y: number
+  }
+}
 
 export interface lifeGameInterface {
   grid: number[][]
