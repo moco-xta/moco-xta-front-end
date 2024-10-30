@@ -1,23 +1,25 @@
 import React from 'react'
 
-import IntroductionTextBlock from './introduction_text_block'
-import MainSkillsCanvas from '../../three/canvas/main_skills_canvas/MainSkillsCanvas'
-import MainSkillsTextBlocks from './main_skills_text_blocks'
-import RealTime3D from './real_time_3D'
-
-import useIsLargeScreen from '@/hooks/useIsLargeScreen'
+import Parallax from '@/components/parallax'
+import MainSkillsCanvas from '@/components/three/canvas/main_skills_canvas/MainSkillsCanvas'
 
 import './index.scss'
 
 export default function MainSkillsSlice() {
-  const { isLargeScreen } = useIsLargeScreen()
-
   return (
-    <section id='main_skills_slice' /*  className='responsive_background' */>
-      <IntroductionTextBlock />
-      {isLargeScreen && <MainSkillsCanvas />}
-      <MainSkillsTextBlocks />
-      <RealTime3D />
-    </section>
+    <Parallax
+      id='main_skills_slice_parallax'
+      speed={0}
+      style={{
+        alignSelf: 'flex-start',
+      }}
+    >
+      <section
+        id='main_skills_slice'
+        className='fullscreen'
+      >
+        <MainSkillsCanvas />
+      </section>
+    </Parallax>
   )
 }

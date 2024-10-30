@@ -4,7 +4,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 
 import MainSkillsScene from './MainSkillsScene'
 
-import { default as heroConstants } from '@/constants/canvas/mainSkillsConstants.json'
+import { default as mainSkillsConstants } from '@/constants/canvas/mainSkillsConstants.json'
 
 export default function MainSkillsCanvas() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
@@ -12,28 +12,28 @@ export default function MainSkillsCanvas() {
   return (
     <Canvas
       id='main_skills_canvas'
-      dpr={heroConstants.CANVAS.DPR}
+      dpr={mainSkillsConstants.CANVAS.DPR}
       shadows
-      legacy={heroConstants.CANVAS.LEGACY}
+      legacy={mainSkillsConstants.CANVAS.LEGACY}
       linear
       flat
       gl={{
-        antialias: heroConstants.CANVAS.GL.ANTIALIAS,
-        alpha: heroConstants.CANVAS.GL.ALPHA,
-        powerPreference: heroConstants.CANVAS.GL.POWER_PREFERENCE,
+        antialias: mainSkillsConstants.CANVAS.GL.ANTIALIAS,
+        alpha: mainSkillsConstants.CANVAS.GL.ALPHA,
+        powerPreference: mainSkillsConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
       <PerspectiveCamera
         ref={perspectiveCameraRef}
         makeDefault
         position={[
-          heroConstants.PERSPECTIVE_CAMERA.POSITION.X,
-          heroConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-          heroConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+          mainSkillsConstants.PERSPECTIVE_CAMERA.POSITION.X,
+          mainSkillsConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          mainSkillsConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
-        fov={heroConstants.PERSPECTIVE_CAMERA.FOV}
+        fov={mainSkillsConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      <ambientLight intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
+      <ambientLight intensity={mainSkillsConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
       <pointLight
         position={[1.2, 1, 1]}
         intensity={5}

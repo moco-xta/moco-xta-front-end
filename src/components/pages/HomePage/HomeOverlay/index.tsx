@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useLenis } from 'lenis/react'
 import { FaArrowRight } from 'react-icons/fa'
 
-import { HeroSlice, IntroductionSlice } from '@/components/slices'
+import { HeroSlice, IntroductionSlice, MainSkillsSlice } from '@/components/slices'
 
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
@@ -72,6 +72,7 @@ export default function HomeOverlay() {
     <>
       <HeroSlice />
       <IntroductionSlice />
+      <MainSkillsSlice />
       <CylenderWorkShowcase />
       <section
         ref={sectionRef}
