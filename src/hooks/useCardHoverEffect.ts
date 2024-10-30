@@ -12,8 +12,6 @@ export default function useCardHoverEffect(
   ref: RefObject<HTMLDivElement>,
   constantsEffect: CardHoverEffectInterface,
 ) {
-  gsap.registerPlugin(useGSAP)
-
   function handleMouseMove(event: MouseEvent) {
     const { x, y } = getUvMousePositionOnDiv(event)
     gsap.to(ref.current, {

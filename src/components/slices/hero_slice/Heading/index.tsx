@@ -21,8 +21,6 @@ import {
   gilroyRegularFont,
 } from '@/assets/fonts/ttf'
 
-gsap.registerPlugin(useGSAP)
-
 export default function Heading() {
   const [splittedText] = useState<string[]>('MOCO'.split(''))
 

@@ -22,8 +22,6 @@ import { navAnimation } from 'animations/gsap/header'
 
 import './index.scss'
 
-gsap.registerPlugin(useGSAP)
-
 export default function Nav() {
   const t = useTranslations('ROUTES')
 

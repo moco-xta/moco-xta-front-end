@@ -21,8 +21,6 @@ type GLTFResult = GLTF & {
   materials: {}
 }
 
-gsap.registerPlugin(useGSAP)
-
 export default function LogoMoco() {
   const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_MOCO) as GLTFResult
 

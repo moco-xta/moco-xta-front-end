@@ -10,8 +10,6 @@ import HomeOverlay from './HomeOverlay'
 import './index.scss'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger)
-
 export default function HomePage() {
   const lenisRef = useRef<LenisRef>(null!)
 

@@ -8,8 +8,6 @@ import { default as cursorAnimationsConstants } from '@/constants/animations/cur
 
 import './index.scss'
 
-gsap.registerPlugin(useGSAP)
-
 export default function Cursor() {
   useGSAP((_, contextSafe) => {
     gsap.from(cursorAnimationsConstants.SELECTOR, {

@@ -5,7 +5,6 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 /* import useModelHoverEffect from '@/hooks/useModelHoverEffect' */
 
@@ -23,8 +22,6 @@ type GLTFResult = GLTF & {
   }
   materials: {}
 }
-
-gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export default function LogoNextjs({ position, rotation, scale }: GroupProps) {
   const { nodes } = useGLTF(gltfConstants.LOGOS.LOGO_NEXTJS) as GLTFResult

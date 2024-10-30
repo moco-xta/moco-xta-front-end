@@ -5,8 +5,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { HeroSlice, IntroductionSlice } from '@/components/slices'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger)
-
 export default function Overlay() {
   useGSAP(() => {
     /* gsap.from('#box_test_second_section', {

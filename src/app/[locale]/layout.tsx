@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { Toaster } from 'sonner'
 import { ReactLenis } from 'lenis/react'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 

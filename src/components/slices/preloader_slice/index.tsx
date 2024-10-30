@@ -7,8 +7,6 @@ import { preloaderH1Animation, preloaderSliceAnimation } from 'animations/gsap/p
 import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
 
-gsap.registerPlugin(useGSAP)
-
 export default function PreloaderSlice() {
   const [splittedText] = useState<string[]>('HELLO!'.split(''))
 

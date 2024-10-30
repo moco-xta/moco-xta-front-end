@@ -10,8 +10,6 @@ import './index.scss'
 import { gilroyBlackFont } from '@/assets/fonts/ttf'
 import CylenderWorkShowcase from '@/components/slices/cylender_work_showcase'
 
-gsap.registerPlugin(useGSAP)
-
 const Block = () => {
   return (
     <div className='marque'>
