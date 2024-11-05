@@ -15,8 +15,9 @@ import {
   gilroyBlackFont,
   gilroyBoldFont,
   gilroyHeavyFont,
-  gilroyRegularFont,
+  sansTrialRegularFont,
 } from '@/assets/fonts/ttf'
+import Menu from '@/components/shared/menu'
 
 const interFont = Inter({
   subsets: ['latin'],
@@ -51,7 +52,7 @@ export default function RootLayout({
           }}
         >
           <body
-            className={`${interFont.className} ${gilroyBlackFont.variable} ${gilroyBoldFont.variable} ${gilroyHeavyFont.variable}`}
+            className={`${interFont.className} ${gilroyBlackFont.variable} ${gilroyBoldFont.variable} ${gilroyHeavyFont.variable} ${sansTrialRegularFont.variable}`}
           >
             <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
             <ReduxProvider>
@@ -71,7 +72,8 @@ export default function RootLayout({
                   }}
                 />
                 <Cursor />
-                <Header />
+                {/* <Header /> */}
+                <Menu />
                 {children}
               </NextIntlClientProvider>
             </ReduxProvider>

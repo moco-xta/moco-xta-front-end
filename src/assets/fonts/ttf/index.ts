@@ -1,23 +1,28 @@
 import localFont from 'next/font/local'
 
 const gilroyBlackFont = localFont({
-  src: './gilroy/Gilroy-Black.ttf',
+  src: './Gilroy/Gilroy-Black.ttf',
   variable: '--font-gilroy-black',
 })
 
 const gilroyBoldFont = localFont({
-  src: './gilroy/Gilroy-Bold.ttf',
+  src: './Gilroy/Gilroy-Bold.ttf',
   variable: '--font-gilroy-bold',
 })
 
 const gilroyHeavyFont = localFont({
-  src: './gilroy/Gilroy-Heavy.ttf',
+  src: './Gilroy/Gilroy-Heavy.ttf',
   variable: '--font-gilroy-heavy',
 })
 
 const gilroyRegularFont = localFont({
-  src: './gilroy/Gilroy-Regular.ttf',
+  src: './Gilroy/Gilroy-Regular.ttf',
   variable: '--font-gilroy-regular',
 })
 
-export { gilroyBlackFont, gilroyBoldFont, gilroyHeavyFont, gilroyRegularFont }
+const sansTrialRegularFont = localFont({
+  src: './SansTRIAL/SaansTRIAL-Regular.ttf',
+  variable: '--font-sans-trial-regular',
+})
+
+export { gilroyBlackFont, gilroyBoldFont, gilroyHeavyFont, gilroyRegularFont, sansTrialRegularFont }

@@ -8,7 +8,8 @@ export const logoMocoAnimation = {
   params: {
     y: headerAnimationsConstants.LOGO_MOCO.PARAMS.Y,
     opacity: headerAnimationsConstants.LOGO_MOCO.PARAMS.OPACITY,
-    delay: preloaderAnimationsConstants.DELAY_AFTER_PRELOADER,
+    // delay: preloaderAnimationsConstants.DELAY_AFTER_PRELOADER + 1,
+    delay: 0,
     duration: headerAnimationsConstants.LOGO_MOCO.PARAMS.DURATION,
     ease: headerAnimationsConstants.LOGO_MOCO.PARAMS.EASE,
   },
@@ -21,7 +22,8 @@ export const navAnimation = {
   params: {
     y: headerAnimationsConstants.NAV.PARAMS.Y,
     opacity: headerAnimationsConstants.NAV.PARAMS.OPACITY,
-    delay: preloaderAnimationsConstants.DELAY_AFTER_PRELOADER + 1,
+    // delay: preloaderAnimationsConstants.DELAY_AFTER_PRELOADER + 1,
+    delay: 0,
     duration: headerAnimationsConstants.NAV.PARAMS.DURATION,
     stagger: headerAnimationsConstants.NAV.PARAMS.STAGGER,
     ease: headerAnimationsConstants.NAV.PARAMS.EASE,

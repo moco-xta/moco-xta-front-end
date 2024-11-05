@@ -11,7 +11,7 @@ import {
   setMenuIsOpen,
 } from '@/redux/slice/appStateSlice'
 
-import { Routes } from '@/routes/routes'
+import { routes } from '@/routes/routes'
 
 import LogoCanvas from '@/components/three/canvas/logo_canvas/LogoCanvas'
 
@@ -37,7 +37,7 @@ export default function Logo() {
       id='logo'
       onClick={handleOnClickLogoMoco}
     >
-      <Link href={Routes.find((route) => route.key === 'HOME')!.path}>
+      <Link href={routes.find((route) => route.key === 'HOME')!.path}>
         <LogoCanvas />
       </Link>
     </div>
