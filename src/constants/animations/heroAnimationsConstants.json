@@ -1,8 +1,41 @@
 {
+  "CREATIVE_DEVELOPER": {
+    "SELECTOR": "#hero_creative_developer",
+    "PARAMS": {
+      "Y": 100,
+      "OPACITY": 0,
+      "DELAY": 2,
+      "DURATION": 0.5,
+      "STAGGER": 0.15,
+      "EASE": "power1.out"
+    }
+  },
   "H1": {
     "SELECTOR": ".hero_h1_spans",
     "PARAMS": {
       "Y": 400,
+      "OPACITY": 0,
+      "DELAY": 2,
+      "DURATION": 0.5,
+      "STAGGER": 0.15,
+      "EASE": "power1.out"
+    }
+  },
+  "FEDERICO_DESMOULIN": {
+    "SELECTOR": "#hero_federico_desmoulin",
+    "PARAMS": {
+      "Y": 100,
+      "OPACITY": 0,
+      "DELAY": 2,
+      "DURATION": 0.5,
+      "STAGGER": 0.15,
+      "EASE": "power1.out"
+    }
+  },
+  "R2024": {
+    "SELECTOR": "#hero_r2024",
+    "PARAMS": {
+      "Y": 100,
       "OPACITY": 0,
       "DELAY": 2,
       "DURATION": 0.5,

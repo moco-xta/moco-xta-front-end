@@ -1,6 +1,5 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/all'
 import { useEffect, useRef, useState } from 'react'
 
 import { hightlightsSlides } from '../../../constants'
@@ -8,10 +7,6 @@ import { hightlightsSlides } from '../../../constants'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 const VideoCarousel = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-  }, [])
-
   const videoRef = useRef<HTMLVideoElement[] | undefined>([])
   const videoSpanRef = useRef<HTMLSpanElement[] | undefined>([])
   const videoDivRef = useRef<HTMLSpanElement[] | undefined>([])

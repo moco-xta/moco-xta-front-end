@@ -6,8 +6,6 @@ import { useGSAP } from '@gsap/react'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
-gsap.registerPlugin(useGSAP)
-
 export default function Camera() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
 

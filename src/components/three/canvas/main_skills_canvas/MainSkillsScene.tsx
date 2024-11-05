@@ -6,8 +6,8 @@ import { LogoAngular, LogoNextjs, LogoSpring } from '../../models/logos'
 export default function MainSkillsScene() {
   return (
     <>
-      <LogoNextjs position={new THREE.Vector3(-2.5, 0, 0)} />
-      <LogoAngular />
+      <LogoAngular position={new THREE.Vector3(-2.5, 0, 0)} />
+      <LogoNextjs />
       <LogoSpring position={new THREE.Vector3(2.5, 0, 0)} />
     </>
   )

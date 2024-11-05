@@ -1,0 +1,33 @@
+@import '@/styles/variables.module.scss';
+
+#hero_heading {
+  display: flex;
+  flex-direction: column;
+  color: $fluorescent_yellow;
+
+  #hero_creative_developer {
+    font-size: 5rem;
+    // line-height: -400px;
+  }
+
+  #hero_h1 {
+    margin-top: -140px;
+    font-size: 30rem;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  #hero_federico_desmoulin {
+    margin-top: -180px;
+    font-size: 3rem;
+    text-align: end;
+  }
+
+  #hero_r2024 {
+    margin-top: -20px;
+    font-size: 3rem;
+    text-align: end;
+  }
+}

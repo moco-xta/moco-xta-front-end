@@ -1,12 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import * as THREE from 'three'
 
-gsap.registerPlugin(ScrollTrigger)
-gsap.registerPlugin(useGSAP)
 const cameraTarget = new THREE.Vector3(0, -0.5, 0)
 
 export default function CameraAnimation() {

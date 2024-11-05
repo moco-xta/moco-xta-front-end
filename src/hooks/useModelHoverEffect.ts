@@ -10,8 +10,6 @@ export default function useModelHoverEffect(
   ref: MutableRefObject<THREE.Group<THREE.Object3DEventMap>>,
   constants: any,
 ) {
-  gsap.registerPlugin(useGSAP)
-
   useGSAP(() => {}, {
     scope: ref,
   })

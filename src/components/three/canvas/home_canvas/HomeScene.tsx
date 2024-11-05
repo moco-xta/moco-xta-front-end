@@ -4,10 +4,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { Billboard, Environment, Float, Sky, Text, useHelper, useScroll } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import { Building001 } from '../../models/home/buildings/Building001'
-import { Building002 } from '../../models/home/buildings/Building002'
 import { TruckRed } from '../../models/home/trucks/TruckRed'
 import { TruckWhite } from '../../models/home/trucks/TruckWhite'
 
@@ -17,8 +14,6 @@ import { PlaneTree001 } from '../../models/home/vegetation/PlaneTree001'
 import Particles from './Particles'
 import { Building001Wall } from '../../models/home/buildings/Building001Wall'
 import { ExoMarket } from '../../models/home/buildings/ExoMarket'
-
-gsap.registerPlugin(useGSAP)
 
 export default function HomeScene() {
   const { camera } = useThree()

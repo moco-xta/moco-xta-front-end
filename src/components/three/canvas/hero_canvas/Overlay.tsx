@@ -1,11 +1,8 @@
 import React from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { HeroSlice, IntroductionSlice } from '@/components/slices'
-
-gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export default function Overlay() {
   useGSAP(() => {

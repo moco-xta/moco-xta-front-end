@@ -19,8 +19,6 @@ import { logoMocoAnimation } from 'animations/gsap/header'
 
 import './index.scss'
 
-gsap.registerPlugin(useGSAP)
-
 export default function Logo() {
   const dispatch = useDispatch<AppDispatch>()
 

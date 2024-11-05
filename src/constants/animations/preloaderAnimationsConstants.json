@@ -7,8 +7,8 @@
         "OPACITY": 0,
         "DELAY": 1,
         "DURATION": 0.5,
-        "STAGGER": 0.1,
-        "EASE": "power4.in"
+        "STAGGER": 0.2,
+        "EASE": "none"
       }
     },
     "TO": {
@@ -17,7 +17,7 @@
         "OPACITY": 0,
         "DURATION": 0.5,
         "STAGGER": 0.1,
-        "EASE": "power4.inOut"
+        "EASE": "none"
       },
       "OFFSET_DELAY": "+=0.75"
     }

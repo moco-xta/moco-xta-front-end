@@ -11,7 +11,12 @@ import Cursor from '@/components/cursor'
 import Header from '@/components/shared/header'
 
 import '@/styles/globals.scss'
-import { gilroyBlackFont } from '@/assets/fonts/ttf'
+import {
+  gilroyBlackFont,
+  gilroyBoldFont,
+  gilroyHeavyFont,
+  gilroyRegularFont,
+} from '@/assets/fonts/ttf'
 
 const interFont = Inter({
   subsets: ['latin'],
@@ -45,7 +50,9 @@ export default function RootLayout({
             touchMultiplier: 2,
           }}
         >
-          <body className={`${interFont.className} ${gilroyBlackFont.variable}`}>
+          <body
+            className={`${interFont.className} ${gilroyBlackFont.variable} ${gilroyBoldFont.variable} ${gilroyHeavyFont.variable}`}
+          >
             <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
             <ReduxProvider>
               <NextIntlClientProvider

@@ -88,6 +88,24 @@ canvas {
   z-index: 10;
 }
 
+// INVERT COLOR
+
+.invert_color {
+  opacity: 0.6;
+  -webkit-backdrop-filter: invert(80%);
+  backdrop-filter: invert(80%);
+}
+
+// BLURED BACKGROUND
+
+.blured_background {
+  // color: #0007;
+  background: rgba(0, 0, 0, 0.8);
+  /* opacity: 0.8; */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
 /* // BUTTONS
 
 .submit_reset_buttons_container {

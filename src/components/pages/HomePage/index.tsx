@@ -1,15 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { LenisRef } from 'lenis/react'
 
 import { HeroCanvas } from '@/components/three/canvas'
 import HomeOverlay from './HomeOverlay'
 
 import './index.scss'
-
-gsap.registerPlugin(useGSAP, ScrollTrigger)
+import ScrollToTop from '@/components/buttons/scroll_to_top'
 
 export default function HomePage() {
   const lenisRef = useRef<LenisRef>(null!)
@@ -43,6 +41,7 @@ export default function HomePage() {
     <div>
       <HeroCanvas />
       <HomeOverlay />
+      <ScrollToTop />
     </div>
   )
 }
