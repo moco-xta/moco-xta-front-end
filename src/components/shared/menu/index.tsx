@@ -54,7 +54,7 @@ export default function Menu() {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            zIndex: '1'
+            zIndex: '1',
           }}
         >
           <div className='menu_logo'>
@@ -96,7 +96,7 @@ export default function Menu() {
             justifyContent: 'space-between',
             alignItems: 'center',
             zIndex: '2',
-            background: '#c5fb45'
+            background: '#c5fb45',
           }}
         >
           <div id='menu_overlay_bar'>
