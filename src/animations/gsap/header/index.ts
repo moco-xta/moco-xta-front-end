@@ -1,27 +1,20 @@
 import { default as preloaderAnimationsConstants } from '@/constants/animations/preloaderAnimationsConstants.json'
 import { default as headerAnimationsConstants } from '@/constants/animations/headerAnimationsConstants.json'
 
-// LOGO TRANSLATION
+// LOGO
 
 export const logoMocoAnimation = {
-  translation: {
-    selector: headerAnimationsConstants.LOGO_MOCO.TRANSLATION.SELECTOR,
-    params: {
-      y: headerAnimationsConstants.LOGO_MOCO.TRANSLATION.PARAMS.Y,
-      delay: preloaderAnimationsConstants.DELAY_AFTER_PRELOADER,
-      duration: headerAnimationsConstants.LOGO_MOCO.TRANSLATION.PARAMS.DURATION,
-      ease: headerAnimationsConstants.LOGO_MOCO.TRANSLATION.PARAMS.EASE,
-    },
-  },
-  opacity: {
-    params: {
-      opacity: headerAnimationsConstants.LOGO_MOCO.OPACITY.OPACITY,
-      delay: preloaderAnimationsConstants.DELAY_AFTER_PRELOADER,
-      duration: headerAnimationsConstants.LOGO_MOCO.OPACITY.DURATION,
-      ease: headerAnimationsConstants.LOGO_MOCO.OPACITY.EASE,
-    },
+  selector: headerAnimationsConstants.LOGO_MOCO.SELECTOR,
+  params: {
+    y: headerAnimationsConstants.LOGO_MOCO.PARAMS.Y,
+    opacity: headerAnimationsConstants.LOGO_MOCO.PARAMS.OPACITY,
+    delay: preloaderAnimationsConstants.DELAY_AFTER_PRELOADER,
+    duration: headerAnimationsConstants.LOGO_MOCO.PARAMS.DURATION,
+    ease: headerAnimationsConstants.LOGO_MOCO.PARAMS.EASE,
   },
 }
+
+// NAV
 
 export const navAnimation = {
   selector: headerAnimationsConstants.NAV.SELECTOR,

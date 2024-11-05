@@ -29,7 +29,7 @@ export default function Logo() {
   }
 
   useGSAP(() => {
-    gsap.from(logoMocoAnimation.translation.selector, logoMocoAnimation.translation.params)
+    gsap.from(logoMocoAnimation.selector, logoMocoAnimation.params)
   })
 
   return (
