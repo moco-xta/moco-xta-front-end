@@ -11,7 +11,7 @@ import './index.scss'
 export default function Header() {
   return (
     <header className='header_zIndex'>
-      <Logo />
+      <Logo isMainLogo={true} />
       {/* <Nav /> */}
       <MenuButton />
     </header>

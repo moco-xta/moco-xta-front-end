@@ -72,7 +72,7 @@ export default function RootLayout({
                   }}
                 />
                 {/* <Cursor /> */}
-                {/* <Header /> */}
+                <Header />
                 <Menu />
                 {children}
               </NextIntlClientProvider>

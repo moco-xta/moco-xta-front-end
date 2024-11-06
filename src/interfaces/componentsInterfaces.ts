@@ -1,5 +1,9 @@
 import { AddReviewValuesInterface, ReviewPayloadInterface } from './reduxApiInterfaces'
 
+export interface LogoInterface {
+  isMainLogo?: boolean
+}
+
 export interface SignUpSignInInterface {
   setIsSignIn: (value: boolean) => void
 }

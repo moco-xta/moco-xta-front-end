@@ -3,7 +3,7 @@
 #menu_container {
   color: $black;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 100%;
 
@@ -11,7 +11,7 @@
     cursor: pointer;
   }
 
-  #menu_bar {
+  /* #menu_bar {
     color: $white;
     position: fixed;
     top: 0;
@@ -26,16 +26,17 @@
     #menu_open {
       cursor: pointer;
     }
-  }
+  } */
 
   #menu_overlay {
+    padding: 2em 2em 2em 15em;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 2em;
-    background: #c5fb45;
+    // padding: 2em;
+    background: $fluorescent_yellow;
     z-index: 2;
     display: flex;
     clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
@@ -45,7 +46,9 @@
       top: 0;
       left: 0;
       width: 100vw;
-      padding: 2em;
+      // padding: 2em;
+      margin-top: $px_margin_XXS;
+      margin-left: $px_margin_XXS;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -87,7 +90,7 @@
             // a {
             .menu_link {
               color: $black;
-              font-size: 80px;
+              font-size: 90px;
               font-weight: 400;
               letter-spacing: -0.02em;
               line-height: 85%;
@@ -104,6 +107,10 @@
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
+
+          #email_address {
+            text-transform: lowercase;
+          }
         }
       }
     }

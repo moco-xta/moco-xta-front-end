@@ -13,13 +13,15 @@ import {
 
 import { routes } from '@/routes/routes'
 
+import { LogoInterface } from '@/interfaces/componentsInterfaces'
+
 import LogoCanvas from '@/components/three/canvas/logo_canvas/LogoCanvas'
 
 import { logoMocoAnimation } from 'animations/gsap/header'
 
 import './index.scss'
 
-export default function Logo() {
+export default function Logo({ isMainLogo = false }: LogoInterface) {
   const dispatch = useDispatch<AppDispatch>()
 
   const handleOnClickLogoMoco = () => {
@@ -29,7 +31,7 @@ export default function Logo() {
   }
 
   useGSAP(() => {
-    gsap.from(logoMocoAnimation.selector, logoMocoAnimation.params)
+    if (isMainLogo) gsap.from(logoMocoAnimation.selector, logoMocoAnimation.params)
   })
 
   return (

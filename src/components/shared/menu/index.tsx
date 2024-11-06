@@ -12,6 +12,8 @@ import { routes } from '@/routes/routes'
 import { AppDispatch, RootState } from '@/redux/store'
 import { toggleMenu } from '@/redux/slice/appStateSlice'
 
+import Logo from '../header/logo'
+
 import './index.scss'
 import { sansTrialRegularFont } from '@/assets/fonts/ttf'
 
@@ -54,8 +56,7 @@ export default function Menu() {
   )
 
   useEffect(() => {
-    timelineRef.current.play()
-    console.log('menuIsOpen', menuIsOpen)
+    console.log('TEST MENU')
     if (menuIsOpen) {
       timelineRef.current.play()
     } else {
@@ -69,9 +70,9 @@ export default function Menu() {
       id='menu_container'
       className={`${sansTrialRegularFont.className}`}
     >
-      <div id='menu_bar'>
+      {/* <div id='menu_bar'>
         <div className='menu_logo'>
-          <Link href='/'>MOCO</Link>
+          <Logo />
         </div>
         <div
           id='menu_open'
@@ -79,12 +80,12 @@ export default function Menu() {
         >
           <p>MENU</p>
         </div>
-      </div>
+      </div> */}
       <div id='menu_overlay'>
         <div id='menu_overlay_bar'>
-          <div className='menu_logo'>
-            <Link href='/'>MOCO</Link>
-          </div>
+          {/* <div className='menu_logo'> */}
+            <Logo />
+          {/* </div> */}
           <div
             id='menu_close'
             onClick={handleToggleMenu}
@@ -92,12 +93,12 @@ export default function Menu() {
             <p>CLOSE</p>
           </div>
         </div>
-        <div
+        {/* <div
           id='menu_close_icon'
           onClick={handleToggleMenu}
         >
           <p>&#x2715;</p>
-        </div>
+        </div> */}
         <div id='menu_copy'>
           <div id='menu_links'>
             {routes
@@ -132,14 +133,14 @@ export default function Menu() {
               <a href='#'>LinkedIn &#8599;</a>
             </div>
             <div className='menu_info_col'>
-              <p>moco.xta@gmail.com</p>
+              <p id='email_address'>moco.xta@gmail.com</p>
               <p>+33 6 15 90 82 75</p>
             </div>
           </div>
         </div>
-        <div id='menu_preview'>
+        {/* <div id='menu_preview'>
           <p>View Showreel</p>
-        </div>
+        </div> */}
       </div>
     </div>
   )
