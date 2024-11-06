@@ -98,15 +98,15 @@ export default function Menu() {
               })}
           </div>
           <div id='menu_info'>
-            <div className="menu_info_col">
-                <a href='#'>X &#8599;</a>
-                <a href='#'>Instagram &#8599;</a>
-                <a href='#'>LinkedIn &#8599;</a>
+            <div className='menu_info_col'>
+              <a href='#'>X &#8599;</a>
+              <a href='#'>Instagram &#8599;</a>
+              <a href='#'>LinkedIn &#8599;</a>
             </div>
-            <div className="menu_info_col">
-                <p>moco.xta@gmail.com</p>
-                <p>+33 6 15 90 82 75</p>
-              </div>
+            <div className='menu_info_col'>
+              <p>moco.xta@gmail.com</p>
+              <p>+33 6 15 90 82 75</p>
+            </div>
           </div>
         </div>
         <div id='menu_preview'>
