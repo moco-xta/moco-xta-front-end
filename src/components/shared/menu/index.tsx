@@ -84,7 +84,7 @@ export default function Menu() {
       <div id='menu_overlay'>
         <div id='menu_overlay_bar'>
           {/* <div className='menu_logo'> */}
-            <Logo />
+          <Logo />
           {/* </div> */}
           <div
             id='menu_close'
