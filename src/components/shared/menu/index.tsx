@@ -39,7 +39,10 @@ export default function Menu() {
         <div className='menu_logo'>
           <Link href='/'>MOCO</Link>
         </div>
-        <div id='menu_open'>
+        <div
+          id='menu_open'
+          onClick={handleToggleMenu}
+        >
           <p>MENU</p>
         </div>
       </div>
@@ -48,7 +51,10 @@ export default function Menu() {
           <div className='menu_logo'>
             <Link href='/'>MOCO</Link>
           </div>
-          <div id='menu_close'>
+          <div
+            id='menu_close'
+            onClick={handleToggleMenu}
+          >
             <p>CLOSE</p>
           </div>
         </div>
@@ -66,29 +72,14 @@ export default function Menu() {
                   <div
                     key={`menuLinkItem_${route.key}`}
                     className='memu_link_item'
-                    style={{
-                      width: 'max-content',
-                      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-                    }}
                   >
                     <div
                       className='menu_link_item_holder'
-                      style={{
-                        position: 'relative',
-                      }}
                       onClick={handleToggleMenu}
                     >
                       <Link
                         href={route.path}
                         className='menu_link'
-                        style={{
-                          color: 'black',
-                          fontSize: '80px',
-                          fontWeight: '400',
-                          letterSpacing: '-0.02em',
-                          lineHeight: '85%',
-                          textTransform: 'uppercase',
-                        }}
                       >
                         {t(route.key)}
                       </Link>
