@@ -7,8 +7,9 @@ import { ReactLenis } from 'lenis/react'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
-import Cursor from '@/components/cursor'
+import Cursor from '@/components/shared/cursor'
 import Header from '@/components/shared/header'
+import Menu from '@/components/shared/menu'
 
 import '@/styles/globals.scss'
 import {
@@ -17,7 +18,6 @@ import {
   gilroyHeavyFont,
   sansTrialRegularFont,
 } from '@/assets/fonts/ttf'
-import Menu from '@/components/shared/menu'
 
 const interFont = Inter({
   subsets: ['latin'],
