@@ -1,5 +1,9 @@
 import { AddReviewValuesInterface, ReviewPayloadInterface } from './reduxApiInterfaces'
 
+export interface HeaderInterface {
+  isMainHeader?: boolean
+}
+
 export interface LogoInterface {
   isMainLogo?: boolean
 }

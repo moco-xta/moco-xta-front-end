@@ -31,7 +31,7 @@ export default function Logo({ isMainLogo = false }: LogoInterface) {
   }
 
   useGSAP(() => {
-    if (isMainLogo) gsap.from(logoMocoAnimation.selector, logoMocoAnimation.params)
+    if (isMainLogo === true) gsap.from(logoMocoAnimation.selector, logoMocoAnimation.params)
   })
 
   return (

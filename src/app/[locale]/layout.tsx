@@ -71,8 +71,7 @@ export default function RootLayout({
                     },
                   }}
                 />
-                {/* <Cursor /> */}
-                <Header />
+                <Cursor />
                 <Menu />
                 {children}
               </NextIntlClientProvider>

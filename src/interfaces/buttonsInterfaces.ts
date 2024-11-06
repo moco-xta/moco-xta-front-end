@@ -3,6 +3,10 @@ import { ActionCreatorWithPayload } from '@reduxjs/toolkit'
 
 import { AddReviewValuesInterface } from './reduxApiInterfaces'
 
+export interface MenuButtonInterface {
+  type: 'open' | 'close'
+}
+
 export interface SubmitButtonInterface {
   submitButtonIsDisabled: boolean
 }
