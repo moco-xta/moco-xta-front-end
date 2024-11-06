@@ -71,7 +71,7 @@ export default function RootLayout({
                     },
                   }}
                 />
-                <Cursor />
+                {/* <Cursor /> */}
                 {/* <Header /> */}
                 <Menu />
                 {children}

@@ -1,17 +1,16 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useDispatch, useSelector } from 'react-redux'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
 import { routes } from '@/routes/routes'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { toggleMenu } from '@/redux/slice/appStateSlice'
-
-import Logo from '../header/logo'
-import CloseMenuButton from '@/components/buttons/menu/close_menu_button'
 
 import './index.scss'
 import { sansTrialRegularFont } from '@/assets/fonts/ttf'
@@ -28,6 +27,41 @@ export default function Menu() {
   const handleToggleMenu = () => {
     dispatch(toggleMenu())
   }
+
+  // const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
+  const timelineRef = useRef<GSAPTimeline>(null!)
+
+  useGSAP(
+    () => {
+      gsap.set('.menu_link_item_holder', { y: 75 })
+
+      timelineRef.current = gsap
+        .timeline({ paused: true })
+        .to('#menu_overlay', {
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+          duration: 1.25,
+          ease: 'power4.inOut',
+        })
+        .to('.menu_link_item_holder', {
+          y: 0,
+          duration: 1,
+          stagger: 0.1,
+          ease: 'power4.inOut',
+          delay: -0.75,
+        })
+    },
+    { scope: menuRef },
+  )
+
+  useEffect(() => {
+    timelineRef.current.play()
+    console.log('menuIsOpen', menuIsOpen)
+    if (menuIsOpen) {
+      timelineRef.current.play()
+    } else {
+      timelineRef.current.reverse()
+    }
+  }, [menuIsOpen])
 
   return (
     <div
@@ -58,7 +92,10 @@ export default function Menu() {
             <p>CLOSE</p>
           </div>
         </div>
-        <div id='menu_close_icon'>
+        <div
+          id='menu_close_icon'
+          onClick={handleToggleMenu}
+        >
           <p>&#x2715;</p>
         </div>
         <div id='menu_copy'>
