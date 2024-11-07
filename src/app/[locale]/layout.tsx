@@ -9,7 +9,7 @@ import ReduxProvider from '@/redux/ReduxProvider'
 
 import Cursor from '@/components/shared/cursor'
 import Header from '@/components/shared/header'
-import Menu from '@/components/shared/menu'
+import MenuContainer from '@/components/shared/menu_container'
 
 import '@/styles/globals.scss'
 import {
@@ -72,7 +72,7 @@ export default function RootLayout({
                   }}
                 />
                 <Cursor />
-                <Menu />
+                <MenuContainer />
                 {children}
               </NextIntlClientProvider>
             </ReduxProvider>

@@ -8,12 +8,9 @@ import MenuOverlay from './menu_overlay'
 import './index.scss'
 import { sansTrialRegularFont } from '@/assets/fonts/ttf'
 
-export default function Menu() {
-  const menuRef = useRef<HTMLDivElement>(null!)
-
+export default function MenuContainer() {
   return (
     <div
-      ref={menuRef}
       id='menu'
       className={`menu_zIndex ${sansTrialRegularFont.className}`}
     >

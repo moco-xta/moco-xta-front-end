@@ -10,6 +10,7 @@ import { AppDispatch, RootState } from '@/redux/store'
 import { toggleMenu } from '@/redux/slice/appStateSlice'
 
 import './index.scss'
+import { menuAnimation } from 'animations/gsap/menu'
 
 export default function MenuButton({ type }: MenuButtonInterface) {
   const t = useTranslations('BUTTONS')
@@ -26,22 +27,12 @@ export default function MenuButton({ type }: MenuButtonInterface) {
 
   useGSAP(
     () => {
-      gsap.set('.menu_link_item_holder', { y: 75 })
+      gsap.set('.route_holder', { y: 75 })
 
       timelineRef.current = gsap
         .timeline({ paused: true })
-        .to('#menu_overlay', {
-          clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-          duration: 1.25,
-          ease: 'power4.inOut',
-        })
-        .to('.menu_link_item_holder', {
-          y: 0,
-          duration: 1,
-          stagger: 0.1,
-          ease: 'power4.inOut',
-          delay: -0.75,
-        })
+        .to(menuAnimation.menuOverlayAnimation.selector, menuAnimation.menuOverlayAnimation.params)
+        .to(menuAnimation.routeHolderAnimation.selector, menuAnimation.routeHolderAnimation.params)
     },
     { scope: '#menu' },
   )
