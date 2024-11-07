@@ -12,8 +12,8 @@ import HomeScene from './HomeScene'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
-studio.extend(extension)
-studio.initialize()
+/* studio.extend(extension)
+studio.initialize() */
 
 export default function HeroCanvas() {
   const sheet = getProject('home_project').sheet('hero_sheet')

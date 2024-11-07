@@ -77,18 +77,22 @@ canvas {
 // Z-INDEXES
 
 .preloader_zIndex {
-  z-index: 30;
+  z-index: 40;
 }
 
 .cursor_zIndex {
-  z-index: 20;
+  z-index: 30;
 }
 
 .menu_overlay_zIndex {
-  z-index: 11;
+  z-index: 21;
 }
 
-.menu_zIndex {
+.menu_container_zIndex {
+  z-index: 20;
+}
+
+.header_zIndex {
   z-index: 10;
 }
 

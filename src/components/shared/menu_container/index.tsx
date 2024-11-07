@@ -11,8 +11,8 @@ import { sansTrialRegularFont } from '@/assets/fonts/ttf'
 export default function MenuContainer() {
   return (
     <div
-      id='menu'
-      className={`menu_zIndex ${sansTrialRegularFont.className}`}
+      id='menu_container'
+      className={`menu_container_zIndex ${sansTrialRegularFont.className}`}
     >
       <Header isMainHeader={true} />
       <MenuOverlay />

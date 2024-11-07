@@ -34,7 +34,7 @@ export default function MenuButton({ type }: MenuButtonInterface) {
         .to(menuAnimation.menuOverlayAnimation.selector, menuAnimation.menuOverlayAnimation.params)
         .to(menuAnimation.routeHolderAnimation.selector, menuAnimation.routeHolderAnimation.params)
     },
-    { scope: '#menu' },
+    { scope: menuAnimation.scope },
   )
 
   useEffect(() => {
