@@ -16,6 +16,9 @@ const appStateSlice = createSlice({
     setMenuIsOpen: (state, action: PayloadAction<boolean>) => {
       state.menuIsOpen = action.payload
     },
+    toggleMenu: (state) => {
+      state.menuIsOpen = !state.menuIsOpen
+    },
     setAuthenticationIsOpen: (state, action: PayloadAction<boolean>) => {
       state.authenticationIsOpen = action.payload
     },
@@ -30,6 +33,7 @@ const appStateSlice = createSlice({
 
 export const {
   setMenuIsOpen,
+  toggleMenu,
   setAuthenticationIsOpen,
   setLocaleSwitcherIsOpen,
   setAddReviewIsOpen,

@@ -6,7 +6,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { Routes } from '@/routes/routes'
+import { routes } from '@/routes/routes'
 
 import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 
@@ -15,7 +15,8 @@ import { setLocaleSwitcherIsOpen, setMenuIsOpen } from '@/redux/slice/appStateSl
 
 import { AuthenticationButton } from '@/components/buttons'
 import LocaleSwitcher from '@/components/buttons/locale_switcher'
-import Hamburger from '@/components/buttons/hamburger'
+// import Hamburger from '@/components/buttons/hamburger'
+import Menu from '../../menu_container'
 import Authentication from '../../authentication'
 
 import { navAnimation } from 'animations/gsap/header'
@@ -51,7 +52,7 @@ export default function Nav() {
 
   return (
     <>
-      <div
+      {/* <div
         id='nav_container'
         className={`${menuIsOpen ? 'open' : ''}`}
       >
@@ -86,9 +87,10 @@ export default function Nav() {
             <LocaleSwitcher />
           </ul>
         </nav>
-      </div>
-      {/* <Hamburger />
-      <Authentication /> */}
+      </div> */}
+      {/* <Hamburger /> */}
+      <Menu />
+      <Authentication />
     </>
   )
 }

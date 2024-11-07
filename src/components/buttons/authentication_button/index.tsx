@@ -23,6 +23,7 @@ export default function AuthenticationButton() {
   const isAuthenticated = useSelector((state: RootState) => state.authentication.isAuthenticated)
 
   function handleAuthenticationIsOpen() {
+    console.log('handleAuthenticationIsOpen')
     dispatch(setAuthenticationIsOpen(true))
     dispatch(setMenuIsOpen(false))
     dispatch(setLocaleSwitcherIsOpen(false))

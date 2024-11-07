@@ -1,6 +1,6 @@
 import { RoutesInterface } from '@/interfaces/routesInterfaces'
 
-export const Routes: RoutesInterface[] = [
+export const routes: RoutesInterface[] = [
   {
     key: 'HOME',
     path: '/',

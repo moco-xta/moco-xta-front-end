@@ -7,15 +7,16 @@ import { ReactLenis } from 'lenis/react'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
-import Cursor from '@/components/cursor'
+import Cursor from '@/components/shared/cursor'
 import Header from '@/components/shared/header'
+import MenuContainer from '@/components/shared/menu_container'
 
 import '@/styles/globals.scss'
 import {
   gilroyBlackFont,
   gilroyBoldFont,
   gilroyHeavyFont,
-  gilroyRegularFont,
+  sansTrialRegularFont,
 } from '@/assets/fonts/ttf'
 
 const interFont = Inter({
@@ -51,7 +52,7 @@ export default function RootLayout({
           }}
         >
           <body
-            className={`${interFont.className} ${gilroyBlackFont.variable} ${gilroyBoldFont.variable} ${gilroyHeavyFont.variable}`}
+            className={`${interFont.className} ${gilroyBlackFont.variable} ${gilroyBoldFont.variable} ${gilroyHeavyFont.variable} ${sansTrialRegularFont.variable}`}
           >
             <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
             <ReduxProvider>
@@ -71,7 +72,7 @@ export default function RootLayout({
                   }}
                 />
                 <Cursor />
-                <Header />
+                <MenuContainer />
                 {children}
               </NextIntlClientProvider>
             </ReduxProvider>

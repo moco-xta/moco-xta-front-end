@@ -25,7 +25,7 @@ export default function Authentication() {
     dispatch(setAuthenticationIsOpen(false))
   }, [dispatch, isLargeScreen])
 
-  const [isSignIn, setIsSignIn] = useState(true)
+  const [isSignIn, setIsSignIn] = useState<boolean>(true)
 
   return (
     <div

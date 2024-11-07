@@ -11,7 +11,9 @@ import {
   setMenuIsOpen,
 } from '@/redux/slice/appStateSlice'
 
-import { Routes } from '@/routes/routes'
+import { routes } from '@/routes/routes'
+
+import { LogoInterface } from '@/interfaces/componentsInterfaces'
 
 import LogoCanvas from '@/components/three/canvas/logo_canvas/LogoCanvas'
 
@@ -19,7 +21,7 @@ import { logoMocoAnimation } from 'animations/gsap/header'
 
 import './index.scss'
 
-export default function Logo() {
+export default function Logo({ isMainLogo = false }: LogoInterface) {
   const dispatch = useDispatch<AppDispatch>()
 
   const handleOnClickLogoMoco = () => {
@@ -29,7 +31,7 @@ export default function Logo() {
   }
 
   useGSAP(() => {
-    gsap.from(logoMocoAnimation.translation.selector, logoMocoAnimation.translation.params)
+    if (isMainLogo === true) gsap.from(logoMocoAnimation.selector, logoMocoAnimation.params)
   })
 
   return (
@@ -37,7 +39,7 @@ export default function Logo() {
       id='logo'
       onClick={handleOnClickLogoMoco}
     >
-      <Link href={Routes.find((route) => route.key === 'HOME')!.path}>
+      <Link href={routes.find((route) => route.key === 'HOME')!.path}>
         <LogoCanvas />
       </Link>
     </div>
