@@ -1,6 +1,7 @@
 import { default as menuAnimationsConstants } from '@/constants/animations/menuAnimationsConstants.json'
 
 export const menuAnimation = {
+  scope: menuAnimationsConstants.SCOPE,
   menuOverlayAnimation: {
     selector: menuAnimationsConstants.MENU_OVERLAY.SELECTOR,
     params: {

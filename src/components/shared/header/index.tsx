@@ -9,7 +9,7 @@ import './index.scss'
 
 export default function Header({ isMainHeader = false }: HeaderInterface) {
   return (
-    <header>
+    <header className='header_zIndex'>
       <Logo isMainLogo={isMainHeader} />
       <MenuButton type={isMainHeader ? 'open' : 'close'} />
     </header>

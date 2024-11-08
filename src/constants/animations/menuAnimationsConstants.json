@@ -1,5 +1,5 @@
 {
-  "SCOPE": "#menu",
+  "SCOPE": "#menu_container",
   "MENU_OVERLAY": {
     "SELECTOR": "#menu_overlay",
     "PARAMS": {

@@ -38,10 +38,10 @@ export default function HomePage() {
   })
 
   return (
-    <div>
+    <>
       <HeroCanvas />
       <HomeOverlay />
       <ScrollToTop />
-    </div>
+    </>
   )
 }
