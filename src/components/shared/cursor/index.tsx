@@ -47,7 +47,7 @@ export default function Cursor() {
   return (
     <div
       id='cursor'
-      className='cursor_zIndex invert_color'
+      className='cursor_zIndex hue_rotate'
       // style={{ left: position.x, top: position.y }}
     />
   )

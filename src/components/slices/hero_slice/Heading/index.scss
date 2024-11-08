@@ -3,31 +3,39 @@
 #hero_heading {
   display: flex;
   flex-direction: column;
-  color: $fluorescent_yellow;
+  color: $white;
 
-  #hero_creative_developer {
+  #hero_heading_creative_developer {
     font-size: 5rem;
     // line-height: -400px;
   }
 
-  #hero_h1 {
-    margin-top: -140px;
-    font-size: 30rem;
+  #hero_heading_h1 {
+    margin-top: -90px;
+    font-size: 20rem;
 
     span {
       display: inline-block;
     }
   }
 
-  #hero_federico_desmoulin {
-    margin-top: -180px;
-    font-size: 3rem;
-    text-align: end;
+  #hero_federico_desmoulin_2024 {
+    margin-top: -100px;
+    font-size: 1.5rem;
+    text-align: center;
+    // color: $grey_medium;
+    line-height: 120%;
   }
 
-  #hero_r2024 {
-    margin-top: -20px;
-    font-size: 3rem;
-    text-align: end;
+  #scroll_down {
+    margin-top: 40px;
+    padding: 7px;
+    // border: 2px solid $grey_darker;
+    border: 2px solid $white;
+    border-radius: 50%;
+
+    #scroll_down_arrow {
+      // color: $grey_darker;
+    }
   }
 }

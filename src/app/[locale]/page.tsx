@@ -13,7 +13,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 export default function Home() {
   return (
     <div>
-      <PreloaderSlice />
+      {/* <PreloaderSlice /> */}
       <HomePage />
     </div>
   )

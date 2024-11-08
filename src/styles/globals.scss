@@ -104,6 +104,12 @@ canvas {
   backdrop-filter: invert(80%);
 }
 
+.hue_rotate {
+  opacity: 0.6;
+  -webkit-backdrop-filter: hue-rotate(90deg);
+  backdrop-filter: hue-rotate(90deg);
+}
+
 // BLURED BACKGROUND
 
 .blured_background {

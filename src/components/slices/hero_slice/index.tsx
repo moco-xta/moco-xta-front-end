@@ -9,7 +9,6 @@ export default function HeroSlice() {
     <div
       id='hero_slice'
       className='fullscreen center_content'
-      style={{ /* background: '#ff1377', */ overflow: 'hidden' }}
     >
       <Heading />
     </div>

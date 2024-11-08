@@ -74,7 +74,7 @@ export default function HomeOverlay() {
   return (
     <>
       <HeroSlice />
-      <MindBendingScrollAnimation />
+      {/* <MindBendingScrollAnimation /> */}
       <IntroductionSlice />
       <MainSkillsSlice />
       <CylenderWorkShowcase />
