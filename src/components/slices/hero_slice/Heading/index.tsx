@@ -14,7 +14,7 @@ export default function Heading() {
       .from('#hero_heading_creative_developer', {
         // y: '150px',
         opacity: 0,
-        transform: 'translateY(100px) scaleY(0) skew(-45deg)',
+        transform: 'translateY(75px) scaleY(0.25) skew(-45deg)',
         filter: 'blur(80px)',
         duration: 1,
         ease: 'power3.out',
@@ -25,12 +25,12 @@ export default function Heading() {
         {
           // y: '150px',
           opacity: 0,
-          transform: 'translateY(150px) scaleY(0) skew(-45deg)',
-          filter: 'blur(80px)',
+          transform: 'translateY(100px) scaleY(0.75) skew(-15deg)',
+          filter: 'blur(100px)',
           duration: 1,
           ease: 'power3.out',
         },
-        '-=0.85',
+        '-=0.75',
       )
       .from(
         '#hero_federico_desmoulin_2024',
@@ -41,7 +41,7 @@ export default function Heading() {
           duration: 1,
           ease: 'power3.out',
         },
-        '-=0.4',
+        '-=0.2',
       )
       .from(
         '#scroll_down',
@@ -52,7 +52,7 @@ export default function Heading() {
           duration: 1,
           ease: 'power3.out',
         },
-        '-=0.4',
+        '-=0.8',
       )
   })
 

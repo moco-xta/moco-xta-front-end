@@ -1,11 +1,11 @@
 @import '@/styles/variables.module.scss';
 
 #introduction_slice {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // background: black;
-  // opacity: 0.8;
+  flex-direction: column;
+
+  #who_i_am {
+    color: red;
+  }
 
   #introduction_text {
     width: 70vw;
@@ -14,5 +14,12 @@
     text-align: justify;
     line-break: loose;
     color: $white;
+  }
+
+  #more_about_me_button {
+    width: 70vw;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
   }
 }
