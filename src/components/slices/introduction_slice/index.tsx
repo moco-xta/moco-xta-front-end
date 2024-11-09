@@ -21,22 +21,20 @@ export default function IntroductionSlice() {
     delay: 1,
   })
 
-  useGSAP(
-    () => {
-      timeline.from('.introduction_text_word_spans', {
-        opacity: 0.5,
-        duration: 0.25,
-        stagger: 1,
-        scrollTrigger: {
-          trigger: '#introduction_slice',
-          start: '-=500px',
-          end: '-=200px',
-          scrub: 0.5,
-          markers: true,
-        },
-      })
-    } /* , [{ scope: '#introduction_text' }] */,
-  )
+  useGSAP(() => {
+    timeline.from('.introduction_text_word_spans', {
+      opacity: 0.5,
+      duration: 0.25,
+      stagger: 1,
+      scrollTrigger: {
+        trigger: '#introduction_slice',
+        start: '-=500px',
+        end: '-=200px',
+        scrub: 0.5,
+        markers: true,
+      },
+    })
+  })
 
   return (
     <Parallax
@@ -48,48 +46,25 @@ export default function IntroductionSlice() {
     >
       <section
         id='introduction_slice'
-        className='fullscreen blured_background'
+        className='fullscreen center_content blured_background'
       >
-        {/* <video
-          width='1920'
-          height='1080'
-          autoPlay
-          loop
-          muted
-        >
-          <source
-            src={videosConstants.HOME.INTRODUCTION.GOUTTE_DOR}
-            type='video/mp4'
-          />
-        </video> */}
         <p
           ref={wrapperRef}
           id='introduction_text'
         >
+          <span id='who_i_am'>WHO I AM - </span>
           {splittedText.map((word, wordIndex) => {
             return (
               <span
                 key={`introduction_text_word_${wordIndex}`}
                 className='introduction_text_word_spans'
               >
-                {/* <>
-                  {word.split('').map((character, characterIndex) => {
-                    return (
-                      <span
-                        key={`introduction_text_character_${wordIndex}_${characterIndex}`}
-                        className='introduction_text_character_spans'
-                      >
-                        {character}
-                      </span>
-                    )
-                  })}
-                  <span>&nbsp;</span>
-                </> */}
                 {word}
               </span>
             )
           })}
         </p>
+        <div id='more_about_me_button'>More about me</div>
       </section>
     </Parallax>
   )
