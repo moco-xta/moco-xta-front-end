@@ -16,7 +16,7 @@ function SunContainer() {
       className='fullscreen'
       style={{ zIndex: -1, position: 'fixed' }}
     >
-      <div style={{ position: 'absolute', top: '30vh', left: '50vw', width: 200, height: 200 }}>
+      <div style={{ position: 'absolute', top: '15vh', left: '50vw', width: 400, height: 400 }}>
         <Sun />
       </div>
     </div>
