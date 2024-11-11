@@ -39,7 +39,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* <HeroCanvas /> */}
+      <HeroCanvas />
       <HomeOverlay />
       <ScrollToTop />
     </>
