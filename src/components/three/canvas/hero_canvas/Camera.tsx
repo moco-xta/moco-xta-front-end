@@ -11,9 +11,8 @@ export default function Camera() {
 
   useGSAP(() => {
     gsap.from(perspectiveCameraRef.current.position, {
-      z: 11,
+      y: 30,
       duration: 1.5,
-      delay: 4.5,
     })
   })
 

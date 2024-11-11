@@ -5,6 +5,7 @@ import { FaArrowDown } from 'react-icons/fa6'
 
 import './index.scss'
 import { gilroyBoldFont, gilroyHeavyFont, gilroyRegularFont } from '@/assets/fonts/ttf'
+import { bagnardFont, itcBenguiatBoldFont } from '@/assets/fonts/otf'
 
 export default function Heading() {
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline())
@@ -53,6 +54,17 @@ export default function Heading() {
           ease: 'power3.out',
         },
         '-=0.8',
+      )
+      .from(
+        '#sun',
+        {
+          // y: '-150px',
+          opacity: 0,
+          transform: 'translateY(-500px)',
+          duration: 3,
+          ease: 'power3.out',
+        },
+        '-=1.8',
       )
   })
 
