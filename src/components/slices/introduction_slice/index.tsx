@@ -31,7 +31,6 @@ export default function IntroductionSlice() {
         start: '-=500px',
         end: '-=200px',
         scrub: 0.5,
-        markers: true,
       },
     })
   })

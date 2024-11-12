@@ -22,6 +22,7 @@ export default function MainSkillsCanvas() {
         alpha: mainSkillsConstants.CANVAS.GL.ALPHA,
         powerPreference: mainSkillsConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
+      style={{ aspectRatio: 3.75 / 2 }}
     >
       <PerspectiveCamera
         ref={perspectiveCameraRef}

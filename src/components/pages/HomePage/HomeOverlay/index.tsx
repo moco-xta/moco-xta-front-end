@@ -77,7 +77,7 @@ export default function HomeOverlay() {
       {/* <MindBendingScrollAnimation /> */}
       <IntroductionSlice />
       <MainSkillsSlice />
-      <CylenderWorkShowcase />
+      {/* <CylenderWorkShowcase />
       <section
         ref={sectionRef}
         className='fullscreen center_content'
@@ -93,7 +93,7 @@ export default function HomeOverlay() {
           <Block />
           <Block />
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
