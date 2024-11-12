@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Box, PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera } from '@react-three/drei'
+
+import SkillScene from './SkillScene'
 
 export default function SkillCanvas() {
   return (
@@ -30,7 +32,7 @@ export default function SkillCanvas() {
       />
       <ambientLight />
       <Suspense>
-        <Box />
+        <SkillScene />
       </Suspense>
     </Canvas>
   )

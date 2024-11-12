@@ -24,14 +24,14 @@ export default function CompanyOrSchoolCard({
       key={`company_or_school_card_${index}`}
       className={`company_or_school_card transition ${index === currentCompanyOrSchool ? 'intersecting_company_or_school' : 'not_intersecting_company_or_school'}`}
     >
-      <img
+      {/* <img
         className='company_or_school_logo'
         src={companyOrSchoolData.logo.src}
         width={companyOrSchoolData.logo.width}
         height={companyOrSchoolData.logo.height}
         onClick={handleOnClick}
         alt={`logo_${companyOrSchoolData.name}_${companyOrSchoolData.as.toLowerCase()}`}
-      />
+      /> */}
       <p
         className='company_or_school_as'
         style={{

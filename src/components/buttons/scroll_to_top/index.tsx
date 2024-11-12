@@ -49,7 +49,7 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     console.log('svgRef.current', svgRef.current)
-  }, [svgRef.current])
+  }, [])
 
   return (
     <div
