@@ -9,7 +9,7 @@ export default function PerformedWithSlice() {
   return (
     <section id='performed_with_slice'>
       <RubiksCubeCanvas />
-      <PerformedWithTextBlock />
+      {/* <PerformedWithTextBlock /> */}
     </section>
   )
 }

@@ -5,8 +5,8 @@ export default function Controls() {
   return (
     <OrbitControls
       enableZoom={false}
-      autoRotate
-      autoRotateSpeed={0.75}
+      // autoRotate
+      // autoRotateSpeed={0.75}
     />
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import { PadsInterface } from '@/interfaces/rubiksCubeInterfaces'
 
@@ -9,6 +9,7 @@ import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeCon
 import { setPadRotation, setRoundedCubeType } from '@/helpers/rubiks_cube/rubiksCubeHelpers'
 
 export default function Pads({ colorPadIndex, coordinates }: PadsInterface) {
+  const padRef = useRef<THREE.Mesh>(null!)
   return (
     <>
       {[...Array(setRoundedCubeType(coordinates))].map((_, index) => {
@@ -20,6 +21,7 @@ export default function Pads({ colorPadIndex, coordinates }: PadsInterface) {
           padsData[currentColorPadIndex % rubiksCubeConstants.RUBIKS_CUBE.PADS.length].name
         return (
           <Pad
+            ref={padRef}
             key={`rubiks_cube_pad_${colorPadName}_${currentColorPadIndex}`}
             name={colorPadName}
             rotation={setPadRotation(coordinates, index)}

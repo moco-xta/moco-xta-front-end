@@ -1,6 +1,6 @@
 {
   "asset": {
-    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "generator": "Khronos glTF Blender I/O v4.2.70",
     "version": "2.0"
   },
   "scene": 0,
@@ -13,7 +13,8 @@
   "nodes": [
     {
       "mesh": 0,
-      "name": "ColorPadSass"
+      "name": "ColorPadSass",
+      "translation": [0, 0, 12]
     }
   ],
   "meshes": [
@@ -35,7 +36,7 @@
     {
       "bufferView": 0,
       "componentType": 5126,
-      "count": 4080,
+      "count": 4074,
       "max": [0.7937999963760376, 1.0290000438690186, 0.7937999963760376],
       "min": [-0.7937999963760376, 0.9800000190734863, -0.7937999963760376],
       "type": "VEC3"
@@ -43,51 +44,51 @@
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 4080,
+      "count": 4074,
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 4080,
+      "count": 4074,
       "type": "VEC2"
     },
     {
       "bufferView": 3,
       "componentType": 5123,
-      "count": 8112,
+      "count": 8100,
       "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 48960,
+      "byteLength": 48888,
       "byteOffset": 0,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 48960,
-      "byteOffset": 48960,
+      "byteLength": 48888,
+      "byteOffset": 48888,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 32640,
-      "byteOffset": 97920,
+      "byteLength": 32592,
+      "byteOffset": 97776,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 16224,
-      "byteOffset": 130560,
+      "byteLength": 16200,
+      "byteOffset": 130368,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 146784,
+      "byteLength": 146568,
       "uri": "ColorPadSass.bin"
     }
   ]
