@@ -23,7 +23,7 @@ export default function MainSkillsSlice() {
         trigger: '#what_are_my_skills',
         scroller: 'body',
         start: 'top 50%',
-        end: 'bottom 50vh',
+        end: 'bottom 50%',
         // toggleActions: 'restart pause reverse pause'
         scrub: true,
         markers: true,
@@ -45,17 +45,34 @@ export default function MainSkillsSlice() {
     }) */
     gsap.from('.main_skills_detail', {
       translateY: '40vh',
-      // opacity: 0,
-      // delay: 1.5,
-      // duration: 0.5,
-      stagger: -1,
       ease: 'power2.out',
       scrollTrigger: {
         trigger: '#main_skills_details_wrapper',
         scroller: 'body',
-        start: 'top 80%',
-        end: 'bottom 80%',
-        // toggleActions: 'restart pause reverse pause'
+        start: 'top 120%',
+        end: 'bottom -20%',
+        scrub: true,
+      },
+    })
+    gsap.from('#logo_nextjs_container', {
+      paddingTop: '80vh',
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '#main_skills_details_wrapper',
+        scroller: 'body',
+        start: 'top 120%',
+        end: 'bottom -20%',
+        scrub: true,
+      },
+    })
+    gsap.from('#logo_angular_container', {
+      paddingTop: '40vh',
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '#main_skills_details_wrapper',
+        scroller: 'body',
+        start: 'top 120%',
+        end: 'bottom -20%',
         scrub: true,
       },
     })
@@ -64,9 +81,10 @@ export default function MainSkillsSlice() {
   return (
     <Parallax
       id='main_skills_slice_parallax'
-      speed={0}
+      speed={-1}
       style={{
         alignSelf: 'flex-start',
+        background: 'purple'
       }}
     >
       <section
@@ -92,9 +110,9 @@ export default function MainSkillsSlice() {
           >
             <div
               id='logo_nextjs_container'
-              style={{
-                paddingTop: '30vh',
-              }}
+              /* style={{
+                paddingTop: '20vh',
+              }} */
             >
               <Image
                 id='logo_nextjs'
@@ -111,9 +129,9 @@ export default function MainSkillsSlice() {
             </div>
             <div
               id='logo_angular_container'
-              style={{
-                paddingTop: '15vh',
-              }}
+              /* style={{
+                paddingTop: '10vh',
+              }} */
             >
               <Image
                 id='logo_angular'
