@@ -7,50 +7,21 @@ import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 import './index.scss'
 
+import {
+  frameworkSkillsAnimation,
+  logoAngularAnimation,
+  logoSpringAnimation,
+} from 'animations/gsap/main_skills'
+
 export default function FrameworksSkills() {
   useGSAP(() => {
-    gsap.from('.framework_skill', {
-      translateY: '40vh',
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '#framework_skills_wrapper',
-        scroller: 'body',
-        start: 'top 120%',
-        end: 'bottom -20%',
-        scrub: true,
-      },
-    })
-    gsap.from('#logo_angular_container', {
-      paddingTop: '40vh',
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '#framework_skills_wrapper',
-        scroller: 'body',
-        start: 'top 120%',
-        end: 'bottom -20%',
-        scrub: true,
-      },
-    })
-    gsap.from('#logo_spring_container', {
-      paddingTop: '80vh',
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '#framework_skills_wrapper',
-        scroller: 'body',
-        start: 'top 120%',
-        end: 'bottom -20%',
-        scrub: true,
-      },
-    })
+    gsap.from(frameworkSkillsAnimation.selector, frameworkSkillsAnimation.params)
+    gsap.from(logoAngularAnimation.selector, logoAngularAnimation.params)
+    gsap.from(logoSpringAnimation.selector, logoSpringAnimation.params)
   })
 
   return (
-    <div
-      id='framework_skills_wrapper'
-      style={{
-        marginTop: '-15vh',
-      }}
-    >
+    <div id='framework_skills_wrapper'>
       <div id='logo_spring_container'>
         <Image
           id='logo_spring'
@@ -58,10 +29,6 @@ export default function FrameworksSkills() {
           src={imgConstants.HERO.MAIN_SKILLS.FRAMEWORKS.LOGO_SPRING}
           width={855}
           height={942}
-          style={{
-            maxWidth: '25vw',
-            height: 'auto',
-          }}
           alt='Logo Spring'
         />
       </div>
@@ -72,10 +39,6 @@ export default function FrameworksSkills() {
           src={imgConstants.HERO.MAIN_SKILLS.FRAMEWORKS.LOGO_ANGULAR}
           width={781}
           height={952}
-          style={{
-            maxWidth: '25vw',
-            height: 'auto',
-          }}
           alt='Logo Angular'
         />
       </div>
@@ -86,10 +49,6 @@ export default function FrameworksSkills() {
           src={imgConstants.HERO.MAIN_SKILLS.FRAMEWORKS.LOGO_NEXTJS}
           width={838}
           height={942}
-          style={{
-            maxWidth: '25vw',
-            height: 'auto',
-          }}
           alt='Logo Nextjs'
         />
       </div>

@@ -5,22 +5,11 @@ import { useGSAP } from '@gsap/react'
 import './index.scss'
 import { gilroyHeavyFont } from '@/assets/fonts/ttf'
 
+import { whatAreMySkillsAnimation } from 'animations/gsap/main_skills'
+
 export default function WhatAreMySkills() {
   useGSAP(() => {
-    gsap.from('.what_are_my_skills_text_blocks', {
-      opacity: 0,
-      translateX: 75,
-      transform: 'scaleY(0.6) skew(30deg)',
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: '#what_are_my_skills',
-        scroller: 'body',
-        start: 'top 50%',
-        end: 'bottom 50%',
-        scrub: true,
-        markers: true,
-      },
-    })
+    gsap.from(whatAreMySkillsAnimation.selector, whatAreMySkillsAnimation.params)
   })
 
   return (
