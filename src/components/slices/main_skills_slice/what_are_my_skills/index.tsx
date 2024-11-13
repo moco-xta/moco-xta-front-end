@@ -7,10 +7,11 @@ import { gilroyHeavyFont } from '@/assets/fonts/ttf'
 
 export default function WhatAreMySkills() {
   useGSAP(() => {
-    gsap.from('#what_are_my_skills', {
+    gsap.from('.what_are_my_skills_text_blocks', {
       opacity: 0,
-      translateX: 200,
-      transform: 'rotateX(-45deg) skew(45deg)',
+      translateX: 75,
+      transform: 'scaleY(0.6) skew(30deg)',
+      stagger: 0.2,
       scrollTrigger: {
         trigger: '#what_are_my_skills',
         scroller: 'body',
@@ -27,11 +28,24 @@ export default function WhatAreMySkills() {
       id='what_are_my_skills'
       className={`${gilroyHeavyFont.className}`}
     >
-      <span id='what'>What</span>
-      <br />
-      are my
-      <br />
-      skills?
+      <div
+        id='what'
+        className='what_are_my_skills_text_blocks'
+      >
+        What
+      </div>
+      <div
+        id='are_my'
+        className='what_are_my_skills_text_blocks'
+      >
+        are my
+      </div>
+      <div
+        id='skills'
+        className='what_are_my_skills_text_blocks'
+      >
+        skills?
+      </div>
     </h1>
   )
 }

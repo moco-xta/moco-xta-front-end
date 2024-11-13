@@ -2,7 +2,8 @@ import React from 'react'
 
 import Parallax from '@/components/parallax'
 import WhatAreMySkills from './what_are_my_skills'
-import Frameworks from './frameworks'
+import FrameworksSkills from './frameworks_skills'
+import ThreeDSkills from './three_d_skills'
 
 import './index.scss'
 
@@ -12,15 +13,16 @@ export default function MainSkillsSlice() {
       id='main_skills_slice_parallax'
       speed={1}
       style={{
-        marginTop: '15vh',
+        marginTop: '20vh',
         alignSelf: 'flex-start',
-        background: 'purple',
+        // background: 'purple',
       }}
     >
       <section id='main_skills_slice'>
         <div id='main_skills_content'>
           <WhatAreMySkills />
-          <Frameworks />
+          <FrameworksSkills />
+          <ThreeDSkills />
         </div>
       </section>
     </Parallax>

@@ -5,11 +5,17 @@
   line-height: 100%;
   text-transform: uppercase;
   color: #ff130a;
-  -webkit-text-stroke: 3px #ff130a;
-  transform: rotateX(0deg) skew(0deg);
 
   #what {
     color: #fff0;
     -webkit-text-stroke: 3px #ff130a;
+  }
+
+  #are_my {
+    margin-top: -30px;
+  }
+
+  #skills {
+    margin-top: -30px;
   }
 }

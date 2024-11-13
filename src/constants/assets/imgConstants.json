@@ -1,9 +1,17 @@
 {
   "HERO": {
     "MAIN_SKILLS": {
-      "LOGO_ANGULAR": "/img/png/main_skills/logo_angular.png",
-      "LOGO_NEXTJS": "/img/png/main_skills/logo_nextjs.png",
-      "LOGO_SPRING": "/img/png/main_skills/logo_spring.png"
+      "FRAMEWORKS": {
+        "LOGO_ANGULAR": "/img/png/main_skills/logo_angular.png",
+        "LOGO_NEXTJS": "/img/png/main_skills/logo_nextjs.png",
+        "LOGO_SPRING": "/img/png/main_skills/logo_spring.png"
+      },
+      "THREE_D": {
+        "LOGO_BABYLONJS": "/img/png/main_skills/logo_babylonjs.png",
+        "LOGO_BLENDER": "/img/png/main_skills/logo_blender.png",
+        "LOGO_REACT_THREE_DREI": "/img/png/main_skills/logo_react_three_drei.png",
+        "LOGO_WEBGL": "/img/png/main_skills/logo_webgl.png"
+      }
     }
   },
   "SNAKE_GAME": {
