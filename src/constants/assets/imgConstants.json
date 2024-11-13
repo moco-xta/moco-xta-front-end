@@ -1,8 +1,8 @@
 {
   "HERO": {
     "MAIN_SKILLS": {
-      "LOGO_NEXTJS": "/img/png/main_skills/logo_nextjs.png",
       "LOGO_ANGULAR": "/img/png/main_skills/logo_angular.png",
+      "LOGO_NEXTJS": "/img/png/main_skills/logo_nextjs.png",
       "LOGO_SPRING": "/img/png/main_skills/logo_spring.png"
     }
   },

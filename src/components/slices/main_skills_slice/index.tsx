@@ -1,12 +1,14 @@
 import React from 'react'
+import Image from 'next/image'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import Parallax from '@/components/parallax'
-import MainSkillsCanvas from '@/components/three/canvas/main_skills_canvas/MainSkillsCanvas'
+
+import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 import './index.scss'
-import { gilroyBoldFont, gilroyHeavyFont, gilroyRegularFont } from '@/assets/fonts/ttf'
+import { gilroyHeavyFont } from '@/assets/fonts/ttf'
 
 export default function MainSkillsSlice() {
   useGSAP(() => {
@@ -18,7 +20,7 @@ export default function MainSkillsSlice() {
       // opacity: 0,
       // duration: 0.5,
       scrollTrigger: {
-        trigger: '#main_skills_slice',
+        trigger: '#what_are_my_skills',
         scroller: 'body',
         start: 'top 50%',
         end: 'bottom 50vh',
@@ -27,7 +29,7 @@ export default function MainSkillsSlice() {
         markers: true,
       },
     })
-    gsap.from('#main_framework_text', {
+    /* gsap.from('#main_framework_text', {
       translateY: 100,
       opacity: 0,
       delay: 1.5,
@@ -39,6 +41,22 @@ export default function MainSkillsSlice() {
         // end: 'bottom -50%',
         // toggleActions: 'restart pause reverse pause'
         // scrub: true,
+      },
+    }) */
+    gsap.from('.main_skills_detail', {
+      translateY: '40vh',
+      // opacity: 0,
+      // delay: 1.5,
+      // duration: 0.5,
+      stagger: -1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '#main_skills_details_wrapper',
+        scroller: 'body',
+        start: 'top 80%',
+        end: 'bottom 80%',
+        // toggleActions: 'restart pause reverse pause'
+        scrub: true,
       },
     })
   })
@@ -53,7 +71,7 @@ export default function MainSkillsSlice() {
     >
       <section
         id='main_skills_slice'
-        className='fullscreen'
+        // className='fullscreen'
       >
         <div id='main_skills_content'>
           <h1
@@ -66,26 +84,65 @@ export default function MainSkillsSlice() {
             <br />
             skills?
           </h1>
-          {/* <div id='main_frameworks'>
-            <MainSkillsCanvas />
-            <p id='main_framework_text'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
+          <div
+            id='main_skills_details_wrapper'
+            style={{
+              marginTop: '-15vh',
+            }}
+          >
+            <div
+              id='logo_nextjs_container'
+              style={{
+                paddingTop: '30vh',
+              }}
+            >
+              <Image
+                id='logo_nextjs'
+                className='main_skills_detail'
+                src={imgConstants.HERO.MAIN_SKILLS.LOGO_NEXTJS}
+                width={838}
+                height={942}
+                style={{
+                  maxWidth: '25vw',
+                  height: 'auto',
+                }}
+                alt='Logo Nextjs'
+              />
+            </div>
+            <div
+              id='logo_angular_container'
+              style={{
+                paddingTop: '15vh',
+              }}
+            >
+              <Image
+                id='logo_angular'
+                className='main_skills_detail'
+                src={imgConstants.HERO.MAIN_SKILLS.LOGO_ANGULAR}
+                width={781}
+                height={952}
+                style={{
+                  maxWidth: '25vw',
+                  height: 'auto',
+                }}
+                alt='Logo Angular'
+              />
+            </div>
+            <div id='logo_spring_container'>
+              <Image
+                id='logo_spring'
+                className='main_skills_detail'
+                src={imgConstants.HERO.MAIN_SKILLS.LOGO_SPRING}
+                width={855}
+                height={942}
+                style={{
+                  maxWidth: '25vw',
+                  height: 'auto',
+                }}
+                alt='Logo Spring'
+              />
+            </div>
           </div>
-          <div id='main_frameworks'>
-            <MainSkillsCanvas />
-            <p id='main_framework_text'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-          </div> */}
         </div>
       </section>
     </Parallax>

@@ -5,7 +5,7 @@ interface RubiksCubeInterface {
 }
 
 const initialState: RubiksCubeInterface = {
-  selectedPad: null
+  selectedPad: null,
 }
 
 const rubiksCubeSlice = createSlice({

@@ -16,10 +16,10 @@ export function addForce(
 ) {
   timeRef.current += delta * 2
   xRef.current =
-  // @ts-ignore
+    // @ts-ignore
     Math.cos(timeRef.current) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
   yRef.current =
-  // @ts-ignore
+    // @ts-ignore
     Math.sin(timeRef.current) * heroConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.ADD_FORCE.INTENSITY
   zRef.current =
     -Math.cos(
