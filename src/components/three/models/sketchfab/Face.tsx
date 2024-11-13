@@ -73,6 +73,7 @@ export function Face(props: JSX.IntrinsicElements['mesh']) {
     gl.setRenderTarget(renderTargetA)
     gl.render(scene, camera)
 
+    // @ts-ignore
     mesh.current.material.map = renderTargetA.texture
 
     /* gl.setRenderTarget(secondRenderTarget);

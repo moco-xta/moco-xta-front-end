@@ -24,13 +24,13 @@ export default function ProjectCard({ index, currentProject, projectData }: Proj
           >
             <h2>{projectData.name}</h2>
           </a>
-          <img
+          {/* <img
             className='home_page_img'
             src={projectData.image}
             width={619}
             height={400}
             alt={`${projectData.key}_image`}
-          />
+          /> */}
           <div className='project_description'>{t(projectData.descriptionsKey)}</div>
         </div>
         <div className='roles'>

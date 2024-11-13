@@ -5,7 +5,7 @@ import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/a
 
 export default function PostProcessing() {
   return (
-    <EffectComposer disableNormalPass>
+    <EffectComposer>
       <N8AO
         color={laboratoireFinalRenderConstants.POST_PROCESSING.NBA.COLOR}
         aoRadius={laboratoireFinalRenderConstants.POST_PROCESSING.NBA.AO_RADIUS}

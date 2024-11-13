@@ -119,6 +119,7 @@ export default function RapierPlayer({
       jumpForce,
       true,
     )
+    // @ts-ignore
     const grounded = ray && ray.collider && Math.abs(ray.toi) <= 1.5
 
     if (jump && grounded) doJump()

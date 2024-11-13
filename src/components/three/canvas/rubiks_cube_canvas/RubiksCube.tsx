@@ -53,7 +53,7 @@ export default function RubiksCube() {
           ),
         )}
       </group>
-      <RotationGroupAndButtons rubiksCubeRef={rubiksCubeRef} />
+      {/* <RotationGroupAndButtons rubiksCubeRef={rubiksCubeRef} /> */}
     </>
   )
 }

@@ -49,7 +49,7 @@ export function Button({ position, rotation, onClick, arrow, isRotating }: Butto
         <meshStandardMaterial
           attach='material'
           transparent
-          opacity={0}
+          opacity={0.5}
         />
       </mesh>
       {hovered && !isRotating && (

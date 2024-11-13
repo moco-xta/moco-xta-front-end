@@ -23,6 +23,14 @@ export default function RubiksCubeCanvas() {
         alpha: rubiksCubeConstants.CANVAS.GL.ALPHA,
         powerPreference: rubiksCubeConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
+      style={{
+        zIndex: 1,
+        position: 'absolute',
+        width: '100vw',
+        height: '100vh',
+        marginLeft: '30vw',
+      }}
+      // raycaster={{ params: { Line: { threshold: 0.1 } } }}
     >
       <PerspectiveCamera
         makeDefault
@@ -31,7 +39,7 @@ export default function RubiksCubeCanvas() {
           rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Y,
           rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
-        fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
+        // fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Lights />
       <Controls />

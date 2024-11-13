@@ -57,7 +57,7 @@ export const TextureSelector = () => {
         id='texture_selector'
         className='texture-selector'
       >
-        {Object.entries(images).map(([k, src]) => {
+        {/* {Object.entries(images).map(([k, src]) => {
           return (
             <img
               key={k}
@@ -66,7 +66,7 @@ export const TextureSelector = () => {
               className={`${k === texture ? 'active' : ''} texture`}
             />
           )
-        })}
+        })} */}
       </div>
     )
   )
