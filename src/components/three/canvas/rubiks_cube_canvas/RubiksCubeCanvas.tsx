@@ -1,14 +1,12 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
+import { Box, PerspectiveCamera } from '@react-three/drei'
 
 import Lights from './Lights'
 import Controls from './Controls'
-import RubiksCube from './RubiksCube'
-import PostProcessing from './PostProcessing'
-import { ToneMapping } from './ToneMapping'
 
 import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
+import RubiksCubeScene from './RubiksCubeScene'
 
 export default function RubiksCubeCanvas() {
   return (
@@ -24,13 +22,9 @@ export default function RubiksCubeCanvas() {
         powerPreference: rubiksCubeConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
       style={{
-        zIndex: 1,
-        position: 'absolute',
         width: '100vw',
         height: '100vh',
-        marginLeft: '30vw',
       }}
-      // raycaster={{ params: { Line: { threshold: 0.1 } } }}
     >
       <PerspectiveCamera
         makeDefault
@@ -39,14 +33,12 @@ export default function RubiksCubeCanvas() {
           rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Y,
           rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
-        // fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
+        fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Lights />
       <Controls />
       <Suspense>
-        <RubiksCube />
-        <PostProcessing />
-        <ToneMapping />
+        <RubiksCubeScene />
       </Suspense>
     </Canvas>
   )
