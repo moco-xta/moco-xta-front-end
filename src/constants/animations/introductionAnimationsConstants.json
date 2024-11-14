@@ -1,0 +1,16 @@
+{
+  "INTRODUCTION_TEXT": {
+    "SELECTOR": ".introduction_letter_span",
+    "PARAMS": {
+      "OPACITY": 0.5,
+      "STAGGER": 1,
+      "SCROLL_TRIGGER": {
+        "TRIGGER": "#introduction_slice",
+        "SCROLLER": "body",
+        "START": "-=300px",
+        "END": "-=50px",
+        "SCRUB": true
+      }
+    }
+  }
+}
