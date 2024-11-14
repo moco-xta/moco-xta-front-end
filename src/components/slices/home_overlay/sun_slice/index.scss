@@ -1,0 +1,14 @@
+@import '@/styles/variables.module.scss';
+
+#sun_slice {
+  z-index: -1;
+  position: fixed;
+
+  #sun_container {
+    position: absolute;
+    top: 15vh;
+    left: 50vw;
+    width: 400px;
+    height: 400px;
+  }
+}

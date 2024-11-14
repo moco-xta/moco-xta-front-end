@@ -8,20 +8,6 @@ import HomeOverlay from './HomeOverlay'
 
 import './index.scss'
 import ScrollToTop from '@/components/buttons/scroll_to_top'
-import Sun from '@/assets/svg/Sun'
-
-function SunContainer() {
-  return (
-    <div
-      className='fullscreen'
-      style={{ zIndex: -1, position: 'fixed' }}
-    >
-      <div style={{ position: 'absolute', top: '15vh', left: '50vw', width: 400, height: 400 }}>
-        <Sun />
-      </div>
-    </div>
-  )
-}
 
 export default function HomePage() {
   const lenisRef = useRef<LenisRef>(null!)
@@ -53,7 +39,6 @@ export default function HomePage() {
 
   return (
     <>
-      <SunContainer />
       <HeroCanvas />
       <HomeOverlay />
       <ScrollToTop />

@@ -4,6 +4,8 @@ import Heading from './Heading'
 
 import './index.scss'
 
+import Sun from '@/assets/svg/Sun'
+
 export default function HeroSlice() {
   return (
     <div

@@ -1,4 +1,4 @@
-import HeroSlice from '@/components/slices/hero_slice'
+import HeroSlice from '@/components/slices/home_overlay/hero_slice'
 import IntroductionSlice from '@/components/slices/introduction_slice'
 import MainSkillsSlice from '@/components/slices/main_skills_slice'
 import MindBendingScrollAnimation from '@/components/slices/mind_binding_scroll_animation'
