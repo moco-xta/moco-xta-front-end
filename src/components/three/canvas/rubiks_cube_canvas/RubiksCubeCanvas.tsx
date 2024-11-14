@@ -1,12 +1,12 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Box, PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera } from '@react-three/drei'
 
 import Lights from './Lights'
 import Controls from './Controls'
+import RubiksCube from './RubiksCube'
 
 import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
-import RubiksCubeScene from './RubiksCubeScene'
 
 export default function RubiksCubeCanvas() {
   return (
@@ -38,7 +38,7 @@ export default function RubiksCubeCanvas() {
       <Lights />
       <Controls />
       <Suspense>
-        <RubiksCubeScene />
+        <RubiksCube />
       </Suspense>
     </Canvas>
   )
