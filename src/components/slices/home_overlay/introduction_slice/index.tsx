@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
 import Parallax from '@/components/parallax'
+import InternalLinkButton from '@/components/buttons/internal_link_button'
 
 import './index.scss'
 
@@ -52,7 +53,12 @@ export default function IntroductionSlice() {
             )
           })}
         </p>
-        <div id='more_about_me_button'>{t('MORE_ABOUT_ME')}</div>
+        <div id='about_link_container'>
+          <InternalLinkButton
+            path={'/about'}
+            text={t('MORE_ABOUT_ME')}
+          />
+        </div>
       </section>
     </Parallax>
   )

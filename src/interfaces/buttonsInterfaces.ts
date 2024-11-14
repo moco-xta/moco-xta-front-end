@@ -3,6 +3,14 @@ import { ActionCreatorWithPayload } from '@reduxjs/toolkit'
 
 import { AddReviewValuesInterface } from './reduxApiInterfaces'
 
+export interface InternalLinkInterface {
+  path: string
+  text: string
+  style?: {
+    [key: string]: string
+  }
+}
+
 export interface MenuButtonInterface {
   type: 'open' | 'close'
 }
