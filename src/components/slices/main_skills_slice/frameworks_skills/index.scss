@@ -1,0 +1,14 @@
+@import '@/styles/variables.module.scss';
+
+#framework_skills_wrapper {
+  width: 100%;
+  margin-top: -15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .framework_skill {
+    max-width: 25vw;
+    height: auto;
+  }
+}

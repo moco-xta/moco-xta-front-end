@@ -28,7 +28,7 @@ const ColorPadWebgl = forwardRef<
   MeshProps
 >(function ColorPadWebgl({ name, position, rotation }, ref) {
   const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_WEBGL) as GLTFResult
-  
+
   const dispatch = useDispatch<AppDispatch>()
 
   const handleOnPointerEnter = (e: ThreeEvent<MouseEvent>) => {

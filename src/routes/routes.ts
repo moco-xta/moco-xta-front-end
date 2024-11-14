@@ -35,9 +35,4 @@ export const routes: RoutesInterface[] = [
     key: 'SKILLS',
     path: '/skills',
   },
-  /* {
-    index: 5,
-    key: 'SNAKE',
-    path: '/snake',
-  }, */
 ]

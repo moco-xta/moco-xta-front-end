@@ -6,32 +6,5 @@
   #main_skills_content {
     // width: 500px;
     margin: 100px;
-
-    #what_are_my_skills {
-      // margin-top: 800px;
-      // padding-top: 300px;
-      font-size: 10rem;
-      line-height: 100%;
-      text-transform: uppercase;
-      color: #ff130a;
-      // text-shadow: #ff130a 0px 0px 20px;
-      -webkit-text-stroke: 3px #ff130a;
-      // transform: perspective(1500px) rotateX(-45deg);
-      transform: rotateX(0deg) skew(0deg);
-
-      #what {
-        color: #fff0;
-        -webkit-text-stroke: 3px #ff130a;
-      }
-    }
-
-    #main_frameworks {
-      display: flex;
-      flex-direction: column;
-
-      #main_framework_text {
-        text-align: justify;
-      }
-    }
   }
 }

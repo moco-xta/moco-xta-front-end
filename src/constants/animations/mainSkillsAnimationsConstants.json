@@ -1,0 +1,60 @@
+{
+  "WHAT_ARE_MY_SKILLS": {
+    "SELECTOR": ".what_are_my_skills_text_blocks",
+    "PARAMS": {
+      "TRANSLATE_X": 75,
+      "TRANSFORM": "scaleY(0.6) skew(30deg)",
+      "OPACITY": 0,
+      "STAGGER": 0.2,
+      "SCROLL_TRIGGER": {
+        "TRIGGER": "#what_are_my_skills",
+        "SCROLLER": "body",
+        "START": "top 50%",
+        "END": "bottom 50%",
+        "SCRUB": true
+      }
+    }
+  },
+  "FRAMEWORK_SKILLS": {
+    "SELECTOR": ".framework_skill",
+    "PARAMS": {
+      "TRANSLATE_Y": "40vh",
+      "EASE": "power2.out",
+      "SCROLL_TRIGGER": {
+        "TRIGGER": "#framework_skills_wrapper",
+        "SCROLLER": "body",
+        "START": "top 120%",
+        "END": "bottom -20%",
+        "SCRUB": true
+      }
+    }
+  },
+  "LOGO_ANGULAR": {
+    "SELECTOR": "#logo_angular_container",
+    "PARAMS": {
+      "PADDING_TOP": "40vh",
+      "EASE": "power2.out",
+      "SCROLL_TRIGGER": {
+        "TRIGGER": "#framework_skills_wrapper",
+        "SCROLLER": "body",
+        "START": "top 120%",
+        "END": "bottom -20%",
+        "SCRUB": true
+      }
+    }
+  },
+  "LOGO_SPRING": {
+    "SELECTOR": "#logo_spring_container",
+    "PARAMS": {
+      "PADDING_TOP": "80vh",
+      "EASE": "power2.out",
+      "SCROLL_TRIGGER": {
+        "TRIGGER": "#framework_skills_wrapper",
+        "SCROLLER": "body",
+        "START": "top 120%",
+        "END": "bottom -20%",
+        "SCRUB": true
+      }
+    }
+  }
+}
