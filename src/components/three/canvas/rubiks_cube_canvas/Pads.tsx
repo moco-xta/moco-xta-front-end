@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { ThreeEvent } from '@react-three/fiber'
 
 import { PadsInterface } from '@/interfaces/rubiksCubeInterfaces'
 
@@ -10,6 +11,28 @@ import { setPadRotation, setRoundedCubeType } from '@/helpers/rubiks_cube/rubiks
 
 export default function Pads({ colorPadIndex, coordinates }: PadsInterface) {
   const padRef = useRef<THREE.Mesh>(null!)
+
+  const handleOnPointerEnter = (e: ThreeEvent<MouseEvent>) => {
+    e.stopPropagation()
+    console.log(padRef.current.name)
+    // @ts-ignore
+    padRef.current.material.emissiveIntensity = 5
+    // @ts-ignore
+    padRef.current.material.emissive = padRef.current.material.color
+  }
+
+  const handleOnPointerLeave = (e: ThreeEvent<MouseEvent>) => {
+    e.stopPropagation()
+    // @ts-ignore
+    padRef.current.material.emissiveIntensity = 1
+    // @ts-ignore
+    padRef.current.material.emissive = {
+      isColor: true,
+      r: 0,
+      g: 0,
+      b: 0,
+    }
+  }
 
   return (
     <>
@@ -29,6 +52,8 @@ export default function Pads({ colorPadIndex, coordinates }: PadsInterface) {
             key={`rubiks_cube_pad_${name}_${currentColorPadIndex}`}
             name={name}
             rotation={setPadRotation(coordinates, index)}
+            onPointerOver={handleOnPointerEnter}
+            onPointerLeave={handleOnPointerLeave}
           />
         )
       })}

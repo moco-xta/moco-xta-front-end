@@ -21,31 +21,8 @@ const ColorPadRedux = forwardRef<
     THREE.Object3DEventMap
   >,
   MeshProps
->(function ColorPadRedux({ name, position, rotation }, ref) {
+>(function ColorPadRedux({ name, position, rotation, onPointerOver, onPointerLeave }, ref) {
   const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_REDUX) as GLTFResult
-
-  const handleOnPointerEnter = (e: ThreeEvent<MouseEvent>) => {
-    e.stopPropagation()
-    // @ts-ignore
-    console.log(ref.current.name)
-    // @ts-ignore
-    ref.current.material.emissiveIntensity = 5
-    // @ts-ignore
-    ref.current.material.emissive = ref.current.material.color
-  }
-
-  const handleOnPointerLeave = (e: ThreeEvent<MouseEvent>) => {
-    e.stopPropagation()
-    // @ts-ignore
-    ref.current.material.emissiveIntensity = 1
-    // @ts-ignore
-    ref.current.material.emissive = {
-      isColor: true,
-      r: 0,
-      g: 0,
-      b: 0,
-    }
-  }
 
   return (
     <mesh
@@ -56,8 +33,8 @@ const ColorPadRedux = forwardRef<
       rotation={rotation}
       receiveShadow
       castShadow
-      onPointerOver={handleOnPointerEnter}
-      onPointerLeave={handleOnPointerLeave}
+      onPointerOver={onPointerOver}
+      onPointerLeave={onPointerLeave}
     >
       <meshStandardMaterial
         attach='material'
