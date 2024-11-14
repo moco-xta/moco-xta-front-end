@@ -1,16 +1,11 @@
 import React, { forwardRef } from 'react'
-import { useDispatch } from 'react-redux'
 import * as THREE from 'three'
 import { MeshProps, ThreeEvent } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { AppDispatch } from '@/redux/store'
-import { setSelectedPad } from '@/redux/slice/rubiksCubeSlice'
-
-import { LogoAngular } from '../logos'
-
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -29,13 +24,10 @@ const ColorPadBlender = forwardRef<
 >(function ColorPadBlender({ name, position, rotation }, ref) {
   const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_BLENDER) as GLTFResult
 
-  const dispatch = useDispatch<AppDispatch>()
-
   const handleOnPointerEnter = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation()
     // @ts-ignore
     console.log(ref.current.name)
-    dispatch(setSelectedPad(<LogoAngular />))
     // @ts-ignore
     ref.current.material.emissiveIntensity = 5
     // @ts-ignore
@@ -67,7 +59,10 @@ const ColorPadBlender = forwardRef<
       onPointerOver={handleOnPointerEnter}
       onPointerLeave={handleOnPointerLeave}
     >
-      <meshStandardMaterial attach='material' />
+      <meshStandardMaterial
+        attach='material'
+        roughness={rubiksCubeConstants.RUBIKS_CUBE.PADS.ROUGHNESS}
+      />
     </mesh>
   )
 })

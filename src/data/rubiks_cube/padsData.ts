@@ -24,7 +24,7 @@ const loadComponent = (component: string): LazyPadType =>
   )
 
 const padsComponents: Record<string, LazyPadType> = Array.from(
-  rubiksCubeConstants.RUBIKS_CUBE.PADS,
+  rubiksCubeConstants.RUBIKS_CUBE.PADS.COMPONENTS,
 ).reduce(
   (object, pad) => {
     object[pad.COMPONENT] = loadComponent(pad.COMPONENT)
@@ -43,11 +43,11 @@ interface PadJsonInterface {
   COMPONENT: string
 }
 
-export const padsData: PadDataInterface[] = Array.from(rubiksCubeConstants.RUBIKS_CUBE.PADS).map(
-  (pad: PadJsonInterface) => {
-    return {
-      name: pad.NAME,
-      component: padsComponents[pad.COMPONENT],
-    }
-  },
-)
+export const padsData: PadDataInterface[] = Array.from(
+  rubiksCubeConstants.RUBIKS_CUBE.PADS.COMPONENTS,
+).map((pad: PadJsonInterface) => {
+  return {
+    name: pad.NAME,
+    component: padsComponents[pad.COMPONENT],
+  }
+})

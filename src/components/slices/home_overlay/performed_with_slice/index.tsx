@@ -5,5 +5,12 @@ import RubiksCubeCanvas from '@/components/three/canvas/rubiks_cube_canvas/Rubik
 import './index.scss'
 
 export default function PerformedWithSlice() {
-  return <RubiksCubeCanvas />
+  return (
+    <section
+      id='performed_with_slice'
+      className='fullscreen'
+    >
+      <RubiksCubeCanvas />
+    </section>
+  )
 }

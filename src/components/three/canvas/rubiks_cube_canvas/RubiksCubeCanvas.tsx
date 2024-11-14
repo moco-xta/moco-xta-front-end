@@ -33,7 +33,7 @@ export default function RubiksCubeCanvas() {
           rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Y,
           rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
-        fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
+        // fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
       />
       <Lights />
       <Controls />

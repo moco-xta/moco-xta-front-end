@@ -4,6 +4,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -23,9 +24,8 @@ export function RoundedCube() {
     >
       <meshStandardMaterial
         attach='material'
-        color={'black'}
-        roughness={0.8}
-        transparent
+        color={rubiksCubeConstants.RUBIKS_CUBE.ROUNDED_CUBES.COLOR}
+        roughness={rubiksCubeConstants.RUBIKS_CUBE.ROUNDED_CUBES.ROUGHNESS}
       />
     </mesh>
   )

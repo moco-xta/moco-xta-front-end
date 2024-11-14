@@ -5,6 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -58,7 +59,10 @@ const ColorPadFormik = forwardRef<
       onPointerOver={handleOnPointerEnter}
       onPointerLeave={handleOnPointerLeave}
     >
-      <meshStandardMaterial attach='material' />
+      <meshStandardMaterial
+        attach='material'
+        roughness={rubiksCubeConstants.RUBIKS_CUBE.PADS.ROUGHNESS}
+      />
     </mesh>
   )
 })

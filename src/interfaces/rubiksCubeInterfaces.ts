@@ -3,6 +3,7 @@ import { MeshProps, ThreeEvent } from '@react-three/fiber'
 
 export interface CubeInterface {
   coordinates: THREE.Vector3
+  colorPadIndex: MutableRefObject<number>
 }
 
 export interface IntersectCubeInterface {

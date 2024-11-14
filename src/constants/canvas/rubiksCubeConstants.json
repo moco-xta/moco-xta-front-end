@@ -10,9 +10,9 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "X": 5,
-      "Y": 5,
-      "Z": 5
+      "X": 6.5,
+      "Y": 6.5,
+      "Z": 6.5
     },
     "FOV": 55
   },
@@ -81,117 +81,124 @@
   },
   "RUBIKS_CUBE": {
     "WIDTH": 3,
-    "PADS": [
-      {
-        "NAME": "color_pad_blender",
-        "COMPONENT": "ColorPadBlender"
-      },
-      {
-        "NAME": "color_pad_chat_gpt",
-        "COMPONENT": "ColorPadChatGpt"
-      },
-      {
-        "NAME": "color_pad_css",
-        "COMPONENT": "ColorPadCss"
-      },
-      {
-        "NAME": "color_pad_docker",
-        "COMPONENT": "ColorPadDocker"
-      },
-      {
-        "NAME": "color_pad_figma",
-        "COMPONENT": "ColorPadFigma"
-      },
-      {
-        "NAME": "color_pad_formik",
-        "COMPONENT": "ColorPadFormik"
-      },
-      {
-        "NAME": "color_pad_github",
-        "COMPONENT": "ColorPadGithub"
-      },
-      {
-        "NAME": "color_pad_google_analytics",
-        "COMPONENT": "ColorPadGoogleAnalytics"
-      },
-      {
-        "NAME": "color_pad_gsap",
-        "COMPONENT": "ColorPadGsap"
-      },
-      {
-        "NAME": "color_pad_hostinger",
-        "COMPONENT": "ColorPadHostinger"
-      },
-      {
-        "NAME": "color_pad_html",
-        "COMPONENT": "ColorPadHtml"
-      },
-      {
-        "NAME": "color_pad_illustrator",
-        "COMPONENT": "ColorPadIllustrator"
-      },
-      {
-        "NAME": "color_pad_java",
-        "COMPONENT": "ColorPadJava"
-      },
-      {
-        "NAME": "color_pad_javascript",
-        "COMPONENT": "ColorPadJavascript"
-      },
-      {
-        "NAME": "color_pad_next",
-        "COMPONENT": "ColorPadNext"
-      },
-      {
-        "NAME": "color_pad_next_intl",
-        "COMPONENT": "ColorPadNextIntl"
-      },
-      {
-        "NAME": "color_pad_nginx",
-        "COMPONENT": "ColorPadNginx"
-      },
-      {
-        "NAME": "color_pad_npm",
-        "COMPONENT": "ColorPadNpm"
-      },
-      {
-        "NAME": "color_pad_photoshop",
-        "COMPONENT": "ColorPadPhotoshop"
-      },
-      {
-        "NAME": "color_pad_postgresql",
-        "COMPONENT": "ColorPadPostgresql"
-      },
-      {
-        "NAME": "color_pad_postman",
-        "COMPONENT": "ColorPadPostman"
-      },
-      {
-        "NAME": "color_pad_react_three_drei",
-        "COMPONENT": "ColorPadReactThreeDrei"
-      },
-      {
-        "NAME": "color_pad_redux",
-        "COMPONENT": "ColorPadRedux"
-      },
-      {
-        "NAME": "color_pad_sass",
-        "COMPONENT": "ColorPadSass"
-      },
-      {
-        "NAME": "color_pad_spring",
-        "COMPONENT": "ColorPadSpring"
-      },
-      {
-        "NAME": "color_pad_typescript",
-        "COMPONENT": "ColorPadTypescript"
-      },
-      {
-        "NAME": "color_pad_webgl",
-        "COMPONENT": "ColorPadWebgl"
-      }
-    ],
-    "COLORS": [
+    "ROUNDED_CUBES": {
+      "COLOR": "black",
+      "ROUGHNESS": 0.75
+    },
+    "PADS": {
+      "ROUGHNESS": 0.75,
+      "COMPONENTS": [
+        {
+          "NAME": "color_pad_blender",
+          "COMPONENT": "ColorPadBlender"
+        },
+        {
+          "NAME": "color_pad_chat_gpt",
+          "COMPONENT": "ColorPadChatGpt"
+        },
+        {
+          "NAME": "color_pad_css",
+          "COMPONENT": "ColorPadCss"
+        },
+        {
+          "NAME": "color_pad_docker",
+          "COMPONENT": "ColorPadDocker"
+        },
+        {
+          "NAME": "color_pad_figma",
+          "COMPONENT": "ColorPadFigma"
+        },
+        {
+          "NAME": "color_pad_formik",
+          "COMPONENT": "ColorPadFormik"
+        },
+        {
+          "NAME": "color_pad_github",
+          "COMPONENT": "ColorPadGithub"
+        },
+        {
+          "NAME": "color_pad_google_analytics",
+          "COMPONENT": "ColorPadGoogleAnalytics"
+        },
+        {
+          "NAME": "color_pad_gsap",
+          "COMPONENT": "ColorPadGsap"
+        },
+        {
+          "NAME": "color_pad_hostinger",
+          "COMPONENT": "ColorPadHostinger"
+        },
+        {
+          "NAME": "color_pad_html",
+          "COMPONENT": "ColorPadHtml"
+        },
+        {
+          "NAME": "color_pad_illustrator",
+          "COMPONENT": "ColorPadIllustrator"
+        },
+        {
+          "NAME": "color_pad_java",
+          "COMPONENT": "ColorPadJava"
+        },
+        {
+          "NAME": "color_pad_javascript",
+          "COMPONENT": "ColorPadJavascript"
+        },
+        {
+          "NAME": "color_pad_next",
+          "COMPONENT": "ColorPadNext"
+        },
+        {
+          "NAME": "color_pad_next_intl",
+          "COMPONENT": "ColorPadNextIntl"
+        },
+        {
+          "NAME": "color_pad_nginx",
+          "COMPONENT": "ColorPadNginx"
+        },
+        {
+          "NAME": "color_pad_npm",
+          "COMPONENT": "ColorPadNpm"
+        },
+        {
+          "NAME": "color_pad_photoshop",
+          "COMPONENT": "ColorPadPhotoshop"
+        },
+        {
+          "NAME": "color_pad_postgresql",
+          "COMPONENT": "ColorPadPostgresql"
+        },
+        {
+          "NAME": "color_pad_postman",
+          "COMPONENT": "ColorPadPostman"
+        },
+        {
+          "NAME": "color_pad_react_three_drei",
+          "COMPONENT": "ColorPadReactThreeDrei"
+        },
+        {
+          "NAME": "color_pad_redux",
+          "COMPONENT": "ColorPadRedux"
+        },
+        {
+          "NAME": "color_pad_sass",
+          "COMPONENT": "ColorPadSass"
+        },
+        {
+          "NAME": "color_pad_spring",
+          "COMPONENT": "ColorPadSpring"
+        },
+        {
+          "NAME": "color_pad_typescript",
+          "COMPONENT": "ColorPadTypescript"
+        },
+        {
+          "NAME": "color_pad_webgl",
+          "COMPONENT": "ColorPadWebgl"
+        }
+      ]
+    },
+    "PADS_COLORS": [
       "rgb(255, 0, 0)",
       "rgb(0, 255, 0)",
       "rgb(0, 0, 255)",
