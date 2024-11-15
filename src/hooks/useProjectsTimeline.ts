@@ -1,19 +1,14 @@
 import { useEffect, useState } from 'react'
 
-import useScroll from '@/hooks/useScroll'
+import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
-import { CompanyOrSchollDataInterface, ProjectDataInterface } from '@/interfaces/dataInterfaces'
+import useLenisScroll from '@/hooks/useLenisScroll'
 
 import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 
-export default function useProjectsTimeline(
-  projectsData: ProjectDataInterface[],
-  companiesAndSchoolData: CompanyOrSchollDataInterface[],
-) {
-  const { y, offsetHeight, clientHeight } = useScroll()
+export default function useProjectsTimeline(projectsData: ProjectDataInterface[]) {
+  const { y, offsetHeight } = useLenisScroll()
 
-  const [currentProject, setCurrentProject] = useState<number>(0)
-  const [currentCompanyOrSchool, setCurrentCompanyOrSchool] = useState<number>(0)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
     getDifferenceBetweenTwoDatesInDays(
@@ -24,39 +19,12 @@ export default function useProjectsTimeline(
   const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
 
   useEffect(() => {
-    if (offsetHeight && clientHeight) {
-      setCurrentDate(new Date())
-      setDeltaPerDay((offsetHeight - clientHeight) / daysDifference)
-    }
-  }, [offsetHeight, clientHeight, daysDifference])
+    if (offsetHeight) setDeltaPerDay(offsetHeight / daysDifference)
+  }, [offsetHeight, daysDifference])
 
   useEffect(() => {
-    const differenceBetweenTodayAndCurrentDate = Math.round(y / deltaPerDay)
-    setCurrentDate(
-      new Date(new Date().setDate(new Date().getDate() - differenceBetweenTodayAndCurrentDate)),
-    )
+    setCurrentDate(new Date(new Date().setDate(new Date().getDate() - Math.round(y / deltaPerDay))))
   }, [y, deltaPerDay])
 
-  useEffect(() => {
-    projectsData.forEach((project, index) => {
-      if (
-        currentDate.getTime() > new Date(project.dates.from).getTime() &&
-        currentDate.getTime() < new Date(project.dates.to).getTime()
-      )
-        setCurrentProject(index)
-    })
-    companiesAndSchoolData.forEach((companyOrSchool, index) => {
-      if (
-        currentDate.getTime() > new Date(companyOrSchool.dates.from).getTime() &&
-        currentDate.getTime() < new Date(companyOrSchool.dates.to).getTime()
-      )
-        setCurrentCompanyOrSchool(index)
-    })
-  }, [currentDate, projectsData, companiesAndSchoolData])
-
-  return {
-    currentProject,
-    currentCompanyOrSchool,
-    currentDate,
-  }
+  return { currentDate }
 }

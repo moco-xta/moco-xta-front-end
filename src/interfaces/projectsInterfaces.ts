@@ -31,8 +31,6 @@ export interface CompanyOrSchollDataInterface {
 
 export interface TimelineInterface {
   currentDate: Date
-  currentProject: number
-  projectsData: ProjectDataInterface[]
 }
 
 export interface ProjectCardsInterface {

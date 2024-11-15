@@ -1,4 +1,9 @@
 @import '@/styles/variables.module.scss';
 
-#project_slice {
+#projects_timeline_container {
+  width: 100vw;
+
+  #projects_slice {
+    position: fixed;
+  }
 }
