@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react'
 
-import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
+import { CompanyOrSchollDataInterface, ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
 import useLenisScroll from '@/hooks/useLenisScroll'
 
 import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 
-export default function useProjectsTimeline(projectsData: ProjectDataInterface[]) {
+export default function useProjectsTimeline(
+  projectsData: ProjectDataInterface[],
+  companiesAndSchoolData: CompanyOrSchollDataInterface[],
+) {
   const { y, offsetHeight } = useLenisScroll()
 
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
@@ -17,6 +20,8 @@ export default function useProjectsTimeline(projectsData: ProjectDataInterface[]
     ),
   )
   const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
+  const [currentProject, setCurrentProject] = useState<number>(0)
+  const [currentCompanyOrSchool, setCurrentCompanyOrSchool] = useState<number>(0)
 
   useEffect(() => {
     if (offsetHeight) setDeltaPerDay(offsetHeight / daysDifference)
@@ -26,5 +31,22 @@ export default function useProjectsTimeline(projectsData: ProjectDataInterface[]
     setCurrentDate(new Date(new Date().setDate(new Date().getDate() - Math.round(y / deltaPerDay))))
   }, [y, deltaPerDay])
 
-  return { currentDate }
+  useEffect(() => {
+    projectsData.forEach((project, index) => {
+      if (
+        currentDate.getTime() > new Date(project.dates.from).getTime() &&
+        currentDate.getTime() < new Date(project.dates.to).getTime()
+      )
+        setCurrentProject(index)
+    })
+    companiesAndSchoolData.forEach((companyOrSchool, index) => {
+      if (
+        currentDate.getTime() > new Date(companyOrSchool.dates.from).getTime() &&
+        currentDate.getTime() < new Date(companyOrSchool.dates.to).getTime()
+      )
+        setCurrentCompanyOrSchool(index)
+    })
+  }, [currentDate, projectsData, companiesAndSchoolData])
+
+  return { currentDate, currentProject, currentCompanyOrSchool }
 }
