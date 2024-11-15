@@ -24,8 +24,8 @@ export function RoundedCube() {
     >
       <meshStandardMaterial
         attach='material'
-        color={rubiksCubeConstants.RUBIKS_CUBE.ROUNDED_CUBES.COLOR}
-        roughness={rubiksCubeConstants.RUBIKS_CUBE.ROUNDED_CUBES.ROUGHNESS}
+        color={rubiksCubeConstants.RUBIKS_CUBE.ROUNDED_CUBES.MATERIAL.COLOR}
+        roughness={rubiksCubeConstants.RUBIKS_CUBE.ROUNDED_CUBES.MATERIAL.ROUGHNESS}
       />
     </mesh>
   )

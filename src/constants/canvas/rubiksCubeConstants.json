@@ -82,8 +82,10 @@
   "RUBIKS_CUBE": {
     "WIDTH": 3,
     "ROUNDED_CUBES": {
-      "COLOR": "black",
-      "ROUGHNESS": 0.75
+      "MATERIAL": {
+        "COLOR": "black",
+        "ROUGHNESS": 0.75
+      }
     },
     "PADS": {
       "ROUGHNESS": 0.75,
@@ -206,655 +208,667 @@
       "rgb(0, 255, 255)",
       "rgb(255, 255, 255)"
     ],
-    "BUTTONS": [
-      {
-        "FUNCTION": "handleBackCCW",
-        "ARROW": "left",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": -2
-            },
-            "ROTATION": {
-              "X": 0,
-              "Y": 90,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": -2
-            },
-            "ROTATION": {
-              "X": 0,
-              "Y": -90,
-              "Z": 180
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": -2
-            },
-            "ROTATION": {
-              "X": 90,
-              "Y": 0,
-              "Z": -90
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": -2
-            },
-            "ROTATION": {
-              "X": -90,
-              "Y": 0,
-              "Z": 90
-            }
-          }
-        ]
+    "BUTTONS": {
+      "MATERIAL": {
+        "OPACITY": 0
       },
-      {
-        "FUNCTION": "handleBackCW",
-        "ARROW": "right",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": -2
+      "TEST": [
+        {
+          "FUNCTION": "handleBackCCW",
+          "ARROW": "left",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 0,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": -90,
+                "Z": 180
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 0,
-              "Z": 180
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 0,
+                "Z": -90
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 0,
-              "Z": -90
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 0,
+                "Z": 90
+              }
             }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": -2
+          ]
+        },
+        {
+          "FUNCTION": "handleBackCW",
+          "ARROW": "right",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 0,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 0,
-              "Z": 90
-            }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleBottomCCW",
-        "ARROW": "left",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 0,
+                "Z": 180
+              }
             },
-            "ROTATION": {
-              "X": 90,
-              "Y": -90,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 0,
+                "Z": -90
+              }
             },
-            "ROTATION": {
-              "X": -90,
-              "Y": 90,
-              "Z": 0
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 0,
+                "Z": 90
+              }
             }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": 2
+          ]
+        },
+        {
+          "FUNCTION": "handleBottomCCW",
+          "ARROW": "left",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": -90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 0,
-              "Z": -90
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 180,
-              "Y": 0,
-              "Z": 90
-            }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleBottomCW",
-        "ARROW": "right",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 0,
+                "Z": -90
+              }
             },
-            "ROTATION": {
-              "X": 90,
-              "Y": 180,
-              "Z": 0
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 180,
+                "Y": 0,
+                "Z": 90
+              }
             }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": -2
+          ]
+        },
+        {
+          "FUNCTION": "handleBottomCW",
+          "ARROW": "right",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 180,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": -90,
-              "Y": 0,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 0,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": -90,
-              "Y": 0,
-              "Z": -90
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 0,
+                "Z": -90
+              }
             },
-            "ROTATION": {
-              "X": -90,
-              "Y": 0,
-              "Z": 90
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 0,
+                "Z": 90
+              }
             }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleFrontCCW",
-        "ARROW": "left",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": 2
+          ]
+        },
+        {
+          "FUNCTION": "handleFrontCCW",
+          "ARROW": "left",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": -90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": -90,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 90,
+                "Z": 180
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 90,
-              "Z": 180
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 0,
+                "Z": -90
+              }
             },
-            "ROTATION": {
-              "X": -90,
-              "Y": 0,
-              "Z": -90
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 0,
+                "Z": 90
+              }
             }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": 2
+          ]
+        },
+        {
+          "FUNCTION": "handleFrontCW",
+          "ARROW": "right",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 180,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 90,
-              "Y": 0,
-              "Z": 90
-            }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleFrontCW",
-        "ARROW": "right",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 180,
+                "Z": 180
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 180,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 180,
+                "Y": 0,
+                "Z": -90
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 180,
-              "Z": 180
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 180,
+                "Y": 0,
+                "Z": 90
+              }
             }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": 2
+          ]
+        },
+        {
+          "FUNCTION": "handleLeftCCW",
+          "ARROW": "left",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 180,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 180,
-              "Y": 0,
-              "Z": -90
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 0,
+                "Z": 180
+              }
             },
-            "ROTATION": {
-              "X": 180,
-              "Y": 0,
-              "Z": 90
-            }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleLeftCCW",
-        "ARROW": "left",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 180,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 180,
-              "Z": 0
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 180,
+                "Z": 0
+              }
             }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": 2
+          ]
+        },
+        {
+          "FUNCTION": "handleLeftCW",
+          "ARROW": "right",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 0,
-              "Z": 180
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 90,
+                "Z": 180
+              }
             },
-            "ROTATION": {
-              "X": 90,
-              "Y": 180,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": -90,
-              "Y": 180,
-              "Z": 0
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 90,
+                "Z": 0
+              }
             }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleLeftCW",
-        "ARROW": "right",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": 2
+          ]
+        },
+        {
+          "FUNCTION": "handleRightCCW",
+          "ARROW": "left",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 0,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 90,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 180,
+                "Z": 180
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 90,
-              "Z": 180
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": -2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 0,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 90,
-              "Y": 90,
-              "Z": 0
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 0,
+                "Z": 0
+              }
             }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": -2
+          ]
+        },
+        {
+          "FUNCTION": "handleRightCW",
+          "ARROW": "right",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": -90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": -90,
-              "Y": 90,
-              "Z": 0
-            }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleRightCCW",
-        "ARROW": "left",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": -90,
+                "Z": 180
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 0,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": -90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": 180,
-              "Z": 180
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": -2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": -90,
+                "Z": 0
+              }
             }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": 2
+          ]
+        },
+        {
+          "FUNCTION": "handleTopCCW",
+          "ARROW": "left",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 90,
-              "Y": 0,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": -90,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": -90,
-              "Y": 0,
-              "Z": 0
-            }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleRightCW",
-        "ARROW": "right",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 180,
+                "Y": 0,
+                "Z": -90
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": -90,
-              "Z": 0
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 0,
+                "Y": 0,
+                "Z": 90
+              }
             }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": 2
+          ]
+        },
+        {
+          "FUNCTION": "handleTopCW",
+          "ARROW": "right",
+          "GEOMETRIES": [
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 0,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 0,
-              "Y": -90,
-              "Z": 180
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": 2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": -90,
+                "Y": 180,
+                "Z": 0
+              }
             },
-            "ROTATION": {
-              "X": 90,
-              "Y": -90,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": -2,
-              "Z": -2
+            {
+              "POSITION": {
+                "X": 2,
+                "Y": 2,
+                "Z": 2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 0,
+                "Z": -90
+              }
             },
-            "ROTATION": {
-              "X": -90,
-              "Y": -90,
-              "Z": 0
+            {
+              "POSITION": {
+                "X": -2,
+                "Y": 2,
+                "Z": -2
+              },
+              "ROTATION": {
+                "X": 90,
+                "Y": 0,
+                "Z": 90
+              }
             }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleTopCCW",
-        "ARROW": "left",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": 2
-            },
-            "ROTATION": {
-              "X": 90,
-              "Y": 90,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": -2
-            },
-            "ROTATION": {
-              "X": -90,
-              "Y": -90,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": -2
-            },
-            "ROTATION": {
-              "X": 180,
-              "Y": 0,
-              "Z": -90
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": 2
-            },
-            "ROTATION": {
-              "X": 0,
-              "Y": 0,
-              "Z": 90
-            }
-          }
-        ]
-      },
-      {
-        "FUNCTION": "handleTopCW",
-        "ARROW": "right",
-        "GEOMETRIES": [
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": 2
-            },
-            "ROTATION": {
-              "X": 90,
-              "Y": 0,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": -2
-            },
-            "ROTATION": {
-              "X": -90,
-              "Y": 180,
-              "Z": 0
-            }
-          },
-          {
-            "POSITION": {
-              "X": 2,
-              "Y": 2,
-              "Z": 2
-            },
-            "ROTATION": {
-              "X": 90,
-              "Y": 0,
-              "Z": -90
-            }
-          },
-          {
-            "POSITION": {
-              "X": -2,
-              "Y": 2,
-              "Z": -2
-            },
-            "ROTATION": {
-              "X": 90,
-              "Y": 0,
-              "Z": 90
-            }
-          }
-        ]
-      }
-    ]
+          ]
+        }
+      ]
+    }
+  },
+  "ARROWS": {
+    "MATERIAL": {
+      "COLOR": "#fff",
+      "EMISSIVE": "#fff",
+      "EMISSIVE_INTENSITY": 1
+    }
   }
 }

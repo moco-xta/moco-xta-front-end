@@ -1,5 +1,5 @@
-import React, { useRef } from 'react'
-import { ThreeEvent } from '@react-three/fiber'
+import React, { useEffect, useRef } from 'react'
+import { ThreeEvent, useThree } from '@react-three/fiber'
 
 import { PadsInterface } from '@/interfaces/rubiksCubeInterfaces'
 
@@ -14,7 +14,7 @@ export default function Pads({ colorPadIndex, coordinates }: PadsInterface) {
 
   const handleOnPointerEnter = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation()
-    console.log(padRef.current.name)
+    console.log(padRef.current)
     // @ts-ignore
     padRef.current.material.emissiveIntensity = 5
     // @ts-ignore

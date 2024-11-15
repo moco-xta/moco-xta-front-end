@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
 import CubeGroup from './CubeGroup'
+import RotationGroupsAndButtons from './RotationGroupsAndButtons'
 
 import { setCubeCoordinates, setPadColor } from '@/helpers/rubiks_cube/rubiksCubeHelpers'
 
@@ -30,26 +31,29 @@ export default function RubiksCube() {
   }, [rubiksCubeRef, colors])
 
   return (
-    <group ref={rubiksCubeRef}>
-      {[...Array(rubiksCubeConstants.RUBIKS_CUBE.WIDTH)].map((_, x) =>
-        [...Array(rubiksCubeConstants.RUBIKS_CUBE.WIDTH)].map((_, y) =>
-          [...Array(rubiksCubeConstants.RUBIKS_CUBE.WIDTH)].map((_, z) => {
-            const coordinates = setCubeCoordinates(x, y, z)
+    <>
+      <group ref={rubiksCubeRef}>
+        {[...Array(rubiksCubeConstants.RUBIKS_CUBE.WIDTH)].map((_, x) =>
+          [...Array(rubiksCubeConstants.RUBIKS_CUBE.WIDTH)].map((_, y) =>
+            [...Array(rubiksCubeConstants.RUBIKS_CUBE.WIDTH)].map((_, z) => {
+              const coordinates = setCubeCoordinates(x, y, z)
 
-            return (
-              <>
-                {!(coordinates.x === 0 && coordinates.y === 0 && coordinates.z === 0) && (
-                  <CubeGroup
-                    key={`cube_group_${x}_${y}_${z}`}
-                    coordinates={coordinates}
-                    colorPadIndex={colorPadIndex}
-                  />
-                )}
-              </>
-            )
-          }),
-        ),
-      )}
-    </group>
+              return (
+                <>
+                  {!(coordinates.x === 0 && coordinates.y === 0 && coordinates.z === 0) && (
+                    <CubeGroup
+                      key={`cube_group_${x}_${y}_${z}`}
+                      coordinates={coordinates}
+                      colorPadIndex={colorPadIndex}
+                    />
+                  )}
+                </>
+              )
+            }),
+          ),
+        )}
+      </group>
+      <RotationGroupsAndButtons rubiksCubeRef={rubiksCubeRef} />
+    </>
   )
 }

@@ -38,6 +38,7 @@ export function setPadRotation(coordinates: THREE.Vector3, index: number) {
       THREE.MathUtils.degToRad(x),
       THREE.MathUtils.degToRad(y),
       THREE.MathUtils.degToRad(z),
+      'XYZ',
     )
   }
 

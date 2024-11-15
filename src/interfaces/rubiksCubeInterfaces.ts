@@ -21,7 +21,7 @@ export interface PadsInterface {
   coordinates: THREE.Vector3
 }
 
-export interface RotationGroupInterface {
+export interface RotationGroupsAndButtonsInterface {
   rubiksCubeRef: Ref<THREE.Group>
 }
 
