@@ -1,13 +1,4 @@
 @import '@/styles/variables.module.scss';
 
-#project_timeline_container {
-  width: 100vw;
-  height: 800vh;
-
-  #project_slice {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    // transition: background-color 1s linear;
-  }
+#project_slice {
 }
