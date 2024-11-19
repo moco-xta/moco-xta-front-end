@@ -18,6 +18,9 @@ $grey_dark: #515151;
 $grey_darker: #292929;
 $black: #000000;
 
+$gamma_red: #ff204e;
+$gamma_violet: #322255;
+
 $primary_light_color: #408aca;
 $primary_light_rgba_color: rgba(64, 138, 202, 0.5);
 $primary_dark_color: #0a569a;
@@ -231,6 +234,9 @@ $responsive_XXXXS: #f72585;
   grey_darker: $grey_darker;
   black: $black;
   fluorescent_yellow: $fluorescent_yellow;
+
+  gamma_red: $gamma_red;
+  gamma_violet: $gamma_violet;
 
   input_background: $input_background;
   input_radio_checked_color: $input_radio_checked_color;

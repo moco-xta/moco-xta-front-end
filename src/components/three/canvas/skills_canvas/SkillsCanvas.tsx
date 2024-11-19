@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
 import SkillScene from './SkillsScene'
 
@@ -21,6 +21,7 @@ export default function SkillsCanvas() {
         powerPreference: skillsConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
       style={{
+        position: 'fixed',
         width: '100vw',
         height: '100vh',
       }}
@@ -34,6 +35,7 @@ export default function SkillsCanvas() {
         ]}
         fov={skillsConstants.PERSPECTIVE_CAMERA.FOV}
       />
+      <OrbitControls enableZoom={false} />
       <ambientLight intensity={skillsConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
       <Suspense>
         <SkillScene />

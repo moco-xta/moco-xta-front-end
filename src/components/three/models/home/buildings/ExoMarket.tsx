@@ -4,29 +4,50 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
+
+import variables from '@/styles/variables.module.scss'
 
 type GLTFResult = GLTF & {
   nodes: {
-    ExoMarket: THREE.Mesh
+    ExoMarket_1: THREE.Mesh
+    ExoMarket_2: THREE.Mesh
+    ExoMarket_3: THREE.Mesh
+    ExoMarket_4: THREE.Mesh
   }
-  materials: {}
+  materials: {
+    exo_market: THREE.MeshStandardMaterial
+    exo_market_signboard: THREE.MeshStandardMaterial
+    exo_market_signboard_text: THREE.MeshStandardMaterial
+    exo_market_windows: THREE.MeshStandardMaterial
+  }
 }
 
 export function ExoMarket(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(glbConstants.HOME.EXO_MARKET) as GLTFResult
-
-  const exoMarketMap = new THREE.TextureLoader().load(texturesConstants.HOME.EXO_MARKET.DIFFUSE)
-  exoMarketMap.flipY = false
-
-  const exoMarketRoughnessMap = new THREE.TextureLoader().load(
-    texturesConstants.HOME.EXO_MARKET.ROUGHNESS,
-  )
-  exoMarketRoughnessMap.flipY = false
+  const { nodes } = useGLTF(glbConstants.HOME.EXO_MARKET) as GLTFResult
 
   const exoMarketMaterial = new THREE.MeshStandardMaterial({
-    map: exoMarketMap,
-    /* roughnessMap: exoMarketRoughnessMap, */
+    color: variables.gamma_violet,
+    roughness: 0,
+  })
+
+  const signBoardMaterial = new THREE.MeshStandardMaterial({
+    color: variables.gamma_violet,
+    roughness: 0,
+    // metalness: 1,
+    emissive: variables.gamma_violet,
+    emissiveIntensity: 0.5,
+  })
+
+  const signBoardTextMaterial = new THREE.MeshStandardMaterial({
+    color: variables.gamma_red,
+    emissive: variables.gamma_red,
+    emissiveIntensity: 1,
+  })
+
+  const windowsMaterial = new THREE.MeshStandardMaterial({
+    color: variables.gamma_red,
+    emissive: variables.gamma_red,
+    emissiveIntensity: 2,
   })
 
   return (
@@ -35,9 +56,30 @@ export function ExoMarket(props: JSX.IntrinsicElements['group']) {
       dispose={null}
     >
       <mesh
-        name='ExoMarket'
-        geometry={nodes.ExoMarket.geometry}
+        name='ExoMarket_1'
+        geometry={nodes.ExoMarket_1.geometry}
         material={exoMarketMaterial}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        name='ExoMarket_2'
+        geometry={nodes.ExoMarket_2.geometry}
+        material={signBoardTextMaterial}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        name='ExoMarket_3'
+        geometry={nodes.ExoMarket_3.geometry}
+        material={windowsMaterial}
+        receiveShadow
+        castShadow
+      />
+      <mesh
+        name='ExoMarket_4'
+        geometry={nodes.ExoMarket_4.geometry}
+        material={signBoardMaterial}
         receiveShadow
         castShadow
       />

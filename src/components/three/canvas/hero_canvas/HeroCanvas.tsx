@@ -11,6 +11,7 @@ import Lights from './Lights'
 import HomeScene from './HomeScene'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
+import PostProcessing from './PostProcessing'
 
 studio.extend(extension)
 studio.initialize()
@@ -43,6 +44,7 @@ export default function HeroCanvas() {
             <Camera />
             <Lights />
             <HomeScene />
+            <PostProcessing />
           </SheetProvider>
         </Suspense>
       </Canvas>

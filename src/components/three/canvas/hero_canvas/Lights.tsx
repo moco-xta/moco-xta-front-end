@@ -4,13 +4,18 @@ import { useHelper } from '@react-three/drei'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
+import variables from '@/styles/variables.module.scss'
+
 export default function Lights() {
   const ref = useRef<THREE.DirectionalLight>(null!)
   /* useHelper(ref, THREE.DirectionalLightHelper) */
 
   return (
     <>
-      <ambientLight intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY} />
+      <ambientLight
+        // color={variables.gamma_red}
+        intensity={heroConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
+      />
       <directionalLight
         ref={ref}
         position={[

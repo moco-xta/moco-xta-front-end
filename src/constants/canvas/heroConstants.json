@@ -24,7 +24,7 @@
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
-      "INTENSITY": 0.25
+      "INTENSITY": 1
     },
     "DIRECTIONAL_LIGHT": {
       "POSITION": {

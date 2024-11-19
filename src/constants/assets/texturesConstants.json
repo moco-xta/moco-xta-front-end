@@ -516,6 +516,10 @@
     "EXO_MARKET": {
       "DIFFUSE": "/img/textures/home/exo_market_DIFFUSE.jpg",
       "ROUGHNESS": "/img/textures/home/exo_market_ROUGHNESS.png"
+    },
+    "GANESH": {
+      "DIFFUSE": "/img/textures/home/ganesh.jpg",
+      "DIFFUSE_RED": "/img/textures/home/ganesh_gamma_red.jpg"
     }
   },
   "LIRA": {

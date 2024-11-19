@@ -19,7 +19,7 @@ export default function ProjectsSlice() {
 
   return (
     <div
-      id='projects_timeline_container'
+      id='projects_timeline_scroller'
       style={{ height: `${projectsData.length}00vh` }}
     >
       <section
