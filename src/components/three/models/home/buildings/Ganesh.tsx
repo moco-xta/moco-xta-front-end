@@ -22,7 +22,7 @@ export function Ganesh(props: JSX.IntrinsicElements['mesh']) {
 
   const ganeshMap = useTextureLoader(
     // @ts-ignore
-    texturesConstants.HOME.GANESH.DIFFUSE
+    texturesConstants.HOME.GANESH.DIFFUSE,
   )
   ganeshMap.flipY = false
 

@@ -26,27 +26,27 @@ export function ExoMarket(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(glbConstants.HOME.EXO_MARKET) as GLTFResult
 
   const exoMarketMaterial = new THREE.MeshStandardMaterial({
-    color: variables.gamma_violet,
+    color: variables.grey_dark,
     roughness: 0,
   })
 
   const signBoardMaterial = new THREE.MeshStandardMaterial({
-    color: variables.gamma_violet,
+    color: variables.grey_dark,
     roughness: 0,
     // metalness: 1,
-    emissive: variables.gamma_violet,
+    emissive: variables.grey_dark,
     emissiveIntensity: 0.5,
   })
 
   const signBoardTextMaterial = new THREE.MeshStandardMaterial({
-    color: variables.gamma_red,
-    emissive: variables.gamma_red,
+    color: variables.white,
+    emissive: variables.white,
     emissiveIntensity: 1,
   })
 
   const windowsMaterial = new THREE.MeshStandardMaterial({
-    color: variables.gamma_red,
-    emissive: variables.gamma_red,
+    color: variables.white,
+    emissive: variables.white,
     emissiveIntensity: 2,
   })
 

@@ -12,7 +12,7 @@
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
       "X": 0,
-      "Y": 15,
+      "Y": 5,
       "Z": 12
     },
     "ROTATION": {
@@ -24,7 +24,7 @@
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
-      "INTENSITY": 1
+      "INTENSITY": 0.25
     },
     "DIRECTIONAL_LIGHT": {
       "POSITION": {

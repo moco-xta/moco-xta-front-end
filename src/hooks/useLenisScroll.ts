@@ -1,5 +1,5 @@
-import { useLenis } from 'lenis/react'
 import { useState } from 'react'
+import { useLenis } from 'lenis/react'
 
 export default function useLenisScroll() {
   const [y, setY] = useState<number>(0)

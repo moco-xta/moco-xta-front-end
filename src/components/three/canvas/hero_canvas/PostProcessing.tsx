@@ -5,7 +5,13 @@ import { KernelSize, Resolution } from 'postprocessing'
 export default function PostProcessing() {
   return (
     <EffectComposer>
-      <Bloom
+      <DepthOfField
+        focusDistance={1}
+        focalLength={0.02}
+        bokehScale={2}
+        height={480}
+      />
+      {/* <Bloom
         intensity={1}
         kernelSize={KernelSize.LARGE}
         luminanceThreshold={0.05}
@@ -13,7 +19,7 @@ export default function PostProcessing() {
         mipmapBlur={false}
         resolutionX={Resolution.AUTO_SIZE}
         resolutionY={Resolution.AUTO_SIZE}
-      />
+      /> */}
     </EffectComposer>
   )
 }

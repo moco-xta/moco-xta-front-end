@@ -20,7 +20,7 @@ export function ExoMarketShutter(props: JSX.IntrinsicElements['mesh']) {
   const { nodes } = useGLTF(glbConstants.HOME.EXO_MARKET_SHUTTER) as GLTFResult
 
   const exoMarketMaterial = new THREE.MeshStandardMaterial({
-    color: variables.gamma_violet,
+    color: variables.grey_dark,
     roughness: 0,
   })
 
