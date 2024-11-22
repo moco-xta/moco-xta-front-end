@@ -6,6 +6,7 @@ import { GLTF } from 'three-stdlib'
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 import variables from '@/styles/variables.module.scss'
+import { RisographShaderMaterial } from '@/components/three/materials/risographShaderMaterial'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -24,6 +25,8 @@ type GLTFResult = GLTF & {
 
 export function ExoMarket(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(glbConstants.HOME.EXO_MARKET) as GLTFResult
+
+  /* const risographMaterial = new RisographShaderMaterial() */
 
   const exoMarketMaterial = new THREE.MeshStandardMaterial({
     color: variables.grey_dark,
@@ -58,6 +61,7 @@ export function ExoMarket(props: JSX.IntrinsicElements['group']) {
       <mesh
         name='ExoMarket_1'
         geometry={nodes.ExoMarket_1.geometry}
+        // material={risographMaterial}
         material={exoMarketMaterial}
         receiveShadow
         castShadow

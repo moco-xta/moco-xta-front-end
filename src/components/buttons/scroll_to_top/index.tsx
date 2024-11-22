@@ -47,10 +47,6 @@ export default function ScrollToTop() {
     lenis!.scrollTo('top')
   }
 
-  useEffect(() => {
-    console.log('svgRef.current', svgRef.current)
-  }, [])
-
   return (
     <div
       ref={scrollToTopRef}

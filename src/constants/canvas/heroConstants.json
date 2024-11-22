@@ -11,9 +11,9 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "X": 0,
-      "Y": 5,
-      "Z": 12
+      "X": 10,
+      "Y": 10,
+      "Z": 10
     },
     "ROTATION": {
       "X": 0,

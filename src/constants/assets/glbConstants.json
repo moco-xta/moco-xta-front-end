@@ -3,5 +3,16 @@
     "EXO_MARKET": "/glb/ExoMarket.glb",
     "EXO_MARKET_SHUTTER": "/glb/ExoMarketShutter.glb",
     "GANESH": "/glb/Ganesh.glb"
+  },
+  "FONTS": {
+    "GILROY": {
+      "HEAVY": {
+        "A": "/glb/fonts/gilroy/heavy/AGilroyHeavy.glb",
+        "S": "/glb/fonts/gilroy/heavy/SGilroyHeavy.glb",
+        "L": "/glb/fonts/gilroy/heavy/LGilroyHeavy.glb",
+        "T": "/glb/fonts/gilroy/heavy/TGilroyHeavy.glb",
+        "U": "/glb/fonts/gilroy/heavy/UGilroyHeavy.glb"
+      }
+    }
   }
 }

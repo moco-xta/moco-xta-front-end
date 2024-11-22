@@ -20,10 +20,6 @@ export default function HomeScene() {
   /* const scroll = useScroll() */
   /* const tl = useRef<GSAPTimeline>(null!) */
 
-  useEffect(() => {
-    /* console.log('camera', camera) */
-  }, [camera])
-
   useFrame(({ camera }, delta, xrFrame) => {
     /* tl.current.seek(scroll.offset * tl.current.duration()) */
     /* console.log('camera.position', camera.position) */

@@ -47,7 +47,6 @@ export function LogoTwitter({ position }: JSX.IntrinsicElements['mesh']) {
   }
 
   useEffect(() => {
-    console.log('USE EFFECT')
     if (meshRef.current && outlineRef.current) {
       const outlineSelection = outlineRef.current.selection
 

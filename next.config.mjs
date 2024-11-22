@@ -7,16 +7,14 @@ const withNextIntl = createNextIntlPlugin()
 
 const nextConfig = {
   reactStrictMode: true,
-  webpack: (config, options) => {
+  swcMinify: true,
+  webpack: (config) => {
     config.module.rules.push({
-      test: /\.(glsl|vs|fs|vert|frag)$/,
+      test: /\.(glsl|frag|vert)$/,
       type: 'asset/source',
     })
     return config
   },
-  /* sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  }, */
 }
 
 export default withNextIntl(nextConfig)

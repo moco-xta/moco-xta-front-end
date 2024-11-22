@@ -12,7 +12,7 @@ import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
 export default function HeroCanvas() {
   useLenis((lenis) => {
-    console.log('lenis: ', lenis)
+    // console.log('lenis: ', lenis)
   })
 
   return (

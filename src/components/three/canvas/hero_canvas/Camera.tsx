@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { CameraControls, PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -11,7 +11,6 @@ export default function Camera() {
   const { gl, camera, scene } = useThree()
 
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
-  const cameraControlsRef = useRef<CameraControls>(null!)
   const cameraTargetRef = useRef<THREE.Object3D>(new THREE.Object3D())
 
   const timeline = gsap.timeline()
@@ -21,32 +20,48 @@ export default function Camera() {
   })
 
   useGSAP(() => {
-    /* timeline.from(cameraTargetRef.current.position, {
-      x: 20,
-      y: 10,
-      z: 0,
-      duration: 5,
-      ease: 'power2.out',
-    }) */
+    timeline
+      .fromTo(
+        cameraTargetRef.current.position,
+        {
+          x: 0.25,
+          y: 20.25,
+          z: 0,
+        },
+        {
+          x: 2,
+          y: 20.25,
+          z: 0,
+          duration: 1.5,
+          ease: 'none',
+        },
+      )
+      .to(
+        perspectiveCameraRef.current.position,
+        {
+          x: 2,
+          duration: 1.5,
+          ease: 'none',
+        },
+        0,
+      )
   })
 
   return (
-    <>
-      <PerspectiveCamera
-        ref={perspectiveCameraRef}
-        makeDefault
-        position={[
+    <PerspectiveCamera
+      ref={perspectiveCameraRef}
+      makeDefault
+      /* position={[
           heroConstants.PERSPECTIVE_CAMERA.POSITION.X,
           heroConstants.PERSPECTIVE_CAMERA.POSITION.Y,
           heroConstants.PERSPECTIVE_CAMERA.POSITION.Z,
-        ]}
-        rotation={[
+        ]} */
+      position={[0.25, 20.25, 1.5]}
+      /* rotation={[
           THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.X),
           THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
           THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
-        ]}
-      />
-      <CameraControls ref={cameraControlsRef} />
-    </>
+        ]} */
+    />
   )
 }

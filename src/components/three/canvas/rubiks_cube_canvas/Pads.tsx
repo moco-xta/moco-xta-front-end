@@ -14,7 +14,6 @@ export default function Pads({ colorPadIndex, coordinates }: PadsInterface) {
 
   const handleOnPointerEnter = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation()
-    console.log(padRef.current)
     // @ts-ignore
     padRef.current.material.emissiveIntensity = 5
     // @ts-ignore

@@ -30,7 +30,7 @@ export default function RealTimeSky() {
             longitude: position.coords.longitude,
           }),
         )
-        console.log(`Latitude: ${location.latitude}, Longitude: ${location.longitude}`)
+        // console.log(`Latitude: ${location.latitude}, Longitude: ${location.longitude}`)
       })
     } else {
       /* console.log('Geolocation is not supported by this browser.') */

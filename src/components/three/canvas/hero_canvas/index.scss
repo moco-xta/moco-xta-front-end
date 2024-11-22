@@ -1,0 +1,17 @@
+@import '@/styles/variables.module.scss';
+
+.html_container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  // background: pink;
+
+  #creative_h2 {
+    // transform: translateX(70vw);
+    display: flex;
+    flex-direction: row;
+    font-size: 40em;
+  }
+}

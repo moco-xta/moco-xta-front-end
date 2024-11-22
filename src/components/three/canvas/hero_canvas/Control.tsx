@@ -7,16 +7,5 @@ import { useGSAP } from '@gsap/react'
 export default function Control() {
   const controlRef = useRef<any>(null!)
 
-  useEffect(() => {
-    console.log('controlRef', controlRef)
-  }, [controlRef])
-
-  /* useGSAP(() => {
-    gsap.from(controlRef.current.target, {
-      x: 10,
-      duration: 10,
-    })
-  }) */
-
   return <OrbitControls ref={controlRef} />
 }
