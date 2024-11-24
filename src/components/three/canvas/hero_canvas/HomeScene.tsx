@@ -11,7 +11,7 @@ import Heading from './Heading'
 export default function HomeScene() {
   return (
     <>
-      <ExoMarket />
+      {/* <ExoMarket />
       <ExoMarketShutter
         name='ExoMarketShutter_A1Left'
         position={[-5.57866, 8.80972, -0.012591]}
@@ -41,7 +41,7 @@ export default function HomeScene() {
         receiveShadow
       >
         <meshStandardMaterial color={'white'} />
-      </Plane>
+      </Plane> */}
       <Heading />
     </>
   )
