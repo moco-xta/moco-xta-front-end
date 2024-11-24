@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 import { useLenis } from 'lenis/react'
 
 import Camera from './Camera'
-import Control from './Control'
 import Lights from './Lights'
 import HomeScene from './HomeScene'
 import PostProcessing from './PostProcessing'
@@ -32,7 +32,7 @@ export default function HeroCanvas() {
       >
         <Suspense fallback={null}>
           <Camera />
-          {/* <Control /> */}
+          <OrbitControls />
           <Lights />
           <HomeScene />
           {/* <PostProcessing /> */}
