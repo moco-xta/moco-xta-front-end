@@ -5,16 +5,21 @@ import Letter3D from './Letter3D'
 interface Word3DInterface {
   keyPrefix: string
   splittedWord: string[]
+  position?: THREE.Vector3
 }
 
 export const Word3D = forwardRef<THREE.Group, Word3DInterface>(function Word3D(
-  { keyPrefix, splittedWord },
+  { keyPrefix, splittedWord, position },
   wordGroupRef,
 ) {
   const lengthRef = useRef<number>(0)
 
   return (
-    <group ref={wordGroupRef}>
+    <group
+      key={`word_3D_${keyPrefix}`}
+      ref={wordGroupRef}
+      position={position}
+    >
       {splittedWord.map((letter, index) => {
         return (
           <Letter3D

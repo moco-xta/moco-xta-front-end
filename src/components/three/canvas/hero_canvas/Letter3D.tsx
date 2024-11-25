@@ -13,14 +13,18 @@ export default function Letter3D({ keyPrefix, letter, index, lengthRef }: Letter
 
   useEffect(() => {
     if (letter3DRef.current) {
-      letter3DRef.current.geometry.computeBoundingBox()
-      if (letter3DRef.current.geometry.boundingBox) {
-        letter3DRef.current.position.x =
-          lengthRef.current - letter3DRef.current.geometry.boundingBox.min.x
-        lengthRef.current +=
-          letter3DRef.current.geometry.boundingBox.max.x -
-          letter3DRef.current.geometry.boundingBox.min.x +
-          0.05
+      if (letter !== ' ') {
+        letter3DRef.current.geometry.computeBoundingBox()
+        if (letter3DRef.current.geometry.boundingBox) {
+          letter3DRef.current.position.x =
+            lengthRef.current - letter3DRef.current.geometry.boundingBox.min.x
+          lengthRef.current +=
+            letter3DRef.current.geometry.boundingBox.max.x -
+            letter3DRef.current.geometry.boundingBox.min.x +
+            0.05
+        }
+      } else {
+        lengthRef.current += 0.5
       }
     }
   }, [letter3DRef])
