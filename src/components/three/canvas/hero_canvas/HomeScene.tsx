@@ -4,9 +4,10 @@ import { Plane } from '@react-three/drei'
 
 import { ExoMarket } from '../../models/home/buildings/ExoMarket'
 import { ExoMarketShutter } from '../../models/home/buildings/ExoMarketShutter'
+import Heading from './Heading'
+import { MacBookPro } from '../../models/home/MacBookPro'
 
 import './index.scss'
-import Heading from './Heading'
 
 export default function HomeScene() {
   return (
@@ -43,6 +44,7 @@ export default function HomeScene() {
         <meshStandardMaterial color={'white'} />
       </Plane> */}
       <Heading />
+      <MacBookPro />
     </>
   )
 }

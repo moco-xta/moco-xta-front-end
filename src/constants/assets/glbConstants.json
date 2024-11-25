@@ -2,7 +2,8 @@
   "HOME": {
     "EXO_MARKET": "/glb/ExoMarket.glb",
     "EXO_MARKET_SHUTTER": "/glb/ExoMarketShutter.glb",
-    "GANESH": "/glb/Ganesh.glb"
+    "GANESH": "/glb/Ganesh.glb",
+    "MAC_BOOK_PRO": "/glb/MacBookPro.glb"
   },
   "FONTS": {
     "GILROY": {
