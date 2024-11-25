@@ -1,5 +1,6 @@
 {
   "HOME": {
+    "AXIS": "/glb/Axis.glb",
     "EXO_MARKET": "/glb/ExoMarket.glb",
     "EXO_MARKET_SHUTTER": "/glb/ExoMarketShutter.glb",
     "GANESH": "/glb/Ganesh.glb",

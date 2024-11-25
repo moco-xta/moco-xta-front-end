@@ -6,8 +6,10 @@ import { ExoMarket } from '../../models/home/buildings/ExoMarket'
 import { ExoMarketShutter } from '../../models/home/buildings/ExoMarketShutter'
 import Heading from './Heading'
 import { MacBookPro } from '../../models/home/MacBookPro'
+import Me from './Me'
 
 import './index.scss'
+import { Axis } from '../../models/home/Axis'
 
 export default function HomeScene() {
   return (
@@ -45,6 +47,8 @@ export default function HomeScene() {
       </Plane> */}
       <Heading />
       <MacBookPro />
+      <Axis />
+      <Me />
     </>
   )
 }
