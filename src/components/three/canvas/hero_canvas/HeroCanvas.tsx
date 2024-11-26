@@ -35,7 +35,7 @@ export default function HeroCanvas() {
           <OrbitControls />
           <Lights />
           <HomeScene />
-          <PostProcessing />
+          {/* <PostProcessing /> */}
         </Suspense>
       </Canvas>
     </section>

@@ -4,19 +4,22 @@ import { Plane } from '@react-three/drei'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
-export default function Me() {
-  const meMap = new THREE.TextureLoader().load(texturesConstants.HOME.ME)
-  meMap.magFilter = THREE.NearestFilter
+export default function Map() {
+  const mapMap = new THREE.TextureLoader().load(texturesConstants.HOME.MAP)
+  mapMap.magFilter = THREE.NearestFilter
 
   const material = new THREE.MeshStandardMaterial({
-    map: meMap,
+    map: mapMap,
+    roughness: 1,
     transparent: true,
     side: THREE.DoubleSide,
   })
 
   return (
     <Plane
-      args={[10, 10]}
+      args={[15, 10.5]}
+      position={new THREE.Vector3(0, -3, 0)}
+      rotation={new THREE.Euler(THREE.MathUtils.degToRad(-90), 0, 0)}
       material={material}
     />
   )

@@ -1,16 +1,10 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Bloom, DepthOfField, EffectComposer } from '@react-three/postprocessing'
 import { DepthOfFieldEffect, KernelSize, Resolution } from 'postprocessing'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useFrame } from '@react-three/fiber'
-
-interface TestInterface {
-  focusDistance: number
-  focalLength: number
-  bokehScale: number
-}
 
 export default function PostProcessing() {
   const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)

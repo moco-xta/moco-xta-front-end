@@ -1,22 +1,20 @@
 {
   "HOME": {
-    "HERO": {
-      "ME": "/img/png/home/me.png"
-    },
-    "BUILDING_001_WALL": {
-      "DIFFUSE": "/img/textures/home/building_001_wall_DIFFUSE.jpg",
-      "DISPLACEMENT": "/img/textures/home/building_001_wall_DISPLACEMENT.png",
-      "NORMAL": "/img/textures/home/building_001_wall_NORMAL.jpg",
-      "ROUGHNESS": "/img/textures/home/building_001_wall_ROUGHNESS.png"
-    },
-    "EXO_MARKET": {
-      "DIFFUSE": "/img/textures/home/exo_market_DIFFUSE.jpg",
-      "ROUGHNESS": "/img/textures/home/exo_market_ROUGHNESS.png"
-    },
-    "GANESH": {
-      "DIFFUSE": "/img/textures/home/ganesh.jpg",
-      "DIFFUSE_RED": "/img/textures/home/ganesh_gamma_red.jpg"
-    }
+    "IPHONE_KEYBOARD_0": "/img/textures/home/iphone_keyboard_0.jpg",
+    "IPHONE_KEYBOARD_1": "/img/textures/home/iphone_keyboard_1.jpg",
+    "IPHONE_KEYBOARD_2": "/img/textures/home/iphone_keyboard_2.jpg",
+    "IPHONE_KEYBOARD_3": "/img/textures/home/iphone_keyboard_3.jpg",
+    "IPHONE_KEYBOARD_4": "/img/textures/home/iphone_keyboard_4.jpg",
+    "IPHONE_KEYBOARD_5": "/img/textures/home/iphone_keyboard_5.jpg",
+    "IPHONE_KEYBOARD_6": "/img/textures/home/iphone_keyboard_6.jpg",
+    "IPHONE_KEYBOARD_7": "/img/textures/home/iphone_keyboard_7.jpg",
+    "IPHONE_KEYBOARD_8": "/img/textures/home/iphone_keyboard_8.jpg",
+    "IPHONE_KEYBOARD_9": "/img/textures/home/iphone_keyboard_9.jpg",
+    "IPHONE_KEYBOARD_CALL": "/img/textures/home/iphone_keyboard_call.jpg",
+    "IPHONE_KEYBOARD_HASH": "/img/textures/home/iphone_keyboard_hash.jpg",
+    "IPHONE_KEYBOARD_STAR": "/img/textures/home/iphone_keyboard_star.jpg",
+    "MAP": "/img/textures/home/map.jpg",
+    "ME": "/img/textures/home/me.png"
   },
   "ABOUT": {
     "LABORATOIRE": {

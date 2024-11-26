@@ -4,6 +4,15 @@
     "EXO_MARKET": "/glb/ExoMarket.glb",
     "EXO_MARKET_SHUTTER": "/glb/ExoMarketShutter.glb",
     "GANESH": "/glb/Ganesh.glb",
+    "LOGO_ANGULAR": "/glb/LogoAngular.glb",
+    "LOGO_BLENDER": "/glb/LogoBlender.glb",
+    "LOGO_DOCKER": "/glb/LogoDocker.glb",
+    "LOGO_FIGMA": "/glb/LogoFigma.glb",
+    "LOGO_GSAP": "/glb/LogoGsap.glb",
+    "LOGO_NEXTJS": "/glb/LogoNextjs.glb",
+    "LOGO_REACT": "/glb/LogoReact.glb",
+    "LOGO_REACT_THREE_DREI": "/glb/LogoReactThreeDrei.glb",
+    "LOGO_SPRING": "/glb/LogoSpring.glb",
     "MAC_BOOK_PRO": "/glb/MacBookPro.glb"
   },
   "FONTS": {
