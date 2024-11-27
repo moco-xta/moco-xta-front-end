@@ -52,6 +52,26 @@ export default function HomeScene() {
         },
         1,
       )
+      .to(
+        hiGroupRef.current.position,
+        {
+          x: -5,
+          y: 3,
+          z: -8,
+          duration: DURATION,
+          ease: 'power1.in',
+        },
+        3,
+      )
+      .to(
+        hiGroupRef.current.rotation,
+        {
+          z: THREE.MathUtils.degToRad(-20),
+          duration: DURATION,
+          ease: 'power1.in',
+        },
+        3,
+      )
     const hiLetters = gsap.utils.toArray(hiGroupRef.current.children)
     hiLetters.forEach((letter, index) => {
       timelineRef.current
@@ -76,6 +96,16 @@ export default function HomeScene() {
             ease: 'power1.in',
           },
           1,
+        )
+        .to(
+          // @ts-ignore
+          letter.material,
+          {
+            opacity: 0,
+            duration: DURATION,
+            ease: 'power1.in',
+          },
+          3,
         )
     })
   })
