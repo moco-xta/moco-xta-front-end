@@ -12,7 +12,7 @@ export default function Camera() {
 
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
   const cameraTargetRef = useRef<THREE.Object3D>(new THREE.Object3D())
-  cameraTargetRef.current.position.set(2.5, 20.25, 0)
+  /* cameraTargetRef.current.position.set(2.5, 20.25, 0) */
   // cameraTargetRef.current.position.set(2.5, 0, 0)
 
   const timeline = gsap.timeline()
@@ -21,7 +21,7 @@ export default function Camera() {
     state.camera.lookAt(cameraTargetRef.current.position)
   }) */
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     timeline
       .from(perspectiveCameraRef.current.position, {
         z: 10,
@@ -52,7 +52,7 @@ export default function Camera() {
         },
         0,
       )
-  })
+  }) */
 
   return (
     <PerspectiveCamera
@@ -63,7 +63,7 @@ export default function Camera() {
         heroConstants.PERSPECTIVE_CAMERA.POSITION.Y,
         heroConstants.PERSPECTIVE_CAMERA.POSITION.Z,
       ]} */
-      position={[0, 0, 5]}
+      position={[0, 0, 8]}
       // position={[-2.5, 20.25, 5]}
       /* rotation={[
           THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.X),

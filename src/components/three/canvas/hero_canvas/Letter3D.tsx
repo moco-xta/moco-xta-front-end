@@ -1,14 +1,26 @@
-import { Text3D } from '@react-three/drei'
 import React, { MutableRefObject, useEffect, useRef } from 'react'
+import * as THREE from 'three'
+import { Text3D } from '@react-three/drei'
 
 interface Letter3DInterface {
   keyPrefix: string
+  font: string
+  size?: number
+  depth?: number
   letter: string
   index: number
   lengthRef: MutableRefObject<number>
 }
 
-export default function Letter3D({ keyPrefix, letter, index, lengthRef }: Letter3DInterface) {
+export default function Letter3D({
+  keyPrefix,
+  font,
+  size,
+  depth,
+  letter,
+  index,
+  lengthRef,
+}: Letter3DInterface) {
   const letter3DRef = useRef<THREE.Mesh>(null!)
 
   useEffect(() => {
@@ -33,7 +45,9 @@ export default function Letter3D({ keyPrefix, letter, index, lengthRef }: Letter
     <Text3D
       ref={letter3DRef}
       key={`letter_3D_${keyPrefix}_${letter}_${index}`}
-      font='fonts/json/Gilroy_Heavy.json'
+      font={font}
+      size={size ? size : 1}
+      scale={new THREE.Vector3(1, 1, depth ? depth : 1)}
       receiveShadow
       castShadow
     >

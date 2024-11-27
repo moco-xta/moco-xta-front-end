@@ -65,25 +65,22 @@ export default function Heading() {
   return (
     <group>
       <Word3D
-        ref={hiRef}
-        keyPrefix={'creative'}
-        splittedWord={hiTextSplitted}
-        position={new THREE.Vector3(0, 2.2, 0)}
-      />
-      <Word3D
         ref={iMARef}
         keyPrefix={'creative'}
+        font={'fonts/json/Gilroy_Heavy.json'}
         splittedWord={iMATextSplitted}
         position={new THREE.Vector3(0, 1.1, 0)}
       />
       <Word3D
         ref={creativeRef}
         keyPrefix={'creative'}
+        font={'fonts/json/Gilroy_Heavy.json'}
         splittedWord={creativeTextSplitted}
       />
       <Word3D
         ref={developperRef}
         keyPrefix={'developper'}
+        font={'fonts/json/Gilroy_Heavy.json'}
         splittedWord={developperTextSplitted}
         position={new THREE.Vector3(0, -1.1, 0)}
       />
