@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { Plane } from '@react-three/drei'
 
@@ -23,8 +23,16 @@ import LogoReactThreeDrei from '../../models/home/logos/LogoReactThreeDrei'
 import IphoneKeyboardTouch from './IphoneKeyboardTouch'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
+import { Word2D } from './Word2D'
 
 export default function HomeScene() {
+  /* const [phoneNumberText] = useState<string>('abcdefghijklmnopqrstuvwxyz') */
+  const [phoneNumberText] = useState<string>('01234567899876543210')
+  /* const [phoneNumberText] = useState<string>('(+33) 6 15 90 82 75') */
+  const [phoneNumberTextSplitted] = useState<string[]>(phoneNumberText.split(''))
+
+  const phoneNumberRef = useRef<THREE.Group>(null!)
+
   const iphoneKeyboard1 = new THREE.TextureLoader().load(texturesConstants.HOME.IPHONE_KEYBOARD_1)
   iphoneKeyboard1.magFilter = THREE.NearestFilter
   const iphoneKeyboard2 = new THREE.TextureLoader().load(texturesConstants.HOME.IPHONE_KEYBOARD_2)
@@ -91,7 +99,7 @@ export default function HomeScene() {
       >
         <meshStandardMaterial color={'white'} />
       </Plane> */}
-      <Heading />
+      {/* <Heading />
       <MacBookPro />
       <Axis />
       <Me />
@@ -158,7 +166,13 @@ export default function HomeScene() {
           position={new THREE.Vector3(0, 0, -6)}
           map={iphoneKeyboardCall}
         />
-      </group>
+      </group> */}
+      <Word2D
+        ref={phoneNumberRef}
+        keyPrefix={'phone_number'}
+        splittedWord={phoneNumberTextSplitted}
+        position={new THREE.Vector3(-10, 0, -5)}
+      />
     </>
   )
 }
