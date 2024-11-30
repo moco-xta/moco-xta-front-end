@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <>
       <GreetingCanvas />
-      <FrontEndDevelopperWithExtraSkillsCanvas />
+      {/* <FrontEndDevelopperWithExtraSkillsCanvas /> */}
     </>
   )
 }
