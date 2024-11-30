@@ -17,9 +17,14 @@
   "HOME": {
     "HERO": {
       "HI": "Hi!",
-      "I_M_A": "I'm a",
-      "CREATIVE": "Creative",
-      "DEVELOPPER": "Developper"
+      "I_M": "I'm",
+      "A": "a",
+      "DEVELOPPER": "Developper",
+      "WITH": "with",
+      "EXTRA": "extra",
+      "SKILLS": "skills",
+      "CONTACT": "contact",
+      "ME": "me"
     },
     "INTRODUCTION": {
       "WHO_I_AM": "Who I am - ",

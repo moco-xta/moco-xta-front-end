@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
+import { Float, PerspectiveCamera } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -55,21 +55,23 @@ export default function Camera() {
   }) */
 
   return (
-    <PerspectiveCamera
-      ref={perspectiveCameraRef}
-      makeDefault
-      /* position={[
-        heroConstants.PERSPECTIVE_CAMERA.POSITION.X,
-        heroConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        heroConstants.PERSPECTIVE_CAMERA.POSITION.Z,
-      ]} */
-      position={[0, 0, 8]}
-      // position={[-2.5, 20.25, 5]}
-      /* rotation={[
-          THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.X),
-          THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
-          THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
+    <Float speed={2}>
+      <PerspectiveCamera
+        ref={perspectiveCameraRef}
+        makeDefault
+        /* position={[
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.X,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]} */
-    />
+        position={[0, 0, 8]}
+        // position={[-2.5, 20.25, 5]}
+        /* rotation={[
+            THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.X),
+            THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
+            THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
+          ]} */
+      />
+    </Float>
   )
 }

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
 const actionByKey = (key: string): string => {
-  console.log('key', key)
+  /* console.log('key', key) */
   const keyActionMap: {
     [key: string]: string
   } = {

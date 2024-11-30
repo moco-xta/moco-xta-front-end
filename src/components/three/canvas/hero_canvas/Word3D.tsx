@@ -1,5 +1,6 @@
-import React, { forwardRef, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { forwardRef, MutableRefObject, useEffect, useRef } from 'react'
 import * as THREE from 'three'
+import { GroupProps } from '@react-three/fiber'
 
 import Letter3D from './Letter3D'
 
@@ -8,21 +9,31 @@ interface Word3DInterface {
   font: string
   size?: number
   depth?: number
+  spaceWidth?: number
   splittedWord: string[]
+  groupProps?: GroupProps
   position?: THREE.Vector3
   center?: boolean
+  lengthRef?: MutableRefObject<number[]>
+  children: JSX.Element
 }
 
 export const Word3D = forwardRef<THREE.Group, Word3DInterface>(function Word3D(
-  { keyPrefix, font, size, depth, splittedWord, position, center = false },
+  {
+    keyPrefix,
+    font,
+    size,
+    depth,
+    spaceWidth,
+    splittedWord,
+    groupProps,
+    position,
+    center = false,
+    lengthRef,
+    children,
+  },
   word3DGroupRef,
 ) {
-  const lengthRef = useRef<number>(0)
-
-  const [centeredPosition, setCenteredPosition] = useState<THREE.Vector3>(
-    new THREE.Vector3(0, 0, 0),
-  )
-
   useEffect(() => {
     // @ts-ignore
     if (word3DGroupRef.current && center) {
@@ -31,15 +42,10 @@ export const Word3D = forwardRef<THREE.Group, Word3DInterface>(function Word3D(
       box3.setFromObject(word3DGroupRef.current)
       // @ts-ignore
       word3DGroupRef.current.position.set(
-        -(box3.max.x - box3.min.x) / 2,
-        -(box3.max.y - box3.min.y) / 2,
-        -(box3.max.z - box3.min.z) / 2,
+        position ? -(box3.max.x - box3.min.x) / 2 + position.x : -(box3.max.x - box3.min.x) / 2,
+        position ? -(box3.max.y - box3.min.y) / 2 + position.y : -(box3.max.y - box3.min.y) / 2,
+        position ? -(box3.max.z - box3.min.z) / 2 + position.z : -(box3.max.z - box3.min.z) / 2,
       )
-      /* setCenteredPosition(new THREE.Vector3(
-      -(box3.max.x - box3.min.x) / 2,
-      -(box3.max.y - box3.min.y) / 2,
-      -(box3.max.z - box3.min.z) / 2,
-     )) */
     }
   }, [word3DGroupRef])
 
@@ -47,7 +53,8 @@ export const Word3D = forwardRef<THREE.Group, Word3DInterface>(function Word3D(
     <group
       key={`word_3D_${keyPrefix}`}
       ref={word3DGroupRef}
-      position={centeredPosition}
+      {...groupProps}
+      position={position}
     >
       {splittedWord.map((letter, index) => {
         return (
@@ -57,9 +64,12 @@ export const Word3D = forwardRef<THREE.Group, Word3DInterface>(function Word3D(
             size={size}
             depth={depth}
             letter={letter}
+            spaceWidth={spaceWidth}
             index={index}
             lengthRef={lengthRef}
-          />
+          >
+            {children}
+          </Letter3D>
         )
       })}
     </group>

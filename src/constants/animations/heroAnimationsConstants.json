@@ -1,4 +1,35 @@
 {
+  "SPEED": 1,
+  "SCENES": {
+    "FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE": {
+      "MAC_BOOK_PRO": {
+        "STEPS": 2,
+        "DELAY": 1
+      }
+    },
+    "PHONE_NUMBER_SCENE": {
+      "CONTACT_ME": {
+        "STEPS": 3,
+        "DELAY": 1
+      },
+      "PHONE_NUMBER": {
+        "STEPS": 2,
+        "DELAY": 4
+      },
+      "TEXT": {
+        "COLOR": "#f00",
+        "STAGGER_DELAY": 0.05
+      }
+    }
+  },
+  "DURATIONS": {
+    "RYTHM": 0.5
+  },
+  "KEY_FRAMES": {
+    "HI_FADE_IN_START": 1,
+    "HI_FADE_OUT_START": 2,
+    "ME_FADE_IN_START": 2
+  },
   "CREATIVE_DEVELOPER": {
     "SELECTOR": "#creative_developer",
     "PARAMS": {

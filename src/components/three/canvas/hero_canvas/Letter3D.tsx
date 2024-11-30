@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useEffect, useRef } from 'react'
+import React, { MutableRefObject, useEffect, useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Text3D } from '@react-three/drei'
 
@@ -8,8 +8,10 @@ interface Letter3DInterface {
   size?: number
   depth?: number
   letter: string
-  index: number
-  lengthRef: MutableRefObject<number>
+  spaceWidth?: number
+  index?: number
+  lengthRef?: MutableRefObject<number[]>
+  children: JSX.Element
 }
 
 export default function Letter3D({
@@ -18,25 +20,29 @@ export default function Letter3D({
   size,
   depth,
   letter,
+  spaceWidth = 0.25,
   index,
   lengthRef,
+  children,
 }: Letter3DInterface) {
   const letter3DRef = useRef<THREE.Mesh>(null!)
 
-  useEffect(() => {
-    if (letter3DRef.current) {
+  useLayoutEffect(() => {
+    if (letter3DRef.current && lengthRef) {
       if (letter !== ' ') {
         letter3DRef.current.geometry.computeBoundingBox()
         if (letter3DRef.current.geometry.boundingBox) {
           letter3DRef.current.position.x =
-            lengthRef.current - letter3DRef.current.geometry.boundingBox.min.x
-          lengthRef.current +=
+            lengthRef.current.reduce((a, b) => a + b, 0) -
+            letter3DRef.current.geometry.boundingBox.min.x
+          lengthRef.current.push(
             letter3DRef.current.geometry.boundingBox.max.x -
-            letter3DRef.current.geometry.boundingBox.min.x +
-            0.05
+              letter3DRef.current.geometry.boundingBox.min.x +
+              0.05,
+          )
         }
       } else {
-        lengthRef.current += 0.5
+        lengthRef.current.push(spaceWidth)
       }
     }
   }, [letter3DRef])
@@ -52,10 +58,7 @@ export default function Letter3D({
       castShadow
     >
       {letter}
-      <meshStandardMaterial
-        color={'white'}
-        transparent
-      />
+      {children}
     </Text3D>
   )
 }

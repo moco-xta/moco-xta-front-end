@@ -14,10 +14,6 @@ export const Word2D = forwardRef<THREE.Group, Word2DInterface>(function Word2D(
 ) {
   const lengthRef = useRef<number>(0)
 
-  useEffect(() => {
-    console.log('splittedWord', splittedWord)
-  }, [splittedWord])
-
   return (
     <group
       key={`word_2D_${keyPrefix}`}

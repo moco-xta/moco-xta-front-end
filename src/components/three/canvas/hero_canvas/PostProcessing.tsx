@@ -18,7 +18,7 @@ export default function PostProcessing() {
     depthOfFieldRef.current.target = dofTargetRef.current
   })
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     gsap.to(dofTargetRef.current, {
       x: -20,
       y: -20,
@@ -27,18 +27,18 @@ export default function PostProcessing() {
       duration: 3,
       ease: 'none',
     })
-  })
+  }) */
 
   return (
     <EffectComposer>
       <DepthOfField
         ref={depthOfFieldRef}
-        focalLength={0.02}
-        bokehScale={10}
-        height={1024}
-        width={1024}
+        focalLength={0.01}
+        bokehScale={20}
+        height={4096}
+        width={4096}
       />
-      {/* <Bloom
+      <Bloom
         intensity={1}
         kernelSize={KernelSize.LARGE}
         luminanceThreshold={0.05}
@@ -46,7 +46,7 @@ export default function PostProcessing() {
         mipmapBlur={false}
         resolutionX={Resolution.AUTO_SIZE}
         resolutionY={Resolution.AUTO_SIZE}
-      /> */}
+      />
     </EffectComposer>
   )
 }

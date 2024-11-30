@@ -9,6 +9,7 @@ import HomeScene from './HomeScene'
 import PostProcessing from './PostProcessing'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
+import BackgroundColor from './BackgroundColor'
 
 export default function HeroCanvas() {
   useLenis((lenis) => {
@@ -35,6 +36,7 @@ export default function HeroCanvas() {
           <OrbitControls />
           <Lights />
           <HomeScene />
+          <BackgroundColor />
           <PostProcessing />
         </Suspense>
       </Canvas>
