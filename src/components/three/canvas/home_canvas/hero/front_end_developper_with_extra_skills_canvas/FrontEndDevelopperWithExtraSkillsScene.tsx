@@ -11,7 +11,7 @@ export default function FrontEndDevelopperWithExtraSkillsScene() {
       scale={0.5}
     >
       <MacBookPro />
-      <WithExtraSkills />
+      {/* <WithExtraSkills /> */}
     </group>
   )
 }

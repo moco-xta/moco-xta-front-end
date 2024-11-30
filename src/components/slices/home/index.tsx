@@ -1,10 +1,13 @@
 import React from 'react'
-import Hero from './hero'
+
+import HeroSlice from './hero_slice'
+import ContactSlice from './contact_slice'
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <HeroSlice />
+      <ContactSlice />
     </>
   )
 }
