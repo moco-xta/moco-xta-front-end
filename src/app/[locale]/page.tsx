@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import HomePage from '@/components/slices/home_page'
+import HomePage from '@/components/slices/home'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 

@@ -6,10 +6,10 @@ import { useLenis } from 'lenis/react'
 import Camera from './Camera'
 import Lights from './Lights'
 import HomeScene from './HomeScene'
+import BackgroundColor from './BackgroundColor'
 import PostProcessing from './PostProcessing'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
-import BackgroundColor from './BackgroundColor'
 
 export default function HeroCanvas() {
   useLenis((lenis) => {
