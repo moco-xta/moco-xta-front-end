@@ -31,17 +31,21 @@ export default function HiImFederico() {
         duration: heroAnimationsConstants.SCENES.GREETING.STEPS / heroAnimationsConstants.SPEED,
         onComplete: () => {
           hiImFedericoSceneGroupRef.current.visible = false
-        }
+        },
       })
 
       // ROTATION
       gsap.to(hiImFedericoSceneGroupRef.current.rotation, {
         keyframes: {
-          '0%': { x: THREE.MathUtils.degToRad(-60), y: 0, ease: 'back.in' },                                 // HI
-          '20%': { x: THREE.MathUtils.degToRad(-15), y: 0, ease: 'back.in' },                                // I_M
-          '40%': { x: THREE.MathUtils.degToRad(-15), y: THREE.MathUtils.degToRad(-30), ease: 'back.in' },    // FEDERICO
-          '60%': { x: THREE.MathUtils.degToRad(15), y: 0, ease: 'back.in' },                                 // > ALL
-          '100%': { x: THREE.MathUtils.degToRad(0), y: 0, ease: 'back.in' },                                 // > FADE OUT
+          '0%': { x: THREE.MathUtils.degToRad(-60), y: 0, ease: 'back.in' }, // HI
+          '20%': { x: THREE.MathUtils.degToRad(-15), y: 0, ease: 'back.in' }, // I_M
+          '40%': {
+            x: THREE.MathUtils.degToRad(-15),
+            y: THREE.MathUtils.degToRad(-30),
+            ease: 'back.in',
+          }, // FEDERICO
+          '60%': { x: THREE.MathUtils.degToRad(15), y: 0, ease: 'back.in' }, // > ALL
+          '100%': { x: THREE.MathUtils.degToRad(0), y: 0, ease: 'back.in' }, // > FADE OUT
           easeEach: 'none',
         },
         delay: heroAnimationsConstants.SCENES.GREETING.DELAY / heroAnimationsConstants.SPEED,

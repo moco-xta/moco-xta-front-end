@@ -50,7 +50,8 @@ export default function HiText() {
               opacity: 0,
             },
             '100%': {
-              opacity: 1, ease: 'power1.in',
+              opacity: 1,
+              ease: 'power1.in',
             },
             easeEach: 'none',
           },
