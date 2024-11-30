@@ -1,0 +1,13 @@
+@import '@/styles/variables.module.scss';
+
+#hero_slice {
+  background: #0000;
+
+  #creative_h2 {
+    position: absolute;
+    transform: translateX(70vw);
+    display: flex;
+    flex-direction: row;
+    font-size: 40em;
+  }
+}

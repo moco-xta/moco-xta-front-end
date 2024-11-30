@@ -1,32 +1,25 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 import { useLenis } from 'lenis/react'
-import studio from '@theatre/studio'
-import extension from '@theatre/r3f/dist/extension'
-import { SheetProvider } from '@theatre/r3f'
-import { getProject, val } from '@theatre/core'
 
 import Camera from './Camera'
 import Lights from './Lights'
 import HomeScene from './HomeScene'
+import PostProcessing from './PostProcessing'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
-
-studio.extend(extension)
-studio.initialize()
+import BackgroundColor from './BackgroundColor'
 
 export default function HeroCanvas() {
-  const sheet = getProject('home_project').sheet('hero_sheet')
-
-  useLenis(({ dimensions, scroll }) => {
-    const sequenceLength = val(sheet!.sequence.pointer.length)
-    sheet!.sequence.position = (scroll / dimensions.scrollHeight) * sequenceLength
+  useLenis((lenis) => {
+    // console.log('lenis: ', lenis)
   })
 
   return (
     <section
       className='fullscreen'
-      style={{ position: 'fixed' }}
+      style={{ zIndex: 1, position: 'fixed' }}
     >
       <Canvas
         dpr={heroConstants.CANVAS.DPR}
@@ -39,11 +32,12 @@ export default function HeroCanvas() {
         }}
       >
         <Suspense fallback={null}>
-          <SheetProvider sheet={sheet}>
-            <Camera />
-            <Lights />
-            <HomeScene />
-          </SheetProvider>
+          <Camera />
+          <OrbitControls />
+          <Lights />
+          <HomeScene />
+          <BackgroundColor />
+          <PostProcessing />
         </Suspense>
       </Canvas>
     </section>

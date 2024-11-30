@@ -1,36 +1,77 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { PerspectiveCamera } from '@theatre/r3f'
+import { useFrame, useThree } from '@react-three/fiber'
+import { Float, PerspectiveCamera } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import { default as heroConstants } from '@/constants/canvas/heroConstants.json'
 
 export default function Camera() {
-  const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
+  const { gl, camera, scene } = useThree()
 
-  useGSAP(() => {
-    gsap.from(perspectiveCameraRef.current.position, {
-      y: 30,
-      duration: 1.5,
-    })
-  })
+  const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
+  const cameraTargetRef = useRef<THREE.Object3D>(new THREE.Object3D())
+  /* cameraTargetRef.current.position.set(2.5, 20.25, 0) */
+  // cameraTargetRef.current.position.set(2.5, 0, 0)
+
+  const timeline = gsap.timeline()
+
+  /* useFrame((state, delta, xrFrame) => {
+    state.camera.lookAt(cameraTargetRef.current.position)
+  }) */
+
+  /* useGSAP(() => {
+    timeline
+      .from(perspectiveCameraRef.current.position, {
+        z: 10,
+        duration: 0.5,
+        ease: 'none',
+      })
+      .to(
+        perspectiveCameraRef.current.position,
+        {
+          x: 5,
+          z: 15,
+          duration: 0.5,
+          ease: 'none',
+        },
+        0,
+      )
+      .fromTo(
+        cameraTargetRef.current.position,
+        {
+          x: 0.25,
+          y: 20.25,
+        },
+        {
+          x: 5,
+          y: 20.25,
+          duration: 1.5,
+          ease: 'none',
+        },
+        0,
+      )
+  }) */
 
   return (
-    <PerspectiveCamera
-      ref={perspectiveCameraRef}
-      theatreKey='Camera'
-      makeDefault
-      position={[
-        heroConstants.PERSPECTIVE_CAMERA.POSITION.X,
-        heroConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        heroConstants.PERSPECTIVE_CAMERA.POSITION.Z,
-      ]}
-      rotation={[
-        THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.X),
-        THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
-        THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
-      ]}
-    />
+    <Float speed={2}>
+      <PerspectiveCamera
+        ref={perspectiveCameraRef}
+        makeDefault
+        /* position={[
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.X,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          heroConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+        ]} */
+        position={[0, 0, 8]}
+        // position={[-2.5, 20.25, 5]}
+        /* rotation={[
+            THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.X),
+            THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Y),
+            THREE.MathUtils.degToRad(heroConstants.PERSPECTIVE_CAMERA.ROTATION.Z),
+          ]} */
+      />
+    </Float>
   )
 }

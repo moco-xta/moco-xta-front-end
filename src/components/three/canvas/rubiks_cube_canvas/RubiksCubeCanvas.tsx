@@ -5,8 +5,6 @@ import { PerspectiveCamera } from '@react-three/drei'
 import Lights from './Lights'
 import Controls from './Controls'
 import RubiksCube from './RubiksCube'
-import PostProcessing from './PostProcessing'
-import { ToneMapping } from './ToneMapping'
 
 import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
@@ -24,13 +22,9 @@ export default function RubiksCubeCanvas() {
         powerPreference: rubiksCubeConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
       style={{
-        zIndex: 1,
-        position: 'absolute',
         width: '100vw',
         height: '100vh',
-        marginLeft: '30vw',
       }}
-      // raycaster={{ params: { Line: { threshold: 0.1 } } }}
     >
       <PerspectiveCamera
         makeDefault
@@ -45,8 +39,6 @@ export default function RubiksCubeCanvas() {
       <Controls />
       <Suspense>
         <RubiksCube />
-        <PostProcessing />
-        <ToneMapping />
       </Suspense>
     </Canvas>
   )

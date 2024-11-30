@@ -6,8 +6,7 @@
     "HOME": "Home",
     "PHOTOGRAPHY": "Fotografía",
     "PROJECTS": "Proyectos",
-    "SKILLS": "Habilidades",
-    "SNAKE": "Snake"
+    "SKILLS": "Habilidades"
   },
   "LOCALES": {
     "EN": "Inglés",
@@ -17,7 +16,19 @@
   },
   "HOME": {
     "HERO": {
-      "FRONT_END_DEVELOPER": "Desarrollador \n Front-End"
+      "HI": "¡Holà!",
+      "I_M": "Soy",
+      "A": "un",
+      "DEVELOPPER": "Developper",
+      "WITH": "con",
+      "EXTRA": "extra",
+      "SKILLS": "habilidades",
+      "CONTACT_ME": "Contáctame"
+    },
+    "INTRODUCTION": {
+      "WHO_I_AM": "Quien soy - ",
+      "INTRODUCTION": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas \"Letraset\", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
+      "MORE_ABOUT_ME": "Más sobre mí - "
     },
     "MAIN_SKILLS": {
       "INTRODUCTION": {
@@ -50,22 +61,6 @@
     "REVIEWS": {
       "TITLE": "Reviews",
       "PARAGRAPH": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    },
-
-    "INTRODUCTION": {
-      "INTRODUCTION_TITLE": "Introducción",
-      "INTRODUCTION_TEXT": "",
-      "MAIN_SKILLS_TITLE": "Habilidades principales",
-      "MAIN_SKILLS_TEXT": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
-      "SEE_MORE": "Ver más",
-      "CARDS": {
-        "THREE_D": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.",
-        "FRONT_END": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.",
-        "BACK_END": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.",
-        "REACT_THREE_DREI": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.",
-        "NEXTJS": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout.",
-        "ANGULAR": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout."
-      }
     },
     "LAST_PROJECTS": {
       "TITLE": "Últimos proyectos",

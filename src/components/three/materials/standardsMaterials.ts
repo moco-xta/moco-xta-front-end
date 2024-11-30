@@ -3,6 +3,7 @@ import * as THREE from 'three'
 export const defaultMaterial = new THREE.MeshStandardMaterial({
   color: '#ffffff',
   roughness: 1,
+  transparent: true,
 })
 
 export const glassSimpleMaterial = new THREE.MeshPhysicalMaterial({

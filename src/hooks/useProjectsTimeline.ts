@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
-import useScroll from '@/hooks/useScroll'
-
 import { CompanyOrSchollDataInterface, ProjectDataInterface } from '@/interfaces/dataInterfaces'
+
+import useLenisScroll from '@/hooks/useLenisScroll'
 
 import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 
@@ -10,10 +10,8 @@ export default function useProjectsTimeline(
   projectsData: ProjectDataInterface[],
   companiesAndSchoolData: CompanyOrSchollDataInterface[],
 ) {
-  const { y, offsetHeight, clientHeight } = useScroll()
+  const { y, offsetHeight } = useLenisScroll()
 
-  const [currentProject, setCurrentProject] = useState<number>(0)
-  const [currentCompanyOrSchool, setCurrentCompanyOrSchool] = useState<number>(0)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
     getDifferenceBetweenTwoDatesInDays(
@@ -22,19 +20,15 @@ export default function useProjectsTimeline(
     ),
   )
   const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
+  const [currentProject, setCurrentProject] = useState<number>(0)
+  const [currentCompanyOrSchool, setCurrentCompanyOrSchool] = useState<number>(0)
 
   useEffect(() => {
-    if (offsetHeight && clientHeight) {
-      setCurrentDate(new Date())
-      setDeltaPerDay((offsetHeight - clientHeight) / daysDifference)
-    }
-  }, [offsetHeight, clientHeight, daysDifference])
+    if (offsetHeight) setDeltaPerDay(offsetHeight / daysDifference)
+  }, [offsetHeight, daysDifference])
 
   useEffect(() => {
-    const differenceBetweenTodayAndCurrentDate = Math.round(y / deltaPerDay)
-    setCurrentDate(
-      new Date(new Date().setDate(new Date().getDate() - differenceBetweenTodayAndCurrentDate)),
-    )
+    setCurrentDate(new Date(new Date().setDate(new Date().getDate() - Math.round(y / deltaPerDay))))
   }, [y, deltaPerDay])
 
   useEffect(() => {
@@ -54,9 +48,5 @@ export default function useProjectsTimeline(
     })
   }, [currentDate, projectsData, companiesAndSchoolData])
 
-  return {
-    currentProject,
-    currentCompanyOrSchool,
-    currentDate,
-  }
+  return { currentDate, currentProject, currentCompanyOrSchool }
 }

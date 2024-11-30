@@ -5,16 +5,10 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import { HomePage } from '@/components/pages'
-import { PreloaderSlice } from '@/components/slices'
+import HomePage from '@/components/slices/home_page'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export default function Home() {
-  return (
-    <div>
-      {/* <PreloaderSlice /> */}
-      <HomePage />
-    </div>
-  )
+  return <HomePage />
 }

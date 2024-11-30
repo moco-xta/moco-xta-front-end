@@ -3,7 +3,7 @@ import { ThreeEvent } from '@react-three/fiber'
 import * as THREE from 'three'
 import gsap from 'gsap'
 
-export function setCubeGroupCoordinates(x: number, y: number, z: number) {
+export function setCubeCoordinates(x: number, y: number, z: number) {
   function setCoordinate(value: number) {
     return value * 2 - 2
   }
@@ -38,6 +38,7 @@ export function setPadRotation(coordinates: THREE.Vector3, index: number) {
       THREE.MathUtils.degToRad(x),
       THREE.MathUtils.degToRad(y),
       THREE.MathUtils.degToRad(z),
+      'XYZ',
     )
   }
 

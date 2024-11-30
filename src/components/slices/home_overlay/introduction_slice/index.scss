@@ -1,0 +1,24 @@
+@import '@/styles/variables.module.scss';
+
+#introduction_slice {
+  flex-direction: column;
+
+  #who_i_am {
+    color: #ff130a;
+  }
+
+  #introduction_text {
+    width: 70vw;
+    font-size: 2rem;
+    text-align: justify;
+    line-break: loose;
+    color: $white;
+  }
+
+  #about_link_container {
+    width: 70vw;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

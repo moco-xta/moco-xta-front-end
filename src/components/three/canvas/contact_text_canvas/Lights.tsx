@@ -1,6 +1,6 @@
-import { useHelper } from '@react-three/drei'
-import * as THREE from 'three'
 import { useRef } from 'react'
+import * as THREE from 'three'
+import { useHelper } from '@react-three/drei'
 import { useControls } from 'leva'
 
 export function Lights() {

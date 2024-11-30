@@ -2,17 +2,17 @@ import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
 import CubeGroup from './CubeGroup'
-import RotationGroupAndButtons from './RotationGroupAndButtons'
+import RotationGroupsAndButtons from './RotationGroupsAndButtons'
 
-import { setCubeGroupCoordinates, setPadColor } from '@/helpers/rubiks_cube/rubiksCubeHelpers'
+import { setCubeCoordinates, setPadColor } from '@/helpers/rubiks_cube/rubiksCubeHelpers'
 
 import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 export default function RubiksCube() {
   const rubiksCubeRef = useRef<THREE.Group>(null!)
-  let colorPadIndex = useRef<number>(0)
+  const colorPadIndex = useRef<number>(0)
 
-  const colors: string[] = rubiksCubeConstants.RUBIKS_CUBE.COLORS.map((color) => color)
+  const colors: string[] = rubiksCubeConstants.RUBIKS_CUBE.PADS_COLORS.map((color) => color)
 
   useEffect(() => {
     const colorPads: THREE.Object3D<THREE.Object3DEventMap>[] = []
@@ -36,15 +36,15 @@ export default function RubiksCube() {
         {[...Array(rubiksCubeConstants.RUBIKS_CUBE.WIDTH)].map((_, x) =>
           [...Array(rubiksCubeConstants.RUBIKS_CUBE.WIDTH)].map((_, y) =>
             [...Array(rubiksCubeConstants.RUBIKS_CUBE.WIDTH)].map((_, z) => {
-              const coordinates = setCubeGroupCoordinates(x, y, z)
+              const coordinates = setCubeCoordinates(x, y, z)
 
               return (
                 <>
                   {!(coordinates.x === 0 && coordinates.y === 0 && coordinates.z === 0) && (
                     <CubeGroup
                       key={`cube_group_${x}_${y}_${z}`}
-                      colorPadIndex={colorPadIndex}
                       coordinates={coordinates}
+                      colorPadIndex={colorPadIndex}
                     />
                   )}
                 </>
@@ -53,7 +53,7 @@ export default function RubiksCube() {
           ),
         )}
       </group>
-      {/* <RotationGroupAndButtons rubiksCubeRef={rubiksCubeRef} /> */}
+      <RotationGroupsAndButtons rubiksCubeRef={rubiksCubeRef} />
     </>
   )
 }

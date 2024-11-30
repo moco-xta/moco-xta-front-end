@@ -1,16 +1,11 @@
 import React, { forwardRef } from 'react'
-import { useDispatch } from 'react-redux'
 import * as THREE from 'three'
 import { MeshProps, ThreeEvent } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { AppDispatch } from '@/redux/store'
-import { setSelectedPad } from '@/redux/slice/rubiksCubeSlice'
-
-import { LogoAngular } from '../logos'
-
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -26,34 +21,8 @@ const ColorPadBlender = forwardRef<
     THREE.Object3DEventMap
   >,
   MeshProps
->(function ColorPadBlender({ name, position, rotation }, ref) {
+>(function ColorPadBlender({ name, position, rotation, onPointerOver, onPointerLeave }, ref) {
   const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.COLOR_PAD_BLENDER) as GLTFResult
-
-  const dispatch = useDispatch<AppDispatch>()
-
-  const handleOnPointerEnter = (e: ThreeEvent<MouseEvent>) => {
-    e.stopPropagation()
-    // @ts-ignore
-    console.log(ref.current.name)
-    dispatch(setSelectedPad(<LogoAngular />))
-    // @ts-ignore
-    ref.current.material.emissiveIntensity = 5
-    // @ts-ignore
-    ref.current.material.emissive = ref.current.material.color
-  }
-
-  const handleOnPointerLeave = (e: ThreeEvent<MouseEvent>) => {
-    e.stopPropagation()
-    // @ts-ignore
-    ref.current.material.emissiveIntensity = 1
-    // @ts-ignore
-    ref.current.material.emissive = {
-      isColor: true,
-      r: 0,
-      g: 0,
-      b: 0,
-    }
-  }
 
   return (
     <mesh
@@ -64,10 +33,13 @@ const ColorPadBlender = forwardRef<
       rotation={rotation}
       receiveShadow
       castShadow
-      onPointerOver={handleOnPointerEnter}
-      onPointerLeave={handleOnPointerLeave}
+      onPointerOver={onPointerOver}
+      onPointerLeave={onPointerLeave}
     >
-      <meshStandardMaterial attach='material' />
+      <meshStandardMaterial
+        attach='material'
+        roughness={rubiksCubeConstants.RUBIKS_CUBE.PADS.ROUGHNESS}
+      />
     </mesh>
   )
 })

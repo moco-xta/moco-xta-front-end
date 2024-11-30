@@ -5,6 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -23,7 +24,7 @@ interface ButtonInterface extends GroupProps {
 }
 
 export function Button({ position, rotation, onClick, arrow, isRotating }: ButtonInterface) {
-  const { nodes, materials } = useGLTF(gltfConstants.RUBIKS_CUBE.BUTTON) as GLTFResult
+  const { nodes } = useGLTF(gltfConstants.RUBIKS_CUBE.BUTTON) as GLTFResult
 
   const [hovered, setHovered] = useState<boolean>(false)
 
@@ -49,7 +50,7 @@ export function Button({ position, rotation, onClick, arrow, isRotating }: Butto
         <meshStandardMaterial
           attach='material'
           transparent
-          opacity={0.5}
+          opacity={rubiksCubeConstants.RUBIKS_CUBE.BUTTONS.MATERIAL.OPACITY}
         />
       </mesh>
       {hovered && !isRotating && (
@@ -58,18 +59,18 @@ export function Button({ position, rotation, onClick, arrow, isRotating }: Butto
             <mesh geometry={nodes.ArrowLeft.geometry}>
               <meshStandardMaterial
                 attach='material'
-                color={0xffffff}
-                emissive={0xffffff}
-                emissiveIntensity={1}
+                color={rubiksCubeConstants.ARROWS.MATERIAL.COLOR}
+                emissive={rubiksCubeConstants.ARROWS.MATERIAL.EMISSIVE}
+                emissiveIntensity={rubiksCubeConstants.ARROWS.MATERIAL.EMISSIVE_INTENSITY}
               />
             </mesh>
           ) : (
             <mesh geometry={nodes.ArrowRight.geometry}>
               <meshStandardMaterial
                 attach='material'
-                color={0xffffff}
-                emissive={0xffffff}
-                emissiveIntensity={1}
+                color={rubiksCubeConstants.ARROWS.MATERIAL.COLOR}
+                emissive={rubiksCubeConstants.ARROWS.MATERIAL.EMISSIVE}
+                emissiveIntensity={rubiksCubeConstants.ARROWS.MATERIAL.EMISSIVE_INTENSITY}
               />
             </mesh>
           )}

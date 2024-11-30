@@ -1,15 +1,23 @@
 import React from 'react'
 
-import RubiksCubeCanvas from '@/components/three/canvas/rubiks_cube_canvas/RubiksCubeCanvas'
-import SkillCanvas from '@/components/three/canvas/skill_canvas/SkillCanvas'
+import SkillsCanvas from '@/components/three/canvas/skills_canvas/SkillsCanvas'
+
+import { skillsData } from '@/data/skills/skillsData'
 
 import './index.scss'
 
 export default function SkillsSlice() {
   return (
-    <section id='skills_slice'>
-      <SkillCanvas />
-      <RubiksCubeCanvas />
-    </section>
+    <div
+      id='skills_scroller'
+      style={{ height: `${Math.round(skillsData.length * 0.2)}00vh` }}
+    >
+      <section
+        id='skills_slice'
+        className='fullscreen'
+      >
+        <SkillsCanvas />
+      </section>
+    </div>
   )
 }

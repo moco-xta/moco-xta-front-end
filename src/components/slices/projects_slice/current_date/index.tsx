@@ -7,22 +7,12 @@ import { TimelineInterface } from '@/interfaces/projectsInterfaces'
 
 import './index.scss'
 
-export default function CurrentDate({
-  currentDate,
-  currentProject,
-  projectsData,
-}: TimelineInterface) {
+export default function CurrentDate({ currentDate }: TimelineInterface) {
   const locale = useLocale()
   const t = useTranslations('PROJECTS')
 
   return (
-    <div
-      id='current_date'
-      style={{
-        color:
-          projectsData[currentProject].backgroundColor.page !== '#ffffff' ? '#ffffff' : '#000000',
-      }}
-    >
+    <div id='current_date'>
       {locale === 'en' ? (
         <>
           <p id='month'>{t(`MONTH.${moment(currentDate).format('MMM').toUpperCase()}`)}</p>

@@ -1,4 +1,30 @@
 {
+  "HOME": {
+    "IPHONE_KEYBOARD": [
+      "/img/textures/home/iphone_keyboard_0.jpg",
+      "/img/textures/home/iphone_keyboard_1.jpg",
+      "/img/textures/home/iphone_keyboard_2.jpg",
+      "/img/textures/home/iphone_keyboard_3.jpg",
+      "/img/textures/home/iphone_keyboard_4.jpg",
+      "/img/textures/home/iphone_keyboard_5.jpg",
+      "/img/textures/home/iphone_keyboard_6.jpg",
+      "/img/textures/home/iphone_keyboard_7.jpg",
+      "/img/textures/home/iphone_keyboard_8.jpg",
+      "/img/textures/home/iphone_keyboard_9.jpg",
+      "/img/textures/home/iphone_keyboard_call.jpg",
+      "/img/textures/home/iphone_keyboard_hash.jpg",
+      "/img/textures/home/iphone_keyboard_star.jpg"
+    ],
+    "JUPITER": "/img/textures/home/jupiter.png",
+    "MAP": "/img/textures/home/map.jpg",
+    "MARS": "/img/textures/home/mars.png",
+    "ME": "/img/textures/home/me.png",
+    "MERCURY": "/img/textures/home/mercury.png",
+    "MOON": "/img/textures/home/moon.png",
+    "SATURN": "/img/textures/home/saturn.png",
+    "SUN": "/img/textures/home/sun.png",
+    "VENUS": "/img/textures/home/venus.png"
+  },
   "ABOUT": {
     "LABORATOIRE": {
       "CLAY_RENDER": {
@@ -504,18 +530,6 @@
           }
         }
       }
-    }
-  },
-  "HOME": {
-    "BUILDING_001_WALL": {
-      "DIFFUSE": "/img/textures/home/building_001_wall_DIFFUSE.jpg",
-      "DISPLACEMENT": "/img/textures/home/building_001_wall_DISPLACEMENT.png",
-      "NORMAL": "/img/textures/home/building_001_wall_NORMAL.jpg",
-      "ROUGHNESS": "/img/textures/home/building_001_wall_ROUGHNESS.png"
-    },
-    "EXO_MARKET": {
-      "DIFFUSE": "/img/textures/home/exo_market_DIFFUSE.jpg",
-      "ROUGHNESS": "/img/textures/home/exo_market_ROUGHNESS.png"
     }
   },
   "LIRA": {

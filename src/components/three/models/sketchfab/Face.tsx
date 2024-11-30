@@ -56,7 +56,6 @@ export function Face(props: JSX.IntrinsicElements['mesh']) {
       'center',
       new THREE.BufferAttribute(new Float32Array(centers), 3),
     )
-    console.log('nodes.Face.geometry', nodes.Face.geometry)
   }, [nodes])
 
   useFrame((state, delta) => {
@@ -65,7 +64,6 @@ export function Face(props: JSX.IntrinsicElements['mesh']) {
 
     /* time += delta */
 
-    console.log('clock', clock)
     /* console.log('nodes.Face.position.x', nodes.Face.position.x) */
 
     faceRef.current.position.x = 0.5 * Math.sin(clock.elapsedTime * 0.6)

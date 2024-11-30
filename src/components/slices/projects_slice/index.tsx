@@ -5,8 +5,6 @@ import useProjectsTimeline from '@/hooks/useProjectsTimeline'
 import { projectsData } from '@/data/projects/projectsData'
 import { companiesAndSchoolData } from '@/data/projects/companiesAndSchoolData'
 
-import ProjectCards from './project_cards'
-import CompanyOrSchoolCards from './company_or_school_cards'
 import CurrentDate from './current_date'
 
 import { isValidDate } from '@/helpers/dateHelpers'
@@ -14,33 +12,23 @@ import { isValidDate } from '@/helpers/dateHelpers'
 import './index.scss'
 
 export default function ProjectsSlice() {
-  const { currentProject, currentCompanyOrSchool, currentDate } = useProjectsTimeline(
+  const { currentDate, currentProject, currentCompanyOrSchool } = useProjectsTimeline(
     projectsData,
     companiesAndSchoolData,
   )
 
   return (
-    <div id='project_timeline_container'>
+    <div
+      id='projects_timeline_scroller'
+      style={{ height: `${projectsData.length}00vh` }}
+    >
       <section
-        id='project_slice'
-        style={{
-          backgroundColor: projectsData[currentProject].backgroundColor.page,
-        }}
-        /* className='responsive_background' */
+        id='projects_slice'
+        className='fullscreen'
       >
-        {/* <ProjectCards currentProject={currentProject} />
-        <CompanyOrSchoolCards
-          currentCompanyOrSchool={currentCompanyOrSchool}
-          currentProject={currentProject}
-        /> */}
-
-        {isValidDate(currentDate) && (
-          <CurrentDate
-            currentDate={currentDate}
-            currentProject={currentProject}
-            projectsData={projectsData}
-          />
-        )}
+        <p>Project: {currentProject}</p>
+        <p>Company or school: {currentCompanyOrSchool}</p>
+        {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
       </section>
     </div>
   )

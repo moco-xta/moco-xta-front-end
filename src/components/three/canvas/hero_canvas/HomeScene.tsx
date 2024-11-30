@@ -1,31 +1,36 @@
 import React from 'react'
 import * as THREE from 'three'
-import { editable as e } from '@theatre/r3f'
 
-import { Building001Wall } from '@/components/three/models/home/buildings/Building001Wall'
-import { ExoMarket } from '../../models/home/buildings/ExoMarket'
-import { Box } from '@react-three/drei'
+import PhoneNumberScene from './phone_number_scene/PhoneNumberScene'
+import FrontEndDevelopperWithExtraSkillsScene from './front_end_developper_with_extra_skills/FrontEndDevelopperWithExtraSkillsScene'
 
 export default function HomeScene() {
   return (
     <>
-      <Building001Wall />
-      <ExoMarket />
-      {/* <e.mesh
-        theatreKey='Cube'
-        receiveShadow
-        castShadow
-      >
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color='orange' />
-      </e.mesh> */}
-      <Box
-        args={[3, 20, 3]}
-        position={[0, 10, -20]}
-        rotation={[0, THREE.MathUtils.radToDeg(33), 0]}
-        receiveShadow
-        castShadow
-      />
+      {/* <group position={new THREE.Vector3(0, 0, 0)}> */}
+      <group position={new THREE.Vector3(0, 5, 0)}>
+        {/* <group position={new THREE.Vector3(0, 15, 0)}> */}
+        <PhoneNumberScene />
+        <FrontEndDevelopperWithExtraSkillsScene />
+        {/* <group position={new THREE.Vector3(0, 0, 0)}>
+          <Box args={[0.1, 0.1, 0.1]} />
+          <Hi />
+          <Me />
+          <Im />
+          <Federico />
+        </group> */}
+      </group>
+      {/* <A />
+      <Developper />
+      <With />
+      <Extra />
+      <Skills /> */}
+      {/*
+        <Axis />
+        <Me />
+        <Map />
+      <group position={new THREE.Vector3(0, 7, 0)}>
+      </group> */}
     </>
   )
 }
