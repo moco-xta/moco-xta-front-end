@@ -7,7 +7,7 @@ export default function GreetingScene() {
   return (
     <>
       <HiImFederico />
-      <Federico />
+      {/* <Federico /> */}
     </>
   )
 }

@@ -83,13 +83,15 @@ export default function HiText() {
       center={true}
       lengthRef={hiTextLengthRef}
     >
-      <meshStandardMaterial
-        color={'#dcff00'}
-        transparent
-        opacity={0}
-        emissive={'#dcff00'}
-        side={THREE.DoubleSide}
-      />
+      {
+        <meshStandardMaterial
+          color={'#dcff00'}
+          transparent
+          opacity={0}
+          // emissive={'#dcff00'}
+          side={THREE.DoubleSide}
+        />
+      }
     </Word3D>
   )
 }

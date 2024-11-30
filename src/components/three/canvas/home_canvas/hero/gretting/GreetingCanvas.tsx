@@ -2,11 +2,11 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Box, OrbitControls } from '@react-three/drei'
 
+import Camera from './Camera'
+import Lights from './Lights'
 import GreetingScene from './GreetingScene'
 
 import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
-import Camera from './Camera'
-import Lights from './Lights'
 
 export default function GreetingCanvas() {
   return (

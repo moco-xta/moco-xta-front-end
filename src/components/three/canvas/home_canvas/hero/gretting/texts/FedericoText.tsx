@@ -98,7 +98,7 @@ export default function FedericoText() {
         color={'#dcff00'}
         transparent
         opacity={0}
-        emissive={'#dcff00'}
+        // emissive={'#dcff00'}
         side={THREE.DoubleSide}
       />
     </Word3D>
