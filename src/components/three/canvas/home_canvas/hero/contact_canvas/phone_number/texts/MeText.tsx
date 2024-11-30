@@ -4,14 +4,14 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { Word3D } from '../../../components/word_3d/Word3D'
+import { Word3D } from '../../../../components/word_3d/Word3D'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/heroAnimationsConstants.json'
 
 export default function ContactText() {
   const t = useTranslations('HOME')
 
-  const [contactText] = useState<string>(t('HERO.CONTACT').toUpperCase())
+  const [contactText] = useState<string>(t('HERO.ME').toUpperCase())
   const [contactTextSplitted] = useState<string[]>(contactText.split(''))
 
   const contactGroupRef = useRef<THREE.Group>(null!)
@@ -76,6 +76,7 @@ export default function ContactText() {
         },
         delay:
           heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY +
+          0.5 +
           heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
         duration:
           heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS /
@@ -92,7 +93,7 @@ export default function ContactText() {
       size={1}
       depth={0.1}
       splittedWord={contactTextSplitted}
-      position={new THREE.Vector3(0, 0.55, 0)}
+      position={new THREE.Vector3(0, -0.55, 0)}
       center={true}
       lengthRef={lengthRef}
     >

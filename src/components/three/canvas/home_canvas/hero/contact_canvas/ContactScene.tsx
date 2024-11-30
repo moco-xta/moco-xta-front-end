@@ -1,6 +1,13 @@
 import React from 'react'
-import { Box } from '@react-three/drei'
+
+import PhoneNumber from './phone_number/PhoneNumber'
+import ContactMe from './phone_number/ContactMe'
 
 export default function ContactScene() {
-  return <Box />
+  return (
+    <group>
+      <ContactMe />
+      <PhoneNumber />
+    </group>
+  )
 }
