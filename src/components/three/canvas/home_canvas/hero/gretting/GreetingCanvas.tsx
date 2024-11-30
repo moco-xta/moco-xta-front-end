@@ -6,6 +6,7 @@ import GreetingScene from './GreetingScene'
 
 import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
 import Camera from './Camera'
+import Lights from './Lights'
 
 export default function GreetingCanvas() {
   return (
@@ -26,6 +27,7 @@ export default function GreetingCanvas() {
       >
         <Camera />
         <OrbitControls />
+        <Lights />
         <Suspense fallback={null}>
           <GreetingScene />
         </Suspense>
