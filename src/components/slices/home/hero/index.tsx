@@ -5,7 +5,7 @@ import GreetingCanvas from '@/components/three/canvas/home_canvas/hero/gretting/
 export default function Hero() {
   return (
     <>
-      <GreetingCanvas /> 
+      <GreetingCanvas />
     </>
   )
 }

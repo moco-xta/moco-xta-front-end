@@ -1,8 +1,11 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Box } from '@react-three/drei'
+import { Box, OrbitControls } from '@react-three/drei'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
+import GreetingScene from './GreetingScene'
+
+import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
+import Camera from './Camera'
 
 export default function GreetingCanvas() {
   return (
@@ -12,17 +15,19 @@ export default function GreetingCanvas() {
       style={{ zIndex: 1, position: 'fixed' }}
     >
       <Canvas
-        dpr={heroAnimationsConstants.CANVAS.DPR}
-        legacy={heroAnimationsConstants.CANVAS.LEGACY}
+        dpr={greetingCanvasConstants.CANVAS.DPR}
+        legacy={greetingCanvasConstants.CANVAS.LEGACY}
         shadows
         gl={{
-          antialias: heroAnimationsConstants.CANVAS.GL.ANTIALIAS,
-          alpha: heroAnimationsConstants.CANVAS.GL.ALPHA,
-          powerPreference: heroAnimationsConstants.CANVAS.GL.POWER_PREFERENCE,
+          antialias: greetingCanvasConstants.CANVAS.GL.ANTIALIAS,
+          alpha: greetingCanvasConstants.CANVAS.GL.ALPHA,
+          powerPreference: greetingCanvasConstants.CANVAS.GL.POWER_PREFERENCE,
         }}
       >
+        <Camera />
+        <OrbitControls />
         <Suspense fallback={null}>
-          <Box />
+          <GreetingScene />
         </Suspense>
       </Canvas>
     </section>

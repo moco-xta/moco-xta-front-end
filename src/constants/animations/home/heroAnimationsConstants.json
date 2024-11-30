@@ -1,25 +1,39 @@
 {
-  "CANVAS": {
-    "DPR": 2,
-    "LEGACY": false,
-    "GL": {
-      "ANTIALIAS": true,
-      "ALPHA": true,
-      "POWER_PREFERENCE": "high-performance",
-      "PRESERVE_DRAWING_BUFFER": true
+  "SPEED": 1,
+  "SCENES": {
+    "GREETING": {
+      "STEPS": 5,
+      "DELAY": 1,
+      "HI": {
+        "POSITION": {
+          "X": -2,
+          "Y": 1,
+          "Z": 0
+        }
+      },
+      "I_M": {
+        "POSITION": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0
+        }
+      },
+      "FEDERICO": {
+        "POSITION": {
+          "X": 0,
+          "Y": -1.5,
+          "Z": 0
+        }
+      },
+      "TEXTS": {
+        "FONT": "fonts/json/Agharti_Bold_Ultra_Wide_Bold.json",
+        "DEPTH": 1,
+        "SIZES": {
+          "HI": 2.5,
+          "I_M": 2.5,
+          "FEDERICO": 1.5
+        }
+      }
     }
-  },
-  "PERSPECTIVE_CAMERA": {
-    "POSITION": {
-      "X": 10,
-      "Y": 10,
-      "Z": 10
-    },
-    "ROTATION": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "FOV": 50
   }
 }
