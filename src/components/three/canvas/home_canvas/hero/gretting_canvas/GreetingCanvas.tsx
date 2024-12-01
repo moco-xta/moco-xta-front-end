@@ -7,6 +7,7 @@ import Lights from './Lights'
 import GreetingScene from './GreetingScene'
 
 import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
+import PostProcessing from './PostProcessing'
 
 export default function GreetingCanvas() {
   return (
@@ -25,6 +26,7 @@ export default function GreetingCanvas() {
       <Lights />
       <Suspense fallback={null}>
         <GreetingScene />
+        <PostProcessing />
       </Suspense>
     </Canvas>
   )

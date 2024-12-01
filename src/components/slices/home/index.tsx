@@ -6,8 +6,8 @@ import ContactSlice from './contact_slice'
 export default function HomePage() {
   return (
     <>
-      {/* <HeroSlice /> */}
-      <ContactSlice />
+      <HeroSlice />
+      {/* <ContactSlice /> */}
     </>
   )
 }

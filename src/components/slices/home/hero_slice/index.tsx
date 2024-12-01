@@ -13,13 +13,13 @@ export default function HeroSlice() {
       >
         <GreetingCanvas />
       </section>
-      <section
+      {/* <section
         id='front_end_developper_with_extra_skills_canvas'
         className='fullscreen'
         style={{ zIndex: 2, position: 'fixed' }}
       >
         <FrontEndDevelopperWithExtraSkillsCanvas />
-      </section>
+      </section> */}
     </>
   )
 }

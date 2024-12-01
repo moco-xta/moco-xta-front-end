@@ -29,9 +29,9 @@ export default function HiImFederico() {
         },
         delay: heroAnimationsConstants.SCENES.GREETING.DELAY / heroAnimationsConstants.SPEED,
         duration: heroAnimationsConstants.SCENES.GREETING.STEPS / heroAnimationsConstants.SPEED,
-        onComplete: () => {
+        /* onComplete: () => {
           hiImFedericoSceneGroupRef.current.visible = false
-        },
+        }, */
       })
 
       // ROTATION
