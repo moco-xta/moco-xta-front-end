@@ -9,13 +9,13 @@ import { default as heroAnimationsConstants } from '@/constants/animations/home/
 export default function HeroSlice() {
   return (
     <>
-      <section
+      {/* <section
         id='greeting_slice'
         className='fullscreen'
         style={{ zIndex: heroAnimationsConstants.Z_INDEXES.GREETING_SLICE, position: 'fixed' }}
       >
         <GreetingCanvas />
-      </section>
+      </section> */}
       <section
         id='moco_slice'
         className='fullscreen'

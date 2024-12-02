@@ -42,7 +42,7 @@ export default function PostProcessing() {
     <EffectComposer>
       <DepthOfField
         ref={depthOfFieldRef}
-        focalLength={0.005}
+        focalLength={0.05}
         bokehScale={20}
         height={4096}
         width={4096}

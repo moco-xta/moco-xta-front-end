@@ -5,6 +5,9 @@
     "EXO_MARKET_SHUTTER": "/glb/ExoMarketShutter.glb",
     "GANESH": "/glb/Ganesh.glb",
     "GOBELINO": "/glb/Gobelino.glb",
+    "HELIUM_BALLOON_C": "/glb/HeliumBalloonC.glb",
+    "HELIUM_BALLOON_M": "/glb/HeliumBalloonM.glb",
+    "HELIUM_BALLOON_O": "/glb/HeliumBalloonO.glb",
     "HEPTAGRAM": "/glb/Heptagram.glb",
     "LOGO_ANGULAR": "/glb/LogoAngular.glb",
     "LOGO_BLENDER": "/glb/LogoBlender.glb",
@@ -20,7 +23,8 @@
     "LOGO_TAILWIND": "/glb/LogoTailwind.glb",
     "MAC_BOOK_PRO": "/glb/MacBookPro.glb",
     "PHONE_NUMBER_INPUT": "/glb/PhoneNumberInput.glb",
-    "SEVEN_POINTED_STAR": "/glb/SevenPointedStar.glb"
+    "SEVEN_POINTED_STAR": "/glb/SevenPointedStar.glb",
+    "SMILEY": "/glb/Smiley.glb"
   },
   "FONTS": {
     "GILROY": {
