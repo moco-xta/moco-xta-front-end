@@ -1,5 +1,6 @@
 {
   "HOME": {
+    "GOBELINO": "/img/textures/home/gobelino.jpg",
     "IPHONE_KEYBOARD": [
       "/img/textures/home/iphone_keyboard_0.jpg",
       "/img/textures/home/iphone_keyboard_1.jpg",
@@ -21,6 +22,7 @@
     "PORTRAIT": "/img/textures/home/portrait.png",
     "MERCURY": "/img/textures/home/mercury.png",
     "MOON": "/img/textures/home/moon.png",
+    "LOGO_RCL": "/img/textures/home/logo_rcl.png",
     "SATURN": "/img/textures/home/saturn.png",
     "SUN": "/img/textures/home/sun.png",
     "VENUS": "/img/textures/home/venus.png"

@@ -1,13 +1,13 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Box, OrbitControls } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 
 import Camera from './Camera'
 import Lights from './Lights'
 import GreetingScene from './GreetingScene'
+import PostProcessing from './PostProcessing'
 
 import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
-import PostProcessing from './PostProcessing'
 
 export default function GreetingCanvas() {
   return (

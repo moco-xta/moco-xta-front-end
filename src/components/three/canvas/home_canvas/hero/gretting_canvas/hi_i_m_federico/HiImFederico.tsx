@@ -3,9 +3,9 @@ import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import HiText from './texts/HiText'
-import ImText from './texts/ImText'
-import FedericoText from './texts/FedericoText'
+import HiText from '../texts/HiText'
+import ImText from '../texts/ImText'
+import FedericoText from '../texts/FedericoText'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 

@@ -1,13 +1,13 @@
 import React from 'react'
 
-import HiImFederico from './HiImFederico'
-import Federico from './Federico'
+import HiImFederico from './hi_i_m_federico/HiImFederico'
+import Federico from './federico/Federico'
 
 export default function GreetingScene() {
   return (
     <>
       <HiImFederico />
-      {/* <Federico /> */}
+      <Federico />
     </>
   )
 }

@@ -10,7 +10,7 @@ import { default as greetingCanvasConstants } from '@/constants/canvas/home/gree
 export default function Camera() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
 
-  /* return (
+  return (
     <Float speed={greetingCanvasConstants.PERSPECTIVE_CAMERA.FLOAT.SPEED}>
       <PerspectiveCamera
         ref={perspectiveCameraRef}
@@ -22,9 +22,9 @@ export default function Camera() {
         ]}
         fov={greetingCanvasConstants.PERSPECTIVE_CAMERA.FOV}
       />
-    </Float> */
+    </Float>
 
-  return (
+    /* return (
     <PerspectiveCamera
       ref={perspectiveCameraRef}
       makeDefault
@@ -34,6 +34,6 @@ export default function Camera() {
         greetingCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Z,
       ]}
       fov={greetingCanvasConstants.PERSPECTIVE_CAMERA.FOV}
-    />
+    /> */
   )
 }

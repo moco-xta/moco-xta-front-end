@@ -1,5 +1,8 @@
 import React, { useRef } from 'react'
-import Portrait from './federico/Portrait'
+
+import Portrait from './Portrait'
+import GobelinoComponent from './GobelinoConponent'
+import LogoRCL from './LogoRCL'
 
 export default function Federico() {
   const federicoGroupRef = useRef<THREE.Group>(null!)
@@ -7,6 +10,8 @@ export default function Federico() {
   return (
     <group ref={federicoGroupRef}>
       <Portrait />
+      <GobelinoComponent />
+      <LogoRCL />
     </group>
   )
 }
