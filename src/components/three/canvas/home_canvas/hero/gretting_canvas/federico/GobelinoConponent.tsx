@@ -1,14 +1,12 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { Plane } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-// import HeptagramComponent from './HeptagramComponent'
+import { Gobelino } from '@/components/three/models/home/Gobelino'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
-import { Gobelino } from '@/components/three/models/home/Gobelino'
 
 export default function GobelinoConponent() {
   const gobelinotMap = new THREE.TextureLoader().load(texturesConstants.HOME.GOBELINO)

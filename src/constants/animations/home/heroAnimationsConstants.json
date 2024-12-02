@@ -1,5 +1,11 @@
 {
   "SPEED": 1.25,
+  "Z_INDEXES": {
+    "GREETING_SLICE": 2,
+    "MOCO_SLICE": 1,
+    "FRONT_END_DEVELOPPER_WITH_EXTRA_SLICE": 3,
+    "CONTACT_SLICE": 4
+  },
   "SCENES": {
     "GREETING": {
       "STEPS": 5,
