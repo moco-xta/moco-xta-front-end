@@ -7,10 +7,14 @@ import { Gobelino } from '@/components/three/models/home/Gobelino'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
-import { getDelay } from '@/helpers/animationHelpers'
+import { getDelay, getSceneDelay } from '@/helpers/animationHelpers'
 import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
 
-export default function GobelinoConponent() {
+interface GobelinoConponentInterface {
+  timeline: GSAPTimeline
+}
+
+export default function GobelinoConponent({ timeline }: GobelinoConponentInterface) {
   const gobelinotMap = new THREE.TextureLoader().load(texturesConstants.HOME.GOBELINO)
   gobelinotMap.magFilter = THREE.NearestFilter
 
@@ -26,52 +30,70 @@ export default function GobelinoConponent() {
 
   useGSAP(
     () => {
-      gsap.to(gobelinoGroupRef.current.position, {
-        keyframes: {
-          '0%': { y: -4 },
-          '33%': { y: 0 },
-          easeEach: 'power2.out',
+      // POSITION
+      timeline.to(
+        gobelinoGroupRef.current.position,
+        {
+          keyframes: {
+            '0%': { y: -4 },
+            '33%': { y: 0 },
+            easeEach: 'power2.out',
+          },
+          duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
         },
-        delay:
-          (heroAnimationsConstants.DELAY + getDelay('FEDERICO', heroTimeline)) /
-          heroAnimationsConstants.SPEED,
-        duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
-      })
-      /* gsap.to(gobelinoGroupRef.current.rotation, {
-      keyframes: {
-        '0%': { z: THREE.MathUtils.degToRad(33) },
-        '33%': { z: 0 },
-        easeEach: 'power2.out',
-      },
-      delay:
-          (heroAnimationsConstants.DELAY +
-            getDelay('FEDERICO', heroTimeline)) /
-          heroAnimationsConstants.SPEED,
-      duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
-    }) */
+        getSceneDelay({
+          scenes: heroTimeline,
+          sceneName: 'FEDERICO',
+          offset: heroAnimationsConstants.SCENES.FEDERICO.OFFSET,
+        }) / heroAnimationsConstants.SPEED,
+      )
+
+      // ROTATION
+      /* timeline.to(
+        gobelinoGroupRef.current.rotation,
+        {
+          keyframes: {
+            '0%': { z: THREE.MathUtils.degToRad(33) },
+            '33%': { z: 0 },
+            easeEach: 'power2.out',
+          },
+          duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
+        },
+        getSceneDelay({
+          scenes: heroTimeline,
+          sceneName: 'FEDERICO',
+          offset: heroAnimationsConstants.SCENES.FEDERICO.OFFSET,
+        }) / heroAnimationsConstants.SPEED,
+      ) */
+
       const gobelinoMeshes = gsap.utils.toArray(gobelinoMeshesGroupRef.current.children)
       gobelinoMeshes.forEach((child, index) => {
-        // ROTATION
-        // @ts-ignore
-        gsap.to(child.material, {
-          keyframes: {
-            '33%': {
-              opacity: 0,
+        // MATERIALS
+        timeline.to(
+          // @ts-ignore
+          child.material,
+          {
+            keyframes: {
+              '0%': {
+                opacity: 0,
+              },
+              '33%': {
+                opacity: 1,
+                ease: 'power1.in',
+              },
+              easeEach: 'none',
             },
-            '66%': {
-              opacity: 1,
-              ease: 'power1.in',
-            },
-            easeEach: 'none',
+            duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
           },
-          delay:
-            (heroAnimationsConstants.DELAY + getDelay('FEDERICO', heroTimeline)) /
-            heroAnimationsConstants.SPEED,
-          duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
-        })
+          getSceneDelay({
+            scenes: heroTimeline,
+            sceneName: 'FEDERICO',
+            offset: heroAnimationsConstants.SCENES.FEDERICO.OFFSET,
+          }) / heroAnimationsConstants.SPEED,
+        )
       })
     },
-    { scope: gobelinoGroupRef },
+    /* { scope: gobelinoGroupRef }, */
   )
 
   return (

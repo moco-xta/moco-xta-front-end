@@ -11,7 +11,7 @@ export default function GreetingScene({ timeline }: GreetingSceneInterface) {
   return (
     <>
       <HiImFederico timeline={timeline} />
-      {/* <Federico /> */}
+      <Federico timeline={timeline} />
     </>
   )
 }
