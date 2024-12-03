@@ -8,6 +8,8 @@ import { useGSAP } from '@gsap/react'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
+import { getDelay } from '@/helpers/animationHelpers'
+import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
 
 export default function Portrait() {
   const portraitMap = new THREE.TextureLoader().load(texturesConstants.HOME.PORTRAIT)
@@ -33,9 +35,7 @@ export default function Portrait() {
         easeEach: 'power2.out',
       },
       delay:
-        (heroAnimationsConstants.SCENES.GREETING.DELAY +
-          heroAnimationsConstants.SCENES.GREETING.STEPS +
-          heroAnimationsConstants.SCENES.FEDERICO.OFFSET) /
+        (heroAnimationsConstants.DELAY + getDelay('FEDERICO', heroTimeline)) /
         heroAnimationsConstants.SPEED,
       duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
     })
@@ -46,9 +46,7 @@ export default function Portrait() {
         easeEach: 'power2.out',
       },
       delay:
-        (heroAnimationsConstants.SCENES.GREETING.DELAY +
-          heroAnimationsConstants.SCENES.GREETING.STEPS +
-          heroAnimationsConstants.SCENES.FEDERICO.OFFSET) /
+        (heroAnimationsConstants.DELAY + getDelay('FEDERICO', heroTimeline)) /
         heroAnimationsConstants.SPEED,
       duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
     })
@@ -59,9 +57,7 @@ export default function Portrait() {
         easeEach: 'power1.in',
       },
       delay:
-        (heroAnimationsConstants.SCENES.GREETING.DELAY +
-          heroAnimationsConstants.SCENES.GREETING.STEPS +
-          heroAnimationsConstants.SCENES.FEDERICO.OFFSET) /
+        (heroAnimationsConstants.DELAY + getDelay('FEDERICO', heroTimeline)) /
         heroAnimationsConstants.SPEED,
       duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
     })

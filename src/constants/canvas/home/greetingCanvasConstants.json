@@ -45,5 +45,22 @@
       "SHADOW_RADIUS": 13,
       "SHADOW_BIAS": 0.0001
     }
+  },
+  "MESHES": {
+    "HI_TEXT": {
+      "POSITION": {
+        "X": -2,
+        "Y": 1,
+        "Z": 0
+      }
+    }
+  },
+  "MATERIALS": {
+    "TEXTS": {
+      "COLOR": "#dcff00",
+      "TRANSPARENT": true,
+      "OPACITY": 0,
+      "EMISSIVE": "#dcff00"
+    }
   }
 }

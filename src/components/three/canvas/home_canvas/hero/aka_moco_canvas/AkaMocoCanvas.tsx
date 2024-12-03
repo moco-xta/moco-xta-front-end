@@ -5,12 +5,12 @@ import { Physics } from '@react-three/rapier'
 
 import Camera from './Camera'
 import Lights from './Lights'
-import MocoScene from './MocoScene'
+import MocoScene from './AkaMocoScene'
 import PostProcessing from './PostProcessing'
 
 import { default as mocoCanvasConstants } from '@/constants/canvas/home/mocoCanvasConstants.json'
 
-export default function MocoCanvas() {
+export default function AkaMocoCanvas() {
   return (
     <Canvas
       dpr={mocoCanvasConstants.CANVAS.DPR}
@@ -33,6 +33,7 @@ export default function MocoCanvas() {
             mocoCanvasConstants.PHYSICS.GRAVITY.Y,
             mocoCanvasConstants.PHYSICS.GRAVITY.Z,
           ]}
+          // timeStep={mocoCanvasConstants.PHYSICS.TIME_STEP}
           paused={mocoCanvasConstants.PHYSICS.PAUSED}
         >
           <MocoScene />

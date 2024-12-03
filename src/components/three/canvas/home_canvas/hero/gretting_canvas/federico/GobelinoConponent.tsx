@@ -7,6 +7,8 @@ import { Gobelino } from '@/components/three/models/home/Gobelino'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
+import { getDelay } from '@/helpers/animationHelpers'
+import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
 
 export default function GobelinoConponent() {
   const gobelinotMap = new THREE.TextureLoader().load(texturesConstants.HOME.GOBELINO)
@@ -31,10 +33,7 @@ export default function GobelinoConponent() {
           easeEach: 'power2.out',
         },
         delay:
-          (heroAnimationsConstants.SCENES.GREETING.DELAY +
-            heroAnimationsConstants.SCENES.GREETING.STEPS +
-            heroAnimationsConstants.SCENES.FEDERICO.OFFSET +
-            1) /
+          (heroAnimationsConstants.DELAY + getDelay('FEDERICO', heroTimeline)) /
           heroAnimationsConstants.SPEED,
         duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
       })
@@ -45,10 +44,9 @@ export default function GobelinoConponent() {
         easeEach: 'power2.out',
       },
       delay:
-        (heroAnimationsConstants.SCENES.GREETING.DELAY +
-          heroAnimationsConstants.SCENES.GREETING.STEPS +
-          heroAnimationsConstants.SCENES.FEDERICO.OFFSET) /
-        heroAnimationsConstants.SPEED,
+          (heroAnimationsConstants.DELAY +
+            getDelay('FEDERICO', heroTimeline)) /
+          heroAnimationsConstants.SPEED,
       duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
     }) */
       const gobelinoMeshes = gsap.utils.toArray(gobelinoMeshesGroupRef.current.children)
@@ -67,9 +65,7 @@ export default function GobelinoConponent() {
             easeEach: 'none',
           },
           delay:
-            (heroAnimationsConstants.SCENES.GREETING.DELAY +
-              heroAnimationsConstants.SCENES.GREETING.STEPS +
-              heroAnimationsConstants.SCENES.FEDERICO.OFFSET) /
+            (heroAnimationsConstants.DELAY + getDelay('FEDERICO', heroTimeline)) /
             heroAnimationsConstants.SPEED,
           duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
         })

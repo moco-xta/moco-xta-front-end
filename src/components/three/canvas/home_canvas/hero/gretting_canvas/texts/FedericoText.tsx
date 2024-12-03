@@ -3,17 +3,21 @@ import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { useTranslations } from 'next-intl'
+
+import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
 
 import { Word3D } from '../../../components/word_3d/Word3D'
 
-import { getRandomInt } from '@/helpers/animationHelpers'
+import { getDelay, getRandomInt } from '@/helpers/animationHelpers'
 
+import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 
-export default function FedericoText() {
-  const t = useTranslations('HOME')
+interface FedericoTextInterface {
+  timeline: GSAPTimeline
+}
 
+export default function FedericoText({ timeline }: FedericoTextInterface) {
   const [federicoText] = useState<string>('federico'.toUpperCase())
   const [federicoTextSplitted] = useState<string[]>(federicoText.split(''))
 
@@ -23,13 +27,13 @@ export default function FedericoText() {
 
   // useHelper(hiGroupRef, THREE.BoxHelper, 'blue')
 
-  useGSAP(
+  /* useGSAP(
     () => {
       const federicoLetters = gsap.utils.toArray(federicoTextGroupRef.current.children)
       federicoLetters.forEach((letter, index) => {
         // POSITION
         // @ts-ignore
-        gsap.from(letter.position, {
+        timeline.to(letter.position, {
           keyframes: {
             '0%': {
               x: getRandomInt({ min: 0, max: 20, decimal: 0.25 }),
@@ -45,14 +49,17 @@ export default function FedericoText() {
             easeEach: 'power1.in',
           },
           delay:
-            (heroAnimationsConstants.SCENES.GREETING.DELAY + 2 + 0.085 * index) /
+            (heroAnimationsConstants.DELAY +
+              getDelay('HI_I_M_FEDERICO', heroTimeline) +
+              2 +
+              0.125 * index) /
             heroAnimationsConstants.SPEED,
           duration: 1 / heroAnimationsConstants.SPEED,
         })
 
         // ROTATION
         // @ts-ignore
-        gsap.from(letter.material, {
+        timeline.to(letter.material, {
           keyframes: {
             '0%': {
               opacity: 0,
@@ -67,38 +74,41 @@ export default function FedericoText() {
             easeEach: 'none',
           },
           delay:
-            (heroAnimationsConstants.SCENES.GREETING.DELAY + 2 + 0.085 * index) /
+            (heroAnimationsConstants.DELAY +
+              getDelay('HI_I_M_FEDERICO', heroTimeline) +
+              2 +
+              0.125 * index) /
             heroAnimationsConstants.SPEED,
           duration: 1 / heroAnimationsConstants.SPEED,
         })
       })
     },
     { scope: federicoTextGroupRef },
-  )
+  ) */
 
   return (
     <Word3D
       ref={federicoTextGroupRef}
       keyPrefix={'federico_text'}
-      font={heroAnimationsConstants.SCENES.GREETING.TEXTS.FONT}
-      size={heroAnimationsConstants.SCENES.GREETING.TEXTS.SIZES.FEDERICO}
-      depth={heroAnimationsConstants.SCENES.GREETING.TEXTS.DEPTH}
+      font={heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.TEXTS.FONT}
+      size={heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.TEXTS.SIZES.FEDERICO}
+      depth={heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.TEXTS.DEPTH}
       splittedWord={federicoTextSplitted}
       position={
         new THREE.Vector3(
-          heroAnimationsConstants.SCENES.GREETING.FEDERICO.POSITION.X,
-          heroAnimationsConstants.SCENES.GREETING.FEDERICO.POSITION.Y,
-          heroAnimationsConstants.SCENES.GREETING.FEDERICO.POSITION.Z,
+          heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.FEDERICO.POSITION.X,
+          heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.FEDERICO.POSITION.Y,
+          heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.FEDERICO.POSITION.Z,
         )
       }
       center={true}
       lengthRef={federicoTextLengthRef}
     >
       <meshStandardMaterial
-        color={'#dcff00'}
-        transparent
-        opacity={0}
-        // emissive={'#dcff00'}
+        color={greetingCanvasConstants.MATERIALS.TEXTS.COLOR}
+        transparent={greetingCanvasConstants.MATERIALS.TEXTS.TRANSPARENT}
+        opacity={greetingCanvasConstants.MATERIALS.TEXTS.OPACITY}
+        // emissive={greetingCanvasConstants.MATERIALS.TEXTS.EMISSIVE}
         side={THREE.DoubleSide}
       />
     </Word3D>

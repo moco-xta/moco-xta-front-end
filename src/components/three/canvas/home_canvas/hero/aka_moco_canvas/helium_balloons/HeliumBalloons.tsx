@@ -9,9 +9,8 @@ import { Smiley } from '@/components/three/models/home/Smiley'
 
 import { default as mocoCanvasConstants } from '@/constants/canvas/home/mocoCanvasConstants.json'
 
-export default function MocoScene() {
+export default function HeliumBalloons() {
   const heliumBalloonsgroupRef = useRef<THREE.Group>(null!)
-
   const heliumBalloonM = useRef<THREE.Mesh>(null!)
   const heliumBalloonO1 = useRef<THREE.Mesh>(null!)
   const heliumBalloonC = useRef<THREE.Mesh>(null!)
@@ -25,17 +24,15 @@ export default function MocoScene() {
           mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.POSITION.M.Y,
           mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.POSITION.M.Z,
         ]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.ROTATION),
+          0,
+        ]}
         colliders='hull'
         restitution={mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
       >
-        <HeliumBalloonM
-          ref={heliumBalloonM}
-          rotation={[
-            0,
-            THREE.MathUtils.degToRad(mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.ROTATION),
-            0,
-          ]}
-        />
+        <HeliumBalloonM ref={heliumBalloonM} />
       </RigidBody>
       <RigidBody
         position={[
@@ -43,17 +40,15 @@ export default function MocoScene() {
           mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O1.Y,
           mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O1.Z,
         ]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.ROTATION),
+          0,
+        ]}
         colliders='hull'
         restitution={mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
       >
-        <HeliumBalloonO
-          ref={heliumBalloonO1}
-          rotation={[
-            0,
-            THREE.MathUtils.degToRad(mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.ROTATION),
-            0,
-          ]}
-        />
+        <HeliumBalloonO ref={heliumBalloonO1} />
       </RigidBody>
       <RigidBody
         position={[
@@ -61,17 +56,15 @@ export default function MocoScene() {
           mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.POSITION.C.Y,
           mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.POSITION.C.Z,
         ]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.ROTATION),
+          0,
+        ]}
         colliders='hull'
         restitution={mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
       >
-        <HeliumBalloonC
-          ref={heliumBalloonC}
-          rotation={[
-            0,
-            THREE.MathUtils.degToRad(mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.ROTATION),
-            0,
-          ]}
-        />
+        <HeliumBalloonC ref={heliumBalloonC} />
       </RigidBody>
       <RigidBody
         position={[
@@ -79,17 +72,15 @@ export default function MocoScene() {
           mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O2.Y,
           mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.POSITION.O2.Z,
         ]}
+        rotation={[
+          0,
+          THREE.MathUtils.degToRad(mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.ROTATION),
+          0,
+        ]}
         colliders='hull'
         restitution={mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.PHYSICS.RESTITUTION}
       >
-        <HeliumBalloonO
-          ref={heliumBalloonO2}
-          rotation={[
-            0,
-            THREE.MathUtils.degToRad(mocoCanvasConstants.HELIUM_BALLOONS.BALLOONS.ROTATION),
-            0,
-          ]}
-        />
+        <HeliumBalloonO ref={heliumBalloonO2} />
         <Smiley />
       </RigidBody>
     </group>

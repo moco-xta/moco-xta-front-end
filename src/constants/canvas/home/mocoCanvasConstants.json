@@ -13,7 +13,7 @@
     "POSITION": {
       "X": -0.04,
       "Y": 0,
-      "Z": 3
+      "Z": 5
     },
     "ROTATION": {
       "X": 0,
@@ -34,9 +34,10 @@
     "DEBUG": true,
     "GRAVITY": {
       "X": 0,
-      "Y": 0,
+      "Y": 0.05,
       "Z": 0
     },
+    "TIME_STEP": "vary",
     "PAUSED": true
   },
   "HELIUM_BALLOONS": {

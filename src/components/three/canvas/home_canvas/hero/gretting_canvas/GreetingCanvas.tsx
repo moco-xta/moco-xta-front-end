@@ -9,7 +9,11 @@ import PostProcessing from './PostProcessing'
 
 import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
 
-export default function GreetingCanvas() {
+interface GreetingCanvasInterface {
+  timeline: GSAPTimeline
+}
+
+export default function GreetingCanvas({ timeline }: GreetingCanvasInterface) {
   return (
     <Canvas
       dpr={greetingCanvasConstants.CANVAS.DPR}
@@ -25,7 +29,7 @@ export default function GreetingCanvas() {
       <OrbitControls />
       <Lights />
       <Suspense fallback={null}>
-        <GreetingScene />
+        <GreetingScene timeline={timeline} />
         <PostProcessing />
       </Suspense>
     </Canvas>

@@ -3,11 +3,15 @@ import React from 'react'
 import HiImFederico from './hi_i_m_federico/HiImFederico'
 import Federico from './federico/Federico'
 
-export default function GreetingScene() {
+interface GreetingSceneInterface {
+  timeline: GSAPTimeline
+}
+
+export default function GreetingScene({ timeline }: GreetingSceneInterface) {
   return (
     <>
-      <HiImFederico />
-      <Federico />
+      <HiImFederico timeline={timeline} />
+      {/* <Federico /> */}
     </>
   )
 }

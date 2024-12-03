@@ -32,8 +32,8 @@ export default function PostProcessing() {
         '100%': { z: 0 },
         easeEach: 'none',
       },
-      delay: heroAnimationsConstants.SCENES.GREETING.DELAY / heroAnimationsConstants.SPEED,
-      duration: heroAnimationsConstants.SCENES.GREETING.STEPS / heroAnimationsConstants.SPEED,
+      delay: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.DELAY / heroAnimationsConstants.SPEED,
+      duration: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.STEPS / heroAnimationsConstants.SPEED,
       ease: 'none',
     })
   }) */

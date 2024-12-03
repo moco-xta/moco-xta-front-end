@@ -5,11 +5,20 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
+import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
+
 import { Word3D } from '../../../components/word_3d/Word3D'
 
+import { getDelay } from '@/helpers/animationHelpers'
+
+import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 
-export default function ImText() {
+interface ImTextInterface {
+  timeline: GSAPTimeline
+}
+
+export default function ImText({ timeline }: ImTextInterface) {
   const t = useTranslations('HOME')
 
   const [imText] = useState<string>(t('HERO.I_M').toUpperCase())
@@ -27,21 +36,24 @@ export default function ImText() {
       imLetters.forEach((letter, index) => {
         // POSITION
         // @ts-ignore
-        gsap.from(letter.position, {
+        timeline.to(letter.position, {
           keyframes: {
             '0%': { x: -2.5, z: -2.5 * index },
             '100%': { x: imTextLengthRef.current.slice(0, index).reduce((a, b) => a + b, 0), z: 0 },
             easeEach: 'none',
           },
           delay:
-            (heroAnimationsConstants.SCENES.GREETING.DELAY + 1 + 0.125 * index) /
+            (heroAnimationsConstants.DELAY +
+              getDelay('HI_I_M_FEDERICO', heroTimeline) +
+              1 +
+              0.125 * index) /
             heroAnimationsConstants.SPEED,
           duration: 1 / heroAnimationsConstants.SPEED,
         })
 
         // ROTATION
         // @ts-ignore
-        gsap.from(letter.material, {
+        timeline.to(letter.material, {
           keyframes: {
             '0%': {
               opacity: 0,
@@ -56,7 +68,10 @@ export default function ImText() {
             easeEach: 'none',
           },
           delay:
-            (heroAnimationsConstants.SCENES.GREETING.DELAY + 1 + 0.125 * index) /
+            (heroAnimationsConstants.DELAY +
+              getDelay('HI_I_M_FEDERICO', heroTimeline) +
+              1 +
+              0.125 * index) /
             heroAnimationsConstants.SPEED,
           duration: 1 / heroAnimationsConstants.SPEED,
         })
@@ -69,25 +84,25 @@ export default function ImText() {
     <Word3D
       ref={imTextGroupRef}
       keyPrefix={'i_m_text'}
-      font={heroAnimationsConstants.SCENES.GREETING.TEXTS.FONT}
-      size={heroAnimationsConstants.SCENES.GREETING.TEXTS.SIZES.I_M}
-      depth={heroAnimationsConstants.SCENES.GREETING.TEXTS.DEPTH}
+      font={heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.TEXTS.FONT}
+      size={heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.TEXTS.SIZES.I_M}
+      depth={heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.TEXTS.DEPTH}
       splittedWord={imTextSplitted}
       position={
         new THREE.Vector3(
-          heroAnimationsConstants.SCENES.GREETING.I_M.POSITION.X,
-          heroAnimationsConstants.SCENES.GREETING.I_M.POSITION.Y,
-          heroAnimationsConstants.SCENES.GREETING.I_M.POSITION.Z,
+          heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M.POSITION.X,
+          heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M.POSITION.Y,
+          heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M.POSITION.Z,
         )
       }
       center={true}
       lengthRef={imTextLengthRef}
     >
       <meshStandardMaterial
-        color={'#dcff00'}
-        transparent
-        opacity={0}
-        // emissive={'#dcff00'}
+        color={greetingCanvasConstants.MATERIALS.TEXTS.COLOR}
+        transparent={greetingCanvasConstants.MATERIALS.TEXTS.TRANSPARENT}
+        opacity={greetingCanvasConstants.MATERIALS.TEXTS.OPACITY}
+        // emissive={greetingCanvasConstants.MATERIALS.TEXTS.EMISSIVE}
         side={THREE.DoubleSide}
       />
     </Word3D>
