@@ -78,8 +78,8 @@ export default function HiImFederico({ timeline }: HiImFedericoInterface) {
   return (
     <group ref={hiImFedericoSceneGroupRef}>
       <HiText timeline={timeline} />
-      {/* <ImText timeline={timeline} /> */}
-      {/* <FedericoText timeline={timeline} /> */}
+      <ImText timeline={timeline} />
+      <FedericoText timeline={timeline} />
     </group>
   )
 }

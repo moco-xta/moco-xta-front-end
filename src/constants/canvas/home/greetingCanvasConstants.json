@@ -53,6 +53,20 @@
         "Y": 1,
         "Z": 0
       }
+    },
+    "I_M_TEXT": {
+      "POSITION": {
+        "X": 1,
+        "Y": 1,
+        "Z": 0
+      }
+    },
+    "FEDERICO_TEXT": {
+      "POSITION": {
+        "X": 0,
+        "Y": -1.5,
+        "Z": 0
+      }
     }
   },
   "MATERIALS": {

@@ -9,7 +9,7 @@ import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
 
 import { Word3D } from '../../../components/word_3d/Word3D'
 
-import { getDelay } from '@/helpers/animationHelpers'
+import { getSceneDelay } from '@/helpers/animationHelpers'
 
 import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
@@ -35,46 +35,61 @@ export default function ImText({ timeline }: ImTextInterface) {
       const imLetters = gsap.utils.toArray(imTextGroupRef.current.children)
       imLetters.forEach((letter, index) => {
         // POSITION
-        // @ts-ignore
-        timeline.to(letter.position, {
-          keyframes: {
-            '0%': { x: -2.5, z: -2.5 * index },
-            '100%': { x: imTextLengthRef.current.slice(0, index).reduce((a, b) => a + b, 0), z: 0 },
-            easeEach: 'none',
+        timeline.to(
+          // @ts-ignore
+          letter.position,
+          {
+            keyframes: {
+              '0%': { x: -2.5, z: -2.5 * index },
+              '100%': {
+                x: imTextLengthRef.current.slice(0, index).reduce((a, b) => a + b, 0),
+                z: 0,
+              },
+              easeEach: 'none',
+            },
+            duration: 1 / heroAnimationsConstants.SPEED,
           },
-          delay:
-            (heroAnimationsConstants.DELAY +
-              getDelay('HI_I_M_FEDERICO', heroTimeline) +
-              1 +
-              0.125 * index) /
-            heroAnimationsConstants.SPEED,
-          duration: 1 / heroAnimationsConstants.SPEED,
-        })
+          getSceneDelay({
+            scenes: heroTimeline,
+            sceneName: 'HI_I_M_FEDERICO',
+            offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.OFFSET,
+            stagger: {
+              index: index,
+              offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.STAGGER.OFFSET,
+            },
+          }) / heroAnimationsConstants.SPEED,
+        )
 
         // ROTATION
-        // @ts-ignore
-        timeline.to(letter.material, {
-          keyframes: {
-            '0%': {
-              opacity: 0,
+        timeline.to(
+          // @ts-ignore
+          letter.material,
+          {
+            keyframes: {
+              '0%': {
+                opacity: 0,
+              },
+              '50%': {
+                opacity: 0,
+              },
+              '100%': {
+                opacity: 1,
+                ease: 'power1.in',
+              },
+              easeEach: 'none',
             },
-            '50%': {
-              opacity: 0,
-            },
-            '100%': {
-              opacity: 1,
-              ease: 'power1.in',
-            },
-            easeEach: 'none',
+            duration: 1 / heroAnimationsConstants.SPEED,
           },
-          delay:
-            (heroAnimationsConstants.DELAY +
-              getDelay('HI_I_M_FEDERICO', heroTimeline) +
-              1 +
-              0.125 * index) /
-            heroAnimationsConstants.SPEED,
-          duration: 1 / heroAnimationsConstants.SPEED,
-        })
+          getSceneDelay({
+            scenes: heroTimeline,
+            sceneName: 'HI_I_M_FEDERICO',
+            offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.OFFSET,
+            stagger: {
+              index: index,
+              offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.STAGGER.OFFSET,
+            },
+          }) / heroAnimationsConstants.SPEED,
+        )
       })
     },
     { scope: imTextGroupRef },
@@ -90,9 +105,9 @@ export default function ImText({ timeline }: ImTextInterface) {
       splittedWord={imTextSplitted}
       position={
         new THREE.Vector3(
-          heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M.POSITION.X,
-          heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M.POSITION.Y,
-          heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M.POSITION.Z,
+          greetingCanvasConstants.MESHES.I_M_TEXT.POSITION.X,
+          greetingCanvasConstants.MESHES.I_M_TEXT.POSITION.Y,
+          greetingCanvasConstants.MESHES.I_M_TEXT.POSITION.Z,
         )
       }
       center={true}

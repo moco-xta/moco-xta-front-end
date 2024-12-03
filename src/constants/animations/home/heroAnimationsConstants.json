@@ -13,26 +13,22 @@
       "STEPS": 5,
       "OFFSET": 0,
       "SUBS": {
-        "HI": {
+        "HI_TEXT": {
           "OFFSET": 0,
           "STAGGER": {
             "OFFSET": 0.125
           }
         },
-        "I_M": {
+        "I_M_TEXT": {
           "OFFSET": 1,
-          "POSITION": {
-            "X": 1,
-            "Y": 1,
-            "Z": 0
+          "STAGGER": {
+            "OFFSET": 0.125
           }
         },
-        "FEDERICO": {
+        "FEDERICO_TEXT": {
           "OFFSET": 2,
-          "POSITION": {
-            "X": 0,
-            "Y": -1.5,
-            "Z": 0
+          "STAGGER": {
+            "OFFSET": 0.125
           }
         }
       },

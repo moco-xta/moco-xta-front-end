@@ -49,10 +49,10 @@ export default function HiText({ timeline }: HiTextInterface) {
           getSceneDelay({
             scenes: heroTimeline,
             sceneName: 'HI_I_M_FEDERICO',
-            offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI.OFFSET,
+            offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI_TEXT.OFFSET,
             stagger: {
               index: index,
-              offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI.STAGGER.OFFSET,
+              offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI_TEXT.STAGGER.OFFSET,
             },
           }) / heroAnimationsConstants.SPEED,
         )
@@ -77,10 +77,10 @@ export default function HiText({ timeline }: HiTextInterface) {
           getSceneDelay({
             scenes: heroTimeline,
             sceneName: 'HI_I_M_FEDERICO',
-            offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI.OFFSET,
+            offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI_TEXT.OFFSET,
             stagger: {
               index: index,
-              offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI.STAGGER.OFFSET,
+              offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI_TEXT.STAGGER.OFFSET,
             },
           }) / heroAnimationsConstants.SPEED,
         )
