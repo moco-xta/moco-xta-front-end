@@ -16,7 +16,7 @@ type GLTFResult = GLTF & {
 
 const LogoGsap = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   function LogoGsap(props, ref) {
-    const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_GSAP) as GLTFResult
+    const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_GSAP) as GLTFResult
 
     return (
       <group
@@ -35,6 +35,6 @@ const LogoGsap = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   },
 )
 
-useGLTF.preload(glbConstants.HOME.LOGO_GSAP)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_GSAP)
 
 export default LogoGsap

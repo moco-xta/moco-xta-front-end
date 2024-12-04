@@ -8,9 +8,11 @@ import GreetingCanvas from '@/components/three/canvas/home_canvas/hero/gretting_
 import AkaMocoCanvas from '@/components/three/canvas/home_canvas/hero/aka_moco_canvas/AkaMocoCanvas'
 import FrontEndDevelopperWithExtraSkillsCanvas from '@/components/three/canvas/home_canvas/hero/front_end_developper_with_extra_skills_canvas/FrontEndDevelopperWithExtraSkillsCanvas'
 
-import { getDelay } from '@/helpers/animationHelpers'
+import { getDelay, getSceneDelay } from '@/helpers/animationHelpers'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
+
+import './index.scss'
 
 export default function HeroSlice() {
   const heroTimelineRef = useRef<GSAPTimeline>(
@@ -18,15 +20,36 @@ export default function HeroSlice() {
       delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
     }),
   )
+  const grettingSliceRef = useRef<HTMLElement>(null!)
   const akaMocoSliceRef = useRef<HTMLElement>(null!)
 
   useEffect(() => {
     console.log('akaMocoSliceRef', akaMocoSliceRef)
   }, [akaMocoSliceRef])
 
-  /* useGSAP(
-    () => {
-      heroTimelineRef.current.to(akaMocoSliceRef.current.style, {
+  useGSAP()
+  /* () => {
+      heroTimelineRef.current.to(
+        grettingSliceRef.current.style,
+        {
+          keyframes: {
+            '0%': {
+              background: '#fff',
+            },
+            '50%': {
+              background: '#fff',
+            },
+            '60%': {
+              background: '#000',
+            },
+            easeEach: 'none',
+          },
+          duration: 10 / heroAnimationsConstants.SPEED,
+        },
+        0,
+      )
+9    }, */
+  /* heroTimelineRef.current.to(akaMocoSliceRef.current.style, {
         keyframes: {
           '0%': {
             // display: 'none',
@@ -45,13 +68,13 @@ export default function HeroSlice() {
           heroAnimationsConstants.SPEED,
         duration: 1 / heroAnimationsConstants.SPEED,
       })
-    },
-    // { scope: akaMocoSliceRef },
-  ) */
+    }, */
+  // { scope: akaMocoSliceRef },
 
   return (
     <>
       <section
+        ref={grettingSliceRef}
         id='greeting_slice'
         className='fullscreen'
         style={{ zIndex: heroAnimationsConstants.Z_INDEXES.GREETING_SLICE, position: 'fixed' }}

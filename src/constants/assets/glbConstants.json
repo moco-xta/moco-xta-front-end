@@ -1,30 +1,41 @@
 {
   "HOME": {
+    "HERO": {
+      "GOBELINO": {
+        "MOON": "/glb/home/hero/gobelino/Moon.glb",
+        "SKY": "/glb/home/hero/gobelino/Sky.glb",
+        "SUN": "/glb/home/hero/gobelino/Sun.glb"
+      },
+      "HELIUM_BALLOONS": {
+        "HELIUM_BALLOON_C": "/glb/home/hero/helium_balloons/HeliumBalloonC.glb",
+        "HELIUM_BALLOON_M": "/glb/home/hero/helium_balloons/HeliumBalloonM.glb",
+        "HELIUM_BALLOON_O": "/glb/home/hero/helium_balloons/HeliumBalloonO.glb",
+        "SMILEY": "/glb/home/hero/helium_balloons/Smiley.glb"
+      },
+      "LOGOS": {
+        "LOGO_ANGULAR": "/glb/home/hero/logos/LogoAngular.glb",
+        "LOGO_BLENDER": "/glb/home/hero/logos/LogoBlender.glb",
+        "LOGO_DOCKER": "/glb/home/hero/logos/LogoDocker.glb",
+        "LOGO_FIGMA": "/glb/home/hero/logos/LogoFigma.glb",
+        "LOGO_GSAP": "/glb/home/hero/logos/LogoGsap.glb",
+        "LOGO_NEXTJS": "/glb/home/hero/logos/LogoNextjs.glb",
+        "LOGO_REACT": "/glb/home/hero/logos/LogoReact.glb",
+        "LOGO_REACT_THREE_DREI": "/glb/home/hero/logos/LogoReactThreeDrei.glb",
+        "LOGO_REDUX": "/glb/home/hero/logos/LogoRedux.glb",
+        "LOGO_SASS": "/glb/home/hero/logos/LogoSass.glb",
+        "LOGO_SPRING": "/glb/home/hero/logos/LogoSpring.glb",
+        "LOGO_TAILWIND": "/glb/home/hero/logos/LogoTailwind.glb"
+      }
+    },
     "AXIS": "/glb/Axis.glb",
     "EXO_MARKET": "/glb/ExoMarket.glb",
     "EXO_MARKET_SHUTTER": "/glb/ExoMarketShutter.glb",
     "GANESH": "/glb/Ganesh.glb",
     "GOBELINO": "/glb/Gobelino.glb",
-    "HELIUM_BALLOON_C": "/glb/HeliumBalloonC.glb",
-    "HELIUM_BALLOON_M": "/glb/HeliumBalloonM.glb",
-    "HELIUM_BALLOON_O": "/glb/HeliumBalloonO.glb",
     "HEPTAGRAM": "/glb/Heptagram.glb",
-    "LOGO_ANGULAR": "/glb/LogoAngular.glb",
-    "LOGO_BLENDER": "/glb/LogoBlender.glb",
-    "LOGO_DOCKER": "/glb/LogoDocker.glb",
-    "LOGO_FIGMA": "/glb/LogoFigma.glb",
-    "LOGO_GSAP": "/glb/LogoGsap.glb",
-    "LOGO_NEXTJS": "/glb/LogoNextjs.glb",
-    "LOGO_REACT": "/glb/LogoReact.glb",
-    "LOGO_REACT_THREE_DREI": "/glb/LogoReactThreeDrei.glb",
-    "LOGO_REDUX": "/glb/LogoRedux.glb",
-    "LOGO_SASS": "/glb/LogoSass.glb",
-    "LOGO_SPRING": "/glb/LogoSpring.glb",
-    "LOGO_TAILWIND": "/glb/LogoTailwind.glb",
     "MAC_BOOK_PRO": "/glb/MacBookPro.glb",
     "PHONE_NUMBER_INPUT": "/glb/PhoneNumberInput.glb",
-    "SEVEN_POINTED_STAR": "/glb/SevenPointedStar.glb",
-    "SMILEY": "/glb/Smiley.glb"
+    "SEVEN_POINTED_STAR": "/glb/SevenPointedStar.glb"
   },
   "FONTS": {
     "GILROY": {

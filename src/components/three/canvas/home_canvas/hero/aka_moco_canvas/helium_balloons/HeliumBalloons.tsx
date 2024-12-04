@@ -2,10 +2,10 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { RigidBody } from '@react-three/rapier'
 
-import { HeliumBalloonM } from '@/components/three/models/home/HeliumBalloonM'
-import { HeliumBalloonO } from '@/components/three/models/home/HeliumBalloonO'
-import { HeliumBalloonC } from '@/components/three/models/home/HeliumBalloonC'
-import { Smiley } from '@/components/three/models/home/Smiley'
+import { HeliumBalloonM } from '@/components/three/models/home/hero/helium_balloons/HeliumBalloonM'
+import { HeliumBalloonO } from '@/components/three/models/home/hero/helium_balloons/HeliumBalloonO'
+import { HeliumBalloonC } from '@/components/three/models/home/hero/helium_balloons/HeliumBalloonC'
+import { Smiley } from '@/components/three/models/home/hero/helium_balloons/Smiley'
 
 import { default as mocoCanvasConstants } from '@/constants/canvas/home/mocoCanvasConstants.json'
 

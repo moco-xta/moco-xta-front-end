@@ -16,7 +16,7 @@ type GltfResultType = GLTF & {
 
 const LogoReact = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   function LogoReact(props, ref) {
-    const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_REACT) as GltfResultType
+    const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_REACT) as GltfResultType
 
     return (
       <group
@@ -35,6 +35,6 @@ const LogoReact = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   },
 )
 
-useGLTF.preload(glbConstants.HOME.LOGO_REACT)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_REACT)
 
 export default LogoReact

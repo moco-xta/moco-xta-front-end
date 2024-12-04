@@ -16,7 +16,7 @@ type GLTFResult = GLTF & {
 
 const LogoDocker = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   function LogoDocker(props, ref) {
-    const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_DOCKER) as GLTFResult
+    const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_DOCKER) as GLTFResult
 
     return (
       <group
@@ -35,6 +35,6 @@ const LogoDocker = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   },
 )
 
-useGLTF.preload(glbConstants.HOME.LOGO_DOCKER)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_DOCKER)
 
 export default LogoDocker

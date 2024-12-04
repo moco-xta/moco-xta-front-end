@@ -16,7 +16,7 @@ type GLTFResult = GLTF & {
 }
 
 export const LogoTailwind = forwardRef<THREE.Group, GroupProps>(function LogoTailwind(props, ref) {
-  const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_TAILWIND) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_TAILWIND) as GLTFResult
 
   return (
     <group
@@ -33,4 +33,4 @@ export const LogoTailwind = forwardRef<THREE.Group, GroupProps>(function LogoTai
   )
 })
 
-useGLTF.preload(glbConstants.HOME.LOGO_TAILWIND)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_TAILWIND)

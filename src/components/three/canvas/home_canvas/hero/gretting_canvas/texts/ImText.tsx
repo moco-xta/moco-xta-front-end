@@ -47,7 +47,9 @@ export default function ImText({ timeline }: ImTextInterface) {
               },
               easeEach: 'none',
             },
-            duration: 1 / heroAnimationsConstants.SPEED,
+            duration:
+              heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.DURATION /
+              heroAnimationsConstants.SPEED,
           },
           getSceneDelay({
             scenes: heroTimeline,
@@ -78,7 +80,9 @@ export default function ImText({ timeline }: ImTextInterface) {
               },
               easeEach: 'none',
             },
-            duration: 1 / heroAnimationsConstants.SPEED,
+            duration:
+              heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.DURATION /
+              heroAnimationsConstants.SPEED,
           },
           getSceneDelay({
             scenes: heroTimeline,
@@ -114,10 +118,10 @@ export default function ImText({ timeline }: ImTextInterface) {
       lengthRef={imTextLengthRef}
     >
       <meshStandardMaterial
-        color={greetingCanvasConstants.MATERIALS.TEXTS.COLOR}
-        transparent={greetingCanvasConstants.MATERIALS.TEXTS.TRANSPARENT}
-        opacity={greetingCanvasConstants.MATERIALS.TEXTS.OPACITY}
-        // emissive={greetingCanvasConstants.MATERIALS.TEXTS.EMISSIVE}
+        color={greetingCanvasConstants.MATERIALS.TEXTS.HI_I_M_FEDERICO.COLOR}
+        transparent={greetingCanvasConstants.MATERIALS.TEXTS.HI_I_M_FEDERICO.TRANSPARENT}
+        opacity={greetingCanvasConstants.MATERIALS.TEXTS.HI_I_M_FEDERICO.OPACITY}
+        // emissive={greetingCanvasConstants.MATERIALS.TEXTS.HI_I_M_FEDERICO.EMISSIVE}
         side={THREE.DoubleSide}
       />
     </Word3D>

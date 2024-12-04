@@ -10,22 +10,25 @@
   "SCENES": {
     "HI_I_M_FEDERICO": {
       "NAME": "HI_I_M_FEDERICO",
-      "STEPS": 5,
+      "DURATION": 5,
       "OFFSET": 0,
       "SUBS": {
         "HI_TEXT": {
+          "DURATION": 1,
           "OFFSET": 0,
           "STAGGER": {
             "OFFSET": 0.125
           }
         },
         "I_M_TEXT": {
+          "DURATION": 1,
           "OFFSET": 1,
           "STAGGER": {
             "OFFSET": 0.125
           }
         },
         "FEDERICO_TEXT": {
+          "DURATION": 1,
           "OFFSET": 2,
           "STAGGER": {
             "OFFSET": 0.125
@@ -44,16 +47,32 @@
     },
     "FEDERICO": {
       "NAME": "FEDERICO",
-      "STEPS": 3,
-      "OFFSET": -1
+      "DURATION": 3,
+      "OFFSET": -1,
+      "SUBS": {
+        "GOBELINO": {
+          "DURATION": 1,
+          "OFFSET": 0,
+          "SUBS": {
+            "SKY": {
+              "DURATION": 2,
+              "OFFSET": 0
+            },
+            "SUN_AND_MOON": {
+              "DURATION": 2,
+              "OFFSET": -0.25
+            }
+          }
+        }
+      }
     },
     "AKA_MOCO": {
       "KEYFRAME_NAME": "AKA_MOCO",
-      "STEPS": 3,
+      "DURATION": 3,
       "ALSO": {
         "POSITION": {
           "X": 0,
-          "Y": 1.1,
+          "Y": 2,
           "Z": 1
         }
       },
@@ -67,22 +86,14 @@
       "AS": {
         "POSITION": {
           "X": 0,
-          "Y": -1.1,
+          "Y": -2,
           "Z": 1
         }
       },
       "TEXTS": {
         "FONT": "fonts/json/Gilroy_Heavy.json",
         "DEPTH": 0.5,
-        "SIZE": 1,
-        "MATERIAL": {
-          "COLOR": "#f00",
-          "TRANSPARENT": true,
-          "OPACITY": 1,
-          "EMISSIVE": "#f00",
-          "EMISSIVE_INTENSITY": 5,
-          "WIREFRAME": true
-        }
+        "SIZE": 1.8
       }
     }
   }

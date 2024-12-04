@@ -20,7 +20,9 @@ type GltfResultType = GLTF & {
 
 const LogoBlender = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   function LogoBlender(props, ref) {
-    const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_BLENDER) as GltfResultType
+    const { nodes, materials } = useGLTF(
+      glbConstants.HOME.HERO.LOGOS.LOGO_BLENDER,
+    ) as GltfResultType
 
     return (
       <group
@@ -51,6 +53,6 @@ const LogoBlender = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   },
 )
 
-useGLTF.preload(glbConstants.HOME.LOGO_BLENDER)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_BLENDER)
 
 export default LogoBlender

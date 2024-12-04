@@ -24,7 +24,7 @@ type GLTFResult = GLTF & {
 
 const LogoFigma = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   function LogoFigma(props, ref) {
-    const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_FIGMA) as GLTFResult
+    const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_FIGMA) as GLTFResult
 
     return (
       <group
@@ -67,6 +67,6 @@ const LogoFigma = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   },
 )
 
-useGLTF.preload(glbConstants.HOME.LOGO_FIGMA)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_FIGMA)
 
 export default LogoFigma

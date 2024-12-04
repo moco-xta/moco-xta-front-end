@@ -20,7 +20,7 @@ const LogoSpring = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(funct
   { position, rotation, scale },
   ref,
 ) {
-  const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_SPRING) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_SPRING) as GLTFResult
 
   return (
     <group
@@ -46,6 +46,6 @@ const LogoSpring = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(funct
   )
 })
 
-useGLTF.preload(glbConstants.HOME.LOGO_SPRING)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_SPRING)
 
 export default LogoSpring

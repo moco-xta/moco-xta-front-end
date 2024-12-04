@@ -18,7 +18,9 @@ type GLTFResult = GLTF & {
 
 const LogoReactThreeDrei = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   function LogoReactThreeDrei({ position, rotation, scale }, ref) {
-    const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_REACT_THREE_DREI) as GLTFResult
+    const { nodes, materials } = useGLTF(
+      glbConstants.HOME.HERO.LOGOS.LOGO_REACT_THREE_DREI,
+    ) as GLTFResult
 
     return (
       <group
@@ -45,6 +47,6 @@ const LogoReactThreeDrei = forwardRef<THREE.Group, JSX.IntrinsicElements['group'
   },
 )
 
-useGLTF.preload(glbConstants.HOME.LOGO_REACT_THREE_DREI)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_REACT_THREE_DREI)
 
 export default LogoReactThreeDrei

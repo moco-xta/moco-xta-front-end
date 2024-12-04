@@ -16,7 +16,7 @@ type GLTFResult = GLTF & {
 }
 
 export const LogoRedux = forwardRef<THREE.Group, GroupProps>(function LogoRedux(props, ref) {
-  const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_REDUX) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_REDUX) as GLTFResult
 
   return (
     <group
@@ -33,4 +33,4 @@ export const LogoRedux = forwardRef<THREE.Group, GroupProps>(function LogoRedux(
   )
 })
 
-useGLTF.preload(glbConstants.HOME.LOGO_REDUX)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_REDUX)

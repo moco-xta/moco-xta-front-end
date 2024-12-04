@@ -1,11 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { Plane } from '@react-three/drei'
+import { Box, Plane } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
 import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
 
 // import HeptagramComponent from './HeptagramComponent'
+import AlsoKnowAs from '../../aka_moco_canvas/also_know_as/AlsoKnowAs'
+
+import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
 
 import { getSceneDelay } from '@/helpers/animationHelpers'
 
@@ -27,22 +30,23 @@ export default function Portrait({ timeline }: PortraitInterface) {
     side: THREE.DoubleSide,
   })
 
-  const portraitGroupRef = useRef<THREE.Group>(null!)
+  const portraitBoxGroupRef = useRef<THREE.Mesh>(null!)
+  // const portraitGroupRef = useRef<THREE.Group>(null!)
   const portraitMeshRef = useRef<THREE.Mesh>(null!)
+
+  useEffect(() => {}, [])
 
   useGSAP(() => {
     // POSITION
     timeline.to(
-      portraitGroupRef.current.position,
+      portraitBoxGroupRef.current.position,
       {
         keyframes: {
-          '0%': { y: -1, z: 6 },
-          '33%': { y: 0, z: 0 },
-          '66%': { y: 0, z: 0 },
-          '100%': { y: 0, z: 0 },
+          '0%': { y: -6, z: 6 },
+          '33%': { y: -5, z: 0 },
           easeEach: 'power2.out',
         },
-        duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
+        duration: heroAnimationsConstants.SCENES.FEDERICO.DURATION / heroAnimationsConstants.SPEED,
       },
       getSceneDelay({
         scenes: heroTimeline,
@@ -53,14 +57,14 @@ export default function Portrait({ timeline }: PortraitInterface) {
 
     // ROTATION
     timeline.to(
-      portraitGroupRef.current.rotation,
+      portraitBoxGroupRef.current.rotation,
       {
         keyframes: {
-          '0%': { z: THREE.MathUtils.degToRad(33) },
-          '33%': { z: 0 },
+          '66%': { z: THREE.MathUtils.degToRad(0) },
+          '100%': { z: THREE.MathUtils.degToRad(-180) },
           easeEach: 'power2.out',
         },
-        duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
+        duration: heroAnimationsConstants.SCENES.FEDERICO.DURATION / heroAnimationsConstants.SPEED,
       },
       getSceneDelay({
         scenes: heroTimeline,
@@ -78,7 +82,7 @@ export default function Portrait({ timeline }: PortraitInterface) {
           '20%': { opacity: 1 },
           easeEach: 'power1.in',
         },
-        duration: heroAnimationsConstants.SCENES.FEDERICO.STEPS / heroAnimationsConstants.SPEED,
+        duration: heroAnimationsConstants.SCENES.FEDERICO.DURATION / heroAnimationsConstants.SPEED,
       },
       getSceneDelay({
         scenes: heroTimeline,
@@ -88,9 +92,8 @@ export default function Portrait({ timeline }: PortraitInterface) {
     )
   })
 
-  return (
-    <group ref={portraitGroupRef}>
-      {/* <HeptagramComponent /> */}
+  /* return (
+    <group ref={portraitGroupRef} position={new THREE.Vector3(0, -5, 0)}>
       <Plane
         ref={portraitMeshRef}
         args={[7.5, 7.5]}
@@ -99,5 +102,24 @@ export default function Portrait({ timeline }: PortraitInterface) {
         castShadow
       />
     </group>
+  ) */
+
+  return (
+    <Box
+      ref={portraitBoxGroupRef}
+      args={[1, 10, 1]}
+      position={[0, -5, 0]}
+      material={boxGroupMaterial}
+    >
+      <AlsoKnowAs />
+      <Plane
+        ref={portraitMeshRef}
+        args={[7.5, 7.5]}
+        position={[0, 5, 0]}
+        material={portraitMaterial}
+        receiveShadow
+        castShadow
+      />
+    </Box>
   )
 }

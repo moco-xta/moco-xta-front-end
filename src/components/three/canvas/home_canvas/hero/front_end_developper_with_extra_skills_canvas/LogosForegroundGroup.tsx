@@ -1,11 +1,11 @@
 import React from 'react'
 import * as THREE from 'three'
 
-import LogoAngular from '@/components/three/models/home/logos/LogoAngular'
-import LogoFigma from '@/components/three/models/home/logos/LogoFigma'
-import LogoGsap from '@/components/three/models/home/logos/LogoGsap'
-import LogoNextjs from '@/components/three/models/home/logos/LogoNextjs'
-import { LogoTailwind } from '@/components/three/models/home/logos/LogoTailwind'
+import LogoAngular from '@/components/three/models/home/hero/logos/LogoAngular'
+import LogoFigma from '@/components/three/models/home/hero/logos/LogoFigma'
+import LogoGsap from '@/components/three/models/home/hero/logos/LogoGsap'
+import LogoNextjs from '@/components/three/models/home/hero/logos/LogoNextjs'
+import { LogoTailwind } from '@/components/three/models/home/hero/logos/LogoTailwind'
 
 export default function LogosForegroundGroup() {
   return (

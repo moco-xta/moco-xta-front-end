@@ -33,6 +33,7 @@ export default function Lights() {
           greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.Y,
           greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.Z,
         ]}
+        target={new THREE.Object3D()}
         intensity={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.INTENSITY}
         shadow-mapSize={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.MAP_SIZE}
         shadow-camera-far={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_FAR}
@@ -44,7 +45,41 @@ export default function Lights() {
         shadow-bias={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_BIAS}
         castShadow
       />
-      <spotLight
+      <directionalLight
+        ref={ref}
+        position={[
+          -greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.X,
+          greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.Y,
+          greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.Z,
+        ]}
+        target={new THREE.Object3D()}
+        intensity={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.INTENSITY}
+        shadow-mapSize={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.MAP_SIZE}
+        shadow-camera-far={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_FAR}
+        shadow-camera-left={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_LEFT}
+        shadow-camera-right={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_RIGHT}
+        shadow-camera-top={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_TOP}
+        shadow-camera-bottom={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_BOTTOM}
+        shadow-radius={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_RADIUS}
+        shadow-bias={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_BIAS}
+        castShadow
+      />
+      <directionalLight
+        ref={ref}
+        position={[0, 0, 5]}
+        target={new THREE.Object3D()}
+        intensity={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.INTENSITY}
+        shadow-mapSize={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.MAP_SIZE}
+        shadow-camera-far={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_FAR}
+        shadow-camera-left={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_LEFT}
+        shadow-camera-right={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_RIGHT}
+        shadow-camera-top={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_TOP}
+        shadow-camera-bottom={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_BOTTOM}
+        shadow-radius={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_RADIUS}
+        shadow-bias={greetingCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_BIAS}
+        castShadow
+      />
+      {/* <spotLight
         ref={spotLightRef}
         position={[6.25, 9, 1]}
         intensity={30}
@@ -53,7 +88,7 @@ export default function Lights() {
         penumbra={0.1}
         decay={0.5}
         castShadow
-      />
+      /> */}
     </>
   )
 }

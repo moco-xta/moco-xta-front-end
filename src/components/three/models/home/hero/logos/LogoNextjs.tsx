@@ -18,7 +18,7 @@ type GLTFResult = GLTF & {
 
 const LogoNextjs = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   function LogoNextjs(props, ref) {
-    const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_NEXTJS) as GLTFResult
+    const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_NEXTJS) as GLTFResult
 
     return (
       <group
@@ -41,6 +41,6 @@ const LogoNextjs = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   },
 )
 
-useGLTF.preload(glbConstants.HOME.LOGO_NEXTJS)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_NEXTJS)
 
 export default LogoNextjs

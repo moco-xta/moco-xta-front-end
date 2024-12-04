@@ -27,7 +27,7 @@
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
-      "INTENSITY": 0.25
+      "INTENSITY": 0.5
     },
     "DIRECTIONAL_LIGHT": {
       "POSITION": {
@@ -71,10 +71,20 @@
   },
   "MATERIALS": {
     "TEXTS": {
-      "COLOR": "#dcff00",
-      "TRANSPARENT": true,
-      "OPACITY": 0,
-      "EMISSIVE": "#dcff00"
+      "HI_I_M_FEDERICO": {
+        "COLOR": "#dcff00",
+        "TRANSPARENT": true,
+        "OPACITY": 0,
+        "EMISSIVE": "#dcff00"
+      },
+      "ALSO_KNOW_AS": {
+        "COLOR": "#f00",
+        "TRANSPARENT": true,
+        "OPACITY": 1,
+        "EMISSIVE": "#f00",
+        "EMISSIVE_INTENSITY": 5,
+        "WIREFRAME": true
+      }
     }
   }
 }

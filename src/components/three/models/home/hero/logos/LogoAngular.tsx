@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
 
 const LogoAngular = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   function LogoAngular(props, ref) {
-    const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_ANGULAR) as GLTFResult
+    const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_ANGULAR) as GLTFResult
 
     return (
       <group
@@ -51,6 +51,6 @@ const LogoAngular = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   },
 )
 
-useGLTF.preload(glbConstants.HOME.LOGO_ANGULAR)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_ANGULAR)
 
 export default LogoAngular

@@ -1,10 +1,10 @@
 import React from 'react'
 import * as THREE from 'three'
 
-import LogoReact from '@/components/three/models/home/logos/LogoReact'
-import LogoReactThreeDrei from '@/components/three/models/home/logos/LogoReactThreeDrei'
-import { LogoRedux } from '@/components/three/models/home/logos/LogoRedux'
-import { LogoSass } from '@/components/three/models/home/logos/LogoSass'
+import LogoReact from '@/components/three/models/home/hero/logos/LogoReact'
+import LogoReactThreeDrei from '@/components/three/models/home/hero/logos/LogoReactThreeDrei'
+import { LogoRedux } from '@/components/three/models/home/hero/logos/LogoRedux'
+import { LogoSass } from '@/components/three/models/home/hero/logos/LogoSass'
 
 export default function LogosBackgroundGroup() {
   return (

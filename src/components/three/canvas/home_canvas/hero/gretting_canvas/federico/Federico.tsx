@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 
 import Portrait from './Portrait'
-import GobelinoComponent from './GobelinoConponent'
+import GobelinoComponent from './gobelino/GobelinoComponent'
 import LogoRCL from './LogoRCL'
 
 interface FedericoInterface {

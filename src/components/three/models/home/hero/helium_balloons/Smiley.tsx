@@ -16,7 +16,7 @@ type GLTFResult = GLTF & {
 }
 
 export const Smiley = forwardRef<THREE.Mesh, MeshProps>(function Smiley(props, ref) {
-  const { nodes, materials } = useGLTF(glbConstants.HOME.SMILEY) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.HELIUM_BALLOONS.SMILEY) as GLTFResult
   return (
     <mesh
       ref={ref}
@@ -29,4 +29,4 @@ export const Smiley = forwardRef<THREE.Mesh, MeshProps>(function Smiley(props, r
   )
 })
 
-useGLTF.preload(glbConstants.HOME.SMILEY)
+useGLTF.preload(glbConstants.HOME.HERO.HELIUM_BALLOONS.SMILEY)

@@ -16,7 +16,7 @@ type GLTFResult = GLTF & {
 }
 
 export const LogoSass = forwardRef<THREE.Group, GroupProps>(function LogoSass(props, ref) {
-  const { nodes, materials } = useGLTF(glbConstants.HOME.LOGO_SASS) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.LOGOS.LOGO_SASS) as GLTFResult
 
   return (
     <group
@@ -33,4 +33,4 @@ export const LogoSass = forwardRef<THREE.Group, GroupProps>(function LogoSass(pr
   )
 })
 
-useGLTF.preload(glbConstants.HOME.LOGO_SASS)
+useGLTF.preload(glbConstants.HOME.HERO.LOGOS.LOGO_SASS)
