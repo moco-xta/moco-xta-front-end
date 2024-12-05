@@ -45,33 +45,64 @@ export default function HiText({ timeline }: HiTextInterface) {
           letter.position,
           {
             keyframes: {
-              '0%': { y: -2.5, z: -2 },
-              '100%': { y: 0, z: 0 },
-              easeEach: 'none',
+              '0%': {
+                y: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.POSITION[
+                  '0_PERCENT'
+                ].Y,
+                z: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.POSITION[
+                  '0_PERCENT'
+                ].Z,
+              },
+              '100%': {
+                y: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.POSITION[
+                  '100_PERCENT'
+                ].Y,
+                z: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.POSITION[
+                  '100_PERCENT'
+                ].Z,
+              },
+              easeEach:
+                heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.POSITION
+                  .EACH_EASE,
             },
             duration: duration,
           },
-          delay,
+          delay +
+            (index *
+              heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.STAGGER) /
+              heroAnimationsConstants.SPEED,
         )
 
-        // ROTATION
+        // MATERIAL
         timeline.to(
           // @ts-ignore
           letter.material,
           {
             keyframes: {
               '50%': {
-                opacity: 0,
+                opacity:
+                  heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.MATERIAL[
+                    '50_PERCENT'
+                  ].OPACITY,
               },
               '100%': {
-                opacity: 1,
-                ease: 'power1.in',
+                opacity:
+                  heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.MATERIAL[
+                    '100_PERCENT'
+                  ].OPACITY,
+                ease: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION
+                  .MATERIAL['100_PERCENT'].EASE,
               },
-              easeEach: 'none',
+              easeEach:
+                heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.MATERIAL
+                  .EACH_EASE,
             },
             duration: duration,
           },
-          delay,
+          delay +
+            (index *
+              heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.ANIMATION.STAGGER) /
+              heroAnimationsConstants.SPEED,
         )
       })
     },

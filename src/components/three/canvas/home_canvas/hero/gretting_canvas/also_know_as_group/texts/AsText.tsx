@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import * as THREE from 'three'
 
-import { Word3D } from '../../../components/word_3d/Word3D'
+import { Word3D } from '../../../../components/word_3d/Word3D'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
@@ -19,15 +19,15 @@ export default function AsText() {
     <Word3D
       ref={asTextGroupRef}
       keyPrefix={'as_text'}
-      font={heroAnimationsConstants.SCENES.AKA_MOCO.TEXTS.FONT}
-      size={heroAnimationsConstants.SCENES.AKA_MOCO.TEXTS.SIZE}
-      depth={heroAnimationsConstants.SCENES.AKA_MOCO.TEXTS.DEPTH}
+      font={heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.TEXTS.FONT}
+      size={heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.TEXTS.SIZE}
+      depth={heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.TEXTS.DEPTH}
       splittedWord={asTextSplitted}
       position={
         new THREE.Vector3(
-          heroAnimationsConstants.SCENES.AKA_MOCO.AS.POSITION.X,
-          heroAnimationsConstants.SCENES.AKA_MOCO.AS.POSITION.Y,
-          heroAnimationsConstants.SCENES.AKA_MOCO.AS.POSITION.Z,
+          heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.AS.POSITION.X,
+          heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.AS.POSITION.Y,
+          heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.AS.POSITION.Z,
         )
       }
       center={true}

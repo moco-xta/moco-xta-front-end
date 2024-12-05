@@ -3,7 +3,11 @@ import * as THREE from 'three'
 
 import { Buho } from '@/components/three/models/home/hero/Buho'
 
-export default function BuhoComponent() {
+interface BuhoComponentInterface {
+  timeline: GSAPTimeline
+}
+
+export default function BuhoComponent({ timeline }: BuhoComponentInterface) {
   const buhoGroupRef = useRef<THREE.Group>(null!)
 
   return (

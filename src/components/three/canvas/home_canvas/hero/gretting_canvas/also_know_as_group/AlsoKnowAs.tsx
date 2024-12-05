@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
 
-import AlsoText from '../../aka_moco_canvas/texts/AlsoText'
-import KnowText from '../../aka_moco_canvas/texts/KnowText'
-import AsText from '../../aka_moco_canvas/texts/AsText'
+import AlsoText from './texts/AlsoText'
+import KnowText from './texts/KnowText'
+import AsText from './texts/AsText'
 
 export default function AlsoKnowAs() {
   const alsoKnowAsGroupRef = useRef<THREE.Group>(null!)

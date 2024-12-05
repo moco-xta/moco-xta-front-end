@@ -1,37 +1,37 @@
 import React, { useRef, useState } from 'react'
 import * as THREE from 'three'
 
-import { Word3D } from '../../../components/word_3d/Word3D'
+import { Word3D } from '../../../../components/word_3d/Word3D'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
 
-export default function AlsoText() {
-  const [alsoText] = useState<string>('also'.toUpperCase())
-  const [alsoTextSplitted] = useState<string[]>(alsoText.split(''))
+export default function KnowText() {
+  const [knowText] = useState<string>('know'.toUpperCase())
+  const [knowTextSplitted] = useState<string[]>(knowText.split(''))
 
-  const alsoTextGroupRef = useRef<THREE.Group>(null!)
-  const alsoTextLengthRef = useRef<number[]>([])
+  const knowTextGroupRef = useRef<THREE.Group>(null!)
+  const knowTextLengthRef = useRef<number[]>([])
   // const box3Ref = useRef<THREE.Box3>(new THREE.Box3())
 
   // useHelper(hiGroupRef, THREE.BoxHelper, 'blue')
   return (
     <Word3D
-      ref={alsoTextGroupRef}
-      keyPrefix={'also_text'}
-      font={heroAnimationsConstants.SCENES.AKA_MOCO.TEXTS.FONT}
-      size={heroAnimationsConstants.SCENES.AKA_MOCO.TEXTS.SIZE}
-      depth={heroAnimationsConstants.SCENES.AKA_MOCO.TEXTS.DEPTH}
-      splittedWord={alsoTextSplitted}
+      ref={knowTextGroupRef}
+      keyPrefix={'know_text'}
+      font={heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.TEXTS.FONT}
+      size={heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.TEXTS.SIZE}
+      depth={heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.TEXTS.DEPTH}
+      splittedWord={knowTextSplitted}
       position={
         new THREE.Vector3(
-          heroAnimationsConstants.SCENES.AKA_MOCO.ALSO.POSITION.X,
-          heroAnimationsConstants.SCENES.AKA_MOCO.ALSO.POSITION.Y,
-          heroAnimationsConstants.SCENES.AKA_MOCO.ALSO.POSITION.Z,
+          heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.KNOW.POSITION.X,
+          heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.KNOW.POSITION.Y,
+          heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.KNOW.POSITION.Z,
         )
       }
       center={true}
-      lengthRef={alsoTextLengthRef}
+      lengthRef={knowTextLengthRef}
     >
       <meshStandardMaterial
         color={greetingCanvasConstants.MATERIALS.TEXTS.ALSO_KNOW_AS.COLOR}

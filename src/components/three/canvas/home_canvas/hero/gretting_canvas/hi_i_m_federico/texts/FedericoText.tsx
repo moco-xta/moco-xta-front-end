@@ -17,11 +17,11 @@ interface FedericoTextInterface {
 
 export default function FedericoText({ timeline }: FedericoTextInterface) {
   const [duration] = useState<number>(
-    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.DURATION /
+    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.DURATION /
       heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
-    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.KEYFRAME_START /
+    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.KEYFRAME_START /
       heroAnimationsConstants.SPEED,
   )
 
@@ -45,44 +45,72 @@ export default function FedericoText({ timeline }: FedericoTextInterface) {
           {
             keyframes: {
               '0%': {
-                x: getRandomInt({ min: 0, max: 20, decimal: 0.25 }),
-                z: getRandomInt({ min: 0, max: 20, decimal: 0.25 }),
+                x: getRandomInt({
+                  min: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                    .POSITION['0_PERCENT'].X.MIN,
+                  max: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                    .POSITION['0_PERCENT'].X.MAX,
+                  decimal:
+                    heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                      .POSITION['0_PERCENT'].X.DECIMAL,
+                }),
+                z: getRandomInt({
+                  min: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                    .POSITION['0_PERCENT'].Z.MIN,
+                  max: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                    .POSITION['0_PERCENT'].Z.MAX,
+                  decimal:
+                    heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                      .POSITION['0_PERCENT'].Z.DECIMAL,
+                }),
               },
               '100%': {
                 x:
                   federicoTextGroupRef.current.position.x +
                   federicoTextLengthRef.current.slice(0, index).reduce((a, b) => a + b, 0),
-                z: 0,
+                z: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                  .POSITION['100_PERCENT'].Z,
               },
-              delay: getRandomInt({ min: 0, max: 20 }) / 5 + index * 0.25,
-              easeEach: 'power1.in',
+              easeEach:
+                heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION.MATERIAL
+                  .EACH_EASE,
             },
             duration: duration,
           },
-          delay,
+          delay +
+            (index *
+              heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION.STAGGER) /
+              heroAnimationsConstants.SPEED,
         )
 
-        // ROTATION
+        // MATERIAL
         timeline.to(
           // @ts-ignore
           letter.material,
           {
             keyframes: {
-              '0%': {
-                opacity: 0,
-              },
               '50%': {
-                opacity: 0,
+                opacity:
+                  heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                    .MATERIAL['50_PERCENT'].OPACITY,
               },
               '100%': {
-                opacity: 1,
-                ease: 'power1.in',
+                opacity:
+                  heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                    .MATERIAL['100_PERCENT'].OPACITY,
+                ease: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION
+                  .MATERIAL['100_PERCENT'].EASE,
               },
-              easeEach: 'none',
+              easeEach:
+                heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION.MATERIAL
+                  .EACH_EASE,
             },
             duration: duration,
           },
-          delay,
+          delay +
+            (index *
+              heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.FEDERICO_TEXT.ANIMATION.STAGGER) /
+              heroAnimationsConstants.SPEED,
         )
       })
     },
