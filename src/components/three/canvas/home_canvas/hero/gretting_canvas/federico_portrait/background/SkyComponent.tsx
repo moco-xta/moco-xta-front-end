@@ -1,17 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
-import { Box } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
-import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
-
 import { Sky } from '@/components/three/models/home/hero/gobelino/Sky'
-import SunComponent from './SunComponent'
-import MoonComponent from './MoonComponent'
-
-import { getSceneDelay } from '@/helpers/animationHelpers'
-
-import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
+import SunAndMoon from './SunAndMoon'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 
@@ -29,7 +21,6 @@ export default function SkyComponent({ timeline }: SkyComponentInterface) {
 
   const skyComponentGroupRef = useRef<THREE.Group>(null!)
   const skyComponentMeshRef = useRef<THREE.Mesh>(null!)
-  const sunAndMoonBoxGroupRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(() => {
     // POSITION
@@ -76,20 +67,6 @@ export default function SkyComponent({ timeline }: SkyComponentInterface) {
       },
       delay,
     )
-
-    timeline.to(
-      sunAndMoonBoxGroupRef.current.rotation,
-      {
-        keyframes: {
-          '0%': { z: THREE.MathUtils.degToRad(66) },
-          '66%': { z: THREE.MathUtils.degToRad(-33) },
-          '100%': { z: THREE.MathUtils.degToRad(-213) },
-          easeEach: 'power2.out',
-        },
-        duration: duration,
-      },
-      delay,
-    )
   })
 
   return (
@@ -98,15 +75,7 @@ export default function SkyComponent({ timeline }: SkyComponentInterface) {
       position={new THREE.Vector3(0, -5, 0)}
     >
       <Sky ref={skyComponentMeshRef} />
-      <Box
-        ref={sunAndMoonBoxGroupRef}
-        args={[1, 6, 1]}
-        rotation={new THREE.Euler(0, 0, THREE.MathUtils.degToRad(66))}
-        material={boxGroupMaterial}
-      >
-        <SunComponent position={new THREE.Vector3(0, 3, 0)} />
-        <MoonComponent position={new THREE.Vector3(0, -3, 0)} />
-      </Box>
+      <SunAndMoon timeline={timeline} />
     </group>
   )
 }
