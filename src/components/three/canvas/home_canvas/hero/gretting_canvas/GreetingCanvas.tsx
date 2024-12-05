@@ -28,10 +28,10 @@ export default function GreetingCanvas({ timeline }: GreetingCanvasInterface) {
       <Camera />
       <OrbitControls />
       <Lights />
-      <color
+      {/* <color
         attach='background'
-        args={['#0000']}
-      />
+        args={['#000']}
+      /> */}
       <Suspense fallback={null}>
         <GreetingScene timeline={timeline} />
         <PostProcessing />

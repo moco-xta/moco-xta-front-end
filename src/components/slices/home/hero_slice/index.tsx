@@ -8,14 +8,12 @@ import GreetingCanvas from '@/components/three/canvas/home_canvas/hero/gretting_
 import AkaMocoCanvas from '@/components/three/canvas/home_canvas/hero/aka_moco_canvas/AkaMocoCanvas'
 import FrontEndDevelopperWithExtraSkillsCanvas from '@/components/three/canvas/home_canvas/hero/front_end_developper_with_extra_skills_canvas/FrontEndDevelopperWithExtraSkillsCanvas'
 
-import { getDelay, getSceneDelay } from '@/helpers/animationHelpers'
-
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 
 import './index.scss'
 
 export default function HeroSlice() {
-  const heroTimelineRef = useRef<GSAPTimeline>(
+  const timelineRef = useRef<GSAPTimeline>(
     gsap.timeline({
       delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
     }),
@@ -27,29 +25,81 @@ export default function HeroSlice() {
     console.log('akaMocoSliceRef', akaMocoSliceRef)
   }, [akaMocoSliceRef])
 
-  useGSAP()
-  /* () => {
-      heroTimelineRef.current.to(
+  useGSAP(
+    () => {
+      /* timelineRef.current.to(
         grettingSliceRef.current.style,
         {
           keyframes: {
             '0%': {
               background: '#fff',
             },
+            '5%': {
+              backgroundImage: 'url("/img/test/brain.jpg")',
+            },
+            '10%': {
+              backgroundImage: 'url("/img/test/nuclear_explosion.jpg")',
+            },
+            '15%': {
+              backgroundImage: 'url("/img/test/guernica.jpg")',
+            },
+            '20%': {
+              backgroundImage: 'url("/img/test/brain.jpg")',
+            },
+            '25%': {
+              backgroundImage: 'url("/img/test/nuclear_explosion.jpg")',
+              // backgroundImage: 'unset',
+              // background: '#f00',
+            },
+            '30%': {
+              backgroundImage: 'url("/img/test/guernica.jpg")',
+            },
+            '35%': {
+              backgroundImage: 'url("/img/test/brain.jpg")',
+            },
+            '40%': {
+              backgroundImage: 'url("/img/test/nuclear_explosion.jpg")',
+            },
+            '45%': {
+              backgroundImage: 'url("/img/test/guernica.jpg")',
+              // backgroundImage: 'unset',
+              // background: '#f00',
+            },
             '50%': {
-              background: '#fff',
+              backgroundImage: 'url("/img/test/brain.jpg")',
+            },
+            '55%': {
+              backgroundImage: 'url("/img/test/nuclear_explosion.jpg")',
             },
             '60%': {
-              background: '#000',
+              backgroundImage: 'url("/img/test/guernica.jpg")',
+            },
+            '65%': {
+              backgroundImage: 'url("/img/test/brain.jpg")',
+            },
+            '70%': {
+              backgroundImage: 'url("/img/test/nuclear_explosion.jpg")',
+            },
+            '75%': {
+              backgroundImage: 'url("/img/test/guernica.jpg")',
+              // backgroundImage: 'unset',
+              // background: '#f00',
+            },
+            '80%': {
+              backgroundImage: 'url("/img/test/guernica.jpg")',
+              // backgroundImage: 'unset',
+              // background: '#00f',
+            },
+            '85%': {
+              backgroundImage: 'url("/img/test/nuclear_explosion.jpg")',
             },
             easeEach: 'none',
           },
           duration: 10 / heroAnimationsConstants.SPEED,
         },
         0,
-      )
-9    }, */
-  /* heroTimelineRef.current.to(akaMocoSliceRef.current.style, {
+      ) */
+      /* heroTimelineRef.current.to(akaMocoSliceRef.current.style, {
         keyframes: {
           '0%': {
             // display: 'none',
@@ -67,9 +117,10 @@ export default function HeroSlice() {
           (heroAnimationsConstants.DELAY + getDelay('AKA_MOCO', heroTimeline)) /
           heroAnimationsConstants.SPEED,
         duration: 1 / heroAnimationsConstants.SPEED,
-      })
-    }, */
-  // { scope: akaMocoSliceRef },
+      }) */
+    },
+    { scope: akaMocoSliceRef },
+  )
 
   return (
     <>
@@ -77,9 +128,13 @@ export default function HeroSlice() {
         ref={grettingSliceRef}
         id='greeting_slice'
         className='fullscreen'
-        style={{ zIndex: heroAnimationsConstants.Z_INDEXES.GREETING_SLICE, position: 'fixed' }}
+        style={{
+          zIndex: heroAnimationsConstants.Z_INDEXES.GREETING_SLICE,
+          position: 'fixed',
+          // backgroundImage: 'url("/img/test/guernica.jpg")',
+        }}
       >
-        <GreetingCanvas timeline={heroTimelineRef.current} />
+        <GreetingCanvas timeline={timelineRef.current} />
       </section>
       {/* <section
         ref={akaMocoSliceRef}

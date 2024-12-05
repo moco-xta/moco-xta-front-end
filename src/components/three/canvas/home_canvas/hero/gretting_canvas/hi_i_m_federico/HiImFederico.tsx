@@ -2,13 +2,9 @@ import React, { useRef, useState } from 'react'
 import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
 
-import HiText from '../texts/HiText'
-import ImText from '../texts/ImText'
-import FedericoText from '../texts/FedericoText'
-
-import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
-
-import { getSceneDelay } from '@/helpers/animationHelpers'
+import HiText from './texts/HiText'
+import ImText from './texts/ImText'
+import FedericoText from './texts/FedericoText'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 
@@ -21,11 +17,7 @@ export default function HiImFederico({ timeline }: HiImFedericoInterface) {
     heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.DURATION / heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
-    getSceneDelay({
-      scenes: heroTimeline,
-      sceneName: 'HI_I_M_FEDERICO',
-      offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.OFFSET,
-    }) / heroAnimationsConstants.SPEED,
+    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.KEYFRAME_START / heroAnimationsConstants.SPEED,
   )
 
   const hiImFedericoSceneGroupRef = useRef<THREE.Group>(null!)

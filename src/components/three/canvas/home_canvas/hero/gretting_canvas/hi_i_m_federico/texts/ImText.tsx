@@ -5,11 +5,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
-
-import { Word3D } from '../../../components/word_3d/Word3D'
-
-import { getSceneDelay } from '@/helpers/animationHelpers'
+import { Word3D } from '../../../../components/word_3d/Word3D'
 
 import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
@@ -20,6 +16,15 @@ interface ImTextInterface {
 
 export default function ImText({ timeline }: ImTextInterface) {
   const t = useTranslations('HOME')
+
+  const [duration] = useState<number>(
+    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.DURATION /
+      heroAnimationsConstants.SPEED,
+  )
+  const [delay] = useState<number>(
+    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.KEYFRAME_START /
+      heroAnimationsConstants.SPEED,
+  )
 
   const [imText] = useState<string>(t('HERO.I_M').toUpperCase())
   const [imTextSplitted] = useState<string[]>(imText.split(''))
@@ -47,19 +52,9 @@ export default function ImText({ timeline }: ImTextInterface) {
               },
               easeEach: 'none',
             },
-            duration:
-              heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.DURATION /
-              heroAnimationsConstants.SPEED,
+            duration: duration,
           },
-          getSceneDelay({
-            scenes: heroTimeline,
-            sceneName: 'HI_I_M_FEDERICO',
-            offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.OFFSET,
-            stagger: {
-              index: index,
-              offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.STAGGER.OFFSET,
-            },
-          }) / heroAnimationsConstants.SPEED,
+          delay,
         )
 
         // ROTATION
@@ -80,19 +75,9 @@ export default function ImText({ timeline }: ImTextInterface) {
               },
               easeEach: 'none',
             },
-            duration:
-              heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.DURATION /
-              heroAnimationsConstants.SPEED,
+            duration: duration,
           },
-          getSceneDelay({
-            scenes: heroTimeline,
-            sceneName: 'HI_I_M_FEDERICO',
-            offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.OFFSET,
-            stagger: {
-              index: index,
-              offset: heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.I_M_TEXT.STAGGER.OFFSET,
-            },
-          }) / heroAnimationsConstants.SPEED,
+          delay,
         )
       })
     },
@@ -103,25 +88,25 @@ export default function ImText({ timeline }: ImTextInterface) {
     <Word3D
       ref={imTextGroupRef}
       keyPrefix={'i_m_text'}
-      font={heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.TEXTS.FONT}
-      size={heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.TEXTS.SIZES.I_M}
-      depth={heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.TEXTS.DEPTH}
+      font={greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.GEOMETRY.FONT}
+      size={greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.GEOMETRY.SIZES.I_M}
+      depth={greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.GEOMETRY.DEPTH}
       splittedWord={imTextSplitted}
       position={
         new THREE.Vector3(
-          greetingCanvasConstants.MESHES.I_M_TEXT.POSITION.X,
-          greetingCanvasConstants.MESHES.I_M_TEXT.POSITION.Y,
-          greetingCanvasConstants.MESHES.I_M_TEXT.POSITION.Z,
+          greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.I_M_TEXT.POSITION.X,
+          greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.I_M_TEXT.POSITION.Y,
+          greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.I_M_TEXT.POSITION.Z,
         )
       }
       center={true}
       lengthRef={imTextLengthRef}
     >
       <meshStandardMaterial
-        color={greetingCanvasConstants.MATERIALS.TEXTS.HI_I_M_FEDERICO.COLOR}
-        transparent={greetingCanvasConstants.MATERIALS.TEXTS.HI_I_M_FEDERICO.TRANSPARENT}
-        opacity={greetingCanvasConstants.MATERIALS.TEXTS.HI_I_M_FEDERICO.OPACITY}
-        // emissive={greetingCanvasConstants.MATERIALS.TEXTS.HI_I_M_FEDERICO.EMISSIVE}
+        color={greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.MATERIALS.COLOR}
+        transparent={greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.MATERIALS.TRANSPARENT}
+        opacity={greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.MATERIALS.OPACITY}
+        // emissive={greetingCanvasConstants.SCENES.HI_I_M_FEDERICO.MATERIALS.TEXTS.EMISSIVE}
         side={THREE.DoubleSide}
       />
     </Word3D>

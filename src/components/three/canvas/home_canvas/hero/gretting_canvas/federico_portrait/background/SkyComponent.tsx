@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { Box } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
@@ -20,13 +20,16 @@ interface SkyComponentInterface {
 }
 
 export default function SkyComponent({ timeline }: SkyComponentInterface) {
+  const [duration] = useState<number>(
+    heroAnimationsConstants.SCENES.FEDERICO_PORTRAIT.DURATION / heroAnimationsConstants.SPEED,
+  )
+  const [delay] = useState<number>(
+    heroAnimationsConstants.SCENES.FEDERICO_PORTRAIT.KEYFRAME_START / heroAnimationsConstants.SPEED,
+  )
+
   const skyComponentGroupRef = useRef<THREE.Group>(null!)
   const skyComponentMeshRef = useRef<THREE.Mesh>(null!)
   const sunAndMoonBoxGroupRef = useRef<THREE.Mesh>(null!)
-
-  useEffect(() => {
-    console.log('skyComponentMeshRef', skyComponentMeshRef.current)
-  }, [])
 
   useGSAP(() => {
     // POSITION
@@ -39,13 +42,9 @@ export default function SkyComponent({ timeline }: SkyComponentInterface) {
           '33%': { y: 0 },
           easeEach: 'power1.in',
         },
-        duration: heroAnimationsConstants.SCENES.FEDERICO.DURATION / heroAnimationsConstants.SPEED,
+        duration: duration,
       },
-      getSceneDelay({
-        scenes: heroTimeline,
-        sceneName: 'FEDERICO',
-        offset: heroAnimationsConstants.SCENES.FEDERICO.OFFSET,
-      }) / heroAnimationsConstants.SPEED,
+      delay,
     )
 
     // COLOR
@@ -58,13 +57,9 @@ export default function SkyComponent({ timeline }: SkyComponentInterface) {
           '100%': { r: 0.00784313725490196, g: 0.00784313725490196, b: 0.1411764705882353 },
           easeEach: 'power1.in',
         },
-        duration: heroAnimationsConstants.SCENES.FEDERICO.DURATION / heroAnimationsConstants.SPEED,
+        duration: duration,
       },
-      getSceneDelay({
-        scenes: heroTimeline,
-        sceneName: 'FEDERICO',
-        offset: heroAnimationsConstants.SCENES.FEDERICO.OFFSET,
-      }) / heroAnimationsConstants.SPEED,
+      delay,
     )
 
     // OPACITY
@@ -77,13 +72,9 @@ export default function SkyComponent({ timeline }: SkyComponentInterface) {
           '33%': { opacity: 1 },
           easeEach: 'power1.in',
         },
-        duration: heroAnimationsConstants.SCENES.FEDERICO.DURATION / heroAnimationsConstants.SPEED,
+        duration: duration,
       },
-      getSceneDelay({
-        scenes: heroTimeline,
-        sceneName: 'FEDERICO',
-        offset: heroAnimationsConstants.SCENES.FEDERICO.OFFSET,
-      }) / heroAnimationsConstants.SPEED,
+      delay,
     )
 
     timeline.to(
@@ -95,15 +86,9 @@ export default function SkyComponent({ timeline }: SkyComponentInterface) {
           '100%': { z: THREE.MathUtils.degToRad(-213) },
           easeEach: 'power2.out',
         },
-        duration: heroAnimationsConstants.SCENES.FEDERICO.DURATION / heroAnimationsConstants.SPEED,
+        duration: duration,
       },
-      getSceneDelay({
-        scenes: heroTimeline,
-        sceneName: 'FEDERICO',
-        offset:
-          heroAnimationsConstants.SCENES.FEDERICO.OFFSET +
-          heroAnimationsConstants.SCENES.FEDERICO.SUBS.GOBELINO.SUBS.SUN_AND_MOON.OFFSET,
-      }) / heroAnimationsConstants.SPEED,
+      delay,
     )
   })
 

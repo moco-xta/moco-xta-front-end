@@ -1,6 +1,7 @@
 {
   "HOME": {
     "HERO": {
+      "BUHO": "/glb/home/hero/Buho.glb",
       "GOBELINO": {
         "MOON": "/glb/home/hero/gobelino/Moon.glb",
         "SKY": "/glb/home/hero/gobelino/Sky.glb",
@@ -12,6 +13,7 @@
         "HELIUM_BALLOON_O": "/glb/home/hero/helium_balloons/HeliumBalloonO.glb",
         "SMILEY": "/glb/home/hero/helium_balloons/Smiley.glb"
       },
+      "LIGHTNING": "/glb/home/hero/Lightning.glb",
       "LOGOS": {
         "LOGO_ANGULAR": "/glb/home/hero/logos/LogoAngular.glb",
         "LOGO_BLENDER": "/glb/home/hero/logos/LogoBlender.glb",

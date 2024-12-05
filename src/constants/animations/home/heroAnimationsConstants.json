@@ -10,57 +10,50 @@
   "SCENES": {
     "HI_I_M_FEDERICO": {
       "NAME": "HI_I_M_FEDERICO",
+      "KEYFRAME_START": 0,
       "DURATION": 5,
-      "OFFSET": 0,
       "SUBS": {
         "HI_TEXT": {
+          "KEYFRAME_START": 0,
           "DURATION": 1,
-          "OFFSET": 0,
           "STAGGER": {
             "OFFSET": 0.125
           }
         },
         "I_M_TEXT": {
+          "KEYFRAME_START": 1,
           "DURATION": 1,
-          "OFFSET": 1,
           "STAGGER": {
             "OFFSET": 0.125
           }
         },
         "FEDERICO_TEXT": {
+          "KEYFRAME_START": 2,
           "DURATION": 1,
-          "OFFSET": 2,
           "STAGGER": {
             "OFFSET": 0.125
           }
         }
-      },
-      "TEXTS": {
-        "FONT": "fonts/json/Agharti_Bold_Ultra_Wide_Bold.json",
-        "DEPTH": 1,
-        "SIZES": {
-          "HI": 2.5,
-          "I_M": 2.5,
-          "FEDERICO": 1.5
-        }
       }
     },
-    "FEDERICO": {
-      "NAME": "FEDERICO",
+    "FEDERICO_PORTRAIT": {
+      "NAME": "FEDERICO_PORTRAIT",
+      "KEYFRAME_START": 4,
       "DURATION": 3,
-      "OFFSET": -1,
       "SUBS": {
         "GOBELINO": {
+          "KEYFRAME_START": 4,
           "DURATION": 1,
           "OFFSET": 0,
           "SUBS": {
             "SKY": {
+              "KEYFRAME_START": 4,
               "DURATION": 2,
               "OFFSET": 0
             },
             "SUN_AND_MOON": {
-              "DURATION": 2,
-              "OFFSET": -0.25
+              "KEYFRAME_START": 4,
+              "DURATION": 2
             }
           }
         }

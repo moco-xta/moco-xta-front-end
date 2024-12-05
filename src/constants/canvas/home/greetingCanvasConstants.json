@@ -46,37 +46,51 @@
       "SHADOW_BIAS": 0.0001
     }
   },
-  "MESHES": {
-    "HI_TEXT": {
-      "POSITION": {
-        "X": -2,
-        "Y": 1,
-        "Z": 0
+  "SCENES": {
+    "HI_I_M_FEDERICO": {
+      "HI_TEXT": {
+        "POSITION": {
+          "X": -2,
+          "Y": 1,
+          "Z": 0
+        }
+      },
+      "I_M_TEXT": {
+        "POSITION": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0
+        }
+      },
+      "FEDERICO_TEXT": {
+        "POSITION": {
+          "X": 0,
+          "Y": -1.5,
+          "Z": 0
+        }
+      },
+      "TEXTS": {
+        "GEOMETRY": {
+          "FONT": "fonts/json/Agharti_Bold_Ultra_Wide_Bold.json",
+          "DEPTH": 1,
+          "SIZES": {
+            "HI": 2.5,
+            "I_M": 2.5,
+            "FEDERICO": 1.5
+          }
+        },
+        "MATERIALS": {
+          "COLOR": "#dcff00",
+          "TRANSPARENT": true,
+          "OPACITY": 0,
+          "EMISSIVE": "#dcff00"
+        }
       }
     },
-    "I_M_TEXT": {
-      "POSITION": {
-        "X": 1,
-        "Y": 1,
-        "Z": 0
-      }
-    },
-    "FEDERICO_TEXT": {
-      "POSITION": {
-        "X": 0,
-        "Y": -1.5,
-        "Z": 0
-      }
-    }
+    "FEDERICO_AKA": {}
   },
   "MATERIALS": {
     "TEXTS": {
-      "HI_I_M_FEDERICO": {
-        "COLOR": "#dcff00",
-        "TRANSPARENT": true,
-        "OPACITY": 0,
-        "EMISSIVE": "#dcff00"
-      },
       "ALSO_KNOW_AS": {
         "COLOR": "#f00",
         "TRANSPARENT": true,
