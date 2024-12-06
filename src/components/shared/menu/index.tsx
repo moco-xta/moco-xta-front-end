@@ -8,7 +8,7 @@ import MenuOverlay from './menu_overlay'
 import './index.scss'
 import { sansTrialRegularFont } from '@/assets/fonts/ttf'
 
-export default function MenuContainer() {
+export default function Menu() {
   return (
     <div
       id='menu_container'

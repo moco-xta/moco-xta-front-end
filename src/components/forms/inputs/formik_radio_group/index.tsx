@@ -5,7 +5,7 @@ import { FormikRadioGroupInterface } from '@/interfaces/inputsInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
-import Error from '../../errors'
+import Error from '../../forms/errors'
 
 import './index.scss'
 

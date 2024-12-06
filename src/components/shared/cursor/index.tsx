@@ -8,9 +8,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { RootState } from '@/redux/store'
 
-import { cursorAnimation } from 'animations'
-
 import './index.scss'
+import { cursorAnimation } from 'animations'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 

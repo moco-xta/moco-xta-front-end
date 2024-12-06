@@ -10,7 +10,7 @@ import { AppDispatch, RootState } from '@/redux/store'
 import { toggleMenu } from '@/redux/slice/appStateSlice'
 
 import './index.scss'
-import { menuAnimation } from 'animations/shared/menu'
+import { menuAnimation } from 'animations'
 
 export default function MenuButton({ type }: MenuButtonInterface) {
   const t = useTranslations('BUTTONS')

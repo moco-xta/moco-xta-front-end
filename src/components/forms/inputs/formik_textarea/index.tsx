@@ -1,24 +1,27 @@
 import React, { ChangeEvent, useEffect } from 'react'
 
-import { FormikTextInterface } from '@/interfaces/inputsInterfaces'
+import { FormikTextareaInterface } from '@/interfaces/inputsInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 
-import Error from '../../errors'
+import Error from '../../forms/errors'
 
 import './index.scss'
 
-export default function FormikTextField(props: FormikTextInterface) {
+export default function FormikTextarea(props: FormikTextareaInterface) {
   const {
     label,
-    type,
     name,
+    cols,
+    rows,
+    maxLength,
     handleChange,
     setFieldValue,
     value,
-    storeValue = true,
     error,
     helperText,
+    disabled,
+    inputStyle,
   } = props
 
   const [storedValue, setValueToStore] = useStoreInputValueInLocalStorage(name, value)
@@ -27,31 +30,32 @@ export default function FormikTextField(props: FormikTextInterface) {
     if (storedValue) setFieldValue(name, storedValue)
   }, [storedValue, setFieldValue, name])
 
-  function handleOnChange(e: ChangeEvent<HTMLInputElement>) {
-    if (storeValue) setValueToStore(e.currentTarget.value)
+  function handleOnChange(e: ChangeEvent<HTMLTextAreaElement>) {
+    setValueToStore(e.currentTarget.value)
     return handleChange(e)
   }
 
   return (
-    <div className='formik_input_container formik_field_container'>
-      <label
-        htmlFor={name}
-        className='input_label'
-      >
+    <>
+      <label htmlFor={name}>
         {label}
         <Error
           error={error}
           helperText={helperText}
         />
       </label>
-      <input
-        className={`${error ? 'error' : ''}`}
-        type={type}
+      <textarea
+        className={`${error ? 'error' : ''} ${disabled ? 'disabled' : ''}`}
+        style={inputStyle}
         id={name}
         name={name}
+        cols={cols}
+        rows={rows}
+        maxLength={maxLength}
         onChange={handleOnChange}
         value={value}
+        disabled={disabled}
       />
-    </div>
+    </>
   )
 }

@@ -16,7 +16,7 @@ import { setLocaleSwitcherIsOpen, setMenuIsOpen } from '@/redux/slice/appStateSl
 import { AuthenticationButton } from '@/components/buttons'
 import LocaleSwitcher from '@/components/buttons/locale_switcher'
 // import Hamburger from '@/components/buttons/hamburger'
-import Menu from '../../menu_container'
+import Menu from '../../menu'
 import Authentication from '../../authentication'
 
 import { navAnimation } from 'animations/shared/header'

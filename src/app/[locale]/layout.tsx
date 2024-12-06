@@ -8,8 +8,7 @@ import { ReactLenis } from 'lenis/react'
 import ReduxProvider from '@/redux/ReduxProvider'
 
 import Cursor from '@/components/shared/cursor'
-import Header from '@/components/shared/header'
-import MenuContainer from '@/components/shared/menu_container'
+import Menu from '@/components/shared/menu'
 
 import '@/styles/globals.scss'
 import {
@@ -72,7 +71,7 @@ export default function RootLayout({
                   }}
                 />
                 <Cursor />
-                <MenuContainer />
+                <Menu />
                 {children}
               </NextIntlClientProvider>
             </ReduxProvider>
