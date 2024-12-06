@@ -1,4 +1,4 @@
-import { LocationInterface } from './locationInterfaces'
+import { LocationInterface } from './location/locationInterfaces'
 
 export interface AboutInterface {
   showInstructions: boolean

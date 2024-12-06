@@ -1,45 +1,9 @@
 {
-  "HERO": {
-    "MAIN_SKILLS": {
-      "FRAMEWORKS": {
-        "LOGO_ANGULAR": "/img/png/main_skills/logo_angular.png",
-        "LOGO_NEXTJS": "/img/png/main_skills/logo_nextjs.png",
-        "LOGO_SPRING": "/img/png/main_skills/logo_spring.png"
-      },
-      "THREE_D": {
-        "LOGO_BABYLONJS": "/img/png/main_skills/logo_babylonjs.png",
-        "LOGO_BLENDER": "/img/png/main_skills/logo_blender.png",
-        "LOGO_REACT_THREE_DREI": "/img/png/main_skills/logo_react_three_drei.png",
-        "LOGO_WEBGL": "/img/png/main_skills/logo_webgl.png"
-      }
-    }
-  },
-  "SNAKE_GAME": {
-    "TEXTURES": {
-      "SNAKE_CELL": "/img/png/snake_game/snake_cell_texture.png"
-    }
-  },
   "HDRS": {
-    "LABORATOIRE_ENVIRONMENT": "/img/hdr/laboratoire.hdr",
-    "HERO_ENVIRONMENT": "/img/hdr/peppermint_powerplant_2_1k.hdr",
-    "HOME_ENVIRONMENT": "/img/hdr/the_sky_is_on_fire_4k.exr"
-  },
-  "JAVASCRIPT_MASTERY": {
-    "APPLE_SVG": "/assets/images/apple.svg",
-    "BAG_SVG": "/assets/images/bag.svg",
-    "SEARCH_SVG": "/assets/images/search.svg",
-    "RIGHT_SVG": "/assets/images/right.svg",
-    "WATCH_SVG": "/assets/images/watch.svg",
-    "PLAY_SVG": "/assets/images/play.svg",
-    "PAUSE_SVG": "/assets/images/pause.svg",
-    "REPLAY_SVG": "/assets/images/replay.svg",
-    "BLACK_IMG": "/assets/images/black.jpg",
-    "BLUE_IMG": "/assets/images/blue.jpg",
-    "WHITE_IMG": "/assets/images/white.jpg",
-    "YELLOW_IMG": "/assets/images/yellow.jpg"
+    "HERO_ENVIRONMENT": "/img/hdrs/peppermint_powerplant_2_1k.hdr"
   },
   "QR_CODES": {
-    "TO_ABOUT": "/img/png/qr_codes/qr_code_to_about.png",
-    "TO_HOME": "/img/png/qr_codes/qr_code_to_home.png"
+    "TO_ABOUT": "/qr_codes/qr_code_to_about.png",
+    "TO_HOME": "/qr_codes/qr_code_to_home.png"
   }
 }

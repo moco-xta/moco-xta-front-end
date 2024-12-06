@@ -25,6 +25,8 @@ export interface RotationGroupsAndButtonsInterface {
   rubiksCubeRef: Ref<THREE.Group>
 }
 
+export interface RoundedCubeInterface extends MeshProps {}
+
 export interface ColorPadInterface extends MeshProps {
   color: THREE.Color
 }

@@ -18,10 +18,6 @@ export interface PointerLockControlsComponentInterface {
   pointerLockControlsSelector: string
 }
 
-export interface SocialsCanvasInterface {
-  className: string
-}
-
 export interface AboutSceneInterface {
   isClayRender: boolean
 }

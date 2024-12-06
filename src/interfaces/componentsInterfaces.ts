@@ -1,4 +1,4 @@
-import { AddReviewValuesInterface, ReviewPayloadInterface } from './reduxApiInterfaces'
+import { AddReviewValuesInterface, ReviewPayloadInterface } from './redux/reduxApiInterfaces'
 
 export interface HeaderInterface {
   isMainHeader?: boolean

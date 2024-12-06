@@ -6,7 +6,6 @@ import { GLTF } from 'three-stdlib'
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 import variables from '@/styles/variables.module.scss'
-import { RisographShaderMaterial } from '@/components/three/materials/risographShaderMaterial'
 
 type GLTFResult = GLTF & {
   nodes: {

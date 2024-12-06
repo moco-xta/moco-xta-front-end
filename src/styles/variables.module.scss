@@ -157,48 +157,6 @@ $reviews_slice_height_S: 55vh;
 
 $projects_margin_top: 10vh;
 $projects_margin_left: 5vw;
-
-// SNAKE GAME
-
-$snake_game_margin_smaller: 25px;
-$snake_game_margin_small: 50px;
-$snake_game_margin_medium: 100px;
-$snake_game_margin_large: 150px;
-$snake_game_margin_larger: 200px;
-
-$nokia_0: #a8df02;
-$nokia_1: #b3bb00;
-$nokia_2: #b39900;
-$nokia_3: #aa7a15;
-$nokia_4: #995d21;
-$nokia_5: #814527;
-$nokia_6: #653227;
-$nokia_7: #462222;
-$nokia_8: #261517;
-
-$gameboy_lighter: #c9db9f;
-$gameboy_light: #9bbc0f;
-$gameboy_medium: #8bac0d;
-$gameboy_dark: #306230;
-$gameboy_darker: #0f3810;
-
-$dawnbringer32_blue_light: #5ecde4;
-$dawnbringer32_blue_dark: #306082;
-$dawnbringer32_green: #69be30;
-$dawnbringer32_pink: #d77bba;
-$dawnbringer32_red: #d95663;
-$dawnbringer32_red_dark: #ac3232;
-$dawnbringer32_violet: #3f3f73;
-$dawnbringer32_violet_dark: #222034;
-
-$snake_game_background: $dawnbringer32_violet;
-$snake_game_snake_cell: $dawnbringer32_green;
-$snake_game_fruit: $dawnbringer32_red;
-$snake_game_grid: $dawnbringer32_pink;
-$snake_game_default_text: $dawnbringer32_violet_dark;
-$snake_game_hidden_text: $dawnbringer32_blue_dark;
-$snake_game_revealed_text: $dawnbringer32_blue_light;
-$snake_game_i_dont_want_to_play: $dawnbringer32_red_dark;
 // $snake_game_: $;
 
 // RESPONSIVE
@@ -308,37 +266,4 @@ $responsive_XXXXS: #f72585;
 
   transition: $transition_M;
   hover_transition: $hover_transition;
-
-  // SNAKE GAME
-
-  snake_game_margin_smaller: $snake_game_margin_smaller;
-  snake_game_margin_small: $snake_game_margin_small;
-  snake_game_margin_medium: $snake_game_margin_medium;
-  snake_game_margin_large: $snake_game_margin_large;
-  snake_game_margin_larger: $snake_game_margin_larger;
-
-  nokia_0: $nokia_0;
-  nokia_1: $nokia_1;
-  nokia_2: $nokia_2;
-  nokia_3: $nokia_3;
-  nokia_4: $nokia_4;
-  nokia_5: $nokia_5;
-  nokia_6: $nokia_6;
-  nokia_7: $nokia_7;
-  nokia_8: $nokia_8;
-
-  gameboy_lighter: $gameboy_lighter;
-  gameboy_light: $gameboy_light;
-  gameboy_medium: $gameboy_medium;
-  gameboy_dark: $gameboy_dark;
-  gameboy_darker: $gameboy_darker;
-
-  snake_game_background: $snake_game_background;
-  snake_game_snake_cell: $snake_game_snake_cell;
-  snake_game_fruit: $snake_game_fruit;
-  snake_game_grid: $snake_game_grid;
-  snake_game_default_text: $snake_game_default_text;
-  snake_game_hidden_text: $snake_game_hidden_text;
-  snake_game_revealed_text: $snake_game_revealed_text;
-  snake_game_i_dont_want_to_play: $snake_game_i_dont_want_to_play;
 }

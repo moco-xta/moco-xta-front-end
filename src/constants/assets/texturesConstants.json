@@ -18,9 +18,10 @@
     "JUPITER": "/img/textures/home/jupiter.png",
     "MAP": "/img/textures/home/map.jpg",
     "MARS": "/img/textures/home/mars.png",
-    "ME": "/img/textures/home/me.png",
+    "PORTRAIT": "/img/textures/home/portrait.png",
     "MERCURY": "/img/textures/home/mercury.png",
     "MOON": "/img/textures/home/moon.png",
+    "LOGO_RCL": "/img/textures/home/logo_rcl.png",
     "SATURN": "/img/textures/home/saturn.png",
     "SUN": "/img/textures/home/sun.png",
     "VENUS": "/img/textures/home/venus.png"
@@ -532,9 +533,6 @@
       }
     }
   },
-  "LIRA": {
-    "LIRA_TEST_001": "gltf/lira/LiraTest001.jpg"
-  },
   "MINECRAFT": {
     "DIRT": "/img/textures/about/minecraft/dirt.jpg",
     "GLASS": "/img/textures/about/minecraft/glass.png",
@@ -542,13 +540,7 @@
     "LOG": "/img/textures/about/minecraft/log.jpg",
     "WOOD": "/img/textures/about/minecraft/wood.png"
   },
-  "CONTACT": {
-    "PROFIL_PICTURE": "/img/textures/contact/profile_picture_bray_dunes_bw.jpg"
-  },
   "SHADERS": {
     "EXPLOSION": "/img/png/shaders/explosion.png"
-  },
-  "CYLENDER_WORK_SHOWCASE": {
-    "DIFFUSE": "/img/png/cylender_work_showcase_test.png"
   }
 }

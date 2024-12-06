@@ -5,7 +5,7 @@ import { toast } from 'sonner'
 import { useTranslations } from 'next-intl'
 
 import { SignUpSignInInterface } from '@/interfaces/componentsInterfaces'
-import { SignInPayloadInterface } from '@/interfaces/reduxApiInterfaces'
+import { SignInPayloadInterface } from '@/interfaces/redux/reduxApiInterfaces'
 
 import { AppDispatch } from '@/redux/store'
 import { useSignInMutation } from '@/redux/api/authenticationApi'

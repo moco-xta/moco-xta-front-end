@@ -1,0 +1,116 @@
+{
+  "CANVAS": {
+    "DPR": 1,
+    "LEGACY": false,
+    "GL": {
+      "ANTIALIAS": true,
+      "ALPHA": true,
+      "POWER_PREFERENCE": "high-performance",
+      "PRESERVE_DRAWING_BUFFER": true
+    }
+  },
+  "PERSPECTIVE_CAMERA": {
+    "POSITION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 8
+    },
+    "ROTATION": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "FOV": 50,
+    "FLOAT": {
+      "SPEED": 2
+    }
+  },
+  "LIGHTS": {
+    "AMBIENT_LIGHT": {
+      "INTENSITY": 0
+    },
+    "DIRECTIONAL_LIGHTS": {
+      "POSITIONS": [
+        {
+          "X": 10,
+          "Y": 10,
+          "Z": 10
+        },
+        {
+          "X": -10,
+          "Y": 10,
+          "Z": 10
+        },
+        {
+          "X": 0,
+          "Y": 0,
+          "Z": 10
+        }
+      ],
+      "INTENSITY": 0.33,
+      "MAP_SIZE": [4096, 4096],
+      "SHADOW_CAMERA_FAR": 20,
+      "SHADOW_CAMERA_LEFT": -20,
+      "SHADOW_CAMERA_RIGHT": 20,
+      "SHADOW_CAMERA_TOP": 20,
+      "SHADOW_CAMERA_BOTTOM": -20,
+      "SHADOW_RADIUS": 13,
+      "SHADOW_BIAS": 0.0001
+    }
+  },
+  "SCENES": {
+    "HI_I_M_FEDERICO": {
+      "HI_TEXT": {
+        "POSITION": {
+          "X": -2,
+          "Y": 1,
+          "Z": 0
+        }
+      },
+      "I_M_TEXT": {
+        "POSITION": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0
+        }
+      },
+      "FEDERICO_TEXT": {
+        "POSITION": {
+          "X": 0,
+          "Y": -1.5,
+          "Z": 0
+        }
+      },
+      "TEXTS": {
+        "GEOMETRY": {
+          "FONT": "fonts/json/Agharti_Bold_Ultra_Wide_Bold.json",
+          "DEPTH": 1,
+          "SIZES": {
+            "HI": 2.5,
+            "I_M": 2.5,
+            "FEDERICO": 1.5
+          }
+        },
+        "MATERIALS": {
+          "COLOR": "#333",
+          "TRANSPARENT": true,
+          "OPACITY": 0,
+          "EMISSIVE": "#333"
+        }
+      }
+    },
+    "FEDERICO_AKA": {}
+  },
+  "MATERIALS": {
+    "TEXTS": {
+      "ALSO_KNOW_AS": {
+        "COLOR": "#f00",
+        "TRANSPARENT": true,
+        "OPACITY": 1,
+        "EMISSIVE": "#f00",
+        "EMISSIVE_INTENSITY": 5,
+        "WIREFRAME": true
+      }
+    }
+  }
+}

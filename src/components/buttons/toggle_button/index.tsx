@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 
-import { ToggleButtonInterface } from '@/interfaces/buttonsInterfaces'
+import { ToggleButtonInterface } from '@/interfaces/buttons/buttonsInterfaces'
 
 import { AppDispatch } from '@/redux/store'
 

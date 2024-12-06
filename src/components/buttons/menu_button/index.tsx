@@ -4,13 +4,13 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { MenuButtonInterface } from '@/interfaces/buttonsInterfaces'
+import { MenuButtonInterface } from '@/interfaces/buttons/buttonsInterfaces'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { toggleMenu } from '@/redux/slice/appStateSlice'
 
 import './index.scss'
-import { menuAnimation } from 'animations/gsap/menu'
+import { menuAnimation } from 'animations'
 
 export default function MenuButton({ type }: MenuButtonInterface) {
   const t = useTranslations('BUTTONS')
@@ -19,11 +19,11 @@ export default function MenuButton({ type }: MenuButtonInterface) {
 
   const menuIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
 
+  const timelineRef = useRef<GSAPTimeline>(null!)
+
   const handleToggleMenu = () => {
     dispatch(toggleMenu())
   }
-
-  const timelineRef = useRef<GSAPTimeline>(null!)
 
   useGSAP(
     () => {

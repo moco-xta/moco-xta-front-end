@@ -7,10 +7,8 @@ import apiSlice from '@/redux/slice/apiSlice'
 import appStateSlice from './slice/appStateSlice'
 import authenticationSlice from './slice/authenticationSlice'
 import cursorStateSlice from './slice/cursorStateSlice'
-import lifeGameSlice from './slice/lifeGameSlice'
 import minecraftSlice from './slice/minecraftSlice'
 import rubiksCubeSlice from './slice/rubiksCubeSlice'
-import snakeGameSlice from './slice/snakeGameSlice'
 
 export const store = configureStore({
   reducer: {
@@ -18,10 +16,8 @@ export const store = configureStore({
     appState: appStateSlice,
     authentication: authenticationSlice,
     cursorState: cursorStateSlice,
-    lifeGame: lifeGameSlice,
     minecraft: minecraftSlice,
     rubiksCube: rubiksCubeSlice,
-    snakeGame: snakeGameSlice,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
