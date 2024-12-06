@@ -19,7 +19,7 @@ import LocaleSwitcher from '@/components/buttons/locale_switcher'
 import Menu from '../../menu_container'
 import Authentication from '../../authentication'
 
-import { navAnimation } from 'animations/gsap/header'
+import { navAnimation } from 'animations/header'
 
 import './index.scss'
 
