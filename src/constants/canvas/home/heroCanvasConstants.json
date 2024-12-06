@@ -21,6 +21,8 @@
       "Z": 0
     },
     "FOV": 50,
+    "NEAR": 0.01,
+    "FAR": 20,
     "FLOAT": {
       "SPEED": 2
     }
@@ -58,6 +60,15 @@
       "SHADOW_BIAS": 0.0001
     }
   },
+  "GROUPS": {
+    "HI_I_M_FEDERICO_GROUP": {
+      "HI_TEXT": {
+        "GEOMETRY": {
+          "POSITION": {}
+        }
+      }
+    }
+  },
   "SCENES": {
     "HI_I_M_FEDERICO": {
       "HI_TEXT": {
@@ -83,7 +94,7 @@
       },
       "TEXTS": {
         "GEOMETRY": {
-          "FONT": "fonts/json/Agharti_Bold_Ultra_Wide_Bold.json",
+          "FONT": "fonts/json/Gilroy_Heavy.json",
           "DEPTH": 1,
           "SIZES": {
             "HI": 2.5,

@@ -5,7 +5,7 @@ export const imTextPositionAnimation = (imTextLengthRef: number[], index: number
     '20%': {
       x: hiImFedericoGroupAnimationsConstants.SUBS.I_M_TEXT.ANIMATION.POSITION['20_PERCENT'].X,
       z:
-        hiImFedericoGroupAnimationsConstants.SUBS.I_M_TEXT.ANIMATION.POSITION['20_PERCENT'].Z *
+        hiImFedericoGroupAnimationsConstants.SUBS.I_M_TEXT.ANIMATION.POSITION['20_PERCENT'].Z +
         index,
     },
     '40%': {
