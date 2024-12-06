@@ -1,6 +1,7 @@
 {
+  "SCOPE": "html",
   "SELECTOR": "#cursor",
-  "DEFAULT": {
+  "PARAMS": {
     "DURATION": 1,
     "EASE": "back.out"
   }

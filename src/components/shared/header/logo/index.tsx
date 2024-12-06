@@ -17,7 +17,7 @@ import { LogoInterface } from '@/interfaces/componentsInterfaces'
 
 import LogoCanvas from '@/components/three/canvas/logo_canvas/LogoCanvas'
 
-import { logoMocoAnimation } from 'animations/header'
+import { logoMocoAnimation } from 'animations/shared/header'
 
 import './index.scss'
 

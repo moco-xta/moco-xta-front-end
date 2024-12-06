@@ -10,7 +10,7 @@ import { AppDispatch, RootState } from '@/redux/store'
 import { toggleMenu } from '@/redux/slice/appStateSlice'
 
 import './index.scss'
-import { menuAnimation } from 'animations/menu'
+import { menuAnimation } from 'animations/shared/menu'
 
 export default function MenuButton({ type }: MenuButtonInterface) {
   const t = useTranslations('BUTTONS')
@@ -19,11 +19,11 @@ export default function MenuButton({ type }: MenuButtonInterface) {
 
   const menuIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
 
+  const timelineRef = useRef<GSAPTimeline>(null!)
+
   const handleToggleMenu = () => {
     dispatch(toggleMenu())
   }
-
-  const timelineRef = useRef<GSAPTimeline>(null!)
 
   useGSAP(
     () => {

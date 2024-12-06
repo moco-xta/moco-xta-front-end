@@ -1,8 +1,6 @@
 import { default as preloaderAnimationsConstants } from '@/constants/animations/preloaderAnimationsConstants.json'
 import { default as headerAnimationsConstants } from '@/constants/animations/headerAnimationsConstants.json'
 
-// LOGO
-
 export const logoMocoAnimation = {
   selector: headerAnimationsConstants.LOGO_MOCO.SELECTOR,
   params: {
