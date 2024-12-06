@@ -3,7 +3,5 @@ import React from 'react'
 import './index.scss'
 
 export default function ReviewssSlice() {
-  return (
-    <div>REVIEWS SLICE</div>
-  )
+  return <div>REVIEWS SLICE</div>
 }

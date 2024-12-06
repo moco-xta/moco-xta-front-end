@@ -4,7 +4,7 @@ import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { heliumBalloonMaterial } from '../../../../materials/heliumBalloonMaterial'
+import { heliumBalloonMaterial } from '../../../../materials/home/heliumBalloonMaterial'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 

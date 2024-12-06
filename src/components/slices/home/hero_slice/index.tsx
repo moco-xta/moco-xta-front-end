@@ -1,12 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { heroTimeline } from '@/data/animations/timelines/heroTimeline'
-
-import GreetingCanvas from '@/components/three/canvas/home_canvas/hero/gretting_canvas/GreetingCanvas'
-import AkaMocoCanvas from '@/components/three/canvas/home_canvas/hero/aka_moco_canvas/AkaMocoCanvas'
-import FrontEndDevelopperWithExtraSkillsCanvas from '@/components/three/canvas/home_canvas/hero/front_end_developper_with_extra_skills_canvas/FrontEndDevelopperWithExtraSkillsCanvas'
+import { HeroCanvas } from '@/components/three/canvas'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 
@@ -30,7 +26,7 @@ export default function HeroSlice() {
 
   useGSAP(
     () => {
-      timelineRef.current.to(
+      /* timelineRef.current.to(
         grettingSliceRef.current.style,
         {
           keyframes: {
@@ -71,7 +67,7 @@ export default function HeroSlice() {
           duration: 10,
         },
         0,
-      )
+      ) */
       /* timelineRef.current.to(
         grettingSliceRef.current.style,
         {
@@ -169,7 +165,8 @@ export default function HeroSlice() {
 
   return (
     <>
-      <section
+      <HeroCanvas />
+      {/* <section
         ref={grettingSliceRef}
         id='greeting_slice'
         className='fullscreen'
@@ -180,8 +177,8 @@ export default function HeroSlice() {
         }}
       >
         <GreetingCanvas timeline={timelineRef.current} />
-      </section>
-      <section
+      </section> */}
+      {/* <section
         ref={mocoSliceRef}
         id='aka_moco_slice'
         className='fullscreen'
@@ -192,7 +189,7 @@ export default function HeroSlice() {
         }}
       >
         <AkaMocoCanvas />
-      </section>
+      </section> */}
       {/* <section
         id='front_end_developper_with_extra_skills_canvas'
         className='fullscreen'

@@ -9,8 +9,8 @@ import AboutDashboard from './about_dahboard'
 import AboutGreeting from './about_greeting'
 import AboutDesktopCanvas from '../../three/canvas/about_canvas/AboutDesktopCanvas'
 import AboutScene from '../../three/canvas/about_canvas/AboutScene'
-import AboutCanvas from '../../three/canvas/about_canvas/AboutCanvas'
 import DeviceMotionPermission from './device_motion_permission'
+import { AboutCanvas } from '@/components/three/canvas'
 
 import './index.scss'
 
@@ -33,11 +33,3 @@ export default function AboutSlice() {
     </>
   )
 }
-
-// ----------------------------------------------------------------
-// Z-INDEXES
-// 0: AboutCanvas
-// 1:
-// 2:
-// 3:
-// 4: AboutGreeting

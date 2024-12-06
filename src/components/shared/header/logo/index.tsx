@@ -15,7 +15,7 @@ import { routes } from '@/routes/routes'
 
 import { LogoInterface } from '@/interfaces/componentsInterfaces'
 
-import LogoCanvas from '@/components/three/canvas/logo_canvas/LogoCanvas'
+import { LogoCanvas } from '@/components/three/canvas'
 
 import { logoMocoAnimation } from 'animations/shared/header'
 

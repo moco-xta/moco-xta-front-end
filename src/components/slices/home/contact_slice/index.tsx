@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ContactCanvas from '@/components/three/canvas/home_canvas/hero/contact_canvas/ContactCanvas'
+import ContactCanvas from '@/components/three/canvas/home/hero_canvas/contact_canvas/ContactCanvas'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 
