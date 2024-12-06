@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 
 import Camera from './Camera'
-import Lights from './Lights'
+import Lights from './lights/Lights'
 import GreetingScene from './GreetingScene'
 import PostProcessing from './PostProcessing'
 
@@ -19,6 +19,11 @@ export default function GreetingCanvas({ timeline }: GreetingCanvasInterface) {
       dpr={greetingCanvasConstants.CANVAS.DPR}
       legacy={greetingCanvasConstants.CANVAS.LEGACY}
       shadows
+      onCreated={({ gl }) => {
+        gl.setClearColor(0xfffff, 0)
+        gl.autoClear = true
+        gl.clearDepth()
+      }}
       gl={{
         antialias: greetingCanvasConstants.CANVAS.GL.ANTIALIAS,
         alpha: greetingCanvasConstants.CANVAS.GL.ALPHA,
@@ -27,14 +32,14 @@ export default function GreetingCanvas({ timeline }: GreetingCanvasInterface) {
     >
       <Camera />
       <OrbitControls />
-      <Lights />
+      <Lights timeline={timeline} />
       {/* <color
         attach='background'
-        args={['#000']}
+        args={['#ffffff']}
       /> */}
       <Suspense fallback={null}>
         <GreetingScene timeline={timeline} />
-        <PostProcessing />
+        {/* <PostProcessing /> */}
       </Suspense>
     </Canvas>
   )

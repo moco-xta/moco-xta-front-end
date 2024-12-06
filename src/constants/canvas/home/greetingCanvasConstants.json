@@ -1,6 +1,6 @@
 {
   "CANVAS": {
-    "DPR": 2,
+    "DPR": 1,
     "LEGACY": false,
     "GL": {
       "ANTIALIAS": true,
@@ -27,15 +27,27 @@
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
-      "INTENSITY": 0.5
+      "INTENSITY": 0
     },
-    "DIRECTIONAL_LIGHT": {
-      "POSITION": {
-        "X": 10,
-        "Y": 10,
-        "Z": 10
-      },
-      "INTENSITY": 1,
+    "DIRECTIONAL_LIGHTS": {
+      "POSITIONS": [
+        {
+          "X": 10,
+          "Y": 10,
+          "Z": 10
+        },
+        {
+          "X": -10,
+          "Y": 10,
+          "Z": 10
+        },
+        {
+          "X": 0,
+          "Y": 0,
+          "Z": 10
+        }
+      ],
+      "INTENSITY": 0.33,
       "MAP_SIZE": [4096, 4096],
       "SHADOW_CAMERA_FAR": 20,
       "SHADOW_CAMERA_LEFT": -20,
@@ -80,10 +92,10 @@
           }
         },
         "MATERIALS": {
-          "COLOR": "#dcff00",
+          "COLOR": "#333",
           "TRANSPARENT": true,
           "OPACITY": 0,
-          "EMISSIVE": "#dcff00"
+          "EMISSIVE": "#333"
         }
       }
     },

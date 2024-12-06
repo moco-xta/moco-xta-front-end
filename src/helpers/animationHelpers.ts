@@ -39,7 +39,7 @@ interface GetSceneDelayInterface {
   }
 }
 
-export const getSceneDelay = ({ scenes, sceneName, offset, stagger }: GetSceneDelayInterface) => {
+/* export const getSceneDelay = ({ scenes, sceneName, offset, stagger }: GetSceneDelayInterface) => {
   const steps: number[] = []
   let frame: number = 0
 
@@ -55,9 +55,9 @@ export const getSceneDelay = ({ scenes, sceneName, offset, stagger }: GetSceneDe
   console.log('delay', delay)
 
   return delay
-}
+} */
 
-export const getDelay = (keyframeName: string, keyframes: SceneInterface[]) => {
+/* export const getDelay = (keyframeName: string, keyframes: SceneInterface[]) => {
   const steps: number[] = []
   let keyframeIndex: number = 0
 
@@ -67,7 +67,7 @@ export const getDelay = (keyframeName: string, keyframes: SceneInterface[]) => {
   })
 
   return steps.slice(0, keyframeIndex).reduce((a, b) => a + b, 0) + 1
-}
+} */
 
 export const getRandomInt = ({ min, max, decimal = 1 }: RandomRangeInterface) => {
   min = Math.ceil(min)

@@ -1,6 +1,6 @@
 {
   "CANVAS": {
-    "DPR": 2,
+    "DPR": 1,
     "LEGACY": false,
     "GL": {
       "ANTIALIAS": true,

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -13,20 +13,65 @@ import { default as heroAnimationsConstants } from '@/constants/animations/home/
 import './index.scss'
 
 export default function HeroSlice() {
+  const [greetingSliceDuration] = useState<number>(
+    heroAnimationsConstants.BLOCKS.GREETING_SLICE.DURATION / heroAnimationsConstants.SPEED,
+  )
+  const [greetingSliceDelay] = useState<number>(
+    heroAnimationsConstants.BLOCKS.GREETING_SLICE.KEYFRAME_START / heroAnimationsConstants.SPEED,
+  )
+
   const timelineRef = useRef<GSAPTimeline>(
     gsap.timeline({
       delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
     }),
   )
   const grettingSliceRef = useRef<HTMLElement>(null!)
-  const akaMocoSliceRef = useRef<HTMLElement>(null!)
-
-  useEffect(() => {
-    console.log('akaMocoSliceRef', akaMocoSliceRef)
-  }, [akaMocoSliceRef])
+  const mocoSliceRef = useRef<HTMLElement>(null!)
 
   useGSAP(
     () => {
+      timelineRef.current.to(
+        grettingSliceRef.current.style,
+        {
+          keyframes: {
+            '0%': {
+              background: 'white',
+            },
+            '40%': {
+              background: 'white',
+              // onComplete: () => heroDivRef.current.style.background = 'red'
+            },
+            '41%': {
+              background: 'black',
+            },
+            easeEach: 'none',
+          },
+          duration: greetingSliceDuration,
+        },
+        greetingSliceDelay,
+      )
+      timelineRef.current.to(
+        mocoSliceRef.current.style,
+        {
+          keyframes: {
+            '0%': {
+              // onComplete: () => mocoSliceRef.current.style.visibility = 'visible'
+              // display: 'none',
+              opacity: 0,
+              // background: 'red'
+            },
+            '100%': {
+              // onComplete: () => mocoSliceRef.current.style.visibility = 'hidden'
+              // display: 'none',
+              opacity: 1,
+              // background: 'red'
+            },
+            easeEach: 'none',
+          },
+          duration: 10,
+        },
+        0,
+      )
       /* timelineRef.current.to(
         grettingSliceRef.current.style,
         {
@@ -119,7 +164,7 @@ export default function HeroSlice() {
         duration: 1 / heroAnimationsConstants.SPEED,
       }) */
     },
-    { scope: akaMocoSliceRef },
+    { scope: mocoSliceRef },
   )
 
   return (
@@ -136,14 +181,18 @@ export default function HeroSlice() {
       >
         <GreetingCanvas timeline={timelineRef.current} />
       </section>
-      {/* <section
-        ref={akaMocoSliceRef}
+      <section
+        ref={mocoSliceRef}
         id='aka_moco_slice'
         className='fullscreen'
-        style={{ zIndex: heroAnimationsConstants.Z_INDEXES.AKA_MOCO_SLICE, position: 'fixed', opacity: 0 }}
+        style={{
+          zIndex: heroAnimationsConstants.Z_INDEXES.AKA_MOCO_SLICE,
+          position: 'fixed',
+          opacity: 0,
+        }}
       >
         <AkaMocoCanvas />
-      </section> */}
+      </section>
       {/* <section
         id='front_end_developper_with_extra_skills_canvas'
         className='fullscreen'

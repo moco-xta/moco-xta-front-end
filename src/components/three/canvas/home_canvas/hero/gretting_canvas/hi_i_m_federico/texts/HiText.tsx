@@ -18,11 +18,11 @@ export default function HiText({ timeline }: HiTextInterface) {
   const t = useTranslations('HOME')
 
   const [duration] = useState<number>(
-    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI_TEXT.DURATION /
+    heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.DURATION /
       heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
-    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.SUBS.HI_TEXT.KEYFRAME_START /
+    heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.SUBS.HI_TEXT.KEYFRAME_START /
       heroAnimationsConstants.SPEED,
   )
 

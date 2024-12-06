@@ -13,7 +13,7 @@ export default function GreetingScene({ timeline }: GreetingSceneInterface) {
     <>
       <HiImFederico timeline={timeline} />
       <FedericoPortrait timeline={timeline} />
-      {/* <AlsoKnowAsGroup timeline={timeline} /> */}
+      <AlsoKnowAsGroup timeline={timeline} />
     </>
   )
 }

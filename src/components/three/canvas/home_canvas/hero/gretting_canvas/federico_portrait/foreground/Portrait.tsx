@@ -12,10 +12,12 @@ interface PortraitInterface {
 
 export default function Portrait({ timeline }: PortraitInterface) {
   const [duration] = useState<number>(
-    heroAnimationsConstants.SCENES.FEDERICO_PORTRAIT.DURATION / heroAnimationsConstants.SPEED,
+    heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT.DURATION /
+      heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
-    heroAnimationsConstants.SCENES.FEDERICO_PORTRAIT.KEYFRAME_START / heroAnimationsConstants.SPEED,
+    heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT.KEYFRAME_START /
+      heroAnimationsConstants.SPEED,
   )
 
   const portraitMeshRef = useRef<THREE.Mesh>(null!)
@@ -36,9 +38,19 @@ export default function Portrait({ timeline }: PortraitInterface) {
       portraitMeshRef.current.material,
       {
         keyframes: {
-          '0%': { opacity: 0 },
-          '20%': { opacity: 1 },
-          easeEach: 'power1.in',
+          '0%': {
+            opacity:
+              heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT
+                .ANIMATION.MATERIAL['0_PERCENT'].OPACITY,
+          },
+          '20%': {
+            opacity:
+              heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT
+                .ANIMATION.MATERIAL['20_PERCENT'].OPACITY,
+          },
+          easeEach:
+            heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT.ANIMATION
+              .MATERIAL.EACH_EASE,
         },
         duration: duration,
       },

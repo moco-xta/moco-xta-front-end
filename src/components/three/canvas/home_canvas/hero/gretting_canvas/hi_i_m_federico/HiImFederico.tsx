@@ -14,10 +14,10 @@ interface HiImFedericoInterface {
 
 export default function HiImFederico({ timeline }: HiImFedericoInterface) {
   const [duration] = useState<number>(
-    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.DURATION / heroAnimationsConstants.SPEED,
+    heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.DURATION / heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
-    heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.KEYFRAME_START / heroAnimationsConstants.SPEED,
+    heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.KEYFRAME_START / heroAnimationsConstants.SPEED,
   )
 
   const hiImFedericoSceneGroupRef = useRef<THREE.Group>(null!)
@@ -91,6 +91,10 @@ export default function HiImFederico({ timeline }: HiImFedericoInterface) {
                 ease: heroAnimationsConstants.BLOCKS.HI_I_M_FEDERICO.ANIMATION.POSITION[
                   '100_PERCENT'
                 ].EASE,
+                onComplete: () =>
+                  setTimeout(() => {
+                    hiImFedericoSceneGroupRef.current.visible = false
+                  }, 1000),
               },
             },
             duration: duration,

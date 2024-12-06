@@ -12,36 +12,45 @@ interface SunComponentInterface {
 
 export default function SunComponent({ timeline }: SunComponentInterface) {
   const [duration] = useState<number>(
-    heroAnimationsConstants.SCENES.FEDERICO_PORTRAIT.DURATION / heroAnimationsConstants.SPEED,
+    heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.SUN
+      .DURATION / heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
-    heroAnimationsConstants.SCENES.FEDERICO_PORTRAIT.KEYFRAME_START / heroAnimationsConstants.SPEED,
+    heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.SUN
+      .KEYFRAME_START / heroAnimationsConstants.SPEED,
   )
 
   const sunComponentMeshRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(() => {
-    // POSITION
-    timeline.to(
-      sunComponentMeshRef.current.position,
-      {
-        keyframes: {
-          '0%': { y: 6 },
-          '33%': { y: 3 },
-          easeEach: 'power1.in',
-        },
-        duration: duration,
-      },
-      delay,
-    )
     // OPACITY
     timeline.to(
       sunComponentMeshRef.current.material,
       {
         keyframes: {
-          '0%': { opacity: 0 },
-          '33%': { opacity: 1 },
-          easeEach: 'power1.in',
+          '0%': {
+            opacity:
+              heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS
+                .SUN.MATERIAL['0_PERCENT'].OPACITY,
+          },
+          '20%': {
+            opacity:
+              heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS
+                .SUN.MATERIAL['20_PERCENT'].OPACITY,
+          },
+          '40%': {
+            opacity:
+              heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS
+                .SUN.MATERIAL['40_PERCENT'].OPACITY,
+          },
+          '60%': {
+            opacity:
+              heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS
+                .SUN.MATERIAL['60_PERCENT'].OPACITY,
+          },
+          easeEach:
+            heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS
+              .SUN.MATERIAL.EACH_EASE,
         },
         duration: duration,
       },
