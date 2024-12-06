@@ -107,7 +107,7 @@ export default function SkyComponent({ timeline }: SkyComponentInterface) {
         delay,
       )
     },
-    { scope: skyComponentMeshRef },
+    /* { scope: skyComponentMeshRef }, */
   )
 
   return <Sky ref={skyComponentMeshRef} />

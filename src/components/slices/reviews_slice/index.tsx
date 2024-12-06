@@ -2,6 +2,6 @@ import React from 'react'
 
 import './index.scss'
 
-export default function ReviewssSlice() {
+export default function ReviewsSlice() {
   return <div>REVIEWS SLICE</div>
 }

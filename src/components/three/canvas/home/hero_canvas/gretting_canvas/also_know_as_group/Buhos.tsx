@@ -54,7 +54,7 @@ export default function Buhos({ timeline }: BuhoComponentInterface) {
         delay,
       )
     },
-    { scope: buhosGroupRef },
+    /* { scope: buhosGroupRef }, */
   )
 
   return (

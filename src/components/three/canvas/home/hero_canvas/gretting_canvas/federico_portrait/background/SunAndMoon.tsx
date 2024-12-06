@@ -65,7 +65,7 @@ export default function SunAndMoon({ timeline }: SunAndMoonInterface) {
         delay,
       )
     },
-    { scope: sunAndMoonBoxGroupRef },
+    /* { scope: sunAndMoonBoxGroupRef }, */
   )
 
   return (

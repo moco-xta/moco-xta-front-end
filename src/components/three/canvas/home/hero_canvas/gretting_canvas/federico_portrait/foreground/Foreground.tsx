@@ -78,7 +78,7 @@ export default function Foreground({ timeline }: ForegroundInterface) {
         delay,
       )
     },
-    { scope: foregroundBoxGroupRef },
+    /* { scope: foregroundBoxGroupRef }, */
   )
 
   return (

@@ -48,7 +48,7 @@ export default function LightningComponent({ timeline }: LightningComponentInter
         delay,
       )
     },
-    { scope: lightningMeshRef },
+    /* { scope: lightningMeshRef }, */
   )
 
   return (

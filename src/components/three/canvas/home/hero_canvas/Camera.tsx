@@ -1,9 +1,6 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { useFrame, useThree } from '@react-three/fiber'
 import { Float, PerspectiveCamera } from '@react-three/drei'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react'
 
 import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 
