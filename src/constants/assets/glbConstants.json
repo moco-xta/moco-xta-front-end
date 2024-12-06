@@ -1,53 +1,42 @@
 {
   "HOME": {
     "HERO": {
-      "BUHO": "/glb/home/hero/Buho.glb",
+      "BUHO": "/models/glb/home/hero/Buho.glb",
       "GOBELINO": {
-        "MOON": "/glb/home/hero/gobelino/Moon.glb",
-        "SKY": "/glb/home/hero/gobelino/Sky.glb",
-        "SUN": "/glb/home/hero/gobelino/Sun.glb"
+        "MOON": "/models/glb/home/hero/gobelino/Moon.glb",
+        "SKY": "/models/glb/home/hero/gobelino/Sky.glb",
+        "SUN": "/models/glb/home/hero/gobelino/Sun.glb"
       },
       "HELIUM_BALLOONS": {
-        "HELIUM_BALLOON_C": "/glb/home/hero/helium_balloons/HeliumBalloonC.glb",
-        "HELIUM_BALLOON_M": "/glb/home/hero/helium_balloons/HeliumBalloonM.glb",
-        "HELIUM_BALLOON_O": "/glb/home/hero/helium_balloons/HeliumBalloonO.glb",
-        "SMILEY": "/glb/home/hero/helium_balloons/Smiley.glb"
+        "HELIUM_BALLOON_C": "/models/glb/home/hero/helium_balloons/HeliumBalloonC.glb",
+        "HELIUM_BALLOON_M": "/models/glb/home/hero/helium_balloons/HeliumBalloonM.glb",
+        "HELIUM_BALLOON_O": "/models/glb/home/hero/helium_balloons/HeliumBalloonO.glb",
+        "SMILEY": "/models/glb/home/hero/helium_balloons/Smiley.glb"
       },
-      "LIGHTNING": "/glb/home/hero/Lightning.glb",
+      "LIGHTNING": "/models/glb/home/hero/Lightning.glb",
       "LOGOS": {
-        "LOGO_ANGULAR": "/glb/home/hero/logos/LogoAngular.glb",
-        "LOGO_BLENDER": "/glb/home/hero/logos/LogoBlender.glb",
-        "LOGO_DOCKER": "/glb/home/hero/logos/LogoDocker.glb",
-        "LOGO_FIGMA": "/glb/home/hero/logos/LogoFigma.glb",
-        "LOGO_GSAP": "/glb/home/hero/logos/LogoGsap.glb",
-        "LOGO_NEXTJS": "/glb/home/hero/logos/LogoNextjs.glb",
-        "LOGO_REACT": "/glb/home/hero/logos/LogoReact.glb",
-        "LOGO_REACT_THREE_DREI": "/glb/home/hero/logos/LogoReactThreeDrei.glb",
-        "LOGO_REDUX": "/glb/home/hero/logos/LogoRedux.glb",
-        "LOGO_SASS": "/glb/home/hero/logos/LogoSass.glb",
-        "LOGO_SPRING": "/glb/home/hero/logos/LogoSpring.glb",
-        "LOGO_TAILWIND": "/glb/home/hero/logos/LogoTailwind.glb"
+        "LOGO_ANGULAR": "/models/glb/home/hero/logos/LogoAngular.glb",
+        "LOGO_BLENDER": "/models/glb/home/hero/logos/LogoBlender.glb",
+        "LOGO_DOCKER": "/models/glb/home/hero/logos/LogoDocker.glb",
+        "LOGO_FIGMA": "/models/glb/home/hero/logos/LogoFigma.glb",
+        "LOGO_GSAP": "/models/glb/home/hero/logos/LogoGsap.glb",
+        "LOGO_NEXTJS": "/models/glb/home/hero/logos/LogoNextjs.glb",
+        "LOGO_REACT": "/models/glb/home/hero/logos/LogoReact.glb",
+        "LOGO_REACT_THREE_DREI": "/models/glb/home/hero/logos/LogoReactThreeDrei.glb",
+        "LOGO_REDUX": "/models/glb/home/hero/logos/LogoRedux.glb",
+        "LOGO_SASS": "/models/glb/home/hero/logos/LogoSass.glb",
+        "LOGO_SPRING": "/models/glb/home/hero/logos/LogoSpring.glb",
+        "LOGO_TAILWIND": "/models/glb/home/hero/logos/LogoTailwind.glb"
       }
     },
-    "AXIS": "/glb/Axis.glb",
-    "EXO_MARKET": "/glb/ExoMarket.glb",
-    "EXO_MARKET_SHUTTER": "/glb/ExoMarketShutter.glb",
-    "GANESH": "/glb/Ganesh.glb",
-    "GOBELINO": "/glb/Gobelino.glb",
-    "HEPTAGRAM": "/glb/Heptagram.glb",
-    "MAC_BOOK_PRO": "/glb/MacBookPro.glb",
-    "PHONE_NUMBER_INPUT": "/glb/PhoneNumberInput.glb",
-    "SEVEN_POINTED_STAR": "/glb/SevenPointedStar.glb"
-  },
-  "FONTS": {
-    "GILROY": {
-      "HEAVY": {
-        "A": "/glb/fonts/gilroy/heavy/AGilroyHeavy.glb",
-        "S": "/glb/fonts/gilroy/heavy/SGilroyHeavy.glb",
-        "L": "/glb/fonts/gilroy/heavy/LGilroyHeavy.glb",
-        "T": "/glb/fonts/gilroy/heavy/TGilroyHeavy.glb",
-        "U": "/glb/fonts/gilroy/heavy/UGilroyHeavy.glb"
-      }
-    }
+    "AXIS": "/models/glb/Axis.glb",
+    "EXO_MARKET": "/models/glb/ExoMarket.glb",
+    "EXO_MARKET_SHUTTER": "/models/glb/ExoMarketShutter.glb",
+    "GANESH": "/models/glb/Ganesh.glb",
+    "GOBELINO": "/models/glb/Gobelino.glb",
+    "HEPTAGRAM": "/models/glb/Heptagram.glb",
+    "MAC_BOOK_PRO": "/models/glb/MacBookPro.glb",
+    "PHONE_NUMBER_INPUT": "/models/glb/PhoneNumberInput.glb",
+    "SEVEN_POINTED_STAR": "/models/glb/SevenPointedStar.glb"
   }
 }
