@@ -1,4 +1,4 @@
-import { default as cursorAnimationsConstants } from '@/constants/animations/cursorAnimationsConstants.json'
+import { default as cursorAnimationsConstants } from '@/constants/animations/shared/cursorAnimationsConstants.json'
 
 export const cursorAnimation = {
   scope: cursorAnimationsConstants.SCOPE,

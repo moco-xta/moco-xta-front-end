@@ -2,7 +2,7 @@ import createMiddleware from 'next-intl/middleware'
 
 /* import {locales, localePrefix, pathnames} from './navigation' */
 
-import { default as LocalesConstants } from '@/constants/localesConstants.json'
+import { default as LocalesConstants } from '@/constants/locales/localesConstants.json'
 
 export default createMiddleware({
   locales: LocalesConstants.LOCALES,

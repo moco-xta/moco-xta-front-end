@@ -1,4 +1,4 @@
-import { default as menuAnimationsConstants } from '@/constants/animations/menuAnimationsConstants.json'
+import { default as menuAnimationsConstants } from '@/constants/animations/shared/menuAnimationsConstants.json'
 
 export const menuAnimation = {
   scope: menuAnimationsConstants.SCOPE,

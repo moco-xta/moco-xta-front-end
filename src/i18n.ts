@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getRequestConfig } from 'next-intl/server'
 
-import { default as LocalesConstants } from '@/constants/localesConstants.json'
+import { default as LocalesConstants } from '@/constants/locales/localesConstants.json'
 
 interface RequestConfigInterface {
   locale: string

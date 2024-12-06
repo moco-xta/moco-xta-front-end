@@ -22,9 +22,6 @@
     "BENCH_001": "gltf/home/Bench001.gltf",
     "PLANE_TREE_001": "gltf/home/PlaneTree001.gltf"
   },
-  "LIRA": {
-    "LIRA_TEST_001": "gltf/lira/LiraTest001.gltf"
-  },
   "RUBIKS_CUBE": {
     "ARROW": "/gltf/rubiks_cube/Arrow.gltf",
     "BUTTON": "/gltf/rubiks_cube/Button.gltf",
@@ -133,16 +130,5 @@
         }
       }
     }
-  },
-  "SKETCHFAB": {
-    "FACE": "/gltf/sketchfab/Face.gltf"
-  },
-  "SNAKE_GAME": {
-    "ARROW_TEST": "/gltf/snake_game/ArrowTest.gltf",
-    "FRUIT": "/gltf/snake_game/Fruit.gltf",
-    "GRASS": "/gltf/snake_game/Grass.gltf",
-    "SNAKE_CELL_CORNER": "/gltf/snake_game/SnakeCellCorner.gltf",
-    "SNAKE_CELL_STRAIGHT": "/gltf/snake_game/SnakeCellStraight.gltf",
-    "SNAKE_HEAD": "/gltf/snake_game/SnakeHead.gltf"
   }
 }
