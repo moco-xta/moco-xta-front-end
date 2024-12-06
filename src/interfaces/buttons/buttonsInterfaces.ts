@@ -1,7 +1,7 @@
 import { FormikState } from 'formik'
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit'
 
-import { AddReviewValuesInterface } from './redux/reduxApiInterfaces'
+import { AddReviewValuesInterface } from '../redux/reduxApiInterfaces'
 
 export interface InternalLinkInterface {
   path: string

@@ -46,7 +46,7 @@ export const Word3D = forwardRef<THREE.Group, Word3DInterface>(function Word3D(
         position ? -(box3.max.z - box3.min.z) / 2 + position.z : -(box3.max.z - box3.min.z) / 2,
       )
     }
-  }, [word3DGroupRef])
+  }, [center, position, word3DGroupRef])
 
   return (
     <group
@@ -58,6 +58,7 @@ export const Word3D = forwardRef<THREE.Group, Word3DInterface>(function Word3D(
       {splittedWord.map((letter, index) => {
         return (
           <Letter3D
+            key={`letter_3D_component_${keyPrefix}_${letter}_${index}`}
             keyPrefix={keyPrefix}
             font={font}
             size={size}

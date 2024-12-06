@@ -5,10 +5,10 @@ import { useTranslations } from 'next-intl'
 import { AuthenticationFormsInterface } from '@/interfaces/authentication/authenticationFormsInterfaces'
 import { SignInPayloadInterface } from '@/interfaces/redux/reduxApiInterfaces'
 
-import { FormikTextField } from '@/components/inputs'
-import { ResetButton, SubmitButton } from '@/components/buttons'
+import { FormikTextField } from '@/components/forms/inputs'
+import SubmitButton from '@/components/buttons/closing_arrow/submit_button'
+import ResetButton from '@/components/buttons/about_mobile_escape_button/reset_button'
 
-import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function SignInForm({

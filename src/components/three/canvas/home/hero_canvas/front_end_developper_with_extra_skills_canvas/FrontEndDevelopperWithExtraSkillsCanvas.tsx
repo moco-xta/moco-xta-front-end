@@ -6,19 +6,18 @@ import Camera from './Camera'
 import Lights from './Lights'
 import FrontEndDevelopperWithExtraSkillsScene from './FrontEndDevelopperWithExtraSkillsScene'
 
-import { default as frontEndDevelopperWithExtraSkillsCanvasConstants } from '@/constants/canvas/home/frontEndDevelopperWithExtraSkillsCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 
 export default function FrontEndDevelopperWithExtraSkillsCanvas() {
   return (
     <Canvas
-      dpr={frontEndDevelopperWithExtraSkillsCanvasConstants.CANVAS.DPR}
-      legacy={frontEndDevelopperWithExtraSkillsCanvasConstants.CANVAS.LEGACY}
+      dpr={heroCanvasConstants.CANVAS.DPR}
+      legacy={heroCanvasConstants.CANVAS.LEGACY}
       shadows
       gl={{
-        antialias: frontEndDevelopperWithExtraSkillsCanvasConstants.CANVAS.GL.ANTIALIAS,
-        alpha: frontEndDevelopperWithExtraSkillsCanvasConstants.CANVAS.GL.ALPHA,
-        powerPreference:
-          frontEndDevelopperWithExtraSkillsCanvasConstants.CANVAS.GL.POWER_PREFERENCE,
+        antialias: heroCanvasConstants.CANVAS.GL.ANTIALIAS,
+        alpha: heroCanvasConstants.CANVAS.GL.ALPHA,
+        powerPreference: heroCanvasConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
       <Camera />

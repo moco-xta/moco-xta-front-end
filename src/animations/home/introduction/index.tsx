@@ -1,4 +1,4 @@
-import { default as introductionAnimationsConstants } from '@/constants/animations/introductionAnimationsConstants.json'
+import { default as introductionAnimationsConstants } from '@/constants/animations/home/introductionAnimationsConstants.json'
 
 export const introductionTextAnimation = {
   selector: introductionAnimationsConstants.INTRODUCTION_TEXT.SELECTOR,

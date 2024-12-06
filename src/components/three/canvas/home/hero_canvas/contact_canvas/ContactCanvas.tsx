@@ -6,18 +6,18 @@ import Camera from './Camera'
 import Lights from './Lights'
 import ContactScene from './ContactScene'
 
-import { default as contactCanvasConstants } from '@/constants/canvas/home/contactCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 
 export default function ContactCanvas() {
   return (
     <Canvas
-      dpr={contactCanvasConstants.CANVAS.DPR}
-      legacy={contactCanvasConstants.CANVAS.LEGACY}
+      dpr={heroCanvasConstants.CANVAS.DPR}
+      legacy={heroCanvasConstants.CANVAS.LEGACY}
       shadows
       gl={{
-        antialias: contactCanvasConstants.CANVAS.GL.ANTIALIAS,
-        alpha: contactCanvasConstants.CANVAS.GL.ALPHA,
-        powerPreference: contactCanvasConstants.CANVAS.GL.POWER_PREFERENCE,
+        antialias: heroCanvasConstants.CANVAS.GL.ANTIALIAS,
+        alpha: heroCanvasConstants.CANVAS.GL.ALPHA,
+        powerPreference: heroCanvasConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
       <Camera />

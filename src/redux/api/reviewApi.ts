@@ -1,6 +1,6 @@
 import apiSlice from '../slice/apiSlice'
 
-import { default as apiConstants } from '@/constants/apiConstants.json'
+import { default as apiConstants } from '@/constants/redux/apiConstants.json'
 
 import {
   AddReviewPayloadInterface,

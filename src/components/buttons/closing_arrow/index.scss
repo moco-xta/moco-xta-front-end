@@ -1,0 +1,29 @@
+@import '@/styles/variables.module.scss';
+
+#closing_arrow_container {
+  z-index: 8;
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  color: $grey_medium;
+  cursor: pointer;
+}
+
+#closing_arrow_container:hover {
+  color: $white;
+}
+
+@media screen and (max-width: $desktop_limit) {
+  #closing_arrow_container {
+    top: unset;
+    right: unset;
+    left: 35px;
+    bottom: 20px;
+    justify-content: flex-start;
+  }
+}

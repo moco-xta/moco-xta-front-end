@@ -1,4 +1,4 @@
-import { default as preloaderAnimationsConstants } from '@/constants/animations/preloaderAnimationsConstants.json'
+import { default as preloaderAnimationsConstants } from '@/constants/animations/shared/preloaderAnimationsConstants.json'
 
 // TEXT
 

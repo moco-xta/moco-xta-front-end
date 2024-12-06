@@ -10,7 +10,7 @@ import {
   LogOutResponseInterface,
 } from '@/interfaces/redux/reduxApiInterfaces'
 
-import { default as apiConstants } from '@/constants/apiConstants.json'
+import { default as apiConstants } from '@/constants/redux/apiConstants.json'
 
 import { getAccessToken, removeTokens, storeTokens } from '@/helpers/localStorageHelpers'
 

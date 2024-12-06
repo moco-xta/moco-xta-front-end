@@ -20,7 +20,7 @@ export default function PostProcessing() {
     depthOfFieldRef.current.target = dofTargetRef.current
   })
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     gsap.to(dofTargetRef.current, {
       keyframes: {
         '0%': { z: 4, ease: 'back.in' },
@@ -36,7 +36,7 @@ export default function PostProcessing() {
         heroAnimationsConstants.SCENES.HI_I_M_FEDERICO.STEPS / heroAnimationsConstants.SPEED,
       ease: 'none',
     })
-  })
+  }) */
 
   return (
     <EffectComposer>

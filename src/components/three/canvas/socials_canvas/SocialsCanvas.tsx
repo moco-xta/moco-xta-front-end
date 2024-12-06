@@ -3,14 +3,16 @@ import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
-import { SocialsCanvasInterface } from '@/interfaces/threeInterfaces'
-
 import Lights from './Lights'
 import SocialsScene from './SocialsScene'
 
 import { default as socialsConstants } from '@/constants/canvas/socialsConstants.json'
 
 import './index.scss'
+
+interface SocialsCanvasInterface {
+  className: string
+}
 
 export default function SocialsCanvas({ className }: SocialsCanvasInterface) {
   return (

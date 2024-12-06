@@ -10,7 +10,7 @@ import {
   RandomRangePositionInterface,
   setRandomPosition,
   setRandomRotation,
-} from '@/helpers/animationHelpers'
+} from '@/helpers/threeHelpers'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
@@ -39,8 +39,9 @@ export const IphoneKeyboard = forwardRef<THREE.Group, GroupProps>(
 
     return (
       <group ref={ref}>
-        {maps.map((map) => (
+        {maps.map((map, index) => (
           <IphoneKeyboardTouch
+            key={`iphone_keyboard_touch_${index}`}
             position={setRandomPosition(POSITION_RANDOM_RANGE)}
             rotation={setRandomRotation({ z: true })}
             scale={2}

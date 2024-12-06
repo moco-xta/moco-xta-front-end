@@ -1,0 +1,21 @@
+@import '@/styles/variables.module.scss';
+@import '@/styles/text_blocks.module.scss';
+
+.text_block_main {
+  display: flex;
+  flex-direction: column;
+  gap: $gap_M;
+
+  p {
+    text-align: justify;
+  }
+}
+
+#desktop_about_introduction_text_block {
+  p {
+    max-width: 35%;
+  }
+}
+
+#mobile_about_introduction_text_block {
+}

@@ -4,7 +4,7 @@ import { useHelper } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 
 import variables from '@/styles/variables.module.scss'
 import { useFrame } from '@react-three/fiber'
@@ -34,7 +34,7 @@ export default function Lights({ timeline }: LightsInterface) {
     <group ref={lightsGroupRef}>
       <ambientLight
         color={variables.white}
-        intensity={greetingCanvasConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
+        intensity={heroCanvasConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
       />
       <DirectionalLights timeline={timeline} />
       {/* <spotLight

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
 
-import { default as contactCanvasConstants } from '@/constants/canvas/home/contactCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 
 import variables from '@/styles/variables.module.scss'
 
@@ -24,26 +24,26 @@ export default function Lights() {
     <>
       <ambientLight
         color={variables.white}
-        intensity={contactCanvasConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
+        intensity={heroCanvasConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
       />
-      <directionalLight
+      {/* <directionalLight
         ref={ref}
         position={[
-          contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.X,
-          contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.Y,
-          contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.Z,
+          heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.X,
+          heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.Y,
+          heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.Z,
         ]}
-        intensity={contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.INTENSITY}
-        shadow-mapSize={contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.MAP_SIZE}
-        shadow-camera-far={contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_FAR}
-        shadow-camera-left={contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_LEFT}
-        shadow-camera-right={contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_RIGHT}
-        shadow-camera-top={contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_TOP}
-        shadow-camera-bottom={contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_BOTTOM}
-        shadow-radius={contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_RADIUS}
-        shadow-bias={contactCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_BIAS}
+        intensity={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.INTENSITY}
+        shadow-mapSize={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.MAP_SIZE}
+        shadow-camera-far={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_FAR}
+        shadow-camera-left={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_LEFT}
+        shadow-camera-right={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_RIGHT}
+        shadow-camera-top={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_TOP}
+        shadow-camera-bottom={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_CAMERA_BOTTOM}
+        shadow-radius={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_RADIUS}
+        shadow-bias={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_BIAS}
         castShadow
-      />
+      /> */}
       <spotLight
         ref={spotLightRef}
         position={[6.25, 9, 1]}

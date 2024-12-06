@@ -11,7 +11,7 @@ import { defaultMaterial } from '../../materials/defaultMaterials'
 
 import { default as socialsConstants } from '@/constants/canvas/socialsConstants.json'
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
-import { default as externalLinksConstants } from '@/constants/externalLinksConstants.json'
+import { default as externalLinksConstants } from '@/constants/external_links/externalLinksConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

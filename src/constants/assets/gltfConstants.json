@@ -9,124 +9,124 @@
     "LOGO_TWITTER": "/models/gltf/logos/LogoTwitter.gltf"
   },
   "HERO": {
-    "M_HELIUM_BALLOON": "/gltf/hero/MHeliumBalloon.gltf",
-    "O_HELIUM_BALLOON": "/gltf/hero/OHeliumBalloon.gltf",
-    "C_HELIUM_BALLOON": "/gltf/hero/CHeliumBalloon.gltf",
-    "SMILEY": "/gltf/hero/Smiley.gltf"
+    "M_HELIUM_BALLOON": "/models/gltf/hero/MHeliumBalloon.gltf",
+    "O_HELIUM_BALLOON": "/models/gltf/hero/OHeliumBalloon.gltf",
+    "C_HELIUM_BALLOON": "/models/gltf/hero/CHeliumBalloon.gltf",
+    "SMILEY": "/models/gltf/hero/Smiley.gltf"
   },
   "HOME": {
-    "BUILDING_001": "gltf/home/Building001.gltf",
-    "BUILDING_002": "gltf/home/Building002.gltf",
-    "TRUCK_RED": "gltf/home/TruckRed.gltf",
-    "TRUCK_WHITE": "gltf/home/TruckWhite.gltf",
-    "BENCH_001": "gltf/home/Bench001.gltf",
-    "PLANE_TREE_001": "gltf/home/PlaneTree001.gltf"
+    "BUILDING_001": "models/gltf/home/Building001.gltf",
+    "BUILDING_002": "models/gltf/home/Building002.gltf",
+    "TRUCK_RED": "models/gltf/home/TruckRed.gltf",
+    "TRUCK_WHITE": "models/gltf/home/TruckWhite.gltf",
+    "BENCH_001": "models/gltf/home/Bench001.gltf",
+    "PLANE_TREE_001": "models/gltf/home/PlaneTree001.gltf"
   },
   "RUBIKS_CUBE": {
-    "ARROW": "/gltf/rubiks_cube/Arrow.gltf",
-    "BUTTON": "/gltf/rubiks_cube/Button.gltf",
-    "COLOR_PAD": "/gltf/rubiks_cube/ColorPad.gltf",
-    "COLOR_PAD_BLENDER": "/gltf/rubiks_cube/ColorPadBlender.gltf",
-    "COLOR_PAD_CHAT_GPT": "/gltf/rubiks_cube/ColorPadChatGpt.gltf",
-    "COLOR_PAD_CSS": "/gltf/rubiks_cube/ColorPadCss.gltf",
-    "COLOR_PAD_DOCKER": "/gltf/rubiks_cube/ColorPadDocker.gltf",
-    "COLOR_PAD_FIGMA": "/gltf/rubiks_cube/ColorPadFigma.gltf",
-    "COLOR_PAD_FORMIK": "/gltf/rubiks_cube/ColorPadFormik.gltf",
-    "COLOR_PAD_GITHUB": "/gltf/rubiks_cube/ColorPadGithub.gltf",
-    "COLOR_PAD_GOOGLE_ANALYTICS": "/gltf/rubiks_cube/ColorPadGoogleAnalytics.gltf",
-    "COLOR_PAD_GSAP": "/gltf/rubiks_cube/ColorPadGsap.gltf",
-    "COLOR_PAD_HOSTINGER": "/gltf/rubiks_cube/ColorPadHostinger.gltf",
-    "COLOR_PAD_HTML": "/gltf/rubiks_cube/ColorPadHtml.gltf",
-    "COLOR_PAD_ILLUSTRATOR": "/gltf/rubiks_cube/ColorPadIllustrator.gltf",
-    "COLOR_PAD_JAVA": "/gltf/rubiks_cube/ColorPadJava.gltf",
-    "COLOR_PAD_JAVASCRIPT": "/gltf/rubiks_cube/ColorPadJavascript.gltf",
-    "COLOR_PAD_NEXT": "/gltf/rubiks_cube/ColorPadNext.gltf",
-    "COLOR_PAD_NEXT_INTL": "/gltf/rubiks_cube/ColorPadNextIntl.gltf",
-    "COLOR_PAD_NGINX": "/gltf/rubiks_cube/ColorPadNginx.gltf",
-    "COLOR_PAD_NPM": "/gltf/rubiks_cube/ColorPadNpm.gltf",
-    "COLOR_PAD_PHOTOSHOP": "/gltf/rubiks_cube/ColorPadPhotoshop.gltf",
-    "COLOR_PAD_POSTGRESQL": "/gltf/rubiks_cube/ColorPadPostgresql.gltf",
-    "COLOR_PAD_POSTMAN": "/gltf/rubiks_cube/ColorPadPostman.gltf",
-    "COLOR_PAD_REACT_THREE_DREI": "/gltf/rubiks_cube/ColorPadReactThreeDrei.gltf",
-    "COLOR_PAD_REDUX": "/gltf/rubiks_cube/ColorPadRedux.gltf",
-    "COLOR_PAD_SASS": "/gltf/rubiks_cube/ColorPadSass.gltf",
-    "COLOR_PAD_SPRING": "/gltf/rubiks_cube/ColorPadSpring.gltf",
-    "COLOR_PAD_TYPESCRIPT": "/gltf/rubiks_cube/ColorPadTypescript.gltf",
-    "COLOR_PAD_WEBGL": "/gltf/rubiks_cube/ColorPadWebgl.gltf",
-    "ROUNDED_CUBE": "/gltf/rubiks_cube/RoundedCube.gltf"
+    "ARROW": "/models/gltf/rubiks_cube/Arrow.gltf",
+    "BUTTON": "/models/gltf/rubiks_cube/Button.gltf",
+    "COLOR_PAD": "/models/gltf/rubiks_cube/ColorPad.gltf",
+    "COLOR_PAD_BLENDER": "/models/gltf/rubiks_cube/ColorPadBlender.gltf",
+    "COLOR_PAD_CHAT_GPT": "/models/gltf/rubiks_cube/ColorPadChatGpt.gltf",
+    "COLOR_PAD_CSS": "/models/gltf/rubiks_cube/ColorPadCss.gltf",
+    "COLOR_PAD_DOCKER": "/models/gltf/rubiks_cube/ColorPadDocker.gltf",
+    "COLOR_PAD_FIGMA": "/models/gltf/rubiks_cube/ColorPadFigma.gltf",
+    "COLOR_PAD_FORMIK": "/models/gltf/rubiks_cube/ColorPadFormik.gltf",
+    "COLOR_PAD_GITHUB": "/models/gltf/rubiks_cube/ColorPadGithub.gltf",
+    "COLOR_PAD_GOOGLE_ANALYTICS": "/models/gltf/rubiks_cube/ColorPadGoogleAnalytics.gltf",
+    "COLOR_PAD_GSAP": "/models/gltf/rubiks_cube/ColorPadGsap.gltf",
+    "COLOR_PAD_HOSTINGER": "/models/gltf/rubiks_cube/ColorPadHostinger.gltf",
+    "COLOR_PAD_HTML": "/models/gltf/rubiks_cube/ColorPadHtml.gltf",
+    "COLOR_PAD_ILLUSTRATOR": "/models/gltf/rubiks_cube/ColorPadIllustrator.gltf",
+    "COLOR_PAD_JAVA": "/models/gltf/rubiks_cube/ColorPadJava.gltf",
+    "COLOR_PAD_JAVASCRIPT": "/models/gltf/rubiks_cube/ColorPadJavascript.gltf",
+    "COLOR_PAD_NEXT": "/models/gltf/rubiks_cube/ColorPadNext.gltf",
+    "COLOR_PAD_NEXT_INTL": "/models/gltf/rubiks_cube/ColorPadNextIntl.gltf",
+    "COLOR_PAD_NGINX": "/models/gltf/rubiks_cube/ColorPadNginx.gltf",
+    "COLOR_PAD_NPM": "/models/gltf/rubiks_cube/ColorPadNpm.gltf",
+    "COLOR_PAD_PHOTOSHOP": "/models/gltf/rubiks_cube/ColorPadPhotoshop.gltf",
+    "COLOR_PAD_POSTGRESQL": "/models/gltf/rubiks_cube/ColorPadPostgresql.gltf",
+    "COLOR_PAD_POSTMAN": "/models/gltf/rubiks_cube/ColorPadPostman.gltf",
+    "COLOR_PAD_REACT_THREE_DREI": "/models/gltf/rubiks_cube/ColorPadReactThreeDrei.gltf",
+    "COLOR_PAD_REDUX": "/models/gltf/rubiks_cube/ColorPadRedux.gltf",
+    "COLOR_PAD_SASS": "/models/gltf/rubiks_cube/ColorPadSass.gltf",
+    "COLOR_PAD_SPRING": "/models/gltf/rubiks_cube/ColorPadSpring.gltf",
+    "COLOR_PAD_TYPESCRIPT": "/models/gltf/rubiks_cube/ColorPadTypescript.gltf",
+    "COLOR_PAD_WEBGL": "/models/gltf/rubiks_cube/ColorPadWebgl.gltf",
+    "ROUNDED_CUBE": "/models/gltf/rubiks_cube/RoundedCube.gltf"
   },
   "ABOUT": {
     "LABORATOIRE": {
       "CLAY_RENDER": {
-        "LABORATOIRE": "/gltf/about/laboratoire/clay_render/Laboratoire.gltf"
+        "LABORATOIRE": "/models/gltf/about/laboratoire/clay_render/Laboratoire.gltf"
       },
       "FINAL_RENDER": {
         "DESK_COLLECTION": {
-          "DESK_CHAIR": "/gltf/about/laboratoire/final_render/desk_collection/DeskChair.gltf",
-          "DESK_TRAY": "/gltf/about/laboratoire/final_render/desk_collection/DeskTray.gltf",
-          "MAC_BOOK_PRO": "/gltf/about/laboratoire/final_render/desk_collection/MacBookPro.gltf",
-          "SCREEN": "/gltf/about/laboratoire/final_render/desk_collection/Screen.gltf",
-          "TRESTLE": "/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf",
-          "TRANSFERT_BOX": "/gltf/about/laboratoire/final_render/desk_collection/TransfertBox.gltf",
-          "VINYL_DISC": "/gltf/about/laboratoire/final_render/desk_collection/VinylDisc.gltf"
+          "DESK_CHAIR": "/models/gltf/about/laboratoire/final_render/desk_collection/DeskChair.gltf",
+          "DESK_TRAY": "/models/gltf/about/laboratoire/final_render/desk_collection/DeskTray.gltf",
+          "MAC_BOOK_PRO": "/models/gltf/about/laboratoire/final_render/desk_collection/MacBookPro.gltf",
+          "SCREEN": "/models/gltf/about/laboratoire/final_render/desk_collection/Screen.gltf",
+          "TRESTLE": "/models/gltf/about/laboratoire/final_render/desk_collection/Trestle.gltf",
+          "TRANSFERT_BOX": "/models/gltf/about/laboratoire/final_render/desk_collection/TransfertBox.gltf",
+          "VINYL_DISC": "/models/gltf/about/laboratoire/final_render/desk_collection/VinylDisc.gltf"
         },
         "LIGHTS_COLLECTION": {
-          "CEILING_LAMP": "/gltf/about/laboratoire/final_render/lights_collection/CeilingLamp.gltf",
-          "CEILING_LAMP_FRAME": "/gltf/about/laboratoire/final_render/lights_collection/CeilingLampFrame.gltf",
-          "TABLE_LAMP": "/gltf/about/laboratoire/final_render/lights_collection/TableLamp.gltf"
+          "CEILING_LAMP": "/models/gltf/about/laboratoire/final_render/lights_collection/CeilingLamp.gltf",
+          "CEILING_LAMP_FRAME": "/models/gltf/about/laboratoire/final_render/lights_collection/CeilingLampFrame.gltf",
+          "TABLE_LAMP": "/models/gltf/about/laboratoire/final_render/lights_collection/TableLamp.gltf"
         },
         "PARQUET_COLLECTION": {
-          "PARQUET": "/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf"
+          "PARQUET": "/models/gltf/about/laboratoire/final_render/parquet_collection/Parquet.gltf"
         },
         "SHELF_COLLECTION": {
-          "PABLO_ESCOBAR": "/gltf/about/laboratoire/final_render/shelf_collection/PabloEscobar.gltf",
+          "PABLO_ESCOBAR": "/models/gltf/about/laboratoire/final_render/shelf_collection/PabloEscobar.gltf",
           "PLATONIC_SOLIDS": {
-            "CUBE": "/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Cube.gltf",
-            "DODECAHEDRON": "/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Dodecahedron.gltf",
-            "ICOSAHEDRON": "/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Icosahedron.gltf",
-            "OCTAHEDRON": "/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Octahedron.gltf",
-            "TETRAHEDRON": "/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Tetrahedron.gltf"
+            "CUBE": "/models/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Cube.gltf",
+            "DODECAHEDRON": "/models/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Dodecahedron.gltf",
+            "ICOSAHEDRON": "/models/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Icosahedron.gltf",
+            "OCTAHEDRON": "/models/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Octahedron.gltf",
+            "TETRAHEDRON": "/models/gltf/about/laboratoire/final_render/shelf_collection/platonic_solids/Tetrahedron.gltf"
           },
-          "SHELF": "/gltf/about/laboratoire/final_render/shelf_collection/Shelf.gltf",
-          "VIRGEN_DE_GUADALUPE": "/gltf/about/laboratoire/final_render/shelf_collection/VirgenDeGuadalupe.gltf"
+          "SHELF": "/models/gltf/about/laboratoire/final_render/shelf_collection/Shelf.gltf",
+          "VIRGEN_DE_GUADALUPE": "/models/gltf/about/laboratoire/final_render/shelf_collection/VirgenDeGuadalupe.gltf"
         },
         "SOCIALS_COLLECTION": {
-          "LOGO_GITHUB": "/gltf/about/laboratoire/final_render/socials_collection/LogoGitHub.gltf",
-          "LOGO_TWITTER": "/gltf/about/laboratoire/final_render/socials_collection/LogoTwitter.gltf"
+          "LOGO_GITHUB": "/models/gltf/about/laboratoire/final_render/socials_collection/LogoGitHub.gltf",
+          "LOGO_TWITTER": "/models/gltf/about/laboratoire/final_render/socials_collection/LogoTwitter.gltf"
         },
         "SPEAKERS_COLLECTION": {
-          "SPEAKER": "/gltf/about/laboratoire/final_render/speakers_collection/Speaker.gltf",
-          "SPEAKER_BOX": "/gltf/about/laboratoire/final_render/speakers_collection/SpeakerBox.gltf",
-          "WORLD_MAP": "/gltf/about/laboratoire/final_render/speakers_collection/WorldMap.gltf",
-          "WORLD_MAP_STAND": "/gltf/about/laboratoire/final_render/speakers_collection/WorldMapStand.gltf"
+          "SPEAKER": "/models/gltf/about/laboratoire/final_render/speakers_collection/Speaker.gltf",
+          "SPEAKER_BOX": "/models/gltf/about/laboratoire/final_render/speakers_collection/SpeakerBox.gltf",
+          "WORLD_MAP": "/models/gltf/about/laboratoire/final_render/speakers_collection/WorldMap.gltf",
+          "WORLD_MAP_STAND": "/models/gltf/about/laboratoire/final_render/speakers_collection/WorldMapStand.gltf"
         },
         "WALLS_COLLECTION": {
-          "CEILING": "/gltf/about/laboratoire/final_render/walls_collection/Ceiling.gltf",
+          "CEILING": "/models/gltf/about/laboratoire/final_render/walls_collection/Ceiling.gltf",
           "DOOR_COLLECTION": {
-            "DOOR": "/gltf/about/laboratoire/final_render/walls_collection/door_collection/Door.gltf",
-            "DOOR_FRAME": "/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorFrame.gltf",
-            "DOOR_HANDLE": "/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorHandle.gltf"
+            "DOOR": "/models/gltf/about/laboratoire/final_render/walls_collection/door_collection/Door.gltf",
+            "DOOR_FRAME": "/models/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorFrame.gltf",
+            "DOOR_HANDLE": "/models/gltf/about/laboratoire/final_render/walls_collection/door_collection/DoorHandle.gltf"
           },
           "FRAMES_COLLECTION": {
-            "AMOR_LLAMA_AMOR": "/gltf/about/laboratoire/final_render/walls_collection/frames_collection/AmorLlamaAmor.gltf",
-            "BRAIN": "/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Brain.gltf",
-            "CELESTIAL_MAP": "/gltf/about/laboratoire/final_render/walls_collection/frames_collection/CelestialMap.gltf",
-            "COURONNES": "/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Couronnes.gltf",
-            "FRAME_GLASSES": "/gltf/about/laboratoire/final_render/walls_collection/frames_collection/FrameGlasses.gltf",
-            "MONARCH": "/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Monarch.gltf",
-            "NICOTIANA_RUSTICA": "/gltf/about/laboratoire/final_render/walls_collection/frames_collection/NicotianaRustica.gltf",
-            "TRINITY": "/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Trinity.gltf"
+            "AMOR_LLAMA_AMOR": "/models/gltf/about/laboratoire/final_render/walls_collection/frames_collection/AmorLlamaAmor.gltf",
+            "BRAIN": "/models/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Brain.gltf",
+            "CELESTIAL_MAP": "/models/gltf/about/laboratoire/final_render/walls_collection/frames_collection/CelestialMap.gltf",
+            "COURONNES": "/models/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Couronnes.gltf",
+            "FRAME_GLASSES": "/models/gltf/about/laboratoire/final_render/walls_collection/frames_collection/FrameGlasses.gltf",
+            "MONARCH": "/models/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Monarch.gltf",
+            "NICOTIANA_RUSTICA": "/models/gltf/about/laboratoire/final_render/walls_collection/frames_collection/NicotianaRustica.gltf",
+            "TRINITY": "/models/gltf/about/laboratoire/final_render/walls_collection/frames_collection/Trinity.gltf"
           },
-          "NORTH_WALL": "/gltf/about/laboratoire/final_render/walls_collection/NorthWall.gltf",
+          "NORTH_WALL": "/models/gltf/about/laboratoire/final_render/walls_collection/NorthWall.gltf",
           "WALL_CLOCK_COLLECTION": {
-            "HOUR_HAND": "/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/HourHand.gltf",
-            "HOUR_AND_MINUTE_MARKERS": "/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/HourAndMinuteMarkers.gltf",
-            "MINUTE_HAND": "/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/MinuteHand.gltf",
-            "SECOND_HAND": "/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/SecondHand.gltf",
-            "WALL_CLOCK": "/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClock.gltf",
-            "WALL_CLOCK_GLASS": "/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClockGlass.gltf"
+            "HOUR_HAND": "/models/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/HourHand.gltf",
+            "HOUR_AND_MINUTE_MARKERS": "/models/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/HourAndMinuteMarkers.gltf",
+            "MINUTE_HAND": "/models/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/MinuteHand.gltf",
+            "SECOND_HAND": "/models/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/SecondHand.gltf",
+            "WALL_CLOCK": "/models/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClock.gltf",
+            "WALL_CLOCK_GLASS": "/models/gltf/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClockGlass.gltf"
           },
-          "WEST_WALL": "/gltf/about/laboratoire/final_render/walls_collection/WestWall.gltf"
+          "WEST_WALL": "/models/gltf/about/laboratoire/final_render/walls_collection/WestWall.gltf"
         }
       }
     }

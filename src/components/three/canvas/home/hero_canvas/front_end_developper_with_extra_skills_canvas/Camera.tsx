@@ -5,22 +5,22 @@ import { Float, PerspectiveCamera } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 
 export default function Camera() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
 
   /* return (
-    <Float speed={greetingCanvasConstants.PERSPECTIVE_CAMERA.FLOAT.SPEED}>
+    <Float speed={heroCanvasConstants.PERSPECTIVE_CAMERA.FLOAT.SPEED}>
       <PerspectiveCamera
         ref={perspectiveCameraRef}
         makeDefault
         position={[
-          greetingCanvasConstants.PERSPECTIVE_CAMERA.POSITION.X,
-          greetingCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-          greetingCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+          heroCanvasConstants.PERSPECTIVE_CAMERA.POSITION.X,
+          heroCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+          heroCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
-        fov={greetingCanvasConstants.PERSPECTIVE_CAMERA.FOV}
+        fov={heroCanvasConstants.PERSPECTIVE_CAMERA.FOV}
       />
     </Float> */
 
@@ -29,11 +29,11 @@ export default function Camera() {
       ref={perspectiveCameraRef}
       makeDefault
       position={[
-        greetingCanvasConstants.PERSPECTIVE_CAMERA.POSITION.X,
-        greetingCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Y,
-        greetingCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Z,
+        heroCanvasConstants.PERSPECTIVE_CAMERA.POSITION.X,
+        heroCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Y,
+        heroCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Z,
       ]}
-      fov={greetingCanvasConstants.PERSPECTIVE_CAMERA.FOV}
+      fov={heroCanvasConstants.PERSPECTIVE_CAMERA.FOV}
     />
   )
 }

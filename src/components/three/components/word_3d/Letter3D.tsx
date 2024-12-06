@@ -45,7 +45,7 @@ export default function Letter3D({
         lengthRef.current.push(spaceWidth)
       }
     }
-  }, [letter3DRef])
+  }, [lengthRef, letter, letter3DRef, spaceWidth])
 
   return (
     <Text3D

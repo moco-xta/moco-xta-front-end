@@ -7,7 +7,7 @@ import Lights from './lights/Lights'
 import GreetingScene from './GreetingScene'
 import PostProcessing from './PostProcessing'
 
-import { default as greetingCanvasConstants } from '@/constants/canvas/home/greetingCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 
 interface GreetingCanvasInterface {
   timeline: GSAPTimeline
@@ -16,8 +16,8 @@ interface GreetingCanvasInterface {
 export default function GreetingCanvas({ timeline }: GreetingCanvasInterface) {
   return (
     <Canvas
-      dpr={greetingCanvasConstants.CANVAS.DPR}
-      legacy={greetingCanvasConstants.CANVAS.LEGACY}
+      dpr={heroCanvasConstants.CANVAS.DPR}
+      legacy={heroCanvasConstants.CANVAS.LEGACY}
       shadows
       onCreated={({ gl }) => {
         gl.setClearColor(0xfffff, 0)
@@ -25,9 +25,9 @@ export default function GreetingCanvas({ timeline }: GreetingCanvasInterface) {
         gl.clearDepth()
       }}
       gl={{
-        antialias: greetingCanvasConstants.CANVAS.GL.ANTIALIAS,
-        alpha: greetingCanvasConstants.CANVAS.GL.ALPHA,
-        powerPreference: greetingCanvasConstants.CANVAS.GL.POWER_PREFERENCE,
+        antialias: heroCanvasConstants.CANVAS.GL.ANTIALIAS,
+        alpha: heroCanvasConstants.CANVAS.GL.ALPHA,
+        powerPreference: heroCanvasConstants.CANVAS.GL.POWER_PREFERENCE,
       }}
     >
       <Camera />

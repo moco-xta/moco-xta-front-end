@@ -43,9 +43,11 @@ export const Gobelino = forwardRef<THREE.Group, GroupProps>(function Gobelino(pr
 
   useLayoutEffect(() => {
     Object.keys(materials).forEach(function (material, index) {
-      console.log('materials[material]', materials[material])
+      // @ts-ignore
       materials[material].transparent = true
+      // @ts-ignore
       materials[material].opacity = 0
+      // @ts-ignore
       materials[material].needsUpdate = true
     })
   }, [materials])
