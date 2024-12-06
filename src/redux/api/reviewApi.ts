@@ -2,7 +2,10 @@ import apiSlice from '../slice/apiSlice'
 
 import { default as apiConstants } from '@/constants/apiConstants.json'
 
-import { AddReviewPayloadInterface, ReviewPayloadInterface } from '@/interfaces/reduxApiInterfaces'
+import {
+  AddReviewPayloadInterface,
+  ReviewPayloadInterface,
+} from '@/interfaces/redux/reduxApiInterfaces'
 
 const reviewApi = apiSlice.injectEndpoints({
   endpoints: (build) => ({

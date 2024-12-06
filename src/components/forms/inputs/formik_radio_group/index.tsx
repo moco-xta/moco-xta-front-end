@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 
-import { FormikRadioGroupInterface } from '@/interfaces/inputsInterfaces'
+import { FormikRadioGroupInterface } from '@/interfaces/forms/inputsInterfaces'
 
 import useStoreInputValueInLocalStorage from '@/hooks/useStoreInputValueInLocalStorage'
 

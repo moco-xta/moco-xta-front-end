@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { CursorStateSliceInterface } from '@/interfaces/reduxSlicesInterfaces'
+import { CursorStateSliceInterface } from '@/interfaces/redux/reduxSlicesInterfaces'
 
 const initialState: CursorStateSliceInterface = {
   state: 'default',

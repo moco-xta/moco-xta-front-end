@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { AuthenticationSliceInterface } from '@/interfaces/reduxSlicesInterfaces'
+import { AuthenticationSliceInterface } from '@/interfaces/redux/reduxSlicesInterfaces'
 
 import { getAccessToken } from '@/helpers/localStorageHelpers'
 

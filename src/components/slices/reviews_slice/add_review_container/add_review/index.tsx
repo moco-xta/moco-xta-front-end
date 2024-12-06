@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 import { RootState } from '@/redux/store'
 import { useAddReviewMutation } from '@/redux/api/reviewApi'
 
-import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
+import { AddReviewValuesInterface } from '@/interfaces/redux/reduxApiInterfaces'
 
 import { addNewReviewValidationSchema } from 'validations/addNewReviewValidationSchema'
 

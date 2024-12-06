@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
 import { AboutInterface } from '@/interfaces/aboutInterfaces'
-import { LocationInterface } from '@/interfaces/locationInterfaces'
+import { LocationInterface } from '@/interfaces/location/locationInterfaces'
 
 const initialState: AboutInterface = {
   showInstructions: true,

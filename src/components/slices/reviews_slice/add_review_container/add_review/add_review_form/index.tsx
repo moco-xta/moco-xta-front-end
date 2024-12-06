@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux'
 import { useFormikContext } from 'formik'
 import { useTranslations } from 'next-intl'
 
-import { FormsInterface } from '@/interfaces/formsInterfaces'
-import { AddReviewValuesInterface } from '@/interfaces/reduxApiInterfaces'
+import { FormsInterface } from '@/interfaces/authentication/authenticationFormsInterfaces'
+import { AddReviewValuesInterface } from '@/interfaces/redux/reduxApiInterfaces'
 
 import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 

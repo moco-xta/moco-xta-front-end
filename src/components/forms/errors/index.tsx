@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import { FormikErrorInterface } from '@/interfaces/formikInterfaces'
+import { FormikErrorInterface } from '@/interfaces/forms/errorsInterfaces'
 
 import './index.scss'
 

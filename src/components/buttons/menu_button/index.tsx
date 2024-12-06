@@ -4,7 +4,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { MenuButtonInterface } from '@/interfaces/buttonsInterfaces'
+import { MenuButtonInterface } from '@/interfaces/buttons/buttonsInterfaces'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { toggleMenu } from '@/redux/slice/appStateSlice'

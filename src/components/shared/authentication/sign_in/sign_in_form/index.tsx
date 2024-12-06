@@ -2,8 +2,8 @@ import React, { SyntheticEvent } from 'react'
 import { useFormikContext } from 'formik'
 import { useTranslations } from 'next-intl'
 
-import { AuthenticationFormsInterface } from '@/interfaces/formsInterfaces'
-import { SignInPayloadInterface } from '@/interfaces/reduxApiInterfaces'
+import { AuthenticationFormsInterface } from '@/interfaces/authentication/authenticationFormsInterfaces'
+import { SignInPayloadInterface } from '@/interfaces/redux/reduxApiInterfaces'
 
 import { FormikTextField } from '@/components/inputs'
 import { ResetButton, SubmitButton } from '@/components/buttons'

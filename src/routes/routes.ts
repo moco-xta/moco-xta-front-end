@@ -1,4 +1,4 @@
-import { RoutesInterface } from '@/interfaces/routesInterfaces'
+import { RoutesInterface } from '@/interfaces/routes/routesInterfaces'
 
 export const routes: RoutesInterface[] = [
   {
