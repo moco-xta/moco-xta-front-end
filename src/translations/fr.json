@@ -30,54 +30,6 @@
       "WHO_I_AM": "Qui suis-je - ",
       "INTRODUCTION": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
       "MORE_ABOUT_ME": "En savoir plus sur moi - "
-    },
-    "MAIN_SKILLS": {
-      "INTRODUCTION": {
-        "TITLE": "Introduction",
-        "PARAGRAPH": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source."
-      },
-      "MAIN_SKILLS": {
-        "NEXTJS": {
-          "TITLE": "NextJS",
-          "PARAGRAPH": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout. It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout."
-        },
-        "ANGULAR": {
-          "TITLE": "Angular",
-          "PARAGRAPH": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout. It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout."
-        },
-        "SPRING": {
-          "TITLE": "Spring",
-          "PARAGRAPH": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout. It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout."
-        }
-      },
-      "REAL_TIME_3D": {
-        "TITLE": "Real-Time 3D",
-        "PARAGRAPH": "It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout. It is a long \n established fact that \n a reader will be distracted \n by the readable content of a \n page when looking at its \n layout."
-      }
-    },
-    "PERFORMED_WITH": {
-      "TITLE": "Performed with",
-      "PARAGRAPH": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    },
-    "REVIEWS": {
-      "TITLE": "Reviews",
-      "PARAGRAPH": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    },
-    "LAST_PROJECTS": {
-      "TITLE": "Derniers projets",
-      "TEXT": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
-      "CARDS": {
-        "DESCRIPTIONS": {
-          "ABWERKT": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "LENTO": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-        }
-      },
-      "SEE_ALL_PROJECTS": "Voir tous les projects"
-    },
-    "LAST_REVIEWS": {
-      "LAST_REVIEWS": "Derniers avis",
-      "ADD_A_REVIEW": "Laisser un avis",
-      "SEE_ALL_REVIEWS": "Voir tous les avis"
     }
   },
   "ABOUT": {
@@ -113,50 +65,6 @@
     "OPEN": "Open",
     "CLOSE": "Close",
     "ENTER": "Entrer"
-  },
-  "CONTACT": {
-    "SNAKE_GAME": {
-      "SCORE": "Score",
-      "LEVEL": "Level",
-      "PLAY": "Play",
-      "PAUSE": "Pause",
-      "EMAIL": "Email",
-      "PHONE_NUMBER": "Phone number",
-      "I_DONT_WANT_TO_PLAY": "I don't want to play :("
-    }
-  },
-  "SKILLS": {
-    "SKILLS": "Skills",
-    "CATEGORIES": {
-      "GRAPHICS": {
-        "TITLE": "Graphisme",
-        "DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-      },
-      "FRONT_END": {
-        "TITLE": "Front-end",
-        "DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-      },
-      "FRONT_END_LIBRAIRIES": {
-        "TITLE": "Librairies front-end",
-        "DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-      },
-      "BACK_END": {
-        "TITLE": "Back-end",
-        "DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-      },
-      "DATABASE": {
-        "TITLE": "Base de données",
-        "DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-      },
-      "DEV_OPS": {
-        "TITLE": "Dev-ops",
-        "DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-      },
-      "TOOLS": {
-        "TITLE": "Outils",
-        "DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-      }
-    }
   },
   "PROJECTS": {
     "CARDS": {
