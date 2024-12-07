@@ -8,15 +8,21 @@ import MoonComponent from './MoonComponent'
 
 import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
 
-import { default as federicoPortraitGroupAnimationsConstants } from '@/constants/animations/home/hero/federicoPortraitGroupAnimationsConstants.json'
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as sunAndMoonAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/sunAndMoonAnimationsConstants.json'
 
 interface SunAndMoonInterface {
   timeline: GSAPTimeline
-  duration: number
-  delay: number
 }
 
-export default function SunAndMoon({ timeline, duration, delay }: SunAndMoonInterface) {
+export default function SunAndMoon({ timeline }: SunAndMoonInterface) {
+  const [duration] = useState<number>(
+    sunAndMoonAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+  )
+  const [delay] = useState<number>(
+    sunAndMoonAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+  )
+
   const sunAndMoonBoxGroupRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(
@@ -25,33 +31,27 @@ export default function SunAndMoon({ timeline, duration, delay }: SunAndMoonInte
         sunAndMoonBoxGroupRef.current.rotation,
         {
           keyframes: {
-            '25%': {
+            '0%': {
               z: THREE.MathUtils.degToRad(
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.ANIMATION
-                  .ROTATION['0_PERCENT'].Z,
+                sunAndMoonAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z,
               ),
             },
-            '50%': {
+            '20%': {
               z: THREE.MathUtils.degToRad(
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.ANIMATION
-                  .ROTATION['20_PERCENT'].Z,
+                sunAndMoonAnimationsConstants.ANIMATION['20_PERCENT'].ROTATION.Z,
               ),
             },
-            '75%': {
+            '40%': {
               z: THREE.MathUtils.degToRad(
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.ANIMATION
-                  .ROTATION['40_PERCENT'].Z,
+                sunAndMoonAnimationsConstants.ANIMATION['40_PERCENT'].ROTATION.Z,
               ),
             },
-            '100%': {
+            '60%': {
               z: THREE.MathUtils.degToRad(
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.ANIMATION
-                  .ROTATION['60_PERCENT'].Z,
+                sunAndMoonAnimationsConstants.ANIMATION['60_PERCENT'].ROTATION.Z,
               ),
             },
-            easeEach:
-              federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.ANIMATION
-                .ROTATION.EACH_EASE,
+            easeEach: sunAndMoonAnimationsConstants.ANIMATION.EACH_EASE.ROTATION,
           },
           duration: duration,
         },
@@ -69,24 +69,13 @@ export default function SunAndMoon({ timeline, duration, delay }: SunAndMoonInte
         new THREE.Euler(
           0,
           0,
-          THREE.MathUtils.degToRad(
-            federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.ANIMATION
-              .ROTATION['0_PERCENT'].Z,
-          ),
+          THREE.MathUtils.degToRad(sunAndMoonAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z),
         )
       }
       material={boxGroupMaterial}
     >
-      <SunComponent
-        timeline={timeline}
-        duration={duration}
-        delay={delay}
-      />
-      <MoonComponent
-        timeline={timeline}
-        duration={duration}
-        delay={delay}
-      />
+      <SunComponent timeline={timeline} />
+      <MoonComponent timeline={timeline} />
     </Box>
   )
 }

@@ -8,70 +8,81 @@ import AlsoKnowAs from '../../gretting_canvas/also_know_as_group/AlsoKnowAs'
 
 import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
 
-import { default as federicoPortraitGroupAnimationsConstants } from '@/constants/animations/home/hero/federicoPortraitGroupAnimationsConstants.json'
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/foregroundAnimationsConstants.json'
 
 interface ForegroundInterface {
   timeline: GSAPTimeline
-  duration: number
-  delay: number
 }
 
-export default function Foreground({ timeline, duration, delay }: ForegroundInterface) {
+export default function Foreground({ timeline }: ForegroundInterface) {
+  const [duration] = useState<number>(
+    foregroundAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+  )
+  const [delay] = useState<number>(
+    foregroundAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+  )
+
   const foregroundBoxGroupRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(
     () => {
       // POSITION
-      timeline.to(
-        foregroundBoxGroupRef.current.position,
-        {
-          keyframes: {
-            '0%': {
-              z: federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.ANIMATION.POSITION[
-                '0_PERCENT'
-              ].Z,
+      timeline
+        .to(
+          foregroundBoxGroupRef.current.position,
+          {
+            keyframes: {
+              '0%': {
+                z: foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+              },
+              '25%': {
+                z: foregroundAnimationsConstants.ANIMATION['25_PERCENT'].POSITION.Z,
+              },
+              easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
             },
-            '20%': {
-              z: federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.ANIMATION.POSITION[
-                '20_PERCENT'
-              ].Z,
-            },
-            easeEach:
-              federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.ANIMATION.POSITION.EACH_EASE,
+            duration: duration,
           },
-          duration: duration,
-        },
-        delay,
-      )
-
-      // ROTATION
-      timeline.to(
-        foregroundBoxGroupRef.current.rotation,
-        {
-          keyframes: {
-            '40%': {
-              z: THREE.MathUtils.degToRad(
-                federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.ANIMATION.ROTATION[
-                  '40_PERCENT'
-                ].Z,
-              ),
+          delay,
+        )
+        // ROTATION
+        .to(
+          foregroundBoxGroupRef.current.rotation,
+          {
+            keyframes: {
+              '50%': {
+                z: THREE.MathUtils.degToRad(
+                  foregroundAnimationsConstants.ANIMATION['50_PERCENT'].ROTATION.Z,
+                ),
+              },
+              '75%': {
+                z: THREE.MathUtils.degToRad(
+                  foregroundAnimationsConstants.ANIMATION['75_PERCENT'].ROTATION.Z,
+                ),
+              },
+              easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.ROTATION,
             },
-            '60%': {
-              z: THREE.MathUtils.degToRad(
-                federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.ANIMATION.ROTATION[
-                  '60_PERCENT'
-                ].Z,
-              ),
-            },
-            easeEach:
-              federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.ANIMATION.ROTATION.EACH_EASE,
+            duration: duration,
           },
-          duration: duration,
-        },
-        delay,
-      )
+          delay,
+        )
+        .to(
+          // VISIBILITY
+          foregroundBoxGroupRef.current,
+          {
+            keyframes: {
+              '100%': {
+                onComplete: () => {
+                  foregroundBoxGroupRef.current.visible = false
+                },
+              },
+            },
+            duration: duration,
+          },
+          delay,
+        )
     },
-    /* { scope: foregroundBoxGroupRef }, */
+    { scope: foregroundBoxGroupRef },
   )
 
   return (
@@ -81,16 +92,8 @@ export default function Foreground({ timeline, duration, delay }: ForegroundInte
       position={[0, -5, 0]}
       material={boxGroupMaterial}
     >
-      <Portrait
-        timeline={timeline}
-        duration={duration}
-        delay={delay}
-      />
-      <AlsoKnowAs
-        timeline={timeline}
-        duration={duration}
-        delay={delay}
-      />
+      <Portrait timeline={timeline} />
+      <AlsoKnowAs timeline={timeline} />
     </Box>
   )
 }

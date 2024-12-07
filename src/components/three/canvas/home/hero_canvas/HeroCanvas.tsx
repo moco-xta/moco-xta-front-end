@@ -8,6 +8,7 @@ import HiImFedericoGroup from './hi_i_m_federico_group/HiImFedericoGroup'
 import FedericoPortraitGroup from './federico_portrait/FedericoPortraitGroup'
 
 import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
+import AlsoKnowAsGroup from './gretting_canvas/also_know_as_group/AlsoKnowAsGroup'
 
 interface HeroCanvasInterface {
   timeline: GSAPTimeline
@@ -39,7 +40,8 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
       /> */}
       <Suspense fallback={null}>
         <HiImFedericoGroup timeline={timeline} />
-        {/* <FedericoPortraitGroup timeline={timeline} /> */}
+        <FedericoPortraitGroup timeline={timeline} />
+        <AlsoKnowAsGroup timeline={timeline} />
       </Suspense>
     </Canvas>
   )

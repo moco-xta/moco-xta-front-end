@@ -31,8 +31,8 @@ export default function Camera() {
         heroCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Z,
       ]}
       fov={heroCanvasConstants.PERSPECTIVE_CAMERA.FOV}
-      near={heroCanvasConstants.PERSPECTIVE_CAMERA.NEAR}
-      far={heroCanvasConstants.PERSPECTIVE_CAMERA.FAR}
+      // near={heroCanvasConstants.PERSPECTIVE_CAMERA.NEAR}
+      // far={heroCanvasConstants.PERSPECTIVE_CAMERA.FAR}
     />
   )
 }

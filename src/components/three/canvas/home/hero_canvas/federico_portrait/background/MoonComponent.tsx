@@ -4,15 +4,21 @@ import { useGSAP } from '@gsap/react'
 
 import { Moon } from '@/components/three/models/home/hero/gobelino/Moon'
 
-import { default as federicoPortraitGroupAnimationsConstants } from '@/constants/animations/home/hero/federicoPortraitGroupAnimationsConstants.json'
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as moonAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/moonAnimationsConstants.json'
 
 interface MoonComponentInterface {
   timeline: GSAPTimeline
-  duration: number
-  delay: number
 }
 
-export default function MoonComponent({ timeline, duration, delay }: MoonComponentInterface) {
+export default function MoonComponent({ timeline }: MoonComponentInterface) {
+  const [duration] = useState<number>(
+    moonAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+  )
+  const [delay] = useState<number>(
+    moonAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+  )
+
   const moonComponentMeshRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(
@@ -22,19 +28,13 @@ export default function MoonComponent({ timeline, duration, delay }: MoonCompone
         moonComponentMeshRef.current.material,
         {
           keyframes: {
-            '40%': {
-              opacity:
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.MOON
-                  .ANIMATION.MATERIAL['40_PERCENT'].OPACITY,
+            '0%': {
+              opacity: moonAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
             },
-            '60%': {
-              opacity:
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.MOON
-                  .ANIMATION.MATERIAL['60_PERCENT'].OPACITY,
+            '33%': {
+              opacity: moonAnimationsConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
             },
-            easeEach:
-              federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.MOON
-                .ANIMATION.MATERIAL.EACH_EASE,
+            easeEach: moonAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
           },
           duration: duration,
         },

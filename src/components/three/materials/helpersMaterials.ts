@@ -5,4 +5,5 @@ export const boxGroupMaterial = new THREE.MeshStandardMaterial({
   transparent: true,
   opacity: 0,
   wireframe: true,
+  side: THREE.DoubleSide,
 })

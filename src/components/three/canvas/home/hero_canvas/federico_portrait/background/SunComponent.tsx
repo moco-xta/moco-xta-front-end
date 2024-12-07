@@ -4,15 +4,21 @@ import { useGSAP } from '@gsap/react'
 
 import { Sun } from '@/components/three/models/home/hero/gobelino/Sun'
 
-import { default as federicoPortraitGroupAnimationsConstants } from '@/constants/animations/home/hero/federicoPortraitGroupAnimationsConstants.json'
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as sunAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/sunAnimationsConstants.json'
 
 interface SunComponentInterface {
   timeline: GSAPTimeline
-  duration: number
-  delay: number
 }
 
-export default function SunComponent({ timeline, duration, delay }: SunComponentInterface) {
+export default function SunComponent({ timeline }: SunComponentInterface) {
+  const [duration] = useState<number>(
+    sunAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+  )
+  const [delay] = useState<number>(
+    sunAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+  )
+
   const sunComponentMeshRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(
@@ -23,28 +29,18 @@ export default function SunComponent({ timeline, duration, delay }: SunComponent
         {
           keyframes: {
             '0%': {
-              opacity:
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.SUN
-                  .MATERIAL['0_PERCENT'].OPACITY,
+              opacity: sunAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
             },
-            '20%': {
-              opacity:
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.SUN
-                  .MATERIAL['20_PERCENT'].OPACITY,
+            '33%': {
+              opacity: sunAnimationsConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
             },
-            '40%': {
-              opacity:
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.SUN
-                  .MATERIAL['40_PERCENT'].OPACITY,
+            '66%': {
+              opacity: sunAnimationsConstants.ANIMATION['66_PERCENT'].MATERIAL.OPACITY,
             },
-            '60%': {
-              opacity:
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.SUN
-                  .MATERIAL['60_PERCENT'].OPACITY,
+            '100%': {
+              opacity: sunAnimationsConstants.ANIMATION['100_PERCENT'].MATERIAL.OPACITY,
             },
-            easeEach:
-              federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SUN_AND_MOON.SUBS.SUN
-                .MATERIAL.EACH_EASE,
+            easeEach: sunAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
           },
           duration: duration,
         },

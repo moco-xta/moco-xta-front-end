@@ -4,15 +4,21 @@ import { useGSAP } from '@gsap/react'
 
 import { Sky } from '@/components/three/models/home/hero/gobelino/Sky'
 
-import { default as federicoPortraitGroupAnimationsConstants } from '@/constants/animations/home/hero/federicoPortraitGroupAnimationsConstants.json'
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as skyAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/skyAnimationsConstants.json'
 
 interface SkyComponentInterface {
   timeline: GSAPTimeline
-  duration: number
-  delay: number
 }
 
-export default function SkyComponent({ timeline, duration, delay }: SkyComponentInterface) {
+export default function SkyComponent({ timeline }: SkyComponentInterface) {
+  const [duration] = useState<number>(
+    skyAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+  )
+  const [delay] = useState<number>(
+    skyAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+  )
+
   const skyComponentMeshRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(
@@ -24,18 +30,12 @@ export default function SkyComponent({ timeline, duration, delay }: SkyComponent
         {
           keyframes: {
             '0%': {
-              y: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.POSITION[
-                '0_PERCENT'
-              ].Y,
+              y: skyAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
             },
             '33%': {
-              y: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.POSITION[
-                '20_PERCENT'
-              ].Y,
+              y: skyAnimationsConstants.ANIMATION['20_PERCENT'].POSITION.Y,
             },
-            easeEach:
-              federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.POSITION
-                .EACH_EASE,
+            easeEach: skyAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
           },
           duration: duration,
         },
@@ -49,37 +49,19 @@ export default function SkyComponent({ timeline, duration, delay }: SkyComponent
         {
           keyframes: {
             '0%': {
-              r: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.COLOR[
-                '0_PERCENT'
-              ].R,
-              g: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.COLOR[
-                '0_PERCENT'
-              ].G,
-              b: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.COLOR[
-                '0_PERCENT'
-              ].B,
+              r: skyAnimationsConstants.ANIMATION['0_PERCENT'].COLOR.R,
+              g: skyAnimationsConstants.ANIMATION['0_PERCENT'].COLOR.G,
+              b: skyAnimationsConstants.ANIMATION['0_PERCENT'].COLOR.B,
             },
             '40%': {
-              r: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.COLOR[
-                '40_PERCENT'
-              ].R,
-              g: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.COLOR[
-                '40_PERCENT'
-              ].G,
-              b: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.COLOR[
-                '40_PERCENT'
-              ].B,
+              r: skyAnimationsConstants.ANIMATION['40_PERCENT'].COLOR.R,
+              g: skyAnimationsConstants.ANIMATION['40_PERCENT'].COLOR.G,
+              b: skyAnimationsConstants.ANIMATION['40_PERCENT'].COLOR.B,
             },
             '60%': {
-              r: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.COLOR[
-                '60_PERCENT'
-              ].R,
-              g: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.COLOR[
-                '60_PERCENT'
-              ].G,
-              b: federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.COLOR[
-                '60_PERCENT'
-              ].B,
+              r: skyAnimationsConstants.ANIMATION['60_PERCENT'].COLOR.R,
+              g: skyAnimationsConstants.ANIMATION['60_PERCENT'].COLOR.G,
+              b: skyAnimationsConstants.ANIMATION['60_PERCENT'].COLOR.B,
             },
             easeEach: 'power1.in',
           },
@@ -95,20 +77,12 @@ export default function SkyComponent({ timeline, duration, delay }: SkyComponent
         {
           keyframes: {
             '0%': {
-              opacity:
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.MATERIAL[
-                  '0_PERCENT'
-                ].OPACITY,
+              opacity: skyAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
             },
             '33%': {
-              opacity:
-                federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.MATERIAL[
-                  '33_PERCENT'
-                ].OPACITY,
+              opacity: skyAnimationsConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
             },
-            easeEach:
-              federicoPortraitGroupAnimationsConstants.SUBS.GOBELINO.SUBS.SKY.ANIMATION.MATERIAL
-                .EACH_EASE,
+            easeEach: skyAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
           },
           duration: duration,
         },

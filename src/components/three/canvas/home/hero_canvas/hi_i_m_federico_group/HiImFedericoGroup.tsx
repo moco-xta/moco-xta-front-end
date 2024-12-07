@@ -27,8 +27,8 @@ export default function HiImFedericoGrooup({ timeline }: HiImFedericoInterface) 
 
   useGSAP(
     () => {
-      // POSITION
       timeline
+        // POSITION
         .to(
           hiImFedericoGroupRef.current.position,
           {
@@ -42,6 +42,26 @@ export default function HiImFedericoGrooup({ timeline }: HiImFedericoInterface) 
           hiImFedericoGroupRef.current.rotation,
           {
             keyframes: hiImFedericoGroupAnimations.rotation.keyframes,
+            duration: duration,
+          },
+          delay,
+        )
+        // VISIBILITY
+        .to(
+          hiImFedericoGroupRef.current,
+          {
+            keyframes: {
+              '0%': {
+                onComplete: () => {
+                  hiImFedericoGroupRef.current.visible = true
+                },
+              },
+              '100%': {
+                onComplete: () => {
+                  hiImFedericoGroupRef.current.visible = false
+                },
+              },
+            },
             duration: duration,
           },
           delay,

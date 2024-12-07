@@ -3,16 +3,22 @@ import * as THREE from 'three'
 import { Plane } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
-import { default as federicoPortraitGroupAnimationsConstants } from '@/constants/animations/home/hero/federicoPortraitGroupAnimationsConstants.json'
+import { default as portraitAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/portraitAnimationsConstants.json'
 
 interface PortraitInterface {
   timeline: GSAPTimeline
-  duration: number
-  delay: number
 }
 
-export default function Portrait({ timeline, duration, delay }: PortraitInterface) {
+export default function Portrait({ timeline }: PortraitInterface) {
+  const [duration] = useState<number>(
+    portraitAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+  )
+  const [delay] = useState<number>(
+    portraitAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+  )
+
   const portraitMeshRef = useRef<THREE.Mesh>(null!)
 
   const portraitMap = new THREE.TextureLoader().load(texturesConstants.HOME.PORTRAIT)
@@ -32,18 +38,12 @@ export default function Portrait({ timeline, duration, delay }: PortraitInterfac
       {
         keyframes: {
           '0%': {
-            opacity:
-              federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.SUBS.PORTRAIT.ANIMATION
-                .MATERIAL['0_PERCENT'].OPACITY,
+            opacity: portraitAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
           },
-          '20%': {
-            opacity:
-              federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.SUBS.PORTRAIT.ANIMATION
-                .MATERIAL['20_PERCENT'].OPACITY,
+          '25%': {
+            opacity: portraitAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
           },
-          easeEach:
-            federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.SUBS.PORTRAIT.ANIMATION
-              .MATERIAL.EACH_EASE,
+          easeEach: portraitAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
         },
         duration: duration,
       },
