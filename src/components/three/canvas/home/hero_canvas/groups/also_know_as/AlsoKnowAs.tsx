@@ -7,7 +7,7 @@ import KnowText from './texts/KnowText'
 import AsText from './texts/AsText'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as alsoKnowAsAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/alsoKnowAsAnimationsConstants.json'
+import { default as alsoKnowAsAnimationsConstants } from '@/constants/animations/home/hero/portrait/alsoKnowAsAnimationsConstants.json'
 
 interface AlsoKnowAsInterface {
   timeline: GSAPTimeline

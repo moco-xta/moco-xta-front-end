@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { Moon } from '@/components/three/models/home/hero/gobelino/Moon'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as moonAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/moonAnimationsConstants.json'
+import { default as moonAnimationsConstants } from '@/constants/animations/home/hero/portrait/moonAnimationsConstants.json'
 
 interface MoonComponentInterface {
   timeline: GSAPTimeline

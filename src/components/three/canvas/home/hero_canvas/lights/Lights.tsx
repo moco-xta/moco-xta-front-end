@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
 
-import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 
 import DirectionalLights from './DirectionalLights'
 

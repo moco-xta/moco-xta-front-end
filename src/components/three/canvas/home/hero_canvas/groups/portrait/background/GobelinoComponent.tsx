@@ -6,7 +6,7 @@ import SkyComponent from './SkyComponent'
 import SunAndMoon from './SunAndMoon'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as gobelinoComponentAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/gobelinoComponentAnimationsConstants.json'
+import { default as gobelinoComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/gobelinoComponentAnimationsConstants.json'
 
 interface GobelinoConponentInterface {
   timeline: GSAPTimeline

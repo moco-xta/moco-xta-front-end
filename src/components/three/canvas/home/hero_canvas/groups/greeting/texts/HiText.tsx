@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/hiTextAnimationsConstants.json'
 
@@ -87,7 +87,7 @@ export default function HiText({ timeline }: HiTextInterface) {
         transparent={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.TRANSPARENT}
         opacity={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.OPACITY}
         // emissive={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.EMISSIVE}
-        side={THREE.DoubleSide}
+        // side={THREE.DoubleSide}
       />
     </Word3D>
   )

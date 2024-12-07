@@ -4,7 +4,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 
 import { LogoMoco } from '../../models/logos'
 
-import { default as logoConstants } from '@/constants/canvas/logoConstants.json'
+import { default as logoConstants } from '@/constants/three/logoConstants.json'
 
 export default function LogoCanvas() {
   return (

@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { Sky } from '@/components/three/models/home/hero/gobelino/Sky'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as skyAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/skyAnimationsConstants.json'
+import { default as skyAnimationsConstants } from '@/constants/animations/home/hero/portrait/skyAnimationsConstants.json'
 
 interface SkyComponentInterface {
   timeline: GSAPTimeline

@@ -6,7 +6,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 import Lights from './Lights'
 import SocialsScene from './SocialsScene'
 
-import { default as socialsConstants } from '@/constants/canvas/socialsConstants.json'
+import { default as socialsConstants } from '@/constants/three/socialsConstants.json'
 
 import './index.scss'
 

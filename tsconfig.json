@@ -19,21 +19,20 @@
     ],
     "baseUrl": "src/",
     "paths": {
+      "@/animations/*": ["animations/*"],
       "@/app/*": ["app/*"],
       "@/assets/*": ["assets/*"],
       "@/components/*": ["components/*"],
       "@/constants/*": ["constants/*"],
       "@/data/*": ["data/*"],
-      "@/fonts/*": ["fonts/*"],
       "@/helpers/*": ["helpers/*"],
       "@/hooks/*": ["hooks/*"],
       "@/interfaces/*": ["interfaces/*"],
-      "@/lenis/*": ["lenis/*"],
       "@/redux/*": ["redux/*"],
       "@/routes/*": ["routes/*"],
       "@/styles/*": ["styles/*"],
       "@/translations/*": ["translations/*"],
-      "@/utils/*": ["utils/*"]
+      "@/validations/*": ["validations/*"]
     }
   },
   "include": [

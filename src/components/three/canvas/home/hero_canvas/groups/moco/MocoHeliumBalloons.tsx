@@ -8,15 +8,15 @@ import { HeliumBalloonO } from '@/components/three/models/home/hero/helium_ballo
 import { HeliumBalloonC } from '@/components/three/models/home/hero/helium_balloons/HeliumBalloonC'
 import { Smiley } from '@/components/three/models/home/hero/helium_balloons/Smiley'
 
-import { default as mocoHeliumBalloonsConstants } from '@/constants/canvas/home/hero/mocoHeliumBalloonsConstants.json'
+import { default as mocoHeliumBalloonsConstants } from '@/constants/three/home/hero/mocoHeliumBalloonsConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as mocoHeliumBalloonsAnimationsConstants } from '@/constants/animations/home/hero/moco_helium_balloons/mocoHeliumBalloonsAnimationsConstants.json'
+import { default as mocoHeliumBalloonsAnimationsConstants } from '@/constants/animations/home/hero/moco/mocoHeliumBalloonsAnimationsConstants.json'
 
-interface MocoHeliumBalloonsInterface {
+interface MocoGroupInterface {
   timeline: GSAPTimeline
 }
 
-export default function MocoHeliumBalloons({ timeline }: MocoHeliumBalloonsInterface) {
+export default function MocoGroup({ timeline }: MocoGroupInterface) {
   const [duration] = useState<number>(
     mocoHeliumBalloonsAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )

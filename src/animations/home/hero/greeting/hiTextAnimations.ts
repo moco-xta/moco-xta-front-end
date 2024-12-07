@@ -1,4 +1,4 @@
-import { default as hiTextAnimationsConstants } from '@/constants/animations/home/hero/hi_i_m_federico_group/hiTextAnimationsConstants.json'
+import { default as hiTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/hiTextAnimationsConstants.json'
 
 export const hiTextAnimations = {
   position: {

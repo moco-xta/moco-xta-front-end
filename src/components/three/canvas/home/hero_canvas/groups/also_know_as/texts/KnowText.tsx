@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 
 export default function KnowText() {
   const [knowText] = useState<string>('know'.toUpperCase())

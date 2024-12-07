@@ -1,4 +1,4 @@
-import { default as imtextAnimationsConstants } from '@/constants/animations/home/hero/hi_i_m_federico_group/imtextAnimationsConstants.json'
+import { default as imtextAnimationsConstants } from '@/constants/animations/home/hero/greeting/imtextAnimationsConstants.json'
 
 export const imTextPositionAnimation = (imTextLengthRef: number[], index: number) => {
   return {

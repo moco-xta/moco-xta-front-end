@@ -9,7 +9,7 @@ import MoonComponent from './MoonComponent'
 import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as sunAndMoonAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/sunAndMoonAnimationsConstants.json'
+import { default as sunAndMoonAnimationsConstants } from '@/constants/animations/home/hero/portrait/sunAndMoonAnimationsConstants.json'
 
 interface SunAndMoonInterface {
   timeline: GSAPTimeline

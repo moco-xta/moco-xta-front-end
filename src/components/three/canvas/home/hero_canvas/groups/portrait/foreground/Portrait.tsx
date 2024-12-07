@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
-import { default as portraitAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/portraitAnimationsConstants.json'
+import { default as portraitAnimationsConstants } from '@/constants/animations/home/hero/portrait/portraitAnimationsConstants.json'
 
 interface PortraitInterface {
   timeline: GSAPTimeline

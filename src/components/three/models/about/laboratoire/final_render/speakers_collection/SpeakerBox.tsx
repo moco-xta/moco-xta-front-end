@@ -10,7 +10,7 @@ import {
   speakerStandMaterial,
 } from '@/components/three/materials/about/laboratoire/final_render/laboratoireFinalRenderMaterials'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/three/about/laboratoire/laboratoireFinalRenderConstants.json'
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {

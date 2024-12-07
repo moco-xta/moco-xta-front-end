@@ -9,7 +9,7 @@ import IntersectCube from './IntersectCube'
 
 import { defaultMaterial } from '../../materials/defaultMaterials'
 
-import { default as socialsConstants } from '@/constants/canvas/socialsConstants.json'
+import { default as socialsConstants } from '@/constants/three/socialsConstants.json'
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 import { default as externalLinksConstants } from '@/constants/external_links/externalLinksConstants.json'
 

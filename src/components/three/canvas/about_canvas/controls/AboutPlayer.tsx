@@ -3,7 +3,7 @@ import * as THREE from 'three'
 
 import RapierPlayer from '../../../controls/players/RapierPlayer'
 
-import { default as aboutConstants } from '@/constants/canvas/about/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/three/about/aboutConstants.json'
 
 export default function AboutPlayer() {
   return (

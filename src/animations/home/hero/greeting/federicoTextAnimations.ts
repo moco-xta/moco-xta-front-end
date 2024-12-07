@@ -1,4 +1,4 @@
-import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/hi_i_m_federico_group/federicoTextAnimationsConstants.json'
+import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/federicoTextAnimationsConstants.json'
 import { getRandomInt } from '@/helpers/mathHelpers'
 
 export const federicoTextPositionAnimation = (

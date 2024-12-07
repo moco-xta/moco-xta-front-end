@@ -9,7 +9,7 @@ import AlsoKnowAs from '../../also_know_as/AlsoKnowAs'
 import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/foregroundAnimationsConstants.json'
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foregroundAnimationsConstants.json'
 
 interface ForegroundInterface {
   timeline: GSAPTimeline

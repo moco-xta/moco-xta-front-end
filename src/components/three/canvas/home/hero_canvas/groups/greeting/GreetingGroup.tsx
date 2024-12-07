@@ -7,20 +7,20 @@ import ImText from './texts/ImText'
 import FedericoText from './texts/FedericoText'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as greetingAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingAnimationsConstants.json'
+import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
 
-import { hiImFedericoGroupAnimations } from 'animations'
+import { greetingGroupAnimations } from 'animations'
 
-interface HiImFedericoInterface {
+interface GreetingGroupInterface {
   timeline: GSAPTimeline
 }
 
-export default function grettingGroup({ timeline }: HiImFedericoInterface) {
+export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
   const [duration] = useState<number>(
-    greetingAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+    greetingGroupAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
-    greetingAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+    greetingGroupAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
   )
 
   const grettingGroupRef = useRef<THREE.Group>(null!)
@@ -32,7 +32,7 @@ export default function grettingGroup({ timeline }: HiImFedericoInterface) {
         .to(
           grettingGroupRef.current.position,
           {
-            keyframes: hiImFedericoGroupAnimations.position.keyframes,
+            keyframes: greetingGroupAnimations.position.keyframes,
             duration: duration,
           },
           delay,
@@ -41,7 +41,7 @@ export default function grettingGroup({ timeline }: HiImFedericoInterface) {
         .to(
           grettingGroupRef.current.rotation,
           {
-            keyframes: hiImFedericoGroupAnimations.rotation.keyframes,
+            keyframes: greetingGroupAnimations.rotation.keyframes,
             duration: duration,
           },
           delay,

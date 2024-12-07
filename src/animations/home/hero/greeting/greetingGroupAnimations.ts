@@ -1,8 +1,8 @@
 import * as THREE from 'three'
 
-import { default as hiImFedericoGroupAnimationsConstants } from '@/constants/animations/home/hero/hi_i_m_federico_group/hiImFedericoGroupAnimationsConstants.json'
+import { default as hiImFedericoGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
 
-export const hiImFedericoGroupAnimations = {
+export const greetingGroupAnimations = {
   position: {
     keyframes: {
       '20%': {

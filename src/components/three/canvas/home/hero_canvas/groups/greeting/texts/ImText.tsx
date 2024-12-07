@@ -6,10 +6,11 @@ import { useTranslations } from 'next-intl'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/imTextAnimationsConstants.json'
-import { imTextPositionAnimation, imTextMaterialAnimation } from 'animations'
+
+import { imTextMaterialAnimation, imTextPositionAnimation } from 'animations'
 
 interface ImTextInterface {
   timeline: GSAPTimeline
@@ -18,15 +19,15 @@ interface ImTextInterface {
 export default function ImText({ timeline }: ImTextInterface) {
   const t = useTranslations('HOME')
 
+  const [imText] = useState<string>(t('HERO.I_M').toUpperCase())
+  const [imTextSplitted] = useState<string[]>(imText.split(''))
+
   const [duration] = useState<number>(
     imTextAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
     imTextAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
   )
-
-  const [imText] = useState<string>(t('HERO.I_M').toUpperCase())
-  const [imTextSplitted] = useState<string[]>(imText.split(''))
 
   const imTextGroupRef = useRef<THREE.Group>(null!)
   const imTextLengthRef = useRef<number[]>([])
@@ -86,7 +87,7 @@ export default function ImText({ timeline }: ImTextInterface) {
         transparent={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.TRANSPARENT}
         opacity={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.OPACITY}
         // emissive={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.EMISSIVE}
-        side={THREE.DoubleSide}
+        // side={THREE.DoubleSide}
       />
     </Word3D>
   )

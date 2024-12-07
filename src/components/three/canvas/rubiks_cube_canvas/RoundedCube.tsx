@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
-import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/three/rubiksCubeConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

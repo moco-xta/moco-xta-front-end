@@ -1,13 +1,13 @@
-import { hiImFedericoGroupAnimations } from './hi_i_m_federico_group'
-import { hiTextAnimations } from './hi_i_m_federico_group/hi_text'
-import { imTextPositionAnimation, imTextMaterialAnimation } from './hi_i_m_federico_group/i_m_text'
+import { greetingGroupAnimations } from './greeting/greetingGroupAnimations'
+import { hiTextAnimations } from './greeting/hiTextAnimations'
+import { imTextPositionAnimation, imTextMaterialAnimation } from './greeting/imTextAnimations'
 import {
   federicoTextPositionAnimation,
   federicoTextMaterialAnimation,
-} from './hi_i_m_federico_group/federico_text'
+} from './greeting/federicoTextAnimations'
 
 export {
-  hiImFedericoGroupAnimations,
+  greetingGroupAnimations,
   hiTextAnimations,
   imTextPositionAnimation,
   imTextMaterialAnimation,
