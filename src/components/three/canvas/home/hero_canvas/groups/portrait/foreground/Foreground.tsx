@@ -4,7 +4,7 @@ import { Box } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
 import Portrait from './Portrait'
-import AlsoKnowAs from '../../also_know_as/AlsoKnowAs'
+import AlsoKnowAsText from '../../also_know_as/also_know_as_text/AlsoKnowAsTextGroup'
 
 import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
 
@@ -93,7 +93,7 @@ export default function Foreground({ timeline }: ForegroundInterface) {
       material={boxGroupMaterial}
     >
       <Portrait timeline={timeline} />
-      <AlsoKnowAs timeline={timeline} />
+      <AlsoKnowAsText timeline={timeline} />
     </Box>
   )
 }

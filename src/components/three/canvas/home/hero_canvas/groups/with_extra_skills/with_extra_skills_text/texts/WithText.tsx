@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { Word3D } from '../../../../../components/word_3d/Word3D'
+import { Word3D } from '@/components/three/components/word_3d/Word3D'
 import { SkillsTextBackground } from '../SkillsTextBackground'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/heroAnimationsConstants.json'

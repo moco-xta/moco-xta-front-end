@@ -9,11 +9,11 @@ import AsText from './texts/AsText'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as alsoKnowAsAnimationsConstants } from '@/constants/animations/home/hero/portrait/alsoKnowAsAnimationsConstants.json'
 
-interface AlsoKnowAsInterface {
+interface AlsoKnowAsTextGroupInterface {
   timeline: GSAPTimeline
 }
 
-export default function AlsoKnowAs({ timeline }: AlsoKnowAsInterface) {
+export default function AlsoKnowAsTextGroup({ timeline }: AlsoKnowAsTextGroupInterface) {
   const [duration] = useState<number>(
     alsoKnowAsAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )

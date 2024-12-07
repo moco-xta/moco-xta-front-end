@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 
-import AFrontEndDeveloperTextGroup from './a_front_developer/AFrontEndDeveloperTextGroup'
+import AFrontEndDeveloperTextGroup from './a_front_developer_text/AFrontEndDeveloperTextGroup'
 import MacBookProGroup from './mac_book_pro/MacBookProGroup'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'

@@ -1,5 +1,6 @@
-import React, { useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
+import { useGSAP } from '@gsap/react'
 
 import AText from './texts/AText'
 import FrontText from './texts/FrontText'
@@ -24,6 +25,37 @@ export default function AFrontEndDeveloperTextGroup({
   )
 
   const aFrontEndDeveloperTextGroupRef = useRef<THREE.Group>(null!)
+
+  useLayoutEffect(() => {
+    if (aFrontEndDeveloperTextGroupRef.current)
+      aFrontEndDeveloperTextGroupRef.current.visible = false
+  }, [aFrontEndDeveloperTextGroupRef])
+
+  useGSAP(
+    () => {
+      // POSITION
+      timeline.to(
+        aFrontEndDeveloperTextGroupRef.current,
+        {
+          keyframes: {
+            '0%': {
+              onComplete: () => {
+                aFrontEndDeveloperTextGroupRef.current.visible = true
+              },
+            },
+            '100%': {
+              onComplete: () => {
+                aFrontEndDeveloperTextGroupRef.current.visible = false
+              },
+            },
+          },
+          duration: duration,
+        },
+        delay,
+      )
+    },
+    { scope: aFrontEndDeveloperTextGroupRef },
+  )
 
   return (
     <group
