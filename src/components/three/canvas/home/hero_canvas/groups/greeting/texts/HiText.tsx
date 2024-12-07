@@ -8,7 +8,7 @@ import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
 import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/hi_i_m_federico_group/hiTextAnimationsConstants.json'
+import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/hiTextAnimationsConstants.json'
 
 import { hiTextAnimations } from 'animations'
 

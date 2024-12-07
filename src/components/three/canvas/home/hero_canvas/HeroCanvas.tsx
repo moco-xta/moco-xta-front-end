@@ -5,11 +5,11 @@ import { Physics } from '@react-three/rapier'
 
 import Camera from './Camera'
 import Lights from './lights/Lights'
-import HiImFedericoGroup from './hi_i_m_federico_group/HiImFedericoGroup'
-import FedericoPortraitGroup from './federico_portrait_group/FedericoPortraitGroup'
-import AlsoKnowAsGroup from './also_know_as_group/AlsoKnowAsGroup'
-import MocoHeliumBalloons from './moco_helium_balloons/MocoHeliumBalloons'
-import AFrontEndDeveloperGroup from './a_front_end_developer_group/AFrontEndDeveloperGroup'
+import HiImFedericoGroup from './groups/greeting/HiImFedericoGroup'
+import FedericoPortraitGroup from './groups/portrait/FedericoPortraitGroup'
+import AlsoKnowAsGroup from './groups/also_know_as/AlsoKnowAsGroup'
+import MocoHeliumBalloons from './groups/moco/MocoHeliumBalloons'
+import AFrontEndDeveloperGroup from './groups/developer/AFrontEndDeveloperGroup'
 
 import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
 

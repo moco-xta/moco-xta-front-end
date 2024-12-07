@@ -16,10 +16,10 @@
   },
   "HOME": {
     "HERO": {
-      "HI": "Salut!",
-      "I_M": "Je suis",
+      "HI": "salut!",
+      "I_M": "je suis",
       "A": "un",
-      "DEVELOPPER": "Developper",
+      "DEVELOPER": "Developpeur",
       "WITH": "avec des",
       "EXTRA": "supplémentaires",
       "SKILLS": "compétences",

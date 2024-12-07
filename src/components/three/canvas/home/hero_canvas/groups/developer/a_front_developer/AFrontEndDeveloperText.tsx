@@ -5,6 +5,8 @@ interface AFrontEndDeveloperInterface {
   timeline: GSAPTimeline
 }
 
-export default function AFrontEndDeveloper({ timeline }: AFrontEndDeveloperInterface) {
-  return <Box />
+export default function AFrontEndDeveloperText({ timeline }: AFrontEndDeveloperInterface) {
+  return {
+    
+  }
 }
