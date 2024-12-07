@@ -1,6 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+import { useFrame, useThree } from '@react-three/fiber'
 import { Float, PerspectiveCamera } from '@react-three/drei'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
 
@@ -31,8 +34,6 @@ export default function Camera() {
         heroCanvasConstants.PERSPECTIVE_CAMERA.POSITION.Z,
       ]}
       fov={heroCanvasConstants.PERSPECTIVE_CAMERA.FOV}
-      // near={heroCanvasConstants.PERSPECTIVE_CAMERA.NEAR}
-      // far={heroCanvasConstants.PERSPECTIVE_CAMERA.FAR}
     />
   )
 }

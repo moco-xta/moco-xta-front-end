@@ -1,14 +1,17 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
+import { Physics } from '@react-three/rapier'
 
 import Camera from './Camera'
 import Lights from './lights/Lights'
-import HiImFedericoGroup from './hi_i_m_federico_group/HiImFedericoGroup'
-import FedericoPortraitGroup from './federico_portrait/FedericoPortraitGroup'
+import HiImFedericoGroup from './groups/greeting/HiImFedericoGroup'
+import FedericoPortraitGroup from './groups/portrait/FedericoPortraitGroup'
+import AlsoKnowAsGroup from './groups/also_know_as/AlsoKnowAsGroup'
+import MocoHeliumBalloons from './groups/moco/MocoHeliumBalloons'
+import AFrontEndDeveloperGroup from './groups/developer/AFrontEndDeveloperGroup'
 
-import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
-import AlsoKnowAsGroup from './gretting_canvas/also_know_as_group/AlsoKnowAsGroup'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
 
 interface HeroCanvasInterface {
   timeline: GSAPTimeline
@@ -39,9 +42,22 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
         args={['#ffffff']}
       /> */}
       <Suspense fallback={null}>
-        <HiImFedericoGroup timeline={timeline} />
-        <FedericoPortraitGroup timeline={timeline} />
-        <AlsoKnowAsGroup timeline={timeline} />
+        <Physics
+          debug={heroCanvasConstants.PHYSICS.DEBUG}
+          gravity={[
+            heroCanvasConstants.PHYSICS.GRAVITY.X,
+            heroCanvasConstants.PHYSICS.GRAVITY.Y,
+            heroCanvasConstants.PHYSICS.GRAVITY.Z,
+          ]}
+          // timeStep={heroCanvasConstants.PHYSICS.TIME_STEP}
+          paused={heroCanvasConstants.PHYSICS.PAUSED}
+        >
+          <HiImFedericoGroup timeline={timeline} />
+          <FedericoPortraitGroup timeline={timeline} />
+          <AlsoKnowAsGroup timeline={timeline} />
+          <MocoHeliumBalloons timeline={timeline} />
+          <AFrontEndDeveloperGroup timeline={timeline} />
+        </Physics>
       </Suspense>
     </Canvas>
   )

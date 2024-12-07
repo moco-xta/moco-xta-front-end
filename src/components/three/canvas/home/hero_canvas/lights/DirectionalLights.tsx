@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
 
-import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
 
 interface DirectionalLightsInterface {
   timeline: GSAPTimeline
