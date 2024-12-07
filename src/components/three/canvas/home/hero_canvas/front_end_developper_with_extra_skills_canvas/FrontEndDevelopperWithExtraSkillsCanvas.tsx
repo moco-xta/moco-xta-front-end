@@ -6,7 +6,7 @@ import Camera from './Camera'
 import Lights from './Lights'
 import FrontEndDevelopperWithExtraSkillsScene from './FrontEndDevelopperWithExtraSkillsScene'
 
-import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
 
 export default function FrontEndDevelopperWithExtraSkillsCanvas() {
   return (

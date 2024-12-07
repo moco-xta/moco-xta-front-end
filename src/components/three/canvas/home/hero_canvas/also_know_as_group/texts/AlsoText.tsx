@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react'
 import * as THREE from 'three'
 
-import { Word3D } from '../../../../../../components/word_3d/Word3D'
+import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
 
 export default function AlsoText() {
   const [alsoText] = useState<string>('also'.toUpperCase())

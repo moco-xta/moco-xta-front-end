@@ -4,7 +4,7 @@ import { Box } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
 import Portrait from './Portrait'
-import AlsoKnowAs from '../../gretting_canvas/also_know_as_group/AlsoKnowAs'
+import AlsoKnowAs from '../../also_know_as_group/AlsoKnowAs'
 
 import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
 
