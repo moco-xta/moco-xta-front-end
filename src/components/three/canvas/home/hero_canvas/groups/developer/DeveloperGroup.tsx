@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 
 import AFrontEndDeveloperTextGroup from './a_front_developer/AFrontEndDeveloperTextGroup'
-import MacBookPro from './mac_book_pro/MacBookPro'
+import MacBookProGroup from './mac_book_pro/MacBookProGroup'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as developerGroupAnimationsConstants } from '@/constants/animations/home/hero/developer/developerGroupAnimationsConstants.json'
@@ -54,7 +54,7 @@ export default function DeveloperGroup({ timeline }: DeveloperGroupInterface) {
   return (
     <group ref={developerGroupRef}>
       <AFrontEndDeveloperTextGroup timeline={timeline} />
-      <MacBookPro timeline={timeline} />
+      <MacBookProGroup timeline={timeline} />
     </group>
   )
 }

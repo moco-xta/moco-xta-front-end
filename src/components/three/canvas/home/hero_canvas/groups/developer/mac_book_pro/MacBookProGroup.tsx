@@ -4,11 +4,11 @@ import MacBookProComponent from './MacBookProComponent'
 import LogosForegroundGroup from './LogosForegroundGroup'
 import LogosBackgroundGroup from './LogosBackgroundGroup'
 
-interface MacBookProInterface {
+interface MacBookProGroupInterface {
   timeline: GSAPTimeline
 }
 
-export default function MacBookPro({ timeline }: MacBookProInterface) {
+export default function MacBookProGroup({ timeline }: MacBookProGroupInterface) {
   const macBookProComponentAndLogosForegroundGroupRef = useRef<THREE.Group>(null!)
 
   return (
