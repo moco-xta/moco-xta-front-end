@@ -7,7 +7,7 @@ import ImText from './texts/ImText'
 import FedericoText from './texts/FedericoText'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as hiImFedericoGroupAnimationsConstants } from '@/constants/animations/home/hero/hiImFedericoGroupAnimationsConstants.json'
+import { default as hiImFedericoGroupAnimationsConstants } from '@/constants/animations/home/hero/hi_i_m_federico_group/hiImFedericoGroupAnimationsConstants.json'
 
 import { hiImFedericoGroupAnimations } from 'animations'
 
@@ -50,22 +50,13 @@ export default function HiImFedericoGrooup({ timeline }: HiImFedericoInterface) 
     { scope: hiImFedericoGroupRef },
   )
   return (
-    <group ref={hiImFedericoGroupRef}>
-      <HiText
-        timeline={timeline}
-        duration={duration}
-        delay={delay}
-      />
-      <ImText
-        timeline={timeline}
-        duration={duration}
-        delay={delay}
-      />
-      <FedericoText
-        timeline={timeline}
-        duration={duration}
-        delay={delay}
-      />
+    <group
+      ref={hiImFedericoGroupRef}
+      position={new THREE.Vector3(3, -0.5, 4)}
+    >
+      <HiText timeline={timeline} />
+      <ImText timeline={timeline} />
+      <FedericoText timeline={timeline} />
     </group>
   )
 }

@@ -4,22 +4,15 @@ import { Plane } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
-import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
+import { default as federicoPortraitGroupAnimationsConstants } from '@/constants/animations/home/hero/federicoPortraitGroupAnimationsConstants.json'
 
 interface PortraitInterface {
   timeline: GSAPTimeline
+  duration: number
+  delay: number
 }
 
-export default function Portrait({ timeline }: PortraitInterface) {
-  const [duration] = useState<number>(
-    heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT.DURATION /
-      heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT.KEYFRAME_START /
-      heroAnimationsConstants.SPEED,
-  )
-
+export default function Portrait({ timeline, duration, delay }: PortraitInterface) {
   const portraitMeshRef = useRef<THREE.Mesh>(null!)
 
   const portraitMap = new THREE.TextureLoader().load(texturesConstants.HOME.PORTRAIT)
@@ -40,16 +33,16 @@ export default function Portrait({ timeline }: PortraitInterface) {
         keyframes: {
           '0%': {
             opacity:
-              heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT
-                .ANIMATION.MATERIAL['0_PERCENT'].OPACITY,
+              federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.SUBS.PORTRAIT.ANIMATION
+                .MATERIAL['0_PERCENT'].OPACITY,
           },
           '20%': {
             opacity:
-              heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT
-                .ANIMATION.MATERIAL['20_PERCENT'].OPACITY,
+              federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.SUBS.PORTRAIT.ANIMATION
+                .MATERIAL['20_PERCENT'].OPACITY,
           },
           easeEach:
-            heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.FOREGROUND.SUBS.PORTRAIT.ANIMATION
+            federicoPortraitGroupAnimationsConstants.SUBS.FOREGROUND.SUBS.PORTRAIT.ANIMATION
               .MATERIAL.EACH_EASE,
         },
         duration: duration,

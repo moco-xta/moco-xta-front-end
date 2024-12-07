@@ -1,34 +1,29 @@
-import { default as hiImFedericoGroupAnimationsConstants } from '@/constants/animations/home/hero/hiImFedericoGroupAnimationsConstants.json'
+import { default as hiTextAnimationsConstants } from '@/constants/animations/home/hero/hi_i_m_federico_group/hiTextAnimationsConstants.json'
 
 export const hiTextAnimations = {
   position: {
     keyframes: {
       '0%': {
-        y: hiImFedericoGroupAnimationsConstants.SUBS.HI_TEXT.ANIMATION.POSITION['0_PERCENT'].Y,
-        z: hiImFedericoGroupAnimationsConstants.SUBS.HI_TEXT.ANIMATION.POSITION['0_PERCENT'].Z,
+        y: hiTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+        z: hiTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
       },
       '20%': {
-        y: hiImFedericoGroupAnimationsConstants.SUBS.HI_TEXT.ANIMATION.POSITION['20_PERCENT'].Y,
-        z: hiImFedericoGroupAnimationsConstants.SUBS.HI_TEXT.ANIMATION.POSITION['20_PERCENT'].Z,
+        y: hiTextAnimationsConstants.ANIMATION['20_PERCENT'].POSITION.Y,
+        z: hiTextAnimationsConstants.ANIMATION['20_PERCENT'].POSITION.Z,
       },
-      easeEach: hiImFedericoGroupAnimationsConstants.SUBS.HI_TEXT.ANIMATION.POSITION.EACH_EASE,
+      easeEach: hiTextAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
     },
   },
   rotation: {
     keyframes: {
       '10%': {
-        opacity:
-          hiImFedericoGroupAnimationsConstants.SUBS.HI_TEXT.ANIMATION.MATERIAL['10_PERCENT']
-            .OPACITY,
+        opacity: hiTextAnimationsConstants.ANIMATION['10_PERCENT'].MATERIAL.OPACITY,
       },
       '29%': {
-        opacity:
-          hiImFedericoGroupAnimationsConstants.SUBS.HI_TEXT.ANIMATION.MATERIAL['20_PERCENT']
-            .OPACITY,
-        ease: hiImFedericoGroupAnimationsConstants.SUBS.HI_TEXT.ANIMATION.MATERIAL['20_PERCENT']
-          .EASE,
+        opacity: hiTextAnimationsConstants.ANIMATION['20_PERCENT'].MATERIAL.OPACITY,
+        ease: hiTextAnimationsConstants.ANIMATION['20_PERCENT'].MATERIAL.EASE,
       },
-      easeEach: hiImFedericoGroupAnimationsConstants.SUBS.HI_TEXT.ANIMATION.MATERIAL.EACH_EASE,
+      easeEach: hiTextAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
     },
   },
 }

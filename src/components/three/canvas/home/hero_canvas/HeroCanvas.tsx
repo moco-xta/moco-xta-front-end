@@ -5,6 +5,7 @@ import { OrbitControls } from '@react-three/drei'
 import Camera from './Camera'
 import Lights from './lights/Lights'
 import HiImFedericoGroup from './hi_i_m_federico_group/HiImFedericoGroup'
+import FedericoPortraitGroup from './federico_portrait/FedericoPortraitGroup'
 
 import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 
@@ -38,6 +39,7 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
       /> */}
       <Suspense fallback={null}>
         <HiImFedericoGroup timeline={timeline} />
+        {/* <FedericoPortraitGroup timeline={timeline} /> */}
       </Suspense>
     </Canvas>
   )

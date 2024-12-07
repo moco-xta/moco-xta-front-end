@@ -1,0 +1,145 @@
+{
+  "NAME": "FEDERICO_PORTRAIT_GROUP",
+  "KEYFRAME_START": 4,
+  "DURATION": 5,
+  "SUBS": {
+    "FOREGROUND": {
+      "NAME": "FOREGROUND",
+      "ANIMATION": {
+        "POSITION": {
+          "0_PERCENT": {
+            "Z": 6
+          },
+          "20_PERCENT": {
+            "Z": 0
+          },
+          "EACH_EASE": "power2.out"
+        },
+        "ROTATION": {
+          "40_PERCENT": {
+            "Z": 0
+          },
+          "60_PERCENT": {
+            "Z": -180
+          },
+          "EACH_EASE": "power2.out"
+        }
+      },
+      "SUBS": {
+        "PORTRAIT": {
+          "NAME": "PORTRAIT",
+          "ANIMATION": {
+            "MATERIAL": {
+              "0_PERCENT": {
+                "OPACITY": 0
+              },
+              "20_PERCENT": {
+                "OPACITY": 1
+              },
+              "EACH_EASE": "power1.in"
+            }
+          }
+        }
+      }
+    },
+    "GOBELINO": {
+      "NAME": "GOBELINO",
+      "SUBS": {
+        "SKY": {
+          "NAME": "SKY",
+          "ANIMATION": {
+            "POSITION": {
+              "0_PERCENT": {
+                "Y": -5
+              },
+              "20_PERCENT": {
+                "Y": 0
+              },
+              "EACH_EASE": "power1.in"
+            },
+            "COLOR": {
+              "0_PERCENT": {
+                "R": 0.23137254901960785,
+                "G": 0.38823529411764707,
+                "B": 1
+              },
+              "40_PERCENT": {
+                "R": 0.23137254901960785,
+                "G": 0.38823529411764707,
+                "B": 1
+              },
+              "60_PERCENT": {
+                "R": 0.00784313725490196,
+                "G": 0.00784313725490196,
+                "B": 0.1411764705882353
+              }
+            },
+            "MATERIAL": {
+              "0_PERCENT": {
+                "OPACITY": 0
+              },
+              "33_PERCENT": {
+                "OPACITY": 1
+              },
+              "EACH_EASE": "power1.in"
+            }
+          }
+        },
+        "SUN_AND_MOON": {
+          "NAME": "SUN_AND_MOON",
+          "ANIMATION": {
+            "ROTATION": {
+              "0_PERCENT": {
+                "Z": 66
+              },
+              "20_PERCENT": {
+                "Z": -33
+              },
+              "40_PERCENT": {
+                "Z": -33
+              },
+              "60_PERCENT": {
+                "Z": -213
+              },
+              "EACH_EASE": "none"
+            }
+          },
+          "SUBS": {
+            "SUN": {
+              "NAME": "SUN",
+              "MATERIAL": {
+                "0_PERCENT": {
+                  "OPACITY": 0
+                },
+                "20_PERCENT": {
+                  "OPACITY": 1
+                },
+                "40_PERCENT": {
+                  "OPACITY": 1
+                },
+                "60_PERCENT": {
+                  "OPACITY": 0
+                },
+                "EACH_EASE": "power1.in"
+              }
+            },
+            "MOON": {
+              "NAME": "MOON",
+              "ANIMATION": {
+                "MATERIAL": {
+                  "40_PERCENT": {
+                    "OPACITY": 0
+                  },
+                  "60_PERCENT": {
+                    "OPACITY": 1
+                  },
+                  "EACH_EASE": "power1.in"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,17 +7,22 @@ import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
 import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as hiImFedericoGroupAnimationsConstants } from '@/constants/animations/home/hero/hiImFedericoGroupAnimationsConstants.json'
+import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/hi_i_m_federico_group/federicoTextAnimationsConstants.json'
 
 import { federicoTextPositionAnimation, imTextMaterialAnimation } from 'animations'
 
 interface FedericoTextInterface {
   timeline: GSAPTimeline
-  duration: number
-  delay: number
 }
 
-export default function FedericoText({ timeline, duration, delay }: FedericoTextInterface) {
+export default function FedericoText({ timeline }: FedericoTextInterface) {
+  const [duration] = useState<number>(
+    federicoTextAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+  )
+  const [delay] = useState<number>(
+    federicoTextAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+  )
+
   const [federicoText] = useState<string>('federico'.toUpperCase())
   const [federicoTextSplitted] = useState<string[]>(federicoText.split(''))
 
@@ -41,7 +46,7 @@ export default function FedericoText({ timeline, duration, delay }: FedericoText
             duration: duration,
           },
           delay +
-            (index * hiImFedericoGroupAnimationsConstants.SUBS.FEDERICO_TEXT.ANIMATION.STAGGER) /
+            (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
               heroAnimationsConstants.SPEED,
         )
 
@@ -54,7 +59,7 @@ export default function FedericoText({ timeline, duration, delay }: FedericoText
             duration: duration,
           },
           delay +
-            (index * hiImFedericoGroupAnimationsConstants.SUBS.FEDERICO_TEXT.ANIMATION.STAGGER) /
+            (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
               heroAnimationsConstants.SPEED,
         )
       })
@@ -66,25 +71,25 @@ export default function FedericoText({ timeline, duration, delay }: FedericoText
     <Word3D
       ref={federicoTextGroupRef}
       keyPrefix={'federico_text'}
-      font={heroCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.GEOMETRY.FONT}
-      size={heroCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.GEOMETRY.SIZES.FEDERICO}
-      depth={heroCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.GEOMETRY.DEPTH}
+      font={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.FONT.FONT}
+      size={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.FONT.SIZE}
+      depth={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.FONT.DEPTH}
       splittedWord={federicoTextSplitted}
       position={
         new THREE.Vector3(
-          heroCanvasConstants.SCENES.HI_I_M_FEDERICO.FEDERICO_TEXT.POSITION.X,
-          heroCanvasConstants.SCENES.HI_I_M_FEDERICO.FEDERICO_TEXT.POSITION.Y,
-          heroCanvasConstants.SCENES.HI_I_M_FEDERICO.FEDERICO_TEXT.POSITION.Z,
+          heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.POSITION.X,
+          heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.POSITION.Y,
+          heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.POSITION.Z,
         )
       }
       center={true}
       lengthRef={federicoTextLengthRef}
     >
       <meshStandardMaterial
-        color={heroCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.MATERIALS.COLOR}
-        transparent={heroCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.MATERIALS.TRANSPARENT}
-        opacity={heroCanvasConstants.SCENES.HI_I_M_FEDERICO.TEXTS.MATERIALS.OPACITY}
-        // emissive={heroCanvasConstants.SCENES.HI_I_M_FEDERICO.MATERIALS.TEXTS.EMISSIVE}
+        color={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.COLOR}
+        transparent={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.TRANSPARENT}
+        opacity={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.OPACITY}
+        // emissive={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.EMISSIVE}
         side={THREE.DoubleSide}
       />
     </Word3D>

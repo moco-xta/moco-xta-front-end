@@ -3,28 +3,24 @@ import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
 
 import SkyComponent from './SkyComponent'
-
-import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
 import SunAndMoon from './SunAndMoon'
+
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 
 interface GobelinoConponentInterface {
   timeline: GSAPTimeline
+  duration: number
+  delay: number
 }
 
-export default function GobelinoComponent({ timeline }: GobelinoConponentInterface) {
-  const [duration] = useState<number>(
-    heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.GOBELINO.DURATION /
-      heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    heroAnimationsConstants.BLOCKS.FEDERICO_PORTRAIT.SUBS.GOBELINO.KEYFRAME_START /
-      heroAnimationsConstants.SPEED,
-  )
-
+export default function GobelinoComponent({
+  timeline,
+  duration,
+  delay,
+}: GobelinoConponentInterface) {
   const gobelinoGroupRef = useRef<THREE.Group>(null!)
 
   useGSAP(() => {
-    // POSITION
     timeline.to(
       gobelinoGroupRef.current,
       {
@@ -39,8 +35,16 @@ export default function GobelinoComponent({ timeline }: GobelinoConponentInterfa
 
   return (
     <group ref={gobelinoGroupRef}>
-      <SunAndMoon timeline={timeline} />
-      <SkyComponent timeline={timeline} />
+      <SunAndMoon
+        timeline={timeline}
+        duration={duration}
+        delay={delay}
+      />
+      <SkyComponent
+        timeline={timeline}
+        duration={duration}
+        delay={delay}
+      />
     </group>
   )
 }

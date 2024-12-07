@@ -64,53 +64,55 @@
     "HI_I_M_FEDERICO_GROUP": {
       "HI_TEXT": {
         "GEOMETRY": {
-          "POSITION": {}
-        }
-      }
-    }
-  },
-  "SCENES": {
-    "HI_I_M_FEDERICO": {
-      "HI_TEXT": {
-        "POSITION": {
-          "X": -2,
-          "Y": 1,
-          "Z": 0
+          "POSITION": {
+            "X": -2,
+            "Y": 1,
+            "Z": 0
+          },
+          "FONT": {
+            "FONT": "fonts/json/Molde_Compressed_Heavy_Regular.json",
+            "SIZE": 2.5,
+            "DEPTH": 1
+          }
         }
       },
       "I_M_TEXT": {
-        "POSITION": {
-          "X": 1,
-          "Y": 1,
-          "Z": 0
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 1,
+            "Y": 1,
+            "Z": 0
+          },
+          "FONT": {
+            "FONT": "fonts/json/Molde_Compressed_Heavy_Regular.json",
+            "SIZE": 2.5,
+            "DEPTH": 1
+          }
         }
       },
       "FEDERICO_TEXT": {
-        "POSITION": {
-          "X": 0,
-          "Y": -1.5,
-          "Z": 0
+        "GEOMETRY": {
+          "POSITION": {
+            "X": 0,
+            "Y": -1.5,
+            "Z": 0
+          },
+          "FONT": {
+            "FONT": "fonts/json/Molde_Compressed_Heavy_Regular.json",
+            "SIZE": 2,
+            "DEPTH": 1
+          }
         }
       },
-      "TEXTS": {
-        "GEOMETRY": {
-          "FONT": "fonts/json/Gilroy_Heavy.json",
-          "DEPTH": 1,
-          "SIZES": {
-            "HI": 2.5,
-            "I_M": 2.5,
-            "FEDERICO": 1.5
-          }
-        },
-        "MATERIALS": {
+      "MATERIALS": {
+        "TEXTS": {
           "COLOR": "#333",
           "TRANSPARENT": true,
           "OPACITY": 0,
           "EMISSIVE": "#333"
         }
       }
-    },
-    "FEDERICO_AKA": {}
+    }
   },
   "MATERIALS": {
     "TEXTS": {

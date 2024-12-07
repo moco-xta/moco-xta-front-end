@@ -197,44 +197,8 @@
           "NAME": "FOREGROUND",
           "KEYFRAME_START": 4,
           "DURATION": 5,
-          "ANIMATION": {
-            "POSITION": {
-              "0_PERCENT": {
-                "Z": 6
-              },
-              "20_PERCENT": {
-                "Z": 0
-              },
-              "EACH_EASE": "power2.out"
-            },
-            "ROTATION": {
-              "40_PERCENT": {
-                "Z": 0
-              },
-              "60_PERCENT": {
-                "Z": -180
-              },
-              "EACH_EASE": "power2.out"
-            }
-          },
-          "SUBS": {
-            "PORTRAIT": {
-              "NAME": "PORTRAIT",
-              "KEYFRAME_START": 4,
-              "DURATION": 5,
-              "ANIMATION": {
-                "MATERIAL": {
-                  "0_PERCENT": {
-                    "OPACITY": 0
-                  },
-                  "20_PERCENT": {
-                    "OPACITY": 1
-                  },
-                  "EACH_EASE": "power1.in"
-                }
-              }
-            }
-          }
+          "ANIMATION": {},
+          "SUBS": {}
         },
         "GOBELINO": {
           "NAME": "GOBELINO",

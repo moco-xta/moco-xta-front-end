@@ -3,7 +3,7 @@ import * as THREE from 'three'
 
 import { Word3D } from '../../../../../../components/word_3d/Word3D'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as heroCanvasConstants } from '@/constants/canvas/home/heroCanvasConstants.json'
 
 export default function AsText() {

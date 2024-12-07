@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
 
@@ -6,29 +6,22 @@ import AlsoText from './texts/AlsoText'
 import KnowText from './texts/KnowText'
 import AsText from './texts/AsText'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
+import { default as federicoPortraitGroupAnimationsConstants } from '@/constants/animations/home/hero/federicoPortraitGroupAnimationsConstants.json'
 
 interface AlsoKnowAsInterface {
   timeline: GSAPTimeline
+  duration: number
+  delay: number
 }
 
-export default function AlsoKnowAs({ timeline }: AlsoKnowAsInterface) {
-  const [duration] = useState<number>(
-    heroAnimationsConstants.BLOCKS.ALSO_KNOW_AS_GROUP.SUBS.ASLO_KNOW_AS.DURATION /
-      heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    heroAnimationsConstants.BLOCKS.ALSO_KNOW_AS_GROUP.SUBS.ASLO_KNOW_AS.KEYFRAME_START /
-      heroAnimationsConstants.SPEED,
-  )
-
+export default function AlsoKnowAs({ timeline, duration, delay }: AlsoKnowAsInterface) {
   const alsoKnowAsGroupRef = useRef<THREE.Group>(null!)
 
   useLayoutEffect(() => {
     if (alsoKnowAsGroupRef.current) alsoKnowAsGroupRef.current.visible = false
   }, [alsoKnowAsGroupRef])
 
-  useGSAP(
+  /* useGSAP(
     () => {
       // POSITION
       timeline.to(
@@ -52,7 +45,7 @@ export default function AlsoKnowAs({ timeline }: AlsoKnowAsInterface) {
       )
     },
     { scope: alsoKnowAsGroupRef },
-  )
+  ) */
 
   return (
     <group
