@@ -1,0 +1,88 @@
+{
+  "NAME": "HI_I_M_FEDERICO_GROUP",
+  "KEYFRAME_START": 0,
+  "DURATION": 5,
+  "ANIMATION": {
+    "0_PERCENT": {
+      "ROTATION": {
+        "X": -60,
+        "Y": 0,
+        "Z": 0,
+        "EASE": "back.in"
+      }
+    },
+    "20_PERCENT": {
+      "POSITION": {
+        "X": 2,
+        "Y": -1,
+        "EASE": "back.in"
+      },
+      "ROTATION": {
+        "X": -15,
+        "Y": 0,
+        "Z": 0,
+        "EASE": "back.in"
+      }
+    },
+    "40_PERCENT": {
+      "POSITION": {
+        "X": -0.25,
+        "Y": -0.7,
+        "Z": 4,
+        "EASE": "back.in"
+      },
+      "ROTATION": {
+        "X": -15,
+        "Y": -30,
+        "Z": 0,
+        "EASE": "back.in"
+      }
+    },
+    "60_PERCENT": {
+      "POSITION": {
+        "X": 0,
+        "Y": 1.3,
+        "Z": 5,
+        "EASE": "back.in"
+      },
+      "ROTATION": {
+        "X": -30,
+        "Y": 0,
+        "Z": 0,
+        "EASE": "back.in"
+      }
+    },
+    "80_PERCENT": {
+      "POSITION": {
+        "Y": 0,
+        "Z": 0,
+        "EASE": "back.in"
+      },
+      "ROTATION": {
+        "X": 15,
+        "Y": 0,
+        "Z": 0,
+        "EASE": "back.in"
+      }
+    },
+    "100_PERCENT": {
+      "POSITION": {
+        "Z": -3,
+        "EASE": "power1.in"
+      },
+      "ROTATION": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "EASE": "power1.in"
+      }
+    },
+    "POSITION": {
+      "20_PERCENT": {},
+      "40_PERCENT": {},
+      "60_PERCENT": {},
+      "80_PERCENT": {},
+      "100_PERCENT": {}
+    }
+  }
+}

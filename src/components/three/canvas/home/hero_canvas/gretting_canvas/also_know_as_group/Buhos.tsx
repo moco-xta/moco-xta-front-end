@@ -4,7 +4,8 @@ import { useGSAP } from '@gsap/react'
 
 import { Buho } from '@/components/three/models/home/hero/Buho'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as buhosAnimationsConstants } from '@/constants/animations/home/hero/also_konw_as_group/buhosAnimationsConstants.json'
 
 interface BuhoComponentInterface {
   timeline: GSAPTimeline
@@ -12,12 +13,10 @@ interface BuhoComponentInterface {
 
 export default function Buhos({ timeline }: BuhoComponentInterface) {
   const [duration] = useState<number>(
-    heroAnimationsConstants.BLOCKS.ALSO_KNOW_AS_GROUP.SUBS.BUJO.DURATION /
-      heroAnimationsConstants.SPEED,
+    buhosAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
-    heroAnimationsConstants.BLOCKS.ALSO_KNOW_AS_GROUP.SUBS.BUJO.KEYFRAME_START /
-      heroAnimationsConstants.SPEED,
+    buhosAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
   )
 
   const buhosGroupRef = useRef<THREE.Group>(null!)
@@ -54,7 +53,7 @@ export default function Buhos({ timeline }: BuhoComponentInterface) {
         delay,
       )
     },
-    { scope: buhosGroupRef },
+    /* { scope: buhosGroupRef }, */
   )
 
   return (

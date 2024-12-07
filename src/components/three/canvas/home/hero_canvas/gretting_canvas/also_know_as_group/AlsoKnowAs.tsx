@@ -6,7 +6,8 @@ import AlsoText from './texts/AlsoText'
 import KnowText from './texts/KnowText'
 import AsText from './texts/AsText'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/heroAnimationsConstants.json'
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as alsoKnowAsAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/alsoKnowAsAnimationsConstants.json'
 
 interface AlsoKnowAsInterface {
   timeline: GSAPTimeline
@@ -14,12 +15,10 @@ interface AlsoKnowAsInterface {
 
 export default function AlsoKnowAs({ timeline }: AlsoKnowAsInterface) {
   const [duration] = useState<number>(
-    heroAnimationsConstants.BLOCKS.ALSO_KNOW_AS_GROUP.SUBS.ASLO_KNOW_AS.DURATION /
-      heroAnimationsConstants.SPEED,
+    alsoKnowAsAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )
   const [delay] = useState<number>(
-    heroAnimationsConstants.BLOCKS.ALSO_KNOW_AS_GROUP.SUBS.ASLO_KNOW_AS.KEYFRAME_START /
-      heroAnimationsConstants.SPEED,
+    alsoKnowAsAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
   )
 
   const alsoKnowAsGroupRef = useRef<THREE.Group>(null!)
@@ -30,19 +29,14 @@ export default function AlsoKnowAs({ timeline }: AlsoKnowAsInterface) {
 
   useGSAP(
     () => {
-      // POSITION
       timeline.to(
+        // VISIBILITY
         alsoKnowAsGroupRef.current,
         {
           keyframes: {
             '0%': {
               onComplete: () => {
                 alsoKnowAsGroupRef.current.visible = true
-              },
-            },
-            '100%': {
-              onComplete: () => {
-                alsoKnowAsGroupRef.current.visible = false
               },
             },
           },

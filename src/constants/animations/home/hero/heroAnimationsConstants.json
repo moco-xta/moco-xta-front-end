@@ -1,0 +1,293 @@
+{
+  "SPEED": 1.25,
+  "DELAY": 1,
+  "GROUPS": {
+    "FEDERICO_PORTRAIT": {
+      "NAME": "FEDERICO_PORTRAIT",
+      "SUBS": {
+        "FOREGROUND": {
+          "NAME": "FOREGROUND",
+          "KEYFRAME_START": 4,
+          "DURATION": 5,
+          "ANIMATION": {
+            "POSITION": {
+              "0_PERCENT": {
+                "Z": 6
+              },
+              "20_PERCENT": {
+                "Z": 0
+              },
+              "EACH_EASE": "power2.out"
+            },
+            "ROTATION": {
+              "40_PERCENT": {
+                "Z": 0
+              },
+              "60_PERCENT": {
+                "Z": -180
+              },
+              "EACH_EASE": "power2.out"
+            }
+          },
+          "SUBS": {
+            "PORTRAIT": {
+              "NAME": "PORTRAIT",
+              "KEYFRAME_START": 4,
+              "DURATION": 5,
+              "ANIMATION": {
+                "MATERIAL": {
+                  "0_PERCENT": {
+                    "OPACITY": 0
+                  },
+                  "20_PERCENT": {
+                    "OPACITY": 1
+                  },
+                  "EACH_EASE": "power1.in"
+                }
+              }
+            }
+          }
+        },
+        "GOBELINO": {
+          "NAME": "GOBELINO",
+          "KEYFRAME_START": 4,
+          "DURATION": 5,
+          "SUBS": {
+            "SKY": {
+              "NAME": "SKY",
+              "KEYFRAME_START": 4,
+              "DURATION": 5,
+              "ANIMATION": {
+                "POSITION": {
+                  "0_PERCENT": {
+                    "Y": -5
+                  },
+                  "20_PERCENT": {
+                    "Y": 0
+                  },
+                  "EACH_EASE": "power1.in"
+                },
+                "COLOR": {
+                  "0_PERCENT": {
+                    "R": 0.23137254901960785,
+                    "G": 0.38823529411764707,
+                    "B": 1
+                  },
+                  "40_PERCENT": {
+                    "R": 0.23137254901960785,
+                    "G": 0.38823529411764707,
+                    "B": 1
+                  },
+                  "60_PERCENT": {
+                    "R": 0.00784313725490196,
+                    "G": 0.00784313725490196,
+                    "B": 0.1411764705882353
+                  }
+                },
+                "MATERIAL": {
+                  "0_PERCENT": {
+                    "OPACITY": 0
+                  },
+                  "33_PERCENT": {
+                    "OPACITY": 1
+                  },
+                  "EACH_EASE": "power1.in"
+                }
+              }
+            },
+            "SUN_AND_MOON": {
+              "NAME": "SUN_AND_MOON",
+              "KEYFRAME_START": 4,
+              "DURATION": 5,
+              "ANIMATION": {
+                "ROTATION": {
+                  "0_PERCENT": {
+                    "Z": 66
+                  },
+                  "20_PERCENT": {
+                    "Z": -33
+                  },
+                  "40_PERCENT": {
+                    "Z": -33
+                  },
+                  "60_PERCENT": {
+                    "Z": -213
+                  },
+                  "EACH_EASE": "none"
+                }
+              },
+              "SUBS": {
+                "SUN": {
+                  "NAME": "SUN",
+                  "KEYFRAME_START": 4,
+                  "DURATION": 5,
+                  "MATERIAL": {
+                    "0_PERCENT": {
+                      "OPACITY": 0
+                    },
+                    "20_PERCENT": {
+                      "OPACITY": 1
+                    },
+                    "40_PERCENT": {
+                      "OPACITY": 1
+                    },
+                    "60_PERCENT": {
+                      "OPACITY": 0
+                    },
+                    "EACH_EASE": "power1.in"
+                  }
+                },
+                "MOON": {
+                  "NAME": "MOON",
+                  "KEYFRAME_START": 4,
+                  "DURATION": 5,
+                  "ANIMATION": {
+                    "MATERIAL": {
+                      "40_PERCENT": {
+                        "OPACITY": 0
+                      },
+                      "60_PERCENT": {
+                        "OPACITY": 1
+                      },
+                      "EACH_EASE": "power1.in"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ALSO_KNOW_AS_GROUP": {
+      "KEYFRAME_NAME": "ALSO_KNOW_AS_GROUP",
+      "SUBS": {
+        "ASLO_KNOW_AS": {
+          "KEYFRAME_NAME": "ASLO_KNOW_AS",
+          "KEYFRAME_START": 4,
+          "DURATION": 4
+        },
+        "LIGHTNING": {
+          "KEYFRAME_NAME": "LIGHTNING",
+          "KEYFRAME_START": 4,
+          "DURATION": 4,
+          "ANIMATION": {
+            "MATERIAL": {
+              "0_PERCENT": {
+                "OPACITY": 1
+              },
+              "50_PERCENT": {
+                "OPACITY": 1
+              }
+            }
+          }
+        },
+        "BUJO": {
+          "KEYFRAME_NAME": "BUJO",
+          "KEYFRAME_START": 8,
+          "DURATION": 1,
+          "ANIMATION": {
+            "MATERIAL": {
+              "0_PERCENT": {
+                "OPACITY": 1
+              },
+              "50_PERCENT": {
+                "OPACITY": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "MOCO": {
+      "NAME": "MOCO",
+      "KEYFRAME_START": 9,
+      "DURATION": 2
+    }
+  },
+  "SCENES": {
+    "HI_I_M_FEDERICO": {
+      "NAME": "HI_I_M_FEDERICO",
+      "KEYFRAME_START": 0,
+      "DURATION": 5,
+      "SUBS": {
+        "HI_TEXT": {
+          "KEYFRAME_START": 0,
+          "DURATION": 1,
+          "STAGGER": {
+            "OFFSET": 0.125
+          }
+        },
+        "I_M_TEXT": {
+          "KEYFRAME_START": 1,
+          "DURATION": 1,
+          "STAGGER": {
+            "OFFSET": 0.125
+          }
+        },
+        "FEDERICO_TEXT": {
+          "KEYFRAME_START": 2,
+          "DURATION": 1,
+          "STAGGER": {
+            "OFFSET": 0.125
+          }
+        }
+      }
+    },
+    "FEDERICO_PORTRAIT": {
+      "NAME": "FEDERICO_PORTRAIT",
+      "KEYFRAME_START": 4,
+      "DURATION": 3,
+      "SUBS": {
+        "GOBELINO": {
+          "KEYFRAME_START": 4,
+          "DURATION": 1,
+          "OFFSET": 0,
+          "SUBS": {
+            "SKY": {
+              "KEYFRAME_START": 4,
+              "DURATION": 2,
+              "OFFSET": 0
+            },
+            "SUN_AND_MOON": {
+              "KEYFRAME_START": 4,
+              "DURATION": 2
+            }
+          }
+        }
+      }
+    },
+    "ALSO_KNOW_AS_GROUP": {
+      "KEYFRAME_NAME": "ALSO_KNOW_AS_GROUP",
+      "KEYFRAME_START": 4,
+      "DURATION": 3,
+      "SUBS": {},
+      "ALSO": {
+        "POSITION": {
+          "X": 0,
+          "Y": 2,
+          "Z": 1
+        }
+      },
+      "KNOW": {
+        "POSITION": {
+          "X": 0,
+          "Y": 0,
+          "Z": 1
+        }
+      },
+      "AS": {
+        "POSITION": {
+          "X": 0,
+          "Y": -2,
+          "Z": 1
+        }
+      },
+      "TEXTS": {
+        "FONT": "fonts/json/Gilroy_Heavy.json",
+        "DEPTH": 0.5,
+        "SIZE": 1.8
+      }
+    }
+  }
+}

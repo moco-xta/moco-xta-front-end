@@ -36,7 +36,7 @@ export default function Cursor() {
         window.removeEventListener('mousemove', handleMouseMove)
       }
     },
-    { scope: cursorAnimation.scope },
+    /* { scope: cursorAnimation.scope }, */
   )
 
   return (
