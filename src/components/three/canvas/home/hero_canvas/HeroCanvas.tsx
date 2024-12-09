@@ -13,6 +13,7 @@ import DeveloperGroup from './groups/developer/DeveloperGroup'
 import WithExtraSkillsGroup from './groups/with_extra_skills/WithExtraSkillsGroup'
 
 import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
+import PostProcessing from './PostProcessing'
 
 interface HeroCanvasInterface {
   timeline: GSAPTimeline
@@ -53,12 +54,13 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
           // timeStep={heroCanvasConstants.PHYSICS.TIME_STEP}
           paused={heroCanvasConstants.PHYSICS.PAUSED}
         >
-          <GreetingGroup timeline={timeline} />
+          {/* <GreetingGroup timeline={timeline} /> */}
           <PortraitGroup timeline={timeline} />
-          <AlsoKnowAsGroup timeline={timeline} />
-          <MocoGroup timeline={timeline} />
-          <DeveloperGroup timeline={timeline} />
-          <WithExtraSkillsGroup timeline={timeline} />
+          {/* <AlsoKnowAsGroup timeline={timeline} /> */}
+          {/* <MocoGroup timeline={timeline} /> */}
+          {/* <DeveloperGroup timeline={timeline} /> */}
+          {/* <WithExtraSkillsGroup timeline={timeline} /> */}
+          {/* <PostProcessing /> */}
         </Physics>
       </Suspense>
     </Canvas>

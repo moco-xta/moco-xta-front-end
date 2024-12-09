@@ -22,7 +22,7 @@ export default function GobelinoComponent({ timeline }: GobelinoConponentInterfa
 
   const gobelinoGroupRef = useRef<THREE.Group>(null!)
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     timeline.to(
       gobelinoGroupRef.current,
       {
@@ -33,7 +33,7 @@ export default function GobelinoComponent({ timeline }: GobelinoConponentInterfa
       },
       delay,
     )
-  })
+  }) */
 
   return (
     <group ref={gobelinoGroupRef}>

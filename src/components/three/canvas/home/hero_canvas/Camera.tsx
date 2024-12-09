@@ -7,8 +7,11 @@ import { default as heroCanvasConstants } from '@/constants/three/home/hero/hero
 export default function Camera() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
 
-  /* return (
-    <Float speed={heroCanvasConstants.PERSPECTIVE_CAMERA.FLOAT.SPEED}>
+  return (
+    <Float
+      speed={heroCanvasConstants.PERSPECTIVE_CAMERA.FLOAT.SPEED}
+      rotationIntensity={heroCanvasConstants.PERSPECTIVE_CAMERA.FLOAT.ROTAION_INTENSITY}
+    >
       <PerspectiveCamera
         ref={perspectiveCameraRef}
         makeDefault
@@ -19,9 +22,9 @@ export default function Camera() {
         ]}
         fov={heroCanvasConstants.PERSPECTIVE_CAMERA.FOV}
       />
-    </Float> */
+    </Float>
 
-  return (
+    /* return (
     <PerspectiveCamera
       ref={perspectiveCameraRef}
       makeDefault
@@ -33,6 +36,6 @@ export default function Camera() {
       fov={heroCanvasConstants.PERSPECTIVE_CAMERA.FOV}
       // near={heroCanvasConstants.PERSPECTIVE_CAMERA.NEAR}
       // far={heroCanvasConstants.PERSPECTIVE_CAMERA.FAR}
-    />
+    /> */
   )
 }

@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { Box } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
-import Portrait from './Portrait'
+import Mess from './mess/Mess'
 import AlsoKnowAsText from '../../also_know_as/also_know_as_text/AlsoKnowAsTextGroup'
 
 import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
@@ -28,25 +28,24 @@ export default function Foreground({ timeline }: ForegroundInterface) {
   useGSAP(
     () => {
       // POSITION
-      timeline
-        .to(
-          foregroundBoxGroupRef.current.position,
-          {
-            keyframes: {
-              '0%': {
-                z: foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
-              },
-              '25%': {
-                z: foregroundAnimationsConstants.ANIMATION['25_PERCENT'].POSITION.Z,
-              },
-              easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
+      timeline.to(
+        foregroundBoxGroupRef.current.position,
+        {
+          keyframes: {
+            '0%': {
+              z: foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
             },
-            duration: duration,
+            '25%': {
+              z: foregroundAnimationsConstants.ANIMATION['25_PERCENT'].POSITION.Z,
+            },
+            easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
           },
-          delay,
-        )
-        // ROTATION
-        .to(
+          duration: duration,
+        },
+        delay,
+      )
+      // ROTATION
+      /* .to(
           foregroundBoxGroupRef.current.rotation,
           {
             keyframes: {
@@ -65,9 +64,9 @@ export default function Foreground({ timeline }: ForegroundInterface) {
             duration: duration,
           },
           delay,
-        )
-        .to(
-          // VISIBILITY
+        ) */
+      // VISIBILITY
+      /* .to(
           foregroundBoxGroupRef.current,
           {
             keyframes: {
@@ -80,7 +79,7 @@ export default function Foreground({ timeline }: ForegroundInterface) {
             duration: duration,
           },
           delay,
-        )
+        ) */
     },
     { scope: foregroundBoxGroupRef },
   )
@@ -92,7 +91,7 @@ export default function Foreground({ timeline }: ForegroundInterface) {
       position={[0, -5, 0]}
       material={boxGroupMaterial}
     >
-      <Portrait timeline={timeline} />
+      <Mess timeline={timeline} />
       <AlsoKnowAsText timeline={timeline} />
     </Box>
   )

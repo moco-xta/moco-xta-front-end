@@ -27,12 +27,20 @@
         "LOGO_SASS": "/models/glb/home/hero/logos/LogoSass.glb",
         "LOGO_SPRING": "/models/glb/home/hero/logos/LogoSpring.glb",
         "LOGO_TAILWIND": "/models/glb/home/hero/logos/LogoTailwind.glb"
+      },
+      "PORTRAIT": {
+        "CHRISTUS": "/models/glb/home/hero/portrait/Christus.glb",
+        "COLOR_PICKER": "/models/glb/home/hero/portrait/ColorPicker.glb",
+        "COLORS": "/models/glb/home/hero/portrait/Colors.glb",
+        "GANESH": "/models/glb/home/hero/portrait/Ganesh.glb",
+        "HEART": "/models/glb/home/hero/portrait/Heart.glb",
+        "PAINT_BUCKET": "/models/glb/home/hero/portrait/PaintBucket.glb",
+        "SPRAY": "/models/glb/home/hero/portrait/Spray.glb"
       }
     },
     "AXIS": "/models/glb/Axis.glb",
     "EXO_MARKET": "/models/glb/ExoMarket.glb",
     "EXO_MARKET_SHUTTER": "/models/glb/ExoMarketShutter.glb",
-    "GANESH": "/models/glb/Ganesh.glb",
     "GOBELINO": "/models/glb/Gobelino.glb",
     "HEPTAGRAM": "/models/glb/Heptagram.glb",
     "MAC_BOOK_PRO": "/models/glb/MacBookPro.glb",

@@ -1,6 +1,6 @@
 {
   "CANVAS": {
-    "DPR": 1,
+    "DPR": 2,
     "LEGACY": false,
     "GL": {
       "ANTIALIAS": true,
@@ -24,12 +24,13 @@
     "NEAR": 0.01,
     "FAR": 20,
     "FLOAT": {
-      "SPEED": 2
+      "SPEED": 2,
+      "ROTAION_INTENSITY": 4
     }
   },
   "LIGHTS": {
     "AMBIENT_LIGHT": {
-      "INTENSITY": 0
+      "INTENSITY": 1
     },
     "DIRECTIONAL_LIGHTS": {
       "POSITIONS": [
@@ -49,7 +50,7 @@
           "Z": 10
         }
       ],
-      "INTENSITY": 0.33,
+      "INTENSITY": 0.5,
       "MAP_SIZE": [4096, 4096],
       "SHADOW_CAMERA_FAR": 20,
       "SHADOW_CAMERA_LEFT": -20,
