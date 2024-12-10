@@ -1,7 +1,14 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { Bloom, DepthOfField, EffectComposer } from '@react-three/postprocessing'
-import { DepthOfFieldEffect, KernelSize, Resolution } from 'postprocessing'
+import {
+  Bloom,
+  DepthOfField,
+  EffectComposer,
+  Noise,
+  Scanline,
+  Vignette,
+} from '@react-three/postprocessing'
+import { BlendFunction, DepthOfFieldEffect, KernelSize, Resolution } from 'postprocessing'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useFrame } from '@react-three/fiber'
@@ -18,7 +25,7 @@ export default function PostProcessing() {
     depthOfFieldRef.current.target = dofTargetRef.current
   })
 
-  /* useGSAP(() => {
+  useGSAP(() => {
     gsap.to(dofTargetRef.current, {
       x: -20,
       y: -20,
@@ -27,7 +34,7 @@ export default function PostProcessing() {
       duration: 3,
       ease: 'none',
     })
-  }) */
+  })
 
   return (
     <EffectComposer>
@@ -35,17 +42,29 @@ export default function PostProcessing() {
         ref={depthOfFieldRef}
         focalLength={0.01}
         bokehScale={20}
-        height={4096}
-        width={4096}
+        height={1024}
+        width={1024}
       />
       <Bloom
-        intensity={1}
+        intensity={0.5}
         kernelSize={KernelSize.LARGE}
         luminanceThreshold={0.05}
         luminanceSmoothing={0.025}
         mipmapBlur={false}
         resolutionX={Resolution.AUTO_SIZE}
         resolutionY={Resolution.AUTO_SIZE}
+      />
+      <Scanline
+        blendFunction={BlendFunction.DARKEN}
+        opacity={0.1}
+        density={0.8}
+      />
+      <Noise opacity={0.5} />
+      <Vignette
+        offset={0.5}
+        darkness={0.5}
+        eskil={false}
+        blendFunction={BlendFunction.NORMAL}
       />
     </EffectComposer>
   )

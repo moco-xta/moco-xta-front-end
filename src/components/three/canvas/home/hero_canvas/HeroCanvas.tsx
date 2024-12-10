@@ -60,7 +60,7 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
           {/* <MocoGroup timeline={timeline} /> */}
           {/* <DeveloperGroup timeline={timeline} /> */}
           {/* <WithExtraSkillsGroup timeline={timeline} /> */}
-          {/* <PostProcessing /> */}
+          <PostProcessing />
         </Physics>
       </Suspense>
     </Canvas>

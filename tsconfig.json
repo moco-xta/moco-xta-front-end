@@ -33,7 +33,8 @@
       "@/styles/*": ["styles/*"],
       "@/translations/*": ["translations/*"],
       "@/validations/*": ["validations/*"]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
