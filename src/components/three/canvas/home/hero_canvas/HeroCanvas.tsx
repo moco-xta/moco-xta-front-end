@@ -54,7 +54,7 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
           // timeStep={heroCanvasConstants.PHYSICS.TIME_STEP}
           paused={heroCanvasConstants.PHYSICS.PAUSED}
         >
-          {/* <GreetingGroup timeline={timeline} /> */}
+          <GreetingGroup timeline={timeline} />
           <PortraitGroup timeline={timeline} />
           {/* <AlsoKnowAsGroup timeline={timeline} /> */}
           {/* <MocoGroup timeline={timeline} /> */}

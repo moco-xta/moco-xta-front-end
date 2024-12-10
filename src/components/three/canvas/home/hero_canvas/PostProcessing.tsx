@@ -15,21 +15,21 @@ import { useFrame } from '@react-three/fiber'
 
 export default function PostProcessing() {
   const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)
-  const dofTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0))
+  const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 15))
 
   useLayoutEffect(() => {
-    depthOfFieldRef.current.target = dofTargetRef.current
+    depthOfFieldRef.current.target = depthOfFieldTargetRef.current
   }, [])
 
   useFrame(() => {
-    depthOfFieldRef.current.target = dofTargetRef.current
+    depthOfFieldRef.current.target = depthOfFieldTargetRef.current
   })
 
   useGSAP(() => {
-    gsap.to(dofTargetRef.current, {
-      x: -20,
-      y: -20,
-      z: -20,
+    gsap.to(depthOfFieldTargetRef.current, {
+      x: 0,
+      y: 0,
+      z: 0,
       delay: 1,
       duration: 3,
       ease: 'none',

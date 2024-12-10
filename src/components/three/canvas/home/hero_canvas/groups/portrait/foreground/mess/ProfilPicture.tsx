@@ -75,7 +75,7 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
         value: 1.0,
       },
     }),
-    [],
+    [portraitMap],
   )
 
   useEffect(() => {

@@ -27,45 +27,47 @@ export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
 
   useGSAP(
     () => {
-      timeline
-        // POSITION
-        .to(
-          grettingGroupRef.current.position,
-          {
-            keyframes: greetingGroupAnimations.position.keyframes,
-            duration: duration,
-          },
-          delay,
-        )
-        // ROTATION
-        .to(
-          grettingGroupRef.current.rotation,
-          {
-            keyframes: greetingGroupAnimations.rotation.keyframes,
-            duration: duration,
-          },
-          delay,
-        )
-        // VISIBILITY
-        .to(
-          grettingGroupRef.current,
-          {
-            keyframes: {
-              '0%': {
-                onComplete: () => {
-                  grettingGroupRef.current.visible = true
-                },
-              },
-              '100%': {
-                onComplete: () => {
-                  grettingGroupRef.current.visible = false
-                },
-              },
+      if (greetingGroupAnimationsConstants.ANIMATE) {
+        timeline
+          // POSITION
+          .to(
+            grettingGroupRef.current.position,
+            {
+              keyframes: greetingGroupAnimations.position.keyframes,
+              duration: duration,
             },
-            duration: duration,
-          },
-          delay,
-        )
+            delay,
+          )
+          // ROTATION
+          .to(
+            grettingGroupRef.current.rotation,
+            {
+              keyframes: greetingGroupAnimations.rotation.keyframes,
+              duration: duration,
+            },
+            delay,
+          )
+          // VISIBILITY
+          .to(
+            grettingGroupRef.current,
+            {
+              keyframes: {
+                '0%': {
+                  onComplete: () => {
+                    grettingGroupRef.current.visible = true
+                  },
+                },
+                '100%': {
+                  onComplete: () => {
+                    grettingGroupRef.current.visible = false
+                  },
+                },
+              },
+              duration: duration,
+            },
+            delay,
+          )
+      }
     },
     { scope: grettingGroupRef },
   )

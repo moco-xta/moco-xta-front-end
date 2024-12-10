@@ -2,6 +2,7 @@
   "NAME": "I_M_TEXT",
   "KEYFRAME_START": 0,
   "DURATION": 5,
+  "ANIMATE": false,
   "ANIMATION": {
     "20_PERCENT": {
       "POSITION": {

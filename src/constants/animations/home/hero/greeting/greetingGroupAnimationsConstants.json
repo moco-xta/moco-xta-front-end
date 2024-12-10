@@ -2,6 +2,7 @@
   "NAME": "HI_I_M_FEDERICO_GROUP",
   "KEYFRAME_START": 0,
   "DURATION": 5,
+  "ANIMATE": false,
   "ANIMATION": {
     "0_PERCENT": {
       "ROTATION": {
