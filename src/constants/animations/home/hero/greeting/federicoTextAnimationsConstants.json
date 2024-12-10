@@ -2,7 +2,7 @@
   "NAME": "FEDERICO_TEXT",
   "KEYFRAME_START": 0,
   "DURATION": 5,
-  "ANIMATE": false,
+  "ANIMATE": true,
   "ANIMATION": {
     "40_PERCENT": {
       "POSITION": {

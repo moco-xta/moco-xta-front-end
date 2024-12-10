@@ -2,7 +2,7 @@
   "NAME": "HI_TEXT",
   "KEYFRAME_START": 0,
   "DURATION": 5,
-  "ANIMATE": false,
+  "ANIMATE": true,
   "ANIMATION": {
     "0_PERCENT": {
       "POSITION": {

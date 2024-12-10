@@ -42,13 +42,6 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
     previousMouseCoordinates: new THREE.Vector2(0, 0),
   })
 
-  /* const portraitMaterial = new THREE.MeshStandardMaterial({
-    map: portraitMap,
-    transparent: true,
-    opacity: 0,
-    side: THREE.DoubleSide,
-  }) */
-
   const uniforms = useMemo(
     () => ({
       uTexture: {
@@ -112,34 +105,26 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
   })
 
   useGSAP(() => {
-    // MATERIAL
-    timeline.to(
-      portraitMeshRef.current.material,
-      {
-        keyframes: {
-          '0%': {
-            opacity: profilPictureAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+    if (profilPictureAnimationsConstants.ANIMATE) {
+      // MATERIAL
+      timeline.to(
+        portraitMeshRef.current.material,
+        {
+          keyframes: {
+            '0%': {
+              opacity: profilPictureAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+            },
+            '25%': {
+              opacity: profilPictureAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
+            },
+            easeEach: profilPictureAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
           },
-          '25%': {
-            opacity: profilPictureAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
-          },
-          easeEach: profilPictureAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+          duration: duration,
         },
-        duration: duration,
-      },
-      delay,
-    )
+        delay,
+      )
+    }
   })
-
-  /* return (
-    <Plane
-      ref={portraitMeshRef}
-      args={[7.5, 7.5]}
-      material={portraitMaterial}
-      receiveShadow
-      castShadow
-    />
-  ) */
 
   return (
     <Plane
@@ -151,7 +136,6 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
       <shaderMaterial
         ref={shaderMaterialRef}
         uniforms={uniforms}
-        // uniforms={uniformsRef.current}
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
         transparent

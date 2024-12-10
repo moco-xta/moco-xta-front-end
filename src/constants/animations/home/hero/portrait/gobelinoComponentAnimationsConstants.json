@@ -1,5 +1,6 @@
 {
   "NAME": "GOBELINO",
   "KEYFRAME_START": 4,
-  "DURATION": 5
+  "DURATION": 5,
+  "ANIMATE": true
 }

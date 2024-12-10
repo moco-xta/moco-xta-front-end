@@ -22,18 +22,20 @@ export default function GobelinoComponent({ timeline }: GobelinoConponentInterfa
 
   const gobelinoGroupRef = useRef<THREE.Group>(null!)
 
-  /* useGSAP(() => {
-    timeline.to(
-      gobelinoGroupRef.current,
-      {
-        onComplete: () => {
-          gobelinoGroupRef.current.visible = false
+  useGSAP(() => {
+    if (gobelinoComponentAnimationsConstants.ANIMATE) {
+      timeline.to(
+        gobelinoGroupRef.current,
+        {
+          onComplete: () => {
+            gobelinoGroupRef.current.visible = false
+          },
+          duration: duration,
         },
-        duration: duration,
-      },
-      delay,
-    )
-  }) */
+        delay,
+      )
+    }
+  })
 
   return (
     <group ref={gobelinoGroupRef}>

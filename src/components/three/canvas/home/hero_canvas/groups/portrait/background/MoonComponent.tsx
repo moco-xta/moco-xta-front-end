@@ -23,23 +23,25 @@ export default function MoonComponent({ timeline }: MoonComponentInterface) {
 
   useGSAP(
     () => {
-      // OPACITY
-      timeline.to(
-        moonComponentMeshRef.current.material,
-        {
-          keyframes: {
-            '0%': {
-              opacity: moonAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+      if (moonAnimationsConstants.ANIMATE) {
+        // OPACITY
+        timeline.to(
+          moonComponentMeshRef.current.material,
+          {
+            keyframes: {
+              '0%': {
+                opacity: moonAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+              },
+              '33%': {
+                opacity: moonAnimationsConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
+              },
+              easeEach: moonAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
             },
-            '33%': {
-              opacity: moonAnimationsConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
-            },
-            easeEach: moonAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+            duration: duration,
           },
-          duration: duration,
-        },
-        delay,
-      )
+          delay,
+        )
+      }
     },
     { scope: moonComponentMeshRef },
   )

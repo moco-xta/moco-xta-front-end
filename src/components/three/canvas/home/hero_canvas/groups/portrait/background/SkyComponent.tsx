@@ -23,71 +23,71 @@ export default function SkyComponent({ timeline }: SkyComponentInterface) {
 
   useGSAP(
     () => {
-      // POSITION
-      timeline.to(
-        // @ts-ignore
-        skyComponentMeshRef.current.position,
-        {
-          keyframes: {
-            '0%': {
-              y: skyAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+      if (skyAnimationsConstants.ANIMATE) {
+        // POSITION
+        timeline.to(
+          // @ts-ignore
+          skyComponentMeshRef.current.position,
+          {
+            keyframes: {
+              '0%': {
+                y: skyAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+              },
+              '33%': {
+                y: skyAnimationsConstants.ANIMATION['20_PERCENT'].POSITION.Y,
+              },
+              easeEach: skyAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
             },
-            '33%': {
-              y: skyAnimationsConstants.ANIMATION['20_PERCENT'].POSITION.Y,
-            },
-            easeEach: skyAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
+            duration: duration,
           },
-          duration: duration,
-        },
-        delay,
-      )
-
-      // COLOR
-      timeline.to(
-        // @ts-ignore
-        skyComponentMeshRef.current.material.color,
-        {
-          keyframes: {
-            '0%': {
-              r: skyAnimationsConstants.ANIMATION['0_PERCENT'].COLOR.R,
-              g: skyAnimationsConstants.ANIMATION['0_PERCENT'].COLOR.G,
-              b: skyAnimationsConstants.ANIMATION['0_PERCENT'].COLOR.B,
+          delay,
+        )
+        // COLOR
+        timeline.to(
+          // @ts-ignore
+          skyComponentMeshRef.current.material.color,
+          {
+            keyframes: {
+              '0%': {
+                r: skyAnimationsConstants.ANIMATION['0_PERCENT'].COLOR.R,
+                g: skyAnimationsConstants.ANIMATION['0_PERCENT'].COLOR.G,
+                b: skyAnimationsConstants.ANIMATION['0_PERCENT'].COLOR.B,
+              },
+              '40%': {
+                r: skyAnimationsConstants.ANIMATION['40_PERCENT'].COLOR.R,
+                g: skyAnimationsConstants.ANIMATION['40_PERCENT'].COLOR.G,
+                b: skyAnimationsConstants.ANIMATION['40_PERCENT'].COLOR.B,
+              },
+              '60%': {
+                r: skyAnimationsConstants.ANIMATION['60_PERCENT'].COLOR.R,
+                g: skyAnimationsConstants.ANIMATION['60_PERCENT'].COLOR.G,
+                b: skyAnimationsConstants.ANIMATION['60_PERCENT'].COLOR.B,
+              },
+              easeEach: 'power1.in',
             },
-            '40%': {
-              r: skyAnimationsConstants.ANIMATION['40_PERCENT'].COLOR.R,
-              g: skyAnimationsConstants.ANIMATION['40_PERCENT'].COLOR.G,
-              b: skyAnimationsConstants.ANIMATION['40_PERCENT'].COLOR.B,
-            },
-            '60%': {
-              r: skyAnimationsConstants.ANIMATION['60_PERCENT'].COLOR.R,
-              g: skyAnimationsConstants.ANIMATION['60_PERCENT'].COLOR.G,
-              b: skyAnimationsConstants.ANIMATION['60_PERCENT'].COLOR.B,
-            },
-            easeEach: 'power1.in',
+            duration: duration,
           },
-          duration: duration,
-        },
-        delay,
-      )
-
-      // OPACITY
-      timeline.to(
-        // @ts-ignore
-        skyComponentMeshRef.current.material,
-        {
-          keyframes: {
-            '0%': {
-              opacity: skyAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+          delay,
+        )
+        // OPACITY
+        timeline.to(
+          // @ts-ignore
+          skyComponentMeshRef.current.material,
+          {
+            keyframes: {
+              '0%': {
+                opacity: skyAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+              },
+              '33%': {
+                opacity: skyAnimationsConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
+              },
+              easeEach: skyAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
             },
-            '33%': {
-              opacity: skyAnimationsConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
-            },
-            easeEach: skyAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+            duration: duration,
           },
-          duration: duration,
-        },
-        delay,
-      )
+          delay,
+        )
+      }
     },
     { scope: skyComponentMeshRef },
   )

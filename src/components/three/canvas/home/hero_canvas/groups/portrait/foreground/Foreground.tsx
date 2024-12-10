@@ -27,59 +27,62 @@ export default function Foreground({ timeline }: ForegroundInterface) {
 
   useGSAP(
     () => {
-      // POSITION
-      timeline.to(
-        foregroundBoxGroupRef.current.position,
-        {
-          keyframes: {
-            '0%': {
-              z: foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
-            },
-            '25%': {
-              z: foregroundAnimationsConstants.ANIMATION['25_PERCENT'].POSITION.Z,
-            },
-            easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
-          },
-          duration: duration,
-        },
-        delay,
-      )
-      // ROTATION
-      /* .to(
-          foregroundBoxGroupRef.current.rotation,
-          {
-            keyframes: {
-              '50%': {
-                z: THREE.MathUtils.degToRad(
-                  foregroundAnimationsConstants.ANIMATION['50_PERCENT'].ROTATION.Z,
-                ),
+      if (foregroundAnimationsConstants.ANIMATE) {
+        // POSITION
+        timeline
+          .to(
+            foregroundBoxGroupRef.current.position,
+            {
+              keyframes: {
+                '0%': {
+                  z: foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+                },
+                '25%': {
+                  z: foregroundAnimationsConstants.ANIMATION['25_PERCENT'].POSITION.Z,
+                },
+                easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
               },
-              '75%': {
-                z: THREE.MathUtils.degToRad(
-                  foregroundAnimationsConstants.ANIMATION['75_PERCENT'].ROTATION.Z,
-                ),
-              },
-              easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.ROTATION,
+              duration: duration,
             },
-            duration: duration,
-          },
-          delay,
-        ) */
-      // VISIBILITY
-      /* .to(
-          foregroundBoxGroupRef.current,
-          {
-            keyframes: {
-              '100%': {
-                onComplete: () => {
-                  foregroundBoxGroupRef.current.visible = false
+            delay,
+          )
+          // ROTATION
+          .to(
+            foregroundBoxGroupRef.current.rotation,
+            {
+              keyframes: {
+                '50%': {
+                  z: THREE.MathUtils.degToRad(
+                    foregroundAnimationsConstants.ANIMATION['50_PERCENT'].ROTATION.Z,
+                  ),
+                },
+                '75%': {
+                  z: THREE.MathUtils.degToRad(
+                    foregroundAnimationsConstants.ANIMATION['75_PERCENT'].ROTATION.Z,
+                  ),
+                },
+                easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.ROTATION,
+              },
+              duration: duration,
+            },
+            delay,
+          )
+          // VISIBILITY
+          .to(
+            foregroundBoxGroupRef.current,
+            {
+              keyframes: {
+                '100%': {
+                  onComplete: () => {
+                    foregroundBoxGroupRef.current.visible = false
+                  },
                 },
               },
+              duration: duration,
             },
-            duration: duration,
-          },
-          delay,
-        ) */
+            delay,
+          )
+      }
     },
     { scope: foregroundBoxGroupRef },
   )
