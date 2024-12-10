@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { AppDispatch } from '@/redux/store'
 import { setShowInstructions } from '@/redux/slice/aboutSlice'
 
-import { default as aboutConstants } from '@/constants/canvas/about/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/three/about/aboutConstants.json'
 
 import './index.scss'
 

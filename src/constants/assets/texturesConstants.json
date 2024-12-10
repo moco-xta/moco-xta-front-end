@@ -542,5 +542,8 @@
   },
   "SHADERS": {
     "EXPLOSION": "/img/png/shaders/explosion.png"
+  },
+  "MATCAPS": {
+    "CHRISTUS": "/img/textures/matcaps/36220C_C6C391_8C844A_8B7B4C.png"
   }
 }

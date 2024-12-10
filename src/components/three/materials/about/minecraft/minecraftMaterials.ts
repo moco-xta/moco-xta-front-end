@@ -2,7 +2,7 @@ import * as THREE from 'three'
 
 import minecraftTextures from './minecraftTextures'
 
-import { default as minecraftConstants } from '@/constants/canvas/about/minecraft/minecraftConstants.json'
+import { default as minecraftConstants } from '@/constants/three/about/minecraft/minecraftConstants.json'
 
 const minecraftGroundMap = minecraftTextures['groundTexture']
 minecraftGroundMap.repeat.set(

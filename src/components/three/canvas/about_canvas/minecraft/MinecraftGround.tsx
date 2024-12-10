@@ -8,7 +8,7 @@ import { addCube } from '@/redux/slice/minecraftSlice'
 
 import { minecraftGroundMaterial } from '../../../materials/about/minecraft/minecraftMaterials'
 
-import { default as minecraftConstants } from '@/constants/canvas/about/minecraft/minecraftConstants.json'
+import { default as minecraftConstants } from '@/constants/three/about/minecraft/minecraftConstants.json'
 
 export default function MinecraftGround() {
   const dispatch = useDispatch<AppDispatch>()

@@ -7,7 +7,7 @@ import useModelHoverEffect from '@/hooks/useModelHoverEffect'
 
 import Anaglyph from '../../post_processing/Anaglyph'
 
-import { default as logoConstants } from '@/constants/canvas/logoConstants.json'
+import { default as logoConstants } from '@/constants/three/logoConstants.json'
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 
 type GLTFResult = GLTF & {

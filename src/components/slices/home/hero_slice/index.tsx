@@ -9,11 +9,9 @@ import { default as heroAnimationsConstants } from '@/constants/animations/home/
 import './index.scss'
 
 export default function HeroSlice() {
-  const timelineRef = useRef<GSAPTimeline>(
-    gsap.timeline({
-      delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
-    }),
-  )
+  const timeline = gsap.timeline({
+    delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
+  })
   const heroSliceRef = useRef<HTMLElement>(null!)
 
   useGSAP(() => {}, { scope: heroSliceRef })
@@ -25,7 +23,7 @@ export default function HeroSlice() {
         id='hero_slice'
         className='fullscreen'
       >
-        <HeroCanvas timeline={timelineRef.current} />
+        <HeroCanvas timeline={timeline} />
       </section>
     </>
   )

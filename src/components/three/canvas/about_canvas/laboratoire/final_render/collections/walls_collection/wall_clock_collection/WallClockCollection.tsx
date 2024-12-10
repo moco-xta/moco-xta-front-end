@@ -8,7 +8,7 @@ import { SecondHand } from '@/components/three/models/about/laboratoire/final_re
 import { WallClock } from '@/components/three/models/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClock'
 import { WallClockGlass } from '@/components/three/models/about/laboratoire/final_render/walls_collection/wall_clock_collection/WallClockGlass'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/three/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function WallClockCollection() {
   const [date, setDate] = useState<Date>(new Date())

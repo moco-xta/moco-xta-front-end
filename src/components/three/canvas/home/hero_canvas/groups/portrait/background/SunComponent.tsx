@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { Sun } from '@/components/three/models/home/hero/gobelino/Sun'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as sunAnimationsConstants } from '@/constants/animations/home/hero/federico_portrait/sunAnimationsConstants.json'
+import { default as sunAnimationsConstants } from '@/constants/animations/home/hero/portrait/sunAnimationsConstants.json'
 
 interface SunComponentInterface {
   timeline: GSAPTimeline

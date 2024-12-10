@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { Buho } from '@/components/three/models/home/hero/Buho'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as buhosAnimationsConstants } from '@/constants/animations/home/hero/also_konw_as_group/buhosAnimationsConstants.json'
+import { default as buhosAnimationsConstants } from '@/constants/animations/home/hero/also_konw_as/buhosAnimationsConstants.json'
 
 interface BuhoComponentInterface {
   timeline: GSAPTimeline

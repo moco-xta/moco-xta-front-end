@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/hiTextAnimationsConstants.json'
 
@@ -34,32 +34,34 @@ export default function HiText({ timeline }: HiTextInterface) {
 
   useGSAP(
     () => {
-      const hiLetters = gsap.utils.toArray(hiTextGroupRef.current.children)
-      hiLetters.forEach((letter, index) => {
-        // POSITION
-        timeline.to(
-          // @ts-ignore
-          letter.position,
-          {
-            keyframes: hiTextAnimations.position.keyframes,
-            duration: duration,
-          },
-          delay +
-            (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
-        )
+      if (hiTextAnimationsContants.ANIMATE) {
+        const hiLetters = gsap.utils.toArray(hiTextGroupRef.current.children)
+        hiLetters.forEach((letter, index) => {
+          // POSITION
+          timeline.to(
+            // @ts-ignore
+            letter.position,
+            {
+              keyframes: hiTextAnimations.position.keyframes,
+              duration: duration,
+            },
+            delay +
+              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+          )
 
-        // MATERIAL
-        timeline.to(
-          // @ts-ignore
-          letter.material,
-          {
-            keyframes: hiTextAnimations.rotation.keyframes,
-            duration: duration,
-          },
-          delay +
-            (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
-        )
-      })
+          // MATERIAL
+          timeline.to(
+            // @ts-ignore
+            letter.material,
+            {
+              keyframes: hiTextAnimations.rotation.keyframes,
+              duration: duration,
+            },
+            delay +
+              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+          )
+        })
+      }
     },
     { scope: hiTextGroupRef },
   )
@@ -85,9 +87,13 @@ export default function HiText({ timeline }: HiTextInterface) {
       <meshStandardMaterial
         color={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.COLOR}
         transparent={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.TRANSPARENT}
-        opacity={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.OPACITY}
+        opacity={
+          hiTextAnimationsContants.ANIMATE
+            ? heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.OPACITY
+            : 1
+        }
         // emissive={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.EMISSIVE}
-        side={THREE.DoubleSide}
+        // side={THREE.DoubleSide}
       />
     </Word3D>
   )

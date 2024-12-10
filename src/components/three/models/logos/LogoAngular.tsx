@@ -11,7 +11,7 @@ import IntersectCube from './IntersectCube'
 
 import { mainSkillsLogoMaterial } from '../../materials/mainSkillsLogoMaterial'
 
-import { default as mainSkillsConstants } from '@/constants/canvas/mainSkillsConstants.json'
+import { default as mainSkillsConstants } from '@/constants/three/mainSkillsConstants.json'
 import { default as gltfConstants } from '@/constants/assets/gltfConstants.json'
 import { GroupProps } from '@react-three/fiber'
 

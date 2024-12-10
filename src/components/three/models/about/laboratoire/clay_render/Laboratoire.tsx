@@ -1,6 +1,6 @@
 import React from 'react'
 import * as THREE from 'three'
-import { MeshTransmissionMaterial, useGLTF, useTexture } from '@react-three/drei'
+import { MeshTransmissionMaterial, useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import {

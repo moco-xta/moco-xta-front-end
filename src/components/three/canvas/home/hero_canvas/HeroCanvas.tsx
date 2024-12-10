@@ -5,13 +5,15 @@ import { Physics } from '@react-three/rapier'
 
 import Camera from './Camera'
 import Lights from './lights/Lights'
-import HiImFedericoGroup from './groups/greeting/HiImFedericoGroup'
-import FedericoPortraitGroup from './groups/portrait/FedericoPortraitGroup'
+import GreetingGroup from './groups/greeting/GreetingGroup'
+import PortraitGroup from './groups/portrait/PortraitGroup'
 import AlsoKnowAsGroup from './groups/also_know_as/AlsoKnowAsGroup'
-import MocoHeliumBalloons from './groups/moco/MocoHeliumBalloons'
-import AFrontEndDeveloperGroup from './groups/developer/AFrontEndDeveloperGroup'
+import MocoGroup from './groups/moco/MocoHeliumBalloons'
+import DeveloperGroup from './groups/developer/DeveloperGroup'
+import WithExtraSkillsGroup from './groups/with_extra_skills/WithExtraSkillsGroup'
 
-import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
+import PostProcessing from './PostProcessing'
 
 interface HeroCanvasInterface {
   timeline: GSAPTimeline
@@ -52,11 +54,13 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
           // timeStep={heroCanvasConstants.PHYSICS.TIME_STEP}
           paused={heroCanvasConstants.PHYSICS.PAUSED}
         >
-          <HiImFedericoGroup timeline={timeline} />
-          <FedericoPortraitGroup timeline={timeline} />
-          <AlsoKnowAsGroup timeline={timeline} />
-          <MocoHeliumBalloons timeline={timeline} />
-          <AFrontEndDeveloperGroup timeline={timeline} />
+          <GreetingGroup timeline={timeline} />
+          <PortraitGroup timeline={timeline} />
+          {/* <AlsoKnowAsGroup timeline={timeline} /> */}
+          {/* <MocoGroup timeline={timeline} /> */}
+          {/* <DeveloperGroup timeline={timeline} /> */}
+          {/* <WithExtraSkillsGroup timeline={timeline} /> */}
+          <PostProcessing />
         </Physics>
       </Suspense>
     </Canvas>

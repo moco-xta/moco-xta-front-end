@@ -6,7 +6,7 @@ import PlatonicSolids from './platonic_solids/PlatonicSolids'
 import { Shelf } from '@/components/three/models/about/laboratoire/final_render/shelf_collection/Shelf'
 import { VirgenDeGuadalupe } from '@/components/three/models/about/laboratoire/final_render/shelf_collection/VirgenDeGuadalupe'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/three/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function ShelfCollection() {
   return (

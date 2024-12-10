@@ -6,10 +6,11 @@ import { useTranslations } from 'next-intl'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroCanvasConstants } from '@/constants/canvas/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/imTextAnimationsConstants.json'
-import { imTextPositionAnimation, imTextMaterialAnimation } from 'animations'
+import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/imTESTAnimationsConstants.json'
+
+import { imTextMaterialAnimation, imTextPositionAnimation } from 'animations'
 
 interface ImTextInterface {
   timeline: GSAPTimeline
@@ -18,6 +19,9 @@ interface ImTextInterface {
 export default function ImText({ timeline }: ImTextInterface) {
   const t = useTranslations('HOME')
 
+  const [imText] = useState<string>(t('HERO.I_M').toUpperCase())
+  const [imTextSplitted] = useState<string[]>(imText.split(''))
+
   const [duration] = useState<number>(
     imTextAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )
@@ -25,40 +29,39 @@ export default function ImText({ timeline }: ImTextInterface) {
     imTextAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
   )
 
-  const [imText] = useState<string>(t('HERO.I_M').toUpperCase())
-  const [imTextSplitted] = useState<string[]>(imText.split(''))
-
   const imTextGroupRef = useRef<THREE.Group>(null!)
   const imTextLengthRef = useRef<number[]>([])
 
   useGSAP(
     () => {
-      const imLetters = gsap.utils.toArray(imTextGroupRef.current.children)
-      imLetters.forEach((letter, index) => {
-        // POSITION
-        timeline.to(
-          // @ts-ignore
-          letter.position,
-          {
-            keyframes: imTextPositionAnimation(imTextLengthRef.current, index),
-            duration: duration,
-          },
-          delay +
-            (index * imTextAnimationsConstants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
-        )
+      if (imTextAnimationsConstants.ANIMATE) {
+        const imLetters = gsap.utils.toArray(imTextGroupRef.current.children)
+        imLetters.forEach((letter, index) => {
+          // POSITION
+          timeline.to(
+            // @ts-ignore
+            letter.position,
+            {
+              keyframes: imTextPositionAnimation(imTextLengthRef.current, index),
+              duration: duration,
+            },
+            delay +
+              (index * imTextAnimationsConstants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+          )
 
-        // MATERIAL
-        timeline.to(
-          // @ts-ignore
-          letter.material,
-          {
-            keyframes: imTextMaterialAnimation.keyframes,
-            duration: duration,
-          },
-          delay +
-            (index * imTextAnimationsConstants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
-        )
-      })
+          // MATERIAL
+          timeline.to(
+            // @ts-ignore
+            letter.material,
+            {
+              keyframes: imTextMaterialAnimation.keyframes,
+              duration: duration,
+            },
+            delay +
+              (index * imTextAnimationsConstants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+          )
+        })
+      }
     },
     { scope: imTextGroupRef },
   )
@@ -84,9 +87,13 @@ export default function ImText({ timeline }: ImTextInterface) {
       <meshStandardMaterial
         color={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.COLOR}
         transparent={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.TRANSPARENT}
-        opacity={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.OPACITY}
+        opacity={
+          imTextAnimationsConstants.ANIMATE
+            ? heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.OPACITY
+            : 1
+        }
         // emissive={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.EMISSIVE}
-        side={THREE.DoubleSide}
+        // side={THREE.DoubleSide}
       />
     </Word3D>
   )

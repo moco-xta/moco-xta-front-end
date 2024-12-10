@@ -7,7 +7,7 @@ import { CannonPlayerInterface } from '@/interfaces/threeInterfaces'
 
 import { useAboutKeyboard } from '@/hooks/useAboutKeyboard'
 
-import { default as aboutConstants } from '@/constants/canvas/about/aboutConstants.json'
+import { default as aboutConstants } from '@/constants/three/about/aboutConstants.json'
 
 export const CannonPlayer = ({ pointerLockControlsSelector }: CannonPlayerInterface) => {
   const { camera, gl } = useThree()

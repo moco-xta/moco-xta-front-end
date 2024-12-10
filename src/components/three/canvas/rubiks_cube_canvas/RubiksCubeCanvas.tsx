@@ -6,7 +6,7 @@ import Lights from './Lights'
 import Controls from './Controls'
 import RubiksCube from './RubiksCube'
 
-import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/three/rubiksCubeConstants.json'
 
 export default function RubiksCubeCanvas() {
   return (

@@ -3,7 +3,7 @@ import { menuAnimation } from './shared/menu'
 import {
   imTextPositionAnimation,
   imTextMaterialAnimation,
-  hiImFedericoGroupAnimations,
+  greetingGroupAnimations,
   hiTextAnimations,
   federicoTextPositionAnimation,
   federicoTextMaterialAnimation,
@@ -14,7 +14,7 @@ export {
   imTextPositionAnimation,
   imTextMaterialAnimation,
   menuAnimation,
-  hiImFedericoGroupAnimations,
+  greetingGroupAnimations,
   hiTextAnimations,
   federicoTextPositionAnimation,
   federicoTextMaterialAnimation,

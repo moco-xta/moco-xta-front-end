@@ -5,7 +5,7 @@ import { Door } from '@/components/three/models/about/laboratoire/final_render/w
 import { DoorFrame } from '@/components/three/models/about/laboratoire/final_render/walls_collection/door_collection/DoorFrame'
 import { DoorHandle } from '@/components/three/models/about/laboratoire/final_render/walls_collection/door_collection/DoorHandle'
 
-import { default as laboratoireFinalRenderConstants } from '@/constants/canvas/about/laboratoire/laboratoireFinalRenderConstants.json'
+import { default as laboratoireFinalRenderConstants } from '@/constants/three/about/laboratoire/laboratoireFinalRenderConstants.json'
 
 export default function DoorCollection() {
   return (

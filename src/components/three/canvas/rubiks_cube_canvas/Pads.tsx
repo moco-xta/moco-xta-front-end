@@ -5,7 +5,7 @@ import { PadsInterface } from '@/interfaces/rubiksCubeInterfaces'
 
 import { padsData } from '@/data/rubiks_cube/padsData'
 
-import { default as rubiksCubeConstants } from '@/constants/canvas/rubiksCubeConstants.json'
+import { default as rubiksCubeConstants } from '@/constants/three/rubiksCubeConstants.json'
 
 import { setPadRotation, setRoundedCubeType } from '@/helpers/rubiks_cube/rubiksCubeHelpers'
 
