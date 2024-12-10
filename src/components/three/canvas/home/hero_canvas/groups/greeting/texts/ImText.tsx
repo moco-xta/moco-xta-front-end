@@ -8,7 +8,7 @@ import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
 import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/imTextAnimationsConstants.json'
+import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/changeName.json'
 
 import { imTextMaterialAnimation, imTextPositionAnimation } from 'animations'
 
