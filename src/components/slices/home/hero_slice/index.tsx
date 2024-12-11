@@ -86,9 +86,9 @@ export default function HeroSlice() {
                     .BACKGROUND_IMAGE,
               },
               '100%': {
-                // backgroundImage: heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['100_PERCENT'].BACKGROUND_IMAGE
-                background: '#f0f',
-                backgroundImage: 'unset',
+                backgroundImage:
+                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['100_PERCENT']
+                    .BACKGROUND_IMAGE,
               },
               easeEach: 'none',
             },
@@ -108,9 +108,7 @@ export default function HeroSlice() {
         id='hero_slice'
         className='fullscreen'
         style={{
-          // backgroundImage: heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['100_PERCENT'].BACKGROUND_IMAGE,
           background: '#fff',
-          // backgroundImage: 'unset'
         }}
       >
         <HeroCanvas timeline={timeline} />

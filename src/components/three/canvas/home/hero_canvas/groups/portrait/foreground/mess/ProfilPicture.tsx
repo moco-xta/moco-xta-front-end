@@ -29,12 +29,14 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
   const portraitMeshRef = useRef<THREE.Mesh>(null!)
   const shaderMaterialRef = useRef<THREE.ShaderMaterial>(null!)
   const mouseDataRef = useRef<{
+    opacity: number
     speed: number
     targetSpeed: number
     mouseCoordinates: THREE.Vector2
     followMouseCoordinates: THREE.Vector2
     previousMouseCoordinates: THREE.Vector2
   }>({
+    opacity: 0,
     speed: 0,
     targetSpeed: 0,
     mouseCoordinates: new THREE.Vector2(0, 0),
@@ -44,36 +46,19 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
 
   const uniforms = useMemo(
     () => ({
+      uAlpha: {
+        value: 1.0,
+      },
       uTexture: {
         type: 't',
         value: portraitMap,
       },
-      uVelocity: {
-        value: 0.0,
-      },
-      uType: {
-        value: 0,
-      },
       uMouse: {
         value: new THREE.Vector2(0.0, 0.0),
-      },
-      uResolution: {
-        type: 'v4',
-        value: new THREE.Vector4(400.0, 400.0, 1.0, 1.0),
-      },
-      uOffset: {
-        value: new THREE.Vector2(0.0, 0.0),
-      },
-      uAlpha: {
-        value: 1.0,
       },
     }),
     [portraitMap],
   )
-
-  useEffect(() => {
-    if (shaderMaterialRef.current) console.log('shaderMaterialRef', shaderMaterialRef)
-  }, [shaderMaterialRef])
 
   const getMouseData = (mouseCoordinates: THREE.Vector2) => {
     mouseDataRef.current.speed = Math.sqrt(
@@ -92,23 +77,11 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
     mouseDataRef.current.previousMouseCoordinates.y = mouseCoordinates.y
   }
 
-  useFrame(({ gl, scene, camera, mouse }, delta, xrFrame) => {
-    // console.log('delta', delta)
-    // console.log('uniformsRef.current.time', uniformsRef.current.time)
-    // console.log('timeline.time()', timeline.time())
-    // console.log('mouse', mouse)
-    getMouseData(mouse)
-    shaderMaterialRef.current.uniforms.uMouse.value = mouseDataRef.current.followMouseCoordinates
-    // shaderMaterialRef.current.uniforms.uMouse.value = new THREE.Vector2(2, 2)
-    shaderMaterialRef.current.uniforms.uVelocity.value = mouseDataRef.current.targetSpeed
-    // shaderMaterialRef.current.uniforms.uVelocity.value = 1000
-  })
-
   useGSAP(() => {
-    if (profilPictureAnimationsConstants.ANIMATE) {
+    if (profilPictureAnimationsConstants.ANIMATE)
       // MATERIAL
       timeline.to(
-        portraitMeshRef.current.material,
+        mouseDataRef.current,
         {
           keyframes: {
             '0%': {
@@ -123,7 +96,12 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
         },
         delay,
       )
-    }
+  })
+
+  useFrame(({ pointer }) => {
+    getMouseData(pointer)
+    shaderMaterialRef.current.uniforms.uMouse.value = mouseDataRef.current.followMouseCoordinates
+    shaderMaterialRef.current.uniforms.uAlpha.value = mouseDataRef.current.opacity
   })
 
   return (
@@ -136,6 +114,7 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
       <shaderMaterial
         ref={shaderMaterialRef}
         uniforms={uniforms}
+        // uniforms={uniformsRef.current}
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
         transparent
