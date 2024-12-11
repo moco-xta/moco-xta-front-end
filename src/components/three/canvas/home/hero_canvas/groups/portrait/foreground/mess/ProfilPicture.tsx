@@ -8,8 +8,8 @@ import vertexShader from '@/components/three/shaders/profil_picture/vertexShader
 import fragmentShader from '@/components/three/shaders/profil_picture/fragmentShader.glsl'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 import { default as profilPictureAnimationsConstants } from '@/constants/animations/home/hero/portrait/profilPictureAnimationsConstants.json'
+import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 interface ProfilPictureInterface {
   timeline: GSAPTimeline

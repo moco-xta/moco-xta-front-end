@@ -18,8 +18,8 @@ export default function Mess({ timeline }: MessInterface) {
       <ToolsGroup timeline={timeline} />
       <LogoRCL timeline={timeline} />
       <ProfilPicture timeline={timeline} />
-      <ChristusComponent />
-      <GaneshComponent />
+      <ChristusComponent timeline={timeline} />
+      <GaneshComponent timeline={timeline} />
     </group>
   )
 }

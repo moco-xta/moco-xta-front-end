@@ -1,0 +1,21 @@
+{
+  "NAME": "CHRISTUS_COMPONENT",
+  "KEYFRAME_START": 4,
+  "DURATION": 4,
+  "ANIMATE": true,
+  "ANIMATION": {
+    "0_PERCENT": {
+      "MATERIAL": {
+        "OPACITY": 0
+      }
+    },
+    "25_PERCENT": {
+      "MATERIAL": {
+        "OPACITY": 1
+      }
+    },
+    "EACH_EASE": {
+      "MATERIAL": "power1.in"
+    }
+  }
+}

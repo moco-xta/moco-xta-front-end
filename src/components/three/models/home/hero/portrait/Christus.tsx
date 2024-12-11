@@ -23,6 +23,8 @@ export const Christus = forwardRef<THREE.Mesh, MeshProps>(function Christus(prop
 
   const chiristusMaterial = new THREE.MeshMatcapMaterial({
     matcap: christusMap,
+    transparent: true,
+    opacity: 0,
   })
 
   return (
