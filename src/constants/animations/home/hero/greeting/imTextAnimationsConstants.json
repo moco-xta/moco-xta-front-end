@@ -2,13 +2,13 @@
   "NAME": "I_M_TEXT",
   "KEYFRAME_START": 0,
   "DURATION": 5,
-  "ANIMATE": true,
+  "PAUSED": false,
   "ANIMATION": {
     "0_PERCENT": {
       "POSITION": {
-        "X": 1.5,
-        "Y": 0.75,
-        "Z": -5
+        "X": 2.2,
+        "Y": 1.6,
+        "Z": 0
       },
       "MATERIAL": {
         "OPACITY": 0
@@ -16,7 +16,7 @@
     },
     "20_PERCENT": {
       "POSITION": {
-        "X": 1.5,
+        "X": 2.2,
         "Z": -5
       }
     },
@@ -27,7 +27,7 @@
     },
     "40_PERCENT": {
       "POSITION": {
-        "Z": 5
+        "Z": 0
       },
       "MATERIAL": {
         "OPACITY": 1,

@@ -7,8 +7,8 @@ import ImText from './texts/ImText'
 import FedericoText from './texts/FedericoText'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as greetingAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingAnimationsConstants.json'
 import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
-import { default as hiImFedericoGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
 
 import { greetingGroupAnimations } from 'animations'
 
@@ -28,7 +28,7 @@ export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
 
   useGSAP(
     () => {
-      if (greetingGroupAnimationsConstants.ANIMATE) {
+      if (!greetingAnimationsConstants.PAUSED && !greetingGroupAnimationsConstants.PAUSED) {
         timeline
           // POSITION
           .to(
@@ -49,7 +49,7 @@ export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
             delay,
           )
           // VISIBILITY
-          .to(
+          /* .to(
             grettingGroupRef.current,
             {
               keyframes: {
@@ -67,7 +67,7 @@ export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
               duration: duration,
             },
             delay,
-          )
+          ) */
       }
     },
     { scope: grettingGroupRef },
@@ -77,16 +77,22 @@ export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
       ref={grettingGroupRef}
       position={
         new THREE.Vector3(
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
       rotation={
         new THREE.Euler(
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.X,
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Y,
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z,
+          THREE.MathUtils.degToRad(
+            greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.X,
+          ),
+          THREE.MathUtils.degToRad(
+            greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Y,
+          ),
+          THREE.MathUtils.degToRad(
+            greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z,
+          ),
         )
       }
     >

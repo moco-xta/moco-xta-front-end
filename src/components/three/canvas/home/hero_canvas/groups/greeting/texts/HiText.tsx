@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl'
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as greetingAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingAnimationsConstants.json'
 import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
 import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/hiTextAnimationsConstants.json'
 
@@ -34,30 +35,32 @@ export default function HiText({ timeline }: HiTextInterface) {
 
   useGSAP(
     () => {
-      if (hiTextAnimationsContants.ANIMATE) {
+      if (!greetingAnimationsConstants.PAUSED && !hiTextAnimationsContants.PAUSED) {
         const hiLetters: THREE.Mesh[] = gsap.utils.toArray(hiTextGroupRef.current.children)
         hiLetters.forEach((letter, index) => {
           // POSITION
-          timeline.to(
-            letter.position,
-            {
-              keyframes: hiTextAnimations.position.keyframes,
-              duration: duration,
-            },
-            delay +
-              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
-          )
-
-          // MATERIAL
-          timeline.to(
-            letter.material,
-            {
-              keyframes: hiTextAnimations.rotation.keyframes,
-              duration: duration,
-            },
-            delay +
-              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
-          )
+          timeline
+            .to(
+              letter.position,
+              {
+                keyframes: hiTextAnimations.position.keyframes,
+                duration: duration,
+              },
+              delay +
+                (index * hiTextAnimationsContants.ANIMATION.STAGGER) /
+                  heroAnimationsConstants.SPEED,
+            )
+            // MATERIAL
+            .to(
+              letter.material,
+              {
+                keyframes: hiTextAnimations.rotation.keyframes,
+                duration: duration,
+              },
+              delay +
+                (index * hiTextAnimationsContants.ANIMATION.STAGGER) /
+                  heroAnimationsConstants.SPEED,
+            )
         })
       }
     },
@@ -69,9 +72,8 @@ export default function HiText({ timeline }: HiTextInterface) {
       ref={hiTextGroupRef}
       keyPrefix={'hi_text'}
       font={greetingTextsAnimationsConstants.GEOMETRY.FONT}
-      size={greetingTextsAnimationsConstants.GEOMETRY.SIZES.HI_TEXT}
+      size={greetingTextsAnimationsConstants.GEOMETRY.SIZES.DEFAULT}
       depth={greetingTextsAnimationsConstants.GEOMETRY.DEPTH}
-      splittedWord={hiTextSplitted}
       position={
         new THREE.Vector3(
           hiTextAnimationsContants.ANIMATION['0_PERCENT'].POSITION.X,
@@ -80,13 +82,14 @@ export default function HiText({ timeline }: HiTextInterface) {
         )
       }
       center={true}
+      splittedWord={hiTextSplitted}
       lengthRef={hiTextLengthRef}
     >
       <meshStandardMaterial
         color={greetingTextsAnimationsConstants.MATERIAL.COLOR}
         transparent={greetingTextsAnimationsConstants.MATERIAL.TRANSPARENT}
         opacity={
-          hiTextAnimationsContants.ANIMATE
+          !greetingAnimationsConstants.PAUSED && !hiTextAnimationsContants.PAUSED
             ? hiTextAnimationsContants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
             : 1
         }

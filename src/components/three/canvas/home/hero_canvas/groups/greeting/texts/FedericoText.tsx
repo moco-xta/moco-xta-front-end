@@ -5,9 +5,11 @@ import { useGSAP } from '@gsap/react'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as greetingAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingAnimationsConstants.json'
+import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
 import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/federicoTextAnimationsConstants.json'
+
 import { federicoTextPositionAnimation, imTextMaterialAnimation } from 'animations'
 
 interface FedericoTextInterface {
@@ -30,38 +32,38 @@ export default function FedericoText({ timeline }: FedericoTextInterface) {
 
   useGSAP(
     () => {
-      if (federicoTextAnimationsConstants.ANIMATE) {
+      if (!greetingAnimationsConstants.PAUSED && !federicoTextAnimationsConstants.PAUSED) {
         const federicoLetters = gsap.utils.toArray(federicoTextGroupRef.current.children)
         federicoLetters.forEach((letter, index) => {
           // POSITION
-          timeline.to(
-            // @ts-ignore
-            letter.position,
-            {
-              keyframes: federicoTextPositionAnimation(
-                federicoTextGroupRef.current,
-                federicoTextLengthRef.current,
-                index,
-              ),
-              duration: duration,
-            },
-            delay +
-              (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
-                heroAnimationsConstants.SPEED,
-          )
-
-          // MATERIAL
-          timeline.to(
-            // @ts-ignore
-            letter.material,
-            {
-              keyframes: imTextMaterialAnimation.keyframes,
-              duration: duration,
-            },
-            delay +
-              (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
-                heroAnimationsConstants.SPEED,
-          )
+          timeline
+            .to(
+              // @ts-ignore
+              letter.position,
+              {
+                keyframes: federicoTextPositionAnimation(
+                  federicoTextGroupRef.current,
+                  federicoTextLengthRef.current,
+                  index,
+                ),
+                duration: duration,
+              },
+              delay +
+                (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
+                  heroAnimationsConstants.SPEED,
+            )
+            // MATERIAL
+            .to(
+              // @ts-ignore
+              letter.material,
+              {
+                keyframes: imTextMaterialAnimation.keyframes,
+                duration: duration,
+              },
+              delay +
+                (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
+                  heroAnimationsConstants.SPEED,
+            )
         })
       }
     },
@@ -72,30 +74,29 @@ export default function FedericoText({ timeline }: FedericoTextInterface) {
     <Word3D
       ref={federicoTextGroupRef}
       keyPrefix={'federico_text'}
-      font={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.FONT.FONT}
-      size={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.FONT.SIZE}
-      depth={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.FONT.DEPTH}
-      splittedWord={federicoTextSplitted}
+      font={greetingTextsAnimationsConstants.GEOMETRY.FONT}
+      size={greetingTextsAnimationsConstants.GEOMETRY.SIZES.FEDERICO_TEXT}
+      depth={greetingTextsAnimationsConstants.GEOMETRY.DEPTH}
       position={
         new THREE.Vector3(
-          heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.POSITION.X,
-          heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.POSITION.Y,
-          heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.FEDERICO_TEXT.GEOMETRY.POSITION.Z,
+          federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
       center={true}
+      splittedWord={federicoTextSplitted}
       lengthRef={federicoTextLengthRef}
     >
       <meshStandardMaterial
-        color={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.COLOR}
-        transparent={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.TRANSPARENT}
+        color={greetingTextsAnimationsConstants.MATERIAL.COLOR}
+        transparent={greetingTextsAnimationsConstants.MATERIAL.TRANSPARENT}
         opacity={
-          federicoTextAnimationsConstants.ANIMATE
-            ? heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.OPACITY
+          !greetingAnimationsConstants.PAUSED && !federicoTextAnimationsConstants.PAUSED
+            ? federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
             : 1
         }
-        // emissive={heroCanvasConstants.GROUPS.HI_I_M_FEDERICO_GROUP.MATERIALS.TEXTS.EMISSIVE}
-        // side={THREE.DoubleSide}
+        side={THREE.DoubleSide}
       />
     </Word3D>
   )

@@ -22,22 +22,31 @@ export default function HeroSlice() {
 
   const heroSliceRef = useRef<HTMLElement>(null!)
 
-  const { paused } = useSelector((state: RootState) => state.heroAnimationSlice)
+  const { /* timeline, */ paused } = useSelector((state: RootState) => state.heroAnimationSlice)
 
   const timeline = useRef<GSAPTimeline>(
     gsap.timeline({
       delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
+      smoothChildTiming: true,
+      // yoyo: true
     }),
   )
 
   useEffect(() => {
-    timeline.current.paused(paused)
+    console.log('timeline.current', timeline.current)
+  }, [timeline.current])
+
+  useEffect(() => {
+    if (paused) {
+      timeline.current.pause(timeline.current.vars.data)
+    } else {
+      timeline.current.paused(false)
+    }
   }, [paused])
 
   useGSAP(
     () => {
-      if (heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATE) {
-        console.log('TEST')
+      if (!heroSliceAnimationsConstants.SUBS.PORTRAIT.PAUSED) {
         timeline.current.to(
           heroSliceRef.current.style,
           {

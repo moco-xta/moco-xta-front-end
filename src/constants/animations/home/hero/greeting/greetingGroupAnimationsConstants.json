@@ -1,14 +1,14 @@
 {
-  "NAME": "HI_I_M_FEDERICO_GROUP",
+  "NAME": "GREETING_GROUP",
   "KEYFRAME_START": 0,
   "DURATION": 5,
-  "ANIMATE": true,
+  "PAUSED": false,
   "ANIMATION": {
     "0_PERCENT": {
       "POSITION": {
-        "X": 3,
-        "Y": -0.5,
-        "Z": 4
+        "X": 0,
+        "Y": 0,
+        "Z": 0
       },
       "ROTATION": {
         "X": -60,

@@ -2,8 +2,18 @@
   "NAME": "FEDERICO_TEXT",
   "KEYFRAME_START": 0,
   "DURATION": 5,
-  "ANIMATE": true,
+  "PAUSED": false,
   "ANIMATION": {
+    "0_PERCENT": {
+      "POSITION": {
+        "X": 0,
+        "Y": -1.6,
+        "Z": 0
+      },
+      "MATERIAL": {
+        "OPACITY": 0
+      }
+    },
     "40_PERCENT": {
       "POSITION": {
         "X": {

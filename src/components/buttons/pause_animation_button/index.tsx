@@ -25,8 +25,9 @@ export default function PauseAnimationButton() {
         // background: !paused ? variables.success_light_color : variables.alert_light_color // TODO: Issue with variables!!! Weird...
         background: !paused ? 'chartreuse' : 'red',
       }}
+      onClick={handleOnClick}
     >
-      {!paused ? <FaPause onClick={handleOnClick} /> : <FaPlay onClick={handleOnClick} />}
+      {!paused ? <FaPause /> : <FaPlay />}
     </div>
   )
 }
