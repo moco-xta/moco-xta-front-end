@@ -17,6 +17,7 @@ import {
   gilroyHeavyFont,
   sansTrialRegularFont,
 } from '@/assets/fonts/ttf'
+import PauseAnimationButton from '@/components/buttons/pause_animation_button'
 
 const interFont = Inter({
   subsets: ['latin'],
@@ -72,6 +73,7 @@ export default function RootLayout({
                 />
                 <Cursor />
                 <Menu />
+                <PauseAnimationButton />
                 {children}
               </NextIntlClientProvider>
             </ReduxProvider>
