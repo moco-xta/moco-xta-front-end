@@ -10,7 +10,6 @@ interface Word3DInterface {
   depth?: number
   spaceWidth?: number
   splittedWord: string[]
-  groupProps?: GroupProps
   position?: THREE.Vector3
   center?: boolean
   lengthRef?: MutableRefObject<number[]>
@@ -25,7 +24,6 @@ export const Word3D = forwardRef<THREE.Group, Word3DInterface>(function Word3D(
     depth,
     spaceWidth,
     splittedWord,
-    groupProps,
     position,
     center = false,
     lengthRef,
@@ -52,7 +50,6 @@ export const Word3D = forwardRef<THREE.Group, Word3DInterface>(function Word3D(
     <group
       key={`word_3D_${keyPrefix}`}
       ref={word3DGroupRef}
-      {...groupProps}
       position={position}
     >
       {splittedWord.map((letter, index) => {

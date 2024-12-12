@@ -18,9 +18,9 @@ export default function ToolsGroup({ timeline }: ToolsGroupInterface) {
       ref={toolsGroupRef}
       position={new THREE.Vector3(-3, 0, 0.2)}
     >
-      <SprayComponent />
-      <ColorPickerComponent />
-      <PaintBucketComponent />
+      <SprayComponent timeline={timeline} />
+      <ColorPickerComponent timeline={timeline} />
+      <PaintBucketComponent timeline={timeline} />
       <ColorsComponent timeline={timeline} />
     </group>
   )

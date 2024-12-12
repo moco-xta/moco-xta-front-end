@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import { Plane } from '@react-three/drei'
@@ -7,9 +7,9 @@ import { useGSAP } from '@gsap/react'
 import vertexShader from '@/components/three/shaders/profil_picture/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/profil_picture/fragmentShader.glsl'
 
+import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as profilPictureAnimationsConstants } from '@/constants/animations/home/hero/portrait/profilPictureAnimationsConstants.json'
-import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 interface ProfilPictureInterface {
   timeline: GSAPTimeline
@@ -114,7 +114,6 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
       <shaderMaterial
         ref={shaderMaterialRef}
         uniforms={uniforms}
-        // uniforms={uniformsRef.current}
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
         transparent

@@ -1,4 +1,4 @@
-import { default as imtextAnimationsConstants } from '@/constants/animations/home/hero/greeting/imtextAnimationsConstants.json'
+import { default as imtextAnimationsConstants } from '@/constants/animations/home/hero/greeting/caseIssue.json'
 
 export const imTextPositionAnimation = (imTextLengthRef: number[], index: number) => {
   return {
@@ -8,7 +8,7 @@ export const imTextPositionAnimation = (imTextLengthRef: number[], index: number
     },
     '40%': {
       x: imTextLengthRef.slice(0, index).reduce((a, b) => a + b, 0),
-      z: imtextAnimationsConstants.ANIMATION['40_PERCENT'].POSITION.X,
+      z: imtextAnimationsConstants.ANIMATION['40_PERCENT'].POSITION.Z,
     },
     easeEach: imtextAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
   }

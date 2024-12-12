@@ -109,6 +109,8 @@ export default function HeroSlice() {
         className='fullscreen'
         style={{
           background: '#fff',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
         }}
       >
         <HeroCanvas timeline={timeline} />

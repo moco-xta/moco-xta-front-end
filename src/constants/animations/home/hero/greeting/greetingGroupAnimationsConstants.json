@@ -5,6 +5,11 @@
   "ANIMATE": true,
   "ANIMATION": {
     "0_PERCENT": {
+      "POSITION": {
+        "X": 3,
+        "Y": -0.5,
+        "Z": 4
+      },
       "ROTATION": {
         "X": -60,
         "Y": 0,

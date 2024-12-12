@@ -14,7 +14,7 @@ interface MessInterface {
 export default function Mess({ timeline }: MessInterface) {
   return (
     <group position={[0, 5, 0]}>
-      <HeartComponent />
+      <HeartComponent timeline={timeline} />
       <ToolsGroup timeline={timeline} />
       <LogoRCL timeline={timeline} />
       <ProfilPicture timeline={timeline} />

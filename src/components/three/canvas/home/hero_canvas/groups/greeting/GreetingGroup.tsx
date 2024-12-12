@@ -8,6 +8,7 @@ import FedericoText from './texts/FedericoText'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
+import { default as hiImFedericoGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
 
 import { greetingGroupAnimations } from 'animations'
 
@@ -74,7 +75,20 @@ export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
   return (
     <group
       ref={grettingGroupRef}
-      position={new THREE.Vector3(3, -0.5, 4)}
+      position={
+        new THREE.Vector3(
+          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+        )
+      }
+      rotation={
+        new THREE.Euler(
+          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.X,
+          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Y,
+          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z,
+        )
+      }
     >
       <HiText timeline={timeline} />
       <ImText timeline={timeline} />

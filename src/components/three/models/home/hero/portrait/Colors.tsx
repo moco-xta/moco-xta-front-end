@@ -1,10 +1,11 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import { default as colorsComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/colorsComponentAnimationsConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -66,13 +67,23 @@ type GLTFResult = GLTF & {
     ['colors_#dcff00_material']: THREE.MeshStandardMaterial
     ['colors_#25eae6_material']: THREE.MeshStandardMaterial
     ['colors_#ff0085_material']: THREE.MeshStandardMaterial
-    ['color_#ff7b29_material']: THREE.MeshStandardMaterial
+    ['color_#ff7b29_material']: THREE.MeshStandardMaterial // TODO: Change material name
     ['colors_#ff00a7_material']: THREE.MeshStandardMaterial
   }
 }
 
 export const Colors = forwardRef<THREE.Group, GroupProps>(function Colors(props, ref) {
   const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.PORTRAIT.COLORS) as GLTFResult
+
+  useLayoutEffect(() => {
+    Object.keys(materials).forEach((key) => {
+      // @ts-ignore
+      materials[key].transparent = true
+      // @ts-ignore
+      materials[key].opacity =
+        colorsComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+    })
+  }, [materials])
 
   return (
     <group
