@@ -2,6 +2,7 @@
   "NAME": "SUN_AND_MOON",
   "KEYFRAME_START": 4,
   "DURATION": 5,
+  "ANIMATE": true,
   "ANIMATION": {
     "0_PERCENT": {
       "ROTATION": {

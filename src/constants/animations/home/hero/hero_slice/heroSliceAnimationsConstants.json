@@ -1,0 +1,45 @@
+{
+  "NAME": "HERO_SLICE",
+  "SUBS": {
+    "PORTRAIT": {
+      "KEYFRAME_START": 4,
+      "DURATION": 2,
+      "ANIMATE": true,
+      "ANIMATION": {
+        "0_PERCENT": {
+          "BACKGROUND_IMAGE": "/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg'"
+        },
+        "10_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/guernica.jpg')"
+        },
+        "20_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/brain.jpg')"
+        },
+        "30_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg')"
+        },
+        "40_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/guernica.jpg')"
+        },
+        "50_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/brain.jpg')"
+        },
+        "60_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/explosion_bombe_atomique_mururoa_1971.jpg')"
+        },
+        "70_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/guernica.jpg')"
+        },
+        "80_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/brain.jpg')"
+        },
+        "90_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg')"
+        },
+        "100_PERCENT": {
+          "BACKGROUND_IMAGE": "url('/img/background_images/explosion_bombe_atomique_mururoa_1971.jpg')"
+        }
+      }
+    }
+  }
+}

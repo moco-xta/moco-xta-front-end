@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -18,6 +18,11 @@ type GLTFResult = GLTF & {
 
 export const Heart = forwardRef<THREE.Mesh, MeshProps>(function Heart(props, ref) {
   const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.PORTRAIT.HEART) as GLTFResult
+
+  useLayoutEffect(() => {
+    materials.heart_material.transparent = true
+    materials.heart_material.opacity = 0
+  }, [materials])
 
   return (
     <mesh

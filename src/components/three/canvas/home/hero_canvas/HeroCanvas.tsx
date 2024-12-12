@@ -56,9 +56,9 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
         >
           <GreetingGroup timeline={timeline} />
           <PortraitGroup timeline={timeline} />
-          {/* <AlsoKnowAsGroup timeline={timeline} /> */}
-          {/* <MocoGroup timeline={timeline} /> */}
-          {/* <DeveloperGroup timeline={timeline} /> */}
+          <AlsoKnowAsGroup timeline={timeline} />
+          <MocoGroup timeline={timeline} />
+          <DeveloperGroup timeline={timeline} />
           {/* <WithExtraSkillsGroup timeline={timeline} /> */}
           <PostProcessing />
         </Physics>

@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
@@ -25,6 +25,15 @@ type GLTFResult = GLTF & {
 
 export const PaintBucket = forwardRef<THREE.Group, GroupProps>(function PaintBucket(props, ref) {
   const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.PORTRAIT.PAINT_BUCKET) as GLTFResult
+
+  useLayoutEffect(() => {
+    Object.keys(materials).forEach((key) => {
+      // @ts-ignore
+      materials[key].transparent = true
+      // @ts-ignore
+      materials[key].opacity = 0
+    })
+  }, [materials])
 
   return (
     <group

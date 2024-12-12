@@ -1,12 +1,9 @@
+import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
-import React, { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import useTextureLoader from '@/hooks/useTextureLoader'
-
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 import { MeshProps } from '@react-three/fiber'
 
@@ -22,22 +19,10 @@ type GLTFResult = GLTF & {
 export const Ganesh = forwardRef<THREE.Mesh, MeshProps>(function Ganesh(props, ref) {
   const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.PORTRAIT.GANESH) as GLTFResult
 
-  /* const ganeshMap = useTextureLoader(
-    // @ts-ignore
-    texturesConstants.HOME.GANESH.DIFFUSE,
-  )
-  ganeshMap.flipY = false */
-
-  /* const ganeshMaterial = new THREE.MeshStandardMaterial({
-    // color: variables.gamma_red,
-    map: ganeshMap,
-    roughness: 1,
-    emissive: 'white',
-    emissiveMap: ganeshMap,
-    emissiveIntensity: 0.1,
-    transparent: true,
-    opacity: 0.25,
-  }) */
+  useLayoutEffect(() => {
+    materials.ganesh_material.transparent = true
+    materials.ganesh_material.opacity = 0
+  }, [materials])
 
   return (
     <mesh

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import { Plane } from '@react-three/drei'
@@ -7,8 +7,8 @@ import { useGSAP } from '@gsap/react'
 import vertexShader from '@/components/three/shaders/profil_picture/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/profil_picture/fragmentShader.glsl'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
+import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as profilPictureAnimationsConstants } from '@/constants/animations/home/hero/portrait/profilPictureAnimationsConstants.json'
 
 interface ProfilPictureInterface {
@@ -29,12 +29,14 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
   const portraitMeshRef = useRef<THREE.Mesh>(null!)
   const shaderMaterialRef = useRef<THREE.ShaderMaterial>(null!)
   const mouseDataRef = useRef<{
+    opacity: number
     speed: number
     targetSpeed: number
     mouseCoordinates: THREE.Vector2
     followMouseCoordinates: THREE.Vector2
     previousMouseCoordinates: THREE.Vector2
   }>({
+    opacity: 0,
     speed: 0,
     targetSpeed: 0,
     mouseCoordinates: new THREE.Vector2(0, 0),
@@ -42,45 +44,21 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
     previousMouseCoordinates: new THREE.Vector2(0, 0),
   })
 
-  /* const portraitMaterial = new THREE.MeshStandardMaterial({
-    map: portraitMap,
-    transparent: true,
-    opacity: 0,
-    side: THREE.DoubleSide,
-  }) */
-
   const uniforms = useMemo(
     () => ({
+      uAlpha: {
+        value: 1.0,
+      },
       uTexture: {
         type: 't',
         value: portraitMap,
       },
-      uVelocity: {
-        value: 0.0,
-      },
-      uType: {
-        value: 0,
-      },
       uMouse: {
         value: new THREE.Vector2(0.0, 0.0),
-      },
-      uResolution: {
-        type: 'v4',
-        value: new THREE.Vector4(400.0, 400.0, 1.0, 1.0),
-      },
-      uOffset: {
-        value: new THREE.Vector2(0.0, 0.0),
-      },
-      uAlpha: {
-        value: 1.0,
       },
     }),
     [portraitMap],
   )
-
-  useEffect(() => {
-    if (shaderMaterialRef.current) console.log('shaderMaterialRef', shaderMaterialRef)
-  }, [shaderMaterialRef])
 
   const getMouseData = (mouseCoordinates: THREE.Vector2) => {
     mouseDataRef.current.speed = Math.sqrt(
@@ -99,47 +77,32 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
     mouseDataRef.current.previousMouseCoordinates.y = mouseCoordinates.y
   }
 
-  useFrame(({ gl, scene, camera, mouse }, delta, xrFrame) => {
-    // console.log('delta', delta)
-    // console.log('uniformsRef.current.time', uniformsRef.current.time)
-    // console.log('timeline.time()', timeline.time())
-    // console.log('mouse', mouse)
-    getMouseData(mouse)
-    shaderMaterialRef.current.uniforms.uMouse.value = mouseDataRef.current.followMouseCoordinates
-    // shaderMaterialRef.current.uniforms.uMouse.value = new THREE.Vector2(2, 2)
-    shaderMaterialRef.current.uniforms.uVelocity.value = mouseDataRef.current.targetSpeed
-    // shaderMaterialRef.current.uniforms.uVelocity.value = 1000
-  })
-
   useGSAP(() => {
-    // MATERIAL
-    timeline.to(
-      portraitMeshRef.current.material,
-      {
-        keyframes: {
-          '0%': {
-            opacity: profilPictureAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+    if (profilPictureAnimationsConstants.ANIMATE)
+      // MATERIAL
+      timeline.to(
+        mouseDataRef.current,
+        {
+          keyframes: {
+            '0%': {
+              opacity: profilPictureAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+            },
+            '25%': {
+              opacity: profilPictureAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
+            },
+            easeEach: profilPictureAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
           },
-          '25%': {
-            opacity: profilPictureAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
-          },
-          easeEach: profilPictureAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+          duration: duration,
         },
-        duration: duration,
-      },
-      delay,
-    )
+        delay,
+      )
   })
 
-  /* return (
-    <Plane
-      ref={portraitMeshRef}
-      args={[7.5, 7.5]}
-      material={portraitMaterial}
-      receiveShadow
-      castShadow
-    />
-  ) */
+  useFrame(({ pointer }) => {
+    getMouseData(pointer)
+    shaderMaterialRef.current.uniforms.uMouse.value = mouseDataRef.current.followMouseCoordinates
+    shaderMaterialRef.current.uniforms.uAlpha.value = mouseDataRef.current.opacity
+  })
 
   return (
     <Plane
@@ -151,7 +114,6 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
       <shaderMaterial
         ref={shaderMaterialRef}
         uniforms={uniforms}
-        // uniforms={uniformsRef.current}
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
         transparent

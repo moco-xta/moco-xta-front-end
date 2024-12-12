@@ -2,13 +2,16 @@
   "NAME": "HI_TEXT",
   "KEYFRAME_START": 0,
   "DURATION": 5,
-  "ANIMATE": false,
+  "ANIMATE": true,
   "ANIMATION": {
     "0_PERCENT": {
       "POSITION": {
-        "X": 0,
-        "Y": -2.5,
-        "Z": -2
+        "X": -1,
+        "Y": 0.75,
+        "Z": 0
+      },
+      "MATERIAL": {
+        "OPACITY": 0
       }
     },
     "10_PERCENT": {

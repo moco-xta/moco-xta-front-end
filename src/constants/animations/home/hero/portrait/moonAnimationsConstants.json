@@ -2,6 +2,7 @@
   "NAME": "MOON",
   "KEYFRAME_START": 6,
   "DURATION": 3,
+  "ANIMATE": true,
   "ANIMATION": {
     "0_PERCENT": {
       "MATERIAL": {
