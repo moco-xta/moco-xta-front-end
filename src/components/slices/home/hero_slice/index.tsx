@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
+
+import { RootState } from '@/redux/store'
 
 import { HeroCanvas } from '@/components/three/canvas'
 
@@ -19,19 +22,23 @@ export default function HeroSlice() {
 
   const heroSliceRef = useRef<HTMLElement>(null!)
 
-  const timeline = gsap.timeline({
-    delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
-  })
+  const { paused } = useSelector((state: RootState) => state.heroAnimationSlice)
+
+  const timeline = useRef<GSAPTimeline>(
+    gsap.timeline({
+      delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
+    }),
+  )
 
   useEffect(() => {
-    console.log('heroSliceRef', heroSliceRef)
-  }, [heroSliceRef])
+    timeline.current.paused(paused)
+  }, [paused])
 
   useGSAP(
     () => {
       if (heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATE) {
         console.log('TEST')
-        timeline.to(
+        timeline.current.to(
           heroSliceRef.current.style,
           {
             keyframes: {
@@ -113,7 +120,7 @@ export default function HeroSlice() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <HeroCanvas timeline={timeline} />
+        <HeroCanvas timeline={timeline.current} />
       </section>
     </>
   )

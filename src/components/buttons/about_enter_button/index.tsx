@@ -17,7 +17,7 @@ export default function AboutEnterButton() {
   const handleOnClick = () => {
     dispatch(setShowInstructions(false))
   }
-  ;('')
+
   return (
     <button
       id={aboutConstants.POINTER_LOCK_CONTROLS.SELECTOR}
