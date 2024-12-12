@@ -55,10 +55,10 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
           paused={heroCanvasConstants.PHYSICS.PAUSED}
         >
           <GreetingGroup timeline={timeline} />
-          <PortraitGroup timeline={timeline} />
-          <AlsoKnowAsGroup timeline={timeline} />
-          <MocoGroup timeline={timeline} />
-          <DeveloperGroup timeline={timeline} />
+          {/* <PortraitGroup timeline={timeline} /> */}
+          {/* <AlsoKnowAsGroup timeline={timeline} /> */}
+          {/* <MocoGroup timeline={timeline} /> */}
+          {/* <DeveloperGroup timeline={timeline} /> */}
           {/* <WithExtraSkillsGroup timeline={timeline} /> */}
           <PostProcessing />
         </Physics>
