@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useRef } from 'react'
+import { createContext, ReactNode, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
 interface GSAPTimelineContextInterface {
@@ -9,18 +9,37 @@ export const GSAPTimelineContext = createContext<GSAPTimelineContextInterface | 
   undefined,
 )
 
+interface LabelInterface {
+  NAME: string
+  POSITION: string | number
+}
+
 interface GSAPTimelineProviderInterface {
   delay: number
-  speed: number
+  timeScale: number
+  labels: LabelInterface[]
   children: ReactNode
 }
 
-export const GSAPTimelineProvider = ({ delay, speed, children }: GSAPTimelineProviderInterface) => {
+export const GSAPTimelineProvider = ({
+  delay,
+  timeScale,
+  labels,
+  children,
+}: GSAPTimelineProviderInterface) => {
   const timeline = useRef<GSAPTimeline>(
-    gsap.timeline({
-      delay: delay / speed,
-    }),
+    gsap
+      .timeline({
+        delay: delay,
+      })
+      .timeScale(timeScale),
   )
+
+  useEffect(() => {
+    labels.forEach((label) => {
+      timeline.current.addLabel(label.NAME, label.POSITION)
+    })
+  }, [timeline])
 
   return (
     <GSAPTimelineContext.Provider value={{ timeline: timeline.current }}>

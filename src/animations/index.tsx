@@ -1,21 +1,17 @@
 import { cursorAnimation } from './shared/cursor'
 import { menuAnimation } from './shared/menu'
 import {
-  imTextPositionAnimation,
-  imTextMaterialAnimation,
+  imTextAnimations,
   greetingGroupAnimations,
   hiTextAnimations,
-  federicoTextPositionAnimation,
-  federicoTextMaterialAnimation,
+  federicoTextAnimations,
 } from './home/hero'
 
 export {
   cursorAnimation,
-  imTextPositionAnimation,
-  imTextMaterialAnimation,
+  imTextAnimations,
   menuAnimation,
   greetingGroupAnimations,
   hiTextAnimations,
-  federicoTextPositionAnimation,
-  federicoTextMaterialAnimation,
+  federicoTextAnimations,
 }

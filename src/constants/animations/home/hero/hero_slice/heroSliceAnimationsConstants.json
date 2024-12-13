@@ -1,9 +1,8 @@
 {
-  "NAME": "HERO_SLICE",
   "SUBS": {
     "PORTRAIT": {
-      "KEYFRAME_START": 4,
       "DURATION": 2,
+      "LABEL": "portrait",
       "ANIMATION": {
         "0_PERCENT": {
           "BACKGROUND_IMAGE": "/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg'"

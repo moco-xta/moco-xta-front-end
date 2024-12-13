@@ -1,7 +1,7 @@
 {
   "NAME": "FEDERICO_TEXT",
-  "KEYFRAME_START": 0,
   "DURATION": 5,
+  "LABEL": "greeting",
   "ANIMATION": {
     "0_PERCENT": {
       "POSITION": {

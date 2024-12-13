@@ -1,6 +1,16 @@
 {
-  "SPEED": 1.25,
+  "TIME_SCALE": 1.25,
   "DELAY": 1,
+  "LABELS": [
+    {
+      "NAME": "greeting",
+      "POSITION": "0"
+    },
+    {
+      "NAME": "portrait",
+      "POSITION": "4"
+    }
+  ],
   "GROUPS": {
     "FEDERICO_PORTRAIT": {
       "NAME": "FEDERICO_PORTRAIT",

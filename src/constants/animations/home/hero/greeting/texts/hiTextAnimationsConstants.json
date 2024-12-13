@@ -1,12 +1,12 @@
 {
   "NAME": "HI_TEXT",
-  "KEYFRAME_START": 0,
   "DURATION": 5,
+  "LABEL": "greeting",
   "ANIMATION": {
     "0_PERCENT": {
       "POSITION": {
         "X": -2.2,
-        "Y": 1.6,
+        "Y": 0,
         "Z": 0
       },
       "MATERIAL": {
@@ -21,7 +21,7 @@
     "20_PERCENT": {
       "POSITION": {
         "X": 0,
-        "Y": 0,
+        "Y": 1.6,
         "Z": 0
       },
       "MATERIAL": {

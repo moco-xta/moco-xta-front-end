@@ -7,21 +7,13 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
 import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/texts/federicoTextAnimationsConstants.json'
 
-import { federicoTextPositionAnimation, imTextMaterialAnimation } from 'animations'
+import { federicoTextAnimations } from 'animations'
 
 export default function FedericoText() {
   const { timeline } = useGSAPTimelineContext()
-
-  const [duration] = useState<number>(
-    federicoTextAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    federicoTextAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
 
   const [federicoText] = useState<string>('federico'.toUpperCase())
   const [federicoTextSplitted] = useState<string[]>(federicoText.split(''))
@@ -31,36 +23,33 @@ export default function FedericoText() {
 
   useGSAP(
     () => {
-      const federicoLetters = gsap.utils.toArray(federicoTextGroupRef.current.children)
+      const federicoLetters: THREE.Mesh[] = gsap.utils.toArray(
+        federicoTextGroupRef.current.children,
+      )
       federicoLetters.forEach((letter, index) => {
-        // POSITION
+        const animations = federicoTextAnimations(
+          federicoTextGroupRef.current,
+          federicoTextLengthRef.current,
+          index,
+        )
         timeline
           .to(
-            // @ts-ignore
+            // POSITION
             letter.position,
             {
-              keyframes: federicoTextPositionAnimation(
-                federicoTextGroupRef.current,
-                federicoTextLengthRef.current,
-                index,
-              ),
-              duration: duration,
+              keyframes: animations.position.keyframes,
+              duration: animations.duration,
             },
-            delay +
-              (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
-                heroAnimationsConstants.SPEED,
+            animations.delay,
           )
           // MATERIAL
           .to(
-            // @ts-ignore
             letter.material,
             {
-              keyframes: imTextMaterialAnimation.keyframes,
-              duration: duration,
+              keyframes: animations.rotation.keyframes,
+              duration: animations.duration,
             },
-            delay +
-              (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
-                heroAnimationsConstants.SPEED,
+            animations.delay,
           )
       })
     },
@@ -89,6 +78,7 @@ export default function FedericoText() {
         color={greetingTextsAnimationsConstants.MATERIAL.COLOR}
         transparent={greetingTextsAnimationsConstants.MATERIAL.TRANSPARENT}
         opacity={federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY}
+        // opacity={1}
         side={THREE.DoubleSide}
       />
     </Word3D>

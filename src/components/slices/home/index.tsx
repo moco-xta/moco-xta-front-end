@@ -12,7 +12,8 @@ export default function HomePage() {
     <>
       <GSAPTimelineProvider
         delay={heroAnimationsConstants.DELAY}
-        speed={heroAnimationsConstants.SPEED}
+        timeScale={heroAnimationsConstants.TIME_SCALE}
+        labels={heroAnimationsConstants.LABELS}
       >
         <HeroSlice />
       </GSAPTimelineProvider>

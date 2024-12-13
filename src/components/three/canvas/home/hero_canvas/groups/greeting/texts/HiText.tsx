@@ -8,7 +8,6 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
 import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/texts/hiTextAnimationsConstants.json'
 
@@ -17,13 +16,6 @@ import { hiTextAnimations } from 'animations'
 export default function HiText() {
   const t = useTranslations('HOME')
   const { timeline } = useGSAPTimelineContext()
-
-  const [duration] = useState<number>(
-    hiTextAnimationsContants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    hiTextAnimationsContants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
 
   const [hiText] = useState<string>(t('HERO.HI').toUpperCase())
   const [hiTextSplitted] = useState<string[]>(hiText.split(''))
@@ -35,26 +27,25 @@ export default function HiText() {
     () => {
       const hiLetters: THREE.Mesh[] = gsap.utils.toArray(hiTextGroupRef.current.children)
       hiLetters.forEach((letter, index) => {
-        // POSITION
+        const animations = hiTextAnimations(index)
         timeline
+          // POSITION
           .to(
             letter.position,
             {
-              keyframes: hiTextAnimations.position.keyframes,
-              duration: duration,
+              keyframes: animations.position.keyframes,
+              duration: animations.duration,
             },
-            delay +
-              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+            animations.delay,
           )
           // MATERIAL
           .to(
             letter.material,
             {
-              keyframes: hiTextAnimations.rotation.keyframes,
-              duration: duration,
+              keyframes: animations.rotation.keyframes,
+              duration: animations.duration,
             },
-            delay +
-              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+            animations.delay,
           )
       })
     },

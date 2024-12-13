@@ -1,7 +1,7 @@
 import { default as heroSliceAnimationsConstants } from '@/constants/animations/home/hero/hero_slice/heroSliceAnimationsConstants.json'
 
 export const heroSliceAnimations = {
-  backgroundImage: {
+  portrait: {
     keyFrames: {
       '0%': {
         backgroundImage:
@@ -49,5 +49,7 @@ export const heroSliceAnimations = {
       },
       easeEach: heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION.EACH_EASE,
     },
+    duration: heroSliceAnimationsConstants.SUBS.PORTRAIT.DURATION,
+    delay: heroSliceAnimationsConstants.SUBS.PORTRAIT.LABEL,
   },
 }

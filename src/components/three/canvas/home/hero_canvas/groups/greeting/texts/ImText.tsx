@@ -12,7 +12,7 @@ import { default as heroAnimationsConstants } from '@/constants/animations/home/
 import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
 import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/texts/imTextAnimationsConstants.json'
 
-import { imTextMaterialAnimation, imTextPositionAnimation } from 'animations'
+import { imTextAnimations } from 'animations'
 
 export default function ImText() {
   const t = useTranslations('HOME')
@@ -21,42 +21,32 @@ export default function ImText() {
   const [imText] = useState<string>(t('HERO.I_M').toUpperCase())
   const [imTextSplitted] = useState<string[]>(imText.split(''))
 
-  const [duration] = useState<number>(
-    imTextAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    imTextAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
-
   const imTextGroupRef = useRef<THREE.Group>(null!)
   const imTextLengthRef = useRef<number[]>([])
 
   useGSAP(
     () => {
-      const imLetters = gsap.utils.toArray(imTextGroupRef.current.children)
+      const imLetters: THREE.Mesh[] = gsap.utils.toArray(imTextGroupRef.current.children)
       imLetters.forEach((letter, index) => {
-        // POSITION
+        const animations = imTextAnimations(imTextLengthRef.current, index)
         timeline
+          // POSITION
           .to(
-            // @ts-ignore
             letter.position,
             {
-              keyframes: imTextPositionAnimation(imTextLengthRef.current, index),
-              duration: duration,
+              keyframes: animations.position.keyframes,
+              duration: animations.duration,
             },
-            delay +
-              (index * imTextAnimationsConstants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+            animations.delay,
           )
           // MATERIAL
           .to(
-            // @ts-ignore
             letter.material,
             {
-              keyframes: imTextMaterialAnimation.keyframes,
-              duration: duration,
+              keyframes: animations.material.keyframes,
+              duration: animations.duration,
             },
-            delay +
-              (index * imTextAnimationsConstants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+            animations.delay,
           )
       })
     },
