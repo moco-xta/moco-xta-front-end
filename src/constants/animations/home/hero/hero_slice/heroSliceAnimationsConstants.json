@@ -4,7 +4,6 @@
     "PORTRAIT": {
       "KEYFRAME_START": 4,
       "DURATION": 2,
-      "PAUSED": true,
       "ANIMATION": {
         "0_PERCENT": {
           "BACKGROUND_IMAGE": "/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg'"
@@ -38,7 +37,8 @@
         },
         "100_PERCENT": {
           "BACKGROUND_IMAGE": "url('/img/background_images/explosion_bombe_atomique_mururoa_1971.jpg')"
-        }
+        },
+        "EACH_EASE": "none"
       }
     }
   }

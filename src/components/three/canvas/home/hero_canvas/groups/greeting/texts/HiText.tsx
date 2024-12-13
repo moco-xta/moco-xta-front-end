@@ -4,21 +4,19 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as greetingAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingAnimationsConstants.json'
 import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
 import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/texts/hiTextAnimationsConstants.json'
 
 import { hiTextAnimations } from 'animations'
 
-interface HiTextInterface {
-  timeline: GSAPTimeline
-}
-
-export default function HiText({ timeline }: HiTextInterface) {
+export default function HiText() {
   const t = useTranslations('HOME')
+  const { timeline } = useGSAPTimelineContext()
 
   const [duration] = useState<number>(
     hiTextAnimationsContants.DURATION / heroAnimationsConstants.SPEED,
@@ -35,34 +33,30 @@ export default function HiText({ timeline }: HiTextInterface) {
 
   useGSAP(
     () => {
-      if (!greetingAnimationsConstants.PAUSED && !hiTextAnimationsContants.PAUSED) {
-        const hiLetters: THREE.Mesh[] = gsap.utils.toArray(hiTextGroupRef.current.children)
-        hiLetters.forEach((letter, index) => {
-          // POSITION
-          timeline
-            .to(
-              letter.position,
-              {
-                keyframes: hiTextAnimations.position.keyframes,
-                duration: duration,
-              },
-              delay +
-                (index * hiTextAnimationsContants.ANIMATION.STAGGER) /
-                  heroAnimationsConstants.SPEED,
-            )
-            // MATERIAL
-            .to(
-              letter.material,
-              {
-                keyframes: hiTextAnimations.rotation.keyframes,
-                duration: duration,
-              },
-              delay +
-                (index * hiTextAnimationsContants.ANIMATION.STAGGER) /
-                  heroAnimationsConstants.SPEED,
-            )
-        })
-      }
+      const hiLetters: THREE.Mesh[] = gsap.utils.toArray(hiTextGroupRef.current.children)
+      hiLetters.forEach((letter, index) => {
+        // POSITION
+        timeline
+          .to(
+            letter.position,
+            {
+              keyframes: hiTextAnimations.position.keyframes,
+              duration: duration,
+            },
+            delay +
+              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+          )
+          // MATERIAL
+          .to(
+            letter.material,
+            {
+              keyframes: hiTextAnimations.rotation.keyframes,
+              duration: duration,
+            },
+            delay +
+              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+          )
+      })
     },
     { scope: hiTextGroupRef },
   )
@@ -88,11 +82,7 @@ export default function HiText({ timeline }: HiTextInterface) {
       <meshStandardMaterial
         color={greetingTextsAnimationsConstants.MATERIAL.COLOR}
         transparent={greetingTextsAnimationsConstants.MATERIAL.TRANSPARENT}
-        opacity={
-          !greetingAnimationsConstants.PAUSED && !hiTextAnimationsContants.PAUSED
-            ? hiTextAnimationsContants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
-            : 1
-        }
+        opacity={hiTextAnimationsContants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY}
         side={THREE.DoubleSide}
       />
     </Word3D>

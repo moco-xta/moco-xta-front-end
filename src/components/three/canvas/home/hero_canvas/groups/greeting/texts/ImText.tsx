@@ -4,21 +4,19 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as greetingAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingAnimationsConstants.json'
 import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
 import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/texts/imTextAnimationsConstants.json'
 
 import { imTextMaterialAnimation, imTextPositionAnimation } from 'animations'
 
-interface ImTextInterface {
-  timeline: GSAPTimeline
-}
-
-export default function ImText({ timeline }: ImTextInterface) {
+export default function ImText() {
   const t = useTranslations('HOME')
+  const { timeline } = useGSAPTimelineContext()
 
   const [imText] = useState<string>(t('HERO.I_M').toUpperCase())
   const [imTextSplitted] = useState<string[]>(imText.split(''))
@@ -35,36 +33,32 @@ export default function ImText({ timeline }: ImTextInterface) {
 
   useGSAP(
     () => {
-      if (!greetingAnimationsConstants.PAUSED && !imTextAnimationsConstants.PAUSED) {
-        const imLetters = gsap.utils.toArray(imTextGroupRef.current.children)
-        imLetters.forEach((letter, index) => {
-          // POSITION
-          timeline
-            .to(
-              // @ts-ignore
-              letter.position,
-              {
-                keyframes: imTextPositionAnimation(imTextLengthRef.current, index),
-                duration: duration,
-              },
-              delay +
-                (index * imTextAnimationsConstants.ANIMATION.STAGGER) /
-                  heroAnimationsConstants.SPEED,
-            )
-            // MATERIAL
-            .to(
-              // @ts-ignore
-              letter.material,
-              {
-                keyframes: imTextMaterialAnimation.keyframes,
-                duration: duration,
-              },
-              delay +
-                (index * imTextAnimationsConstants.ANIMATION.STAGGER) /
-                  heroAnimationsConstants.SPEED,
-            )
-        })
-      }
+      const imLetters = gsap.utils.toArray(imTextGroupRef.current.children)
+      imLetters.forEach((letter, index) => {
+        // POSITION
+        timeline
+          .to(
+            // @ts-ignore
+            letter.position,
+            {
+              keyframes: imTextPositionAnimation(imTextLengthRef.current, index),
+              duration: duration,
+            },
+            delay +
+              (index * imTextAnimationsConstants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+          )
+          // MATERIAL
+          .to(
+            // @ts-ignore
+            letter.material,
+            {
+              keyframes: imTextMaterialAnimation.keyframes,
+              duration: duration,
+            },
+            delay +
+              (index * imTextAnimationsConstants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+          )
+      })
     },
     { scope: imTextGroupRef },
   )
@@ -90,11 +84,7 @@ export default function ImText({ timeline }: ImTextInterface) {
       <meshStandardMaterial
         color={greetingTextsAnimationsConstants.MATERIAL.COLOR}
         transparent={greetingTextsAnimationsConstants.MATERIAL.TRANSPARENT}
-        opacity={
-          !greetingAnimationsConstants.PAUSED && !imTextAnimationsConstants.PAUSED
-            ? imTextAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
-            : 1
-        }
+        opacity={imTextAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY}
         side={THREE.DoubleSide}
       />
     </Word3D>

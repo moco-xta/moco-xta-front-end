@@ -9,7 +9,6 @@ import ImText from './texts/ImText'
 import FedericoText from './texts/FedericoText'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as greetingAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingAnimationsConstants.json'
 import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
 
 import { greetingGroupAnimations } from 'animations'
@@ -28,28 +27,27 @@ export default function GreetingGroup() {
 
   useGSAP(
     () => {
-      if (!greetingAnimationsConstants.PAUSED && !greetingGroupAnimationsConstants.PAUSED) {
-        timeline
-          // POSITION
-          .to(
-            grettingGroupRef.current.position,
-            {
-              keyframes: greetingGroupAnimations.position.keyframes,
-              duration: duration,
-            },
-            delay,
-          )
-          // ROTATION
-          .to(
-            grettingGroupRef.current.rotation,
-            {
-              keyframes: greetingGroupAnimations.rotation.keyframes,
-              duration: duration,
-            },
-            delay,
-          )
-        // VISIBILITY
-        /* .to(
+      timeline
+        // POSITION
+        .to(
+          grettingGroupRef.current.position,
+          {
+            keyframes: greetingGroupAnimations.position.keyframes,
+            duration: duration,
+          },
+          delay,
+        )
+        // ROTATION
+        .to(
+          grettingGroupRef.current.rotation,
+          {
+            keyframes: greetingGroupAnimations.rotation.keyframes,
+            duration: duration,
+          },
+          delay,
+        )
+      // VISIBILITY
+      /* .to(
             grettingGroupRef.current,
             {
               keyframes: {
@@ -68,7 +66,6 @@ export default function GreetingGroup() {
             },
             delay,
           ) */
-      }
     },
     { scope: grettingGroupRef },
   )
@@ -96,9 +93,9 @@ export default function GreetingGroup() {
         )
       }
     >
-      <HiText timeline={timeline} />
-      <ImText timeline={timeline} />
-      <FedericoText timeline={timeline} />
+      <HiText />
+      <ImText />
+      <FedericoText />
     </group>
   )
 }

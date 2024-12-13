@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
@@ -10,6 +11,7 @@ import { default as heroAnimationsConstants } from '@/constants/animations/home/
 import { default as heroSliceAnimationsConstants } from '@/constants/animations/home/hero/hero_slice/heroSliceAnimationsConstants.json'
 
 import './index.scss'
+import { heroSliceAnimations } from '@/animations/home/hero'
 
 export default function HeroSlice() {
   const { timeline } = useGSAPTimelineContext()
@@ -25,73 +27,18 @@ export default function HeroSlice() {
 
   useGSAP(
     () => {
-      if (!heroSliceAnimationsConstants.SUBS.PORTRAIT.PAUSED) {
-        timeline.current.to(
-          heroSliceRef.current.style,
-          {
-            keyframes: {
-              '0%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['0_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '10%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['10_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '20%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['20_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '30%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['30_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '40%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['40_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '50%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['50_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '60%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['60_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '70%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['70_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '80%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['80_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '90%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['90_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              '100%': {
-                backgroundImage:
-                  heroSliceAnimationsConstants.SUBS.PORTRAIT.ANIMATION['100_PERCENT']
-                    .BACKGROUND_IMAGE,
-              },
-              easeEach: 'none',
-            },
-            duration: portraitDuration,
-          },
-          portraitDelay,
-        )
-      }
+      // console.log('timeline.current', timeline.current)
+      // timeline.current.addLabel('greeting', 0)
+      // timeline.current.timeline()
+      // console.log('gsap.context()', gsap.context())
+      timeline.to(
+        heroSliceRef.current.style,
+        {
+          keyframes: heroSliceAnimations.backgroundImage.keyFrames,
+          duration: portraitDuration,
+        },
+        portraitDelay,
+      )
     },
     { scope: heroSliceRef },
   )

@@ -3,20 +3,19 @@ import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as greetingAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingAnimationsConstants.json'
 import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
 import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/texts/federicoTextAnimationsConstants.json'
 
 import { federicoTextPositionAnimation, imTextMaterialAnimation } from 'animations'
 
-interface FedericoTextInterface {
-  timeline: GSAPTimeline
-}
+export default function FedericoText() {
+  const { timeline } = useGSAPTimelineContext()
 
-export default function FedericoText({ timeline }: FedericoTextInterface) {
   const [duration] = useState<number>(
     federicoTextAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )
@@ -32,40 +31,38 @@ export default function FedericoText({ timeline }: FedericoTextInterface) {
 
   useGSAP(
     () => {
-      if (!greetingAnimationsConstants.PAUSED && !federicoTextAnimationsConstants.PAUSED) {
-        const federicoLetters = gsap.utils.toArray(federicoTextGroupRef.current.children)
-        federicoLetters.forEach((letter, index) => {
-          // POSITION
-          timeline
-            .to(
-              // @ts-ignore
-              letter.position,
-              {
-                keyframes: federicoTextPositionAnimation(
-                  federicoTextGroupRef.current,
-                  federicoTextLengthRef.current,
-                  index,
-                ),
-                duration: duration,
-              },
-              delay +
-                (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
-                  heroAnimationsConstants.SPEED,
-            )
-            // MATERIAL
-            .to(
-              // @ts-ignore
-              letter.material,
-              {
-                keyframes: imTextMaterialAnimation.keyframes,
-                duration: duration,
-              },
-              delay +
-                (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
-                  heroAnimationsConstants.SPEED,
-            )
-        })
-      }
+      const federicoLetters = gsap.utils.toArray(federicoTextGroupRef.current.children)
+      federicoLetters.forEach((letter, index) => {
+        // POSITION
+        timeline
+          .to(
+            // @ts-ignore
+            letter.position,
+            {
+              keyframes: federicoTextPositionAnimation(
+                federicoTextGroupRef.current,
+                federicoTextLengthRef.current,
+                index,
+              ),
+              duration: duration,
+            },
+            delay +
+              (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
+                heroAnimationsConstants.SPEED,
+          )
+          // MATERIAL
+          .to(
+            // @ts-ignore
+            letter.material,
+            {
+              keyframes: imTextMaterialAnimation.keyframes,
+              duration: duration,
+            },
+            delay +
+              (index * federicoTextAnimationsConstants.ANIMATION.STAGGER) /
+                heroAnimationsConstants.SPEED,
+          )
+      })
     },
     { scope: federicoTextGroupRef },
   )
@@ -91,11 +88,7 @@ export default function FedericoText({ timeline }: FedericoTextInterface) {
       <meshStandardMaterial
         color={greetingTextsAnimationsConstants.MATERIAL.COLOR}
         transparent={greetingTextsAnimationsConstants.MATERIAL.TRANSPARENT}
-        opacity={
-          !greetingAnimationsConstants.PAUSED && !federicoTextAnimationsConstants.PAUSED
-            ? federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
-            : 1
-        }
+        opacity={federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY}
         side={THREE.DoubleSide}
       />
     </Word3D>
