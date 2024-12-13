@@ -1,22 +1,27 @@
 'use client'
 
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useState } from 'react'
 import { FaPause, FaPlay } from 'react-icons/fa'
 
-import { AppDispatch, RootState } from '@/redux/store'
-import { pause } from '@/redux/slice/animations/heroAnimationSlice'
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import variables from '@/styles/variables.module.scss'
 import './index.scss'
 
 export default function PauseAnimationButton() {
-  const dispatch = useDispatch<AppDispatch>()
-  const { paused } = useSelector((state: RootState) => state.heroAnimationSlice)
+  const [paused, setPaused] = useState<boolean>(false)
+
+  const { timeline } = useGSAPTimelineContext()
 
   const handleOnClick = () => {
-    dispatch(pause())
+    if (!paused) {
+      timeline.pause()
+      setPaused(true)
+    } else {
+      timeline.play()
+      setPaused(false)
+    }
   }
+
   return (
     <div
       id='pause_animation_button'

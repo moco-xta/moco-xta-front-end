@@ -9,7 +9,7 @@ import { Word3D } from '@/components/three/components/word_3d/Word3D'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as greetingAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingAnimationsConstants.json'
 import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
-import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/hiTextAnimationsConstants.json'
+import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/texts/hiTextAnimationsConstants.json'
 
 import { hiTextAnimations } from 'animations'
 

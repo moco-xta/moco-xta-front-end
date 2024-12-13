@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react'
 import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
 
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
 import HiText from './texts/HiText'
 import ImText from './texts/ImText'
 import FedericoText from './texts/FedericoText'
@@ -12,11 +14,9 @@ import { default as greetingGroupAnimationsConstants } from '@/constants/animati
 
 import { greetingGroupAnimations } from 'animations'
 
-interface GreetingGroupInterface {
-  timeline: GSAPTimeline
-}
+export default function GreetingGroup() {
+  const { timeline } = useGSAPTimelineContext()
 
-export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
   const [duration] = useState<number>(
     greetingGroupAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )
@@ -48,8 +48,8 @@ export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
             },
             delay,
           )
-          // VISIBILITY
-          /* .to(
+        // VISIBILITY
+        /* .to(
             grettingGroupRef.current,
             {
               keyframes: {

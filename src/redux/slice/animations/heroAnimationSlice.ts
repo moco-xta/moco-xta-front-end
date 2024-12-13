@@ -4,16 +4,10 @@ import { gsap } from 'gsap'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 
 interface HeroAnimationInterface {
-  timeline: GSAPTimeline
   paused: boolean
 }
 
 const initialState: HeroAnimationInterface = {
-  timeline: gsap.timeline({
-    delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
-    smoothChildTiming: true,
-    // yoyo: true
-  }),
   paused: false,
 }
 

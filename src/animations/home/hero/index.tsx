@@ -1,10 +1,10 @@
 import { greetingGroupAnimations } from './greeting/greetingGroupAnimations'
-import { hiTextAnimations } from './greeting/hiTextAnimations'
-import { imTextPositionAnimation, imTextMaterialAnimation } from './greeting/imTextAnimations'
+import { hiTextAnimations } from './greeting/texts/hiTextAnimations'
+import { imTextPositionAnimation, imTextMaterialAnimation } from './greeting/texts/imTextAnimations'
 import {
   federicoTextPositionAnimation,
   federicoTextMaterialAnimation,
-} from './greeting/federicoTextAnimations'
+} from './greeting/texts/federicoTextAnimations'
 
 export {
   greetingGroupAnimations,

@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { useSelector } from 'react-redux'
-import { gsap } from 'gsap'
+import React, { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 
-import { RootState } from '@/redux/store'
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import { HeroCanvas } from '@/components/three/canvas'
+import PauseAnimationButton from '@/components/buttons/pause_animation_button'
 
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as heroSliceAnimationsConstants } from '@/constants/animations/home/hero/hero_slice/heroSliceAnimationsConstants.json'
@@ -13,6 +12,8 @@ import { default as heroSliceAnimationsConstants } from '@/constants/animations/
 import './index.scss'
 
 export default function HeroSlice() {
+  const { timeline } = useGSAPTimelineContext()
+
   const [portraitDuration] = useState<number>(
     heroSliceAnimationsConstants.SUBS.PORTRAIT.DURATION / heroAnimationsConstants.SPEED,
   )
@@ -21,28 +22,6 @@ export default function HeroSlice() {
   )
 
   const heroSliceRef = useRef<HTMLElement>(null!)
-
-  const { /* timeline, */ paused } = useSelector((state: RootState) => state.heroAnimationSlice)
-
-  const timeline = useRef<GSAPTimeline>(
-    gsap.timeline({
-      delay: heroAnimationsConstants.DELAY / heroAnimationsConstants.SPEED,
-      smoothChildTiming: true,
-      // yoyo: true
-    }),
-  )
-
-  useEffect(() => {
-    console.log('timeline.current', timeline.current)
-  }, [timeline.current])
-
-  useEffect(() => {
-    if (paused) {
-      timeline.current.pause(timeline.current.vars.data)
-    } else {
-      timeline.current.paused(false)
-    }
-  }, [paused])
 
   useGSAP(
     () => {
@@ -118,19 +97,18 @@ export default function HeroSlice() {
   )
 
   return (
-    <>
-      <section
-        ref={heroSliceRef}
-        id='hero_slice'
-        className='fullscreen'
-        style={{
-          background: '#fff',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <HeroCanvas timeline={timeline.current} />
-      </section>
-    </>
+    <section
+      ref={heroSliceRef}
+      id='hero_slice'
+      className='fullscreen'
+      style={{
+        background: '#fff',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <HeroCanvas />
+      <PauseAnimationButton />
+    </section>
   )
 }

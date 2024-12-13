@@ -20,7 +20,7 @@ export const store = configureStore({
     cursorState: cursorStateSlice,
     minecraft: minecraftSlice,
     rubiksCube: rubiksCubeSlice,
-    heroAnimationSlice: heroAnimationSlice,
+    heroAnimation: heroAnimationSlice,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),

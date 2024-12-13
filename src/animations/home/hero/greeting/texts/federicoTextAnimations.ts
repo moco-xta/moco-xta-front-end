@@ -1,5 +1,6 @@
-import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/federicoTextAnimationsConstants.json'
 import { getRandomInt } from '@/helpers/mathHelpers'
+
+import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/texts/federicoTextAnimationsConstants.json'
 
 export const federicoTextPositionAnimation = (
   federicoTextGroupRef: THREE.Group,

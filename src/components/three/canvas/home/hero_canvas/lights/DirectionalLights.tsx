@@ -3,11 +3,7 @@ import * as THREE from 'three'
 
 import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 
-interface DirectionalLightsInterface {
-  timeline: GSAPTimeline
-}
-
-export default function DirectionalLights({ timeline }: DirectionalLightsInterface) {
+export default function DirectionalLights() {
   const directionalLightsGroupRef = useRef<THREE.Group>(null!)
 
   return (

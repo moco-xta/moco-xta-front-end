@@ -11,15 +11,11 @@ import AlsoKnowAsGroup from './groups/also_know_as/AlsoKnowAsGroup'
 import MocoGroup from './groups/moco/MocoHeliumBalloons'
 import DeveloperGroup from './groups/developer/DeveloperGroup'
 import WithExtraSkillsGroup from './groups/with_extra_skills/WithExtraSkillsGroup'
-
-import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 import PostProcessing from './PostProcessing'
 
-interface HeroCanvasInterface {
-  timeline: GSAPTimeline
-}
+import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
 
-export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
+export default function HeroCanvas() {
   return (
     <Canvas
       dpr={heroCanvasConstants.CANVAS.DPR}
@@ -38,7 +34,7 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
     >
       <Camera />
       <OrbitControls />
-      <Lights timeline={timeline} />
+      <Lights />
       {/* <color
         attach='background'
         args={['#ffffff']}
@@ -54,7 +50,7 @@ export default function HeroCanvas({ timeline }: HeroCanvasInterface) {
           // timeStep={heroCanvasConstants.PHYSICS.TIME_STEP}
           paused={heroCanvasConstants.PHYSICS.PAUSED}
         >
-          <GreetingGroup timeline={timeline} />
+          <GreetingGroup />
           {/* <PortraitGroup timeline={timeline} /> */}
           {/* <AlsoKnowAsGroup timeline={timeline} /> */}
           {/* <MocoGroup timeline={timeline} /> */}
