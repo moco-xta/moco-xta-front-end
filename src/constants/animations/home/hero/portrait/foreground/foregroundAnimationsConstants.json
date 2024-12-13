@@ -1,8 +1,6 @@
 {
-  "NAME": "FOREGROUND",
-  "KEYFRAME_START": 4,
   "DURATION": 4,
-  "ANIMATE": true,
+  "LABEL": "portrait",
   "ANIMATION": {
     "0_PERCENT": {
       "POSITION": {

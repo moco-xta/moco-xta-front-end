@@ -7,11 +7,7 @@ import { Ganesh } from '@/components/three/models/home/hero/portrait/Ganesh'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as ganeshComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/ganeshComponentAnimationsConstants.json'
 
-interface GaneshComponentInterface {
-  timeline: GSAPTimeline
-}
-
-export default function GaneshComponent({ timeline }: GaneshComponentInterface) {
+export default function GaneshComponent() {
   const [duration] = useState<number>(
     ganeshComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )

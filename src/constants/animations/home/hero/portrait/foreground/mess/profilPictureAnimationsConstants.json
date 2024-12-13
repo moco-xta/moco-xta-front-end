@@ -1,7 +1,6 @@
 {
-  "NAME": "PROFIL_PICTURE",
-  "KEYFRAME_START": 4,
   "DURATION": 4,
+  "LABEL": "portrait",
   "ANIMATE": true,
   "ANIMATION": {
     "0_PERCENT": {

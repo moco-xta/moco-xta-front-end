@@ -7,11 +7,7 @@ import { Heart } from '@/components/three/models/home/hero/portrait/Heart'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as heartComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/heartComponentAnimationsConstants.json'
 
-interface ProfilPictureInterface {
-  timeline: GSAPTimeline
-}
-
-export default function HeartComponent({ timeline }: ProfilPictureInterface) {
+export default function HeartComponent() {
   const [duration] = useState<number>(
     heartComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )

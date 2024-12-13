@@ -1,5 +1,4 @@
 {
-  "NAME": "GREETING_GROUP",
   "DURATION": 5,
   "LABEL": "greeting",
   "ANIMATION": {
@@ -81,13 +80,6 @@
         "Z": 0,
         "EASE": "power1.in"
       }
-    },
-    "POSITION": {
-      "20_PERCENT": {},
-      "40_PERCENT": {},
-      "60_PERCENT": {},
-      "80_PERCENT": {},
-      "100_PERCENT": {}
     }
   }
 }

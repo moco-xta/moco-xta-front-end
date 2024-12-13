@@ -7,11 +7,6 @@ import { Spray } from '@/components/three/models/home/hero/portrait/Spray'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as sprayComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/sprayComponentAnimationsConstants.json'
 
-interface SprayComponentInterface {
-  timeline: GSAPTimeline
-}
-
-export default function SprayComponent({ timeline }: SprayComponentInterface) {
   const [duration] = useState<number>(
     sprayComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )

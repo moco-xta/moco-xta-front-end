@@ -7,11 +7,7 @@ import { Colors } from '@/components/three/models/home/hero/portrait/Colors'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as colorsComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/colorsComponentAnimationsConstants.json'
 
-interface ColorsComponentInterface {
-  timeline: GSAPTimeline
-}
-
-export default function ColorsComponent({ timeline }: ColorsComponentInterface) {
+export default function ColorsComponent() {
   const [duration] = useState<number>(
     colorsComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )

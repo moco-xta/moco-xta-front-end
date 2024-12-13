@@ -1,27 +1,20 @@
-import React, { useMemo, useRef, useState } from 'react'
+import React, { useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import { Plane } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
 import vertexShader from '@/components/three/shaders/profil_picture/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/profil_picture/fragmentShader.glsl'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as profilPictureAnimationsConstants } from '@/constants/animations/home/hero/portrait/profilPictureAnimationsConstants.json'
 
-interface ProfilPictureInterface {
-  timeline: GSAPTimeline
-}
+import { profilePictureAnimations } from '@/animations/index'
 
-export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
-  const [duration] = useState<number>(
-    profilPictureAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    profilPictureAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
+export default function ProfilPicture() {
+  const { timeline } = useGSAPTimelineContext()
 
   const portraitMap = new THREE.TextureLoader().load(texturesConstants.HOME.PORTRAIT)
   portraitMap.magFilter = THREE.NearestFilter
@@ -78,24 +71,15 @@ export default function ProfilPicture({ timeline }: ProfilPictureInterface) {
   }
 
   useGSAP(() => {
-    if (profilPictureAnimationsConstants.ANIMATE)
-      // MATERIAL
-      timeline.to(
-        mouseDataRef.current,
-        {
-          keyframes: {
-            '0%': {
-              opacity: profilPictureAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
-            },
-            '25%': {
-              opacity: profilPictureAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
-            },
-            easeEach: profilPictureAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
-          },
-          duration: duration,
-        },
-        delay,
-      )
+    // MATERIAL
+    timeline.to(
+      mouseDataRef.current,
+      {
+        keyframes: profilePictureAnimations.material.keyframes,
+        duration: profilePictureAnimations.material.duration,
+      },
+      profilePictureAnimations.delay,
+    )
   })
 
   useFrame(({ pointer }) => {

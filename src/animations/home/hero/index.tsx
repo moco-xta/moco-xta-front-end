@@ -1,8 +1,11 @@
 import { heroSliceAnimations } from './heroSliceAnimations'
-import { greetingGroupAnimations } from './greeting/greetingGroupAnimations'
-import { hiTextAnimations } from './greeting/texts/hiTextAnimations'
-import { imTextAnimations } from './greeting/texts/imTextAnimations'
-import { federicoTextAnimations } from './greeting/texts/federicoTextAnimations'
+import {
+  greetingGroupAnimations,
+  hiTextAnimations,
+  imTextAnimations,
+  federicoTextAnimations,
+} from './greeting'
+import { profilePictureAnimations } from './portrait'
 
 export {
   heroSliceAnimations,
@@ -10,4 +13,5 @@ export {
   hiTextAnimations,
   imTextAnimations,
   federicoTextAnimations,
+  profilePictureAnimations,
 }

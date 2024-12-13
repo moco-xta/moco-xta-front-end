@@ -5,6 +5,7 @@ import {
   greetingGroupAnimations,
   hiTextAnimations,
   federicoTextAnimations,
+  profilePictureAnimations,
 } from './home/hero'
 
 export {
@@ -14,4 +15,5 @@ export {
   greetingGroupAnimations,
   hiTextAnimations,
   federicoTextAnimations,
+  profilePictureAnimations,
 }

@@ -8,11 +8,7 @@ import { PaintBucket } from '@/components/three/models/home/hero/portrait/PaintB
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as paintBucketComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/paintBucketComponentAnimationsConstants.json'
 
-interface PaintBucketComponentInterface {
-  timeline: GSAPTimeline
-}
-
-export default function PaintBucketComponent({ timeline }: PaintBucketComponentInterface) {
+export default function PaintBucketComponent() {
   const [duration] = useState<number>(
     paintBucketComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )

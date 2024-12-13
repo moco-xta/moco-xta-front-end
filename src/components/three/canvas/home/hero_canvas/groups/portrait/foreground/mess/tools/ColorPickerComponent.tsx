@@ -8,11 +8,7 @@ import { ColorPicker } from '@/components/three/models/home/hero/portrait/ColorP
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as colorPickerComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/colorPickerComponentAnimationsConstants.json'
 
-interface ColorPickerComponentInterface {
-  timeline: GSAPTimeline
-}
-
-export default function ColorPickerComponent({ timeline }: ColorPickerComponentInterface) {
+export default function ColorPickerComponent() {
   const [duration] = useState<number>(
     colorPickerComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )

@@ -7,11 +7,7 @@ import { Christus } from '@/components/three/models/home/hero/portrait/Christus'
 import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as christusComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/christusComponentAnimationsConstants.json'
 
-interface ChristusComponentInterface {
-  timeline: GSAPTimeline
-}
-
-export default function ChristusComponent({ timeline }: ChristusComponentInterface) {
+export default function ChristusComponent() {
   const [duration] = useState<number>(
     christusComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
   )
