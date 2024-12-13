@@ -8,7 +8,7 @@ import { HeroCanvas } from '@/components/three/canvas'
 import PauseAnimationButton from '@/components/buttons/pause_animation_button'
 
 import './index.scss'
-import { heroSliceAnimations } from '@/animations/home/hero'
+import { heroSliceAnimations } from '@/animations/index'
 
 export default function HeroSlice() {
   const { timeline } = useGSAPTimelineContext()

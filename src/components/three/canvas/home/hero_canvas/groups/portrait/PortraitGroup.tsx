@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Foreground from './foreground/Foreground'
-import GobelinoComponent from './background/GobelinoComponent'
+import GobelinoGroup from './gobelino/GobelinoGroup'
 
 export default function PortraitGroup() {
   return (
     <>
       <Foreground />
-      {/* <GobelinoComponent timeline={timeline} /> */}
+      <GobelinoGroup />
     </>
   )
 }

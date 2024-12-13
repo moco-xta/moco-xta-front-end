@@ -4,7 +4,9 @@ import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import { Heart } from '@/components/three/models/home/hero/portrait/Heart'
+import { Heart } from '@/components/three/models/home/hero/portrait/foreground/mess/Heart'
+
+import { default as heartComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/heartComponentAnimationsConstants.json'
 
 import { heartComponentAnimations } from '@/animations/index'
 
@@ -28,8 +30,14 @@ export default function HeartComponent() {
   return (
     <Heart
       ref={heartComponentMeshRef}
-      position={new THREE.Vector3(1.5, -3.75, 1)}
-      scale={0.5}
+      position={
+        new THREE.Vector3(
+          heartComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          heartComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          heartComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+        )
+      }
+      scale={heartComponentAnimationsConstants.ANIMATION['0_PERCENT'].SCALE}
     />
   )
 }

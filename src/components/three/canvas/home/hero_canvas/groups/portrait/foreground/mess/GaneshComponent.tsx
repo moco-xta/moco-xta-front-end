@@ -1,48 +1,43 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
 
-import { Ganesh } from '@/components/three/models/home/hero/portrait/Ganesh'
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as ganeshComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/ganeshComponentAnimationsConstants.json'
+import { Ganesh } from '@/components/three/models/home/hero/portrait/foreground/mess/Ganesh'
+
+import { default as ganeshComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/ganeshComponentAnimationsConstants.json'
+
+import { ganeshComponentAnimations } from '@/animations/index'
 
 export default function GaneshComponent() {
-  const [duration] = useState<number>(
-    ganeshComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    ganeshComponentAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
+  const { timeline } = useGSAPTimelineContext()
 
   const ganeshComponentMeshRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(() => {
-    if (ganeshComponentAnimationsConstants.ANIMATE)
-      // MATERIAL
-      timeline.to(
-        ganeshComponentMeshRef.current.material,
-        {
-          keyframes: {
-            '0%': {
-              opacity: ganeshComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
-            },
-            '25%': {
-              opacity: ganeshComponentAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
-            },
-            easeEach: ganeshComponentAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
-          },
-          duration: duration,
-        },
-        delay,
-      )
+    // MATERIAL
+    timeline.to(
+      ganeshComponentMeshRef.current.material,
+      {
+        keyframes: ganeshComponentAnimations.material.keyframes,
+        duration: ganeshComponentAnimations.material.duration,
+      },
+      ganeshComponentAnimations.delay,
+    )
   })
 
   return (
     <Ganesh
       ref={ganeshComponentMeshRef}
-      position={new THREE.Vector3(-2.5, -1.5, 0)}
-      scale={0.5}
+      position={
+        new THREE.Vector3(
+          ganeshComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          ganeshComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          ganeshComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+        )
+      }
+      scale={ganeshComponentAnimationsConstants.ANIMATION['0_PERCENT'].SCALE}
     />
   )
 }

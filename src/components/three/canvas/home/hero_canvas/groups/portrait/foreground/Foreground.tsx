@@ -5,7 +5,9 @@ import { useGSAP } from '@gsap/react'
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import Mess from './mess/Mess'
-// import AlsoKnowAsText from '../../also_know_as/also_know_as_text/AlsoKnowAsTextGroup'
+import AlsoKnowAsText from '../../also_know_as/also_know_as_text/AlsoKnowAsTextGroup'
+
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundAnimationsConstants.json'
 
 import { foregroundAnimations } from '@/animations/home/hero/portrait/foreground/foregroundAnimations'
 
@@ -59,10 +61,14 @@ export default function Foreground() {
   return (
     <group
       ref={foregroundGroupRef}
-      position={[0, -5, 0]}
+      position={[
+        foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
+        foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+        foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+      ]}
     >
       <Mess />
-      {/* <AlsoKnowAsText /> */}
+      <AlsoKnowAsText />
     </group>
   )
 }

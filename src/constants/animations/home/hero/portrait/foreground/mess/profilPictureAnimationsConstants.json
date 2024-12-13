@@ -5,6 +5,7 @@
   "ANIMATION": {
     "0_PERCENT": {
       "MATERIAL": {
+        "TRANSPARENT": true,
         "OPACITY": 0
       }
     },
