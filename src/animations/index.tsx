@@ -6,6 +6,7 @@ import {
   hiTextAnimations,
   federicoTextAnimations,
   profilePictureAnimations,
+  heartComponentAnimations,
 } from './home/hero'
 
 export {
@@ -16,4 +17,5 @@ export {
   hiTextAnimations,
   federicoTextAnimations,
   profilePictureAnimations,
+  heartComponentAnimations,
 }

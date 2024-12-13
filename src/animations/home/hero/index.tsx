@@ -5,7 +5,7 @@ import {
   imTextAnimations,
   federicoTextAnimations,
 } from './greeting'
-import { profilePictureAnimations } from './portrait'
+import { profilePictureAnimations, heartComponentAnimations } from './portrait'
 
 export {
   heroSliceAnimations,
@@ -14,4 +14,5 @@ export {
   imTextAnimations,
   federicoTextAnimations,
   profilePictureAnimations,
+  heartComponentAnimations,
 }

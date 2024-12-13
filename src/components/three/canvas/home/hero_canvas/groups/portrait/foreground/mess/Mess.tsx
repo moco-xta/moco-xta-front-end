@@ -10,7 +10,7 @@ import ChristusComponent from './ChristusComponent'
 export default function Mess() {
   return (
     <group position={[0, 5, 0]}>
-      {/* <HeartComponent /> */}
+      <HeartComponent />
       {/* <ToolsGroup /> */}
       {/* <LogoRCL /> */}
       <ProfilPicture />

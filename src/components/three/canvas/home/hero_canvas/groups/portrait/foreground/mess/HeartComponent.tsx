@@ -1,41 +1,28 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
 
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
 import { Heart } from '@/components/three/models/home/hero/portrait/Heart'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as heartComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/heartComponentAnimationsConstants.json'
+import { heartComponentAnimations } from '@/animations/index'
 
 export default function HeartComponent() {
-  const [duration] = useState<number>(
-    heartComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    heartComponentAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
+  const { timeline } = useGSAPTimelineContext()
 
   const heartComponentMeshRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(() => {
-    if (heartComponentAnimationsConstants.ANIMATE)
-      // MATERIAL
-      timeline.to(
-        heartComponentMeshRef.current.material,
-        {
-          keyframes: {
-            '0%': {
-              opacity: heartComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
-            },
-            '25%': {
-              opacity: heartComponentAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
-            },
-            easeEach: heartComponentAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
-          },
-          duration: duration,
-        },
-        delay,
-      )
+    // MATERIAL
+    timeline.to(
+      heartComponentMeshRef.current.material,
+      {
+        keyframes: heartComponentAnimations.material.keyframes,
+        duration: heartComponentAnimations.material.duration,
+      },
+      heartComponentAnimations.delay,
+    )
   })
 
   return (
