@@ -1,11 +1,11 @@
 @import '@/styles/variables.module.scss';
 
 #hero_background_canvas_container {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   z-index: -100;
-  background: pink;
+  // background: pink;
 }

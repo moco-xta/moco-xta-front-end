@@ -1,10 +1,5 @@
-attribute vec2 aVertexPosition;
-attribute vec2 aTexturePosition;
- 
- 
-varying vec2 tPos;
- 
+attribute vec4 a_position;
+
 void main() {
-    tPos = aTexturePosition;
-    gl_Position = vec4(aVertexPosition, 0.0, 1.0);
+	gl_Position = a_position;
 }

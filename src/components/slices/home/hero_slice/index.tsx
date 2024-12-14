@@ -60,7 +60,7 @@ export default function HeroSlice() {
       }}
     >
       <Controls />
-      <HeroCanvas />
+      {/* <HeroCanvas /> */}
       <HeroBackgroundCanvas />
     </section>
   )
