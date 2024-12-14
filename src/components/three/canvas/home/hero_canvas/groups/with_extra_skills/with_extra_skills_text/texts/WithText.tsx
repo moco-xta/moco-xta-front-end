@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl'
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 import { SkillsTextBackground } from '../SkillsTextBackground'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/heroConstants.json'
 
 export default function WithText() {
   const t = useTranslations('HOME')
@@ -45,12 +45,10 @@ export default function WithText() {
         '50%': { y: 4.6 },
         easeEach: 'power1.in',
       },
-      delay:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .DELAY,
+      delay: heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.DELAY,
       duration:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .STEPS / heroAnimationsConstants.SPEED,
+        heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.STEPS /
+        heroConstants.SPEED,
     })
     gsap.to(withGroupRef.current.rotation, {
       keyframes: {
@@ -62,12 +60,10 @@ export default function WithText() {
         '50%': { x: 0, y: 0, z: 0 },
         easeEach: 'power1.in',
       },
-      delay:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .DELAY,
+      delay: heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.DELAY,
       duration:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .STEPS / heroAnimationsConstants.SPEED,
+        heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.STEPS /
+        heroConstants.SPEED,
     })
     gsap.to(withTextBackgroundRef.current.scale, {
       keyframes: {
@@ -76,12 +72,10 @@ export default function WithText() {
         '100%': { z: 1, ease: 'power4.in' },
         easeEach: 'power1.in',
       },
-      delay:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .DELAY,
+      delay: heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.DELAY,
       duration:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .STEPS / heroAnimationsConstants.SPEED,
+        heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.STEPS /
+        heroConstants.SPEED,
     })
   })
 
@@ -102,7 +96,7 @@ export default function WithText() {
         lengthRef={lengthRef}
       >
         <meshStandardMaterial
-          color={heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
+          color={heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
           transparent
           opacity={1}
           side={THREE.DoubleSide}

@@ -9,9 +9,9 @@ interface Word3DInterface {
   size?: number
   depth?: number
   spaceWidth?: number
-  splittedWord: string[]
   position?: THREE.Vector3
   center?: boolean
+  splittedWord: string[]
   lengthRef?: MutableRefObject<number[]>
   children: JSX.Element
 }

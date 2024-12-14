@@ -24,7 +24,6 @@ export const Smiley = forwardRef<THREE.Mesh, MeshProps>(function Smiley(props, r
       geometry={nodes.Smiley.geometry}
       material={materials.smiley}
       {...props}
-      dispose={null}
     />
   )
 })

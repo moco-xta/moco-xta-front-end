@@ -45,7 +45,6 @@ export function VinylDisc({ name, position, rotation, texture }: VinylDiscInterf
       name={name}
       position={position}
       rotation={rotation}
-      dispose={null}
     >
       <mesh
         name='VinylDisc_1'

@@ -7,7 +7,7 @@ import ContactText from './texts/ContactText'
 import MeText from './texts/MeText'
 import { IphoneKeyboard } from './IphoneKeyboard'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/heroConstants.json'
 
 export default function ContactMe() {
   const contactMeGroupRef = useRef<THREE.Group>(null!)
@@ -28,10 +28,8 @@ export default function ContactMe() {
           z: 0,
         },
       },
-      delay: heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY,
-      duration:
-        heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS /
-        heroAnimationsConstants.SPEED,
+      delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY,
+      duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
     })
     gsap.to(contactMeGroupRef.current.rotation, {
       keyframes: {
@@ -49,10 +47,8 @@ export default function ContactMe() {
           ease: 'circ.inOut',
         },
       },
-      delay: heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY,
-      duration:
-        heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS /
-        heroAnimationsConstants.SPEED,
+      delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY,
+      duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
     })
     const iphoneKeyboardTouchs = gsap.utils.toArray(iphoneKeyboardGroupRef.current.children)
     iphoneKeyboardTouchs.forEach((touch, index) => {
@@ -74,10 +70,8 @@ export default function ContactMe() {
             opacity: 0,
           },
         },
-        delay: heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY,
-        duration:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS /
-          heroAnimationsConstants.SPEED,
+        delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY,
+        duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
       })
     })
     gsap.to(contactMeGroupRef.current, {
@@ -89,10 +83,8 @@ export default function ContactMe() {
           visible: false,
         },
       },
-      delay: heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY,
-      duration:
-        heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS /
-        heroAnimationsConstants.SPEED,
+      delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY,
+      duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
     })
   })
 

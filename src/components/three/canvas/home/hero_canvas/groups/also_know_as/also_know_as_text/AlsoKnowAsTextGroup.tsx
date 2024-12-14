@@ -1,33 +1,26 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
+
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import AlsoText from './texts/AlsoText'
 import KnowText from './texts/KnowText'
 import AsText from './texts/AsText'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as alsoKnowAsAnimationsConstants } from '@/constants/animations/home/hero/portrait/alsoKnowAsAnimationsConstants.json'
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundConstants.json'
+import { default as alsoKnowAsConstants } from '@/constants/animations/home/hero/portrait/foreground/alsoKnowAsConstants.json'
 
-interface AlsoKnowAsTextGroupInterface {
-  timeline: GSAPTimeline
-}
-
-export default function AlsoKnowAsTextGroup({ timeline }: AlsoKnowAsTextGroupInterface) {
-  const [duration] = useState<number>(
-    alsoKnowAsAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    alsoKnowAsAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
+export default function AlsoKnowAsTextGroup() {
+  const { timeline } = useGSAPTimelineContext()
 
   const alsoKnowAsGroupRef = useRef<THREE.Group>(null!)
 
-  useLayoutEffect(() => {
+  /* useLayoutEffect(() => {
     if (alsoKnowAsGroupRef.current) alsoKnowAsGroupRef.current.visible = false
-  }, [alsoKnowAsGroupRef])
+  }, [alsoKnowAsGroupRef]) */
 
-  useGSAP(
+  /* useGSAP(
     () => {
       timeline.to(
         // VISIBILITY
@@ -46,12 +39,14 @@ export default function AlsoKnowAsTextGroup({ timeline }: AlsoKnowAsTextGroupInt
       )
     },
     { scope: alsoKnowAsGroupRef },
-  )
+  ) */
 
   return (
     <group
       ref={alsoKnowAsGroupRef}
-      position={new THREE.Vector3(0, -5, 0)}
+      position={
+        new THREE.Vector3(0, foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y, 0)
+      }
       rotation={new THREE.Euler(0, 0, THREE.MathUtils.degToRad(-180))}
     >
       <AlsoText />

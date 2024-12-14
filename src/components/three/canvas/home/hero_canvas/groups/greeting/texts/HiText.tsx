@@ -4,27 +4,18 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
-import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/hiTextAnimationsConstants.json'
+import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/greeting/texts/hiTextAnimationsConstants.json'
 
 import { hiTextAnimations } from 'animations'
 
-interface HiTextInterface {
-  timeline: GSAPTimeline
-}
-
-export default function HiText({ timeline }: HiTextInterface) {
+export default function HiText() {
   const t = useTranslations('HOME')
-
-  const [duration] = useState<number>(
-    hiTextAnimationsContants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    hiTextAnimationsContants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
+  const { timeline } = useGSAPTimelineContext()
 
   const [hiText] = useState<string>(t('HERO.HI').toUpperCase())
   const [hiTextSplitted] = useState<string[]>(hiText.split(''))
@@ -34,32 +25,29 @@ export default function HiText({ timeline }: HiTextInterface) {
 
   useGSAP(
     () => {
-      if (hiTextAnimationsContants.ANIMATE) {
-        const hiLetters: THREE.Mesh[] = gsap.utils.toArray(hiTextGroupRef.current.children)
-        hiLetters.forEach((letter, index) => {
+      const hiLetters: THREE.Mesh[] = gsap.utils.toArray(hiTextGroupRef.current.children)
+      hiLetters.forEach((letter, index) => {
+        const animations = hiTextAnimations(index)
+        timeline
           // POSITION
-          timeline.to(
+          .to(
             letter.position,
             {
-              keyframes: hiTextAnimations.position.keyframes,
-              duration: duration,
+              keyframes: animations.position.keyframes,
+              duration: animations.duration,
             },
-            delay +
-              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+            animations.delay,
           )
-
           // MATERIAL
-          timeline.to(
+          .to(
             letter.material,
             {
-              keyframes: hiTextAnimations.rotation.keyframes,
-              duration: duration,
+              keyframes: animations.rotation.keyframes,
+              duration: animations.duration,
             },
-            delay +
-              (index * hiTextAnimationsContants.ANIMATION.STAGGER) / heroAnimationsConstants.SPEED,
+            animations.delay,
           )
-        })
-      }
+      })
     },
     { scope: hiTextGroupRef },
   )
@@ -69,9 +57,8 @@ export default function HiText({ timeline }: HiTextInterface) {
       ref={hiTextGroupRef}
       keyPrefix={'hi_text'}
       font={greetingTextsAnimationsConstants.GEOMETRY.FONT}
-      size={greetingTextsAnimationsConstants.GEOMETRY.SIZES.HI_TEXT}
+      size={greetingTextsAnimationsConstants.GEOMETRY.SIZES.DEFAULT}
       depth={greetingTextsAnimationsConstants.GEOMETRY.DEPTH}
-      splittedWord={hiTextSplitted}
       position={
         new THREE.Vector3(
           hiTextAnimationsContants.ANIMATION['0_PERCENT'].POSITION.X,
@@ -80,16 +67,13 @@ export default function HiText({ timeline }: HiTextInterface) {
         )
       }
       center={true}
+      splittedWord={hiTextSplitted}
       lengthRef={hiTextLengthRef}
     >
       <meshStandardMaterial
         color={greetingTextsAnimationsConstants.MATERIAL.COLOR}
         transparent={greetingTextsAnimationsConstants.MATERIAL.TRANSPARENT}
-        opacity={
-          hiTextAnimationsContants.ANIMATE
-            ? hiTextAnimationsContants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
-            : 1
-        }
+        opacity={hiTextAnimationsContants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY}
         side={THREE.DoubleSide}
       />
     </Word3D>

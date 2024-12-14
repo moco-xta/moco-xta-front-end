@@ -24,10 +24,7 @@ export function WallClock({ position }: JSX.IntrinsicElements['group']) {
   ) as GLTFResult
 
   return (
-    <group
-      position={position}
-      dispose={null}
-    >
+    <group position={position}>
       <mesh
         name='WallClock_1'
         geometry={nodes.WallClock_1.geometry}

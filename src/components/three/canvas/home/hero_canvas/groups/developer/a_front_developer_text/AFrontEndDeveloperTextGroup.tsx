@@ -7,7 +7,7 @@ import FrontText from './texts/FrontText'
 import EndText from './texts/EndText'
 import DeveloperText from './texts/DeveloperText'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
 import { default as aFrontEndDeveloperTextGroupAnimationsConstants } from '@/constants/animations/home/hero/developer/aFrontEndDeveloperTextGroupAnimationsConstants.json'
 
 interface AFrontEndDeveloperTextGroupInterface {
@@ -18,10 +18,10 @@ export default function AFrontEndDeveloperTextGroup({
   timeline,
 }: AFrontEndDeveloperTextGroupInterface) {
   const [duration] = useState<number>(
-    aFrontEndDeveloperTextGroupAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+    aFrontEndDeveloperTextGroupAnimationsConstants.DURATION / heroConstants.SPEED,
   )
   const [delay] = useState<number>(
-    aFrontEndDeveloperTextGroupAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+    aFrontEndDeveloperTextGroupAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
   )
 
   const aFrontEndDeveloperTextGroupRef = useRef<THREE.Group>(null!)

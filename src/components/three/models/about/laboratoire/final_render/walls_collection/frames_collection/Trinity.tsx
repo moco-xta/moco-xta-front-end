@@ -27,7 +27,6 @@ export function Trinity({ position }: JSX.IntrinsicElements['group']) {
     <group
       name='Trinity'
       position={position}
-      dispose={null}
     >
       <mesh
         name='Trinity_1'

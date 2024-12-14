@@ -30,7 +30,6 @@ export function SpeakerBox({ name, position }: JSX.IntrinsicElements['group']) {
     <group
       name={name}
       position={position}
-      dispose={null}
     >
       <mesh
         name='SpeakerBox_1'

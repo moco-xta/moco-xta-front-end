@@ -25,7 +25,6 @@ export function Couronnes({ position }: JSX.IntrinsicElements['group']) {
     <group
       name='Couronnes'
       position={position}
-      dispose={null}
     >
       <mesh
         name='Couronnes_1'

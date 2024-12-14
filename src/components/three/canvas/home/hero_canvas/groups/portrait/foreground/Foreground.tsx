@@ -1,74 +1,46 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { Box } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
-import Mess from './mess/Mess'
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
+import MessGroup from './mess/Mess'
 import AlsoKnowAsText from '../../also_know_as/also_know_as_text/AlsoKnowAsTextGroup'
 
-import { boxGroupMaterial } from '@/components/three/materials/helpersMaterials'
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundConstants.json'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foregroundAnimationsConstants.json'
+import { foregroundAnimations } from '@/animations/home/hero/portrait/foreground/foregroundAnimations'
 
-interface ForegroundInterface {
-  timeline: GSAPTimeline
-}
+export default function Foreground() {
+  const { timeline } = useGSAPTimelineContext()
 
-export default function Foreground({ timeline }: ForegroundInterface) {
-  const [duration] = useState<number>(
-    foregroundAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    foregroundAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
-
-  const foregroundBoxGroupRef = useRef<THREE.Mesh>(null!)
+  // const foregroundBoxGroupRef = useRef<THREE.Mesh>(null!)
+  const foregroundGroupRef = useRef<THREE.Group>(null!)
 
   useGSAP(
     () => {
-      if (foregroundAnimationsConstants.ANIMATE) {
+      const animations = foregroundAnimations()
+      timeline
         // POSITION
-        timeline
-          .to(
-            foregroundBoxGroupRef.current.position,
-            {
-              keyframes: {
-                '0%': {
-                  z: foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
-                },
-                '25%': {
-                  z: foregroundAnimationsConstants.ANIMATION['25_PERCENT'].POSITION.Z,
-                },
-                easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.POSITION,
-              },
-              duration: duration,
-            },
-            delay,
-          )
-          // ROTATION
-          .to(
-            foregroundBoxGroupRef.current.rotation,
-            {
-              keyframes: {
-                '50%': {
-                  z: THREE.MathUtils.degToRad(
-                    foregroundAnimationsConstants.ANIMATION['50_PERCENT'].ROTATION.Z,
-                  ),
-                },
-                '75%': {
-                  z: THREE.MathUtils.degToRad(
-                    foregroundAnimationsConstants.ANIMATION['75_PERCENT'].ROTATION.Z,
-                  ),
-                },
-                easeEach: foregroundAnimationsConstants.ANIMATION.EACH_EASE.ROTATION,
-              },
-              duration: duration,
-            },
-            delay,
-          )
-          // VISIBILITY
-          .to(
+        .to(
+          foregroundGroupRef.current.position,
+          {
+            keyframes: animations.position.keyframes,
+            duration: animations.duration,
+          },
+          animations.delay,
+        )
+        // ROTATION
+        .to(
+          foregroundGroupRef.current.rotation,
+          {
+            keyframes: animations.rotation.keyframes,
+            duration: animations.duration,
+          },
+          animations.delay,
+        )
+      // VISIBILITY
+      /* .to(
             foregroundBoxGroupRef.current,
             {
               keyframes: {
@@ -81,21 +53,22 @@ export default function Foreground({ timeline }: ForegroundInterface) {
               duration: duration,
             },
             delay,
-          )
-      }
+          ) */
     },
-    { scope: foregroundBoxGroupRef },
+    { scope: foregroundGroupRef },
   )
 
   return (
-    <Box
-      ref={foregroundBoxGroupRef}
-      args={[1, 10, 1]}
-      position={[0, -5, 0]}
-      material={boxGroupMaterial}
+    <group
+      ref={foregroundGroupRef}
+      position={[
+        foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
+        foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+        foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+      ]}
     >
-      <Mess timeline={timeline} />
-      <AlsoKnowAsText timeline={timeline} />
-    </Box>
+      <MessGroup />
+      <AlsoKnowAsText />
+    </group>
   )
 }

@@ -28,7 +28,6 @@ export const MacBookPro = forwardRef<THREE.Group, JSX.IntrinsicElements['group']
       <group
         ref={ref}
         {...props}
-        dispose={null}
       >
         <mesh
           name='MacBookPro_1'

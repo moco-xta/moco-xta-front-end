@@ -25,7 +25,6 @@ const LogoSpring = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(funct
   return (
     <group
       ref={ref}
-      dispose={null}
       position={position}
       rotation={rotation}
       scale={scale}

@@ -28,7 +28,6 @@ export function TransfertBox({ name, position, rotation }: JSX.IntrinsicElements
       name={name}
       position={position}
       rotation={rotation}
-      dispose={null}
     >
       <mesh
         name='TransfertBox_1'

@@ -27,7 +27,6 @@ export function AmorLlamaAmor({ position }: JSX.IntrinsicElements['group']) {
     <group
       name='AmorLlamaAmor'
       position={position}
-      dispose={null}
     >
       <mesh
         name='AmorLlamaAmor_1'

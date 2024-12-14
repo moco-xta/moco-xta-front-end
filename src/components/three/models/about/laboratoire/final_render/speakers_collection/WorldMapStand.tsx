@@ -28,7 +28,6 @@ export function WorldMapStand({ position, rotation }: JSX.IntrinsicElements['gro
       name='WorldMapStand'
       position={position}
       rotation={rotation}
-      dispose={null}
     >
       <mesh
         name='WorldMapStand_1'

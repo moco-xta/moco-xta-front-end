@@ -25,7 +25,6 @@ export const HeliumBalloonC = forwardRef<THREE.Mesh, MeshProps>(
         geometry={nodes.HeliumBalloonC.geometry}
         material={heliumBalloonMaterial}
         {...props}
-        dispose={null}
       />
     )
   },

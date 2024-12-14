@@ -1,55 +1,45 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
+
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import HiText from './texts/HiText'
 import ImText from './texts/ImText'
 import FedericoText from './texts/FedericoText'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
 import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
-import { default as hiImFedericoGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
 
 import { greetingGroupAnimations } from 'animations'
 
-interface GreetingGroupInterface {
-  timeline: GSAPTimeline
-}
-
-export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
-  const [duration] = useState<number>(
-    greetingGroupAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    greetingGroupAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
+export default function GreetingGroup() {
+  const { timeline } = useGSAPTimelineContext()
 
   const grettingGroupRef = useRef<THREE.Group>(null!)
 
   useGSAP(
     () => {
-      if (greetingGroupAnimationsConstants.ANIMATE) {
-        timeline
-          // POSITION
-          .to(
-            grettingGroupRef.current.position,
-            {
-              keyframes: greetingGroupAnimations.position.keyframes,
-              duration: duration,
-            },
-            delay,
-          )
-          // ROTATION
-          .to(
-            grettingGroupRef.current.rotation,
-            {
-              keyframes: greetingGroupAnimations.rotation.keyframes,
-              duration: duration,
-            },
-            delay,
-          )
-          // VISIBILITY
-          .to(
+      timeline
+        // POSITION
+        .to(
+          grettingGroupRef.current.position,
+          {
+            keyframes: greetingGroupAnimations.position.keyframes,
+            duration: greetingGroupAnimations.duration,
+          },
+          greetingGroupAnimations.delay,
+        )
+        // ROTATION
+        .to(
+          grettingGroupRef.current.rotation,
+          {
+            keyframes: greetingGroupAnimations.rotation.keyframes,
+            duration: greetingGroupAnimations.duration,
+          },
+          greetingGroupAnimations.delay,
+        )
+      // VISIBILITY
+      /* .to(
             grettingGroupRef.current,
             {
               keyframes: {
@@ -67,8 +57,7 @@ export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
               duration: duration,
             },
             delay,
-          )
-      }
+          ) */
     },
     { scope: grettingGroupRef },
   )
@@ -77,22 +66,28 @@ export default function GreetingGroup({ timeline }: GreetingGroupInterface) {
       ref={grettingGroupRef}
       position={
         new THREE.Vector3(
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
       rotation={
         new THREE.Euler(
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.X,
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Y,
-          hiImFedericoGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z,
+          THREE.MathUtils.degToRad(
+            greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.X,
+          ),
+          THREE.MathUtils.degToRad(
+            greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Y,
+          ),
+          THREE.MathUtils.degToRad(
+            greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z,
+          ),
         )
       }
     >
-      <HiText timeline={timeline} />
-      <ImText timeline={timeline} />
-      <FedericoText timeline={timeline} />
+      <HiText />
+      <ImText />
+      <FedericoText />
     </group>
   )
 }

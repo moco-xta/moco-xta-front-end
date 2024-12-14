@@ -47,7 +47,6 @@ export function LogoTwitter(props: JSX.IntrinsicElements['group']) {
     <group
       ref={logoTwitterRef}
       {...props}
-      dispose={null}
     >
       <IntersectCube
         handleOnPointerMove={handleOnPointerMove}

@@ -5,7 +5,7 @@ import MacBookProComponent from './MacBookProComponent'
 import LogosForegroundGroup from './LogosForegroundGroup'
 import LogosBackgroundGroup from './LogosBackgroundGroup'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
 import { default as macBookProGroupAnimationsConstants } from '@/constants/animations/home/hero/developer/macBookProGroupAnimationsConstants.json'
 
 interface MacBookProGroupInterface {
@@ -14,10 +14,10 @@ interface MacBookProGroupInterface {
 
 export default function MacBookProGroup({ timeline }: MacBookProGroupInterface) {
   const [duration] = useState<number>(
-    macBookProGroupAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+    macBookProGroupAnimationsConstants.DURATION / heroConstants.SPEED,
   )
   const [delay] = useState<number>(
-    macBookProGroupAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+    macBookProGroupAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
   )
 
   const macBookProComponentAndLogosForegroundGroupRef = useRef<THREE.Group>(null!)

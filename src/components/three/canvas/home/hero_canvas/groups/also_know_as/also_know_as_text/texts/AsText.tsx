@@ -3,8 +3,8 @@ import * as THREE from 'three'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
+import { default as alsoKnowAsTextsConstants } from '@/constants/animations/home/hero/portrait/foreground/alsoKnowAsTextsConstants.json'
+import { default as asTextConstants } from '@/constants/animations/home/hero/portrait/foreground/asTextConstants.json'
 
 export default function AsText() {
   const [asText] = useState<string>('as'.toUpperCase())
@@ -19,27 +19,27 @@ export default function AsText() {
     <Word3D
       ref={asTextGroupRef}
       keyPrefix={'as_text'}
-      font={heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.TEXTS.FONT}
-      size={heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.TEXTS.SIZE}
-      depth={heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.TEXTS.DEPTH}
+      font={alsoKnowAsTextsConstants.GEOMETRY.FONT}
+      size={alsoKnowAsTextsConstants.GEOMETRY.SIZE}
+      depth={alsoKnowAsTextsConstants.GEOMETRY.DEPTH}
       splittedWord={asTextSplitted}
       position={
         new THREE.Vector3(
-          heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.AS.POSITION.X,
-          heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.AS.POSITION.Y,
-          heroAnimationsConstants.SCENES.ALSO_KNOW_AS_GROUP.AS.POSITION.Z,
+          asTextConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          asTextConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          asTextConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
       center={true}
       lengthRef={asTextLengthRef}
     >
       <meshStandardMaterial
-        color={heroCanvasConstants.MATERIALS.TEXTS.ALSO_KNOW_AS.COLOR}
-        transparent={heroCanvasConstants.MATERIALS.TEXTS.ALSO_KNOW_AS.TRANSPARENT}
-        opacity={heroCanvasConstants.MATERIALS.TEXTS.ALSO_KNOW_AS.OPACITY}
-        emissive={heroCanvasConstants.MATERIALS.TEXTS.ALSO_KNOW_AS.EMISSIVE}
-        emissiveIntensity={heroCanvasConstants.MATERIALS.TEXTS.ALSO_KNOW_AS.EMISSIVE_INTENSITY}
-        // wireframe={heroCanvasConstants.MATERIALS.TEXTS.ALSO_KNOW_AS.WIREFRAME}
+        color={alsoKnowAsTextsConstants.MATERIAL.COLOR}
+        transparent={alsoKnowAsTextsConstants.MATERIAL.TRANSPARENT}
+        opacity={alsoKnowAsTextsConstants.MATERIAL.OPACITY}
+        emissive={alsoKnowAsTextsConstants.MATERIAL.EMISSIVE}
+        emissiveIntensity={alsoKnowAsTextsConstants.MATERIAL.EMISSIVE_INTENSITY}
+        wireframe={alsoKnowAsTextsConstants.MATERIAL.WIREFRAME}
         side={THREE.DoubleSide}
       />
     </Word3D>

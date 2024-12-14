@@ -21,7 +21,6 @@ const LogoReact = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
     return (
       <group
         ref={ref}
-        dispose={null}
         {...props}
       >
         <mesh

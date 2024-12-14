@@ -27,7 +27,6 @@ export function DoorHandle({ position }: JSX.IntrinsicElements['group']) {
     <group
       name='DoorHandle'
       position={position}
-      dispose={null}
     >
       <mesh
         name='DoorHandle_1'

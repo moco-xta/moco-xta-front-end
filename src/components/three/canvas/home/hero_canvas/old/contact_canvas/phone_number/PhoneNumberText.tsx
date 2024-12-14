@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 
 import { Word3D } from '../../../../../components/word_3d/Word3D'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/heroConstants.json'
 
 export default function PhoneNumberText() {
   const [phoneNumberTextSplitted] = useState<string[]>('(+33) 6 15 90 82 75'.split(''))
@@ -28,11 +28,9 @@ export default function PhoneNumberText() {
           easeEach: 'power1.in',
         },
         delay:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY +
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
-        duration:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS /
-          heroAnimationsConstants.SPEED,
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY +
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
+        duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS / heroConstants.SPEED,
       })
       // @ts-ignore
       gsap.to(letter.material, {
@@ -46,11 +44,9 @@ export default function PhoneNumberText() {
           easeEach: 'power1.in',
         },
         delay:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY +
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
-        duration:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS /
-          heroAnimationsConstants.SPEED,
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY +
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
+        duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS / heroConstants.SPEED,
       })
     })
   })

@@ -1,54 +1,35 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { ColorPicker } from '@/components/three/models/home/hero/portrait/ColorPicker'
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
-import { default as colorPickerComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/colorPickerComponentAnimationsConstants.json'
+import { ColorPicker } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/ColorPicker'
 
-interface ColorPickerComponentInterface {
-  timeline: GSAPTimeline
-}
+import { default as colorPickerComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorPickerComponentConstants.json'
 
-export default function ColorPickerComponent({ timeline }: ColorPickerComponentInterface) {
-  const [duration] = useState<number>(
-    colorPickerComponentAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    colorPickerComponentAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
-  )
+import { colorPickerComponentAnimations } from '@/animations/index'
+
+export default function ColorPickerComponent() {
+  const { timeline } = useGSAPTimelineContext()
 
   const colorPickerRef = useRef<THREE.Group>(null!)
 
   useGSAP(
     () => {
-      if (colorPickerComponentAnimationsConstants.ANIMATE) {
-        const meshes: THREE.Mesh[] = gsap.utils.toArray(colorPickerRef.current.children)
-        meshes.forEach((mesh) => {
-          // MATERIAL
-          timeline.to(
-            mesh.material,
-            {
-              keyframes: {
-                '0%': {
-                  opacity:
-                    colorPickerComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
-                },
-                '25%': {
-                  opacity:
-                    colorPickerComponentAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL
-                      .OPACITY,
-                },
-                easeEach: colorPickerComponentAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
-              },
-              duration: duration,
-            },
-            delay,
-          )
-        })
-      }
+      const meshes: THREE.Mesh[] = gsap.utils.toArray(colorPickerRef.current.children)
+      meshes.forEach((mesh) => {
+        // MATERIAL
+        timeline.to(
+          mesh.material,
+          {
+            keyframes: colorPickerComponentAnimations.material.keyframes,
+            duration: colorPickerComponentAnimations.material.duration,
+          },
+          colorPickerComponentAnimations.delay,
+        )
+      })
     },
     { scope: colorPickerRef },
   )
@@ -56,7 +37,13 @@ export default function ColorPickerComponent({ timeline }: ColorPickerComponentI
   return (
     <ColorPicker
       ref={colorPickerRef}
-      position={new THREE.Vector3(0, 1, 0)}
+      position={
+        new THREE.Vector3(
+          colorPickerComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          colorPickerComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          colorPickerComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+        )
+      }
     />
   )
 }

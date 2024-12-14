@@ -87,10 +87,7 @@ export function Laboratoire(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(gltfConstants.ABOUT.LABORATOIRE.CLAY_RENDER.LABORATOIRE) as GLTFResult
 
   return (
-    <group
-      {...props}
-      dispose={null}
-    >
+    <group {...props}>
       <mesh
         name='DeskTray'
         geometry={nodes.DeskTray.geometry}

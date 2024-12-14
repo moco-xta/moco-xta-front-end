@@ -88,7 +88,6 @@ export default function LogoAngular({ position, rotation, scale }: GroupProps) {
   return (
     <group
       ref={logoAngularRef}
-      dispose={null}
       position={position}
       rotation={rotation}
       scale={scale}

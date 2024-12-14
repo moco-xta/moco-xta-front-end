@@ -22,7 +22,6 @@ export const LogoSass = forwardRef<THREE.Group, GroupProps>(function LogoSass(pr
     <group
       ref={ref}
       {...props}
-      dispose={null}
     >
       <mesh
         name='LogoSass'

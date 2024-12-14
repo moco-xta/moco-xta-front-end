@@ -2,11 +2,6 @@
   "HOME": {
     "HERO": {
       "BUHO": "/models/glb/home/hero/Buho.glb",
-      "GOBELINO": {
-        "MOON": "/models/glb/home/hero/gobelino/Moon.glb",
-        "SKY": "/models/glb/home/hero/gobelino/Sky.glb",
-        "SUN": "/models/glb/home/hero/gobelino/Sun.glb"
-      },
       "HELIUM_BALLOONS": {
         "HELIUM_BALLOON_C": "/models/glb/home/hero/helium_balloons/HeliumBalloonC.glb",
         "HELIUM_BALLOON_M": "/models/glb/home/hero/helium_balloons/HeliumBalloonM.glb",
@@ -29,13 +24,29 @@
         "LOGO_TAILWIND": "/models/glb/home/hero/logos/LogoTailwind.glb"
       },
       "PORTRAIT": {
-        "CHRISTUS": "/models/glb/home/hero/portrait/Christus.glb",
-        "COLOR_PICKER": "/models/glb/home/hero/portrait/ColorPicker.glb",
-        "COLORS": "/models/glb/home/hero/portrait/Colors.glb",
-        "GANESH": "/models/glb/home/hero/portrait/Ganesh.glb",
-        "HEART": "/models/glb/home/hero/portrait/Heart.glb",
-        "PAINT_BUCKET": "/models/glb/home/hero/portrait/PaintBucket.glb",
-        "SPRAY": "/models/glb/home/hero/portrait/Spray.glb"
+        "FOREGROUND": {
+          "MESS": {
+            "CHRISTUS": "/models/glb/home/hero/portrait/foreground/mess/Christus.glb",
+            "GANESH": "/models/glb/home/hero/portrait/foreground/mess/Ganesh.glb",
+            "HEART": "/models/glb/home/hero/portrait/foreground/mess/Heart.glb",
+            "LOGO_ATHLETICO_NACIONAL": "/models/glb/home/hero/portrait/foreground/mess/LogoAthleticoNacional.glb",
+            "TOOLS": {
+              "COLORS": "/models/glb/home/hero/portrait/foreground/mess/tools/Colors.glb",
+              "COLOR_PICKER": "/models/glb/home/hero/portrait/foreground/mess/tools/ColorPicker.glb",
+              "PAINT_BUCKET": "/models/glb/home/hero/portrait/foreground/mess/tools/PaintBucket.glb",
+              "SPRAY": "/models/glb/home/hero/portrait/foreground/mess/tools/Spray.glb"
+            }
+          }
+        },
+        "GOBELINO": {
+          "BIRD": "/models/glb/home/hero/portrait/gobelino/Bird.glb",
+          "CLOUD": "/models/glb/home/hero/portrait/gobelino/Cloud.glb",
+          "HILL_TOP_LEFT": "/models/glb/home/hero/portrait/gobelino/HillTopLeft.glb",
+          "HILL_TOP_RIGHT": "/models/glb/home/hero/portrait/gobelino/HillTopRight.glb",
+          "MOON": "/models/glb/home/hero/portrait/gobelino/Moon.glb",
+          "SKY": "/models/glb/home/hero/portrait/gobelino/Sky.glb",
+          "SUN": "/models/glb/home/hero/portrait/gobelino/Sun.glb"
+        }
       }
     },
     "AXIS": "/models/glb/Axis.glb",

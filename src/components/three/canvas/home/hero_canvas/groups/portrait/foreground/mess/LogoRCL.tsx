@@ -4,11 +4,7 @@ import { Plane } from '@react-three/drei'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
-interface LogoRCLInterface {
-  timeline: GSAPTimeline
-}
-
-export default function LogoRCL({ timeline }: LogoRCLInterface) {
+export default function LogoRCL() {
   const logoRclMap = new THREE.TextureLoader().load(texturesConstants.HOME.LOGO_RCL)
   logoRclMap.magFilter = THREE.NearestFilter
 

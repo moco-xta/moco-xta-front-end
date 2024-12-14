@@ -7,11 +7,7 @@ import DirectionalLights from './DirectionalLights'
 
 import variables from '@/styles/variables.module.scss'
 
-interface LightsInterface {
-  timeline: GSAPTimeline
-}
-
-export default function Lights({ timeline }: LightsInterface) {
+export default function Lights() {
   const lightsGroupRef = useRef<THREE.Group>(null!)
 
   return (
@@ -20,7 +16,7 @@ export default function Lights({ timeline }: LightsInterface) {
         color={variables.white}
         intensity={heroCanvasConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
       />
-      <DirectionalLights timeline={timeline} />
+      <DirectionalLights />
     </group>
   )
 }

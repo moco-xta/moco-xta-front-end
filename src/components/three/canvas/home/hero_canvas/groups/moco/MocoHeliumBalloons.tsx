@@ -9,7 +9,7 @@ import { HeliumBalloonC } from '@/components/three/models/home/hero/helium_ballo
 import { Smiley } from '@/components/three/models/home/hero/helium_balloons/Smiley'
 
 import { default as mocoHeliumBalloonsConstants } from '@/constants/three/home/hero/mocoHeliumBalloonsConstants.json'
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
 import { default as mocoHeliumBalloonsAnimationsConstants } from '@/constants/animations/home/hero/moco/mocoHeliumBalloonsAnimationsConstants.json'
 
 interface MocoGroupInterface {
@@ -18,10 +18,10 @@ interface MocoGroupInterface {
 
 export default function MocoGroup({ timeline }: MocoGroupInterface) {
   const [duration] = useState<number>(
-    mocoHeliumBalloonsAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+    mocoHeliumBalloonsAnimationsConstants.DURATION / heroConstants.SPEED,
   )
   const [delay] = useState<number>(
-    mocoHeliumBalloonsAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+    mocoHeliumBalloonsAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
   )
 
   const mocoHeliumBalloonsGroupRef = useRef<THREE.Group>(null!)

@@ -87,7 +87,6 @@ export default function LogoSpring({ position, rotation, scale }: GroupProps) {
   return (
     <group
       ref={logoSpringRef}
-      dispose={null}
       position={position}
       rotation={rotation}
       scale={scale}

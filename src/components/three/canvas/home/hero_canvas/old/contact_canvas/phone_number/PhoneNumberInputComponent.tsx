@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 
 import { PhoneNumberInput } from '@/components/three/models/home/PhoneNumberInput'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/heroConstants.json'
 
 export default function PhoneNumberInputComponent() {
   const phoneNumberInputRef = useRef<THREE.Mesh>(null!)
@@ -24,12 +24,8 @@ export default function PhoneNumberInputComponent() {
           ease: 'circ.inOut',
         },
       },
-      delay:
-        heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY /
-        heroAnimationsConstants.SPEED,
-      duration:
-        heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS /
-        heroAnimationsConstants.SPEED,
+      delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY / heroConstants.SPEED,
+      duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS / heroConstants.SPEED,
     })
   })
 

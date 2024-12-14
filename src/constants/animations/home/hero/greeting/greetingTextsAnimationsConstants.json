@@ -2,8 +2,7 @@
   "GEOMETRY": {
     "FONT": "fonts/json/Barlow_Condensed_Bold.json",
     "SIZES": {
-      "HI_TEXT": 2.5,
-      "I_M_TEXT": 2.5,
+      "DEFAULT": 3.5,
       "FEDERICO_TEXT": 2
     },
     "DEPTH": 1

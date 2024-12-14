@@ -29,7 +29,6 @@ export const Lightning = forwardRef<THREE.Mesh, MeshProps>(function Lightning(pr
       geometry={nodes.Lightning.geometry}
       material={material}
       {...props}
-      dispose={null}
     />
   )
 })

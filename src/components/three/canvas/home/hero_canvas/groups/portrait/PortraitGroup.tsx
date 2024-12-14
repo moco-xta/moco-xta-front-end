@@ -1,17 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Foreground from './foreground/Foreground'
-import GobelinoComponent from './background/GobelinoComponent'
+import GobelinoGroup from './gobelino/GobelinoGroup'
 
-interface PortraitGroupInterface {
-  timeline: GSAPTimeline
-}
-
-export default function PortraitGroup({ timeline }: PortraitGroupInterface) {
+export default function PortraitGroup() {
   return (
     <>
-      <Foreground timeline={timeline} />
-      <GobelinoComponent timeline={timeline} />
+      <Foreground />
+      <GobelinoGroup />
     </>
   )
 }

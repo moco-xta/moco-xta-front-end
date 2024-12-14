@@ -1,25 +1,32 @@
 import React from 'react'
 
+import HeartComponent from './HeartComponent'
+import ToolsGroup from './tools/ToolsGroup'
+import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
 import LogoRCL from './LogoRCL'
 import ProfilPicture from './ProfilPicture'
-import ToolsGroup from './tools/ToolsGroup'
-import GaneshComponent from './GaneshComponent'
-import HeartComponent from './HeartComponent'
 import ChristusComponent from './ChristusComponent'
+import GaneshComponent from './GaneshComponent'
 
-interface MessInterface {
-  timeline: GSAPTimeline
-}
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundConstants.json'
+import { default as messGroupConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/messGroupConstants.json'
 
-export default function Mess({ timeline }: MessInterface) {
+export default function MessGroup() {
   return (
-    <group position={[0, 5, 0]}>
-      <HeartComponent timeline={timeline} />
-      <ToolsGroup timeline={timeline} />
-      <LogoRCL timeline={timeline} />
-      <ProfilPicture timeline={timeline} />
-      <ChristusComponent timeline={timeline} />
-      <GaneshComponent timeline={timeline} />
+    <group
+      position={[
+        messGroupConstants.ANIMATION['0_PERCENT'].POSITION.X,
+        -foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+        messGroupConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+      ]}
+    >
+      <HeartComponent />
+      <ToolsGroup />
+      <LogoAthleticoNacionalComponent />
+      {/* <LogoRCL /> */}
+      <ProfilPicture />
+      <ChristusComponent />
+      <GaneshComponent />
     </group>
   )
 }
