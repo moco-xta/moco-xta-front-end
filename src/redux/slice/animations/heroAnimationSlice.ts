@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { gsap } from 'gsap'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
 
 interface HeroAnimationInterface {
   paused: boolean

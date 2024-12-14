@@ -8,18 +8,19 @@ import Lights from './lights/Lights'
 import GreetingGroup from './groups/greeting/GreetingGroup'
 import PortraitGroup from './groups/portrait/PortraitGroup'
 import AlsoKnowAsGroup from './groups/also_know_as/AlsoKnowAsGroup'
-import MocoGroup from './groups/moco/MocoHeliumBalloons'
+import MocoGroup from './groups/moco/MocoGroup'
 import DeveloperGroup from './groups/developer/DeveloperGroup'
 import WithExtraSkillsGroup from './groups/with_extra_skills/WithExtraSkillsGroup'
 import PostProcessing from './PostProcessing'
 
-import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json'
+import { default as physicsConstants } from '@/constants/animations/home/hero/canvas/physicsConstants.json'
 
 export default function HeroCanvas() {
   return (
     <Canvas
-      dpr={heroCanvasConstants.CANVAS.DPR}
-      legacy={heroCanvasConstants.CANVAS.LEGACY}
+      dpr={heroCanvasConstants.DPR}
+      legacy={heroCanvasConstants.LEGACY}
       shadows
       /* onCreated={({ gl }) => {
         gl.setClearColor(0xfffff, 0)
@@ -27,9 +28,9 @@ export default function HeroCanvas() {
         gl.clearDepth()
       }} */
       gl={{
-        antialias: heroCanvasConstants.CANVAS.GL.ANTIALIAS,
-        alpha: heroCanvasConstants.CANVAS.GL.ALPHA,
-        powerPreference: heroCanvasConstants.CANVAS.GL.POWER_PREFERENCE,
+        antialias: heroCanvasConstants.GL.ANTIALIAS,
+        alpha: heroCanvasConstants.GL.ALPHA,
+        powerPreference: heroCanvasConstants.GL.POWER_PREFERENCE,
       }}
     >
       <Camera />
@@ -41,22 +42,22 @@ export default function HeroCanvas() {
       /> */}
       <Suspense fallback={null}>
         <Physics
-          debug={heroCanvasConstants.PHYSICS.DEBUG}
+          debug={physicsConstants.DEBUG}
           gravity={[
-            heroCanvasConstants.PHYSICS.GRAVITY.X,
-            heroCanvasConstants.PHYSICS.GRAVITY.Y,
-            heroCanvasConstants.PHYSICS.GRAVITY.Z,
+            physicsConstants.GRAVITY.X,
+            physicsConstants.GRAVITY.Y,
+            physicsConstants.GRAVITY.Z,
           ]}
-          // timeStep={heroCanvasConstants.PHYSICS.TIME_STEP}
-          paused={heroCanvasConstants.PHYSICS.PAUSED}
+          // timeStep={physicsConstants.TIME_STEP}
+          paused={physicsConstants.PAUSED}
         >
           <GreetingGroup />
           <PortraitGroup />
-          {/* <AlsoKnowAsGroup timeline={timeline} /> */}
-          {/* <MocoGroup timeline={timeline} /> */}
+          <AlsoKnowAsGroup />
+          <MocoGroup />
           {/* <DeveloperGroup timeline={timeline} /> */}
           {/* <WithExtraSkillsGroup timeline={timeline} /> */}
-          {/* <PostProcessing /> */}
+          <PostProcessing />
         </Physics>
       </Suspense>
     </Canvas>

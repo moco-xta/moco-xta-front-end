@@ -1,69 +1,67 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
+import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { Buho } from '@/components/three/models/home/hero/Buho'
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
-import { default as buhosAnimationsConstants } from '@/constants/animations/home/hero/also_konw_as/buhosAnimationsConstants.json'
+import { Buho } from '@/components/three/models/home/hero/also_know_as/Buho'
 
-interface BuhoComponentInterface {
-  timeline: GSAPTimeline
-}
+import { default as buhosConstants } from '@/constants/animations/home/hero/canvas/groups/also_konw_as/buhosConstants.json'
 
-export default function Buhos({ timeline }: BuhoComponentInterface) {
-  const [duration] = useState<number>(buhosAnimationsConstants.DURATION / heroConstants.SPEED)
-  const [delay] = useState<number>(buhosAnimationsConstants.KEYFRAME_START / heroConstants.SPEED)
+import { buhosAnimations } from 'animations'
+
+export default function Buhos() {
+  const { timeline } = useGSAPTimelineContext()
 
   const buhosGroupRef = useRef<THREE.Group>(null!)
-  const buhoLeftGroupRef = useRef<THREE.Group>(null!)
-  const buhoRightGroupRef = useRef<THREE.Group>(null!)
 
   useLayoutEffect(() => {
-    if (buhoLeftGroupRef.current) buhoLeftGroupRef.current.visible = false
-    if (buhoRightGroupRef.current) buhoRightGroupRef.current.visible = false
-  }, [buhoLeftGroupRef, buhoRightGroupRef])
+    buhosGroupRef.current.children.forEach((buho) => {
+      buho.visible = buhosConstants.DEFAULT.VISIBLE
+    })
+  }, [buhosGroupRef])
 
   useGSAP(
     () => {
-      // POSITION
-      timeline.to(
-        [buhoLeftGroupRef.current, buhoRightGroupRef.current],
-        {
-          keyframes: {
-            '0%': {
-              onComplete: () => {
-                buhoLeftGroupRef.current.visible = true
-                buhoRightGroupRef.current.visible = true
-              },
+      const buhos: THREE.Mesh[] = gsap.utils.toArray(buhosGroupRef.current.children)
+      buhos.forEach((buho) => {
+        const animation = buhosAnimations(buho)
+        timeline
+          .to(
+            buho.material,
+            {
+              keyframes: animation.material.keyframes,
+              duration: animation.duration,
             },
-            '100%': {
-              onComplete: () => {
-                buhoLeftGroupRef.current.visible = false
-                buhoRightGroupRef.current.visible = false
-              },
+            animation.delay,
+          )
+          .to(
+            buho,
+            {
+              keyframes: animation.visibility.keyframes,
+              duration: animation.duration,
             },
-          },
-          duration: duration,
-        },
-        delay,
-      )
+            animation.delay,
+          )
+      })
     },
-    /* { scope: buhosGroupRef }, */
+    { scope: buhosGroupRef },
   )
 
   return (
     <group ref={buhosGroupRef}>
-      <Buho
-        ref={buhoLeftGroupRef}
-        position={new THREE.Vector3(-3.5, 0, 0)}
-        scale={2.5}
-      />
-      <Buho
-        ref={buhoRightGroupRef}
-        position={new THREE.Vector3(3.5, 0, 0)}
-        scale={new THREE.Vector3(-2.5, 2.5, 2.5)}
-      />
+      {buhosConstants.DEFAULT.GEOMETRY.POSITIONS.map((buho, index) => (
+        <Buho
+          key={`buho_${index}`}
+          position={new THREE.Vector3(buho.X, buho.Y, buho.Z)}
+          scale={[
+            buhosConstants.DEFAULT.GEOMETRY.SCALES[index].X,
+            buhosConstants.DEFAULT.GEOMETRY.SCALES[index].Y,
+            buhosConstants.DEFAULT.GEOMETRY.SCALES[index].Z,
+          ]}
+        />
+      ))}
     </group>
   )
 }

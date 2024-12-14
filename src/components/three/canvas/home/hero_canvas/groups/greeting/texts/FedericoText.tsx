@@ -7,8 +7,8 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingTextsAnimationsConstants.json'
-import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/texts/federicoTextAnimationsConstants.json'
+import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingTextsAnimationsConstants.json'
+import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/federicoTextAnimationsConstants.json'
 
 import { federicoTextAnimations } from 'animations'
 

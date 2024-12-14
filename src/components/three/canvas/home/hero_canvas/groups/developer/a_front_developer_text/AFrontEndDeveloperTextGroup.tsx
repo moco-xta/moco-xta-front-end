@@ -7,8 +7,8 @@ import FrontText from './texts/FrontText'
 import EndText from './texts/EndText'
 import DeveloperText from './texts/DeveloperText'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
-import { default as aFrontEndDeveloperTextGroupAnimationsConstants } from '@/constants/animations/home/hero/developer/aFrontEndDeveloperTextGroupAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
+import { default as aFrontEndDeveloperTextGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/developer/aFrontEndDeveloperTextGroupAnimationsConstants.json'
 
 interface AFrontEndDeveloperTextGroupInterface {
   timeline: GSAPTimeline

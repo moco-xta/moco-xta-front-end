@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { PaintBucket } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/PaintBucket'
 
-import { default as paintBucketComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/paintBucketComponentConstants.json'
+import { default as paintBucketComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/paintBucketComponentConstants.json'
 
 import { paintBucketComponentAnimations } from '@/animations/index'
 

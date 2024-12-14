@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Heart } from '@/components/three/models/home/hero/portrait/foreground/mess/Heart'
 
-import { default as heartComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/heartComponentConstants.json'
+import { default as heartComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/heartComponentConstants.json'
 
 import { heartComponentAnimations } from '@/animations/index'
 

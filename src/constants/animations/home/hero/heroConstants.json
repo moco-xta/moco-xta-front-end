@@ -9,6 +9,10 @@
     {
       "NAME": "portrait",
       "POSITION": "4"
+    },
+    {
+      "NAME": "also_know_as",
+      "POSITION": "8"
     }
   ],
   "GROUPS": {

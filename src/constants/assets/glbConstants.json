@@ -1,14 +1,10 @@
 {
   "HOME": {
     "HERO": {
-      "BUHO": "/models/glb/home/hero/Buho.glb",
-      "HELIUM_BALLOONS": {
-        "HELIUM_BALLOON_C": "/models/glb/home/hero/helium_balloons/HeliumBalloonC.glb",
-        "HELIUM_BALLOON_M": "/models/glb/home/hero/helium_balloons/HeliumBalloonM.glb",
-        "HELIUM_BALLOON_O": "/models/glb/home/hero/helium_balloons/HeliumBalloonO.glb",
-        "SMILEY": "/models/glb/home/hero/helium_balloons/Smiley.glb"
+      "ALSO_KNOW_AS": {
+        "BUHO": "/models/glb/home/hero/also_know_as/Buho.glb",
+        "LIGHTNING": "/models/glb/home/hero/also_know_as/Lightning.glb"
       },
-      "LIGHTNING": "/models/glb/home/hero/Lightning.glb",
       "LOGOS": {
         "LOGO_ANGULAR": "/models/glb/home/hero/logos/LogoAngular.glb",
         "LOGO_BLENDER": "/models/glb/home/hero/logos/LogoBlender.glb",
@@ -22,6 +18,12 @@
         "LOGO_SASS": "/models/glb/home/hero/logos/LogoSass.glb",
         "LOGO_SPRING": "/models/glb/home/hero/logos/LogoSpring.glb",
         "LOGO_TAILWIND": "/models/glb/home/hero/logos/LogoTailwind.glb"
+      },
+      "MOCO": {
+        "HELIUM_BALLOON_C": "/models/glb/home/hero/moco/HeliumBalloonC.glb",
+        "HELIUM_BALLOON_M": "/models/glb/home/hero/moco/HeliumBalloonM.glb",
+        "HELIUM_BALLOON_O": "/models/glb/home/hero/moco/HeliumBalloonO.glb",
+        "SMILEY": "/models/glb/home/hero/moco/Smiley.glb"
       },
       "PORTRAIT": {
         "FOREGROUND": {

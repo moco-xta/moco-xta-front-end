@@ -5,8 +5,8 @@ import MacBookProComponent from './MacBookProComponent'
 import LogosForegroundGroup from './LogosForegroundGroup'
 import LogosBackgroundGroup from './LogosBackgroundGroup'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
-import { default as macBookProGroupAnimationsConstants } from '@/constants/animations/home/hero/developer/macBookProGroupAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
+import { default as macBookProGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/developer/macBookProGroupAnimationsConstants.json'
 
 interface MacBookProGroupInterface {
   timeline: GSAPTimeline

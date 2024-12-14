@@ -1,0 +1,10 @@
+{
+  "DEBUG": false,
+  "GRAVITY": {
+    "X": 0,
+    "Y": 0.05,
+    "Z": 0
+  },
+  "TIME_STEP": "vary",
+  "PAUSED": true
+}

@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Sky } from '@/components/three/models/home/hero/portrait/gobelino/Sky'
 
-import { default as skyComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/skyComponentConstants.json'
+import { default as skyComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/skyComponentConstants.json'
 
 import { skyComponentAnimations } from '@/animations/index'
 

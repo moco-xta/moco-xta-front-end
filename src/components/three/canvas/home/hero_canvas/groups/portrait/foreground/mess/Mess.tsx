@@ -8,8 +8,8 @@ import ProfilPicture from './ProfilPicture'
 import ChristusComponent from './ChristusComponent'
 import GaneshComponent from './GaneshComponent'
 
-import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundConstants.json'
-import { default as messGroupConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/messGroupConstants.json'
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/foregroundConstants.json'
+import { default as messGroupConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/messGroupConstants.json'
 
 export default function MessGroup() {
   return (

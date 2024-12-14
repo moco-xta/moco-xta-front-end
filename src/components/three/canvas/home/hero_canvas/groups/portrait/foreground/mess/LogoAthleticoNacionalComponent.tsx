@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { LogoAthleticoNacional } from '@/components/three/models/home/hero/portrait/foreground/mess/LogoAthleticoNacional'
 
-import { default as logoAthleticoNacionalComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
+import { default as logoAthleticoNacionalComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
 
 import { logoAthleticoNacionalComponentAnimations } from '@/animations/index'
 

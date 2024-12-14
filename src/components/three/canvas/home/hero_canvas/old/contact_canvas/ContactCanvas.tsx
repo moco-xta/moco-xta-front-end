@@ -6,7 +6,7 @@ import Camera from './Camera'
 import Lights from './Lights'
 import ContactScene from './ContactScene'
 
-import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json'
 
 export default function ContactCanvas() {
   return (

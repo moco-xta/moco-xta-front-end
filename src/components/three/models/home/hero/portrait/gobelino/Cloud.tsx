@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as cloudComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/cloudComponentConstants.json'
+import { default as cloudComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/cloudComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -33,8 +33,6 @@ export const Cloud = forwardRef<THREE.Mesh, MeshProps>(function Cloud(props, ref
       name='Sun'
       geometry={nodes.Cloud.geometry}
       material={materials['gobelino_#ffffff_material']}
-      receiveShadow
-      castShadow
       {...props}
     />
   )

@@ -3,8 +3,8 @@ import * as THREE from 'three'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as alsoKnowAsTextsConstants } from '@/constants/animations/home/hero/portrait/foreground/alsoKnowAsTextsConstants.json'
-import { default as asTextConstants } from '@/constants/animations/home/hero/portrait/foreground/asTextConstants.json'
+import { default as alsoKnowAsTextsConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/alsoKnowAsTextsConstants.json'
+import { default as asTextConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/asTextConstants.json'
 
 export default function AsText() {
   const [asText] = useState<string>('as'.toUpperCase())

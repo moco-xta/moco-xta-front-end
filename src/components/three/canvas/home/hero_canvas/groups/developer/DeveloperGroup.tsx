@@ -4,8 +4,8 @@ import { useGSAP } from '@gsap/react'
 import AFrontEndDeveloperTextGroup from './a_front_developer_text/AFrontEndDeveloperTextGroup'
 import MacBookProGroup from './mac_book_pro/MacBookProGroup'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
-import { default as developerGroupAnimationsConstants } from '@/constants/animations/home/hero/developer/developerGroupAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
+import { default as developerGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/developer/developerGroupAnimationsConstants.json'
 
 interface DeveloperGroupInterface {
   timeline: GSAPTimeline
