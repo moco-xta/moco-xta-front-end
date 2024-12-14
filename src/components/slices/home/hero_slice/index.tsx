@@ -4,8 +4,9 @@ import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import { HeroCanvas } from '@/components/three/canvas'
 import Controls from '@/components/buttons/animation/controls'
+import { HeroCanvas } from '@/components/three/canvas'
+import HeroBackgroundCanvas from '@/components/three/canvas/home/hero_background_canvas/HeroBackgroundCanvas'
 
 import './index.scss'
 import { heroSliceAnimations } from '@/animations/index'
@@ -58,8 +59,9 @@ export default function HeroSlice() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <HeroCanvas />
       <Controls />
+      <HeroCanvas />
+      <HeroBackgroundCanvas />
     </section>
   )
 }
