@@ -4,7 +4,7 @@ import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-import { heliumBalloonMaterial } from '../../../../materials/home/heliumBalloonMaterial'
+import { heliumBalloonMaterial } from '@/components/three/materials/heroMaterials'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 
 export const HeliumBalloonM = forwardRef<THREE.Mesh, MeshProps>(
   function HeliumBalloonM(props, ref) {
-    const { nodes } = useGLTF(glbConstants.HOME.HERO.HELIUM_BALLOONS.HELIUM_BALLOON_M) as GLTFResult
+    const { nodes } = useGLTF(glbConstants.HOME.HERO.MOCO.HELIUM_BALLOON_M) as GLTFResult
     return (
       <mesh
         ref={ref}
@@ -30,4 +30,4 @@ export const HeliumBalloonM = forwardRef<THREE.Mesh, MeshProps>(
   },
 )
 
-useGLTF.preload(glbConstants.HOME.HERO.HELIUM_BALLOONS.HELIUM_BALLOON_M)
+useGLTF.preload(glbConstants.HOME.HERO.MOCO.HELIUM_BALLOON_M)

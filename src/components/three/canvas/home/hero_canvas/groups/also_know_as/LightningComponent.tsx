@@ -1,57 +1,44 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 
-import { Lightning } from '@/components/three/models/home/hero/Lightning'
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
-import { default as lightningAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/also_konw_as/lightningAnimationsConstants.json'
+import { Lightning } from '@/components/three/models/home/hero/also_know_as/Lightning'
 
-interface LightningComponentInterface {
-  timeline: GSAPTimeline
-}
+import { default as lightningComponentConstants } from '@/constants/animations/home/hero/canvas/groups/also_konw_as/lightningComponentConstants.json'
 
-export default function LightningComponent({ timeline }: LightningComponentInterface) {
-  const [duration] = useState<number>(lightningAnimationsConstants.DURATION / heroConstants.SPEED)
-  const [delay] = useState<number>(
-    lightningAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
-  )
+import { lightningComponentAnimations } from 'animations'
 
-  const lightningMeshRef = useRef<THREE.Mesh>(null!)
+export default function LightningComponent() {
+  const { timeline } = useGSAPTimelineContext()
+
+  const lightningComponentMeshRef = useRef<THREE.Mesh>(null!)
 
   useLayoutEffect(() => {
-    if (lightningMeshRef.current) lightningMeshRef.current.visible = false
-  }, [lightningMeshRef])
+    if (lightningComponentMeshRef.current)
+      lightningComponentMeshRef.current.visible = lightningComponentConstants.DEFAULT.VISIBLE
+  }, [lightningComponentMeshRef])
 
   useGSAP(
     () => {
+      const animations = lightningComponentAnimations(lightningComponentMeshRef.current)
       // POSITION
       timeline.to(
-        lightningMeshRef.current,
+        lightningComponentMeshRef.current.material,
         {
-          keyframes: {
-            '0%': {
-              onComplete: () => {
-                lightningMeshRef.current.visible = true
-              },
-            },
-            '100%': {
-              onComplete: () => {
-                lightningMeshRef.current.visible = false
-              },
-            },
-          },
-          duration: duration,
+          keyframes: animations.material.keyframes,
+          duration: animations.material.duration,
         },
-        delay,
+        animations.delay,
       )
     },
-    { scope: lightningMeshRef },
+    { scope: lightningComponentMeshRef },
   )
 
   return (
     <Lightning
-      ref={lightningMeshRef}
-      scale={2.5}
+      ref={lightningComponentMeshRef}
+      scale={lightningComponentConstants.DEFAULT.GEOMETRY.SCALE}
     />
   )
 }

@@ -1,11 +1,12 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { Float, PerspectiveCamera } from '@react-three/drei'
+import { Float, PerspectiveCamera, useHelper } from '@react-three/drei'
 
 import { default as perspectiveCameraConstants } from '@/constants/animations/home/hero/canvas/perspectiveCameraConstants.json'
 
 export default function Camera() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
+  useHelper(perspectiveCameraRef, THREE.CameraHelper)
 
   {
     /* return (

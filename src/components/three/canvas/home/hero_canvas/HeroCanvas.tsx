@@ -8,7 +8,7 @@ import Lights from './lights/Lights'
 import GreetingGroup from './groups/greeting/GreetingGroup'
 import PortraitGroup from './groups/portrait/PortraitGroup'
 import AlsoKnowAsGroup from './groups/also_know_as/AlsoKnowAsGroup'
-import MocoGroup from './groups/moco/MocoHeliumBalloons'
+import MocoGroup from './groups/moco/MocoGroup'
 import DeveloperGroup from './groups/developer/DeveloperGroup'
 import WithExtraSkillsGroup from './groups/with_extra_skills/WithExtraSkillsGroup'
 import PostProcessing from './PostProcessing'
@@ -53,11 +53,11 @@ export default function HeroCanvas() {
         >
           <GreetingGroup />
           <PortraitGroup />
-          {/* <AlsoKnowAsGroup timeline={timeline} /> */}
-          {/* <MocoGroup timeline={timeline} /> */}
+          <AlsoKnowAsGroup />
+          <MocoGroup />
           {/* <DeveloperGroup timeline={timeline} /> */}
           {/* <WithExtraSkillsGroup timeline={timeline} /> */}
-          {/* <PostProcessing /> */}
+          <PostProcessing />
         </Physics>
       </Suspense>
     </Canvas>

@@ -1,0 +1,58 @@
+{
+  "DURATION": 2,
+  "LABEL": "moco",
+  "DEFAULT": {
+    "MOCO_GROUP": {
+      "VISIBLE": false,
+      "SCALE": 5
+    },
+    "LETTERS": {
+      "GEOMETRY": {
+        "POSITIONS": {
+          "M": {
+            "X": -0.96,
+            "Y": 0,
+            "Z": 0
+          },
+          "O1": {
+            "X": -0.32,
+            "Y": 0,
+            "Z": 0
+          },
+          "C": {
+            "X": 0.32,
+            "Y": 0,
+            "Z": 0
+          },
+          "O2": {
+            "X": 0.96,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "ROTATION": {
+          "X": 0,
+          "Y": 33,
+          "Z": 0
+        }
+      },
+      "PHYSICS": {
+        "COLLIDERS": "hull",
+        "ADD_FORCE": {
+          "INTENSITY": 0.001,
+          "Z_THRESHOLD": 0.5
+        },
+        "APPLY_IMPULSE_INTENSITY": 0.001,
+        "RESTITUTION": 0.2
+      }
+    }
+  },
+  "WRAPPER": {
+    "DIMENSIONS": {
+      "WIDTH": 2.55,
+      "HEIGHT": 1.1,
+      "DEPTH": 0.85
+    },
+    "OPACITY": 0
+  }
+}

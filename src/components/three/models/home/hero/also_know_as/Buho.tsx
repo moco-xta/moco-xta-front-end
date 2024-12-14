@@ -5,6 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import { default as buhosConstants } from '@/constants/animations/home/hero/canvas/groups/also_konw_as/buhosConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -44,20 +45,20 @@ type GLTFResult = GLTF & {
 }
 
 export const Buho = forwardRef<THREE.Group, GroupProps>(function Buho(props, ref) {
-  const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.BUHO) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.ALSO_KNOW_AS.BUHO) as GLTFResult
 
   useLayoutEffect(() => {
     Object.keys(materials).forEach(function (key, index) {
       // @ts-ignore
-      materials[key].transparent = true
+      materials[key].transparent = buhosConstants.DEFAULT.MATERIAL.TRANSPARENT
       // @ts-ignore
-      materials[key].opacity = 0.1
+      materials[key].opacity = buhosConstants.DEFAULT.MATERIAL.OPACITY
       // @ts-ignore
       materials[key].emissive = materials.bordeaux_material.color
       // @ts-ignore
-      materials[key].emissiveIntensity = 15
+      materials[key].emissiveIntensity = buhosConstants.DEFAULT.MATERIAL.EMISSIVE_INTENSITY
       // @ts-ignore
-      materials[key].needsUpdate = true
+      materials[key].needsUpdate = buhosConstants.DEFAULT.MATERIAL.NEEDS_UP_DATE
     })
   }, [materials])
 
@@ -145,4 +146,4 @@ export const Buho = forwardRef<THREE.Group, GroupProps>(function Buho(props, ref
   )
 })
 
-useGLTF.preload(glbConstants.HOME.HERO.BUHO)
+useGLTF.preload(glbConstants.HOME.HERO.ALSO_KNOW_AS.BUHO)

@@ -9,7 +9,7 @@ import AlsoKnowAsText from '../../also_know_as/also_know_as_text/AlsoKnowAsTextG
 
 import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/foregroundConstants.json'
 
-import { foregroundAnimations } from '@/animations/home/hero/portrait/foreground/foregroundAnimations'
+import { foregroundAnimations } from '@/animations/home/hero/canvas/groups/portrait/foreground/foregroundAnimations'
 
 export default function Foreground() {
   const { timeline } = useGSAPTimelineContext()
@@ -68,7 +68,7 @@ export default function Foreground() {
       ]}
     >
       <MessGroup />
-      <AlsoKnowAsText />
+      {/* <AlsoKnowAsText /> */}
     </group>
   )
 }

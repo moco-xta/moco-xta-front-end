@@ -33,8 +33,6 @@ export const Cloud = forwardRef<THREE.Mesh, MeshProps>(function Cloud(props, ref
       name='Sun'
       geometry={nodes.Cloud.geometry}
       material={materials['gobelino_#ffffff_material']}
-      receiveShadow
-      castShadow
       {...props}
     />
   )

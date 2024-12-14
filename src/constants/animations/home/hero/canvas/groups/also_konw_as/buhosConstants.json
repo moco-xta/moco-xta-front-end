@@ -1,0 +1,82 @@
+{
+  "DURATION": 1,
+  "LABEL": "also_know_as",
+  "DEFAULT": {
+    "VISIBLE": false,
+    "GEOMETRY": {
+      "POSITIONS": [
+        {
+          "X": -3.5,
+          "Y": 0,
+          "Z": 1
+        },
+        {
+          "X": 3.5,
+          "Y": 0,
+          "Z": 1
+        }
+      ],
+      "SCALES": [
+        {
+          "X": 2.5,
+          "Y": 2.5,
+          "Z": 2.5
+        },
+        {
+          "X": -2.5,
+          "Y": 2.5,
+          "Z": 2.5
+        }
+      ]
+    },
+    "MATERIAL": {
+      "TRANSPARENT": true,
+      "OPACITY": 0.1,
+      "EMISSIVE_INTENSITY": 0.5,
+      "NEEDS_UP_DATE": true
+    }
+  },
+  "ANIMATION": {
+    "0_PERCENT": {
+      "VISIBLE": true
+    },
+    "10_PERCENT": {
+      "MATERIAL": {
+        "OPACITY": 1,
+        "EMISSIVE_INTENSITY": 1
+      }
+    },
+    "20_PERCENT": {
+      "MATERIAL": {
+        "OPACITY": 0.05,
+        "EMISSIVE_INTENSITY": 0.5
+      }
+    },
+    "30_PERCENT": {
+      "MATERIAL": {
+        "OPACITY": 0,
+        "EMISSIVE_INTENSITY": 0
+      }
+    },
+    "40_PERCENT": {
+      "MATERIAL": {
+        "OPACITY": 0.1,
+        "EMISSIVE_INTENSITY": 0.75
+      }
+    },
+    "50_PERCENT": {
+      "MATERIAL": {
+        "OPACITY": 0.05,
+        "EMISSIVE_INTENSITY": 0.3
+      }
+    },
+    "100_PERCENT": {
+      "VISIBLE": false,
+      "MATERIAL": {
+        "OPACITY": 0,
+        "EMISSIVE_INTENSITY": 0
+      }
+    },
+    "EACH_EASE": "none"
+  }
+}

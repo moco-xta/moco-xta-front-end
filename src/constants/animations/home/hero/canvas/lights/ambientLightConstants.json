@@ -2,7 +2,7 @@
   "ANIMATION": {
     "0_PERCENT": {
       "COLOR": "#ffffff",
-      "INTENSITY": 1
+      "INTENSITY": 0.1
     }
   }
 }
