@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundAnimationsConstants.json'
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundConstants.json'
 
 export const foregroundAnimations = () => {
   return {

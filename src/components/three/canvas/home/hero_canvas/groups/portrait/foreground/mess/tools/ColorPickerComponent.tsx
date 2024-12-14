@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { ColorPicker } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/ColorPicker'
 
-import { default as colorPickerComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorPickerComponentAnimationsConstants.json'
+import { default as colorPickerComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorPickerComponentConstants.json'
 
 import { colorPickerComponentAnimations } from '@/animations/index'
 
@@ -39,9 +39,9 @@ export default function ColorPickerComponent() {
       ref={colorPickerRef}
       position={
         new THREE.Vector3(
-          colorPickerComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          colorPickerComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          colorPickerComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          colorPickerComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          colorPickerComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          colorPickerComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
     />

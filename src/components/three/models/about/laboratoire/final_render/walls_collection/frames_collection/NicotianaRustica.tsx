@@ -28,7 +28,6 @@ export function NicotianaRustica({ position }: JSX.IntrinsicElements['group']) {
     <group
       name='NicotianaRustica'
       position={position}
-      dispose={null}
     >
       <mesh
         name='NicotianaRustica_1'

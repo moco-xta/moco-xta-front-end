@@ -1,23 +1,23 @@
-import { default as sunComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/gobelino/sunComponentAnimationsConstants.json'
+import { default as sunComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/sunComponentConstants.json'
 
 export const sunComponentAnimations = {
   material: {
     keyframes: {
       '0%': {
-        opacity: sunComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+        opacity: sunComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
       },
       '33%': {
-        opacity: sunComponentAnimationsConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
+        opacity: sunComponentConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
       },
       '66%': {
-        opacity: sunComponentAnimationsConstants.ANIMATION['66_PERCENT'].MATERIAL.OPACITY,
+        opacity: sunComponentConstants.ANIMATION['66_PERCENT'].MATERIAL.OPACITY,
       },
       '100%': {
-        opacity: sunComponentAnimationsConstants.ANIMATION['100_PERCENT'].MATERIAL.OPACITY,
+        opacity: sunComponentConstants.ANIMATION['100_PERCENT'].MATERIAL.OPACITY,
       },
-      easeEach: sunComponentAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+      easeEach: sunComponentConstants.ANIMATION.EACH_EASE.MATERIAL,
     },
-    duration: sunComponentAnimationsConstants.DURATION,
+    duration: sunComponentConstants.DURATION,
   },
-  delay: sunComponentAnimationsConstants.LABEL,
+  delay: sunComponentConstants.LABEL,
 }

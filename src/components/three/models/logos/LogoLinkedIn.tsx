@@ -47,7 +47,6 @@ export function LogoLinkedIn(props: JSX.IntrinsicElements['group']) {
     <group
       ref={logoLinkedInRef}
       {...props}
-      dispose={null}
     >
       <IntersectCube
         handleOnPointerMove={handleOnPointerMove}

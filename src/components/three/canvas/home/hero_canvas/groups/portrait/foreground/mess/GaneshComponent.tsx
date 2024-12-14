@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Ganesh } from '@/components/three/models/home/hero/portrait/foreground/mess/Ganesh'
 
-import { default as ganeshComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/ganeshComponentAnimationsConstants.json'
+import { default as ganeshComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/ganeshComponentConstants.json'
 
 import { ganeshComponentAnimations } from '@/animations/index'
 
@@ -32,12 +32,12 @@ export default function GaneshComponent() {
       ref={ganeshComponentMeshRef}
       position={
         new THREE.Vector3(
-          ganeshComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          ganeshComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          ganeshComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          ganeshComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          ganeshComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          ganeshComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
-      scale={ganeshComponentAnimationsConstants.ANIMATION['0_PERCENT'].SCALE}
+      scale={ganeshComponentConstants.ANIMATION['0_PERCENT'].SCALE}
     />
   )
 }

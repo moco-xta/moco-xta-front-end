@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as paintBucketComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/paintBucketComponentAnimationsConstants.json'
+import { default as paintBucketComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/paintBucketComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -33,10 +33,9 @@ export const PaintBucket = forwardRef<THREE.Group, GroupProps>(function PaintBuc
     Object.keys(materials).forEach((key) => {
       // @ts-ignore
       materials[key].transparent =
-        paintBucketComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
+        paintBucketComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
       // @ts-ignore
-      materials[key].opacity =
-        paintBucketComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+      materials[key].opacity = paintBucketComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
     })
   }, [materials])
 
@@ -44,7 +43,6 @@ export const PaintBucket = forwardRef<THREE.Group, GroupProps>(function PaintBuc
     <group
       ref={ref}
       {...props}
-      dispose={null}
     >
       <mesh
         name='PaintBucket_1'

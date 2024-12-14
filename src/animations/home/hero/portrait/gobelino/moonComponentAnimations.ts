@@ -1,17 +1,17 @@
-import { default as moonComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/gobelino/moonComponentAnimationsConstants.json'
+import { default as moonComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/moonComponentConstants.json'
 
 export const moonComponentAnimations = {
   material: {
     keyframes: {
       '0%': {
-        opacity: moonComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+        opacity: moonComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
       },
       '33%': {
-        opacity: moonComponentAnimationsConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
+        opacity: moonComponentConstants.ANIMATION['33_PERCENT'].MATERIAL.OPACITY,
       },
-      easeEach: moonComponentAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+      easeEach: moonComponentConstants.ANIMATION.EACH_EASE.MATERIAL,
     },
-    duration: moonComponentAnimationsConstants.DURATION,
+    duration: moonComponentConstants.DURATION,
   },
-  delay: moonComponentAnimationsConstants.LABEL,
+  delay: moonComponentConstants.LABEL,
 }

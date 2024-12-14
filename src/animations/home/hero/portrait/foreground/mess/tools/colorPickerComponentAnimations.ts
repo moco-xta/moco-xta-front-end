@@ -1,17 +1,17 @@
-import { default as colorPickerComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorPickerComponentAnimationsConstants.json'
+import { default as colorPickerComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorPickerComponentConstants.json'
 
 export const colorPickerComponentAnimations = {
   material: {
     keyframes: {
       '0%': {
-        opacity: colorPickerComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+        opacity: colorPickerComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
       },
       '25%': {
-        opacity: colorPickerComponentAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
+        opacity: colorPickerComponentConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
       },
-      easeEach: colorPickerComponentAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+      easeEach: colorPickerComponentConstants.ANIMATION.EACH_EASE.MATERIAL,
     },
-    duration: colorPickerComponentAnimationsConstants.DURATION,
+    duration: colorPickerComponentConstants.DURATION,
   },
-  delay: colorPickerComponentAnimationsConstants.LABEL,
+  delay: colorPickerComponentConstants.LABEL,
 }

@@ -29,7 +29,6 @@ export function MacBookPro({ position }: JSX.IntrinsicElements['group']) {
     <group
       name='MacBookPro'
       position={position}
-      dispose={null}
     >
       <mesh
         name='MacBookPro_1'

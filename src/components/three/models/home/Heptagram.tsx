@@ -76,7 +76,6 @@ export const Heptagram = forwardRef<THREE.Group, GroupProps>(function Heptagram(
     <group
       ref={ref}
       {...props}
-      dispose={null}
     >
       <mesh
         name='Heptagram_1'

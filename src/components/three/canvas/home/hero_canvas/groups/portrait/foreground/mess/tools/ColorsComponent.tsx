@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -6,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Colors } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/Colors'
 
-import { default as colorsComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorsComponentAnimationsConstants.json'
+import { default as colorsComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorsComponentConstants.json'
 
 import { colorsComponentAnimations } from '@/animations/index'
 
@@ -36,12 +37,14 @@ export default function ColorsComponent() {
   return (
     <Colors
       ref={colorsComponentRef}
-      position={[
-        colorsComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-        colorsComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-        colorsComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
-      ]}
-      scale={colorsComponentAnimationsConstants.ANIMATION['0_PERCENT'].SCALE}
+      position={
+        new THREE.Vector3(
+          colorsComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          colorsComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          colorsComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+        )
+      }
+      scale={colorsComponentConstants.ANIMATION['0_PERCENT'].SCALE}
     />
   )
 }

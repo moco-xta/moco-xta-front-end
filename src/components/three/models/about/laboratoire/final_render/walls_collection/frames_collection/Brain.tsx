@@ -27,7 +27,6 @@ export function Brain({ position }: JSX.IntrinsicElements['group']) {
     <group
       name='Brain'
       position={position}
-      dispose={null}
     >
       <mesh
         name='Brain_1'

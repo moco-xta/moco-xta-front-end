@@ -3,7 +3,7 @@ import { useGSAP } from '@gsap/react'
 
 import { Lightning } from '@/components/three/models/home/hero/Lightning'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
 import { default as lightningAnimationsConstants } from '@/constants/animations/home/hero/also_konw_as/lightningAnimationsConstants.json'
 
 interface LightningComponentInterface {
@@ -11,11 +11,9 @@ interface LightningComponentInterface {
 }
 
 export default function LightningComponent({ timeline }: LightningComponentInterface) {
-  const [duration] = useState<number>(
-    lightningAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
-  )
+  const [duration] = useState<number>(lightningAnimationsConstants.DURATION / heroConstants.SPEED)
   const [delay] = useState<number>(
-    lightningAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+    lightningAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
   )
 
   const lightningMeshRef = useRef<THREE.Mesh>(null!)

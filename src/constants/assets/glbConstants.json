@@ -39,6 +39,10 @@
           }
         },
         "GOBELINO": {
+          "BIRD": "/models/glb/home/hero/portrait/gobelino/Bird.glb",
+          "CLOUD": "/models/glb/home/hero/portrait/gobelino/Cloud.glb",
+          "HILL_TOP_LEFT": "/models/glb/home/hero/portrait/gobelino/HillTopLeft.glb",
+          "HILL_TOP_RIGHT": "/models/glb/home/hero/portrait/gobelino/HillTopRight.glb",
           "MOON": "/models/glb/home/hero/portrait/gobelino/Moon.glb",
           "SKY": "/models/glb/home/hero/portrait/gobelino/Sky.glb",
           "SUN": "/models/glb/home/hero/portrait/gobelino/Sun.glb"

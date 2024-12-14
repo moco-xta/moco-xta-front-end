@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Sky } from '@/components/three/models/home/hero/portrait/gobelino/Sky'
 
-import { default as skyComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/gobelino/skyComponentAnimationsConstants.json'
+import { default as skyComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/skyComponentConstants.json'
 
 import { skyComponentAnimations } from '@/animations/index'
 
@@ -54,9 +54,9 @@ export default function SkyComponent() {
     <Sky
       ref={skyComponentMeshRef}
       position={[
-        skyComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-        skyComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-        skyComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+        skyComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+        skyComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+        skyComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
       ]}
     />
   )

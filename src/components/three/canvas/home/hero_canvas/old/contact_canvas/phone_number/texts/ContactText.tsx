@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 import { Word3D } from '../../../../../../components/word_3d/Word3D'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/heroConstants.json'
 
 export default function ContactText() {
   const t = useTranslations('HOME')
@@ -33,11 +33,9 @@ export default function ContactText() {
           easeEach: 'power1.in',
         },
         delay:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY +
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
-        duration:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS /
-          heroAnimationsConstants.SPEED,
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY +
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
+        duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
       })
       // @ts-ignore
       gsap.to(letter.rotation, {
@@ -51,11 +49,9 @@ export default function ContactText() {
           easeEach: 'power1.in',
         },
         delay:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY +
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
-        duration:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS /
-          heroAnimationsConstants.SPEED,
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY +
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
+        duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
       })
       // @ts-ignore
       gsap.to(letter.material, {
@@ -75,11 +71,9 @@ export default function ContactText() {
           easeEach: 'power1.in',
         },
         delay:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY +
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
-        duration:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS /
-          heroAnimationsConstants.SPEED,
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY +
+          heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.STAGGER_DELAY * index,
+        duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
       })
     })
   })
@@ -97,7 +91,7 @@ export default function ContactText() {
       lengthRef={lengthRef}
     >
       <meshStandardMaterial
-        color={heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
+        color={heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
         transparent
         opacity={0}
         side={THREE.DoubleSide}

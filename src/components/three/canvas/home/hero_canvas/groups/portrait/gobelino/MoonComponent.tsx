@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Moon } from '@/components/three/models/home/hero/portrait/gobelino/Moon'
 
-import { default as moonComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/gobelino/moonComponentAnimationsConstants.json'
+import { default as moonComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/moonComponentConstants.json'
 
 import { moonComponentAnimations } from '@/animations/index'
 
@@ -35,9 +35,9 @@ export default function MoonComponent() {
       ref={moonComponentMeshRef}
       position={
         new THREE.Vector3(
-          moonComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          moonComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          moonComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          moonComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          moonComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          moonComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
     />

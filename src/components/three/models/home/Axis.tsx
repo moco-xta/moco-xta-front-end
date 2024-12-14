@@ -28,10 +28,7 @@ export function Axis(props: JSX.IntrinsicElements['group']) {
   })
 
   return (
-    <group
-      {...props}
-      dispose={null}
-    >
+    <group {...props}>
       <mesh
         name='Axis_1'
         geometry={nodes.Axis_1.geometry}

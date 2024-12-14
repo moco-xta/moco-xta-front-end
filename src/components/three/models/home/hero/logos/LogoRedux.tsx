@@ -22,7 +22,6 @@ export const LogoRedux = forwardRef<THREE.Group, GroupProps>(function LogoRedux(
     <group
       ref={ref}
       {...props}
-      dispose={null}
     >
       <mesh
         name='LogoRedux'

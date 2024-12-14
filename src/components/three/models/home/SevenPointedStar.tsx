@@ -30,7 +30,6 @@ export const SevenPointedStar = forwardRef<THREE.Mesh, MeshProps>(
         geometry={nodes.SevenPointedStar.geometry}
         material={material}
         {...props}
-        dispose={null}
       />
     )
   },

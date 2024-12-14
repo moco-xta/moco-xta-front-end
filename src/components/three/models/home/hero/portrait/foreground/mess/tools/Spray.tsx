@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as sprayComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/sprayComponentAnimationsConstants.json'
+import { default as sprayComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/sprayComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -29,10 +29,9 @@ export const Spray = forwardRef<THREE.Group, GroupProps>(function Spray(props, r
     Object.keys(materials).forEach((key) => {
       // @ts-ignore
       materials[key].transparent =
-        sprayComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPAREMT
+        sprayComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPAREMT
       // @ts-ignore
-      materials[key].opacity =
-        sprayComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+      materials[key].opacity = sprayComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
     })
   }, [materials])
 
@@ -40,7 +39,6 @@ export const Spray = forwardRef<THREE.Group, GroupProps>(function Spray(props, r
     <group
       ref={ref}
       {...props}
-      dispose={null}
     >
       <mesh
         name='Spray_1'

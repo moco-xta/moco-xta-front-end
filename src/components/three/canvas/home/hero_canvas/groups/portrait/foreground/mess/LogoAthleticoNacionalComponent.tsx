@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { LogoAthleticoNacional } from '@/components/three/models/home/hero/portrait/foreground/mess/LogoAthleticoNacional'
 
-import { default as logoAthleticoNacionalComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/logoAthleticoNacionalComponentAnimationsConstants.json'
+import { default as logoAthleticoNacionalComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
 
 import { logoAthleticoNacionalComponentAnimations } from '@/animations/index'
 
@@ -32,12 +32,12 @@ export default function LogoAthleticoNacionalComponent() {
       ref={logoAthleticoNacionalComponentMeshRef}
       position={
         new THREE.Vector3(
-          logoAthleticoNacionalComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          logoAthleticoNacionalComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          logoAthleticoNacionalComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
-      scale={logoAthleticoNacionalComponentAnimationsConstants.ANIMATION['0_PERCENT'].SCALE}
+      scale={logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].SCALE}
     />
   )
 }

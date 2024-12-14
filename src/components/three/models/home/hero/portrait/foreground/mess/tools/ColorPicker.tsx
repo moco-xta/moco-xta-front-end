@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as colorPickerComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorPickerComponentAnimationsConstants.json'
+import { default as colorPickerComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorPickerComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -33,10 +33,9 @@ export const ColorPicker = forwardRef<THREE.Group, GroupProps>(function ColorPic
     Object.keys(materials).forEach((key) => {
       // @ts-ignore
       materials[key].transparent =
-        colorPickerComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
+        colorPickerComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
       // @ts-ignore
-      materials[key].opacity =
-        colorPickerComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+      materials[key].opacity = colorPickerComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
     })
   }, [materials])
 
@@ -44,7 +43,6 @@ export const ColorPicker = forwardRef<THREE.Group, GroupProps>(function ColorPic
     <group
       ref={ref}
       {...props}
-      dispose={null}
     >
       <mesh
         name='ColorPicker_1'

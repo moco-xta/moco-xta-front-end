@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as logoAthleticoNacionalComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/logoAthleticoNacionalComponentAnimationsConstants.json'
+import { default as logoAthleticoNacionalComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -24,17 +24,14 @@ export const LogoAthleticoNacional = forwardRef<THREE.Mesh, MeshProps>(
 
     useLayoutEffect(() => {
       materials.logo_athletico_nacional_material.transparent =
-        logoAthleticoNacionalComponentAnimationsConstants.ANIMATION[
-          '0_PERCENT'
-        ].MATERIAL.TRANSPARENT
+        logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
       materials.logo_athletico_nacional_material.opacity =
-        logoAthleticoNacionalComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+        logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
     }, [materials])
 
     return (
       <mesh
         ref={ref}
-        dispose={null}
         name='LogoAthleticoNacional'
         geometry={nodes.LogoAthleticoNacional.geometry}
         material={materials.logo_athletico_nacional_material}

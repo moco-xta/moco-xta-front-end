@@ -30,7 +30,6 @@ export function DeskChair({ position, rotation }: JSX.IntrinsicElements['group']
       name='DeskChair'
       position={position}
       rotation={rotation}
-      dispose={null}
     >
       <mesh
         name='DeskChair_1'

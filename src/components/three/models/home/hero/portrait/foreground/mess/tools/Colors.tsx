@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as colorsComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorsComponentAnimationsConstants.json'
+import { default as colorsComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorsComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -81,10 +81,9 @@ export const Colors = forwardRef<THREE.Group, GroupProps>(function Colors(props,
     Object.keys(materials).forEach((key) => {
       // @ts-ignore
       materials[key].transparent =
-        colorsComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
+        colorsComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
       // @ts-ignore
-      materials[key].opacity =
-        colorsComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+      materials[key].opacity = colorsComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
     })
   }, [materials])
 
@@ -92,7 +91,6 @@ export const Colors = forwardRef<THREE.Group, GroupProps>(function Colors(props,
     <group
       ref={ref}
       {...props}
-      dispose={null}
     >
       <mesh
         name='Colors_1'

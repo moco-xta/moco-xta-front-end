@@ -1,0 +1,20 @@
+{
+  "DURATION": 4,
+  "LABEL": "portrait",
+  "ANIMATION": {
+    "0_PERCENT": {
+      "MATERIAL": {
+        "TRANSPAREMT": true,
+        "OPACITY": 0
+      }
+    },
+    "25_PERCENT": {
+      "MATERIAL": {
+        "OPACITY": 1
+      }
+    },
+    "EACH_EASE": {
+      "MATERIAL": "power1.in"
+    }
+  }
+}

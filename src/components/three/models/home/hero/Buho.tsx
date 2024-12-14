@@ -65,7 +65,6 @@ export const Buho = forwardRef<THREE.Group, GroupProps>(function Buho(props, ref
     <group
       ref={ref}
       {...props}
-      dispose={null}
     >
       <mesh
         name='Buho_1'

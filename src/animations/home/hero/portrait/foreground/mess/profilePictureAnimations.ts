@@ -1,17 +1,17 @@
-import { default as profilPictureAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/profilPictureAnimationsConstants.json'
+import { default as profilPictureConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/profilPictureConstants.json'
 
 export const profilePictureAnimations = {
   material: {
     keyframes: {
       '0%': {
-        opacity: profilPictureAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+        opacity: profilPictureConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
       },
       '25%': {
-        opacity: profilPictureAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
+        opacity: profilPictureConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
       },
-      easeEach: profilPictureAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+      easeEach: profilPictureConstants.ANIMATION.EACH_EASE.MATERIAL,
     },
-    duration: profilPictureAnimationsConstants.DURATION,
+    duration: profilPictureConstants.DURATION,
   },
-  delay: profilPictureAnimationsConstants.LABEL,
+  delay: profilPictureConstants.LABEL,
 }

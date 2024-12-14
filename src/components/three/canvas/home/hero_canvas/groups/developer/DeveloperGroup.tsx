@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react'
 import AFrontEndDeveloperTextGroup from './a_front_developer_text/AFrontEndDeveloperTextGroup'
 import MacBookProGroup from './mac_book_pro/MacBookProGroup'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
 import { default as developerGroupAnimationsConstants } from '@/constants/animations/home/hero/developer/developerGroupAnimationsConstants.json'
 
 interface DeveloperGroupInterface {
@@ -13,10 +13,10 @@ interface DeveloperGroupInterface {
 
 export default function DeveloperGroup({ timeline }: DeveloperGroupInterface) {
   const [duration] = useState<number>(
-    developerGroupAnimationsConstants.DURATION / heroAnimationsConstants.SPEED,
+    developerGroupAnimationsConstants.DURATION / heroConstants.SPEED,
   )
   const [delay] = useState<number>(
-    developerGroupAnimationsConstants.KEYFRAME_START / heroAnimationsConstants.SPEED,
+    developerGroupAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
   )
 
   const developerGroupRef = useRef<THREE.Group>(null!)

@@ -21,6 +21,10 @@ import { gobelinoComponentAnimations } from './home/hero/portrait/gobelino/gobel
 import { sunComponentAnimations } from './home/hero/portrait/gobelino/sunComponentAnimations'
 import { moonComponentAnimations } from './home/hero/portrait/gobelino/moonComponentAnimations'
 import { skyComponentAnimations } from './home/hero/portrait/gobelino/skyComponentAnimations'
+import { birdComponentAnimations } from './home/hero/portrait/gobelino/birdComponentAnimations'
+import { cloudComponentAnimations } from './home/hero/portrait/gobelino/cloudComponentAnimations'
+import { hillTopRightComponentAnimations } from './home/hero/portrait/gobelino/hillTopRightComponentAnimations'
+import { hillTopleftComponentAnimations } from './home/hero/portrait/gobelino/hillTopleftComponentAnimations'
 
 export {
   cursorAnimation,
@@ -43,4 +47,8 @@ export {
   sunComponentAnimations,
   moonComponentAnimations,
   skyComponentAnimations,
+  birdComponentAnimations,
+  cloudComponentAnimations,
+  hillTopRightComponentAnimations,
+  hillTopleftComponentAnimations,
 }

@@ -86,7 +86,6 @@ export default function LogoNextjs({ position, rotation, scale }: GroupProps) {
   return (
     <group
       ref={logoNextjsRef}
-      dispose={null}
       position={position}
       rotation={rotation}
       scale={scale}

@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Christus } from '@/components/three/models/home/hero/portrait/foreground/mess/Christus'
 
-import { default as christusComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/christusComponentAnimationsConstants.json'
+import { default as christusComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/christusComponentConstants.json'
 
 import { christusComponentAnimations } from '@/animations/index'
 
@@ -32,28 +32,22 @@ export default function ChristusComponent() {
       ref={christusComponentMeshRef}
       position={
         new THREE.Vector3(
-          christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          christusComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          christusComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          christusComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
       rotation={
         new THREE.Euler(
-          THREE.MathUtils.degToRad(
-            christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.X,
-          ),
-          THREE.MathUtils.degToRad(
-            christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Y,
-          ),
-          THREE.MathUtils.degToRad(
-            christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z,
-          ),
+          THREE.MathUtils.degToRad(christusComponentConstants.ANIMATION['0_PERCENT'].ROTATION.X),
+          THREE.MathUtils.degToRad(christusComponentConstants.ANIMATION['0_PERCENT'].ROTATION.Y),
+          THREE.MathUtils.degToRad(christusComponentConstants.ANIMATION['0_PERCENT'].ROTATION.Z),
         )
       }
       scale={[
-        christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].SCALE.X,
-        christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].SCALE.Y,
-        christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].SCALE.Z,
+        christusComponentConstants.ANIMATION['0_PERCENT'].SCALE.X,
+        christusComponentConstants.ANIMATION['0_PERCENT'].SCALE.Y,
+        christusComponentConstants.ANIMATION['0_PERCENT'].SCALE.Z,
       ]}
     />
   )

@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { PaintBucket } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/PaintBucket'
 
-import { default as paintBucketComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/paintBucketComponentAnimationsConstants.json'
+import { default as paintBucketComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/paintBucketComponentConstants.json'
 
 import { paintBucketComponentAnimations } from '@/animations/index'
 
@@ -39,9 +39,9 @@ export default function PaintBucketComponent() {
       ref={paintBucketComponentRef}
       position={
         new THREE.Vector3(
-          paintBucketComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          paintBucketComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          paintBucketComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          paintBucketComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          paintBucketComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          paintBucketComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
     />

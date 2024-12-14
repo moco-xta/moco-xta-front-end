@@ -6,7 +6,7 @@ import ColorsComponent from './ColorsComponent'
 import ColorPickerComponent from './ColorPickerComponent'
 import PaintBucketComponent from './PaintBucketComponent'
 
-import { default as toolsGroupAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/toolsGroupAnimationsConstants.json'
+import { default as toolsGroupConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/toolsGroupConstants.json'
 
 export default function ToolsGroup() {
   const toolsGroupRef = useRef<THREE.Group>(null!)
@@ -16,9 +16,9 @@ export default function ToolsGroup() {
       ref={toolsGroupRef}
       position={
         new THREE.Vector3(
-          toolsGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          toolsGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          toolsGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          toolsGroupConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          toolsGroupConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          toolsGroupConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
     >

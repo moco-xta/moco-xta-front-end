@@ -30,7 +30,6 @@ export const Moon = forwardRef<THREE.Mesh, MeshProps>(function Moon(props, ref) 
       geometry={nodes.Moon.geometry}
       material={materials.moon_material}
       {...props}
-      dispose={null}
     />
   )
 })

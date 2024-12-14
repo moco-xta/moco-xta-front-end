@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import { HeroCanvas } from '@/components/three/canvas'
-import PauseAnimationButton from '@/components/buttons/pause_animation_button'
+import Controls from '@/components/buttons/animation/controls'
 
 import './index.scss'
 import { heroSliceAnimations } from '@/animations/index'
@@ -45,7 +45,7 @@ export default function HeroSlice() {
       }}
     >
       <HeroCanvas />
-      <PauseAnimationButton />
+      <Controls />
     </section>
   )
 }

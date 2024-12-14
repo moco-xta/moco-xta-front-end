@@ -47,7 +47,6 @@ export function LogoGitHub(props: JSX.IntrinsicElements['group']) {
     <group
       ref={logoGitHubRef}
       {...props}
-      dispose={null}
     >
       <IntersectCube
         handleOnPointerMove={handleOnPointerMove}

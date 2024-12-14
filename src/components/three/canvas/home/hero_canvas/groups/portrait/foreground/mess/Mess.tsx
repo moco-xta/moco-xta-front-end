@@ -8,16 +8,16 @@ import ProfilPicture from './ProfilPicture'
 import ChristusComponent from './ChristusComponent'
 import GaneshComponent from './GaneshComponent'
 
-import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundAnimationsConstants.json'
-import { default as messAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/messAnimationsConstants.json'
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundConstants.json'
+import { default as messGroupConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/messGroupConstants.json'
 
-export default function Mess() {
+export default function MessGroup() {
   return (
     <group
       position={[
-        messAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
+        messGroupConstants.ANIMATION['0_PERCENT'].POSITION.X,
         -foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-        messAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+        messGroupConstants.ANIMATION['0_PERCENT'].POSITION.Z,
       ]}
     >
       <HeartComponent />

@@ -7,7 +7,7 @@ import PhoneNumberText from './PhoneNumberText'
 import PhoneNumberInputComponent from './PhoneNumberInputComponent'
 import { IphoneKeyboard } from './IphoneKeyboard'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/heroConstants.json'
 
 export default function PhoneNumber() {
   const phoneNumberGroupRef = useRef<THREE.Group>(null!)
@@ -30,11 +30,8 @@ export default function PhoneNumber() {
         },
       },
       delay:
-        (heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY + 0.05) /
-        heroAnimationsConstants.SPEED,
-      duration:
-        heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS /
-        heroAnimationsConstants.SPEED,
+        (heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY + 0.05) / heroConstants.SPEED,
+      duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS / heroConstants.SPEED,
     })
     gsap.to(iphoneKeyboardGroupRef.current.rotation, {
       keyframes: {
@@ -49,12 +46,8 @@ export default function PhoneNumber() {
           ease: 'circ.inOut',
         },
       },
-      delay:
-        heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY /
-        heroAnimationsConstants.SPEED,
-      duration:
-        heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS /
-        heroAnimationsConstants.SPEED,
+      delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY / heroConstants.SPEED,
+      duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS / heroConstants.SPEED,
     })
     const iphoneKeyboardTouchs = gsap.utils.toArray(iphoneKeyboardGroupRef.current.children)
     iphoneKeyboardTouchs.forEach((touch, index) => {
@@ -72,12 +65,8 @@ export default function PhoneNumber() {
             opacity: 1,
           },
         },
-        delay:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY /
-          heroAnimationsConstants.SPEED,
-        duration:
-          heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS /
-          heroAnimationsConstants.SPEED,
+        delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY / heroConstants.SPEED,
+        duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS / heroConstants.SPEED,
       })
     })
     gsap.to(phoneNumberGroupRef.current, {
@@ -89,10 +78,8 @@ export default function PhoneNumber() {
           visible: false,
         },
       },
-      delay: heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY,
-      duration:
-        heroAnimationsConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS /
-        heroAnimationsConstants.SPEED,
+      delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY,
+      duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
     })
   })
 

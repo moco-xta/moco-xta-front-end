@@ -27,7 +27,6 @@ export function CelestialMap({ position }: JSX.IntrinsicElements['group']) {
     <group
       name='CelestialMap'
       position={position}
-      dispose={null}
     >
       <mesh
         name='CelestialMap_1'

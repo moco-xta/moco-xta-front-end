@@ -1,17 +1,17 @@
-import { default as heartComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/heartComponentAnimationsConstants.json'
+import { default as heartComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/heartComponentConstants.json'
 
 export const heartComponentAnimations = {
   material: {
     keyframes: {
       '0%': {
-        opacity: heartComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+        opacity: heartComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
       },
       '25%': {
-        opacity: heartComponentAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
+        opacity: heartComponentConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
       },
-      easeEach: heartComponentAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+      easeEach: heartComponentConstants.ANIMATION.EACH_EASE.MATERIAL,
     },
-    duration: heartComponentAnimationsConstants.DURATION,
+    duration: heartComponentConstants.DURATION,
   },
-  delay: heartComponentAnimationsConstants.LABEL,
+  delay: heartComponentConstants.LABEL,
 }

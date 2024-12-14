@@ -33,7 +33,6 @@ export const PhoneNumberInput = forwardRef<THREE.Mesh, MeshProps>(
         receiveShadow
         castShadow
         {...props}
-        dispose={null}
       />
     )
   },

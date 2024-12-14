@@ -29,7 +29,6 @@ export function Monarch({ position }: JSX.IntrinsicElements['group']) {
     <group
       name='Monarch'
       position={position}
-      dispose={null}
     >
       <mesh
         name='Monarch_1'

@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Sun } from '@/components/three/models/home/hero/portrait/gobelino/Sun'
 
-import { default as sunComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/gobelino/sunComponentAnimationsConstants.json'
+import { default as sunComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/sunComponentConstants.json'
 
 import { sunComponentAnimations } from '@/animations/index'
 
@@ -35,9 +35,9 @@ export default function SunComponent() {
       ref={sunComponentMeshRef}
       position={
         new THREE.Vector3(
-          sunComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          sunComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          sunComponentAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          sunComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          sunComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          sunComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
     />

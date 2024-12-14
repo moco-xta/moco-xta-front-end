@@ -1,17 +1,17 @@
-import { default as christusComponentAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/christusComponentAnimationsConstants.json'
+import { default as christusComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/christusComponentConstants.json'
 
 export const christusComponentAnimations = {
   material: {
     keyframes: {
       '0%': {
-        opacity: christusComponentAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+        opacity: christusComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
       },
       '25%': {
-        opacity: christusComponentAnimationsConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
+        opacity: christusComponentConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
       },
-      easeEach: christusComponentAnimationsConstants.ANIMATION.EACH_EASE.MATERIAL,
+      easeEach: christusComponentConstants.ANIMATION.EACH_EASE.MATERIAL,
     },
-    duration: christusComponentAnimationsConstants.DURATION,
+    duration: christusComponentConstants.DURATION,
   },
-  delay: christusComponentAnimationsConstants.LABEL,
+  delay: christusComponentConstants.LABEL,
 }

@@ -29,7 +29,6 @@ export const Ganesh = forwardRef<THREE.Mesh, MeshProps>(function Ganesh(props, r
   return (
     <mesh
       ref={ref}
-      dispose={null}
       name='Ganesh'
       geometry={nodes.Ganesh.geometry}
       material={materials.ganesh_material}

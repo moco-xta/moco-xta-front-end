@@ -20,8 +20,8 @@ export default function WithExtraSkillsTextGroup() {
         withExtraSkillsTextGroupRef.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
           .DELAY,
       duration:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .STEPS / heroAnimationsConstants.SPEED,
+        heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
+          .STEPS / heroConstants.SPEED,
     }) */
     /* gsap.to(withExtraSkillsGroupRef.current.scale, {
       keyframes: {
@@ -31,11 +31,11 @@ export default function WithExtraSkillsTextGroup() {
         easeEach: 'power1.in',
       },
       delay:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
+        heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
           .DELAY,
       duration:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .STEPS / heroAnimationsConstants.SPEED,
+        heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
+          .STEPS / heroConstants.SPEED,
     }) */
   })
 

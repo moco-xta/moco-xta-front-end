@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 import SunComponent from './SunComponent'
 import MoonComponent from './MoonComponent'
 
-import { default as sunAndMoonAnimationsConstants } from '@/constants/animations/home/hero/portrait/gobelino/sunAndMoonAnimationsConstants.json'
+import { default as sunAndMoonConstants } from '@/constants/animations/home/hero/portrait/gobelino/sunAndMoonConstants.json'
 
 import { gobelinoComponentAnimations } from '@/animations/index'
 
@@ -34,11 +34,18 @@ export default function SunAndMoon() {
   return (
     <group
       ref={sunAndMoonGroupRef}
+      position={
+        new THREE.Vector3(
+          sunAndMoonConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          sunAndMoonConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          sunAndMoonConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+        )
+      }
       rotation={
         new THREE.Euler(
-          THREE.MathUtils.degToRad(sunAndMoonAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.X),
-          THREE.MathUtils.degToRad(sunAndMoonAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Y),
-          THREE.MathUtils.degToRad(sunAndMoonAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z),
+          THREE.MathUtils.degToRad(sunAndMoonConstants.ANIMATION['0_PERCENT'].ROTATION.X),
+          THREE.MathUtils.degToRad(sunAndMoonConstants.ANIMATION['0_PERCENT'].ROTATION.Y),
+          THREE.MathUtils.degToRad(sunAndMoonConstants.ANIMATION['0_PERCENT'].ROTATION.Z),
         )
       }
     >

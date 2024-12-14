@@ -22,7 +22,6 @@ export const LogoTailwind = forwardRef<THREE.Group, GroupProps>(function LogoTai
     <group
       ref={ref}
       {...props}
-      dispose={null}
     >
       <mesh
         name='LogoTailwind'

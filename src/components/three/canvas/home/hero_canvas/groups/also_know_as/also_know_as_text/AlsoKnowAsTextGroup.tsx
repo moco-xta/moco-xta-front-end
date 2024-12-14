@@ -8,8 +8,8 @@ import AlsoText from './texts/AlsoText'
 import KnowText from './texts/KnowText'
 import AsText from './texts/AsText'
 
-import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundAnimationsConstants.json'
-import { default as alsoKnowAsAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/alsoKnowAsAnimationsConstants.json'
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundConstants.json'
+import { default as alsoKnowAsConstants } from '@/constants/animations/home/hero/portrait/foreground/alsoKnowAsConstants.json'
 
 export default function AlsoKnowAsTextGroup() {
   const { timeline } = useGSAPTimelineContext()

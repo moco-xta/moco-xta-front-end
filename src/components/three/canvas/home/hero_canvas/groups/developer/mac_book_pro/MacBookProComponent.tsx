@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 
 import { MacBookPro } from '@/components/three/models/home/MacBookPro'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/heroConstants.json'
 
 export default function MacBookProComponent() {
   const macBookProTopPartRef = useRef<THREE.Group>(null!)
@@ -22,12 +22,10 @@ export default function MacBookProComponent() {
           ease: 'circ.inOut',
         },
       },
-      delay:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .DELAY,
+      delay: heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.DELAY,
       duration:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .STEPS / heroAnimationsConstants.SPEED,
+        heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.STEPS /
+        heroConstants.SPEED,
     })
     const macBookTopPart = macBookProTopPartRef.current.getObjectByName('MacBookPro_2')
     gsap.to(macBookTopPart!.rotation, {
@@ -44,12 +42,10 @@ export default function MacBookProComponent() {
           x: THREE.MathUtils.degToRad(0),
         },
       },
-      delay:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .DELAY,
+      delay: heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.DELAY,
       duration:
-        heroAnimationsConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
-          .STEPS / heroAnimationsConstants.SPEED,
+        heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.STEPS /
+        heroConstants.SPEED,
     })
   })
 

@@ -5,15 +5,15 @@ import { GSAPTimelineProvider } from 'contexts/GSAPTimelineContext'
 import HeroSlice from './hero_slice'
 // import ContactSlice from './contact_slice'
 
-import { default as heroAnimationsConstants } from '@/constants/animations/home/hero/heroAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
 
 export default function HomePage() {
   return (
     <>
       <GSAPTimelineProvider
-        delay={heroAnimationsConstants.DELAY}
-        timeScale={heroAnimationsConstants.TIME_SCALE}
-        labels={heroAnimationsConstants.LABELS}
+        delay={heroConstants.DELAY}
+        timeScale={heroConstants.TIME_SCALE}
+        labels={heroConstants.LABELS}
       >
         <HeroSlice />
       </GSAPTimelineProvider>
