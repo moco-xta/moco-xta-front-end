@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { HillTopLeft } from '@/components/three/models/home/hero/portrait/gobelino/HillTopLeft'
 
-import { default as hillTopLeftComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/hillTopLeftComponentConstants.json'
+import { default as hillTopLeftComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/hillTopLeftComponentConstants.json'
 
 import { hillTopleftComponentAnimations } from '@/animations/index'
 

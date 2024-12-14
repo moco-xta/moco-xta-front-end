@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Colors } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/Colors'
 
-import { default as colorsComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorsComponentConstants.json'
+import { default as colorsComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/colorsComponentConstants.json'
 
 import { colorsComponentAnimations } from '@/animations/index'
 

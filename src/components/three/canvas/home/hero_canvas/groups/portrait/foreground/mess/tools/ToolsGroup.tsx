@@ -6,7 +6,7 @@ import ColorsComponent from './ColorsComponent'
 import ColorPickerComponent from './ColorPickerComponent'
 import PaintBucketComponent from './PaintBucketComponent'
 
-import { default as toolsGroupConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/toolsGroupConstants.json'
+import { default as toolsGroupConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/toolsGroupConstants.json'
 
 export default function ToolsGroup() {
   const toolsGroupRef = useRef<THREE.Group>(null!)

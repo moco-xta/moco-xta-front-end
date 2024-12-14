@@ -1,4 +1,4 @@
-import { default as logoAthleticoNacionalComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
+import { default as logoAthleticoNacionalComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
 
 export const logoAthleticoNacionalComponentAnimations = {
   material: {

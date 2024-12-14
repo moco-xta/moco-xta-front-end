@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useHelper } from '@react-three/drei'
 
-import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json'
 
 import variables from '@/styles/variables.module.scss'
 

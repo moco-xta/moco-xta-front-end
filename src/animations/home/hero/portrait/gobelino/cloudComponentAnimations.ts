@@ -1,4 +1,4 @@
-import { default as cloudComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/cloudComponentConstants.json'
+import { default as cloudComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/cloudComponentConstants.json'
 
 export const cloudComponentAnimations = {
   material: {

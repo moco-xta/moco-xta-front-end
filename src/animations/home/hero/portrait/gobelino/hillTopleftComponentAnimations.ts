@@ -1,4 +1,4 @@
-import { default as hillTopLeftComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/hillTopLeftComponentConstants.json'
+import { default as hillTopLeftComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/hillTopLeftComponentConstants.json'
 
 export const hillTopleftComponentAnimations = {
   material: {

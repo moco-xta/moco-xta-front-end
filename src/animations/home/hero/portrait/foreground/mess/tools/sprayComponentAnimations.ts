@@ -1,4 +1,4 @@
-import { default as sprayComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/sprayComponentConstants.json'
+import { default as sprayComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/sprayComponentConstants.json'
 
 export const sprayComponentAnimations = {
   material: {

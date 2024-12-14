@@ -1,4 +1,4 @@
-import { default as skyComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/skyComponentConstants.json'
+import { default as skyComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/skyComponentConstants.json'
 
 export const skyComponentAnimations = {
   position: {

@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Cloud } from '@/components/three/models/home/hero/portrait/gobelino/Cloud'
 
-import { default as cloudComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/cloudComponentConstants.json'
+import { default as cloudComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/cloudComponentConstants.json'
 
 import { cloudComponentAnimations } from '@/animations/index'
 

@@ -1,4 +1,4 @@
-import { default as colorsComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/colorsComponentConstants.json'
+import { default as colorsComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/colorsComponentConstants.json'
 
 export const colorsComponentAnimations = {
   material: {

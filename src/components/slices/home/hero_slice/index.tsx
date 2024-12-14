@@ -17,15 +17,29 @@ export default function HeroSlice() {
 
   useGSAP(
     () => {
-      console.log('timeline', timeline)
-      console.log('gsap.context()', gsap.context())
-      console.log('timeline.labels', timeline.labels)
-
       timeline.to(
         heroSliceRef.current.style,
         {
           keyframes: heroSliceAnimations.portrait.keyFrames,
           duration: heroSliceAnimations.portrait.duration,
+        },
+        heroSliceAnimations.portrait.delay,
+      )
+    },
+    { scope: heroSliceRef },
+  )
+
+  useGSAP(
+    () => {
+      timeline.to(
+        heroSliceRef.current.style,
+        {
+          keyframes: heroSliceAnimations.portrait.keyFrames,
+          duration: heroSliceAnimations.portrait.duration,
+          onComplete: () => {
+            heroSliceRef.current.style.background = '#000'
+            heroSliceRef.current.style.backgroundImage = 'unset'
+          },
         },
         heroSliceAnimations.portrait.delay,
       )

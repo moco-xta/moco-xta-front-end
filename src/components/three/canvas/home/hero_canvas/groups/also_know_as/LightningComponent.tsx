@@ -3,8 +3,8 @@ import { useGSAP } from '@gsap/react'
 
 import { Lightning } from '@/components/three/models/home/hero/Lightning'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/heroConstants.json'
-import { default as lightningAnimationsConstants } from '@/constants/animations/home/hero/also_konw_as/lightningAnimationsConstants.json'
+import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
+import { default as lightningAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/also_konw_as/lightningAnimationsConstants.json'
 
 interface LightningComponentInterface {
   timeline: GSAPTimeline

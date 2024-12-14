@@ -8,7 +8,7 @@ import useTextureLoader from '@/hooks/useTextureLoader'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
-import { default as christusComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/christusComponentConstants.json'
+import { default as christusComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/christusComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

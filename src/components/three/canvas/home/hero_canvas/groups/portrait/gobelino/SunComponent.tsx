@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Sun } from '@/components/three/models/home/hero/portrait/gobelino/Sun'
 
-import { default as sunComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/sunComponentConstants.json'
+import { default as sunComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/sunComponentConstants.json'
 
 import { sunComponentAnimations } from '@/animations/index'
 

@@ -1,4 +1,4 @@
-import { default as birdComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/birdComponentConstants.json'
+import { default as birdComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/birdComponentConstants.json'
 
 export const birdComponentAnimations = {
   material: {

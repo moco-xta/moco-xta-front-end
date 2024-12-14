@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 import MessGroup from './mess/Mess'
 import AlsoKnowAsText from '../../also_know_as/also_know_as_text/AlsoKnowAsTextGroup'
 
-import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/portrait/foreground/foregroundConstants.json'
+import { default as foregroundAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/foregroundConstants.json'
 
 import { foregroundAnimations } from '@/animations/home/hero/portrait/foreground/foregroundAnimations'
 

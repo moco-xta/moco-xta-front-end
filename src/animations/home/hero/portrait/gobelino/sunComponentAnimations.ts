@@ -1,4 +1,4 @@
-import { default as sunComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/sunComponentConstants.json'
+import { default as sunComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/sunComponentConstants.json'
 
 export const sunComponentAnimations = {
   material: {

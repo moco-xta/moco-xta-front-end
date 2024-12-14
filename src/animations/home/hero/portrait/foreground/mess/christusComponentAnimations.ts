@@ -1,4 +1,4 @@
-import { default as christusComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/christusComponentConstants.json'
+import { default as christusComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/christusComponentConstants.json'
 
 export const christusComponentAnimations = {
   material: {

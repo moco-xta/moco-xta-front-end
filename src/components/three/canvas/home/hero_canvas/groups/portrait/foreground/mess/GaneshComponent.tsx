@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Ganesh } from '@/components/three/models/home/hero/portrait/foreground/mess/Ganesh'
 
-import { default as ganeshComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/ganeshComponentConstants.json'
+import { default as ganeshComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/ganeshComponentConstants.json'
 
 import { ganeshComponentAnimations } from '@/animations/index'
 

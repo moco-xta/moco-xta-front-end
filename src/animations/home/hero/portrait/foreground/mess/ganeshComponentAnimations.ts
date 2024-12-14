@@ -1,4 +1,4 @@
-import { default as ganeshComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/ganeshComponentConstants.json'
+import { default as ganeshComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/ganeshComponentConstants.json'
 
 export const ganeshComponentAnimations = {
   material: {

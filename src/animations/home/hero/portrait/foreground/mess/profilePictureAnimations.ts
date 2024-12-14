@@ -1,4 +1,4 @@
-import { default as profilPictureConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/profilPictureConstants.json'
+import { default as profilPictureConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/profilPictureConstants.json'
 
 export const profilePictureAnimations = {
   material: {

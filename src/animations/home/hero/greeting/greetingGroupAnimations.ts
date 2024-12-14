@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
+import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingGroupAnimationsConstants.json'
 
 export const greetingGroupAnimations = {
   position: {

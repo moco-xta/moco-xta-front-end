@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as birdComponentConstants } from '@/constants/animations/home/hero/portrait/gobelino/birdComponentConstants.json'
+import { default as birdComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/birdComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {

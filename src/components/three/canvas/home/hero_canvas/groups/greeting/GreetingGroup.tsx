@@ -8,7 +8,7 @@ import HiText from './texts/HiText'
 import ImText from './texts/ImText'
 import FedericoText from './texts/FedericoText'
 
-import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/greeting/greetingGroupAnimationsConstants.json'
+import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingGroupAnimationsConstants.json'
 
 import { greetingGroupAnimations } from 'animations'
 

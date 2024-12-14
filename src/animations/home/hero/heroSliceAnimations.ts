@@ -1,4 +1,4 @@
-import { default as heroSliceAnimationsConstants } from '@/constants/animations/home/hero/hero_slice/heroSliceAnimationsConstants.json'
+import { default as heroSliceAnimationsConstants } from '@/constants/animations/home/hero/hero_slice/heroSliceConstants.json'
 
 export const heroSliceAnimations = {
   portrait: {

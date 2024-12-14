@@ -1,4 +1,4 @@
-import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/greeting/texts/imTextAnimationsConstants.json'
+import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/imTextAnimationsConstants.json'
 
 export const imTextAnimations = (imTextLengthRef: number[], index: number) => {
   return {

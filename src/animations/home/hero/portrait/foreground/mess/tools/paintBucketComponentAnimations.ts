@@ -1,4 +1,4 @@
-import { default as paintBucketComponentConstants } from '@/constants/animations/home/hero/portrait/foreground/mess/tools/paintBucketComponentConstants.json'
+import { default as paintBucketComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/paintBucketComponentConstants.json'
 import { duration } from 'moment'
 
 export const paintBucketComponentAnimations = {

@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import { default as sunAndMoonConstants } from '@/constants/animations/home/hero/portrait/gobelino/sunAndMoonConstants.json'
+import { default as sunAndMoonConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/sunAndMoonConstants.json'
 
 export const gobelinoComponentAnimations = {
   rotation: {

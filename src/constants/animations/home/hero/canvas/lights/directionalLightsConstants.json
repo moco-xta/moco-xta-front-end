@@ -1,0 +1,34 @@
+{
+  "LABEL": "greeting",
+  "ANIMATION": {
+    "0_PERCENT": {
+      "POSITIONS": [
+        {
+          "X": 10,
+          "Y": 10,
+          "Z": 10
+        },
+        {
+          "X": -10,
+          "Y": 10,
+          "Z": 10
+        },
+        {
+          "X": 0,
+          "Y": 0,
+          "Z": 10
+        }
+      ],
+      "COLOR": "#ffffff",
+      "INTENSITY": 0.5,
+      "MAP_SIZE": [4096, 4096],
+      "SHADOW_CAMERA_FAR": 20,
+      "SHADOW_CAMERA_LEFT": -20,
+      "SHADOW_CAMERA_RIGHT": 20,
+      "SHADOW_CAMERA_TOP": 20,
+      "SHADOW_CAMERA_BOTTOM": -20,
+      "SHADOW_RADIUS": 13,
+      "SHADOW_BIAS": 0.0001
+    }
+  }
+}

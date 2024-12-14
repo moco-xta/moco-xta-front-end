@@ -5,7 +5,7 @@ import { Float, PerspectiveCamera } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { default as heroCanvasConstants } from '@/constants/three/home/hero/heroCanvasConstants.json'
+import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json'
 
 export default function Camera() {
   const perspectiveCameraRef = useRef<THREE.PerspectiveCamera>(null!)
