@@ -1,81 +1,155 @@
-import * as THREE from 'three'
+import vertexShader from '@/components/three/shaders/hero_background/vertexShader.glsl'
+import fragmentShader from '@/components/three/shaders/hero_background/fragmentShader.glsl'
 
 export default class ProfilePictureScene {
   constructor(props) {
     const { container } = props
-
-    this.isPlaying = true
-    this.time = 0
-    this.speed = 0
-    this.targetSpeed = 0
-    this.mouse = new THREE.Vector2()
-    this.followMouse = new THREE.Vector2()
-    this.prevMouse = new THREE.Vector2()
+    // console.log('props', props)
 
     this.container = container
 
-    this.scene = new THREE.Scene()
-    this.composer
-    this.effect1
+    this.canvas
+    this.gl
 
-    this.width = window.innerWidth
-    this.height = window.innerHeight
-    this.imgWidth = 4
-    this.imgHeight = 4
+    this.vertexBuffer
+    this.vertexCount
 
-    this.renderer = new THREE.WebGLRenderer({
-      alpha: true,
-      antialias: true,
+    this.startup()
+  }
+
+  initwebGL() {
+    this.canvas = this.container
+    this.gl = this.canvas.getContext("webgl");
+}
+
+  compileShader(code, type) {
+    let shader = this.gl.createShader(type)
+
+    this.gl.shaderSource(shader, code)
+    this.gl.compileShader(shader)
+
+    if (!this.gl.getShaderParameter(shader, this.gl.COMPILE_STATUS)) {
+      console.log(
+        `Error compiling ${type === this.gl.VERTEX_SHADER ? 'vertex' : 'fragment'} shader:`,
+      )
+      console.log(this.gl.getShaderInfoLog(shader))
+    }
+    return shader
+  }
+
+  buildShaderProgram(shaderInfo, uniforms, attributes) {
+    let program = this.gl.createProgram()
+
+    shaderInfo.forEach(function (desc) {
+      let shader = this.compileShader(desc.code, desc.type)
+
+      if (shader) {
+        this.gl.attachShader(program, shader)
+      }
     })
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    this.renderer.setSize(this.width, this.height)
-    this.renderer.setClearColor(0x000000, 0.5)
 
-    this.container.appendChild(this.renderer.domElement)
+    this.gl.linkProgram(program)
 
-    this.camera = new THREE.PerspectiveCamera(70, this.width / this.height, 0.01, 1000)
-    this.camera.position.set(0, 0, 4)
+    if (!this.gl.getProgramParameter(program, this.gl.LINK_STATUS)) {
+      console.log('Error linking shader program:')
+      console.log(this.gl.getProgramInfoLog(program))
+    }
 
-    // this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement)
+    var unifrorms_dict = {}
+    uniforms.forEach(function (name) {
+      uniform_id = this.gl.getUniformLocation(program, name)
+      unifrorms_dict[name] = uniform_id
+    })
 
-    this.addObjects()
-    this.addLights()
-    this.render()
+    var attributes_dict = {}
+    attributes.forEach(function (name) {
+      attrib_id = this.gl.getAttribLocation(program, name)
+      attributes_dict[name] = attrib_id
+    })
 
-    this.setupResize()
+    return {
+      program: program,
+      uniforms: unifrorms_dict,
+      attributes: attributes_dict,
+    }
+  }
+  resize(canvas) {
+    var displayWidth = canvas.clientWidth
+    var displayHeight = canvas.clientHeight
+
+    if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
+      canvas.width = displayWidth
+      canvas.height = displayHeight
+    }
   }
 
-  addObjects() {
-    // GEOMETRY
-    const geometry = new THREE.BoxGeometry(1, 1, 1)
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
-    const cube = new THREE.Mesh(geometry, material)
-    this.scene.add(cube)
+  animateScene() {
+    this.resize(this.canvas)
+
+    this.gl.viewport(0, 0, this.canvas.width, this.canvas.height)
+    this.gl.clearColor(0.0, 0.0, 0.0, 1.0)
+    this.gl.clear(this.gl.COLOR_BUFFER_BIT)
+
+    this.gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
+
+    this.gl.enableVertexAttribArray(shaderProgram.attributes['aVertexPosition'])
+    this.gl.vertexAttribPointer(
+      shaderProgram.attributes['aVertexPosition'],
+      2,
+      gl.FLOAT,
+      false,
+      4 * 4,
+      0,
+    )
+    this.gl.enableVertexAttribArray(shaderProgram.attributes['aTexturePosition'])
+    this.gl.vertexAttribPointer(
+      shaderProgram.attributes['aTexturePosition'],
+      2,
+      gl.FLOAT,
+      false,
+      4 * 4,
+      2 * 4,
+    )
+
+    this.gl.useProgram(shaderProgram.program)
+
+    this.gl.drawArrays(this.gl.TRIANGLE_STRIP, 0, vertexCount)
+
+    window.requestAnimationFrame(function (currentTime) {
+      previousTime = currentTime
+      animateScene()
+    })
   }
 
-  addLights() {
-    this.ambient = new THREE.AmbientLight(0xffffff, 0.15)
-    this.directionnal = new THREE.DirectionalLight(0xffffff, 0.75)
-    this.directionnal.position.set(0, 2, 2)
-    this.scene.add(this.ambient)
-    this.scene.add(this.directionnal)
-  }
+  // window.addEventListener("load", startup, false);
 
-  render() {
-    if (!this.isPlaying) return
-    // requestAnimationFrame(this.render.bind(this))
-    this.renderer.render(this.scene, this.camera)
-  }
+  startup() {
+    this.initwebGL()
 
-  setupResize() {
-    window.addEventListener('resize', this.resize.bind(this))
-  }
+    const shaderSet = [
+      {
+        type: this.gl.VERTEX_SHADER,
+        code: vertexShader,
+      },
+      {
+        type: this.gl.FRAGMENT_SHADER,
+        code: fragmentShader,
+      },
+    ]
+    const shaderUniforms = []
+    const shaderAttributes = ['aVertexPosition', 'aTexturePosition']
+    console.log('TEST')
+    shaderProgram = this.buildShaderProgram(shaderSet, shaderUniforms, shaderAttributes)
+    console.log(shaderProgram)
 
-  resize() {
-    this.width = window.innerWidth
-    this.height = window.innerHeight
-    this.renderer.setSize(this.width, this.height)
-    this.camera.aspect = this.width / this.height
-    this.camera.updateProjectionMatrix()
+    let vertices = new Float32Array([-1, 1, 0, 0, 1, 1, 1, 0, -1, -1, 0, 1, 1, -1, 1, 1])
+
+    vertexBuffer = this.gl.createBuffer()
+    this.gl.bindBuffer(this.gl.ARRAY_BUFFER, vertexBuffer)
+    this.gl.bufferData(this.gl.ARRAY_BUFFER, vertices, this.gl.STATIC_DRAW)
+
+    vertexCount = vertices.length / 4
+
+    animateScene()
   }
 }

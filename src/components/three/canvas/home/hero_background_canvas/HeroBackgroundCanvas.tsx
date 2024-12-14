@@ -2,16 +2,18 @@ import React, { Component, createRef, RefObject } from 'react'
 
 import HeroBackgroundScene from './HeroBackgroundScene.js'
 
+import './index.scss'
+
 interface HeroBackgroundCanvasState {
   initialized: boolean
 }
 
 export default class HeroBackgroundCanvas extends Component<{}, HeroBackgroundCanvasState> {
-  private canvasRef: RefObject<HTMLDivElement>
+  private heroBackgroundCanvasRef: RefObject<HTMLCanvasElement>
 
   constructor(props: any) {
     super(props)
-    this.canvasRef = createRef()
+    this.heroBackgroundCanvasRef = createRef()
   }
 
   componentDidMount() {
@@ -20,11 +22,11 @@ export default class HeroBackgroundCanvas extends Component<{}, HeroBackgroundCa
 
   init = () => {
     new HeroBackgroundScene({
-      container: this.canvasRef.current,
+      container: this.heroBackgroundCanvasRef.current,
     })
   }
 
-  render() {
+  /* render() {
     return (
       <div
         style={{
@@ -32,10 +34,21 @@ export default class HeroBackgroundCanvas extends Component<{}, HeroBackgroundCa
           position: 'absolute',
           top: '0px',
           left: '0px',
-          /* width: '50vw' */
+          // width: '50vw'
         }}
         ref={this.canvasRef}
       />
+    )
+  } */
+
+  render() {
+    return (
+      <div id='hero_background_canvas_container'>
+        <canvas
+          id='hero_background_canvas'
+          ref={this.heroBackgroundCanvasRef}
+        ></canvas>
+      </div>
     )
   }
 }
