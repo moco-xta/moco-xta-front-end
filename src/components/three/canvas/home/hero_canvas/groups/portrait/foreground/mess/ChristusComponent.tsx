@@ -8,7 +8,7 @@ import { Christus } from '@/components/three/models/home/hero/portrait/foregroun
 
 import { default as christusComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/christusComponentConstants.json'
 
-import { christusComponentAnimations } from '@/animations/index'
+import { christusComponentAnimations } from 'animations'
 
 export default function ChristusComponent() {
   const { timeline } = useGSAPTimelineContext()

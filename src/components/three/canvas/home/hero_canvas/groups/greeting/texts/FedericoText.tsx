@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingTextsAnimationsConstants.json'
+import { default as greetingTextsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingTextsConstants.json'
 import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/federicoTextAnimationsConstants.json'
 
 import { federicoTextAnimations } from 'animations'
@@ -60,9 +60,9 @@ export default function FedericoText() {
     <Word3D
       ref={federicoTextGroupRef}
       keyPrefix={'federico_text'}
-      font={greetingTextsAnimationsConstants.GEOMETRY.FONT}
-      size={greetingTextsAnimationsConstants.GEOMETRY.SIZES.FEDERICO_TEXT}
-      depth={greetingTextsAnimationsConstants.GEOMETRY.DEPTH}
+      font={greetingTextsConstants.GEOMETRY.FONT}
+      size={greetingTextsConstants.GEOMETRY.SIZES.FEDERICO_TEXT}
+      depth={greetingTextsConstants.GEOMETRY.DEPTH}
       position={
         new THREE.Vector3(
           federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
@@ -75,8 +75,8 @@ export default function FedericoText() {
       lengthRef={federicoTextLengthRef}
     >
       <meshStandardMaterial
-        color={greetingTextsAnimationsConstants.MATERIAL.COLOR}
-        transparent={greetingTextsAnimationsConstants.MATERIAL.TRANSPARENT}
+        color={greetingTextsConstants.MATERIAL.COLOR}
+        transparent={greetingTextsConstants.MATERIAL.TRANSPARENT}
         opacity={federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY}
         // opacity={1}
         side={THREE.DoubleSide}

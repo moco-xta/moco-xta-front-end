@@ -1,0 +1,15 @@
+{
+  "DURATION": 4,
+  "LABEL": "developer",
+  "DEFAULT": {
+    "VISIBILITY": false
+  },
+  "ANIMATION": {
+    "0_PERCENT": {
+      "VISIBILITY": true
+    },
+    "100_PERCENT": {
+      "VISIBILITY": false
+    }
+  }
+}

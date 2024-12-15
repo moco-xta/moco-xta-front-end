@@ -9,7 +9,7 @@ import { Bird } from '@/components/three/models/home/hero/portrait/gobelino/Bird
 
 import { default as birdComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/birdComponentConstants.json'
 
-import { birdComponentAnimations } from '@/animations/index'
+import { birdComponentAnimations } from 'animations'
 
 export default function BirdComponent() {
   const { timeline } = useGSAPTimelineContext()

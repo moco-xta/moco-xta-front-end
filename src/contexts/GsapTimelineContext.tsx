@@ -39,7 +39,7 @@ export const GSAPTimelineProvider = ({
     labels.forEach((label) => {
       timeline.current.addLabel(label.NAME, label.POSITION)
     })
-  }, [timeline])
+  }, [labels, timeline])
 
   return (
     <GSAPTimelineContext.Provider value={{ timeline: timeline.current }}>

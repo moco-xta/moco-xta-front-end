@@ -3,9 +3,9 @@ import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { Word3D } from '../../../../../components/word_3d/Word3D'
+import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroConstants } from '@/constants/animations/heroConstants.json'
+/* import { default as heroConstants } from '@/constants/animations/heroConstants.json' */
 
 export default function PhoneNumberText() {
   const [phoneNumberTextSplitted] = useState<string[]>('(+33) 6 15 90 82 75'.split(''))
@@ -13,7 +13,7 @@ export default function PhoneNumberText() {
   const phoneNumberGroupRef = useRef<THREE.Group>(null!)
   const lengthRef = useRef<number[]>([])
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     const phoneNumberLetters = gsap.utils.toArray(phoneNumberGroupRef.current.children)
     phoneNumberLetters.forEach((letter, index) => {
       // @ts-ignore
@@ -49,7 +49,7 @@ export default function PhoneNumberText() {
         duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.STEPS / heroConstants.SPEED,
       })
     })
-  })
+  }) */
 
   return (
     <Word3D

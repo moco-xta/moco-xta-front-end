@@ -9,7 +9,7 @@ import { PaintBucket } from '@/components/three/models/home/hero/portrait/foregr
 
 import { default as paintBucketComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/paintBucketComponentConstants.json'
 
-import { paintBucketComponentAnimations } from '@/animations/index'
+import { paintBucketComponentAnimations } from 'animations'
 
 export default function PaintBucketComponent() {
   const { timeline } = useGSAPTimelineContext()

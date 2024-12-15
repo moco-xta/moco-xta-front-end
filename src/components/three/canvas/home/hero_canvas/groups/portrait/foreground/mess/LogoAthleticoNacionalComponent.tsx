@@ -8,7 +8,7 @@ import { LogoAthleticoNacional } from '@/components/three/models/home/hero/portr
 
 import { default as logoAthleticoNacionalComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
 
-import { logoAthleticoNacionalComponentAnimations } from '@/animations/index'
+import { logoAthleticoNacionalComponentAnimations } from 'animations'
 
 export default function LogoAthleticoNacionalComponent() {
   const { timeline } = useGSAPTimelineContext()

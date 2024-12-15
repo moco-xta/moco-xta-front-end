@@ -9,7 +9,7 @@ import { HillTopRight } from '@/components/three/models/home/hero/portrait/gobel
 
 import { default as hillTopRightComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/hillTopRightComponentConstants.json'
 
-import { hillTopRightComponentAnimations } from '@/animations/index'
+import { hillTopRightComponentAnimations } from 'animations'
 
 export default function HillTopRightComponent() {
   const { timeline } = useGSAPTimelineContext()

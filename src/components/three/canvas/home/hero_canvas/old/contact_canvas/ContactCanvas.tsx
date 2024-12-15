@@ -6,10 +6,10 @@ import Camera from './Camera'
 import Lights from './Lights'
 import ContactScene from './ContactScene'
 
-import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json'
+/* import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json' */
 
 export default function ContactCanvas() {
-  return (
+  /* return (
     <Canvas
       dpr={heroCanvasConstants.CANVAS.DPR}
       legacy={heroCanvasConstants.CANVAS.LEGACY}
@@ -27,5 +27,7 @@ export default function ContactCanvas() {
         <ContactScene />
       </Suspense>
     </Canvas>
-  )
+  ) */
+
+  return null
 }

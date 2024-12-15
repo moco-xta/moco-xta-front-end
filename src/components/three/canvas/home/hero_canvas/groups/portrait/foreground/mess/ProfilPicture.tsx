@@ -11,7 +11,7 @@ import fragmentShader from '@/components/three/shaders/profil_picture/fragmentSh
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
-import { profilePictureAnimations } from '@/animations/index'
+import { profilePictureAnimations } from 'animations'
 
 export default function ProfilPicture() {
   const { timeline } = useGSAPTimelineContext()

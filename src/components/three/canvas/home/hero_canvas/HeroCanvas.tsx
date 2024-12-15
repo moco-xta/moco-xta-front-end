@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { Environment, OrbitControls } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import Camera from './Camera'
@@ -10,11 +10,12 @@ import PortraitGroup from './groups/portrait/PortraitGroup'
 import AlsoKnowAsGroup from './groups/also_know_as/AlsoKnowAsGroup'
 import MocoGroup from './groups/moco/MocoGroup'
 import DeveloperGroup from './groups/developer/DeveloperGroup'
-import WithExtraSkillsGroup from './groups/with_extra_skills/WithExtraSkillsGroup'
+import WithExtraSkillsGroup from './groups/extra_skills/ExtraSkillsGroup'
 import PostProcessing from './PostProcessing'
 
 import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json'
 import { default as physicsConstants } from '@/constants/animations/home/hero/canvas/physicsConstants.json'
+import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 export default function HeroCanvas() {
   return (
@@ -55,8 +56,9 @@ export default function HeroCanvas() {
           <PortraitGroup />
           <AlsoKnowAsGroup />
           <MocoGroup />
-          {/* <DeveloperGroup timeline={timeline} /> */}
-          {/* <WithExtraSkillsGroup timeline={timeline} /> */}
+          <DeveloperGroup />
+          <WithExtraSkillsGroup />
+          <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
           <PostProcessing />
         </Physics>
       </Suspense>

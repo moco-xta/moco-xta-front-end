@@ -8,7 +8,7 @@ import { Sky } from '@/components/three/models/home/hero/portrait/gobelino/Sky'
 
 import { default as skyComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/skyComponentConstants.json'
 
-import { skyComponentAnimations } from '@/animations/index'
+import { skyComponentAnimations } from 'animations'
 
 export default function SkyComponent() {
   const { timeline } = useGSAPTimelineContext()

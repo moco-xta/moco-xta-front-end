@@ -8,7 +8,7 @@ import HiText from './texts/HiText'
 import ImText from './texts/ImText'
 import FedericoText from './texts/FedericoText'
 
-import { default as greetingGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingGroupAnimationsConstants.json'
+import { default as greetingGroupConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingGroupConstants.json'
 
 import { greetingGroupAnimations } from 'animations'
 
@@ -66,22 +66,16 @@ export default function GreetingGroup() {
       ref={grettingGroupRef}
       position={
         new THREE.Vector3(
-          greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          greetingGroupConstants.ANIMATION['0_PERCENT'].POSITION.X,
+          greetingGroupConstants.ANIMATION['0_PERCENT'].POSITION.Y,
+          greetingGroupConstants.ANIMATION['0_PERCENT'].POSITION.Z,
         )
       }
       rotation={
         new THREE.Euler(
-          THREE.MathUtils.degToRad(
-            greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.X,
-          ),
-          THREE.MathUtils.degToRad(
-            greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Y,
-          ),
-          THREE.MathUtils.degToRad(
-            greetingGroupAnimationsConstants.ANIMATION['0_PERCENT'].ROTATION.Z,
-          ),
+          THREE.MathUtils.degToRad(greetingGroupConstants.ANIMATION['0_PERCENT'].ROTATION.X),
+          THREE.MathUtils.degToRad(greetingGroupConstants.ANIMATION['0_PERCENT'].ROTATION.Y),
+          THREE.MathUtils.degToRad(greetingGroupConstants.ANIMATION['0_PERCENT'].ROTATION.Z),
         )
       }
     >

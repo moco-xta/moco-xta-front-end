@@ -13,6 +13,10 @@
     {
       "NAME": "also_know_as",
       "POSITION": "8"
+    },
+    {
+      "NAME": "developer",
+      "POSITION": "10"
     }
   ],
   "GROUPS": {

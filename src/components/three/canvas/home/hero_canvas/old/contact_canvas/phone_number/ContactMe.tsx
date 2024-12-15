@@ -7,13 +7,13 @@ import ContactText from './texts/ContactText'
 import MeText from './texts/MeText'
 import { IphoneKeyboard } from './IphoneKeyboard'
 
-import { default as heroConstants } from '@/constants/animations/heroConstants.json'
+/* import { default as heroConstants } from '@/constants/animations/heroConstants.json' */
 
 export default function ContactMe() {
   const contactMeGroupRef = useRef<THREE.Group>(null!)
   const iphoneKeyboardGroupRef = useRef<THREE.Group>(null!)
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     gsap.to(contactMeGroupRef.current.position, {
       keyframes: {
         '0%': {
@@ -86,7 +86,7 @@ export default function ContactMe() {
       delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.DELAY,
       duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
     })
-  })
+  }) */
 
   return (
     <group

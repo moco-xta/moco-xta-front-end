@@ -8,7 +8,8 @@ import { useTranslations } from 'next-intl'
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 import { SkillsTextBackground } from '../SkillsTextBackground'
 
-import { default as heroConstants } from '@/constants/animations/heroConstants.json'
+import { default as extraSkillsTextsConstants } from '@/constants/animations/home/hero/canvas/groups/extra_skills/extraSkillsTextsConstants.json'
+import { default as extraTextConstants } from '@/constants/animations/home/hero/canvas/groups/extra_skills/texts/extraTextConstants.json'
 
 export default function ExtraText() {
   const t = useTranslations('HOME')
@@ -41,7 +42,7 @@ export default function ExtraText() {
     extraTextBackgroundRef.current.position.z = -extraTextBackgroundRef.current.scale.z / 2
   })
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     gsap.to(extraGroupRef.current.position, {
       keyframes: {
         '0%': { x: 4 },
@@ -80,7 +81,7 @@ export default function ExtraText() {
         heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.STEPS /
         heroConstants.SPEED,
     })
-  })
+  }) */
 
   return (
     <group
@@ -90,18 +91,24 @@ export default function ExtraText() {
       <Word3D
         ref={extraTextGroupRef}
         keyPrefix={'extra'}
-        font={'fonts/json/Gilroy_Heavy.json'}
-        size={3.3}
-        depth={8}
+        font={extraSkillsTextsConstants.GEOMETRY.FONT}
+        size={extraSkillsTextsConstants.GEOMETRY.SIZE}
+        depth={extraSkillsTextsConstants.GEOMETRY.DEPTH}
         splittedWord={extraTextSplitted}
-        position={new THREE.Vector3(0, 0, 0)}
-        center={true}
+        position={
+          new THREE.Vector3(
+            extraTextConstants.DEFAULT.GEOMETRY.POSITION.X,
+            extraTextConstants.DEFAULT.GEOMETRY.POSITION.Y,
+            extraTextConstants.DEFAULT.GEOMETRY.POSITION.Z,
+          )
+        }
+        center={extraSkillsTextsConstants.GEOMETRY.CENTER}
         lengthRef={lengthRef}
       >
         <meshStandardMaterial
-          color={heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
-          transparent
-          opacity={1}
+          color={extraSkillsTextsConstants.MATERIAL.COLOR}
+          transparent={extraSkillsTextsConstants.MATERIAL.TRANSPARENT}
+          opacity={extraSkillsTextsConstants.MATERIAL.OPACITY}
           side={THREE.DoubleSide}
         />
       </Word3D>

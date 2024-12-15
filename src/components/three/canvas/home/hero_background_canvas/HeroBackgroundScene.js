@@ -41,7 +41,6 @@ export default class ProfilePictureScene {
 
   main() {
     this.canvas = this.container
-    // this.canvas = document.querySelector("#hero_background_canvas");
     this.gl = this.canvas.getContext('webgl')
     if (!this.gl) {
       return

@@ -1,0 +1,14 @@
+{
+  "DURATION": 2,
+  "LABEL": "developer",
+  "DEFAULT": {
+    "GEOMETRY": {
+      "POSITION": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      }
+    }
+  },
+  "ANIMATION": {}
+}

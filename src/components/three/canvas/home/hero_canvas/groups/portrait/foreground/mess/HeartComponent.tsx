@@ -8,7 +8,7 @@ import { Heart } from '@/components/three/models/home/hero/portrait/foreground/m
 
 import { default as heartComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/heartComponentConstants.json'
 
-import { heartComponentAnimations } from '@/animations/index'
+import { heartComponentAnimations } from 'animations'
 
 export default function HeartComponent() {
   const { timeline } = useGSAPTimelineContext()

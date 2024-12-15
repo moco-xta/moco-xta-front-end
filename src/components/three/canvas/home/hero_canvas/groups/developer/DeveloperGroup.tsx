@@ -1,23 +1,15 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 
-import AFrontEndDeveloperTextGroup from './a_front_developer_text/AFrontEndDeveloperTextGroup'
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
+import DeveloperTextsGroup from './developer_texts/DeveloperTextsGroup'
 import MacBookProGroup from './mac_book_pro/MacBookProGroup'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
-import { default as developerGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/developer/developerGroupAnimationsConstants.json'
+import { developerGroupAnimations } from 'animations'
 
-interface DeveloperGroupInterface {
-  timeline: GSAPTimeline
-}
-
-export default function DeveloperGroup({ timeline }: DeveloperGroupInterface) {
-  const [duration] = useState<number>(
-    developerGroupAnimationsConstants.DURATION / heroConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    developerGroupAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
-  )
+export default function DeveloperGroup() {
+  const { timeline } = useGSAPTimelineContext()
 
   const developerGroupRef = useRef<THREE.Group>(null!)
 
@@ -27,25 +19,15 @@ export default function DeveloperGroup({ timeline }: DeveloperGroupInterface) {
 
   useGSAP(
     () => {
-      // POSITION
+      const animation = developerGroupAnimations(developerGroupRef.current)
+      // VISIBILITY
       timeline.to(
         developerGroupRef.current,
         {
-          keyframes: {
-            '0%': {
-              onComplete: () => {
-                developerGroupRef.current.visible = true
-              },
-            },
-            '100%': {
-              onComplete: () => {
-                developerGroupRef.current.visible = false
-              },
-            },
-          },
-          duration: duration,
+          keyframes: animation.visibility.keyframes,
+          duration: animation.visibility.duration,
         },
-        delay,
+        animation.delay,
       )
     },
     { scope: developerGroupRef },
@@ -53,8 +35,8 @@ export default function DeveloperGroup({ timeline }: DeveloperGroupInterface) {
 
   return (
     <group ref={developerGroupRef}>
-      <AFrontEndDeveloperTextGroup timeline={timeline} />
-      <MacBookProGroup timeline={timeline} />
+      <DeveloperTextsGroup />
+      <MacBookProGroup />
     </group>
   )
 }

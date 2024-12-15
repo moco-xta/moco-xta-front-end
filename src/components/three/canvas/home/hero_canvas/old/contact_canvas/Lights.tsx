@@ -20,13 +20,13 @@ export default function Lights() {
     }
   }, [spotLightRef])
 
-  return (
+  /* return (
     <>
       <ambientLight
         color={variables.white}
         intensity={heroCanvasConstants.LIGHTS.AMBIENT_LIGHT.INTENSITY}
       />
-      {/* <directionalLight
+      <directionalLight
         ref={ref}
         position={[
           heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.POSITION.X,
@@ -43,7 +43,7 @@ export default function Lights() {
         shadow-radius={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_RADIUS}
         shadow-bias={heroCanvasConstants.LIGHTS.DIRECTIONAL_LIGHT.SHADOW_BIAS}
         castShadow
-      /> */}
+      />
       <spotLight
         ref={spotLightRef}
         position={[6.25, 9, 1]}
@@ -55,5 +55,7 @@ export default function Lights() {
         castShadow
       />
     </>
-  )
+  ) */
+
+  return null
 }

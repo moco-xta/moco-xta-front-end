@@ -6,11 +6,11 @@ import WithText from './texts/WithText'
 import ExtraText from './texts/ExtraText'
 import SkillsText from './texts/SkillsText'
 
-export default function WithExtraSkillsTextGroup() {
+export default function ExtraSkillsTextsGroup() {
   const withExtraSkillsTextGroupRef = useRef<THREE.Group>(null!)
 
-  useGSAP(() => {
-    /* gsap.to(withExtraSkillsTextGroupRef.current.position, {
+  /* useGSAP(() => {
+    gsap.to(withExtraSkillsTextGroupRef.current.position, {
       keyframes: {
         '0%': { x: -5, y: -3, z: 12 },
         '50%': { x: 0, y: 0, z: 0 },
@@ -23,7 +23,7 @@ export default function WithExtraSkillsTextGroup() {
         heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
           .STEPS / heroConstants.SPEED,
     }) */
-    /* gsap.to(withExtraSkillsGroupRef.current.scale, {
+  /* gsap.to(withExtraSkillsGroupRef.current.scale, {
       keyframes: {
         '50%': { z: 1 },
         '75%': { z: 5 },
@@ -36,8 +36,8 @@ export default function WithExtraSkillsTextGroup() {
       duration:
         heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO
           .STEPS / heroConstants.SPEED,
-    }) */
-  })
+    })
+  }) */
 
   return (
     <group

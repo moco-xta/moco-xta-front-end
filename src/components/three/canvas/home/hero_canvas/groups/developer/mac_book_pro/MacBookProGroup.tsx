@@ -1,54 +1,39 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import { useGSAP } from '@gsap/react'
+
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import MacBookProComponent from './MacBookProComponent'
 import LogosForegroundGroup from './LogosForegroundGroup'
 import LogosBackgroundGroup from './LogosBackgroundGroup'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
-import { default as macBookProGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/developer/macBookProGroupAnimationsConstants.json'
+import { default as macBookProGroupConstants } from '@/constants/animations/home/hero/canvas/groups/developer/macBookProGroupConstants.json'
 
-interface MacBookProGroupInterface {
-  timeline: GSAPTimeline
-}
+import { macBookProGroupAnimations } from 'animations'
 
-export default function MacBookProGroup({ timeline }: MacBookProGroupInterface) {
-  const [duration] = useState<number>(
-    macBookProGroupAnimationsConstants.DURATION / heroConstants.SPEED,
-  )
-  const [delay] = useState<number>(
-    macBookProGroupAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
-  )
+export default function MacBookProGroup() {
+  const { timeline } = useGSAPTimelineContext()
 
   const macBookProComponentAndLogosForegroundGroupRef = useRef<THREE.Group>(null!)
 
   const macBookProGroupRef = useRef<THREE.Group>(null!)
 
   useLayoutEffect(() => {
-    if (macBookProGroupRef.current) macBookProGroupRef.current.visible = false
+    if (macBookProGroupRef.current)
+      macBookProGroupRef.current.visible = macBookProGroupConstants.DEFAULT.VISIBLE
   }, [macBookProGroupRef])
 
   useGSAP(
     () => {
-      // POSITION
+      const animations = macBookProGroupAnimations(macBookProGroupRef.current)
+      // VISIBILITY
       timeline.to(
         macBookProGroupRef.current,
         {
-          keyframes: {
-            '0%': {
-              onComplete: () => {
-                macBookProGroupRef.current.visible = true
-              },
-            },
-            '100%': {
-              onComplete: () => {
-                macBookProGroupRef.current.visible = false
-              },
-            },
-          },
-          duration: duration,
+          keyframes: animations.visibility.keyframes,
+          duration: animations.visibility.duration,
         },
-        delay,
+        animations.delay,
       )
     },
     { scope: macBookProGroupRef },

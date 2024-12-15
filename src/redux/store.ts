@@ -10,8 +10,6 @@ import cursorStateSlice from './slice/cursorStateSlice'
 import minecraftSlice from './slice/minecraftSlice'
 import rubiksCubeSlice from './slice/rubiksCubeSlice'
 
-import heroAnimationSlice from './slice/animations/heroAnimationSlice'
-
 export const store = configureStore({
   reducer: {
     about: aboutSlice,
@@ -20,7 +18,6 @@ export const store = configureStore({
     cursorState: cursorStateSlice,
     minecraft: minecraftSlice,
     rubiksCube: rubiksCubeSlice,
-    heroAnimation: heroAnimationSlice,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
