@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl'
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 import { SkillsTextBackground } from '../SkillsTextBackground'
 
-import { default as heroConstants } from '@/constants/animations/heroConstants.json'
+/* import { default as heroConstants } from '@/constants/animations/heroConstants.json' */
 
 export default function WithText() {
   const t = useTranslations('HOME')
@@ -38,7 +38,7 @@ export default function WithText() {
     withTextBackgroundRef.current.position.z = -withTextBackgroundRef.current.scale.z / 2
   })
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     gsap.to(withGroupRef.current.position, {
       keyframes: {
         '0%': { y: 7.5 },
@@ -77,7 +77,7 @@ export default function WithText() {
         heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.STEPS /
         heroConstants.SPEED,
     })
-  })
+  }) */
 
   return (
     <group
@@ -96,7 +96,8 @@ export default function WithText() {
         lengthRef={lengthRef}
       >
         <meshStandardMaterial
-          color={heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
+          // color={heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
+          color={'#ffffff'}
           transparent
           opacity={1}
           side={THREE.DoubleSide}

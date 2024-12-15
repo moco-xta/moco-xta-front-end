@@ -4,9 +4,9 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { Word3D } from '../../../../../../components/word_3d/Word3D'
+import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as heroConstants } from '@/constants/animations/heroConstants.json'
+/* import { default as heroConstants } from '@/constants/animations/heroConstants.json' */
 
 export default function ContactText() {
   const t = useTranslations('HOME')
@@ -18,7 +18,7 @@ export default function ContactText() {
   const lengthRef = useRef<number[]>([])
   const box3Ref = useRef<THREE.Box3>(new THREE.Box3())
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     const contacLetters = gsap.utils.toArray(contactGroupRef.current.children)
     contacLetters.forEach((letter, index) => {
       // @ts-ignore
@@ -76,7 +76,7 @@ export default function ContactText() {
         duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
       })
     })
-  })
+  }) */
 
   return (
     <Word3D
@@ -91,7 +91,8 @@ export default function ContactText() {
       lengthRef={lengthRef}
     >
       <meshStandardMaterial
-        color={heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
+        // color={heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
+        color={'#ffffff'}
         transparent
         opacity={0}
         side={THREE.DoubleSide}

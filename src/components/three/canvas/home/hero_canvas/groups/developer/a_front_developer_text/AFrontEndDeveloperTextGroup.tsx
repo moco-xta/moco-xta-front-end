@@ -7,7 +7,7 @@ import FrontText from './texts/FrontText'
 import EndText from './texts/EndText'
 import DeveloperText from './texts/DeveloperText'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
+// import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
 import { default as aFrontEndDeveloperTextGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/developer/aFrontEndDeveloperTextGroupAnimationsConstants.json'
 
 interface AFrontEndDeveloperTextGroupInterface {
@@ -17,12 +17,12 @@ interface AFrontEndDeveloperTextGroupInterface {
 export default function AFrontEndDeveloperTextGroup({
   timeline,
 }: AFrontEndDeveloperTextGroupInterface) {
-  const [duration] = useState<number>(
+  /* const [duration] = useState<number>(
     aFrontEndDeveloperTextGroupAnimationsConstants.DURATION / heroConstants.SPEED,
   )
   const [delay] = useState<number>(
     aFrontEndDeveloperTextGroupAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
-  )
+  ) */
 
   const aFrontEndDeveloperTextGroupRef = useRef<THREE.Group>(null!)
 
@@ -31,7 +31,7 @@ export default function AFrontEndDeveloperTextGroup({
       aFrontEndDeveloperTextGroupRef.current.visible = false
   }, [aFrontEndDeveloperTextGroupRef])
 
-  useGSAP(
+  /* useGSAP(
     () => {
       // POSITION
       timeline.to(
@@ -55,7 +55,7 @@ export default function AFrontEndDeveloperTextGroup({
       )
     },
     { scope: aFrontEndDeveloperTextGroupRef },
-  )
+  ) */
 
   return (
     <group

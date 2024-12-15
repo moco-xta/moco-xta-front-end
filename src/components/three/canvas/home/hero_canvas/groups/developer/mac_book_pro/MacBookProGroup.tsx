@@ -5,7 +5,7 @@ import MacBookProComponent from './MacBookProComponent'
 import LogosForegroundGroup from './LogosForegroundGroup'
 import LogosBackgroundGroup from './LogosBackgroundGroup'
 
-import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json'
+/* import { default as heroConstants } from '@/constants/animations/home/hero/canvas/groups/heroConstants.json' */
 import { default as macBookProGroupAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/developer/macBookProGroupAnimationsConstants.json'
 
 interface MacBookProGroupInterface {
@@ -13,12 +13,12 @@ interface MacBookProGroupInterface {
 }
 
 export default function MacBookProGroup({ timeline }: MacBookProGroupInterface) {
-  const [duration] = useState<number>(
+  /* const [duration] = useState<number>(
     macBookProGroupAnimationsConstants.DURATION / heroConstants.SPEED,
   )
   const [delay] = useState<number>(
     macBookProGroupAnimationsConstants.KEYFRAME_START / heroConstants.SPEED,
-  )
+  ) */
 
   const macBookProComponentAndLogosForegroundGroupRef = useRef<THREE.Group>(null!)
 
@@ -28,7 +28,7 @@ export default function MacBookProGroup({ timeline }: MacBookProGroupInterface) 
     if (macBookProGroupRef.current) macBookProGroupRef.current.visible = false
   }, [macBookProGroupRef])
 
-  useGSAP(
+  /* useGSAP(
     () => {
       // POSITION
       timeline.to(
@@ -52,7 +52,7 @@ export default function MacBookProGroup({ timeline }: MacBookProGroupInterface) 
       )
     },
     { scope: macBookProGroupRef },
-  )
+  ) */
 
   return (
     <group ref={macBookProGroupRef}>

@@ -7,14 +7,14 @@ import PhoneNumberText from './PhoneNumberText'
 import PhoneNumberInputComponent from './PhoneNumberInputComponent'
 import { IphoneKeyboard } from './IphoneKeyboard'
 
-import { default as heroConstants } from '@/constants/animations/heroConstants.json'
+/* import { default as heroConstants } from '@/constants/animations/heroConstants.json' */
 
 export default function PhoneNumber() {
   const phoneNumberGroupRef = useRef<THREE.Group>(null!)
   const phoneNumberWithInputGroupRef = useRef<THREE.Group>(null!)
   const iphoneKeyboardGroupRef = useRef<THREE.Group>(null!)
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     gsap.to(phoneNumberWithInputGroupRef.current.rotation, {
       keyframes: {
         '0%': {
@@ -81,7 +81,7 @@ export default function PhoneNumber() {
       delay: heroConstants.SCENES.PHONE_NUMBER_SCENE.PHONE_NUMBER.DELAY,
       duration: heroConstants.SCENES.PHONE_NUMBER_SCENE.CONTACT_ME.STEPS / heroConstants.SPEED,
     })
-  })
+  }) */
 
   return (
     <group ref={phoneNumberGroupRef}>

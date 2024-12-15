@@ -5,12 +5,12 @@ import { useGSAP } from '@gsap/react'
 
 import { MacBookPro } from '@/components/three/models/home/MacBookPro'
 
-import { default as heroConstants } from '@/constants/animations/heroConstants.json'
+/* import { default as heroConstants } from '@/constants/animations/heroConstants.json' */
 
 export default function MacBookProComponent() {
   const macBookProTopPartRef = useRef<THREE.Group>(null!)
 
-  useGSAP(() => {
+  /* useGSAP(() => {
     gsap.to(macBookProTopPartRef.current.rotation, {
       keyframes: {
         '0%': {
@@ -47,7 +47,7 @@ export default function MacBookProComponent() {
         heroConstants.SCENES.FRONT_END_DEVELOPPER_WITH_EXTRA_SKILLS_SCENE.MAC_BOOK_PRO.STEPS /
         heroConstants.SPEED,
     })
-  })
+  }) */
 
   return (
     <MacBookPro
