@@ -8,7 +8,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as greetingTextsAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingTextsAnimationsConstants.json'
+import { default as greetingTextsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingTextsConstants.json'
 import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/hiTextAnimationsConstants.json'
 
 import { hiTextAnimations } from 'animations'
@@ -56,9 +56,9 @@ export default function HiText() {
     <Word3D
       ref={hiTextGroupRef}
       keyPrefix={'hi_text'}
-      font={greetingTextsAnimationsConstants.GEOMETRY.FONT}
-      size={greetingTextsAnimationsConstants.GEOMETRY.SIZES.DEFAULT}
-      depth={greetingTextsAnimationsConstants.GEOMETRY.DEPTH}
+      font={greetingTextsConstants.GEOMETRY.FONT}
+      size={greetingTextsConstants.GEOMETRY.SIZES.DEFAULT}
+      depth={greetingTextsConstants.GEOMETRY.DEPTH}
       position={
         new THREE.Vector3(
           hiTextAnimationsContants.ANIMATION['0_PERCENT'].POSITION.X,
@@ -71,8 +71,8 @@ export default function HiText() {
       lengthRef={hiTextLengthRef}
     >
       <meshStandardMaterial
-        color={greetingTextsAnimationsConstants.MATERIAL.COLOR}
-        transparent={greetingTextsAnimationsConstants.MATERIAL.TRANSPARENT}
+        color={greetingTextsConstants.MATERIAL.COLOR}
+        transparent={greetingTextsConstants.MATERIAL.TRANSPARENT}
         opacity={hiTextAnimationsContants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY}
         side={THREE.DoubleSide}
       />

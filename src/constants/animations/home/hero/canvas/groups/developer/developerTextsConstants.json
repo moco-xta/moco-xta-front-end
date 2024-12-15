@@ -1,0 +1,14 @@
+{
+  "GEOMETRY": {
+    "FONT": "fonts/json/Barlow_Condensed_Bold.json",
+    "SIZE": 2,
+    "DEPTH": 1
+  },
+  "MATERIAL": {
+    "COLOR": "#ffff00",
+    "ROUGHNESS": 1,
+    "TRANSPARENT": true,
+    "OPACITY": 1,
+    "EMISSIVE": "#ffff00"
+  }
+}

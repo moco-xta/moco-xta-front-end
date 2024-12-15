@@ -9,7 +9,7 @@ import { HeroCanvas } from '@/components/three/canvas'
 import HeroBackgroundCanvas from '@/components/three/canvas/home/hero_background_canvas/HeroBackgroundCanvas'
 
 import './index.scss'
-import { heroSliceAnimations } from '@/animations/index'
+import { heroSliceAnimations } from 'animations'
 
 export default function HeroSlice() {
   const { timeline } = useGSAPTimelineContext()

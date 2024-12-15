@@ -9,7 +9,7 @@ import { Colors } from '@/components/three/models/home/hero/portrait/foreground/
 
 import { default as colorsComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/colorsComponentConstants.json'
 
-import { colorsComponentAnimations } from '@/animations/index'
+import { colorsComponentAnimations } from 'animations'
 
 export default function ColorsComponent() {
   const { timeline } = useGSAPTimelineContext()

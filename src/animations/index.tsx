@@ -28,6 +28,9 @@ import { hillTopRightComponentAnimations } from './home/hero/canvas/groups/portr
 import { hillTopleftComponentAnimations } from './home/hero/canvas/groups/portrait/gobelino/hillTopleftComponentAnimations'
 import { lightningComponentAnimations } from './home/hero/canvas/groups/also_know_as/lightningComponentAnimations'
 import { buhosAnimations } from './home/hero/canvas/groups/also_know_as/buhosAnimations'
+import { developerGroupAnimations } from './home/hero/canvas/groups/developer/developerGroupAnimations'
+import { developerTextsGroupAnimations } from './home/hero/canvas/groups/developer/developerTextsGroupAnimations'
+import { macBookProGroupAnimations } from './home/hero/canvas/groups/developer/macBookProGroupAnimations'
 
 export {
   cursorAnimation,
@@ -57,4 +60,7 @@ export {
   hillTopleftComponentAnimations,
   lightningComponentAnimations,
   buhosAnimations,
+  developerGroupAnimations,
+  developerTextsGroupAnimations,
+  macBookProGroupAnimations,
 }

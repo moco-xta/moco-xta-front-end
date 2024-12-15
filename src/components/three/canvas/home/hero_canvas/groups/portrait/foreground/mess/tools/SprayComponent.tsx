@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import { Spray } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/Spray'
 
-import { sprayComponentAnimations } from '@/animations/index'
+import { sprayComponentAnimations } from 'animations'
 
 export default function SprayComponent() {
   const { timeline } = useGSAPTimelineContext()

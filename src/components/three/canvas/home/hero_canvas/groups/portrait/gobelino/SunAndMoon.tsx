@@ -9,7 +9,7 @@ import MoonComponent from './MoonComponent'
 
 import { default as sunAndMoonConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/sunAndMoonConstants.json'
 
-import { gobelinoComponentAnimations } from '@/animations/index'
+import { gobelinoComponentAnimations } from 'animations'
 
 export default function SunAndMoon() {
   const { timeline } = useGSAPTimelineContext()

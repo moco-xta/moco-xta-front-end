@@ -43,7 +43,7 @@ export default function MocoGroup() {
               },
             },
           },
-          duration: 100,
+          duration: 1,
         },
         9,
       )

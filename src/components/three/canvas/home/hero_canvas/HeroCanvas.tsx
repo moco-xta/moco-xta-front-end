@@ -10,7 +10,7 @@ import PortraitGroup from './groups/portrait/PortraitGroup'
 import AlsoKnowAsGroup from './groups/also_know_as/AlsoKnowAsGroup'
 import MocoGroup from './groups/moco/MocoGroup'
 import DeveloperGroup from './groups/developer/DeveloperGroup'
-import WithExtraSkillsGroup from './groups/with_extra_skills/WithExtraSkillsGroup'
+import WithExtraSkillsGroup from './groups/extra_skills/ExtraSkillsGroup'
 import PostProcessing from './PostProcessing'
 
 import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json'
@@ -56,8 +56,8 @@ export default function HeroCanvas() {
           <PortraitGroup />
           <AlsoKnowAsGroup />
           <MocoGroup />
-          {/* <DeveloperGroup timeline={timeline} /> */}
-          {/* <WithExtraSkillsGroup timeline={timeline} /> */}
+          <DeveloperGroup />
+          <WithExtraSkillsGroup />
           <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
           <PostProcessing />
         </Physics>

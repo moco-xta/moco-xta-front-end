@@ -5,10 +5,11 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
+import { default as extraSkillsTextsConstants } from '@/constants/animations/home/hero/canvas/groups/extra_skills/extraSkillsTextsConstants.json'
+import { default as skillsTextConstants } from '@/constants/animations/home/hero/canvas/groups/extra_skills/texts/skillsTextConstants.json'
+
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 import { SkillsTextBackground } from '../SkillsTextBackground'
-
-/* import { default as heroConstants } from '@/constants/animations/heroConstants.json' */
 
 export default function SkillsText() {
   const t = useTranslations('HOME')
@@ -90,19 +91,24 @@ export default function SkillsText() {
       <Word3D
         ref={skillsTextGroupRef}
         keyPrefix={'skills'}
-        font={'fonts/json/Gilroy_Heavy.json'}
-        size={3.3}
-        depth={8}
+        font={extraSkillsTextsConstants.GEOMETRY.FONT}
+        size={extraSkillsTextsConstants.GEOMETRY.SIZE}
+        depth={extraSkillsTextsConstants.GEOMETRY.DEPTH}
         splittedWord={skillsTextSplitted}
-        position={new THREE.Vector3(0, 0, 0)}
-        center={true}
+        position={
+          new THREE.Vector3(
+            skillsTextConstants.DEFAULT.GEOMETRY.POSITION.X,
+            skillsTextConstants.DEFAULT.GEOMETRY.POSITION.Y,
+            skillsTextConstants.DEFAULT.GEOMETRY.POSITION.Z,
+          )
+        }
+        center={extraSkillsTextsConstants.GEOMETRY.CENTER}
         lengthRef={lengthRef}
       >
         <meshStandardMaterial
-          // color={heroConstants.SCENES.PHONE_NUMBER_SCENE.TEXT.COLOR}
-          color={'#ffffff'}
-          transparent
-          opacity={1}
+          color={extraSkillsTextsConstants.MATERIAL.COLOR}
+          transparent={extraSkillsTextsConstants.MATERIAL.TRANSPARENT}
+          opacity={extraSkillsTextsConstants.MATERIAL.OPACITY}
           side={THREE.DoubleSide}
         />
       </Word3D>

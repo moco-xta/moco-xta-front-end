@@ -8,7 +8,7 @@ import { Ganesh } from '@/components/three/models/home/hero/portrait/foreground/
 
 import { default as ganeshComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/ganeshComponentConstants.json'
 
-import { ganeshComponentAnimations } from '@/animations/index'
+import { ganeshComponentAnimations } from 'animations'
 
 export default function GaneshComponent() {
   const { timeline } = useGSAPTimelineContext()

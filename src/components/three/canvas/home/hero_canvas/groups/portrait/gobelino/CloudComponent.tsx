@@ -8,7 +8,7 @@ import { Cloud } from '@/components/three/models/home/hero/portrait/gobelino/Clo
 
 import { default as cloudComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/cloudComponentConstants.json'
 
-import { cloudComponentAnimations } from '@/animations/index'
+import { cloudComponentAnimations } from 'animations'
 
 interface CloudComponentInterface {
   position: THREE.Vector3

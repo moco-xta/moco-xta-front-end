@@ -9,7 +9,7 @@ import { ColorPicker } from '@/components/three/models/home/hero/portrait/foregr
 
 import { default as colorPickerComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/colorPickerComponentConstants.json'
 
-import { colorPickerComponentAnimations } from '@/animations/index'
+import { colorPickerComponentAnimations } from 'animations'
 
 export default function ColorPickerComponent() {
   const { timeline } = useGSAPTimelineContext()
