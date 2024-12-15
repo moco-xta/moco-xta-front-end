@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { Environment, OrbitControls } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import Camera from './Camera'
@@ -15,6 +15,7 @@ import PostProcessing from './PostProcessing'
 
 import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json'
 import { default as physicsConstants } from '@/constants/animations/home/hero/canvas/physicsConstants.json'
+import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 export default function HeroCanvas() {
   return (
@@ -57,6 +58,7 @@ export default function HeroCanvas() {
           <MocoGroup />
           {/* <DeveloperGroup timeline={timeline} /> */}
           {/* <WithExtraSkillsGroup timeline={timeline} /> */}
+          <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
           <PostProcessing />
         </Physics>
       </Suspense>

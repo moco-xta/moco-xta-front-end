@@ -9,6 +9,7 @@ import { HeliumBalloonM } from '@/components/three/models/home/hero/moco/HeliumB
 import { HeliumBalloonO } from '@/components/three/models/home/hero/moco/HeliumBalloonO'
 import { HeliumBalloonC } from '@/components/three/models/home/hero/moco/HeliumBalloonC'
 import { Smiley } from '@/components/three/models/home/hero/moco/Smiley'
+import BalloonsWrapper from './BalloonsWrapper'
 
 import { default as mocoGroupConstants } from '@/constants/animations/home/hero/canvas/groups/moco/mocoGroupConstants.json'
 
@@ -42,7 +43,7 @@ export default function MocoGroup() {
               },
             },
           },
-          duration: 10,
+          duration: 100,
         },
         9,
       )
@@ -136,6 +137,7 @@ export default function MocoGroup() {
         <HeliumBalloonO />
         <Smiley />
       </RigidBody>
+      <BalloonsWrapper />
     </group>
   )
 }
