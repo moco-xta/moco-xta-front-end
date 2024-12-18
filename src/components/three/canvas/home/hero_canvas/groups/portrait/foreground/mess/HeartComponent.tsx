@@ -15,29 +15,24 @@ export default function HeartComponent() {
 
   const heartComponentMeshRef = useRef<THREE.Mesh>(null!)
 
-  useGSAP(() => {
-    // MATERIAL
-    timeline.to(
-      heartComponentMeshRef.current.material,
-      {
-        keyframes: heartComponentAnimations.material.keyframes,
-        duration: heartComponentAnimations.material.duration,
-      },
-      heartComponentAnimations.delay,
-    )
-  })
+  useGSAP(
+    () => {
+      heartComponentAnimations(timeline, heartComponentMeshRef.current)
+    },
+    { scope: heartComponentMeshRef },
+  )
 
   return (
     <Heart
       ref={heartComponentMeshRef}
       position={
         new THREE.Vector3(
-          heartComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          heartComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          heartComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          heartComponentConstants.DEFAULT.POSITION.X,
+          heartComponentConstants.DEFAULT.POSITION.Y,
+          heartComponentConstants.DEFAULT.POSITION.Z,
         )
       }
-      scale={heartComponentConstants.ANIMATION['0_PERCENT'].SCALE}
+      scale={heartComponentConstants.DEFAULT.SCALE}
     />
   )
 }

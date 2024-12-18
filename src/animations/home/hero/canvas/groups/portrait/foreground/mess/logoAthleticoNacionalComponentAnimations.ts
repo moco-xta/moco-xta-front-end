@@ -1,17 +1,23 @@
 import { default as logoAthleticoNacionalComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
 
-export const logoAthleticoNacionalComponentAnimations = {
-  material: {
-    keyframes: {
-      '0%': {
-        opacity: logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+export const logoAthleticoNacionalComponentAnimations = (
+  timeline: GSAPTimeline,
+  logoAthleticoNacionalComponentMeshRef: THREE.Mesh,
+) => {
+  timeline
+    // MATERIAL
+    .to(
+      logoAthleticoNacionalComponentMeshRef.material,
+      {
+        keyframes: {
+          '25%': {
+            opacity:
+              logoAthleticoNacionalComponentConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
+          },
+          easeEach: logoAthleticoNacionalComponentConstants.ANIMATION.EACH_EASE.MATERIAL,
+        },
+        duration: logoAthleticoNacionalComponentConstants.DURATION,
       },
-      '25%': {
-        opacity: logoAthleticoNacionalComponentConstants.ANIMATION['25_PERCENT'].MATERIAL.OPACITY,
-      },
-      easeEach: logoAthleticoNacionalComponentConstants.ANIMATION.EACH_EASE.MATERIAL,
-    },
-    duration: logoAthleticoNacionalComponentConstants.DURATION,
-  },
-  delay: logoAthleticoNacionalComponentConstants.LABEL,
+      logoAthleticoNacionalComponentConstants.LABEL,
+    )
 }

@@ -6,7 +6,7 @@ export const useGSAPTimelineContext = () => {
   const gsapTimelineContext = useContext(GSAPTimelineContext)
 
   if (!gsapTimelineContext) {
-    throw new Error('useAppContext must be used within an AppProvider')
+    throw new Error('useGSAPTimelineContext must be used within an GSAPTimelineprovider :)')
   }
 
   return gsapTimelineContext

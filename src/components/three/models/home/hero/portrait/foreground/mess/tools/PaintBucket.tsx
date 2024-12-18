@@ -32,10 +32,9 @@ export const PaintBucket = forwardRef<THREE.Group, GroupProps>(function PaintBuc
   useLayoutEffect(() => {
     Object.keys(materials).forEach((key) => {
       // @ts-ignore
-      materials[key].transparent =
-        paintBucketComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
+      materials[key].transparent = paintBucketComponentConstants.DEFAULT.MATERIAL.TRANSPARENT
       // @ts-ignore
-      materials[key].opacity = paintBucketComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+      materials[key].opacity = paintBucketComponentConstants.DEFAULT.MATERIAL.OPACITY
     })
   }, [materials])
 

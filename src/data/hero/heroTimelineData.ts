@@ -1,0 +1,24 @@
+import { TimelineDataInterface } from '@/interfaces/animation'
+
+export const heroTimelineData: TimelineDataInterface = {
+  timeScale: 1.25,
+  delay: 1,
+  labels: [
+    {
+      name: 'greeting',
+      position: 0,
+    },
+    {
+      name: 'portrait',
+      position: 4,
+    },
+    {
+      name: 'also_know_as',
+      position: 8,
+    },
+    {
+      name: 'developer',
+      position: 10,
+    },
+  ],
+}

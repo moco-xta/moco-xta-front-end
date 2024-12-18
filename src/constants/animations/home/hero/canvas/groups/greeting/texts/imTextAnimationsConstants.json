@@ -1,18 +1,17 @@
 {
-  "KEYFRAME_START": 0,
-  "DURATION": 5,
   "LABEL": "greeting",
-  "ANIMATION": {
-    "0_PERCENT": {
-      "POSITION": {
-        "X": 2.2,
-        "Y": 1.6,
-        "Z": 0
-      },
-      "MATERIAL": {
-        "OPACITY": 0
-      }
+  "DURATION": 5,
+  "DEFAULT": {
+    "POSITION": {
+      "X": 2.2,
+      "Y": 1.6,
+      "Z": 0
     },
+    "MATERIAL": {
+      "OPACITY": 0
+    }
+  },
+  "ANIMATION": {
     "20_PERCENT": {
       "POSITION": {
         "X": 2.2,

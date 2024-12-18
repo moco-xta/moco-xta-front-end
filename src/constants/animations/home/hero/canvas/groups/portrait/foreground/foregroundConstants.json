@@ -1,14 +1,14 @@
 {
-  "DURATION": 4,
   "LABEL": "portrait",
+  "DURATION": 4,
+  "DEFAULT": {
+    "POSITION": {
+      "X": 0,
+      "Y": -10,
+      "Z": 6
+    }
+  },
   "ANIMATION": {
-    "0_PERCENT": {
-      "POSITION": {
-        "X": 0,
-        "Y": -10,
-        "Z": 6
-      }
-    },
     "25_PERCENT": {
       "POSITION": {
         "Z": 0

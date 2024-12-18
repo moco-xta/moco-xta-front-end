@@ -15,9 +15,9 @@ export default function MessGroup() {
   return (
     <group
       position={[
-        messGroupConstants.ANIMATION['0_PERCENT'].POSITION.X,
-        -foregroundAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-        messGroupConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+        messGroupConstants.DEFAULT.POSITION.X,
+        -foregroundAnimationsConstants.DEFAULT.POSITION.Y,
+        messGroupConstants.DEFAULT.POSITION.Z,
       ]}
     >
       <HeartComponent />

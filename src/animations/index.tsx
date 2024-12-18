@@ -3,12 +3,13 @@ import { menuAnimation } from './shared/menu'
 
 import { heroSliceAnimations } from './home/hero/heroSliceAnimations'
 
-import { greetingGroupAnimations } from './home/hero/canvas/groups/greeting/greetingGroupAnimations'
+import { directionalLightsAnimations } from './home/hero/canvas/lights/directionalLightsAnimations'
+
 import { hiTextAnimations } from './home/hero/canvas/groups/greeting/texts/hiTextAnimations'
 import { imTextAnimations } from './home/hero/canvas/groups/greeting/texts/imTextAnimations'
 import { federicoTextAnimations } from './home/hero/canvas/groups/greeting/texts/federicoTextAnimations'
 
-import { directionalLightsAnimations } from './home/hero/canvas/lights/directionalLightsAnimations'
+import { foregroundAnimations } from './home/hero/canvas/groups/portrait/foreground/foregroundAnimations'
 import { profilePictureAnimations } from './home/hero/canvas/groups/portrait/foreground/mess/profilePictureAnimations'
 import { heartComponentAnimations } from './home/hero/canvas/groups/portrait/foreground/mess/heartComponentAnimations'
 import { logoAthleticoNacionalComponentAnimations } from './home/hero/canvas/groups/portrait/foreground/mess/logoAthleticoNacionalComponentAnimations'
@@ -32,15 +33,17 @@ import { developerGroupAnimations } from './home/hero/canvas/groups/developer/de
 import { developerTextsGroupAnimations } from './home/hero/canvas/groups/developer/developerTextsGroupAnimations'
 import { macBookProGroupAnimations } from './home/hero/canvas/groups/developer/macBookProGroupAnimations'
 
+import { showHideAnimation } from './shared/helpers/show_hide/showHideAnimation'
+
 export {
   cursorAnimation,
   menuAnimation,
   heroSliceAnimations,
   directionalLightsAnimations,
   imTextAnimations,
-  greetingGroupAnimations,
   hiTextAnimations,
   federicoTextAnimations,
+  foregroundAnimations,
   profilePictureAnimations,
   heartComponentAnimations,
   logoAthleticoNacionalComponentAnimations,
@@ -63,4 +66,5 @@ export {
   developerGroupAnimations,
   developerTextsGroupAnimations,
   macBookProGroupAnimations,
+  showHideAnimation,
 }

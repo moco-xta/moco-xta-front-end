@@ -19,16 +19,8 @@ export default function PaintBucketComponent() {
   useGSAP(
     () => {
       const meshes: THREE.Mesh[] = gsap.utils.toArray(paintBucketComponentRef.current.children)
-      meshes.forEach((mesh) => {
-        // MATERIAL
-        timeline.to(
-          mesh.material,
-          {
-            keyframes: paintBucketComponentAnimations.material.keyframes,
-            duration: paintBucketComponentAnimations.material.duration,
-          },
-          paintBucketComponentAnimations.delay,
-        )
+      meshes.forEach((meshRef) => {
+        paintBucketComponentAnimations(timeline, meshRef)
       })
     },
     { scope: paintBucketComponentRef },
@@ -39,9 +31,9 @@ export default function PaintBucketComponent() {
       ref={paintBucketComponentRef}
       position={
         new THREE.Vector3(
-          paintBucketComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          paintBucketComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          paintBucketComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          paintBucketComponentConstants.DEFAULT.POSITION.X,
+          paintBucketComponentConstants.DEFAULT.POSITION.Y,
+          paintBucketComponentConstants.DEFAULT.POSITION.Z,
         )
       }
     />

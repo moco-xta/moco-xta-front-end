@@ -4,81 +4,57 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+import useSplitted3DText from '@/hooks/animations/useSplitted3DText'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as greetingTextsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingTextsConstants.json'
+import { default as greetingTextsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/greetingTextsConstants.json'
 import { default as federicoTextAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/federicoTextAnimationsConstants.json'
 
 import { federicoTextAnimations } from 'animations'
 
 export default function FedericoText() {
   const { timeline } = useGSAPTimelineContext()
-
-  const [federicoText] = useState<string>('federico'.toUpperCase())
-  const [federicoTextSplitted] = useState<string[]>(federicoText.split(''))
-
-  const federicoTextGroupRef = useRef<THREE.Group>(null!)
-  const federicoTextLengthRef = useRef<number[]>([])
+  const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText('federico')
 
   useGSAP(
     () => {
-      const federicoLetters: THREE.Mesh[] = gsap.utils.toArray(
-        federicoTextGroupRef.current.children,
-      )
-      federicoLetters.forEach((letter, index) => {
-        const animations = federicoTextAnimations(
-          federicoTextGroupRef.current,
-          federicoTextLengthRef.current,
+      const federicoLetters: THREE.Mesh[] = gsap.utils.toArray(textGroupRef.current.children)
+      federicoLetters.forEach((letterRef, index) => {
+        federicoTextAnimations(
+          timeline,
+          textGroupRef.current,
+          textLengthRef.current,
+          letterRef,
           index,
         )
-        timeline
-          .to(
-            // POSITION
-            letter.position,
-            {
-              keyframes: animations.position.keyframes,
-              duration: animations.duration,
-            },
-            animations.delay,
-          )
-          // MATERIAL
-          .to(
-            letter.material,
-            {
-              keyframes: animations.rotation.keyframes,
-              duration: animations.duration,
-            },
-            animations.delay,
-          )
       })
     },
-    { scope: federicoTextGroupRef },
+    { scope: textGroupRef },
   )
 
   return (
     <Word3D
-      ref={federicoTextGroupRef}
+      ref={textGroupRef}
       keyPrefix={'federico_text'}
       font={greetingTextsConstants.GEOMETRY.FONT}
       size={greetingTextsConstants.GEOMETRY.SIZES.FEDERICO_TEXT}
       depth={greetingTextsConstants.GEOMETRY.DEPTH}
       position={
         new THREE.Vector3(
-          federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          federicoTextAnimationsConstants.DEFAULT.POSITION.X,
+          federicoTextAnimationsConstants.DEFAULT.POSITION.Y,
+          federicoTextAnimationsConstants.DEFAULT.POSITION.Z,
         )
       }
-      center={true}
-      splittedWord={federicoTextSplitted}
-      lengthRef={federicoTextLengthRef}
+      center={greetingTextsConstants.GEOMETRY.CENTER}
+      splittedWord={textSplitted}
+      lengthRef={textLengthRef}
     >
       <meshStandardMaterial
         color={greetingTextsConstants.MATERIAL.COLOR}
         transparent={greetingTextsConstants.MATERIAL.TRANSPARENT}
-        opacity={federicoTextAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY}
-        // opacity={1}
+        opacity={federicoTextAnimationsConstants.DEFAULT.MATERIAL.OPACITY}
         side={THREE.DoubleSide}
       />
     </Word3D>

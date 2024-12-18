@@ -9,6 +9,7 @@ import { LogoAthleticoNacional } from '@/components/three/models/home/hero/portr
 import { default as logoAthleticoNacionalComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
 
 import { logoAthleticoNacionalComponentAnimations } from 'animations'
+import { AnimatedComponent } from '@/components/animation/AnimatedComponent'
 
 export default function LogoAthleticoNacionalComponent() {
   const { timeline } = useGSAPTimelineContext()
@@ -16,28 +17,25 @@ export default function LogoAthleticoNacionalComponent() {
   const logoAthleticoNacionalComponentMeshRef = useRef<THREE.Mesh>(null!)
 
   useGSAP(() => {
-    // MATERIAL
-    timeline.to(
-      logoAthleticoNacionalComponentMeshRef.current.material,
-      {
-        keyframes: logoAthleticoNacionalComponentAnimations.material.keyframes,
-        duration: logoAthleticoNacionalComponentAnimations.material.duration,
-      },
-      logoAthleticoNacionalComponentAnimations.delay,
+    logoAthleticoNacionalComponentAnimations(
+      timeline,
+      logoAthleticoNacionalComponentMeshRef.current,
     )
   })
 
   return (
-    <LogoAthleticoNacional
-      ref={logoAthleticoNacionalComponentMeshRef}
-      position={
-        new THREE.Vector3(
-          logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
-        )
-      }
-      scale={logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].SCALE}
-    />
+    <AnimatedComponent timeline={timeline}>
+      <LogoAthleticoNacional
+        ref={logoAthleticoNacionalComponentMeshRef}
+        position={
+          new THREE.Vector3(
+            logoAthleticoNacionalComponentConstants.DEFAULT.POSITION.X,
+            logoAthleticoNacionalComponentConstants.DEFAULT.POSITION.Y,
+            logoAthleticoNacionalComponentConstants.DEFAULT.POSITION.Z,
+          )
+        }
+        scale={logoAthleticoNacionalComponentConstants.DEFAULT.SCALE}
+      />
+    </AnimatedComponent>
   )
 }

@@ -5,7 +5,8 @@
       "DEFAULT": 3.5,
       "FEDERICO_TEXT": 2
     },
-    "DEPTH": 1
+    "DEPTH": 1,
+    "CENTER": true
   },
   "MATERIAL": {
     "COLOR": "#3d3d3d",

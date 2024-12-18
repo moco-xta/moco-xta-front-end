@@ -22,10 +22,8 @@ export const Heart = forwardRef<THREE.Mesh, MeshProps>(function Heart(props, ref
   ) as GLTFResult
 
   useLayoutEffect(() => {
-    materials.heart_material.transparent =
-      heartComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
-    materials.heart_material.opacity =
-      heartComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+    materials.heart_material.transparent = heartComponentConstants.DEFAULT.MATERIAL.TRANSPARENT
+    materials.heart_material.opacity = heartComponentConstants.DEFAULT.MATERIAL.OPACITY
   }, [materials])
 
   return (

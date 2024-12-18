@@ -4,84 +4,32 @@ import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import HiText from './texts/HiText'
-import ImText from './texts/ImText'
-import FedericoText from './texts/FedericoText'
+import GreetingTextsGroup from './texts/GreetingTextsGroup'
 
-import { default as greetingGroupConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingGroupConstants.json'
+import { greetingGroupData } from '@/data/hero/three/canvas/hero/greeting_group/greetingGroupData'
 
-import { greetingGroupAnimations } from 'animations'
+import { showHideAnimation } from 'animations'
 
 export default function GreetingGroup() {
   const { timeline } = useGSAPTimelineContext()
 
-  const grettingGroupRef = useRef<THREE.Group>(null!)
+  const greetingGroupRef = useRef<THREE.Group>(null!)
 
   useGSAP(
     () => {
-      timeline
-        // POSITION
-        .to(
-          grettingGroupRef.current.position,
-          {
-            keyframes: greetingGroupAnimations.position.keyframes,
-            duration: greetingGroupAnimations.duration,
-          },
-          greetingGroupAnimations.delay,
-        )
-        // ROTATION
-        .to(
-          grettingGroupRef.current.rotation,
-          {
-            keyframes: greetingGroupAnimations.rotation.keyframes,
-            duration: greetingGroupAnimations.duration,
-          },
-          greetingGroupAnimations.delay,
-        )
-      // VISIBILITY
-      /* .to(
-            grettingGroupRef.current,
-            {
-              keyframes: {
-                '0%': {
-                  onComplete: () => {
-                    grettingGroupRef.current.visible = true
-                  },
-                },
-                '100%': {
-                  onComplete: () => {
-                    grettingGroupRef.current.visible = false
-                  },
-                },
-              },
-              duration: duration,
-            },
-            delay,
-          ) */
+      showHideAnimation(
+        timeline,
+        greetingGroupRef.current,
+        greetingGroupData.duration,
+        greetingGroupData.label!,
+      )
     },
-    { scope: grettingGroupRef },
+    { scope: greetingGroupRef },
   )
+
   return (
-    <group
-      ref={grettingGroupRef}
-      position={
-        new THREE.Vector3(
-          greetingGroupConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          greetingGroupConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          greetingGroupConstants.ANIMATION['0_PERCENT'].POSITION.Z,
-        )
-      }
-      rotation={
-        new THREE.Euler(
-          THREE.MathUtils.degToRad(greetingGroupConstants.ANIMATION['0_PERCENT'].ROTATION.X),
-          THREE.MathUtils.degToRad(greetingGroupConstants.ANIMATION['0_PERCENT'].ROTATION.Y),
-          THREE.MathUtils.degToRad(greetingGroupConstants.ANIMATION['0_PERCENT'].ROTATION.Z),
-        )
-      }
-    >
-      <HiText />
-      <ImText />
-      <FedericoText />
+    <group ref={greetingGroupRef}>
+      <GreetingTextsGroup />
     </group>
   )
 }

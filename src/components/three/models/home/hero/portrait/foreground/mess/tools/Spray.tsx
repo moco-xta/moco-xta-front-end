@@ -28,10 +28,9 @@ export const Spray = forwardRef<THREE.Group, GroupProps>(function Spray(props, r
   useLayoutEffect(() => {
     Object.keys(materials).forEach((key) => {
       // @ts-ignore
-      materials[key].transparent =
-        sprayComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPAREMT
+      materials[key].transparent = sprayComponentConstants.DEFAULT.MATERIAL.TRANSPAREMT
       // @ts-ignore
-      materials[key].opacity = sprayComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+      materials[key].opacity = sprayComponentConstants.DEFAULT.MATERIAL.OPACITY
     })
   }, [materials])
 
