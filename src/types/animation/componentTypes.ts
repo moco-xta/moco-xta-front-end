@@ -6,7 +6,7 @@ export type TGroup = THREE.Group & {
 }
 
 export type TMesh = Omit<THREE.Mesh, 'material'> & {
-  material?: TMaterial
+  material: TMaterial
 }
 
 type TMaterial = {

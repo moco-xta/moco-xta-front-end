@@ -11,29 +11,29 @@ import FedericoText from './FedericoText'
 
 import { greetingTextsGroupData } from '@/data/hero/three/canvas/hero/greeting_group/greeting_texts_group/greetingTextsGroupData'
 
-import { animateGroup } from '@/animations/shared/helpers/animation/animation'
+import { animateGeometry } from '@/animations/shared/helpers/animation/animation'
 
 export default function GreetingTextsGroup() {
   const { timeline } = useGSAPTimelineContext()
 
-  const greetingTextGroupRef = useRef<TGroup>(null!)
+  const greetingTextsGroupRef = useRef<TGroup>(null!)
 
   useGSAP(
     () => {
-      animateGroup({
+      animateGeometry({
         timeline: timeline,
-        ref: greetingTextGroupRef.current,
+        ref: greetingTextsGroupRef.current,
         animations: greetingTextsGroupData.animations,
         duration: greetingTextsGroupData.duration,
         label: greetingTextsGroupData.label!,
       })
     },
-    { scope: greetingTextGroupRef },
+    { scope: greetingTextsGroupRef },
   )
 
   return (
     <group
-      ref={greetingTextGroupRef}
+      ref={greetingTextsGroupRef}
       position={greetingTextsGroupData.defaultValues!.position}
       rotation={greetingTextsGroupData.defaultValues!.rotation}
     >

@@ -1,18 +1,10 @@
-import React, { MutableRefObject, useEffect, useLayoutEffect, useRef } from 'react'
+import React, { MutableRefObject, useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Text3D } from '@react-three/drei'
 
-interface Letter3DInterface {
-  keyPrefix: string
-  font: string
-  size?: number
-  depth?: number
-  letter: string
-  spaceWidth?: number
-  index?: number
-  lengthRef?: MutableRefObject<number[]>
-  children: JSX.Element
-}
+import { TLetter3D } from '@/types/three/word3DTypes'
+
+import { TMesh } from '@/types/animation/componentTypes'
 
 export default function Letter3D({
   keyPrefix,
@@ -24,7 +16,7 @@ export default function Letter3D({
   index,
   lengthRef,
   children,
-}: Letter3DInterface) {
+}: TLetter3D) {
   const letter3DRef = useRef<THREE.Mesh>(null!)
 
   useLayoutEffect(() => {

@@ -1,3 +1,16 @@
+import { TAnimationsData } from './dataTypes'
+
+export type TTimelineData = {
+  timeScale?: number
+  delay?: number
+  labels?: TLabel[]
+}
+
+type TLabel = {
+  name: string
+  position: number | string
+}
+
 // SHOW/HIDE
 
 export type TShowHideAnimation<T> = {
@@ -12,19 +25,8 @@ export type TShowHideAnimation<T> = {
 export type TAnimate<T> = {
   timeline: GSAPTimeline
   ref: T
-  animations: TAnimations<T>
+  index?: number
+  animations: TAnimationsData<T>
   duration: number
   label: string
 }
-
-export type TAnimations<T> = Partial<Record<keyof T, TAnimation>>
-
-type TAnimation = {
-  keyframes: TKeyframes
-}
-
-export type TKeyframes =
-  | Record<string, Record<string, string | number>>
-  | {
-      easeEach?: string
-    }

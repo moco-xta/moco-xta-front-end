@@ -1,12 +1,7 @@
-import { TKeyframes } from './timelineTypes'
-
 export type TProperties = {
-  position?: THREE.Vector3 | TKeyframes
-  rotation?: THREE.Euler | TKeyframes
-  scale?: THREE.Vector3 | TKeyframes
-}
-
-export type TMeshProperties = TProperties & {
+  position?: THREE.Vector3
+  rotation?: THREE.Euler
+  scale?: THREE.Vector3
   material?: TMaterialProperties
 }
 

@@ -1,10 +1,12 @@
 import * as THREE from 'three'
 
+import type { TGroup } from '@/types/animation/componentTypes'
+
 import { TAnimatedComponentData } from '@/types/animation/dataTypes'
 
 import { default as greetingTextsGroupConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/greetingTextsGroupConstants.json'
 
-export const greetingTextsGroupData: TAnimatedComponentData<THREE.Group> = {
+export const greetingTextsGroupData: TAnimatedComponentData<TGroup> = {
   label: greetingTextsGroupConstants.label,
   duration: greetingTextsGroupConstants.duration,
   defaultValues: {

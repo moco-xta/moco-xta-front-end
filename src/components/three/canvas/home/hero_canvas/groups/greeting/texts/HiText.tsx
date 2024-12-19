@@ -4,15 +4,19 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
+import type { TMesh } from '@/types/animation/componentTypes'
+
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 import useSplitted3DText from '@/hooks/animations/useSplitted3DText'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as greetingTextsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/greetingTextsConstants.json'
-import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/hiTextAnimationsConstants.json'
+import { hiTextData } from '@/data/hero/three/canvas/hero/greeting_group/greeting_texts_group/texts/hiTextData'
 
-import { hiTextAnimations } from '@/animations/home/hero/new/canvas/greeting_group/greeting_texts_group/texts/hiTextAnimations'
+import { default as greetingTextsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/greetingTextsConstants.json'
+import { default as hiTextConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/hiTextConstants.json'
+
+import { animateMesh } from '@/animations/shared/helpers/animation/animation'
 
 export default function HiText() {
   const t = useTranslations('HOME')
@@ -21,9 +25,16 @@ export default function HiText() {
 
   useGSAP(
     () => {
-      const hiLetters: THREE.Mesh[] = gsap.utils.toArray(textGroupRef.current.children)
+      const hiLetters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       hiLetters.forEach((letterRef, index) => {
-        hiTextAnimations({ timeline: timeline, ref: letterRef, index: index })
+        const animationsData = hiTextData(index, textLengthRef.current)
+        animateMesh({
+          timeline: timeline,
+          ref: letterRef,
+          animations: animationsData.animations,
+          duration: animationsData.duration,
+          label: animationsData.label!,
+        })
       })
     },
     { scope: textGroupRef },
@@ -38,9 +49,9 @@ export default function HiText() {
       depth={greetingTextsConstants.GEOMETRY.DEPTH}
       position={
         new THREE.Vector3(
-          hiTextAnimationsContants.DEFAULT.POSITION.X,
-          hiTextAnimationsContants.DEFAULT.POSITION.Y,
-          hiTextAnimationsContants.DEFAULT.POSITION.Z,
+          hiTextConstants.defaultValues.position.x,
+          hiTextConstants.defaultValues.position.y,
+          hiTextConstants.defaultValues.position.z,
         )
       }
       center={greetingTextsConstants.GEOMETRY.CENTER}
@@ -50,7 +61,7 @@ export default function HiText() {
       <meshStandardMaterial
         color={greetingTextsConstants.MATERIAL.COLOR}
         transparent={greetingTextsConstants.MATERIAL.TRANSPARENT}
-        opacity={hiTextAnimationsContants.DEFAULT.MATERIAL.OPACITY}
+        opacity={hiTextConstants.defaultValues.material.opacity}
         side={THREE.DoubleSide}
       />
     </Word3D>

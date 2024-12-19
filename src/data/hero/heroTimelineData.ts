@@ -1,7 +1,8 @@
-import { TimelineDataInterface } from '@/interfaces/animation'
+import type { TTimelineData } from '@/types/animation/timelineTypes'
 
-export const heroTimelineData: TimelineDataInterface = {
-  timeScale: 1.25,
+export const heroTimelineData: TTimelineData = {
+  // timeScale: 1.25,
+  timeScale: 0.5,
   delay: 1,
   labels: [
     {

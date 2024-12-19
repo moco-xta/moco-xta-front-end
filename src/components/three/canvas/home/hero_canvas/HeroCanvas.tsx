@@ -20,21 +20,10 @@ import { heroCanvasData } from '@/data/hero/three/canvas/hero/heroCanvasData'
 
 export default function HeroCanvas() {
   return (
-    <Canvas
-      {...heroCanvasData}
-      /* onCreated={({ gl }) => {
-        gl.setClearColor(0xfffff, 0)
-        gl.autoClear = true
-        gl.clearDepth()
-      }} */
-    >
+    <Canvas {...heroCanvasData}>
       <Camera />
       <Lights />
       <OrbitControls />
-      {/* <color
-        attach='background'
-        args={['#ffffff']}
-      /> */}
       <Suspense fallback={null}>
         <Physics
           debug={physicsConstants.DEBUG}
