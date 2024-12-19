@@ -16,9 +16,9 @@ export default function ToolsGroup() {
       ref={toolsGroupRef}
       position={
         new THREE.Vector3(
-          toolsGroupConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          toolsGroupConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          toolsGroupConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          toolsGroupConstants.DEFAULT.POSITION.X,
+          toolsGroupConstants.DEFAULT.POSITION.Y,
+          toolsGroupConstants.DEFAULT.POSITION.Z,
         )
       }
     >

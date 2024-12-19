@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
-import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
+
+import { editableRewrited as e } from '@/types/animation/types'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
@@ -62,6 +63,7 @@ export default function HeroSlice() {
       <Controls />
       <HeroCanvas />
       <HeroBackgroundCanvas />
+      {/* <e.div elementKey={'element_key_test'}></e.div> */}
     </section>
   )
 }

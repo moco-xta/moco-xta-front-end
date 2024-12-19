@@ -1,18 +1,18 @@
 {
   "DURATION": 4,
   "LABEL": "portrait",
-  "ANIMATION": {
-    "0_PERCENT": {
-      "POSITION": {
-        "X": 0,
-        "Y": 2,
-        "Z": 0
-      },
-      "MATERIAL": {
-        "TRANSPARENT": true,
-        "OPACITY": 0
-      }
+  "DEFAULT": {
+    "POSITION": {
+      "X": 0,
+      "Y": 2,
+      "Z": 0
     },
+    "MATERIAL": {
+      "TRANSPARENT": true,
+      "OPACITY": 0
+    }
+  },
+  "ANIMATION": {
     "25_PERCENT": {
       "MATERIAL": {
         "OPACITY": 1

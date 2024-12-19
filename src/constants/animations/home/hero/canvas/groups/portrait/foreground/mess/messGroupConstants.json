@@ -1,11 +1,8 @@
 {
-  "ANIMATION": {
-    "0_PERCENT": {
-      "POSITION": {
-        "X": 0,
-        "Y": 5,
-        "Z": 0
-      }
+  "DEFAULT": {
+    "POSITION": {
+      "X": 0,
+      "Z": 0
     }
   }
 }

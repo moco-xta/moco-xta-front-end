@@ -20,6 +20,7 @@ export default function AboutTarget() {
 
   const handleDevicemotion = useCallback(
     (e: any) => {
+      // (e: DeviceMotionEvent) => {
       setAcceleration({
         x: e.acceleration.x > acceleration.x ? e.acceleration.x.toFixed(2) : acceleration.x,
         y: e.acceleration.y > acceleration.y ? e.acceleration.x.toFixed(2) : acceleration.y,

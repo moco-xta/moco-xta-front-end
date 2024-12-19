@@ -19,16 +19,8 @@ export default function ColorPickerComponent() {
   useGSAP(
     () => {
       const meshes: THREE.Mesh[] = gsap.utils.toArray(colorPickerRef.current.children)
-      meshes.forEach((mesh) => {
-        // MATERIAL
-        timeline.to(
-          mesh.material,
-          {
-            keyframes: colorPickerComponentAnimations.material.keyframes,
-            duration: colorPickerComponentAnimations.material.duration,
-          },
-          colorPickerComponentAnimations.delay,
-        )
+      meshes.forEach((meshRef) => {
+        colorPickerComponentAnimations(timeline, meshRef)
       })
     },
     { scope: colorPickerRef },
@@ -39,9 +31,9 @@ export default function ColorPickerComponent() {
       ref={colorPickerRef}
       position={
         new THREE.Vector3(
-          colorPickerComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          colorPickerComponentConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          colorPickerComponentConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          colorPickerComponentConstants.DEFAULT.POSITION.X,
+          colorPickerComponentConstants.DEFAULT.POSITION.Y,
+          colorPickerComponentConstants.DEFAULT.POSITION.Z,
         )
       }
     />

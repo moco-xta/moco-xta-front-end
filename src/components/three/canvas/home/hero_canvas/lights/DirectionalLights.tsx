@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import { default as directionalLightsConstants } from '@/constants/animations/home/hero/canvas/lights/directionalLightsConstants.json'
+import { directionalLightsData } from '@/data/hero/three/canvas/hero/lights/directionalLightsData'
 
 import { directionalLightsAnimations } from 'animations'
 
@@ -19,15 +19,8 @@ export default function DirectionalLights() {
       const directionLights: THREE.DirectionalLight[] = gsap.utils.toArray(
         directionalLightsGroupRef.current.children,
       )
-      directionLights.forEach((directionLight, index) => {
-        timeline.to(
-          directionLight,
-          {
-            keyframes: directionalLightsAnimations.directionalLight.keyframes,
-            duration: directionalLightsAnimations.directionalLight.duration,
-          },
-          directionalLightsAnimations.delay,
-        )
+      directionLights.forEach((directionLightRef) => {
+        directionalLightsAnimations(timeline, directionLightRef)
       })
     },
     { scope: directionalLightsGroupRef },
@@ -35,23 +28,23 @@ export default function DirectionalLights() {
 
   return (
     <group ref={directionalLightsGroupRef}>
-      {directionalLightsConstants.DEFAULT.POSITIONS.map((position, index) => {
+      {directionalLightsData.default.positions!.map((position, index) => {
         return (
           <directionalLight
             key={`greeting_canvas_directional_light_${index}`}
-            position={[position.X, position.Y, position.Z]}
-            target={new THREE.Object3D()}
-            color={directionalLightsConstants.DEFAULT.COLOR}
-            intensity={directionalLightsConstants.DEFAULT.INTENSITY}
-            shadow-mapSize={directionalLightsConstants.DEFAULT.SHADOW.MAP_SIZE}
-            shadow-camera-far={directionalLightsConstants.DEFAULT.SHADOW.SHADOW_CAMERA_FAR}
-            shadow-camera-left={directionalLightsConstants.DEFAULT.SHADOW.SHADOW_CAMERA_LEFT}
-            shadow-camera-right={directionalLightsConstants.DEFAULT.SHADOW.SHADOW_CAMERA_RIGHT}
-            shadow-camera-top={directionalLightsConstants.DEFAULT.SHADOW.SHADOW_CAMERA_TOP}
-            shadow-camera-bottom={directionalLightsConstants.DEFAULT.SHADOW.SHADOW_CAMERA_BOTTOM}
-            shadow-radius={directionalLightsConstants.DEFAULT.SHADOW.SHADOW_RADIUS}
-            shadow-bias={directionalLightsConstants.DEFAULT.SHADOW.SHADOW_BIAS}
-            castShadow
+            color={directionalLightsData.default.color}
+            intensity={directionalLightsData.default.intensity}
+            position={position}
+            target={directionalLightsData.default.target}
+            castShadow={directionalLightsData.default.castShadow}
+            shadow-mapSize={directionalLightsData.default['shadow-mapSize']}
+            shadow-camera-far={directionalLightsData.default['shadow-camera-far']}
+            shadow-camera-left={directionalLightsData.default['shadow-camera-left']}
+            shadow-camera-right={directionalLightsData.default['shadow-camera-right']}
+            shadow-camera-top={directionalLightsData.default['shadow-camera-top']}
+            shadow-camera-bottom={directionalLightsData.default['shadow-camera-bottom']}
+            shadow-radius={directionalLightsData.default['shadow-radius']}
+            shadow-bias={directionalLightsData.default['shadow-bias']}
           />
         )
       })}

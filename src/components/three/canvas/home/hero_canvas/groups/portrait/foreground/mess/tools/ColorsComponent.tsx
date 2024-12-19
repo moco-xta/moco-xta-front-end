@@ -14,29 +14,21 @@ import { colorsComponentAnimations } from 'animations'
 export default function ColorsComponent() {
   const { timeline } = useGSAPTimelineContext()
 
-  const colorsComponentRef = useRef<THREE.Group>(null!)
+  const colorsComponenGrouptRef = useRef<THREE.Group>(null!)
 
   useGSAP(
     () => {
-      const meshes: THREE.Mesh[] = gsap.utils.toArray(colorsComponentRef.current.children)
-      meshes.forEach((mesh) => {
-        // MATERIAL
-        timeline.to(
-          mesh.material,
-          {
-            keyframes: colorsComponentAnimations.material.keyframes,
-            duration: colorsComponentAnimations.material.duration,
-          },
-          colorsComponentAnimations.delay,
-        )
+      const meshes: THREE.Mesh[] = gsap.utils.toArray(colorsComponenGrouptRef.current.children)
+      meshes.forEach((meshRef) => {
+        colorsComponentAnimations(timeline, meshRef)
       })
     },
-    { scope: colorsComponentRef },
+    { scope: colorsComponenGrouptRef },
   )
 
   return (
     <Colors
-      ref={colorsComponentRef}
+      ref={colorsComponenGrouptRef}
       position={
         new THREE.Vector3(
           colorsComponentConstants.ANIMATION['0_PERCENT'].POSITION.X,

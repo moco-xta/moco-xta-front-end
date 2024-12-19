@@ -32,10 +32,9 @@ export const ColorPicker = forwardRef<THREE.Group, GroupProps>(function ColorPic
   useLayoutEffect(() => {
     Object.keys(materials).forEach((key) => {
       // @ts-ignore
-      materials[key].transparent =
-        colorPickerComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
+      materials[key].transparent = colorPickerComponentConstants.DEFAULT.MATERIAL.TRANSPARENT
       // @ts-ignore
-      materials[key].opacity = colorPickerComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+      materials[key].opacity = colorPickerComponentConstants.DEFAULT.MATERIAL.OPACITY
     })
   }, [materials])
 

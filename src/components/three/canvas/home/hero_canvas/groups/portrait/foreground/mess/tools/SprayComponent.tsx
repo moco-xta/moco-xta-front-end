@@ -11,25 +11,17 @@ import { sprayComponentAnimations } from 'animations'
 export default function SprayComponent() {
   const { timeline } = useGSAPTimelineContext()
 
-  const sprayComponentRef = useRef<THREE.Group>(null!)
+  const sprayComponentGroupRef = useRef<THREE.Group>(null!)
 
   useGSAP(
     () => {
-      const meshes: THREE.Mesh[] = gsap.utils.toArray(sprayComponentRef.current.children)
-      meshes.forEach((mesh) => {
-        // MATERIAL
-        timeline.to(
-          mesh.material,
-          {
-            keyframes: sprayComponentAnimations.material.keyframes,
-            duration: sprayComponentAnimations.material.duration,
-          },
-          sprayComponentAnimations.delay,
-        )
+      const meshes: THREE.Mesh[] = gsap.utils.toArray(sprayComponentGroupRef.current.children)
+      meshes.forEach((meshRef) => {
+        sprayComponentAnimations(timeline, meshRef)
       })
     },
-    { scope: sprayComponentRef },
+    { scope: sprayComponentGroupRef },
   )
 
-  return <Spray ref={sprayComponentRef} />
+  return <Spray ref={sprayComponentGroupRef} />
 }

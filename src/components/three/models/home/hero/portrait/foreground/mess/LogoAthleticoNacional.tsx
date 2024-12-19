@@ -24,9 +24,9 @@ export const LogoAthleticoNacional = forwardRef<THREE.Mesh, MeshProps>(
 
     useLayoutEffect(() => {
       materials.logo_athletico_nacional_material.transparent =
-        logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
+        logoAthleticoNacionalComponentConstants.DEFAULT.MATERIAL.TRANSPARENT
       materials.logo_athletico_nacional_material.opacity =
-        logoAthleticoNacionalComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+        logoAthleticoNacionalComponentConstants.DEFAULT.MATERIAL.OPACITY
     }, [materials])
 
     return (

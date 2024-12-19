@@ -1,32 +1,17 @@
-import { createContext, ReactNode, useEffect, useRef } from 'react'
+import { createContext, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
-interface GSAPTimelineContextInterface {
-  timeline: GSAPTimeline
-}
+// import type { TGSAPTimelineContext, TGSAPTimelineProvider } from '@/types/animation/types'
+import type { TGSAPTimelineContext, TGSAPTimelineProvider } from '@/types/animation/contextTypes'
 
-export const GSAPTimelineContext = createContext<GSAPTimelineContextInterface | undefined>(
-  undefined,
-)
-
-interface LabelInterface {
-  NAME: string
-  POSITION: string | number
-}
-
-interface GSAPTimelineProviderInterface {
-  delay: number
-  timeScale: number
-  labels: LabelInterface[]
-  children: ReactNode
-}
+export const GSAPTimelineContext = createContext<TGSAPTimelineContext>(null!)
 
 export const GSAPTimelineProvider = ({
   delay,
-  timeScale,
+  timeScale = 1,
   labels,
   children,
-}: GSAPTimelineProviderInterface) => {
+}: TGSAPTimelineProvider) => {
   const timeline = useRef<GSAPTimeline>(
     gsap
       .timeline({
@@ -36,8 +21,8 @@ export const GSAPTimelineProvider = ({
   )
 
   useEffect(() => {
-    labels.forEach((label) => {
-      timeline.current.addLabel(label.NAME, label.POSITION)
+    labels?.forEach((label) => {
+      timeline.current.addLabel(label.name, label.position)
     })
   }, [labels, timeline])
 

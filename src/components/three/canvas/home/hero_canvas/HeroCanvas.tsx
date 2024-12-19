@@ -13,34 +13,17 @@ import DeveloperGroup from './groups/developer/DeveloperGroup'
 import WithExtraSkillsGroup from './groups/extra_skills/ExtraSkillsGroup'
 import PostProcessing from './PostProcessing'
 
-import { default as heroCanvasConstants } from '@/constants/animations/home/hero/canvas/heroCanvasConstants.json'
 import { default as physicsConstants } from '@/constants/animations/home/hero/canvas/physicsConstants.json'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
+import { heroCanvasData } from '@/data/hero/three/canvas/hero/heroCanvasData'
+
 export default function HeroCanvas() {
   return (
-    <Canvas
-      dpr={heroCanvasConstants.DPR}
-      legacy={heroCanvasConstants.LEGACY}
-      shadows
-      /* onCreated={({ gl }) => {
-        gl.setClearColor(0xfffff, 0)
-        gl.autoClear = true
-        gl.clearDepth()
-      }} */
-      gl={{
-        antialias: heroCanvasConstants.GL.ANTIALIAS,
-        alpha: heroCanvasConstants.GL.ALPHA,
-        powerPreference: heroCanvasConstants.GL.POWER_PREFERENCE,
-      }}
-    >
+    <Canvas {...heroCanvasData}>
       <Camera />
-      <OrbitControls />
       <Lights />
-      {/* <color
-        attach='background'
-        args={['#ffffff']}
-      /> */}
+      <OrbitControls />
       <Suspense fallback={null}>
         <Physics
           debug={physicsConstants.DEBUG}
@@ -57,8 +40,8 @@ export default function HeroCanvas() {
           <AlsoKnowAsGroup />
           <MocoGroup />
           <DeveloperGroup />
-          <WithExtraSkillsGroup />
-          <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} />
+          {/* <WithExtraSkillsGroup /> */}
+          {/* <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} /> */}
           <PostProcessing />
         </Physics>
       </Suspense>

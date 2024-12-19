@@ -5,10 +5,11 @@ import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+import useSplitted3DText from '@/hooks/animations/useSplitted3DText'
 
 import { Word3D } from '@/components/three/components/word_3d/Word3D'
 
-import { default as greetingTextsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/greetingTextsConstants.json'
+import { default as greetingTextsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/greetingTextsConstants.json'
 import { default as imTextAnimationsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/imTextAnimationsConstants.json'
 
 import { imTextAnimations } from 'animations'
@@ -16,64 +17,40 @@ import { imTextAnimations } from 'animations'
 export default function ImText() {
   const t = useTranslations('HOME')
   const { timeline } = useGSAPTimelineContext()
-
-  const [imText] = useState<string>(t('HERO.I_M').toUpperCase())
-  const [imTextSplitted] = useState<string[]>(imText.split(''))
-
-  const imTextGroupRef = useRef<THREE.Group>(null!)
-  const imTextLengthRef = useRef<number[]>([])
+  const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.I_M'))
 
   useGSAP(
     () => {
-      const imLetters: THREE.Mesh[] = gsap.utils.toArray(imTextGroupRef.current.children)
-      imLetters.forEach((letter, index) => {
-        const animations = imTextAnimations(imTextLengthRef.current, index)
-        timeline
-          // POSITION
-          .to(
-            letter.position,
-            {
-              keyframes: animations.position.keyframes,
-              duration: animations.duration,
-            },
-            animations.delay,
-          )
-          // MATERIAL
-          .to(
-            letter.material,
-            {
-              keyframes: animations.material.keyframes,
-              duration: animations.duration,
-            },
-            animations.delay,
-          )
+      const imLetters: THREE.Mesh[] = gsap.utils.toArray(textGroupRef.current.children)
+      imLetters.forEach((letterRef, index) => {
+        imTextAnimations(timeline, letterRef, textLengthRef.current, index)
       })
     },
-    { scope: imTextGroupRef },
+    { scope: textGroupRef },
   )
 
   return (
     <Word3D
-      ref={imTextGroupRef}
+      ref={textGroupRef}
       keyPrefix={'i_m_text'}
       font={greetingTextsConstants.GEOMETRY.FONT}
       size={greetingTextsConstants.GEOMETRY.SIZES.DEFAULT}
       depth={greetingTextsConstants.GEOMETRY.DEPTH}
       position={
         new THREE.Vector3(
-          imTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.X,
-          imTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Y,
-          imTextAnimationsConstants.ANIMATION['0_PERCENT'].POSITION.Z,
+          imTextAnimationsConstants.DEFAULT.POSITION.X,
+          imTextAnimationsConstants.DEFAULT.POSITION.Y,
+          imTextAnimationsConstants.DEFAULT.POSITION.Z,
         )
       }
-      center={true}
-      splittedWord={imTextSplitted}
-      lengthRef={imTextLengthRef}
+      center={greetingTextsConstants.GEOMETRY.CENTER}
+      splittedWord={textSplitted}
+      lengthRef={textLengthRef}
     >
       <meshStandardMaterial
         color={greetingTextsConstants.MATERIAL.COLOR}
         transparent={greetingTextsConstants.MATERIAL.TRANSPARENT}
-        opacity={imTextAnimationsConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY}
+        opacity={imTextAnimationsConstants.DEFAULT.MATERIAL.OPACITY}
         side={THREE.DoubleSide}
       />
     </Word3D>

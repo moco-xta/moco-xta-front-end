@@ -1,17 +1,17 @@
 {
-  "DURATION": 5,
   "LABEL": "greeting",
-  "ANIMATION": {
-    "0_PERCENT": {
-      "POSITION": {
-        "X": 0,
-        "Y": -1.6,
-        "Z": 0
-      },
-      "MATERIAL": {
-        "OPACITY": 0
-      }
+  "DURATION": 5,
+  "DEFAULT": {
+    "POSITION": {
+      "X": 0,
+      "Y": -1.6,
+      "Z": 0
     },
+    "MATERIAL": {
+      "OPACITY": 0
+    }
+  },
+  "ANIMATION": {
     "40_PERCENT": {
       "POSITION": {
         "X": {

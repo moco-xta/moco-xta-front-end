@@ -1,6 +1,6 @@
-import { RoutesInterface } from '@/interfaces/routes/routesInterfaces'
+import type { TRoutes } from '@/types/routes/types'
 
-export const routes: RoutesInterface[] = [
+export const routes: TRoutes[] = [
   {
     key: 'HOME',
     path: '/',
@@ -30,9 +30,19 @@ export const routes: RoutesInterface[] = [
     key: 'PROJECTS',
     path: '/projects',
   },
+  /* {
+    index: 6,
+    key: 'RESOURCES',
+    path: '/resources',
+  }, */
   {
     index: 0,
     key: 'SKILLS',
     path: '/skills',
   },
+  /* {
+    index: 7,
+    key: 'THANKS',
+    path: '/thanks',
+  }, */
 ]
