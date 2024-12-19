@@ -1,37 +1,37 @@
-import { default as preloaderAnimationsConstants } from '@/constants/animations/shared/preloaderAnimationsConstants.json'
+import { default as preloaderConstants } from '@/constants/animations/shared/preloaderConstants.json'
 
 // TEXT
 
 export const preloaderH1Animation = {
-  selector: preloaderAnimationsConstants.H1.SELECTOR,
+  selector: preloaderConstants.H1.SELECTOR,
   from: {
     params: {
-      y: preloaderAnimationsConstants.H1.FROM.PARAMS.Y,
-      opacity: preloaderAnimationsConstants.H1.FROM.PARAMS.OPACITY,
-      delay: preloaderAnimationsConstants.H1.FROM.PARAMS.DELAY,
-      duration: preloaderAnimationsConstants.H1.FROM.PARAMS.DURATION,
-      stagger: preloaderAnimationsConstants.H1.FROM.PARAMS.STAGGER,
-      ease: preloaderAnimationsConstants.H1.FROM.PARAMS.EASE,
+      y: preloaderConstants.H1.FROM.PARAMS.Y,
+      opacity: preloaderConstants.H1.FROM.PARAMS.OPACITY,
+      delay: preloaderConstants.H1.FROM.PARAMS.DELAY,
+      duration: preloaderConstants.H1.FROM.PARAMS.DURATION,
+      stagger: preloaderConstants.H1.FROM.PARAMS.STAGGER,
+      ease: preloaderConstants.H1.FROM.PARAMS.EASE,
     },
   },
   to: {
     params: {
-      y: preloaderAnimationsConstants.H1.TO.PARAMS.Y,
-      opacity: preloaderAnimationsConstants.H1.TO.PARAMS.OPACITY,
-      duration: preloaderAnimationsConstants.H1.TO.PARAMS.DURATION,
-      stagger: preloaderAnimationsConstants.H1.TO.PARAMS.STAGGER,
-      ease: preloaderAnimationsConstants.H1.TO.PARAMS.EASE,
+      y: preloaderConstants.H1.TO.PARAMS.Y,
+      opacity: preloaderConstants.H1.TO.PARAMS.OPACITY,
+      duration: preloaderConstants.H1.TO.PARAMS.DURATION,
+      stagger: preloaderConstants.H1.TO.PARAMS.STAGGER,
+      ease: preloaderConstants.H1.TO.PARAMS.EASE,
     },
-    offset_delay: preloaderAnimationsConstants.H1.TO.OFFSET_DELAY,
+    offset_delay: preloaderConstants.H1.TO.OFFSET_DELAY,
   },
 }
 
 // PRELOADER SLICE
 
 export const preloaderSliceAnimation = {
-  selector: preloaderAnimationsConstants.SLICE.SELECTOR,
+  selector: preloaderConstants.SLICE.SELECTOR,
   params: {
-    y: preloaderAnimationsConstants.SLICE.PARAMS.Y,
-    duration: preloaderAnimationsConstants.SLICE.PARAMS.DURATION,
+    y: preloaderConstants.SLICE.PARAMS.Y,
+    duration: preloaderConstants.SLICE.PARAMS.DURATION,
   },
 }

@@ -1,7 +1,0 @@
-{
-  "LABEL": "greeting",
-  "DURATION": 5,
-  "DEFAULT": {
-    "VISIBILITY": false
-  }
-}
