@@ -2,7 +2,7 @@ import { createContext, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
 // import type { TGSAPTimelineContext, TGSAPTimelineProvider } from '@/types/animation/types'
-import { type TGSAPTimelineContext, type TGSAPTimelineProvider } from '@/types/animation/types'
+import type { TGSAPTimelineContext, TGSAPTimelineProvider } from '@/types/animation/contextTypes'
 
 export const GSAPTimelineContext = createContext<TGSAPTimelineContext>(null!)
 

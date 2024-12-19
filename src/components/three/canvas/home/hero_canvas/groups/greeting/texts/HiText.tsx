@@ -12,7 +12,7 @@ import { Word3D } from '@/components/three/components/word_3d/Word3D'
 import { default as greetingTextsConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/greetingTextsConstants.json'
 import { default as hiTextAnimationsContants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/hiTextAnimationsConstants.json'
 
-import { hiTextAnimations } from 'animations'
+import { hiTextAnimations } from '@/animations/home/hero/new/canvas/greeting_group/greeting_texts_group/texts/hiTextAnimations'
 
 export default function HiText() {
   const t = useTranslations('HOME')
@@ -23,7 +23,7 @@ export default function HiText() {
     () => {
       const hiLetters: THREE.Mesh[] = gsap.utils.toArray(textGroupRef.current.children)
       hiLetters.forEach((letterRef, index) => {
-        hiTextAnimations(timeline, letterRef, index)
+        hiTextAnimations({ timeline: timeline, ref: letterRef, index: index })
       })
     },
     { scope: textGroupRef },

@@ -17,13 +17,13 @@ export default function Foreground() {
 
   useGSAP(
     () => {
+      showHideAnimation({
+        timeline: timeline,
+        ref: foregroundGroupRef.current,
+        duration: foregroundAnimationsConstants.DURATION,
+        label: foregroundAnimationsConstants.LABEL,
+      })
       foregroundAnimations(timeline, foregroundGroupRef.current)
-      showHideAnimation(
-        timeline,
-        foregroundGroupRef.current,
-        foregroundAnimationsConstants.DURATION,
-        foregroundAnimationsConstants.LABEL,
-      )
     },
     { scope: foregroundGroupRef },
   )

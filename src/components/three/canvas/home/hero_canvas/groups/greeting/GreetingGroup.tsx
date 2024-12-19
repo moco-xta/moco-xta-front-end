@@ -17,12 +17,12 @@ export default function GreetingGroup() {
 
   useGSAP(
     () => {
-      showHideAnimation(
-        timeline,
-        greetingGroupRef.current,
-        greetingGroupData.duration,
-        greetingGroupData.label!,
-      )
+      showHideAnimation({
+        timeline: timeline,
+        ref: greetingGroupRef.current,
+        duration: greetingGroupData.duration,
+        label: greetingGroupData.label!,
+      })
     },
     { scope: greetingGroupRef },
   )

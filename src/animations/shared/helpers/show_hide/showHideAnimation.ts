@@ -1,9 +1,12 @@
-export const showHideAnimation = (
-  timeline: GSAPTimeline,
-  ref: THREE.Group | THREE.Mesh,
-  duration: number,
-  label: string,
-) => {
+import type { TShowHideAnimation } from '@/types/animation/timelineTypes'
+import type { TGroup, TMesh } from '@/types/animation/componentTypes'
+
+export const showHideAnimation = <T extends TGroup | TMesh>({
+  timeline,
+  ref,
+  duration,
+  label,
+}: TShowHideAnimation<T>): void => {
   timeline
     // VISIBILITY
     .to(

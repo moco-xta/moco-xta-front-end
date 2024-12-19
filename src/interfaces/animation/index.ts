@@ -16,32 +16,13 @@ export interface AnimatedComponentInterface {
   readonly label?: string
   readonly duration: number
   readonly default?: DefaultInterface
-  readonly animations?: AnimationsInterface
+  // readonly animations?: AnimationsInterface
 }
 
 interface DefaultInterface {
   visibility?: boolean
   position?: THREE.Vector3
   rotation?: THREE.Euler
-}
-
-export interface AnimationsInterface {
-  visibility?: (
-    timeline: GSAPTimeline,
-    ref: THREE.Group | THREE.Mesh,
-    duration: number,
-    label: string,
-  ) => void
-  position?: {
-    keyframes?: TKeyframes
-    duration?: number
-  }
-  rotation?: {
-    keyframes?: TKeyframes
-    duration?: number
-  }
-  scale?: THREE.Vector3
-  label?: string
 }
 
 interface VisibilityInterface {

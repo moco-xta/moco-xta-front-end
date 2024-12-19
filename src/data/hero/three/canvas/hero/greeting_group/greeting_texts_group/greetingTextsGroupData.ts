@@ -1,72 +1,92 @@
 import * as THREE from 'three'
 
-import { AnimatedComponentInterface } from '@/interfaces/animation'
+import { TAnimatedComponentData } from '@/types/animation/dataTypes'
 
-export const greetingTextsGroupData: AnimatedComponentInterface = {
-  label: 'greeting',
-  duration: 1,
-  default: {
-    position: new THREE.Vector3(0, 0, 0),
+import { default as greetingTextsGroupConstants } from '@/constants/animations/home/hero/canvas/groups/greeting/texts/greetingTextsGroupConstants.json'
+
+export const greetingTextsGroupData: TAnimatedComponentData<THREE.Group> = {
+  label: greetingTextsGroupConstants.label,
+  duration: greetingTextsGroupConstants.duration,
+  defaultValues: {
+    position: new THREE.Vector3(
+      greetingTextsGroupConstants.defualtValues.position.x,
+      greetingTextsGroupConstants.defualtValues.position.y,
+      greetingTextsGroupConstants.defualtValues.position.z,
+    ),
     rotation: new THREE.Euler(
-      THREE.MathUtils.degToRad(-60),
-      THREE.MathUtils.degToRad(0),
-      THREE.MathUtils.degToRad(0),
+      THREE.MathUtils.degToRad(greetingTextsGroupConstants.defualtValues.rotation.x),
+      THREE.MathUtils.degToRad(greetingTextsGroupConstants.defualtValues.rotation.x),
+      THREE.MathUtils.degToRad(greetingTextsGroupConstants.defualtValues.rotation.x),
     ),
   },
   animations: {
     position: {
       keyframes: {
+        '0%': {
+          x: greetingTextsGroupConstants.defualtValues.position.x,
+          y: greetingTextsGroupConstants.defualtValues.position.y,
+          z: greetingTextsGroupConstants.defualtValues.position.z,
+        },
         '20%': {
-          x: 2,
-          y: -1,
-          ease: 'back.in',
+          x: greetingTextsGroupConstants.animations.position['20%'].x,
+          y: greetingTextsGroupConstants.animations.position['20%'].y,
+          ease: greetingTextsGroupConstants.animations.position['20%'].ease,
         },
         '40%': {
-          x: -0.25,
-          y: -0.7,
-          z: 4,
-          ease: 'back.in',
+          x: greetingTextsGroupConstants.animations.position['40%'].x,
+          y: greetingTextsGroupConstants.animations.position['40%'].y,
+          z: greetingTextsGroupConstants.animations.position['40%'].z,
+          ease: greetingTextsGroupConstants.animations.position['40%'].ease,
         },
         '60%': {
-          x: 0,
-          y: 1.3,
-          z: 5,
-          ease: 'back.in',
+          x: greetingTextsGroupConstants.animations.position['60%'].x,
+          y: greetingTextsGroupConstants.animations.position['60%'].y,
+          z: greetingTextsGroupConstants.animations.position['60%'].z,
+          ease: greetingTextsGroupConstants.animations.position['60%'].ease,
         },
         '80%': {
-          y: 0,
-          z: 0,
-          ease: 'back.in',
+          y: greetingTextsGroupConstants.animations.position['80%'].y,
+          z: greetingTextsGroupConstants.animations.position['80%'].z,
+          ease: greetingTextsGroupConstants.animations.position['80%'].ease,
         },
         '100%': {
-          z: -3,
-          ease: 'power1.in',
+          z: greetingTextsGroupConstants.animations.position['100%'].z,
+          ease: greetingTextsGroupConstants.animations.position['100%'].ease,
         },
-        eachEase: 'none',
+        easeEach: greetingTextsGroupConstants.animations.position.eachEase,
       },
     },
     rotation: {
       keyframes: {
+        '0%': {
+          x: THREE.MathUtils.degToRad(greetingTextsGroupConstants.defualtValues.rotation.x),
+          y: THREE.MathUtils.degToRad(greetingTextsGroupConstants.defualtValues.rotation.y),
+          z: THREE.MathUtils.degToRad(greetingTextsGroupConstants.defualtValues.rotation.z),
+        },
         '20%': {
-          x: THREE.MathUtils.degToRad(-15),
-          y: THREE.MathUtils.degToRad(0),
-          ease: 'back.in',
+          x: THREE.MathUtils.degToRad(greetingTextsGroupConstants.animations.rotation['20%'].x),
+          y: THREE.MathUtils.degToRad(greetingTextsGroupConstants.animations.rotation['20%'].y),
+          ease: greetingTextsGroupConstants.animations.rotation['20%'].ease,
         },
         '40%': {
-          x: THREE.MathUtils.degToRad(-15),
-          y: THREE.MathUtils.degToRad(-30),
-          ease: 'back.in',
+          x: THREE.MathUtils.degToRad(greetingTextsGroupConstants.animations.rotation['40%'].x),
+          y: THREE.MathUtils.degToRad(greetingTextsGroupConstants.animations.rotation['40%'].y),
+          ease: greetingTextsGroupConstants.animations.rotation['40%'].ease,
         },
         '60%': {
-          x: THREE.MathUtils.degToRad(-30),
-          y: 0,
-          ease: 'back.in',
+          x: THREE.MathUtils.degToRad(greetingTextsGroupConstants.animations.rotation['60%'].x),
+          y: THREE.MathUtils.degToRad(greetingTextsGroupConstants.animations.rotation['60%'].y),
+          ease: greetingTextsGroupConstants.animations.rotation['60%'].ease,
+        },
+        '80%': {
+          x: THREE.MathUtils.degToRad(greetingTextsGroupConstants.animations.rotation['80%'].x),
+          ease: greetingTextsGroupConstants.animations.rotation['80%'].ease,
         },
         '100%': {
-          x: THREE.MathUtils.degToRad(15),
-          ease: 'back.in',
+          x: THREE.MathUtils.degToRad(greetingTextsGroupConstants.animations.rotation['100%'].x),
+          ease: greetingTextsGroupConstants.animations.rotation['100%'].ease,
         },
-        easeEach: 'none',
+        easeEach: greetingTextsGroupConstants.animations.rotation.eachEase,
       },
     },
   },

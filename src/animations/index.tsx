@@ -5,6 +5,7 @@ import { heroSliceAnimations } from './home/hero/heroSliceAnimations'
 
 import { directionalLightsAnimations } from './home/hero/canvas/lights/directionalLightsAnimations'
 
+import { greetingTextsGroupAnimations } from './home/hero/new/canvas/greeting_group/greeting_texts_group/greetingTextsGroupAnimations'
 import { hiTextAnimations } from './home/hero/canvas/groups/greeting/texts/hiTextAnimations'
 import { imTextAnimations } from './home/hero/canvas/groups/greeting/texts/imTextAnimations'
 import { federicoTextAnimations } from './home/hero/canvas/groups/greeting/texts/federicoTextAnimations'
@@ -40,6 +41,7 @@ export {
   menuAnimation,
   heroSliceAnimations,
   directionalLightsAnimations,
+  greetingTextsGroupAnimations,
   imTextAnimations,
   hiTextAnimations,
   federicoTextAnimations,
