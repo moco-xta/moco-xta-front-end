@@ -2,7 +2,7 @@ import React, { createRef, forwardRef, MutableRefObject, useEffect, useRef } fro
 import { useGSAP } from '@gsap/react'
 
 import { AnimationsInterface } from '@/interfaces/animation'
-import { showHideAnimation } from '@/types/animation/timelineTypes'
+import { showHideAnimation } from '@/animations/index'
 
 interface AnimatedComponentInterface {
   timeline: GSAPTimeline
@@ -18,15 +18,16 @@ export const AnimatedComponent = forwardRef<THREE.Group, AnimatedComponentInterf
     useGSAP(
       () => {
         // if (Object(animations).hasOwnProperty('visibility')) {
-        /* if ('visibility' in Object(animations)) {
+        if ('visibility' in Object(animations)) {
           showHideAnimation(
             timeline,
+            ref.current,
             animations.visibility!.duration!,
             animations.visibility!.label!,
           )
-        } */
+        }
       },
-      // { scope: ref },
+      { scope: ref },
     )
 
     return (

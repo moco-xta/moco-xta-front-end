@@ -1,10 +1,12 @@
 // COMPONENT
 
+import { TAnimations } from './timelineTypes'
+
 export type TAnimatedComponentData<T> = {
   label?: string
   duration: number
-  defaultValues?: TDefaultValues<T>
-  animations: TAnimationsData
+  defaultValues?: Partial<T>
+  animations: TAnimations<T>
 }
 
 // GROUP
@@ -18,41 +20,41 @@ export type TAnimatedComponentData<T> = {
 
 // MESH
 
-type TAnimatedMeshData = {
+/* type TAnimatedMeshData = {
   label?: string
   duration: number
   defaultValues?: TMeshDefaultValues
   // animations: TAnimationsData
-}
+} */
 
 // DEFAULT VALUES
 
-export type TDefaultValues<T> = {
+export type TDefaultValues = {
   position?: THREE.Vector3
   rotation?: THREE.Euler
   scale?: THREE.Vector3
 }
 
-export type TMeshDefaultValues = TDefaultValues & {
+/* export type TMeshDefaultValues = TDefaultValues & {
   material?: TMaterial
-}
+} */
 
-type TMaterial = {
+/* type TMaterial = {
   opacity?: number
-}
+} */
 
 // ANIMATIONS
 
-export type TAnimatedProperties = 'position' | 'rotation' | 'scale' | 'material'
+/* export type TAnimatedProperties = 'position' | 'rotation' | 'scale' | 'material' */
 
-type TAnimationsData =
+/* type TAnimationsData =
   | Partial<Record<TAnimatedProperties, TKeyframesData>>
   | {
       stagger?: number
-    }
+    } */
 
 // KEYFRAMES
 
-type TKeyframesData = {
+/* type TKeyframesData = {
   keyframes: Record<string, string | Record<string, string | number>>
-}
+} */

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
-import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
+
+import type { TGroup } from '@/types/animation/componentTypes'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
@@ -13,7 +14,7 @@ import { showHideAnimation } from 'animations'
 export default function GreetingGroup() {
   const { timeline } = useGSAPTimelineContext()
 
-  const greetingGroupRef = useRef<THREE.Group>(null!)
+  const greetingGroupRef = useRef<TGroup>(null!)
 
   useGSAP(
     () => {

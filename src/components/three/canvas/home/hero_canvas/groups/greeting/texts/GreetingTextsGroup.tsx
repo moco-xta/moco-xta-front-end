@@ -11,7 +11,7 @@ import FedericoText from './FedericoText'
 
 import { greetingTextsGroupData } from '@/data/hero/three/canvas/hero/greeting_group/greeting_texts_group/greetingTextsGroupData'
 
-import { greetingTextsGroupAnimations } from 'animations'
+import { animateGroup } from '@/animations/shared/helpers/animation/animation'
 
 export default function GreetingTextsGroup() {
   const { timeline } = useGSAPTimelineContext()
@@ -19,7 +19,15 @@ export default function GreetingTextsGroup() {
   const greetingTextGroupRef = useRef<TGroup>(null!)
 
   useGSAP(
-    () => greetingTextsGroupAnimations({ timeline: timeline, ref: greetingTextGroupRef.current }),
+    () => {
+      animateGroup({
+        timeline: timeline,
+        ref: greetingTextGroupRef.current,
+        animations: greetingTextsGroupData.animations,
+        duration: greetingTextsGroupData.duration,
+        label: greetingTextsGroupData.label!,
+      })
+    },
     { scope: greetingTextGroupRef },
   )
 
