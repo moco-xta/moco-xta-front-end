@@ -1,12 +1,11 @@
 import type { TGroup, TMesh } from '@/types/animation/three/componentsTypes'
-import type { TShowHideSignature } from '@/types/animation/three/animationsTypes'
+import type { TAnimationSignature } from '@/types/animation/three/animationsTypes'
 
 export const showHide = <T extends TGroup | TMesh>({
   timeline,
   ref,
-  duration,
-  label,
-}: TShowHideSignature<T>): void => {
+  animationsData,
+}: TAnimationSignature<T>): void => {
   timeline.to(
     ref,
     {
@@ -22,8 +21,8 @@ export const showHide = <T extends TGroup | TMesh>({
           },
         },
       },
-      duration: duration,
+      duration: animationsData.duration,
     },
-    label,
+    animationsData.label,
   )
 }

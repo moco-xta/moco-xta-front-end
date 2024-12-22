@@ -14,13 +14,15 @@ export const GSAPTimelineProvider = ({
 }: TGSAPTimelineProvider) => {
   const timeline = useRef<GSAPTimeline>(
     gsap
-      .timeline({
+      .timeline()
+      /* .timeline({
         delay: delay,
-      })
+      }) */
       .timeScale(timeScale),
   )
 
   useEffect(() => {
+    // timeline.current.delay(delay) // TODO: Delay for timeline is not working
     labels?.forEach((label) => {
       timeline.current.addLabel(label.name, label.position)
     })

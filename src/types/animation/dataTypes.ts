@@ -53,7 +53,7 @@ export type TDefaultValues<T extends TGroup | TMesh> = {
 export type TAnimationsData<T extends TGroup | TMesh> = {
   label?: string
   duration: string | number
-  animations: Partial<Record<keyof T, TKeyframesData>>
+  animations?: Partial<Record<keyof T, TKeyframesData>>
 }
 
 export type TKeyframesData = {

@@ -7,9 +7,10 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import HiText from './HiText'
 
-import { greetingTextsGroupData } from '@/data/home/hero/three/greeting/texts/greetingTextsGroupData'
+import { greetingTextsGroupAnimationsData } from '@/data/home/hero/three/greeting/texts/greetingTextsGroupData'
 
 import { animate } from 'animations'
+import { Box } from '@react-three/drei'
 
 export default function GreetingTextsGroup() {
   const { timeline } = useGSAPTimelineContext()
@@ -25,9 +26,7 @@ export default function GreetingTextsGroup() {
       animate({
         timeline: timeline,
         ref: greetingTextsGroupRef.current,
-        label: greetingTextsGroupData.label!,
-        duration: greetingTextsGroupData.duration,
-        animations: greetingTextsGroupData.animations!,
+        animationsData: greetingTextsGroupAnimationsData,
       })
     },
     { scope: greetingTextsGroupRef },
@@ -35,7 +34,8 @@ export default function GreetingTextsGroup() {
 
   return (
     <group ref={greetingTextsGroupRef}>
-      <HiText />
+      {/* <HiText /> */}
+      {/* <Box /> */}
     </group>
   )
 }

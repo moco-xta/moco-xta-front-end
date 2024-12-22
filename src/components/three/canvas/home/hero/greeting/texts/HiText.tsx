@@ -29,11 +29,11 @@ export default function HiText() {
     () => {
       const hiLetters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       hiLetters.forEach((letterRef, index) => {
-        animate({
+        animate(/* {
           timeline: timeline,
           ref: letterRef,
           animationsData: getHiTextAnimationsData(textLengthRef.current, index)
-        })
+        } */)
       })
     },
     { scope: textGroupRef },

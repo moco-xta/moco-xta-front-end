@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import GreetingTextsGroup from './texts/GreetingTextsGroup'
 
-import { greetingGroupData } from '@/data/home/hero/three/greeting/greetingGroupData'
+import { greetingGroupAnimationsData } from '@/data/home/hero/three/greeting/greetingGroupData'
 
 import { showHide } from 'animations'
 
@@ -21,8 +21,7 @@ export default function GreetingGroup() {
       showHide({
         timeline: timeline,
         ref: greetingGroupRef.current,
-        label: greetingGroupData.label!,
-        duration: greetingGroupData.duration,
+        animationsData: greetingGroupAnimationsData(),
       })
     },
     { scope: greetingGroupRef },
