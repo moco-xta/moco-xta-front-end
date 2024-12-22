@@ -6,11 +6,11 @@ import Camera from './Camera'
 import Lights from './lights/Lights'
 import GreetingGroup from './greeting/GreetingGroup'
 
-import { canvasData } from '@/data/home/hero/three/canvasData'
+import { canvasDefaultValues } from '@/data/home/hero/three/canvasData'
 
 export default function HeroCanvas() {
   return (
-    <Canvas {...canvasData}>
+    <Canvas {...canvasDefaultValues}>
       <Camera />
       <Lights />
       <OrbitControls />

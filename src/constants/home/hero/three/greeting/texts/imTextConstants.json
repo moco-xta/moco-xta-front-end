@@ -1,0 +1,41 @@
+{
+  "label": "greeting",
+  "duration": 5,
+  "keySiffix": "i_m_text",
+  "defaultValues": {
+    "position": {
+      "x": 2.2,
+      "y": 1.6,
+      "z": 0
+    },
+    "material": {
+      "opacity": 0
+    }
+  },
+  "animations": {
+    "position": {
+      "20%": {
+        "x": 2.2,
+        "y": 1.6,
+        "z": -5
+      },
+      "40%": {
+        "z": 0,
+        "ease": "back.in"
+      },
+      "easeEach": "none"
+    },
+    "material": {
+      "30%": {
+        "opacity": 0,
+        "ease": "power1.in"
+      },
+      "40%": {
+        "opacity": 1,
+        "ease": "power1.in"
+      },
+      "easeEach": "none"
+    },
+    "stagger": 0.125
+  }
+}

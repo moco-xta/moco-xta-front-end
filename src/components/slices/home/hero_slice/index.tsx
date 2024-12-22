@@ -1,10 +1,14 @@
 import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 
+import { GSAPTimelineProvider } from 'contexts/GSAPTimelineContext'
+
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import Controls from '@/components/buttons/animation/controls'
 import { HeroCanvas } from '@/components/three/canvas'
+
+import { timelineDefaultValues } from '@/data/home/hero/timelineData'
 
 import './index.scss'
 
@@ -46,18 +50,20 @@ export default function HeroSlice() {
   ) */
 
   return (
-    <section
-      ref={heroSliceRef}
-      id='hero_slice'
-      className='fullscreen'
-      style={{
-        background: '#fff',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      <Controls />
-      <HeroCanvas />
-    </section>
+    <GSAPTimelineProvider {...timelineDefaultValues}>
+      <section
+        ref={heroSliceRef}
+        id='hero_slice'
+        className='fullscreen'
+        style={{
+          background: '#fff',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <Controls />
+        <HeroCanvas />
+      </section>
+    </GSAPTimelineProvider>
   )
 }

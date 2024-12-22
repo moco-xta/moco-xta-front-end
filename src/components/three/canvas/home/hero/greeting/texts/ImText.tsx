@@ -13,16 +13,16 @@ import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
 import { greetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
-  hiTextDefaultValues,
-  getHiTextAnimationsData,
-} from '@/data/home/hero/three/greeting/texts/hiTextData'
+  imTextDefaultValues,
+  getImTextAnimationsData,
+} from '@/data/home/hero/three/greeting/texts/imTextData'
 
 import { animate } from '@/animations/index'
 
-export default function HiText() {
+export default function ImText() {
   const t = useTranslations('HOME')
   const { timeline } = useGSAPTimelineContext()
-  const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.HI'))
+  const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.I_M'))
 
   useGSAP(
     () => {
@@ -31,7 +31,7 @@ export default function HiText() {
         animate({
           timeline: timeline,
           ref: letterRef,
-          animationsData: getHiTextAnimationsData({
+          animationsData: getImTextAnimationsData({
             textLengthRef: textLengthRef.current,
             index: index,
           }),
@@ -44,8 +44,8 @@ export default function HiText() {
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={hiTextDefaultValues.keySuffix!}
-      position={hiTextDefaultValues.position}
+      keySuffix={imTextDefaultValues.keySuffix!}
+      position={imTextDefaultValues.position}
       {...greetingTextsDefaultValues.text3D}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}

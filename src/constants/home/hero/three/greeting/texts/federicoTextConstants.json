@@ -1,0 +1,48 @@
+{
+  "label": "greeting",
+  "duration": 5,
+  "keySiffix": "federico_text",
+  "defaultValues": {
+    "position": {
+      "x": 0,
+      "y": -1.6,
+      "z": 0
+    },
+    "material": {
+      "opacity": 0
+    }
+  },
+  "animations": {
+    "position": {
+      "40%": {
+        "x": {
+          "min": 0,
+          "max": 20,
+          "decimal": 0.25
+        },
+        "z": {
+          "min": 0,
+          "max": 20,
+          "decimal": 0.25
+        },
+        "ease": "back.in"
+      },
+      "60%": {
+        "z": 0,
+        "ease": "back.in"
+      },
+      "easeEach": "none"
+    },
+    "material": {
+      "50%": {
+        "opacity": 0
+      },
+      "60%": {
+        "opacity": 1,
+        "ease": "power1.in"
+      },
+      "easeEach": "none"
+    },
+    "stagger": 0.125
+  }
+}

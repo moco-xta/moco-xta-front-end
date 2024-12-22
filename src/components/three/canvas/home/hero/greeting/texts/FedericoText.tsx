@@ -1,7 +1,6 @@
 import React from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { useTranslations } from 'next-intl'
 
 import { TMesh } from '@/types/animation/three/componentsTypes'
 
@@ -13,16 +12,15 @@ import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
 import { greetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
-  hiTextDefaultValues,
-  getHiTextAnimationsData,
-} from '@/data/home/hero/three/greeting/texts/hiTextData'
+  federicoTextDefaultValues,
+  getFedericoTextAnimationsData,
+} from '@/data/home/hero/three/greeting/texts/federicoTextData'
 
 import { animate } from '@/animations/index'
 
-export default function HiText() {
-  const t = useTranslations('HOME')
+export default function FedericoText() {
   const { timeline } = useGSAPTimelineContext()
-  const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.HI'))
+  const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText('Federico')
 
   useGSAP(
     () => {
@@ -31,7 +29,8 @@ export default function HiText() {
         animate({
           timeline: timeline,
           ref: letterRef,
-          animationsData: getHiTextAnimationsData({
+          animationsData: getFedericoTextAnimationsData({
+            textGroupRef: textGroupRef.current,
             textLengthRef: textLengthRef.current,
             index: index,
           }),
@@ -44,8 +43,8 @@ export default function HiText() {
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={hiTextDefaultValues.keySuffix!}
-      position={hiTextDefaultValues.position}
+      keySuffix={federicoTextDefaultValues.keySuffix!}
+      position={federicoTextDefaultValues.position}
       {...greetingTextsDefaultValues.text3D}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}

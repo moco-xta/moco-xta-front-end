@@ -4,7 +4,7 @@ import type { TCameraData } from '@/types/three/camerasTypes'
 
 import { default as cameraConstants } from '@/constants/home/hero/three/cameraConstants.json'
 
-export const cameraData: TCameraData = {
+export const cameraDefaultValues: TCameraData = {
   defaultValues: {
     camera: {
       makeDefault: cameraConstants.defualtValue.camera.makeDefault,

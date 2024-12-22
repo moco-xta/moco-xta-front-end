@@ -1,27 +1,32 @@
 import * as THREE from 'three'
 
-import { TMesh } from '@/types/animation/three/componentsTypes'
-
-import { TAnimationsData, TDefaultValues } from '@/types/animation/dataTypes'
+import type { TMesh } from '@/types/animation/three/componentsTypes'
+import type {
+  TAnimationsData,
+  TDefaultValues,
+  TGetAnimationsDataSignature,
+} from '@/types/animation/dataTypes'
 
 import { default as hiTextConstants } from '@/constants/home/hero/three/greeting/texts/hiTextConstants.json'
 
 export const hiTextDefaultValues: TDefaultValues<TMesh> = {
-  keySuffix: 'hero_text',
-  position: new THREE.Vector3(
-    hiTextConstants.defaultValues.position.x,
-    hiTextConstants.defaultValues.position.y,
-    hiTextConstants.defaultValues.position.z,
-  ),
+  keySuffix: hiTextConstants.keySiffix,
+  position: !hiTextConstants.defaultValues.position
+    ? new THREE.Vector3()
+    : new THREE.Vector3(
+        hiTextConstants.defaultValues.position.x,
+        hiTextConstants.defaultValues.position.y,
+        hiTextConstants.defaultValues.position.z,
+      ),
   material: {
     opacity: hiTextConstants.defaultValues.material.opacity,
   },
 }
 
-export function getHiTextAnimationsData(
-  textLengthRef: number[],
-  index: number,
-): TAnimationsData<TMesh> {
+export function getHiTextAnimationsData({
+  textLengthRef,
+  index,
+}: TGetAnimationsDataSignature): TAnimationsData<TMesh> {
   return {
     label: `${hiTextConstants.label}+=${index! * hiTextConstants.animations.stagger}`,
     duration: hiTextConstants.duration,
@@ -34,7 +39,7 @@ export function getHiTextAnimationsData(
             z: hiTextConstants.defaultValues.position.z,
           },
           '20%': {
-            x: textLengthRef.slice(0, index).reduce((a, b) => a + b, 0),
+            x: textLengthRef!.slice(0, index).reduce((a, b) => a + b, 0),
             y: hiTextConstants.animations.position['20%'].y,
             z: hiTextConstants.animations.position['20%'].z,
             ease: hiTextConstants.animations.position['20%'].ease,

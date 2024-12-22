@@ -7,7 +7,7 @@ import type { TGSAPTimelineContext, TGSAPTimelineProvider } from '@/types/animat
 export const GSAPTimelineContext = createContext<TGSAPTimelineContext>(null!)
 
 export const GSAPTimelineProvider = ({
-  delay,
+  delay = 0,
   timeScale = 1,
   labels,
   children,

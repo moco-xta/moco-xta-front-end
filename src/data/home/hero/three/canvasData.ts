@@ -2,7 +2,7 @@ import { CanvasProps } from '@react-three/fiber'
 
 import { default as canvasConstants } from '@/constants/home/hero/three/canvasConstants.json'
 
-export const canvasData: Partial<CanvasProps> = {
+export const canvasDefaultValues: Partial<CanvasProps> = {
   dpr: canvasConstants.dpr,
   legacy: canvasConstants.legacy,
   shadows: canvasConstants.shadows,

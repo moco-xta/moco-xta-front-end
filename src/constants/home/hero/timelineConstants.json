@@ -1,6 +1,6 @@
 {
   "timeScale": 1.25,
-  "delay": 6,
+  "delay": 1,
   "labels": [
     {
       "name": "greeting",
