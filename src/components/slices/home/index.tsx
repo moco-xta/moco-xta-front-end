@@ -5,18 +5,18 @@ import { GSAPTimelineProvider } from 'contexts/GSAPTimelineContext'
 import HeroSlice from './hero_slice'
 // import ContactSlice from './contact_slice'
 
-// import { heroTimelineData } from '@/data/hero/heroTimelineData'
+import { timelineData } from '@/data/home/hero/timelineData'
 
 export default function HomePage() {
   return (
     <>
-      {/* <GSAPTimelineProvider
-        delay={heroTimelineData.delay}
-        timeScale={heroTimelineData.timeScale}
-        labels={heroTimelineData.labels}
-      > */}
-      <HeroSlice />
-      {/* </GSAPTimelineProvider> */}
+      <GSAPTimelineProvider
+        delay={timelineData.delay}
+        timeScale={timelineData.timeScale}
+        labels={timelineData.labels}
+      >
+        <HeroSlice />
+      </GSAPTimelineProvider>
       {/* <ContactSlice /> */}
     </>
   )

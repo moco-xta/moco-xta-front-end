@@ -1,0 +1,7 @@
+{
+  "label": "greeting",
+  "duration": 5,
+  "default": {
+    "visibility": false
+  }
+}

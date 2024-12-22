@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 
-import type { TGroup } from '@/types/animation/three/componentTypes'
+import type { TGroup } from '@/types/animation/three/componentsTypes'
 import type { TWord3D } from '@/types/three/lib/word3DTypes'
 
 import Letter3D from './Letter3D'

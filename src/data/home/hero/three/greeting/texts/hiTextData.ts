@@ -1,10 +1,59 @@
 import * as THREE from 'three'
 
-export const hiTextData = {
-  defaultValues: {
-    position: new THREE.Vector3(-2.2, 0, 0),
-    material: {
-      opacity: 0
-    }
+import { TMesh } from '@/types/animation/three/componentsTypes'
+
+import { TAnimationsData, TDefaultValues } from '@/types/animation/dataTypes'
+
+import { default as hiTextConstants } from '@/constants/home/hero/three/greeting/texts/hiTextConstants.json'
+
+export const hiTextDefaultValues: TDefaultValues<TMesh> = {
+  keySuffix: 'hero_text',
+  position: new THREE.Vector3(
+    hiTextConstants.defaultValues.position.x,
+    hiTextConstants.defaultValues.position.y,
+    hiTextConstants.defaultValues.position.z,
+  ),
+  material: {
+    opacity: hiTextConstants.defaultValues.material.opacity,
+  },
+}
+
+export function getHiTextAnimationsData(
+  textLengthRef: number[],
+  index: number,
+): TAnimationsData<TMesh> {
+  return {
+    label: `${hiTextConstants.label}+=${index! * hiTextConstants.animations.stagger}`,
+    duration: hiTextConstants.duration,
+    animations: {
+      position: {
+        keyframes: {
+          '0%': {
+            x: hiTextConstants.defaultValues.position.x,
+            y: hiTextConstants.defaultValues.position.y,
+            z: hiTextConstants.defaultValues.position.z,
+          },
+          '20%': {
+            x: textLengthRef.slice(0, index).reduce((a, b) => a + b, 0),
+            y: hiTextConstants.animations.position['20%'].y,
+            z: hiTextConstants.animations.position['20%'].z,
+            ease: hiTextConstants.animations.position['20%'].ease,
+          },
+          easeEach: hiTextConstants.animations.position.easeEach,
+        },
+      },
+      material: {
+        keyframes: {
+          '10%': {
+            opacity: hiTextConstants.defaultValues.material.opacity,
+          },
+          '20%': {
+            opacity: hiTextConstants.animations.material['20%'].opacity,
+            ease: hiTextConstants.animations.material['20%'].ease,
+          },
+          easeEach: hiTextConstants.animations.material.easeEach,
+        },
+      },
+    },
   }
 }

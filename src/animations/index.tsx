@@ -1,6 +1,7 @@
 import { cursorAnimation } from './shared/cursor'
 import { menuAnimation } from './shared/menu'
 
-import { showHideAnimation } from './shared/helpers/show_hide/showHideAnimation'
+import { showHide } from './shared/helpers/show_hide/showHide'
+import { animate } from './shared/helpers/animate/animate'
 
-export { cursorAnimation, menuAnimation, showHideAnimation }
+export { cursorAnimation, menuAnimation, animate, showHide }

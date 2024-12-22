@@ -1,24 +1,23 @@
 import { MutableRefObject } from 'react'
 
-export type TWord3D = {
-  keySuffix: string
-  position?: THREE.Vector3
+export type TText3D = {
   font: string
   size?: number
   depth?: number
-  spaceWidth?: number
   center?: boolean
+  spaceWidth?: number
+}
+
+export type TWord3D = TText3D & {
+  keySuffix: string
+  position?: THREE.Vector3
   splittedWord: string[]
   lengthRef?: MutableRefObject<number[]>
   children: JSX.Element
 }
 
-export type TLetter3D = {
+export type TLetter3D = TText3D & {
   keySuffix: string
-  font: string
-  size?: number
-  depth?: number
-  spaceWidth?: number
   lengthRef?: MutableRefObject<number[]>
   letter: string
   index?: number
