@@ -1,11 +1,9 @@
 {
-  "label": "greeting",
-  "duration": 5,
   "keySiffix": "federico_text",
   "defaultValues": {
     "position": {
       "x": 0,
-      "y": -1.6,
+      "y": 0,
       "z": 0
     },
     "material": {

@@ -2,11 +2,12 @@ import * as THREE from 'three'
 
 import type { TMesh } from '@/types/animation/three/componentsTypes'
 import type {
-  TAnimationsData,
   TDefaultValues,
+  TElementData,
   TGetAnimationsDataSignature,
 } from '@/types/animation/dataTypes'
 
+import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as imTextConstants } from '@/constants/home/hero/three/greeting/texts/imTextConstants.json'
 
 export const imTextDefaultValues: TDefaultValues<TMesh> = {
@@ -24,10 +25,10 @@ export const imTextDefaultValues: TDefaultValues<TMesh> = {
 export function getImTextAnimationsData({
   textLengthRef,
   index,
-}: TGetAnimationsDataSignature): TAnimationsData<TMesh> {
+}: TGetAnimationsDataSignature): TElementData<TMesh> {
   return {
-    label: `${imTextConstants.label}+=${index! * imTextConstants.animations.stagger}`,
-    duration: imTextConstants.duration,
+    label: `${greetingGroupConstants.label}+=${index! * imTextConstants.animations.stagger}`,
+    duration: greetingGroupConstants.duration,
     animations: {
       position: {
         keyframes: {

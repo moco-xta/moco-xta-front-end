@@ -1,13 +1,20 @@
 import * as THREE from 'three'
 
-import type { TMesh } from '@/types/animation/three/componentsTypes'
+import type { TGroup, TMesh } from '@/types/animation/three/componentsTypes'
 import type {
-  TAnimationsData,
   TDefaultValues,
+  TElementData,
   TGetAnimationsDataSignature,
 } from '@/types/animation/dataTypes'
 
+import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
+
+import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as hiTextConstants } from '@/constants/home/hero/three/greeting/texts/hiTextConstants.json'
+
+/* export const hiTextDefaultValues: TDefaultValues<TGroup> = {
+  ...getDefaultValues(hiTextConstants),
+} */
 
 export const hiTextDefaultValues: TDefaultValues<TMesh> = {
   keySuffix: hiTextConstants.keySiffix,
@@ -23,13 +30,13 @@ export const hiTextDefaultValues: TDefaultValues<TMesh> = {
   },
 }
 
-export function getHiTextAnimationsData({
+/* export function getHiTextAnimationsData({
   textLengthRef,
   index,
-}: TGetAnimationsDataSignature): TAnimationsData<TMesh> {
+}: TGetAnimationsDataSignature): TElementData<TMesh> {
   return {
-    label: `${hiTextConstants.label}+=${index! * hiTextConstants.animations.stagger}`,
-    duration: hiTextConstants.duration,
+    label: `${greetingGroupConstants.label}+=${index! * hiTextConstants.animations.stagger}`,
+    duration: greetingGroupConstants.duration,
     animations: {
       position: {
         keyframes: {
@@ -61,4 +68,4 @@ export function getHiTextAnimationsData({
       },
     },
   }
-}
+} */

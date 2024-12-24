@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { TMesh } from '@/types/animation/three/componentsTypes'
+import type { TMesh } from '@/types/animation/three/componentsTypes'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
@@ -24,7 +24,7 @@ export default function ImText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.I_M'))
 
-  useGSAP(
+  /* useGSAP(
     () => {
       const letters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       letters.forEach((letterRef, index) => {
@@ -39,14 +39,14 @@ export default function ImText() {
       })
     },
     { scope: textGroupRef },
-  )
+  ) */
 
   return (
     <Word3D
       ref={textGroupRef}
       keySuffix={imTextDefaultValues.keySuffix!}
-      position={imTextDefaultValues.position}
-      {...greetingTextsDefaultValues.text3D}
+      // position={imTextDefaultValues.position}
+      {...greetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
     >

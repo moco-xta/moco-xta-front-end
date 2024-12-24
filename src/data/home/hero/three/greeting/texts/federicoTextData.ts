@@ -2,13 +2,14 @@ import * as THREE from 'three'
 
 import type { TMesh } from '@/types/animation/three/componentsTypes'
 import type {
-  TAnimationsData,
   TDefaultValues,
+  TElementData,
   TGetAnimationsDataSignature,
 } from '@/types/animation/dataTypes'
 
 import { getRandomInt } from '@/helpers/mathHelpers'
 
+import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as federicoTextConstants } from '@/constants/home/hero/three/greeting/texts/federicoTextConstants.json'
 
 export const federicoTextDefaultValues: TDefaultValues<TMesh> = {
@@ -29,10 +30,10 @@ export function getFedericoTextAnimationsData({
   textGroupRef,
   textLengthRef,
   index,
-}: TGetAnimationsDataSignature): TAnimationsData<TMesh> {
+}: TGetAnimationsDataSignature): TElementData<TMesh> {
   return {
-    label: `${federicoTextConstants.label}+=${index! * federicoTextConstants.animations.stagger}`,
-    duration: federicoTextConstants.duration,
+    label: `${greetingGroupConstants.label}+=${index! * federicoTextConstants.animations.stagger}`,
+    duration: greetingGroupConstants.duration,
     animations: {
       position: {
         keyframes: {
@@ -52,7 +53,9 @@ export function getFedericoTextAnimationsData({
             }),
           },
           '60%': {
-            x: textGroupRef!.position.x + textLengthRef!.slice(0, index).reduce((a, b) => a + b, 0),
+            x: /* textGroupRef!.position.x +  */ textLengthRef!
+              .slice(0, index)
+              .reduce((a, b) => a + b, 0),
             z: federicoTextConstants.animations.position['60%'].z,
           },
           easeEach: federicoTextConstants.animations.position.easeEach,

@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { TMesh } from '@/types/animation/three/componentsTypes'
+import type { TMesh } from '@/types/animation/three/componentsTypes'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
@@ -14,7 +14,7 @@ import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 import { greetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
   hiTextDefaultValues,
-  getHiTextAnimationsData,
+  // getHiTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/hiTextData'
 
 import { animate } from '@/animations/index'
@@ -24,7 +24,7 @@ export default function HiText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.HI'))
 
-  useGSAP(
+  /* useGSAP(
     () => {
       const letters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       letters.forEach((letterRef, index) => {
@@ -39,14 +39,14 @@ export default function HiText() {
       })
     },
     { scope: textGroupRef },
-  )
+  ) */
 
   return (
     <Word3D
       ref={textGroupRef}
       keySuffix={hiTextDefaultValues.keySuffix!}
       position={hiTextDefaultValues.position}
-      {...greetingTextsDefaultValues.text3D}
+      {...greetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
     >

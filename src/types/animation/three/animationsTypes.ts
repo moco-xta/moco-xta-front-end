@@ -1,8 +1,9 @@
 import type { TGroup, TMesh } from './componentsTypes'
-import type { TAnimationsData } from '../dataTypes'
+import type { TElementData } from '../dataTypes'
 
 export type TAnimationSignature<T extends TGroup | TMesh> = {
   timeline: GSAPTimeline
   ref: T
-  animationsData: TAnimationsData<T>
+  animationsData: TElementData<T>
+  variables?: Record<string, number>
 }

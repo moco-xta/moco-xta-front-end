@@ -1,73 +1,99 @@
 {
-  "duration": 5,
-  "label": "greeting",
-  "defualtValues": {
+  "defaultValues": {
     "position": {
-      "x": 0,
-      "y": 0,
-      "z": 0
+      "x": 3.8,
+      "y": -4,
+      "z": 8
     },
     "rotation": {
       "x": -60,
       "y": 0,
       "z": 0
+    },
+    "dimensions": {
+      "width": 10,
+      "height": 10,
+      "depth": 1
     }
   },
   "animations": {
     "position": {
-      "20%": {
-        "x": 2,
-        "y": -1,
+      "step_1": {
+        "x": "-=1",
+        "y": "+=2",
+        "z": 3,
         "ease": "back.in"
       },
-      "40%": {
-        "x": -0.25,
-        "y": -0.7,
-        "z": 4,
+      "step_2": {
+        "x": "-=5.2",
+        "y": "+=0.4",
+        "z": 3,
         "ease": "back.in"
       },
-      "60%": {
-        "x": 0,
-        "y": 1.3,
-        "z": 5,
+      "step_3": {
+        "x": "+=2.4",
+        "y": "+=2.6",
+        "z": 1.5,
         "ease": "back.in"
       },
-      "80%": {
+      "step_4": {
+        "x": "+=0",
+        "y": "+=0",
+        "z": 0,
+        "ease": "back.in"
+      },
+      "step_5": {
+        "x": "+=0",
+        "y": "+=0",
+        "z": 0,
+        "ease": "power1.in"
+      },
+      "step_6": {
+        "x": "+=0",
+        "y": "+=0",
+        "z": -3,
+        "ease": "power1.in"
+      },
+      "easeEach": "none"
+    },
+    "rotation": {
+      "step_1": {
+        "x": -15,
         "y": 0,
         "z": 0,
         "ease": "back.in"
       },
-      "100%": {
-        "z": -3,
-        "ease": "power1.in"
-      },
-      "eachEase": "none"
-    },
-    "rotation": {
-      "20%": {
-        "x": -15,
-        "y": 0,
-        "ease": "back.in"
-      },
-      "40%": {
-        "x": -15,
-        "y": -30,
-        "ease": "back.in"
-      },
-      "60%": {
-        "x": -30,
-        "y": 0,
-        "ease": "back.in"
-      },
-      "80%": {
-        "x": 15,
-        "ease": "back.in"
-      },
-      "100%": {
+      "step_2": {
         "x": 0,
+        "y": 0,
+        "z": 0,
+        "ease": "back.in"
+      },
+      "step_3": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "ease": "back.in"
+      },
+      "step_4": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "ease": "back.in"
+      },
+      "step_5": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
         "ease": "power1.in"
       },
-      "eachEase": "none"
+      "step_6": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "ease": "power1.in"
+      },
+      "easeEach": "none"
     }
   }
 }

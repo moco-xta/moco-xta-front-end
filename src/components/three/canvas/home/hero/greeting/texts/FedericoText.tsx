@@ -22,7 +22,7 @@ export default function FedericoText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText('Federico')
 
-  useGSAP(
+  /* useGSAP(
     () => {
       const letters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       letters.forEach((letterRef, index) => {
@@ -38,14 +38,14 @@ export default function FedericoText() {
       })
     },
     { scope: textGroupRef },
-  )
+  ) */
 
   return (
     <Word3D
       ref={textGroupRef}
       keySuffix={federicoTextDefaultValues.keySuffix!}
       position={federicoTextDefaultValues.position}
-      {...greetingTextsDefaultValues.text3D}
+      {...greetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
     >

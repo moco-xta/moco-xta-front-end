@@ -1,5 +1,14 @@
-import { MutableRefObject } from 'react'
 import type { TGroup, TMesh } from './three/componentsTypes'
+import { TDimensionsData } from './three/dataTypes'
+
+// CONSTANTS
+
+export type TConstantsData<T extends TGroup | TMesh> = {
+  defaultValues: Partial<Record<keyof T, Record<string, string | number | boolean>>>
+  animations?: Partial<
+    Record<keyof T, Record<string, string | Record<string, string | number | boolean>>>
+  >
+}
 
 // TIMELINE
 
@@ -20,15 +29,18 @@ export type TDefaultValues<T extends TGroup | TMesh> = {
   keySuffix?: string
 } & Omit<Partial<T>, 'material'> & {
     material?: Partial<THREE.Material>
+    dimensions?: TDimensionsData
   }
 
 // ANIMATION
 
-export type TAnimationsData<T extends TGroup | TMesh> = {
+export type TElementData<T extends TGroup | TMesh> = {
   label?: string
   duration: string | number
-  animations?: Partial<Record<keyof T, TKeyframesData>>
+  animations?: TAnimationsData<T>
 }
+
+export type TAnimationsData<T> = Partial<Record<keyof T, TKeyframesData>>
 
 export type TKeyframesData = {
   keyframes: Record<string, string | Record<string, string | number>> & {
