@@ -1,23 +1,23 @@
 import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 
-import { editableRewrited as e } from '@/types/animation/types'
+import { GSAPTimelineProvider } from 'contexts/GSAPTimelineContext'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import Controls from '@/components/buttons/animation/controls'
 import { HeroCanvas } from '@/components/three/canvas'
-import HeroBackgroundCanvas from '@/components/three/canvas/home/hero_background_canvas/HeroBackgroundCanvas'
+
+import { timelineDefaultValues } from '@/data/home/hero/timelineData'
 
 import './index.scss'
-import { heroSliceAnimations } from 'animations'
 
 export default function HeroSlice() {
-  const { timeline } = useGSAPTimelineContext()
+  /* const { timeline } = useGSAPTimelineContext() */
 
   const heroSliceRef = useRef<HTMLElement>(null!)
 
-  useGSAP(
+  /* useGSAP(
     () => {
       timeline.to(
         heroSliceRef.current.style,
@@ -47,23 +47,23 @@ export default function HeroSlice() {
       )
     },
     { scope: heroSliceRef },
-  )
+  ) */
 
   return (
-    <section
-      ref={heroSliceRef}
-      id='hero_slice'
-      className='fullscreen'
-      style={{
-        background: '#fff',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      <Controls />
-      <HeroCanvas />
-      <HeroBackgroundCanvas />
-      {/* <e.div elementKey={'element_key_test'}></e.div> */}
-    </section>
+    <GSAPTimelineProvider {...timelineDefaultValues}>
+      <section
+        ref={heroSliceRef}
+        id='hero_slice'
+        className='fullscreen'
+        style={{
+          background: '#fff',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <Controls />
+        <HeroCanvas />
+      </section>
+    </GSAPTimelineProvider>
   )
 }

@@ -1,10 +1,10 @@
-import { default as cursorAnimationsConstants } from '@/constants/animations/shared/cursorAnimationsConstants.json'
+import { default as cursorConstants } from '@/constants/animations/shared/cursorConstants.json'
 
 export const cursorAnimation = {
-  scope: cursorAnimationsConstants.SCOPE,
-  selector: cursorAnimationsConstants.SELECTOR,
+  scope: cursorConstants.SCOPE,
+  selector: cursorConstants.SELECTOR,
   params: {
-    duration: cursorAnimationsConstants.PARAMS.DURATION,
-    ease: cursorAnimationsConstants.PARAMS.EASE,
+    duration: cursorConstants.PARAMS.DURATION,
+    ease: cursorConstants.PARAMS.EASE,
   },
 }
