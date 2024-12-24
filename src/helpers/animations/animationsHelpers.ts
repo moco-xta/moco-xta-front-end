@@ -5,7 +5,7 @@ import type { TAnimationsData, TConstantsData } from '@/types/animation/dataType
 
 // GET DEFAULT VALUES
 
-export function getDefaultValues<T extends TGroup | TMesh>(constants: TConstantsData<T>) {
+/* export function getDefaultValues<T extends TGroup | TMesh>(constants: TConstantsData<T>) {
   let defaultValues = {}
   for (const [property, values] of Object.entries(constants.defaultValues)) {
     let propertyData: Record<string, any> = {}
@@ -19,6 +19,46 @@ export function getDefaultValues<T extends TGroup | TMesh>(constants: TConstants
       [property]: propertyData,
     }
   }
+  return defaultValues
+} */
+
+export function getDefaultValues<T extends TGroup | TMesh>(constants: TConstantsData<T>) {
+  let defaultValues = {}
+  for (const [property, values] of Object.entries(constants.defaultValues)) {
+    let propertyData: Record<string, any> = {}
+    switch (property) {
+      case 'position':
+        /* const position = new THREE.Vector3()
+          for (const [key, value] of Object.entries(values)) {
+            position[key as 'x' | 'y' | 'z'] = value as number
+            } */
+        let position: Record<'x' | 'y' | 'z', string | number> = { x: 0, y: 0, z: 0 }
+        for (const [key, value] of Object.entries(values)) {
+          position = { ...position, [key]: value as string | number }
+          propertyData[property] = position
+        }
+        propertyData[property] = position
+        break
+      case 'rotation':
+        const rotation = new THREE.Euler()
+        for (const [key, value] of Object.entries(values)) {
+          rotation[key as 'x' | 'y' | 'z'] = value as number
+        }
+        propertyData[property] = rotation
+        break
+      default:
+        let valuesData: Record<string, string | number | boolean> = {}
+        for (const [key, value] of Object.entries(values)) {
+          valuesData = { ...valuesData, [key]: value as string | number | boolean }
+          propertyData[property] = valuesData
+        }
+    }
+    defaultValues = {
+      ...defaultValues,
+      [property]: propertyData,
+    }
+  }
+  console.log('defaultValues', defaultValues)
   return defaultValues
 }
 

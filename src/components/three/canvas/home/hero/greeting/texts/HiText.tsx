@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
@@ -41,10 +41,14 @@ export default function HiText() {
     { scope: textGroupRef },
   ) */
 
+  useEffect(() => {
+    console.log('hiTextDefaultValues', hiTextDefaultValues)
+  }, [hiTextDefaultValues])
+
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={hiTextDefaultValues.keySuffix!}
+      keySuffix={hiTextDefaultValues.text!.keySuffix!}
       position={hiTextDefaultValues.position}
       {...greetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}

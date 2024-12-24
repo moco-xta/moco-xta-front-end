@@ -1,6 +1,6 @@
 {
-  "keySiffix": "i_m_text",
   "defaultValues": {
+    "keySuffix": "i_m_text",
     "position": {
       "x": 0,
       "y": 0,

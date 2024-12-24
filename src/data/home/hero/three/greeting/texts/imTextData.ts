@@ -11,7 +11,7 @@ import { default as greetingGroupConstants } from '@/constants/home/hero/three/g
 import { default as imTextConstants } from '@/constants/home/hero/three/greeting/texts/imTextConstants.json'
 
 export const imTextDefaultValues: TDefaultValues<TMesh> = {
-  keySuffix: imTextConstants.keySiffix,
+  keySuffix: imTextConstants.defaultValues.keySuffix,
   position: new THREE.Vector3(
     imTextConstants.defaultValues.position.x,
     imTextConstants.defaultValues.position.y,

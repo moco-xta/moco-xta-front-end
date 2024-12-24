@@ -1,10 +1,12 @@
 {
-  "keySiffix": "hi_text",
   "defaultValues": {
     "position": {
       "x": 0,
       "y": 0,
       "z": 0
+    },
+    "text": {
+      "keySuffix": "hi_text"
     },
     "material": {
       "opacity": 1

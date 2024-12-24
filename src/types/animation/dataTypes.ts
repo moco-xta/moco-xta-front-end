@@ -25,12 +25,13 @@ type TLabel = {
 
 // DEFAULT VALUES
 
-export type TDefaultValues<T extends TGroup | TMesh> = {
-  keySuffix?: string
-} & Omit<Partial<T>, 'material'> & {
-    material?: Partial<THREE.Material>
-    dimensions?: TDimensionsData
+export type TDefaultValues<T extends TGroup | TMesh> = Omit<Partial<T>, 'material'> & {
+  material?: Partial<THREE.Material>
+  dimensions?: TDimensionsData
+  text?: {
+    keySuffix: string
   }
+}
 
 // ANIMATION
 

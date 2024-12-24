@@ -1,6 +1,6 @@
 {
-  "keySiffix": "federico_text",
   "defaultValues": {
+    "keySuffix": "federico_text",
     "position": {
       "x": 0,
       "y": 0,

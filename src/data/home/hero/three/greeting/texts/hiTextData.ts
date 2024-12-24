@@ -12,12 +12,11 @@ import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animat
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as hiTextConstants } from '@/constants/home/hero/three/greeting/texts/hiTextConstants.json'
 
-/* export const hiTextDefaultValues: TDefaultValues<TGroup> = {
+export const hiTextDefaultValues: TDefaultValues<TGroup> = {
   ...getDefaultValues(hiTextConstants),
-} */
+}
 
-export const hiTextDefaultValues: TDefaultValues<TMesh> = {
-  keySuffix: hiTextConstants.keySiffix,
+/* export const hiTextDefaultValues: TDefaultValues<TMesh> = {
   position: !hiTextConstants.defaultValues.position
     ? new THREE.Vector3()
     : new THREE.Vector3(
@@ -25,10 +24,13 @@ export const hiTextDefaultValues: TDefaultValues<TMesh> = {
         hiTextConstants.defaultValues.position.y,
         hiTextConstants.defaultValues.position.z,
       ),
+  text: {
+    keySuffix: hiTextConstants.defaultValues.text.keySuffix,
+  },
   material: {
     opacity: hiTextConstants.defaultValues.material.opacity,
   },
-}
+} */
 
 /* export function getHiTextAnimationsData({
   textLengthRef,

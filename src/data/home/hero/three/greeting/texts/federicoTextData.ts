@@ -13,7 +13,7 @@ import { default as greetingGroupConstants } from '@/constants/home/hero/three/g
 import { default as federicoTextConstants } from '@/constants/home/hero/three/greeting/texts/federicoTextConstants.json'
 
 export const federicoTextDefaultValues: TDefaultValues<TMesh> = {
-  keySuffix: federicoTextConstants.keySiffix,
+  keySuffix: federicoTextConstants.defaultValues.keySuffix,
   position: !federicoTextConstants.defaultValues.position
     ? new THREE.Vector3()
     : new THREE.Vector3(
