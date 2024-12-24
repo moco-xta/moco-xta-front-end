@@ -1,72 +1,148 @@
 import * as THREE from 'three'
 
-import type { TGroup, TMesh } from '@/types/animation/three/componentsTypes'
-import type { TAnimationsData, TConstantsData } from '@/types/animation/dataTypes'
+import type {
+  TConstants,
+  TCoordinates,
+  TDefaultValuesData,
+  TDimensions,
+  TPropertyValuesTypes,
+} from '@/types/animation/dataTypes'
 
 // GET DEFAULT VALUES
 
-/* export function getDefaultValues<T extends TGroup | TMesh>(constants: TConstantsData<T>) {
-  let defaultValues = {}
-  for (const [property, values] of Object.entries(constants.defaultValues)) {
-    let propertyData: Record<string, any> = {}
-    for (const [key, value] of Object.entries(values)) {
-      propertyData[key] = !(property == 'rotation')
-        ? value
-        : THREE.MathUtils.degToRad(value as number)
-    }
-    defaultValues = {
-      ...defaultValues,
-      [property]: propertyData,
-    }
+/* function setPropertyDefaultValues<T extends TGroup | TMesh>(
+  defaultValues: TDefaultValuesData<T>,
+  property: string,
+  propertyValue: TPropertyValueTypes,
+  propertyValues: TPropertyValuesTypes,
+) {
+  for (const [key, value] of Object.entries(propertyValue)) {
+    ;(propertyValues as Record<string, any>)[key] = value
   }
-  return defaultValues
+  defaultValues = {
+    ...defaultValues,
+    [property]: propertyValues,
+  }
 } */
 
-export function getDefaultValues<T extends TGroup | TMesh>(constants: TConstantsData<T>) {
-  let defaultValues = {}
-  for (const [property, values] of Object.entries(constants.defaultValues)) {
-    let propertyData: Record<string, any> = {}
-    switch (property) {
-      case 'position':
-        /* const position = new THREE.Vector3()
-          for (const [key, value] of Object.entries(values)) {
-            position[key as 'x' | 'y' | 'z'] = value as number
-            } */
-        let position: Record<'x' | 'y' | 'z', string | number> = { x: 0, y: 0, z: 0 }
-        for (const [key, value] of Object.entries(values)) {
-          position = { ...position, [key]: value as string | number }
-          propertyData[property] = position
+function pushPropertyDefaultValues(
+
+  defaultValues: TDefaultValuesData,
+  property: string,
+  propertyValues: TPropertyValuesTypes,
+): void {
+  defaultValues = {
+    ...defaultValues,
+    [property]: propertyValues,
+  }
+}
+
+export function getDefaultValues(constants: TConstants) {
+  // console.log(`${constants.name} constants`, constants)
+
+  let defaultValues = {} as TDefaultValuesData
+  
+  for (const [property, propertyValue] of Object.entries(constants.defaultValues)) {
+    if (
+      typeof propertyValue === 'string' ||
+      typeof propertyValue === 'number' ||
+      typeof propertyValue === 'boolean'
+    ) {
+      defaultValues = {
+        ...defaultValues,
+        [property]: propertyValue,
+      }
+    } else {
+      let propertyValues: TPropertyValuesTypes
+
+      if (property === 'position' || property === 'scale') {
+        propertyValues = new THREE.Vector3()
+        for (const [key, value] of Object.entries(propertyValue)) {
+          propertyValues[key as keyof TCoordinates] = value
         }
-        propertyData[property] = position
-        break
-      case 'rotation':
-        const rotation = new THREE.Euler()
-        for (const [key, value] of Object.entries(values)) {
-          rotation[key as 'x' | 'y' | 'z'] = value as number
+        pushPropertyDefaultValues(defaultValues, property, propertyValues)
+      } else if (property === 'rotation') {
+        propertyValues = new THREE.Euler()
+        for (const [key, value] of Object.entries(propertyValue)) {
+          propertyValues[key as keyof TCoordinates] = THREE.MathUtils.degToRad(value)
         }
-        propertyData[property] = rotation
-        break
-      default:
-        let valuesData: Record<string, string | number | boolean> = {}
-        for (const [key, value] of Object.entries(values)) {
-          valuesData = { ...valuesData, [key]: value as string | number | boolean }
-          propertyData[property] = valuesData
+        pushPropertyDefaultValues(defaultValues, property, propertyValues)
+      } else {
+        propertyValues = {}
+        for (const [key, value] of Object.entries(propertyValue)) {
+          propertyValues = { ...propertyValues, [key]: value }
         }
+        pushPropertyDefaultValues(defaultValues, property, propertyValues)
+      }
     }
-    defaultValues = {
-      ...defaultValues,
-      [property]: propertyData,
+  }
+
+
+
+
+
+  console.log(`${constants.name} defaultValues`, defaultValues)
+  return defaultValues
+}
+
+/* export function getDefaultValues(constants: TDefaultValuesConstants) {
+  let defaultValues = {} as TDefaultValuesData
+  for (const [property, propertyValue] of Object.entries(constants)) {
+    if (
+      typeof propertyValue === 'string' ||
+      typeof propertyValue === 'number' ||
+      typeof propertyValue === 'boolean'
+    ) {
+      defaultValues = {
+        ...defaultValues,
+        [property]: propertyValue,
+      }
+    } else {
+      console.log('IS object')
+      let propertyValues: TPropertyValuesTypes
+
+      if (property === 'position' || property === 'scale') {
+        propertyValues = new THREE.Vector3()
+        for (const [key, value] of Object.entries(propertyValue)) {
+          propertyValues[key as keyof TCoordinates] = value
+        }
+        addPropertyDefaultValues(defaultValues, property, propertyValues)
+      } else if (property === 'rotation') {
+        propertyValues = new THREE.Euler()
+        for (const [key, value] of Object.entries(propertyValue)) {
+          propertyValues[key as keyof TCoordinates] = THREE.MathUtils.degToRad(value)
+        }
+        addPropertyDefaultValues(defaultValues, property, propertyValues)
+      } else {
+        propertyValues = {}
+        for (const [key, value] of Object.entries(propertyValue)) {
+          propertyValues = { ...propertyValues, [key]: value }
+        }
+        addPropertyDefaultValues(defaultValues, property, propertyValues)
+      }
     }
   }
   console.log('defaultValues', defaultValues)
   return defaultValues
-}
+} */
 
 // GET ANIMATIONS DATA
 
-export function getAnimationsData<T extends TGroup | TMesh>(
+/* export function getAnimationsData(duration: number, constants: TConstants): TAnimationsData {
+  let animationsData: TAnimationsData = {}
+
+  for (const [property, keyframes] of Object.entries(constants.animations!) as [
+    TPropertiesTypes,
+    Record<string, string | Record<string, string | number | boolean>>,
+  ][]) {
+  }
+
+  return animationsData
+}
+
+export function getAnimationsDataOld<T extends TGroup | TMesh>(
   duration: number,
-  constants: TConstantsData<T>,
+  constants: TConstants<T>,
 ): TAnimationsData<T> {
   let animationsData: TAnimationsData<T> = {}
   let propertyData = {}
@@ -123,4 +199,4 @@ export function getAnimationsData<T extends TGroup | TMesh>(
 
 function getKeyframePosition(duration: number, step: number): string {
   return `${((100 / duration) * step).toFixed(2)}%`
-}
+} */

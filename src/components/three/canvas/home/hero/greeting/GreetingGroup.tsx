@@ -16,7 +16,7 @@ export default function GreetingGroup() {
 
   const greetingGroupRef = useRef<TGroup>(null!)
 
-  /* useGSAP(
+  useGSAP(
     () => {
       showHide({
         timeline: timeline,
@@ -25,7 +25,7 @@ export default function GreetingGroup() {
       })
     },
     { scope: greetingGroupRef },
-  ) */
+  )
 
   return (
     <group ref={greetingGroupRef}>

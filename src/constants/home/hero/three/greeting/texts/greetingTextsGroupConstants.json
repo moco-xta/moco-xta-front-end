@@ -1,5 +1,7 @@
 {
+  "name": "greeting_texts_group",
   "defaultValues": {
+    "visible": true,
     "position": {
       "x": 3.8,
       "y": -4,
@@ -18,43 +20,45 @@
   },
   "animations": {
     "position": {
-      "step_1": {
-        "x": "-=1",
-        "y": "+=2",
-        "z": 3,
-        "ease": "back.in"
-      },
-      "step_2": {
-        "x": "-=5.2",
-        "y": "+=0.4",
-        "z": 3,
-        "ease": "back.in"
-      },
-      "step_3": {
-        "x": "+=2.4",
-        "y": "+=2.6",
-        "z": 1.5,
-        "ease": "back.in"
-      },
-      "step_4": {
-        "x": "+=0",
-        "y": "+=0",
-        "z": 0,
-        "ease": "back.in"
-      },
-      "step_5": {
-        "x": "+=0",
-        "y": "+=0",
-        "z": 0,
-        "ease": "power1.in"
-      },
-      "step_6": {
-        "x": "+=0",
-        "y": "+=0",
-        "z": -3,
-        "ease": "power1.in"
-      },
-      "easeEach": "none"
+      "keyframes": {
+        "step_1": {
+          "x": "-=1",
+          "y": "+=2",
+          "z": 3,
+          "ease": "back.in"
+        },
+        "step_2": {
+          "x": "-=5.2",
+          "y": "+=0.4",
+          "z": 3,
+          "ease": "back.in"
+        },
+        "step_3": {
+          "x": "+=2.4",
+          "y": "+=2.6",
+          "z": 1.5,
+          "ease": "back.in"
+        },
+        "step_4": {
+          "x": "+=0",
+          "y": "+=0",
+          "z": 0,
+          "ease": "back.in"
+        },
+        "step_5": {
+          "x": "+=0",
+          "y": "+=0",
+          "z": 0,
+          "ease": "power1.in"
+        },
+        "step_6": {
+          "x": "+=0",
+          "y": "+=0",
+          "z": -3,
+          "ease": "power1.in"
+        },
+        "easeEach": "none"
+      }
     },
     "rotation": {
       "step_1": {
