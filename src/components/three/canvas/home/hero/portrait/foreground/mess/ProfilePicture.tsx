@@ -13,13 +13,13 @@ import { default as texturesConstants } from '@/constants/assets/texturesConstan
 
 // import { profilePictureAnimations } from 'animations'
 
-export default function ProfilPicture() {
+export default function ProfilePicture() {
   const { timeline } = useGSAPTimelineContext()
 
   const portraitMap = new THREE.TextureLoader().load(texturesConstants.HOME.PORTRAIT)
   portraitMap.magFilter = THREE.NearestFilter
 
-  const portraitMeshRef = useRef<THREE.Mesh>(null!)
+  const profileRef = useRef<THREE.Mesh>(null!)
   const shaderMaterialRef = useRef<THREE.ShaderMaterial>(null!)
   const mouseDataRef = useRef<{
     opacity: number
@@ -90,7 +90,7 @@ export default function ProfilPicture() {
 
   return (
     <Plane
-      ref={portraitMeshRef}
+      ref={profileRef}
       args={[7.5, 7.5]}
       receiveShadow
       castShadow

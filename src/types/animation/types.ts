@@ -53,7 +53,7 @@ export type TDefaultValuesConstants = {
   visible: boolean
   position?: TCoordinates
   rotation?: TCoordinates
-  scale?: TCoordinates
+  scale?: number | TCoordinates
   dimensions?: TDimensions
   material?: TMaterial
 }
@@ -136,5 +136,6 @@ export type TDimensions = {
 }
 
 export type TMaterial = {
+  transparent?: boolean
   opacity?: number
 }

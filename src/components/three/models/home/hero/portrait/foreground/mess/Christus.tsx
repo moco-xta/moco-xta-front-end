@@ -8,7 +8,7 @@ import useTextureLoader from '@/hooks/useTextureLoader'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
-import { default as christusComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/christusComponentConstants.json'
+import { default as christusComponentConstants } from '@/constants/home/hero/three/portrait/foreground/mess/christusComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -24,8 +24,8 @@ export const Christus = forwardRef<THREE.Mesh, MeshProps>(function Christus(prop
 
   const chiristusMaterial = new THREE.MeshMatcapMaterial({
     matcap: christusMap,
-    transparent: christusComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT,
-    opacity: christusComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY,
+    transparent: christusComponentConstants.defaultValues.material.transparent,
+    opacity: christusComponentConstants.defaultValues.material.opacity,
   })
 
   return (

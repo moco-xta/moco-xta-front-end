@@ -38,10 +38,10 @@ export function getDefaultValues(constants: TConstants) {
       }
     } else {
       let propertyValues: TPropertyValuesDataTypes
-      if (property === 'position' || property === 'scale') {
+      if (property === 'position') {
         propertyValues = new THREE.Vector3()
         for (const [key, value] of Object.entries(propertyValue)) {
-          propertyValues[key as keyof TCoordinates] = value
+          propertyValues[key as keyof TCoordinates] = value as number
         }
         defaultValues = {
           ...defaultValues,
@@ -51,11 +51,28 @@ export function getDefaultValues(constants: TConstants) {
       } else if (property === 'rotation') {
         propertyValues = new THREE.Euler()
         for (const [key, value] of Object.entries(propertyValue)) {
-          propertyValues[key as keyof TCoordinates] = THREE.MathUtils.degToRad(value)
+          propertyValues[key as keyof TCoordinates] = THREE.MathUtils.degToRad(value as number)
         }
         defaultValues = {
           ...defaultValues,
           [property]: propertyValues,
+        }
+        // pushPropertyDefaultValues(defaultValues, property, propertyValues)
+      } else if (property === 'scale') {
+        if (typeof propertyValue === 'number') {
+          defaultValues = {
+            ...defaultValues,
+            [property]: propertyValue,
+          }
+        } else {
+          propertyValues = new THREE.Vector3()
+          for (const [key, value] of Object.entries(propertyValue)) {
+            propertyValues[key as keyof TCoordinates] = value as number
+          }
+          defaultValues = {
+            ...defaultValues,
+            [property]: propertyValues,
+          }
         }
         // pushPropertyDefaultValues(defaultValues, property, propertyValues)
       } else {
@@ -79,6 +96,8 @@ export function getDefaultValues(constants: TConstants) {
 // GET ANIMATIONS DATA
 
 export function getAnimationsData(duration: number, constants: TConstants): TAnimationsData {
+  console.log(`${constants.name} constants`, constants)
+
   let animationsData: TAnimationsData = {}
   let propertyData = {}
 
@@ -87,20 +106,22 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
     TKeyframesData,
   ][]) {
     // DEFAULT VALUES
-    for (const [key, value] of Object.entries(
-      constants.defaultValues[property] as Record<string, string | number | boolean>,
-    )) {
-      let valuesData: Record<string, string | number | boolean> = {}
-      if (property === 'position') {
-        valuesData[key] = `+=${value}` // TODO: Issue with negative numbers (check if it can be a string in constants OR typeof)
-      } else if (property === 'rotation') {
-        valuesData[key] = THREE.MathUtils.degToRad(value as unknown as number)
-      } else {
-        valuesData[key] = value as string | number | boolean
-      }
-      propertyData = {
-        ...propertyData,
-        '0%': { ...valuesData },
+    if (constants.defaultValues.hasOwnProperty(property)) {
+      for (const [key, value] of Object.entries(
+        constants.defaultValues[property] as Record<string, string | number | boolean>,
+      )) {
+        let valuesData: Record<string, string | number | boolean> = {}
+        if (property === 'position') {
+          valuesData[key] = `+=${value}` // TODO: Issue with negative numbers (check if it can be a string in constants OR typeof)
+        } else if (property === 'rotation') {
+          valuesData[key] = THREE.MathUtils.degToRad(value as unknown as number)
+        } else {
+          valuesData[key] = value as string | number | boolean
+        }
+        propertyData = {
+          ...propertyData,
+          '0%': { ...valuesData },
+        }
       }
     }
     // ANIMATIONS
