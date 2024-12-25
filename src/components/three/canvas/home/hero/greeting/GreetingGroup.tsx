@@ -5,10 +5,9 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 
 import GreetingTextsGroup from './texts/GreetingTextsGroup'
 
-import { greetingGroupAnimationsData } from '@/data/home/hero/three/greeting/greetingGroupData'
+import { getGreetingGroupAnimationsData } from '@/data/home/hero/three/greeting/greetingGroupData'
 
 import { showHide } from 'animations'
-import { Box } from '@react-three/drei'
 
 export default function GreetingGroup() {
   const { timeline } = useGSAPTimelineContext()
@@ -20,7 +19,7 @@ export default function GreetingGroup() {
       showHide({
         timeline: timeline,
         ref: greetingGroupRef.current,
-        animationsData: greetingGroupAnimationsData(),
+        animationsData: getGreetingGroupAnimationsData(),
       })
     },
     { scope: greetingGroupRef },

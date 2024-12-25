@@ -1,8 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 
-import type { TGroup } from '@/types/animation/three/componentsTypes'
-
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import HiText from './HiText'
@@ -11,14 +9,14 @@ import FedericoText from './FedericoText'
 
 import { setGreetingTextsPositions } from '@/helpers/animations/heroAnimationsHelpers'
 
-import { greetingTextsGroupAnimationsData } from '@/data/home/hero/three/greeting/texts/greetingTextsGroupData'
+import { getGreetingTextsGroupAnimationsData } from '@/data/home/hero/three/greeting/texts/greetingTextsGroupData'
 
 import { animate } from 'animations'
 
 export default function GreetingTextsGroup() {
   const { timeline } = useGSAPTimelineContext()
 
-  const greetingTextsGroupRef = useRef<TGroup>(null!)
+  const greetingTextsGroupRef = useRef<THREE.Group>(null!)
 
   useLayoutEffect(() => {
     setGreetingTextsPositions(greetingTextsGroupRef)
@@ -29,7 +27,7 @@ export default function GreetingTextsGroup() {
       animate({
         timeline: timeline,
         ref: greetingTextsGroupRef.current,
-        animationsData: greetingTextsGroupAnimationsData(),
+        animationsData: getGreetingTextsGroupAnimationsData(),
       })
     },
     { scope: greetingTextsGroupRef },

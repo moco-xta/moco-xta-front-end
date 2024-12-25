@@ -1,24 +1,14 @@
 import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
 import type { TGetAnimationsDataSignature } from '@/types/animation/helpers'
 
-import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
+import { getDefaultValues } from '@/helpers/animations/animationsHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as hiTextConstants } from '@/constants/home/hero/three/greeting/texts/hiTextConstants.json'
 
-export const hiTextDefaultValues: TDefaultValuesData = {
+export const getHiTextDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(hiTextConstants),
 }
-
-/* export function getHiTextAnimationsData(index: number): TElementData {
-  return {
-    label: greetingGroupConstants.label,
-    duration: greetingGroupConstants.duration,
-    animations: {
-      ...getAnimationsData(greetingGroupConstants.duration, hiTextConstants),
-    },
-  }
-} */
 
 export function getHiTextAnimationsData({
   textLengthRef,

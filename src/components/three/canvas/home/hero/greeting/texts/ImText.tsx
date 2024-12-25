@@ -11,9 +11,9 @@ import useSplitted3DText from '@/hooks/animations/useSplitted3DText'
 
 import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
-import { greetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
+import { getGreetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
-  imTextDefaultValues,
+  getImTextDefaultValues,
   getImTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/imTextData'
 
@@ -47,12 +47,12 @@ export default function ImText() {
     <Word3D
       ref={textGroupRef}
       keySuffix={imTextConstants.name}
-      position={imTextDefaultValues.position}
-      {...greetingTextsDefaultValues.geometry}
+      position={getImTextDefaultValues.position}
+      {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
     >
-      <meshStandardMaterial {...greetingTextsDefaultValues.material} />
+      <meshStandardMaterial {...getGreetingTextsDefaultValues.material} />
     </Word3D>
   )
 }

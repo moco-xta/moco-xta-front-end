@@ -10,9 +10,9 @@ import useSplitted3DText from '@/hooks/animations/useSplitted3DText'
 
 import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
-import { greetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
+import { getGreetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
-  federicoTextDefaultValues,
+  getFedericoTextDefaultValues,
   getFedericoTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/federicoTextData'
 
@@ -46,12 +46,12 @@ export default function FedericoText() {
     <Word3D
       ref={textGroupRef}
       keySuffix={federicoTextConstants.name}
-      position={federicoTextDefaultValues.position}
-      {...greetingTextsDefaultValues.geometry}
+      position={getFedericoTextDefaultValues.position}
+      {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
     >
-      <meshStandardMaterial {...greetingTextsDefaultValues.material} />
+      <meshStandardMaterial {...getGreetingTextsDefaultValues.material} />
     </Word3D>
   )
 }

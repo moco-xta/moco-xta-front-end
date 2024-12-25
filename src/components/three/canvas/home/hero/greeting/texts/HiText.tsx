@@ -11,11 +11,10 @@ import useSplitted3DText from '@/hooks/animations/useSplitted3DText'
 
 import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
-import { greetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
+import { getGreetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
   getHiTextAnimationsData,
-  hiTextDefaultValues,
-  // getHiTextAnimationsData,
+  getHiTextDefaultValues,
 } from '@/data/home/hero/three/greeting/texts/hiTextData'
 
 import { default as hiTextConstants } from '@/constants/home/hero/three/greeting/texts/hiTextConstants.json'
@@ -49,12 +48,12 @@ export default function HiText() {
     <Word3D
       ref={textGroupRef}
       keySuffix={hiTextConstants.name}
-      position={hiTextDefaultValues.position}
-      {...greetingTextsDefaultValues.geometry}
+      position={getHiTextDefaultValues.position}
+      {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
     >
-      <meshStandardMaterial {...greetingTextsDefaultValues.material} />
+      <meshStandardMaterial {...getGreetingTextsDefaultValues.material} />
     </Word3D>
   )
 }

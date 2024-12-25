@@ -6,7 +6,7 @@ import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animat
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as imTextConstants } from '@/constants/home/hero/three/greeting/texts/imTextConstants.json'
 
-export const imTextDefaultValues: TDefaultValuesData = {
+export const getImTextDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(imTextConstants),
 }
 

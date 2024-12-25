@@ -1,29 +1,13 @@
-// import * as THREE from 'three'
-
 import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
 import type { TGetAnimationsDataSignature } from '@/types/animation/helpers'
 
-import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
+import { getDefaultValues } from '@/helpers/animations/animationsHelpers'
 import { getRandomInt } from '@/helpers/mathHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as federicoTextConstants } from '@/constants/home/hero/three/greeting/texts/federicoTextConstants.json'
 
-/* export const federicoTextDefaultValues: TDefaultValues<TMesh> = {
-  keySuffix: federicoTextConstants.defaultValues.keySuffix,
-  position: !federicoTextConstants.defaultValues.position
-    ? new THREE.Vector3()
-    : new THREE.Vector3(
-        federicoTextConstants.defaultValues.position.x,
-        federicoTextConstants.defaultValues.position.y,
-        federicoTextConstants.defaultValues.position.z,
-      ),
-  material: {
-    opacity: federicoTextConstants.defaultValues.material.opacity,
-  },
-} */
-
-export const federicoTextDefaultValues: TDefaultValuesData = {
+export const getFedericoTextDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(federicoTextConstants),
 }
 

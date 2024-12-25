@@ -1,14 +1,14 @@
-import type { TElementData, TDefaultValuesData } from '@/types/animation/dataTypes'
+import type { TElementData, TDefaultValuesData } from '@/types/animation/types'
 
 import { getDefaultValues } from '@/helpers/animations/animationsHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 
-export const greetingGroupDefaultValues: TDefaultValuesData = {
+export const getGreetingGroupDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(greetingGroupConstants),
 }
 
-export function greetingGroupAnimationsData(): TElementData {
+export function getGreetingGroupAnimationsData(): TElementData {
   return {
     label: greetingGroupConstants.label,
     duration: greetingGroupConstants.duration,

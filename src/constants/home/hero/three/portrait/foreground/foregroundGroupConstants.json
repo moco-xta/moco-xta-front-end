@@ -1,0 +1,34 @@
+{
+  "name": "foreground",
+  "duration": 4,
+  "label": "portrait",
+  "defaultValues": {
+    "visible": true,
+    "position": {
+      "x": 0,
+      "y": -10,
+      "z": 6
+    }
+  },
+  "animations": {
+    "position": {
+      "keyframes": {
+        "step_1": {
+          "z": 0
+        },
+        "easeEach": "power2.out"
+      }
+    },
+    "rotation": {
+      "keyframes": {
+        "step_2": {
+          "z": 0
+        },
+        "step_3": {
+          "z": -180
+        },
+        "easeEach": "power2.out"
+      }
+    }
+  }
+}

@@ -5,11 +5,11 @@ import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animat
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as greetingTextsGroupConstants } from '@/constants/home/hero/three/greeting/texts/greetingTextsGroupConstants.json'
 
-export const greetingTextsGroupDefaultValues: TDefaultValuesData = {
+export const getGreetingTextsGroupDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(greetingTextsGroupConstants),
 }
 
-export function greetingTextsGroupAnimationsData(): TElementData {
+export function getGreetingTextsGroupAnimationsData(): TElementData {
   return {
     label: greetingGroupConstants.label,
     duration: greetingGroupConstants.duration,
