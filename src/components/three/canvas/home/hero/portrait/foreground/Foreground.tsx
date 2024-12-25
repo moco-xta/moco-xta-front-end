@@ -1,8 +1,9 @@
 import React, { useRef } from 'react'
-import { Box } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
+
+import MessGroup from './mess/MessGroup'
 
 import {
   getForegroundDefaultValues,
@@ -30,10 +31,9 @@ export default function ForegroundGroup() {
   return (
     <group
       ref={foregroundGroupRef}
-      position={getForegroundDefaultValues.position}
+      {...getForegroundDefaultValues}
     >
-      <Box />
-      {/* <AlsoKnowAsText /> */}
+      <MessGroup />
     </group>
   )
 }
