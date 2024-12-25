@@ -1,11 +1,16 @@
 {
-  "name": "mess_group",
+  "name": "also_know_as_texts_group",
   "defaultValues": {
     "visible": true,
     "position": {
       "x": 0,
       "y": 0,
       "z": 0
+    },
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 180
     }
   }
 }

@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react'
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import MessGroup from './mess/MessGroup'
+import AlsoKnowAsTextsGroup from './also_know_as/texts/AlsoKnowAsTextsGroup'
 
 import {
   getForegroundDefaultValues,
@@ -34,6 +35,7 @@ export default function ForegroundGroup() {
       {...getForegroundDefaultValues}
     >
       <MessGroup />
+      <AlsoKnowAsTextsGroup />
     </group>
   )
 }
