@@ -1,6 +1,7 @@
 {
+  "name": "i_m_text",
   "defaultValues": {
-    "keySuffix": "i_m_text",
+    "visible": true,
     "position": {
       "x": 0,
       "y": 0,
@@ -12,27 +13,32 @@
   },
   "animations": {
     "position": {
-      "20%": {
-        "x": 2.2,
-        "y": 1.6,
-        "z": -5
-      },
-      "40%": {
-        "z": 0,
-        "ease": "back.in"
-      },
-      "easeEach": "none"
+      "keyframes": {
+        "step_1": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "ease": "back.in"
+        },
+        "step_3": {
+          "z": 0,
+          "ease": "back.in"
+        },
+        "easeEach": "none"
+      }
     },
     "material": {
-      "30%": {
-        "opacity": 0,
-        "ease": "power1.in"
-      },
-      "40%": {
-        "opacity": 1,
-        "ease": "power1.in"
-      },
-      "easeEach": "none"
+      "keyframes": {
+        "step_1.5": {
+          "opacity": 0,
+          "ease": "power1.in"
+        },
+        "step_2": {
+          "opacity": 1,
+          "ease": "power1.in"
+        },
+        "easeEach": "none"
+      }
     },
     "stagger": 0.125
   }

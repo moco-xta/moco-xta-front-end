@@ -1,31 +1,19 @@
-import * as THREE from 'three'
+import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
+import type { TGetAnimationsDataSignature } from '@/types/animation/helpers'
 
-import type { TMesh } from '@/types/animation/three/componentsTypes'
-import type {
-  TDefaultValues,
-  TElementData,
-  TGetAnimationsDataSignature,
-} from '@/types/animation/dataTypes'
+import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as imTextConstants } from '@/constants/home/hero/three/greeting/texts/imTextConstants.json'
 
-export const imTextDefaultValues: TDefaultValues<TMesh> = {
-  keySuffix: imTextConstants.defaultValues.keySuffix,
-  position: new THREE.Vector3(
-    imTextConstants.defaultValues.position.x,
-    imTextConstants.defaultValues.position.y,
-    imTextConstants.defaultValues.position.z,
-  ),
-  material: {
-    opacity: imTextConstants.defaultValues.material.opacity,
-  },
+export const imTextDefaultValues: TDefaultValuesData = {
+  ...getDefaultValues(imTextConstants),
 }
 
 export function getImTextAnimationsData({
   textLengthRef,
   index,
-}: TGetAnimationsDataSignature): TElementData<TMesh> {
+}: TGetAnimationsDataSignature): TElementData {
   return {
     label: `${greetingGroupConstants.label}+=${index! * imTextConstants.animations.stagger}`,
     duration: greetingGroupConstants.duration,
@@ -33,27 +21,27 @@ export function getImTextAnimationsData({
       position: {
         keyframes: {
           '20%': {
-            x: imTextConstants.animations.position['20%'].x,
-            y: imTextConstants.animations.position['20%'].y,
-            z: imTextConstants.animations.position['20%'].z,
+            x: imTextConstants.animations.position.keyframes['step_1'].x,
+            y: imTextConstants.animations.position.keyframes['step_1'].y,
+            z: imTextConstants.animations.position.keyframes['step_1'].z,
           },
           '40%': {
             x: textLengthRef!.slice(0, index).reduce((a, b) => a + b, 0),
-            z: imTextConstants.animations.position['40%'].z,
+            z: imTextConstants.animations.position.keyframes['step_1'].z,
           },
-          easeEach: imTextConstants.animations.position.easeEach,
+          easeEach: imTextConstants.animations.position.keyframes.easeEach,
         },
       },
       material: {
         keyframes: {
           '30%': {
-            opacity: imTextConstants.animations.material['30%'].opacity,
+            opacity: imTextConstants.animations.material.keyframes['step_1.5'].opacity,
           },
           '40%': {
-            opacity: imTextConstants.animations.material['40%'].opacity,
-            ease: imTextConstants.animations.material['40%'].ease,
+            opacity: imTextConstants.animations.material.keyframes['step_2'].opacity,
+            ease: imTextConstants.animations.material.keyframes['step_2'].ease,
           },
-          easeEach: imTextConstants.animations.material.easeEach,
+          easeEach: imTextConstants.animations.material.keyframes.easeEach,
         },
       },
     },

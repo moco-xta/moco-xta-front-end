@@ -111,9 +111,9 @@ type TButton = ComponentPropsWithRef<'button'> & {
 // type TButton = ComponentPropsWithoutRef<"button">
 
 function Button({ timeline, ...rest }: TButton) {
-  useEffect(() => {
+  /* useEffect(() => {
     console.log('timeline', timeline)
-  }, [timeline])
+  }, [timeline]) */
 
   return <button {...rest}>'Click me!'</button>
 }
@@ -143,8 +143,8 @@ type TGenericButton<T extends number | string> = {
 }
 
 function GenericButton<T extends number | string>({ data, dataHistory }: TGenericButton<T>) {
-  console.log('data', data)
-  console.log('dataHistory', dataHistory)
+  /* console.log('data', data)
+  console.log('dataHistory', dataHistory) */
 
   return <button>Click me!</button>
 }

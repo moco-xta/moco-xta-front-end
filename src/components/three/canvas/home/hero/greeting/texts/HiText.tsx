@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
@@ -13,9 +13,12 @@ import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
 import { greetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
+  getHiTextAnimationsData,
   hiTextDefaultValues,
   // getHiTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/hiTextData'
+
+import { default as hiTextConstants } from '@/constants/home/hero/three/greeting/texts/hiTextConstants.json'
 
 import { animate } from '@/animations/index'
 
@@ -24,13 +27,14 @@ export default function HiText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.HI'))
 
-  /* useGSAP(
+  useGSAP(
     () => {
       const letters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       letters.forEach((letterRef, index) => {
         animate({
           timeline: timeline,
           ref: letterRef,
+          // animationsData: getHiTextAnimationsData(index),
           animationsData: getHiTextAnimationsData({
             textLengthRef: textLengthRef.current,
             index: index,
@@ -39,16 +43,12 @@ export default function HiText() {
       })
     },
     { scope: textGroupRef },
-  ) */
-
-  useEffect(() => {
-    console.log('hiTextDefaultValues', hiTextDefaultValues)
-  }, [hiTextDefaultValues])
+  )
 
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={hiTextDefaultValues.text!.keySuffix!}
+      keySuffix={hiTextConstants.name}
       position={hiTextDefaultValues.position}
       {...greetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}

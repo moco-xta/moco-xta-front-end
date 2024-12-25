@@ -1,108 +1,17 @@
-// TIMELINE
-
-export type TTimelineData = {
-  timeScale?: number
-  delay?: number
-  labels?: TLabel[]
-}
-
-type TLabel = {
-  name: string
-  position?: number | string
-}
-
-// PROPERTIES
-
-export type TPropertiesTypes =
-  | 'visible'
-  | 'position'
-  | 'rotation'
-  | 'scale'
-  | 'dimensions'
-  | 'material'
-
-// CONSTANTS
-
-export type TConstants = {
-  name: string
-  label?: string
-  duration?: number
-  defaultValues: TDefaultValuesConstants
-  animations?: TAnimationsConstants
-}
-
-// DEFAULT VALUES [CONSTANTS]
-
-export type TDefaultValuesConstants = {
-  visible: boolean
-  position?: TCoordinates
-  rotation?: TCoordinates
-  scale?: TCoordinates
-  dimensions?: TDimensions
-  material?: TMaterial
-}
-
 // ANIMATIONS [CONSTANTS]
 
-export type TAnimationsConstants = Partial<Record<TPropertiesTypes, { 
-  keyframes: Record<TKeyframeKey, string | number | boolean>
-}>>
-
-// DATA
-
-// DEFAULT VALUES [DATA]
-
-export type TDefaultValuesData = {
-  visible: boolean
-  position?: THREE.Vector3
-  rotation?: THREE.Euler
-  scale?: THREE.Vector3
-  dimensions?: TDimensions
-  material?: TMaterial
-}
-
-// ELEMENT [DATA]
-
-export type TElementData = {
-  label?: string
-  duration: string | number
-  animations?: TAnimationsData
-}
-
-// ANIMATIONS [DATA]
-
-export type TAnimationsData = Record<TPropertiesTypes, TKeyframesData>
-
-export type TKeyframesData = {
-  keyframes: Record<TKeyframeKey, Record<TPropertyParameters, string | number>> & {
-    easeEach?: string
-  }
-}
+export type TAnimationsConstants = Partial<
+  Record<
+    TPropertiesTypes,
+    {
+      keyframes: Record<TKeyframeKey, string | number | boolean>
+    }
+  >
+>
 
 // GLOBAL
 
-export type TCoordinates = {
-  x?: number
-  y?: number
-  z?: number
-}
-
-export type TDimensions = {
-  width?: number
-  height?: number
-  depth?: number
-}
-
-export type TMaterial = {
-  opacity?: number
-}
-
-type TKeyframeKey = `step_${string}` | `${string}%` | 'easeEach'
-
 /* type TPropertyParametersConstants = keyof TCoordinates | keyof TDimensions | keyof TMaterial */
-type TPropertyParameters = keyof TCoordinates | keyof TDimensions | keyof TMaterial | 'ease'
-
-export type TPropertyValuesTypes = THREE.Vector3 | THREE.Euler | TDimensions
 
 // #################################################################
 // #################################################################

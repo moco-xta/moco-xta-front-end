@@ -1,8 +1,6 @@
 import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 
-import type { TGroup } from '@/types/animation/three/componentsTypes'
-
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import GreetingTextsGroup from './texts/GreetingTextsGroup'
@@ -10,11 +8,12 @@ import GreetingTextsGroup from './texts/GreetingTextsGroup'
 import { greetingGroupAnimationsData } from '@/data/home/hero/three/greeting/greetingGroupData'
 
 import { showHide } from 'animations'
+import { Box } from '@react-three/drei'
 
 export default function GreetingGroup() {
   const { timeline } = useGSAPTimelineContext()
 
-  const greetingGroupRef = useRef<TGroup>(null!)
+  const greetingGroupRef = useRef<THREE.Group>(null!)
 
   useGSAP(
     () => {

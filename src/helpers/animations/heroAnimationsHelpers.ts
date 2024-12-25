@@ -1,18 +1,17 @@
 import * as THREE from 'three'
 import { gsap } from 'gsap'
 
-import type { TGroup } from '@/types/animation/three/componentsTypes'
+import { TDimensions } from '@/types/animation/types'
 import type { MutableRefObject } from 'react'
-import { TDimensionsData } from '@/types/animation/three/dataTypes'
 
 import { greetingTextsGroupDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsGroupData'
 
 // SET GREETING TEXTS POSITIONS
 
-export function setGreetingTextsPositions(greetingTextsGroupRef: MutableRefObject<TGroup>) {
+export function setGreetingTextsPositions(greetingTextsGroupRef: MutableRefObject<THREE.Group>) {
   const MARGIN = 0.75
 
-  const texts: TGroup[] = gsap.utils.toArray(greetingTextsGroupRef.current.children)
+  const texts: THREE.Group[] = gsap.utils.toArray(greetingTextsGroupRef.current.children)
 
   const greetingTextsBoundingBoxes: THREE.Box3[] = []
   texts.forEach((child) => {
@@ -21,7 +20,7 @@ export function setGreetingTextsPositions(greetingTextsGroupRef: MutableRefObjec
     greetingTextsBoundingBoxes.push(boundingBox)
   })
 
-  const greetingTextsDimensions: TDimensionsData[] = []
+  const greetingTextsDimensions: TDimensions[] = []
   greetingTextsBoundingBoxes.forEach((boundingBox) => {
     greetingTextsDimensions.push({
       width: boundingBox.max.x - boundingBox.min.x,
@@ -35,13 +34,18 @@ export function setGreetingTextsPositions(greetingTextsGroupRef: MutableRefObjec
   const scaleLineUp =
     textSpaceUp / (greetingTextsDimensions[0].width! + greetingTextsDimensions[1].width!)
 
+  texts[0].matrixWorldNeedsUpdate = true
   texts[0].scale.set(scaleLineUp, scaleLineUp, greetingTextsGroupDefaultValues.dimensions!.depth!)
+  texts[0].updateMatrix()
 
+  texts[1].matrixWorldNeedsUpdate = true
   const hiTextBoundingBox = new THREE.Box3()
   hiTextBoundingBox.setFromObject(texts[0])
   texts[1].position.x = hiTextBoundingBox.min.x + hiTextBoundingBox.max.x + MARGIN
   texts[1].scale.set(scaleLineUp, scaleLineUp, greetingTextsGroupDefaultValues.dimensions!.depth!)
+  texts[1].updateMatrix()
 
+  texts[2].matrixWorldNeedsUpdate = true
   const scaleLineDown =
     greetingTextsGroupDefaultValues.dimensions!.width! / greetingTextsDimensions[2].width!
   texts[2].position.set(0, -5, 0)
@@ -50,8 +54,9 @@ export function setGreetingTextsPositions(greetingTextsGroupRef: MutableRefObjec
     scaleLineDown,
     greetingTextsGroupDefaultValues.dimensions!.depth!,
   )
+  texts[2].updateMatrix()
 
-  const newTexts: TGroup[] = gsap.utils.toArray(greetingTextsGroupRef.current.children)
+  const newTexts: THREE.Group[] = gsap.utils.toArray(greetingTextsGroupRef.current.children)
 
   const newGreetingTextsBoundingBoxes: THREE.Box3[] = []
   newTexts.forEach((child) => {
@@ -70,7 +75,7 @@ export function setGreetingTextsPositions(greetingTextsGroupRef: MutableRefObjec
   greetingTextsGroupBoundingBox.setFromObject(greetingTextsGroupRef.current)
   greetingTextsGroupRef.current.position.set(
     -greetingTextsGroupDefaultValues.dimensions!.width! / 2,
-    greetingTextsGroupBoundingBox.min.y + greetingTextsGroupBoundingBox.max.y,
+    greetingTextsGroupBoundingBox.min.y + greetingTextsGroupBoundingBox.max.y - MARGIN / 2,
     0,
   )
 }

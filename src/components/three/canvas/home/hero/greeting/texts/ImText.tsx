@@ -17,6 +17,8 @@ import {
   getImTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/imTextData'
 
+import { default as imTextConstants } from '@/constants/home/hero/three/greeting/texts/imTextConstants.json'
+
 import { animate } from '@/animations/index'
 
 export default function ImText() {
@@ -24,7 +26,7 @@ export default function ImText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.I_M'))
 
-  /* useGSAP(
+  useGSAP(
     () => {
       const letters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       letters.forEach((letterRef, index) => {
@@ -39,13 +41,13 @@ export default function ImText() {
       })
     },
     { scope: textGroupRef },
-  ) */
+  )
 
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={imTextDefaultValues.keySuffix!}
-      // position={imTextDefaultValues.position}
+      keySuffix={imTextConstants.name}
+      position={imTextDefaultValues.position}
       {...greetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}

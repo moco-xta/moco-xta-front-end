@@ -8,9 +8,9 @@ export default function useLocation() {
   const dispatch = useDispatch<AppDispatch>()
   const { location } = useSelector((state: RootState) => state.about)
 
-  useEffect(() => {
+  /* useEffect(() => {
     console.log(`Latitude: ${location.latitude}, Longitude: ${location.longitude}`)
-  }, [location.latitude, location.longitude])
+  }, [location.latitude, location.longitude]) */
 
   useEffect(() => {
     if (navigator.geolocation) {

@@ -1,18 +1,15 @@
-import * as THREE from 'three'
+// import * as THREE from 'three'
 
-import type { TMesh } from '@/types/animation/three/componentsTypes'
-import type {
-  TDefaultValues,
-  TElementData,
-  TGetAnimationsDataSignature,
-} from '@/types/animation/dataTypes'
+import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
+import type { TGetAnimationsDataSignature } from '@/types/animation/helpers'
 
+import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
 import { getRandomInt } from '@/helpers/mathHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as federicoTextConstants } from '@/constants/home/hero/three/greeting/texts/federicoTextConstants.json'
 
-export const federicoTextDefaultValues: TDefaultValues<TMesh> = {
+/* export const federicoTextDefaultValues: TDefaultValues<TMesh> = {
   keySuffix: federicoTextConstants.defaultValues.keySuffix,
   position: !federicoTextConstants.defaultValues.position
     ? new THREE.Vector3()
@@ -24,13 +21,16 @@ export const federicoTextDefaultValues: TDefaultValues<TMesh> = {
   material: {
     opacity: federicoTextConstants.defaultValues.material.opacity,
   },
+} */
+
+export const federicoTextDefaultValues: TDefaultValuesData = {
+  ...getDefaultValues(federicoTextConstants),
 }
 
 export function getFedericoTextAnimationsData({
-  textGroupRef,
   textLengthRef,
   index,
-}: TGetAnimationsDataSignature): TElementData<TMesh> {
+}: TGetAnimationsDataSignature): TElementData {
   return {
     label: `${greetingGroupConstants.label}+=${index! * federicoTextConstants.animations.stagger}`,
     duration: greetingGroupConstants.duration,
@@ -42,35 +42,35 @@ export function getFedericoTextAnimationsData({
           },
           '40%': {
             x: getRandomInt({
-              min: federicoTextConstants.animations.position['40%'].x.min,
-              max: federicoTextConstants.animations.position['40%'].x.max,
-              decimal: federicoTextConstants.animations.position['40%'].x.decimal,
+              min: federicoTextConstants.animations.position.keyframes['step_2'].x.min,
+              max: federicoTextConstants.animations.position.keyframes['step_2'].x.max,
+              decimal: federicoTextConstants.animations.position.keyframes['step_2'].x.decimal,
             }),
             z: getRandomInt({
-              min: federicoTextConstants.animations.position['40%'].z.min,
-              max: federicoTextConstants.animations.position['40%'].z.max,
-              decimal: federicoTextConstants.animations.position['40%'].z.decimal,
+              min: federicoTextConstants.animations.position.keyframes['step_2'].z.min,
+              max: federicoTextConstants.animations.position.keyframes['step_2'].z.max,
+              decimal: federicoTextConstants.animations.position.keyframes['step_2'].z.decimal,
             }),
           },
           '60%': {
             x: /* textGroupRef!.position.x +  */ textLengthRef!
               .slice(0, index)
               .reduce((a, b) => a + b, 0),
-            z: federicoTextConstants.animations.position['60%'].z,
+            z: federicoTextConstants.animations.position.keyframes['step_3'].z,
           },
-          easeEach: federicoTextConstants.animations.position.easeEach,
+          easeEach: federicoTextConstants.animations.position.keyframes.easeEach,
         },
       },
       material: {
         keyframes: {
           '50%': {
-            opacity: federicoTextConstants.animations.material['50%'].opacity,
+            opacity: federicoTextConstants.animations.material.keyframes['step_2'].opacity,
           },
           '60%': {
-            opacity: federicoTextConstants.animations.material['60%'].opacity,
-            ease: federicoTextConstants.animations.material['60%'].ease,
+            opacity: federicoTextConstants.animations.material.keyframes['step_3'].opacity,
+            ease: federicoTextConstants.animations.material.keyframes['step_3'].ease,
           },
-          easeEach: federicoTextConstants.animations.material.easeEach,
+          easeEach: federicoTextConstants.animations.material.keyframes.easeEach,
         },
       },
     },

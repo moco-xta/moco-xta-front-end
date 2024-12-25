@@ -16,13 +16,15 @@ import {
   getFedericoTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/federicoTextData'
 
+import { default as federicoTextConstants } from '@/constants/home/hero/three/greeting/texts/federicoTextConstants.json'
+
 import { animate } from '@/animations/index'
 
 export default function FedericoText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText('Federico')
 
-  /* useGSAP(
+  useGSAP(
     () => {
       const letters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       letters.forEach((letterRef, index) => {
@@ -38,12 +40,12 @@ export default function FedericoText() {
       })
     },
     { scope: textGroupRef },
-  ) */
+  )
 
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={federicoTextDefaultValues.keySuffix!}
+      keySuffix={federicoTextConstants.name}
       position={federicoTextDefaultValues.position}
       {...greetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
