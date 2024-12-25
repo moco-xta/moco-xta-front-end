@@ -4,6 +4,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import { default as ganeshComponentConstants } from '@/constants/home/hero/three/portrait/foreground/mess/ganeshComponentConstants.json'
 
 import { MeshProps } from '@react-three/fiber'
 
@@ -22,8 +23,9 @@ export const Ganesh = forwardRef<THREE.Mesh, MeshProps>(function Ganesh(props, r
   ) as GLTFResult
 
   useLayoutEffect(() => {
-    materials.ganesh_material.transparent = true
-    materials.ganesh_material.opacity = 0
+    materials.ganesh_material.transparent =
+      ganeshComponentConstants.defaultValues.material.transparent
+    materials.ganesh_material.opacity = ganeshComponentConstants.defaultValues.material.opacity
   }, [materials])
 
   return (
