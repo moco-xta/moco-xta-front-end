@@ -1,3 +1,5 @@
+import { MutableRefObject } from 'react'
+
 // #################################
 // ##  CONTEXT  ####################
 // #################################
@@ -28,6 +30,7 @@ export type TTimelineData = {
 // #################################
 
 export type TPropertiesTypes =
+  | 'name'
   | 'visible'
   | 'position'
   | 'rotation'
@@ -40,7 +43,6 @@ export type TPropertiesTypes =
 // #################################
 
 export type TConstants = {
-  name: string
   label?: string
   duration?: number
   defaultValues: TDefaultValuesConstants
@@ -50,10 +52,11 @@ export type TConstants = {
 // DEFAULT VALUES [CONSTANTS]
 
 export type TDefaultValuesConstants = {
+  name: string
   visible: boolean
-  position?: TCoordinates
-  rotation?: TCoordinates
-  scale?: number | TCoordinates
+  position?: TCoordinatesData
+  rotation?: TCoordinatesData
+  scale?: number | number[] | TCoordinatesData
   dimensions?: TDimensions
   material?: TMaterial
 }
@@ -76,6 +79,7 @@ type TKeyframes = {
 // DEFAULT VALUES [DATA]
 
 export type TDefaultValuesData = {
+  name: string
   visible: boolean
   position?: THREE.Vector3
   rotation?: THREE.Euler
@@ -106,6 +110,31 @@ export type TKeyframesData = {
       }
 }
 
+// ###############################
+// ##  TEXT  #####################
+// ###############################
+
+export type TText3DData = {
+  geometry: TTextGeometry
+  material: TMaterial
+}
+
+export type TWord3DData = TTextGeometry & {
+  keySuffix: string
+  position?: THREE.Vector3
+  splittedWord: string[]
+  lengthRef?: MutableRefObject<number[]>
+  children: JSX.Element
+}
+
+export type TLetter3DData = TTextGeometry & {
+  keySuffix: string
+  lengthRef?: MutableRefObject<number[]>
+  letter: string
+  index?: number
+  children: JSX.Element
+}
+
 // #################################
 // ##  GLOBAL  #####################
 // #################################
@@ -116,6 +145,8 @@ type TLabel = {
 }
 
 type TKeyframeKey = `step_${string}` | `${string}%` | 'easeEach'
+
+export type TCoordinatesData = TCoordinates | TCoordinates[]
 
 export type TCoordinates = {
   x?: number
@@ -135,7 +166,22 @@ export type TDimensions = {
   depth?: number
 }
 
+type TTextGeometry = {
+  font: string
+  size?: number
+  depth?: number
+  center?: boolean
+  spaceWidth?: number
+}
+
 export type TMaterial = {
+  color?: string | THREE.Color
+  roughness?: number
   transparent?: boolean
   opacity?: number
+  emissive?: string | THREE.Color
+  emissive_intensity?: number
+  wireframe?: boolean
+  side?: THREE.Side
+  needsUpdate?: boolean
 }

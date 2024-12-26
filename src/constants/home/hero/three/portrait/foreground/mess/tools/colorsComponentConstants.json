@@ -1,6 +1,6 @@
 {
-  "name": "colors_component",
   "defaultValues": {
+    "name": "colors_component",
     "visible": true,
     "position": {
       "x": 1,

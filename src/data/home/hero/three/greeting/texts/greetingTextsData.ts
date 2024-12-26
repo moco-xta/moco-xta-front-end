@@ -1,11 +1,10 @@
 import * as THREE from 'three'
 
-import type { Text3DData } from '@/types/animation/three/dataTypes'
+import type { TText3DData } from '@/types/animation/types'
 
-import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as greetingTextsConstants } from '@/constants/home/hero/three/greeting/texts/greetingTextsConstants.json'
 
-export const getGreetingTextsDefaultValues: Text3DData = {
+export const getGreetingTextsDefaultValues: TText3DData = {
   geometry: {
     font: greetingTextsConstants.geometry.font,
     // size: greetingTextsConstants.geometry.size,

@@ -17,8 +17,6 @@ import {
   getImTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/imTextData'
 
-import { default as imTextConstants } from '@/constants/home/hero/three/greeting/texts/imTextConstants.json'
-
 import { animate } from '@/animations/index'
 
 export default function ImText() {
@@ -46,7 +44,7 @@ export default function ImText() {
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={imTextConstants.name}
+      keySuffix={getImTextDefaultValues.name}
       position={getImTextDefaultValues.position}
       {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}

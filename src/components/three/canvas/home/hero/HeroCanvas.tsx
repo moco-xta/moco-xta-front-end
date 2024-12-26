@@ -8,16 +8,18 @@ import GreetingGroup from './greeting/GreetingGroup'
 import PortraitGroup from './portrait/PortraitGroup'
 
 import { canvasDefaultValues } from '@/data/home/hero/three/canvasData'
+import AlsoKnowAsGroup from './also_know_as/AlsoKnowAsGroup'
 
 export default function HeroCanvas() {
   return (
     <Canvas {...canvasDefaultValues}>
       <Camera />
       <Lights />
-      {/* <OrbitControls /> */}
+      <OrbitControls />
       <Suspense fallback={null}>
         <GreetingGroup />
         <PortraitGroup />
+        <AlsoKnowAsGroup />
       </Suspense>
     </Canvas>
   )

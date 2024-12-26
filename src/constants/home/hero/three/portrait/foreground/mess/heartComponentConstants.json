@@ -1,6 +1,6 @@
 {
-  "name": "heart_component",
   "defaultValues": {
+    "name": "heart_component",
     "visible": true,
     "position": {
       "x": 1.5,

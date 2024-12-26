@@ -1,8 +1,8 @@
 {
-  "name": "foreground_group",
   "duration": 4,
   "label": "portrait",
   "defaultValues": {
+    "name": "foreground_group",
     "visible": true,
     "position": {
       "x": 0,

@@ -1,6 +1,6 @@
 {
-  "name": "spray_component",
   "defaultValues": {
+    "name": "spray_component",
     "visible": true,
     "material": {
       "transparent": true,

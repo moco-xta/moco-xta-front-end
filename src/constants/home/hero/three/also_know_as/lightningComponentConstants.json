@@ -1,0 +1,37 @@
+{
+  "defaultValues": {
+    "name": "lightning_component",
+    "visible": true,
+    "scale": 2.5,
+    "material": {
+      "color": "#ffffff",
+      "emissive": "#ffffff",
+      "emissive_intensity": 1
+    }
+  },
+  "animations": {
+    "material": {
+      "keyframes": {
+        "step_1": {
+          "emissive_intensity": 60
+        },
+        "step_2": {
+          "emissive_intensity": 40
+        },
+        "step_3": {
+          "emissive_intensity": 0
+        },
+        "step_4": {
+          "emissive_intensity": 50
+        },
+        "step_5": {
+          "emissive_intensity": 20
+        },
+        "step_10": {
+          "emissive_intensity": 0
+        },
+        "easeEach": "none"
+      }
+    }
+  }
+}

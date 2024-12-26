@@ -1,11 +1,14 @@
 {
   "defaultValues": {
-    "name": "mess_group",
     "visible": true,
+    "name": "know_text",
     "position": {
       "x": 0,
       "y": 0,
-      "z": 0
+      "z": 1
+    },
+    "material": {
+      "opacity": 0
     }
   }
 }

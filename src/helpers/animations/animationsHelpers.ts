@@ -21,7 +21,7 @@ import type {
   }
 } */
 
-export function getDefaultValues(constants: TConstants) {
+export function getDefaultValues(constants: TConstants): TDefaultValuesData {
   // console.log(`${constants.name} constants`, constants)
 
   let defaultValues = {} as TDefaultValuesData
@@ -89,14 +89,14 @@ export function getDefaultValues(constants: TConstants) {
     }
   }
 
-  console.log(`${constants.name} defaultValues`, defaultValues)
+  console.log(`${constants.defaultValues.name} defaultValues`, defaultValues)
   return defaultValues
 }
 
 // GET ANIMATIONS DATA
 
 export function getAnimationsData(duration: number, constants: TConstants): TAnimationsData {
-  console.log(`${constants.name} constants`, constants)
+  console.log(`${constants.defaultValues.name} constants`, constants)
 
   let animationsData: TAnimationsData = {}
   let propertyData = {}
@@ -152,7 +152,7 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
     }
   }
 
-  console.log(`${constants.name} animationsData`, animationsData)
+  console.log(`${constants.defaultValues.name} animationsData`, animationsData)
   return animationsData
 }
 

@@ -1,6 +1,6 @@
 {
-  "name": "ganesh_component",
   "defaultValues": {
+    "name": "ganesh_component",
     "visible": true,
     "position": {
       "x": -2.5,

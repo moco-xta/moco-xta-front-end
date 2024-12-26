@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Text3D } from '@react-three/drei'
 
-import type { TMesh } from '@/types/animation/three/componentsTypes'
+import type { TLetter3DData } from '@/types/animation/types'
 
 import { TLetter3D } from '@/types/three/lib/word3DTypes'
 
@@ -16,8 +16,8 @@ export default function Letter3D({
   letter,
   index,
   children,
-}: TLetter3D) {
-  const letter3DRef = useRef<TMesh>(null!)
+}: TLetter3DData) {
+  const letter3DRef = useRef<THREE.Mesh>(null!)
 
   useLayoutEffect(() => {
     if (letter3DRef.current && lengthRef) {

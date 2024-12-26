@@ -1,6 +1,6 @@
 {
-  "name": "christus_component",
   "defaultValues": {
+    "name": "christus_component",
     "visible": true,
     "position": {
       "x": 0,
