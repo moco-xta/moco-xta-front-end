@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as heartComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/heartComponentConstants.json'
+import { default as heartComponentConstants } from '@/constants/home/hero/three/portrait/foreground/mess/heartComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -22,8 +22,10 @@ export const Heart = forwardRef<THREE.Mesh, MeshProps>(function Heart(props, ref
   ) as GLTFResult
 
   useLayoutEffect(() => {
-    materials.heart_material.transparent = heartComponentConstants.DEFAULT.MATERIAL.TRANSPARENT
-    materials.heart_material.opacity = heartComponentConstants.DEFAULT.MATERIAL.OPACITY
+    ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
+      materials[key].transparent = heartComponentConstants.defaultValues.material.transparent
+      materials[key].opacity = heartComponentConstants.defaultValues.material.opacity
+    })
   }, [materials])
 
   return (

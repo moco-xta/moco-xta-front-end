@@ -1,23 +1,20 @@
-import type { TElementData, TConstants, TDefaultValuesData } from '@/types/animation/dataTypes'
+import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
 
-import { /* getAnimationsData, */ getDefaultValues } from '@/helpers/animations/animationsHelpers'
+import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as greetingTextsGroupConstants } from '@/constants/home/hero/three/greeting/texts/greetingTextsGroupConstants.json'
 
-export const greetingTextsGroupDefaultValues: TDefaultValuesData = {
+export const getGreetingTextsGroupDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(greetingTextsGroupConstants),
 }
 
-export function greetingTextsGroupAnimationsData(): TElementData {
+export function getGreetingTextsGroupAnimationsData(): TElementData {
   return {
     label: greetingGroupConstants.label,
     duration: greetingGroupConstants.duration,
-    /* animations: {
-      ...getAnimationsData(
-        greetingGroupConstants.duration,
-        greetingTextsGroupConstants as unknown as TConstants,
-      ),
-    }, */
+    animations: {
+      ...getAnimationsData(greetingGroupConstants.duration, greetingTextsGroupConstants),
+    },
   }
 }

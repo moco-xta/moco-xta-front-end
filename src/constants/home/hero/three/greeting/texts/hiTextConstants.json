@@ -1,33 +1,36 @@
 {
+  "name": "hi_text",
   "defaultValues": {
+    "visible": true,
     "position": {
       "x": 0,
       "y": 0,
       "z": 0
     },
-    "text": {
-      "keySuffix": "hi_text"
-    },
     "material": {
-      "opacity": 1
+      "opacity": 0
     }
   },
   "animations": {
     "position": {
-      "step_1": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "ease": "back.in"
-      },
-      "easeEach": "none"
+      "keyframes": {
+        "step_1": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "ease": "back.in"
+        },
+        "easeEach": "none"
+      }
     },
     "material": {
-      "step_1": {
-        "opacity": 1,
-        "ease": "power1.in"
-      },
-      "easeEach": "none"
+      "keyframes": {
+        "step_1": {
+          "opacity": 1,
+          "ease": "power1.in"
+        },
+        "easeEach": "none"
+      }
     },
     "stagger": 0.125
   }

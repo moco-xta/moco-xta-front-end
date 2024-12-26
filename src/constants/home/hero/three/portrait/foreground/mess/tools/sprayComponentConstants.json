@@ -1,0 +1,20 @@
+{
+  "name": "spray_component",
+  "defaultValues": {
+    "visible": true,
+    "material": {
+      "transparent": true,
+      "opacity": 0
+    }
+  },
+  "animations": {
+    "material": {
+      "keyframes": {
+        "step_1": {
+          "opacity": 1
+        },
+        "easeEach": "power1.in"
+      }
+    }
+  }
+}

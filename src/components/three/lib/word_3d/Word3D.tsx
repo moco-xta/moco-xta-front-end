@@ -7,10 +7,6 @@ import Letter3D from './Letter3D'
 
 export const Word3D = forwardRef<TGroup, TWord3D>(
   ({ keySuffix, position, splittedWord, children, ...rest }, ref) => {
-    useEffect(() => {
-      console.log('ref', ref)
-    }, [ref])
-
     return (
       <group
         key={`word_3D_${keySuffix}`}

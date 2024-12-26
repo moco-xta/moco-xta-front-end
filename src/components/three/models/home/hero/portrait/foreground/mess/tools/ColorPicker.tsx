@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as colorPickerComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/colorPickerComponentConstants.json'
+import { default as colorPickerComponentConstants } from '@/constants/home/hero/three/portrait/foreground/mess/tools/colorPickerComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -30,11 +30,9 @@ export const ColorPicker = forwardRef<THREE.Group, GroupProps>(function ColorPic
   ) as GLTFResult
 
   useLayoutEffect(() => {
-    Object.keys(materials).forEach((key) => {
-      // @ts-ignore
-      materials[key].transparent = colorPickerComponentConstants.DEFAULT.MATERIAL.TRANSPARENT
-      // @ts-ignore
-      materials[key].opacity = colorPickerComponentConstants.DEFAULT.MATERIAL.OPACITY
+    ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
+      materials[key].transparent = colorPickerComponentConstants.defaultValues.material.transparent
+      materials[key].opacity = colorPickerComponentConstants.defaultValues.material.opacity
     })
   }, [materials])
 

@@ -1,14 +1,9 @@
-import type { TGroup, TMesh } from '@/types/animation/three/componentsTypes'
-import type { TAnimationSignature } from '@/types/animation/three/animationsTypes'
-import { TProperties } from '@/types/animation/dataTypes'
+import type { TAnimateSignature } from '@/types/animation/helpers'
+import { TPropertiesTypes } from '@/types/animation/types'
 
-export const animate = <T extends TGroup | TMesh>({
-  timeline,
-  ref,
-  animationsData,
-}: TAnimationSignature<T>): void => {
+export const animate = ({ timeline, ref, animationsData }: TAnimateSignature): void => {
   if (animationsData.animations) {
-    for (const key of Object.keys(animationsData.animations) as (keyof TProperties<T>)[]) {
+    for (const key of Object.keys(animationsData.animations) as TPropertiesTypes[]) {
       timeline.to(
         // TODO: Try to cast 'keys'
         // @ts-ignore

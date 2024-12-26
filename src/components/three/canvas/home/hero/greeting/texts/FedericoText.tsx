@@ -10,11 +10,13 @@ import useSplitted3DText from '@/hooks/animations/useSplitted3DText'
 
 import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
-import { greetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
+import { getGreetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
-  federicoTextDefaultValues,
+  getFedericoTextDefaultValues,
   getFedericoTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/federicoTextData'
+
+import { default as federicoTextConstants } from '@/constants/home/hero/three/greeting/texts/federicoTextConstants.json'
 
 import { animate } from '@/animations/index'
 
@@ -22,7 +24,7 @@ export default function FedericoText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText('Federico')
 
-  /* useGSAP(
+  useGSAP(
     () => {
       const letters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       letters.forEach((letterRef, index) => {
@@ -38,18 +40,18 @@ export default function FedericoText() {
       })
     },
     { scope: textGroupRef },
-  ) */
+  )
 
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={federicoTextDefaultValues.keySuffix!}
-      position={federicoTextDefaultValues.position}
-      {...greetingTextsDefaultValues.geometry}
+      keySuffix={federicoTextConstants.name}
+      position={getFedericoTextDefaultValues.position}
+      {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
     >
-      <meshStandardMaterial {...greetingTextsDefaultValues.material} />
+      <meshStandardMaterial {...getGreetingTextsDefaultValues.material} />
     </Word3D>
   )
 }

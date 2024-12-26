@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as sprayComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/sprayComponentConstants.json'
+import { default as sprayComponentConstants } from '@/constants/home/hero/three/portrait/foreground/mess/heartComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -26,11 +26,9 @@ export const Spray = forwardRef<THREE.Group, GroupProps>(function Spray(props, r
   ) as GLTFResult
 
   useLayoutEffect(() => {
-    Object.keys(materials).forEach((key) => {
-      // @ts-ignore
-      materials[key].transparent = sprayComponentConstants.DEFAULT.MATERIAL.TRANSPAREMT
-      // @ts-ignore
-      materials[key].opacity = sprayComponentConstants.DEFAULT.MATERIAL.OPACITY
+    ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
+      materials[key].transparent = sprayComponentConstants.defaultValues.material.transparent
+      materials[key].opacity = sprayComponentConstants.defaultValues.material.opacity
     })
   }, [materials])
 

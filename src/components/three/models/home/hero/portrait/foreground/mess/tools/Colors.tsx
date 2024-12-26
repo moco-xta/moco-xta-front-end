@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as colorsComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/foreground/mess/tools/colorsComponentConstants.json'
+import { default as colorsComponentConstants } from '@/constants/home/hero/three/portrait/foreground/mess/tools/colorsComponentConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -78,12 +78,9 @@ export const Colors = forwardRef<THREE.Group, GroupProps>(function Colors(props,
   ) as GLTFResult
 
   useLayoutEffect(() => {
-    Object.keys(materials).forEach((key) => {
-      // @ts-ignore
-      materials[key].transparent =
-        colorsComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
-      // @ts-ignore
-      materials[key].opacity = colorsComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+    ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
+      materials[key].transparent = colorsComponentConstants.defaultValues.material.transparent
+      materials[key].opacity = colorsComponentConstants.defaultValues.material.opacity
     })
   }, [materials])
 

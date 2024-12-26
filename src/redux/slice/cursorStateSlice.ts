@@ -15,7 +15,7 @@ const cursorStateSlice = createSlice({
   initialState,
   reducers: {
     setState: (state, action: PayloadAction<'default' | 'mind_bending'>) => {
-      console.log('action.payload', action.payload)
+      // console.log('action.payload', action.payload)
       state.state = action.payload
     },
   },

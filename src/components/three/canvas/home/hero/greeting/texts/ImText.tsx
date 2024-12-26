@@ -11,11 +11,13 @@ import useSplitted3DText from '@/hooks/animations/useSplitted3DText'
 
 import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
-import { greetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
+import { getGreetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
-  imTextDefaultValues,
+  getImTextDefaultValues,
   getImTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/imTextData'
+
+import { default as imTextConstants } from '@/constants/home/hero/three/greeting/texts/imTextConstants.json'
 
 import { animate } from '@/animations/index'
 
@@ -24,7 +26,7 @@ export default function ImText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.I_M'))
 
-  /* useGSAP(
+  useGSAP(
     () => {
       const letters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
       letters.forEach((letterRef, index) => {
@@ -39,18 +41,18 @@ export default function ImText() {
       })
     },
     { scope: textGroupRef },
-  ) */
+  )
 
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={imTextDefaultValues.keySuffix!}
-      // position={imTextDefaultValues.position}
-      {...greetingTextsDefaultValues.geometry}
+      keySuffix={imTextConstants.name}
+      position={getImTextDefaultValues.position}
+      {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
     >
-      <meshStandardMaterial {...greetingTextsDefaultValues.material} />
+      <meshStandardMaterial {...getGreetingTextsDefaultValues.material} />
     </Word3D>
   )
 }

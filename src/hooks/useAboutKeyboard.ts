@@ -45,10 +45,6 @@ export const useAboutKeyboard = () => {
     escape: false,
   })
 
-  useEffect(() => {
-    console.log('actions', actions)
-  }, [actions])
-
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     /* console.log('e.code', e.code) */
     const action = actionByKey(e.code)
