@@ -46,7 +46,7 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
           }
           defaultValues = {
             ...defaultValues,
-            [property]: propertyValues,
+            [property]: propertyValues as THREE.Vector3,
           }
         } else {
           propertyValues = []
@@ -71,7 +71,7 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
           }
           defaultValues = {
             ...defaultValues,
-            [property]: propertyValues,
+            [property]: propertyValues as THREE.Euler,
           }
         } else {
           propertyValues = []
@@ -102,7 +102,7 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
             }
             defaultValues = {
               ...defaultValues,
-              [property]: propertyValues,
+              [property]: propertyValues as THREE.Vector3,
             }
           }
         } else {

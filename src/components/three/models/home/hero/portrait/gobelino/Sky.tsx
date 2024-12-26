@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as skyComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/skyComponentConstants.json'
+import { getSkyComponentDefaultValues } from '@/data/home/hero/three/portrait/gobelino/skyComponentData'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -21,9 +21,8 @@ export const Sky = forwardRef<THREE.Mesh, MeshProps>(function Sky(props, ref) {
 
   useLayoutEffect(() => {
     materials['gobelino_#3B63FF_material'].transparent =
-      skyComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
-    materials['gobelino_#3B63FF_material'].opacity =
-      skyComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+      getSkyComponentDefaultValues.material?.transparent!
+    materials['gobelino_#3B63FF_material'].opacity = getSkyComponentDefaultValues.material?.opacity!
   }, [materials])
 
   return (

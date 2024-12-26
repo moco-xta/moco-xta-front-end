@@ -1,0 +1,24 @@
+{
+  "defaultValues": {
+    "name": "hill_top_right_component",
+    "visible": true,
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": -0.6
+    },
+    "material": {
+      "transparent": true,
+      "opacity": 1
+    }
+  },
+  "anmations": {
+    "material": {
+      "keyframes": {
+        "step_1.5": {
+          "opacity": 1
+        }
+      }
+    }
+  }
+}

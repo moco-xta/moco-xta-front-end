@@ -232,9 +232,9 @@ export default function ProfilePicture() {
   }, [scene])
 
   useFrame(({ clock, pointer, scene }, delta, xrFrame) => {
-    getMouseData(pointer)
+    /* getMouseData(pointer)
     shaderMaterialRef.current.uniforms.uMouse.value = mouseDataRef.current.followMouseCoordinates
-    shaderMaterialRef.current.uniforms.uAlpha.value = mouseDataRef.current.opacity
+    shaderMaterialRef.current.uniforms.uAlpha.value = mouseDataRef.current.opacity */
 
     // MATHIS BIABIANY
     let time = clock.getElapsedTime()
@@ -243,7 +243,9 @@ export default function ProfilePicture() {
     materialBiabiany.uniforms.move.value = moveRef.current
   })
 
-  return (
+  return null
+
+  /* return (
     <Plane
       ref={profileRef}
       args={[7.5, 7.5]}
@@ -258,5 +260,5 @@ export default function ProfilePicture() {
         transparent
       />
     </Plane>
-  )
+  ) */
 }

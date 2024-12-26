@@ -12,12 +12,12 @@ import { getMessGroupDefaultValues } from '@/data/home/hero/three/portrait/foreg
 export default function MessGroup() {
   return (
     <group {...getMessGroupDefaultValues}>
-      <ToolsGroup />
+      {/* <ToolsGroup /> */}
       <ProfilePicture />
-      <LogoAthleticoNacionalComponent />
-      <HeartComponent />
-      <GaneshComponent />
-      <ChristusComponent />
+      {/* <LogoAthleticoNacionalComponent /> */}
+      {/* <HeartComponent /> */}
+      {/* <GaneshComponent /> */}
+      {/* <ChristusComponent /> */}
     </group>
   )
 }

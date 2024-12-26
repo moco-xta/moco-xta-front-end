@@ -37,6 +37,7 @@ export type TPropertiesTypes =
   | 'scale'
   | 'dimensions'
   | 'material'
+  | 'color'
 
 // #################################
 // ##  CONSTANTS  ##################
@@ -59,6 +60,7 @@ export type TDefaultValuesConstants = {
   scale?: number | number[] | TCoordinatesData
   dimensions?: TDimensions
   material?: TMaterial
+  color?: TColor
 }
 
 // ANIMATIONS [CONSTANTS]
@@ -86,6 +88,7 @@ export type TDefaultValuesData = {
   scale?: THREE.Vector3 | THREE.Vector3[]
   dimensions?: TDimensions
   material?: TMaterial
+  color?: TColor
 }
 
 export type TPropertyValuesDataTypes =
@@ -190,4 +193,10 @@ export type TMaterial = {
   wireframe?: boolean
   side?: THREE.Side
   needsUpdate?: boolean
+}
+
+export type TColor = {
+  r: number
+  g: number
+  b: number
 }
