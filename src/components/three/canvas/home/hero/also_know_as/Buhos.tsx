@@ -1,13 +1,11 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import { Buho } from '@/components/three/models/home/hero/also_know_as/Buho'
 
-import { default as buhosConstants } from '@/constants/home/hero/three/also_know_as/buhosConstants.json'
 import {
   getBuhosAnimationsData,
   getBuhosDefaultValues,
@@ -33,17 +31,18 @@ export default function Buhos() {
 
   return (
     <group ref={buhosRef}>
-      {buhosConstants.defaultValues.position.map(({ x, y, z }, index) => (
-        <Buho
-          key={`buho_${index}`}
-          position={new THREE.Vector3(x, y, z)}
-          scale={[
-            buhosConstants.defaultValues.scale[index].x,
-            buhosConstants.defaultValues.scale[index].y,
-            buhosConstants.defaultValues.scale[index].z,
-          ]}
-        />
-      ))}
+      {Array.isArray(getBuhosDefaultValues.position) &&
+        getBuhosDefaultValues.position.map(({ x, y, z }, index) => (
+          <Buho
+            key={`buho_${index}`}
+            position={new THREE.Vector3(x, y, z)}
+            scale={[
+              (getBuhosDefaultValues.scale as THREE.Vector3[])[index]!.x,
+              (getBuhosDefaultValues.scale as THREE.Vector3[])[index]!.y,
+              (getBuhosDefaultValues.scale as THREE.Vector3[])[index]!.z,
+            ]}
+          />
+        ))}
     </group>
   )
 }

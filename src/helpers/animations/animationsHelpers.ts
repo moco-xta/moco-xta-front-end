@@ -39,32 +39,7 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
     } else {
       let propertyValues: TPropertyValuesDataTypes
       if (property === 'position') {
-        propertyValues = new THREE.Vector3()
-        for (const [key, value] of Object.entries(propertyValue)) {
-          propertyValues[key as keyof TCoordinates] = value as number
-        }
-        defaultValues = {
-          ...defaultValues,
-          [property]: propertyValues,
-        }
-        // pushPropertyDefaultValues(defaultValues, property, propertyValues)
-      } else if (property === 'rotation') {
-        propertyValues = new THREE.Euler()
-        for (const [key, value] of Object.entries(propertyValue)) {
-          propertyValues[key as keyof TCoordinates] = THREE.MathUtils.degToRad(value as number)
-        }
-        defaultValues = {
-          ...defaultValues,
-          [property]: propertyValues,
-        }
-        // pushPropertyDefaultValues(defaultValues, property, propertyValues)
-      } else if (property === 'scale') {
-        if (typeof propertyValue === 'number') {
-          defaultValues = {
-            ...defaultValues,
-            [property]: propertyValue,
-          }
-        } else {
+        if (!Array.isArray(propertyValue)) {
           propertyValues = new THREE.Vector3()
           for (const [key, value] of Object.entries(propertyValue)) {
             propertyValues[key as keyof TCoordinates] = value as number
@@ -72,6 +47,76 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
           defaultValues = {
             ...defaultValues,
             [property]: propertyValues,
+          }
+        } else {
+          propertyValues = []
+          propertyValue.forEach((position) => {
+            const positionValues = new THREE.Vector3()
+            for (const [key, value] of Object.entries(position)) {
+              positionValues[key as keyof TCoordinates] = value as number
+            }
+            ;(propertyValues as THREE.Vector3[]).push(positionValues)
+          })
+          defaultValues = {
+            ...defaultValues,
+            [property]: propertyValues as THREE.Vector3[],
+          }
+        }
+        // pushPropertyDefaultValues(defaultValues, property, propertyValues)
+      } else if (property === 'rotation') {
+        if (!Array.isArray(propertyValue)) {
+          propertyValues = new THREE.Euler()
+          for (const [key, value] of Object.entries(propertyValue)) {
+            propertyValues[key as keyof TCoordinates] = THREE.MathUtils.degToRad(value as number)
+          }
+          defaultValues = {
+            ...defaultValues,
+            [property]: propertyValues,
+          }
+        } else {
+          propertyValues = []
+          propertyValue.forEach((rotation) => {
+            const rotationValues = new THREE.Euler()
+            for (const [key, value] of Object.entries(rotation)) {
+              rotationValues[key as keyof TCoordinates] = value as number
+            }
+            ;(propertyValues as THREE.Euler[]).push(rotationValues)
+          })
+          defaultValues = {
+            ...defaultValues,
+            [property]: propertyValues as THREE.Euler[],
+          }
+        }
+        // pushPropertyDefaultValues(defaultValues, property, propertyValues)
+      } else if (property === 'scale') {
+        if (!Array.isArray(propertyValue)) {
+          if (typeof propertyValue === 'number') {
+            defaultValues = {
+              ...defaultValues,
+              [property]: propertyValue,
+            }
+          } else {
+            propertyValues = new THREE.Vector3()
+            for (const [key, value] of Object.entries(propertyValue)) {
+              propertyValues[key as keyof TCoordinates] = value as number
+            }
+            defaultValues = {
+              ...defaultValues,
+              [property]: propertyValues,
+            }
+          }
+        } else {
+          propertyValues = []
+          propertyValue.forEach((scale) => {
+            const scaleValues = new THREE.Vector3()
+            for (const [key, value] of Object.entries(scale)) {
+              scaleValues[key as keyof TCoordinates] = value as number
+            }
+            ;(propertyValues as THREE.Vector3[]).push(scaleValues)
+          })
+          defaultValues = {
+            ...defaultValues,
+            [property]: propertyValues as THREE.Vector3[],
           }
         }
         // pushPropertyDefaultValues(defaultValues, property, propertyValues)
@@ -96,7 +141,7 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
 // GET ANIMATIONS DATA
 
 export function getAnimationsData(duration: number, constants: TConstants): TAnimationsData {
-  console.log(`${constants.defaultValues.name} constants`, constants)
+  // console.log(`${constants.defaultValues.name} constants`, constants)
 
   let animationsData: TAnimationsData = {}
   let propertyData = {}
@@ -110,11 +155,49 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
       for (const [key, value] of Object.entries(
         constants.defaultValues[property] as Record<string, string | number | boolean>,
       )) {
-        let valuesData: Record<string, string | number | boolean> = {}
+        let valuesData: Record<string, string | number | boolean | TCoordinates[]> = {}
         if (property === 'position') {
-          valuesData[key] = `+=${value}` // TODO: Issue with negative numbers (check if it can be a string in constants OR typeof)
+          if (!Array.isArray(value)) {
+            valuesData[key] = `+=${value}` // TODO: Issue with negative numbers (check if it can be a string in constants OR typeof)
+          } else {
+            const values: TCoordinates[] = []
+            value.forEach((position: TCoordinates) => {
+              let positionData: Record<string, string | number> = {}
+              for (const [key, value] of Object.entries(position)) {
+                positionData[key] = `+=${value}`
+              }
+              values.push(positionData)
+            })
+            valuesData[key] = values
+          }
         } else if (property === 'rotation') {
-          valuesData[key] = THREE.MathUtils.degToRad(value as unknown as number)
+          if (!Array.isArray(value)) {
+            valuesData[key] = THREE.MathUtils.degToRad(value as unknown as number)
+          } else {
+            const values: TCoordinates[] = []
+            value.forEach((rotation: TCoordinates) => {
+              let rotationData: Record<string, string | number> = {}
+              for (const [key, value] of Object.entries(rotation)) {
+                rotationData[key] = THREE.MathUtils.degToRad(value as unknown as number)
+              }
+              values.push(rotationData)
+            })
+            valuesData[key] = values
+          }
+        } else if (property === 'scale') {
+          if (!Array.isArray(value)) {
+            valuesData[key] = value
+          } else {
+            const values: TCoordinates[] = []
+            value.forEach((position: TCoordinates) => {
+              let positionData: Record<string, string | number> = {}
+              for (const [key, value] of Object.entries(position)) {
+                positionData[key] = value
+              }
+              values.push(positionData)
+            })
+            valuesData[key] = values
+          }
         } else {
           valuesData[key] = value as string | number | boolean
         }
@@ -152,7 +235,7 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
     }
   }
 
-  console.log(`${constants.defaultValues.name} animationsData`, animationsData)
+  // console.log(`${constants.defaultValues.name} animationsData`, animationsData)
   return animationsData
 }
 

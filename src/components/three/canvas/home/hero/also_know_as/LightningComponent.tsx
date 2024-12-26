@@ -31,7 +31,7 @@ export default function LightningComponent() {
   return (
     <Lightning
       ref={lightningComponentRef}
-      scale={getLightningComponentDefaultValues.scale}
+      scale={getLightningComponentDefaultValues.scale as THREE.Vector3}
     />
   )
 }
