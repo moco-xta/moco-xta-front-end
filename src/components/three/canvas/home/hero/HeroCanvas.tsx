@@ -14,7 +14,7 @@ export default function HeroCanvas() {
     <Canvas {...canvasDefaultValues}>
       <Camera />
       <Lights />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <Suspense fallback={null}>
         <GreetingGroup />
         <PortraitGroup />
