@@ -13,8 +13,8 @@ import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
 import { getGreetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
+  hiTextDefaultValues,
   getHiTextAnimationsData,
-  getHiTextDefaultValues,
 } from '@/data/home/hero/three/greeting/texts/hiTextData'
 
 import { animate } from '@/animations/index'
@@ -45,8 +45,7 @@ export default function HiText() {
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={getHiTextDefaultValues.name}
-      position={getHiTextDefaultValues.position}
+      {...hiTextDefaultValues}
       {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}

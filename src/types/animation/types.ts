@@ -129,7 +129,7 @@ export type TText3DData = {
 }
 
 export type TWord3DData = TTextGeometry & {
-  keySuffix: string
+  name: string
   position?: THREE.Vector3
   splittedWord: string[]
   lengthRef?: MutableRefObject<number[]>
@@ -137,7 +137,7 @@ export type TWord3DData = TTextGeometry & {
 }
 
 export type TLetter3DData = TTextGeometry & {
-  keySuffix: string
+  name: string
   lengthRef?: MutableRefObject<number[]>
   letter: string
   index?: number

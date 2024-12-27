@@ -3,9 +3,9 @@
     "name": "greeting_texts_group",
     "visible": true,
     "position": {
-      "x": 8.5,
-      "y": -2.5,
-      "z": 10
+      "x": 5,
+      "y": -1.5,
+      "z": 6
     },
     "rotation": {
       "x": -22,
@@ -22,27 +22,27 @@
     "position": {
       "keyframes": {
         "step_1": {
-          "x": "-=6",
-          "y": "+=1",
-          "z": 4,
+          "x": "-=2.2",
+          "y": "+=0.5",
+          "z": 4.5,
           "ease": "back.in"
         },
         "step_2": {
-          "x": "-=4.7",
-          "y": "+=0.2",
-          "z": 2.8,
+          "x": "-=5.2",
+          "y": "+=0",
+          "z": 2.6,
           "ease": "back.in"
         },
         "step_3": {
           "x": "+=5.2",
           "y": "+=3",
-          "z": 3.8,
+          "z": 4.4,
           "ease": "back.in"
         },
         "step_4": {
           "x": "-=5",
           "y": "+=0",
-          "z": 1.5,
+          "z": 2.7,
           "ease": "back.in"
         },
         "step_5": {
@@ -63,7 +63,7 @@
     "rotation": {
       "keyframes": {
         "step_1": {
-          "x": -22,
+          "x": -33,
           "y": 15,
           "z": 0,
           "ease": "back.in"

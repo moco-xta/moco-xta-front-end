@@ -199,8 +199,6 @@ export function getDefaultValuesArray(constants: TConstants): TDefaultValuesData
 // GET ANIMATIONS DATA
 
 export function getAnimationsData(duration: number, constants: TConstants): TAnimationsData {
-  // console.log(`${constants.defaultValues.name} constants`, constants)
-
   let animationsData: TAnimationsData = {}
   let propertyData = {}
 
@@ -215,48 +213,11 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
       )) {
         let valuesData: Record<string, string | number | boolean | TCoordinates[]> = {}
         if (property === 'position') {
-          /* if (!Array.isArray(value)) { */
-          // valuesData[key] = `+=${value}` // TODO: Issue with negative numbers (check if it can be a string in constants OR typeof)
           valuesData[key] = value
-          /* } else {
-            const values: TCoordinates[] = []
-            value.forEach((position: TCoordinates) => {
-              let positionData: Record<string, string | number> = {}
-              for (const [key, value] of Object.entries(position)) {
-                positionData[key] = `+=${value}`
-              }
-              values.push(positionData)
-            })
-            valuesData[key] = values
-          } */
         } else if (property === 'rotation') {
-          /* if (!Array.isArray(value)) { */
           valuesData[key] = THREE.MathUtils.degToRad(value as unknown as number)
-          /* } else {
-            const values: TCoordinates[] = []
-            value.forEach((rotation: TCoordinates) => {
-              let rotationData: Record<string, string | number> = {}
-              for (const [key, value] of Object.entries(rotation)) {
-                rotationData[key] = THREE.MathUtils.degToRad(value as unknown as number)
-              }
-              values.push(rotationData)
-            })
-            valuesData[key] = values
-          } */
         } else if (property === 'scale') {
-          /* if (!Array.isArray(value)) { */
           valuesData[key] = value
-          /* } else {
-            const values: TCoordinates[] = []
-            value.forEach((position: TCoordinates) => {
-              let positionData: Record<string, string | number> = {}
-              for (const [key, value] of Object.entries(position)) {
-                positionData[key] = value
-              }
-              values.push(positionData)
-            })
-            valuesData[key] = values
-          } */
         } else {
           valuesData[key] = value as string | number | boolean
         }
@@ -279,7 +240,7 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
         }
         propertyData = {
           ...propertyData,
-          [`${getKeyframePosition(duration, Number(key.split('_')[1]))}`]: { ...valuesData },
+          [`${getKeyframePosition(duration, key)}`]: { ...valuesData },
         }
       } else {
         propertyData = {
@@ -300,6 +261,7 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
 
 // GET KEYFRAME POSITION
 
-function getKeyframePosition(duration: number, step: number): string {
-  return `${((100 / duration) * step).toFixed(2)}%`
+export function getKeyframePosition(duration: number, step: string): string {
+  console.log(step, Number(step.split('_')[1]))
+  return `${((100 / duration) * Number(step.split('_')[1])).toFixed(2)}%`
 }

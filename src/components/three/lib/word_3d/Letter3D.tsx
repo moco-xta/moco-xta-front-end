@@ -7,7 +7,7 @@ import type { TLetter3DData } from '@/types/animation/types'
 import { TLetter3D } from '@/types/three/lib/word3DTypes'
 
 export default function Letter3D({
-  keySuffix,
+  name,
   font,
   size = 1,
   depth,
@@ -41,7 +41,7 @@ export default function Letter3D({
 
   return (
     <Text3D
-      key={`letter_3D_${keySuffix}_${letter}_${index}`}
+      key={`letter_3D_${name}_${letter}_${index}`}
       ref={letter3DRef}
       font={font}
       size={size}

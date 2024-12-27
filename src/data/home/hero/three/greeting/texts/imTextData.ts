@@ -1,12 +1,12 @@
 import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
 import type { TGetAnimationsDataSignature } from '@/types/animation/helpers'
 
-import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
+import { getDefaultValues, getKeyframePosition } from '@/helpers/animations/animationsHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as imTextConstants } from '@/constants/home/hero/three/greeting/texts/imTextConstants.json'
 
-export const getImTextDefaultValues: TDefaultValuesData = {
+export const imTextDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(imTextConstants),
 }
 
@@ -20,12 +20,12 @@ export function getImTextAnimationsData({
     animations: {
       position: {
         keyframes: {
-          '20%': {
-            x: imTextConstants.animations.position.keyframes['step_1'].x,
+          [`${getKeyframePosition(greetingGroupConstants.duration, 'step_1')}`]: {
+            x: '-=2',
             y: imTextConstants.animations.position.keyframes['step_1'].y,
-            z: imTextConstants.animations.position.keyframes['step_1'].z,
+            z: '-=4',
           },
-          '40%': {
+          [`${getKeyframePosition(greetingGroupConstants.duration, 'step_2')}`]: {
             x: textLengthRef!.slice(0, index).reduce((a, b) => a + b, 0),
             z: imTextConstants.animations.position.keyframes['step_1'].z,
           },
@@ -34,10 +34,10 @@ export function getImTextAnimationsData({
       },
       material: {
         keyframes: {
-          '30%': {
+          [`${getKeyframePosition(greetingGroupConstants.duration, 'step_1.5')}`]: {
             opacity: imTextConstants.animations.material.keyframes['step_1.5'].opacity,
           },
-          '40%': {
+          [`${getKeyframePosition(greetingGroupConstants.duration, 'step_2')}`]: {
             opacity: imTextConstants.animations.material.keyframes['step_2'].opacity,
             ease: imTextConstants.animations.material.keyframes['step_2'].ease,
           },
