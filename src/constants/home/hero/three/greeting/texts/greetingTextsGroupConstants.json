@@ -3,14 +3,14 @@
     "name": "greeting_texts_group",
     "visible": true,
     "position": {
-      "x": 0,
-      "y": 0,
-      "z": 0
+      "x": 8.5,
+      "y": -2.5,
+      "z": 10
     },
     "rotation": {
-      "x": 0,
+      "x": -22,
       "y": 0,
-      "z": 0
+      "z": 15
     },
     "dimensions": {
       "width": 10,
@@ -22,40 +22,40 @@
     "position": {
       "keyframes": {
         "step_1": {
-          "x": "+=0",
-          "y": "+=0",
-          "z": 0,
+          "x": "-=6",
+          "y": "+=1",
+          "z": 4,
           "ease": "back.in"
         },
         "step_2": {
-          "x": "+=0",
-          "y": "+=0",
-          "z": 0,
+          "x": "-=4.7",
+          "y": "+=0.2",
+          "z": 2.8,
           "ease": "back.in"
         },
         "step_3": {
-          "x": "+=0",
-          "y": "+=0",
-          "z": 0,
+          "x": "+=5.2",
+          "y": "+=3",
+          "z": 3.8,
           "ease": "back.in"
         },
         "step_4": {
-          "x": "+=0",
+          "x": "-=5",
           "y": "+=0",
-          "z": 0,
+          "z": 1.5,
           "ease": "back.in"
         },
         "step_5": {
-          "x": "+=0",
-          "y": "+=0",
-          "z": 0,
+          "x": "+=1.8",
+          "y": "-=1.6",
+          "z": -3,
           "ease": "power1.in"
         },
         "step_6": {
           "x": "+=0",
           "y": "+=0",
-          "z": 0,
-          "ease": "power1.in"
+          "z": -7.5,
+          "ease": "none"
         },
         "easeEach": "none"
       }
@@ -63,26 +63,26 @@
     "rotation": {
       "keyframes": {
         "step_1": {
-          "x": 0,
-          "y": 0,
+          "x": -22,
+          "y": 15,
           "z": 0,
           "ease": "back.in"
         },
         "step_2": {
-          "x": 0,
-          "y": 0,
+          "x": 15,
+          "y": -5,
           "z": 0,
           "ease": "back.in"
         },
         "step_3": {
-          "x": 0,
-          "y": 0,
+          "x": -15,
+          "y": 15,
           "z": 0,
           "ease": "back.in"
         },
         "step_4": {
           "x": 0,
-          "y": 0,
+          "y": -15,
           "z": 0,
           "ease": "back.in"
         },

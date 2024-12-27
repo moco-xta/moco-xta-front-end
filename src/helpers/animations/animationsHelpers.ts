@@ -216,7 +216,8 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
         let valuesData: Record<string, string | number | boolean | TCoordinates[]> = {}
         if (property === 'position') {
           /* if (!Array.isArray(value)) { */
-          valuesData[key] = `+=${value}` // TODO: Issue with negative numbers (check if it can be a string in constants OR typeof)
+          // valuesData[key] = `+=${value}` // TODO: Issue with negative numbers (check if it can be a string in constants OR typeof)
+          valuesData[key] = value
           /* } else {
             const values: TCoordinates[] = []
             value.forEach((position: TCoordinates) => {
