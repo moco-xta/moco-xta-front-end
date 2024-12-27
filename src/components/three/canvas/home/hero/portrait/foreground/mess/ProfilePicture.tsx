@@ -1,7 +1,8 @@
-import React, { useEffect, useMemo, useRef } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import { Plane } from '@react-three/drei'
+import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { TextureLoader } from 'three'
 
@@ -93,31 +94,61 @@ export default function ProfilePicture() {
   const mouseRef = useRef<THREE.Vector2>(new THREE.Vector2())
   const pointRef = useRef<THREE.Vector2>(new THREE.Vector2())
 
+  const handleWheel = useCallback((e: WheelEvent) => {
+    console.log(e.deltaY)
+    moveRef.current += e.deltaY
+    console.log('moveRef.current', moveRef.current)
+  }, [])
+
+  const test = new THREE.Mesh(new THREE.PlaneGeometry(10, 10), new THREE.MeshStandardMaterial())
+
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    mouseRef.current.x = (e.clientX / window.innerWidth) * 2 - 1
+    mouseRef.current.y = -(e.clientY / window.innerHeight) * 2 + 1
+    raycasterRef.current.setFromCamera(mouseRef.current, camera)
+    let intersects = raycasterRef.current.intersectObjects([test])
+    console.log(intersects[0])
+    if (intersects.length > 0) {
+      pointRef.current.x = intersects[0].point.x
+      pointRef.current.y = intersects[0].point.y
+    }
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleWheel, false)
+    window.addEventListener('mousemove', handleMouseMove, false)
+    return () => {
+      window.removeEventListener('wheel', handleWheel, false)
+      window.removeEventListener('mousemove', handleMouseMove, false)
+    }
+  }, [handleWheel, handleMouseMove])
+
   useGSAP(
     (_, contextSafe) => {
       if (!contextSafe) return
 
-      const handleWheel = contextSafe((e: WheelEvent) => {
-        console.log(e.deltaY)
-        moveRef.current += e.deltaY
-        console.log('moveRef.current', moveRef.current)
+      const handleMouseDown = contextSafe(() => {
+        gsap.to(materialBiabiany.uniforms.mousePressed, {
+          duration: 1,
+          value: 1,
+          ease: 'elastic.out(1, 0.3)',
+        })
       })
 
-      const handleMouseMove = contextSafe((e: MouseEvent) => {
-        mouseRef.current.x = (e.clientX / window.innerWidth) * 2 - 1
-        mouseRef.current.y = -(e.clientY / window.innerHeight) * 2 + 1
-        raycasterRef.current.setFromCamera(mouseRef.current, camera)
-        // let intersects = raycasterRef.current.intersectObjects([this.test])
-        // pointRef.current.x = intersects[0].point.x
-        // pointRef.current.y = intersects[0].point.y
+      const handleMouseUp = contextSafe(() => {
+        gsap.to(materialBiabiany.uniforms.mousePressed, {
+          duration: 1,
+          value: 0,
+          ease: 'elastic.out(1, 0.3)',
+        })
       })
 
-      window.addEventListener('wheel', handleWheel, false)
-      window.addEventListener('mousemove', handleMouseMove, false)
+      window.addEventListener('mousedown', handleMouseDown, false)
+      window.addEventListener('mouseup', handleMouseUp, false)
 
       return () => {
-        window.removeEventListener('wheel', handleWheel, false)
-        window.removeEventListener('mousemove', handleMouseMove, false)
+        window.removeEventListener('mousedown', handleMouseDown, false)
+        window.removeEventListener('mouseup', handleMouseUp, false)
       }
     },
     /* { scope: cursorAnimation.scope }, */
@@ -163,7 +194,7 @@ export default function ProfilePicture() {
         type: 'v2',
         value: new THREE.Vector2(0.0, 0.0),
       },
-      mousePreseed: {
+      mousePressed: {
         type: 'f',
         value: 0,
       },
@@ -176,47 +207,46 @@ export default function ProfilePicture() {
   )
 
   const materialBiabiany = new THREE.ShaderMaterial({
-    side: THREE.DoubleSide,
-    transparent: true,
-    depthTest: false,
-    depthWrite: false,
     uniforms: uniformsBiabiany,
     vertexShader: vertexShaderBiabiany,
     fragmentShader: fragmentShaderBiabiany,
+    transparent: true,
+    side: THREE.DoubleSide,
+    depthTest: false,
+    depthWrite: false,
   })
 
   useEffect(() => {
-    /* const geometry = new THREE.PlaneGeometry(1, 1)
-    const plane = new THREE.Mesh(geometry, defautlMaterial)
-    scene.add(plane) */
+    const NUMBER = 512
+    const NUMBER_SQUARED = Math.pow(NUMBER, 2)
+    const FACTOR = 125
 
-    const number = 512 * 512
     const geometry = new THREE.BufferGeometry()
+    // geometry.scale(0.002, 0.002, 0.002)
 
-    const positions = new THREE.BufferAttribute(new Float32Array(number * 3), 3)
-    const coordinates = new THREE.BufferAttribute(new Float32Array(number * 3), 3)
-    const speeds = new THREE.BufferAttribute(new Float32Array(number), 1)
-    const offset = new THREE.BufferAttribute(new Float32Array(number), 1)
-    const direction = new THREE.BufferAttribute(new Float32Array(number), 1)
-    const press = new THREE.BufferAttribute(new Float32Array(number), 1)
+    const positions = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED * 3), 3)
+    const coordinates = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED * 3), 3)
+    const speeds = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
+    const offset = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
+    const direction = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
+    const press = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
 
     function rand(a: number, b: number): number {
       return a + (b - a) * Math.random()
     }
 
-    const FACTOR = 80
+    let INDEX = 0
 
-    let index = 0
-    for (let i = 0; i < 512; i++) {
-      const posX = (i - 256) / FACTOR
-      for (let j = 0; j < 512; j++) {
-        positions.setXYZ(index, posX * 2, ((j - 256) / FACTOR) * 2, 0)
-        coordinates.setXYZ(index, i, j, 0)
-        offset.setX(index, rand(-1000, 1000))
-        speeds.setX(index, rand(0.4, 1))
-        direction.setX(index, Math.random() > 0.5 ? 1 : -1)
-        press.setX(index, rand(0.4, 1))
-        index++
+    for (let i = 0; i < NUMBER; i++) {
+      const posX = (i - NUMBER / 2) / FACTOR
+      for (let j = 0; j < NUMBER; j++) {
+        positions.setXYZ(INDEX, posX * 2, ((j - NUMBER / 2) / FACTOR) * 2, 0)
+        coordinates.setXYZ(INDEX, i, j, 0)
+        speeds.setX(INDEX, rand(0.4, 1))
+        offset.setX(INDEX, rand(-1000 / FACTOR, 1000 / FACTOR))
+        direction.setX(INDEX, Math.random() > 0.5 ? 1 : -1)
+        press.setX(INDEX, rand(0.4, 1))
+        INDEX++
       }
     }
 
@@ -239,8 +269,10 @@ export default function ProfilePicture() {
     // MATHIS BIABIANY
     let time = clock.getElapsedTime()
     time += 0.03
+    // console.log('time', time)
     materialBiabiany.uniforms.time.value = clock.elapsedTime
-    materialBiabiany.uniforms.move.value = moveRef.current
+    materialBiabiany.uniforms.move.value = 0
+    materialBiabiany.uniforms.mouse.value = pointRef
   })
 
   return null
