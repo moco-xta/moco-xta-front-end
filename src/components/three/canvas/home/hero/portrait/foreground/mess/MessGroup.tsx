@@ -17,7 +17,7 @@ export default function MessGroup() {
       {/* <LogoAthleticoNacionalComponent /> */}
       {/* <HeartComponent /> */}
       {/* <GaneshComponent /> */}
-      {/* <ChristusComponent /> */}
+      <ChristusComponent />
     </group>
   )
 }

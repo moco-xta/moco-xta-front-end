@@ -10,24 +10,10 @@ import type {
   TPropertyValuesDataTypes,
 } from '@/types/animation/types'
 
-/* function pushPropertyDefaultValues(
-  defaultValues: TDefaultValuesData,
-  property: string,
-  propertyValues: TPropertyValuesDataTypes,
-): void {
-  defaultValues = {
-    ...defaultValues,
-    [property]: Array.isArray(propertyValue) ? propertyValues as THREE.Vector3[] : propertyValues as THREE.Vector3,
-  }
-} */
-
 // GET DEFAULT VALUES
 
 export function getDefaultValues(constants: TConstants): TDefaultValuesData {
-  // console.log(`${constants.name} constants`, constants)
-
   let defaultValues = {} as TDefaultValuesData
-
   for (const [property, propertyValue] of Object.entries(constants.defaultValues)) {
     if (
       typeof propertyValue === 'string' ||
@@ -40,7 +26,7 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
       }
     } else {
       let propertyValues: TPropertyValuesDataTypes
-      if (property === 'position') {
+      if (property === 'position' || property === 'scale') {
         propertyValues = new THREE.Vector3()
         for (const [key, value] of Object.entries(propertyValue)) {
           propertyValues[key as keyof TCoordinates] = value as number
@@ -49,7 +35,6 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
           ...defaultValues,
           [property]: propertyValues as THREE.Vector3,
         }
-        // pushPropertyDefaultValues(defaultValues, property, propertyValues)
       } else if (property === 'rotation') {
         propertyValues = new THREE.Euler()
         for (const [key, value] of Object.entries(propertyValue)) {
@@ -58,14 +43,6 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
         defaultValues = {
           ...defaultValues,
           [property]: propertyValues as THREE.Euler,
-        }
-        // pushPropertyDefaultValues(defaultValues, property, propertyValues)
-      } else if (property === 'scale') {
-        if (typeof propertyValue === 'number') {
-          defaultValues = {
-            ...defaultValues,
-            [property]: propertyValue,
-          }
         }
         // pushPropertyDefaultValues(defaultValues, property, propertyValues)
       } else {
@@ -77,11 +54,9 @@ export function getDefaultValues(constants: TConstants): TDefaultValuesData {
           ...defaultValues,
           [property]: propertyValues,
         }
-        // pushPropertyDefaultValues(defaultValues, property, propertyValues)
       }
     }
   }
-
   // console.log(`${constants.defaultValues.name} defaultValues`, defaultValues)
   return defaultValues
 }
@@ -122,7 +97,6 @@ export function getDefaultValuesArray(constants: TConstants): TDefaultValuesData
                 [property]: propertyValues as THREE.Vector3,
               }
             }
-            // pushPropertyDefaultValues(defaultValues, property, propertyValues)
           } else if (property === 'rotation') {
             if (!Array.isArray(propertyValue)) {
               propertyValues = new THREE.Euler()
@@ -149,7 +123,6 @@ export function getDefaultValuesArray(constants: TConstants): TDefaultValuesData
                 }
               }
             }
-            // pushPropertyDefaultValues(defaultValues, property, propertyValues)
           } else if (property === 'scale') {
             if (!Array.isArray(propertyValue)) {
               propertyValues = new THREE.Vector3()
@@ -174,7 +147,6 @@ export function getDefaultValuesArray(constants: TConstants): TDefaultValuesData
                 }
               }
             }
-            // pushPropertyDefaultValues(defaultValues, property, propertyValues)
           } else {
             propertyValues = {}
             for (const [key, value] of Object.entries(propertyValue)) {
@@ -184,15 +156,13 @@ export function getDefaultValuesArray(constants: TConstants): TDefaultValuesData
               ...elementDefaultValues,
               [property]: propertyValues,
             }
-            // pushPropertyDefaultValues(defaultValues, property, propertyValues)
           }
         }
       }
       defaultValues.push(elementDefaultValues)
-      // console.log(`${constants.defaultValues.name} elementDefaultValues`, elementDefaultValues)
     })
-    console.log(`${constants.defaultValues.name} defaultValues`, defaultValues)
   }
+  // console.log(`${constants.defaultValues.name} defaultValues`, defaultValues)
   return defaultValues
 }
 
@@ -254,7 +224,6 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
       [property]: { keyframes: propertyData },
     }
   }
-
   // console.log(`${constants.defaultValues.name} animationsData`, animationsData)
   return animationsData
 }

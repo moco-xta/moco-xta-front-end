@@ -18,7 +18,7 @@ export default function HeroCanvas() {
       <OrbitControls />
       <Suspense fallback={null}>
         <GreetingGroup />
-        {/* <PortraitGroup /> */}
+        <PortraitGroup />
         {/* <AlsoKnowAsGroup /> */}
       </Suspense>
     </Canvas>

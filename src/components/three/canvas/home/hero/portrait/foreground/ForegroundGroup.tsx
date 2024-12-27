@@ -18,7 +18,7 @@ export default function ForegroundGroup() {
 
   const foregroundGroupRef = useRef<THREE.Group>(null!)
 
-  /* useGSAP(
+  useGSAP(
     () => {
       animate({
         timeline: timeline,
@@ -27,7 +27,7 @@ export default function ForegroundGroup() {
       })
     },
     { scope: foregroundGroupRef },
-  ) */
+  )
 
   return (
     <group
@@ -35,7 +35,7 @@ export default function ForegroundGroup() {
       {...getForegroundGroupDefaultValues}
     >
       <MessGroup />
-      <AlsoKnowAsTextsGroup />
+      {/* <AlsoKnowAsTextsGroup /> */}
     </group>
   )
 }
