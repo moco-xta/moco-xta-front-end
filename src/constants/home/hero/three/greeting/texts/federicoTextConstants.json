@@ -1,6 +1,6 @@
 {
-  "name": "federico_text",
   "defaultValues": {
+    "name": "federico_text",
     "visible": true,
     "position": {
       "x": 0,

@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as lightningComponentConstants } from '@/constants/animations/home/hero/canvas/groups/also_konw_as/lightningComponentConstants.json'
+import { getLightningComponentDefaultValues } from '@/data/home/hero/three/also_know_as/lightningComponentData'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -18,9 +18,9 @@ export const Lightning = forwardRef<THREE.Mesh, MeshProps>(function Lightning(pr
   const { nodes } = useGLTF(glbConstants.HOME.HERO.ALSO_KNOW_AS.LIGHTNING) as GLTFResult
 
   const lightningMaterial = new THREE.MeshStandardMaterial({
-    color: lightningComponentConstants.DEFAULT.MATERIAL.COLOR,
-    emissive: lightningComponentConstants.DEFAULT.MATERIAL.EMISSIVE,
-    emissiveIntensity: lightningComponentConstants.DEFAULT.MATERIAL.EMISSIVE_INTENSITY,
+    color: getLightningComponentDefaultValues.material?.color,
+    emissive: getLightningComponentDefaultValues.material?.emissive,
+    emissiveIntensity: getLightningComponentDefaultValues.material?.emissive_intensity,
   })
 
   return (

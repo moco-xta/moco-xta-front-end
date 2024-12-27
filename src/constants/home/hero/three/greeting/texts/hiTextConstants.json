@@ -1,6 +1,6 @@
 {
-  "name": "hi_text",
   "defaultValues": {
+    "name": "hi_text",
     "visible": true,
     "position": {
       "x": 0,

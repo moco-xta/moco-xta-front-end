@@ -1,3 +1,5 @@
+import { MutableRefObject } from 'react'
+
 // #################################
 // ##  CONTEXT  ####################
 // #################################
@@ -28,19 +30,20 @@ export type TTimelineData = {
 // #################################
 
 export type TPropertiesTypes =
+  | 'name'
   | 'visible'
   | 'position'
   | 'rotation'
   | 'scale'
   | 'dimensions'
   | 'material'
+  | 'color'
 
 // #################################
 // ##  CONSTANTS  ##################
 // #################################
 
 export type TConstants = {
-  name: string
   label?: string
   duration?: number
   defaultValues: TDefaultValuesConstants
@@ -50,12 +53,14 @@ export type TConstants = {
 // DEFAULT VALUES [CONSTANTS]
 
 export type TDefaultValuesConstants = {
+  name: string
   visible: boolean
-  position?: TCoordinates
-  rotation?: TCoordinates
-  scale?: number | TCoordinates
+  position?: TCoordinatesData
+  rotation?: TCoordinatesData
+  scale?: number | number[] | TCoordinatesData
   dimensions?: TDimensions
   material?: TMaterial
+  color?: TColor
 }
 
 // ANIMATIONS [CONSTANTS]
@@ -76,15 +81,23 @@ type TKeyframes = {
 // DEFAULT VALUES [DATA]
 
 export type TDefaultValuesData = {
+  name: string
   visible: boolean
-  position?: THREE.Vector3
-  rotation?: THREE.Euler
-  scale?: THREE.Vector3
+  position?: THREE.Vector3 | THREE.Vector3[]
+  rotation?: THREE.Euler | THREE.Euler[]
+  scale?: THREE.Vector3 | THREE.Vector3[]
   dimensions?: TDimensions
   material?: TMaterial
+  color?: TColor
 }
 
-export type TPropertyValuesDataTypes = THREE.Vector3 | THREE.Euler | TDimensions | TMaterial
+export type TPropertyValuesDataTypes =
+  | THREE.Vector3
+  | THREE.Vector3[]
+  | THREE.Euler
+  | THREE.Euler[]
+  | TDimensions
+  | TMaterial
 
 // ELEMENT [DATA]
 
@@ -106,6 +119,31 @@ export type TKeyframesData = {
       }
 }
 
+// ###############################
+// ##  TEXT  #####################
+// ###############################
+
+export type TText3DData = {
+  geometry: TTextGeometry
+  material: TMaterial
+}
+
+export type TWord3DData = TTextGeometry & {
+  keySuffix: string
+  position?: THREE.Vector3
+  splittedWord: string[]
+  lengthRef?: MutableRefObject<number[]>
+  children: JSX.Element
+}
+
+export type TLetter3DData = TTextGeometry & {
+  keySuffix: string
+  lengthRef?: MutableRefObject<number[]>
+  letter: string
+  index?: number
+  children: JSX.Element
+}
+
 // #################################
 // ##  GLOBAL  #####################
 // #################################
@@ -116,6 +154,8 @@ type TLabel = {
 }
 
 type TKeyframeKey = `step_${string}` | `${string}%` | 'easeEach'
+
+export type TCoordinatesData = TCoordinates | TCoordinates[]
 
 export type TCoordinates = {
   x?: number
@@ -135,7 +175,28 @@ export type TDimensions = {
   depth?: number
 }
 
+type TTextGeometry = {
+  font: string
+  size?: number
+  depth?: number
+  center?: boolean
+  spaceWidth?: number
+}
+
 export type TMaterial = {
+  color?: string | THREE.Color
+  roughness?: number
   transparent?: boolean
   opacity?: number
+  emissive?: string | THREE.Color
+  emissive_intensity?: number
+  wireframe?: boolean
+  side?: THREE.Side
+  needsUpdate?: boolean
+}
+
+export type TColor = {
+  r: number
+  g: number
+  b: number
 }

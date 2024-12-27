@@ -1,11 +1,10 @@
-import React, { forwardRef, useEffect } from 'react'
+import React, { forwardRef } from 'react'
 
-import type { TGroup } from '@/types/animation/three/componentsTypes'
-import type { TWord3D } from '@/types/three/lib/word3DTypes'
+import type { TWord3DData } from '@/types/animation/types'
 
 import Letter3D from './Letter3D'
 
-export const Word3D = forwardRef<TGroup, TWord3D>(
+export const Word3D = forwardRef<THREE.Group, TWord3DData>(
   ({ keySuffix, position, splittedWord, children, ...rest }, ref) => {
     return (
       <group

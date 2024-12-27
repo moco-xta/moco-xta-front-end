@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as sunComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/sunComponentConstants.json'
+import { sunComponentDefaultValues } from '@/data/home/hero/three/portrait/gobelino/sun_and_moon/sunComponentData'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -21,10 +21,8 @@ export const Sun = forwardRef<THREE.Mesh, MeshProps>(function Sun(props, ref) {
 
   useLayoutEffect(() => {
     materials['gobelino_#E7CE00_material'].transparent =
-      sunComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
-    materials['gobelino_#E7CE00_material'].opacity =
-      sunComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
-    // materials['gobelino_#E7CE00_material'].side = THREE.DoubleSide
+      sunComponentDefaultValues.material?.transparent!
+    materials['gobelino_#E7CE00_material'].opacity = sunComponentDefaultValues.material?.opacity!
   }, [materials])
 
   return (

@@ -14,33 +14,31 @@ import {
 } from '@/data/home/hero/three/also_know_as/texts/alsoKnowAsTextsGroupData'
 
 import { showHide } from 'animations'
-import { Box } from '@react-three/drei'
 
 export default function AlsoKnowAsTextsGroup() {
   const { timeline } = useGSAPTimelineContext()
 
-  const alsoKnowAsGroupRef = useRef<THREE.Group>(null!)
+  const alsoKnowAsTextsGroupRef = useRef<THREE.Group>(null!)
 
   useGSAP(
     () => {
       showHide({
         timeline: timeline,
-        ref: alsoKnowAsGroupRef.current,
+        ref: alsoKnowAsTextsGroupRef.current,
         animationsData: getAlsoKnowAsTextsGroupAnimationsData(),
       })
     },
-    { scope: alsoKnowAsGroupRef },
+    { scope: alsoKnowAsTextsGroupRef },
   )
 
   return (
     <group
-      ref={alsoKnowAsGroupRef}
+      ref={alsoKnowAsTextsGroupRef}
       {...getAlsoKnowAsTextsGroupDefaultValues}
     >
-      <Box />
-      {/* <AlsoText />
+      <AlsoText />
       <KnowText />
-      <AsText /> */}
+      <AsText />
     </group>
   )
 }

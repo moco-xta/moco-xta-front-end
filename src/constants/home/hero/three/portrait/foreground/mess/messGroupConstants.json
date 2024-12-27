@@ -1,6 +1,6 @@
 {
-  "name": "mess_group",
   "defaultValues": {
+    "name": "mess_group",
     "visible": true,
     "position": {
       "x": 0,

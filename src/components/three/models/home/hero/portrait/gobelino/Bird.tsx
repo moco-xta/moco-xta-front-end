@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as birdComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/birdComponentConstants.json'
+import { getBirdComponentDefaultValues } from '@/data/home/hero/three/portrait/gobelino/birdComponentData'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -22,12 +22,9 @@ export const Bird = forwardRef<THREE.Group, GroupProps>(function Bird(props, ref
   const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.PORTRAIT.GOBELINO.BIRD) as GLTFResult
 
   useLayoutEffect(() => {
-    Object.keys(materials).forEach((key) => {
-      // @ts-ignore
-      materials[key].transparent =
-        birdComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
-      // @ts-ignore
-      materials[key].opacity = birdComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+    ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
+      materials[key].transparent = getBirdComponentDefaultValues.material?.transparent!
+      materials[key].opacity = getBirdComponentDefaultValues.material?.opacity!
     })
   }, [materials])
 

@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as hillTopRightComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/hillTopRightComponentConstants.json'
+import { getHillTopRightComponentDefaultValues } from '@/data/home/hero/three/portrait/gobelino/hillTopRightComponentData'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -42,13 +42,9 @@ export const HillTopRight = forwardRef<THREE.Group, GroupProps>(function HillTop
   ) as GLTFResult
 
   useLayoutEffect(() => {
-    Object.keys(materials).forEach((key) => {
-      // @ts-ignore
-      materials[key].transparent =
-        hillTopRightComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
-      // @ts-ignore
-      materials[key].opacity =
-        hillTopRightComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
+    ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
+      materials[key].transparent = getHillTopRightComponentDefaultValues.material?.transparent!
+      materials[key].opacity = getHillTopRightComponentDefaultValues.material?.opacity!
     })
   }, [materials])
 

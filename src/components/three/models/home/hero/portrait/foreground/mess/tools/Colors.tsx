@@ -78,9 +78,14 @@ export const Colors = forwardRef<THREE.Group, GroupProps>(function Colors(props,
   ) as GLTFResult
 
   useLayoutEffect(() => {
-    ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
-      materials[key].transparent = colorsComponentConstants.defaultValues.material.transparent
-      materials[key].opacity = colorsComponentConstants.defaultValues.material.opacity
+    ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((material) => {
+      Object.entries(colorsComponentConstants.defaultValues.material).forEach(
+        ([property, value]) => {
+          ;(materials[material as keyof typeof materials] as any)[
+            property as keyof THREE.MeshStandardMaterial
+          ] = value
+        },
+      )
     })
   }, [materials])
 

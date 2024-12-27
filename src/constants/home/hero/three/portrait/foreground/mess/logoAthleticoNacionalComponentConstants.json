@@ -1,6 +1,6 @@
 {
-  "name": "logo_athletico_nacional_component",
   "defaultValues": {
+    "name": "logo_athletico_nacional_component",
     "visible": true,
     "position": {
       "x": 1.5,

@@ -4,11 +4,11 @@ import { useGSAP } from '@gsap/react'
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import MessGroup from './mess/MessGroup'
-import AlsoKnowAsTextsGroup from './also_know_as/texts/AlsoKnowAsTextsGroup'
+import AlsoKnowAsTextsGroup from '../../also_know_as/texts/AlsoKnowAsTextsGroup'
 
 import {
-  getForegroundDefaultValues,
   getForegroundGroupAnimationsData,
+  getForegroundGroupDefaultValues,
 } from '@/data/home/hero/three/portrait/foreground/foregroundGroupData'
 
 import { animate } from 'animations'
@@ -18,7 +18,7 @@ export default function ForegroundGroup() {
 
   const foregroundGroupRef = useRef<THREE.Group>(null!)
 
-  useGSAP(
+  /* useGSAP(
     () => {
       animate({
         timeline: timeline,
@@ -27,12 +27,12 @@ export default function ForegroundGroup() {
       })
     },
     { scope: foregroundGroupRef },
-  )
+  ) */
 
   return (
     <group
       ref={foregroundGroupRef}
-      {...getForegroundDefaultValues}
+      {...getForegroundGroupDefaultValues}
     >
       <MessGroup />
       <AlsoKnowAsTextsGroup />

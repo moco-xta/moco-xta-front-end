@@ -1,6 +1,6 @@
 {
-  "name": "greeting_texts_group",
   "defaultValues": {
+    "name": "greeting_texts_group",
     "visible": true,
     "position": {
       "x": 0,

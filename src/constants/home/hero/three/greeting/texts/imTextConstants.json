@@ -1,6 +1,6 @@
 {
-  "name": "i_m_text",
   "defaultValues": {
+    "name": "i_m_text",
     "visible": true,
     "position": {
       "x": 0,

@@ -1,6 +1,6 @@
 {
-  "name": "also_know_as_texts_group",
   "defaultValues": {
+    "name": "also_know_as_texts_group",
     "visible": true,
     "position": {
       "x": 0,

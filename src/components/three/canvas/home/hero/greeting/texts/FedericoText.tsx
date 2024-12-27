@@ -16,8 +16,6 @@ import {
   getFedericoTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/federicoTextData'
 
-import { default as federicoTextConstants } from '@/constants/home/hero/three/greeting/texts/federicoTextConstants.json'
-
 import { animate } from '@/animations/index'
 
 export default function FedericoText() {
@@ -45,7 +43,7 @@ export default function FedericoText() {
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={federicoTextConstants.name}
+      keySuffix={getFedericoTextDefaultValues.name}
       position={getFedericoTextDefaultValues.position}
       {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}

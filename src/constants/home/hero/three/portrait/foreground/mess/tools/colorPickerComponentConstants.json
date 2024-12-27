@@ -1,6 +1,6 @@
 {
-  "name": "color_picker_component",
   "defaultValues": {
+    "name": "color_picker_component",
     "visible": true,
     "position": {
       "x": 0,

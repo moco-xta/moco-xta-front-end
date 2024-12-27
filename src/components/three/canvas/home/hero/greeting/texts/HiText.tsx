@@ -17,8 +17,6 @@ import {
   getHiTextDefaultValues,
 } from '@/data/home/hero/three/greeting/texts/hiTextData'
 
-import { default as hiTextConstants } from '@/constants/home/hero/three/greeting/texts/hiTextConstants.json'
-
 import { animate } from '@/animations/index'
 
 export default function HiText() {
@@ -47,7 +45,7 @@ export default function HiText() {
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={hiTextConstants.name}
+      keySuffix={getHiTextDefaultValues.name}
       position={getHiTextDefaultValues.position}
       {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
