@@ -83,9 +83,9 @@ type TKeyframes = {
 export type TDefaultValuesData = {
   name: string
   visible: boolean
-  position?: THREE.Vector3 | THREE.Vector3[]
-  rotation?: THREE.Euler | THREE.Euler[]
-  scale?: THREE.Vector3 | THREE.Vector3[]
+  position?: THREE.Vector3
+  rotation?: THREE.Euler
+  scale?: THREE.Vector3
   dimensions?: TDimensions
   material?: TMaterial
   color?: TColor

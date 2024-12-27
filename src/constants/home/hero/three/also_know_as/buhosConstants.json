@@ -28,7 +28,7 @@
     ],
     "material": {
       "transparent": true,
-      "opacity": 0.1,
+      "opacity": 1,
       "emissiveIntensity": 0.5,
       "needsUpdate": true
     }
