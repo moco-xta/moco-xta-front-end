@@ -6,29 +6,29 @@
     "material": {
       "color": "#ffffff",
       "emissive": "#ffffff",
-      "emissive_intensity": 1
+      "emissiveIntensity": 1
     }
   },
   "animations": {
     "material": {
       "keyframes": {
         "step_1": {
-          "emissive_intensity": 60
+          "emissiveIntensity": 60
         },
         "step_2": {
-          "emissive_intensity": 40
+          "emissiveIntensity": 40
         },
         "step_3": {
-          "emissive_intensity": 0
+          "emissiveIntensity": 0
         },
         "step_4": {
-          "emissive_intensity": 50
+          "emissiveIntensity": 50
         },
         "step_5": {
-          "emissive_intensity": 20
+          "emissiveIntensity": 20
         },
         "step_10": {
-          "emissive_intensity": 0
+          "emissiveIntensity": 0
         },
         "easeEach": "none"
       }

@@ -6,7 +6,7 @@ import { cameraDefaultValues } from '@/data/home/hero/three/cameraData'
 
 function Camera() {
   const cameraRef = useRef<THREE.PerspectiveCamera>(null!)
-  useHelper(cameraRef, THREE.CameraHelper)
+  /* useHelper(cameraRef, THREE.CameraHelper) */
 
   return (
     <PerspectiveCamera

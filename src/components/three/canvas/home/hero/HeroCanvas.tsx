@@ -9,6 +9,7 @@ import PortraitGroup from './portrait/PortraitGroup'
 
 import { canvasDefaultValues } from '@/data/home/hero/three/canvasData'
 import AlsoKnowAsGroup from './also_know_as/AlsoKnowAsGroup'
+import PostProcessing from './PostProcessing'
 
 export default function HeroCanvas() {
   return (
@@ -19,8 +20,9 @@ export default function HeroCanvas() {
       <Suspense fallback={null}>
         <GreetingGroup />
         <PortraitGroup />
-        <AlsoKnowAsGroup />
+        {/* <AlsoKnowAsGroup /> */}
       </Suspense>
+      <PostProcessing />
     </Canvas>
   )
 }
