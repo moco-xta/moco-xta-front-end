@@ -5,10 +5,12 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { TextureLoader } from 'three'
 
+import type { TUniforms } from '@/types/animation/types'
+
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import vertex from '@/components/three/shaders/profile_picture/vertexShader.glsl'
-import fragment from '@/components/three/shaders/profile_picture/fragmentShader.glsl'
+import vertexShader from '@/components/three/shaders/profile_picture/vertexShader.glsl'
+import fragmentShader from '@/components/three/shaders/profile_picture/fragmentShader.glsl'
 
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 import { default as foregroundGroupConstants } from '@/constants/home/hero/three/portrait/foreground/foregroundGroupConstants.json'
@@ -36,45 +38,42 @@ export default function ProfilePicture() {
   const raycasterRef = useRef<THREE.Raycaster>(new THREE.Raycaster())
   const mouseRef = useRef<THREE.Vector2>(new THREE.Vector2())
   const pointRef = useRef<THREE.Vector2>(new THREE.Vector2())
-  const uniforms = useMemo(
-    () => ({
-      time: {
-        type: 'f',
-        value: 0,
-      },
-      opacity: {
-        type: 'f',
-        value: opacityRef.current.value,
-      },
-      uTexture: {
-        type: 't',
-        value: textures[1],
-      },
-      mask: {
-        type: 't',
-        value: textures[2],
-      },
-      mouse: {
-        type: 'v2',
-        value: new THREE.Vector2(0.0, 0.0),
-      },
-      mousePressed: {
-        type: 'f',
-        value: 0,
-      },
-      move: {
-        type: 'f',
-        value: 0,
-      },
-    }),
-    [textures],
-  )
+  const uniforms = useRef<TUniforms>({
+    time: {
+      type: 'f',
+      value: 0,
+    },
+    opacity: {
+      type: 'f',
+      value: opacityRef.current.value,
+    },
+    uTexture: {
+      type: 't',
+      value: textures[1],
+    },
+    mask: {
+      type: 't',
+      value: textures[2],
+    },
+    mouse: {
+      type: 'v2',
+      value: new THREE.Vector2(0.0, 0.0),
+    },
+    mousePressed: {
+      type: 'f',
+      value: 0,
+    },
+    move: {
+      type: 'f',
+      value: 0,
+    },
+  })
 
   const materialRef = useRef<THREE.ShaderMaterial>(
     new THREE.ShaderMaterial({
-      uniforms: uniforms,
-      vertexShader: vertex,
-      fragmentShader: fragment,
+      uniforms: uniforms.current,
+      vertexShader: vertexShader,
+      fragmentShader: fragmentShader,
       transparent: true,
       side: THREE.DoubleSide,
       depthTest: false,
@@ -225,7 +224,7 @@ export default function ProfilePicture() {
     geometry.setAttribute('aPress', press)
 
     const points = new THREE.Points(geometry, materialRef.current)
-    scene.add(points)
+    scene.getObjectByName('mess_group')?.add(points)
   }, [scene])
 
   useFrame(({ clock }) => {

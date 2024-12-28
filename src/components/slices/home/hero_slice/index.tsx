@@ -56,7 +56,7 @@ export default function HeroSlice() {
         id='hero_slice'
         className='fullscreen'
         style={{
-          background: '#fff',
+          background: '#000',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}

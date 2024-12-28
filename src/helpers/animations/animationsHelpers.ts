@@ -171,7 +171,7 @@ export function getDefaultValuesArray(constants: TConstants): TDefaultValuesData
 // GET ANIMATIONS DATA
 
 export function getAnimationsData(duration: number, constants: TConstants): TAnimationsData {
-  console.log(`${constants.defaultValues.name} constants`, constants)
+  // console.log(`${constants.defaultValues.name} constants`, constants)
 
   let animationsData: TAnimationsData = {}
   let propertyData = {}
@@ -228,7 +228,7 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
       [property]: { keyframes: propertyData },
     }
   }
-  console.log(`${constants.defaultValues.name} animationsData`, animationsData)
+  // console.log(`${constants.defaultValues.name} animationsData`, animationsData)
   return animationsData
 }
 

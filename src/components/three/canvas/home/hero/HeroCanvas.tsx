@@ -6,10 +6,11 @@ import Camera from './Camera'
 import Lights from './lights/Lights'
 import GreetingGroup from './greeting/GreetingGroup'
 import PortraitGroup from './portrait/PortraitGroup'
+import AlsoKnowAsGroup from './also_know_as/AlsoKnowAsGroup'
+import MocoGroup from './moco/MocoGroup'
+import PostProcessing from './PostProcessing'
 
 import { canvasDefaultValues } from '@/data/home/hero/three/canvasData'
-import AlsoKnowAsGroup from './also_know_as/AlsoKnowAsGroup'
-import PostProcessing from './PostProcessing'
 
 export default function HeroCanvas() {
   return (
@@ -21,6 +22,7 @@ export default function HeroCanvas() {
         <GreetingGroup />
         <PortraitGroup />
         <AlsoKnowAsGroup />
+        <MocoGroup />
       </Suspense>
       <PostProcessing />
     </Canvas>

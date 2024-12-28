@@ -11,7 +11,10 @@ import Clouds from './Clouds'
 import SunAndMoon from './sun_and_moon/SunAndMoonGroup'
 import SkyComponent from './SkyComponent'
 
-import { getGobelinoGroupDefaultValues, getGobelinoGroupAnimationsData } from '@/data/home/hero/three/portrait/gobelino/gobelinoGroupData'
+import {
+  getGobelinoGroupDefaultValues,
+  getGobelinoGroupAnimationsData,
+} from '@/data/home/hero/three/portrait/gobelino/gobelinoGroupData'
 
 import { showHide } from 'animations'
 
@@ -32,7 +35,10 @@ export default function GobelinoGroup() {
   )
 
   return (
-    <group ref={gobelinoGroupRef} visible={getGobelinoGroupDefaultValues.visible}>
+    <group
+      ref={gobelinoGroupRef}
+      visible={getGobelinoGroupDefaultValues.visible}
+    >
       <HillTopLeftComponent />
       <HillTopRightComponent />
       <BirdComponent />

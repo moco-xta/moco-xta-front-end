@@ -200,3 +200,10 @@ export type TColor = {
   g: number
   b: number
 }
+
+export type TUniforms = Record<string, TUniform>
+
+type TUniform = {
+  type: string
+  value: number | THREE.Texture | THREE.Vector2 | THREE.Vector3
+}
