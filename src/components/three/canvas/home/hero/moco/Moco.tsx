@@ -17,9 +17,42 @@ type Line = {
   previous: THREE.Vector3
 }
 
+class Sparkle extends THREE.Vector3 {
+  x: number = 0
+  y: number = 0
+  z: number = 0
+  _size: number = 0
+  size: number = 0
+  dest: THREE.Vector3 = new THREE.Vector3()
+  scaleSpeed: number = 0
+  stop: boolean = false
+  setup(origin: THREE.Vector3) {
+    this.add(origin).multiplyScalar(2)
+    this.dest = origin
+    this._size = Math.random() * 0.5 + 0.5
+    this.size = 3
+    this.scaleSpeed = Math.random() * 0.3 + 0.3
+    this.stop = false
+  }
+  update() {
+    this.x += (this.dest.x - this.x) * 0.08
+    this.y += (this.dest.y - this.y) * 0.08
+    this.z += (this.dest.z - this.z) * 0.08
+    if (this.size < this._size) {
+      this.size += this.scaleSpeed
+    } else {
+      if (this.distanceTo(this.dest) < 0.1) {
+        this.stop = true
+      }
+    }
+  }
+}
+
 export default function Moco() {
   const { scene } = useThree()
 
+  let samplerRef = useRef<MeshSurfaceSampler>(null!)
+  const loader = useRef<GLTFLoader>(new GLTFLoader())
   const sparklesGeometryRef = useRef<THREE.BufferGeometry>(new THREE.BufferGeometry())
   const uniformsRef = useRef<TUniforms>({
     pointTexture: {
@@ -48,6 +81,14 @@ export default function Moco() {
   const linesRef = useRef<Line[]>([])
   const tempSparklesArrayColorsRef: number[] = []
 
+  const modelsUrls = useMemo(
+    () => [
+      glbConstants.HOME.HERO.MOCO.HELIUM_BALLOON_M,
+      glbConstants.HOME.HERO.MOCO.HELIUM_BALLOON_C,
+      glbConstants.HOME.HERO.MOCO.HELIUM_BALLOON_O,
+    ],
+    [],
+  )
   const linesColors = useMemo(
     () => [
       new THREE.Color(0xfaad80).multiplyScalar(0.5),
@@ -57,8 +98,6 @@ export default function Moco() {
     ],
     [],
   )
-
-  let samplerRef = useRef<MeshSurfaceSampler>(null!)
 
   function initLines(letter: THREE.Mesh) {
     samplerRef.current = new MeshSurfaceSampler(letter).build()
@@ -72,14 +111,6 @@ export default function Moco() {
       linesRef.current.push(linesMesh)
     }
   }
-
-  const loader = new GLTFLoader()
-  loader.load(glbConstants.HOME.HERO.MOCO.HELIUM_BALLOON_M, function (gltf) {
-    const letter = gltf.scene.children[0] as THREE.Mesh
-    letter.geometry.scale(5, 5, 5)
-    letter.updateMatrix()
-    initLines(letter)
-  })
 
   function findNextVector(line: Line) {
     let ok = false
@@ -104,51 +135,31 @@ export default function Moco() {
     }
   }
 
-  class Sparkle extends THREE.Vector3 {
-    x: number = 0
-    y: number = 0
-    z: number = 0
-    _size: number = 0
-    size: number = 0
-    dest: THREE.Vector3 = new THREE.Vector3()
-    scaleSpeed: number = 0
-    stop: boolean = false
-    setup(origin: THREE.Vector3) {
-      this.add(origin).multiplyScalar(2)
-      this.dest = origin
-      this._size = Math.random() * 5 + 5
-      this.size = 10
-      this.scaleSpeed = Math.random() * 3 + 3
-      this.stop = false
-    }
-    update() {
-      this.x += (this.dest.x - this.x) * 0.08
-      this.y += (this.dest.y - this.y) * 0.08
-      this.z += (this.dest.z - this.z) * 0.08
-      if (this.size < this._size) {
-        this.size += this.scaleSpeed
-      } else {
-        if (this.distanceTo(this.dest) < 0.1) {
-          this.stop = true
-        }
-      }
-    }
-  }
-
   let tempSparklesArray: number[] = []
   let tempSparklesArraySizes: number[] = []
 
   useEffect(() => {
     window.sparkles = sparkles.current
     // console.log('window', window)
+    // pointsRef.current.position.set(-2, 0, 0)
+
+
+    modelsUrls.forEach((url, index) => {
+      loader.current.load(url, function (gltf) {
+        const letter = gltf.scene.children[0] as THREE.Mesh
+        letter.geometry.scale(5, 5, 5)
+        letter.updateMatrix()
+        // scene.getObjectByName('moco_group')?.add(letter)
+        initLines(letter)
+      })
+    })
+
+
     scene.getObjectByName('moco_group')?.add(pointsRef.current)
   }, [scene])
 
-  useFrame(({ clock }) => {
-    let time = clock.getElapsedTime()
-    time += 0.03
-
-    if (sparkles.current.length < 40000) {
+  useFrame(() => {
+    if (sparkles.current.length < 100000) {
       linesRef.current.forEach((l) => {
         findNextVector(l)
         findNextVector(l)
