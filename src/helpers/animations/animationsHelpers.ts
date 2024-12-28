@@ -237,3 +237,25 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
 export function getKeyframePosition(duration: number, step: string): string {
   return `${((100 / duration) * Number(step.split('_')[1])).toFixed(2)}%`
 }
+
+// SET POSITION
+
+export function setPosition(coordinates: TCoordinates): THREE.Vector3 {
+  return new THREE.Vector3(coordinates.x ?? 0, coordinates.y ?? 0, coordinates.z ?? 0)
+}
+
+// SET ROTATION
+
+export function setRotation(coordinates: TCoordinates): THREE.Euler {
+  return new THREE.Euler(
+    THREE.MathUtils.degToRad(coordinates.x ?? 0),
+    THREE.MathUtils.degToRad(coordinates.y ?? 0),
+    THREE.MathUtils.degToRad(coordinates.z ?? 0),
+  )
+}
+
+// SET SCALE
+
+export function setScale(coordinates: TCoordinates): THREE.Vector3 {
+  return new THREE.Vector3(coordinates.x ?? 0, coordinates.y ?? 0, coordinates.z ?? 0)
+}

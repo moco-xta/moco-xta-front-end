@@ -9,8 +9,8 @@ import KnowText from './KnowText'
 import AsText from './AsText'
 
 import {
+  alsoKnowAsTextsGroupDefaultValues,
   getAlsoKnowAsTextsGroupAnimationsData,
-  getAlsoKnowAsTextsGroupDefaultValues,
 } from '@/data/home/hero/three/also_know_as/texts/alsoKnowAsTextsGroupData'
 
 import { showHide } from 'animations'
@@ -34,7 +34,7 @@ export default function AlsoKnowAsTextsGroup() {
   return (
     <group
       ref={alsoKnowAsTextsGroupRef}
-      {...getAlsoKnowAsTextsGroupDefaultValues}
+      {...alsoKnowAsTextsGroupDefaultValues}
     >
       <AlsoText />
       <KnowText />

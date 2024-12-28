@@ -35,7 +35,7 @@ export default function ForegroundGroup() {
       {...foregroundGroupDefaultValues}
     >
       <MessGroup />
-      {/* <AlsoKnowAsTextsGroup /> */}
+      <AlsoKnowAsTextsGroup />
     </group>
   )
 }
