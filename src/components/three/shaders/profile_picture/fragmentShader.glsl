@@ -8,9 +8,9 @@ uniform sampler2D mask;
 float NUMBER = 512.0;
 
 vec4 rgbShift(sampler2D uTexture, vec2 vUv, float opacity) {
-   float r = texture2D(uTexture, vUv + vec2(1.0 - opacity, 0.0)).r;
+   float r = texture2D(uTexture, vUv + vec2((1.0 - opacity) * 0.05, 0.0)).r;
    float g = texture2D(uTexture, vUv).g;
-   float b = texture2D(uTexture, vUv + vec2(1.0 - opacity, 0.0)).b;
+   float b = texture2D(uTexture, vUv + vec2((1.0 - opacity) * 0.05, 0.0)).b;
    return vec4(r, g, b, opacity * texture2D(uTexture, vUv).a);
  }
 

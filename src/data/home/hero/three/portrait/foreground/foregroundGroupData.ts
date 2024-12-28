@@ -4,7 +4,7 @@ import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animat
 
 import { default as foregroundGroupConstants } from '@/constants/home/hero/three/portrait/foreground/foregroundGroupConstants.json'
 
-export const getForegroundGroupDefaultValues: TDefaultValuesData = {
+export const foregroundGroupDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(foregroundGroupConstants),
 }
 

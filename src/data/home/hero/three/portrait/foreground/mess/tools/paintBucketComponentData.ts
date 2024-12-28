@@ -5,7 +5,7 @@ import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animat
 import { default as foregroundGroupConstants } from '@/constants/home/hero/three/portrait/foreground/foregroundGroupConstants.json'
 import { default as paintBucketComponentConstants } from '@/constants/home/hero/three/portrait/foreground/mess/tools/paintBucketComponentConstants.json'
 
-export const getPaintBucketComponentDefaultValues: TDefaultValuesData = {
+export const paintBucketComponentDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(paintBucketComponentConstants),
 }
 

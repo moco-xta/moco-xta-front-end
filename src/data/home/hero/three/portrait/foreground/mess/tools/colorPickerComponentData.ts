@@ -5,7 +5,7 @@ import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animat
 import { default as foregroundGroupConstants } from '@/constants/home/hero/three/portrait/foreground/foregroundGroupConstants.json'
 import { default as colorPickerComponentConstants } from '@/constants/home/hero/three/portrait/foreground/mess/tools/colorPickerComponentConstants.json'
 
-export const getColorPickerComponentDefaultValues: TDefaultValuesData = {
+export const colorPickerComponentDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(colorPickerComponentConstants),
 }
 

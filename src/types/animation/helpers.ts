@@ -10,5 +10,6 @@ export type TAnimateSignature = {
   timeline: GSAPTimeline
   ref: THREE.Group | THREE.Mesh
   animationsData: TElementData
+  withMaterialsArray?: boolean
   // variables?: Record<string, number>
 }

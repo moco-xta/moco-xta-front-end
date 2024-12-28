@@ -231,6 +231,5 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
 // GET KEYFRAME POSITION
 
 export function getKeyframePosition(duration: number, step: string): string {
-  console.log(step, Number(step.split('_')[1]))
   return `${((100 / duration) * Number(step.split('_')[1])).toFixed(2)}%`
 }

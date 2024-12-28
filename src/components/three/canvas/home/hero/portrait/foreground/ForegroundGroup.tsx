@@ -7,8 +7,8 @@ import MessGroup from './mess/MessGroup'
 import AlsoKnowAsTextsGroup from '../../also_know_as/texts/AlsoKnowAsTextsGroup'
 
 import {
+  foregroundGroupDefaultValues,
   getForegroundGroupAnimationsData,
-  getForegroundGroupDefaultValues,
 } from '@/data/home/hero/three/portrait/foreground/foregroundGroupData'
 
 import { animate } from 'animations'
@@ -32,7 +32,7 @@ export default function ForegroundGroup() {
   return (
     <group
       ref={foregroundGroupRef}
-      {...getForegroundGroupDefaultValues}
+      {...foregroundGroupDefaultValues}
     >
       <MessGroup />
       {/* <AlsoKnowAsTextsGroup /> */}

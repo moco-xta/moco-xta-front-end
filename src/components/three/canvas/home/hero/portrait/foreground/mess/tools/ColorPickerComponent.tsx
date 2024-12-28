@@ -7,8 +7,8 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 import { ColorPicker } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/ColorPicker'
 
 import {
+  colorPickerComponentDefaultValues,
   getColorPickerComponentAnimationsData,
-  getColorPickerComponentDefaultValues,
 } from '@/data/home/hero/three/portrait/foreground/mess/tools/colorPickerComponentData'
 
 import { animate } from 'animations'
@@ -24,6 +24,7 @@ export default function ColorPickerComponent() {
         timeline: timeline,
         ref: colorPickerComponentRef.current,
         animationsData: getColorPickerComponentAnimationsData(),
+        withMaterialsArray: true,
       })
     },
     { scope: colorPickerComponentRef },
@@ -32,7 +33,7 @@ export default function ColorPickerComponent() {
   return (
     <ColorPicker
       ref={colorPickerComponentRef}
-      position={getColorPickerComponentDefaultValues.position}
+      position={colorPickerComponentDefaultValues.position}
     />
   )
 }
