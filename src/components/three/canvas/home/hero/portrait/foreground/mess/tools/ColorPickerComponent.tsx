@@ -24,7 +24,9 @@ export default function ColorPickerComponent() {
         timeline: timeline,
         ref: colorPickerComponentRef.current,
         animationsData: getColorPickerComponentAnimationsData(),
-        withMaterialsArray: true,
+        params: {
+          withMaterialsArray: true,
+        },
       })
     },
     { scope: colorPickerComponentRef },

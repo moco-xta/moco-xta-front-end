@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
 
@@ -7,8 +7,8 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 import { Sky } from '@/components/three/models/home/hero/portrait/gobelino/Sky'
 
 import {
+  skyComponentDefaultValues,
   getSkyComponentAnimationsData,
-  getSkyComponentDefaultValues,
 } from '@/data/home/hero/three/portrait/gobelino/skyComponentData'
 
 import { animate } from 'animations'
@@ -29,10 +29,14 @@ export default function SkyComponent() {
     { scope: skyComponentRef },
   )
 
+  useEffect(() => {
+    console.log('skyComponentRef', skyComponentRef)
+  }, [skyComponentRef])
+
   return (
     <Sky
       ref={skyComponentRef}
-      position={getSkyComponentDefaultValues.position}
+      position={skyComponentDefaultValues.position}
     />
   )
 }

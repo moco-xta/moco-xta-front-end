@@ -28,8 +28,8 @@
     ],
     "material": {
       "transparent": true,
-      "opacity": 1,
-      "emissiveIntensity": 0.5,
+      "opacity": 0,
+      "emissiveIntensity": 0,
       "needsUpdate": true
     }
   },
@@ -38,27 +38,27 @@
       "keyframes": {
         "step_1": {
           "opacity": 1,
-          "emissive_intensity": 1
+          "emissiveIntensity": 1
         },
         "step_2": {
           "opacity": 0.05,
-          "emissive_intensity": 0.5
+          "emissiveIntensity": 0.5
         },
         "step_3": {
           "opacity": 0,
-          "emissive_intensity": 0
+          "emissiveIntensity": 0
         },
         "step_4": {
           "opacity": 0.11,
-          "emissive_intensity": 0.75
+          "emissiveIntensity": 0.75
         },
         "step_5": {
           "opacity": 0.05,
-          "emissive_intensity": 0.3
+          "emissiveIntensity": 0.3
         },
         "step_10": {
           "opacity": 0,
-          "emissive_intensity": 0
+          "emissiveIntensity": 0
         },
         "easeEach": "none"
       }

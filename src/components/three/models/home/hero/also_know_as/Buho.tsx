@@ -44,25 +44,26 @@ type GLTFResult = GLTF & {
   }
 }
 
-export const Buho = forwardRef<THREE.Group, GroupProps>(function Buho(props, ref) {
+export const Buho = forwardRef<THREE.Group, GroupProps & { index: number }>(function Buho(
+  { index, ...rest },
+  ref,
+) {
   const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.ALSO_KNOW_AS.BUHO) as GLTFResult
 
   useLayoutEffect(() => {
-    buhosDefaultValues.forEach((buho) => {
-      ;(Object.keys(materials) as (keyof typeof materials)[]).forEach((key) => {
-        materials[key].transparent = buho.material?.transparent!
-        materials[key].opacity = buho.material?.opacity!
-        materials[key].emissive = materials.bordeaux_material.color
-        materials[key].emissiveIntensity = buho.material?.emissive_intensity!
-        materials[key].needsUpdate = buho.material?.needsUpdate!
-      })
+    ;(Object.keys(materials) as (keyof typeof materials)[]).forEach((key) => {
+      materials[key].transparent = buhosDefaultValues[index].material?.transparent!
+      materials[key].opacity = buhosDefaultValues[index].material?.opacity!
+      materials[key].emissive = materials.bordeaux_material.color
+      materials[key].emissiveIntensity = buhosDefaultValues[index].material?.emissive_intensity!
+      materials[key].needsUpdate = buhosDefaultValues[index].material?.needsUpdate!
     })
   }, [materials])
 
   return (
     <group
       ref={ref}
-      {...props}
+      {...rest}
     >
       <mesh
         name='Buho_1'

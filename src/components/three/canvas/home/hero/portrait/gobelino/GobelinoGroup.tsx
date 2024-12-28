@@ -36,7 +36,7 @@ export default function GobelinoGroup() {
       <HillTopLeftComponent />
       <HillTopRightComponent />
       <BirdComponent />
-      {/* <Clouds /> */}
+      <Clouds />
       <SunAndMoon />
       <SkyComponent />
     </group>

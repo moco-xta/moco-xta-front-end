@@ -25,7 +25,9 @@ export default function PaintBucketComponent() {
         timeline: timeline,
         ref: paintBucketComponentRef.current,
         animationsData: getPaintBucketComponentAnimationsData(),
-        withMaterialsArray: true,
+        params: {
+          withMaterialsArray: true,
+        },
       })
     },
     { scope: paintBucketComponentRef },

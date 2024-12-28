@@ -20,25 +20,28 @@ export default function Buhos() {
 
   const buhosRef = useRef<THREE.Group>(null!)
 
-  /* useGSAP(
+  useGSAP(
     () => {
       animate({
         timeline: timeline,
         ref: buhosRef.current,
         animationsData: getBuhosAnimationsData(),
+        params: {
+          withMaterialsArray: true,
+          elementsArray: true,
+        },
       })
     },
     { scope: buhosRef },
-  ) */
+  )
 
   return (
     <group ref={buhosRef}>
       {buhosDefaultValues.map((buho: TDefaultValuesData, index: number) => {
-        // console.log('buhosDefaultValues', buhosDefaultValues)
-        console.log('buho', buho)
         return (
           <Buho
             key={`buho_${index}`}
+            index={index}
             position={buho.position}
             scale={buho.scale}
           />

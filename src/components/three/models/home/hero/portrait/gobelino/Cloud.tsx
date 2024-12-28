@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as cloudComponentConstants } from '@/constants/animations/home/hero/canvas/groups/portrait/gobelino/cloudComponentConstants.json'
+import { cloudsDefaultValues } from '@/data/home/hero/three/portrait/gobelino/cloudsData'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -16,24 +16,25 @@ type GLTFResult = GLTF & {
   }
 }
 
-export const Cloud = forwardRef<THREE.Mesh, MeshProps>(function Cloud(props, ref) {
+export const Cloud = forwardRef<THREE.Mesh, MeshProps & { index: number }>(function Cloud(
+  { index, ...rest },
+  ref,
+) {
   const { nodes, materials } = useGLTF(glbConstants.HOME.HERO.PORTRAIT.GOBELINO.CLOUD) as GLTFResult
 
   useLayoutEffect(() => {
     materials['gobelino_#ffffff_material'].transparent =
-      cloudComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.TRANSPARENT
-    materials['gobelino_#ffffff_material'].opacity =
-      cloudComponentConstants.ANIMATION['0_PERCENT'].MATERIAL.OPACITY
-    // materials['gobelino_#E7CE00_material'].side = THREE.DoubleSide
+      cloudsDefaultValues[index].material?.transparent!
+    materials['gobelino_#ffffff_material'].opacity = cloudsDefaultValues[index].material?.opacity!
   }, [materials])
 
   return (
     <mesh
       ref={ref}
-      name='Sun'
+      name={cloudsDefaultValues[index].name}
       geometry={nodes.Cloud.geometry}
       material={materials['gobelino_#ffffff_material']}
-      {...props}
+      {...rest}
     />
   )
 })

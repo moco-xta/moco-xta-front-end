@@ -115,7 +115,9 @@ export function getDefaultValuesArray(constants: TConstants): TDefaultValuesData
                 for (const [key, value] of Object.entries(
                   constants.defaultValues.rotation[index] as TCoordinates,
                 )) {
-                  propertyValues[key as keyof TCoordinates] = value as number
+                  propertyValues[key as keyof TCoordinates] = THREE.MathUtils.degToRad(
+                    value,
+                  ) as number
                 }
                 elementDefaultValues = {
                   ...elementDefaultValues,
@@ -169,6 +171,8 @@ export function getDefaultValuesArray(constants: TConstants): TDefaultValuesData
 // GET ANIMATIONS DATA
 
 export function getAnimationsData(duration: number, constants: TConstants): TAnimationsData {
+  console.log(`${constants.defaultValues.name} constants`, constants)
+
   let animationsData: TAnimationsData = {}
   let propertyData = {}
 
@@ -224,7 +228,7 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
       [property]: { keyframes: propertyData },
     }
   }
-  // console.log(`${constants.defaultValues.name} animationsData`, animationsData)
+  console.log(`${constants.defaultValues.name} animationsData`, animationsData)
   return animationsData
 }
 

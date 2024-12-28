@@ -24,7 +24,9 @@ export default function ColorsComponent() {
         timeline: timeline,
         ref: colorsComponentRef.current,
         animationsData: getColorsComponentAnimationsData(),
-        withMaterialsArray: true,
+        params: {
+          withMaterialsArray: true,
+        },
       })
     },
     { scope: colorsComponentRef },
