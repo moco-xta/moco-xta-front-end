@@ -20,7 +20,7 @@ export default function HeroCanvas() {
       <Suspense fallback={null}>
         <GreetingGroup />
         <PortraitGroup />
-        {/* <AlsoKnowAsGroup /> */}
+        <AlsoKnowAsGroup />
       </Suspense>
       <PostProcessing />
     </Canvas>

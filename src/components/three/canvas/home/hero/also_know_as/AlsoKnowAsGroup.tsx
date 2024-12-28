@@ -6,7 +6,7 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 import LightningComponent from './LightningComponent'
 import Buhos from './Buhos'
 
-import { getAlsoKnowAsGroupAnimationsData } from '@/data/home/hero/three/also_know_as/alsoKnowAsGroupData'
+import { alsoKnowAsGroupDefaultValues, getAlsoKnowAsGroupAnimationsData } from '@/data/home/hero/three/also_know_as/alsoKnowAsGroupData'
 
 import { showHide } from 'animations'
 
@@ -27,7 +27,7 @@ export default function AlsoKnowAsGroup() {
   )
 
   return (
-    <group ref={alsoKnowAsGroupRef}>
+    <group ref={alsoKnowAsGroupRef} visible={alsoKnowAsGroupDefaultValues.visible}>
       <LightningComponent />
       <Buhos />
     </group>
