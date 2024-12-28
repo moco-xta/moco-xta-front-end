@@ -10,9 +10,9 @@ import './index.scss'
 export default function PauseButton() {
   const [paused, setPaused] = useState<boolean>(false)
 
-  /* const { timeline } = useGSAPTimelineContext() */
+  const { timeline } = useGSAPTimelineContext()
 
-  /* const handleOnClick = () => {
+  const handleOnClick = () => {
     if (!paused) {
       timeline.pause()
       setPaused(true)
@@ -20,7 +20,7 @@ export default function PauseButton() {
       timeline.play()
       setPaused(false)
     }
-  } */
+  }
 
   return (
     <div
@@ -29,7 +29,7 @@ export default function PauseButton() {
         // background: !paused ? variables.success_light_color : variables.alert_light_color // TODO: Issue with variables!!! Weird...
         background: !paused ? 'chartreuse' : 'red',
       }}
-      /* onClick={handleOnClick} */
+      onClick={handleOnClick}
     >
       {!paused ? <FaPause /> : <FaPlay />}
     </div>
