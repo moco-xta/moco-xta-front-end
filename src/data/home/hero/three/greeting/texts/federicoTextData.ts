@@ -1,7 +1,7 @@
-import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
+import type { TDefaultValuesData, TElementData } from '@/types/animation/three/types'
 import type { TGetAnimationsDataSignature } from '@/types/animation/helpers'
 
-import { getDefaultValues, getKeyframePosition } from '@/helpers/animations/animationsHelpers'
+import { getDefaultValues, getKeyframePosition } from '@/helpers/animations/three/animationsHelpers'
 import { getRandomInt, randomPositiveOrNegative } from '@/helpers/mathHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'

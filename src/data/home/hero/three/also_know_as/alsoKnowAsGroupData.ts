@@ -1,6 +1,6 @@
-import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
+import type { TDefaultValuesData, TElementData } from '@/types/animation/three/types'
 
-import { getDefaultValues } from '@/helpers/animations/animationsHelpers'
+import { getDefaultValues } from '@/helpers/animations/three/animationsHelpers'
 
 import { default as alsoKnowAsGroupConstants } from '@/constants/home/hero/three/also_know_as/alsoKnowAsGroupConstants.json'
 

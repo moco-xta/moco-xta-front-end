@@ -1,0 +1,51 @@
+{
+  "duration": 2,
+  "steps": 10,
+  "label": "portrait",
+  "defaultValues": {
+    "id": "hero_slice",
+    "className": "fullscreen",
+    "style": {
+      "background": "#000",
+      "backgroundSize": "cover",
+      "backgroundRepeat": "no-repeat"
+    }
+  },
+  "animations": {
+    "style": {
+      "keyframes": {
+        "step_1": {
+          "backgroundImage": "url('/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg')"
+        },
+        "step_2": {
+          "backgroundImage": "url('/img/background_images/brain.jpg')"
+        },
+        "step_3": {
+          "backgroundImage": "url('/img/background_images/ondas_de_la_ayahuasca_pablo_amaringo.jpg')"
+        },
+        "step_4": {
+          "backgroundImage": "url('/img/background_images/orion_constellation.jpg')"
+        },
+        "step_5": {
+          "backgroundImage": "url('/img/background_images/brain.jpg')"
+        },
+        "step_6": {
+          "backgroundImage": "url('/img/background_images/explosion_bombe_atomique_mururoa_1971.jpg')"
+        },
+        "step_7": {
+          "backgroundImage": "url('/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg')"
+        },
+        "step_8": {
+          "backgroundImage": "url('/img/background_images/inchas_athletico_nacional.jpg')"
+        },
+        "step_9": {
+          "backgroundImage": "url('/img/background_images/explosion_bombe_atomique_mururoa_1971.jpg')"
+        },
+        "step_10": {
+          "backgroundImage": "url('/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg')"
+        },
+        "easeEach": "none"
+      }
+    }
+  }
+}

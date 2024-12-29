@@ -24,7 +24,7 @@ export default function HeroCanvas() {
         <AlsoKnowAsGroup />
         <MocoGroup />
       </Suspense>
-      {/* <PostProcessing /> */}
+      <PostProcessing />
     </Canvas>
   )
 }

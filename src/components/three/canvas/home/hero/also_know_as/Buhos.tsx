@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useGSAP } from '@gsap/react'
 
-import type { TDefaultValuesData } from '@/types/animation/types'
+import type { TDefaultValuesData } from '@/types/animation/three/types'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 

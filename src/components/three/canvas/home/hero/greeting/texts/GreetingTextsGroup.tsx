@@ -7,7 +7,7 @@ import HiText from './HiText'
 import ImText from './ImText'
 import FedericoText from './FedericoText'
 
-import { setGreetingTextsPositions } from '@/helpers/animations/heroAnimationsHelpers'
+import { setGreetingTextsPositions } from '@/helpers/animations/three/heroAnimationsHelpers'
 
 import { getGreetingTextsGroupAnimationsData } from '@/data/home/hero/three/greeting/texts/greetingTextsGroupData'
 

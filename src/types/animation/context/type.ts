@@ -1,3 +1,5 @@
+import type { TLabel } from '../three/types'
+
 export type TGSAPTimelineContext = {
   timeline: GSAPTimeline
 }
@@ -7,9 +9,4 @@ export type TGSAPTimelineProvider = {
   timeScale?: number
   labels?: TLabel[]
   children: JSX.Element
-}
-
-type TLabel = {
-  name: string
-  position: number | string
 }

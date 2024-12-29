@@ -1,4 +1,4 @@
-import { TElementData } from './types'
+import type { TElementData } from './types'
 
 export type TGetAnimationsDataSignature = {
   index?: number

@@ -1,4 +1,4 @@
-import { TTimelineData } from '@/types/animation/types'
+import type { TTimelineData } from '@/types/animation/timeline/types'
 
 import { default as timelineConstants } from '@/constants/home/hero/timelineConstants.json'
 

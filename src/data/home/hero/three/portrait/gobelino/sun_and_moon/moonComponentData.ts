@@ -1,6 +1,6 @@
-import type { TElementData, TDefaultValuesData } from '@/types/animation/types'
+import type { TElementData, TDefaultValuesData } from '@/types/animation/three/types'
 
-import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
+import { getAnimationsData, getDefaultValues } from '@/helpers/animations/three/animationsHelpers'
 
 import { default as gobelinoGroupConstants } from '@/constants/home/hero/three/portrait/gobelino/gobelinoGroupConstants.json'
 import { default as moonComponentConstants } from '@/constants/home/hero/three/portrait/gobelino/sun_and_moon/moonComponentConstants.json'

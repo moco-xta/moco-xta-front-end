@@ -1,8 +1,8 @@
 import * as THREE from 'three'
 
-import type { TElementData, TDefaultValuesData } from '@/types/animation/types'
+import type { TElementData, TDefaultValuesData } from '@/types/animation/three/types'
 
-import { setRotation } from '@/helpers/animations/animationsHelpers'
+import { setRotation } from '@/helpers/animations/three/animationsHelpers'
 
 import { default as foregroundGroupConstants } from '@/constants/home/hero/three/portrait/foreground/foregroundGroupConstants.json'
 import { default as alsoKnowAsTextsGroupConstants } from '@/constants/home/hero/three/also_know_as/texts/alsoKnowAsTextsGroupConstants.json'

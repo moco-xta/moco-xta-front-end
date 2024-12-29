@@ -5,10 +5,10 @@ import type {
   TConstants,
   TCoordinates,
   TDefaultValuesData,
-  TKeyframesData,
   TPropertiesTypes,
   TPropertyValuesDataTypes,
-} from '@/types/animation/types'
+} from '@/types/animation/three/types'
+import type { TKeyframesData } from '@/types/animation/timeline/types'
 
 // GET DEFAULT VALUES
 

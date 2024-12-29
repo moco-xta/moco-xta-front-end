@@ -29,10 +29,6 @@ export default function SkyComponent() {
     { scope: skyComponentRef },
   )
 
-  useEffect(() => {
-    console.log('skyComponentRef', skyComponentRef)
-  }, [skyComponentRef])
-
   return (
     <Sky
       ref={skyComponentRef}

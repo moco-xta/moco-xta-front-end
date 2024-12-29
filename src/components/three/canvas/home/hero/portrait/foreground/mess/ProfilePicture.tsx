@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { TextureLoader } from 'three'
 
-import type { TUniforms } from '@/types/animation/types'
+import type { TUniforms } from '@/types/animation/three/types'
 
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 

@@ -1,6 +1,9 @@
-import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
+import type { TDefaultValuesData, TElementData } from '@/types/animation/three/types'
 
-import { getAnimationsData, getDefaultValuesArray } from '@/helpers/animations/animationsHelpers'
+import {
+  getAnimationsData,
+  getDefaultValuesArray,
+} from '@/helpers/animations/three/animationsHelpers'
 
 import { default as gobelinoGroupConstants } from '@/constants/home/hero/three/portrait/gobelino/gobelinoGroupConstants.json'
 import { default as cloudsConstants } from '@/constants/home/hero/three/portrait/gobelino/cloudsConstants.json'

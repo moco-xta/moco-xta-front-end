@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import type { TText3DData } from '@/types/animation/types'
+import type { TText3DData } from '@/types/animation/three/types'
 
 import { default as alsoKnowAsTextsConstants } from '@/constants/home/hero/three/also_know_as/texts/alsoKnowAsTextsConstants.json'
 

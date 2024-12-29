@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Text3D } from '@react-three/drei'
 
-import type { TLetter3DData } from '@/types/animation/types'
+import type { TLetter3DData } from '@/types/animation/three/types'
 
 import { TLetter3D } from '@/types/three/lib/word3DTypes'
 

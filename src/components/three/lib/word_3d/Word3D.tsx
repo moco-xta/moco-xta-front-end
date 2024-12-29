@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 
-import type { TWord3DData } from '@/types/animation/types'
+import type { TWord3DData } from '@/types/animation/three/types'
 
 import Letter3D from './Letter3D'
 

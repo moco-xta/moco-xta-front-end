@@ -1,6 +1,6 @@
-import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
+import type { TDefaultValuesData, TElementData } from '@/types/animation/three/types'
 
-import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
+import { getAnimationsData, getDefaultValues } from '@/helpers/animations/three/animationsHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/home/hero/three/greeting/greetingGroupConstants.json'
 import { default as greetingTextsGroupConstants } from '@/constants/home/hero/three/greeting/texts/greetingTextsGroupConstants.json'

@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { MeshSurfaceSampler } from 'three/examples/jsm/math/MeshSurfaceSampler.js'
 import { useFrame, useThree } from '@react-three/fiber'
 
-import type { TUniforms } from '@/types/animation/types'
+import type { TUniforms } from '@/types/animation/three/types'
 
 import vertexShader from '@/components/three/shaders/moco/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/moco/fragmentShader.glsl'

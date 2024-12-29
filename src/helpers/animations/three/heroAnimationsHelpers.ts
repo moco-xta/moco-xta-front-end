@@ -2,7 +2,7 @@ import type { MutableRefObject } from 'react'
 import * as THREE from 'three'
 import { gsap } from 'gsap'
 
-import type { TDimensions } from '@/types/animation/types'
+import type { TDimensions } from '@/types/animation/three/types'
 
 import { greetingTextsGroupDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsGroupData'
 
