@@ -1,6 +1,6 @@
 {
   "label": "moco",
-  "duration": 20,
+  "duration": 120,
   "defaultValues": {
     "name": "moco_group",
     "visible": false

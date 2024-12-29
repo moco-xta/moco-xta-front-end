@@ -40,7 +40,7 @@ export default function MessGroup() {
       visible={messGroupDefaultValues.visible}
     >
       <ToolsGroup />
-      {/* <ProfilePicture /> */}
+      <ProfilePicture />
       <LogoAthleticoNacionalComponent />
       <HeartComponent />
       <GaneshComponent />

@@ -6,7 +6,7 @@
     "material": {
       "color": "#ffffff",
       "emissive": "#ffffff",
-      "emissiveIntensity": 1
+      "emissiveIntensity": 0
     }
   },
   "animations": {

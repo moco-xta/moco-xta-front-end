@@ -152,7 +152,7 @@ export default function ProfilePicture() {
     const handleMouseDown = contextSafe(() => {
       gsap.to(materialRef.current.uniforms.mousePressed, {
         duration: 0.5,
-        value: 0.25,
+        value: 7,
         ease: 'power1.out',
       })
       gsap.to(opacityRef.current, {

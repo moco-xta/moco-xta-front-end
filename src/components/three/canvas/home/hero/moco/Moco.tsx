@@ -27,7 +27,7 @@ class Sparkle extends THREE.Vector3 {
   scaleSpeed: number = 0
   stop: boolean = false
   setup(origin: THREE.Vector3) {
-    this.add(origin).multiplyScalar(2)
+    this.add(origin).multiplyScalar(4)
     this.dest = origin
     this._size = Math.random() * 0.5 + 0.5
     this.size = 3
@@ -85,7 +85,7 @@ export default function Moco() {
     () => [
       glbConstants.HOME.HERO.MOCO.HELIUM_BALLOON_M,
       glbConstants.HOME.HERO.MOCO.HELIUM_BALLOON_C,
-      glbConstants.HOME.HERO.MOCO.HELIUM_BALLOON_O,
+      glbConstants.HOME.HERO.PORTRAIT.FOREGROUND.MESS.HEART,
     ],
     [],
   )
@@ -143,17 +143,15 @@ export default function Moco() {
     // console.log('window', window)
     // pointsRef.current.position.set(-2, 0, 0)
 
-
-    modelsUrls.forEach((url, index) => {
-      loader.current.load(url, function (gltf) {
-        const letter = gltf.scene.children[0] as THREE.Mesh
-        letter.geometry.scale(5, 5, 5)
-        letter.updateMatrix()
-        // scene.getObjectByName('moco_group')?.add(letter)
-        initLines(letter)
-      })
+    /* modelsUrls.forEach((url) => { */
+    loader.current.load(modelsUrls[2], function (gltf) {
+      const letter = gltf.scene.children[0] as THREE.Mesh
+      // letter.geometry.scale(5, 5, 5)
+      letter.updateMatrix()
+      // scene.getObjectByName('moco_group')?.add(letter)
+      initLines(letter)
     })
-
+    /* }) */
 
     scene.getObjectByName('moco_group')?.add(pointsRef.current)
   }, [scene])
