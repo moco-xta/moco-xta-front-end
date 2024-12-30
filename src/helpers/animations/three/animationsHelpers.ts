@@ -219,7 +219,7 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
       } else {
         propertyData = {
           ...propertyData,
-          eachEase: values,
+          easeEach: values,
         }
       }
     }
