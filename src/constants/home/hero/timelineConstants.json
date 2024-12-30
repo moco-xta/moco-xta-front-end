@@ -1,5 +1,5 @@
 {
-  "timeScale": 1,
+  "timeScale": 0.3,
   "delay": 1,
   "labels": [
     {
@@ -17,6 +17,10 @@
     {
       "name": "also_know_as",
       "position": 8
+    },
+    {
+      "name": "moco",
+      "position": 0
     },
     {
       "name": "developer",

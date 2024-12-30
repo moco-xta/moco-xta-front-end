@@ -8,8 +8,8 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 import { PaintBucket } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/PaintBucket'
 
 import {
+  paintBucketComponentDefaultValues,
   getPaintBucketComponentAnimationsData,
-  getPaintBucketComponentDefaultValues,
 } from '@/data/home/hero/three/portrait/foreground/mess/tools/paintBucketComponentData'
 
 import { animate } from 'animations'
@@ -25,6 +25,9 @@ export default function PaintBucketComponent() {
         timeline: timeline,
         ref: paintBucketComponentRef.current,
         animationsData: getPaintBucketComponentAnimationsData(),
+        params: {
+          withMaterialsArray: true,
+        },
       })
     },
     { scope: paintBucketComponentRef },
@@ -33,7 +36,7 @@ export default function PaintBucketComponent() {
   return (
     <PaintBucket
       ref={paintBucketComponentRef}
-      position={getPaintBucketComponentDefaultValues.position}
+      position={paintBucketComponentDefaultValues.position}
     />
   )
 }

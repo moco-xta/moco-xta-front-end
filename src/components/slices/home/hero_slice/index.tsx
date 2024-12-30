@@ -1,69 +1,40 @@
 import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 
-import { GSAPTimelineProvider } from 'contexts/GSAPTimelineContext'
-
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import Controls from '@/components/buttons/animation/controls'
 import { HeroCanvas } from '@/components/three/canvas'
 
-import { timelineDefaultValues } from '@/data/home/hero/timelineData'
+import { heroSliceDefaultValues, getHeroSliceAnimationsData } from '@/data/home/hero/heroSliceData'
+
+import { animate } from 'animations'
 
 import './index.scss'
 
 export default function HeroSlice() {
-  /* const { timeline } = useGSAPTimelineContext() */
+  const { timeline } = useGSAPTimelineContext()
 
   const heroSliceRef = useRef<HTMLElement>(null!)
 
-  /* useGSAP(
+  useGSAP(
     () => {
-      timeline.to(
-        heroSliceRef.current.style,
-        {
-          keyframes: heroSliceAnimations.portrait.keyFrames,
-          duration: heroSliceAnimations.portrait.duration,
-        },
-        heroSliceAnimations.portrait.delay,
-      )
+      animate({
+        timeline: timeline,
+        ref: heroSliceRef.current,
+        animationsData: getHeroSliceAnimationsData(heroSliceRef),
+      })
     },
     { scope: heroSliceRef },
   )
 
-  useGSAP(
-    () => {
-      timeline.to(
-        heroSliceRef.current.style,
-        {
-          keyframes: heroSliceAnimations.portrait.keyFrames,
-          duration: heroSliceAnimations.portrait.duration,
-          onComplete: () => {
-            heroSliceRef.current.style.background = '#000'
-            heroSliceRef.current.style.backgroundImage = 'unset'
-          },
-        },
-        heroSliceAnimations.portrait.delay,
-      )
-    },
-    { scope: heroSliceRef },
-  ) */
-
   return (
-    <GSAPTimelineProvider {...timelineDefaultValues}>
-      <section
-        ref={heroSliceRef}
-        id='hero_slice'
-        className='fullscreen'
-        style={{
-          background: '#fff',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <Controls />
-        <HeroCanvas />
-      </section>
-    </GSAPTimelineProvider>
+    <section
+      ref={heroSliceRef}
+      {...heroSliceDefaultValues}
+    >
+      <Controls />
+      <HeroCanvas />
+    </section>
   )
 }

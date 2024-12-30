@@ -13,7 +13,7 @@ import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
 import { getGreetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
-  getImTextDefaultValues,
+  imTextDefaultValues,
   getImTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/imTextData'
 
@@ -44,8 +44,7 @@ export default function ImText() {
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={getImTextDefaultValues.name}
-      position={getImTextDefaultValues.position}
+      {...imTextDefaultValues}
       {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}

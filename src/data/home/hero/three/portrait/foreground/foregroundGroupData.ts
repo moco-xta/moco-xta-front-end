@@ -1,10 +1,10 @@
-import type { TElementData, TDefaultValuesData } from '@/types/animation/types'
+import type { TElementData, TDefaultValuesData } from '@/types/animation/three/types'
 
-import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
+import { getAnimationsData, getDefaultValues } from '@/helpers/animations/three/animationsHelpers'
 
 import { default as foregroundGroupConstants } from '@/constants/home/hero/three/portrait/foreground/foregroundGroupConstants.json'
 
-export const getForegroundGroupDefaultValues: TDefaultValuesData = {
+export const foregroundGroupDefaultValues: TDefaultValuesData = {
   ...getDefaultValues(foregroundGroupConstants),
 }
 

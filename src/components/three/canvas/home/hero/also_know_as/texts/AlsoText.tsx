@@ -21,7 +21,7 @@ export default function AlsoText() {
   return (
     <Word3D
       ref={alsoTextRef}
-      keySuffix={getAlsoTextDefaultValues.name}
+      name={getAlsoTextDefaultValues.name}
       position={getAlsoTextDefaultValues.position}
       {...getAlsoKnowAsTextsDefaultValues.geometry}
       splittedWord={textSplitted}

@@ -8,8 +8,8 @@ import SunComponent from './SunComponent'
 import MoonComponent from './MoonComponent'
 
 import {
-  getSunAndMoonGroupAnimationsData,
   sunAndMoonGroupDefaultValues,
+  getSunAndMoonGroupAnimationsData,
 } from '@/data/home/hero/three/portrait/gobelino/sun_and_moon/sunAndMoonGroupData'
 
 import { animate } from 'animations'

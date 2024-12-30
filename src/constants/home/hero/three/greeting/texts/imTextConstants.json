@@ -3,7 +3,7 @@
     "name": "i_m_text",
     "visible": true,
     "position": {
-      "x": 0,
+      "x": -2,
       "y": 0,
       "z": 0
     },
@@ -20,7 +20,7 @@
           "z": 0,
           "ease": "back.in"
         },
-        "step_3": {
+        "step_2": {
           "z": 0,
           "ease": "back.in"
         },

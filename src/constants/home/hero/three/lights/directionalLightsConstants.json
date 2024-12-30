@@ -1,7 +1,9 @@
 {
   "defaultValues": {
-    "color": "#f00",
-    "intensity": 0.1,
+    "name": "directional_lights",
+    "visible": true,
+    "color": "#fff",
+    "intensity": 0.7,
     "positions": [
       {
         "x": 10,
@@ -20,7 +22,7 @@
       }
     ],
     "castShadow": true,
-    "shadow-mapSize": [4096, 4096],
+    "shadow-mapSize": 4096,
     "shadow-camera-far": 20,
     "shadow-camera-left": -20,
     "shadow-camera-right": 20,

@@ -1,22 +1,48 @@
-import React from 'react'
-import * as THREE from 'three'
+import React, { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
 
-import CloudComponent from './CloudComponent'
+import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
-import { getCloudsDefaultValues } from '@/data/home/hero/three/portrait/gobelino/cloudsData'
+import { Cloud } from '@/components/three/models/home/hero/portrait/gobelino/Cloud'
+
+import {
+  cloudsDefaultValues,
+  getCloudsAnimationsData,
+} from '@/data/home/hero/three/portrait/gobelino/cloudsData'
 
 import { animate } from 'animations'
 
 export default function Clouds() {
+  const { timeline } = useGSAPTimelineContext()
+
+  const cloudsRef = useRef<THREE.Group>(null!)
+
+  useGSAP(
+    () => {
+      animate({
+        timeline: timeline,
+        ref: cloudsRef.current,
+        animationsData: getCloudsAnimationsData(),
+        params: {
+          elementsArray: true,
+        },
+      })
+    },
+    { scope: cloudsRef },
+  )
+
   return (
-    <>
-      {Array.isArray(getCloudsDefaultValues.position) &&
-        getCloudsDefaultValues.position.map(({ x, y, z }, index) => (
-          <CloudComponent
+    <group ref={cloudsRef}>
+      {Array.isArray(cloudsDefaultValues) &&
+        cloudsDefaultValues.map((cloudsDefaultValues, index) => (
+          <Cloud
             key={`cloud_${index}`}
-            position={new THREE.Vector3(x, y, z)}
+            index={index}
+            position={cloudsDefaultValues.position!}
+            rotation={cloudsDefaultValues.rotation!}
+            scale={cloudsDefaultValues.scale!}
           />
         ))}
-    </>
+    </group>
   )
 }

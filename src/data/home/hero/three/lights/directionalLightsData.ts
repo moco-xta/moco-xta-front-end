@@ -4,30 +4,31 @@ import { TDirectionalLightData } from '@/types/three/lightsTypes'
 
 import { default as directionalLightsConstants } from '@/constants/home/hero/three/lights/directionalLightsConstants.json'
 
-export function directionalLightsData(): TDirectionalLightData[] {
+export function directionalLightsDefaultValues(): TDirectionalLightData[] {
   const directionalLightsData: TDirectionalLightData[] = []
 
   directionalLightsConstants.defaultValues.positions.forEach((_, index) => {
     directionalLightsData.push({
-      defaultValues: {
-        color: '#fff',
-        intensity: 0.1,
-        position: new THREE.Vector3(
-          directionalLightsConstants.defaultValues.positions[index].x,
-          directionalLightsConstants.defaultValues.positions[index].y,
-          directionalLightsConstants.defaultValues.positions[index].z,
-        ),
-        target: new THREE.Object3D(),
-        castShadow: true,
-        'shadow-mapSize': [4096, 4096],
-        'shadow-camera-far': 20,
-        'shadow-camera-left': -20,
-        'shadow-camera-right': 20,
-        'shadow-camera-top': 20,
-        'shadow-camera-bottom': -20,
-        'shadow-radius': 13,
-        'shadow-bias': 0.0001,
-      },
+      color: '#fff',
+      intensity: directionalLightsConstants.defaultValues.intensity,
+      position: new THREE.Vector3(
+        directionalLightsConstants.defaultValues.positions[index].x,
+        directionalLightsConstants.defaultValues.positions[index].y,
+        directionalLightsConstants.defaultValues.positions[index].z,
+      ),
+      target: new THREE.Object3D(),
+      castShadow: true,
+      'shadow-mapSize': [
+        directionalLightsConstants.defaultValues['shadow-mapSize'],
+        directionalLightsConstants.defaultValues['shadow-mapSize'],
+      ],
+      'shadow-camera-far': directionalLightsConstants.defaultValues['shadow-camera-far'],
+      'shadow-camera-left': directionalLightsConstants.defaultValues['shadow-camera-left'],
+      'shadow-camera-right': directionalLightsConstants.defaultValues['shadow-camera-right'],
+      'shadow-camera-top': directionalLightsConstants.defaultValues['shadow-camera-top'],
+      'shadow-camera-bottom': directionalLightsConstants.defaultValues['shadow-camera-bottom'],
+      'shadow-radius': directionalLightsConstants.defaultValues['shadow-radius'],
+      'shadow-bias': directionalLightsConstants.defaultValues['shadow-bias'],
     })
   })
 

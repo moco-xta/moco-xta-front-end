@@ -20,6 +20,9 @@ export default function SprayComponent() {
         timeline: timeline,
         ref: sprayComponentRef.current,
         animationsData: getSprayComponentAnimationsData(),
+        params: {
+          withMaterialsArray: true,
+        },
       })
     },
     { scope: sprayComponentRef },

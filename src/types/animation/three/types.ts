@@ -1,29 +1,5 @@
-import { MutableRefObject } from 'react'
-
-// #################################
-// ##  CONTEXT  ####################
-// #################################
-
-export type TGSAPTimelineContext = {
-  timeline: GSAPTimeline
-}
-
-export type TGSAPTimelineProvider = {
-  delay?: number
-  timeScale?: number
-  labels?: TLabel[]
-  children: JSX.Element
-}
-
-// #################################
-// ##  TIMELINE  ###################
-// #################################
-
-export type TTimelineData = {
-  timeScale?: number
-  delay?: number
-  labels?: TLabel[]
-}
+import type { MutableRefObject } from 'react'
+import type { TKeyframesData } from '../timeline/types'
 
 // #################################
 // ##  PROPERTIES  #################
@@ -65,14 +41,7 @@ export type TDefaultValuesConstants = {
 
 // ANIMATIONS [CONSTANTS]
 
-export type TAnimationsConstants = Partial<Record<TPropertiesTypes, TKeyframes>>
-
-type TKeyframes = {
-  keyframes: Record<
-    TKeyframeKey,
-    string | Record<string, string | number | boolean | TCoordinatesRange>
-  >
-}
+export type TAnimationsConstants = Partial<Record<TPropertiesTypes, TKeyframesData>>
 
 // #################################
 // ##  DATA  #######################
@@ -83,9 +52,9 @@ type TKeyframes = {
 export type TDefaultValuesData = {
   name: string
   visible: boolean
-  position?: THREE.Vector3 | THREE.Vector3[]
-  rotation?: THREE.Euler | THREE.Euler[]
-  scale?: THREE.Vector3 | THREE.Vector3[]
+  position?: THREE.Vector3
+  rotation?: THREE.Euler
+  scale?: THREE.Vector3
   dimensions?: TDimensions
   material?: TMaterial
   color?: TColor
@@ -111,14 +80,6 @@ export type TElementData = {
 
 export type TAnimationsData = Partial<Record<TPropertiesTypes, TKeyframesData>>
 
-export type TKeyframesData = {
-  keyframes:
-    | Record<TKeyframeKey, Record<string, string | number>>
-    | {
-        easeEach?: string
-      }
-}
-
 // ###############################
 // ##  TEXT  #####################
 // ###############################
@@ -129,7 +90,7 @@ export type TText3DData = {
 }
 
 export type TWord3DData = TTextGeometry & {
-  keySuffix: string
+  name: string
   position?: THREE.Vector3
   splittedWord: string[]
   lengthRef?: MutableRefObject<number[]>
@@ -137,23 +98,17 @@ export type TWord3DData = TTextGeometry & {
 }
 
 export type TLetter3DData = TTextGeometry & {
-  keySuffix: string
+  name: string
   lengthRef?: MutableRefObject<number[]>
   letter: string
   index?: number
   children: JSX.Element
 }
 
-// #################################
-// ##  GLOBAL  #####################
-// #################################
-
-type TLabel = {
+export type TLabel = {
   name: string
   position: number | string
 }
-
-type TKeyframeKey = `step_${string}` | `${string}%` | 'easeEach'
 
 export type TCoordinatesData = TCoordinates | TCoordinates[]
 
@@ -163,7 +118,7 @@ export type TCoordinates = {
   z?: number
 }
 
-type TCoordinatesRange = {
+export type TCoordinatesRange = {
   min: number
   max: number
   decimal?: number
@@ -199,4 +154,11 @@ export type TColor = {
   r: number
   g: number
   b: number
+}
+
+export type TUniforms = Record<string, TUniform>
+
+type TUniform = {
+  type: string
+  value: number | THREE.Texture | THREE.Vector2 | THREE.Vector3
 }

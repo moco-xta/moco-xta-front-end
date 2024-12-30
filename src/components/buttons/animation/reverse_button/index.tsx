@@ -10,9 +10,9 @@ import './index.scss'
 export default function ReverseButton() {
   const [reversed, setReversed] = useState<boolean>(false)
 
-  /* const { timeline } = useGSAPTimelineContext() */
+  const { timeline } = useGSAPTimelineContext()
 
-  /* const handleOnClick = () => {
+  const handleOnClick = () => {
     if (!timeline.reversed()) {
       timeline.reversed(true)
       setReversed(true)
@@ -20,7 +20,7 @@ export default function ReverseButton() {
       timeline.reversed(false)
       setReversed(false)
     }
-  } */
+  }
 
   return (
     <div
@@ -28,7 +28,7 @@ export default function ReverseButton() {
       style={{
         background: 'chartreuse',
       }}
-      /* onClick={handleOnClick} */
+      onClick={handleOnClick}
     >
       <FaPlay
         style={{

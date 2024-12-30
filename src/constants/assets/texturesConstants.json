@@ -1,5 +1,6 @@
 {
   "HOME": {
+    "DOT_TEXTURE": "/img/textures/home/hero/dot_texture.png",
     "IPHONE_KEYBOARD": [
       "/img/textures/home/iphone_keyboard_0.jpg",
       "/img/textures/home/iphone_keyboard_1.jpg",
@@ -19,7 +20,7 @@
     "MAP": "/img/textures/home/map.jpg",
     "MARS": "/img/textures/home/mars.png",
     "PROFILE_PICTURE": "/img/textures/home/hero/profile_picture.png",
-    "GRADIENT_CIRCLE_MASK": "/img/textures/home/hero/gradient_circle_mask.jpg",
+    "GRADIENT_CIRCLE_MASK": "/img/textures/home/hero/gradient_circle_mask.png",
     "MERCURY": "/img/textures/home/mercury.png",
     "MOON": "/img/textures/home/moon.png",
     "LOGO_ATHLETICO_NACIONAL": "/img/textures/home/hero/logo_athelico_nacional.png",

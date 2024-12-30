@@ -34,7 +34,7 @@ void main() {
 	stable.z += 2.0 * cos(time * aPress) * aDirection * area * mousePressed;
 
 	vec4 mvPosition = modelViewMatrix * vec4(stable, 1.0);
-	gl_PointSize = 50.0 * (1.0 / -mvPosition.z);
+	gl_PointSize = 100.0 * (1.0 / -mvPosition.z);
 	// gl_PointSize = 100.0;
 	gl_Position = projectionMatrix * mvPosition;
 	vCoordinates = aCoordinates.xy;

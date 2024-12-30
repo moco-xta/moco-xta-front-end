@@ -1,6 +1,6 @@
-import type { TDefaultValuesData, TElementData } from '@/types/animation/types'
+import type { TDefaultValuesData, TElementData } from '@/types/animation/three/types'
 
-import { getAnimationsData, getDefaultValues } from '@/helpers/animations/animationsHelpers'
+import { getAnimationsData, getDefaultValues } from '@/helpers/animations/three/animationsHelpers'
 
 import { default as foregroundGroupConstants } from '@/constants/home/hero/three/portrait/foreground/foregroundGroupConstants.json'
 import { default as logoAthleticoNacionalComponentConstants } from '@/constants/home/hero/three/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'

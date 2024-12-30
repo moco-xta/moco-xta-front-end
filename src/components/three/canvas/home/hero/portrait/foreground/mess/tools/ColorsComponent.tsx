@@ -7,8 +7,8 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 import { Colors } from '@/components/three/models/home/hero/portrait/foreground/mess/tools/Colors'
 
 import {
+  colorsComponentDefaultValues,
   getColorsComponentAnimationsData,
-  getColorsComponentDefaultValues,
 } from '@/data/home/hero/three/portrait/foreground/mess/tools/colorsComponentData'
 
 import { animate } from 'animations'
@@ -24,6 +24,9 @@ export default function ColorsComponent() {
         timeline: timeline,
         ref: colorsComponentRef.current,
         animationsData: getColorsComponentAnimationsData(),
+        params: {
+          withMaterialsArray: true,
+        },
       })
     },
     { scope: colorsComponentRef },
@@ -32,8 +35,8 @@ export default function ColorsComponent() {
   return (
     <Colors
       ref={colorsComponentRef}
-      position={getColorsComponentDefaultValues.position}
-      scale={getColorsComponentDefaultValues.scale}
+      position={colorsComponentDefaultValues.position}
+      scale={colorsComponentDefaultValues.scale}
     />
   )
 }

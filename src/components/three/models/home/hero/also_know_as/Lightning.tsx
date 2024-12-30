@@ -19,6 +19,8 @@ export const Lightning = forwardRef<THREE.Mesh, MeshProps>(function Lightning(pr
 
   const lightningMaterial = new THREE.MeshStandardMaterial({
     color: getLightningComponentDefaultValues.material?.color,
+    transparent: getLightningComponentDefaultValues.material?.transparent,
+    opacity: getLightningComponentDefaultValues.material?.opacity,
     emissive: getLightningComponentDefaultValues.material?.emissive,
     emissiveIntensity: getLightningComponentDefaultValues.material?.emissive_intensity,
   })

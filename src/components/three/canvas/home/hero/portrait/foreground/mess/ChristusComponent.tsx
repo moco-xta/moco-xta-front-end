@@ -7,8 +7,8 @@ import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContex
 import { Christus } from '@/components/three/models/home/hero/portrait/foreground/mess/Christus'
 
 import {
+  christusComponentDefaultValues,
   getChristusComponentAnimationsData,
-  getChristusComponentDefaultValues,
 } from '@/data/home/hero/three/portrait/foreground/mess/christusComponentData'
 
 import { animate } from 'animations'
@@ -32,9 +32,9 @@ export default function ChristusComponent() {
   return (
     <Christus
       ref={christusComponentRef}
-      position={getChristusComponentDefaultValues.position}
-      rotation={getChristusComponentDefaultValues.rotation}
-      scale={getChristusComponentDefaultValues.scale}
+      position={christusComponentDefaultValues.position}
+      rotation={christusComponentDefaultValues.rotation}
+      scale={christusComponentDefaultValues.scale}
     />
   )
 }

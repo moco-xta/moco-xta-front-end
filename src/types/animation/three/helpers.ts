@@ -1,4 +1,4 @@
-import { TElementData } from './types'
+import type { TElementData } from './types'
 
 export type TGetAnimationsDataSignature = {
   index?: number
@@ -10,5 +10,8 @@ export type TAnimateSignature = {
   timeline: GSAPTimeline
   ref: THREE.Group | THREE.Mesh
   animationsData: TElementData
-  // variables?: Record<string, number>
+  params?: {
+    withMaterialsArray?: boolean
+    elementsArray?: boolean
+  }
 }

@@ -28,7 +28,7 @@
     },
     "material": {
       "keyframes": {
-        "step_3.3": {
+        "step_3": {
           "opacity": 1
         },
         "easeEach": "power1.in"
@@ -36,7 +36,7 @@
     },
     "color": {
       "keyframes": {
-        "step_3.3": {
+        "step_3": {
           "r": 0.23137254901960785,
           "g": 0.38823529411764707,
           "b": 1

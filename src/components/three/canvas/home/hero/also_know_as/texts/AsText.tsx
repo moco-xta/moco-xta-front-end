@@ -21,7 +21,7 @@ export default function AsText() {
   return (
     <Word3D
       ref={asTextRef}
-      keySuffix={getAsTextDefaultValues.name}
+      name={getAsTextDefaultValues.name}
       position={getAsTextDefaultValues.position}
       {...getAlsoKnowAsTextsDefaultValues.geometry}
       splittedWord={textSplitted}

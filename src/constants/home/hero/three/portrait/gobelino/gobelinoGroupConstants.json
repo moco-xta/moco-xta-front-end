@@ -3,6 +3,6 @@
   "duration": 6,
   "defaultValues": {
     "name": "gobelino_group",
-    "visible": true
+    "visible": false
   }
 }

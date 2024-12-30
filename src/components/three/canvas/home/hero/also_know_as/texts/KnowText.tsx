@@ -21,7 +21,7 @@ export default function KnowText() {
   return (
     <Word3D
       ref={knowTextRef}
-      keySuffix={getKnowTextDefaultValues.name}
+      name={getKnowTextDefaultValues.name}
       position={getKnowTextDefaultValues.position}
       {...getAlsoKnowAsTextsDefaultValues.geometry}
       splittedWord={textSplitted}

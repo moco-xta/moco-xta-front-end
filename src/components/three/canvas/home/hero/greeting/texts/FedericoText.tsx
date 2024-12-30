@@ -12,7 +12,7 @@ import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
 import { getGreetingTextsDefaultValues } from '@/data/home/hero/three/greeting/texts/greetingTextsData'
 import {
-  getFedericoTextDefaultValues,
+  federicoTextDefaultValues,
   getFedericoTextAnimationsData,
 } from '@/data/home/hero/three/greeting/texts/federicoTextData'
 
@@ -43,8 +43,7 @@ export default function FedericoText() {
   return (
     <Word3D
       ref={textGroupRef}
-      keySuffix={getFedericoTextDefaultValues.name}
-      position={getFedericoTextDefaultValues.position}
+      {...federicoTextDefaultValues}
       {...getGreetingTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
