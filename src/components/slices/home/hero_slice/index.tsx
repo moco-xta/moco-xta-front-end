@@ -22,7 +22,7 @@ export default function HeroSlice() {
       animate({
         timeline: timeline,
         ref: heroSliceRef.current,
-        animationsData: getHeroSliceAnimationsData(),
+        animationsData: getHeroSliceAnimationsData(heroSliceRef),
       })
     },
     { scope: heroSliceRef },

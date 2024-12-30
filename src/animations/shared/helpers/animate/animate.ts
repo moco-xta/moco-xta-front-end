@@ -1,4 +1,4 @@
-import type { TAnimateSignature } from '@/types/animation/helpers'
+import type { TAnimateSignature } from '@/types/animation/three/helpers'
 import type { TPropertiesTypes } from '@/types/animation/three/types'
 
 // TODO: Optimize function

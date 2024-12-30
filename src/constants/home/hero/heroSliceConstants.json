@@ -6,7 +6,7 @@
     "id": "hero_slice",
     "className": "fullscreen",
     "style": {
-      "background": "#000",
+      "background": "#fff",
       "backgroundSize": "cover",
       "backgroundRepeat": "no-repeat"
     }
@@ -30,7 +30,7 @@
           "backgroundImage": "url('/img/background_images/brain.jpg')"
         },
         "step_6": {
-          "backgroundImage": "url('/img/background_images/explosion_bombe_atomique_mururoa_1971.jpg')"
+          "backgroundImage": "url('/img/background_images/explosion_bombe_atomique_mururoa.jpg')"
         },
         "step_7": {
           "backgroundImage": "url('/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg')"
@@ -39,7 +39,7 @@
           "backgroundImage": "url('/img/background_images/inchas_athletico_nacional.jpg')"
         },
         "step_9": {
-          "backgroundImage": "url('/img/background_images/explosion_bombe_atomique_mururoa_1971.jpg')"
+          "backgroundImage": "url('/img/background_images/explosion_bombe_atomique_mururoa.jpg')"
         },
         "step_10": {
           "backgroundImage": "url('/img/background_images/the_garden_of_eden_with_the_fall_of_man.jpg')"

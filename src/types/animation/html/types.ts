@@ -1,6 +1,6 @@
 import { type CSSProperties } from 'react'
 
-import type { TKeyframesData } from '../timeline/types'
+import type { TKeyframeKey, TKeyframesData } from '../timeline/types'
 
 // #################################
 // ##  PROPERTIES  #################
@@ -56,3 +56,10 @@ export type TElementData = {
 
 // export type TAnimationsData = CSSProperties
 export type TAnimationsData = CSSProperties
+
+// CUSTOM ANIMATIONS
+
+export type TCustomsAnimations = Record<
+  TPropertiesTypes,
+  Record<TKeyframeKey, Record<string, () => void>>
+>

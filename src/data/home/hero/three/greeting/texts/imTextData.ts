@@ -1,5 +1,5 @@
 import type { TDefaultValuesData, TElementData } from '@/types/animation/three/types'
-import type { TGetAnimationsDataSignature } from '@/types/animation/helpers'
+import type { TGetAnimationsDataSignature } from '@/types/animation/three/helpers'
 
 import { getDefaultValues, getKeyframePosition } from '@/helpers/animations/three/animationsHelpers'
 
