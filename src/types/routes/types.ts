@@ -1,4 +1,4 @@
-type TRoute =
+export type TRoutes =
   | '/'
   | '/about'
   | '/blog'
@@ -9,7 +9,7 @@ type TRoute =
   | '/skills'
   | '/thanks'
 
-export type TRoutes = {
+export type TRoute = {
   index?: number
   key: string
   path: TRoute
