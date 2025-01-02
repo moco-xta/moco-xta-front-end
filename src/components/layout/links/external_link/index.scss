@@ -1,0 +1,11 @@
+@import '@/styles/variables.module.scss';
+
+#external_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  svg {
+    margin-left: 5px;
+  }
+}

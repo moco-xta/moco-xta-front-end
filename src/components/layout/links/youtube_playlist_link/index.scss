@@ -1,0 +1,17 @@
+@import '@/styles/variables.module.scss';
+
+#youtube_playlist_link {
+  width: fit-content;
+  padding: 4px 10px 4px 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: $youtube_red;
+  border-radius: 8px;
+
+  svg {
+    margin-left: 5px;
+    width: 30px;
+    height: 20px;
+  }
+}

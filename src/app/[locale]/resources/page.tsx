@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react'
 
-import './index.scss'
+import ResourcesPage from '@/components/slices/resources'
 
 export default function Resources() {
-  return <div id='resource_page'>Resources</div>
+  return <ResourcesPage />
 }

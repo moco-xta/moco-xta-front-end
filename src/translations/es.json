@@ -1,4 +1,11 @@
 {
+  "LAYOUT": {
+    "LINKS": {
+      "CHANNELS": "canales",
+      "DOCUMENTATION": "documentación",
+      "MY_PLAYLIST": "Mi lista de reproducción"
+    }
+  },
   "ROUTES": {
     "ABOUT": "A proposito",
     "BLOG": "Blog",
@@ -30,6 +37,21 @@
       "WHO_I_AM": "Quien soy - ",
       "INTRODUCTION": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas \"Letraset\", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
       "MORE_ABOUT_ME": "Más sobre mí - "
+    }
+  },
+  "RESOURCES": {
+    "GRAPHICS": {
+      "GRAPHICS": "gráficos"
+    },
+    "3D": {
+      "JAVASCRIPT_LIBRARIES": {
+        "THREEJS": {
+          "DESCRIPTION": "Three.js es una biblioteca de JavaScript que se utiliza para crear y mostrar gráficos 3D en un navegador web. Simplifica el proceso de trabajo con contenido 3D al proporcionar una abstracción sobre WebGL (Web Graphics Library), que es una API de gráficos de bajo nivel integrada en los navegadores modernos."
+        },
+        "REACT_THREE_FIBER": {
+          "DESCRIPTION": "React Three Fiber (R3F) es un renderizador de React para Three.js que permite a los desarrolladores crear aplicaciones de gráficos 3D en el estilo declarativo de React. Es un puente entre la arquitectura basada en componentes de React y la API imperativa de Three.js, lo que facilita la integración de escenas 3D en aplicaciones React."
+        }
+      }
     }
   },
   "ABOUT": {
