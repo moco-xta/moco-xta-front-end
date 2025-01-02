@@ -21,7 +21,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   height: 100%;
-  // background: #000;
+  background: $black;
   user-select: none;
 }
 
@@ -48,9 +48,24 @@ html.lenis body {
   pointer-events: none;
 }
 
-canvas {
-  touch-action: none;
+.page {
+  width: 100vw;
+  max-width: $max_width;
+  margin: auto;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.section {
+  padding: 50px;
+}
+
+/* canvas {
+  touch-action: none;
+} */
 
 .screen-max-width {
   margin-inline-start: auto;
@@ -98,6 +113,16 @@ canvas {
 
 .animation_controls_zIndex {
   z-index: 9;
+}
+
+// RESOURCES Z-INDEXES
+
+.resources_canvas_zIndex {
+  z-index: 0;
+}
+
+.resource_page_zIndex {
+  z-index: 1;
 }
 
 // INVERT COLOR

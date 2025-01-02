@@ -1,4 +1,11 @@
 {
+  "LAYOUT": {
+    "LINKS": {
+      "CHANNELS": "chaînes",
+      "DOCUMENTATION": "documentation",
+      "MY_PLAYLIST": "Ma playlist"
+    }
+  },
   "ROUTES": {
     "ABOUT": "À propos",
     "BLOG": "Blog",
@@ -6,6 +13,7 @@
     "HOME": "Home",
     "PHOTOGRAPHY": "Photographie",
     "PROJECTS": "Projets",
+    "RESOURCES": "Ressources",
     "SKILLS": "Compétences"
   },
   "LOCALES": {
@@ -30,6 +38,21 @@
       "WHO_I_AM": "Qui suis-je - ",
       "INTRODUCTION": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
       "MORE_ABOUT_ME": "En savoir plus sur moi - "
+    }
+  },
+  "RESOURCES": {
+    "GRAPHICS": {
+      "GRAPHICS": "graphisme"
+    },
+    "3D": {
+      "JAVASCRIPT_LIBRARIES": {
+        "THREEJS": {
+          "DESCRIPTION": "Three.js est une bibliothèque JavaScript utilisée pour créer et afficher des graphiques 3D dans un navigateur Web. Elle simplifie le processus de travail avec le contenu 3D en fournissant une abstraction sur WebGL (Web Graphics Library), qui est une API graphique de bas niveau intégrée aux navigateurs modernes."
+        },
+        "REACT_THREE_FIBER": {
+          "DESCRIPTION": "React Three Fiber (R3F) est un moteur de rendu React pour Three.js, permettant aux développeurs de créer des applications graphiques 3D dans le style déclaratif de React. Il comble le fossé entre l'architecture basée sur les composants de React et l'API impérative de Three.js, facilitant ainsi l'intégration de scènes 3D dans les applications React."
+        }
+      }
     }
   },
   "ABOUT": {

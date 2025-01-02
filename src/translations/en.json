@@ -1,4 +1,11 @@
 {
+  "LAYOUT": {
+    "LINKS": {
+      "CHANNELS": "channels",
+      "DOCUMENTATION": "documentation",
+      "MY_PLAYLIST": "my playlist"
+    }
+  },
   "ROUTES": {
     "ABOUT": "About",
     "BLOG": "Blog",
@@ -6,6 +13,7 @@
     "HOME": "Home",
     "PHOTOGRAPHY": "Photography",
     "PROJECTS": "Projects",
+    "RESOURCES": "Resources",
     "SKILLS": "Skills"
   },
   "LOCALES": {
@@ -25,6 +33,21 @@
       "SKILLS": "skills",
       "CONTACT": "contact",
       "ME": "me"
+    }
+  },
+  "RESOURCES": {
+    "GRAPHICS": {
+      "GRAPHICS": "graphics"
+    },
+    "3D": {
+      "JAVASCRIPT_LIBRARIES": {
+        "THREEJS": {
+          "DESCRIPTION": "Three.js is a JavaScript library used to create and display 3D graphics in a web browser. It simplifies the process of working with 3D content by providing an abstraction over WebGL (Web Graphics Library), which is a low-level graphics API built into modern browsers."
+        },
+        "REACT_THREE_FIBER": {
+          "DESCRIPTION": "React Three Fiber (R3F) is a React renderer for Three.js, enabling developers to build 3D graphics applications in the declarative style of React. It bridges the gap between React's component-based architecture and Three.js's imperative API, making it easier to integrate 3D scenes into React applications."
+        }
+      }
     }
   },
   "ABOUT": {

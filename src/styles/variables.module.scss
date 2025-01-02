@@ -1,12 +1,21 @@
+// GLOBAL
+
+$max_width: 1280px;
+
 // FONTS
 
-$gilroyBlackFont: var(--font-gilroy-black);
+$font_size_h1: 48px;
+$font_size_h2: 32px;
+$font_size_h3: 24px;
+$font_size_h4: 22px;
 
-$font_size_small: 1em;
+/* $gilroyBlackFont: var(--font-gilroy-black); */
+
+/* $font_size_small: 1em;
 $font_size_medium: 1.5em;
 $font_size_large: 3em;
 $font_size_extra_large: 6em;
-$font_size_alert: 0.8em;
+$font_size_alert: 0.8em; */
 
 // COLORS
 
@@ -17,6 +26,8 @@ $grey_medium: #7b7b7b;
 $grey_dark: #515151;
 $grey_darker: #292929;
 $black: #000000;
+
+$youtube_red: #ff0032;
 
 $gamma_red: #ff204e;
 $gamma_violet: #322255;
@@ -173,9 +184,13 @@ $responsive_XXXS: #b5179e;
 $responsive_XXXXS: #f72585;
 
 :export {
+  // GLOBAL
+
+  max_width: $max_width;
+
   // FONTS
 
-  gilroy_black_font: $gilroyBlackFont;
+  /* gilroy_black_font: $gilroyBlackFont; */
 
   // BACKGROUNDS
 

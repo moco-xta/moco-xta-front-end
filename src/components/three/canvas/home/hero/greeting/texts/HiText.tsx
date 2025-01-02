@@ -3,8 +3,6 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import type { TMesh } from '@/types/animation/three/componentsTypes'
-
 import { useGSAPTimelineContext } from '@/hooks/animations/useGSAPTimelineContext'
 
 import useSplitted3DText from '@/hooks/animations/useSplitted3DText'
@@ -26,7 +24,7 @@ export default function HiText() {
 
   useGSAP(
     () => {
-      const letters: TMesh[] = gsap.utils.toArray(textGroupRef.current.children)
+      const letters: THREE.Mesh[] = gsap.utils.toArray(textGroupRef.current.children)
       letters.forEach((letterRef, index) => {
         animate({
           timeline: timeline,
