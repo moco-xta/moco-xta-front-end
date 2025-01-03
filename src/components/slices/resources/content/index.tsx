@@ -11,7 +11,10 @@ import './index.scss'
 
 export default function Content() {
   return (
-    <div id='resources_content'>
+    <div
+      id='resources_content'
+      data-lenis-prevent
+    >
       <Introduction />
       {resourcesConstants.map((sectionData) => (
         <ResourcesSection
@@ -22,3 +25,5 @@ export default function Content() {
     </div>
   )
 }
+
+// https://github.com/darkroomengineering/lenis?tab=readme-ov-file#considerations

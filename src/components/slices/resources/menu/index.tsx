@@ -1,8 +1,9 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
-import { RootState } from '@/redux/store'
+import { AppDispatch, RootState } from '@/redux/store'
+import { setCurrentSection } from '@/redux/slice/resourcesStateSlice'
 
 import { default as resourcesConstants } from '@/constants/resources/resourcesConstants.json'
 
@@ -13,7 +14,14 @@ import './index.scss'
 export default function Menu() {
   const t = useTranslations('RESOURCES')
 
+  const dispatch = useDispatch<AppDispatch>()
+
   const currentSection = useSelector((state: RootState) => state.resroucesState.currentSection)
+
+  function handleOnClick(key: string) {
+    document.getElementById(key)!.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    dispatch(setCurrentSection(key))
+  }
 
   return (
     <div id='resources_menu'>
@@ -22,8 +30,8 @@ export default function Menu() {
         {resourcesConstants.map((sectionData) => (
           <li>
             <a
-              href={`#${sectionData.key}`}
               className={`menu_section ${currentSection === sectionData.key ? 'current_section' : ''}`}
+              onClick={() => handleOnClick(sectionData.key)}
             >
               {capitalizeFirstLetter(t(`SECTIONS.${sectionData.translationKey}.SECTION_TITLE`))}
             </a>

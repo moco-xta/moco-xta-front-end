@@ -7,7 +7,6 @@ import './index.scss'
 import Menu from './menu'
 
 export default function ResourcesPage() {
-
   return (
     <>
       <section

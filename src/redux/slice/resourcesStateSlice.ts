@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import type { TResourcesState } from "@/types/redux/types";
+import type { TResourcesState } from '@/types/redux/types'
 
 const initialState: TResourcesState = {
   currentSection: 'front_end',
@@ -16,8 +16,6 @@ const resourcesStateSlice = createSlice({
   },
 })
 
-export const {
-  setCurrentSection,
-} = resourcesStateSlice.actions
+export const { setCurrentSection } = resourcesStateSlice.actions
 
 export default resourcesStateSlice.reducer
