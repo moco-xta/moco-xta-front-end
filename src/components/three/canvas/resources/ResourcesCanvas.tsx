@@ -1,14 +1,9 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import {
-  BallCollider,
-  CuboidCollider,
-  Physics,
-  RapierCollider,
-  RapierRigidBody,
-  RigidBody,
-} from '@react-three/rapier'
+import { BallCollider, Physics, RapierRigidBody, RigidBody } from '@react-three/rapier'
+
+import useMouseMove from '@/hooks/useMouseMove'
 
 import Lights from './lights/Lights'
 import { logosData } from '@/data/resources/logosData'
@@ -17,9 +12,14 @@ import ResourcesText from './ResourcesText'
 
 function Pointer({ vec = new THREE.Vector3() }) {
   const ref = useRef<RapierRigidBody>(null!)
-  useFrame(({ mouse, viewport }) => {
-    vec.lerp({ x: (mouse.x * viewport.width) / 2, y: (mouse.y * viewport.height) / 2, z: 0 }, 0.2)
-    ref.current.setNextKinematicTranslation(vec)
+
+  const { uvX, uvY } = useMouseMove()
+
+  useFrame(({ viewport }) => {
+    if (ref.current) {
+      vec.lerp({ x: (uvX * viewport.width) / 2, y: (uvY * viewport.height) / 2, z: 0 }, 0.2)
+      ref.current.setNextKinematicTranslation(vec)
+    }
   })
   return (
     <RigidBody
@@ -36,27 +36,27 @@ function Pointer({ vec = new THREE.Vector3() }) {
 function Logos() {
   return (
     <>
-      {logosData.map(({ name, component }, i) => {
+      {logosData.map(({ component }, i) => {
         const rigidBodyRef = useRef<RapierRigidBody>(null!)
-        const cuboidColliderRef = useRef<RapierCollider>(null!)
         const logoGroupRef = useRef<THREE.Group>(null!)
         const vec = new THREE.Vector3()
         const scale = 1
         const r = THREE.MathUtils.randFloatSpread
 
-        useFrame((state, delta) => {
+        useFrame((_, delta) => {
           delta = Math.min(0.1, delta)
-          // @ts-ignore
-          rigidBodyRef.current.applyImpulse(
-            vec
-              .copy(rigidBodyRef.current.translation())
-              .normalize()
-              .multiply({
-                x: -50 * delta * scale,
-                y: -150 * delta * scale,
-                z: -50 * delta * scale,
-              }),
-          )
+          if (rigidBodyRef.current)
+            rigidBodyRef.current.applyImpulse(
+              vec
+                .copy(rigidBodyRef.current.translation())
+                .normalize()
+                .multiply({
+                  x: -50 * delta * scale,
+                  y: -150 * delta * scale,
+                  z: -50 * delta * scale,
+                }),
+              true,
+            )
         })
 
         const Logo = component
