@@ -10,6 +10,7 @@ import { default as resourcesConstants } from '@/constants/resources/resourcesCo
 import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 import './index.scss'
+import ScrollToTop from '@/components/layout/buttons/scroll_to_top'
 
 export default function Menu() {
   const t = useTranslations('RESOURCES')
@@ -53,6 +54,7 @@ export default function Menu() {
           </li>
         ))}
       </ul>
+      <ScrollToTop elementId={'resources_content'} />
     </div>
   )
 }

@@ -29,6 +29,13 @@ export default function ResourcesParagraph({
         title={t('DOCUMENTATION')}
         links={paragraphData.documentation as unknown as TExternalLink[]}
       />
+      {paragraphData.websites.length > 0 && (
+        <LinksArray
+          translationPathPrefix={translationPath}
+          title={t('WEBSITES')}
+          links={paragraphData.websites as unknown as TExternalLink[]}
+        />
+      )}
       {paragraphData.channels.length > 0 && (
         <LinksArray
           translationPathPrefix={translationPath}

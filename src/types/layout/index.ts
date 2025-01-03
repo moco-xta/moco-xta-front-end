@@ -26,6 +26,7 @@ export type TResourcesParagraphData = {
   translationKey: string
   documentation: TLinksArray[]
   youtubePlaylistlink?: string
+  websites: TLinksArray[]
   channels: TLinksArray[]
   articles: TLinksArray[]
 }
