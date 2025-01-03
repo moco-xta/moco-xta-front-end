@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <>
       <html lang={locale}>
-        <ReactLenis
+        {/* <ReactLenis
           root
           options={{
             lerp: 0.1,
@@ -49,34 +49,34 @@ export default function RootLayout({
             smoothWheel: true,
             touchMultiplier: 2,
           }}
+        > */}
+        <body
+          className={`${interFont.className} ${gilroyBlackFont.variable} ${gilroyBoldFont.variable} ${gilroyHeavyFont.variable} ${sansTrialRegularFont.variable}`}
         >
-          <body
-            className={`${interFont.className} ${gilroyBlackFont.variable} ${gilroyBoldFont.variable} ${gilroyHeavyFont.variable} ${sansTrialRegularFont.variable}`}
-          >
-            <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-            <ReduxProvider>
-              <NextIntlClientProvider
-                locale={locale}
-                messages={translations}
-              >
-                <Toaster
-                  toastOptions={{
-                    unstyled: true,
-                    duration: 2000,
-                    classNames: {
-                      loading: 'toaster toaster_loading',
-                      success: 'toaster toaster_success',
-                      error: 'toaster toaster_error',
-                    },
-                  }}
-                />
-                <Cursor />
-                <Menu />
-                {children}
-              </NextIntlClientProvider>
-            </ReduxProvider>
-          </body>
-        </ReactLenis>
+          <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+          <ReduxProvider>
+            <NextIntlClientProvider
+              locale={locale}
+              messages={translations}
+            >
+              <Toaster
+                toastOptions={{
+                  unstyled: true,
+                  duration: 2000,
+                  classNames: {
+                    loading: 'toaster toaster_loading',
+                    success: 'toaster toaster_success',
+                    error: 'toaster toaster_error',
+                  },
+                }}
+              />
+              <Cursor />
+              <Menu />
+              {children}
+            </NextIntlClientProvider>
+          </ReduxProvider>
+        </body>
+        {/* </ReactLenis> */}
       </html>
     </>
   )

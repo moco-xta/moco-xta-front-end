@@ -16,7 +16,7 @@ export default function ExternalLink({ urlName, url, languages }: TExternalLink)
     >
       {urlName ? urlName : url}
       <LuExternalLink />
-      {languages!.includes('en') && (
+      {/* {languages!.includes('en') && (
         <GB
           className='...'
           style={{ width: '18px', height: '12px' }} // TODO: Create class + Map values
@@ -33,7 +33,7 @@ export default function ExternalLink({ urlName, url, languages }: TExternalLink)
           className='...'
           style={{ width: '18px', height: '12px' }}
         />
-      )}
+      )} */}
     </Link>
   )
 }

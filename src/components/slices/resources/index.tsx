@@ -1,15 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import ResourcesCanvas from '@/components/three/canvas/resources/ResourcesCanvas'
-import Introduction from './introduction'
-import FrontEnd from './front_end'
-import Graphics from './graphics'
-import ThreeDimensional from './three_dimensional'
-import BackEnd from './back_end'
+import Content from './content'
 
 import './index.scss'
+import Menu from './menu'
 
 export default function ResourcesPage() {
+  const [currentSection, setCurrentSection] = useState<string>('front_end')
+
   return (
     <>
       <section
@@ -20,13 +19,10 @@ export default function ResourcesPage() {
       </section>
       <div
         id='resource_page'
-        className='page'
+        className='resource_page_zIndex'
       >
-        <Introduction />
-        <FrontEnd />
-        <Graphics />
-        <ThreeDimensional />
-        <BackEnd />
+        <Menu currentSection={currentSection} />
+        <Content setCurrentSection={setCurrentSection} />
       </div>
     </>
   )

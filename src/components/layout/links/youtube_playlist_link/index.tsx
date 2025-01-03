@@ -5,6 +5,8 @@ import { useTranslations } from 'next-intl'
 
 import type { TExternalLink } from '@/types/layout'
 
+import { capitalizeFirstLetter } from '@/helpers/textHelpers'
+
 import './index.scss'
 
 export default function YoutubePlaylistLink({ url }: TExternalLink) {
@@ -16,7 +18,7 @@ export default function YoutubePlaylistLink({ url }: TExternalLink) {
       href={url}
       target='_blank'
     >
-      {t('MY_PLAYLIST')}
+      {capitalizeFirstLetter(t('MY_PLAYLIST'))}
       <FaYoutube />
     </Link>
   )

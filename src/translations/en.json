@@ -36,17 +36,58 @@
     }
   },
   "RESOURCES": {
-    "GRAPHICS": {
-      "GRAPHICS": "graphics"
-    },
-    "3D": {
-      "JAVASCRIPT_LIBRARIES": {
-        "THREEJS": {
-          "DESCRIPTION": "Three.js is a JavaScript library used to create and display 3D graphics in a web browser. It simplifies the process of working with 3D content by providing an abstraction over WebGL (Web Graphics Library), which is a low-level graphics API built into modern browsers."
-        },
-        "REACT_THREE_FIBER": {
-          "DESCRIPTION": "React Three Fiber (R3F) is a React renderer for Three.js, enabling developers to build 3D graphics applications in the declarative style of React. It bridges the gap between React's component-based architecture and Three.js's imperative API, making it easier to integrate 3D scenes into React applications."
+    "ON_THIS_PAGE": "On this page",
+    "RESOURCES": "resources",
+    "DOCUMENTATION": "documentation",
+    "CHANNELS": "channels",
+    "ARTICLES": "articles",
+    "SECTIONS": {
+      "FRONT_END": {
+        "SECTION_TITLE": "front-end",
+        "SECTION_DESCRIPTION": "Front-end refers to the part of a website or application that users interact with directly. It involves everything that is visible and functional in the user's browser or device, including the design, layout, and user interface (UI). The front-end is responsible for providing a seamless and interactive experience for users.",
+        "PARAGRAPHS": {
+          "HTML": {
+            "PARAGRAPH_TITLE": "HTML",
+            "PARAGRAPH_DESCRIPTION": "HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It forms the foundation of every website and is used in combination with CSS (for styling) and JavaScript (for interactivity).",
+            "LINKS": {
+              "W3SCHOOLS": {
+                "DESCRIPTION": "W3Schools is a popular and widely used educational website for learning web development technologies. It serves as a comprehensive resource for beginners and experienced developers alike, offering tutorials, references, and interactive examples."
+              },
+              "MOZILLA": {
+                "DESCRIPTION": "MDN Web Docs (formerly known as Mozilla Developer Network) is a highly regarded and comprehensive online resource for web developers. It is maintained by the Mozilla Foundation and contributions from the developer community. It provides in-depth documentation, tutorials, and guides for web development technologies."
+              },
+              "FREECODECAMP": {
+                "DESCRIPTION": "FreeCodeCamp is a non-profit organization that offers free online coding courses and tutorials. Their platform covers a wide range of topics, including HTML, CSS, JavaScript, and more. They also have a blog with articles on web development and programming."
+              }
+            }
+          }
         }
+      },
+      "3D": {
+        "SECTION_TITLE": "3D",
+        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "PARAGRAPHS": {
+          "THREEJS": {
+            "PARAGRAPH_TITLE": "HTML",
+            "PARAGRAPH_DESCRIPTION": "HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It forms the foundation of every website and is used in combination with CSS (for styling) and JavaScript (for interactivity).",
+            "LINKS": {
+              "W3SCHOOLS": {
+                "DESCRIPTION": "W3Schools is a popular and widely used educational website for learning web development technologies. It serves as a comprehensive resource for beginners and experienced developers alike, offering tutorials, references, and interactive examples."
+              },
+              "MOZILLA": {
+                "DESCRIPTION": "MDN Web Docs (formerly known as Mozilla Developer Network) is a highly regarded and comprehensive online resource for web developers. It is maintained by the Mozilla Foundation and contributions from the developer community. It provides in-depth documentation, tutorials, and guides for web development technologies."
+              },
+              "FREECODECAMP": {
+                "DESCRIPTION": "FreeCodeCamp is a non-profit organization that offers free online coding courses and tutorials. Their platform covers a wide range of topics, including HTML, CSS, JavaScript, and more. They also have a blog with articles on web development and programming."
+              }
+            }
+          }
+        }
+      },
+      "BACK_END": {
+        "SECTION_TITLE": "back-end",
+        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "PARAGRAPHS": {}
       }
     }
   },
