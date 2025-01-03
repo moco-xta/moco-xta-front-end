@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { TResourcesContent, TResourcesSectionData } from '@/types/layout'
+import type { TResourcesSectionData } from '@/types/layout'
 
 import Introduction from './introduction'
 import { ResourcesSection } from '@/components/layout/sections'
@@ -9,7 +9,7 @@ import { default as resourcesConstants } from '@/constants/resources/resourcesCo
 
 import './index.scss'
 
-export default function Content({ setCurrentSection }: TResourcesContent) {
+export default function Content() {
   return (
     <div id='resources_content'>
       <Introduction />
@@ -17,7 +17,6 @@ export default function Content({ setCurrentSection }: TResourcesContent) {
         <ResourcesSection
           key={`resource_section_${sectionData.key}`}
           sectionData={sectionData as unknown as TResourcesSectionData}
-          setCurrentSection={setCurrentSection}
         />
       ))}
     </div>

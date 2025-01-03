@@ -2,23 +2,10 @@
 
 import { Dispatch, SetStateAction } from 'react'
 
-// MENU
-
-export type TResourcesMenu = {
-  currentSection: string
-}
-
-// CONTENT
-
-export type TResourcesContent = {
-  setCurrentSection: Dispatch<SetStateAction<string>>
-}
-
 // SECTION
 
 export type TResourcesSection = {
   sectionData: TResourcesSectionData
-  setCurrentSection: Dispatch<SetStateAction<string>>
 }
 
 export type TResourcesSectionData = {

@@ -3,22 +3,19 @@ import { useTranslations } from 'next-intl'
 
 import type { TResourcesParagraphData, TResourcesSection } from '@/types/layout'
 
+import useSectionIsVisible from '@/hooks/useSectionIsVisible'
+
 import { SectionTitle } from '../../titles'
 import { ResourcesParagraph } from '../../paragraphs'
 
 import './index.scss'
-import useSectionIsVisible from '@/hooks/useSectionIsVisible'
 
-export default function ResourcesSection({ sectionData, setCurrentSection }: TResourcesSection) {
+export default function ResourcesSection({ sectionData }: TResourcesSection) {
   const t = useTranslations(`RESOURCES.SECTIONS.${sectionData.translationKey}`)
 
   const resourcesSectionRef = useRef<HTMLElement>(null!)
 
-  const isIntersecting = useSectionIsVisible(resourcesSectionRef)
-
-  useEffect(() => {
-    if (isIntersecting) setCurrentSection(sectionData.key)
-  }, [isIntersecting])
+  useSectionIsVisible(resourcesSectionRef)
 
   return (
     <section

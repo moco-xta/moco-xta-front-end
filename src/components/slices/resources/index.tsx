@@ -7,7 +7,6 @@ import './index.scss'
 import Menu from './menu'
 
 export default function ResourcesPage() {
-  const [currentSection, setCurrentSection] = useState<string>('front_end')
 
   return (
     <>
@@ -21,8 +20,8 @@ export default function ResourcesPage() {
         id='resource_page'
         className='resource_page_zIndex'
       >
-        <Menu currentSection={currentSection} />
-        <Content setCurrentSection={setCurrentSection} />
+        <Menu />
+        <Content />
       </div>
     </>
   )

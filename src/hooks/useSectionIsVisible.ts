@@ -1,36 +1,29 @@
-import { useState, useEffect, MutableRefObject } from 'react'
+import { useEffect, MutableRefObject } from 'react'
+import { useDispatch } from 'react-redux'
+
+import { AppDispatch } from '@/redux/store'
+import {
+  setCurrentSection,
+} from '@/redux/slice/resourcesStateSlice'
 
 export default function useSectionIsVisible(ref: MutableRefObject<HTMLElement>) {
-  const [isIntersecting, setIsIntersecting] = useState<boolean>(false)
-  const [rootMargin] = useState<string>(`-${window.innerHeight - 500}px`)
+
+  const dispatch = useDispatch<AppDispatch>()
 
   useEffect(() => {
-    console.log('ref', ref)
-    console.log('window.innerHeight', window.innerHeight)
-    console.log('rootMargin', rootMargin)
-  }, [isIntersecting])
-
-  useEffect(() => {
-    // Create an IntersectionObserver to observe the ref's visibility
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsIntersecting(entry.isIntersecting)
+        if (entry.isIntersecting) dispatch(setCurrentSection(ref.current.id))
       },
       { rootMargin: '-300px' },
-      // { rootMargin: rootMargin.toString() }
-      /* {
-        rootMargin: '0px 0px 100px'
-      } */
     )
 
-    // Start observing the element
     observer.observe(ref.current)
 
-    // Cleanup the observer when the component unmounts or ref changes
     return () => {
       observer.disconnect()
     }
   }, [ref])
 
-  return isIntersecting
+  return null
 }

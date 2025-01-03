@@ -8,6 +8,7 @@ import appStateSlice from './slice/appStateSlice'
 import authenticationSlice from './slice/authenticationSlice'
 import cursorStateSlice from './slice/cursorStateSlice'
 import minecraftSlice from './slice/minecraftSlice'
+import resourcesStateSlice from './slice/resourcesStateSlice'
 import rubiksCubeSlice from './slice/rubiksCubeSlice'
 
 export const store = configureStore({
@@ -17,6 +18,7 @@ export const store = configureStore({
     authentication: authenticationSlice,
     cursorState: cursorStateSlice,
     minecraft: minecraftSlice,
+    resroucesState: resourcesStateSlice,
     rubiksCube: rubiksCubeSlice,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
