@@ -44,7 +44,7 @@
     "SECTIONS": {
       "FRONT_END": {
         "SECTION_TITLE": "front-end",
-        "SECTION_DESCRIPTION": "Front-end refers to the part of a website or application that users interact with directly. It involves everything that is visible and functional in the user's browser or device, including the design, layout, and user interface (UI). The front-end is responsible for providing a seamless and interactive experience for users.",
+        "SECTION_DESCRIPTION": "Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.",
         "PARAGRAPHS": {
           "HTML": {
             "PARAGRAPH_TITLE": "HTML",

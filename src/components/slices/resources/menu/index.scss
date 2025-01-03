@@ -14,14 +14,20 @@
   }
 
   .menu_section {
-    color: $white;
+    color: $grey_light;
     font-weight: 500;
+    transition: all 0.5s;
+  }
+
+  .menu_section:hover {
+    color: $white;
+    font-weight: 700;
     transition: all 0.5s;
   }
 
   .current_section {
     color: $external_link;
-    font-weight: 800;
+    font-weight: 500;
     transition: all 0.5s;
   }
 }

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { setCurrentSection } from '@/redux/slice/resourcesStateSlice'
+import { setIsScrolling } from '@/redux/slice/resourcesStateSlice'
 
 import { default as resourcesConstants } from '@/constants/resources/resourcesConstants.json'
 
@@ -20,8 +20,23 @@ export default function Menu() {
 
   function handleOnClick(key: string) {
     document.getElementById(key)!.scrollIntoView({ block: 'start', behavior: 'smooth' })
-    dispatch(setCurrentSection(key))
+    dispatch(setIsScrolling(true))
   }
+
+  let scrollTimeout: NodeJS.Timeout
+  const handleScroll = useCallback(() => {
+    clearTimeout(scrollTimeout)
+    scrollTimeout = setTimeout(function () {
+      dispatch(setIsScrolling(false))
+    }, 100)
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true, capture: true })
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <div id='resources_menu'>

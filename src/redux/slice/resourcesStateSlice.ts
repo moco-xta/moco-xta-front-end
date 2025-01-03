@@ -4,6 +4,7 @@ import type { TResourcesState } from '@/types/redux/types'
 
 const initialState: TResourcesState = {
   currentSection: 'front_end',
+  isScrolling: false,
 }
 
 const resourcesStateSlice = createSlice({
@@ -13,9 +14,12 @@ const resourcesStateSlice = createSlice({
     setCurrentSection: (state, action: PayloadAction<string>) => {
       state.currentSection = action.payload
     },
+    setIsScrolling: (state, action: PayloadAction<boolean>) => {
+      state.isScrolling = action.payload
+    },
   },
 })
 
-export const { setCurrentSection } = resourcesStateSlice.actions
+export const { setCurrentSection, setIsScrolling } = resourcesStateSlice.actions
 
 export default resourcesStateSlice.reducer
