@@ -41,6 +41,7 @@
     "translationKey": "3D",
     "paragraphs": [
       {
+        "key": "webgl",
         "translationKey": "WEBGL",
         "documentation": [
           {
@@ -96,6 +97,7 @@
         "articles": []
       },
       {
+        "key": "threejs",
         "translationKey": "THREEJS",
         "documentation": [
           {
@@ -114,6 +116,7 @@
         "articles": []
       },
       {
+        "key": "react_three_fiber",
         "translationKey": "REACT_THREE_FIBER",
         "documentation": [
           {

@@ -3,7 +3,7 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import type { TResourcesState } from '@/types/redux/types'
 
 const initialState: TResourcesState = {
-  currentSection: 'front_end',
+  currentPosition: 'front_end',
   isScrolling: false,
 }
 
@@ -11,8 +11,8 @@ const resourcesStateSlice = createSlice({
   name: 'Authentication',
   initialState,
   reducers: {
-    setCurrentSection: (state, action: PayloadAction<string>) => {
-      state.currentSection = action.payload
+    setCurrentPosition: (state, action: PayloadAction<string>) => {
+      state.currentPosition = action.payload
     },
     setIsScrolling: (state, action: PayloadAction<boolean>) => {
       state.isScrolling = action.payload
@@ -20,6 +20,6 @@ const resourcesStateSlice = createSlice({
   },
 })
 
-export const { setCurrentSection, setIsScrolling } = resourcesStateSlice.actions
+export const { setCurrentPosition, setIsScrolling } = resourcesStateSlice.actions
 
 export default resourcesStateSlice.reducer

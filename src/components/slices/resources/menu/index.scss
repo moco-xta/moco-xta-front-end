@@ -13,21 +13,48 @@
     margin-bottom: 10px;
   }
 
-  .menu_section {
-    color: $grey_light;
-    font-weight: 500;
-    transition: all 0.5s;
-  }
+  .li_section {
+    margin-bottom: 5px;
 
-  .menu_section:hover {
-    color: $white;
-    font-weight: 700;
-    transition: all 0.5s;
-  }
+    .menu_section {
+      color: $grey_light;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
 
-  .current_section {
-    color: $external_link;
-    font-weight: 500;
-    transition: all 0.5s;
+    .menu_section:hover {
+      color: $white;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .current_section {
+      color: $external_link;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .menu_paragraph {
+      margin-left: 7px;
+      color: $grey_light;
+      font-size: 11px;
+    }
+
+    .menu_paragraph:hover {
+      color: $white;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .current_paragraph {
+      color: $external_link;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .past {
+      color: $white;
+      transition: all 0.2s;
+    }
   }
 }

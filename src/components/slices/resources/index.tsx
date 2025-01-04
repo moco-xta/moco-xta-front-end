@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import ResourcesCanvas from '@/components/three/canvas/resources/ResourcesCanvas'
+import Menu from './menu'
 import Content from './content'
 
 import './index.scss'
-import Menu from './menu'
 
 export default function ResourcesPage() {
   return (

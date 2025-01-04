@@ -2,8 +2,8 @@
 
 import React from 'react'
 
-import SkillsSlice from '@/components/slices/skills_slice'
+import SkillsPage from '@/components/pages/skills'
 
 export default function Skills() {
-  return <SkillsSlice />
+  return <SkillsPage />
 }

@@ -1,6 +1,12 @@
-// RESOURCES
+import { ReactNode } from 'react'
 
-import { Dispatch, SetStateAction } from 'react'
+// LAYOUT
+
+export type TPage = {
+  children: ReactNode
+}
+
+// RESOURCES
 
 // SECTION
 
@@ -23,6 +29,7 @@ export type TResourcesParagraph = {
 }
 
 export type TResourcesParagraphData = {
+  key: string
   translationKey: string
   documentation: TLinksArray[]
   youtubePlaylistlink?: string

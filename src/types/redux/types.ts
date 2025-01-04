@@ -1,4 +1,4 @@
 export type TResourcesState = {
-  currentSection: string
+  currentPosition: string
   isScrolling: boolean
 }

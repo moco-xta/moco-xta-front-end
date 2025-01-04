@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import type { TResourcesParagraphData, TResourcesSection } from '@/types/layout'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { setCurrentSection } from '@/redux/slice/resourcesStateSlice'
+import { setCurrentPosition } from '@/redux/slice/resourcesStateSlice'
 
 import { SectionTitle } from '../../titles'
 import { ResourcesParagraph } from '../../paragraphs'
@@ -26,7 +26,7 @@ export default function ResourcesSection({ sectionData }: TResourcesSection) {
     if (resourcesSectionRef.current) {
       const boundingBox = resourcesSectionRef.current.getBoundingClientRect()
       if (boundingBox.top >= 0 && boundingBox.top < 120)
-        if (!isScrolling) dispatch(setCurrentSection(resourcesSectionRef.current.id))
+        if (!isScrolling) dispatch(setCurrentPosition(resourcesSectionRef.current.id))
     }
   }, [])
 
