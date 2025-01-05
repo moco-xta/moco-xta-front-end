@@ -6,11 +6,19 @@ import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { Page } from '@/components/layout/pages'
+import ResourcesCanvas from '@/components/three/canvas/resources/ResourcesCanvas'
 
 import { default as resourcesConstants } from '@/constants/resources/resourcesConstants.json'
+
+import './index.scss'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export default function Resources() {
-  return <Page pageData={resourcesConstants} />
+  return (
+    <Page
+      pageData={resourcesConstants}
+      backgroundCanvas={<ResourcesCanvas />}
+    />
+  )
 }

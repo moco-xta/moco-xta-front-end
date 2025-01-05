@@ -24,7 +24,7 @@ export default function SkillsParagraph({ translationPath, paragraphData }: TSki
 
   const paragraphRef = useRef<HTMLDivElement>(null!)
 
-  const handleScroll = useCallback((e: Event) => {
+  const handleScroll = useCallback(() => {
     if (paragraphRef.current) {
       const boundingBox = paragraphRef.current.getBoundingClientRect()
       if (boundingBox.top >= 0 && boundingBox.top < 100)

@@ -1,11 +1,13 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useCallback, useEffect, useRef } from 'react'
+// import { useDispatch, useSelector } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
 import type { TExternalLink, TResourcesParagraph } from '@/types/layout'
 
-import { AppDispatch, RootState } from '@/redux/store'
-import { setCurrentPosition } from '@/redux/slice/resourcesStateSlice'
+// import { AppDispatch, RootState } from '@/redux/store'
+// import { setCurrentPosition } from '@/redux/slice/resourcesStateSlice'
+
+import { usePageContext } from 'contexts/PageContext'
 
 import { ParagraphTitle } from '../../titles'
 import { LinksArray } from '../../links'
@@ -18,17 +20,20 @@ export default function ResourcesParagraph({
 }: TResourcesParagraph) {
   const t = useTranslations()
 
-  const dispatch = useDispatch<AppDispatch>()
-  const isScrolling = useSelector((state: RootState) => state.resroucesState.isScrolling)
+  // const dispatch = useDispatch<AppDispatch>()
+  // const isScrolling = useSelector((state: RootState) => state.resroucesState.isScrolling)
 
-  const resourcesParagraphRef = useRef<HTMLDivElement>(null!)
+  const { setCurrentPosition, isScrolling } = usePageContext()
 
-  const handleScroll = useCallback((e: Event) => {
-    if (resourcesParagraphRef.current) {
-      const boundingBox = resourcesParagraphRef.current.getBoundingClientRect()
-      if (boundingBox.top >= 0 && boundingBox.top < 120)
-        if (!isScrolling) dispatch(setCurrentPosition(resourcesParagraphRef.current.id))
-      console.log('resourcesParagraphRef.current.id', resourcesParagraphRef.current.id)
+  const paragraphRef = useRef<HTMLDivElement>(null!)
+
+  const handleScroll = useCallback(() => {
+    if (paragraphRef.current) {
+      const boundingBox = paragraphRef.current.getBoundingClientRect()
+      if (boundingBox.top >= 0 && boundingBox.top < 100)
+        if (!isScrolling)
+          // if (!isScrolling) dispatch(setCurrentPosition(paragraphData.key))
+          setCurrentPosition(paragraphData.key)
     }
   }, [])
 
@@ -41,8 +46,8 @@ export default function ResourcesParagraph({
 
   return (
     <div
-      ref={resourcesParagraphRef}
-      id={paragraphData.key}
+      ref={paragraphRef}
+      id={`${paragraphData.key}_paragraph`}
       className='resources_paragraph'
     >
       <ParagraphTitle

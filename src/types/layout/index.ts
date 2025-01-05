@@ -2,6 +2,7 @@
 
 export type TPage = {
   pageData: TPageData
+  backgroundCanvas?: JSX.Element
 }
 
 // SIDE NAVIGATION MENU
