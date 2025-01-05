@@ -13,17 +13,13 @@ import { LinksArray } from '../../links'
 import './index.scss'
 
 export default function ResourcesParagraph({
-  translationPathPrefix,
+  translationPath,
   paragraphData,
 }: TResourcesParagraph) {
   const t = useTranslations()
 
   const dispatch = useDispatch<AppDispatch>()
   const isScrolling = useSelector((state: RootState) => state.resroucesState.isScrolling)
-
-  const [translationPath] = useState<string>(
-    `${translationPathPrefix}.PARAGRAPHS.${paragraphData.translationKey}`,
-  )
 
   const resourcesParagraphRef = useRef<HTMLDivElement>(null!)
 
@@ -49,25 +45,27 @@ export default function ResourcesParagraph({
       id={paragraphData.key}
       className='resources_paragraph'
     >
-      <ParagraphTitle text={t(`${translationPath}.PARAGRAPH_TITLE`)} />
-      <p className='resources_paragraph_description'>
-        {t(`${translationPath}.PARAGRAPH_DESCRIPTION`)}
+      <ParagraphTitle
+        translationPath={t(`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_TITLE`)}
+      />
+      <p className='pc_item resources_paragraph_description'>
+        {t(`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_DESCRIPTION`)}
       </p>
       <LinksArray
-        translationPathPrefix={translationPath}
+        translationPath={`${translationPath}.${paragraphData.translationKey}`}
         title={t('DOCUMENTATION')}
         links={paragraphData.documentation as unknown as TExternalLink[]}
       />
       {paragraphData.websites.length > 0 && (
         <LinksArray
-          translationPathPrefix={translationPath}
+          translationPath={`${translationPath}.${paragraphData.translationKey}`}
           title={t('WEBSITES')}
           links={paragraphData.websites as unknown as TExternalLink[]}
         />
       )}
       {paragraphData.channels.length > 0 && (
         <LinksArray
-          translationPathPrefix={translationPath}
+          translationPath={`${translationPath}.${paragraphData.translationKey}`}
           title={t('CHANNELS')}
           links={paragraphData.channels as unknown as TExternalLink[]}
           youtubePlaylistlink={paragraphData.youtubePlaylistlink}
@@ -75,7 +73,7 @@ export default function ResourcesParagraph({
       )}
       {paragraphData.articles.length > 0 && (
         <LinksArray
-          translationPathPrefix={translationPath}
+          translationPath={`${translationPath}.${paragraphData.translationKey}`}
           title={t('ARTICLES')}
           links={paragraphData.articles as unknown as TExternalLink[]}
           youtubePlaylistlink={paragraphData.youtubePlaylistlink}

@@ -11,7 +11,7 @@ import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 import './index.scss'
 
 export default function LinksArray({
-  translationPathPrefix,
+  translationPath,
   title,
   links,
   youtubePlaylistlink,
@@ -19,7 +19,10 @@ export default function LinksArray({
   const t = useTranslations()
 
   return (
-    <table id='links_array'>
+    <table
+      id='links_array'
+      className='pc_item'
+    >
       <caption>
         {capitalizeFirstLetter(t(`RESOURCES.${title}`))}
         {youtubePlaylistlink && <YoutubePlaylistLink url={youtubePlaylistlink} />}
@@ -34,7 +37,7 @@ export default function LinksArray({
             />
           </th>
           <th className='links_array_description'>
-            {t(`${translationPathPrefix}.LINKS.${translationKey}.DESCRIPTION`)}
+            {t(`${translationPath}.LINKS.${translationKey}.DESCRIPTION`)}
           </th>
         </tr>
       ))}
