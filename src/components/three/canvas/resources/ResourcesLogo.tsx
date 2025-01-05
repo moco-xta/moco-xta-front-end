@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
-import { RapierRigidBody, RigidBody } from '@react-three/rapier'
+import { BallCollider, RapierRigidBody, RigidBody } from '@react-three/rapier'
 
 import type { TResourcesLogo } from '@/types/layout'
 
@@ -37,10 +37,11 @@ export const ResourcesLogo = ({ pathToModel, componentName }: TResourcesLogo) =>
         ref={rigidBodyRef}
         linearDamping={0.75}
         angularDamping={0.15}
-        friction={0.2}
+        friction={0.5}
         position={[r(20), r(20) - 25, r(20) - 10]}
-        colliders={'cuboid'}
+        // colliders={'ball'}
       >
+        <BallCollider args={[1]} scale={[1, 1, 0.5]} />
         <Logo ref={logoRef} />
       </RigidBody>
     </Suspense>

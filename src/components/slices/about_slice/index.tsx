@@ -7,8 +7,8 @@ import { RootState } from '@/redux/store'
 
 import AboutDashboard from './about_dahboard'
 import AboutGreeting from './about_greeting'
-import AboutDesktopCanvas from '../../three/canvas/about_canvas/AboutDesktopCanvas'
-import AboutScene from '../../three/canvas/about_canvas/AboutScene'
+import AboutDesktopCanvas from '../../three/canvas/about/AboutDesktopCanvas'
+import AboutScene from '../../three/canvas/about/AboutScene'
 import DeviceMotionPermission from './device_motion_permission'
 import { AboutCanvas } from '@/components/three/canvas'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import RubiksCubeCanvas from '../../three/canvas/rubiks_cube_canvas/RubiksCubeCanvas'
+import RubiksCubeCanvas from '../../three/canvas/rubiks_cube/RubiksCubeCanvas'
 import PerformedWithTextBlock from './performed_with_text_block'
 
 import './index.scss'

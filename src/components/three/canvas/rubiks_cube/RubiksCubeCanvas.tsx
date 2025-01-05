@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 
@@ -7,6 +8,7 @@ import Controls from './Controls'
 import RubiksCube from './RubiksCube'
 
 import { default as rubiksCubeConstants } from '@/constants/three/rubiksCubeConstants.json'
+import PostProcessing from './PostProcessing'
 
 export default function RubiksCubeCanvas() {
   return (
@@ -33,13 +35,20 @@ export default function RubiksCubeCanvas() {
           rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Y,
           rubiksCubeConstants.PERSPECTIVE_CAMERA.POSITION.Z,
         ]}
+
         // fov={rubiksCubeConstants.PERSPECTIVE_CAMERA.FOV}
       />
-      <Lights />
       <Controls />
+      <Lights />
       <Suspense>
         <RubiksCube />
       </Suspense>
+      <fogExp2
+        attach='fog'
+        color='black'
+        density={0.1}
+      />
+      <PostProcessing />
     </Canvas>
   )
 }

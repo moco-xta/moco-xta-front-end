@@ -10,7 +10,7 @@ import type { TSkillsParagraph } from '@/types/layout'
 import { usePageContext } from 'contexts/PageContext'
 
 import { ParagraphTitle } from '../../titles'
-import LogoSkillCanvas from '@/components/three/canvas/skills/LogoSkillCanvas'
+import LogoSkillCanvas from '@/components/three/canvas/logo_skill/LogoSkillCanvas'
 
 import './index.scss'
 

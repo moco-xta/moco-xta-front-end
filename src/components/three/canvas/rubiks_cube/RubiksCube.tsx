@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+import { useFrame } from '@react-three/fiber'
 
 import CubeGroup from './CubeGroup'
 import RotationGroupsAndButtons from './RotationGroupsAndButtons'
@@ -29,6 +30,10 @@ export default function RubiksCube() {
         })
     })
   }, [rubiksCubeRef, colors])
+
+  useFrame((state, delta, xrFrame) => {
+    rubiksCubeRef.current.rotation.y += delta * 0.15
+  })
 
   return (
     <>
