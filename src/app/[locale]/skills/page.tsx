@@ -1,9 +1,16 @@
 'use client'
 
 import React from 'react'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import SkillsSlice from '@/components/slices/skills_slice'
+import { Page } from '@/components/layout/pages'
+
+import { default as skillsConstants } from '@/constants/skills/skillsConstants.json'
+
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export default function Skills() {
-  return <SkillsSlice />
+  return <Page pageData={skillsConstants} />
 }

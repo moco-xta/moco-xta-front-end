@@ -1,275 +1,222 @@
-{
-  "fonts": {},
-  "3D": {
-    "models": {},
-    "materials": {
-      "sources": {}
-    },
-    "javacriptLibraries": {
-      "threejs": {
-        "youtubePlaylist": {
-          "url": "https://www.youtube.com/playlist?list=PLbEvIQDy5AOV8tytC6WBKZG2iIlTKil9n"
-        },
-        "description": "JAVASCRIPT_LIBRARIES.THREEJS.DESCRIPTION",
-        "documentation": {
-          "name": "three.js",
-          "url": "https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene/",
-          "languages": ["en"]
-        },
-        "channels": [
-          {
-            "url": "",
-            "urlName": "",
-            "descirption": ""
-          }
-        ]
-      },
-      "reactThreeFiber": {
-        "youtubePlaylist": {
-          "url": "https://www.youtube.com/playlist?list=PLbEvIQDy5AOUWLXqGBuB__fq8TohIxzwZ"
-        },
-        "description": "JAVASCRIPT_LIBRARIES.REACT_THREE_FIBER.DESCRIPTION",
+[
+  {
+    "key": "front_end",
+    "translationKey": "FRONT_END",
+    "paragraphs": [
+      {
+        "key": "html",
+        "translationKey": "HTML",
         "documentation": [
           {
-            "urlName": "@react-three/fiber",
-            "url": "https://r3f.docs.pmnd.rs/getting-started/introduction",
-            "description": "Build your scene declaratively with re-usable, self-contained components that react to state, are readily interactive and can participate in React's ecosystem.",
+            "key": "w3school",
+            "translationKey": "W3SCHOOLS",
+            "urlName": "W3schools",
+            "url": "https://www.w3schools.com/html/default.asp",
             "languages": ["en"]
           },
           {
-            "urlName": "@react-three/drei",
-            "url": "https://drei.docs.pmnd.rs/getting-started/introduction",
-            "description": "A growing collection of useful helpers and fully functional, ready-made abstractions for @react-three/fiber.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/gltfjsx",
-            "url": "https://github.com/pmndrs/gltfjsx",
-            "description": "A small command-line tool that turns GLTF assets into declarative and re-usable react-three-fiber JSX components.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/postprocessing",
-            "url": "https://github.com/pmndrs/react-postprocessing",
-            "description": "react-postprocessing is a postprocessing wrapper for @react-three/fiber. This is not (yet) meant for complex orchestration of effects, but can save you hundreds of LOC for a straight forward effects-chain.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/test-renderer",
-            "url": "https://github.com/pmndrs/react-three-fiber/tree/master/packages/test-renderer",
-            "description": "@react-three/test-renderer is a React testing renderer for threejs in node.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/flex",
-            "url": "https://github.com/pmndrs/react-three-flex",
-            "description": "Placing content in THREE.js is hard. @react-three/flex brings the webs flexbox spec to react-three-fiber. It is based on Yoga, Facebook's open source layout engine for react-native.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/xr",
-            "url": "https://github.com/pmndrs/xr",
-            "description": "Turn any R3F app into an interactive immersive experience.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/csg",
-            "url": "https://github.com/pmndrs/react-three-csg",
-            "description": "Constructive solid geometry for React, a small abstraction around gkjohnson/three-bvh-csg.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/rapier",
-            "url": "https://github.com/pmndrs/react-three-rapier",
-            "description": "react-three/rapier (or r3/rapier) is a wrapper library around the Rapier (https://rapier.rs/docs/user_guides/javascript) WASM-based physics engine, designed to slot seamlessly into a react-three/fiber pipeline. The goal of this library to is to provide a fast physics engine with minimal friction and small, straight forward API.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/cannon",
-            "url": "https://github.com/pmndrs/use-cannon",
-            "description": "",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/p2",
-            "url": "https://github.com/pmndrs/use-p2",
-            "description": "React hooks for p2-es.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/a11y",
-            "url": "https://github.com/pmndrs/react-three-a11y",
-            "description": "@react-three/a11y brings accessibility to webGL with easy-to-use react-three-fiber components",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "@react-three/gpu-pathtracer",
-            "url": "https://github.com/pmndrs/react-three-gpu-pathtracer",
-            "description": "react-three-gpu-pathtracer lets you render your react-three-fiber scenes using Path Tracing!",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "create-r3f-app next",
-            "url": "https://github.com/pmndrs/react-three-next",
-            "description": "A minimalist starter for NextJS, @react-three/fiber and Threejs.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "zustand",
-            "url": "https://github.com/pmndrs/zustand",
-            "description": "A small, fast and scalable bearbones state-management solution using simplified flux principles. Has a comfy API based on hooks, isn't boilerplatey or opinionated.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "jotai",
-            "url": "https://github.com/pmndrs/jotai",
-            "description": "Primitive and flexible state management for React",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "valtio",
-            "url": "https://github.com/pmndrs/valtio",
-            "description": "Valtio makes proxy-state simple",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "react-spring",
-            "url": "https://github.com/pmndrs/react-spring",
-            "description": "react-spring is a cross-platform spring-physics first animation library.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "use-gesture",
-            "url": "https://github.com/pmndrs/use-gesture",
-            "description": "@use-gesture is a library that lets you bind richer mouse and touch events to any component or view. With the data you receive, it becomes trivial to set up gestures, and often takes no more than a few lines of code.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "leva",
-            "url": "https://github.com/pmndrs/leva",
-            "description": "",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "maath",
-            "url": "https://github.com/pmndrs/maath",
-            "description": "This is a collection of useful math helpers, random generators, bits and bobs.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "miniplex",
-            "url": "https://github.com/hmans/miniplex",
-            "description": "",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "composer-suite",
-            "url": "https://github.com/hmans/composer-suite",
-            "description": "A suite of libraries for making game development with Three.js and React not only awesome, but so good, it would feel wrong to use anything else.",
+            "key": "mozilla",
+            "translationKey": "MOZILLA",
+            "urlName": "Mozilla",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
             "languages": ["en"]
           }
         ],
-
-        "channels": [
+        "websites": [],
+        "channels": [],
+        "articles": [
           {
-            "urlName": "Anderson Mancini",
-            "url": "https://www.youtube.com/@AndersonMancini",
-            "description": "On this channel, I usually post some videos about my journey with Three.js and some tutorials of what I have learned along that journey. I'm doing this to help those who are starting. My channel is recommended for those who are seeking inspiration for threejs projects, not tutorials only. If you want just tutorials regularly, you might feel bored.",
-            "languages": ["en"]
-          },
-          {
-            "urlName": "Wawa Sensei",
-            "url": "https://www.youtube.com/@WawaSensei",
-            "description": "Welcome, to the Wawa Sensei channel. On this channel I want to share with you my coding journey throughout tutorials and discussion videos. I always try to be as informative as possible to help you get the most out of my videos. If you like tech, coding, web3, 3D  and most of all learning, you'll enjoy joining the community!",
+            "key": "freecodecamp",
+            "translationKey": "FREECODECAMP",
+            "urlName": "FreeCodeCamp",
+            "url": "https://www.freecodecamp.org/news/tag/html/",
             "languages": ["en"]
           }
         ]
-      },
-      "babylonjs": {
-        "documentation": {
-          "name": "babylon.js",
-          "url": "https://www.babylonjs.com/",
-          "languages": ["en"]
-        }
       }
-    },
-    "shaders": {
-      "youtubePlaylist": {
-        "url": "https://www.youtube.com/playlist?list=PLbEvIQDy5AOWBGw5qOGLk1rY2IFY3gkkV"
-      },
-      "websites": [
-        {
-          "name": "WebGl Fundamentals",
-          "url": "https://webglfundamentals.org/",
-          "languages": ["en", "fr"]
-        },
-        {
-          "name": "The book of shaders",
-          "url": "https://thebookofshaders.com/",
-          "languages": ["en", "es", "fr"]
-        },
-        {
-          "name": "Maxime Heckel's website",
-          "url": "https://blog.maximeheckel.com/",
-          "languages": ["en"]
-        },
-        {
-          "name": "www.stashofcode.fr",
-          "url": "https://www.stashofcode.fr/category/webgl/",
-          "languages": ["fr"]
-        }
-      ],
-      "channels": [
-        {
-          "name": "Yuri Artiukh's channel",
-          "url": "https://www.youtube.com/@akella_",
-          "languages": ["en"]
-        }
-      ],
-      "editors": [
-        {
-          "name": "ShaderToy",
-          "url": "https://www.shadertoy.com/",
-          "languages": ["en"]
-        },
-        {
-          "name": "glsl.app",
-          "url": "https://glsl.app/",
-          "languages": ["en"]
-        }
-      ],
-      "galleries": [
-        {
-          "name": "GLSL Sandbox",
-          "url": "https://glslsandbox.com/",
-          "languages": ["en"]
-        },
-        {
-          "name": "Shader daily",
-          "url": "https://www.shaderdaily.com/",
-          "languages": ["en"]
-        }
-      ],
-      "books": [],
-      "articles": [
-        {
-          "name": "Introduction to WebGL Background",
-          "url": "https://wdf-dev.gitlab.io/background-intro.html",
-          "languages": ["en"]
-        },
-        {
-          "name": "Rendering Realtime Caustics in WebGL",
-          "url": "https://medium.com/@evanwallace/rendering-realtime-caustics-in-webgl-2a99a29a0b2c",
-          "languages": ["en"]
-        }
-      ]
-    }
+    ]
   },
-  "tools": [
-    {
-      "name": "Blender",
-      "url": "https://www.blender.org/",
-      "languages": ["en"]
-    }
-  ]
-}
+  {
+    "key": "threed",
+    "translationKey": "3D",
+    "paragraphs": [
+      {
+        "key": "webgl",
+        "translationKey": "WEBGL",
+        "documentation": [
+          {
+            "key": "webgl",
+            "translationKey": "KHRONOS",
+            "urlName": "khronos.org",
+            "url": "https://registry.khronos.org/webgl/specs/latest/2.0/",
+            "languages": ["en"]
+          }
+        ],
+        "websites": [
+          {
+            "key": "webgl_fundamentals",
+            "translationKey": "WEBGL_FUNDAMENTALS",
+            "urlName": "WebGL fundamentals",
+            "url": "https://webglfundamentals.org/",
+            "languages": ["en"]
+          },
+          {
+            "key": "the_boof_of_sdaders",
+            "translationKey": "THE_BOOK_OF_SHADERS",
+            "urlName": "The book of shaders",
+            "url": "https://thebookofshaders.com/",
+            "languages": ["en"]
+          },
+          {
+            "key": "shadertoy",
+            "translationKey": "SHADERTOY",
+            "urlName": "Shadertoy",
+            "url": "https://www.shadertoy.com/",
+            "languages": ["en"]
+          }
+        ],
+        "youtubePlaylistlink": {
+          "url": ""
+        },
+        "channels": [
+          {
+            "key": "yuri_artiukh",
+            "translationKey": "YURI_ARTIUKH",
+            "urlName": "Yuri Artiukh",
+            "url": "https://www.youtube.com/@akella_",
+            "languages": ["en"]
+          },
+          {
+            "key": "visionary_3d",
+            "translationKey": "VISIONARY_3D",
+            "urlName": "Visionary 3D",
+            "url": "https://www.youtube.com/@visionary_3_d/featured",
+            "languages": ["en"]
+          }
+        ],
+        "articles": []
+      },
+      {
+        "key": "threejs",
+        "translationKey": "THREEJS",
+        "documentation": [
+          {
+            "key": "threejs",
+            "translationKey": "THREEJS",
+            "urlName": "three.js",
+            "url": "https://threejs.org/docs/index.html",
+            "languages": ["en"]
+          }
+        ],
+        "websites": [],
+        "youtubePlaylistlink": {
+          "url": ""
+        },
+        "channels": [],
+        "articles": []
+      },
+      {
+        "key": "react_three_fiber",
+        "translationKey": "REACT_THREE_FIBER",
+        "documentation": [
+          {
+            "key": "react_three_fiber",
+            "translationKey": "REACT_THREE_FIBER",
+            "urlName": "@react-three/fiber",
+            "url": "https://r3f.docs.pmnd.rs/getting-started/introduction",
+            "languages": ["en"]
+          },
+          {
+            "key": "react_three_drei",
+            "translationKey": "REACT_THREE_DREI",
+            "urlName": "@react-three/drei",
+            "url": "https://drei.docs.pmnd.rs/getting-started/introduction",
+            "languages": ["en"]
+          },
+          {
+            "key": "react_three_postprocessing",
+            "translationKey": "REACT_THREE_POSTPROCESSING",
+            "urlName": "@react-three/postprocessing",
+            "url": "https://github.com/pmndrs/react-postprocessing",
+            "languages": ["en"]
+          },
+          {
+            "key": "react_three_rapier",
+            "translationKey": "REACT_THREE_RAPIER",
+            "urlName": "@react-three/rapier",
+            "url": "https://github.com/pmndrs/react-three-rapier",
+            "languages": ["en"]
+          },
+          {
+            "key": "react_three_cannon",
+            "translationKey": "REACT_THREE_CANNON",
+            "urlName": "@react-three/cannon",
+            "url": "https://github.com/pmndrs/use-cannon",
+            "languages": ["en"]
+          },
+          {
+            "key": "react_three_gpu_pathtracer",
+            "translationKey": "REACT_THREE_GPU_PATHTRACER",
+            "urlName": "@react-three/gpu-pathtracer",
+            "url": "https://github.com/pmndrs/react-three-gpu-pathtracer",
+            "languages": ["en"]
+          },
+          {
+            "key": "react_spring",
+            "translationKey": "REACT_SPRING",
+            "urlName": "react-spring",
+            "url": "https://github.com/pmndrs/react-spring",
+            "languages": ["en"]
+          },
+          {
+            "key": "use_gesture",
+            "translationKey": "USE_GESTURE",
+            "urlName": "use-gesture",
+            "url": "https://github.com/pmndrs/use-gesture",
+            "languages": ["en"]
+          },
+          {
+            "key": "leva",
+            "translationKey": "LEVA",
+            "urlName": "leva",
+            "url": "https://github.com/pmndrs/leva",
+            "languages": ["en"]
+          },
+          {
+            "key": "maath",
+            "translationKey": "MAATH",
+            "urlName": "maath",
+            "url": "https://github.com/pmndrs/maath",
+            "languages": ["en"]
+          }
+        ],
+        "websites": [],
+        "youtubePlaylistlink": {
+          "url": ""
+        },
+        "channels": [
+          {
+            "key": "anderson_mancini",
+            "translationKey": "ANDERSON_MANCINI",
+            "urlName": "Anderson Mancini",
+            "url": "https://www.youtube.com/@AndersonMancini",
+            "languages": ["en"]
+          },
+          {
+            "key": "wawa_sensei",
+            "translationKey": "WAWA_SENSEI",
+            "urlName": "Wawa Sensei",
+            "url": "https://www.youtube.com/@WawaSensei",
+            "languages": ["en"]
+          }
+        ],
+        "articles": []
+      }
+    ]
+  },
+  {
+    "key": "back_end",
+    "translationKey": "BACK_END",
+    "paragraphs": []
+  }
+]

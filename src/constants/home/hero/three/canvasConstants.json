@@ -1,11 +1,13 @@
 {
-  "dpr": 2,
-  "legacy": false,
-  "shadows": true,
-  "gl": {
-    "antialias": true,
-    "alpha": true,
-    "powerPreference": "high-performance",
-    "preserveDrawingBuffer": true
+  "defaultValues": {
+    "dpr": 2,
+    "legacy": false,
+    "shadows": true,
+    "gl": {
+      "antialias": true,
+      "alpha": true,
+      "powerPreference": "high-performance",
+      "preserveDrawingBuffer": true
+    }
   }
 }

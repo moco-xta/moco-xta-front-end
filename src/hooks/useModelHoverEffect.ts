@@ -7,7 +7,7 @@ import { ThreeEvent } from '@react-three/fiber'
 import { getUvMousePositionOnMesh } from '@/helpers/threeHelpers'
 
 export default function useModelHoverEffect(
-  ref: MutableRefObject<THREE.Group<THREE.Object3DEventMap>>,
+  ref: MutableRefObject<THREE.Group | THREE.Mesh>,
   constants: any,
 ) {
   useGSAP(() => {}, {
@@ -15,7 +15,7 @@ export default function useModelHoverEffect(
   })
 
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
-    const { x, y } = getUvMousePositionOnMesh(event, 'introduction_card')
+    const { x, y } = getUvMousePositionOnMesh(event)
     gsap.to(ref.current!.rotation, {
       duration: 0.2,
       ease: 'power3.out',

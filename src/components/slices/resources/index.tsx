@@ -1,11 +1,8 @@
 import React from 'react'
 
 import ResourcesCanvas from '@/components/three/canvas/resources/ResourcesCanvas'
-import Introduction from './introduction'
-import FrontEnd from './front_end'
-import Graphics from './graphics'
-import ThreeDimensional from './three_dimensional'
-import BackEnd from './back_end'
+import Menu from './menu'
+import Content from './content'
 
 import './index.scss'
 
@@ -20,13 +17,10 @@ export default function ResourcesPage() {
       </section>
       <div
         id='resource_page'
-        className='page'
+        className='resource_page_zIndex'
       >
-        <Introduction />
-        <FrontEnd />
-        <Graphics />
-        <ThreeDimensional />
-        <BackEnd />
+        <Menu />
+        <Content />
       </div>
     </>
   )

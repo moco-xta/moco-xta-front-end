@@ -17,7 +17,7 @@
 }
 
 body {
-  color: white;
+  color: $white;
   width: 100vw;
   overflow-x: hidden;
   height: 100%;
@@ -48,16 +48,16 @@ html.lenis body {
   pointer-events: none;
 }
 
-.page {
+/* .page {
   width: 100vw;
   max-width: $max_width;
   margin: auto;
-  padding-top: 50px;
+  // padding-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .section {
   padding: 50px;

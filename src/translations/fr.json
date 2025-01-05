@@ -41,6 +41,7 @@
     }
   },
   "RESOURCES": {
+    "FRONT_END": "front-end",
     "GRAPHICS": {
       "GRAPHICS": "graphisme"
     },
