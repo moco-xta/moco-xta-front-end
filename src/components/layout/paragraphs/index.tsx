@@ -1,3 +1,4 @@
+import SkillsParagraph from './skills_paragraph'
 import ResourcesParagraph from './resources_paragraph'
 
-export { ResourcesParagraph }
+export { SkillsParagraph, ResourcesParagraph }

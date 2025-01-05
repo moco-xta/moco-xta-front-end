@@ -1,0 +1,11 @@
+@import '@/styles/variables.module.scss';
+
+.page_introduction {
+  margin-top: -5px;
+  margin-bottom: -80px;
+
+  .pi_introduction {
+    margin-bottom: $px_margin_XL;
+    text-align: justify;
+  }
+}

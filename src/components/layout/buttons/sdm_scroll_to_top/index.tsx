@@ -9,8 +9,8 @@ type TScrollToTop = {
   elementId: string
 }
 
-export default function ScrollToTop({ elementId }: TScrollToTop) {
-  const { y, scrollPercentage } = useScroll('resources_content')
+export default function SdmScrollToTop({ elementId }: TScrollToTop) {
+  const { y, scrollPercentage } = useScroll(elementId)
 
   const scrollToTopRef = useRef<HTMLDivElement>(null!)
 
@@ -33,8 +33,9 @@ export default function ScrollToTop({ elementId }: TScrollToTop) {
     <div
       ref={scrollToTopRef}
       className='scroll_to_top'
+      onClick={handleOnClick}
     >
-      <p onClick={handleOnClick}>Scroll to top</p>
+      <p>Scroll to top</p>
       <HiOutlineArrowUpCircle />
     </div>
   )

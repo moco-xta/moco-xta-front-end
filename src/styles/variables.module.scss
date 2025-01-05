@@ -10,6 +10,16 @@ $font_size_h2: 32px;
 $font_size_h3: 24px;
 $font_size_h4: 22px;
 
+$font_size_XXS: 11px;
+$font_size_XS: 12px;
+$font_size_S: 14px;
+$font_size_M: 18px;
+$font_size_L: 24px;
+$font_size_XL: 32px;
+$font_size_XXL: 48px;
+
+$font_weight_hover: 500;
+
 /* $gilroyBlackFont: var(--font-gilroy-black); */
 
 /* $font_size_small: 1em;
@@ -27,6 +37,8 @@ $grey_medium: #7b7b7b;
 $grey_dark: #515151;
 $grey_darker: #292929;
 $black: #000000;
+
+$sdm_current: #47a8ff;
 
 $external_link: #47a8ff;
 $youtube_red: #ff0032;
@@ -102,6 +114,15 @@ $larger_limit: 2000px;
 
 // MARGINS
 
+$px_margin_XXS: 5px;
+$px_margin_XS: 7px;
+$px_margin_S: 10px;
+$px_margin_M: 15px;
+$px_margin_L: 20px;
+$px_margin_XL: 30px;
+$px_margin_XL: 50px;
+$px_margin_XXL: 100px;
+
 $percent_margin_XXXL: 45%;
 $percent_margin_XXL: 35%;
 $percent_margin_XL: 35%;
@@ -110,13 +131,6 @@ $percent_margin_M: 20%;
 $percent_margin_S: 15%;
 $percent_margin_XS: 10%;
 $percent_margin_XXS: 5%;
-
-$px_margin_XXS: 10px;
-$px_margin_XS: 25px;
-$px_margin_S: 50px;
-$px_margin_M: 100px;
-$px_margin_L: 150px;
-$px_margin_XL: 200px;
 
 $top_bottom_margin_smaller: 25px;
 $top_bottom_margin_small: 50px;

@@ -1,6 +1,6 @@
 {
   "defaultValues": {
-    "dpr": 2,
+    "dpr": 1,
     "legacy": false,
     "shadows": true,
     "gl": {

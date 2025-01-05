@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { AppDispatch, RootState } from '@/redux/store'
 import { setIsScrolling } from '@/redux/slice/resourcesStateSlice'
 
-import ScrollToTop from '@/components/layout/buttons/scroll_to_top'
+import SdmScrollToTop from '@/components/layout/buttons/sdm_scroll_to_top'
 
 import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
@@ -89,7 +89,7 @@ export default function Menu() {
           )
         })}
       </ul>
-      <ScrollToTop elementId={'resources_content'} />
+      <SdmScrollToTop elementId={'resources_content'} />
     </div>
   )
 }

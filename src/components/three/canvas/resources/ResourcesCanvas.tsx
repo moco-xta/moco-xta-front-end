@@ -1,31 +1,45 @@
-import React, { useRef } from 'react'
+import React, { MutableRefObject, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { BallCollider, Physics, RapierRigidBody, RigidBody } from '@react-three/rapier'
-
-import useMouseMove from '@/hooks/useMouseMove'
+import {
+  BallCollider,
+  CuboidCollider,
+  Physics,
+  RapierCollider,
+  RapierRigidBody,
+  RigidBody,
+} from '@react-three/rapier'
 
 import Lights from './lights/Lights'
-import { logosData } from '@/data/resources/logosData'
+import { ResourcesLogo } from './ResourcesLogo'
 import PostProcessing from './PostProcessing'
 import ResourcesText from './ResourcesText'
+import useMouseMove from '@/hooks/useMouseMove'
 
-function Pointer({ vec = new THREE.Vector3() }) {
+import { default as logosConstants } from '@/constants/resources/three/logosConstants.json'
+
+type TPointer = {
+  pointerRef: MutableRefObject<THREE.Vector3>
+}
+
+function Pointer({ pointerRef }: TPointer) {
   const ref = useRef<RapierRigidBody>(null!)
 
   const { uvX, uvY } = useMouseMove()
 
   useFrame(({ viewport }) => {
     if (ref.current) {
-      vec.lerp({ x: (uvX * viewport.width) / 2, y: (uvY * viewport.height) / 2, z: 0 }, 0.2)
-      ref.current.setNextKinematicTranslation(vec)
+      pointerRef.current.lerp(
+        { x: (uvX * viewport.width) / 2, y: (uvY * viewport.height) / 2, z: 0 },
+        0.2,
+      )
+      ref.current.setNextKinematicTranslation(pointerRef.current)
     }
   })
   return (
     <RigidBody
-      position={[100, 100, 100]}
       type='kinematicPosition'
-      colliders={false}
+      colliders={'ball'}
       ref={ref}
     >
       <BallCollider args={[2]} />
@@ -36,14 +50,27 @@ function Pointer({ vec = new THREE.Vector3() }) {
 function Logos() {
   return (
     <>
-      {logosData.map(({ component }, i) => {
+      {Array(logosConstants.modelsMultiplier)
+        .fill(logosConstants.models)
+        .flat()
+        .map((componentName, index) => {
+          return (
+            <ResourcesLogo
+              key={index}
+              pathToModel={logosConstants.pathToModel}
+              componentName={componentName}
+            />
+          )
+        })}
+      {/* {logosData.map(({ name, component }, i) => {
         const rigidBodyRef = useRef<RapierRigidBody>(null!)
+        const cuboidColliderRef = useRef<RapierCollider>(null!)
         const logoGroupRef = useRef<THREE.Group>(null!)
         const vec = new THREE.Vector3()
         const scale = 1
         const r = THREE.MathUtils.randFloatSpread
 
-        useFrame((_, delta) => {
+        useFrame((state, delta) => {
           delta = Math.min(0.1, delta)
           if (rigidBodyRef.current)
             rigidBodyRef.current.applyImpulse(
@@ -69,10 +96,6 @@ function Logos() {
             position={[r(20), r(20) - 25, r(20) - 10]}
             colliders={'cuboid'}
           >
-            {/* <CuboidCollider
-              ref={cuboidColliderRef}
-              args={[1, 1, 0.4]} // args={getCuboidColliderArgs(logoGroupRef)}
-            /> */}
             <Logo
               ref={logoGroupRef}
               key={i}
@@ -80,12 +103,14 @@ function Logos() {
             />
           </RigidBody>
         )
-      })}
+      })} */}
     </>
   )
 }
 
 export default function ResourcesCanvas() {
+  const vecRef = useRef<THREE.Vector3>(new THREE.Vector3())
+
   return (
     <Canvas
       shadows
@@ -98,7 +123,7 @@ export default function ResourcesCanvas() {
         // debug
         gravity={[0, 0, 0]}
       >
-        <Pointer />
+        <Pointer pointerRef={vecRef} />
         <Logos />
         <ResourcesText />
       </Physics>

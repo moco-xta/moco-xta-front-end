@@ -2,19 +2,18 @@
 
 .page_container {
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
-  background: pink;
 
   .page {
     position: fixed;
     width: 100%;
     height: 100%;
     max-width: $max_width;
-    margin-top: $page_margin_top;
     display: flex;
     flex-direction: row;
-    background: yellow;
+    font-size: $font_size_S;
+
+    // background: red;
   }
 }
