@@ -1,13 +1,13 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { CubeInterface, MinecraftInterface } from '@/interfaces/minecraftInterfaces'
+import type { TCube, TMinecraftState } from '@/types/three/minecraft/types'
 
-// @ts-ignore
 const getLocalStorage = (key: string) => JSON.parse(localStorage.getItem(key))
-const setLocalStorage = (key: string, value: CubeInterface[]) =>
+
+const setLocalStorage = (key: string, value: TCube[]) =>
   localStorage.setItem(key, JSON.stringify(value))
 
-const initialState: MinecraftInterface = {
+const initialState: TMinecraftState = {
   texture: 'dirt',
   cubes: getLocalStorage('cubes') || [],
 }

@@ -9,15 +9,25 @@ import { PageContent } from '../../content'
 
 import './index.scss'
 
-export default function Page({ pageData }: TPage) {
+export default function Page({ pageData, backgroundCanvas }: TPage) {
   return (
-    <PageProvider defaultPosition={pageData.sections[0].key}>
-      <div className='page_container'>
-        <div className='page'>
-          <SideNavigationMenu pageData={pageData} />
-          <PageContent pageData={pageData} />
+    <>
+      {backgroundCanvas && (
+        <section
+          id='background_canvas'
+          className='background_canvas_zIndex'
+        >
+          {backgroundCanvas}
+        </section>
+      )}
+      <PageProvider defaultPosition={pageData.sections[0].key}>
+        <div className='page_container'>
+          <div className='page'>
+            <SideNavigationMenu pageData={pageData} />
+            <PageContent pageData={pageData} />
+          </div>
         </div>
-      </div>
-    </PageProvider>
+      </PageProvider>
+    </>
   )
 }

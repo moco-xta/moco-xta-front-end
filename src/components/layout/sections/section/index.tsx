@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef } from 'react'
 // import { useDispatch, useSelector } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
-import type { TSection } from '@/types/layout'
+import type { TResourcesParagraphData, TSection, TSkillsParagraphData } from '@/types/layout'
 
 // import { AppDispatch, RootState } from '@/redux/store'
 // import { setCurrentPosition } from '@/redux/slice/resourcesStateSlice'
@@ -10,7 +10,7 @@ import type { TSection } from '@/types/layout'
 import { usePageContext } from 'contexts/PageContext'
 
 import { SectionTitle } from '../../titles'
-import { SkillsParagraph } from '../../paragraphs'
+import { ResourcesParagraph, SkillsParagraph } from '../../paragraphs'
 
 import './index.scss'
 
@@ -59,7 +59,14 @@ export default function Section({ translationPath, sectionData }: TSection) {
             <SkillsParagraph
               key={`paragraph_${paragraphData.key}`}
               translationPath={`${translationPath}.SECTIONS.${sectionData.translationKey}.PARAGRAPHS`}
-              paragraphData={paragraphData}
+              paragraphData={paragraphData as TSkillsParagraphData}
+            />
+          )}
+          {translationPath.split('.')[0] === 'RESOURCES' && (
+            <ResourcesParagraph
+              key={`paragraph_${paragraphData.key}`}
+              translationPath={`${translationPath}.SECTIONS.${sectionData.translationKey}.PARAGRAPHS`}
+              paragraphData={paragraphData as TResourcesParagraphData}
             />
           )}
         </>

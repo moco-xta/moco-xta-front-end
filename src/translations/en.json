@@ -78,6 +78,8 @@
     }
   },
   "RESOURCES": {
+    "PAGE_TITLE": "resources",
+    "PAGE_INTRODUCTION": "This page is your central destination for curated links and tools across the vast landscape of web development. Whether you're diving into Front-End Development, exploring the depths of Back-End Engineering, venturing into the world of 3D Graphics, or perfecting your skills in Web Design, you'll find valuable resources to guide and inspire you. From in-depth tutorials to cutting-edge libraries and communities, these links are handpicked to help developers and designers at all levels. Explore, learn, and create with confidence!",
     "RESOURCES": "resources",
     "ON_THIS_PAGE": "On this page",
     "DOCUMENTATION": "documentation",

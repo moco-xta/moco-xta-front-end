@@ -1,11 +1,13 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useCallback, useEffect, useRef } from 'react'
+// import { useDispatch, useSelector } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
 import type { TExternalLink, TResourcesParagraph } from '@/types/layout'
 
-import { AppDispatch, RootState } from '@/redux/store'
-import { setCurrentPosition } from '@/redux/slice/resourcesStateSlice'
+// import { AppDispatch, RootState } from '@/redux/store'
+// import { setCurrentPosition } from '@/redux/slice/resourcesStateSlice'
+
+import { usePageContext } from 'contexts/PageContext'
 
 import { ParagraphTitle } from '../../titles'
 import { LinksArray } from '../../links'
@@ -13,26 +15,25 @@ import { LinksArray } from '../../links'
 import './index.scss'
 
 export default function ResourcesParagraph({
-  translationPathPrefix,
+  translationPath,
   paragraphData,
 }: TResourcesParagraph) {
   const t = useTranslations()
 
-  const dispatch = useDispatch<AppDispatch>()
-  const isScrolling = useSelector((state: RootState) => state.resroucesState.isScrolling)
+  // const dispatch = useDispatch<AppDispatch>()
+  // const isScrolling = useSelector((state: RootState) => state.resroucesState.isScrolling)
 
-  const [translationPath] = useState<string>(
-    `${translationPathPrefix}.PARAGRAPHS.${paragraphData.translationKey}`,
-  )
+  const { setCurrentPosition, isScrolling } = usePageContext()
 
-  const resourcesParagraphRef = useRef<HTMLDivElement>(null!)
+  const paragraphRef = useRef<HTMLDivElement>(null!)
 
-  const handleScroll = useCallback((e: Event) => {
-    if (resourcesParagraphRef.current) {
-      const boundingBox = resourcesParagraphRef.current.getBoundingClientRect()
-      if (boundingBox.top >= 0 && boundingBox.top < 120)
-        if (!isScrolling) dispatch(setCurrentPosition(resourcesParagraphRef.current.id))
-      console.log('resourcesParagraphRef.current.id', resourcesParagraphRef.current.id)
+  const handleScroll = useCallback(() => {
+    if (paragraphRef.current) {
+      const boundingBox = paragraphRef.current.getBoundingClientRect()
+      if (boundingBox.top >= 0 && boundingBox.top < 100)
+        if (!isScrolling)
+          // if (!isScrolling) dispatch(setCurrentPosition(paragraphData.key))
+          setCurrentPosition(paragraphData.key)
     }
   }, [])
 
@@ -45,29 +46,31 @@ export default function ResourcesParagraph({
 
   return (
     <div
-      ref={resourcesParagraphRef}
-      id={paragraphData.key}
+      ref={paragraphRef}
+      id={`${paragraphData.key}_paragraph`}
       className='resources_paragraph'
     >
-      <ParagraphTitle text={t(`${translationPath}.PARAGRAPH_TITLE`)} />
-      <p className='resources_paragraph_description'>
-        {t(`${translationPath}.PARAGRAPH_DESCRIPTION`)}
+      <ParagraphTitle
+        translationPath={t(`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_TITLE`)}
+      />
+      <p className='pc_item resources_paragraph_description'>
+        {t(`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_DESCRIPTION`)}
       </p>
       <LinksArray
-        translationPathPrefix={translationPath}
+        translationPath={`${translationPath}.${paragraphData.translationKey}`}
         title={t('DOCUMENTATION')}
         links={paragraphData.documentation as unknown as TExternalLink[]}
       />
       {paragraphData.websites.length > 0 && (
         <LinksArray
-          translationPathPrefix={translationPath}
+          translationPath={`${translationPath}.${paragraphData.translationKey}`}
           title={t('WEBSITES')}
           links={paragraphData.websites as unknown as TExternalLink[]}
         />
       )}
       {paragraphData.channels.length > 0 && (
         <LinksArray
-          translationPathPrefix={translationPath}
+          translationPath={`${translationPath}.${paragraphData.translationKey}`}
           title={t('CHANNELS')}
           links={paragraphData.channels as unknown as TExternalLink[]}
           youtubePlaylistlink={paragraphData.youtubePlaylistlink}
@@ -75,7 +78,7 @@ export default function ResourcesParagraph({
       )}
       {paragraphData.articles.length > 0 && (
         <LinksArray
-          translationPathPrefix={translationPath}
+          translationPath={`${translationPath}.${paragraphData.translationKey}`}
           title={t('ARTICLES')}
           links={paragraphData.articles as unknown as TExternalLink[]}
           youtubePlaylistlink={paragraphData.youtubePlaylistlink}

@@ -1,5 +1,7 @@
-import AboutCanvas from './about_canvas/AboutCanvas'
+import AboutCanvas from './about/AboutCanvas'
 import HeroCanvas from './home/hero/HeroCanvas'
-import LogoCanvas from './logo_canvas/LogoCanvas'
+import LogoCanvas from './logo/LogoCanvas'
+import LogoSkillCanvas from './logo_skill/LogoSkillCanvas'
+import RubiksCubeCanvas from './rubiks_cube/RubiksCubeCanvas'
 
-export { AboutCanvas, HeroCanvas, LogoCanvas }
+export { AboutCanvas, HeroCanvas, LogoCanvas, LogoSkillCanvas, RubiksCubeCanvas }

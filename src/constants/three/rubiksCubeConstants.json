@@ -10,9 +10,9 @@
   },
   "PERSPECTIVE_CAMERA": {
     "POSITION": {
-      "X": 6.5,
+      "X": 4.5,
       "Y": 6.5,
-      "Z": 6.5
+      "Z": 3
     },
     "FOV": 55
   },
@@ -21,9 +21,9 @@
   },
   "POST_PROCESSING": {
     "DEPTH_OF_FIELD": {
-      "FOCUS_DISTANCE": 0.003,
+      "FOCUS_DISTANCE": 0.0015,
       "FOCAL_LENGTH": 0.0025,
-      "BOKEH_SCALE": 5
+      "BOKEH_SCALE": 20
     },
     "BLOOM": {
       "INTENSITY": 1,

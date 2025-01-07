@@ -10,7 +10,7 @@ import type { TSkillsParagraph } from '@/types/layout'
 import { usePageContext } from 'contexts/PageContext'
 
 import { ParagraphTitle } from '../../titles'
-import LogoSkillCanvas from '@/components/three/canvas/skills/LogoSkillCanvas'
+import LogoSkillCanvas from '@/components/three/canvas/logo_skill/LogoSkillCanvas'
 
 import './index.scss'
 
@@ -24,7 +24,7 @@ export default function SkillsParagraph({ translationPath, paragraphData }: TSki
 
   const paragraphRef = useRef<HTMLDivElement>(null!)
 
-  const handleScroll = useCallback((e: Event) => {
+  const handleScroll = useCallback(() => {
     if (paragraphRef.current) {
       const boundingBox = paragraphRef.current.getBoundingClientRect()
       if (boundingBox.top >= 0 && boundingBox.top < 100)

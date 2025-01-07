@@ -2,8 +2,14 @@
 
 import React from 'react'
 
-import ProjectsSlice from '@/components/slices/projects_slice'
+import MinecraftCanvas from '@/components/three/canvas/minecraft/MinecraftCanvas'
+
+import './index.scss'
 
 export default function Projects() {
-  return <ProjectsSlice />
+  return (
+    <div id='minecraft_canvas_container'>
+      <MinecraftCanvas />
+    </div>
+  )
 }

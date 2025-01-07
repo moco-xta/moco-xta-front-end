@@ -2,6 +2,7 @@
 
 export type TPage = {
   pageData: TPageData
+  backgroundCanvas?: JSX.Element
 }
 
 // SIDE NAVIGATION MENU
@@ -100,7 +101,7 @@ export type TResourcesSectionData = {
 
 export type TResourcesParagraph = {
   key: string
-  translationPathPrefix: string
+  translationPath: string
   paragraphData: TResourcesParagraphData
 }
 
@@ -122,7 +123,7 @@ export type TResourcesLogo = {
 // LINKS ARRAY
 
 export type TLinksArray = {
-  translationPathPrefix: string
+  translationPath: string
   title: string
   links: TExternalLink[]
   youtubePlaylistlink?: string
