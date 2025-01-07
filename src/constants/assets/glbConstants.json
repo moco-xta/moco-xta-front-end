@@ -60,6 +60,9 @@
     "PHONE_NUMBER_INPUT": "/models/glb/PhoneNumberInput.glb",
     "SEVEN_POINTED_STAR": "/models/glb/SevenPointedStar.glb"
   },
+  "MINECRAFT": {
+    "MINECRAFT_GROUND": "/models/glb/minecraft/MinecraftGround.glb"
+  },
   "RESOURCES": {
     "LOGO_ANGULAR": "/models/glb/resources/LogoAngular.glb",
     "LOGO_AWS": "/models/glb/resources/LogoAws.glb",

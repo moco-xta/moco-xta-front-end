@@ -41,7 +41,10 @@ export const ResourcesLogo = ({ pathToModel, componentName }: TResourcesLogo) =>
         position={[r(20), r(20) - 25, r(20) - 10]}
         // colliders={'ball'}
       >
-        <BallCollider args={[1]} scale={[1, 1, 0.5]} />
+        <BallCollider
+          args={[1]}
+          scale={[1, 1, 0.5]}
+        />
         <Logo ref={logoRef} />
       </RigidBody>
     </Suspense>
