@@ -22,7 +22,7 @@ const frontVector = new THREE.Vector3()
 const sideVector = new THREE.Vector3()
 /* const rotation = new THREE.Vector3() */
 
-export default function RapierPlayer({
+export default function ({
   cameraRotation,
   fov,
   rigidBodyPosition,

@@ -60,6 +60,19 @@
     "PHONE_NUMBER_INPUT": "/models/glb/PhoneNumberInput.glb",
     "SEVEN_POINTED_STAR": "/models/glb/SevenPointedStar.glb"
   },
+  "PROJECTS": {
+    "AMSTERDAM": "/models/glb/projects/Amsterdam.glb",
+    "AMSTERDAM_HOUSE": "/models/glb/projects/AmsterdamHouse.glb",
+    "AMSTERDAM_SIGN": "/models/glb/projects/AmsterdamSign.glb",
+    "ARIES": "/models/glb/projects/Aries.glb",
+    "FOREST_001": "/models/glb/projects/Forest001.glb",
+    "FOREST_002": "/models/glb/projects/Forest002.glb",
+    "MAASTRICHT_HOUSE": "/models/glb/projects/MaastrichtHouse.glb",
+    "MAASTRICHT_HOUSE_002": "/models/glb/projects/MaastrichtHouse002.glb",
+    "MAASTRICHT_HOUSE_003": "/models/glb/projects/MaastrichtHouse003.glb",
+    "TREE_001": "/models/glb/projects/Tree001.glb",
+    "TREE_002": "/models/glb/projects/Tree002.glb"
+  },
   "MINECRAFT": {
     "MINECRAFT_GROUND": "/models/glb/minecraft/MinecraftGround.glb"
   },

@@ -2,14 +2,14 @@
 
 import React from 'react'
 
-import MinecraftCanvas from '@/components/three/canvas/minecraft/MinecraftCanvas'
+import ProjectsCanvas from '@/components/three/canvas/projects/ProjectsCanvas'
 
 import './index.scss'
 
 export default function Projects() {
   return (
     <div id='minecraft_canvas_container'>
-      <MinecraftCanvas />
+      <ProjectsCanvas />
     </div>
   )
 }
