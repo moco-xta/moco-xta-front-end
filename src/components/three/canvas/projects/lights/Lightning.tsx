@@ -5,23 +5,16 @@ export default function Lightning() {
   return (
     <>
       <ambientLight
-        intensity={0.4}
+        intensity={0.2}
         color='#FFDAB9'
       />
       <hemisphereLight
         color='#FFD1DC'
         groundColor='#D0D0C8'
-        intensity={0.5}
-      />
-      <Sky
-        turbidity={0.3}
-        rayleigh={0}
-        mieCoefficient={0.005}
-        mieDirectionalG={0.7}
-        azimuth={180}
+        intensity={0.15}
       />
       <directionalLight
-        intensity={0.8}
+        intensity={0.4}
         color='#FFB347'
         position={[10, 20, 10]}
         castShadow
@@ -33,6 +26,13 @@ export default function Lightning() {
         shadow-camera-right={15}
         shadow-camera-top={15}
         shadow-camera-bottom={-15}
+      />
+      <Sky
+        turbidity={0.3}
+        rayleigh={0}
+        mieCoefficient={0.005}
+        mieDirectionalG={0.7}
+        azimuth={180}
       />
     </>
   )

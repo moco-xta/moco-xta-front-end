@@ -14,7 +14,6 @@ import { AppDispatch } from '@/redux/store'
 import { setLocation } from '@/redux/slice/aboutSlice'
 
 import useLocation from '@/hooks/useLocation'
-
 import { useAboutKeyboard } from '@/hooks/useAboutKeyboard'
 
 const direction = new THREE.Vector3()
