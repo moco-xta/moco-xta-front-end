@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useThree } from '@react-three/fiber'
-import { PointerLockControls as PointerLockControlsImpl } from 'three-stdlib'
+import { PointerLockControls as TPointerLockControls } from 'three-stdlib'
 
 import { PointerLockControlsComponentInterface } from '@/interfaces/threeInterfaces'
 
@@ -22,7 +22,7 @@ export default function AboutPointerLockControls({
   const dispatch = useDispatch<AppDispatch>()
   const { showInstructions } = useSelector((state: RootState) => state.about)
 
-  const controlsRef = useRef<PointerLockControlsImpl>(null!)
+  const controlsRef = useRef<TPointerLockControls>(null!)
 
   useEffect(() => {
     function pointerLockChange() {

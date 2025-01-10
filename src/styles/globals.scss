@@ -119,6 +119,16 @@ html.lenis body {
   z-index: 0;
 }
 
+// PROJECTS
+
+.projects_slice_zIndex {
+  z-index: 1;
+}
+
+.projects_canvas_zIndex {
+  z-index: 0;
+}
+
 // INVERT COLOR
 
 .invert_color {

@@ -60,6 +60,13 @@
     "PHONE_NUMBER_INPUT": "/models/glb/PhoneNumberInput.glb",
     "SEVEN_POINTED_STAR": "/models/glb/SevenPointedStar.glb"
   },
+  "PROJECTS": {
+    "AMSTERDAM_SCENE": "/models/glb/projects/AmsterdamScene.glb",
+    "LOGO_PONTHUS": "/models/glb/projects/LogoPonthus.glb",
+    "LOGO_THE_BRINK": "/models/glb/projects/LogoTheBrink.glb",
+    "MAASTRICHT_SCENE": "/models/glb/projects/MaastrichtScene.glb",
+    "PARIS_SCENE": "/models/glb/projects/ParisScene.glb"
+  },
   "MINECRAFT": {
     "MINECRAFT_GROUND": "/models/glb/minecraft/MinecraftGround.glb"
   },

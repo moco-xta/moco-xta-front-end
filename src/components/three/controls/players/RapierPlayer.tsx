@@ -14,7 +14,6 @@ import { AppDispatch } from '@/redux/store'
 import { setLocation } from '@/redux/slice/aboutSlice'
 
 import useLocation from '@/hooks/useLocation'
-
 import { useAboutKeyboard } from '@/hooks/useAboutKeyboard'
 
 const direction = new THREE.Vector3()
@@ -22,7 +21,7 @@ const frontVector = new THREE.Vector3()
 const sideVector = new THREE.Vector3()
 /* const rotation = new THREE.Vector3() */
 
-export default function RapierPlayer({
+export default function ({
   cameraRotation,
   fov,
   rigidBodyPosition,

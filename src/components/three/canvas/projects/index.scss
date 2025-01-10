@@ -1,0 +1,10 @@
+@import '@/styles/variables.module.scss';
+
+.content {
+  width: 334px;
+  height: 216px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  overflow-y: auto;
+  padding: 0;
+}
