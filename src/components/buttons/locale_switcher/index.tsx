@@ -1,6 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
+
+import type { TLocales } from '@/types/locales/types'
 
 import { getCookieByName } from '@/helpers/cookiesHelpers'
 
@@ -12,15 +14,11 @@ export default function LocaleSwitcher() {
   const router = useRouter()
   const locale = useLocale()
 
-  const [currentLocale, setCurrentLocale] = useState('en')
+  const [currentLocale, setCurrentLocale] = useState(getCookieByName('NEXT_LOCALE') || locale)
 
   const localeSwitcherRef = useRef<HTMLLIElement>(null)
 
-  useEffect(() => {
-    setCurrentLocale(getCookieByName('NEXT_LOCALE') || locale)
-  }, [locale])
-
-  function handleSetCurrentLocale(locale: string) {
+  function handleSetCurrentLocale(locale: TLocales) {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`
     setCurrentLocale(locale)
     router.refresh()
@@ -32,9 +30,9 @@ export default function LocaleSwitcher() {
         <span>{currentLocale.toUpperCase()}</span>
         <ul>
           {localesConstants
-            .filter((locale_constant: string) => locale_constant !== locale)
-            .sort((a: string, b: string) => a.localeCompare(b))
-            .map((locale_constant: string) => {
+            .filter((locale_constant: TLocales) => locale_constant !== locale)
+            .sort((a: TLocales, b: TLocales) => a.localeCompare(b))
+            .map((locale_constant: TLocales) => {
               return (
                 <li
                   key={`localeSwitcherOption_${locale_constant}`}
