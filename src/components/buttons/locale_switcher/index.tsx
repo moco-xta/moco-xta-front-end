@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
 
-import { getCookieByName } from 'helpers/cookiesHelpers'
+import { getCookieByName } from '@/helpers/cookiesHelpers'
 
 import { localesConstants } from '@/i18n/i18n.config'
 
@@ -12,13 +12,9 @@ export default function LocaleSwitcher() {
   const router = useRouter()
   const locale = useLocale()
 
-  const [currentLocale, setCurrentLocale] = useState('en')
+  const [currentLocale, setCurrentLocale] = useState(getCookieByName('NEXT_LOCALE') || locale)
 
   const localeSwitcherRef = useRef<HTMLLIElement>(null)
-
-  useEffect(() => {
-    setCurrentLocale(getCookieByName('NEXT_LOCALE') || locale)
-  }, [locale])
 
   function handleSetCurrentLocale(locale: string) {
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`

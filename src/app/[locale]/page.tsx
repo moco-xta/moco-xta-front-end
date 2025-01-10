@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 
-import { LocaleSwitcher } from 'components/buttons'
+import { LocaleSwitcher } from '@/components/buttons'
 
 import './index.css'
 
