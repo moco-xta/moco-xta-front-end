@@ -1,25 +1,36 @@
-// RESPONSIVE
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-2560×1440 // XXXL
+## Getting Started
 
-1920×1080 // XXL
+First, run the development server:
 
-1600×900 // XL
-1536×864
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-1440×900 // L
-1366×768
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1280×720 // M
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-810×1080 // S
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-414×896
-412×915
-393×873 // XS
+## Learn More
 
-390×844
-375×812
-360×800
-360×780
-360×640 // XXS
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

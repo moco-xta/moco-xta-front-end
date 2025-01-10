@@ -1,8 +1,0 @@
-{
-  "label": "gobelino",
-  "duration": 6,
-  "defaultValues": {
-    "name": "gobelino_group",
-    "visible": false
-  }
-}

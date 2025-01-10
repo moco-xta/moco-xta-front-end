@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -17,41 +18,10 @@
         "name": "next"
       }
     ],
-    "baseUrl": "src/",
     "paths": {
-      "@/animations/*": ["animations/*"],
-      "@/app/*": ["app/*"],
-      "@/assets/*": ["assets/*"],
-      "@/components/*": ["components/*"],
-      "@/constants/*": ["constants/*"],
-      "@/data/*": ["data/*"],
-      "@/helpers/*": ["helpers/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/interfaces/*": ["interfaces/*"],
-      "@/redux/*": ["redux/*"],
-      "@/routes/*": ["routes/*"],
-      "@/styles/*": ["styles/*"],
-      "@/translations/*": ["translations/*"],
-      "@/types/*": ["types/*"],
-      "@/validations/*": ["validations/*"]
-    },
-    "target": "ES2017",
-    // ADDED
-    "removeComments": true,
-    "sourceMap": true,
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "noImplicitReturns": true
+      "@/*": ["./src/*"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "**/*.js",
-    "**/*.jsx",
-    ".next/types/**/*.js"
-    // "./types/types.d.ts",
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
