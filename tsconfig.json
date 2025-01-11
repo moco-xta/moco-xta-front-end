@@ -21,8 +21,13 @@
     "paths": {
       "@/app/*": ["app/*"],
       "@/components/*": ["components/*"],
+      "@/constants/*": ["constants/*"],
+      "@/data/*": ["data/*"],
       "@/helpers/*": ["helpers/*"],
+      "@/hooks/*": ["hooks/*"],
       "@/i18n/*": ["i18n/*"],
+      "@/routes/*": ["routes/*"],
+      "@/styles/*": ["styles/*"],
       "@/translations/*": ["translations/*"],
       "@/types/*": ["types/*"]
     }
