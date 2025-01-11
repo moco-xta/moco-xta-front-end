@@ -1,3 +1,13 @@
 {
-  "HELLO_WORLD": "¡Hola Mundo!"
+  "ROUTES": {
+    "ABOUT": "A proposito",
+    "CONTACT": "Contacto",
+    "HOME": "Home",
+    "PROJECTS": "Proyectos",
+    "RESOURCES": "Recursos",
+    "SKILLS": "Habilidades"
+  },
+  "BUTTONS": {
+    "CLOSE": "Close"
+  }
 }

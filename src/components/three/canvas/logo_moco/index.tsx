@@ -4,9 +4,9 @@ import { PerspectiveCamera } from '@react-three/drei'
 
 import { LogoMoco } from '../../models/logos/LogoMoco'
 
-import { canvasDefaultValues } from 'data/header/logo_moco/three/canvasData'
-import { cameraDefaultValues } from 'data/header/logo_moco/three/cameraData'
-import { lightsData } from 'data/header/logo_moco/three/lightsData'
+import { canvasDefaultValues } from '@/data/menu/header/logo_moco/three/canvasData'
+import { cameraDefaultValues } from '@/data/menu/header/logo_moco/three/cameraData'
+import { lightsData } from '@/data/menu/header/logo_moco/three/lightsData'
 
 export default function LogoMocoCanvas() {
   return (

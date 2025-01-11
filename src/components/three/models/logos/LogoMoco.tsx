@@ -5,7 +5,7 @@ import { GLTF } from 'three-stdlib'
 
 import useHoverModelAnimation from '@/hooks/three/useHoverModelAnimation'
 
-import { logoMocoData } from '@/data/header/logo_moco/three/logoMocoData'
+import { logoMocoData } from '@/data/menu/header/logo_moco/three/logoMocoData'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 

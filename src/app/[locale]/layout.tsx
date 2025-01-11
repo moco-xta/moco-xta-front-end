@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 
-import Header from '@/components/header'
+import ReduxProvider from '@/redux/ReduxProvider'
+
+import Menu from '@/components/menu'
 
 import '@/styles/globals.scss'
 
@@ -22,15 +24,17 @@ export default function RootLayout({
   const translations = useMessages()
 
   return (
-    <html lang='en'>
+    <html lang={locale}>
       <body>
-        <NextIntlClientProvider
-          locale={locale}
-          messages={translations}
-        >
-          <Header />
-          {children}
-        </NextIntlClientProvider>
+        <ReduxProvider>
+          <NextIntlClientProvider
+            locale={locale}
+            messages={translations}
+          >
+            <Menu />
+            {children}
+          </NextIntlClientProvider>
+        </ReduxProvider>
       </body>
     </html>
   )

@@ -1,11 +1,13 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import React from 'react'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 import './index.scss'
 
-export default function Home() {
-  const t = useTranslations()
+gsap.registerPlugin(useGSAP)
 
-  return <div id='page_container'>Home</div>
+export default function Page() {
+  return <div className='page'>Home</div>
 }

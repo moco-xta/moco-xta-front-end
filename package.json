@@ -14,11 +14,13 @@
     "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.120.6",
     "@react-three/fiber": "^8.17.12",
+    "@reduxjs/toolkit": "^2.5.0",
     "gsap": "^3.12.5",
     "next": "14.2.23",
     "next-intl": "^3.26.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-redux": "^9.2.0",
     "three": "^0.172.0"
   },
   "devDependencies": {
