@@ -1,19 +1,11 @@
 import type { Metadata } from 'next'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 
-import './globals.css'
-import localFont from 'next/font/local'
+import ReduxProvider from '@/redux/ReduxProvider'
 
-const geistSans = localFont({
-  src: '../fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-})
-const geistMono = localFont({
-  src: '../fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-})
+import Menu from '@/components/menu'
+
+import '@/styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -32,14 +24,17 @@ export default function RootLayout({
   const translations = useMessages()
 
   return (
-    <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <NextIntlClientProvider
-          locale={locale}
-          messages={translations}
-        >
-          {children}
-        </NextIntlClientProvider>
+    <html lang={locale}>
+      <body>
+        <ReduxProvider>
+          <NextIntlClientProvider
+            locale={locale}
+            messages={translations}
+          >
+            <Menu />
+            {children}
+          </NextIntlClientProvider>
+        </ReduxProvider>
       </body>
     </html>
   )

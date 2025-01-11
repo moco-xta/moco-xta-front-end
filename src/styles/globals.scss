@@ -1,0 +1,57 @@
+@import '@/styles/variables.module.scss';
+
+// :root, *, BODY
+
+:root {
+  --max-width: $app_max_width;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  background: $black;
+  color: $white;
+  font-family: Helvetica;
+  user-select: none;
+}
+
+// LAYOUT
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Z-INDEXES
+
+.menu_overlay_zIndex {
+  z-index: 21;
+}
+
+.menu_container_zIndex {
+  z-index: 20;
+}
+
+.header_zIndex {
+  z-index: 10;
+}
+
+// #################################
+// #################################
+// #################################
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

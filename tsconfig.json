@@ -21,11 +21,23 @@
     "paths": {
       "@/app/*": ["app/*"],
       "@/components/*": ["components/*"],
+      "@/constants/*": ["constants/*"],
+      "@/data/*": ["data/*"],
       "@/helpers/*": ["helpers/*"],
+      "@/hooks/*": ["hooks/*"],
       "@/i18n/*": ["i18n/*"],
+      "@/redux/*": ["redux/*"],
+      "@/routes/*": ["routes/*"],
+      "@/styles/*": ["styles/*"],
       "@/translations/*": ["translations/*"],
       "@/types/*": ["types/*"]
-    }
+    },
+    // ADDED
+    "removeComments": true,
+    "sourceMap": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
