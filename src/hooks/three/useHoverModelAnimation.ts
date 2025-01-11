@@ -1,6 +1,6 @@
 import * as THREE from 'three'
-import gsap from 'gsap'
 import { ThreeEvent } from '@react-three/fiber'
+import gsap from 'gsap'
 
 import type { TUseHoverModelAnimation } from '@/types/hooks/types'
 
@@ -12,7 +12,7 @@ export default function useHoverModelAnimation({
 }: TUseHoverModelAnimation) {
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
     const { x, y } = getUvMousePositionOnMesh(event)
-    
+
     gsap.to(ref.current!.rotation, {
       duration: animationData.duration,
       ease: animationData.ease,
