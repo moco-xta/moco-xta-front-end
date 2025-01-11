@@ -1,18 +1,18 @@
-import { MutableRefObject } from 'react'
 import * as THREE from 'three'
 import gsap from 'gsap'
 import { ThreeEvent } from '@react-three/fiber'
 
-import type { THoverModelAnimation } from '@/types/three/animation/types'
+import type { TUseHoverModelAnimation } from '@/types/hooks/types'
 
 import { getUvMousePositionOnMesh } from '@/helpers/threeHelpers'
 
-export default function useHoverModelAnimation(
-  ref: MutableRefObject<THREE.Group | THREE.Mesh>,
-  animationData: THoverModelAnimation,
-) {
+export default function useHoverModelAnimation({
+  ref,
+  animationData
+}: TUseHoverModelAnimation) {
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
     const { x, y } = getUvMousePositionOnMesh(event)
+    
     gsap.to(ref.current!.rotation, {
       duration: animationData.duration,
       ease: animationData.ease,

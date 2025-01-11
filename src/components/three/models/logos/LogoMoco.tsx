@@ -21,10 +21,10 @@ export function LogoMoco(props: JSX.IntrinsicElements['group']) {
 
   const logoMocoRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!) // TODO: MouseEvent.mozPressure is deprecated. Use PointerEvent.pressure instead.
 
-  const { handleOnPointerMove, handleOnPointerLeave } = useHoverModelAnimation(
-    logoMocoRef,
-    logoMocoData.hoverModelAnimationData,
-  )
+  const { handleOnPointerMove, handleOnPointerLeave } = useHoverModelAnimation({
+    ref: logoMocoRef,
+    animationData: logoMocoData.hoverModelAnimationData,
+  })
 
   return (
     <group
