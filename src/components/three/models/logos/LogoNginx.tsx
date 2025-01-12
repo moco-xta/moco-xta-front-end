@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoNginx = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_NGINX) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_NGINX) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -41,6 +41,6 @@ const LogoNginx = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props
 
 LogoNginx.displayName = 'LogoNginx'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_NGINX)
+useGLTF.preload(glbConstants.LOGOS.LOGO_NGINX)
 
 export default LogoNginx

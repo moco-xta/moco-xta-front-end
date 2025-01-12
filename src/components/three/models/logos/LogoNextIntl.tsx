@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoNextIntl = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_NEXT_INTL) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_NEXT_INTL) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -41,6 +41,6 @@ const LogoNextIntl = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((pr
 
 LogoNextIntl.displayName = 'LogoNextIntl'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_NEXT_INTL)
+useGLTF.preload(glbConstants.LOGOS.LOGO_NEXT_INTL)
 
 export default LogoNextIntl

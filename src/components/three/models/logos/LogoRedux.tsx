@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoRedux = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_REDUX) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_REDUX) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -41,6 +41,6 @@ const LogoRedux = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props
 
 LogoRedux.displayName = 'LogoRedux'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_REDUX)
+useGLTF.preload(glbConstants.LOGOS.LOGO_REDUX)
 
 export default LogoRedux

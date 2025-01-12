@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoDocker = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_DOCKER) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_DOCKER) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -41,6 +41,6 @@ const LogoDocker = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
 
 LogoDocker.displayName = 'LogoDocker'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_DOCKER)
+useGLTF.preload(glbConstants.LOGOS.LOGO_DOCKER)
 
 export default LogoDocker

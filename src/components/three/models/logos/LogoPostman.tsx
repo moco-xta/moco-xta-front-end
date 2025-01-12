@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoPostman = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_POSTMAN) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_POSTMAN) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -49,6 +49,6 @@ const LogoPostman = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((pro
 
 LogoPostman.displayName = 'LogoPostman'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_POSTMAN)
+useGLTF.preload(glbConstants.LOGOS.LOGO_POSTMAN)
 
 export default LogoPostman

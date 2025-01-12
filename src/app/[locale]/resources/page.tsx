@@ -3,7 +3,6 @@
 import React from 'react'
 
 import { Page } from '@/components/layout/pages'
-
 import { ResourcesCanvas } from '@/components/three/canvas'
 
 import { resourcesData } from '@/data/resources/resourcesData'

@@ -19,7 +19,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoBlender = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_BLENDER) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_BLENDER) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -60,6 +60,6 @@ const LogoBlender = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((pro
 
 LogoBlender.displayName = 'LogoBlender'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_BLENDER)
+useGLTF.preload(glbConstants.LOGOS.LOGO_BLENDER)
 
 export default LogoBlender

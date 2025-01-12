@@ -1,3 +1,4 @@
 import Page from './page'
+import PlayerPage from './player_page'
 
-export { Page }
+export { Page, PlayerPage }

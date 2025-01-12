@@ -7,7 +7,7 @@ import Camera from './Camera'
 import Lights from './Lights'
 import SkillLogo from './SkillLogo'
 
-import { canvasDefaultValues } from '@/data/skills/skill_logo/canvasData'
+import { canvasDefaultValues } from '@/data/skills/skill_logo/three/canvasData'
 
 export default function SkillLogoCanvas({ logoData }: TSkillLogoCanvas) {
   return (

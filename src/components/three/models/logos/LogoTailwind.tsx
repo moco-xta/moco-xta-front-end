@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoTailwind = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_TAILWIND) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_TAILWIND) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -41,6 +41,6 @@ const LogoTailwind = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((pr
 
 LogoTailwind.displayName = 'LogoTailwind'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_TAILWIND)
+useGLTF.preload(glbConstants.LOGOS.LOGO_TAILWIND)
 
 export default LogoTailwind

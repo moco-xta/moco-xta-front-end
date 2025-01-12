@@ -19,7 +19,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoPostgresql = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_POSTGRESQL) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_POSTGRESQL) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -57,6 +57,6 @@ const LogoPostgresql = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((
 
 LogoPostgresql.displayName = 'LogoPostgresql'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_POSTGRESQL)
+useGLTF.preload(glbConstants.LOGOS.LOGO_POSTGRESQL)
 
 export default LogoPostgresql

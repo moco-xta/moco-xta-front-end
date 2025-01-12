@@ -6,11 +6,15 @@ import type {
   TSkillsParagraphData,
 } from '@/types/data/components/layout/types'
 
-// PAGE
+// PAGES
 
 export type TPage = {
   pageData: TPageData
   backgroundCanvas?: JSX.Element
+}
+
+export type TPlayerPage = {
+  canvas: JSX.Element
 }
 
 // SIDE NAVIGATION MENU

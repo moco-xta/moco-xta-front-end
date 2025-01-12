@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { PerspectiveCamera } from '@react-three/drei'
-import { cameraDefaultValues } from '@/data/skills/skill_logo/cameraData'
+import { cameraDefaultValues } from '@/data/skills/skill_logo/three/cameraData'
 
 export default function Camera() {
   const cameraRef = useRef<THREE.PerspectiveCamera>(null!)
@@ -9,7 +9,7 @@ export default function Camera() {
   return (
     <PerspectiveCamera
       ref={cameraRef}
-      {...cameraDefaultValues}
+      {...cameraDefaultValues.defaultValues.camera}
     />
   )
 }

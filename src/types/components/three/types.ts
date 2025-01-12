@@ -4,6 +4,19 @@ import { MeshProps } from '@react-three/fiber'
 
 import type { TLogoData } from '@/types/data/components/three/types'
 
+// PLAYER
+
+export type TPlayer = {
+  cameraRotation?: THREE.Euler
+  speed?: number
+  jumpForce?: number
+  children: JSX.Element
+}
+
+export type TPlayerPointerLockControls = {
+  pointerLockControlsSelector: string
+}
+
 // SKILL LOGO
 
 export type TSkillLogoCanvas = {

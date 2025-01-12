@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useEffect } from 'react'
+import React, { useRef, useMemo, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 
@@ -15,7 +15,7 @@ export default function RubiksCube() {
 
   const padsColors: string[] = padsData.defaultValues.material.colors.map((color) => color)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!rubiksCubeRef.current) return
 
     const colorPads: THREE.Object3D<THREE.Object3DEventMap>[] = []

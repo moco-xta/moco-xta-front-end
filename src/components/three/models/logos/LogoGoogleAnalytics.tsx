@@ -18,7 +18,7 @@ type GLTFResult = GLTF & {
 
 const LogoGoogleAnalytics = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
   (props, ref) => {
-    const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_GOOGLE_ANALYTICS) as GLTFResult
+    const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_GOOGLE_ANALYTICS) as GLTFResult
 
     useLayoutEffect(() => {
       ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -51,6 +51,6 @@ const LogoGoogleAnalytics = forwardRef<THREE.Group, JSX.IntrinsicElements['group
 
 LogoGoogleAnalytics.displayName = 'LogoGoogleAnalytics'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_GOOGLE_ANALYTICS)
+useGLTF.preload(glbConstants.LOGOS.LOGO_GOOGLE_ANALYTICS)
 
 export default LogoGoogleAnalytics

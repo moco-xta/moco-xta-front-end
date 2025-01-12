@@ -1,0 +1,23 @@
+@import '@/styles/variables.module.scss';
+
+#player_page_greeting_section {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #00000088;
+}
+
+.show_player_page_greeting {
+  transition: opacity $transition_M linear;
+  opacity: 1;
+}
+
+.hide_player_page_greeting {
+  transition: opacity $transition_M linear;
+  opacity: 0;
+}

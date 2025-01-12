@@ -23,7 +23,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoBabylonjs = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_BABYLONJS) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_BABYLONJS) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -78,6 +78,6 @@ const LogoBabylonjs = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((p
 
 LogoBabylonjs.displayName = 'LogoBabylonjs'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_BABYLONJS)
+useGLTF.preload(glbConstants.LOGOS.LOGO_BABYLONJS)
 
 export default LogoBabylonjs

@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoPython = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_PYTHON) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_PYTHON) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -45,6 +45,6 @@ const LogoPython = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
 
 LogoPython.displayName = 'LogoPython'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_PYTHON)
+useGLTF.preload(glbConstants.LOGOS.LOGO_PYTHON)
 
 export default LogoPython

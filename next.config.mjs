@@ -7,6 +7,7 @@ const withNextIntl = createNextIntlPlugin()
 
 const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ['three'],
 }
 
 export default withNextIntl(nextConfig)

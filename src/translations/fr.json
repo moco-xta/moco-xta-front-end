@@ -170,7 +170,8 @@
       "ON_THIS_PAGE": "sur cette page"
     },
     "BUTTONS": {
-      "CLOSE": "fermer"
+      "CLOSE": "fermer",
+      "ENTER": "entrer"
     },
     "LINKS": {
       "CHANNELS": "chaînes",
