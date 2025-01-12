@@ -1,7 +1,7 @@
-import { MutableRefObject } from "react"
-import * as THREE from "three"
+import { MutableRefObject } from 'react'
+import * as THREE from 'three'
 
-import type { THoverModelAnimation } from "../components/three/animation/types"
+import type { THoverModelAnimation } from '../components/three/animation/types'
 
 // useHoverModelAnimation
 

@@ -7,7 +7,56 @@
     "RESOURCES": "Ressources",
     "SKILLS": "Compétences"
   },
-  "BUTTONS": {
-    "CLOSE": "Close"
+  "SKILLS": {
+    "PAGE_TITLE": "skills",
+    "PAGE_INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "SECTIONS": {
+      "FRONT_END": {
+        "SECTION_TITLE": "front-end",
+        "SECTION_DESCRIPTION": "Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.",
+        "PARAGRAPHS": {
+          "NEXTJS": {
+            "PARAGRAPH_TITLE": "next.js",
+            "PARAGRAPH_DESCRIPTION": "Next.js is a powerful open-source React framework designed to build fast, scalable, and SEO-friendly web applications. Developed and maintained by Vercel, it provides features like server-side rendering (SSR), static site generation (SSG), and API routes, allowing developers to create dynamic and high-performance web experiences. With its file-based routing system and built-in optimizations like image optimization and code splitting, Next.js simplifies development while improving user experience. It also supports hybrid rendering, enabling developers to choose between static and dynamic content generation. Ideal for modern web development, Next.js is widely used for building everything from simple websites to complex applications."
+          },
+          "REACT": {
+            "PARAGRAPH_TITLE": "react",
+            "PARAGRAPH_DESCRIPTION": "React is a popular open-source JavaScript library used for building user interfaces, particularly for single-page applications. Created and maintained by Meta (formerly Facebook), React allows developers to create reusable UI components that efficiently update and render as application data changes. It employs a declarative programming approach, making the code more predictable and easier to debug. At its core, React uses a virtual DOM to optimize rendering performance by updating only the parts of the UI that change, rather than reloading the entire page. React is highly extensible, integrates seamlessly with other libraries or frameworks, and is widely used for creating dynamic and responsive web applications."
+          },
+          "ANGULAR": {
+            "PARAGRAPH_TITLE": "Angular",
+            "PARAGRAPH_DESCRIPTION": "Angular is a powerful open-source framework developed and maintained by Google for building dynamic and scalable web applications. Known for its comprehensive nature, Angular provides a complete solution for front-end development, including tools for building interactive user interfaces, managing application state, and handling routing. It uses TypeScript, a superset of JavaScript, and follows a component-based architecture, making code modular, reusable, and maintainable. Angular’s two-way data binding ensures that changes in the UI reflect in the underlying data model and vice versa, simplifying real-time updates. With its robust features, including dependency injection and a rich ecosystem of tools, Angular is ideal for creating complex, enterprise-level applications."
+          }
+        }
+      },
+      "THREED": {
+        "SECTION_TITLE": "3D",
+        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "PARAGRAPHS": {}
+      },
+      "GRAPHICS": {
+        "SECTION_TITLE": "graphics",
+        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "PARAGRAPHS": {}
+      },
+      "BACK_END": {
+        "SECTION_TITLE": "back-end",
+        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "PARAGRAPHS": {}
+      }
+    }
+  },
+  "LAYOUT": {
+    "SIDE_NAVIGATION_MENU": {
+      "ON_THIS_PAGE": "sur cette page"
+    },
+    "BUTTONS": {
+      "CLOSE": "fermer"
+    },
+    "LINKS": {
+      "CHANNELS": "chaînes",
+      "DOCUMENTATION": "documentation",
+      "MY_PLAYLIST": "ma playlist"
+    }
   }
 }

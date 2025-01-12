@@ -13,7 +13,7 @@ type GLTFResult = GLTF & {
   nodes: {
     LogoMoco: THREE.Mesh
   }
-  materials: {}
+  materials: object
 }
 
 export function LogoMoco(props: JSX.IntrinsicElements['group']) {

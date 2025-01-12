@@ -9,3 +9,9 @@ export type THeader = {
 export type TLogoMoco = {
   isMain?: boolean
 }
+
+// LAZY FACTORY
+
+export type TLazyFactory = {
+  (): Promise<{ default: React.ComponentType<any> }>
+}

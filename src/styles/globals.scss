@@ -22,16 +22,6 @@ body {
   user-select: none;
 }
 
-// LAYOUT
-
-.page {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 // Z-INDEXES
 
 .menu_overlay_zIndex {
@@ -46,12 +36,8 @@ body {
   z-index: 10;
 }
 
-// #################################
-// #################################
-// #################################
+// LISTS
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+li {
+  list-style-type: none;
 }

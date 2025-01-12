@@ -3,7 +3,7 @@ import { NextIntlClientProvider, useMessages } from 'next-intl'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
-import Menu from '@/components/menu'
+import Menu from '@/components/layout/menu'
 
 import '@/styles/globals.scss'
 
