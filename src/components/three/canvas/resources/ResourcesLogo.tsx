@@ -37,7 +37,7 @@ export const ResourcesLogo = ({ pathToModel, componentName }: TResourcesLogo) =>
         ref={rigidBodyRef}
         linearDamping={0.75}
         angularDamping={0.15}
-        friction={0.5}
+        friction={0.2}
         position={[r(20), r(20) - 25, r(20) - 10]}
       >
         <BallCollider

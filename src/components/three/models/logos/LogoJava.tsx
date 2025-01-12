@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoJava = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_JAVA) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_JAVA) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -49,6 +49,6 @@ const LogoJava = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props,
 
 LogoJava.displayName = 'LogoJava'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_JAVA)
+useGLTF.preload(glbConstants.LOGOS.LOGO_JAVA)
 
 export default LogoJava

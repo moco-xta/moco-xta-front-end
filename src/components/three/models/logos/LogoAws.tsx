@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoAws = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_AWS) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_AWS) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -51,6 +51,6 @@ const LogoAws = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, 
 
 LogoAws.displayName = 'LogoAws'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_AWS)
+useGLTF.preload(glbConstants.LOGOS.LOGO_AWS)
 
 export default LogoAws

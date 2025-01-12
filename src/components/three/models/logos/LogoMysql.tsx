@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoMysql = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_MYSQL) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_MYSQL) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -49,6 +49,6 @@ const LogoMysql = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props
 
 LogoMysql.displayName = 'LogoMysql'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_MYSQL)
+useGLTF.preload(glbConstants.LOGOS.LOGO_MYSQL)
 
 export default LogoMysql

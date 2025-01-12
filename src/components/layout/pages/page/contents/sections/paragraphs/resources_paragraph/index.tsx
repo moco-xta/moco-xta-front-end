@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 
 import type { TResourcesParagraph } from '@/types/components/layout/types'
 
-import { usePageContext } from 'contexts/PageContext'
+import { usePageContext } from '@/contexts/PageContext'
 
 // import { AppDispatch, RootState } from '@/redux/store'
 // import { setCurrentPosition } from '@/redux/slice/resourcesStateSlice'

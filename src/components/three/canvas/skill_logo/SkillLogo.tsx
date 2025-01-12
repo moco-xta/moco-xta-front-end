@@ -7,7 +7,7 @@ import type { TSkillLogo } from '@/types/components/three/types'
 
 import useHoverModelAnimation from '@/hooks/three/useHoverModelAnimation'
 
-import { skillLogoData } from '@/data/skills/skill_logo/skillLogoData'
+import { skillLogoData } from '@/data/skills/skill_logo/three/skillLogoData'
 
 const lazyWithForwardRef = (factory: TLazyFactory, componentName: string) => {
   const LazyComponent = lazy(() =>

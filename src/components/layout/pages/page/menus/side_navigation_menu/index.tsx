@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 import type { TSideNavigationMenu } from '@/types/components/layout/types'
 
-import { usePageContext } from 'contexts/PageContext'
+import { usePageContext } from '@/contexts/PageContext'
 
 // import { AppDispatch, RootState } from '@/redux/store'
 // import { setIsScrolling } from '@/redux/slice/resourcesStateSlice'

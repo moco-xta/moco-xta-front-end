@@ -11,7 +11,7 @@ import { lightsData } from '@/data/menu/header/logo_moco/three/lightsData'
 export default function LogoMocoCanvas() {
   return (
     <Canvas {...canvasDefaultValues}>
-      <PerspectiveCamera {...cameraDefaultValues} />
+      <PerspectiveCamera {...cameraDefaultValues.defaultValues.camera} />
       <ambientLight {...lightsData.ambientLight} />
       <Suspense fallback={null}>
         <LogoMoco />

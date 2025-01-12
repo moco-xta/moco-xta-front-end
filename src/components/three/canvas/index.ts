@@ -1,6 +1,15 @@
+import AboutCanvas from './about/AboutCanvas'
 import LogoMocoCanvas from './logo_moco/LogoMocoCanvas'
-import SkillLogoCanvas from './skill_logo/LogoSkillCanvas'
+import ProjectsCanvas from './projects/ProjectsCanvas'
 import ResourcesCanvas from './resources/ResourcesCanvas'
 import RubiksCubeCanvas from './rubiks_cube/RubiksCubeCanvas'
+import SkillLogoCanvas from './skill_logo/LogoSkillCanvas'
 
-export { LogoMocoCanvas, SkillLogoCanvas, ResourcesCanvas, RubiksCubeCanvas }
+export {
+  AboutCanvas,
+  LogoMocoCanvas,
+  ProjectsCanvas,
+  ResourcesCanvas,
+  RubiksCubeCanvas,
+  SkillLogoCanvas,
+}

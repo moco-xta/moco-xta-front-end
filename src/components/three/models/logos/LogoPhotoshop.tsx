@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoPhotoshop = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_PHOTOSHOP) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_PHOTOSHOP) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -49,6 +49,6 @@ const LogoPhotoshop = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((p
 
 LogoPhotoshop.displayName = 'LogoPhotoshop'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_PHOTOSHOP)
+useGLTF.preload(glbConstants.LOGOS.LOGO_PHOTOSHOP)
 
 export default LogoPhotoshop

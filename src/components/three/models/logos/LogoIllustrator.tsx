@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoIllustrator = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_ILLUSTRATOR) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_ILLUSTRATOR) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -49,6 +49,6 @@ const LogoIllustrator = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
 
 LogoIllustrator.displayName = 'LogoIllustrator'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_ILLUSTRATOR)
+useGLTF.preload(glbConstants.LOGOS.LOGO_ILLUSTRATOR)
 
 export default LogoIllustrator

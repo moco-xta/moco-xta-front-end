@@ -170,7 +170,8 @@
       "ON_THIS_PAGE": "on this page"
     },
     "BUTTONS": {
-      "CLOSE": "close"
+      "CLOSE": "close",
+      "ENTER": "enter"
     },
     "LINKS": {
       "CHANNELS": "channels",

@@ -23,7 +23,7 @@ type GLTFResult = GLTF & {
 }
 
 const LogoGoogleMaps = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.RESOURCES.LOGO_GOOGLE_MAPS) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_GOOGLE_MAPS) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
@@ -73,6 +73,6 @@ const LogoGoogleMaps = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((
 
 LogoGoogleMaps.displayName = 'LogoLogoGoogleMapsAngular'
 
-useGLTF.preload(glbConstants.RESOURCES.LOGO_GOOGLE_MAPS)
+useGLTF.preload(glbConstants.LOGOS.LOGO_GOOGLE_MAPS)
 
 export default LogoGoogleMaps
