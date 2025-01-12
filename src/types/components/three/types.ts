@@ -36,3 +36,14 @@ export type TPad = {
 // RUBIKS CUBE
 
 export type TLazyPad = LazyExoticComponent<ComponentType<MeshProps>>
+
+// SKILLS
+
+export type TPointer = {
+  pointerRef: MutableRefObject<THREE.Vector3>
+}
+
+export type TResourcesLogo = {
+  pathToModel: string
+  componentName: string
+}

@@ -28,20 +28,22 @@ export default function LinksArray({
         {capitalizeFirstLetter(t(`RESOURCES.${title}`))}
         {youtubePlaylistlink && <YoutubePlaylistLink url={youtubePlaylistlink} />}
       </caption>
-      {links.map(({ translationKey, urlName, url, languages }: TExternalLinkData) => (
-        <tr key={`external_link_${urlName}`}>
-          <th className='links_array_link'>
-            <ExternalLink
-              urlName={urlName}
-              url={url}
-              languages={languages}
-            />
-          </th>
-          <th className='links_array_description'>
-            {t(`${translationPath}.LINKS.${translationKey}.DESCRIPTION`)}
-          </th>
-        </tr>
-      ))}
+      <tbody>
+        {links.map(({ translationKey, urlName, url, languages }: TExternalLinkData) => (
+          <tr key={`external_link_${urlName}`}>
+            <td className='links_array_link'>
+              <ExternalLink
+                urlName={urlName}
+                url={url}
+                languages={languages}
+              />
+            </td>
+            <td className='links_array_description'>
+              {t(`${translationPath}.LINKS.${translationKey}.DESCRIPTION`)}
+            </td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   )
 }

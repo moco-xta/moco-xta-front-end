@@ -39,6 +39,8 @@ const LogoReact = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props
 
 LogoReact.displayName = 'LogoReact'
 
+LogoReact.displayName = 'LogoReact'
+
 useGLTF.preload(glbConstants.LOGOS.LOGO_REACT)
 
 export default LogoReact
