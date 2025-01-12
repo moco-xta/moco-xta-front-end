@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function Page() {
+export default function Resources() {
   return <div className='page'>Resources</div>
 }

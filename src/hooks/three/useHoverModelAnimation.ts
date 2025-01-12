@@ -6,10 +6,7 @@ import type { TUseHoverModelAnimation } from '@/types/hooks/types'
 
 import { getUvMousePositionOnMesh } from '@/helpers/threeHelpers'
 
-export default function useHoverModelAnimation({
-  ref,
-  animationData
-}: TUseHoverModelAnimation) {
+export default function useHoverModelAnimation({ ref, animationData }: TUseHoverModelAnimation) {
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
     const { x, y } = getUvMousePositionOnMesh(event)
 

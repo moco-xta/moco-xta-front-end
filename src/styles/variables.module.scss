@@ -1,6 +1,7 @@
 // GLOBAL
 
 $max_width: 1280px;
+$page_margin_top: 90px;
 
 // MARGINS
 
@@ -13,9 +14,40 @@ $px_margin_XL: 30px;
 $px_margin_XL: 50px;
 $px_margin_XXL: 100px;
 
+// FONTS
+
+$font_size_h1: 48px;
+$font_size_h2: 32px;
+$font_size_h3: 24px;
+$font_size_h4: 22px;
+
+$font_size_XXS: 11px;
+$font_size_XS: 12px;
+$font_size_S: 14px;
+$font_size_M: 18px;
+$font_size_L: 24px;
+$font_size_XL: 32px;
+$font_size_XXL: 48px;
+
+$font_weight_hover: 500;
+
 // COLORS
 
 $white: #fff;
+$grey_lighter: #d8d8d8;
+$grey_light: #a8a8a8;
+$grey_medium: #7b7b7b;
+$grey_dark: #515151;
+$grey_darker: #292929;
 $black: #000;
 
+$sdm_current: #47a8ff;
+
+$external_link: #47a8ff;
+$youtube_red: #ff0032;
+
 $fluorescent_yellow: #c5fb45;
+
+// TRANSITIONS
+
+$hover_transition: 0.2s;

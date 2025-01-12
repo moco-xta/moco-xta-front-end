@@ -1,5 +1,39 @@
 {
   "LOGOS": {
-    "LOGO_MOCO": "/glb/logos/LogoMoco.glb"
+    "LOGO_ANGULAR": "/glb/logos/LogoAngular.glb",
+    "LOGO_MOCO": "/glb/logos/LogoMoco.glb",
+    "LOGO_NEXTJS": "/glb/logos/LogoNextjs.glb",
+    "LOGO_REACT": "/glb/logos/LogoReact.glb"
+  },
+  "RUBIKS_CUBE": {
+    "BASE_CUBE": "/glb/rubiks_cube/BaseCube.glb",
+    "PAD_BLENDER": "/glb/rubiks_cube/PadBlender.glb",
+    "PAD_CHAT_GPT": "/glb/rubiks_cube/PadChatGpt.glb",
+    "PAD_CSS": "/glb/rubiks_cube/PadCss.glb",
+    "PAD_DOCKER": "/glb/rubiks_cube/PadDocker.glb",
+    "PAD_FIGMA": "/glb/rubiks_cube/PadFigma.glb",
+    "PAD_FORMIK": "/glb/rubiks_cube/PadFormik.glb",
+    "PAD_GITHUB": "/glb/rubiks_cube/PadGithub.glb",
+    "PAD_GOOGLE_ANALYTICS": "/glb/rubiks_cube/PadGoogleAnalytics.glb",
+    "PAD_GSAP": "/glb/rubiks_cube/PadGsap.glb",
+    "PAD_HOSTINGER": "/glb/rubiks_cube/PadHostinger.glb",
+    "PAD_HTML": "/glb/rubiks_cube/PadHtml.glb",
+    "PAD_ILLUSTRATOR": "/glb/rubiks_cube/PadIllustrator.glb",
+    "PAD_JAVA": "/glb/rubiks_cube/PadJava.glb",
+    "PAD_JAVASCRIPT": "/glb/rubiks_cube/PadJavascript.glb",
+    "PAD_NEXT": "/glb/rubiks_cube/PadNext.glb",
+    "PAD_NEXT_INTL": "/glb/rubiks_cube/PadNextIntl.glb",
+    "PAD_NGINX": "/glb/rubiks_cube/PadNginx.glb",
+    "PAD_NPM": "/glb/rubiks_cube/PadNpm.glb",
+    "PAD_PHOTOSHOP": "/glb/rubiks_cube/PadPhotoshop.glb",
+    "PAD_POSTGRESQL": "/glb/rubiks_cube/PadPostgresql.glb",
+    "PAD_POSTMAN": "/glb/rubiks_cube/PadPostman.glb",
+    "PAD_REACT_THREE_DREI": "/glb/rubiks_cube/PadReactThreeDrei.glb",
+    "PAD_REDUX": "/glb/rubiks_cube/PadRedux.glb",
+    "PAD_SASS": "/glb/rubiks_cube/PadSass.glb",
+    "PAD_SPRING": "/glb/rubiks_cube/PadSpring.glb",
+    "PAD_TYPESCRIPT": "/glb/rubiks_cube/PadTypescript.glb",
+    "PAD_THREEJS": "/glb/rubiks_cube/PadThreejs.glb",
+    "PAD_WEBGL": "/glb/rubiks_cube/PadWebgl.glb"
   }
 }
