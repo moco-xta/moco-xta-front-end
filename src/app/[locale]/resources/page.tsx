@@ -1,5 +1,18 @@
+'use client'
+
 import React from 'react'
 
+import { Page } from '@/components/layout/pages'
+
+import { RubiksCubeCanvas } from '@/components/three/canvas'
+
+import { resourcesData } from '@/data/resourcess/resourcessData'
+
 export default function Resources() {
-  return <div className='page'>Resources</div>
+  return (
+    <Page
+      pageData={resourcesData}
+      backgroundCanvas={<RubiksCubeCanvas />}
+    />
+  )
 }
