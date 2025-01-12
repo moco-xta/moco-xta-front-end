@@ -47,6 +47,8 @@ const LogoNextjs = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
 
 LogoNextjs.displayName = 'LogoNextjs'
 
+LogoNextjs.displayName = 'LogoNextjs'
+
 useGLTF.preload(glbConstants.LOGOS.LOGO_NEXTJS)
 
 export default LogoNextjs

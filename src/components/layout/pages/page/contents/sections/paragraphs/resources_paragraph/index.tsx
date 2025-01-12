@@ -52,27 +52,27 @@ export default function ResourcesParagraph({
       className='resources_paragraph'
     >
       <ParagraphTitle
-        translationPath={t(`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_TITLE`)}
+        translationPath={`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_TITLE`}
       />
       <p className='pc_item resources_paragraph_description'>
         {t(`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_DESCRIPTION`)}
       </p>
       <LinksArray
         translationPath={`${translationPath}.${paragraphData.translationKey}`}
-        title={t('DOCUMENTATION')}
+        title={'DOCUMENTATION'}
         links={paragraphData.documentation as unknown as TExternalLinkData[]}
       />
       {paragraphData.websites.length > 0 && (
         <LinksArray
           translationPath={`${translationPath}.${paragraphData.translationKey}`}
-          title={t('WEBSITES')}
+          title={'WEBSITES'}
           links={paragraphData.websites as unknown as TExternalLinkData[]}
         />
       )}
       {paragraphData.channels.length > 0 && (
         <LinksArray
           translationPath={`${translationPath}.${paragraphData.translationKey}`}
-          title={t('CHANNELS')}
+          title={'CHANNELS'}
           links={paragraphData.channels as unknown as TExternalLinkData[]}
           youtubePlaylistlink={paragraphData.youtubePlaylistlink}
         />
@@ -80,7 +80,7 @@ export default function ResourcesParagraph({
       {paragraphData.articles.length > 0 && (
         <LinksArray
           translationPath={`${translationPath}.${paragraphData.translationKey}`}
-          title={t('ARTICLES')}
+          title={'ARTICLES'}
           links={paragraphData.articles as unknown as TExternalLinkData[]}
           youtubePlaylistlink={paragraphData.youtubePlaylistlink}
         />

@@ -46,6 +46,125 @@
       }
     }
   },
+  "RESOURCES": {
+    "PAGE_TITLE": "resources",
+    "PAGE_INTRODUCTION": "This page is your central destination for curated links and tools across the vast landscape of web development. Whether you're diving into Front-End Development, exploring the depths of Back-End Engineering, venturing into the world of 3D Graphics, or perfecting your skills in Web Design, you'll find valuable resources to guide and inspire you. From in-depth tutorials to cutting-edge libraries and communities, these links are handpicked to help developers and designers at all levels. Explore, learn, and create with confidence!",
+    "RESOURCES": "resources",
+    "ON_THIS_PAGE": "On this page",
+    "DOCUMENTATION": "documentation",
+    "WEBSITES": "websites",
+    "CHANNELS": "channels",
+    "ARTICLES": "articles",
+    "SECTIONS": {
+      "FRONT_END": {
+        "SECTION_TITLE": "front-end",
+        "SECTION_DESCRIPTION": "Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.",
+        "PARAGRAPHS": {
+          "HTML": {
+            "PARAGRAPH_TITLE": "HTML",
+            "PARAGRAPH_DESCRIPTION": "HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It forms the foundation of every website and is used in combination with CSS (for styling) and JavaScript (for interactivity).",
+            "LINKS": {
+              "W3SCHOOLS": {
+                "DESCRIPTION": "W3Schools is a popular and widely used educational website for learning web development technologies. It serves as a comprehensive resource for beginners and experienced developers alike, offering tutorials, references, and interactive examples."
+              },
+              "MOZILLA": {
+                "DESCRIPTION": "MDN Web Docs (formerly known as Mozilla Developer Network) is a highly regarded and comprehensive online resource for web developers. It is maintained by the Mozilla Foundation and contributions from the developer community. It provides in-depth documentation, tutorials, and guides for web development technologies."
+              },
+              "FREECODECAMP": {
+                "DESCRIPTION": "FreeCodeCamp is a non-profit organization that offers free online coding courses and tutorials. Their platform covers a wide range of topics, including HTML, CSS, JavaScript, and more. They also have a blog with articles on web development and programming."
+              }
+            }
+          }
+        }
+      },
+      "3D": {
+        "SECTION_TITLE": "3D",
+        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "PARAGRAPHS": {
+          "WEBGL": {
+            "PARAGRAPH_TITLE": "WebGL",
+            "PARAGRAPH_DESCRIPTION": "WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 2D and 3D graphics within any compatible web browser without the use of plug-ins. It is based on OpenGL ES and provides a low-level, high-performance interface for creating graphics on the web.",
+            "LINKS": {
+              "KHRONOS": {
+                "DESCRIPTION": "The Khronos Group is an industry consortium that develops open standards for graphics, parallel computing, and vision processing. Their website provides information on WebGL, including specifications, tutorials, and resources for developers."
+              },
+              "WEBGL_FUNDAMENTALS": {
+                "DESCRIPTION": "WebGL Fundamentals is a website dedicated to teaching the fundamentals of WebGL programming. It covers topics like shaders, buffers, textures, and more, with interactive examples and detailed explanations to help developers learn and understand WebGL."
+              },
+              "THE_BOOK_OF_SHADERS": {
+                "DESCRIPTION": "The Book of Shaders is an online resource for learning about fragment shaders and procedural graphics. It provides a series of interactive tutorials and examples that cover topics like color theory, noise functions, and ray marching, helping developers create visually stunning and complex effects."
+              },
+              "SHADERTOY": {
+                "DESCRIPTION": "ShaderToy is an online tool and community for creating and sharing shaders. It allows developers to write and test shaders in real-time, with a library of user-submitted shaders that showcase a wide range of visual effects and techniques. It is a valuable resource for learning and experimenting with shaders."
+              },
+              "YURI_ARTIUKH": {
+                "DESCRIPTION": "Yuri Artiukh is a 3D artist and educator who creates tutorials and resources for learning 3D graphics and animation. His YouTube channel features in-depth tutorials on topics like modeling, texturing, lighting, and rendering, as well as tips and tricks for creating realistic and visually appealing 3D scenes."
+              },
+              "VISIONARY_3D": {
+                "DESCRIPTION": "Visionary 3D is a YouTube channel dedicated to 3D graphics and animation, with a focus on software like Blender, Maya, and Unity. The channel offers tutorials, tips, and resources for creating 3D models, animations, and visual effects, as well as insights into the latest trends and techniques in the industry."
+              }
+            }
+          },
+          "THREEJS": {
+            "PARAGRAPH_TITLE": "Three.js",
+            "PARAGRAPH_DESCRIPTION": "Three.js is a JavaScript library used to create and display 3D graphics in web browsers using WebGL (Web Graphics Library). It simplifies the process of building interactive 3D content by abstracting much of the complexity of WebGL.",
+            "LINKS": {
+              "THREEJS": {
+                "DESCRIPTION": "The official documentation for Three.js provides detailed information on how to get started with the library, including installation instructions, examples, and API references."
+              }
+            }
+          },
+          "REACT_THREE_FIBER": {
+            "PARAGRAPH_TITLE": "React Three Fiber",
+            "PARAGRAPH_DESCRIPTION": "React Three Fiber (commonly referred to as react-three/fiber) is a React-based library for creating and managing 3D scenes using Three.js, a popular JavaScript library for rendering 3D graphics. React Three Fiber allows developers to leverage React's declarative programming model and component-based architecture to work with Three.js more efficiently and intuitively.",
+            "LINKS": {
+              "REACT_THREE_FIBER": {
+                "DESCRIPTION": "The official documentation for React Three Fiber provides detailed information on how to get started with the library, including installation instructions, examples, and API references."
+              },
+              "REACT_THREE_DREI": {
+                "DESCRIPTION": "Drei is a collection of useful helpers and abstractions for React Three Fiber, designed to simplify common tasks and streamline the development process. It includes components for lighting, cameras, controls, and more, making it easier to create complex 3D scenes with React Three Fiber."
+              },
+              "REACT_THREE_POSTPROCESSING": {
+                "DESCRIPTION": "React Three Postprocessing is a library for applying post-processing effects to 3D graphics using React Three Fiber. It provides a set of high-level components and utilities for applying various post-processing effects, such as bloom, chromatic aberration, and depth of field."
+              },
+              "REACT_THREE_RAPIER": {
+                "DESCRIPTION": "Rapier is a collection of React Three Fiber components and hooks that simplify the creation of physics-based simulations and interactions in 3D scenes. It provides a range of features for working with physics engines, collision detection, and rigid bodies, enabling developers to create realistic and interactive 3D environments."
+              },
+              "REACT_THREE_CANNON": {
+                "DESCRIPTION": "React Three Cannon is a collection of React Three Fiber components and hooks that simplify the creation of physics-based simulations and interactions in 3D scenes using the Cannon.js physics engine. It provides a range of features for working with physics engines, collision detection, and rigid bodies, enabling developers to create realistic and interactive 3D environments."
+              },
+              "REACT_THREE_GPU_PATHTRACER": {
+                "DESCRIPTION": "React Three GPU Pathtracer is a library for rendering 3D graphics using React Three Fiber and the GPU Path Tracer algorithm. It allows developers to create realistic and interactive 3D scenes with high performance and visual quality, while leveraging the power of GPUs for rendering."
+              },
+              "REACT_SPRING": {
+                "DESCRIPTION": "React Spring is a popular and flexible animation library for React that simplifies the creation of animated components and transitions. It provides a set of hooks and components that allow developers to easily create and manage animations, including spring-based animations, physics-based animations, and more."
+              },
+              "USE_GESTURE": {
+                "DESCRIPTION": "Use Gesture is a library for creating gesture-based interactions in React applications. It provides a set of hooks and components that enable developers to add touch, mouse, and pointer gestures to their applications, allowing for intuitive and responsive user interactions."
+              },
+              "LEVA": {
+                "DESCRIPTION": "Leva is a developer tool for creating adjustable values in React applications. It provides a set of components and hooks that allow developers to create sliders, color pickers, and other adjustable controls for tweaking values in real-time, making it easier to fine-tune the appearance and behavior of components."
+              },
+              "MAATH": {
+                "DESCRIPTION": "Maath is a collection of math utilities and functions for 3D graphics and animation in React applications. It provides a range of functions for working with vectors, matrices, quaternions, and other mathematical concepts commonly used in 3D graphics programming, making it easier to perform complex calculations and transformations."
+              },
+              "ANDERSON_MANCINI": {
+                "DESCRIPTION": "Anderson Mancini is a Brazilian developer and educator who creates tutorials and resources for learning Three.js and React Three Fiber. His YouTube channel features in-depth tutorials on 3D graphics, animation, and interactive web development."
+              },
+              "WAWA_SENSEI": {
+                "DESCRIPTION": "Wawa Sensei's YouTube channel is dedicated to 3D web development, focusing on technologies like Three.js and React Three Fiber. The channel offers concise, targeted tutorials that break down complex projects into manageable segments, aiding developers in learning and implementing 3D web applications effectively."
+              }
+            }
+          }
+        }
+      },
+      "BACK_END": {
+        "SECTION_TITLE": "back-end",
+        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "PARAGRAPHS": {}
+      }
+    }
+  },
   "LAYOUT": {
     "SIDE_NAVIGATION_MENU": {
       "ON_THIS_PAGE": "on this page"
