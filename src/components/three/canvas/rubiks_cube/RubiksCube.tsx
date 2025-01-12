@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useEffect } from 'react'
+import React, { useRef, useMemo, useEffect, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 
@@ -24,7 +24,7 @@ export default function RubiksCube() {
       if (!child.children) return
 
       child.children.forEach((pad) => {
-        if (pad.name.startsWith('PAD') && pad instanceof THREE.Mesh) {
+        if (pad.name.startsWith('pad_') && pad instanceof THREE.Mesh) {
           colorPads.push(pad)
 
           const normal = new THREE.Vector3(0, 1, 0)
@@ -37,15 +37,11 @@ export default function RubiksCube() {
         }
       })
     })
-  }, [rubiksCubeRef, padsColors, setPadColor])
+  }, [rubiksCubeRef, padsColors])
 
-  useEffect(() => {
-    console.log('rubiksCubeRef', rubiksCubeRef)
-  }, [rubiksCubeRef])
-
-  /* useFrame((_, delta) => {
+  useFrame((_, delta) => {
     rubiksCubeRef.current.rotation.y += delta * 0.15
-  }) */
+  })
 
   const cubes = useMemo(() => {
     const cubes: JSX.Element[] = []

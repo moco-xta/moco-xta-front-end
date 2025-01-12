@@ -1,5 +1,6 @@
-import { MutableRefObject } from 'react'
+import { ComponentType, LazyExoticComponent, MutableRefObject } from 'react'
 import * as THREE from 'three'
+import { MeshProps } from '@react-three/fiber'
 
 import type { TLogoData } from '@/types/data/components/three/types'
 
@@ -31,3 +32,7 @@ export type TPad = {
   currentPadIndex: number
   rotation: THREE.Euler
 }
+
+// RUBIKS CUBE
+
+export type TLazyPad = LazyExoticComponent<ComponentType<MeshProps>>

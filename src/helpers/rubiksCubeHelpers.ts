@@ -59,7 +59,7 @@ export function setPadRotation(coordinates: THREE.Vector3, index: number) {
 }
 
 export function setPadColor(normal: THREE.Vector3, colors: string[]) {
-  let color = new THREE.Color()
+  const color = new THREE.Color()
   Object.entries(normal).forEach(([key, value]) => {
     if (key === 'x' && (value > 0.5 || value < -0.5)) {
       value === 1 ? color.set(colors[0]) : color.set(colors[1])

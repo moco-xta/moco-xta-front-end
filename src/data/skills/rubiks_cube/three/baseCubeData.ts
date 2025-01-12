@@ -1,5 +1,3 @@
-import { roughness } from 'three/tsl'
-
 export const baseCubeData = {
   defaultValues: {
     material: {
