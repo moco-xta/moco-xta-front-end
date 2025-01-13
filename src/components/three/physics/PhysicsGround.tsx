@@ -1,8 +1,9 @@
 import React from 'react'
 import * as THREE from 'three'
 import { RigidBody } from '@react-three/rapier'
+import { TPhysicsGround } from '@/types/components/three/types'
 
-export default function PhysicsGround() {
+export default function PhysicsGround({ args }: TPhysicsGround) {
   return (
     <RigidBody
       type='fixed'
@@ -14,7 +15,7 @@ export default function PhysicsGround() {
       >
         <planeGeometry
           attach='geometry'
-          args={[200, 200]}
+          args={args}
         />
         <meshBasicMaterial
           transparent

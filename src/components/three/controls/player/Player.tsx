@@ -13,17 +13,17 @@ import { RootState } from '@/redux/store'
 
 import { useKeyboard } from '@/hooks/three/useKeyboard'
 
+import PlayerCamera from './PlayerCamera'
 import PlayerPointerLockControls from './PlayerPointerLockControls'
 
 const SPEED = 10
 const JUMP_FORCE = 8
-const GROUNDED_DISTANCE = 1.5
+const GROUNDED_DISTANCE = 0.25
 
 export default function Player({
-  cameraRotation = new THREE.Euler(),
+  cameraDefaultValues,
   speed = SPEED,
   jumpForce = JUMP_FORCE,
-  children,
 }: TPlayer) {
   const { pointerLockControlsSelector, dopTargetPosition } = useSelector(
     (state: RootState) => state.playerPageState,
@@ -43,8 +43,18 @@ export default function Player({
   const dofRef = useRef<{ target: THREE.Vector3 }>(null!)
 
   useEffect(() => {
-    camera.rotation.set(cameraRotation.x, cameraRotation.y, cameraRotation.z, 'YXZ')
-  }, [camera.rotation, cameraRotation.x, cameraRotation.y, cameraRotation.z])
+    camera.rotation.set(
+      cameraDefaultValues.rotation.x,
+      cameraDefaultValues.rotation.y,
+      cameraDefaultValues.rotation.z,
+      'YXZ',
+    )
+  }, [
+    camera.rotation,
+    cameraDefaultValues.rotation.x,
+    cameraDefaultValues.rotation.y,
+    cameraDefaultValues.rotation.z,
+  ])
 
   useFrame(() => {
     if (!rigidBodyRef.current) return
@@ -113,7 +123,7 @@ export default function Player({
         position={new THREE.Vector3(0, 15, 20)}
         enabledRotations={[false, false, false]}
       >
-        {children}
+        <PlayerCamera cameraDefaultValues={cameraDefaultValues} />
         <CapsuleCollider args={[0.75, 0.5]} />
         <EffectComposer
           enableNormalPass
@@ -122,7 +132,7 @@ export default function Player({
           <DepthOfField
             ref={dofRef}
             focalLength={0.3}
-            bokehScale={18}
+            bokehScale={2}
           />
           <Bloom
             intensity={1}
