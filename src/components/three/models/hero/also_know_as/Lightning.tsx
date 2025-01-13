@@ -22,7 +22,7 @@ export const Lightning = forwardRef<THREE.Mesh, MeshProps>(function Lightning(pr
     transparent: lightningComponentDefaultValues.material?.transparent,
     opacity: lightningComponentDefaultValues.material?.opacity,
     emissive: lightningComponentDefaultValues.material?.emissive,
-    emissiveIntensity: lightningComponentDefaultValues.material?.emissive_intensity,
+    emissiveIntensity: lightningComponentDefaultValues.material?.emissiveIntensity,
   })
 
   return (
