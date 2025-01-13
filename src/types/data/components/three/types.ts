@@ -5,15 +5,18 @@ import { FloatProps } from '@react-three/drei'
 
 export type TCameraData = {
   defaultValues: {
-    camera: {
-      makeDefault: boolean
-      position: THREE.Vector3
-      fov: number
-      near: number
-      far: number
-    }
+    perspectiveCamera: TPerspectiveCameraData
     float?: FloatProps
   }
+}
+
+export type TPerspectiveCameraData = {
+  makeDefault: boolean
+  position: THREE.Vector3
+  rotation: THREE.Euler
+  fov: number
+  near: number
+  far: number
 }
 
 // LOGO

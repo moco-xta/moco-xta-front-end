@@ -79,5 +79,12 @@
     "MAASTRICHT_SCENE": "/glb/projects/MaastrichtScene.glb",
     "PARIS_SCENE": "/glb/projects/ParisScene.glb"
   },
+  "LABORATORY": {
+    "COURONNES": "/glb/laboratory/Couronnes.glb",
+    "PABLO_ESCOBAR": "/glb/laboratory/PabloEscobar.glb",
+    "SHELF_DESK": "/glb/laboratory/ShelfDesk.glb",
+    "TRESTLE": "/glb/laboratory/Trestle.glb",
+    "VIRGEN_DE_GUADALUPE": "/glb/laboratory/VirgenDeGuadalupe.glb"
+  },
   "RESOURCES": {}
 }

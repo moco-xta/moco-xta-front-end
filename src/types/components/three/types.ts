@@ -1,16 +1,19 @@
-import { ComponentType, LazyExoticComponent, MutableRefObject } from 'react'
+import type { ComponentType, LazyExoticComponent, MutableRefObject } from 'react'
 import * as THREE from 'three'
-import { MeshProps } from '@react-three/fiber'
+import type { MeshProps } from '@react-three/fiber'
 
-import type { TLogoData } from '@/types/data/components/three/types'
+import type { TLogoData, TPerspectiveCameraData } from '@/types/data/components/three/types'
 
 // PLAYER
 
 export type TPlayer = {
-  cameraRotation?: THREE.Euler
+  cameraDefaultValues: TPerspectiveCameraData
   speed?: number
   jumpForce?: number
-  children: JSX.Element
+}
+
+export type TPlayerCamera = {
+  cameraDefaultValues: TPerspectiveCameraData
 }
 
 export type TPlayerPointerLockControls = {
@@ -59,4 +62,10 @@ export type TPointer = {
 export type TResourcesLogo = {
   pathToModel: string
   componentName: string
+}
+
+// PHYSICS
+
+export type TPhysicsGround = {
+  args: [number, number]
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import * as THREE from 'three'
 
 import { MaastrichtScene } from '@/components/three/models/projects/MaastrichtScene'
-import { LogoPonthus } from '@/components/three/models/projects/LogoPonthus'
+import { LogoPonthus } from '@/components/three/models/logos/LogoPonthus'
 import Projects from './Projects'
 
 const PROJECTS = [

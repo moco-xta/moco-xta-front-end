@@ -10,7 +10,6 @@ const keyActionMap: { [key: string]: string } = {
   KeyD: 'moveRight',
   ArrowRight: 'moveRight',
   Space: 'jump',
-  Escape: 'escape',
   Digit1: 'dirt',
   Numpad1: 'dirt',
   Digit2: 'grass',
@@ -39,7 +38,6 @@ export const useKeyboard = () => {
     glass: false,
     wood: false,
     log: false,
-    escape: false,
   })
 
   const updateAction = useCallback((key: string, value: boolean) => {
