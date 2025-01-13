@@ -1,0 +1,34 @@
+{
+  "defaultValues": {
+    "name": "sun_component",
+    "visible": true,
+    "position": {
+      "x": 0,
+      "y": 3,
+      "z": 0
+    },
+    "material": {
+      "transparent": true,
+      "opacity": 1
+    }
+  },
+  "animations": {
+    "material": {
+      "keyframes": {
+        "step_1": {
+          "opacity": 1
+        },
+        "step_2": {
+          "opacity": 1
+        },
+        "step_3": {
+          "opacity": 1
+        },
+        "step_4": {
+          "opacity": 1
+        },
+        "easeEach": "power1.in"
+      }
+    }
+  }
+}

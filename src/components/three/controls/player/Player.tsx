@@ -43,18 +43,13 @@ export default function Player({
   const dofRef = useRef<{ target: THREE.Vector3 }>(null!)
 
   useEffect(() => {
-    camera.rotation.set(
-      cameraDefaultValues.rotation.x,
-      cameraDefaultValues.rotation.y,
-      cameraDefaultValues.rotation.z,
-      'YXZ',
-    )
-  }, [
-    camera.rotation,
-    cameraDefaultValues.rotation.x,
-    cameraDefaultValues.rotation.y,
-    cameraDefaultValues.rotation.z,
-  ])
+    const rotation = cameraDefaultValues.rotation
+
+    if (rotation) {
+      const { x, y, z } = rotation
+      camera.rotation.set(x, y, z, 'YXZ')
+    }
+  }, [camera.rotation, cameraDefaultValues.rotation])
 
   useFrame(() => {
     if (!rigidBodyRef.current) return
@@ -87,6 +82,7 @@ export default function Player({
       jumpForce,
       true,
     )
+    // @ts-expect-error: ray.collider may be null or undefined
     const grounded = ray && ray.collider && Math.abs(ray.toi) <= GROUNDED_DISTANCE
 
     if (jump && grounded) doJump()
@@ -130,6 +126,7 @@ export default function Player({
           multisampling={4}
         >
           <DepthOfField
+            // @ts-expect-error: dofRef does not match the expected type
             ref={dofRef}
             focalLength={0.3}
             bokehScale={2}

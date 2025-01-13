@@ -1,0 +1,14 @@
+{
+  "defaultValues": {
+    "name": "a_text",
+    "visible": true,
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "material": {
+      "opacity": 0
+    }
+  }
+}

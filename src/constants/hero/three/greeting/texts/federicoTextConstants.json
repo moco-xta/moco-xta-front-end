@@ -1,0 +1,51 @@
+{
+  "defaultValues": {
+    "name": "federico_text",
+    "visible": true,
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "material": {
+      "opacity": 0
+    }
+  },
+  "animations": {
+    "position": {
+      "keyframes": {
+        "step_1.5": {
+          "x": {
+            "min": 0,
+            "max": 30,
+            "decimal": 0.25
+          },
+          "z": {
+            "min": 0,
+            "max": 30,
+            "decimal": 0.25
+          },
+          "ease": "back.in"
+        },
+        "step_3.5": {
+          "z": 0,
+          "ease": "back.in"
+        },
+        "easeEach": "none"
+      }
+    },
+    "material": {
+      "keyframes": {
+        "step_2.5": {
+          "opacity": 0
+        },
+        "step_3.5": {
+          "opacity": 1,
+          "ease": "power1.in"
+        },
+        "easeEach": "none"
+      }
+    },
+    "stagger": 0.125
+  }
+}

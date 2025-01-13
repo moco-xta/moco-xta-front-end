@@ -1,0 +1,14 @@
+{
+  "geometry": {
+    "font": "/fonts/json/Saira_Condensed_Black.json",
+    "size": 3.5,
+    "depth": 1,
+    "center": true,
+    "spaceWidth": 0.05
+  },
+  "material": {
+    "color": "#3d3d3d",
+    "transparent": true,
+    "opacity": 0
+  }
+}

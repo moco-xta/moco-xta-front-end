@@ -43,6 +43,46 @@
     "LOGO_WEBGL": "/glb/logos/LogoWebgl.glb",
     "LOGO_YARN": "/glb/logos/LogoYarn.glb"
   },
+  "HERO": {
+    "ALSO_KNOW_AS": {
+      "BUHO": "/glb/hero/also_know_as/Buho.glb",
+      "LIGHTNING": "/glb/hero/also_know_as/Lightning.glb"
+    },
+    "DEVELOPER": {
+      "MAC_BOOK_PRO": "/glb/hero/developer/MacBookPro.glb"
+    },
+    "MOCO": {
+      "HELIUM_BALLOON_C": "/glb/hero/moco/HeliumBalloonC.glb",
+      "HELIUM_BALLOON_M": "/glb/hero/moco/HeliumBalloonM.glb",
+      "HELIUM_BALLOON_O": "/glb/hero/moco/HeliumBalloonO.glb",
+      "SMILEY": "/glb/hero/moco/Smiley.glb"
+    },
+    "PORTRAIT": {
+      "FOREGROUND": {
+        "MESS": {
+          "CHRISTUS": "/glb/hero/portrait/foreground/mess/Christus.glb",
+          "GANESH": "/glb/hero/portrait/foreground/mess/Ganesh.glb",
+          "HEART": "/glb/hero/portrait/foreground/mess/Heart.glb",
+          "LOGO_ATHLETICO_NACIONAL": "/glb/hero/portrait/foreground/mess/LogoAthleticoNacional.glb",
+          "TOOLS": {
+            "COLORS": "/glb/hero/portrait/foreground/mess/tools/Colors.glb",
+            "COLOR_PICKER": "/glb/hero/portrait/foreground/mess/tools/ColorPicker.glb",
+            "PAINT_BUCKET": "/glb/hero/portrait/foreground/mess/tools/PaintBucket.glb",
+            "SPRAY": "/glb/hero/portrait/foreground/mess/tools/Spray.glb"
+          }
+        }
+      },
+      "GOBELINO": {
+        "BIRD": "/glb/hero/portrait/gobelino/Bird.glb",
+        "CLOUD": "/glb/hero/portrait/gobelino/Cloud.glb",
+        "HILL_TOP_LEFT": "/glb/hero/portrait/gobelino/HillTopLeft.glb",
+        "HILL_TOP_RIGHT": "/glb/hero/portrait/gobelino/HillTopRight.glb",
+        "MOON": "/glb/hero/portrait/gobelino/Moon.glb",
+        "SKY": "/glb/hero/portrait/gobelino/Sky.glb",
+        "SUN": "/glb/hero/portrait/gobelino/Sun.glb"
+      }
+    }
+  },
   "RUBIKS_CUBE": {
     "BASE_CUBE": "/glb/rubiks_cube/BaseCube.glb",
     "PAD_BLENDER": "/glb/rubiks_cube/PadBlender.glb",

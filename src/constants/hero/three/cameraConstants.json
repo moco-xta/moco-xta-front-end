@@ -1,0 +1,19 @@
+{
+  "defualtValues": {
+    "camera": {
+      "makeDefault": true,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 8
+      },
+      "fov": 50,
+      "near": 0.01,
+      "far": 100
+    },
+    "float": {
+      "speed": 2,
+      "rotationIntensity": 4
+    }
+  }
+}

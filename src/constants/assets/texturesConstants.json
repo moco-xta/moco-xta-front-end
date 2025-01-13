@@ -1,0 +1,15 @@
+{
+  "HERO": {
+    "PORTRAIT": {
+      "LOGO_ATHLETICO_NACIONAL": "/img/textures/hero/portrait/logo_athletico_nacional.png",
+      "PROFILE_PICTURE": "/img/textures/hero/portrait/profile_picture.png"
+    }
+  },
+  "SHADERS": {
+    "DOT_TEXTURE": "/img/textures/shaders/dot_texture.png",
+    "GRADIENT_CIRCLE_MASK": "/img/textures/shaders/gradient_circle_mask.png"
+  },
+  "MATCAPS": {
+    "CHRISTUS": "/img/textures/matcap/36220C_C6C391_8C844A_8B7B4C.png"
+  }
+}

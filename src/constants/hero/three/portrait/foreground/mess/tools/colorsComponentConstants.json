@@ -1,0 +1,26 @@
+{
+  "defaultValues": {
+    "name": "colors_component",
+    "visible": true,
+    "position": {
+      "x": 1,
+      "y": -3,
+      "z": 0.2
+    },
+    "scale": 0.5,
+    "material": {
+      "transparent": true,
+      "opacity": 0
+    }
+  },
+  "animations": {
+    "material": {
+      "keyframes": {
+        "step_1": {
+          "opacity": 1
+        },
+        "easeEach": "power1.in"
+      }
+    }
+  }
+}

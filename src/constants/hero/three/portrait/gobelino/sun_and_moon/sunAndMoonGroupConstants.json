@@ -1,0 +1,32 @@
+{
+  "defaultValues": {
+    "name": "sun_and_moon_group",
+    "visible": true,
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": -0.9
+    },
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 66
+    }
+  },
+  "animations": {
+    "rotation": {
+      "keyframes": {
+        "step_1": {
+          "z": -33
+        },
+        "step_2": {
+          "z": -33
+        },
+        "step_3": {
+          "z": -213
+        },
+        "easeEach": "none"
+      }
+    }
+  }
+}
