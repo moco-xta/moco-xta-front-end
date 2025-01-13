@@ -1,0 +1,67 @@
+{
+  "defaultValues": {
+    "name": "buhos",
+    "visible": true,
+    "position": [
+      {
+        "x": -3.5,
+        "y": 0,
+        "z": 1
+      },
+      {
+        "x": 3.5,
+        "y": 0,
+        "z": 1
+      }
+    ],
+    "scale": [
+      {
+        "x": 2.5,
+        "y": 2.5,
+        "z": 2.5
+      },
+      {
+        "x": -2.5,
+        "y": 2.5,
+        "z": 2.5
+      }
+    ],
+    "material": {
+      "transparent": true,
+      "opacity": 0,
+      "emissiveIntensity": 0,
+      "needsUpdate": true
+    }
+  },
+  "animations": {
+    "material": {
+      "keyframes": {
+        "step_1": {
+          "opacity": 1,
+          "emissiveIntensity": 1
+        },
+        "step_2": {
+          "opacity": 0.05,
+          "emissiveIntensity": 0.5
+        },
+        "step_3": {
+          "opacity": 0,
+          "emissiveIntensity": 0
+        },
+        "step_4": {
+          "opacity": 0.11,
+          "emissiveIntensity": 0.75
+        },
+        "step_5": {
+          "opacity": 0.05,
+          "emissiveIntensity": 0.3
+        },
+        "step_10": {
+          "opacity": 0,
+          "emissiveIntensity": 0
+        },
+        "easeEach": "none"
+      }
+    }
+  }
+}

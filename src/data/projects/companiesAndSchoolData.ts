@@ -1,8 +1,8 @@
 import moment from 'moment'
 
-import { CompanyOrSchollDataInterface } from '@/interfaces/dataInterfaces'
+// import { CompanyOrSchollDataInterface } from '@/interfaces/dataInterfaces'
 
-export const companiesAndSchoolData: CompanyOrSchollDataInterface[] = [
+export const companiesAndSchoolData /* : CompanyOrSchollDataInterface[] */ = [
   {
     name: 'moco',
     logo: {

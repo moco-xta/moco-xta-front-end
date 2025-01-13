@@ -8,7 +8,7 @@ export default function Projects({ projectsData }: TProjects) {
   return (
     <>
       {projectsData.map(({ name, url, description }, index) => (
-        <>
+        <group key={`project_${name}_${index}`}>
           <Html
             scale={0.1}
             style={{ userSelect: 'none', opacity: '0.5' }}
@@ -37,7 +37,7 @@ export default function Projects({ projectsData }: TProjects) {
               <p>{description}</p>
             </div>
           </Html>
-        </>
+        </group>
       ))}
     </>
   )

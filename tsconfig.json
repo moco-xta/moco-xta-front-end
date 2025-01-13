@@ -19,6 +19,7 @@
     ],
     "baseUrl": "src/",
     "paths": {
+      "@/animation/*": ["animation/*"],
       "@/app/*": ["app/*"],
       "@/components/*": ["components/*"],
       "@/constants/*": ["constants/*"],

@@ -14,7 +14,7 @@ import { cameraDefaultValues } from '@/data/skills/rubiks_cube/three/cameraData'
 export default function RubiksCubeCanvas() {
   return (
     <Canvas {...canvasDefaultValues}>
-      <PerspectiveCamera {...cameraDefaultValues.defaultValues.camera} />
+      <PerspectiveCamera {...cameraDefaultValues.camera} />
       <Controls />
       <Lights />
       <Fog />

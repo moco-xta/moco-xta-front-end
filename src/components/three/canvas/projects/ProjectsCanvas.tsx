@@ -9,7 +9,7 @@ import ProjectsScene from './ProjectsScene'
 import PhysicsGround from '../../physics/PhysicsGround'
 
 import { canvasDefaultValues } from '@/data/projects/three/canvasData'
-import { cameraData } from '@/data/projects/three/cameraData'
+import { cameraDefaultValues } from '@/data/projects/three/cameraData'
 
 export default function ProjectsCanvas() {
   return (
@@ -21,7 +21,7 @@ export default function ProjectsCanvas() {
     >
       <Lightning />
       <Physics debug>
-        <Player cameraDefaultValues={cameraData.defaultValues.perspectiveCamera} />
+        <Player cameraDefaultValues={cameraDefaultValues.camera} />
         <Suspense fallback={null}>
           <ProjectsScene />
         </Suspense>

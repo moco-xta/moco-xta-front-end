@@ -1,0 +1,8 @@
+{
+  "duration": 1,
+  "label": "also_know_as",
+  "defaultValues": {
+    "name": "also_know_as_group",
+    "visible": false
+  }
+}

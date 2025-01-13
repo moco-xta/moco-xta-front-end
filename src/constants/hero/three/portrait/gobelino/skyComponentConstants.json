@@ -1,0 +1,53 @@
+{
+  "defaultValues": {
+    "name": "sky_component",
+    "visible": true,
+    "position": {
+      "x": 0,
+      "y": -5,
+      "z": -1
+    },
+    "material": {
+      "transparent": true,
+      "opacity": 0
+    },
+    "color": {
+      "r": 0.23137254901960785,
+      "g": 0.38823529411764707,
+      "b": 1
+    }
+  },
+  "animations": {
+    "position": {
+      "keyframes": {
+        "step_1": {
+          "y": 0
+        },
+        "easeEach": "power1.in"
+      }
+    },
+    "material": {
+      "keyframes": {
+        "step_3": {
+          "opacity": 1
+        },
+        "easeEach": "power1.in"
+      }
+    },
+    "color": {
+      "keyframes": {
+        "step_3": {
+          "r": 0.23137254901960785,
+          "g": 0.38823529411764707,
+          "b": 1
+        },
+        "step_6": {
+          "r": 0.00784313725490196,
+          "g": 0.00784313725490196,
+          "b": 0.1411764705882353
+        },
+        "easeEach": "power1.in"
+      }
+    }
+  }
+}

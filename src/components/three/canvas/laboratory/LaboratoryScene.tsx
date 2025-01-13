@@ -9,14 +9,17 @@ import { LaboratoryData } from '@/data/laboratory/three/laboratoryData'
 
 export default function LaboratoryScene() {
   return (
-    <group>
+    <>
       <Couronnes />
       <PabloEscobar />
       <ShelfDesk />
       {LaboratoryData.trestles.map((trestle) => (
-        <Trestle {...trestle} />
+        <Trestle
+          key={`trestle_${trestle.name}`}
+          {...trestle}
+        />
       ))}
       <VirgenDeGuadalupe />
-    </group>
+    </>
   )
 }

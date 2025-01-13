@@ -1,8 +1,8 @@
 import moment from 'moment'
 
-import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
+// import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
-export const projectsData: ProjectDataInterface[] = [
+export const projectsData /* : ProjectDataInterface[] */ = [
   {
     key: 'moco_xta',
     name: 'Moco.xta',

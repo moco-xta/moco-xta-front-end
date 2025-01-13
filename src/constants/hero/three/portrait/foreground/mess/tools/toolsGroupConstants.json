@@ -1,0 +1,12 @@
+{
+  "defaultValues": {
+    "name": "tools_group",
+    "visible": true,
+    "position": {
+      "x": -3,
+      "y": 0,
+      "z": 0.2
+    }
+  },
+  "animations": {}
+}

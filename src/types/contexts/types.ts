@@ -1,3 +1,5 @@
+import type { TLabelData } from '../data/animation/types'
+
 // PAGE CONTEXT
 
 export type TPageContext = {
@@ -9,5 +11,18 @@ export type TPageContext = {
 
 export type TPageProvider = {
   defaultPosition: string
+  children: JSX.Element
+}
+
+// GSAP TIMELINE CONTEXT
+
+export type TGSAPTimelineContext = {
+  timeline: GSAPTimeline
+}
+
+export type TGSAPTimelineProvider = {
+  delay?: number
+  timeScale?: number
+  labels?: TLabelData[]
   children: JSX.Element
 }
