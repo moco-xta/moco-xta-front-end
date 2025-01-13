@@ -50,7 +50,7 @@ export type TMaterialData = {
   transparent?: boolean
   opacity?: number
   emissive?: string | THREE.Color
-  emissive_intensity?: number
+  emissiveIntensity?: number
   wireframe?: boolean
   side?: THREE.Side
   needsUpdate?: boolean
