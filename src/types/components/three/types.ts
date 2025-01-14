@@ -4,6 +4,7 @@ import type {
   AmbientLightProps,
   CanvasProps,
   DirectionalLightProps,
+  GroupProps,
   MeshProps,
 } from '@react-three/fiber'
 
@@ -72,6 +73,13 @@ export type TLetter3D = TTextGeometry & {
   children: JSX.Element
 }
 
+// PHYSICS
+
+export type TPhysicsGround = {
+  args: [number, number]
+  position?: THREE.Vector3
+}
+
 // SKILL LOGO
 
 export type TSkillLogoCanvas = {
@@ -116,8 +124,8 @@ export type TResourcesLogo = {
   componentName: string
 }
 
-// PHYSICS
+// LABORATORY
 
-export type TPhysicsGround = {
-  args: [number, number]
+export type TWallClockComponent = GroupProps & {
+  date: Date
 }

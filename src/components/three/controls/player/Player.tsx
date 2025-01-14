@@ -118,9 +118,15 @@ export default function Player({
         type='dynamic'
         position={new THREE.Vector3(0, 15, 20)}
         enabledRotations={[false, false, false]}
+        linearDamping={0.75}
+        angularDamping={0.15}
+        friction={0.2}
       >
+        <CapsuleCollider
+          args={[0.75, 0.5]}
+          mass={1000}
+        />
         <PlayerCamera cameraDefaultValues={cameraDefaultValues} />
-        <CapsuleCollider args={[0.75, 0.5]} />
         <EffectComposer
           enableNormalPass
           multisampling={4}

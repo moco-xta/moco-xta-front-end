@@ -13,4 +13,5 @@ export type TPlayerPageStateSlice = {
   showInstructions: boolean
   pointerLockControlsSelector: string
   dopTargetPosition: TCoordinatesData
+  debug: boolean
 }

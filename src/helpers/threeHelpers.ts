@@ -19,3 +19,9 @@ export function getUvMousePositionOnMesh(event: ThreeEvent<PointerEvent>) {
     y: 100 * pointCoordinates.y,
   }
 }
+
+export function generateRandomHexGrey(min: number, max: number) {
+  const decimalValue = Math.round(Math.random() * (max - min) + min)
+  const hexadecimalValue = decimalValue.toString(16)
+  return new THREE.Color('#' + hexadecimalValue + hexadecimalValue + hexadecimalValue)
+}

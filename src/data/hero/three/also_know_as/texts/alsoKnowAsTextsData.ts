@@ -18,7 +18,7 @@ export const getAlsoKnowAsTextsDefaultValues: TText3DData = {
     transparent: alsoKnowAsTextsConstants.material.transparent,
     opacity: alsoKnowAsTextsConstants.material.opacity,
     emissive: alsoKnowAsTextsConstants.material.emissive,
-    emissive_intensity: alsoKnowAsTextsConstants.material.emissive_intensity,
+    emissiveIntensity: alsoKnowAsTextsConstants.material.emissiveIntensity,
     wireframe: alsoKnowAsTextsConstants.material.wireframe,
     side: THREE.DoubleSide,
   },

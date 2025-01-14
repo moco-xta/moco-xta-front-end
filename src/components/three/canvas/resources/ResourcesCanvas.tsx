@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { Suspense, useRef } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
@@ -21,13 +21,15 @@ export default function ResourcesCanvas() {
     >
       <Lights />
       <Fog />
-      <Physics
-        // debug
-        gravity={[0, 0, 0]}
-      >
-        <Pointer pointerRef={pointerRef} />
-        <ResourcesLogos />
-      </Physics>
+      <Suspense fallback={null}>
+        <Physics
+          // debug
+          gravity={[0, 0, 0]}
+        >
+          <Pointer pointerRef={pointerRef} />
+          <ResourcesLogos />
+        </Physics>
+      </Suspense>
       <PostProcessing />
     </Canvas>
   )

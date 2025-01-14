@@ -5,6 +5,16 @@
       "PROFILE_PICTURE": "/img/textures/hero/portrait/profile_picture.png"
     }
   },
+  "LABORATORY": {
+    "PARQUET": {
+      "DIFFUSE": "/img/textures/laboratory/parquet_diffuse.jpg",
+      "BUMP": "/img/textures/laboratory/parquet_bump.jpg",
+      "NORMAL": "/img/textures/laboratory/parquet_normal.jpg",
+      "ROUGHNESS": "/img/textures/laboratory/parquet_roughness.jpg",
+      "REPEAT": 1,
+      "CORRECTION_GREY_RANGE": [150, 180]
+    }
+  },
   "SHADERS": {
     "DOT_TEXTURE": "/img/textures/shaders/dot_texture.png",
     "GRADIENT_CIRCLE_MASK": "/img/textures/shaders/gradient_circle_mask.png"
