@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Walls(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(glbConstants.LABORATORY.WALLS) as GLTFResult
+  const { nodes, /* materials */ } = useGLTF(glbConstants.LABORATORY.WALLS) as GLTFResult
 
   return (
     <group

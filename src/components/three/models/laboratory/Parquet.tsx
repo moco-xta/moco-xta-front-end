@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei'
 
 import { generateRandomHexGrey } from '@/helpers/threeHelpers'
 
-import { texturesData } from '@/data/about/three/TexturesData'
+import { texturesData } from '@/data/about/three/texturesData'
 import { parquetDefaultValues } from '@/data/about/three/parquetData'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
