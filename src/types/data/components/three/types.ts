@@ -64,6 +64,10 @@ export type TColorData = {
   b: number
 }
 
+// TEXTURES
+
+export type TTexturesData = Record<string, Record<string, THREE.Texture>>
+
 // TEXT 3D
 
 export type TText3DData = {

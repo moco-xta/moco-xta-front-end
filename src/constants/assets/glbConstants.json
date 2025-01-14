@@ -121,10 +121,22 @@
   },
   "LABORATORY": {
     "COURONNES": "/glb/laboratory/Couronnes.glb",
+    "CUBE": "/glb/laboratory/Cube.glb",
+    "DESK_TRAY": "/glb/laboratory/DeskTray.glb",
+    "DODECAHEDRON": "/glb/laboratory/Dodecahedron.glb",
+    "HOUR_AND_MINUTE_MARKERS": "/glb/laboratory/HourAndMinuteMarkers.glb",
+    "HOUR_HAND": "/glb/laboratory/HourHand.glb",
+    "ICOSAHEDRON": "/glb/laboratory/Icosahedron.glb",
+    "MINUTE_HAND": "/glb/laboratory/MinuteHand.glb",
+    "MONDAINE_WALL_CLOCK_BACKGROUND": "/glb/laboratory/MondaineWallClockBackground.glb",
+    "OCTAHEDRON": "/glb/laboratory/Octahedron.glb",
     "PABLO_ESCOBAR": "/glb/laboratory/PabloEscobar.glb",
+    "PARQUET": "/glb/laboratory/Parquet.glb",
+    "SECOND_HAND": "/glb/laboratory/SecondHand.glb",
     "SHELF_DESK": "/glb/laboratory/ShelfDesk.glb",
     "TRESTLE": "/glb/laboratory/Trestle.glb",
-    "VIRGEN_DE_GUADALUPE": "/glb/laboratory/VirgenDeGuadalupe.glb"
-  },
-  "RESOURCES": {}
+    "VIRGEN_DE_GUADALUPE": "/glb/laboratory/VirgenDeGuadalupe.glb",
+    "WALL_CLOCK": "/glb/laboratory/WallClock.glb",
+    "WALL_CLOCK_GLASS": "/glb/laboratory/WallClockGlass.glb"
+  }
 }
