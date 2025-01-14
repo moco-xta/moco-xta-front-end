@@ -3,7 +3,6 @@ import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import {
-  CapsuleCollider,
   CuboidCollider,
   type RapierRigidBody,
   RigidBody,
@@ -27,7 +26,7 @@ type GLTFResult = GLTF & {
 }
 
 export function DeskChair(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(glbConstants.LABORATORY.DESK_CHAIR) as GLTFResult
+  const { nodes, /* materials */ } = useGLTF(glbConstants.LABORATORY.DESK_CHAIR) as GLTFResult
 
   const rigidBodyRef = useRef<RapierRigidBody>(null)
 

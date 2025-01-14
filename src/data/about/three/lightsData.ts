@@ -1,15 +1,15 @@
 export const ambientLightDefaultValues = {
   color: '#fff',
-  intensity: 0.15,
+  intensity: 0.2,
 }
 
 export const spotLightsDefaultValues = {
   color: '#fff',
-  intensity: 2,
+  intensity: 0.75,
   angle: 1.87,
-  distance: 52,
-  decay: 0.9,
-  penumbra: 0.9,
+  distance: 70,
+  decay: 0.4,
+  penumbra: 0.4,
   castShadow: true,
   ['shadow-mapSize-width']: 2048,
   ['shadow-mapSize-height']: 2048,

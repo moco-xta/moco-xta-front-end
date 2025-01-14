@@ -4,8 +4,8 @@ export const canvasDefaultValues: Partial<CanvasProps> = {
   dpr: 2,
   shadows: true,
   legacy: false,
-  linear: true,
-  flat: true,
+  linear: false,
+  flat: false,
   gl: {
     antialias: true,
     alpha: true,
