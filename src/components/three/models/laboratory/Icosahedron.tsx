@@ -2,6 +2,7 @@ import React from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
+import { RigidBody } from '@react-three/rapier'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
@@ -18,18 +19,20 @@ export function Icosahedron(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(glbConstants.LABORATORY.ICOSAHEDRON) as GLTFResult
 
   return (
-    <group
-      {...props}
-      dispose={null}
-    >
-      <mesh
-        geometry={nodes.Icosahedron.geometry}
-        material={materials.icosahedron_material}
-        position={[3.621, 18.12, -15.221]}
-        receiveShadow
-        castShadow
-      />
-    </group>
+    <RigidBody restitution={2}>
+      <group
+        {...props}
+        dispose={null}
+      >
+        <mesh
+          geometry={nodes.Icosahedron.geometry}
+          material={materials.icosahedron_material}
+          position={[3.621, 18.12, -15.221]}
+          receiveShadow
+          castShadow
+        />
+      </group>
+    </RigidBody>
   )
 }
 

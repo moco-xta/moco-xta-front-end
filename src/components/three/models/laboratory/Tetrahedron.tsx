@@ -8,15 +8,15 @@ import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
-    Octahedron: THREE.Mesh
+    Tetrahedron: THREE.Mesh
   }
   materials: {
-    octahedron_material: THREE.MeshStandardMaterial
+    tetrahedron_material: THREE.MeshStandardMaterial
   }
 }
 
-export function Octahedron(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(glbConstants.LABORATORY.OCTAHEDRON) as GLTFResult
+export function Tetrahedron(props: JSX.IntrinsicElements['group']) {
+  const { nodes, materials } = useGLTF(glbConstants.LABORATORY.TETRAHEDRON) as GLTFResult
 
   return (
     <RigidBody restitution={2}>
@@ -25,9 +25,9 @@ export function Octahedron(props: JSX.IntrinsicElements['group']) {
         dispose={null}
       >
         <mesh
-          geometry={nodes.Octahedron.geometry}
-          material={materials.octahedron_material}
-          position={[3.414, 18.12, -14.86]}
+          geometry={nodes.Tetrahedron.geometry}
+          material={materials.tetrahedron_material}
+          position={[4.034, 18.12, -15.305]}
           receiveShadow
           castShadow
         />
@@ -36,4 +36,4 @@ export function Octahedron(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(glbConstants.LABORATORY.OCTAHEDRON)
+useGLTF.preload(glbConstants.LABORATORY.TETRAHEDRON)

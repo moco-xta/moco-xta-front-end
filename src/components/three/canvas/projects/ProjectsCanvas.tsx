@@ -6,7 +6,7 @@ import { Physics } from '@react-three/rapier'
 import Lightning from './lightning/Lightning'
 import Player from '../../controls/player/Player'
 import ProjectsScene from './ProjectsScene'
-import PhysicsGround from '../../physics/PhysicsGround'
+import PhysicsGround from '../../lib/physics/PhysicsGround'
 
 import { canvasDefaultValues } from '@/data/projects/three/canvasData'
 import { cameraDefaultValues } from '@/data/projects/three/cameraData'
@@ -20,13 +20,13 @@ export default function ProjectsCanvas() {
       }}
     >
       <Lightning />
-      <Physics debug>
-        <Player cameraDefaultValues={cameraDefaultValues.camera} />
-        <Suspense fallback={null}>
+      <Suspense fallback={null}>
+        <Physics debug>
+          <Player cameraDefaultValues={cameraDefaultValues.camera} />
           <ProjectsScene />
-        </Suspense>
-        <PhysicsGround args={[200, 200]} />
-      </Physics>
+          <PhysicsGround args={[200, 200]} />
+        </Physics>
+      </Suspense>
     </Canvas>
   )
 }

@@ -55,7 +55,7 @@ export const Buho = forwardRef<THREE.Group, GroupProps & { index: number }>(func
       materials[key].transparent = buhosDefaultValues[index].material!.transparent!
       materials[key].opacity = buhosDefaultValues[index].material!.opacity!
       materials[key].emissive = materials.bordeaux_material.color
-      materials[key].emissiveIntensity = buhosDefaultValues[index].material!.emissive_intensity!
+      materials[key].emissiveIntensity = buhosDefaultValues[index].material!.emissiveIntensity!
       materials[key].needsUpdate = buhosDefaultValues[index].material!.needsUpdate!
     })
   }, [index, materials])

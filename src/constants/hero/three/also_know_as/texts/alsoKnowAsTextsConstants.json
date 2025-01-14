@@ -12,7 +12,7 @@
     "transparent": true,
     "opacity": 1,
     "emissive": "#ff0000",
-    "emissive_intensity": 5,
+    "emissiveIntensity": 5,
     "wireframe": false
   }
 }

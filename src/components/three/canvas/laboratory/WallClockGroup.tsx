@@ -11,13 +11,13 @@ import { WallClockGlass } from '@/components/three/models/laboratory/WallClockGl
 export default function WallClockGroup() {
   const [date, setDate] = useState<Date>(new Date())
 
-  const getTime = setInterval(() => {
-    setDate(new Date())
-  }, 1000)
-
   useEffect(() => {
+    const getTime = setInterval(() => {
+      setDate(new Date())
+    }, 1000)
+
     return () => clearInterval(getTime)
-  }, [getTime])
+  }, [])
 
   return (
     <group position={new THREE.Vector3(-28.331, 25.4, -10.007)}>
@@ -26,7 +26,7 @@ export default function WallClockGroup() {
       <MinuteHand date={date} />
       <SecondHand date={date} />
       <WallClock />
-      {/* <WallClockGlass /> */}
+      <WallClockGlass />
     </group>
   )
 }

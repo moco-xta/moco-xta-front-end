@@ -77,6 +77,7 @@ export type TLetter3D = TTextGeometry & {
 
 export type TPhysicsGround = {
   args: [number, number]
+  position?: THREE.Vector3
 }
 
 // SKILL LOGO

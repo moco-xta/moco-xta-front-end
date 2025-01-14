@@ -9,13 +9,13 @@ import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 type GLTFResult = GLTF & {
   nodes: {
-    DeskTray: THREE.Mesh
+    Walls: THREE.Mesh
   }
   materials: object
 }
 
-export function DeskTray(props: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF(glbConstants.LABORATORY.DESK_TRAY) as GLTFResult
+export function Walls(props: JSX.IntrinsicElements['group']) {
+  const { nodes, materials } = useGLTF(glbConstants.LABORATORY.WALLS) as GLTFResult
 
   return (
     <group
@@ -23,12 +23,13 @@ export function DeskTray(props: JSX.IntrinsicElements['group']) {
       dispose={null}
     >
       <mesh
-        geometry={nodes.DeskTray.geometry}
-        material={materialsData.glassMaterial}
-        position={[0, 9.092, -10.05]}
+        geometry={nodes.Walls.geometry}
+        material={materialsData.whitePaintMaterial}
+        receiveShadow
+        castShadow
       />
     </group>
   )
 }
 
-useGLTF.preload(glbConstants.LABORATORY.DESK_TRAY)
+useGLTF.preload(glbConstants.LABORATORY.WALLS)

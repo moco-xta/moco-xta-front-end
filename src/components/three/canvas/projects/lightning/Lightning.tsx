@@ -18,6 +18,8 @@ export default function Lightning() {
         shadow-camera-right={150}
         shadow-camera-top={150}
         shadow-camera-bottom={-150}
+        shadow-radius={4}
+        shadow-bias={0.00001}
       />
       <Sky
         turbidity={0.3}

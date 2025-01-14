@@ -122,21 +122,30 @@
   "LABORATORY": {
     "COURONNES": "/glb/laboratory/Couronnes.glb",
     "CUBE": "/glb/laboratory/Cube.glb",
+    "DESK_CHAIR": "/glb/laboratory/DeskChair.glb",
     "DESK_TRAY": "/glb/laboratory/DeskTray.glb",
     "DODECAHEDRON": "/glb/laboratory/Dodecahedron.glb",
+    "DOOR": "/glb/laboratory/Door.glb",
+    "DOOR_FRAME": "/glb/laboratory/DoorFrame.glb",
     "HOUR_AND_MINUTE_MARKERS": "/glb/laboratory/HourAndMinuteMarkers.glb",
     "HOUR_HAND": "/glb/laboratory/HourHand.glb",
     "ICOSAHEDRON": "/glb/laboratory/Icosahedron.glb",
+    "MAC_BOOK_PRO": "/glb/laboratory/MacBookPro.glb",
     "MINUTE_HAND": "/glb/laboratory/MinuteHand.glb",
     "MONDAINE_WALL_CLOCK_BACKGROUND": "/glb/laboratory/MondaineWallClockBackground.glb",
     "OCTAHEDRON": "/glb/laboratory/Octahedron.glb",
     "PABLO_ESCOBAR": "/glb/laboratory/PabloEscobar.glb",
     "PARQUET": "/glb/laboratory/Parquet.glb",
+    "SCREEN": "/glb/laboratory/Screen.glb",
     "SECOND_HAND": "/glb/laboratory/SecondHand.glb",
     "SHELF_DESK": "/glb/laboratory/ShelfDesk.glb",
+    "SPEAKER": "/glb/laboratory/Speaker.glb",
+    "SPEAKER_BOX": "/glb/laboratory/SpeakerBox.glb",
+    "TETRAHEDRON": "/glb/laboratory/Tetrahedron.glb",
     "TRESTLE": "/glb/laboratory/Trestle.glb",
     "VIRGEN_DE_GUADALUPE": "/glb/laboratory/VirgenDeGuadalupe.glb",
     "WALL_CLOCK": "/glb/laboratory/WallClock.glb",
-    "WALL_CLOCK_GLASS": "/glb/laboratory/WallClockGlass.glb"
+    "WALL_CLOCK_GLASS": "/glb/laboratory/WallClockGlass.glb",
+    "WALLS": "/glb/laboratory/Walls.glb"
   }
 }
