@@ -2,19 +2,11 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as heartComponentConstants } from '@/constants/hero/three/portrait/foreground/mess/heartComponentConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    hartZBrush_defualt_group_Heart_Tex_0: THREE.Mesh
-  }
-  materials: {
-    heart_material: THREE.MeshStandardMaterial
-  }
-}
 
 export const Heart = forwardRef<THREE.Mesh, MeshProps>(function Heart(props, ref) {
   const { nodes, materials } = useGLTF(

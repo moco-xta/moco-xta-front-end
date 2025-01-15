@@ -2,17 +2,11 @@ import React, { forwardRef } from 'react'
 import * as THREE from 'three'
 import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { lightningComponentDefaultValues } from '@/data/hero/three/also_know_as/lightningComponentData'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    Lightning: THREE.Mesh
-  }
-  materials: object
-}
 
 export const Lightning = forwardRef<THREE.Mesh, MeshProps>(function Lightning(props, ref) {
   const { nodes } = useGLTF(glbConstants.HERO.ALSO_KNOW_AS.LIGHTNING) as GLTFResult

@@ -1,19 +1,11 @@
 import React from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
 import { RigidBody } from '@react-three/rapier'
 
-import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import type { GLTFResult } from '@/types/data/components/three/types'
 
-type GLTFResult = GLTF & {
-  nodes: {
-    Dodecahedron: THREE.Mesh
-  }
-  materials: {
-    dodecahedron_material: THREE.MeshStandardMaterial
-  }
-}
+import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 export function Dodecahedron(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(glbConstants.LABORATORY.DODECAHEDRON) as GLTFResult

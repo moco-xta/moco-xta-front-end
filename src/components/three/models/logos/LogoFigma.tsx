@@ -1,26 +1,10 @@
 import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    LogoFigma_1: THREE.Mesh
-    LogoFigma_2: THREE.Mesh
-    LogoFigma_3: THREE.Mesh
-    LogoFigma_4: THREE.Mesh
-    LogoFigma_5: THREE.Mesh
-  }
-  materials: {
-    ['logo_figma_#f24d1d']: THREE.MeshStandardMaterial
-    ['logo_figma_#ff7162']: THREE.MeshStandardMaterial
-    ['logo_figma_#a259ff']: THREE.MeshStandardMaterial
-    ['logo_figma_#19bcfe']: THREE.MeshStandardMaterial
-    ['logo_figma_#0dcf82']: THREE.MeshStandardMaterial
-  }
-}
 
 const LogoFigma = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_FIGMA) as GLTFResult

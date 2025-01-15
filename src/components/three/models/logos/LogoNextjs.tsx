@@ -1,20 +1,10 @@
 import React, { forwardRef } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    LogoNextjs_1: THREE.Mesh
-    LogoNextjs_2: THREE.Mesh
-  }
-  materials: {
-    ['logo_nextjs_simple_#000000']: THREE.MeshStandardMaterial
-    ['logo_nextjs_simple_#ffffff']: THREE.MeshStandardMaterial
-  }
-}
 
 const LogoNextjs = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_NEXTJS) as GLTFResult

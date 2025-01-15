@@ -1,6 +1,7 @@
 import { MutableRefObject } from 'react'
 import * as THREE from 'three'
 import { FloatProps } from '@react-three/drei'
+import { GLTF } from 'three-stdlib'
 
 import type { TLazyPad } from '@/types/components/three/types'
 
@@ -97,6 +98,13 @@ export type TLetter3DData = TTextGeometryData & {
   letter: string
   index?: number
   children: JSX.Element
+}
+
+// MODELS
+
+export type GLTFResult = GLTF & {
+  nodes: Record<string, THREE.Mesh>
+  materials: Record<string, THREE.MeshStandardMaterial>
 }
 
 // RUBIKS CUBE

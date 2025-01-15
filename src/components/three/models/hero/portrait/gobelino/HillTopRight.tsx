@@ -2,39 +2,11 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { getHillTopRightComponentDefaultValues } from '@/data/hero/three/portrait/gobelino/hillTopRightComponentData'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    HillTopRight_1: THREE.Mesh
-    HillTopRight_2: THREE.Mesh
-    HillTopRight_3: THREE.Mesh
-    HillTopRight_4: THREE.Mesh
-    HillTopRight_5: THREE.Mesh
-    HillTopRight_6: THREE.Mesh
-    HillTopRight_7: THREE.Mesh
-    HillTopRight_8: THREE.Mesh
-    HillTopRight_9: THREE.Mesh
-    HillTopRight_10: THREE.Mesh
-    HillTopRight_11: THREE.Mesh
-  }
-  materials: {
-    ['gobelino_#000000_material']: THREE.MeshStandardMaterial
-    ['gobelino_#8C933A_material']: THREE.MeshStandardMaterial
-    ['gobelino_#3D5F00_material']: THREE.MeshStandardMaterial
-    ['gobelino_#480703_material']: THREE.MeshStandardMaterial
-    ['gobelino_#005925_material']: THREE.MeshStandardMaterial
-    ['gobelino_#64FF00_material']: THREE.MeshStandardMaterial
-    ['gobelino_#E746D9_material']: THREE.MeshStandardMaterial
-    ['gobelino_#653700_material']: THREE.MeshStandardMaterial
-    ['gobelino_#00DEE7_material']: THREE.MeshStandardMaterial
-    ['gobelino_#851000_material']: THREE.MeshStandardMaterial
-    ['gobelino_#ffffff_material']: THREE.MeshStandardMaterial
-  }
-}
 
 export const HillTopRight = forwardRef<THREE.Group, GroupProps>(function HillTopRight(props, ref) {
   const { nodes, materials } = useGLTF(

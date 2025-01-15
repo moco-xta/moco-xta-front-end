@@ -1,21 +1,12 @@
 import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
+import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as ganeshComponentConstants } from '@/constants/hero/three/portrait/foreground/mess/ganeshComponentConstants.json'
-
-import { MeshProps } from '@react-three/fiber'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    Ganesh: THREE.Mesh
-  }
-  materials: {
-    ganesh_material: THREE.MeshStandardMaterial
-  }
-}
 
 export const Ganesh = forwardRef<THREE.Mesh, MeshProps>(function Ganesh(props, ref) {
   const { nodes, materials } = useGLTF(

@@ -1,6 +1,6 @@
 export const ambientLightDefaultValues = {
   color: '#fff',
-  intensity: 0.2,
+  intensity: 0.05,
 }
 
 export const spotLightsDefaultValues = {

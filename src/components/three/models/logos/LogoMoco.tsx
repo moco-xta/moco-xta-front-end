@@ -1,20 +1,14 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import useHoverModelAnimation from '@/hooks/three/useHoverModelAnimation'
 
 import { logoMocoData } from '@/data/menu/header/logo_moco/three/logoMocoData'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    LogoMoco: THREE.Mesh
-  }
-  materials: object
-}
 
 export function LogoMoco(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(glbConstants.LOGOS.LOGO_MOCO) as GLTFResult

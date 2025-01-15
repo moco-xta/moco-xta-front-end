@@ -1,18 +1,10 @@
 import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    LogoChatGpt: THREE.Mesh
-  }
-  materials: {
-    ['logo_chat_gpt_#75ab9d']: THREE.MeshStandardMaterial
-  }
-}
 
 const LogoChatgpt = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_CHATGPT) as GLTFResult

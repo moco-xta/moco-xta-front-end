@@ -1,22 +1,10 @@
 import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    LogoPostgresql_1: THREE.Mesh
-    LogoPostgresql_2: THREE.Mesh
-    LogoPostgresql_3: THREE.Mesh
-  }
-  materials: {
-    ['logo_postgresql_#000000']: THREE.MeshStandardMaterial
-    ['logo_postgresql_#ffffff']: THREE.MeshStandardMaterial
-    ['logo_postgresql_#336791']: THREE.MeshStandardMaterial
-  }
-}
 
 const LogoPostgresql = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_POSTGRESQL) as GLTFResult

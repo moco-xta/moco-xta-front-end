@@ -1,19 +1,11 @@
 import React from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
 import { RigidBody } from '@react-three/rapier'
 
-import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import type { GLTFResult } from '@/types/data/components/three/types'
 
-type GLTFResult = GLTF & {
-  nodes: {
-    Octahedron: THREE.Mesh
-  }
-  materials: {
-    octahedron_material: THREE.MeshStandardMaterial
-  }
-}
+import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 export function Octahedron(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(glbConstants.LABORATORY.OCTAHEDRON) as GLTFResult

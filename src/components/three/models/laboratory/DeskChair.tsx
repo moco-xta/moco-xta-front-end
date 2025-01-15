@@ -1,32 +1,16 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
-import {
-  CuboidCollider,
-  type RapierRigidBody,
-  RigidBody,
-} from '@react-three/rapier'
+import { CuboidCollider, type RapierRigidBody, RigidBody } from '@react-three/rapier'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { materialsData } from '@/data/about/three/materialsData'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-type GLTFResult = GLTF & {
-  nodes: {
-    DeskChair_1: THREE.Mesh
-    DeskChair_2: THREE.Mesh
-    DeskChair_3: THREE.Mesh
-  }
-  materials: {
-    desk_chair_leg_material: THREE.MeshStandardMaterial
-    desk_chair_leather_material: THREE.MeshStandardMaterial
-    desk_chair_wheels_material: THREE.MeshStandardMaterial
-  }
-}
-
 export function DeskChair(props: JSX.IntrinsicElements['group']) {
-  const { nodes, /* materials */ } = useGLTF(glbConstants.LABORATORY.DESK_CHAIR) as GLTFResult
+  const { nodes /* materials */ } = useGLTF(glbConstants.LABORATORY.DESK_CHAIR) as GLTFResult
 
   const rigidBodyRef = useRef<RapierRigidBody>(null)
 

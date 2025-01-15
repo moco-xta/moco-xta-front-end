@@ -2,27 +2,12 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
 
-import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import type { GLTFResult } from '@/types/data/components/three/types'
+
 import { colorPickerComponentDefaultValues } from '@/data/hero/three/portrait/foreground/mess/tools/colorPickerComponentData'
 
-type GLTFResult = GLTF & {
-  nodes: {
-    ColorPicker_1: THREE.Mesh
-    ColorPicker_2: THREE.Mesh
-    ColorPicker_3: THREE.Mesh
-    ColorPicker_4: THREE.Mesh
-    ColorPicker_5: THREE.Mesh
-  }
-  materials: {
-    ['tools_#000000_material']: THREE.MeshStandardMaterial
-    ['tools_#ffffff_material']: THREE.MeshStandardMaterial
-    ['tools_#848484_material']: THREE.MeshStandardMaterial
-    ['tools_#00ff74_material']: THREE.MeshStandardMaterial
-    ['tools_#0097dc_material']: THREE.MeshStandardMaterial
-  }
-}
+import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 export const ColorPicker = forwardRef<THREE.Group, GroupProps>(function ColorPicker(props, ref) {
   const { nodes, materials } = useGLTF(
