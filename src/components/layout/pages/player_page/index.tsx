@@ -8,7 +8,7 @@ import './index.scss'
 export default function PlayerPage({ canvas }: TPlayerPage) {
   return (
     <>
-      <section id='player_canvas'>{canvas}</section>
+      <div id='player_canvas'>{canvas}</div>
       <PlayerPageGreeting />
     </>
   )

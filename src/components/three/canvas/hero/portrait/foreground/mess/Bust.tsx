@@ -83,8 +83,7 @@ export default function Bust() {
   useMemo(() => textures.forEach((texture) => (texture.minFilter = THREE.LinearFilter)), [textures])
 
   // Load GLTF model
-  const bustGlb = useGlbLoader(glbConstants.SKETCHFAB.BUST) as GLTF &
-    ObjectMap
+  const bustGlb = useGlbLoader(glbConstants.SKETCHFAB.BUST) as GLTF & ObjectMap
 
   const opacityRef = useRef<{ value: number }>({
     value: 0,

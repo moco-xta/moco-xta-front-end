@@ -1,5 +1,9 @@
+'use client'
+
 import React from 'react'
 
+import { ContactPage } from '@/components/layout/pages'
+
 export default function Contact() {
-  return <div className='page'>Contact</div>
+  return <ContactPage />
 }

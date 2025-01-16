@@ -12,7 +12,7 @@ import './index.scss'
 export default function Page({ pageData, backgroundCanvas }: TPage) {
   return (
     <>
-      {backgroundCanvas && <section id='background_canvas'>{backgroundCanvas}</section>}
+      {backgroundCanvas && <div id='background_canvas'>{backgroundCanvas}</div>}
       <PageProvider defaultPosition={pageData.sections[0].key}>
         <div className='page_container'>
           <div className='page'>
