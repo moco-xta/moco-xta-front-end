@@ -1,7 +1,8 @@
 import React from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { Speaker } from './Speaker'
 
@@ -9,17 +10,6 @@ import { laboratoryData } from '@/data/about/three/laboratoryData'
 import { materialsData } from '@/data/about/three/materialsData'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    SpeakerBox_1: THREE.Mesh
-    SpeakerBox_2: THREE.Mesh
-  }
-  materials: {
-    speaker_box_material: THREE.MeshPhysicalMaterial
-    speaker_stand: THREE.MeshStandardMaterial
-  }
-}
 
 export function SpeakerBox(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(glbConstants.LABORATORY.SPEAKER_BOX) as GLTFResult

@@ -1,5 +1,6 @@
 {
   "defaultValues": {
+    "id": "hero_canvas",
     "dpr": 2,
     "legacy": false,
     "shadows": true,

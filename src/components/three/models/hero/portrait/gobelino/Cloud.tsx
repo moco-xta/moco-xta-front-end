@@ -2,19 +2,11 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { cloudsDefaultValues } from '@/data/hero/three/portrait/gobelino/cloudsData'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    Cloud: THREE.Mesh
-  }
-  materials: {
-    ['gobelino_#ffffff_material']: THREE.MeshStandardMaterial
-  }
-}
 
 export const Cloud = forwardRef<THREE.Mesh, MeshProps & { index: number }>(function Cloud(
   { index, ...rest },

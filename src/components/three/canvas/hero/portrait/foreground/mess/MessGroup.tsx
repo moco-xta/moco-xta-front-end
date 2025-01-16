@@ -5,7 +5,8 @@ import { useGSAP } from '@gsap/react'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
 import ToolsGroup from './tools/ToolsGroup'
-import ProfilePicture from './ProfilePicture'
+import BustComponent from './Bust'
+// import ProfilePicture from './ProfilePicture'
 import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
 import HeartComponent from './HeartComponent'
 import GaneshComponent from './GaneshComponent'
@@ -41,7 +42,8 @@ export default function MessGroup() {
       visible={messGroupDefaultValues.visible}
     >
       <ToolsGroup />
-      <ProfilePicture />
+      <BustComponent />
+      {/* <ProfilePicture /> */}
       <LogoAthleticoNacionalComponent />
       <HeartComponent />
       <GaneshComponent />

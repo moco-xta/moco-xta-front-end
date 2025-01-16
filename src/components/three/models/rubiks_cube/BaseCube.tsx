@@ -1,7 +1,8 @@
 import React from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { baseCubeData } from '@/data/skills/rubiks_cube/three/baseCubeData'
 

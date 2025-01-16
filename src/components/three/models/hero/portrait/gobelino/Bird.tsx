@@ -2,21 +2,11 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { getBirdComponentDefaultValues } from '@/data/hero/three/portrait/gobelino/birdComponentData'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    Bird_1: THREE.Mesh
-    Bird_2: THREE.Mesh
-  }
-  materials: {
-    ['gobelino_#E73700_material']: THREE.MeshStandardMaterial
-    ['gobelino_#99000E_material']: THREE.MeshStandardMaterial
-  }
-}
 
 export const Bird = forwardRef<THREE.Group, GroupProps>(function Bird(props, ref) {
   const { nodes, materials } = useGLTF(glbConstants.HERO.PORTRAIT.GOBELINO.BIRD) as GLTFResult

@@ -2,33 +2,11 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { hillTopLeftComponentDefaultValues } from '@/data/hero/three/portrait/gobelino/hillTopLeftComponentData'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    HillTopLeft_1: THREE.Mesh
-    HillTopLeft_2: THREE.Mesh
-    HillTopLeft_3: THREE.Mesh
-    HillTopLeft_4: THREE.Mesh
-    HillTopLeft_5: THREE.Mesh
-    HillTopLeft_6: THREE.Mesh
-    HillTopLeft_7: THREE.Mesh
-    HillTopLeft_8: THREE.Mesh
-  }
-  materials: {
-    ['gobelino_#000000_material']: THREE.MeshStandardMaterial
-    ['gobelino_#3D5F00_material']: THREE.MeshStandardMaterial
-    ['gobelino_#005925_material']: THREE.MeshStandardMaterial
-    ['gobelino_#E76E00_material']: THREE.MeshStandardMaterial
-    ['gobelino_#64FF00_material']: THREE.MeshStandardMaterial
-    ['gobelino_#07725F_material']: THREE.MeshStandardMaterial
-    ['gobelino_#A6760E_material']: THREE.MeshStandardMaterial
-    gobelino_tree_texture: THREE.MeshStandardMaterial
-  }
-}
 
 export const HillTopLeft = forwardRef<THREE.Group, GroupProps>(function HillTopLeft(props, ref) {
   const { nodes, materials } = useGLTF(

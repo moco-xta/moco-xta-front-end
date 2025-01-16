@@ -2,19 +2,11 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { moonComponentDefaultValues } from '@/data/hero/three/portrait/gobelino/sun_and_moon/moonComponentData'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    Moon: THREE.Mesh
-  }
-  materials: {
-    moon_material: THREE.MeshStandardMaterial
-  }
-}
 
 export const Moon = forwardRef<THREE.Mesh, MeshProps>(function Moon(props, ref) {
   const { nodes, materials } = useGLTF(glbConstants.HERO.PORTRAIT.GOBELINO.MOON) as GLTFResult

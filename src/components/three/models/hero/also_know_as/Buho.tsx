@@ -2,47 +2,12 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
 
-import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import type { GLTFResult } from '@/types/data/components/three/types'
+
 import { buhosDefaultValues } from '@/data/hero/three/also_know_as/buhosData'
 
-type GLTFResult = GLTF & {
-  nodes: {
-    Buho_1: THREE.Mesh
-    Buho_2: THREE.Mesh
-    Buho_3: THREE.Mesh
-    Buho_4: THREE.Mesh
-    Buho_5: THREE.Mesh
-    Buho_6: THREE.Mesh
-    Buho_7: THREE.Mesh
-    Buho_8: THREE.Mesh
-    Buho_9: THREE.Mesh
-    Buho_10: THREE.Mesh
-    Buho_11: THREE.Mesh
-    Buho_12: THREE.Mesh
-    Buho_13: THREE.Mesh
-    Buho_14: THREE.Mesh
-    Buho_15: THREE.Mesh
-  }
-  materials: {
-    pink_medium_material: THREE.MeshStandardMaterial
-    green_medium_material: THREE.MeshStandardMaterial
-    green_dark_material: THREE.MeshStandardMaterial
-    yellow_light_material: THREE.MeshStandardMaterial
-    violet_material: THREE.MeshStandardMaterial
-    orange_material: THREE.MeshStandardMaterial
-    red_material: THREE.MeshStandardMaterial
-    bordeaux_material: THREE.MeshStandardMaterial
-    white_material: THREE.MeshStandardMaterial
-    blue_medium_material: THREE.MeshStandardMaterial
-    yellow_medium_material: THREE.MeshStandardMaterial
-    blue_light_material: THREE.MeshStandardMaterial
-    blue_dark_material: THREE.MeshStandardMaterial
-    green_kaki_material: THREE.MeshStandardMaterial
-    pink_light_material: THREE.MeshStandardMaterial
-  }
-}
+import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 export const Buho = forwardRef<THREE.Group, GroupProps & { index: number }>(function Buho(
   { index, ...rest },

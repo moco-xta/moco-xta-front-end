@@ -21,5 +21,11 @@
   },
   "MATCAPS": {
     "CHRISTUS": "/img/textures/matcap/36220C_C6C391_8C844A_8B7B4C.png"
+  },
+  "SKETCHFAB": {
+    "BUST": "/img/textures/sketchfab/face_texture_TEST.jpg"
+  },
+  "TEST": {
+    "GANESH": "/img/textures/tests/ganesh_diffuse.jpg"
   }
 }

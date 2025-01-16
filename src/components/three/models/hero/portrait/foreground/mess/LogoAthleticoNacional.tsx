@@ -2,19 +2,11 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { MeshProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+
+import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as logoAthleticoNacionalComponentConstants } from '@/constants/hero/three/portrait/foreground/mess/logoAthleticoNacionalComponentConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    LogoAthleticoNacional: THREE.Mesh
-  }
-  materials: {
-    logo_athletico_nacional_material: THREE.MeshStandardMaterial
-  }
-}
 
 export const LogoAthleticoNacional = forwardRef<THREE.Mesh, MeshProps>(
   function LogoAthleticoNacional(props, ref) {

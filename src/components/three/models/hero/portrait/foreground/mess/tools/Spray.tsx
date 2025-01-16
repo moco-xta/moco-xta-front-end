@@ -2,23 +2,12 @@ import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
 
-import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import type { GLTFResult } from '@/types/data/components/three/types'
+
 import { default as sprayComponentConstants } from '@/constants/hero/three/portrait/foreground/mess/heartComponentConstants.json'
 
-type GLTFResult = GLTF & {
-  nodes: {
-    Spray_1: THREE.Mesh
-    Spray_2: THREE.Mesh
-    Spray_3: THREE.Mesh
-  }
-  materials: {
-    ['tools_#000000_material']: THREE.MeshStandardMaterial
-    ['tools_#ffffff_material']: THREE.MeshStandardMaterial
-    ['tools_#0000ff_material']: THREE.MeshStandardMaterial
-  }
-}
+import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 export const Spray = forwardRef<THREE.Group, GroupProps>(function Spray(props, ref) {
   const { nodes, materials } = useGLTF(
