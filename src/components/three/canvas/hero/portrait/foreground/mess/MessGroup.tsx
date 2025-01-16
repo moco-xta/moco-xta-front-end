@@ -41,13 +41,13 @@ export default function MessGroup() {
       {...messGroupDefaultValues}
       visible={messGroupDefaultValues.visible}
     >
-      <ToolsGroup />
+      {/* <ToolsGroup /> */}
       <BustComponent />
       {/* <ProfilePicture /> */}
-      <LogoAthleticoNacionalComponent />
-      <HeartComponent />
-      <GaneshComponent />
-      <ChristusComponent />
+      {/* <LogoAthleticoNacionalComponent /> */}
+      {/* <HeartComponent /> */}
+      {/* <GaneshComponent /> */}
+      {/* <ChristusComponent /> */}
     </group>
   )
 }
