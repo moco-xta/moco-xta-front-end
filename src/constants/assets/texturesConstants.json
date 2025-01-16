@@ -24,5 +24,8 @@
   },
   "SKETCHFAB": {
     "BUST": "/img/textures/sketchfab/face_texture_TEST.jpg"
+  },
+  "TEST": {
+    "GANESH": "/img/textures/tests/ganesh_diffuse.jpg"
   }
 }
