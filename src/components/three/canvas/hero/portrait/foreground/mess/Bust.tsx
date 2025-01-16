@@ -20,6 +20,7 @@ import { default as foregroundGroupConstants } from '@/constants/hero/three/port
 const NUMBER = 4096 * 7
 
 const ATTRIBUTE_NAMES = {
+  POSITION: 'position',
   COORDINATES: 'aCoordinates',
   UV: 'aUv',
   SPEED: 'aSpeed',
@@ -58,7 +59,7 @@ const createAttributes = (geometry: THREE.BufferGeometry) => {
   }
 
   const newGeometry = new THREE.BufferGeometry()
-  newGeometry.setAttribute('position', positions)
+  newGeometry.setAttribute(ATTRIBUTE_NAMES.POSITION, positions)
   newGeometry.setAttribute(ATTRIBUTE_NAMES.COORDINATES, coordinates)
   newGeometry.setAttribute(ATTRIBUTE_NAMES.UV, uv)
   newGeometry.setAttribute(ATTRIBUTE_NAMES.SPEED, speeds)
@@ -186,7 +187,7 @@ export default function Bust() {
     const handleMouseUp = contextSafe(() => {
       gsap.to(materialRef.current.uniforms.mousePressed, {
         duration: 0.5,
-        value: 0.25,
+        value: 0,
         ease: 'power1.out',
       })
       gsap.to(opacityRef.current, {

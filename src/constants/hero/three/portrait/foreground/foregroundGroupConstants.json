@@ -23,21 +23,6 @@
         },
         "easeEach": "power2.out"
       }
-    },
-    "rotation": {
-      "keyframes": {
-        "step_2": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "step_3": {
-          "x": 0,
-          "y": 0,
-          "z": -180
-        },
-        "easeEach": "power2.out"
-      }
     }
   }
 }

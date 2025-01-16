@@ -7,7 +7,7 @@ export default function PortraitGroup() {
   return (
     <>
       <ForegroundGroup />
-      <GobelinoGroup />
+      {/* <GobelinoGroup /> */}
     </>
   )
 }
