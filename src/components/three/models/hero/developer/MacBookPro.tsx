@@ -16,10 +16,14 @@ export function MacBookPro(props: JSX.IntrinsicElements['group']) {
       <mesh
         geometry={nodes.MacBookPro_1.geometry}
         material={materials.material_mac_book_pro_bottom_part}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.MacBookPro_2.geometry}
         material={materials.material_mac_book_pro_top_part}
+        receiveShadow
+        castShadow
       />
     </group>
   )

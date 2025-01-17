@@ -7,8 +7,8 @@ import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext
 import { LogoAthleticoNacional } from '@/components/three/models/hero/portrait/foreground/mess/LogoAthleticoNacional'
 
 import {
+  logoAthleticoNacionalComponentDefaultValues,
   getLogoAthleticoNacionalComponentAnimationsData,
-  getLogoAthleticoNacionalComponentDefaultValues,
 } from '@/data/hero/three/portrait/foreground/mess/logoAthleticoNacionalComponentData'
 
 import { animate } from '@/animation/index'
@@ -32,8 +32,8 @@ export default function LogoAthleticoNacionalComponent() {
   return (
     <LogoAthleticoNacional
       ref={logoAthleticoNacionalComponentRef}
-      position={getLogoAthleticoNacionalComponentDefaultValues.position}
-      scale={getLogoAthleticoNacionalComponentDefaultValues.scale}
+      position={logoAthleticoNacionalComponentDefaultValues.position}
+      scale={logoAthleticoNacionalComponentDefaultValues.scale}
     />
   )
 }

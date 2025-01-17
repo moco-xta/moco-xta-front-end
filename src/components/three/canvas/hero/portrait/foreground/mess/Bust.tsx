@@ -13,6 +13,8 @@ import useGlbLoader from '@/hooks/three/useGlbLoader'
 import vertexShader from '@/components/three/shaders/bust/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/bust/fragmentShader.glsl'
 
+import { getRandomInt } from '@/helpers/mathHelpers'
+
 import glbConstants from '@/constants/assets/glbConstants.json'
 import texturesConstants from '@/constants/assets/texturesConstants.json'
 import { default as foregroundGroupConstants } from '@/constants/hero/three/portrait/foreground/foregroundGroupConstants.json'
@@ -28,8 +30,6 @@ const ATTRIBUTE_NAMES = {
   DIRECTION: 'aDirection',
   PRESS: 'aPress',
 }
-
-const generateRandomValue = (min: number, max: number): number => min + (max - min) * Math.random()
 
 const createAttributes = (geometry: THREE.BufferGeometry) => {
   const positions = new THREE.BufferAttribute(new Float32Array(NUMBER * 3), 3)
@@ -51,11 +51,11 @@ const createAttributes = (geometry: THREE.BufferGeometry) => {
     positions.setXYZ(i, x, y, z)
     coordinates.setXYZ(i, i * 2, i * 2 + 1, 0)
     uv.setXY(i, sourceUv[i * 2], sourceUv[i * 2 + 1])
-    speeds.setX(i, generateRandomValue(0.4, 1))
-    offset.setX(i, generateRandomValue(-1000, 1000))
+    speeds.setX(i, getRandomInt({ min: 0.4, max: 1 }))
+    offset.setX(i, getRandomInt({ min: -1000, max: 1000 }))
     // direction.setX(i, Math.random() > 0.5 ? 1 : -1)
     direction.setX(i, 1)
-    press.setX(i, generateRandomValue(0.4, 1))
+    press.setX(i, getRandomInt({ min: 0.4, max: 1 }))
   }
 
   const newGeometry = new THREE.BufferGeometry()
@@ -83,8 +83,7 @@ export default function Bust() {
   useMemo(() => textures.forEach((texture) => (texture.minFilter = THREE.LinearFilter)), [textures])
 
   // Load GLTF model
-  const bustGlb = useGlbLoader(glbConstants.SKETCHFAB.BUST) as GLTF &
-    ObjectMap
+  const bustGlb = useGlbLoader(glbConstants.SKETCHFAB.BUST) as GLTF & ObjectMap
 
   const opacityRef = useRef<{ value: number }>({
     value: 0,

@@ -4,7 +4,6 @@ import { default as canvasConstants } from '@/constants/hero/three/canvasConstan
 
 export const canvasDefaultValues: TCanvasDefaultValues = {
   id: canvasConstants.defaultValues.id,
-  className: canvasConstants.defaultValues.className,
   dpr: canvasConstants.defaultValues.dpr,
   legacy: canvasConstants.defaultValues.legacy,
   shadows: canvasConstants.defaultValues.shadows,

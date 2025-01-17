@@ -150,5 +150,14 @@
   },
   "SKETCHFAB": {
     "BUST": "/models/glb/sketchfab/Bust.glb"
+  },
+  "SHARED": {
+    "BRAIN": "/models/glb/shared/Brain.glb",
+    "CROWN": "/models/glb/shared/Crown.glb",
+    "HEART": "/models/glb/shared/Heart.glb",
+    "HYDRANGEA": "/models/glb/shared/Hydrangea.glb",
+    "KNIGHT": "/models/glb/shared/Knight.glb",
+    "PINE_CONE": "/models/glb/shared/PineCone.glb",
+    "QUEEN_OF_HEARTS": "/models/glb/shared/QueenOfHearts.glb"
   }
 }
