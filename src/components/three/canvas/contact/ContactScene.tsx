@@ -1,7 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 
-import { Brain } from '../../models/shared/Brain'
+// import { Brain } from '../../models/shared/Brain'
 import Bust from './Bust'
 import { Heart } from '../../models/shared/Heart'
 import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'

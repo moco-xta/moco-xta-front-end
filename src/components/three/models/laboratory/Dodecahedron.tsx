@@ -1,5 +1,4 @@
 import React from 'react'
-import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 

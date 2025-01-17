@@ -8,13 +8,6 @@ import { padsData } from '@/data/skills/rubiks_cube/three/padsData'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-type GLTFResult = GLTF & {
-  nodes: {
-    PadSpring: THREE.Mesh
-  }
-  materials: object
-}
-
 const PadSpring = forwardRef<THREE.Mesh, JSX.IntrinsicElements['mesh']>((props, ref) => {
   const { nodes } = useGLTF(glbConstants.RUBIKS_CUBE.PAD_SPRING) as GLTFResult
 

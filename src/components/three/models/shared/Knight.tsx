@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react'
+import React from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
@@ -10,7 +10,7 @@ import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 export function Knight(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(glbConstants.SHARED.KNIGHT) as GLTFResult
+  const { nodes } = useGLTF(glbConstants.SHARED.KNIGHT) as GLTFResult
 
   const knightMap = useTextureLoader(texturesConstants.MATCAPS.KNIGHT)
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import type { GLTFResult } from '@/types/data/components/three/types'
@@ -7,13 +6,6 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 import { baseCubeData } from '@/data/skills/rubiks_cube/three/baseCubeData'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    BaseCube: THREE.Mesh
-  }
-  materials: object
-}
 
 export function BaseCube(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(glbConstants.RUBIKS_CUBE.BASE_CUBE) as GLTFResult

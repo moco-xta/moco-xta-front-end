@@ -6,7 +6,7 @@ import Camera from './Camera'
 import Lightning from './lightning/Lightning'
 import GreetingGroup from './greeting/GreetingGroup'
 import PortraitGroup from './portrait/PortraitGroup'
-import AlsoKnowAsGroup from './also_know_as/AlsoKnowAsGroup'
+// import AlsoKnowAsGroup from './also_know_as/AlsoKnowAsGroup'
 // import MocoGroup from './moco/MocoGroup'
 import PostProcessing from './PostProcessing'
 

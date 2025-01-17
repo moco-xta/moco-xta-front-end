@@ -4,13 +4,13 @@ import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
-import ToolsGroup from './tools/ToolsGroup'
+// import ToolsGroup from './tools/ToolsGroup'
 import BustComponent from './Bust'
 // import ProfilePicture from './ProfilePicture'
-import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
-import HeartComponent from './HeartComponent'
-import GaneshComponent from './GaneshComponent'
-import ChristusComponent from './ChristusComponent'
+// import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
+// import HeartComponent from './HeartComponent'
+// import GaneshComponent from './GaneshComponent'
+// import ChristusComponent from './ChristusComponent'
 
 import {
   messGroupDefaultValues,

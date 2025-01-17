@@ -1,24 +1,9 @@
 import React from 'react'
-import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    HaussmannianBuilding: THREE.Mesh
-    StreetLamp001: THREE.Mesh
-    StreetLamp002: THREE.Mesh
-    StreetLamp003: THREE.Mesh
-    StreetLamp004: THREE.Mesh
-  }
-  materials: {
-    material_haussmannian_building: THREE.MeshStandardMaterial
-    material_street_lamps: THREE.MeshStandardMaterial
-  }
-}
 
 export function ParisScene(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(glbConstants.PROJECTS.PARIS_SCENE) as GLTFResult

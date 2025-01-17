@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
 import MessGroup from './mess/MessGroup'
-import AlsoKnowAsTextsGroup from '../../also_know_as/texts/AlsoKnowAsTextsGroup'
+// import AlsoKnowAsTextsGroup from '../../also_know_as/texts/AlsoKnowAsTextsGroup'
 
 import {
   foregroundGroupDefaultValues,

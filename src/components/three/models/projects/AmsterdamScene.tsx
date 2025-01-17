@@ -1,45 +1,9 @@
 import React from 'react'
-import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-type GLTFResult = GLTF & {
-  nodes: {
-    Tree: THREE.Mesh
-    Boat: THREE.Mesh
-    SidewalkHouseSide: THREE.Mesh
-    Bicycle: THREE.Mesh
-    Road: THREE.Mesh
-    Cloud003: THREE.Mesh
-    Cloud002: THREE.Mesh
-    Cloud004: THREE.Mesh
-    Cloud001: THREE.Mesh
-    AmsterdamHouse: THREE.Mesh
-    CanalWall_1: THREE.Mesh
-    CanalWall_2: THREE.Mesh
-    SidewalkCanalSide: THREE.Mesh
-    Water: THREE.Mesh
-    Bark: THREE.Mesh
-  }
-  materials: {
-    material_tree: THREE.MeshStandardMaterial
-    material_boat: THREE.MeshStandardMaterial
-    material_sidewalk: THREE.MeshStandardMaterial
-    material_bicycle: THREE.MeshStandardMaterial
-    material_road: THREE.MeshStandardMaterial
-    material_cloud_003: THREE.MeshStandardMaterial
-    material_clouds_002_004: THREE.MeshStandardMaterial
-    material_cloud_001: THREE.MeshStandardMaterial
-    material_amsterdam_house: THREE.MeshStandardMaterial
-    material_wall_canal_001: THREE.MeshStandardMaterial
-    material_wall_canal_002: THREE.MeshStandardMaterial
-    material_water: THREE.MeshStandardMaterial
-    material_bark: THREE.MeshStandardMaterial
-  }
-}
 
 export function AmsterdamScene(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(glbConstants.PROJECTS.AMSTERDAM_SCENE) as GLTFResult

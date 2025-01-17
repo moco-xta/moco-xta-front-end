@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react'
+import React from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 

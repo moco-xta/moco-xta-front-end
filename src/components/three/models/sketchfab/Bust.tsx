@@ -25,6 +25,8 @@ const Bust = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref
   )
 })
 
+Bust.displayName = 'Bust'
+
 useGLTF.preload(glbConstants.SKETCHFAB.BUST)
 
 export default Bust
