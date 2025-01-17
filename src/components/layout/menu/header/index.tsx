@@ -1,7 +1,7 @@
 import React from 'react'
 
 import type { THeader } from '@/types/components/types'
-import { MenuButton } from '@/components/layout/buttons'
+import { LocaleSwitcher, MenuButton } from '@/components/layout/buttons'
 
 import LogoMoco from './logo_moco'
 
@@ -12,6 +12,7 @@ export default function Header({ isMain = false }: THeader) {
     <header className='header_zIndex'>
       <LogoMoco isMain={isMain} />
       <MenuButton state={isMain ? 'open' : 'close'} />
+      <LocaleSwitcher />
     </header>
   )
 }

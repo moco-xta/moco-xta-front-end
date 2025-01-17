@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
 
@@ -18,9 +18,9 @@ export default function LocaleSwitcher() {
 
   const localeSwitcherRef = useRef<HTMLLIElement>(null)
 
-  function handleSetCurrentLocale(locale: TLocales) {
-    document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`
-    setCurrentLocale(locale)
+  function handleSetCurrentLocale(localesConstant: TLocales) {
+    document.cookie = `NEXT_LOCALE=${localesConstant}`
+    setCurrentLocale(localesConstant)
     router.refresh()
   }
 
@@ -30,15 +30,15 @@ export default function LocaleSwitcher() {
         <span>{currentLocale.toUpperCase()}</span>
         <ul>
           {localesConstants
-            .filter((locale_constant: TLocales) => locale_constant !== locale)
+            .filter((localeConstant: TLocales) => localeConstant !== currentLocale)
             .sort((a: TLocales, b: TLocales) => a.localeCompare(b))
-            .map((locale_constant: TLocales) => {
+            .map((localeConstant: TLocales) => {
               return (
                 <li
-                  key={`localeSwitcherOption_${locale_constant}`}
-                  onClick={() => handleSetCurrentLocale(locale_constant)}
+                  key={`localeSwitcherOption_${localeConstant}`}
+                  onClick={() => handleSetCurrentLocale(localeConstant)}
                 >
-                  <span>{locale_constant.toUpperCase()}</span>
+                  <span>{localeConstant.toUpperCase()}</span>
                 </li>
               )
             })}
