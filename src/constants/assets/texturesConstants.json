@@ -10,9 +10,7 @@
       "DIFFUSE": "/img/textures/laboratory/parquet_diffuse.jpg",
       "BUMP": "/img/textures/laboratory/parquet_bump.jpg",
       "NORMAL": "/img/textures/laboratory/parquet_normal.jpg",
-      "ROUGHNESS": "/img/textures/laboratory/parquet_roughness.jpg",
-      "REPEAT": 1,
-      "CORRECTION_GREY_RANGE": [150, 180]
+      "ROUGHNESS": "/img/textures/laboratory/parquet_roughness.jpg"
     }
   },
   "SHADERS": {
@@ -20,7 +18,9 @@
     "GRADIENT_CIRCLE_MASK": "/img/textures/shaders/gradient_circle_mask.png"
   },
   "MATCAPS": {
-    "CHRISTUS": "/img/textures/matcap/36220C_C6C391_8C844A_8B7B4C.png"
+    "CHRISTUS": "/img/textures/matcap/36220C_C6C391_8C844A_8B7B4C.png",
+    "KNIGHT": "/img/textures/matcap/80CA23_B7EE37_D5FA4C_A3E434.png",
+    "PINE_CONE": "/img/textures/matcap/8A6565_2E214D_D48A5F_ADA59C.png"
   },
   "SKETCHFAB": {
     "BUST": "/img/textures/sketchfab/face_texture_TEST.jpg"

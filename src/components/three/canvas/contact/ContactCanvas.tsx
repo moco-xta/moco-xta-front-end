@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import Lightning from './lightning/Lightning'
 import Camera from './Camera'
 import ContactScene from './ContactScene'
+import PostProcessing from './PostProcessing'
 
 import { canvasDefaultValues } from '@/data/contact/three/canvasData'
 
@@ -23,6 +24,7 @@ export default function ContactCanvas() {
       <Suspense fallback={null}>
         <ContactScene />
       </Suspense>
+      <PostProcessing />
     </Canvas>
   )
 }
