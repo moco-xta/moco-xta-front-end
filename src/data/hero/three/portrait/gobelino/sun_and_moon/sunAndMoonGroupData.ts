@@ -4,7 +4,7 @@ import type { TElementAnimationData } from '@/types/data/animation/types'
 import { getAnimationsData, getDefaultValues } from '@/helpers/animationHelpers'
 
 import { default as gobelinoGroupConstants } from '@/constants/hero/three/portrait/gobelino/gobelinoGroupConstants.json'
-import { default as sunAndmoonGroupConstants } from '@/constants/hero/three/portrait/gobelino/sun_and_moon/sunAndMoonGroupConstants.json'
+import { default as sunAndmoonGroupConstants } from '@/constants/hero/three/portrait/gobelino/sun_and_moon/sunAndMoonGroupConstantsTest.json'
 
 export const sunAndMoonGroupDefaultValues: TElementDefaultValues = {
   ...getDefaultValues(sunAndmoonGroupConstants),
