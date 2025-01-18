@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import type {
   TExternalLinkData,
   TPageData,
@@ -5,6 +6,12 @@ import type {
   TSectionData,
   TSkillsParagraphData,
 } from '@/types/data/components/layout/types'
+
+// LAYOUT
+
+export type TRootLayout = {
+  children: ReactNode
+}
 
 // PAGES
 
