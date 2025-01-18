@@ -1,9 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
 import { FaYoutube } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 
 import type { TExternalLink } from '@/types/components/layout/types'
+
+import { Link } from '@/i18n/routing'
 
 import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
