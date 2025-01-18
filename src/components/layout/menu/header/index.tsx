@@ -11,8 +11,10 @@ export default function Header({ isMain = false }: THeader) {
   return (
     <header className='header_zIndex'>
       <LogoMoco isMain={isMain} />
-      <MenuButton state={isMain ? 'open' : 'close'} />
-      <LocaleSwitcher />
+      <div className='header_buttons_container'>
+        <MenuButton state={isMain ? 'open' : 'close'} />
+        <LocaleSwitcher />
+      </div>
     </header>
   )
 }

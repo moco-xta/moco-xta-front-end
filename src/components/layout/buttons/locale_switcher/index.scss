@@ -1,1 +1,60 @@
 @import '@/styles/variables.module.scss';
+
+.locale_switcher {
+  padding-right: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  color: $grey_light;
+  cursor: pointer;
+  user-select: none;
+
+  .current_locale {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all $hover_transition ease-in-out;
+
+    .caret {
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+  }
+
+  .locale_options {
+    z-index: 0;
+    position: absolute;
+    margin-top: $px_margin_XL;
+    padding-top: $px_margin_L;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 0.2;
+    transition: all $hover_transition ease-in-out;
+
+    .locale_option {
+      font-size: 12px;
+    }
+
+    .locale_option:hover {
+      color: $white;
+    }
+  }
+
+  .current_locale:hover {
+    color: $white;
+    font-weight: bold;
+  }
+}
+
+.locale_switcher.open .caret {
+  transform: rotate(90deg);
+
+  .locale_option {
+    opacity: 1;
+    transition: all $hover_transition ease-in-out;
+  }
+}
