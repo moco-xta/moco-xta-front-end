@@ -1,1 +1,56 @@
 @import '@/styles/variables.module.scss';
+
+.locale_switcher {
+  padding-right: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: $grey_lighter;
+  cursor: pointer;
+
+  .current_locale_wrapper {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all $hover_transition ease-in-out;
+
+    .caret {
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+  }
+
+  .current_locale_wrapper:hover {
+    color: $white;
+    // font-weight: 600;
+    transition: all $hover_transition ease-in-out;
+  }
+
+  .current_locale::before {
+    display: block;
+    content: attr(currentLocale);
+    // font-weight: 600;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .locale_options {
+    z-index: 0;
+    position: absolute;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: $grey_medium;
+
+    .locale_option {
+      margin-bottom: $px_margin_XXXS;
+    }
+
+    .locale_option:hover {
+      color: $grey_light;
+    }
+  }
+}

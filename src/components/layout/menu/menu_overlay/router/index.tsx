@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/routing'
 
@@ -13,6 +13,7 @@ import './index.scss'
 
 export default function Router() {
   const t = useTranslations('ROUTES')
+  const locale = useLocale()
 
   const dispatch = useDispatch<AppDispatch>()
 
