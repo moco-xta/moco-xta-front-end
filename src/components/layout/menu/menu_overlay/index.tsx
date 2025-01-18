@@ -2,6 +2,7 @@ import React from 'react'
 
 import Header from '../header'
 import Router from './router'
+/* import { LocaleSwitcher } from '../../buttons' */
 
 import './index.scss'
 
@@ -14,6 +15,7 @@ export default function MenuOverlay() {
       <Header />
       <div id='menu_content'>
         <Router />
+        {/* <LocaleSwitcher /> */}
       </div>
     </div>
   )

@@ -38,7 +38,7 @@ export default function RootLayout({
         <body>
           <ReduxProvider>
             <NextIntlClientProvider
-              locale={locale}
+              // locale={locale}
               messages={translations}
             >
               <Menu />

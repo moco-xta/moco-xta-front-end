@@ -7,6 +7,11 @@
     "RESOURCES": "resources",
     "SKILLS": "skills"
   },
+  "LOCALES": {
+    "EN": "English",
+    "ES": "Español",
+    "FR": "Français"
+  },
   "HOME": {
     "HERO": {
       "HI": "hi!",

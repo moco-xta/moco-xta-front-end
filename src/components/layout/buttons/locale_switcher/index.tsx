@@ -1,49 +1,113 @@
-import React, { useRef, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { useLocale } from 'next-intl'
+import React, { useEffect, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useLocale, useTranslations } from 'next-intl'
+import { FaArrowRight } from 'react-icons/fa6'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 import type { TLocales } from '@/types/locales/types'
 
-import { getCookieByName } from '@/helpers/cookiesHelpers'
+import { usePathname, useRouter } from '@/i18n/routing'
+
+import { AppDispatch, RootState } from '@/redux/store'
+import { setLocaleSwitcherIsOpen } from '@/redux/slices/appStateSlice'
 
 import { localesConstants } from '@/i18n/i18n.config'
 
 import './index.scss'
 
 export default function LocaleSwitcher() {
+  const t = useTranslations('LOCALES')
   const router = useRouter()
   const locale = useLocale()
+  const pathname = usePathname()
+  const dispatch = useDispatch<AppDispatch>()
+  const localeSwitcherIsOpen = useSelector(
+    (state: RootState) => state.appState.localeSwitcherIsOpen,
+  )
 
-  const [currentLocale, setCurrentLocale] = useState(getCookieByName('NEXT_LOCALE') || locale)
+  const localeSwitcherRef = useRef<HTMLDivElement>(null!)
+  const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
 
-  const localeSwitcherRef = useRef<HTMLLIElement>(null)
-
-  function handleSetCurrentLocale(locale: TLocales) {
-    document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`
-    setCurrentLocale(locale)
-    router.refresh()
+  function handleSetLocaleSwitcherIsOpen(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    e.stopPropagation()
+    dispatch(setLocaleSwitcherIsOpen(!localeSwitcherIsOpen))
   }
 
+  function handleSetCurrentLocale(localeOption: TLocales) {
+    if (localeSwitcherIsOpen) {
+      router.replace({ pathname }, { locale: localeOption })
+      dispatch(setLocaleSwitcherIsOpen(false))
+    }
+  }
+
+  useGSAP(
+    () => {
+      gsap.set('.locale_option', { y: -30, opacity: 0.0 })
+
+      timelineRef.current
+        .to('.caret', {
+          rotate: '90deg',
+          duration: 0.2,
+          ease: 'power2.out',
+        })
+        .to(
+          '.locale_option',
+          {
+            duration: 0.2,
+            y: 0,
+            opacity: 1,
+            stagger: -0.1,
+            ease: 'power2.out',
+          },
+          0,
+        )
+    },
+    { scope: localeSwitcherRef },
+  )
+
+  useEffect(() => {
+    localeSwitcherIsOpen ? timelineRef.current.play() : timelineRef.current.reverse()
+  }, [localeSwitcherIsOpen])
+
   return (
-    <li ref={localeSwitcherRef}>
-      <div>
-        <span>{currentLocale.toUpperCase()}</span>
-        <ul>
-          {localesConstants
-            .filter((locale_constant: TLocales) => locale_constant !== locale)
-            .sort((a: TLocales, b: TLocales) => a.localeCompare(b))
-            .map((locale_constant: TLocales) => {
-              return (
-                <li
-                  key={`localeSwitcherOption_${locale_constant}`}
-                  onClick={() => handleSetCurrentLocale(locale_constant)}
-                >
-                  <span>{locale_constant.toUpperCase()}</span>
-                </li>
-              )
-            })}
-        </ul>
+    <div
+      ref={localeSwitcherRef}
+      className='locale_switcher'
+    >
+      <div
+        className='locale current_locale_wrapper'
+        onClick={handleSetLocaleSwitcherIsOpen}
+      >
+        <FaArrowRight
+          className='caret'
+          size={14}
+        />
+        <span
+          className='current_locale'
+          {...{ currentLocale: t(locale.toUpperCase()) }}
+        >
+          {t(locale.toUpperCase())}
+        </span>
       </div>
-    </li>
+      <div className='locale_options'>
+        {localesConstants
+          .filter((localeOption) => localeOption !== locale)
+          .sort((a, b) =>
+            t(`LOCALES.${a.toUpperCase()}`).localeCompare(t(`LOCALES.${b.toUpperCase()}`)),
+          )
+          .map((localeOption) => {
+            return (
+              <li
+                key={`localeSwitcherOption_${localeOption}`}
+                className='locale locale_option'
+                onClick={() => handleSetCurrentLocale(localeOption)}
+              >
+                <span>{t(`${localeOption.toUpperCase()}`)}</span>
+              </li>
+            )
+          })}
+      </div>
+    </div>
   )
 }
