@@ -9,3 +9,11 @@ export type TMenuButton = {
 export type TSdmScrollToTop = {
   elementId: string
 }
+
+// LOCALE SWITCHER
+
+export type TLocaleSwitcher = {
+  defaultValue: string
+  label: string
+  children: React.ReactNode
+}

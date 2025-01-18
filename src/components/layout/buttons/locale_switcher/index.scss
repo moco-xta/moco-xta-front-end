@@ -4,6 +4,40 @@
   padding-right: 2em;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+
+  .current_locale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all $hover_transition ease-in-out;
+
+    .caret {
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+  }
+
+  .locale_options {
+    position: absolute;
+    margin-top: $px_margin_L;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.current_locale.open .caret {
+  transform: rotate(90deg);
+}
+
+/* 
+
+.locale_switcher {
+  padding-right: 2em;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   color: $grey_light;
@@ -58,3 +92,4 @@
     transition: all $hover_transition ease-in-out;
   }
 }
+ */
