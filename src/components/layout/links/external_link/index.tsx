@@ -1,8 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import { LuExternalLink } from 'react-icons/lu'
 
 import type { TExternalLinkData } from '@/types/data/components/layout/types'
+
+import { Link } from '@/i18n/routing'
 
 import './index.scss'
 
