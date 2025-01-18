@@ -5,91 +5,52 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  color: $grey_lighter;
   cursor: pointer;
 
-  .current_locale {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all $hover_transition ease-in-out;
-
-    .caret {
-      margin-right: 10px;
-      transition: transform 0.3s;
-    }
-  }
-
-  .locale_options {
-    position: absolute;
-    margin-top: $px_margin_L;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-}
-
-.current_locale.open .caret {
-  transform: rotate(90deg);
-}
-
-/* 
-
-.locale_switcher {
-  padding-right: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  color: $grey_light;
-  cursor: pointer;
-  user-select: none;
-
-  .current_locale {
+  .current_locale_wrapper {
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     transition: all $hover_transition ease-in-out;
 
     .caret {
       margin-right: 10px;
       transition: transform 0.3s;
     }
+  }
+
+  .current_locale_wrapper:hover {
+    color: $white;
+    // font-weight: 600;
+    transition: all $hover_transition ease-in-out;
+  }
+
+  .current_locale::before {
+    display: block;
+    content: attr(currentLocale);
+    // font-weight: 600;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
 
   .locale_options {
     z-index: 0;
     position: absolute;
-    margin-top: $px_margin_XL;
-    padding-top: $px_margin_L;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    opacity: 0.2;
-    transition: all $hover_transition ease-in-out;
+    color: $grey_medium;
 
     .locale_option {
-      font-size: 12px;
+      margin-bottom: $px_margin_XXXS;
     }
 
     .locale_option:hover {
-      color: $white;
+      color: $grey_light;
     }
   }
-
-  .current_locale:hover {
-    color: $white;
-    font-weight: bold;
-  }
 }
-
-.locale_switcher.open .caret {
-  transform: rotate(90deg);
-
-  .locale_option {
-    opacity: 1;
-    transition: all $hover_transition ease-in-out;
-  }
-}
- */
