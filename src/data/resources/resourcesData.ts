@@ -26,6 +26,9 @@ export const resourcesData = {
             },
           ],
           websites: [],
+          youtubePlaylistlink: {
+            url: '',
+          },
           channels: [],
           articles: [
             {

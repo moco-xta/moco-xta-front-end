@@ -27,11 +27,11 @@
   },
   "SKILLS": {
     "PAGE_TITLE": "skills",
-    "PAGE_INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "PAGE_INTRODUCTION": "<p>Welcome to my skills page! My journey as a developer has been a diverse and exciting one, shaped by my passion for exploring different aspects of software development. I started my career with a strong foundation in backend development, specializing in Java and Spring Boot, where I honed my skills in building robust and scalable server-side applications. However, as I transitioned into the professional world, I found myself diving into the dynamic realm of frontend development, working extensively with modern frameworks like React and Angular to create engaging user experiences.</p><p>Over time, my curiosity and creativity led me to explore a new and fascinating frontier: real-time 3D experiences on the web. This field has allowed me to combine my technical expertise with my love for interactive design, pushing the boundaries of what’s possible in web development. Today, my skill set is a unique blend of backend, frontend, and 3D web technologies, enabling me to build full-stack applications that are not only functional but also visually immersive.</p><p>Feel free to explore my portfolio to see how I bring these skills together to create innovative and impactful projects!</p>",
     "SECTIONS": {
       "FRONT_END": {
         "SECTION_TITLE": "front-end",
-        "SECTION_DESCRIPTION": "Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.",
+        "SECTION_DESCRIPTION": "<p>Front-end development is the art of transforming ideas and concepts into dynamic and intuitive interfaces. Throughout my journey, I’ve had the opportunity to work with modern technologies such as React and Angular, powerful tools that have allowed me to create interactive, high-performance, and visually appealing user experiences.</p><p>I strive to combine design and functionality, focusing on accessible, responsive interfaces tailored to all devices. Every project is an opportunity to add a unique touch while maintaining clean, modular, and optimized code. Whether it’s building Single Page Applications (SPAs), managing complex states, or integrating smooth animations, front-end development is my favorite playground for bringing innovative and engaging projects to life.</p><p>In this section, you’ll discover my expertise in modern technologies, best practices, and projects where creativity and technique intertwine to deliver unforgettable user experiences.</p>",
         "PARAGRAPHS": {
           "NEXTJS": {
             "PARAGRAPH_TITLE": "next.js",
@@ -48,20 +48,26 @@
         }
       },
       "THREED": {
-        "SECTION_TITLE": "3D",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SECTION_TITLE": "real-time 3D",
+        "SECTION_DESCRIPTION": "<p>Real-time 3D development is where technology and creativity merge to craft immersive, interactive experiences. My passion for this field has driven me to explore the potential of bringing 3D graphics to the web, leveraging modern tools like Three.js, WebGL, and advanced shader programming to create visually stunning and responsive applications.</p><p>From building interactive visualizations to integrating 3D environments into web platforms, I aim to push the boundaries of what’s possible in the browser. Real-time 3D allows me to transform static interfaces into dynamic, engaging worlds where users can explore, interact, and experience content in a whole new way.</p><p>In this section, you’ll find examples of my work and expertise in real-time rendering, optimization techniques, and creative problem-solving that bring depth and realism to the web. It’s a playground where imagination meets innovation, and every project is an opportunity to captivate and inspire.</p>",
         "PARAGRAPHS": {}
       },
       "GRAPHICS": {
         "SECTION_TITLE": "graphics",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SECTION_DESCRIPTION": "<p>Graphics tools are the core of visual creation, allowing me to bring concepts and ideas to life by blending art and technology. Whether designing logos, editing images, modeling in 3D, or creating illustrations, I rely on powerful tools like Photoshop, Illustrator, Blender, and Artificial Intelligence to transform abstract ideas into tangible creations.</p><p>With Photoshop and Illustrator, I create striking visuals, vector illustrations, and compositions that add an aesthetic dimension to each project. Blender, on the other hand, allows me to model, texture, and animate 3D objects and scenes, providing a deeper visual immersion.</p><p>Artificial Intelligence helps me automate and optimize certain creative processes, opening up new possibilities for design innovation. These tools, combined with my creativity and technical expertise, allow me to add a unique touch to each project, crafting visuals that captivate and inspire.</p><p>In this section, you'll discover how these tools are used to enrich and bring my visual creations to life, with a keen focus on detail and quality.</p>",
         "PARAGRAPHS": {}
       },
       "BACK_END": {
         "SECTION_TITLE": "back-end",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SECTION_DESCRIPTION": "<p>Backend development is the backbone of every successful application, ensuring seamless functionality, security, and performance. My expertise in Spring Boot and Django enables me to design and implement robust, scalable, and efficient server-side solutions.</p><p>With Spring Boot, I build dynamic and high-performance applications, leveraging the power of Java and its rich ecosystem to create secure and maintainable APIs. On the other hand, my experience with Django has allowed me to work with Python’s clean and pragmatic approach, building fast and secure web applications with ease.</p><p>In this section, you'll find an overview of my backend skills, highlighting my ability to create and manage databases, handle user authentication, integrate APIs, and ensure smooth communication between the front-end and the server. Whether it’s building RESTful APIs or setting up complex server-side logic, I focus on writing clean, optimized, and reliable code that powers seamless user experiences.</p>",
         "PARAGRAPHS": {}
       }
+    }
+  },
+  "PROJECTS": {
+    "INTRODUCTION": {
+      "TITLE": "projects",
+      "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
   },
   "RESOURCES": {
@@ -183,7 +189,22 @@
       }
     }
   },
+  "ABOUT": {
+    "INTRODUCTION": {
+      "TITLE": "about",
+      "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }
+  },
   "LAYOUT": {
+    "PLAYER_PAGE": {
+      "INSTRUCTIONS": {
+        "TITLE": "instructions",
+        "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "use the keyboard arrows to move",
+        "USE": "use",
+        "OR": "or",
+        "TO_DIRECT_THE_CAMERA": "to direct the camera"
+      }
+    },
     "SIDE_NAVIGATION_MENU": {
       "ON_THIS_PAGE": "on this page"
     },

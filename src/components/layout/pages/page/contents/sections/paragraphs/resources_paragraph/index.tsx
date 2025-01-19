@@ -82,7 +82,6 @@ export default function ResourcesParagraph({
           translationPath={`${translationPath}.${paragraphData.translationKey}`}
           title={'ARTICLES'}
           links={paragraphData.articles as unknown as TExternalLinkData[]}
-          youtubePlaylistlink={paragraphData.youtubePlaylistlink}
         />
       )}
     </div>

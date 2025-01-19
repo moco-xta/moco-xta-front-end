@@ -33,7 +33,9 @@ export type TResourcesParagraphData = {
   key: string
   translationKey: string
   documentation: TLinksArrayData[]
-  youtubePlaylistlink?: string
+  youtubePlaylistlink?: {
+    url: string
+  }
   websites: TLinksArrayData[]
   channels: TLinksArrayData[]
   articles: TLinksArrayData[]
@@ -45,7 +47,9 @@ export type TLinksArrayData = {
   translationPath: string
   title: string
   links: TExternalLinkData[]
-  youtubePlaylistlink?: string
+  youtubePlaylistlink?: {
+    url: string
+  }
 }
 
 export type TExternalLinkData = {

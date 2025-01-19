@@ -26,12 +26,12 @@
     }
   },
   "SKILLS": {
-    "PAGE_TITLE": "skills",
-    "PAGE_INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "PAGE_TITLE": "habilidades",
+    "PAGE_INTRODUCTION": "<p>¡Bienvenido a mi página de habilidades! Mi trayectoria como desarrollador ha sido diversa y emocionante, moldeada por mi pasión por explorar diferentes aspectos del desarrollo de software. Comencé mi carrera con una sólida base en desarrollo backend, especializándome en Java y Spring Boot, donde perfeccioné mis habilidades para construir aplicaciones robustas y escalables del lado del servidor. Sin embargo, al adentrarme en el mundo profesional, descubrí mi interés por el dinámico campo del desarrollo frontend, trabajando ampliamente con frameworks modernos como React y Angular para crear experiencias de usuario atractivas.</p><p>Con el tiempo, mi curiosidad y creatividad me llevaron a explorar un nuevo y fascinante territorio: experiencias 3D en tiempo real en la web. Este campo me ha permitido combinar mi experiencia técnica con mi amor por el diseño interactivo, ampliando los límites de lo que es posible en el desarrollo web. Hoy en día, mi conjunto de habilidades es una combinación única de tecnologías backend, frontend y web 3D, lo que me permite crear aplicaciones full-stack que no solo son funcionales, sino también visualmente inmersivas.</p><p>¡Te invito a explorar mi portafolio y descubrir cómo integro estas habilidades para crear proyectos innovadores y de impacto!</p>",
     "SECTIONS": {
       "FRONT_END": {
         "SECTION_TITLE": "front-end",
-        "SECTION_DESCRIPTION": "Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.",
+        "SECTION_DESCRIPTION": "<p>El desarrollo front-end es el arte de transformar ideas y conceptos en interfaces dinámicas e intuitivas. A lo largo de mi trayectoria, he tenido la oportunidad de trabajar con tecnologías modernas como React y Angular, herramientas potentes que me han permitido crear experiencias de usuario interactivas, de alto rendimiento y visualmente atractivas.</p><p>Me esfuerzo por combinar diseño y funcionalidad, poniendo énfasis en interfaces accesibles, responsivas y adaptadas a todo tipo de dispositivos. Cada proyecto es una oportunidad para aportar un toque único, manteniendo siempre un código limpio, modular y optimizado. Ya sea construyendo aplicaciones de una sola página (SPAs), gestionando estados complejos o integrando animaciones fluidas, el desarrollo front-end es mi terreno de juego favorito para dar vida a proyectos innovadores y envolventes.</p><p>En esta sección, descubrirás mi experiencia en tecnologías modernas, buenas prácticas y proyectos donde la creatividad y la técnica se entrelazan para ofrecer experiencias de usuario inolvidables.</p>",
         "PARAGRAPHS": {
           "NEXTJS": {
             "PARAGRAPH_TITLE": "next.js",
@@ -48,20 +48,26 @@
         }
       },
       "THREED": {
-        "SECTION_TITLE": "3D",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SECTION_TITLE": "3D en tiempo real",
+        "SECTION_DESCRIPTION": "<p>El desarrollo 3D en tiempo real es donde la tecnología y la creatividad se fusionan para crear experiencias inmersivas e interactivas. Mi pasión por este campo me ha llevado a explorar el potencial de llevar gráficos 3D a la web, utilizando herramientas modernas como Three.js, WebGL y programación avanzada de shaders para crear aplicaciones visualmente impactantes y receptivas.</p><p>Desde construir visualizaciones interactivas hasta integrar entornos 3D en plataformas web, mi objetivo es superar los límites de lo que es posible en el navegador. El 3D en tiempo real me permite transformar interfaces estáticas en mundos dinámicos y atractivos donde los usuarios pueden explorar, interactuar y experimentar el contenido de una manera completamente nueva.</p><p>En esta sección, encontrarás ejemplos de mi trabajo y experiencia en renderizado en tiempo real, técnicas de optimización y resolución creativa de problemas que aportan profundidad y realismo a la web. Es un espacio donde la imaginación se encuentra con la innovación, y cada proyecto es una oportunidad para cautivar e inspirar.</p>",
         "PARAGRAPHS": {}
       },
       "GRAPHICS": {
         "SECTION_TITLE": "graphics",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SECTION_DESCRIPTION": "<p>Las herramientas gráficas son el núcleo de la creación visual y me permiten dar vida a conceptos e ideas, combinando arte y tecnología. Ya sea para diseñar logotipos, editar imágenes, modelar en 3D o crear ilustraciones, utilizo una serie de herramientas potentes como Photoshop, Illustrator, Blender y la Inteligencia Artificial para transformar ideas abstractas en realizaciones tangibles.</p><p>Con Photoshop e Illustrator, creo visuales impactantes, ilustraciones vectoriales y composiciones que aportan una dimensión estética a cada proyecto. Blender, por su parte, me ofrece la posibilidad de modelar, texturizar y animar objetos y escenas 3D, brindando una inmersión visual más profunda.</p><p>La Inteligencia Artificial me ayuda en tareas de creación automatizada y optimizada, abriendo nuevas posibilidades para la innovación en el diseño. Estas herramientas, combinadas con mi creatividad y experiencia técnica, me permiten aportar un toque único a cada proyecto, creando visuales que cautivan e inspiran.</p><p>En esta sección, descubrirás cómo estas herramientas se utilizan para enriquecer y dar vida a mis creaciones visuales, con una atención especial a los detalles y la calidad.</p>",
         "PARAGRAPHS": {}
       },
       "BACK_END": {
         "SECTION_TITLE": "back-end",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SECTION_DESCRIPTION": "<p>El desarrollo backend es la columna vertebral de cada aplicación exitosa, garantizando una funcionalidad, seguridad y rendimiento impecables. Mi experiencia en Spring Boot y Django me permite diseñar e implementar soluciones robustas, escalables y eficientes en el lado del servidor.</p><p>Con Spring Boot, construyo aplicaciones dinámicas y de alto rendimiento, aprovechando el poder de Java y su rico ecosistema para crear APIs seguras y fáciles de mantener. Por otro lado, mi experiencia con Django me ha permitido trabajar con el enfoque limpio y pragmático de Python, desarrollando aplicaciones web rápidas y seguras con facilidad.</p><p>En esta sección, encontrarás una visión general de mis habilidades backend, destacando mi capacidad para crear y gestionar bases de datos, manejar autenticación de usuarios, integrar APIs y garantizar una comunicación fluida entre el front-end y el servidor. Ya sea construyendo APIs RESTful o configurando una lógica compleja en el servidor, me enfoco en escribir código limpio, optimizado y confiable que respalde experiencias de usuario sin interrupciones.</p>",
         "PARAGRAPHS": {}
       }
+    }
+  },
+  "PROJECTS": {
+    "INTRODUCTION": {
+      "TITLE": "projects",
+      "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
   },
   "RESOURCES": {
@@ -183,7 +189,22 @@
       }
     }
   },
+  "ABOUT": {
+    "INTRODUCTION": {
+      "TITLE": "about",
+      "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }
+  },
   "LAYOUT": {
+    "PLAYER_PAGE": {
+      "INSTRUCTIONS": {
+        "TITLE": "instructions",
+        "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "use the keyboard arrows to move",
+        "USE": "use",
+        "OR": "or",
+        "TO_DIRECT_THE_CAMERA": "to direct the camera"
+      }
+    },
     "SIDE_NAVIGATION_MENU": {
       "ON_THIS_PAGE": "en esta página"
     },
