@@ -3,6 +3,18 @@ import { ThreeEvent } from '@react-three/fiber'
 
 import type { TCoordinatesData } from '@/types/data/components/three/types'
 
+export function setGroupSize(boundingBox: THREE.Box3, object: THREE.Group, size: number) {
+  const objectSize = new THREE.Vector3()
+  boundingBox.getSize(objectSize)
+  const scaleFactor = size / Math.max(objectSize.x, objectSize.y)
+  object.children.forEach((child) => {
+    if (child instanceof THREE.Mesh) {
+      child.scale.set(scaleFactor, scaleFactor, scaleFactor)
+      child.updateWorldMatrix(true, false)
+    }
+  })
+}
+
 export function getDegreeEuler(rotationData: TCoordinatesData) {
   return new THREE.Euler(
     rotationData.x ? THREE.MathUtils.degToRad(rotationData.x) : 0,

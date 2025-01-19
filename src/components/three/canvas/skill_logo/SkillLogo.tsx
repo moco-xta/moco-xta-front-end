@@ -7,28 +7,9 @@ import type { TSkillLogo } from '@/types/components/three/types'
 
 import useHoverModelAnimation from '@/hooks/three/useHoverModelAnimation'
 
+import { setGroupSize } from '@/helpers/threeHelpers'
+
 import { skillLogoData } from '@/data/skills/skill_logo/three/skillLogoData'
-
-function setScale(boundingBox: THREE.Box3, object: THREE.Group, maxSize: number) {
-  const size = new THREE.Vector3();
-  boundingBox.getSize(size);
-  const scaleFactor = maxSize / Math.max(size.x, size.y)
-  const scaleMatrix = new THREE.Matrix4().makeScale(scaleFactor, scaleFactor, scaleFactor)
-
-  if (object.children.length === 1) {
-    const mesh = object.children[0] as THREE.Mesh
-    mesh.geometry.applyMatrix4(scaleMatrix)
-    mesh.updateWorldMatrix(true, false)
-    mesh.scale.set(1, 1, 1)
-  } else {
-    object.children.forEach(child => {
-      const mesh = child as THREE.Mesh
-      mesh.geometry.applyMatrix4(scaleMatrix)
-      mesh.updateWorldMatrix(true, false)
-      mesh.scale.set(1, 1, 1)
-    })
-  }
-}
 
 const lazyWithForwardRef = (factory: TLazyFactory, componentName: string) => {
   const LazyComponent = lazy(() =>
@@ -39,9 +20,9 @@ const lazyWithForwardRef = (factory: TLazyFactory, componentName: string) => {
             console.log('Ref', ref)
             const boundingBox = new THREE.Box3()
             if (ref && 'current' in ref) {
-              const group = (ref.current as THREE.Group) as THREE.Group
+              const group = ref.current as THREE.Group as THREE.Group
               boundingBox.setFromObject(ref.current as THREE.Object3D)
-              setScale(boundingBox, group, 2)
+              setGroupSize(boundingBox, group, 2)
             }
           }
         }, [ref])
@@ -96,6 +77,7 @@ export default function SkillLogo({ logoData }: TSkillLogo) {
           <meshStandardMaterial
             transparent
             opacity={0}
+            side={THREE.DoubleSide}
           />
         </Box>
       </group>
