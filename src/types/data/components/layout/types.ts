@@ -13,7 +13,7 @@ export type TPageData = {
 export type TSectionData = {
   key: string
   translationKey: string
-  paragraphs: TParagraphData[]
+  paragraphs: TParagraphData[] | TSkillsParagraphData[] | TResourcesParagraphData[]
 }
 
 // PARAGRAPH
@@ -23,15 +23,11 @@ type TParagraphData = {
   translationKey: string
 }
 
-export type TSkillsParagraphData = {
-  key: string
+export type TSkillsParagraphData = TParagraphData & {
   logo: TLogoData
-  translationKey: string
 }
 
-export type TResourcesParagraphData = {
-  key: string
-  translationKey: string
+export type TResourcesParagraphData = TParagraphData & {
   documentation: TLinksArrayData[]
   youtubePlaylistlink?: {
     url: string

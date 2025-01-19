@@ -60,7 +60,6 @@ export const skillsData = {
           },
           paragraphs: [],
         },
-        ,
         {
           key: 'babylonjs',
           translationKey: 'BABYLONJS',
@@ -91,7 +90,6 @@ export const skillsData = {
           },
           paragraphs: [],
         },
-        ,
         {
           key: 'blender',
           translationKey: 'BLENDER',
