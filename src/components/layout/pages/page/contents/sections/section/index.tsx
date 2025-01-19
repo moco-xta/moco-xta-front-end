@@ -56,7 +56,7 @@ export default function Section({ translationPath, sectionData }: TSection) {
       />
       <div className='pc_item section_description'>
         {t.rich(`${translationPath}.SECTIONS.${sectionData.translationKey}.SECTION_DESCRIPTION`, {
-          p: (chunk) => <p>{chunk}</p>,
+          p: (chunk) => <p className='paragraph_translation'>{chunk}</p>,
         })}
       </div>
       {(sectionData.paragraphs as (TSkillsParagraphData | TResourcesParagraphData)[]).map(

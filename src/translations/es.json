@@ -27,40 +27,167 @@
   },
   "SKILLS": {
     "PAGE_TITLE": "habilidades",
-    "PAGE_INTRODUCTION": "<p>¡Bienvenido a mi página de habilidades! Mi trayectoria como desarrollador ha sido diversa y emocionante, moldeada por mi pasión por explorar diferentes aspectos del desarrollo de software. Comencé mi carrera con una sólida base en desarrollo backend, especializándome en Java y Spring Boot, donde perfeccioné mis habilidades para construir aplicaciones robustas y escalables del lado del servidor. Sin embargo, al adentrarme en el mundo profesional, descubrí mi interés por el dinámico campo del desarrollo frontend, trabajando ampliamente con frameworks modernos como React y Angular para crear experiencias de usuario atractivas.</p><p>Con el tiempo, mi curiosidad y creatividad me llevaron a explorar un nuevo y fascinante territorio: experiencias 3D en tiempo real en la web. Este campo me ha permitido combinar mi experiencia técnica con mi amor por el diseño interactivo, ampliando los límites de lo que es posible en el desarrollo web. Hoy en día, mi conjunto de habilidades es una combinación única de tecnologías backend, frontend y web 3D, lo que me permite crear aplicaciones full-stack que no solo son funcionales, sino también visualmente inmersivas.</p><p>¡Te invito a explorar mi portafolio y descubrir cómo integro estas habilidades para crear proyectos innovadores y de impacto!</p>",
+    "PAGE_INTRODUCTION": "<p>¡Bienvenido a la página de habilidades de mi portafolio! Mi camino como desarrollador ha sido una combinación de experiencias diversas, impulsadas por mi curiosidad de explorar diferentes áreas del desarrollo de software. Comencé con una base sólida en desarrollo backend, especializándome en Java y Spring, donde me enfoqué en construir aplicaciones del lado del servidor escalables y confiables.</p><p>A medida que avancé en el mundo profesional, hice la transición al desarrollo frontend, sumergiéndome en frameworks como Nextjs,  React y Angular. Este cambio me permitió crear experiencias de usuario atractivas e interactivas, dando vida a los diseños con tecnologías modernas.</p><p>A lo largo del camino, mi interés creció por el emocionante campo de las experiencias 3D en tiempo real en la web. Combinando mis habilidades técnicas con mi pasión por el diseño interactivo, he estado empujando los límites de lo que es posible en la web.</p><p>Hoy en día, mi conjunto de habilidades abarca backend, frontend y desarrollo web 3D, lo que me permite crear aplicaciones full-stack que son tanto funcionales como visualmente inmersivas. ¡Explora mi portafolio para ver cómo combino estas habilidades diversas en proyectos innovadores y de impacto!</p>",
     "SECTIONS": {
-      "FRONT_END": {
-        "SECTION_TITLE": "front-end",
-        "SECTION_DESCRIPTION": "<p>El desarrollo front-end es el arte de transformar ideas y conceptos en interfaces dinámicas e intuitivas. A lo largo de mi trayectoria, he tenido la oportunidad de trabajar con tecnologías modernas como React y Angular, herramientas potentes que me han permitido crear experiencias de usuario interactivas, de alto rendimiento y visualmente atractivas.</p><p>Me esfuerzo por combinar diseño y funcionalidad, poniendo énfasis en interfaces accesibles, responsivas y adaptadas a todo tipo de dispositivos. Cada proyecto es una oportunidad para aportar un toque único, manteniendo siempre un código limpio, modular y optimizado. Ya sea construyendo aplicaciones de una sola página (SPAs), gestionando estados complejos o integrando animaciones fluidas, el desarrollo front-end es mi terreno de juego favorito para dar vida a proyectos innovadores y envolventes.</p><p>En esta sección, descubrirás mi experiencia en tecnologías modernas, buenas prácticas y proyectos donde la creatividad y la técnica se entrelazan para ofrecer experiencias de usuario inolvidables.</p>",
+      "FRONT_END_FRAMEWORKS": {
+        "SECTION_TITLE": "frameworks de front-end",
+        "SECTION_DESCRIPTION": "<p>En el mundo en constante evolución del desarrollo web, elegir el framework adecuado para el front-end es clave para construir aplicaciones receptivas, eficientes y fáciles de usar. En esta sección, destaco mi experiencia con tres de los frameworks más populares: Next.js, React y Angular. Estas tecnologías me han permitido crear aplicaciones web dinámicas y de alto rendimiento, aprovechando herramientas y metodologías modernas. Ya sea construyendo aplicaciones renderizadas en el servidor con Next.js, creando componentes reutilizables con React o gestionando proyectos complejos con Angular, cuento con las habilidades necesarias para enfrentar una amplia variedad de desafíos en el desarrollo front-end.</p>",
         "PARAGRAPHS": {
           "NEXTJS": {
             "PARAGRAPH_TITLE": "next.js",
-            "PARAGRAPH_DESCRIPTION": "Next.js is a powerful open-source React framework designed to build fast, scalable, and SEO-friendly web applications. Developed and maintained by Vercel, it provides features like server-side rendering (SSR), static site generation (SSG), and API routes, allowing developers to create dynamic and high-performance web experiences. With its file-based routing system and built-in optimizations like image optimization and code splitting, Next.js simplifies development while improving user experience. It also supports hybrid rendering, enabling developers to choose between static and dynamic content generation. Ideal for modern web development, Next.js is widely used for building everything from simple websites to complex applications."
+            "PARAGRAPH_DESCRIPTION": "Next.js es un potente framework de React de código abierto diseñado para construir aplicaciones web rápidas, escalables y optimizadas para SEO. Desarrollado y mantenido por Vercel, ofrece características como renderizado del lado del servidor (SSR), generación de sitios estáticos (SSG) y rutas de API, permitiendo a los desarrolladores crear experiencias web dinámicas y de alto rendimiento. Con su sistema de enrutamiento basado en archivos y optimizaciones integradas como optimización de imágenes y división de código, Next.js simplifica el desarrollo mientras mejora la experiencia del usuario. También admite renderizado híbrido, lo que permite a los desarrolladores elegir entre generación de contenido estático y dinámico. Ideal para el desarrollo web moderno, Next.js se utiliza ampliamente para construir desde sitios web simples hasta aplicaciones complejas."
           },
           "REACT": {
             "PARAGRAPH_TITLE": "react",
-            "PARAGRAPH_DESCRIPTION": "React is a popular open-source JavaScript library used for building user interfaces, particularly for single-page applications. Created and maintained by Meta (formerly Facebook), React allows developers to create reusable UI components that efficiently update and render as application data changes. It employs a declarative programming approach, making the code more predictable and easier to debug. At its core, React uses a virtual DOM to optimize rendering performance by updating only the parts of the UI that change, rather than reloading the entire page. React is highly extensible, integrates seamlessly with other libraries or frameworks, and is widely used for creating dynamic and responsive web applications."
+            "PARAGRAPH_DESCRIPTION": "React es una biblioteca de JavaScript de código abierto muy popular utilizada para construir interfaces de usuario, especialmente para aplicaciones de una sola página. Creada y mantenida por Meta (anteriormente Facebook), React permite a los desarrolladores crear componentes de UI reutilizables que se actualizan y renderizan de manera eficiente a medida que cambian los datos de la aplicación. Emplea un enfoque de programación declarativa, lo que hace que el código sea más predecible y fácil de depurar. En su núcleo, React utiliza un DOM virtual para optimizar el rendimiento de renderizado actualizando solo las partes de la UI que cambian, en lugar de recargar toda la página. React es altamente extensible, se integra perfectamente con otras bibliotecas o frameworks, y se utiliza ampliamente para crear aplicaciones web dinámicas y responsivas."
           },
           "ANGULAR": {
-            "PARAGRAPH_TITLE": "Angular",
-            "PARAGRAPH_DESCRIPTION": "Angular is a powerful open-source framework developed and maintained by Google for building dynamic and scalable web applications. Known for its comprehensive nature, Angular provides a complete solution for front-end development, including tools for building interactive user interfaces, managing application state, and handling routing. It uses TypeScript, a superset of JavaScript, and follows a component-based architecture, making code modular, reusable, and maintainable. Angular’s two-way data binding ensures that changes in the UI reflect in the underlying data model and vice versa, simplifying real-time updates. With its robust features, including dependency injection and a rich ecosystem of tools, Angular is ideal for creating complex, enterprise-level applications."
+            "PARAGRAPH_TITLE": "angular",
+            "PARAGRAPH_DESCRIPTION": "Angular es un poderoso framework de código abierto desarrollado y mantenido por Google para construir aplicaciones web dinámicas y escalables. Conocido por su naturaleza integral, Angular proporciona una solución completa para el desarrollo front-end, incluyendo herramientas para construir interfaces de usuario interactivas, gestionar el estado de la aplicación y manejar el enrutamiento. Utiliza TypeScript, un superconjunto de JavaScript, y sigue una arquitectura basada en componentes, lo que hace que el código sea modular, reutilizable y fácil de mantener. La vinculación bidireccional de datos de Angular asegura que los cambios en la UI se reflejen en el modelo de datos subyacente y viceversa, simplificando las actualizaciones en tiempo real. Con sus características robustas, incluyendo inyección de dependencias y un rico ecosistema de herramientas, Angular es ideal para crear aplicaciones complejas a nivel empresarial."
           }
         }
       },
-      "THREED": {
+      "FRONT_END_LIBRARIES": {
+        "SECTION_TITLE": "bibliotecas de front-end",
+        "SECTION_DESCRIPTION": "<p>En el desarrollo front-end moderno, las librerías juegan un papel crucial en la mejora de la funcionalidad, optimización del rendimiento y simplificación de tareas complejas. En esta sección, destaco mi experiencia con una variedad de poderosas librerías que complementan y amplían las capacidades de frameworks como React, Angular y Next.js. Desde la gestión del estado con Redux, el manejo de solicitudes API con GraphQL, hasta la integración de mapas con Google Maps API y la creación de animaciones fluidas con Gsap, aprovecho estas herramientas para crear experiencias de usuario interactivas y sin interrupciones. Además, librerías como Next-Intl, Formik y MUI facilitan la internacionalización, el manejo de formularios y el diseño de interfaces de usuario, haciendo que el desarrollo sea más eficiente y escalable.</p>",
+        "PARAGRAPHS": {
+          "REDUX": {
+            "PARAGRAPH_TITLE": "redux",
+            "PARAGRAPH_DESCRIPTION": "Redux es una popular biblioteca de JavaScript de código abierto para la gestión del estado de aplicaciones. Creada y mantenida por Facebook, Redux ofrece una solución predecible e inmutable para la gestión del estado, lo que simplifica el desarrollo de aplicaciones y fomenta la organización del código. Admite conceptos de programación funcional, como funciones puras y datos inmutables, lo que la convierte en una herramienta potente para construir aplicaciones web complejas y escalables."
+          },
+          "GRAPHQL": {
+            "PARAGRAPH_TITLE": "graphql",
+            "PARAGRAPH_DESCRIPTION": "GraphQL es un lenguaje de consulta para APIs y un entorno de ejecución para ejecutar consultas en un servidor. Creado y mantenido por Facebook, GraphQL ofrece una forma flexible y potente de definir modelos de datos y obtener datos de un servidor. Permite a los clientes solicitar campos específicos, campos anidados y relaciones entre objetos, lo que lo convierte en una herramienta poderosa para construir aplicaciones web complejas y escalables."
+          },
+          "GOOGLE_MAPS": {
+            "PARAGRAPH_TITLE": "google maps API",
+            "PARAGRAPH_DESCRIPTION": "La API de Google Maps JavaScript proporciona una forma simple y poderosa de incrustar Google Maps en tus páginas web. Desarrollada y mantenida por Google, permite a los desarrolladores crear mapas interactivos, marcadores y polígonos, siendo una opción popular para construir experiencias personalizadas e interactivas. Con sus potentes características, como vista de calle, geocodificación y enrutamiento, la API de Google Maps JavaScript es una herramienta poderosa para crear aplicaciones web dinámicas y atractivas."
+          },
+          "GSAP": {
+            "PARAGRAPH_TITLE": "gsap",
+            "PARAGRAPH_DESCRIPTION": "GSAP (GreenSock Animation Platform) de GreenSock es una potente biblioteca de JavaScript de código abierto para crear animaciones complejas y efectos interactivos. Desarrollada y mantenida por GreenSock, GSAP proporciona un conjunto de herramientas potentes para animar elementos, crear animaciones y manejar eventos. Admite animaciones CSS, animaciones SVG y objetos JavaScript, lo que la convierte en una solución versátil y flexible para crear experiencias web dinámicas e interactivas."
+          },
+          "NEXT_INTL": {
+            "PARAGRAPH_TITLE": "next-intl",
+            "PARAGRAPH_DESCRIPTION": "Next-Intl es una biblioteca de internacionalización diseñada para aplicaciones de Next.js, construida sobre react-intl, que simplifica la implementación de soporte multilingüe. Permite la detección automática de locales, lo que permite a la aplicación servir contenido en el idioma preferido del usuario. Con una integración fluida en la generación de sitios estáticos (SSG) y el renderizado del lado del servidor (SSR) de Next.js, mejora el SEO y el rendimiento al pre-renderizar contenido en varios idiomas. Next-Intl también admite un formato rico de mensajes para fechas, números y monedas, y ofrece una API fácil de usar para gestionar traducciones. Es escalable, lo que la convierte en una opción ideal para proyectos de cualquier tamaño, ofreciendo simplicidad y flexibilidad al construir aplicaciones multilingües."
+          },
+          "FORMIK": {
+            "PARAGRAPH_TITLE": "formik",
+            "PARAGRAPH_DESCRIPTION": "Formik es una biblioteca de formularios para React que simplifica el proceso de creación de formularios con validación, envío y manejo de errores. Creada y mantenida por 4Catalyzer, Formik proporciona una API de alto nivel para gestionar el estado de los formularios, validar entradas y renderizar componentes de formularios. Admite componentes funcionales, hooks y render props personalizados, lo que la convierte en una opción popular para construir formularios dinámicos e interactivos en la web."
+          },
+          "MUI": {
+            "PARAGRAPH_TITLE": "mui",
+            "PARAGRAPH_DESCRIPTION": "Material-UI es un popular framework de React de código abierto que sigue las pautas de Material Design. Creado y mantenido por el equipo de Google, Material-UI proporciona un conjunto de componentes, estilos y temas preconstruidos que facilitan la creación de interfaces visualmente atractivas y fáciles de usar. Admite una amplia gama de componentes, incluyendo botones, tarjetas, formularios y navegación, lo que lo convierte en una opción popular para construir aplicaciones web dinámicas y responsivas."
+          }
+        }
+      },
+      "STYLING": {
+        "SECTION_TITLE": "estilos",
+        "SECTION_DESCRIPTION": "<p>En el desarrollo web, crear diseños visualmente atractivos y responsivos es clave para ofrecer experiencias de usuario excepcionales. En esta sección, destaco mi experiencia en estilización con dos herramientas poderosas: Sass y Tailwind CSS. Con Sass, aprovecho características avanzadas como variables, mixins y anidamiento para crear hojas de estilo escalables y fáciles de mantener. Por otro lado, Tailwind CSS me permite construir diseños rápidos y flexibles utilizando clases utilitarias, lo que facilita el desarrollo y la personalización de alto nivel. Estas herramientas de estilización me permiten crear interfaces limpias, eficientes y visualmente impresionantes, asegurando que mis proyectos no solo se vean geniales, sino que también funcionen de manera óptima en todos los dispositivos.</p>",
+        "PARAGRAPHS": {
+          "SASS": {
+            "PARAGRAPH_TITLE": "sass",
+            "PARAGRAPH_DESCRIPTION": "Sass es un preprocesador de CSS que añade características como variables, reglas anidadas, mixins y funciones a CSS. Creado y mantenido por la comunidad, Sass ofrece una forma flexible y poderosa de escribir CSS que es más fácil de leer, escribir y mantener. Admite variables, anidamiento, mixins y funciones, lo que lo convierte en una opción popular para construir CSS dinámico y modular."
+          },
+          "TAILWIND": {
+            "PARAGRAPH_TITLE": "tailwindcss",
+            "PARAGRAPH_DESCRIPTION": "Tailwind CSS es un framework CSS orientado a utilidades que proporciona un conjunto de clases y componentes para ayudarte a construir aplicaciones web responsivas, accesibles y eficientes. Creado y mantenido por el equipo de Tailwind Labs, Tailwind CSS ofrece una forma flexible y poderosa de escribir CSS que es más fácil de leer, escribir y mantener. Admite clases utilitarias, componentes y plugins, lo que lo convierte en una opción popular para crear CSS dinámico y modular."
+          }
+        }
+      },
+      "REAL_TIME_THREED": {
         "SECTION_TITLE": "3D en tiempo real",
-        "SECTION_DESCRIPTION": "<p>El desarrollo 3D en tiempo real es donde la tecnología y la creatividad se fusionan para crear experiencias inmersivas e interactivas. Mi pasión por este campo me ha llevado a explorar el potencial de llevar gráficos 3D a la web, utilizando herramientas modernas como Three.js, WebGL y programación avanzada de shaders para crear aplicaciones visualmente impactantes y receptivas.</p><p>Desde construir visualizaciones interactivas hasta integrar entornos 3D en plataformas web, mi objetivo es superar los límites de lo que es posible en el navegador. El 3D en tiempo real me permite transformar interfaces estáticas en mundos dinámicos y atractivos donde los usuarios pueden explorar, interactuar y experimentar el contenido de una manera completamente nueva.</p><p>En esta sección, encontrarás ejemplos de mi trabajo y experiencia en renderizado en tiempo real, técnicas de optimización y resolución creativa de problemas que aportan profundidad y realismo a la web. Es un espacio donde la imaginación se encuentra con la innovación, y cada proyecto es una oportunidad para cautivar e inspirar.</p>",
-        "PARAGRAPHS": {}
+        "SECTION_DESCRIPTION": "<p>El mundo del 3D en tiempo real en la web es un campo emocionante que permite crear experiencias interactivas e inmersivas de alto nivel. En esta sección, destaco mi experiencia en la creación de impresionantes visuales en 3D utilizando WebGL y bibliotecas poderosas como Three.js, React-three-fiber y Babylon.js. Al aprovechar estas tecnologías, doy vida a objetos 3D, entornos y animaciones directamente en el navegador, permitiendo interacciones ricas y experiencias visuales dinámicas. Ya sea para videojuegos, visualización de datos o aplicaciones web inmersivas, mis habilidades en el desarrollo de 3D en tiempo real me permiten crear experiencias innovadoras y visualmente cautivadoras en la web.</p>",
+        "PARAGRAPHS": {
+          "WEBGL": {
+            "PARAGRAPH_TITLE": "webgl",
+            "PARAGRAPH_DESCRIPTION": "WebGL is a standard for rendering 2D and 3D graphics on the web. Created and maintained by Khronos Group, WebGL provides a powerful API for creating and rendering 3D graphics on the web. It allows developers to create interactive, high-performance, and visually appealing user experiences by utilizing hardware-accelerated graphics processing units (GPUs)."
+          },
+          "THREEJS": {
+            "PARAGRAPH_TITLE": "three.js",
+            "PARAGRAPH_DESCRIPTION": "Three.js is a powerful open-source JavaScript library used for building 3D graphics and interactive experiences. Created and maintained by Mozilla, Three.js provides a complete framework for creating and rendering 3D graphics, including geometries, materials, animations, and event handling. It supports WebGL, a standard for rendering 2D and 3D graphics, and allows developers to create visually stunning and interactive experiences on the web."
+          },
+          "REACT_THREE_FIBER": {
+            "PARAGRAPH_TITLE": "react-three-fiber",
+            "PARAGRAPH_DESCRIPTION": "React Three Fiber is a popular open-source library developed by the same team that created Three.js, providing a React component for rendering 3D graphics. React Three Fiber allows developers to build and render 3D graphics using React and leverage the power of Three.js to create visually stunning and interactive experiences on the web."
+          },
+          "BABYLONJS": {
+            "PARAGRAPH_TITLE": "babylon.js",
+            "PARAGRAPH_DESCRIPTION": "Babylon.js is a powerful open-source JavaScript library used for building 3D graphics and interactive experiences. Created and maintained by Microsoft, Babylon.js provides a complete framework for creating and rendering 3D graphics, including geometries, materials, animations, and event handling. It supports WebGL, a standard for rendering 2D and 3D graphics, and allows developers to create visually stunning and interactive experiences on the web."
+          }
+        }
       },
       "GRAPHICS": {
         "SECTION_TITLE": "graphics",
-        "SECTION_DESCRIPTION": "<p>Las herramientas gráficas son el núcleo de la creación visual y me permiten dar vida a conceptos e ideas, combinando arte y tecnología. Ya sea para diseñar logotipos, editar imágenes, modelar en 3D o crear ilustraciones, utilizo una serie de herramientas potentes como Photoshop, Illustrator, Blender y la Inteligencia Artificial para transformar ideas abstractas en realizaciones tangibles.</p><p>Con Photoshop e Illustrator, creo visuales impactantes, ilustraciones vectoriales y composiciones que aportan una dimensión estética a cada proyecto. Blender, por su parte, me ofrece la posibilidad de modelar, texturizar y animar objetos y escenas 3D, brindando una inmersión visual más profunda.</p><p>La Inteligencia Artificial me ayuda en tareas de creación automatizada y optimizada, abriendo nuevas posibilidades para la innovación en el diseño. Estas herramientas, combinadas con mi creatividad y experiencia técnica, me permiten aportar un toque único a cada proyecto, creando visuales que cautivan e inspiran.</p><p>En esta sección, descubrirás cómo estas herramientas se utilizan para enriquecer y dar vida a mis creaciones visuales, con una atención especial a los detalles y la calidad.</p>",
-        "PARAGRAPHS": {}
+        "SECTION_DESCRIPTION": "<p>El mundo del diseño gráfico está evolucionando rápidamente, con la inteligencia artificial (IA) desempeñando un papel cada vez más importante en la transformación del proceso creativo. En esta sección, destaco mi experiencia en diseño gráfico utilizando Photoshop, Illustrator y Blender, al mismo tiempo que adopto las innovaciones que la IA aporta al campo. Desde herramientas impulsadas por IA para la mejora de imágenes y generación de contenido en Photoshop, hasta la vectorización inteligente y la automatización del diseño en Illustrator, la IA ha abierto nuevas posibilidades para la eficiencia y la creatividad. Además, en Blender, la IA asiste en tareas como la modelado y animación procedural, haciendo que el diseño 3D sea más rápido e intuitivo. Al integrar estos avances, puedo llevar los límites del diseño más allá, ofreciendo activos innovadores y visualmente cautivadores para cualquier proyecto.</p>",
+        "PARAGRAPHS": {
+          "PHOTOSHOP": {
+            "PARAGRAPH_TITLE": "photoshop",
+            "PARAGRAPH_DESCRIPTION": "Photoshop is a powerful graphic design software developed by Adobe. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Photoshop allows designers to create visually stunning visuals and compositions. I use Photoshop to edit images, create 3D models, and optimize visuals for web and print."
+          },
+          "ILLUSTRATOR": {
+            "PARAGRAPH_TITLE": "illustrator",
+            "PARAGRAPH_DESCRIPTION": "Illustrator is a powerful vector graphics software developed by Adobe. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Illustrator allows designers to create visually stunning visuals and compositions. I use Illustrator to edit images, create 3D models, and optimize visuals for web and print."
+          },
+          "BLENDER": {
+            "PARAGRAPH_TITLE": "blender",
+            "PARAGRAPH_DESCRIPTION": "Blender is a powerful 3D modeling software developed by Blender Foundation. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Blender allows designers to create visually stunning visuals and compositions. I use Blender to model, texture, and animate 3D objects and scenes, providing a deeper visual immersion."
+          }
+        }
       },
       "BACK_END": {
         "SECTION_TITLE": "back-end",
-        "SECTION_DESCRIPTION": "<p>El desarrollo backend es la columna vertebral de cada aplicación exitosa, garantizando una funcionalidad, seguridad y rendimiento impecables. Mi experiencia en Spring Boot y Django me permite diseñar e implementar soluciones robustas, escalables y eficientes en el lado del servidor.</p><p>Con Spring Boot, construyo aplicaciones dinámicas y de alto rendimiento, aprovechando el poder de Java y su rico ecosistema para crear APIs seguras y fáciles de mantener. Por otro lado, mi experiencia con Django me ha permitido trabajar con el enfoque limpio y pragmático de Python, desarrollando aplicaciones web rápidas y seguras con facilidad.</p><p>En esta sección, encontrarás una visión general de mis habilidades backend, destacando mi capacidad para crear y gestionar bases de datos, manejar autenticación de usuarios, integrar APIs y garantizar una comunicación fluida entre el front-end y el servidor. Ya sea construyendo APIs RESTful o configurando una lógica compleja en el servidor, me enfoco en escribir código limpio, optimizado y confiable que respalde experiencias de usuario sin interrupciones.</p>",
-        "PARAGRAPHS": {}
+        "SECTION_DESCRIPTION": "<p>En el panorama en constante evolución del desarrollo web, elegir el framework back-end adecuado es clave para construir aplicaciones robustas, escalables y seguras. En esta sección, destaco mi experiencia con dos frameworks back-end líderes: Spring y Django. Aunque ambos frameworks tienen sus fortalezas, me siento más cómodo con Spring, gracias a su flexibilidad, su amplia gama de características y su integración fluida con el ecosistema de Java. Desde la creación de APIs RESTful hasta el manejo de lógica empresarial compleja, Spring me permite crear aplicaciones de nivel empresarial que son tanto eficientes como fáciles de mantener. Django, con su enfoque de desarrollo ágil, es otra herramienta en mi conjunto, ideal para desarrollos rápidos sin comprometer la funcionalidad. Juntos, estos frameworks me brindan la capacidad de desarrollar soluciones back-end poderosas para proyectos diversos.</p>",
+        "PARAGRAPHS": {
+          "SPRING": {
+            "PARAGRAPH_TITLE": "spring",
+            "PARAGRAPH_DESCRIPTION": "Spring Boot is a framework that simplifies the process of building stand-alone, production-grade Java applications. It is built on top of the Spring Framework, providing an easier way to create microservices and RESTful APIs. Spring Boot eliminates much of the configuration work required in traditional Spring applications by offering pre-configured defaults and automatic setups for things like databases, security, and web servers. With its convention-over-configuration approach, Spring Boot accelerates development and allows developers to focus on writing business logic while minimizing boilerplate code."
+          },
+          "DJANGO": {
+            "PARAGRAPH_TITLE": "django",
+            "PARAGRAPH_DESCRIPTION": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It follows the 'batteries-included' philosophy, providing a robust set of tools for building secure and scalable web applications. With features like an ORM (Object-Relational Mapping) for database management, built-in authentication, and an admin interface, Django allows developers to focus on writing their applications instead of reinventing common functionality. Its strong security features, easy-to-use templating system, and extensive documentation make it a popular choice for both small projects and large-scale applications."
+          }
+        }
+      },
+      "HOSTING": {
+        "SECTION_TITLE": "hosting",
+        "SECTION_DESCRIPTION": "<p>Un alojamiento fiable es crucial para asegurar que las aplicaciones funcionen sin problemas, sean accesibles en todo momento y escalen según sea necesario. En esta sección, destaco mi experiencia con dos potentes plataformas de alojamiento: Hostinger y AWS. Utilizo el VPS (Servidor Privado Virtual) de Hostinger para soluciones de alojamiento rentables y personalizables, ofreciendo flexibilidad para proyectos de diferentes tamaños y tipos. Por otro lado, AWS ofrece una suite completa de servicios en la nube, lo que me permite desplegar aplicaciones escalables, gestionar infraestructuras a gran escala y optimizar el rendimiento. Juntas, estas plataformas de alojamiento me permiten ofrecer soluciones seguras y de alto rendimiento adaptadas a las necesidades específicas de cada proyecto.</p>",
+        "PARAGRAPHS": {
+          "HOSTINGER": {
+            "PARAGRAPH_TITLE": "hostinger",
+            "PARAGRAPH_DESCRIPTION": "Hostinger is a global web hosting provider known for offering affordable, high-performance hosting solutions for individuals and businesses. It provides a range of services, including shared hosting, cloud hosting, VPS hosting, and domain registration. Hostinger is recognized for its user-friendly interface, fast loading times, reliable uptime, and customer support available 24/7. The platform is optimized for popular content management systems (CMS) like WordPress and offers features such as one-click installs, website builders, and enhanced security. Hostinger also prides itself on delivering a fast, secure, and scalable web hosting experience while catering to both beginner users and experienced developers."
+          },
+          "AWS": {
+            "PARAGRAPH_TITLE": "AWS",
+            "PARAGRAPH_DESCRIPTION": "Amazon Web Services (AWS) is a cloud computing service that provides a wide range of tools, services, and services, making it a popular choice for developers and businesses looking to build, run, and scale their applications on the cloud."
+          }
+        }
+      },
+      "TOOLS": {
+        "SECTION_TITLE": "tools",
+        "SECTION_DESCRIPTION": "<p>Las herramientas adecuadas pueden mejorar significativamente la productividad y agilizar el proceso de desarrollo. En esta sección, destaco algunas de las herramientas esenciales que utilizo para construir, probar y optimizar mis proyectos. GitHub es mi plataforma principal para el control de versiones y la colaboración, lo que permite un trabajo en equipo fluido y una gestión eficiente de proyectos. Postman me ayuda a probar y documentar APIs de manera eficiente, asegurando que sean robustas y funcionales. Docker ofrece un entorno de desarrollo consistente, facilitando el despliegue de aplicaciones en diferentes plataformas. Figma es mi herramienta favorita para diseñar interfaces de usuario y colaborar en prototipos de diseño, mientras que Google Analytics me permite seguir el comportamiento de los usuarios y optimizar aplicaciones web con datos en tiempo real. Juntas, estas herramientas me ayudan a entregar soluciones de alta calidad y eficientes, manteniendo flujos de trabajo sin interrupciones.</p>",
+        "PARAGRAPHS": {
+          "POSTMAN": {
+            "PARAGRAPH_TITLE": "Postman",
+            "PARAGRAPH_DESCRIPTION": "Postman is a free, open-source API development tool that allows users to create, send, and test HTTP requests. It provides a user-friendly interface, powerful request builder, and extensive documentation, making it a popular choice for developers and API testing."
+          },
+          "FIGMA": {
+            "PARAGRAPH_TITLE": "Figma",
+            "PARAGRAPH_DESCRIPTION": "Figma is a user-friendly, collaborative design platform that allows users to create, share, and edit digital designs. It offers a wide range of features, including version control, collaboration tools, and built-in design tools, making it a popular choice for designers and developers alike."
+          },
+          "GOOGLE_ANALYTICS": {
+            "PARAGRAPH_TITLE": "Google Analytics",
+            "PARAGRAPH_DESCRIPTION": "Google Analytics is a web analytics service that provides insights into how users interact with websites and applications. It allows developers to track user behavior, identify trends, and optimize their online presence."
+          },
+          "GITHUB": {
+            "PARAGRAPH_TITLE": "GitHub",
+            "PARAGRAPH_DESCRIPTION": "GitHub is a web-based hosting service for version control using Git. It allows developers to create, fork, and collaborate on projects, as well as manage and share code repositories."
+          },
+          "DOCKER": {
+            "PARAGRAPH_TITLE": "Docker",
+            "PARAGRAPH_DESCRIPTION": "Docker is a containerization platform that allows developers to create, deploy, and run applications in isolated containers. It provides a consistent environment for running applications, making it easier to develop, test, and deploy applications."
+          }
+        }
       }
     }
   },

@@ -276,3 +276,5 @@ export const skillsData = {
     },
   ],
 }
+
+// TODO: Add Prettier - ESLint
