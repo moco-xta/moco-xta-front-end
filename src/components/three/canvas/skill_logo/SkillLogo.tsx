@@ -1,4 +1,4 @@
-import React, { forwardRef, lazy, Suspense, useEffect, useRef } from 'react'
+import React, { forwardRef, lazy, Suspense, useEffect, useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Box } from '@react-three/drei'
 
@@ -9,15 +9,50 @@ import useHoverModelAnimation from '@/hooks/three/useHoverModelAnimation'
 
 import { skillLogoData } from '@/data/skills/skill_logo/three/skillLogoData'
 
+function setScale(boundingBox: THREE.Box3, object: THREE.Group, maxSize: number) {
+  const size = new THREE.Vector3();
+  boundingBox.getSize(size);
+  const scaleFactor = maxSize / Math.max(size.x, size.y)
+  const scaleMatrix = new THREE.Matrix4().makeScale(scaleFactor, scaleFactor, scaleFactor)
+
+  if (object.children.length === 1) {
+    const mesh = object.children[0] as THREE.Mesh
+    mesh.geometry.applyMatrix4(scaleMatrix)
+    mesh.updateWorldMatrix(true, false)
+    mesh.scale.set(1, 1, 1)
+  } else {
+    object.children.forEach(child => {
+      const mesh = child as THREE.Mesh
+      mesh.geometry.applyMatrix4(scaleMatrix)
+      mesh.updateWorldMatrix(true, false)
+      mesh.scale.set(1, 1, 1)
+    })
+  }
+}
+
 const lazyWithForwardRef = (factory: TLazyFactory, componentName: string) => {
   const LazyComponent = lazy(() =>
     factory().then(({ default: Component }) => {
-      const ForwardedComponent = forwardRef((props, ref) => (
-        <Component
-          {...props}
-          ref={ref}
-        />
-      ))
+      const ForwardedComponent = forwardRef((props, ref) => {
+        useLayoutEffect(() => {
+          if (ref) {
+            console.log('Ref', ref)
+            const boundingBox = new THREE.Box3()
+            if (ref && 'current' in ref) {
+              const group = (ref.current as THREE.Group) as THREE.Group
+              boundingBox.setFromObject(ref.current as THREE.Object3D)
+              setScale(boundingBox, group, 2)
+            }
+          }
+        }, [ref])
+
+        return (
+          <Component
+            {...props}
+            ref={ref}
+          />
+        )
+      })
       ForwardedComponent.displayName = componentName
       return { default: ForwardedComponent }
     }),
@@ -54,7 +89,7 @@ export default function SkillLogo({ logoData }: TSkillLogo) {
       <group>
         <Box
           ref={boxRef}
-          args={[1.8, 1.8, 1.8]}
+          args={[2, 2, 0.1]}
           onPointerMove={handleOnPointerMove}
           onPointerOut={handleOnPointerLeave}
         >

@@ -9,6 +9,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-size: 15px;
   box-sizing: border-box;
 }
 
@@ -65,6 +66,16 @@ html.lenis body {
 
 .hero_canvas_zIndex {
   z-index: 0;
+}
+
+// PARAGRAPHS
+
+p {
+  line-height: 1.4em;
+}
+
+.paragraph_translation {
+  margin-bottom: $px_margin_M;
 }
 
 // LISTS
