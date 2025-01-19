@@ -35,17 +35,94 @@ export const skillsData = {
     {
       key: 'threed',
       translationKey: 'THREED',
-      paragraphs: [],
+      paragraphs: [
+        {
+          key: 'webgl',
+          translationKey: 'WEBGL',
+          logo: {
+            name: 'LogoWebgl',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'threjs',
+          translationKey: 'THREEJS',
+          logo: {
+            name: 'LogoThreejs',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'react_three_fiber',
+          translationKey: 'REACT_THREE_FIBER',
+          logo: {
+            name: 'LogoReactThreeDrei',
+          },
+          paragraphs: [],
+        },
+        ,
+        {
+          key: 'babylonjs',
+          translationKey: 'BABYLONJS',
+          logo: {
+            name: 'LogoBabylonjs',
+          },
+          paragraphs: [],
+        },
+      ],
     },
     {
       key: 'graphics',
       translationKey: 'GRAPHICS',
-      paragraphs: [],
+      paragraphs: [
+        {
+          key: 'photoshop',
+          translationKey: 'PHOTOSHOP',
+          logo: {
+            name: 'LogoPhotoshop',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'illustrator',
+          translationKey: 'ILLUSTRATOR',
+          logo: {
+            name: 'LogoIllustrator',
+          },
+          paragraphs: [],
+        },
+        ,
+        {
+          key: 'blender',
+          translationKey: 'BLENDER',
+          logo: {
+            name: 'LogoBlender',
+          },
+          paragraphs: [],
+        },
+      ],
     },
     {
       key: 'back_end',
       translationKey: 'BACK_END',
-      paragraphs: [],
+      paragraphs: [
+        {
+          key: 'spring',
+          translationKey: 'SPRING',
+          logo: {
+            name: 'LogoSpring',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'django',
+          translationKey: 'DJANGO',
+          logo: {
+            name: 'LogoDjango',
+          },
+          paragraphs: [],
+        },
+      ],
     },
   ],
 }

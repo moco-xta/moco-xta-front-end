@@ -6,6 +6,7 @@
     "LOGO_BLENDER": "/models/glb/logos/LogoBlender.glb",
     "LOGO_CHATGPT": "/models/glb/logos/LogoChatgpt.glb",
     "LOGO_CSS": "/models/glb/logos/LogoCss.glb",
+    "LOGO_DJANGO": "/models/glb/logos/LogoDjango.glb",
     "LOGO_DOCKER": "/models/glb/logos/LogoDocker.glb",
     "LOGO_FIGMA": "/models/glb/logos/LogoFigma.glb",
     "LOGO_FORMIK": "/models/glb/logos/LogoFormik.glb",
@@ -39,6 +40,7 @@
     "LOGO_SPRING": "/models/glb/logos/LogoSpring.glb",
     "LOGO_TAILWIND": "/models/glb/logos/LogoTailwind.glb",
     "LOGO_THE_BRINK": "/models/glb/logos/LogoTheBrink.glb",
+    "LOGO_THREEJS": "/models/glb/logos/LogoThreejs.glb",
     "LOGO_TYPESCRIPT": "/models/glb/logos/LogoTypescript.glb",
     "LOGO_WEBGL": "/models/glb/logos/LogoWebgl.glb",
     "LOGO_YARN": "/models/glb/logos/LogoYarn.glb"

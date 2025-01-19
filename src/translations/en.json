@@ -42,7 +42,7 @@
             "PARAGRAPH_DESCRIPTION": "React is a popular open-source JavaScript library used for building user interfaces, particularly for single-page applications. Created and maintained by Meta (formerly Facebook), React allows developers to create reusable UI components that efficiently update and render as application data changes. It employs a declarative programming approach, making the code more predictable and easier to debug. At its core, React uses a virtual DOM to optimize rendering performance by updating only the parts of the UI that change, rather than reloading the entire page. React is highly extensible, integrates seamlessly with other libraries or frameworks, and is widely used for creating dynamic and responsive web applications."
           },
           "ANGULAR": {
-            "PARAGRAPH_TITLE": "Angular",
+            "PARAGRAPH_TITLE": "angular",
             "PARAGRAPH_DESCRIPTION": "Angular is a powerful open-source framework developed and maintained by Google for building dynamic and scalable web applications. Known for its comprehensive nature, Angular provides a complete solution for front-end development, including tools for building interactive user interfaces, managing application state, and handling routing. It uses TypeScript, a superset of JavaScript, and follows a component-based architecture, making code modular, reusable, and maintainable. Angular’s two-way data binding ensures that changes in the UI reflect in the underlying data model and vice versa, simplifying real-time updates. With its robust features, including dependency injection and a rich ecosystem of tools, Angular is ideal for creating complex, enterprise-level applications."
           }
         }
@@ -50,17 +50,56 @@
       "THREED": {
         "SECTION_TITLE": "real-time 3D",
         "SECTION_DESCRIPTION": "<p>Real-time 3D development is where technology and creativity merge to craft immersive, interactive experiences. My passion for this field has driven me to explore the potential of bringing 3D graphics to the web, leveraging modern tools like Three.js, WebGL, and advanced shader programming to create visually stunning and responsive applications.</p><p>From building interactive visualizations to integrating 3D environments into web platforms, I aim to push the boundaries of what’s possible in the browser. Real-time 3D allows me to transform static interfaces into dynamic, engaging worlds where users can explore, interact, and experience content in a whole new way.</p><p>In this section, you’ll find examples of my work and expertise in real-time rendering, optimization techniques, and creative problem-solving that bring depth and realism to the web. It’s a playground where imagination meets innovation, and every project is an opportunity to captivate and inspire.</p>",
-        "PARAGRAPHS": {}
+        "PARAGRAPHS": {
+          "WEBGL": {
+            "PARAGRAPH_TITLE": "webgl",
+            "PARAGRAPH_DESCRIPTION": "WebGL is a standard for rendering 2D and 3D graphics on the web. Created and maintained by Khronos Group, WebGL provides a powerful API for creating and rendering 3D graphics on the web. It allows developers to create interactive, high-performance, and visually appealing user experiences by utilizing hardware-accelerated graphics processing units (GPUs)."
+          },
+          "THREEJS": {
+            "PARAGRAPH_TITLE": "three.js",
+            "PARAGRAPH_DESCRIPTION": "Three.js is a powerful open-source JavaScript library used for building 3D graphics and interactive experiences. Created and maintained by Mozilla, Three.js provides a complete framework for creating and rendering 3D graphics, including geometries, materials, animations, and event handling. It supports WebGL, a standard for rendering 2D and 3D graphics, and allows developers to create visually stunning and interactive experiences on the web."
+          },
+          "REACT_THREE_FIBER": {
+            "PARAGRAPH_TITLE": "react-three-fiber",
+            "PARAGRAPH_DESCRIPTION": "React Three Fiber is a popular open-source library developed by the same team that created Three.js, providing a React component for rendering 3D graphics. React Three Fiber allows developers to build and render 3D graphics using React and leverage the power of Three.js to create visually stunning and interactive experiences on the web."
+          },
+          "BABYLONJS": {
+            "PARAGRAPH_TITLE": "babylon.js",
+            "PARAGRAPH_DESCRIPTION": "Babylon.js is a powerful open-source JavaScript library used for building 3D graphics and interactive experiences. Created and maintained by Microsoft, Babylon.js provides a complete framework for creating and rendering 3D graphics, including geometries, materials, animations, and event handling. It supports WebGL, a standard for rendering 2D and 3D graphics, and allows developers to create visually stunning and interactive experiences on the web."
+          }
+        }
       },
       "GRAPHICS": {
         "SECTION_TITLE": "graphics",
         "SECTION_DESCRIPTION": "<p>Graphics tools are the core of visual creation, allowing me to bring concepts and ideas to life by blending art and technology. Whether designing logos, editing images, modeling in 3D, or creating illustrations, I rely on powerful tools like Photoshop, Illustrator, Blender, and Artificial Intelligence to transform abstract ideas into tangible creations.</p><p>With Photoshop and Illustrator, I create striking visuals, vector illustrations, and compositions that add an aesthetic dimension to each project. Blender, on the other hand, allows me to model, texture, and animate 3D objects and scenes, providing a deeper visual immersion.</p><p>Artificial Intelligence helps me automate and optimize certain creative processes, opening up new possibilities for design innovation. These tools, combined with my creativity and technical expertise, allow me to add a unique touch to each project, crafting visuals that captivate and inspire.</p><p>In this section, you'll discover how these tools are used to enrich and bring my visual creations to life, with a keen focus on detail and quality.</p>",
-        "PARAGRAPHS": {}
+        "PARAGRAPHS": {
+          "PHOTOSHOP": {
+            "PARAGRAPH_TITLE": "photoshop",
+            "PARAGRAPH_DESCRIPTION": "Photoshop is a powerful graphic design software developed by Adobe. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Photoshop allows designers to create visually stunning visuals and compositions. I use Photoshop to edit images, create 3D models, and optimize visuals for web and print."
+          },
+          "ILLUSTRATOR": {
+            "PARAGRAPH_TITLE": "illustrator",
+            "PARAGRAPH_DESCRIPTION": "Illustrator is a powerful vector graphics software developed by Adobe. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Illustrator allows designers to create visually stunning visuals and compositions. I use Illustrator to edit images, create 3D models, and optimize visuals for web and print."
+          },
+          "BLENDER": {
+            "PARAGRAPH_TITLE": "blender",
+            "PARAGRAPH_DESCRIPTION": "Blender is a powerful 3D modeling software developed by Blender Foundation. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Blender allows designers to create visually stunning visuals and compositions. I use Blender to model, texture, and animate 3D objects and scenes, providing a deeper visual immersion."
+          }
+        }
       },
       "BACK_END": {
         "SECTION_TITLE": "back-end",
         "SECTION_DESCRIPTION": "<p>Backend development is the backbone of every successful application, ensuring seamless functionality, security, and performance. My expertise in Spring Boot and Django enables me to design and implement robust, scalable, and efficient server-side solutions.</p><p>With Spring Boot, I build dynamic and high-performance applications, leveraging the power of Java and its rich ecosystem to create secure and maintainable APIs. On the other hand, my experience with Django has allowed me to work with Python’s clean and pragmatic approach, building fast and secure web applications with ease.</p><p>In this section, you'll find an overview of my backend skills, highlighting my ability to create and manage databases, handle user authentication, integrate APIs, and ensure smooth communication between the front-end and the server. Whether it’s building RESTful APIs or setting up complex server-side logic, I focus on writing clean, optimized, and reliable code that powers seamless user experiences.</p>",
-        "PARAGRAPHS": {}
+        "PARAGRAPHS": {
+          "SPRING": {
+            "PARAGRAPH_TITLE": "spring",
+            "PARAGRAPH_DESCRIPTION": "Spring Boot is a framework that simplifies the process of building stand-alone, production-grade Java applications. It is built on top of the Spring Framework, providing an easier way to create microservices and RESTful APIs. Spring Boot eliminates much of the configuration work required in traditional Spring applications by offering pre-configured defaults and automatic setups for things like databases, security, and web servers. With its convention-over-configuration approach, Spring Boot accelerates development and allows developers to focus on writing business logic while minimizing boilerplate code."
+          },
+          "DJANGO": {
+            "PARAGRAPH_TITLE": "django",
+            "PARAGRAPH_DESCRIPTION": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It follows the 'batteries-included' philosophy, providing a robust set of tools for building secure and scalable web applications. With features like an ORM (Object-Relational Mapping) for database management, built-in authentication, and an admin interface, Django allows developers to focus on writing their applications instead of reinventing common functionality. Its strong security features, easy-to-use templating system, and extensive documentation make it a popular choice for both small projects and large-scale applications."
+          }
+        }
       }
     }
   },
