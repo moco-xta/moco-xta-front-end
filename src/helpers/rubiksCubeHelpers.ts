@@ -17,7 +17,7 @@ export function setRoundedCubeType(coordinates: THREE.Vector3) {
   return maxNumberOfPads
 }
 
-export function setPadRotation(coordinates: THREE.Vector3, index: number) {
+export const setPadRotation = (coordinates: THREE.Vector3, index: number): THREE.Euler => {
   let rotationX = 0,
     rotationY = 0,
     rotationZ = 0
@@ -58,16 +58,20 @@ export function setPadRotation(coordinates: THREE.Vector3, index: number) {
   return getDegreeEuler({ x: rotationX, y: rotationY, z: rotationZ })
 }
 
-export function setPadColor(normal: THREE.Vector3, colors: string[]) {
-  const color = new THREE.Color()
-  Object.entries(normal).forEach(([key, value]) => {
-    if (key === 'x' && (value > 0.5 || value < -0.5)) {
-      value === 1 ? color.set(colors[0]) : color.set(colors[1])
-    } else if (key === 'y' && (value > 0.5 || value < -0.5)) {
-      value === 1 ? color.set(colors[2]) : color.set(colors[3])
-    } else if (key === 'z' && (value > 0.5 || value < -0.5)) {
-      value === 1 ? color.set(colors[4]) : color.set(colors[5])
-    }
-  })
-  return color
+export const setPadColor = (normal: THREE.Vector3, colors: string[]): THREE.Color => {
+  const normalizedNormal = normal.clone().normalize()
+  let colorIndex = 0
+
+  if (
+    Math.abs(normalizedNormal.x) > Math.abs(normalizedNormal.y) &&
+    Math.abs(normalizedNormal.x) > Math.abs(normalizedNormal.z)
+  ) {
+    colorIndex = normalizedNormal.x > 0 ? 0 : 5
+  } else if (Math.abs(normalizedNormal.y) > Math.abs(normalizedNormal.z)) {
+    colorIndex = normalizedNormal.y > 0 ? 1 : 3
+  } else {
+    colorIndex = normalizedNormal.z > 0 ? 2 : 4
+  }
+
+  return new THREE.Color(colors[colorIndex])
 }

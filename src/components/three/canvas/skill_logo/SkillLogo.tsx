@@ -17,7 +17,6 @@ const lazyWithForwardRef = (factory: TLazyFactory, componentName: string) => {
       const ForwardedComponent = forwardRef((props, ref) => {
         useLayoutEffect(() => {
           if (ref) {
-            console.log('Ref', ref)
             const boundingBox = new THREE.Box3()
             if (ref && 'current' in ref) {
               const group = ref.current as THREE.Group as THREE.Group
