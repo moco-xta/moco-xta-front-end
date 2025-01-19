@@ -3,8 +3,8 @@ export const skillsData = {
   translationKey: 'SKILLS',
   sections: [
     {
-      key: 'front_end',
-      translationKey: 'FRONT_END',
+      key: 'front_end_frameworks',
+      translationKey: 'FRONT_END_FRAMEWORKS',
       paragraphs: [
         {
           key: 'nextjs',
@@ -33,8 +33,92 @@ export const skillsData = {
       ],
     },
     {
-      key: 'threed',
-      translationKey: 'THREED',
+      key: 'front_end_libraries',
+      translationKey: 'FRONT_END_LIBRARIES',
+      paragraphs: [
+        {
+          key: 'redux',
+          translationKey: 'REDUX',
+          logo: {
+            name: 'LogoRedux',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'graphql',
+          translationKey: 'GRAPHQL',
+          logo: {
+            name: 'LogoGraphql',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'google_maps',
+          translationKey: 'GOOGLE_MAPS',
+          logo: {
+            name: 'LogoGoogleMaps',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'gsap',
+          translationKey: 'GSAP',
+          logo: {
+            name: 'LogoGsap',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'next_intl',
+          translationKey: 'NEXT_INTL',
+          logo: {
+            name: 'LogoNextIntl',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'formik',
+          translationKey: 'FORMIK',
+          logo: {
+            name: 'LogoFormik',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'mui',
+          translationKey: 'MUI',
+          logo: {
+            name: 'LogoMui',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'styling',
+      translationKey: 'STYLING',
+      paragraphs: [
+        {
+          key: 'sass',
+          translationKey: 'SASS',
+          logo: {
+            name: 'LogoSass',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'tailwind',
+          translationKey: 'TAILWIND',
+          logo: {
+            name: 'LogoTailwind',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'real_time_threed',
+      translationKey: 'REAL_TIME_THREED',
       paragraphs: [
         {
           key: 'webgl',
@@ -117,6 +201,74 @@ export const skillsData = {
           translationKey: 'DJANGO',
           logo: {
             name: 'LogoDjango',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'hosting',
+      translationKey: 'HOSTING',
+      paragraphs: [
+        {
+          key: 'hostinger',
+          translationKey: 'HOSTINGER',
+          logo: {
+            name: 'LogoHostinger',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'aws',
+          translationKey: 'AWS',
+          logo: {
+            name: 'LogoAws',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'tools',
+      translationKey: 'TOOLS',
+      paragraphs: [
+        {
+          key: 'postman',
+          translationKey: 'POSTMAN',
+          logo: {
+            name: 'LogoPostman',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'figma',
+          translationKey: 'FIGMA',
+          logo: {
+            name: 'LogoFigma',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'google_analytics',
+          translationKey: 'GOOGLE_ANALYTICS',
+          logo: {
+            name: 'LogoGoogleAnalytics',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'github',
+          translationKey: 'GITHUB',
+          logo: {
+            name: 'LogoGithub',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'docker',
+          translationKey: 'DOCKER',
+          logo: {
+            name: 'LogoDocker',
           },
           paragraphs: [],
         },
