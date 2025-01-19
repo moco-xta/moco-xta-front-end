@@ -21,6 +21,7 @@ export type TPage = {
 }
 
 export type TPlayerPage = {
+  introduction: ReactNode
   canvas: JSX.Element
 }
 
@@ -43,9 +44,19 @@ export type TPageIntroduction = {
   translationPath: string
 }
 
+export type TPlayerPageIntroduction = {
+  translationPath: string
+}
+
 export type TSection = {
   translationPath: string
   sectionData: TSectionData
+}
+
+// PLAYER PAGE GREETING
+
+export type TPlayerPageGreeting = {
+  introduction: ReactNode
 }
 
 // PARAGRAPH
