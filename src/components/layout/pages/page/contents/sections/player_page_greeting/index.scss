@@ -1,14 +1,13 @@
 @import '@/styles/variables.module.scss';
 
-#player_page_greeting_section {
+.player_page_greeting_section {
   position: fixed;
   width: 100vw;
   height: 100vh;
+  padding: 22% $px_margin_XL $px_margin_XL $px_margin_XL;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 !important;
-  padding: 0 !important;
+  // align-items: center;
+  // justify-content: center;
   background: #00000088;
 }
 

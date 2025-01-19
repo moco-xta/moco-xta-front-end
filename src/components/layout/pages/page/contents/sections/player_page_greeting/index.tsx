@@ -1,21 +1,23 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
+import type { TPlayerPageGreeting } from '@/types/components/layout/types'
+
 import { RootState } from '@/redux/store'
 
-import { EnterSceneButton } from '@/components/layout/buttons'
+import Instructions from './intructions'
 
 import './index.scss'
 
-export default function PlayerPageGreeting() {
+export default function PlayerPageGreeting({ introduction }: TPlayerPageGreeting) {
   const { showInstructions } = useSelector((state: RootState) => state.playerPageState)
 
   return (
-    <section
-      id='player_page_greeting_section'
-      className={`${showInstructions ? 'show_player_page_greeting' : 'hide_player_page_greeting'}`}
+    <div
+      className={`player_page_greeting_section ${showInstructions ? 'show_player_page_greeting' : 'hide_player_page_greeting'}`}
     >
-      <EnterSceneButton />
-    </section>
+      {introduction}
+      <Instructions />
+    </div>
   )
 }

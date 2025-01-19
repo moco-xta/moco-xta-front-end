@@ -26,7 +26,7 @@ export default function LinksArray({
     >
       <caption>
         {capitalizeFirstLetter(t(`RESOURCES.${title}`))}
-        {youtubePlaylistlink && <YoutubePlaylistLink url={youtubePlaylistlink} />}
+        {youtubePlaylistlink && <YoutubePlaylistLink url={youtubePlaylistlink.url} />}
       </caption>
       <tbody>
         {links.map(({ translationKey, urlName, url, languages }: TExternalLinkData) => (

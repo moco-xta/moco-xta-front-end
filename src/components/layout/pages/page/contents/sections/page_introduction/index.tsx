@@ -16,7 +16,11 @@ export default function PageIntroduction({ prefixKey, translationPath }: TPageIn
       className='pc_item page_introduction'
     >
       <PageTitle translationPath={`${translationPath}.PAGE_TITLE`} />
-      <p className='pc_item pi_introduction'>{t(`${translationPath}.PAGE_INTRODUCTION`)}</p>
+      <p className='pc_item pi_introduction'>
+        {t.rich(`${translationPath}.PAGE_INTRODUCTION`, {
+          p: (chunk) => <p>{chunk}</p>,
+        })}
+      </p>
     </section>
   )
 }

@@ -29,7 +29,7 @@
 
   .current_locale::before {
     display: block;
-    content: attr(currentLocale);
+    content: attr(currentlocale);
     // font-weight: 600;
     height: 0;
     overflow: hidden;
