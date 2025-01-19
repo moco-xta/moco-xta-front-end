@@ -1,0 +1,17 @@
+@import '@/styles/variables.module.scss';
+
+.player_page_introduction {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  .player_page_introduction_title {
+    margin-bottom: $px_margin_M;
+  }
+
+  .player_page_introduction_text {
+    width: 80%;
+    max-width: 500px;
+    text-align: justify;
+  }
+}

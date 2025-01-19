@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import type {
   TExternalLinkData,
   TPageData,
@@ -5,6 +6,12 @@ import type {
   TSectionData,
   TSkillsParagraphData,
 } from '@/types/data/components/layout/types'
+
+// LAYOUT
+
+export type TRootLayout = {
+  children: ReactNode
+}
 
 // PAGES
 
@@ -14,6 +21,7 @@ export type TPage = {
 }
 
 export type TPlayerPage = {
+  introduction: ReactNode
   canvas: JSX.Element
 }
 
@@ -36,9 +44,19 @@ export type TPageIntroduction = {
   translationPath: string
 }
 
+export type TPlayerPageIntroduction = {
+  translationPath: string
+}
+
 export type TSection = {
   translationPath: string
   sectionData: TSectionData
+}
+
+// PLAYER PAGE GREETING
+
+export type TPlayerPageGreeting = {
+  introduction: ReactNode
 }
 
 // PARAGRAPH
@@ -73,7 +91,9 @@ export type TLinksArray = {
   translationPath: string
   title: string
   links: TExternalLinkData[]
-  youtubePlaylistlink?: string
+  youtubePlaylistlink?: {
+    url: string
+  }
 }
 
 export type TExternalLink = {

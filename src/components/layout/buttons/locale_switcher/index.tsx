@@ -85,7 +85,7 @@ export default function LocaleSwitcher() {
         />
         <span
           className='current_locale'
-          {...{ currentLocale: t(locale.toUpperCase()) }}
+          {...{ currentlocale: t(locale.toUpperCase()) }}
         >
           {t(locale.toUpperCase())}
         </span>
@@ -93,13 +93,11 @@ export default function LocaleSwitcher() {
       <div className='locale_options'>
         {localesConstants
           .filter((localeOption) => localeOption !== locale)
-          .sort((a, b) =>
-            t(`LOCALES.${a.toUpperCase()}`).localeCompare(t(`LOCALES.${b.toUpperCase()}`)),
-          )
+          .sort((a, b) => a.localeCompare(b))
           .map((localeOption) => {
             return (
               <li
-                key={`localeSwitcherOption_${localeOption}`}
+                key={`locale_switcher_option_${localeOption}`}
                 className='locale locale_option'
                 onClick={() => handleSetCurrentLocale(localeOption)}
               >

@@ -2,13 +2,13 @@ import { getRequestConfig } from 'next-intl/server'
 
 import type { TLocales } from 'types/locales/types'
 
-import { routing } from './routing'
+import { redirect, routing } from './routing'
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  let locale = await requestLocale
+  const locale = await requestLocale
 
   if (!locale || !routing.locales.includes(locale as TLocales)) {
-    locale = routing.defaultLocale
+    redirect({ href: '/', locale: 'en' })
   }
 
   return {
