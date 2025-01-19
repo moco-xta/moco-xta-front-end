@@ -29,8 +29,8 @@
     "PAGE_TITLE": "skills",
     "PAGE_INTRODUCTION": "<p>Welcome to my skills page! My journey as a developer has been a diverse and exciting one, shaped by my passion for exploring different aspects of software development. I started my career with a strong foundation in backend development, specializing in Java and Spring Boot, where I honed my skills in building robust and scalable server-side applications. However, as I transitioned into the professional world, I found myself diving into the dynamic realm of frontend development, working extensively with modern frameworks like React and Angular to create engaging user experiences.</p><p>Over time, my curiosity and creativity led me to explore a new and fascinating frontier: real-time 3D experiences on the web. This field has allowed me to combine my technical expertise with my love for interactive design, pushing the boundaries of what’s possible in web development. Today, my skill set is a unique blend of backend, frontend, and 3D web technologies, enabling me to build full-stack applications that are not only functional but also visually immersive.</p><p>Feel free to explore my portfolio to see how I bring these skills together to create innovative and impactful projects!</p>",
     "SECTIONS": {
-      "FRONT_END": {
-        "SECTION_TITLE": "front-end",
+      "FRONT_END_FRAMEWORKS": {
+        "SECTION_TITLE": "front-end frameworks",
         "SECTION_DESCRIPTION": "<p>Front-end development is the art of transforming ideas and concepts into dynamic and intuitive interfaces. Throughout my journey, I’ve had the opportunity to work with modern technologies such as React and Angular, powerful tools that have allowed me to create interactive, high-performance, and visually appealing user experiences.</p><p>I strive to combine design and functionality, focusing on accessible, responsive interfaces tailored to all devices. Every project is an opportunity to add a unique touch while maintaining clean, modular, and optimized code. Whether it’s building Single Page Applications (SPAs), managing complex states, or integrating smooth animations, front-end development is my favorite playground for bringing innovative and engaging projects to life.</p><p>In this section, you’ll discover my expertise in modern technologies, best practices, and projects where creativity and technique intertwine to deliver unforgettable user experiences.</p>",
         "PARAGRAPHS": {
           "NEXTJS": {
@@ -47,7 +47,55 @@
           }
         }
       },
-      "THREED": {
+      "FRONT_END_LIBRARIES": {
+        "SECTION_TITLE": "front-end libraries",
+        "SECTION_DESCRIPTION": "<p>Front-end development is the art of transforming ideas and concepts into dynamic and intuitive interfaces. Throughout my journey, I’ve had the opportunity to work with modern technologies such as React and Angular, powerful tools that have allowed me to create interactive, high-performance, and visually appealing user experiences.</p><p>I strive to combine design and functionality, focusing on accessible, responsive interfaces tailored to all devices. Every project is an opportunity to add a unique touch while maintaining clean, modular, and optimized code. Whether it’s building Single Page Applications (SPAs), managing complex states, or integrating smooth animations, front-end development is my favorite playground for bringing innovative and engaging projects to life.</p><p>In this section, you’ll discover my expertise in modern technologies, best practices, and projects where creativity and technique intertwine to deliver unforgettable user experiences.</p>",
+        "PARAGRAPHS": {
+          "REDUX": {
+            "PARAGRAPH_TITLE": "redux",
+            "PARAGRAPH_DESCRIPTION": "Redux is a popular open-source JavaScript library for managing application state. Created and maintained by Facebook, Redux provides a predictable and immutable state management solution that simplifies application development and encourages code organization. It supports functional programming concepts, including pure functions and immutable data, making it a powerful tool for building complex, scalable web applications."
+          },
+          "GRAPHQL": {
+            "PARAGRAPH_TITLE": "graphql",
+            "PARAGRAPH_DESCRIPTION": "GraphQL is a query language for APIs and a runtime for executing queries by a server. Created and maintained by Facebook, GraphQL provides a flexible and powerful way to define data models and retrieve data from a server. It allows clients to request specific fields, nested fields, and relationships between objects, making it a powerful tool for building complex and scalable web applications."
+          },
+          "GOOGLE_MAPS": {
+            "PARAGRAPH_TITLE": "google maps",
+            "PARAGRAPH_DESCRIPTION": "Google Maps API JavaScript provides a simple and powerful way to embed Google Maps on your web pages. Developed and maintained by Google, it allows developers to create interactive maps, markers, and polygons, making it a popular choice for building custom and interactive experiences. With its powerful features, including street view, geocoding, and routing, Google Maps API JavaScript is a powerful tool for creating dynamic and engaging web applications."
+          },
+          "GSAP": {
+            "PARAGRAPH_TITLE": "gsap",
+            "PARAGRAPH_DESCRIPTION": "GreenSock's GSAP (GreenSock Animation Platform) is a powerful, open-source JavaScript library for creating complex animations and interactive effects. Developed and maintained by GreenSock, GSAP provides a suite of powerful tools for animating elements, creating animations, and handling events. It supports CSS animations, SVG animations, and JavaScript objects, making it a versatile and flexible solution for creating dynamic and interactive web experiences."
+          },
+          "NEXT_INTL": {
+            "PARAGRAPH_TITLE": "next-intl",
+            "PARAGRAPH_DESCRIPTION": "Next-Intl is an internationalization library designed for Next.js applications, built on top of react-intl, which simplifies the implementation of multi-language support. It enables automatic locale detection, allowing the application to serve content in the user's preferred language. With seamless integration into Next.js' static site generation (SSG) and server-side rendering (SSR), it ensures improved SEO and performance by pre-rendering content in various languages. Next-Intl also supports rich message formatting for dates, numbers, and currencies, and provides an easy-to-use API for managing translations. It is scalable, making it an ideal choice for projects of any size, offering both simplicity and flexibility when building multilingual applications."
+          },
+          "FORMIK": {
+            "PARAGRAPH_TITLE": "formik",
+            "PARAGRAPH_DESCRIPTION": "Formik is a form library for React that simplifies the process of creating forms with validation, submission, and error handling. Created and maintained by 4Catalyzer, Formik provides a high-level API for managing form state, validating input, and rendering form components. It supports functional components, hooks, and custom render props, making it a popular choice for building dynamic and interactive forms on the web."
+          },
+          "MUI": {
+            "PARAGRAPH_TITLE": "mui",
+            "PARAGRAPH_DESCRIPTION": "Material-UI is a popular open-source React UI framework that follows the Material Design guidelines. Created and maintained by the team at Google, Material-UI provides a set of pre-built components, styles, and themes that make it easy to create visually appealing and user-friendly interfaces. It supports a wide range of components, including buttons, cards, forms, and navigation, making it a popular choice for building dynamic and responsive web applications."
+          }
+        }
+      },
+      "STYLING": {
+        "SECTION_TITLE": "styling",
+        "SECTION_DESCRIPTION": "Styling",
+        "PARAGRAPHS": {
+          "SASS": {
+            "PARAGRAPH_TITLE": "sass",
+            "PARAGRAPH_DESCRIPTION": "Sass is a CSS preprocessor that adds features like variables, nested rules, mixins, and functions to CSS. Created and maintained by the community, Sass provides a flexible and powerful way to write CSS that is easier to read, write, and maintain. It supports variables, nesting, mixins, and functions, making it a popular choice for building dynamic and modular CSS."
+          },
+          "TAILWIND": {
+            "PARAGRAPH_TITLE": "tailwindcss",
+            "PARAGRAPH_DESCRIPTION": "Tailwind CSS is a utility-first CSS framework that provides a set of classes and components to help you build responsive, accessible, and efficient web applications. Created and maintained by the team at Tailwind Labs, Tailwind CSS provides a flexible and powerful way to write CSS that is easier to read, write, and maintain. It supports utility classes, components, and plugins, making it a popular choice for building dynamic and modular CSS."
+          }
+        }
+      },
+      "REAL_TIME_THREED": {
         "SECTION_TITLE": "real-time 3D",
         "SECTION_DESCRIPTION": "<p>Real-time 3D development is where technology and creativity merge to craft immersive, interactive experiences. My passion for this field has driven me to explore the potential of bringing 3D graphics to the web, leveraging modern tools like Three.js, WebGL, and advanced shader programming to create visually stunning and responsive applications.</p><p>From building interactive visualizations to integrating 3D environments into web platforms, I aim to push the boundaries of what’s possible in the browser. Real-time 3D allows me to transform static interfaces into dynamic, engaging worlds where users can explore, interact, and experience content in a whole new way.</p><p>In this section, you’ll find examples of my work and expertise in real-time rendering, optimization techniques, and creative problem-solving that bring depth and realism to the web. It’s a playground where imagination meets innovation, and every project is an opportunity to captivate and inspire.</p>",
         "PARAGRAPHS": {
@@ -98,6 +146,46 @@
           "DJANGO": {
             "PARAGRAPH_TITLE": "django",
             "PARAGRAPH_DESCRIPTION": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It follows the 'batteries-included' philosophy, providing a robust set of tools for building secure and scalable web applications. With features like an ORM (Object-Relational Mapping) for database management, built-in authentication, and an admin interface, Django allows developers to focus on writing their applications instead of reinventing common functionality. Its strong security features, easy-to-use templating system, and extensive documentation make it a popular choice for both small projects and large-scale applications."
+          }
+        }
+      },
+      "HOSTING": {
+        "SECTION_TITLE": "hosting",
+        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "PARAGRAPHS": {
+          "HOSTINGER": {
+            "PARAGRAPH_TITLE": "hostinger",
+            "PARAGRAPH_DESCRIPTION": "Hostinger is a global web hosting provider known for offering affordable, high-performance hosting solutions for individuals and businesses. It provides a range of services, including shared hosting, cloud hosting, VPS hosting, and domain registration. Hostinger is recognized for its user-friendly interface, fast loading times, reliable uptime, and customer support available 24/7. The platform is optimized for popular content management systems (CMS) like WordPress and offers features such as one-click installs, website builders, and enhanced security. Hostinger also prides itself on delivering a fast, secure, and scalable web hosting experience while catering to both beginner users and experienced developers."
+          },
+          "AWS": {
+            "PARAGRAPH_TITLE": "AWS",
+            "PARAGRAPH_DESCRIPTION": "Amazon Web Services (AWS) is a cloud computing service that provides a wide range of tools, services, and services, making it a popular choice for developers and businesses looking to build, run, and scale their applications on the cloud."
+          }
+        }
+      },
+      "TOOLS": {
+        "SECTION_TITLE": "tools",
+        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "PARAGRAPHS": {
+          "POSTMAN": {
+            "PARAGRAPH_TITLE": "Postman",
+            "PARAGRAPH_DESCRIPTION": "Postman is a free, open-source API development tool that allows users to create, send, and test HTTP requests. It provides a user-friendly interface, powerful request builder, and extensive documentation, making it a popular choice for developers and API testing."
+          },
+          "FIGMA": {
+            "PARAGRAPH_TITLE": "Figma",
+            "PARAGRAPH_DESCRIPTION": "Figma is a user-friendly, collaborative design platform that allows users to create, share, and edit digital designs. It offers a wide range of features, including version control, collaboration tools, and built-in design tools, making it a popular choice for designers and developers alike."
+          },
+          "GOOGLE_ANALYTICS": {
+            "PARAGRAPH_TITLE": "Google Analytics",
+            "PARAGRAPH_DESCRIPTION": "Google Analytics is a web analytics service that provides insights into how users interact with websites and applications. It allows developers to track user behavior, identify trends, and optimize their online presence."
+          },
+          "GITHUB": {
+            "PARAGRAPH_TITLE": "GitHub",
+            "PARAGRAPH_DESCRIPTION": "GitHub is a web-based hosting service for version control using Git. It allows developers to create, fork, and collaborate on projects, as well as manage and share code repositories."
+          },
+          "DOCKER": {
+            "PARAGRAPH_TITLE": "Docker",
+            "PARAGRAPH_DESCRIPTION": "Docker is a containerization platform that allows developers to create, deploy, and run applications in isolated containers. It provides a consistent environment for running applications, making it easier to develop, test, and deploy applications."
           }
         }
       }
