@@ -1,47 +1,16 @@
-import React, { useRef, useMemo, useLayoutEffect } from 'react'
+import React, { useRef, useMemo } from 'react'
 import * as THREE from 'three'
-import { useFrame } from '@react-three/fiber'
 
 import Cube from './Cube'
+import RotationGroupsAndButtons from './RotationGroupsAndButtons'
 
-import { setCubeCoordinates, setPadColor } from '@/helpers/rubiksCubeHelpers'
+import { setCubeCoordinates } from '@/helpers/rubiksCubeHelpers'
 
 import { rubiksCubeData } from '@/data/skills/rubiks_cube/three/rubiksCubeData'
-import { padsData } from '@/data/skills/rubiks_cube/three/padsData'
 
 export default function RubiksCube() {
   const rubiksCubeRef = useRef<THREE.Group>(null!)
   const padIndexRef = useRef<number>(0)
-
-  const padsColors: string[] = padsData.defaultValues.material.colors.map((color) => color)
-
-  useLayoutEffect(() => {
-    if (!rubiksCubeRef.current) return
-
-    const colorPads: THREE.Object3D<THREE.Object3DEventMap>[] = []
-
-    rubiksCubeRef.current.children.forEach((child) => {
-      if (!child.children) return
-
-      child.children.forEach((pad) => {
-        if (pad.name.startsWith('pad_') && pad instanceof THREE.Mesh) {
-          colorPads.push(pad)
-
-          const normal = new THREE.Vector3(0, 1, 0)
-          const euler = new THREE.Euler(pad.rotation.x, pad.rotation.y, pad.rotation.z, 'XYZ')
-          normal.applyEuler(euler)
-
-          if (pad.material instanceof THREE.MeshStandardMaterial) {
-            pad.material.color = setPadColor(normal, padsColors)
-          }
-        }
-      })
-    })
-  }, [rubiksCubeRef, padsColors])
-
-  useFrame((_, delta) => {
-    rubiksCubeRef.current.rotation.y += delta * 0.15
-  })
 
   const cubes = useMemo(() => {
     const cubes: JSX.Element[] = []
@@ -66,5 +35,10 @@ export default function RubiksCube() {
     return cubes
   }, [])
 
-  return <group ref={rubiksCubeRef}>{cubes}</group>
+  return (
+    <>
+      <group ref={rubiksCubeRef}>{cubes}</group>
+      <RotationGroupsAndButtons rubiksCubeRef={rubiksCubeRef} />
+    </>
+  )
 }

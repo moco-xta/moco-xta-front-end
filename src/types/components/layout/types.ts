@@ -17,6 +17,8 @@ export type TRootLayout = {
 
 export type TPage = {
   pageData: TPageData
+  displayPage?: boolean
+  extraButtons?: ReactNode[]
   backgroundCanvas?: JSX.Element
 }
 
@@ -29,6 +31,7 @@ export type TPlayerPage = {
 
 export type TSideNavigationMenu = {
   pageData: TPageData
+  extraButtons?: ReactNode[]
 }
 
 // CONTENT

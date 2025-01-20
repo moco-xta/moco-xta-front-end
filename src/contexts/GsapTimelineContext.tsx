@@ -20,6 +20,14 @@ export const GSAPTimelineProvider = ({
       .timeScale(timeScale),
   )
 
+  function playTimeline() {
+    timeline.current.play()
+  }
+
+  function pauseTimeline() {
+    if (!timeline.current.paused()) timeline.current.pause()
+  }
+
   useEffect(() => {
     // timeline.current.delay(delay) // TODO: Delay for timeline is not working
     labels?.forEach((label) => {
@@ -28,7 +36,13 @@ export const GSAPTimelineProvider = ({
   }, [labels, timeline])
 
   return (
-    <GSAPTimelineContext.Provider value={{ timeline: timeline.current }}>
+    <GSAPTimelineContext.Provider
+      value={{
+        timeline: timeline.current,
+        playTimeline: playTimeline,
+        pauseTimeline: pauseTimeline,
+      }}
+    >
       {children}
     </GSAPTimelineContext.Provider>
   )

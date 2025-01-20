@@ -18,6 +18,8 @@ export type TPageProvider = {
 
 export type TGSAPTimelineContext = {
   timeline: GSAPTimeline
+  playTimeline: () => void
+  pauseTimeline: () => void
 }
 
 export type TGSAPTimelineProvider = {

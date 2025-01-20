@@ -15,3 +15,9 @@ export type TPlayerPageStateSlice = {
   dopTargetPosition: TCoordinatesData
   debug: boolean
 }
+
+// Rubik's cube
+
+export type TRubiksCubeStateSlice = {
+  isActive: boolean
+}

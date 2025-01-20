@@ -1,4 +1,5 @@
 import React from 'react'
+import * as THREE from 'three'
 import { DepthOfField, EffectComposer } from '@react-three/postprocessing'
 import { Bloom } from '@react-three/postprocessing'
 import { KernelSize, Resolution } from 'postprocessing'
@@ -12,6 +13,7 @@ export default function PostProcessing() {
         focusDistance={postProcessingData.depthOfField.focusDistance}
         focalLength={postProcessingData.depthOfField.focalLength}
         bokehScale={postProcessingData.depthOfField.bokehScale}
+              target={new THREE.Vector3(0, 0, 0)}
       />
       <Bloom
         intensity={postProcessingData.bloom.intensity}

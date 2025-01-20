@@ -10,7 +10,7 @@ import './index.scss'
 export default function SdmScrollToTop({ elementId }: TSdmScrollToTop) {
   const { scrollY, scrollPercentage } = useScroll(elementId)
 
-  const scrollToTopRef = useRef<HTMLDivElement>(null!)
+  const scrollToTopRef = useRef<HTMLButtonElement>(null!)
 
   useEffect(() => {
     if (scrollY < 100) {
@@ -28,13 +28,13 @@ export default function SdmScrollToTop({ elementId }: TSdmScrollToTop) {
   }
 
   return (
-    <div
+    <button
       ref={scrollToTopRef}
       className='scroll_to_top'
       onClick={handleOnClick}
     >
       <p>Scroll to top</p>
       <HiOutlineArrowUpCircle />
-    </div>
+    </button>
   )
 }

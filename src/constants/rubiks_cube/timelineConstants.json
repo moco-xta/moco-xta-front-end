@@ -1,0 +1,14 @@
+{
+  "timeScale": 1,
+  "delay": 2,
+  "labels": [
+    {
+      "name": "load",
+      "position": 0
+    },
+    {
+      "name": "mix",
+      "position": 4
+    }
+  ]
+}

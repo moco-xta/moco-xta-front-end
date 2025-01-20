@@ -97,8 +97,6 @@ export type TCube = {
   padIndexRef: MutableRefObject<number>
 }
 
-// PADS
-
 export type TPads = {
   coordinates: THREE.Vector3
   padIndexRef: MutableRefObject<number>
@@ -109,7 +107,9 @@ export type TPad = {
   rotation: THREE.Euler
 }
 
-// RUBIKS CUBE
+export type TRotationGroupsAndButtons = {
+  rubiksCubeRef: MutableRefObject<THREE.Group>
+}
 
 export type TLazyPad = LazyExoticComponent<ComponentType<MeshProps>>
 
