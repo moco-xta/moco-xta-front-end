@@ -17,7 +17,7 @@ import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 import './index.scss'
 
-export default function SideNavigationMenu({ pageData }: TSideNavigationMenu) {
+export default function SideNavigationMenu({ pageData, extraButtons }: TSideNavigationMenu) {
   const t = useTranslations()
 
   // const { currentPosition, setIsScrolling } = useSelector((state: RootState) => state.resroucesState)
@@ -105,6 +105,7 @@ export default function SideNavigationMenu({ pageData }: TSideNavigationMenu) {
         })}
       </ol>
       <SdmScrollToTop elementId={`${pageData.key}_content`} />
+      {extraButtons && extraButtons.length > 0 && <>{extraButtons.map((button) => button)}</>}
     </nav>
   )
 }

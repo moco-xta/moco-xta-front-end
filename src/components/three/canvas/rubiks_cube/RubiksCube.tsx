@@ -1,8 +1,8 @@
 import React, { useRef, useMemo } from 'react'
 import * as THREE from 'three'
-import { useFrame } from '@react-three/fiber'
 
 import Cube from './Cube'
+import RotationGroupsAndButtons from './RotationGroupsAndButtons'
 
 import { setCubeCoordinates } from '@/helpers/rubiksCubeHelpers'
 
@@ -11,10 +11,6 @@ import { rubiksCubeData } from '@/data/skills/rubiks_cube/three/rubiksCubeData'
 export default function RubiksCube() {
   const rubiksCubeRef = useRef<THREE.Group>(null!)
   const padIndexRef = useRef<number>(0)
-
-  useFrame((_, delta) => {
-    rubiksCubeRef.current.rotation.y += delta * 0.15
-  })
 
   const cubes = useMemo(() => {
     const cubes: JSX.Element[] = []
@@ -39,5 +35,10 @@ export default function RubiksCube() {
     return cubes
   }, [])
 
-  return <group ref={rubiksCubeRef}>{cubes}</group>
+  return (
+    <>
+      <group ref={rubiksCubeRef}>{cubes}</group>
+      <RotationGroupsAndButtons rubiksCubeRef={rubiksCubeRef} />
+    </>
+  )
 }

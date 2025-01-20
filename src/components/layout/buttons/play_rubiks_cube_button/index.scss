@@ -1,0 +1,15 @@
+@import '@/styles/variables.module.scss';
+
+#play_rubiks_cube_button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: $play_rubiks_cube_button;
+  cursor: pointer;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+  }
+}

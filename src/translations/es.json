@@ -189,7 +189,8 @@
           }
         }
       }
-    }
+    },
+    "PLAY_RUBIKS_CUBE": "Play Rubik's cube"
   },
   "PROJECTS": {
     "INTRODUCTION": {

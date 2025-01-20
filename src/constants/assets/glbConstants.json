@@ -86,6 +86,7 @@
     }
   },
   "RUBIKS_CUBE": {
+    "BUTTON": "/models/glb/rubiks_cube/Button.glb",
     "BASE_CUBE": "/models/glb/rubiks_cube/BaseCube.glb",
     "PAD_BLENDER": "/models/glb/rubiks_cube/PadBlender.glb",
     "PAD_CHAT_GPT": "/models/glb/rubiks_cube/PadChatGpt.glb",

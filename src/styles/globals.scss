@@ -84,6 +84,18 @@ li {
   list-style-type: none;
 }
 
+// BUTTONS
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 // KEYBOARD KEYS
 
 .keyboard_key {

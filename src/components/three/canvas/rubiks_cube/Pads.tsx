@@ -43,8 +43,8 @@ export default function Pads({ padIndexRef, coordinates }: TPads) {
           <ErrorBoundaryWrapper key={`error_boudary_wrapper_${name}_${currentColorPadIndex}`}>
             <Suspense fallback={null}>
               <Pad
-                /* // @ts-ignore */
-                ref={(el: THREE.Mesh) => (padRefs.current[index] = el)} // Set the pad reference
+                // @ts-expect-error: Error but good type
+                ref={(el: THREE.Mesh) => (padRefs.current[index] = el)}
                 key={`rubiks_cube_pad_${name}_${currentColorPadIndex}`}
                 name={name}
                 rotation={setPadRotation(coordinates, index)}
