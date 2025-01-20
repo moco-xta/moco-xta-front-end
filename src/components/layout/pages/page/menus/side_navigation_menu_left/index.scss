@@ -2,11 +2,11 @@
 
 .side_navigation_menu {
   width: 19%;
-  min-width: 120px;
+  min-width: 150px;
   height: 100%;
-  margin-top: $page_margin_top;
+  margin: $page_margin_top $px_margin_L 0 0;
 
-  .sdm_on_this_page {
+  .side_navigation_menu_title {
     margin-bottom: $px_margin_L;
   }
 
@@ -16,24 +16,13 @@
     .sdm_a {
       color: $grey_light;
       transition: all $hover_transition;
+      cursor: pointer;
     }
 
     .sdm_a:hover {
       color: $white;
       font-weight: $font_weight_hover;
       transition: all $hover_transition;
-    }
-
-    .sdm_paragraphs_ol {
-      margin-top: $px_margin_XS;
-    }
-
-    .sdm_paragraph_li {
-      margin: 0 0 $px_margin_XXS $px_margin_XS;
-
-      .sdm_paragraph_a {
-        font-size: $font_size_XS;
-      }
     }
 
     .sdm_current {

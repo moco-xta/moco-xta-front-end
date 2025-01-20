@@ -8,6 +8,23 @@ export type TPageData = {
   sections: TSectionData[]
 }
 
+// MENU
+
+export type TMenuData = {
+  sections: TMenuSectionData[]
+}
+
+export type TMenuSectionData = {
+  key: string
+  translationKey: string
+  paragraphs: TMenuParagraphData[]
+}
+
+export type TMenuParagraphData = {
+  key: string
+  translationKey: string
+}
+
 // SECTION
 
 export type TSectionData = {

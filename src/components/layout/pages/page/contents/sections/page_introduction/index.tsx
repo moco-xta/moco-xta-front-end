@@ -7,12 +7,12 @@ import { PageTitle } from '@/components/layout/titles'
 
 import './index.scss'
 
-export default function PageIntroduction({ prefixKey, translationPath }: TPageIntroduction) {
+export default function PageIntroduction({ translationPath }: TPageIntroduction) {
   const t = useTranslations()
 
   return (
     <section
-      id={`${prefixKey}_introduction`}
+      id='introduction_section'
       className='pc_item page_introduction'
     >
       <PageTitle translationPath={`${translationPath}.PAGE_TITLE`} />

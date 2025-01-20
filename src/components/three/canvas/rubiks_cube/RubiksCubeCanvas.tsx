@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { /* CameraControls, Fisheye,  */PerspectiveCamera } from '@react-three/drei'
+import { /* CameraControls, Fisheye,  */ PerspectiveCamera } from '@react-three/drei'
 
 import Controls from './Controls'
 import Lights from './Lights'

@@ -1,3 +1,4 @@
-import SideNavigationMenu from './side_navigation_menu'
+import SideNavigationMenuLeft from './side_navigation_menu_left'
+import SideNavigationMenuRight from './side_navigation_menu_right'
 
-export { SideNavigationMenu }
+export { SideNavigationMenuLeft, SideNavigationMenuRight }

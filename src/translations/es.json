@@ -334,7 +334,9 @@
       }
     },
     "SIDE_NAVIGATION_MENU": {
-      "ON_THIS_PAGE": "en esta página"
+      "INTRODUCTION": "introduction",
+      "ON_THIS_PAGE": "en esta página",
+      "ON_THIS_SECTION": "on this page"
     },
     "BUTTONS": {
       "CLOSE": "cerrar",

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useTranslations } from 'next-intl'
-import { BiGame } from 'react-icons/bi'
+// import { BiGame } from 'react-icons/bi'
+import { GrGamepad } from 'react-icons/gr'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
@@ -21,9 +22,13 @@ export default function PlayRubiksCubeButton() {
   }
 
   return (
-    <button id='play_rubiks_cube_button' onClick={handleOnCLick}>
+    <button
+      id='play_rubiks_cube_button'
+      className='sdm_item_left'
+      onClick={handleOnCLick}
+    >
       {t('PLAY_RUBIKS_CUBE')}
-      <BiGame />
+      <GrGamepad />
     </button>
   )
 }

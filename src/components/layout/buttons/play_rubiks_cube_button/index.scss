@@ -2,6 +2,7 @@
 
 #play_rubiks_cube_button {
   display: flex;
+  margin-top: $px_margin_L;
   flex-direction: row;
   align-items: center;
   color: $play_rubiks_cube_button;

@@ -124,8 +124,8 @@ function rotate(
     .slice()
     .reverse()
     .filter(function (c: THREE.Object3D) {
-      const positionValue = c.position[axis] as number;
-      return limit < 0 ? positionValue < limit : positionValue > limit;
+      const positionValue = c.position[axis] as number
+      return limit < 0 ? positionValue < limit : positionValue > limit
     })
     .forEach(function (c) {
       rotationGroupRef.attach(c)
@@ -155,14 +155,7 @@ function handleRotation(
   if (!isRotating) {
     if (e) e.stopPropagation()
     if (setIsRotating) setIsRotating(true)
-    rotate(
-      rubiksCubeRef.current,
-      rotationGroupRef.current,
-      axis,
-      limit,
-      multiplier,
-      setIsRotating,
-    )
+    rotate(rubiksCubeRef.current, rotationGroupRef.current, axis, limit, multiplier, setIsRotating)
   }
 }
 

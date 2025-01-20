@@ -66,7 +66,7 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
           buttonData.function as keyof typeof rubiksCubeData.functions,
         )
         return (
-          <>
+          <group key={`rubiks_cube_buttons_group_${buttonDataIndex}`}>
             {buttonData.geometries.map((button, buttonIndex) => (
               <Button
                 key={`rubiks_cube_button_${buttonDataIndex}_${buttonIndex}`}
@@ -87,7 +87,7 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
                 isRotating={isRotating}
               />
             ))}
-          </>
+          </group>
         )
       })}
       <group ref={rotationGroupRef} />

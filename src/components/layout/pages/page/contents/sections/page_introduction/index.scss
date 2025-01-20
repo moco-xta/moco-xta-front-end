@@ -1,8 +1,10 @@
 @import '@/styles/variables.module.scss';
 
 .page_introduction {
+  height: fit-content;
   margin-top: -5px;
   margin-bottom: -80px;
+  overflow: hidden;
 
   .pi_introduction {
     margin-bottom: $px_margin_XL;

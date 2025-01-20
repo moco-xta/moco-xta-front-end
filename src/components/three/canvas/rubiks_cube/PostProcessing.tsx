@@ -13,7 +13,7 @@ export default function PostProcessing() {
         focusDistance={postProcessingData.depthOfField.focusDistance}
         focalLength={postProcessingData.depthOfField.focalLength}
         bokehScale={postProcessingData.depthOfField.bokehScale}
-              target={new THREE.Vector3(0, 0, 0)}
+        target={new THREE.Vector3(3, 3, 3)}
       />
       <Bloom
         intensity={postProcessingData.bloom.intensity}

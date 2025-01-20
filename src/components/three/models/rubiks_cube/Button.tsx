@@ -25,9 +25,7 @@ export function Button({ onClick, arrow, isRotating, ...rest }: TButton) {
   }
 
   return (
-    <group
-      {...rest}
-    >
+    <group {...rest}>
       <mesh
         geometry={nodes.Button.geometry}
         onClick={onClick}
