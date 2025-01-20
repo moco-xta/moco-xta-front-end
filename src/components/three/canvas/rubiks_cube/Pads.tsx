@@ -43,7 +43,6 @@ function RenderPad({
   )
 }
 
-
 export default function Pads({ padIndexRef, coordinates }: TPads) {
   const padRefs = useRef<(THREE.Mesh | null)[]>([])
   const padsColors = useMemo(() => padsData.defaultValues.material.colors, [])

@@ -10,6 +10,7 @@ import { AppDispatch } from '@/redux/store'
 import { setRubiksCubeStatus } from '@/redux/slices/rubiksCubeStateSlice'
 
 import './index.scss'
+import { TRubiksCubeStatus } from '@/types/redux/types'
 
 export default function PlayRubiksCubeButton() {
   const t = useTranslations('SKILLS')
@@ -18,7 +19,7 @@ export default function PlayRubiksCubeButton() {
 
   function handleOnCLick() {
     playTimeline()
-    dispatch(setRubiksCubeStatus(true))
+    dispatch(setRubiksCubeStatus('mix' as TRubiksCubeStatus))
   }
 
   return (

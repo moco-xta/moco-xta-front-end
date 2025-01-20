@@ -1,11 +1,16 @@
 import React, { useRef, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import * as THREE from 'three'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import type { TRotationGroupsAndButtons } from '@/types/components/three/types'
+import type { TRubiksCubeStatus } from '@/types/redux/types'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
+
+import { AppDispatch, RootState } from '@/redux/store'
+import { setRubiksCubeIsRotating, setRubiksCubeStatus } from '@/redux/slices/rubiksCubeStateSlice'
 
 import { Button } from '../../models/rubiks_cube/Button'
 
@@ -15,30 +20,37 @@ import { mixRubiksCube } from '@/helpers/rubiksCubeHelpers'
 
 export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGroupsAndButtons) {
   const { timeline } = useGSAPTimelineContext()
+  
+  const { isRotating, status } = useSelector((state: RootState) => state.rubiksCubeState)
 
   const rotationGroupRef = useRef<THREE.Group>(null!)
 
-  const [isRotating, setIsRotating] = useState<boolean>(false)
+  const dispatch = useDispatch<AppDispatch>()
+
+  function handleSetRubiksCubeIsRotating(isRotating: boolean) {
+    dispatch(setRubiksCubeIsRotating(isRotating))
+  }
 
   useGSAP(
     () => {
       const cubes: THREE.Group[] = gsap.utils.toArray(rubiksCubeRef.current.children)
-      cubes.forEach((cubeRef) => {
+      cubes.reverse().forEach((cubeRef, index) => {
         timeline.fromTo(
           cubeRef.position,
           {
-            x: cubeRef.position.x * 4,
-            y: cubeRef.position.y * 4,
-            z: cubeRef.position.z * 4,
+            x: cubeRef.position.x * 3,
+            y: (cubeRef.position.y - 3 - index) * 5,
+            z: cubeRef.position.z * 3,
           },
           {
             x: cubeRef.position.x,
             y: cubeRef.position.y,
             z: cubeRef.position.z,
-            duration: 2,
-            delay: 2,
+            duration: 1,
+            ease: 'power1.out',
+            delay: 0.5,
           },
-          'load',
+          index * 0.1,
         )
       })
 
@@ -48,6 +60,9 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
           keyframes: mixRubiksCube(rubiksCubeRef, rotationGroupRef, rubiksCubeData.functions),
           ease: 'none',
           duration: 12,
+          onComplete: () => {
+            dispatch(setRubiksCubeStatus('playing' as TRubiksCubeStatus))
+          }
         },
         'mix+=1',
       )
@@ -81,9 +96,10 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
                   )
                 }
                 onClick={(e) =>
-                  buttonFunction(rubiksCubeRef, rotationGroupRef, isRotating, setIsRotating, e)
+                  buttonFunction(rubiksCubeRef, rotationGroupRef, isRotating, handleSetRubiksCubeIsRotating, e)
                 }
                 arrow={buttonData.arrow}
+                isPlaying={status === 'playing' as TRubiksCubeStatus}
                 isRotating={isRotating}
               />
             ))}
