@@ -106,7 +106,6 @@ export default function Moco() {
 
   useEffect(() => {
     window.sparkles = sparkles.current
-    // console.log('window', window)
     // pointsRef.current.position.set(-2, 0, 0)
 
     /* modelsUrls.forEach((url) => { */

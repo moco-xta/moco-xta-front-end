@@ -92,15 +92,24 @@ export function mixRubiksCube(
   rotationGroupRef: MutableRefObject<THREE.Group>,
   functions: typeof rubiksCubeData.functions,
 ) {
+  const generatePercentages = (steps: number) =>
+    Array.from({ length: steps }, (_, index) => `${(index * 100) / steps}%`)
+
   const mix: gsap.TweenVars = {}
-  Array.from({ length: 10 }).forEach((_, index) => {
-    mix[`${index * 10}%`] = {
+  const percentages = generatePercentages(10)
+
+  percentages.forEach((percent) => {
+    mix[percent] = {
       onComplete: () => {
-        pickRandomFunction(functions)(rubiksCubeRef, rotationGroupRef, false)
+        if (functions && Object.keys(functions).length > 0) {
+          pickRandomFunction(functions)(rubiksCubeRef, rotationGroupRef, false)
+        } else {
+          console.warn("No functions available for mixing the Rubik's Cube")
+        }
       },
     }
   })
-  console.log('mix', mix)
+
   return mix
 }
 

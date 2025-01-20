@@ -114,7 +114,6 @@ export default function Bust() {
 
     const bustMesh = bustGlb.scene.children[0] as THREE.Mesh
 
-    console.log('bustMesh', bustMesh)
     const generatedGeometry = createAttributes(bustMesh.geometry)
 
     const points = new THREE.Points(generatedGeometry, materialRef.current)

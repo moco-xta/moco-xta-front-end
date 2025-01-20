@@ -31,15 +31,6 @@ export function DeskChair(props: JSX.IntrinsicElements['group']) {
       angularDamping={0.15}
       friction={0.2}
       colliders={false}
-      onCollisionEnter={({ manifold, target, other }) => {
-        console.log('Collision at world position ', manifold.solverContactPoint(0))
-        if (other.rigidBodyObject && target.rigidBodyObject) {
-          console.log(target.rigidBodyObject.name, ' collided with ', other.rigidBodyObject.name)
-        }
-      }}
-      onContactForce={(payload) => {
-        console.log(`The total force generated was: ${payload.totalForce}`)
-      }}
     >
       <CuboidCollider
         args={[4, 4, 4]}
