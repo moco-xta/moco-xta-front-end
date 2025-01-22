@@ -218,6 +218,29 @@
     }
   },
   "PROJECTS": {
+    "DAYS_OF_THE_WEEK": {
+      "MON": "Lundi",
+      "TUE": "Mardi",
+      "WED": "Mercredi",
+      "THU": "Jeudi",
+      "FRI": "Vendredi",
+      "SAT": "Samedi",
+      "SUN": "Dimanche"
+    },
+    "MONTH": {
+      "JAN": "Janvier",
+      "FEB": "Février",
+      "MAR": "Mars",
+      "APR": "Avril",
+      "MAY": "Mai",
+      "JUN": "Juin",
+      "JUL": "Juillet",
+      "AUG": "Août",
+      "SEP": "Septembre",
+      "OCT": "Octobre",
+      "NOV": "Novembre",
+      "DEC": "Décembre"
+    },
     "INTRODUCTION": {
       "TITLE": "projects",
       "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."

@@ -1,0 +1,40 @@
+@import '@/styles/variables.module.scss';
+@import '@/styles/variables.module.scss';
+
+#current_date {
+  z-index: 2;
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: bolder;
+  transition: background-color 1s linear;
+
+  #month {
+    font-size: 70px;
+  }
+
+  #day_number {
+    font-size: 35px;
+  }
+
+  #arrow_and_year_container {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    #arrow_left_icon {
+      font-size: 60px;
+    }
+
+    #year {
+      font-size: 70px;
+    }
+  }
+}

@@ -71,3 +71,22 @@ export type TExternalLinkData = {
   url: string
   languages?: string[]
 }
+
+// PROJECTS
+
+export type TProjectData = {
+  key: string
+  url: string
+  name: string
+  image: string
+  descriptionsKey: string
+  dates: {
+    [key: string]: string
+  }
+  roles: string[]
+  tools: string[]
+  backgroundColor: {
+    page: string
+    card: string
+  }
+}

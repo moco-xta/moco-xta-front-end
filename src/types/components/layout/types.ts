@@ -62,6 +62,14 @@ export type TPlayerPageGreeting = {
   introduction: ReactNode
 }
 
+// PROJECTS
+
+// CURRENT DATE
+
+export type TCurrentDate = {
+  currentDate: Date
+}
+
 // PARAGRAPH
 
 export type TParagraph = {

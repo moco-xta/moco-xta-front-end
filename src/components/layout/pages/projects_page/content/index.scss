@@ -1,0 +1,15 @@
+@import '@/styles/variables.module.scss';
+
+#projects_content {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  .project_section {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
