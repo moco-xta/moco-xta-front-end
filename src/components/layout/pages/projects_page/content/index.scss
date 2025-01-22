@@ -1,15 +1,29 @@
 @import '@/styles/variables.module.scss';
 
-#projects_content {
+#projects_timeline_container {
   z-index: 1;
   position: absolute;
   display: flex;
   flex-direction: column;
+}
+
+#projects_container {
+  z-index: 0;
+  position: fixed;
 
   .project_section {
+    position: absolute;
     width: 100vw;
     height: 100vh;
     margin: 0 !important;
     padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .project_container {
+      width: 50%;
+    }
   }
 }

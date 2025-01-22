@@ -1,12 +1,21 @@
 import { useEffect, useState } from 'react'
-import useLenisScroll from '@/hooks/useLenisScroll'
+import { useLenis } from 'lenis/react'
 
 import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 
 import { TProjectData } from '@/types/data/components/layout/types'
 
 export default function useProjectsTimeline(projectsData: TProjectData[]) {
-  const { y, offsetHeight } = useLenisScroll()
+  const [y, setY] = useState<number>(0)
+  const [offsetHeight, setOffsetHeight] = useState<number>(0)
+
+  useLenis((lenis) => {
+    setY(lenis.targetScroll)
+    setOffsetHeight(
+      document.getElementById('projects_timeline_container')?.offsetHeight! -
+        document.documentElement.clientHeight,
+    )
+  })
 
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
@@ -16,6 +25,7 @@ export default function useProjectsTimeline(projectsData: TProjectData[]) {
     ),
   )
   const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
+  const [currentProject, setCurrentProject] = useState<number>(0)
 
   useEffect(() => {
     if (offsetHeight) setDeltaPerDay(offsetHeight / daysDifference)
@@ -28,5 +38,19 @@ export default function useProjectsTimeline(projectsData: TProjectData[]) {
     setCurrentDate(updatedDate)
   }, [y, deltaPerDay])
 
-  return { currentDate }
+  useEffect(() => {
+    console.log('current date', currentDate)
+  }, [currentDate])
+
+  useEffect(() => {
+    projectsData.forEach((project, index) => {
+      if (
+        currentDate.getTime() > new Date(project.dates.from).getTime() &&
+        currentDate.getTime() < new Date(project.dates.to).getTime()
+      )
+        setCurrentProject(index)
+    })
+  }, [currentDate, projectsData])
+
+  return { currentDate, currentProject }
 }
