@@ -229,6 +229,47 @@ export const skillsData = {
       ],
     },
     {
+      key: 'programming_languages',
+      translationKey: 'PROGRAMMING_LANGUAGES',
+      paragraphs: [
+        {
+          key: 'javascript',
+          translationKey: 'JAVASCRIPT',
+          logo: {
+            name: 'LogoJavascript',
+          },
+        },
+        {
+          key: 'typescript',
+          translationKey: 'TYPESCRIPT',
+          logo: {
+            name: 'LogoTypescript',
+          },
+        },
+        {
+          key: 'java',
+          translationKey: 'JAVA',
+          logo: {
+            name: 'LogoJava',
+          },
+        },
+        {
+          key: 'python',
+          translationKey: 'PYTHON',
+          logo: {
+            name: 'LogoPython',
+          },
+        },
+        {
+          key: 'php',
+          translationKey: 'PHP',
+          logo: {
+            name: 'LogoPython',
+          },
+        },
+      ],
+    },
+    {
       key: 'tools',
       translationKey: 'TOOLS',
       paragraphs: [

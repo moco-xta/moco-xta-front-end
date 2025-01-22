@@ -24,7 +24,7 @@ export default function ResourcesParagraph({
   // const dispatch = useDispatch<AppDispatch>()
   // const isScrolling = useSelector((state: RootState) => state.resroucesState.isScrolling)
 
-  const { handleSetCurrentPosition, isScrolling } = usePageContext()
+  const { handleSetCurrentParagraph, isScrolling } = usePageContext()
 
   const paragraphRef = useRef<HTMLDivElement>(null!)
 
@@ -34,9 +34,9 @@ export default function ResourcesParagraph({
       if (boundingBox.top >= 0 && boundingBox.top < 100)
         if (!isScrolling)
           // if (!isScrolling) dispatch(setCurrentPosition(paragraphData.key))
-          handleSetCurrentPosition(paragraphData.key)
+          handleSetCurrentParagraph(paragraphData)
     }
-  }, [handleSetCurrentPosition, isScrolling, paragraphData.key])
+  }, [handleSetCurrentParagraph, isScrolling, paragraphData])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true, capture: true })

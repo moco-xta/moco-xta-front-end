@@ -19,5 +19,8 @@ export type TPlayerPageStateSlice = {
 // Rubik's cube
 
 export type TRubiksCubeStateSlice = {
-  isActive: boolean
+  status: TRubiksCubeStatus
+  isRotating: boolean
 }
+
+export type TRubiksCubeStatus = 'off' | 'mixing' | 'playing'

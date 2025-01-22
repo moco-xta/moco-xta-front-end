@@ -23,7 +23,6 @@ export const GSAPTimelineProvider = ({
   function playTimeline() {
     timeline.current.play()
   }
-
   function pauseTimeline() {
     if (!timeline.current.paused()) timeline.current.pause()
   }

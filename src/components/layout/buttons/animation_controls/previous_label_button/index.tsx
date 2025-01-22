@@ -9,7 +9,6 @@ export default function PreviousLabelButton() {
   const { timeline } = useGSAPTimelineContext()
 
   const handleOnClick = () => {
-    console.log('TEST')
     timeline.previousLabel(0)
   }
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import { FaYoutube } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
+import { FaYoutube } from 'react-icons/fa'
 
 import type { TExternalLink } from '@/types/components/layout/types'
 

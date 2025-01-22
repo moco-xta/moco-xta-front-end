@@ -78,6 +78,17 @@ p {
   margin-bottom: $px_margin_M;
 }
 
+// LINKS
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 // LISTS
 
 li {

@@ -6,12 +6,13 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-type TButton = GroupProps & {
+export type TButton = GroupProps & {
   arrow: string
+  isPlaying: boolean
   isRotating: boolean
-}
+} // TODO: Add to types
 
-export function Button({ onClick, arrow, isRotating, ...rest }: TButton) {
+export function Button({ onClick, arrow, isPlaying, isRotating, ...rest }: TButton) {
   const { nodes } = useGLTF(glbConstants.RUBIKS_CUBE.BUTTON) as GLTFResult
 
   const [hovered, setHovered] = useState<boolean>(false)
@@ -25,9 +26,7 @@ export function Button({ onClick, arrow, isRotating, ...rest }: TButton) {
   }
 
   return (
-    <group
-      {...rest}
-    >
+    <group {...rest}>
       <mesh
         geometry={nodes.Button.geometry}
         onClick={onClick}
@@ -40,7 +39,7 @@ export function Button({ onClick, arrow, isRotating, ...rest }: TButton) {
           opacity={0}
         />
       </mesh>
-      {hovered && !isRotating && (
+      {hovered && isPlaying && !isRotating && (
         <>
           {arrow === 'left' ? (
             <mesh geometry={nodes.ArrowLeft.geometry}>

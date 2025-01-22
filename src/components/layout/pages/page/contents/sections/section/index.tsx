@@ -24,7 +24,7 @@ export default function Section({ translationPath, sectionData }: TSection) {
   // const dispatch = useDispatch<AppDispatch>()
   // const isScrolling = useSelector((state: RootState) => state.resroucesState.isScrolling)
 
-  const { handleSetCurrentPosition, isScrolling } = usePageContext()
+  const { handleSetCurrentParagraph, isScrolling } = usePageContext()
 
   const sectionRef = useRef<HTMLElement>(null!)
 
@@ -34,9 +34,9 @@ export default function Section({ translationPath, sectionData }: TSection) {
       if (boundingBox.top >= 0 && boundingBox.top < 100)
         if (!isScrolling)
           // if (!isScrolling) dispatch(setCurrentPosition(sectionData.key))
-          handleSetCurrentPosition(sectionData.key)
+          handleSetCurrentParagraph(sectionData)
     }
-  }, [handleSetCurrentPosition, isScrolling, sectionData.key])
+  }, [handleSetCurrentParagraph, isScrolling, sectionData])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true, capture: true })

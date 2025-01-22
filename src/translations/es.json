@@ -163,6 +163,32 @@
           }
         }
       },
+      "PROGRAMMING_LANGUAGES": {
+        "SECTION_TITLE": "programming_languages",
+        "SECTION_DESCRIPTION": "",
+        "PARAGRAPHS": {
+          "JAVASCRIPT": {
+            "PARAGRAPH_TITLE": "javascript",
+            "PARAGRAPH_DESCRIPTION": "JavaScript is a popular programming language that was developed by Netscape Corporation. It is a high-level, interpreted, and object-oriented programming language that provides a wide range of libraries and frameworks, making it a popular choice for building web applications, data analysis, machine learning, and automation. JavaScript is known for its simplicity, readability, and performance, making it a popular choice for building robust and scalable applications."
+          },
+          "TYPESCRIPT": {
+            "PARAGRAPH_TITLE": "typescript",
+            "PARAGRAPH_DESCRIPTION": "TypeScript is a superset of JavaScript that adds static type checking to JavaScript code. It is developed by Microsoft and is now maintained by Microsoft alongside TypeScript. TypeScript is known for its simplicity, readability, and performance, making it a popular choice for building web applications, data analysis, machine learning, and automation. TypeScript is also known for its strong type system, making it a popular choice for building robust and scalable applications."
+          },
+          "JAVA": {
+            "PARAGRAPH_TITLE": "java",
+            "PARAGRAPH_DESCRIPTION": "Java is a popular programming language that was developed by Oracle Corporation. It is a statically-typed, object-oriented programming language that provides a strong foundation for building robust and scalable applications. Java is known for its simplicity, readability, and performance, making it a popular choice for building enterprise-grade applications and web services."
+          },
+          "PYTHON": {
+            "PARAGRAPH_TITLE": "python",
+            "PARAGRAPH_DESCRIPTION": "Python is a popular programming language that was developed by Guido van Rossum and is widely used for both personal and professional development. It is a high-level, interpreted, and object-oriented programming language that provides a wide range of libraries and frameworks, making it a popular choice for building web applications, data analysis, machine learning, and automation. Python is known for its simplicity, readability, and performance, making it a popular choice for building robust and scalable applications."
+          },
+          "PHP": {
+            "PARAGRAPH_TITLE": "php",
+            "PARAGRAPH_DESCRIPTION": "PHP is a popular programming language that was developed by the PHP Development Team. It is a server-side scripting language that allows developers to build dynamic web applications and websites. PHP is known for its simplicity, readability, and performance, making it a popular choice for building web applications, data analysis, and automation. PHP is also widely used for building APIs and web services, making it a popular choice for building APIs and web applications."
+          }
+        }
+      },
       "TOOLS": {
         "SECTION_TITLE": "tools",
         "SECTION_DESCRIPTION": "<p>Las herramientas adecuadas pueden mejorar significativamente la productividad y agilizar el proceso de desarrollo. En esta sección, destaco algunas de las herramientas esenciales que utilizo para construir, probar y optimizar mis proyectos. GitHub es mi plataforma principal para el control de versiones y la colaboración, lo que permite un trabajo en equipo fluido y una gestión eficiente de proyectos. Postman me ayuda a probar y documentar APIs de manera eficiente, asegurando que sean robustas y funcionales. Docker ofrece un entorno de desarrollo consistente, facilitando el despliegue de aplicaciones en diferentes plataformas. Figma es mi herramienta favorita para diseñar interfaces de usuario y colaborar en prototipos de diseño, mientras que Google Analytics me permite seguir el comportamiento de los usuarios y optimizar aplicaciones web con datos en tiempo real. Juntas, estas herramientas me ayudan a entregar soluciones de alta calidad y eficientes, manteniendo flujos de trabajo sin interrupciones.</p>",
@@ -200,7 +226,8 @@
   },
   "RESOURCES": {
     "PAGE_TITLE": "resources",
-    "PAGE_INTRODUCTION": "This page is your central destination for curated links and tools across the vast landscape of web development. Whether you're diving into Front-End Development, exploring the depths of Back-End Engineering, venturing into the world of 3D Graphics, or perfecting your skills in Web Design, you'll find valuable resources to guide and inspire you. From in-depth tutorials to cutting-edge libraries and communities, these links are handpicked to help developers and designers at all levels. Explore, learn, and create with confidence!",
+    "PAGE_INTRODUCTION": "<p>This page is your central destination for curated links and tools across the vast landscape of web development. Whether you're diving into Front-End Development, exploring the depths of Back-End Engineering, venturing into the world of 3D Graphics, or perfecting your skills in Web Design, you'll find valuable resources to guide and inspire you. From in-depth tutorials to cutting-edge libraries and communities, these links are handpicked to help developers and designers at all levels. Explore, learn, and create with confidence!</p>",
+    "YOUTUBE_PLAYLISTS_DISCLAMER": "Las listas de reproducción de YouTube, aunque recopilan numerosos tutoriales, no están organizadas como un curso y no siguen un orden predefinido. Cada lista es más bien una colección de videos interesantes o útiles que consideré importante guardar.",
     "RESOURCES": "resources",
     "ON_THIS_PAGE": "On this page",
     "DOCUMENTATION": "documentation",
@@ -334,7 +361,9 @@
       }
     },
     "SIDE_NAVIGATION_MENU": {
-      "ON_THIS_PAGE": "en esta página"
+      "INTRODUCTION": "introduction",
+      "ON_THIS_PAGE": "en esta página",
+      "ON_THIS_SECTION": "on this page"
     },
     "BUTTONS": {
       "CLOSE": "cerrar",
