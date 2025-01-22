@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import * as THREE from 'three'
+import { useThree } from '@react-three/fiber'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -17,10 +18,12 @@ import { Button } from '../../models/rubiks_cube/Button'
 import { rubiksCubeData } from '@/data/skills/rubiks_cube/three/rubiksCubeData'
 import { buttonsData } from '@/data/skills/rubiks_cube/three/buttonsData'
 import { mixRubiksCube } from '@/helpers/rubiksCubeHelpers'
+import { cameraDefaultValues } from '@/data/skills/rubiks_cube/three/cameraData'
 
 export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGroupsAndButtons) {
+  const { camera } = useThree()
   const { timeline } = useGSAPTimelineContext()
-  
+
   const { isRotating, status } = useSelector((state: RootState) => state.rubiksCubeState)
 
   const rotationGroupRef = useRef<THREE.Group>(null!)
@@ -30,6 +33,11 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
   function handleSetRubiksCubeIsRotating(isRotating: boolean) {
     dispatch(setRubiksCubeIsRotating(isRotating))
   }
+
+  useEffect(() => {
+    console.log('timeline', timeline)
+    console.log('status', status)
+  }, [status])
 
   useGSAP(
     () => {
@@ -54,18 +62,59 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
         )
       })
 
-      timeline.addPause('mix').to(
-        rubiksCubeRef,
-        {
-          keyframes: mixRubiksCube(rubiksCubeRef, rotationGroupRef, rubiksCubeData.functions),
-          ease: 'none',
-          duration: 12,
-          onComplete: () => {
-            dispatch(setRubiksCubeStatus('playing' as TRubiksCubeStatus))
-          }
-        },
-        'mix+=1',
-      )
+      // gsap.set(camera.position, { ...cameraDefaultValues.camera.position })
+
+      function animateCamera() {
+          const { x, y, z } = cameraDefaultValues.camera.position!
+          gsap.to(camera.position, { x: x, y, z, duration: 1, ease: 'power1.out' })
+      }
+
+      function goToIsPlaying() {
+        timeline.seek('isPlaying').pause()
+      }
+
+      function goToMix() {
+        timeline.seek('mix').pause()
+      }
+
+      timeline
+        .addPause('mix')
+        // .add(animateCamera)
+        .to(
+          camera.position,
+          {
+            x: 10,
+            y: 10,
+            z: 10,
+            duration: 1,
+            ease: 'power1.out',
+          },
+          'mix+=0.2',
+        )
+        .to(
+          rubiksCubeRef,
+          {
+            keyframes: mixRubiksCube(rubiksCubeRef, rotationGroupRef, rubiksCubeData.functions),
+            ease: 'none',
+            duration: 12,
+            onComplete: () => {
+              dispatch(setRubiksCubeStatus('playing' as TRubiksCubeStatus))
+              goToIsPlaying()
+            },
+          },
+          'mix+=1.2',
+        )
+        .addPause('isPlaying')
+        .to(
+          camera.position,
+          {
+            ...cameraDefaultValues.camera.position,
+            duration: 1,
+            ease: 'power1.out',
+            onComplete: () => goToMix(),
+          },
+          'isPlaying',
+        )
     },
     { scope: rubiksCubeRef },
   )
@@ -96,10 +145,16 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
                   )
                 }
                 onClick={(e) =>
-                  buttonFunction(rubiksCubeRef, rotationGroupRef, isRotating, handleSetRubiksCubeIsRotating, e)
+                  buttonFunction(
+                    rubiksCubeRef,
+                    rotationGroupRef,
+                    isRotating,
+                    handleSetRubiksCubeIsRotating,
+                    e,
+                  )
                 }
                 arrow={buttonData.arrow}
-                isPlaying={status === 'playing' as TRubiksCubeStatus}
+                isPlaying={status === ('playing' as TRubiksCubeStatus)}
                 isRotating={isRotating}
               />
             ))}

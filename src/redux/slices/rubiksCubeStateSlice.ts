@@ -4,7 +4,7 @@ import type { TRubiksCubeStateSlice, TRubiksCubeStatus } from '@/types/redux/typ
 
 const initialState: TRubiksCubeStateSlice = {
   status: 'off',
-  isRotating: false
+  isRotating: false,
 }
 
 const rubiksCubeStateSlice = createSlice({

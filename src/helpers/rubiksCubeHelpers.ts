@@ -6,6 +6,7 @@ import { gsap } from 'gsap'
 import { getDegreeEuler } from './threeHelpers'
 
 import { rubiksCubeData } from '@/data/skills/rubiks_cube/three/rubiksCubeData'
+import { TCoordinatesData } from '@/types/data/components/three/types'
 
 export function setCubeCoordinates(x: number, y: number, z: number) {
   function setCoordinate(value: number) {
@@ -79,6 +80,97 @@ export const setPadColor = (normal: THREE.Vector3, colors: string[]): THREE.Colo
   }
 
   return new THREE.Color(colors[colorIndex])
+}
+
+export function getDofTargetPosition(A: TCoordinatesData, B: TCoordinatesData, cubeSize: number) {
+  const halfSize = cubeSize / 2
+
+  const xmin = (A.x ?? 0) - halfSize
+  const xmax = (A.x ?? 0) + halfSize
+  const ymin = (A.y ?? 0) - halfSize
+  const ymax = (A.y ?? 0) + halfSize
+  const zmin = (A.z ?? 0) - halfSize
+  const zmax = (A.z ?? 0) + halfSize
+
+  const dy = (B.y ?? 0) - (A.y ?? 0)
+  const dx = (B.x ?? 0) - (A.x ?? 0)
+  const dz = (B.z ?? 0) - (A.z ?? 0)
+
+  interface IntersectionPoint {
+    x: number
+    y: number
+    z: number
+    t: number
+  }
+
+  function intersectPlane(
+    coord: number,
+    dCoord: number,
+    fixedValue: number,
+    bounds1: [number, number],
+    bounds2: [number, number],
+  ): IntersectionPoint | null {
+    if (dCoord === 0) return null
+    const t = (fixedValue - coord) / dCoord
+    const x = (A.x ?? 0) + t * dx
+    const y = (A.y ?? 0) + t * dy
+    const z = (A.z ?? 0) + t * dz
+
+    if (t >= 0 && bounds1[0] <= x && x <= bounds1[1] && bounds2[0] <= y && y <= bounds2[1]) {
+      return { x, y, z, t }
+    }
+    return null
+  }
+
+  const candidates = [
+    intersectPlane(A.x ?? 0, dx, xmin, [ymin, ymax], [zmin, zmax]),
+    intersectPlane(A.x ?? 0, dx, xmax, [ymin, ymax], [zmin, zmax]),
+    intersectPlane(A.y ?? 0, dy, ymin, [xmin, xmax], [zmin, zmax]),
+    intersectPlane(A.y ?? 0, dy, ymax, [xmin, xmax], [zmin, zmax]),
+    intersectPlane(A.z ?? 0, dz, zmin, [xmin, xmax], [ymin, ymax]),
+    intersectPlane(A.z ?? 0, dz, zmax, [xmin, xmax], [ymin, ymax]),
+  ].filter((point) => point !== null)
+
+  if (candidates.length === 0) {
+    return null
+  }
+  candidates.sort((a, b) => a.t - b.t)
+  const { x, y, z } = candidates[0] as IntersectionPoint
+  return new THREE.Vector3(x, y, z)
+}
+
+export function getCameraDestinationPosition(
+  A: TCoordinatesData,
+  B: TCoordinatesData,
+  distanceAC: number,
+) {
+  const AB = {
+    x: (B.x ?? 0) - (A.x ?? 0),
+    y: (B.y ?? 0) - (A.y ?? 0),
+    z: (B.z ?? 0) - (A.z ?? 0),
+  }
+
+  const lengthAB = Math.sqrt(AB.x ** 2 + AB.y ** 2 + AB.z ** 2)
+
+  const unitAB = {
+    x: AB.x / lengthAB,
+    y: AB.y / lengthAB,
+    z: AB.z / lengthAB,
+  }
+
+  const scaledVector = {
+    x: unitAB.x * distanceAC,
+    y: unitAB.y * distanceAC,
+    z: unitAB.z * distanceAC,
+  }
+
+  const C = {
+    x: (A.x ?? 0) + scaledVector.x,
+    y: (A.y ?? 0) + scaledVector.y,
+    z: (A.z ?? 0) + scaledVector.z,
+  }
+
+  return C
 }
 
 function pickRandomFunction(functions: typeof rubiksCubeData.functions) {

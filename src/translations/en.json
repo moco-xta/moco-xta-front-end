@@ -163,6 +163,32 @@
           }
         }
       },
+      "PROGRAMMING_LANGUAGES": {
+        "SECTION_TITLE": "programming languages",
+        "SECTION_DESCRIPTION": "",
+        "PARAGRAPHS": {
+          "JAVASCRIPT": {
+            "PARAGRAPH_TITLE": "javascript",
+            "PARAGRAPH_DESCRIPTION": "JavaScript is a popular programming language that was developed by Netscape Corporation. It is a high-level, interpreted, and object-oriented programming language that provides a wide range of libraries and frameworks, making it a popular choice for building web applications, data analysis, machine learning, and automation. JavaScript is known for its simplicity, readability, and performance, making it a popular choice for building robust and scalable applications."
+          },
+          "TYPESCRIPT": {
+            "PARAGRAPH_TITLE": "typescript",
+            "PARAGRAPH_DESCRIPTION": "TypeScript is a superset of JavaScript that adds static type checking to JavaScript code. It is developed by Microsoft and is now maintained by Microsoft alongside TypeScript. TypeScript is known for its simplicity, readability, and performance, making it a popular choice for building web applications, data analysis, machine learning, and automation. TypeScript is also known for its strong type system, making it a popular choice for building robust and scalable applications."
+          },
+          "JAVA": {
+            "PARAGRAPH_TITLE": "java",
+            "PARAGRAPH_DESCRIPTION": "Java is a popular programming language that was developed by Oracle Corporation. It is a statically-typed, object-oriented programming language that provides a strong foundation for building robust and scalable applications. Java is known for its simplicity, readability, and performance, making it a popular choice for building enterprise-grade applications and web services."
+          },
+          "PYTHON": {
+            "PARAGRAPH_TITLE": "python",
+            "PARAGRAPH_DESCRIPTION": "Python is a popular programming language that was developed by Guido van Rossum and is widely used for both personal and professional development. It is a high-level, interpreted, and object-oriented programming language that provides a wide range of libraries and frameworks, making it a popular choice for building web applications, data analysis, machine learning, and automation. Python is known for its simplicity, readability, and performance, making it a popular choice for building robust and scalable applications."
+          },
+          "PHP": {
+            "PARAGRAPH_TITLE": "php",
+            "PARAGRAPH_DESCRIPTION": "PHP is a popular programming language that was developed by the PHP Development Team. It is a server-side scripting language that allows developers to build dynamic web applications and websites. PHP is known for its simplicity, readability, and performance, making it a popular choice for building web applications, data analysis, and automation. PHP is also widely used for building APIs and web services, making it a popular choice for building APIs and web applications."
+          }
+        }
+      },
       "TOOLS": {
         "SECTION_TITLE": "tools",
         "SECTION_DESCRIPTION": "<p>The right tools can significantly enhance productivity and streamline the development process. In this section, I highlight some of the essential tools that I use to build, test, and optimize my projects. GitHub is my go-to for version control and collaboration, enabling seamless teamwork and project management. Postman helps me efficiently test and document APIs, ensuring they are robust and functional. Docker provides a consistent development environment, making it easier to deploy applications across different platforms. Figma is my tool of choice for designing user interfaces and collaborating on design prototypes, while Google Analytics allows me to track user behavior and optimize web applications based on real-time data. Together, these tools help me deliver high-quality, efficient solutions while maintaining smooth workflows.</p>",
@@ -200,7 +226,8 @@
   },
   "RESOURCES": {
     "PAGE_TITLE": "resources",
-    "PAGE_INTRODUCTION": "This page is your central destination for curated links and tools across the vast landscape of web development. Whether you're diving into Front-End Development, exploring the depths of Back-End Engineering, venturing into the world of 3D Graphics, or perfecting your skills in Web Design, you'll find valuable resources to guide and inspire you. From in-depth tutorials to cutting-edge libraries and communities, these links are handpicked to help developers and designers at all levels. Explore, learn, and create with confidence!",
+    "PAGE_INTRODUCTION": "<p>This page is your central destination for curated links and tools across the vast landscape of web development. Whether you're diving into Front-End Development, exploring the depths of Back-End Engineering, venturing into the world of 3D Graphics, or perfecting your skills in Web Design, you'll find valuable resources to guide and inspire you. From in-depth tutorials to cutting-edge libraries and communities, these links are handpicked to help developers and designers at all levels. Explore, learn, and create with confidence!</p>",
+    "YOUTUBE_PLAYLISTS_DISCLAMER": "YouTube playlists, while listing numerous tutorials, are not structured like a course and do not follow a predefined order. Each playlist is more of a collection of interesting or useful videos that I felt were important to save.",
     "RESOURCES": "resources",
     "ON_THIS_PAGE": "On this page",
     "DOCUMENTATION": "documentation",
@@ -212,18 +239,33 @@
         "SECTION_TITLE": "front-end",
         "SECTION_DESCRIPTION": "Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.",
         "PARAGRAPHS": {
-          "HTML": {
-            "PARAGRAPH_TITLE": "HTML",
-            "PARAGRAPH_DESCRIPTION": "HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It forms the foundation of every website and is used in combination with CSS (for styling) and JavaScript (for interactivity).",
+          "NEXTJS": {
+            "PARAGRAPH_TITLE": "Next.js",
+            "PARAGRAPH_DESCRIPTION": "Next.js is a React framework that enables you to build server-rendered and statically-generated web applications with ease. It provides a powerful feature set, such as automatic code splitting, server-side rendering, and SEO optimization, making it a popular choice for building modern web applications.",
             "LINKS": {
-              "W3SCHOOLS": {
-                "DESCRIPTION": "W3Schools is a popular and widely used educational website for learning web development technologies. It serves as a comprehensive resource for beginners and experienced developers alike, offering tutorials, references, and interactive examples."
+              "NEXTJS": {
+                "DESCRIPTION": "NEXTJS DOCUMENTATION DESCRIPTION"
               },
-              "MOZILLA": {
-                "DESCRIPTION": "MDN Web Docs (formerly known as Mozilla Developer Network) is a highly regarded and comprehensive online resource for web developers. It is maintained by the Mozilla Foundation and contributions from the developer community. It provides in-depth documentation, tutorials, and guides for web development technologies."
+              "CODEVOLUTION": {
+                "DESCRIPTION": "CODEVOLUTION DOCUMENTATION DESCRIPTION"
               },
-              "FREECODECAMP": {
-                "DESCRIPTION": "FreeCodeCamp is a non-profit organization that offers free online coding courses and tutorials. Their platform covers a wide range of topics, including HTML, CSS, JavaScript, and more. They also have a blog with articles on web development and programming."
+              "DEV_COMMUNITY": {
+                "DESCRIPTION": "DEV COMMUNITY DESCRIPTION"
+              }
+            }
+          },
+          "REACT": {
+            "PARAGRAPH_TITLE": "react",
+            "PARAGRAPH_DESCRIPTION": "REACT DESCRIPTION",
+            "LINKS": {
+              "REACT": {
+                "DESCRIPTION": "REACT DOCUMENTATION DESCRIPTION"
+              },
+              "THE_LEAN_PROGRAMMER": {
+                "DESCRIPTION": "THE LEAN PROGRAMMER DOCUMENTATION DESCRIPTION"
+              },
+              "TECHSITH": {
+                "DESCRIPTION": "TECHSITH DOCUMENTATION DESCRIPTION"
               }
             }
           }
@@ -314,6 +356,27 @@
         "SECTION_TITLE": "back-end",
         "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         "PARAGRAPHS": {}
+      },
+      "PROGRAMMING_LANGUAGES": {
+        "SECTION_TITLE": "programming languages",
+        "SECTION_DESCRIPTION": "DESCRIPTION",
+        "PARAGRAPHS": {
+          "HTML": {
+            "PARAGRAPH_TITLE": "HTML",
+            "PARAGRAPH_DESCRIPTION": "HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It forms the foundation of every website and is used in combination with CSS (for styling) and JavaScript (for interactivity).",
+            "LINKS": {
+              "W3SCHOOLS": {
+                "DESCRIPTION": "W3Schools is a popular and widely used educational website for learning web development technologies. It serves as a comprehensive resource for beginners and experienced developers alike, offering tutorials, references, and interactive examples."
+              },
+              "MOZILLA": {
+                "DESCRIPTION": "MDN Web Docs (formerly known as Mozilla Developer Network) is a highly regarded and comprehensive online resource for web developers. It is maintained by the Mozilla Foundation and contributions from the developer community. It provides in-depth documentation, tutorials, and guides for web development technologies."
+              },
+              "FREECODECAMP": {
+                "DESCRIPTION": "FreeCodeCamp is a non-profit organization that offers free online coding courses and tutorials. Their platform covers a wide range of topics, including HTML, CSS, JavaScript, and more. They also have a blog with articles on web development and programming."
+              }
+            }
+          }
+        }
       }
     }
   },

@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useTranslations } from 'next-intl'
+import { FaYoutube } from 'react-icons/fa'
 
 import type { TPageIntroduction } from '@/types/components/layout/types'
+
+import { usePathname } from '@/i18n/routing'
 
 import { PageTitle } from '@/components/layout/titles'
 
@@ -9,6 +12,12 @@ import './index.scss'
 
 export default function PageIntroduction({ translationPath }: TPageIntroduction) {
   const t = useTranslations()
+
+  const pathname = usePathname()
+
+  useEffect(() => {
+    console.log('pathname', pathname)
+  })
 
   return (
     <section
@@ -21,6 +30,17 @@ export default function PageIntroduction({ translationPath }: TPageIntroduction)
           p: (chunk) => <p className='paragraph_translation'>{chunk}</p>,
         })}
       </div>
+      {pathname === '/resources' && (
+        <div
+          id='youtube_playlist_disclamer'
+          className='pc_item'
+        >
+          <span>
+            <FaYoutube />
+          </span>
+          <p>{t('RESOURCES.YOUTUBE_PLAYLISTS_DISCLAMER')}</p>
+        </div>
+      )}
     </section>
   )
 }

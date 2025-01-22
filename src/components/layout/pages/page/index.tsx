@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import type { TPage } from '@/types/components/layout/types'
 import type { TRubiksCubeStatus } from '@/types/redux/types'
 
-import { AppDispatch, RootState } from '@/redux/store'
-import { setRubiksCubeStatus } from '@/redux/slices/rubiksCubeStateSlice'
+import { RootState } from '@/redux/store'
 
 import { PageProvider } from '@/contexts/PageContext'
-import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
 import { SideNavigationMenuLeft, SideNavigationMenuRight } from './menus'
 import { PageContent } from './contents'
@@ -17,30 +15,22 @@ import { PageContent } from './contents'
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 import './index.scss'
+import { QuitRubiksCube } from '../../buttons'
 
 const SCALE = 0.5 // TODO: Add to data
 
 function ReplacingContent() {
-  const { timeline } = useGSAPTimelineContext()
-  const dispatch = useDispatch<AppDispatch>()
-
-  const [content, setContent] = useState<React.ReactNode>('Ready! You can play!');
-
-  function handleOnClick() {
-      dispatch(setRubiksCubeStatus('off' as TRubiksCubeStatus))
-      timeline.seek('mix').pause()
-  }
+  const [content, setContent] = useState<React.ReactNode>('Ready! You can play!')
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setContent(<button onClick={handleOnClick}>Quit</button>);
-    }, 3000);
+      setContent(<QuitRubiksCube />)
+    }, 3000)
 
-    // Cleanup timeout if the component unmounts
-    return () => clearTimeout(timeout);
-  }, []);
+    return () => clearTimeout(timeout)
+  }, [])
 
-  return <div>{content}</div>;
+  return <div>{content}</div>
 }
 
 export default function Page({
@@ -76,8 +66,15 @@ export default function Page({
         </PageProvider>
       ) : (
         <div className='canvas_dashboard'>
-          {status === 'mix' as TRubiksCubeStatus && <Image alt='mix gif' src={imgConstants.GIF.MIX} width={480 * SCALE} height={358 * SCALE} />}
-          {status === 'playing' as TRubiksCubeStatus && <ReplacingContent />}
+          {status === ('mix' as TRubiksCubeStatus) && (
+            <Image
+              alt='mix gif'
+              src={imgConstants.GIF.MIX}
+              width={480 * SCALE}
+              height={358 * SCALE}
+            />
+          )}
+          {status === ('playing' as TRubiksCubeStatus) && <ReplacingContent />}
         </div>
       )}
     </>

@@ -9,6 +9,10 @@
     {
       "name": "mix",
       "position": 4
+    },
+    {
+      "name": "isPlaying",
+      "position": 50
     }
   ]
 }

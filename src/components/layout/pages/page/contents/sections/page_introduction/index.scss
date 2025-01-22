@@ -10,4 +10,23 @@
     margin-bottom: $px_margin_XL;
     text-align: justify;
   }
+
+  #youtube_playlist_disclamer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    svg {
+      width: 30px;
+      height: 20px;
+      margin-right: $px_margin_M;
+      color: $youtube_red;
+    }
+
+    p {
+      font-size: $font_size_XS;
+      text-align: justify;
+      color: $youtube_red;
+    }
+  }
 }

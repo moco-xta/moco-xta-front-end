@@ -7,38 +7,73 @@ export const resourcesData = {
       translationKey: 'FRONT_END',
       paragraphs: [
         {
-          key: 'html',
-          translationKey: 'HTML',
+          key: 'nextjs',
+          translationKey: 'NEXTJS',
           documentation: [
             {
-              key: 'w3school',
-              translationKey: 'W3SCHOOLS',
-              urlName: 'W3schools',
-              url: 'https://www.w3schools.com/html/default.asp',
-              languages: ['en'],
-            },
-            {
-              key: 'mozilla',
-              translationKey: 'MOZILLA',
-              urlName: 'Mozilla',
-              url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+              key: 'nextjs',
+              translationKey: 'NEXTJS',
+              urlName: 'nextjs',
+              url: 'https://nextjs.org/docs',
               languages: ['en'],
             },
           ],
           websites: [],
           youtubePlaylistlink: {
-            url: '',
+            url: 'https://www.youtube.com/playlist?list=PLbEvIQDy5AOXC16UOy09wHuEXH1csLLvB',
           },
-          channels: [],
-          articles: [
+          channels: [
             {
-              key: 'freecodecamp',
-              translationKey: 'FREECODECAMP',
-              urlName: 'FreeCodeCamp',
-              url: 'https://www.freecodecamp.org/news/tag/html/',
+              key: 'codevolution',
+              translationKey: 'CODEVOLUTION',
+              urlName: 'codevolution',
+              url: 'https://www.youtube.com/c/Codevolution/playlists',
               languages: ['en'],
             },
           ],
+          articles: [
+            {
+              key: 'dev_community',
+              translationKey: 'DEV_COMMUNITY',
+              urlName: 'DEV Community',
+              url: 'https://dev.to/t/nextjs',
+              languages: ['en'],
+            },
+          ],
+        },
+        {
+          key: 'react',
+          translationKey: 'REACT',
+          documentation: [
+            {
+              key: 'react',
+              translationKey: 'REACT',
+              urlName: 'react',
+              url: 'https://react.dev/learn',
+              languages: ['en'],
+            },
+          ],
+          websites: [],
+          youtubePlaylistlink: {
+            url: 'https://www.youtube.com/playlist?list=PLbEvIQDy5AOU8dzvZ_TSue6ghvOzlV-My',
+          },
+          channels: [
+            {
+              key: 'the_lean_programmer',
+              translationKey: 'THE_LEAN_PROGRAMMER',
+              urlName: 'the Lean programmer',
+              url: 'https://www.youtube.com/@TheLeanProgrammer',
+              languages: ['en'],
+            },
+            {
+              key: 'techsith',
+              translationKey: 'TECHSITH',
+              urlName: 'techsith',
+              url: 'https://www.youtube.com/@Techsithtube/videos',
+              languages: ['en'],
+            },
+          ],
+          articles: [],
         },
       ],
     },
@@ -82,7 +117,7 @@ export const resourcesData = {
             },
           ],
           youtubePlaylistlink: {
-            url: '',
+            url: 'https://www.youtube.com/playlist?list=PLbEvIQDy5AOXNP8ndbZN6ueQBa4CpLVKt',
           },
           channels: [
             {
@@ -116,7 +151,7 @@ export const resourcesData = {
           ],
           websites: [],
           youtubePlaylistlink: {
-            url: '',
+            url: 'https://www.youtube.com/playlist?list=PLbEvIQDy5AOXoQo0Kw6Vu8rr09Tgs6iCg',
           },
           channels: [],
           articles: [],
@@ -198,7 +233,7 @@ export const resourcesData = {
           ],
           websites: [],
           youtubePlaylistlink: {
-            url: '',
+            url: 'https://www.youtube.com/playlist?list=PLbEvIQDy5AOVxtSkMOTjDHYLjZXwUD8bp',
           },
           channels: [
             {
@@ -224,6 +259,46 @@ export const resourcesData = {
       key: 'back_end',
       translationKey: 'BACK_END',
       paragraphs: [],
+    },
+    {
+      key: 'programming_languages',
+      translationKey: 'PROGRAMMING_LANGUAGES',
+      paragraphs: [
+        {
+          key: 'html',
+          translationKey: 'HTML',
+          documentation: [
+            {
+              key: 'w3school',
+              translationKey: 'W3SCHOOLS',
+              urlName: 'W3schools',
+              url: 'https://www.w3schools.com/html/default.asp',
+              languages: ['en'],
+            },
+            {
+              key: 'mozilla',
+              translationKey: 'MOZILLA',
+              urlName: 'Mozilla',
+              url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+              languages: ['en'],
+            },
+          ],
+          websites: [],
+          youtubePlaylistlink: {
+            url: '',
+          },
+          channels: [],
+          articles: [
+            {
+              key: 'freecodecamp',
+              translationKey: 'FREECODECAMP',
+              urlName: 'FreeCodeCamp',
+              url: 'https://www.freecodecamp.org/news/tag/html/',
+              languages: ['en'],
+            },
+          ],
+        },
+      ],
     },
   ],
 }
