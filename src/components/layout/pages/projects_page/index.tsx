@@ -1,9 +1,17 @@
 import React from 'react'
 
+import { ProjectsCanvas } from '@/components/three/canvas'
+import Content from './content'
+
 import './index.scss'
 
 export default function ProjectsPage() {
   return (
-    <div>Projects page</div>
+    <>
+      <div id='projects_canvas'>
+        <ProjectsCanvas />
+      </div>
+      <Content />
+    </>
   )
 }
