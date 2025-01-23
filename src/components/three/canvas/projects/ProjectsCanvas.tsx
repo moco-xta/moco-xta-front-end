@@ -2,7 +2,6 @@ import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 
-import Camera from './Camera'
 import Lightning from './lightning/Lightning'
 import ProjectsScene from './ProjectsScene'
 
@@ -13,9 +12,10 @@ import PostProcessing from './PostProcessing'
 
 export type TProjectCanvas = {
   currentProject: number
+  currentCompany: number
 }
 
-export default function ProjectsCanvas({ currentProject }: TProjectCanvas) {
+export default function ProjectsCanvas({ currentProject, currentCompany }: TProjectCanvas) {
   return (
     <Canvas
       {...canvasDefaultValues}
@@ -26,7 +26,7 @@ export default function ProjectsCanvas({ currentProject }: TProjectCanvas) {
       <CameraWithFloat defaultValues={cameraDefaultValues} />
       <Lightning />
       <Suspense fallback={null}>
-        <ProjectsScene currentProject={currentProject} />
+        <ProjectsScene currentProject={currentProject} currentCompany={currentCompany} />
       </Suspense>
       <PostProcessing />
     </Canvas>

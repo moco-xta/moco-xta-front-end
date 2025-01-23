@@ -1,22 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useLenis } from 'lenis/react'
 
+import type { TCompanyData, TProjectData } from '@/types/data/components/layout/types'
+
 import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 
-import { TProjectData } from '@/types/data/components/layout/types'
-
-export default function useProjectsTimeline(projectsData: TProjectData[]) {
+export default function useProjectsTimeline(projectsData: TProjectData[], companiesAndSchoolData: TCompanyData[]) {
   const [y, setY] = useState<number>(0)
   const [offsetHeight, setOffsetHeight] = useState<number>(0)
-
-  useLenis((lenis) => {
-    setY(lenis.targetScroll)
-    setOffsetHeight(
-      document.getElementById('projects_timeline_container')?.offsetHeight! -
-        document.documentElement.clientHeight,
-    )
-  })
-
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
     getDifferenceBetweenTwoDatesInDays(
@@ -26,6 +17,15 @@ export default function useProjectsTimeline(projectsData: TProjectData[]) {
   )
   const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
   const [currentProject, setCurrentProject] = useState<number>(0)
+  const [currentCompany, setCurrentCompany] = useState<number>(0)
+
+  useLenis((lenis) => {
+    setY(lenis.targetScroll)
+    setOffsetHeight(
+      document.getElementById('projects_timeline_container')?.offsetHeight! -
+        document.documentElement.clientHeight,
+    )
+  })
 
   useEffect(() => {
     if (offsetHeight) setDeltaPerDay(offsetHeight / daysDifference)
@@ -48,5 +48,15 @@ export default function useProjectsTimeline(projectsData: TProjectData[]) {
     })
   }, [currentDate, projectsData])
 
-  return { currentDate, currentProject }
+  useEffect(() => {
+    companiesAndSchoolData.forEach((companyOrSchool, index) => {
+      if (
+        currentDate.getTime() > new Date(companyOrSchool.dates.from).getTime() &&
+        currentDate.getTime() < new Date(companyOrSchool.dates.to).getTime()
+      )
+      setCurrentCompany(index)
+    })
+  }, [currentDate, companiesAndSchoolData])
+
+  return { currentDate, currentProject, currentCompany }
 }

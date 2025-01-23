@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-export function LogoPonthus(props: JSX.IntrinsicElements['group']) {
+const LogoPonthus = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
   const { nodes } = useGLTF(glbConstants.LOGOS.LOGO_PONTHUS) as GLTFResult
+  
   return (
     <group
+    ref={ref}
       {...props}
       dispose={null}
     >
@@ -28,6 +31,10 @@ export function LogoPonthus(props: JSX.IntrinsicElements['group']) {
       </mesh>
     </group>
   )
-}
+})
+
+LogoPonthus.displayName = 'LogoPonthus'
 
 useGLTF.preload(glbConstants.LOGOS.LOGO_PONTHUS)
+
+export default LogoPonthus

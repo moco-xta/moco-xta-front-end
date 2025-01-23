@@ -91,3 +91,13 @@ export type TProjectData = {
     tools: TLogoData[]
   }
 }
+
+export type TCompanyData = {
+  index?: number
+  name?: string
+  logo?: TLogoData
+  url?: string
+  dates: {
+    [key: string]: string
+  }
+}
