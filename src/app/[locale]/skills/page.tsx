@@ -21,7 +21,7 @@ export default function Skills() {
 
   useEffect(() => {
     dispatch(setRubiksCubeStatus('off'))
-  }, [])
+  }, [dispatch])
 
   return (
     <GSAPTimelineProvider {...timelineDefaultValues}>

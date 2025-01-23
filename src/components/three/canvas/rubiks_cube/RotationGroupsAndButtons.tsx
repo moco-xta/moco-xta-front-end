@@ -37,7 +37,7 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
   useEffect(() => {
     console.log('timeline', timeline)
     console.log('status', status)
-  }, [status])
+  }, [status, timeline])
 
   useGSAP(
     () => {

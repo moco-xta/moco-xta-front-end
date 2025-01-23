@@ -18,7 +18,7 @@ export default function PostProcessing() {
   return (
     <EffectComposer>
       <DepthOfField
-        // @ts-ignore
+        // @ts-expect-error: Only used for target position
         ref={dofRef}
         focusDistance={postProcessingData.depthOfField.focusDistance}
         focalLength={postProcessingData.depthOfField.focalLength}

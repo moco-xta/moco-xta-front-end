@@ -13,4 +13,8 @@ export const cameraDefaultValues: TCameraDefaultValues = {
     near: 0.01,
     far: 20,
   },
+  float: {
+    speed: 1,
+    rotationIntensity: 0.5,
+  },
 }

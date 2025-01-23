@@ -1,8 +1,10 @@
 import moment from 'moment'
 
+import { TProjectData } from '@/types/data/components/layout/types'
+
 // import { ProjectDataInterface } from '@/interfaces/dataInterfaces'
 
-export const projectsData /* : ProjectDataInterface[] */ = [
+export const projectsData: TProjectData[] = [
   {
     key: 'moco_xta',
     name: 'Moco.xta',
@@ -14,18 +16,16 @@ export const projectsData /* : ProjectDataInterface[] */ = [
       from: '2024-01-01',
     },
     roles: ['Real-time 3D', 'Full Stack'],
-    tools: [
-      '/img/png/projects/home_pages/logo_blender.png',
-      '/img/png/projects/home_pages/logo_react_three_drei.png',
-      '/img/png/projects/home_pages/logo_nextjs.png',
-      '/img/png/projects/home_pages/logo_spring.png',
-      '/img/png/projects/home_pages/logo_postgresql.png',
-      '/img/png/projects/home_pages/logo_docker.png',
-      '/img/png/projects/home_pages/logo_hostinger.png',
-    ],
-    backgroundColor: {
-      page: '#fc799d',
-      card: '#5b9ff6',
+    logos: {
+      project: { name: 'LogoMoco' },
+      tools: [
+        { name: 'LogoBlender' },
+        { name: 'LogoReactThreeDrei' },
+        { name: 'LogoNextjs' },
+        { name: 'LogoSpring' },
+        { name: 'LogoPostgresql' },
+        { name: 'LogoDocker' },
+      ],
     },
   },
   {
@@ -39,16 +39,23 @@ export const projectsData /* : ProjectDataInterface[] */ = [
       from: '2023-03-01',
     },
     roles: ['Front End'],
-    tools: [
+    logos: {
+      project: { name: 'LogoMoco' },
+      tools: [
+        { name: 'LogoBlender' },
+        { name: 'LogoReactThreeDrei' },
+        { name: 'LogoNextjs' },
+        { name: 'LogoSpring' },
+        { name: 'LogoPostgresql' },
+        { name: 'LogoDocker' },
+      ],
+    },
+    /* tools: [
       '/img/png/projects/home_pages/logo_react-three-drei.png',
       '/img/png/projects/home_pages/logo_nextjs.png',
       '/img/png/projects/home_pages/logo_spring.png',
       '/img/png/projects/home_pages/logo_postgresql.png',
-    ],
-    backgroundColor: {
-      page: '#aec700',
-      card: '#076865',
-    },
+    ], */
   },
   {
     key: 'lento',
@@ -61,17 +68,24 @@ export const projectsData /* : ProjectDataInterface[] */ = [
       from: '2021-11-01',
     },
     roles: ['Front End'],
-    tools: [
+    logos: {
+      project: { name: 'LogoMoco' },
+      tools: [
+        { name: 'LogoBlender' },
+        { name: 'LogoReactThreeDrei' },
+        { name: 'LogoNextjs' },
+        { name: 'LogoSpring' },
+        { name: 'LogoPostgresql' },
+        { name: 'LogoDocker' },
+      ],
+    },
+    /* tools: [
       '/img/png/projects/home_pages/logo_react-three-drei.png',
       '/img/png/projects/home_pages/logo_nextjs.png',
       '/img/png/projects/home_pages/logo_spring.png',
-    ],
-    backgroundColor: {
-      page: '#5397d4',
-      card: '#ecbaa2',
-    },
+    ], */
   },
-  {
+  /* {
     key: 'hundred_hands',
     name: '100 Hands',
     url: 'https://www.100hands.nl/',
@@ -132,5 +146,5 @@ export const projectsData /* : ProjectDataInterface[] */ = [
       page: '#ffffff',
       card: '#7450eb',
     },
-  },
+  }, */
 ]

@@ -1,17 +1,18 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { Box } from '@react-three/drei'
 import { gsap } from 'gsap'
 
-import useProjectsTimeline from '@/hooks/useProjectsTimeline'
+import ProjectLogos from './ProjectLogos'
 
 import { projectsData } from '@/data/projects/projectsData'
 
-const OFFSET = 5
+export type TProjectScene = {
+  currentProject: number
+}
 
-export default function ProjectsScene() {
-  const { currentProject } = useProjectsTimeline(projectsData)
+const OFFSET = 8
 
+export default function ProjectsScene({ currentProject }: TProjectScene) {
   const projectsGroupRef = useRef<THREE.Group>(null!)
 
   useEffect(() => {
@@ -25,8 +26,17 @@ export default function ProjectsScene() {
 
   return (
     <group ref={projectsGroupRef}>
-      {projectsData.map((projectsData, index) => (
-        <Box position={new THREE.Vector3(0, -index * OFFSET, 0)} />
+      {projectsData.map((projectData, index) => (
+        <group
+          key={`projects_logos_${projectData.key}`}
+          position={new THREE.Vector3(0, -index * OFFSET, 0)}
+        >
+          <ProjectLogos
+            projectData={projectData}
+            currentProject={currentProject}
+            index={index}
+          />
+        </group>
       ))}
     </group>
   )

@@ -39,10 +39,6 @@ export default function useProjectsTimeline(projectsData: TProjectData[]) {
   }, [y, deltaPerDay])
 
   useEffect(() => {
-    console.log('current date', currentDate)
-  }, [currentDate])
-
-  useEffect(() => {
     projectsData.forEach((project, index) => {
       if (
         currentDate.getTime() > new Date(project.dates.from).getTime() &&

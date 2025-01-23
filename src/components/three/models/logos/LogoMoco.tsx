@@ -1,35 +1,24 @@
-import React, { useRef } from 'react'
+import React, { forwardRef } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import type { GLTFResult } from '@/types/data/components/three/types'
 
-import useHoverModelAnimation from '@/hooks/three/useHoverModelAnimation'
-
-import { logoMocoData } from '@/data/menu/header/logo_moco/three/logoMocoData'
-
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-export function LogoMoco(props: JSX.IntrinsicElements['group']) {
+const LogoMoco = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
   const { nodes } = useGLTF(glbConstants.LOGOS.LOGO_MOCO) as GLTFResult
-
-  const logoMocoRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!) // TODO: MouseEvent.mozPressure is deprecated. Use PointerEvent.pressure instead.
-
-  const { handleOnPointerMove, handleOnPointerLeave } = useHoverModelAnimation({
-    ref: logoMocoRef,
-    animationData: logoMocoData.hoverModelAnimationData,
-  })
 
   return (
     <group
-      ref={logoMocoRef}
+      ref={ref}
       {...props}
       dispose={null}
     >
       <mesh
         geometry={nodes.LogoMoco.geometry}
-        onPointerMove={handleOnPointerMove}
-        onPointerOut={handleOnPointerLeave}
+        receiveShadow
+        castShadow
       >
         <meshNormalMaterial
           attach='material'
@@ -39,6 +28,10 @@ export function LogoMoco(props: JSX.IntrinsicElements['group']) {
       </mesh>
     </group>
   )
-}
+})
+
+LogoMoco.displayName = 'LogoMoco'
 
 useGLTF.preload(glbConstants.LOGOS.LOGO_MOCO)
+
+export default LogoMoco

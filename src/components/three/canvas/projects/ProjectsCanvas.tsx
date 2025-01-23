@@ -7,8 +7,14 @@ import Lightning from './lightning/Lightning'
 import ProjectsScene from './ProjectsScene'
 
 import { canvasDefaultValues } from '@/data/projects/three/canvasData'
+import CameraWithFloat from '../../lib/camera/CameraWithFloat'
+import { cameraDefaultValues } from '@/data/projects/three/cameraData'
 
-export default function ProjectsCanvas() {
+export type TProjectCanvas = {
+  currentProject: number
+}
+
+export default function ProjectsCanvas({ currentProject }: TProjectCanvas) {
   return (
     <Canvas
       {...canvasDefaultValues}
@@ -16,10 +22,10 @@ export default function ProjectsCanvas() {
         scene.fog = new THREE.Fog(0x334257, 9, 50)
       }}
     >
-      <Camera />
+      <CameraWithFloat defaultValues={cameraDefaultValues} />
       <Lightning />
       <Suspense fallback={null}>
-        <ProjectsScene />
+        <ProjectsScene currentProject={currentProject} />
       </Suspense>
     </Canvas>
   )

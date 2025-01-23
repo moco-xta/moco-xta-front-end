@@ -1,6 +1,8 @@
-// PAGE
+import type { ReactNode } from 'react'
 
-import { TLogoData } from '../three/types'
+import type { TLogoData } from '../three/types'
+
+// PAGE
 
 export type TPageData = {
   key: string
@@ -84,9 +86,8 @@ export type TProjectData = {
     [key: string]: string
   }
   roles: string[]
-  tools: string[]
-  backgroundColor: {
-    page: string
-    card: string
+  logos: {
+    project: TLogoData
+    tools: TLogoData[]
   }
 }
