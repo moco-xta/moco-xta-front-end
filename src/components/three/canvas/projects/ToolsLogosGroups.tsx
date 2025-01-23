@@ -16,7 +16,7 @@ export default function ToolsLogosGroups({ currentProject }: TToolsLogosGroups) 
           key={`tools_logos_group_${index}`}
           projectData={projectData}
           currentProject={currentProject}
-          index={index}
+          toolsGroupIndex={index}
         />
       ))}
     </group>

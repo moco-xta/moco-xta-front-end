@@ -20,6 +20,7 @@ export const projectsData: TProjectData[] = [
       project: { name: 'LogoMoco' },
       tools: [
         { name: 'LogoNextjs' },
+        { name: 'LogoRedux' },
         { name: 'LogoFormik' },
         { name: 'LogoNextIntl' },
         { name: 'LogoGsap' },
@@ -57,12 +58,6 @@ export const projectsData: TProjectData[] = [
         { name: 'LogoFigma' },
       ],
     },
-    /* tools: [
-      '/img/png/projects/home_pages/logo_react-three-drei.png',
-      '/img/png/projects/home_pages/logo_nextjs.png',
-      '/img/png/projects/home_pages/logo_spring.png',
-      '/img/png/projects/home_pages/logo_postgresql.png',
-    ], */
   },
   {
     key: 'lento',
@@ -79,6 +74,7 @@ export const projectsData: TProjectData[] = [
       project: { name: 'LogoLento' },
       tools: [
         { name: 'LogoReact' },
+        { name: 'LogoRedux' },
         { name: 'LogoGoogleMaps' },
         { name: 'LogoFormik' },
         { name: 'LogoMui' },
@@ -89,11 +85,6 @@ export const projectsData: TProjectData[] = [
         // { name: 'LogoAuth0' },
       ],
     },
-    /* tools: [
-      '/img/png/projects/home_pages/logo_react-three-drei.png',
-      '/img/png/projects/home_pages/logo_nextjs.png',
-      '/img/png/projects/home_pages/logo_spring.png',
-    ], */
   },
   {
     key: 'hundred_hands',
@@ -114,6 +105,7 @@ export const projectsData: TProjectData[] = [
         { name: 'LogoThreejs' },
         { name: 'LogoWebgl' },
         { name: 'LogoAws' },
+        { name: 'LogoBlender' },
         // { name: 'LogoSubstance' },
       ],
     },
@@ -137,6 +129,7 @@ export const projectsData: TProjectData[] = [
         { name: 'LogoThreejs' },
         { name: 'LogoWebgl' },
         { name: 'LogoAws' },
+        { name: 'LogoBlender' },
         // { name: 'LogoSubstance' },
       ],
     },
@@ -159,6 +152,7 @@ export const projectsData: TProjectData[] = [
         { name: 'LogoSpring' },
         { name: 'LogoPostgresql' },
         { name: 'LogoMysql' },
+        { name: 'LogoGithub' },
         // { name: 'LogoSubstance' },
       ],
     },

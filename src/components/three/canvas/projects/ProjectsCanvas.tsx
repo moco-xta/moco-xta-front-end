@@ -9,6 +9,7 @@ import ProjectsScene from './ProjectsScene'
 import { canvasDefaultValues } from '@/data/projects/three/canvasData'
 import CameraWithFloat from '../../lib/camera/CameraWithFloat'
 import { cameraDefaultValues } from '@/data/projects/three/cameraData'
+import PostProcessing from './PostProcessing'
 
 export type TProjectCanvas = {
   currentProject: number
@@ -27,6 +28,7 @@ export default function ProjectsCanvas({ currentProject }: TProjectCanvas) {
       <Suspense fallback={null}>
         <ProjectsScene currentProject={currentProject} />
       </Suspense>
+      <PostProcessing />
     </Canvas>
   )
 }
