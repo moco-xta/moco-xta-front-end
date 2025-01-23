@@ -1,24 +1,11 @@
 import React from 'react'
+import DirectionalLights from './DirectionalLights'
 
 export default function Lightning() {
   return (
     <>
-      <ambientLight intensity={0.25} />
-      <directionalLight
-        position={[10, 10, 10]}
-        intensity={1.25}
-        castShadow
-      />
-      <directionalLight
-        position={[-10, 10, 10]}
-        intensity={1.25}
-        castShadow
-      />
-      <directionalLight
-        position={[0, 0, 10]}
-        intensity={1.25}
-        castShadow
-      />
+      <ambientLight intensity={1} />
+      <DirectionalLights />
     </>
   )
 }

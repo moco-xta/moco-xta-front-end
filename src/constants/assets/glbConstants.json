@@ -1,5 +1,6 @@
 {
   "LOGOS": {
+    "LOGO_ABWERKT": "/models/glb/logos/LogoAbwerkt.glb",
     "LOGO_ANGULAR": "/models/glb/logos/LogoAngular.glb",
     "LOGO_AWS": "/models/glb/logos/LogoAws.glb",
     "LOGO_BABYLONJS": "/models/glb/logos/LogoBabylonjs.glb",
@@ -21,6 +22,7 @@
     "LOGO_IONIC": "/models/glb/logos/LogoIonic.glb",
     "LOGO_JAVA": "/models/glb/logos/LogoJava.glb",
     "LOGO_JAVASCRIPT": "/models/glb/logos/LogoJavascript.glb",
+    "LOGO_LENTO": "/models/glb/logos/LogoLento.glb",
     "LOGO_MOCO": "/models/glb/logos/LogoMoco.glb",
     "LOGO_MUI": "/models/glb/logos/LogoMui.glb",
     "LOGO_MYSQL": "/models/glb/logos/LogoMysql.glb",
@@ -28,6 +30,7 @@
     "LOGO_NEXTJS": "/models/glb/logos/LogoNextjs.glb",
     "LOGO_NGINX": "/models/glb/logos/LogoNginx.glb",
     "LOGO_NPM": "/models/glb/logos/LogoNpm.glb",
+    "LOGO_OPENCLASSROOMS": "/models/glb/logos/LogoOpenclassrooms.glb",
     "LOGO_PHOTOSHOP": "/models/glb/logos/LogoPhotoshop.glb",
     "LOGO_PONTHUS": "/models/glb/logos/LogoPonthus.glb",
     "LOGO_POSTGRESQL": "/models/glb/logos/LogoPostgresql.glb",

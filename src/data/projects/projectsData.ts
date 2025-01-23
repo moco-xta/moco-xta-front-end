@@ -19,12 +19,17 @@ export const projectsData: TProjectData[] = [
     logos: {
       project: { name: 'LogoMoco' },
       tools: [
-        { name: 'LogoBlender' },
-        { name: 'LogoReactThreeDrei' },
         { name: 'LogoNextjs' },
+        { name: 'LogoFormik' },
+        { name: 'LogoNextIntl' },
+        { name: 'LogoGsap' },
         { name: 'LogoSpring' },
         { name: 'LogoPostgresql' },
         { name: 'LogoDocker' },
+        { name: 'LogoHostinger' },
+        { name: 'LogoGoogleAnalytics' },
+        { name: 'LogoReactThreeDrei' },
+        { name: 'LogoBlender' },
       ],
     },
   },
@@ -40,14 +45,16 @@ export const projectsData: TProjectData[] = [
     },
     roles: ['Front End'],
     logos: {
-      project: { name: 'LogoMoco' },
+      project: { name: 'LogoAbwerkt' },
       tools: [
-        { name: 'LogoBlender' },
-        { name: 'LogoReactThreeDrei' },
-        { name: 'LogoNextjs' },
-        { name: 'LogoSpring' },
+        { name: 'LogoReact' },
+        { name: 'LogoAngular' },
+        { name: 'LogoRedux' },
+        { name: 'LogoFormik' },
+        { name: 'LogoNextIntl' },
+        { name: 'LogoDjango' },
         { name: 'LogoPostgresql' },
-        { name: 'LogoDocker' },
+        { name: 'LogoFigma' },
       ],
     },
     /* tools: [
@@ -69,14 +76,17 @@ export const projectsData: TProjectData[] = [
     },
     roles: ['Front End'],
     logos: {
-      project: { name: 'LogoMoco' },
+      project: { name: 'LogoLento' },
       tools: [
-        { name: 'LogoBlender' },
-        { name: 'LogoReactThreeDrei' },
-        { name: 'LogoNextjs' },
-        { name: 'LogoSpring' },
+        { name: 'LogoReact' },
+        { name: 'LogoGoogleMaps' },
+        { name: 'LogoFormik' },
+        { name: 'LogoMui' },
+        { name: 'LogoNextIntl' },
+        { name: 'LogoDjango' },
         { name: 'LogoPostgresql' },
-        { name: 'LogoDocker' },
+        { name: 'LogoFigma' },
+        // { name: 'LogoAuth0' },
       ],
     },
     /* tools: [
@@ -85,7 +95,7 @@ export const projectsData: TProjectData[] = [
       '/img/png/projects/home_pages/logo_spring.png',
     ], */
   },
-  /* {
+  {
     key: 'hundred_hands',
     name: '100 Hands',
     url: 'https://www.100hands.nl/',
@@ -96,14 +106,16 @@ export const projectsData: TProjectData[] = [
       from: '2021-09-01',
     },
     roles: ['Front End'],
-    tools: [
-      '/img/png/projects/home_pages/logo_react-three-drei.png',
-      '/img/png/projects/home_pages/logo_nextjs.png',
-      '/img/png/projects/home_pages/logo_spring.png',
-    ],
-    backgroundColor: {
-      page: '#ffffff',
-      card: '#000000',
+    logos: {
+      project: { name: 'LogoLento' },
+      tools: [
+        { name: 'LogoReact' },
+        { name: 'LogoReactThreeDrei' },
+        { name: 'LogoThreejs' },
+        { name: 'LogoWebgl' },
+        { name: 'LogoAws' },
+        // { name: 'LogoSubstance' },
+      ],
     },
   },
   {
@@ -117,14 +129,16 @@ export const projectsData: TProjectData[] = [
       from: '2021-05-17',
     },
     roles: ['Front End'],
-    tools: [
-      '/img/png/projects/home_pages/logo_react-three-drei.png',
-      '/img/png/projects/home_pages/logo_nextjs.png',
-      '/img/png/projects/home_pages/logo_spring.png',
-    ],
-    backgroundColor: {
-      page: '#000000',
-      card: '#f32730',
+    logos: {
+      project: { name: 'LogoLento' },
+      tools: [
+        { name: 'LogoReact' },
+        { name: 'LogoReactThreeDrei' },
+        { name: 'LogoThreejs' },
+        { name: 'LogoWebgl' },
+        { name: 'LogoAws' },
+        // { name: 'LogoSubstance' },
+      ],
     },
   },
   {
@@ -138,13 +152,15 @@ export const projectsData: TProjectData[] = [
       from: '2019-09-01',
     },
     roles: ['Back End'],
-    tools: [
-      '/img/png/projects/home_pages/logo_spring.png',
-      '/img/png/projects/home_pages/logo_postgresql.png',
-    ],
-    backgroundColor: {
-      page: '#ffffff',
-      card: '#7450eb',
+    logos: {
+      project: { name: 'LogoOpenclassrooms' },
+      tools: [
+        { name: 'LogoAngular' },
+        { name: 'LogoSpring' },
+        { name: 'LogoPostgresql' },
+        { name: 'LogoMysql' },
+        // { name: 'LogoSubstance' },
+      ],
     },
-  }, */
+  },
 ]

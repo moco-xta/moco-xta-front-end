@@ -1,13 +1,25 @@
-import React, { forwardRef, lazy, Suspense, useRef } from 'react'
+import React, { forwardRef, lazy, Suspense, useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 
 import type { TLazyFactory } from '@/types/components/types'
 import type { TProjectLogo } from '@/types/components/three/types'
+import { setGroupSize } from '@/helpers/threeHelpers'
 
-const lazyWithForwardRef = (factory: TLazyFactory, componentName: string) => {
+const lazyWithForwardRef = (factory: TLazyFactory, componentName: string, maxSize?: number) => {
   const LazyComponent = lazy(() =>
     factory().then(({ default: Component }) => {
       const ForwardedComponent = forwardRef((props, ref) => {
+        useLayoutEffect(() => {
+          if (ref && maxSize) {
+            const boundingBox = new THREE.Box3()
+            if (ref && 'current' in ref) {
+              const group = ref.current as THREE.Group as THREE.Group
+              boundingBox.setFromObject(ref.current as THREE.Object3D)
+              setGroupSize(boundingBox, group, maxSize)
+            }
+          }
+        }, [ref])
+
         return (
           <Component
             {...props}
@@ -22,12 +34,13 @@ const lazyWithForwardRef = (factory: TLazyFactory, componentName: string) => {
   return LazyComponent
 }
 
-export default function ProjectLogo({ logoData, ...rest }: TProjectLogo) {
+export default function ProjectLogo({ logoData, maxSize, ...rest }: TProjectLogo) {
   const logoRef = useRef<THREE.Group>(null!)
 
   const LazyLogo = lazyWithForwardRef(
     () => import(`@/components/three/models/logos/${logoData.name}`),
     logoData.name,
+    maxSize,
   )
 
   return (

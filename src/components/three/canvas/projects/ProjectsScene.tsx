@@ -2,21 +2,24 @@ import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { gsap } from 'gsap'
 
-import ProjectLogos from './ProjectLogos'
+import ProjectLogo from './ProjectLogo'
+import ToolsLogosGroups from './ToolsLogosGroups'
+
+import { getDegreeEuler } from '@/helpers/threeHelpers'
 
 import { projectsData } from '@/data/projects/projectsData'
 
 export type TProjectScene = {
   currentProject: number
-}
+} //TODO: To types
 
-const OFFSET = 8
+const OFFSET = 8 //TODO: To data
 
 export default function ProjectsScene({ currentProject }: TProjectScene) {
-  const projectsGroupRef = useRef<THREE.Group>(null!)
+  const projectLogosGroupRef = useRef<THREE.Group>(null!)
 
   useEffect(() => {
-    gsap.to(projectsGroupRef.current.position, {
+    gsap.to(projectLogosGroupRef.current.position, {
       y: OFFSET * currentProject,
       opacity: 0,
       duration: 0.5,
@@ -25,19 +28,18 @@ export default function ProjectsScene({ currentProject }: TProjectScene) {
   }, [currentProject])
 
   return (
-    <group ref={projectsGroupRef}>
-      {projectsData.map((projectData, index) => (
-        <group
-          key={`projects_logos_${projectData.key}`}
-          position={new THREE.Vector3(0, -index * OFFSET, 0)}
-        >
-          <ProjectLogos
-            projectData={projectData}
-            currentProject={currentProject}
-            index={index}
+    <>
+      <group ref={projectLogosGroupRef}>
+        {projectsData.map((projectData, index) => (
+          <ProjectLogo
+            logoData={projectData.logos.project}
+            position={new THREE.Vector3(4, -OFFSET * index + 1, 1)}
+            rotation={getDegreeEuler({ y: -33 })}
+            maxSize={7}
           />
-        </group>
-      ))}
-    </group>
+        ))}
+      </group>
+      <ToolsLogosGroups currentProject={currentProject} />
+    </>
   )
 }

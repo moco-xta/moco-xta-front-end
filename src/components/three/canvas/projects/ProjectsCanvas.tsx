@@ -19,7 +19,7 @@ export default function ProjectsCanvas({ currentProject }: TProjectCanvas) {
     <Canvas
       {...canvasDefaultValues}
       onCreated={({ scene }) => {
-        scene.fog = new THREE.Fog(0x334257, 9, 50)
+        scene.fog = new THREE.Fog(0x000000, 10, 12)
       }}
     >
       <CameraWithFloat defaultValues={cameraDefaultValues} />

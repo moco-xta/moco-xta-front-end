@@ -6,8 +6,8 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-const LogoNextjs = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_NEXTJS) as GLTFResult
+const LogoOpenclassrooms = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_OPENCLASSROOMS) as GLTFResult
 
   ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
     materials[key].side = THREE.DoubleSide
@@ -20,14 +20,8 @@ const LogoNextjs = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
       dispose={null}
     >
       <mesh
-        geometry={nodes.LogoNextjs_1.geometry}
-        material={materials['logo_nextjs_simple_#000000']}
-        castShadow
-        receiveShadow
-      />
-      <mesh
-        geometry={nodes.LogoNextjs_2.geometry}
-        material={materials['logo_nextjs_simple_#ffffff']}
+        geometry={nodes.LogoOpenclassrooms.geometry}
+        material={materials['logo_openclassrooms_#7450ea']}
         castShadow
         receiveShadow
       />
@@ -35,8 +29,8 @@ const LogoNextjs = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
   )
 })
 
-LogoNextjs.displayName = 'LogoNextjs'
+LogoOpenclassrooms.displayName = 'LogoOpenclassrooms'
 
-useGLTF.preload(glbConstants.LOGOS.LOGO_NEXTJS)
+useGLTF.preload(glbConstants.LOGOS.LOGO_OPENCLASSROOMS)
 
-export default LogoNextjs
+export default LogoOpenclassrooms
