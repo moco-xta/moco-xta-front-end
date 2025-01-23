@@ -5,7 +5,10 @@ import type { TCompanyData, TProjectData } from '@/types/data/components/layout/
 
 import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
 
-export default function useProjectsTimeline(projectsData: TProjectData[], companiesAndSchoolData: TCompanyData[]) {
+export default function useProjectsTimeline(
+  projectsData: TProjectData[],
+  companiesAndSchoolData: TCompanyData[],
+) {
   const [y, setY] = useState<number>(0)
   const [offsetHeight, setOffsetHeight] = useState<number>(0)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
@@ -54,7 +57,7 @@ export default function useProjectsTimeline(projectsData: TProjectData[], compan
         currentDate.getTime() > new Date(companyOrSchool.dates.from).getTime() &&
         currentDate.getTime() < new Date(companyOrSchool.dates.to).getTime()
       )
-      setCurrentCompany(index)
+        setCurrentCompany(index)
     })
   }, [currentDate, companiesAndSchoolData])
 

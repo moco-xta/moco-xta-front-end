@@ -26,7 +26,10 @@ export default function ProjectsCanvas({ currentProject, currentCompany }: TProj
       <CameraWithFloat defaultValues={cameraDefaultValues} />
       <Lightning />
       <Suspense fallback={null}>
-        <ProjectsScene currentProject={currentProject} currentCompany={currentCompany} />
+        <ProjectsScene
+          currentProject={currentProject}
+          currentCompany={currentCompany}
+        />
       </Suspense>
       <PostProcessing />
     </Canvas>

@@ -52,15 +52,17 @@ export default function ProjectsScene({ currentProject, currentCompany }: TProje
         ))}
       </group>
       <group ref={companiesGroupRef}>
-        {companiesData.filter(companyData => companyData.hasOwnProperty('logo')).map((companyData, index) => (
-          <ProjectLogo
-            logoData={companyData.logo!}
-            position={new THREE.Vector3(3.3, -OFFSET * companyData.index! - 1.5, 3.5)}
-            // position={new THREE.Vector3(3, -OFFSET * (index + 1) - 1, 2)}
-            rotation={getDegreeEuler({ y: -50 })}
-            maxSize={2.2}
-          />
-        ))}
+        {companiesData
+          .filter((companyData) => companyData.hasOwnProperty('logo'))
+          .map((companyData, index) => (
+            <ProjectLogo
+              logoData={companyData.logo!}
+              position={new THREE.Vector3(3.3, -OFFSET * companyData.index! - 1.5, 3.5)}
+              // position={new THREE.Vector3(3, -OFFSET * (index + 1) - 1, 2)}
+              rotation={getDegreeEuler({ y: -50 })}
+              maxSize={2.2}
+            />
+          ))}
       </group>
       <ToolsLogosGroups currentProject={currentProject} />
     </>

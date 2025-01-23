@@ -11,7 +11,7 @@ const LogoTheBrink = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((pr
 
   return (
     <group
-    ref={ref}
+      ref={ref}
       {...props}
       dispose={null}
     >

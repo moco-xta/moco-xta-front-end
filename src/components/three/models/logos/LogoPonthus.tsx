@@ -8,10 +8,10 @@ import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 const LogoPonthus = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
   const { nodes } = useGLTF(glbConstants.LOGOS.LOGO_PONTHUS) as GLTFResult
-  
+
   return (
     <group
-    ref={ref}
+      ref={ref}
       {...props}
       dispose={null}
     >
