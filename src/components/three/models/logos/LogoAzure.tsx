@@ -20,7 +20,7 @@ const LogoAzure = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props
       dispose={null}
     >
       <mesh
-        geometry={nodes.Curve.geometry}
+        geometry={nodes.LogoAzure.geometry}
         material={materials['logo_azure_#0072C6FF']}
         castShadow
         receiveShadow

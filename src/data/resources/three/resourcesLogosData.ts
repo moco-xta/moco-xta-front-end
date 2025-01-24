@@ -1,10 +1,12 @@
 export const resourcesLogosData = {
   lazy: {
     pathToModel: 'logos/',
-    modelsMultiplier: 3,
+    modelsMultiplier: 2,
     models: [
       'LogoAngular',
+      'LogoAuth0',
       'LogoAws',
+      'LogoAzure',
       'LogoBabylonjs',
       'LogoBlender',
       'LogoChatgpt',
@@ -13,6 +15,7 @@ export const resourcesLogosData = {
       'LogoFigma',
       'LogoFormik',
       'LogoGithub',
+      'LogoGitlab',
       'LogoGoogleAnalytics',
       'LogoGoogleMaps',
       'LogoGraphql',
@@ -23,6 +26,7 @@ export const resourcesLogosData = {
       'LogoIonic',
       'LogoJava',
       'LogoJavascript',
+      'LogoJira',
       'LogoMui',
       'LogoMysql',
       'LogoNextIntl',
@@ -38,6 +42,7 @@ export const resourcesLogosData = {
       'LogoRedux',
       'LogoSass',
       'LogoSpring',
+      'LogoSubstancePainter',
       'LogoTailwind',
       'LogoTypescript',
       'LogoWebgl',
