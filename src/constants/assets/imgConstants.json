@@ -1,4 +1,7 @@
 {
+  "BACKGROUNDS": {
+    "VERBAL_SHOOTA": "/img/backgrounds/verbal_shoota.jpg"
+  },
   "GIF": {
     "MIX": "/img/gifs/mix.gif",
     "PLAY": "/img/gifs/play.gif"

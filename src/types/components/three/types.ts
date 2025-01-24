@@ -91,6 +91,8 @@ export type TSkillLogo = {
 }
 
 export type TProjectLogo = Partial<THREE.Group> & {
+  path: string
+  prefix: string
   logoData: TLogoData
   maxSize?: number
 }

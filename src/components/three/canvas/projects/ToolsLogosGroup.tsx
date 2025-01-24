@@ -24,6 +24,8 @@ export default function ToolsLogosGroup({
     >
       {projectData.logos.tools.map((logoData, index) => (
         <ToolLogo
+          path={projectData.logos.path}
+          prefix={projectData.logos.prefix}
           logoData={logoData}
           currentProject={currentProject}
           toolsGroupIndex={toolsGroupIndex}

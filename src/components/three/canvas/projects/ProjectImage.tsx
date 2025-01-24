@@ -50,7 +50,7 @@ export default function ProjectImage({ position, imageUrl }: TProjectImage) {
     addObjects(scene, position, imageUrl)
   }, [scene])
 
-  useFrame((state, delta, xrFrame) => {})
+  // useFrame((state, delta, xrFrame) => {})
 
   return null
 }

@@ -30,4 +30,9 @@ export const routesData: TRouteData[] = [
     translationKey: 'CONTACT',
     path: '/contact',
   },
+  {
+    index: 4,
+    translationKey: 'PHOTOGRAPHY',
+    path: '/photography',
+  },
 ]

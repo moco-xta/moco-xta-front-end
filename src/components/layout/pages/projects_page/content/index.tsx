@@ -8,6 +8,7 @@ import { projectsData } from '@/data/projects/projectsData'
 
 import './index.scss'
 import { companiesData } from '@/data/projects/companiesData'
+import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 export type TContent = {
   currentProject: number
@@ -78,7 +79,9 @@ export default function Content({ currentProject, currentCompany }: TContent) {
             }}
           >
             <div className='project_container'>
-              <SectionTitle title={`${projectData.name} ${companiesData[currentCompany]?.name ? ' with ' + companiesData[currentCompany].name : ''}`} />
+              <SectionTitle
+                title={`${projectData.name} ${companiesData[currentCompany]?.name ? ' with ' + capitalizeFirstLetter(companiesData[currentCompany].name) : ''}`}
+              />
               <p className='project_roles'>
                 {projectData.roles.map((role, index) => (
                   <span key={`role_${projectData.key}_${index}`}>{role}</span>

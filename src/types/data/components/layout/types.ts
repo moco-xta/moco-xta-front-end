@@ -87,6 +87,8 @@ export type TProjectData = {
   }
   roles: string[]
   logos: {
+    prefix: string
+    path: string
     project: TLogoData
     tools: TLogoData[]
   }
@@ -95,9 +97,34 @@ export type TProjectData = {
 export type TCompanyData = {
   index?: number
   name?: string
-  logo?: TLogoData
+  logo?: {
+    prefix: string
+    path: string
+    logo?: TLogoData
+  }
   url?: string
   dates: {
     [key: string]: string
   }
+}
+
+export type TLocationData = {
+  city: string
+  country: string
+  gpsCoordinates: TGpsCoordinates
+  dates: {
+    [key: string]: string
+  }
+  flag: {
+    prefix: string
+    path: string
+    flag: {
+      name: string
+    }
+  }
+}
+
+export type TGpsCoordinates = {
+  longitude: number
+  latitude: number
 }

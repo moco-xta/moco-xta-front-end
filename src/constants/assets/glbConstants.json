@@ -54,6 +54,14 @@
     "LOGO_WPME": "/models/glb/logos/LogoWpme.glb",
     "LOGO_YARN": "/models/glb/logos/LogoYarn.glb"
   },
+  "FLAGS": {
+    "FLAG_AMSTERDAM": "/models/glb/flags/FlagAmsterdam.glb",
+    "FLAG_COLOMBIA": "/models/glb/flags/FlagColombia.glb",
+    "FLAG_FRANCE": "/models/glb/flags/FlagFrance.glb",
+    "FLAG_SWITZERLAND": "/models/glb/flags/FlagSwitzerland.glb",
+    "FLAG_THE_NETHERLANDS": "/models/glb/flags/FlagTheNetherlands.glb",
+    "FLAG_UNITED_KINGDOM": "/models/glb/flags/FlagUnitedKingdom.glb"
+  },
   "HERO": {
     "ALSO_KNOW_AS": {
       "BUHO": "/models/glb/hero/also_know_as/Buho.glb",

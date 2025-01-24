@@ -55,7 +55,7 @@ const LogoGoogleMaps = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((
   )
 })
 
-LogoGoogleMaps.displayName = 'LogoLogoGoogleMapsAngular'
+LogoGoogleMaps.displayName = 'LogoGoogleMaps'
 
 useGLTF.preload(glbConstants.LOGOS.LOGO_GOOGLE_MAPS)
 
