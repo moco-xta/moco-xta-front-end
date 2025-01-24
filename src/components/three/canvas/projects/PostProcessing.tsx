@@ -1,8 +1,7 @@
-import React, { useLayoutEffect, useRef } from 'react'
-import { useFrame } from '@react-three/fiber'
+import React from 'react'
 import * as THREE from 'three'
 import { Bloom, DepthOfField, EffectComposer, SSAO, Vignette } from '@react-three/postprocessing'
-import { BlendFunction, DepthOfFieldEffect, KernelSize, Resolution } from 'postprocessing'
+import { BlendFunction, KernelSize, Resolution } from 'postprocessing'
 
 export default function PostProcessing() {
   /* const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)

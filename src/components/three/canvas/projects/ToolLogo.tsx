@@ -54,7 +54,7 @@ export default function ToolLogo({
         delay: index * 0.1,
       })
     }
-  }, [currentProject])
+  }, [currentProject, index, toolsGroupIndex])
 
   return (
     <group

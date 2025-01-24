@@ -13,4 +13,5 @@ export function isValidDate(date: Date) {
       return true
     }
   }
+  return false
 }

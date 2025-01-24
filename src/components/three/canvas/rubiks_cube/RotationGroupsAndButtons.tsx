@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import * as THREE from 'three'
 import { useThree } from '@react-three/fiber'
@@ -61,13 +61,6 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
           index * 0.1,
         )
       })
-
-      // gsap.set(camera.position, { ...cameraDefaultValues.camera.position })
-
-      function animateCamera() {
-        const { x, y, z } = cameraDefaultValues.camera.position!
-        gsap.to(camera.position, { x: x, y, z, duration: 1, ease: 'power1.out' })
-      }
 
       function goToIsPlaying() {
         timeline.seek('isPlaying').pause()

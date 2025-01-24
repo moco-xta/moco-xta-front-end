@@ -79,6 +79,7 @@ export default function ProjectsScene({
       <group ref={projectLogosGroupRef}>
         {projectsData.map((projectData, index) => (
           <ProjectLogo
+            key={`project_logo_${projectData.key}`}
             path={projectData.logos.path}
             prefix={projectData.logos.prefix}
             logoData={projectData.logos.project}
@@ -91,8 +92,9 @@ export default function ProjectsScene({
       <group ref={companiesGroupRef}>
         {companiesData
           .filter((companyData) => companyData.hasOwnProperty('logo'))
-          .map((companyData, index) => (
+          .map((companyData) => (
             <ProjectLogo
+              key={`project_logo_${companyData.key}`}
               path={companyData.logo!.path}
               prefix={companyData.logo!.prefix}
               logoData={companyData.logo!.logo!}
@@ -113,6 +115,7 @@ export default function ProjectsScene({
         {projectsData.map((projectData, index) => (
           <>
             <ProjectImage
+              key={`project_image_${projectData.key}`}
               position={new THREE.Vector3(-3, -OFFSET * index + 0.5, 2.5)}
               imageUrl={projectData.imageUrl}
             />
@@ -145,8 +148,8 @@ export default function ProjectsScene({
           )
         } */
       >
-        {locationsData.map((locationData, index) => (
-          <group>
+        {locationsData.map((locationData) => (
+          <group key={`location_${locationData.city}`}>
             <ProjectLogo
               path={locationData.flag.path}
               prefix={locationData.flag.prefix}

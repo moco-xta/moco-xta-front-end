@@ -10,6 +10,7 @@ export const companiesData: TCompanyData[] = [
     },
   },
   {
+    key: 'ponthus',
     index: 1,
     name: 'ponthus',
     logo: {
@@ -26,6 +27,7 @@ export const companiesData: TCompanyData[] = [
     },
   },
   {
+    key: 'the_brink',
     index: 2,
     name: 'The Brink',
     logo: {

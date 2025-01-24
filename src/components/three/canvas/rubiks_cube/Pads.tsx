@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef, useMemo, useLayoutEffect } from 'react'
+import React, { Suspense, useEffect, useRef, useMemo } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import * as THREE from 'three'
 
@@ -67,7 +67,6 @@ export default function Pads({ padIndexRef, coordinates }: TPads) {
           index={index}
           padIndexRef={padIndexRef}
           coordinates={coordinates}
-          padsColors={padsColors}
           padRefs={padRefs}
         />
       ))}

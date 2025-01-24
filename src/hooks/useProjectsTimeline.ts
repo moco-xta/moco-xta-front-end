@@ -30,10 +30,13 @@ export default function useProjectsTimeline(
 
   useLenis((lenis) => {
     setY(lenis.targetScroll)
-    setOffsetHeight(
-      document.getElementById('projects_timeline_container')?.offsetHeight! -
-        document.documentElement.clientHeight,
-    )
+    const container = document.getElementById('projects_timeline_container')
+
+    if (container) {
+      setOffsetHeight(container.offsetHeight - document.documentElement.clientHeight)
+    } else {
+      setOffsetHeight(0) // Or handle the case where the element is not found
+    }
   })
 
   useEffect(() => {

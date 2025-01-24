@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import * as THREE from 'three'
-import { useFrame, useThree } from '@react-three/fiber'
+import { useThree } from '@react-three/fiber'
 
 import vertexShader from '../../shaders/project_image/vertexShader.glsl'
 import fragmentShader from '../../shaders/project_image/fragmentShader.glsl'
@@ -48,7 +48,7 @@ export default function ProjectImage({ position, imageUrl }: TProjectImage) {
 
   useEffect(() => {
     addObjects(scene, position, imageUrl)
-  }, [scene])
+  }, [scene, position, imageUrl])
 
   // useFrame((state, delta, xrFrame) => {})
 

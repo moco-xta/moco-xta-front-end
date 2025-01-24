@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react'
-
 import type { TLogoData } from '../three/types'
 
 // PAGE
@@ -95,6 +93,7 @@ export type TProjectData = {
 }
 
 export type TCompanyData = {
+  key?: string
   index?: number
   name?: string
   logo?: {

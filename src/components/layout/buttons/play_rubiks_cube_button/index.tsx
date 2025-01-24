@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { gsap } from 'gsap'
 import { useTranslations } from 'next-intl'
-// import { BiGame } from 'react-icons/bi'
 import { GrGamepad } from 'react-icons/gr'
+
+import type { TRubiksCubeStatus } from '@/types/redux/types'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
@@ -11,9 +11,6 @@ import { AppDispatch } from '@/redux/store'
 import { setRubiksCubeStatus } from '@/redux/slices/rubiksCubeStateSlice'
 
 import './index.scss'
-import { TRubiksCubeStatus } from '@/types/redux/types'
-import { useThree } from '@react-three/fiber'
-import { getCameraDestinationPosition } from '@/helpers/rubiksCubeHelpers'
 
 export default function PlayRubiksCubeButton() {
   const t = useTranslations('SKILLS')
