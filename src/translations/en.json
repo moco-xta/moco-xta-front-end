@@ -133,6 +133,10 @@
           "BLENDER": {
             "PARAGRAPH_TITLE": "blender",
             "PARAGRAPH_DESCRIPTION": "Blender is a powerful 3D modeling software developed by Blender Foundation. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Blender allows designers to create visually stunning visuals and compositions. I use Blender to model, texture, and animate 3D objects and scenes, providing a deeper visual immersion."
+          },
+          "SUBSTANCE_PAINTER": {
+            "PARAGRAPH_TITLE": "substance painter",
+            "PARAGRAPH_DESCRIPTION": "Substance Painter is a powerful graphic design software developed by Adobe. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Substance Painter allows designers to create visually stunning visuals and compositions. I use Substance Painter to edit images, create 3D models, and optimize visuals for web and print."
           }
         }
       },

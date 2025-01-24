@@ -64,6 +64,28 @@ export type TPlayerPageGreeting = {
 
 // PROJECTS
 
+export type TProjectScene = {
+  currentProject: number
+  currentCompany: number
+  currentLocation: number
+}
+
+export type TProjectsLogos = {
+  currentProject: number
+}
+
+export type TCompaniesLogos = {
+  currentCompany: number
+}
+
+export type TProjectsPictures = {
+  currentProject: number
+}
+
+export type TLocations = {
+  currentLocation: number
+}
+
 // CURRENT DATE
 
 export type TCurrentDate = {

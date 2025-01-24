@@ -182,6 +182,14 @@ export const skillsData = {
           },
           paragraphs: [],
         },
+        {
+          key: 'substance_painter',
+          translationKey: 'SUBSTANCE_PAINTER',
+          logo: {
+            name: 'LogoSubstancePainter',
+          },
+          paragraphs: [],
+        },
       ],
     },
     {

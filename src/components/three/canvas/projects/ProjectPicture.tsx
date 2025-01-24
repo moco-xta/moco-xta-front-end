@@ -43,7 +43,7 @@ export type TProjectImage = {
   imageUrl: string
 }
 
-export default function ProjectImage({ position, imageUrl }: TProjectImage) {
+export default function ProjectPicture({ position, imageUrl }: TProjectImage) {
   const { scene } = useThree()
 
   useEffect(() => {

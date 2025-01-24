@@ -24,8 +24,8 @@ const LogoTheBrink = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((pr
           color={'#ff4407'}
           roughness={1}
           metalness={0}
-          emissive={'#ff4407'}
-          emissiveIntensity={1}
+          // emissive={'#ff4407'}
+          // emissiveIntensity={1}
         />
       </mesh>
     </group>
