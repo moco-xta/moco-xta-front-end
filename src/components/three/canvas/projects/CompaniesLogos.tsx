@@ -36,7 +36,7 @@ export default function CompaniesLogos({ currentCompany }: TCompaniesLogos) {
             position={
               new THREE.Vector3(
                 layoutData.companiesLogos.position.x,
-                -layoutData.companiesLogos.gap * companyData.index! -
+                -layoutData.companiesLogos.gap * companyData.index! +
                   layoutData.companiesLogos.position.y,
                 layoutData.companiesLogos.position.z,
               )
