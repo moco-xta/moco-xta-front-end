@@ -7,13 +7,22 @@ import type { TLogoData } from '@/types/data/components/three/types'
 import ProjectLogo from './ProjectLogo'
 
 export type TToolLogo = {
+  path: string
+  prefix: string
   logoData: TLogoData
   currentProject: number
   toolsGroupIndex: number
   index: number
 } //TODO: To types
 
-export default function ToolLogo({ logoData, currentProject, toolsGroupIndex, index }: TToolLogo) {
+export default function ToolLogo({
+  path,
+  prefix,
+  logoData,
+  currentProject,
+  toolsGroupIndex,
+  index,
+}: TToolLogo) {
   const toolLogoGroupRef = useRef<THREE.Group>(null!)
 
   useEffect(() => {
@@ -53,6 +62,8 @@ export default function ToolLogo({ logoData, currentProject, toolsGroupIndex, in
       // position={new THREE.Vector3(index * 0.6, -5, 4)}
     >
       <ProjectLogo
+        path={path}
+        prefix={prefix}
         logoData={logoData}
         maxSize={0.5}
       />

@@ -17,6 +17,8 @@ export const projectsData: TProjectData[] = [
     },
     roles: ['Full Stack', 'Real-time 3D'],
     logos: {
+      prefix: 'Logo',
+      path: 'logos/',
       project: { name: 'Moco' },
       tools: [
         { name: 'Nextjs' },
@@ -48,6 +50,8 @@ export const projectsData: TProjectData[] = [
     },
     roles: ['Front End'],
     logos: {
+      prefix: 'Logo',
+      path: 'logos/',
       project: { name: 'Abwerkt' },
       tools: [
         { name: 'React' },
@@ -75,6 +79,8 @@ export const projectsData: TProjectData[] = [
     },
     roles: ['Front End'],
     logos: {
+      prefix: 'Logo',
+      path: 'logos/',
       project: { name: 'Lento' },
       tools: [
         { name: 'React' },
@@ -104,6 +110,8 @@ export const projectsData: TProjectData[] = [
     },
     roles: ['Front End', 'Real-time 3D'],
     logos: {
+      prefix: 'Logo',
+      path: 'logos/',
       project: { name: 'HundredHands' },
       tools: [
         { name: 'React' },
@@ -129,6 +137,8 @@ export const projectsData: TProjectData[] = [
     },
     roles: ['Front End', 'Real-time 3D'],
     logos: {
+      prefix: 'Logo',
+      path: 'logos/',
       project: { name: 'Wpme' },
       tools: [
         { name: 'React' },
@@ -151,10 +161,12 @@ export const projectsData: TProjectData[] = [
     descriptionsKey: 'DESCRIPTIONS.OPENCLASSROOMS',
     dates: {
       to: '2021-05-17',
-      from: '2019-09-01',
+      from: '2019-05-01',
     },
     roles: ['Full stack', 'Real-time 3D'],
     logos: {
+      prefix: 'Logo',
+      path: 'logos/',
       project: { name: 'Openclassrooms' },
       tools: [
         { name: 'Angular' },

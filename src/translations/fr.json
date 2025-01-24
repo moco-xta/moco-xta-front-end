@@ -1,11 +1,12 @@
 {
   "ROUTES": {
-    "ABOUT": "à propos",
+    "ABOUT": "a propos",
     "CONTACT": "contact",
     "HOME": "home",
+    "PHOTOGRAPHY": "photographie",
     "PROJECTS": "projets",
     "RESOURCES": "ressources",
-    "SKILLS": "compétences"
+    "SKILLS": "competences"
   },
   "LOCALES": {
     "EN": "Anglais",

@@ -10,13 +10,15 @@ import { isValidDate } from '@/helpers/dateHelpers'
 
 import { projectsData } from '@/data/projects/projectsData'
 import { companiesData } from '@/data/projects/companiesData'
+import { locationsData } from '@/data/projects/locationsData'
 
 import './index.scss'
 
 export default function ProjectsPage() {
-  const { currentDate, currentProject, currentCompany } = useProjectsTimeline(
+  const { currentDate, currentProject, currentCompany, currentLocation } = useProjectsTimeline(
     projectsData,
     companiesData,
+    locationsData,
   )
 
   useEffect(() => {
@@ -29,9 +31,13 @@ export default function ProjectsPage() {
         <ProjectsCanvas
           currentProject={currentProject}
           currentCompany={currentCompany}
+          currentLocation={currentLocation}
         />
       </div>
-      <Content currentProject={currentProject} currentCompany={currentCompany} />
+      <Content
+        currentProject={currentProject}
+        currentCompany={currentCompany}
+      />
       {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
     </div>
   )

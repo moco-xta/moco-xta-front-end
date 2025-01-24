@@ -13,9 +13,14 @@ import PostProcessing from './PostProcessing'
 export type TProjectCanvas = {
   currentProject: number
   currentCompany: number
+  currentLocation: number
 }
 
-export default function ProjectsCanvas({ currentProject, currentCompany }: TProjectCanvas) {
+export default function ProjectsCanvas({
+  currentProject,
+  currentCompany,
+  currentLocation,
+}: TProjectCanvas) {
   return (
     <Canvas
       {...canvasDefaultValues}
@@ -29,6 +34,7 @@ export default function ProjectsCanvas({ currentProject, currentCompany }: TProj
         <ProjectsScene
           currentProject={currentProject}
           currentCompany={currentCompany}
+          currentLocation={currentLocation}
         />
       </Suspense>
       <PostProcessing />

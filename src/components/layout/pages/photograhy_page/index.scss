@@ -1,0 +1,11 @@
+@import '@/styles/variables.module.scss';
+
+#photography_page {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/img/backgrounds/verbal_shoota.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
