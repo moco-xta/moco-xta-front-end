@@ -15,7 +15,6 @@ export default function ProjectsPictures({ currentProject }: TProjectsPictures) 
   useEffect(() => {
     gsap.to(projectsPicturesGroupRef.current.position, {
       y: layoutData.pictures.gap * currentProject,
-      opacity: 0,
       duration: 0.5,
       ease: 'power3.inOut',
       delay: 0.2,

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import { useThree } from '@react-three/fiber'
 
@@ -6,6 +6,7 @@ import vertexShader from '../../shaders/project_image/vertexShader.glsl'
 import fragmentShader from '../../shaders/project_image/fragmentShader.glsl'
 
 function addObjects(scene: THREE.Scene, position: THREE.Vector3, imageUrl: string) {
+
   const { x, y, z } = position
 
   const geometry = new THREE.PlaneGeometry(6 * 1, 4 * 1, 6, 4)
@@ -17,6 +18,7 @@ function addObjects(scene: THREE.Scene, position: THREE.Vector3, imageUrl: strin
   const material = new THREE.ShaderMaterial({
     side: THREE.DoubleSide,
     transparent: true,
+    opacity: 0.3,
     uniforms: {
       time: {
         value: 0,
@@ -46,9 +48,14 @@ export type TProjectImage = {
 export default function ProjectPicture({ position, imageUrl }: TProjectImage) {
   const { scene } = useThree()
 
+  const [isLoaded, setIsLoaded] = useState<boolean>(false)
+
   useEffect(() => {
-    addObjects(scene, position, imageUrl)
-  }, [scene, position, imageUrl])
+    if (!isLoaded) {
+      addObjects(scene, position, imageUrl)
+      setIsLoaded(true)
+    }
+  }, [scene, position, imageUrl, isLoaded])
 
   // useFrame((state, delta, xrFrame) => {})
 
