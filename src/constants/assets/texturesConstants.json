@@ -5,6 +5,14 @@
       "PROFILE_PICTURE": "/img/textures/hero/portrait/profile_picture.png"
     }
   },
+  "PROJECTS": {
+    "ABWERKT": "/img/textures/projects/abwerkt.png",
+    "HUNDREDS_HANDS": "/img/textures/projects/hundred_hands.png",
+    "LENTO": "/img/textures/projects/lento.png",
+    "MOCO_XTA": "/img/textures/projects/moco_xta.png",
+    "OPENCLASSROOMS": "/img/textures/projects/openclassrooms.png",
+    "WPME": "/img/textures/projects/wpme.png"
+  },
   "LABORATORY": {
     "PARQUET": {
       "DIFFUSE": "/img/textures/laboratory/parquet_diffuse.jpg",

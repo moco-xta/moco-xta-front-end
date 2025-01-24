@@ -1,0 +1,49 @@
+@import '@/styles/variables.module.scss';
+
+#projects_timeline_container {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+#projects_container {
+  z-index: 0;
+  position: fixed;
+
+  .project_section {
+    position: absolute;
+    width: 25vw;
+    height: 100vh;
+    left: 15vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .project_container {
+      // width: 50%;
+
+      .project_description {
+        margin-bottom: $px_margin_L;
+        text-align: justify;
+      }
+
+      .project_roles {
+        margin: $px_margin_L 0;
+        display: flex;
+        flex-direction: row;
+        gap: $px_margin_M;
+      }
+
+      .project_tools {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0 $px_margin_S;
+      }
+    }
+  }
+}

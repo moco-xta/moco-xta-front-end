@@ -1,32 +1,37 @@
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { Physics } from '@react-three/rapier'
 
 import Lightning from './lightning/Lightning'
-import Player from '../../controls/player/Player'
 import ProjectsScene from './ProjectsScene'
-import PhysicsGround from '../../lib/physics/PhysicsGround'
 
 import { canvasDefaultValues } from '@/data/projects/three/canvasData'
+import CameraWithFloat from '../../lib/camera/CameraWithFloat'
 import { cameraDefaultValues } from '@/data/projects/three/cameraData'
+import PostProcessing from './PostProcessing'
 
-export default function ProjectsCanvas() {
+export type TProjectCanvas = {
+  currentProject: number
+  currentCompany: number
+}
+
+export default function ProjectsCanvas({ currentProject, currentCompany }: TProjectCanvas) {
   return (
     <Canvas
       {...canvasDefaultValues}
       onCreated={({ scene }) => {
-        scene.fog = new THREE.Fog(0x334257, 9, 50)
+        scene.fog = new THREE.Fog(0x000000, 10, 12)
       }}
     >
+      <CameraWithFloat defaultValues={cameraDefaultValues} />
       <Lightning />
       <Suspense fallback={null}>
-        <Physics debug>
-          <Player cameraDefaultValues={cameraDefaultValues.camera} />
-          <ProjectsScene />
-          <PhysicsGround args={[200, 200]} />
-        </Physics>
+        <ProjectsScene
+          currentProject={currentProject}
+          currentCompany={currentCompany}
+        />
       </Suspense>
+      <PostProcessing />
     </Canvas>
   )
 }

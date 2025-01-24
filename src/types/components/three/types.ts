@@ -90,6 +90,11 @@ export type TSkillLogo = {
   logoData: TLogoData
 }
 
+export type TProjectLogo = Partial<THREE.Group> & {
+  logoData: TLogoData
+  maxSize?: number
+}
+
 // RUBIKS CUBE
 
 export type TCube = {

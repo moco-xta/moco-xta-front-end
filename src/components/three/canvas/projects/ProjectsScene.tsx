@@ -1,29 +1,115 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
-import { ThreeEvent } from '@react-three/fiber'
+import React, { useEffect, useRef } from 'react'
+import * as THREE from 'three'
+import { gsap } from 'gsap'
 
-import { AppDispatch } from '@/redux/store'
-import { setDoftargetPosition } from '@/redux/slices/playerPageStateSlice'
+import ProjectLogo from './ProjectLogo'
+import ToolsLogosGroups from './ToolsLogosGroups'
+import ProjectImage from './ProjectImage'
 
-import Paris from './Paris'
-import Maastricht from './Maastricht'
-import Amsterdam from './Amsterdam'
+import { getDegreeEuler } from '@/helpers/threeHelpers'
 
-import './index.scss'
+import { projectsData } from '@/data/projects/projectsData'
+import { companiesData } from '@/data/projects/companiesData'
+import { Box, Html } from '@react-three/drei'
 
-export default function ProjectsScene() {
-  const dispatch = useDispatch<AppDispatch>()
+export type TProjectScene = {
+  currentProject: number
+  currentCompany: number
+} //TODO: To types
 
-  function handleOnPointerMove(e: ThreeEvent<PointerEvent>) {
-    e.stopPropagation()
-    dispatch(setDoftargetPosition({ x: e.point.x, y: e.point.y, z: e.point.z }))
-  }
+const OFFSET = 8 //TODO: To data
+
+export default function ProjectsScene({ currentProject, currentCompany }: TProjectScene) {
+  const projectLogosGroupRef = useRef<THREE.Group>(null!)
+  const companiesGroupRef = useRef<THREE.Group>(null!)
+  const projectsImagesGroupRef = useRef<THREE.Group>(null!)
+
+  useEffect(() => {
+    gsap.to(projectLogosGroupRef.current.position, {
+      y: OFFSET * currentProject,
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power3.inOut',
+    })
+  }, [currentProject])
+
+  useEffect(() => {
+    gsap.to(companiesGroupRef.current.position, {
+      y: OFFSET * currentCompany,
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power3.inOut',
+    })
+  }, [currentCompany])
+
+  useEffect(() => {
+    gsap.to(projectsImagesGroupRef.current.position, {
+      y: OFFSET * currentProject,
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power3.inOut',
+      delay: 0.2,
+    })
+  }, [currentProject])
 
   return (
-    <group onPointerMove={handleOnPointerMove}>
-      <Paris />
-      <Maastricht />
-      <Amsterdam />
-    </group>
+    <>
+      <group ref={projectLogosGroupRef}>
+        {projectsData.map((projectData, index) => (
+          <ProjectLogo
+            logoData={projectData.logos.project}
+            position={new THREE.Vector3(4, -OFFSET * index + 1, 1)}
+            rotation={getDegreeEuler({ y: -33 })}
+            maxSize={7}
+          />
+        ))}
+      </group>
+      <group ref={companiesGroupRef}>
+        {companiesData
+          .filter((companyData) => companyData.hasOwnProperty('logo'))
+          .map((companyData, index) => (
+            <ProjectLogo
+              logoData={companyData.logo!}
+              position={new THREE.Vector3(3.3, -OFFSET * companyData.index! - 1.5, 3.5)}
+              // position={new THREE.Vector3(3, -OFFSET * (index + 1) - 1, 2)}
+              rotation={getDegreeEuler({ y: -50 })}
+              maxSize={2.2}
+            />
+          ))}
+      </group>
+      <group
+        ref={projectsImagesGroupRef}
+        name={'projects_images_group'}
+      >
+        {/* {projectsData.map((projectData, index) => (
+          <Box position={new THREE.Vector3(-3, -OFFSET * index + 0.5, 2.5)} />
+        ))} */}
+        {projectsData.map((projectData, index) => (
+          <>
+            <ProjectImage
+              position={new THREE.Vector3(-3, -OFFSET * index + 0.5, 2.5)}
+              imageUrl={projectData.imageUrl}
+            />
+            {/* <Html
+              scale={0.1}
+              style={{ userSelect: 'none', opacity: '0.5' }}
+              castShadow
+              receiveShadow
+              occlude='blending'
+              transform
+              position={new THREE.Vector3(-3, -OFFSET * index + 0.5, 2.5)}
+            >
+              <iframe
+                title='embed'
+                width={1600}
+                height={900}
+                src={projectData.url}
+              />
+            </Html> */}
+          </>
+        ))}
+      </group>
+      <ToolsLogosGroups currentProject={currentProject} />
+    </>
   )
 }

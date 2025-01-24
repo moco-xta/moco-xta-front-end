@@ -1,6 +1,8 @@
-// PAGE
+import type { ReactNode } from 'react'
 
-import { TLogoData } from '../three/types'
+import type { TLogoData } from '../three/types'
+
+// PAGE
 
 export type TPageData = {
   key: string
@@ -70,4 +72,32 @@ export type TExternalLinkData = {
   urlName?: string
   url: string
   languages?: string[]
+}
+
+// PROJECTS
+
+export type TProjectData = {
+  key: string
+  url: string
+  name: string
+  imageUrl: string
+  descriptionsKey: string
+  dates: {
+    [key: string]: string
+  }
+  roles: string[]
+  logos: {
+    project: TLogoData
+    tools: TLogoData[]
+  }
+}
+
+export type TCompanyData = {
+  index?: number
+  name?: string
+  logo?: TLogoData
+  url?: string
+  dates: {
+    [key: string]: string
+  }
 }

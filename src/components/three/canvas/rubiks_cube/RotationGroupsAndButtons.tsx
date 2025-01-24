@@ -37,7 +37,7 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
   useEffect(() => {
     console.log('timeline', timeline)
     console.log('status', status)
-  }, [status])
+  }, [status, timeline])
 
   useGSAP(
     () => {
@@ -65,8 +65,8 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
       // gsap.set(camera.position, { ...cameraDefaultValues.camera.position })
 
       function animateCamera() {
-          const { x, y, z } = cameraDefaultValues.camera.position!
-          gsap.to(camera.position, { x: x, y, z, duration: 1, ease: 'power1.out' })
+        const { x, y, z } = cameraDefaultValues.camera.position!
+        gsap.to(camera.position, { x: x, y, z, duration: 1, ease: 'power1.out' })
       }
 
       function goToIsPlaying() {
