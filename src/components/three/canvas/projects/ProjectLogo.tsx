@@ -38,8 +38,8 @@ export default function ProjectLogo({ logoData, maxSize, ...rest }: TProjectLogo
   const logoRef = useRef<THREE.Group>(null!)
 
   const LazyLogo = lazyWithForwardRef(
-    () => import(`@/components/three/models/logos/${logoData.name}`),
-    logoData.name,
+    () => import(`@/components/three/models/logos/Logo${logoData.name}`),
+    `Logo${logoData.name}`,
     maxSize,
   )
 

@@ -80,7 +80,7 @@ export type TProjectData = {
   key: string
   url: string
   name: string
-  image: string
+  imageUrl: string
   descriptionsKey: string
   dates: {
     [key: string]: string

@@ -15,22 +15,24 @@
   transition: background-color 1s linear;
 
   #month {
-    font-size: 70px;
+    font-size: 100px;
+    margin-bottom: -30px;
   }
 
   #day_number {
-    font-size: 35px;
+    font-size: 70px;
   }
 
   #arrow_and_year_container {
-    width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 70px;
 
     #arrow_left_icon {
-      font-size: 60px;
+      width: 60px;
+      height: 60px;
     }
 
     #year {

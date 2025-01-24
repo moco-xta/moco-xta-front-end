@@ -7,7 +7,7 @@ import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 import './index.scss'
 
-export default function SectionTitle({ translationPath }: TTitle) {
+export default function SectionTitle({ title, translationPath }: TTitle) {
   const t = useTranslations()
 
   return (
@@ -15,7 +15,7 @@ export default function SectionTitle({ translationPath }: TTitle) {
       id='section_title'
       className='pc_item'
     >
-      {capitalizeFirstLetter(t(translationPath))}
+      {capitalizeFirstLetter(title ? title : t(translationPath))}
     </h2>
   )
 }

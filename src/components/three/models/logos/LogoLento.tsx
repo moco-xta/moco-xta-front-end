@@ -20,8 +20,14 @@ const LogoLento = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props
       dispose={null}
     >
       <mesh
-        geometry={nodes.LogoLento.geometry}
-        material={nodes.LogoLento.material}
+        geometry={nodes.LogoLento_1.geometry}
+        material={materials['logo_lento_#5397D4']}
+        castShadow
+        receiveShadow
+      />
+      <mesh
+        geometry={nodes.LogoLento_2.geometry}
+        material={materials['logo_lento_##ECBAA2']}
         castShadow
         receiveShadow
       />

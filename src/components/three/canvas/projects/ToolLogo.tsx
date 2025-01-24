@@ -20,7 +20,7 @@ export default function ToolLogo({ logoData, currentProject, toolsGroupIndex, in
     if (toolsGroupIndex < currentProject) {
       gsap.to(toolLogoGroupRef.current.position, {
         x: index * 0.6,
-        y: -1.5,
+        y: -1.75,
         z: -5.8,
         duration: 0.5,
         ease: 'power3.inOut',
@@ -29,7 +29,7 @@ export default function ToolLogo({ logoData, currentProject, toolsGroupIndex, in
     } else if (toolsGroupIndex === currentProject) {
       gsap.to(toolLogoGroupRef.current.position, {
         x: index * 0.6,
-        y: -1.5,
+        y: -1.75,
         z: 4,
         duration: 0.5,
         ease: 'power3.inOut',

@@ -2,17 +2,19 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { useTranslations } from 'next-intl'
 
-import { capitalizeFirstLetter } from '@/helpers/textHelpers'
+import { SectionTitle } from '@/components/layout/titles'
 
 import { projectsData } from '@/data/projects/projectsData'
 
 import './index.scss'
+import { companiesData } from '@/data/projects/companiesData'
 
 export type TContent = {
   currentProject: number
+  currentCompany: number
 }
 
-export default function Content({ currentProject }: TContent) {
+export default function Content({ currentProject, currentCompany }: TContent) {
   const t = useTranslations('PROJECTS')
 
   const projectsTimelineContainerRef = useRef<HTMLDivElement>(null)
@@ -72,12 +74,22 @@ export default function Content({ currentProject }: TContent) {
             key={`project_section_${projectData.name}`}
             className='project_section'
             style={{
-              zIndex: `${projectsData.length - index}` /* background: projectData.backgroundColor.page */,
+              zIndex: `${projectsData.length - index}`,
             }}
           >
             <div className='project_container'>
-              <h2>{capitalizeFirstLetter(projectData.name)}</h2>
-              <p>{t(projectData.descriptionsKey)}</p>
+              <SectionTitle title={`${projectData.name} ${companiesData[currentCompany]?.name ? ' with ' + companiesData[currentCompany].name : ''}`} />
+              <p className='project_roles'>
+                {projectData.roles.map((role, index) => (
+                  <span key={`role_${projectData.key}_${index}`}>{role}</span>
+                ))}
+              </p>
+              <p className='project_description'>{t(projectData.descriptionsKey)}</p>
+              <p className='project_tools'>
+                {projectData.logos.tools.map((tool, index) => (
+                  <span key={`role_${projectData.key}_${index}`}>#{tool.name}</span>
+                ))}
+              </p>
             </div>
           </section>
         ))}

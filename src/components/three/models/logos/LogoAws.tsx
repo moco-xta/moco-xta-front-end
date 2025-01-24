@@ -24,7 +24,7 @@ const LogoAws = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, 
       <mesh
         name='LogoAws_1'
         geometry={nodes.LogoAws_1.geometry}
-        material={materials['logo_aws_#252f3e']}
+        material={materials['logo_aws_#fff']}
         castShadow
         receiveShadow
       />

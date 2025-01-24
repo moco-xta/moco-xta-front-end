@@ -93,7 +93,8 @@ export type TResourcesParagraph = {
 // TITLES
 
 export type TTitle = {
-  translationPath: string
+  title?: string
+  translationPath?: string
 }
 
 // LINKS

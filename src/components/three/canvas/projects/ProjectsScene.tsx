@@ -4,11 +4,13 @@ import { gsap } from 'gsap'
 
 import ProjectLogo from './ProjectLogo'
 import ToolsLogosGroups from './ToolsLogosGroups'
+import ProjectImage from './ProjectImage'
 
 import { getDegreeEuler } from '@/helpers/threeHelpers'
 
 import { projectsData } from '@/data/projects/projectsData'
 import { companiesData } from '@/data/projects/companiesData'
+import { Box, Html } from '@react-three/drei'
 
 export type TProjectScene = {
   currentProject: number
@@ -20,6 +22,7 @@ const OFFSET = 8 //TODO: To data
 export default function ProjectsScene({ currentProject, currentCompany }: TProjectScene) {
   const projectLogosGroupRef = useRef<THREE.Group>(null!)
   const companiesGroupRef = useRef<THREE.Group>(null!)
+  const projectsImagesGroupRef = useRef<THREE.Group>(null!)
 
   useEffect(() => {
     gsap.to(projectLogosGroupRef.current.position, {
@@ -38,6 +41,16 @@ export default function ProjectsScene({ currentProject, currentCompany }: TProje
       ease: 'power3.inOut',
     })
   }, [currentCompany])
+
+  useEffect(() => {
+    gsap.to(projectsImagesGroupRef.current.position, {
+      y: OFFSET * currentProject,
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power3.inOut',
+      delay: 0.2,
+    })
+  }, [currentProject])
 
   return (
     <>
@@ -63,6 +76,38 @@ export default function ProjectsScene({ currentProject, currentCompany }: TProje
               maxSize={2.2}
             />
           ))}
+      </group>
+      <group
+        ref={projectsImagesGroupRef}
+        name={'projects_images_group'}
+      >
+        {/* {projectsData.map((projectData, index) => (
+          <Box position={new THREE.Vector3(-3, -OFFSET * index + 0.5, 2.5)} />
+        ))} */}
+        {projectsData.map((projectData, index) => (
+          <>
+            <ProjectImage
+              position={new THREE.Vector3(-3, -OFFSET * index + 0.5, 2.5)}
+              imageUrl={projectData.imageUrl}
+            />
+            {/* <Html
+              scale={0.1}
+              style={{ userSelect: 'none', opacity: '0.5' }}
+              castShadow
+              receiveShadow
+              occlude='blending'
+              transform
+              position={new THREE.Vector3(-3, -OFFSET * index + 0.5, 2.5)}
+            >
+              <iframe
+                title='embed'
+                width={1600}
+                height={900}
+                src={projectData.url}
+              />
+            </Html> */}
+          </>
+        ))}
       </group>
       <ToolsLogosGroups currentProject={currentProject} />
     </>

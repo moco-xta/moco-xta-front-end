@@ -13,8 +13,9 @@
 
   .project_section {
     position: absolute;
-    width: 100vw;
+    width: 25vw;
     height: 100vh;
+    left: 15vw;
     margin: 0 !important;
     padding: 0 !important;
     display: flex;
@@ -23,7 +24,26 @@
     justify-content: center;
 
     .project_container {
-      width: 50%;
+      // width: 50%;
+
+      .project_description {
+        margin-bottom: $px_margin_L;
+        text-align: justify;
+      }
+
+      .project_roles {
+        margin: $px_margin_L 0;
+        display: flex;
+        flex-direction: row;
+        gap: $px_margin_M;
+      }
+
+      .project_tools {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0 $px_margin_S;
+      }
     }
   }
 }

@@ -13,7 +13,7 @@ export const companiesData: TCompanyData[] = [
     index: 1,
     name: 'ponthus',
     logo: {
-      name: 'LogoPonthus',
+      name: 'Ponthus',
     },
     url: 'https://ponthus.nl/',
     dates: {
@@ -25,7 +25,7 @@ export const companiesData: TCompanyData[] = [
     index: 2,
     name: 'the_brink',
     logo: {
-      name: 'LogoTheBrink',
+      name: 'TheBrink',
     },
     url: 'https://www.thebrinkagency.com/',
     dates: {

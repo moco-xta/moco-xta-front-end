@@ -31,7 +31,7 @@ export default function ProjectsPage() {
           currentCompany={currentCompany}
         />
       </div>
-      <Content currentProject={currentProject} />
+      <Content currentProject={currentProject} currentCompany={currentCompany} />
       {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
     </div>
   )
