@@ -19,7 +19,6 @@ export const PageProvider = ({ pageData, children }: TPageProvider) => {
     paragraphs: [],
   })
   const [currentParagraph, setCurrentParagraph] = useState<TMenuParagraphData | null>(null)
-  const [isScrolling, setIsScrolling] = useState<boolean>(false)
 
   const handleSetCurrentSection = (newCurrentSection: TMenuSectionData) => {
     setCurrentSection(newCurrentSection)
@@ -33,10 +32,6 @@ export const PageProvider = ({ pageData, children }: TPageProvider) => {
     setCurrentParagraph(newCurrentParagraph)
   }
 
-  const handleSetIsScrolling = (newState: boolean) => {
-    setIsScrolling(newState)
-  }
-
   return (
     <PageContext.Provider
       value={{
@@ -45,8 +40,6 @@ export const PageProvider = ({ pageData, children }: TPageProvider) => {
         handleSetCurrentSection: handleSetCurrentSection,
         currentParagraph: currentParagraph,
         handleSetCurrentParagraph: handleSetCurrentParagraph,
-        isScrolling: isScrolling,
-        handleSetIsScrolling: handleSetIsScrolling,
       }}
     >
       {children}

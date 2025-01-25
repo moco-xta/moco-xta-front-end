@@ -17,7 +17,7 @@ import './index.scss'
 export default function Section({ translationPath, sectionData }: TSection) {
   const t = useTranslations()
 
-  const { handleSetCurrentParagraph, isScrolling } = usePageContext()
+  const { handleSetCurrentParagraph } = usePageContext()
 
   const sectionRef = useRef<HTMLElement>(null!)
 
@@ -25,14 +25,14 @@ export default function Section({ translationPath, sectionData }: TSection) {
     if (sectionRef.current) {
       const boundingBox = sectionRef.current.getBoundingClientRect()
       if (boundingBox.top >= 0 && boundingBox.top < 100)
-        if (!isScrolling)
-          /* handleSetCurrentParagraph(sectionData) */
-          handleSetCurrentParagraph({
-            key: 'introduction',
-            translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
-          })
+        /* if (!isScrolling) */
+        /* handleSetCurrentParagraph(sectionData) */
+        handleSetCurrentParagraph({
+          key: 'introduction',
+          translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
+        })
     }
-  }, [handleSetCurrentParagraph, isScrolling, sectionData])
+  }, [handleSetCurrentParagraph, sectionData])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true, capture: true })

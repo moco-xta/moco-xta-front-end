@@ -16,8 +16,6 @@ export type TPageContext = {
   handleSetCurrentSection: (newCurrentSection: TMenuSectionData) => void
   currentParagraph: TMenuParagraphData | null
   handleSetCurrentParagraph: (newCurrentParagraph: TMenuParagraphData) => void
-  isScrolling: boolean
-  handleSetIsScrolling: (newState: boolean) => void
 }
 
 export type TPageProvider = {

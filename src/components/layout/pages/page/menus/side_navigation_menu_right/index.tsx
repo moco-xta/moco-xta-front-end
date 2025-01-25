@@ -18,13 +18,7 @@ import './index.scss'
 export default function SideNavigationMenuRight({ pageData, extraButtons }: TSideNavigationMenu) {
   const t = useTranslations()
 
-  const {
-    menuRef,
-    currentSection,
-    currentParagraph,
-    handleSetCurrentParagraph,
-    handleSetIsScrolling,
-  } = usePageContext()
+  const { menuRef, currentSection, currentParagraph, handleSetCurrentParagraph } = usePageContext()
 
   function handleOnClick(paragraphData: TMenuParagraphData) {
     if (paragraphData.key !== 'introduction') {
@@ -36,7 +30,6 @@ export default function SideNavigationMenuRight({ pageData, extraButtons }: TSid
       document.getElementById(`${pageData.key}_content`)!.scrollTo({ top: 0, behavior: 'smooth' })
     }
     handleSetCurrentParagraph(paragraphData)
-    handleSetIsScrolling(true)
   }
 
   useGSAP(() => {
