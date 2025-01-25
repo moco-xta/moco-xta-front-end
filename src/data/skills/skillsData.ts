@@ -272,7 +272,7 @@ export const skillsData = {
           key: 'php',
           translationKey: 'PHP',
           logo: {
-            name: 'LogoPython',
+            name: 'LogoPhp',
           },
         },
       ],
@@ -314,10 +314,26 @@ export const skillsData = {
           paragraphs: [],
         },
         {
+          key: 'gitlab',
+          translationKey: 'GITLAB',
+          logo: {
+            name: 'LogoGitlab',
+          },
+          paragraphs: [],
+        },
+        {
           key: 'docker',
           translationKey: 'DOCKER',
           logo: {
             name: 'LogoDocker',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'jira',
+          translationKey: 'JIRA',
+          logo: {
+            name: 'LogoJira',
           },
           paragraphs: [],
         },

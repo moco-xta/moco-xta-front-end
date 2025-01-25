@@ -13,9 +13,9 @@ export default function Controls() {
       enableZoom
       minDistance={7}
       maxDistance={11}
-      // target={new THREE.Vector3(0, -1, 1)}
       target={new THREE.Vector3(0, 0, 0)}
       autoRotate={status === 'off'}
+      autoRotateSpeed={0.5}
     />
   )
 }

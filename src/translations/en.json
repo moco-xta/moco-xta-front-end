@@ -214,9 +214,17 @@
             "PARAGRAPH_TITLE": "GitHub",
             "PARAGRAPH_DESCRIPTION": "GitHub is a web-based hosting service for version control using Git. It allows developers to create, fork, and collaborate on projects, as well as manage and share code repositories."
           },
+          "GITLAB": {
+            "PARAGRAPH_TITLE": "GitLab",
+            "PARAGRAPH_DESCRIPTION": "GitLab is a web-based DevOps lifecycle tool that provides a Git repository manager, continuous integration, and continuous deployment (CI/CD) pipeline features. It allows developers to manage, secure, and deploy code efficiently."
+          },
           "DOCKER": {
             "PARAGRAPH_TITLE": "Docker",
             "PARAGRAPH_DESCRIPTION": "Docker is a containerization platform that allows developers to create, deploy, and run applications in isolated containers. It provides a consistent environment for running applications, making it easier to develop, test, and deploy applications."
+          },
+          "JIRA": {
+            "PARAGRAPH_TITLE": "Jira",
+            "PARAGRAPH_DESCRIPTION": "Jira is a project management tool that allows teams to track tasks, issues, and progress. It provides a user-friendly interface, extensive documentation, and built-in tools, making it a popular choice for project management and collaboration."
           }
         }
       }

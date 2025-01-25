@@ -6,7 +6,6 @@ import vertexShader from '../../shaders/project_image/vertexShader.glsl'
 import fragmentShader from '../../shaders/project_image/fragmentShader.glsl'
 
 function addObjects(scene: THREE.Scene, position: THREE.Vector3, imageUrl: string) {
-
   const { x, y, z } = position
 
   const geometry = new THREE.PlaneGeometry(6 * 1, 4 * 1, 6, 4)

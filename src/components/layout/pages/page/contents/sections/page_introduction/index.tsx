@@ -15,10 +15,6 @@ export default function PageIntroduction({ translationPath }: TPageIntroduction)
 
   const pathname = usePathname()
 
-  useEffect(() => {
-    console.log('pathname', pathname)
-  })
-
   return (
     <section
       id='introduction_section'

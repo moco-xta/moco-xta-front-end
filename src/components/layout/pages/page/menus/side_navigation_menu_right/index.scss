@@ -25,7 +25,14 @@
 
     .sdm_paragraph_a {
       font-size: $font_size_S;
+      transition: all $hover_transition;
       cursor: pointer;
+    }
+
+    .sdm_paragraph_a:hover {
+      color: $white;
+      font-weight: $font_weight_hover;
+      transition: all $hover_transition;
     }
   }
 

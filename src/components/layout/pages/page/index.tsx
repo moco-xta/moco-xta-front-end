@@ -11,11 +11,11 @@ import { PageProvider } from '@/contexts/PageContext'
 
 import { SideNavigationMenuLeft, SideNavigationMenuRight } from './menus'
 import { PageContent } from './contents'
+import { QuitRubiksCube } from '../../buttons'
 
 import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 import './index.scss'
-import { QuitRubiksCube } from '../../buttons'
 
 const SCALE = 0.5 // TODO: Add to data
 

@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useRef } from 'react'
-// import { useDispatch, useSelector } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
 import type { TSection } from '@/types/components/layout/types'
@@ -10,9 +9,6 @@ import type {
 
 import { usePageContext } from '@/contexts/PageContext'
 
-// import { AppDispatch, RootState } from '@/redux/store'
-// import { setCurrentPosition } from '@/redux/slice/resourcesStateSlice'
-
 import { SectionTitle } from '@/components/layout/titles'
 import { Paragraph } from '../paragraphs'
 
@@ -20,9 +16,6 @@ import './index.scss'
 
 export default function Section({ translationPath, sectionData }: TSection) {
   const t = useTranslations()
-
-  // const dispatch = useDispatch<AppDispatch>()
-  // const isScrolling = useSelector((state: RootState) => state.resroucesState.isScrolling)
 
   const { handleSetCurrentParagraph, isScrolling } = usePageContext()
 
@@ -33,8 +26,11 @@ export default function Section({ translationPath, sectionData }: TSection) {
       const boundingBox = sectionRef.current.getBoundingClientRect()
       if (boundingBox.top >= 0 && boundingBox.top < 100)
         if (!isScrolling)
-          // if (!isScrolling) dispatch(setCurrentPosition(sectionData.key))
-          handleSetCurrentParagraph(sectionData)
+          /* handleSetCurrentParagraph(sectionData) */
+          handleSetCurrentParagraph({
+            key: 'introduction',
+            translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
+          })
     }
   }, [handleSetCurrentParagraph, isScrolling, sectionData])
 

@@ -13,7 +13,7 @@ export const skillLogoData = {
     duration: 0.2,
     ease: 'power3.out',
     rotation: {
-      factor: 0.008,
+      factor: 0.004,
       initial: {
         x: 0,
         y: 0,
