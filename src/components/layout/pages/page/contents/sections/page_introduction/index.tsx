@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useTranslations } from 'next-intl'
 import { FaYoutube } from 'react-icons/fa'
 
