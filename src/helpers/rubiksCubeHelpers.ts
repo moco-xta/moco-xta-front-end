@@ -136,7 +136,6 @@ export function getDofTargetPosition(A: TCoordinatesData, B: TCoordinatesData, c
   }
   candidates.sort((a, b) => a.t - b.t)
   const { x, y, z } = candidates[0] as IntersectionPoint
-  console.log('dofTargetPosition', x, y, z)
   return new THREE.Vector3(x, y, z)
 }
 
@@ -155,9 +154,9 @@ export function getDofFocalLength(A: TCoordinatesData, B: TCoordinatesData, P: T
 
   const t = lengthAP / lengthAB
 
-  console.log('folcalLength', 0.1 + t * (0.25 - 0.1))
+  console.log('folcalLength', 0.1 + t * (0.6 - 0.1))
 
-  return 0.1 + t * (0.25 - 0.1)
+  return 0.1 + t * (0.6 - 0.1)
 }
 
 export function getCameraDestinationPosition(
