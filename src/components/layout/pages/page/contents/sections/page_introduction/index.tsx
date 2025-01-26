@@ -12,7 +12,6 @@ import './index.scss'
 
 export default function PageIntroduction({ translationPath }: TPageIntroduction) {
   const t = useTranslations()
-
   const pathname = usePathname()
 
   return (

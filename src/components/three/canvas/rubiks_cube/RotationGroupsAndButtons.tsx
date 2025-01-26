@@ -11,7 +11,10 @@ import type { TRubiksCubeStatus } from '@/types/redux/types'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { setRubiksCubeIsRotating, setRubiksCubeStatus } from '@/redux/slices/rubiksCubeStateSlice'
+import {
+  setRubiksCubeIsLocked /* , setRubiksCubeStatus */,
+  setRubiksCubeIsMixed,
+} from '@/redux/slices/rubiksCubeStateSlice'
 
 import { Button } from '../../models/rubiks_cube/Button'
 
@@ -24,20 +27,22 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
   const { camera } = useThree()
   const { timeline } = useGSAPTimelineContext()
 
-  const { isRotating, status } = useSelector((state: RootState) => state.rubiksCubeState)
+  const { rubiksCubeIsLocked /* , status */ } = useSelector(
+    (state: RootState) => state.rubiksCubeState,
+  )
 
   const rotationGroupRef = useRef<THREE.Group>(null!)
 
   const dispatch = useDispatch<AppDispatch>()
 
-  function handleSetRubiksCubeIsRotating(isRotating: boolean) {
-    dispatch(setRubiksCubeIsRotating(isRotating))
+  function handleSetRubiksCubeIsMixed() {
+    dispatch(setRubiksCubeIsMixed(true))
+    timeline.pause()
   }
 
-  useEffect(() => {
-    console.log('timeline', timeline)
-    console.log('status', status)
-  }, [status, timeline])
+  function handleSetRubiksCubeIsLocked(isRotating: boolean) {
+    dispatch(setRubiksCubeIsLocked(isRotating))
+  }
 
   useGSAP(
     () => {
@@ -62,52 +67,50 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
         )
       })
 
-      function goToIsPlaying() {
-        timeline.seek('isPlaying').pause()
-      }
-
-      function goToMix() {
-        timeline.seek('mix').pause()
-      }
-
       timeline
-        .addPause('mix')
-        // .add(animateCamera)
-        .to(
-          camera.position,
-          {
-            x: 10,
-            y: 10,
-            z: 10,
-            duration: 1,
-            ease: 'power1.out',
-          },
-          'mix+=0.2',
-        )
         .to(
           rubiksCubeRef,
           {
             keyframes: mixRubiksCube(rubiksCubeRef, rotationGroupRef, rubiksCubeData.functions),
             ease: 'none',
             duration: 12,
-            onComplete: () => {
-              dispatch(setRubiksCubeStatus('playing' as TRubiksCubeStatus))
-              goToIsPlaying()
+            onUpdate: function () {
+              // camera.rotateOnWorldAxis(new THREE.Vector3(0,1,0), THREE.Math.degToRad(angle*this.ratio/100)); // this also doesn't work as expected; if we call outside gsap : camera.rotateOnWorldAxis(new THREE.Vector3(0,1,0), THREE.Math.degToRad(angle)), works perfectly
+              // camera.updateProjectionMatrix();
             },
+            onComplete: () => handleSetRubiksCubeIsMixed(),
           },
-          'mix+=1.2',
+          'mix+=1',
         )
-        .addPause('isPlaying')
+        .addPause()
+      /* .to(
+          camera.position,
+          {
+            x: 10,
+            y: 10,
+            z: 10,
+            duration: 2,
+            ease: 'power1.out',
+            delay: 1,
+            onComplete: () => {
+              handleGoTo('quit')
+            }
+          },
+          'play',
+        )
         .to(
           camera.position,
           {
-            ...cameraDefaultValues.camera.position,
-            duration: 1,
+            x: cameraDefaultValues.camera.position!.x,
+            y: cameraDefaultValues.camera.position!.y,
+            z: cameraDefaultValues.camera.position!.z,
+            duration: 2,
             ease: 'power1.out',
-            onComplete: () => goToMix(),
+            delay: 1,
+            onComplete: () => handleGoTo('play'),
           },
-          'isPlaying',
-        )
+          'quit',
+        ) */
     },
     { scope: rubiksCubeRef },
   )
@@ -141,14 +144,13 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
                   buttonFunction(
                     rubiksCubeRef,
                     rotationGroupRef,
-                    isRotating,
-                    handleSetRubiksCubeIsRotating,
+                    rubiksCubeIsLocked,
+                    handleSetRubiksCubeIsLocked,
                     e,
                   )
                 }
                 arrow={buttonData.arrow}
-                isPlaying={status === ('playing' as TRubiksCubeStatus)}
-                isRotating={isRotating}
+                rubiksCubeIsLocked={rubiksCubeIsLocked}
               />
             ))}
           </group>

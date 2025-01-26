@@ -11,6 +11,8 @@ const LogoDjango = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
+      materials[key].emissive = materials[key].color
+      materials[key].emissiveIntensity = 1
       materials[key].side = THREE.DoubleSide
     })
   }, [materials])

@@ -11,8 +11,12 @@
       "position": 4
     },
     {
-      "name": "isPlaying",
-      "position": 50
+      "name": "play",
+      "position": 20
+    },
+    {
+      "name": "quit",
+      "position": 30
     }
   ]
 }

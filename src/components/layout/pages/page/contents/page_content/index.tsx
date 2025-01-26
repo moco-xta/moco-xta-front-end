@@ -29,7 +29,7 @@ export default function PageContent({ pageData }: TContent) {
     const lastParagraph = document.getElementById(`${pageData.key}_content`)!.children[0].lastChild
     pageContentRef.current.style.paddingBottom =
       currentSection.key !== 'introduction'
-        ? `${window.innerHeight - (lastParagraph as unknown as HTMLElement).clientHeight + 35}px`
+        ? `${window.innerHeight - (lastParagraph as unknown as HTMLElement).clientHeight + 55}px`
         : '0px'
   })
 

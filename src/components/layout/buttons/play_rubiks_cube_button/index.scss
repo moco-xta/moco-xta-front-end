@@ -6,6 +6,8 @@
   flex-direction: row;
   align-items: center;
   color: $play_rubiks_cube_button;
+  // opacity: 1;
+  transition: color $transition_M linear;
   cursor: pointer;
 
   svg {
@@ -13,4 +15,12 @@
     height: 18px;
     margin-left: 5px;
   }
+}
+
+#play_rubiks_cube_button:disabled,
+#play_rubiks_cube_button[disabled] {
+  color: #7b7b7b88;
+  // opacity: 0.5;
+  transition: color $transition_M linear;
+  cursor: not-allowed;
 }

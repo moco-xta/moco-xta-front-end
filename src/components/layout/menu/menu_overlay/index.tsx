@@ -1,4 +1,5 @@
 import React from 'react'
+import * as THREE from 'three'
 
 import Header from '../header'
 import Router from './router'
@@ -12,7 +13,15 @@ export default function MenuOverlay() {
       id='menu_overlay'
       className='menu_overlay_zIndex'
     >
-      <Header />
+      <Header
+        logoMocoMaterial={
+          new THREE.MeshStandardMaterial({
+            color: '#FF51F6',
+            roughness: 0.5,
+            side: THREE.DoubleSide,
+          })
+        }
+      />
       <div id='menu_content'>
         <Router />
         {/* <LocaleSwitcher /> */}

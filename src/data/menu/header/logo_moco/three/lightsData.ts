@@ -1,5 +1,5 @@
 export const lightsData = {
   ambientLight: {
-    intensity: 2,
+    intensity: 4,
   },
 }

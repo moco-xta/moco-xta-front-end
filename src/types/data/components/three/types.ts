@@ -13,7 +13,7 @@ export type TCameraDefaultValues = {
 }
 
 export type TPerspectiveCameraData = {
-  makeDefault: boolean
+  makeDefault?: boolean
   position?: THREE.Vector3
   rotation?: THREE.Euler
   fov?: number

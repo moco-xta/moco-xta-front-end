@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import type { TRubiksCubeStatus } from '@/types/redux/types'
 
 import { AppDispatch } from '@/redux/store'
-import { setRubiksCubeStatus } from '@/redux/slices/rubiksCubeStateSlice'
+import { setRubiksCubeIsLocked } from '@/redux/slices/rubiksCubeStateSlice'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
@@ -15,8 +15,8 @@ export default function QuitRubiksCube() {
   const { timeline } = useGSAPTimelineContext()
 
   function handleOnClick() {
-    dispatch(setRubiksCubeStatus('off' as TRubiksCubeStatus))
-    timeline.play()
+    dispatch(setRubiksCubeIsLocked(true))
+    timeline.seek('quit').play()
   }
 
   return <button onClick={handleOnClick}>Quit</button>

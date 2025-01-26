@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
-import { Link } from '@/i18n/routing'
+import { Link, usePathname } from '@/i18n/routing'
 
 import { AppDispatch } from '@/redux/store'
 import { toggleMenu } from '@/redux/slices/appStateSlice'
@@ -13,7 +13,7 @@ import './index.scss'
 
 export default function Router() {
   const t = useTranslations('ROUTES')
-
+  const pathname = usePathname()
   const dispatch = useDispatch<AppDispatch>()
 
   const handleToggleMenu = () => {
@@ -37,7 +37,7 @@ export default function Router() {
               >
                 <Link
                   href={route.path}
-                  className='route_link'
+                  className={`route_link ${pathname === route.path ? 'active' : ''}`}
                 >
                   {t(route.translationKey)}
                 </Link>

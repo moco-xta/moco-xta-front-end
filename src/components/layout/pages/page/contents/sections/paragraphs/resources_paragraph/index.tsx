@@ -24,8 +24,7 @@ export default function ResourcesParagraph({
   const handleScroll = useCallback(() => {
     if (paragraphRef.current) {
       const boundingBox = paragraphRef.current.getBoundingClientRect()
-      if (boundingBox.top >= 0 && boundingBox.top < 100)
-          handleSetCurrentParagraph(paragraphData)
+      if (boundingBox.top >= 0 && boundingBox.top < 100) handleSetCurrentParagraph(paragraphData)
     }
   }, [handleSetCurrentParagraph, paragraphData])
 

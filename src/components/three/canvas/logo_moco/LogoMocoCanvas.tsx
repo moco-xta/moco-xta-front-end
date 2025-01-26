@@ -11,8 +11,13 @@ import { canvasDefaultValues } from '@/data/menu/header/logo_moco/three/canvasDa
 import { cameraDefaultValues } from '@/data/menu/header/logo_moco/three/cameraData'
 import { lightsData } from '@/data/menu/header/logo_moco/three/lightsData'
 import { logoMocoData } from '@/data/menu/header/logo_moco/three/logoMocoData'
+import Lights from './Lights'
 
-export default function LogoMocoCanvas() {
+export type TLogoMocoCanvas = {
+  logoMocoMaterial: THREE.MeshNormalMaterial | THREE.MeshStandardMaterial
+}
+
+export default function LogoMocoCanvas({ logoMocoMaterial }: TLogoMocoCanvas) {
   const logoMocoRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!) // TODO: MouseEvent.mozPressure is deprecated. Use PointerEvent.pressure instead.
 
   const { handleOnPointerMove, handleOnPointerLeave } = useHoverModelAnimation({
@@ -22,10 +27,12 @@ export default function LogoMocoCanvas() {
   return (
     <Canvas {...canvasDefaultValues}>
       <PerspectiveCamera {...cameraDefaultValues.camera} />
-      <ambientLight {...lightsData.ambientLight} />
+      {/* <ambientLight {...lightsData.ambientLight} /> */}
+      <Lights />
       <Suspense fallback={null}>
         <LogoMoco
           ref={logoMocoRef}
+          material={logoMocoMaterial}
           onPointerMove={handleOnPointerMove}
           onPointerOut={handleOnPointerLeave}
         />

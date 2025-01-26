@@ -1,10 +1,10 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React /* , { useEffect } */ from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { setRubiksCubeStatus } from '@/redux/slices/rubiksCubeStateSlice'
+// import { setRubiksCubeStatus } from '@/redux/slices/rubiksCubeStateSlice'
 
 import { GSAPTimelineProvider } from '@/contexts/GsapTimelineContext'
 
@@ -16,18 +16,20 @@ import { skillsData } from '@/data/skills/skillsData'
 import { timelineDefaultValues } from '@/data/skills/rubiks_cube/timelineData'
 
 export default function Skills() {
-  const status = useSelector((state: RootState) => state.rubiksCubeState.status)
+  const rubiksCubeIsLocked = useSelector(
+    (state: RootState) => state.rubiksCubeState.rubiksCubeIsLocked,
+  )
   const dispatch = useDispatch<AppDispatch>()
 
-  useEffect(() => {
+  /* useEffect(() => {
     dispatch(setRubiksCubeStatus('off'))
-  }, [dispatch])
+  }, [dispatch]) */
 
   return (
     <GSAPTimelineProvider {...timelineDefaultValues}>
       <Page
         pageData={skillsData}
-        displayPage={status === 'off'}
+        displayPage={rubiksCubeIsLocked}
         extraButtons={[<PlayRubiksCubeButton key={'play_rubiks_cube_button'} />]}
         backgroundCanvas={<RubiksCubeCanvas />}
       />

@@ -1,31 +1,31 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, ReactNode } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import { GroupProps } from '@react-three/fiber'
 
-const LogoMoco = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
+export type TLogoMoco = GroupProps & {
+  material?: THREE.MeshNormalMaterial | THREE.MeshStandardMaterial
+}
+
+const LogoMoco = forwardRef<THREE.Group, TLogoMoco>(({ material, ...rest }, ref) => {
   const { nodes } = useGLTF(glbConstants.LOGOS.LOGO_MOCO) as GLTFResult
 
   return (
     <group
       ref={ref}
-      {...props}
+      {...rest}
       dispose={null}
     >
       <mesh
         geometry={nodes.LogoMoco.geometry}
+        material={material}
         receiveShadow
         castShadow
-      >
-        <meshNormalMaterial
-          attach='material'
-          side={THREE.DoubleSide}
-          transparent
-        />
-      </mesh>
+      ></mesh>
     </group>
   )
 })

@@ -17,7 +17,7 @@ import { logoMocoData } from '@/data/menu/header/logo_moco/three/logoMocoData'
 
 import './index.scss'
 
-export default function LogoMoco({ isMain = false }: TLogoMoco) {
+export default function LogoMoco({ isMain = false, logoMocoMaterial }: TLogoMoco) {
   const dispatch = useDispatch<AppDispatch>()
 
   const handleOnClickLogoMoco = () => {
@@ -35,7 +35,7 @@ export default function LogoMoco({ isMain = false }: TLogoMoco) {
       onClick={handleOnClickLogoMoco}
     >
       <Link href={routesData.find((route) => route.translationKey === 'HOME')!.path}>
-        <LogoMocoCanvas />
+        <LogoMocoCanvas logoMocoMaterial={logoMocoMaterial} />
       </Link>
     </div>
   )

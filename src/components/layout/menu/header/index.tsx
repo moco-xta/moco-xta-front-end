@@ -7,10 +7,13 @@ import LogoMoco from './logo_moco'
 
 import './index.scss'
 
-export default function Header({ isMain = false }: THeader) {
+export default function Header({ isMain = false, logoMocoMaterial }: THeader) {
   return (
     <header className='header_zIndex'>
-      <LogoMoco isMain={isMain} />
+      <LogoMoco
+        isMain={isMain}
+        logoMocoMaterial={logoMocoMaterial}
+      />
       <div className='header_buttons_container'>
         <LocaleSwitcher />
         <MenuButton state={isMain ? 'open' : 'close'} />

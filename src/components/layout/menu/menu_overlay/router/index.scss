@@ -13,7 +13,15 @@
         font-weight: 400;
         letter-spacing: -0.02em;
         line-height: 85%;
-        color: #f4ecff;
+        color: #aeecff;
+      }
+
+      .route_link.active {
+        font-size: 90px;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        line-height: 85%;
+        color: #493bff;
       }
     }
   }
