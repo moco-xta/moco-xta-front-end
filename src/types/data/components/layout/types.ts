@@ -127,3 +127,10 @@ export type TGpsCoordinates = {
   longitude: number
   latitude: number
 }
+
+// COLORS
+
+export type TColorData = {
+  name: string
+  hex: string
+}

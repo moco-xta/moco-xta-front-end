@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 
 import type {
-  TColorData,
+  TRgbColorData,
   TCoordinatesData,
   TDimensionsData,
   TMaterialData,
@@ -45,7 +45,7 @@ export type TDefaultValuesConstants = {
   scale?: number | number[] | TCoordinatesData | TCoordinatesData[]
   dimensions?: TDimensionsData | TDimensionsData[]
   material?: TMaterialData
-  color?: TColorData
+  color?: TRgbColorData
 }
 
 export type TAnimationsConstants = Partial<Record<TProperties, TKeyframesData>>
@@ -60,5 +60,5 @@ export type TElementDefaultValues = {
   scale?: THREE.Vector3
   dimensions?: TDimensionsData
   material?: TMaterialData
-  color?: TColorData
+  color?: TRgbColorData
 }

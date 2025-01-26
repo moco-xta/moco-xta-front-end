@@ -59,7 +59,7 @@ export type TMaterialData = {
 
 // COLOR
 
-export type TColorData = {
+export type TRgbColorData = {
   r: number
   g: number
   b: number

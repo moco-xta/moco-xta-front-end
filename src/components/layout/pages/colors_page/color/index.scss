@@ -1,0 +1,64 @@
+@import '@/styles/variables.module.scss';
+
+.color {
+  position: relative;
+  min-width: 200px;
+  height: 100px;
+  margin-right: -120px;
+  padding: $px_margin_S;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+
+  .color_details {
+    display: flex;
+    flex-direction: column;
+
+    .color_name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: $px_margin_XS;
+      color: rgba(255, 255, 255, 1);
+      mix-blend-mode: difference;
+      opacity: 0;
+    }
+
+    .color_hex {
+      font-size: 12px;
+      margin-bottom: $px_margin_XXS;
+      color: rgba(255, 255, 255, 1);
+      mix-blend-mode: difference;
+      opacity: 0;
+    }
+
+    .color_rgba {
+      font-size: 12px;
+      margin-bottom: $px_margin_XXS;
+      color: rgba(255, 255, 255, 1);
+      mix-blend-mode: difference;
+      opacity: 0;
+    }
+  }
+
+  .copied {
+    position: aboslute;
+    top: $px_margin_S;
+    bottom: $px_margin_S;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    mix-blend-mode: difference;
+    opacity: 0;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      margin-right: $px_margin_XXS;
+    }
+  }
+}
