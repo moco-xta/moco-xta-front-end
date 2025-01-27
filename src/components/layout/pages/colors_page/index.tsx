@@ -12,10 +12,10 @@ export default function ColorPage() {
     <div id='color_page'>
       <div id='color_content'>
         <PageTitle translationPath={'COLORS.TITLE'} />
-        {colorsData.map((palette, index) => (
-          <div className='palette_container'>
-            {palette.map((color) => (
-              <Color color={color} />
+        {colorsData.map((palette, paletteIndex) => (
+          <div key={`palette_${paletteIndex}`} className='palette_container'>
+            {palette.map((color, colorIndex) => (
+              <Color key={`color_${colorIndex}`} color={color} />
             ))}
           </div>
         ))}

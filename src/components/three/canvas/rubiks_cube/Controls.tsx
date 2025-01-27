@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import * as THREE from 'three'
 import { OrbitControls } from '@react-three/drei'

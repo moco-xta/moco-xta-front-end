@@ -9,7 +9,6 @@ import LogoMoco from '../../models/logos/LogoMoco'
 
 import { canvasDefaultValues } from '@/data/menu/header/logo_moco/three/canvasData'
 import { cameraDefaultValues } from '@/data/menu/header/logo_moco/three/cameraData'
-import { lightsData } from '@/data/menu/header/logo_moco/three/lightsData'
 import { logoMocoData } from '@/data/menu/header/logo_moco/three/logoMocoData'
 import Lights from './Lights'
 

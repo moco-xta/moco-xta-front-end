@@ -1,8 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 
-import type { TRubiksCubeStatus } from '@/types/redux/types'
-
 import { AppDispatch } from '@/redux/store'
 import { setRubiksCubeIsLocked } from '@/redux/slices/rubiksCubeStateSlice'
 
