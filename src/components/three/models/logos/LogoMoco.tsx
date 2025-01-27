@@ -22,7 +22,7 @@ const LogoMoco = forwardRef<THREE.Group, TLogoMoco>(({ material, ...rest }, ref)
     >
       <mesh
         geometry={nodes.LogoMoco.geometry}
-        material={material}
+        material={material ? material : new THREE.MeshNormalMaterial()}
         receiveShadow
         castShadow
       ></mesh>
