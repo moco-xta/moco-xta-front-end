@@ -21,10 +21,6 @@ export default function ProjectsPage() {
     locationsData,
   )
 
-  useEffect(() => {
-    console.log('currentProject PAGE', currentProject)
-  }, [currentProject])
-
   return (
     <div id='projects_page'>
       <div id='projects_canvas'>

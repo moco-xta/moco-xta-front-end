@@ -3,10 +3,12 @@ import * as THREE from 'three'
 import type { ThreeEvent } from '@react-three/fiber'
 import { gsap } from 'gsap'
 
+import type { TCoordinatesData } from '@/types/data/components/three/types'
+
 import { getDegreeEuler } from './threeHelpers'
 
 import { rubiksCubeData } from '@/data/skills/rubiks_cube/three/rubiksCubeData'
-import { TCoordinatesData } from '@/types/data/components/three/types'
+import { padsData } from '@/data/skills/rubiks_cube/three/padsData'
 
 export function setCubeCoordinates(x: number, y: number, z: number) {
   function setCoordinate(value: number) {
@@ -21,6 +23,29 @@ export function setRoundedCubeType(coordinates: THREE.Vector3) {
     if (value === 0) maxNumberOfPads -= 1
   })
   return maxNumberOfPads
+}
+
+export function getRotationAndMaterial(
+  coordinates: THREE.Vector3,
+  index: number,
+): {
+  rotation: THREE.Euler
+  material: THREE.MeshStandardMaterial
+} {
+  const rotation = setPadRotation(coordinates, index)
+
+  const normal = new THREE.Vector3(0, 1, 0)
+  const euler = new THREE.Euler(rotation.x, rotation.y, rotation.z, 'XYZ')
+  normal.applyEuler(euler)
+  const color = setPadColor(normal, padsData.padColors)
+
+  return {
+    rotation: rotation,
+    material: new THREE.MeshStandardMaterial({
+      color: color,
+      roughness: padsData.defaultValues.material.roughness,
+    }),
+  }
 }
 
 export const setPadRotation = (coordinates: THREE.Vector3, index: number): THREE.Euler => {
@@ -136,8 +161,80 @@ export function getDofTargetPosition(A: TCoordinatesData, B: TCoordinatesData, c
   }
   candidates.sort((a, b) => a.t - b.t)
   const { x, y, z } = candidates[0] as IntersectionPoint
-  console.log('dofTargetPosition', x, y, z)
-  return new THREE.Vector3(x, y, z)
+  return new THREE.Vector3(
+    parseFloat(x.toFixed(1)),
+    parseFloat(y.toFixed(1)),
+    parseFloat(z.toFixed(1)),
+  )
+}
+
+export function findIntersectionWithCube(
+  cubeCenter: THREE.Vector3,
+  cubeSize: number,
+  pointB: THREE.Vector3,
+) {
+  const halfSize = cubeSize / 2
+
+  // Define the bounds of the cube
+  const cubeMin = new THREE.Vector3(
+    cubeCenter.x - halfSize,
+    cubeCenter.y - halfSize,
+    cubeCenter.z - halfSize,
+  )
+  const cubeMax = new THREE.Vector3(
+    cubeCenter.x + halfSize,
+    cubeCenter.y + halfSize,
+    cubeCenter.z + halfSize,
+  )
+
+  // Direction vector from cubeCenter to pointB
+  const direction = new THREE.Vector3().subVectors(pointB, cubeCenter)
+
+  // Array to store intersection points
+  const tValues: number[] = []
+
+  // Check intersections with each axis-aligned plane of the cube
+  ;['x', 'y', 'z'].forEach((axis) => {
+    if (direction[axis] !== 0) {
+      // Intersection with the "min" face along this axis
+      const tMin = (cubeMin[axis] - cubeCenter[axis]) / direction[axis]
+      tValues.push(tMin)
+
+      // Intersection with the "max" face along this axis
+      const tMax = (cubeMax[axis] - cubeCenter[axis]) / direction[axis]
+      tValues.push(tMax)
+    }
+  })
+
+  // Filter out invalid t-values by checking bounds
+  const intersectionPoints = tValues
+    .map(
+      (t) =>
+        new THREE.Vector3(
+          cubeCenter.x + t * direction.x,
+          cubeCenter.y + t * direction.y,
+          cubeCenter.z + t * direction.z,
+        ),
+    )
+    .filter(
+      (point) =>
+        point.x >= cubeMin.x &&
+        point.x <= cubeMax.x &&
+        point.y >= cubeMin.y &&
+        point.y <= cubeMax.y &&
+        point.z >= cubeMin.z &&
+        point.z <= cubeMax.z,
+    )
+
+  // Return the closest valid intersection point
+  if (intersectionPoints.length > 0) {
+    return intersectionPoints.reduce((closest, point) =>
+      point.distanceTo(cubeCenter) < closest.distanceTo(cubeCenter) ? point : closest,
+    )
+  }
+
+  // No valid intersection found
+  return null
 }
 
 export function getDofFocalLength(A: TCoordinatesData, B: TCoordinatesData, P: TCoordinatesData) {
@@ -155,9 +252,7 @@ export function getDofFocalLength(A: TCoordinatesData, B: TCoordinatesData, P: T
 
   const t = lengthAP / lengthAB
 
-  console.log('folcalLength', 0.1 + t * (0.25 - 0.1))
-
-  return 0.1 + t * (0.25 - 0.1)
+  return parseFloat((0.1 + t * (0.8 - 0.1)).toFixed(1))
 }
 
 export function getCameraDestinationPosition(

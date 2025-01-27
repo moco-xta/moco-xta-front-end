@@ -56,15 +56,12 @@ export function getDefaultValues(constants: TConstants): TElementDefaultValues {
       }
     }
   }
-  // console.log(`${constants.defaultValues.name} defaultValues`, defaultValues)
   return defaultValues
 }
 
 // GET DEFAULT VALUES ARRAY
 
 export function getDefaultValuesArray(constants: TConstants): TElementDefaultValues[] {
-  // console.log(`${constants.name} constants`, constants)
-
   const defaultValues = [] as TElementDefaultValues[]
 
   if (Array.isArray(constants.defaultValues.position)) {
@@ -163,15 +160,12 @@ export function getDefaultValuesArray(constants: TConstants): TElementDefaultVal
       defaultValues.push(elementDefaultValues)
     })
   }
-  // console.log(`${constants.defaultValues.name} defaultValues`, defaultValues)
   return defaultValues
 }
 
 // GET ANIMATIONS DATA
 
 export function getAnimationsData(duration: number, constants: TConstants): TAnimationsData {
-  // console.log(`${constants.defaultValues.name} constants`, constants)
-
   let animationsData: TAnimationsData = {}
   let propertyData = {}
 
@@ -227,7 +221,6 @@ export function getAnimationsData(duration: number, constants: TConstants): TAni
       [property]: { keyframes: propertyData },
     }
   }
-  // console.log(`${constants.defaultValues.name} animationsData`, animationsData)
   return animationsData
 }
 

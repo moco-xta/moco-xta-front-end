@@ -4,25 +4,26 @@ import { useGLTF } from '@react-three/drei'
 
 import type { GLTFResult } from '@/types/data/components/three/types'
 
-import { padsData } from '@/data/skills/rubiks_cube/three/padsData'
-
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-const PadCss = forwardRef<THREE.Mesh, JSX.IntrinsicElements['mesh']>((props, ref) => {
-  const { nodes } = useGLTF(glbConstants.RUBIKS_CUBE.PAD_CSS) as GLTFResult
+const PadCss = forwardRef<THREE.Mesh, JSX.IntrinsicElements['mesh']>(
+  ({ children, ...rest }, ref) => {
+    const { nodes } = useGLTF(glbConstants.RUBIKS_CUBE.PAD_CSS) as GLTFResult
 
-  return (
-    <mesh
-      ref={ref}
-      geometry={nodes.PadCss.geometry}
-      castShadow
-      receiveShadow
-      {...props}
-    >
-      <meshStandardMaterial {...padsData.defaultValues.material} />
-    </mesh>
-  )
-})
+    return (
+      <mesh
+        ref={ref}
+        geometry={nodes.PadCss.geometry}
+        castShadow
+        receiveShadow
+        {...rest}
+      >
+        {children}
+        {/* {children} */}
+      </mesh>
+    )
+  },
+)
 
 PadCss.displayName = 'PadCss'
 
