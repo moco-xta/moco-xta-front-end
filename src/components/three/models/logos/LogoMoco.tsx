@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode } from 'react'
+import React, { forwardRef } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 

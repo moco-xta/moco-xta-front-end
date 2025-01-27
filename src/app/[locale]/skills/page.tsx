@@ -1,10 +1,9 @@
 'use client'
 
-import React /* , { useEffect } */ from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 
-import { AppDispatch, RootState } from '@/redux/store'
-// import { setRubiksCubeStatus } from '@/redux/slices/rubiksCubeStateSlice'
+import { RootState } from '@/redux/store'
 
 import { GSAPTimelineProvider } from '@/contexts/GsapTimelineContext'
 
@@ -19,11 +18,6 @@ export default function Skills() {
   const rubiksCubeIsLocked = useSelector(
     (state: RootState) => state.rubiksCubeState.rubiksCubeIsLocked,
   )
-  const dispatch = useDispatch<AppDispatch>()
-
-  /* useEffect(() => {
-    dispatch(setRubiksCubeStatus('off'))
-  }, [dispatch]) */
 
   return (
     <GSAPTimelineProvider {...timelineDefaultValues}>
