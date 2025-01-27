@@ -11,6 +11,7 @@ export const resourcesLogosData = {
       'LogoBlender',
       'LogoChatgpt',
       'LogoCss',
+      'LogoDeepseek',
       'LogoDocker',
       'LogoFigma',
       'LogoFormik',

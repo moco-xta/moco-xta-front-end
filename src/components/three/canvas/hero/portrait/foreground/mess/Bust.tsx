@@ -113,7 +113,6 @@ export default function Bust() {
 
   useEffect(() => {
     if (!bustGlb.scene.children[0]) {
-      console.error('Bust model is missing children.')
       return
     }
 

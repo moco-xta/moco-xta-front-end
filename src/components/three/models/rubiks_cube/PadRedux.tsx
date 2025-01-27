@@ -4,25 +4,25 @@ import { useGLTF } from '@react-three/drei'
 
 import type { GLTFResult } from '@/types/data/components/three/types'
 
-import { padsData } from '@/data/skills/rubiks_cube/three/padsData'
-
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-const PadRedux = forwardRef<THREE.Mesh, JSX.IntrinsicElements['mesh']>((props, ref) => {
-  const { nodes } = useGLTF(glbConstants.RUBIKS_CUBE.PAD_REDUX) as GLTFResult
+const PadRedux = forwardRef<THREE.Mesh, JSX.IntrinsicElements['mesh']>(
+  ({ children, ...rest }, ref) => {
+    const { nodes } = useGLTF(glbConstants.RUBIKS_CUBE.PAD_REDUX) as GLTFResult
 
-  return (
-    <mesh
-      ref={ref}
-      geometry={nodes.PadRedux.geometry}
-      castShadow
-      receiveShadow
-      {...props}
-    >
-      <meshStandardMaterial {...padsData.defaultValues.material} />
-    </mesh>
-  )
-})
+    return (
+      <mesh
+        ref={ref}
+        geometry={nodes.PadRedux.geometry}
+        castShadow
+        receiveShadow
+        {...rest}
+      >
+        {children}
+      </mesh>
+    )
+  },
+)
 
 PadRedux.displayName = 'PadRedux'
 

@@ -9,6 +9,7 @@
     "LOGO_BLENDER": "/models/glb/logos/LogoBlender.glb",
     "LOGO_CHATGPT": "/models/glb/logos/LogoChatgpt.glb",
     "LOGO_CSS": "/models/glb/logos/LogoCss.glb",
+    "LOGO_DEEPSEEK": "/models/glb/logos/LogoDeepseek.glb",
     "LOGO_DJANGO": "/models/glb/logos/LogoDjango.glb",
     "LOGO_DOCKER": "/models/glb/logos/LogoDocker.glb",
     "LOGO_FIGMA": "/models/glb/logos/LogoFigma.glb",

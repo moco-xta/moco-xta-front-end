@@ -1,19 +1,25 @@
-import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
+import React, { MutableRefObject, useRef, useState } from 'react'
+import { useSelector } from 'react-redux'
 import * as THREE from 'three'
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { useFrame, useThree } from '@react-three/fiber'
+import { OrbitControls as DreiOrbitControls, OrbitControlsProps } from '@react-three/drei'
 import { Bloom, DepthOfField, EffectComposer } from '@react-three/postprocessing'
 import { KernelSize, Resolution } from 'postprocessing'
-import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { getDofFocalLength, getDofTargetPosition } from '@/helpers/rubiksCubeHelpers'
+import { RootState } from '@/redux/store'
+
+import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
+
+import {
+  findIntersectionWithCube,
+  getDofFocalLength,
+  getDofTargetPosition,
+} from '@/helpers/rubiksCubeHelpers'
 
 import { postProcessingData } from '@/data/skills/rubiks_cube/three/postProcessingData'
 import { cameraDefaultValues } from '@/data/skills/rubiks_cube/three/cameraData'
-import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
-import { useSelector } from 'react-redux'
-import { RootState } from '@/redux/store'
+import { rubiksCubeData } from '@/data/skills/rubiks_cube/three/rubiksCubeData'
 
 export type TPostProcessing = {
   perspectiveCameraRef: MutableRefObject<THREE.PerspectiveCamera>
@@ -21,74 +27,56 @@ export type TPostProcessing = {
 
 export default function PostProcessing(/* { perspectiveCameraRef }: TPostProcessing */) {
   const { timeline } = useGSAPTimelineContext()
-  const dofRef = useRef<{ target: THREE.Vector3/* , focalLength: number */ }>({
-    target: new THREE.Vector3(),
-    // focalLength: 0.1,
-  })
-  const focalLengthRef = useRef<number>(0.1)
-  const [focalLength, setFocalLength] = useState<number>(0.1)
-  const { camera, gl } = useThree()
-
+  const { camera } = useThree()
   const rubiksCubeIsLocked = useSelector(
     (state: RootState) => state.rubiksCubeState.rubiksCubeIsLocked,
   )
 
-  // const movingCamera = 
+  const controlsRef = useRef<any>(null!)
+  const dofRef = useRef<{ target: THREE.Vector3 }>({
+    target: new THREE.Vector3(),
+  })
+  const focalLengthRef = useRef<number>(0.1)
 
-  const controls = new OrbitControls(camera, gl.domElement)
-  controls.target.set(0, 0, 0)
-  // controls.autoRotate = true
-  // controls.autoRotateSpeed = 0.5
+  const [focalLength, setFocalLength] = useState<number>(0.1)
 
-  /* useEffect(() => {
-      controls.autoRotate = !rubiksCubeIsLocked
-    }, [rubiksCubeIsLocked]) */
+  // const controls = new OrbitControls(camera, gl.domElement)
+  // controls.target.set(0, 0, 0)
 
   useFrame(({ camera }) => {
-    controls.target.set(0, 0, 0)
-    controls.update()
-    dofRef.current.target = getDofTargetPosition(camera.position, { x: 0, y: 0, z: 0 }, 6)!
+    controlsRef.current.target.set(0, 0, 0)
+    controlsRef.current.update()
+    dofRef.current.target = findIntersectionWithCube(
+      camera.position,
+      rubiksCubeData.width * 2,
+      new THREE.Vector3(0, 0, 0),
+    )!
+
+    /* if (findIntersectionWithCube(new THREE.Vector3(0, 0, 0), rubiksCubeData.width, camera.position)) */ focalLengthRef.current =
+      getDofFocalLength(
+        findIntersectionWithCube(
+          camera.position,
+          rubiksCubeData.width * 2,
+          new THREE.Vector3(0, 0, 0),
+        )!,
+        { x: 8, y: 8, z: 8 },
+        camera.position,
+      )
     setFocalLength(focalLengthRef.current)
-    /* const { x, y, z } = dofRef.current.target
+  })
+
+  function updateControls() {
+    controlsRef.current.update()
+    /* const { x, y, z } = getDofTargetPosition(camera.position, { x: 0, y: 0, z: 0 }, 6)!
     focalLengthRef.current = getDofFocalLength(
       { x: x, y: y, z: z },
       { x: 8, y: 8, z: 8 },
       camera.position,
     ) */
-    //setFocalLength(focalLengthRef.current)
-    // if (dofRef.current.target) {
-          /* const { x, y, z } = dofRef.current.target
-          dofRef.current.focalLength = getDofFocalLength(
-            { x: x, y: y, z: z },
-            { x: 8, y: 8, z: 8 },
-            camera.position,
-          ) */
-        // }
-  })
-
-  function updateControls() {
-    // console.log('test updateControls')
-    // controls.target.set(0, 0, 0);
-    // controls.update()
-    // dofRef.current.target = getDofTargetPosition(camera.position, { x: 0, y: 0, z: 0 }, 6)!
-    const { x, y, z } = getDofTargetPosition(camera.position, { x: 0, y: 0, z: 0 }, 6)!
-    focalLengthRef.current = getDofFocalLength(
-      { x: x, y: y, z: z },
-      { x: 8, y: 8, z: 8 },
-      camera.position,
-    )
   }
 
-  /* gsap.to(focalLengthRef, {
-    current: 0.6,
-    duration: 10,
-    ease: 'power1.out',
-    delay: 3,
-    onUpdate: () => console.log('test'),
-  }) */
-
   function handleGoTo(label: string) {
-    timeline.seek(label).pause()
+    // timeline.seek(label).pause()
   }
 
   useGSAP(
@@ -104,11 +92,11 @@ export default function PostProcessing(/* { perspectiveCameraRef }: TPostProcess
             ease: 'power1.out',
             delay: 1,
             onStart: () => {
-              controls.enabled = false;
+              controlsRef.current.enabled = false
             },
             onUpdate: () => updateControls(),
             onComplete: () => {
-              controls.enabled = true;
+              controlsRef.current.enabled = true
               handleGoTo('quit')
             },
           },
@@ -124,11 +112,11 @@ export default function PostProcessing(/* { perspectiveCameraRef }: TPostProcess
             ease: 'power1.out',
             delay: 1,
             onStart: () => {
-              controls.enabled = false; // Disable OrbitControls
+              controlsRef.current.enabled = false // Disable OrbitControls
             },
             onUpdate: () => updateControls(),
             onComplete: () => {
-              controls.enabled = true; 
+              controlsRef.current.enabled = true
               handleGoTo('play')
             },
           },
@@ -139,24 +127,35 @@ export default function PostProcessing(/* { perspectiveCameraRef }: TPostProcess
   )
 
   return (
-    <EffectComposer>
-      <DepthOfField
-        // @ts-expect-error: Only used for target position
-        ref={dofRef}
-        focusDistance={postProcessingData.depthOfField.focusDistance}
-        focalLength={focalLength}
-        bokehScale={postProcessingData.depthOfField.bokehScale}
-        // target={new THREE.Vector3(3, 3, 3)}
+    <>
+      <DreiOrbitControls
+        ref={controlsRef}
+        enableZoom
+        minDistance={7}
+        maxDistance={15}
+        target={new THREE.Vector3(0, 0, 0)}
+        autoRotate={rubiksCubeIsLocked}
+        autoRotateSpeed={0.5}
       />
-      <Bloom
-        intensity={postProcessingData.bloom.intensity}
-        kernelSize={KernelSize.LARGE}
-        luminanceThreshold={postProcessingData.bloom.luminanceThreshold}
-        luminanceSmoothing={postProcessingData.bloom.luminanceSmoothing}
-        mipmapBlur={postProcessingData.bloom.mipmapBlur}
-        resolutionX={Resolution.AUTO_SIZE}
-        resolutionY={Resolution.AUTO_SIZE}
-      />
-    </EffectComposer>
+      <EffectComposer>
+        <DepthOfField
+          // @ts-expect-error: Only used for target position
+          ref={dofRef}
+          focusDistance={postProcessingData.depthOfField.focusDistance}
+          focalLength={focalLength}
+          bokehScale={postProcessingData.depthOfField.bokehScale}
+          // target={new THREE.Vector3(3, 3, 3)}
+        />
+        <Bloom
+          intensity={postProcessingData.bloom.intensity}
+          kernelSize={KernelSize.LARGE}
+          luminanceThreshold={postProcessingData.bloom.luminanceThreshold}
+          luminanceSmoothing={postProcessingData.bloom.luminanceSmoothing}
+          mipmapBlur={postProcessingData.bloom.mipmapBlur}
+          resolutionX={Resolution.AUTO_SIZE}
+          resolutionY={Resolution.AUTO_SIZE}
+        />
+      </EffectComposer>
+    </>
   )
 }
