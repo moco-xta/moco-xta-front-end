@@ -76,7 +76,7 @@ export const projectsData: TProjectData[] = [
     descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
       to: '2023-02-28',
-      from: '2021-11-01',
+      from: '2022-02-01',
     },
     roles: ['Front End'],
     logos: {
@@ -107,7 +107,7 @@ export const projectsData: TProjectData[] = [
     imageUrl: texturesConstants.PROJECTS.HUNDREDS_HANDS,
     descriptionsKey: 'DESCRIPTIONS.HUNDRED_HANDS',
     dates: {
-      to: '2021-10-31',
+      to: '2022-01-30',
       from: '2021-09-01',
     },
     roles: ['Front End', 'Real-time 3D'],
@@ -135,7 +135,7 @@ export const projectsData: TProjectData[] = [
     descriptionsKey: 'DESCRIPTIONS.WPME',
     dates: {
       to: '2021-08-30',
-      from: '2021-05-17',
+      from: '2021-03-17',
     },
     roles: ['Front End', 'Real-time 3D'],
     logos: {

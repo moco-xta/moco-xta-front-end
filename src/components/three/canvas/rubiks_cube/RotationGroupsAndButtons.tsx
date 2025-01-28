@@ -9,10 +9,7 @@ import type { TRotationGroupsAndButtons } from '@/types/components/three/types'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import {
-  setRubiksCubeIsLocked,
-  setRubiksCubeIsMixed,
-} from '@/redux/slices/rubiksCubeStateSlice'
+import { setRubiksCubeIsLocked, setRubiksCubeIsMixed } from '@/redux/slices/rubiksCubeStateSlice'
 
 import { Button } from '../../models/rubiks_cube/Button'
 
@@ -23,9 +20,7 @@ import { mixRubiksCube } from '@/helpers/rubiksCubeHelpers'
 export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGroupsAndButtons) {
   const { timeline } = useGSAPTimelineContext()
 
-  const { rubiksCubeIsLocked } = useSelector(
-    (state: RootState) => state.rubiksCubeState,
-  )
+  const { rubiksCubeIsLocked } = useSelector((state: RootState) => state.rubiksCubeState)
 
   const rotationGroupRef = useRef<THREE.Group>(null!)
 

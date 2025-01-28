@@ -28,3 +28,16 @@ export function hexToRgba(hex: string) {
 
   return `rgba(${r}, ${g}, ${b}, ${a})`
 }
+
+export function indexToGreyGradient(
+  index: number,
+  totalItems: number,
+  minLightness = 20,
+  maxLightness = 90,
+) {
+  if (index < 0 || index >= totalItems) {
+    throw new Error('Index is out of bounds.')
+  }
+  const lightness = minLightness + ((maxLightness - minLightness) * index) / (totalItems - 1)
+  return `hsl(0, 0%, ${lightness}%)`
+}

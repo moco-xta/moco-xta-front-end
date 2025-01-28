@@ -20,7 +20,6 @@ const rubiksCubeStateSlice = createSlice({
   },
 })
 
-export const { setRubiksCubeIsLocked, setRubiksCubeIsMixed } =
-  rubiksCubeStateSlice.actions
+export const { setRubiksCubeIsLocked, setRubiksCubeIsMixed } = rubiksCubeStateSlice.actions
 
 export default rubiksCubeStateSlice.reducer

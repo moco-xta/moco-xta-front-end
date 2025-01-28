@@ -10,16 +10,13 @@ import { isValidDate } from '@/helpers/dateHelpers'
 
 import { projectsData } from '@/data/projects/projectsData'
 import { companiesData } from '@/data/projects/companiesData'
-import { locationsData } from '@/data/projects/locationsData'
+// import { locationsData } from '@/data/projects/locationsData'
 
 import './index.scss'
 
 export default function ProjectsPage() {
-  const { currentDate, currentProject, currentCompany, currentLocation } = useProjectsTimeline(
-    projectsData,
-    companiesData,
-    locationsData,
-  )
+  const { /* snapHeights, */ currentDate, currentProject, currentCompany /* , currentLocation */ } =
+    useProjectsTimeline(projectsData, companiesData /* , locationsData */)
 
   return (
     <div id='projects_page'>
@@ -27,10 +24,11 @@ export default function ProjectsPage() {
         <ProjectsCanvas
           currentProject={currentProject}
           currentCompany={currentCompany}
-          currentLocation={currentLocation}
+          // currentLocation={currentLocation}
         />
       </div>
       <Content
+        // snapHeights={snapHeights}
         currentProject={currentProject}
         currentCompany={currentCompany}
       />
