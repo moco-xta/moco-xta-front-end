@@ -1,25 +1,26 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { useTranslations } from 'next-intl'
 
-import { SectionTitle } from '@/components/layout/titles'
+// import useProjectsTimeline from '@/hooks/useProjectsTimeline'
+
+import Section from './section'
+
+// import { indexToGreyGradient } from '@/helpers/colorsHelpers'
 
 import { projectsData } from '@/data/projects/projectsData'
+import { companiesData } from '@/data/projects/companiesData'
 
 import './index.scss'
-import { companiesData } from '@/data/projects/companiesData'
-import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 export type TContent = {
+  // snapHeights: number[]
   currentProject: number
   currentCompany: number
-}
+} // TODO: To types
 
-export default function Content({ currentProject, currentCompany }: TContent) {
-  const t = useTranslations('PROJECTS')
-
-  const projectsTimelineContainerRef = useRef<HTMLDivElement>(null)
-  const projectsContainerRef = useRef<HTMLDivElement>(null)
+export default function Content({ /* snapHeights, */ currentProject, currentCompany }: TContent) {
+  const projectsContainerRef = useRef<HTMLDivElement>(null!)
+  const projectsTimelineContainerRef = useRef<HTMLDivElement>(null!)
 
   useEffect(() => {
     if (projectsTimelineContainerRef.current) {
@@ -60,42 +61,33 @@ export default function Content({ currentProject, currentCompany }: TContent) {
   return (
     <>
       <div
-        ref={projectsTimelineContainerRef}
-        id='projects_timeline_container'
-        style={{ height: `${projectsData.length}00vh` }}
-      >
-        <p style={{ opacity: 0 }}>Content</p>
-      </div>
-      <div
         ref={projectsContainerRef}
         id='projects_container'
       >
-        {projectsData.map((projectData, index) => (
-          <section
+        {projectsData.map((projectData) => (
+          <Section
             key={`project_section_${projectData.name}`}
-            className='project_section'
-            style={{
-              zIndex: `${projectsData.length - index}`,
-            }}
-          >
-            <div className='project_container'>
-              <SectionTitle
-                title={`${projectData.name} ${companiesData[currentCompany]?.name ? ' with ' + capitalizeFirstLetter(companiesData[currentCompany].name) : ''}`}
-              />
-              <p className='project_roles'>
-                {projectData.roles.map((role, index) => (
-                  <span key={`role_${projectData.key}_${index}`}>{role}</span>
-                ))}
-              </p>
-              <p className='project_description'>{t(projectData.descriptionsKey)}</p>
-              <p className='project_tools'>
-                {projectData.logos.tools.map((tool, index) => (
-                  <span key={`role_${projectData.key}_${index}`}>#{tool.name}</span>
-                ))}
-              </p>
-            </div>
-          </section>
+            projectData={projectData}
+            companiesData={companiesData}
+            currentCompany={currentCompany}
+          />
         ))}
+      </div>
+      {/* <div
+        ref={projectsTimelineContainerRef}
+        id='projects_timeline_container'
+        style={{ height: `${projectsData.length}00vh`, opacity: 0.5 }}
+      >
+          {snapHeights.map((height, index) => (
+            <div key={`snap_${index}`} className='snap' style={{ height: `${height}vh`, background: indexToGreyGradient(index, snapHeights.length) }}>{index}</div>
+          ))}
+      </div> */}
+      <div
+        ref={projectsTimelineContainerRef}
+        id='projects_timeline_container'
+        style={{ height: `${projectsData.length * 1.5}00vh` }}
+      >
+        <p style={{ opacity: 0 }}>Content</p>
       </div>
     </>
   )

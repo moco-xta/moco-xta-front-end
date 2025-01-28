@@ -13,13 +13,13 @@ import PostProcessing from './PostProcessing'
 export type TProjectCanvas = {
   currentProject: number
   currentCompany: number
-  currentLocation: number
+  // currentLocation: number
 }
 
 export default function ProjectsCanvas({
   currentProject,
   currentCompany,
-  currentLocation,
+  // currentLocation,
 }: TProjectCanvas) {
   return (
     <Canvas
@@ -34,7 +34,7 @@ export default function ProjectsCanvas({
         <ProjectsScene
           currentProject={currentProject}
           currentCompany={currentCompany}
-          currentLocation={currentLocation}
+          // currentLocation={currentLocation}
         />
       </Suspense>
       <PostProcessing />

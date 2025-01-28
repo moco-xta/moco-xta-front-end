@@ -67,7 +67,7 @@ export type TPlayerPageGreeting = {
 export type TProjectScene = {
   currentProject: number
   currentCompany: number
-  currentLocation: number
+  // currentLocation: number
 }
 
 export type TProjectsLogos = {

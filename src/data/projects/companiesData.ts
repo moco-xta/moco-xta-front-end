@@ -40,7 +40,7 @@ export const companiesData: TCompanyData[] = [
     url: 'https://www.thebrinkagency.com/',
     dates: {
       to: '2022-02-28',
-      from: '2021-05-17',
+      from: '2021-03-17',
     },
   },
   {
