@@ -128,7 +128,7 @@ export function getDofFocalLength(A: TCoordinatesData, B: TCoordinatesData, P: T
       ((P.z ?? 0) - (A.z ?? 0)) ** 2,
   )
   const t = lengthAP / lengthAB
-  return parseFloat((0.2 + t * (0.2 - 0.001)).toFixed(1))
+  return parseFloat((0.2 + t * (0.2 - 0.0001)).toFixed(1))
 }
 
 export function getCameraDestinationPosition(

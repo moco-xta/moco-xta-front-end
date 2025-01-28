@@ -12,7 +12,7 @@ export type TLogoMoco = GroupProps & {
 }
 
 const LogoMoco = forwardRef<THREE.Group, TLogoMoco>(({ material, ...rest }, ref) => {
-  const { nodes } = useGLTF(glbConstants.LOGOS.LOGO_MOCO) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_MOCO) as GLTFResult
 
   return (
     <group

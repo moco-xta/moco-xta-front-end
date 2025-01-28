@@ -15,10 +15,7 @@ export default function Menu() {
       id='menu_container'
       className={`menu_container_zIndex ${sansTrialRegularFont.className}`}
     >
-      <Header
-        isMain={true}
-        logoMocoMaterial={new THREE.MeshNormalMaterial()}
-      />
+      <Header isMain={true} />
       <MenuOverlay />
     </div>
   )
