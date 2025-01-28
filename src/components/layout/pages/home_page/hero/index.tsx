@@ -3,7 +3,7 @@ import React from 'react'
 import { GSAPTimelineProvider } from '@/contexts/GsapTimelineContext'
 
 import AnimationControls from '@/components/layout/buttons/animation_controls'
-import { HeroCanvas } from '@/components/three/canvas'
+import { HeroCanvas, PlaygroundCanvas } from '@/components/three/canvas'
 
 import { timelineDefaultValues } from '@/data/hero/timelineData'
 
@@ -13,7 +13,8 @@ export default function Hero() {
   return (
     <GSAPTimelineProvider {...timelineDefaultValues}>
       <>
-        <HeroCanvas />
+        {/* <HeroCanvas /> */}
+        <PlaygroundCanvas />
         <AnimationControls />
       </>
     </GSAPTimelineProvider>

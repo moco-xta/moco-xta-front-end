@@ -110,21 +110,49 @@ export default function Bust() {
       depthWrite: false,
     }),
   )
-
-  useEffect(() => {
-    if (!bustGlb.scene.children[0]) {
-      return
-    }
-
-    const bustMesh = bustGlb.scene.children[0] as THREE.Mesh
-
-    const generatedGeometry = createAttributes(bustMesh.geometry)
-
-    const points = new THREE.Points(generatedGeometry, materialRef.current)
-    points.position.set(0, 1, 0)
-    points.scale.set(2.2, 2.2, 2.2)
-    scene.getObjectByName('mess_group')?.add(points)
-  }, [bustGlb, scene])
+  
+    useEffect(() => {
+      const NUMBER = 512
+      const NUMBER_SQUARED = Math.pow(NUMBER, 2)
+      let INDEX = 0
+      const FACTOR = 125
+  
+      const geometry = new THREE.BufferGeometry()
+  
+      const positions = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED * 3), 3)
+      const coordinates = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED * 3), 3)
+      const speeds = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
+      const offset = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
+      const direction = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
+      const press = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
+  
+      function rand(a: number, b: number): number {
+        return a + (b - a) * Math.random()
+      }
+  
+      for (let i = 0; i < NUMBER; i++) {
+        const posX = (i - NUMBER / 2) / FACTOR
+        for (let j = 0; j < NUMBER; j++) {
+          positions.setXYZ(INDEX, posX * 2, ((j - NUMBER / 2) / FACTOR) * 2, 0)
+          coordinates.setXYZ(INDEX, i, j, 0)
+          speeds.setX(INDEX, rand(0.4, 1))
+          offset.setX(INDEX, rand(-1000 / FACTOR, 1000 / FACTOR))
+          direction.setX(INDEX, Math.random() > 0.5 ? 1 : -1)
+          press.setX(INDEX, rand(0.4, 1))
+          INDEX++
+        }
+      }
+  
+      geometry.setAttribute('position', positions)
+      geometry.setAttribute('aCoordinates', coordinates)
+      geometry.setAttribute('aSpeed', speeds)
+      geometry.setAttribute('aOffset', offset)
+      geometry.setAttribute('aDirection', direction)
+      geometry.setAttribute('aPress', press)
+  
+      const points = new THREE.Points(geometry, materialRef.current)
+      scene.getObjectByName('mess_group')?.add(points)
+    }, [scene])
 
   useGSAP(
     () => {
