@@ -20,7 +20,9 @@ import { mixRubiksCube } from '@/helpers/rubiksCubeHelpers'
 export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGroupsAndButtons) {
   const { timeline } = useGSAPTimelineContext()
 
-  const { rubiksCubeIsLocked, rubiksCubeIsRotating } = useSelector((state: RootState) => state.rubiksCubeState)
+  const { rubiksCubeIsLocked, rubiksCubeIsRotating } = useSelector(
+    (state: RootState) => state.rubiksCubeState,
+  )
 
   const rotationGroupRef = useRef<THREE.Group>(null!)
 

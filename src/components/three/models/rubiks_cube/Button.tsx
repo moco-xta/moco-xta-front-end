@@ -12,7 +12,13 @@ export type TButton = GroupProps & {
   rubiksCubeIsRotating: boolean
 } // TODO: Add to types
 
-export function Button({ onClick, arrow, rubiksCubeIsLocked, rubiksCubeIsRotating, ...rest }: TButton) {
+export function Button({
+  onClick,
+  arrow,
+  rubiksCubeIsLocked,
+  rubiksCubeIsRotating,
+  ...rest
+}: TButton) {
   const { nodes } = useGLTF(glbConstants.RUBIKS_CUBE.BUTTON) as GLTFResult
 
   const [hovered, setHovered] = useState<boolean>(false)
@@ -40,7 +46,7 @@ export function Button({ onClick, arrow, rubiksCubeIsLocked, rubiksCubeIsRotatin
           opacity={0}
         />
       </mesh>
-      {hovered && !rubiksCubeIsRotating && (
+      {hovered && !rubiksCubeIsRotating && !rubiksCubeIsLocked && (
         <>
           {arrow === 'left' ? (
             <mesh geometry={nodes.ArrowLeft.geometry}>

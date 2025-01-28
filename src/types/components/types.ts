@@ -4,14 +4,14 @@ import * as THREE from 'three'
 
 export type THeader = {
   isMain?: boolean
-  logoMocoMaterial: THREE.MeshNormalMaterial | THREE.MeshStandardMaterial
+  logoMocoMaterial?: THREE.MeshNormalMaterial | THREE.MeshStandardMaterial
 }
 
 // LOGO MOCO
 
 export type TLogoMoco = {
   isMain?: boolean
-  logoMocoMaterial: THREE.MeshNormalMaterial | THREE.MeshStandardMaterial
+  logoMocoMaterial?: THREE.MeshNormalMaterial | THREE.MeshStandardMaterial
 }
 
 // LAZY FACTORY

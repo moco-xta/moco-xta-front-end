@@ -24,6 +24,7 @@ const rubiksCubeStateSlice = createSlice({
   },
 })
 
-export const { setRubiksCubeIsLocked, setRubiksCubeIsMixed, setRubiksCubeIsRotating } = rubiksCubeStateSlice.actions
+export const { setRubiksCubeIsLocked, setRubiksCubeIsMixed, setRubiksCubeIsRotating } =
+  rubiksCubeStateSlice.actions
 
 export default rubiksCubeStateSlice.reducer
