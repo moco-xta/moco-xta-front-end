@@ -9,7 +9,7 @@ import type { TRotationGroupsAndButtons } from '@/types/components/three/types'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { setRubiksCubeIsLocked, setRubiksCubeIsMixed } from '@/redux/slices/rubiksCubeStateSlice'
+import { setRubiksCubeIsMixed, setRubiksCubeIsRotating } from '@/redux/slices/rubiksCubeStateSlice'
 
 import { Button } from '../../models/rubiks_cube/Button'
 
@@ -20,7 +20,7 @@ import { mixRubiksCube } from '@/helpers/rubiksCubeHelpers'
 export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGroupsAndButtons) {
   const { timeline } = useGSAPTimelineContext()
 
-  const { rubiksCubeIsLocked } = useSelector((state: RootState) => state.rubiksCubeState)
+  const { rubiksCubeIsLocked, rubiksCubeIsRotating } = useSelector((state: RootState) => state.rubiksCubeState)
 
   const rotationGroupRef = useRef<THREE.Group>(null!)
 
@@ -31,8 +31,8 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
     timeline.pause()
   }
 
-  function handleSetRubiksCubeIsLocked(isRotating: boolean) {
-    dispatch(setRubiksCubeIsLocked(isRotating))
+  function handleSetRubiksCubeIsRotating(isRotating: boolean) {
+    dispatch(setRubiksCubeIsRotating(isRotating))
   }
 
   useGSAP(
@@ -103,13 +103,14 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
                   buttonFunction(
                     rubiksCubeRef,
                     rotationGroupRef,
-                    rubiksCubeIsLocked,
-                    handleSetRubiksCubeIsLocked,
+                    rubiksCubeIsRotating,
+                    handleSetRubiksCubeIsRotating,
                     e,
                   )
                 }
                 arrow={buttonData.arrow}
                 rubiksCubeIsLocked={rubiksCubeIsLocked}
+                rubiksCubeIsRotating={rubiksCubeIsRotating}
               />
             ))}
           </group>

@@ -37,15 +37,6 @@ export default function PostProcessing() {
       camera.position,
     ),
   })
-  /* const focalLengthRef = useRef<number>(getDofFocalLength(
-    getDofTargetPosition(
-      new THREE.Vector3(0, 0, 0),
-      camera.position as THREE.Vector3,
-      rubiksCubeData.width,
-    )!,
-    { x: 6, y: 6, z: 6 },
-    camera.position,
-  )) */
 
   const [focalLength, setFocalLength] = useState<number>(dofRef.current.focalLength)
 
@@ -71,10 +62,6 @@ export default function PostProcessing() {
     }
   })
 
-  function updateControls() {
-    controlsRef.current.update()
-  }
-
   function handleGoTo(label: string) {
     timeline.seek(label).pause()
   }
@@ -89,11 +76,9 @@ export default function PostProcessing() {
           z: 6,
           duration: 2,
           ease: 'power1.out',
-          delay: 1,
           onStart: () => {
             controlsRef.current.enabled = false
           },
-          onUpdate: () => updateControls(),
           onComplete: () => {
             controlsRef.current.enabled = true
             handleGoTo('quit')
@@ -109,11 +94,9 @@ export default function PostProcessing() {
           z: cameraDefaultValues.camera.position!.z,
           duration: 2,
           ease: 'power1.out',
-          delay: 1,
           onStart: () => {
-            controlsRef.current.enabled = false // Disable OrbitControls
+            controlsRef.current.enabled = false
           },
-          onUpdate: () => updateControls(),
           onComplete: () => {
             controlsRef.current.enabled = true
             handleGoTo('play')
