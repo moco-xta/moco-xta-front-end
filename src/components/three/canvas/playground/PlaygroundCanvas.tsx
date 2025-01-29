@@ -18,6 +18,12 @@ export function PlaygroundCanvas() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   const timeRef = useRef<number>(0)
+  const opacityRef = useRef<{ value: number }>({
+    value: 0,
+  })
+  const shiftRef = useRef<{ value: number }>({
+    value: 1,
+  })
   const moveRef = useRef<number>(0)
   const pointerRef = useRef<THREE.Vector2>(new THREE.Vector2())
 
@@ -40,6 +46,8 @@ export function PlaygroundCanvas() {
 
   const uniforms = {
     time: { type: 'f', value: 0 },
+    opacity: { type: 'f', value: opacityRef.current.value },
+    shift: { type: 'f', value: shiftRef.current.value },
     progress: { type: 'f', value: 0.0 },
     uTexture: { type: 't', value: textures[0] },
     mask: { type: 't', value: textures[1] },
@@ -147,11 +155,31 @@ export function PlaygroundCanvas() {
         value: 7,
         ease: 'power1.out',
       })
+      gsap.to(opacityRef.current, {
+        duration: 0.5,
+        value: 0.5,
+        ease: 'power1.out',
+      })
+      gsap.to(shiftRef.current, {
+        duration: 0.5,
+        value: 1,
+        ease: 'power1.out',
+      })
     }
 
     const handleMouseUp = () => {
       gsap.to(shaderMaterial.uniforms.mousePressed, {
         duration: 1.5,
+        value: 0,
+        ease: 'power1.out',
+      })
+      gsap.to(opacityRef.current, {
+        duration: 0.5,
+        value: 1,
+        ease: 'power1.out',
+      })
+      gsap.to(shiftRef.current, {
+        duration: 3,
         value: 0,
         ease: 'power1.out',
       })
@@ -166,22 +194,56 @@ export function PlaygroundCanvas() {
     }
   }, [shaderMaterial.uniforms.mousePressed])
 
-  gsap.timeline().to(shaderMaterial.uniforms.mousePressed, {
-    keyframes: {
-      '0%': {
-        value: 10,
+  gsap
+    .timeline()
+    .to(shaderMaterial.uniforms.mousePressed, {
+      keyframes: {
+        '0%': {
+          value: 10,
+        },
+        '50%': {
+          value: 7.5,
+        },
+        '100%': {
+          value: 0,
+          ease: 'power1.inOut',
+        },
+        easeEach: 'power1.in',
       },
-      '50%': {
-        value: 7.5,
+      duration: 5,
+    })
+    .to(
+      opacityRef.current,
+      {
+        keyframes: {
+          '0%': {
+            value: 0,
+          },
+          '100%': {
+            value: 1,
+          },
+          easeEach: 'power1.in',
+        },
+        duration: 2,
       },
-      '100%': {
-        value: 0,
-        ease: 'power1.inOut',
+      0,
+    )
+    .to(
+      shiftRef.current,
+      {
+        keyframes: {
+          '0%': {
+            value: 1,
+          },
+          '100%': {
+            value: 0,
+          },
+          easeEach: 'power1.in',
+        },
+        duration: 6,
       },
-      easeEach: 'power1.in',
-    },
-    duration: 5,
-  })
+      0,
+    )
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -220,6 +282,8 @@ export function PlaygroundCanvas() {
       timeRef.current += 0.01
 
       uniforms.time.value = timeRef.current
+      uniforms.opacity.value = opacityRef.current.value
+      uniforms.shift.value = shiftRef.current.value
       uniforms.move.value = moveRef.current
       // uniforms.mouse.value = intersects[0] ? new THREE.Vector2(intersects[0].point.x, intersects[0].point.y) : new THREE.Vector2(100, 100)
 
