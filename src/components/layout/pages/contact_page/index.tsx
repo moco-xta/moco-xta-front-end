@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { /* ContactCanvas,  */PlaygroundCanvas } from '@/components/three/canvas'
+import { /* ContactCanvas,  */ PlaygroundCanvas } from '@/components/three/canvas'
 
 import './index.scss'
 

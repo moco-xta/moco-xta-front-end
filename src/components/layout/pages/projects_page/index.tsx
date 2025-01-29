@@ -1,5 +1,5 @@
-import React, { useRef } from 'react'
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api'
+import React /* , { useRef } */ from 'react'
+// import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api'
 
 import { ProjectsCanvas } from '@/components/three/canvas'
 import Content from './content'
@@ -19,17 +19,17 @@ export default function ProjectsPage() {
   const { /* snapHeights, */ currentDate, currentProject, currentCompany /* , currentLocation */ } =
     useProjectsTimeline(projectsData, companiesData /* , locationsData */)
 
-  const googleMapContainerRef = useRef<HTMLDivElement>(null!)
+  // const googleMapContainerRef = useRef<HTMLDivElement>(null!)
 
-  const containerStyle = {
+  /* const containerStyle = {
     width: '100%',
     height: '400px',
-  }
+  } */
 
-  const center = {
+  /* const center = {
     lat: 37.7749, // Latitude of the center
     lng: -122.4194, // Longitude of the center
-  }
+  } */
 
   return (
     <>
@@ -48,11 +48,11 @@ export default function ProjectsPage() {
         />
         {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
       </div>
-      <div
+      {/* <div
         ref={googleMapContainerRef}
         id='google_map_container'
         style={{
-          /* display: 'none',  */ width: containerStyle.width,
+          display: 'none',  width: containerStyle.width,
           height: containerStyle.height,
         }}
       >
@@ -62,11 +62,10 @@ export default function ProjectsPage() {
             center={center}
             zoom={10}
           >
-            {/* Add markers or other components here */}
             <Marker position={center} />
           </GoogleMap>
         </LoadScript>
-      </div>
+      </div> */}
     </>
   )
 }
