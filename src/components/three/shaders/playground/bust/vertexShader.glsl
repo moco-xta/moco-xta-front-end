@@ -29,9 +29,9 @@ void main() {
 	float dist = distance(stable.xy, mouse);
 	float area = 1.0 - smoothstep(0.0, 1.0, dist);
  
-	stable.x += 0.5 * sin( time * aPress) * aDirection * area; //* mousePressed;
-	stable.y += 0.5 * sin( time * aPress) * aDirection * area; //* mousePressed;
-	stable.z += 2.0 * cos(time * aPress) * aDirection * area; //* mousePressed;
+	stable.x += 0.5 * sin( time * aPress) * aDirection * area * mousePressed;
+	stable.y += 0.5 * sin( time * aPress) * aDirection * area * mousePressed;
+	stable.z += 2.0 * cos(time * aPress) * aDirection * area * mousePressed;
 
 	vec4 mvPosition = modelViewMatrix * vec4(stable, 1.0);
 	gl_PointSize = 10.0 * (1.0 / -mvPosition.z);
