@@ -52,6 +52,7 @@ export function PlaygroundCanvas() {
     const uniforms = {
       progress: { type: 'f', value: 0.0 },
       uTexture: { type: 't', value: textures[0] },
+      mask: { type: 't', value: textures[1] },
     }
 
     const shaderMaterial = new THREE.ShaderMaterial({
@@ -60,6 +61,8 @@ export function PlaygroundCanvas() {
       fragmentShader,
       transparent: true,
       side: THREE.DoubleSide,
+      depthTest: false,
+      depthWrite: false,
     })
 
     const geometry = new THREE.BufferGeometry()
