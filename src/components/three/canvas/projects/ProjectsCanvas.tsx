@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+// import { OrbitControls } from '@react-three/drei'
 
 import Lightning from './lightning/Lightning'
 import ProjectsScene from './ProjectsScene'
@@ -30,7 +30,7 @@ export default function ProjectsCanvas({
       }}
     >
       <CameraWithFloat defaultValues={cameraDefaultValues} />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <Lightning />
       <Suspense fallback={null}>
         <ProjectsScene

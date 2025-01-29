@@ -91,7 +91,7 @@ export function PlaygroundCanvas() {
     const points = new THREE.Points(geometry, shaderMaterial)
     mesh.material = new THREE.MeshBasicMaterial({
       transparent: true,
-      opacity: 0
+      opacity: 0,
     })
     scene.add(mesh)
     scene.add(points)
@@ -115,8 +115,8 @@ export function PlaygroundCanvas() {
 
   useEffect(() => {
     const handlePointerMove = (event: PointerEvent) => {
-      pointerRef.current.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-      pointerRef.current.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+      pointerRef.current.x = (event.clientX / window.innerWidth) * 2 - 1
+      pointerRef.current.y = -(event.clientY / window.innerHeight) * 2 + 1
       // console.log('Pointer move:', event)
     }
 
@@ -166,27 +166,22 @@ export function PlaygroundCanvas() {
     }
   }, [shaderMaterial.uniforms.mousePressed])
 
-
-  gsap.timeline()
-    .to(
-      shaderMaterial.uniforms.mousePressed,
-      {
-        keyframes: {
-          '0%': {
-            value: 10,
-          },
-          '50%': {
-            value: 7.5,
-          },
-          '100%': {
-            value: 0,
-            ease: 'power1.inOut',
-          },
-          easeEach: 'power1.in',
-        },
-        duration: 5,
-      }
-    )
+  gsap.timeline().to(shaderMaterial.uniforms.mousePressed, {
+    keyframes: {
+      '0%': {
+        value: 10,
+      },
+      '50%': {
+        value: 7.5,
+      },
+      '100%': {
+        value: 0,
+        ease: 'power1.inOut',
+      },
+      easeEach: 'power1.in',
+    },
+    duration: 5,
+  })
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -205,7 +200,7 @@ export function PlaygroundCanvas() {
     renderer.setSize(window.innerWidth, window.innerHeight)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     containerRef.current.appendChild(renderer.domElement)
-    
+
     // const raycaster = new THREE.Raycaster();
 
     const controls = new OrbitControls(camera, renderer.domElement)
@@ -221,7 +216,7 @@ export function PlaygroundCanvas() {
       // if (pointerRef && pointerRef.current) raycaster.setFromCamera( pointerRef.current, camera );
       // const intersects = mesh ? raycaster.intersectObjects( [mesh] ) : [];
       // console.log('intersects', intersects[0] ? intersects[0].point : null)
-    
+
       timeRef.current += 0.01
 
       uniforms.time.value = timeRef.current
