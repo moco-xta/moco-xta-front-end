@@ -1,15 +1,22 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import { DRACOLoader, GLTFLoader } from 'three/examples/jsm/Addons.js'
 
 import vertexShader from '@/components/three/shaders/playground/bust/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/playground/bust/fragmentShader.glsl'
 
+import glbConstants from '@/constants/assets/glbConstants.json'
+
 export function PlaygroundCanvas() {
-  const mountRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  const timeRef = useRef<number>(0)
 
   useEffect(() => {
-    if (!mountRef.current) return
+    if (!containerRef.current) return
+
+    // SET UP
 
     const scene = new THREE.Scene()
 
@@ -24,16 +31,16 @@ export function PlaygroundCanvas() {
     const renderer = new THREE.WebGLRenderer({ antialias: true })
     renderer.setSize(window.innerWidth, window.innerHeight)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    mountRef.current.appendChild(renderer.domElement)
+    containerRef.current.appendChild(renderer.domElement)
 
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
     controls.dampingFactor = 0.05
 
-    const geometry = new THREE.PlaneGeometry(5, 5)
+    // OBJECT
 
     const uniforms = {
-      time: { value: 0.0 },
+      progress: { type: 'f', value: 0.0 },
     }
 
     const shaderMaterial = new THREE.ShaderMaterial({
@@ -44,14 +51,53 @@ export function PlaygroundCanvas() {
       side: THREE.DoubleSide,
     })
 
-    const plane = new THREE.Mesh(geometry, shaderMaterial)
-    scene.add(plane)
+    const geometry = new THREE.BufferGeometry()
+
+    // LOADER
+
+    let mesh: THREE.Mesh
+
+    const loader = new GLTFLoader()
+
+    loader.load(
+      glbConstants.SKETCHFAB.BUST,
+      function (gltf) {
+        mesh = gltf.scene.children[0] as THREE.Mesh
+        // console.log(mesh.geometry.attributes)
+
+        setBufferGeometry(mesh, geometry)
+      },
+      function (xhr) {
+        console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+      },
+      function () {
+        console.log('An error happened')
+      },
+    )
+
+    // BUFFER GEOMETRY
+
+    let positions: THREE.BufferAttribute
+
+    function setBufferGeometry(mesh: THREE.Mesh, geometry: THREE.BufferGeometry) {
+      positions = mesh.geometry.attributes.position as THREE.BufferAttribute
+      // console.log(positions)
+
+      geometry.setAttribute('position', positions)
+      console.log(geometry)
+
+      const points = new THREE.Points(geometry, shaderMaterial)
+      scene.add(points)
+    }
+
+    // ANIMATE
 
     let frameId: number
     const animate = () => {
       frameId = requestAnimationFrame(animate)
+      timeRef.current += 0.01
 
-      uniforms.time.value += 0.01
+      // uniforms.time.value += 0.01
 
       controls.update()
 
@@ -72,12 +118,12 @@ export function PlaygroundCanvas() {
 
     return () => {
       window.removeEventListener('resize', handleResize)
-      mountRef.current?.removeChild(renderer.domElement)
+      containerRef.current?.removeChild(renderer.domElement)
       controls.dispose()
       renderer.dispose()
       cancelAnimationFrame(frameId)
     }
   }, [])
 
-  return <div ref={mountRef} />
+  return <div ref={containerRef} />
 }
