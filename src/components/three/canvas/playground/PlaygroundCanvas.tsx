@@ -7,6 +7,8 @@ import vertexShader from '@/components/three/shaders/playground/bust/vertexShade
 import fragmentShader from '@/components/three/shaders/playground/bust/fragmentShader.glsl'
 
 import glbConstants from '@/constants/assets/glbConstants.json'
+import texturesConstants from '@/constants/assets/texturesConstants.json'
+import { texture } from 'three/tsl'
 
 export function PlaygroundCanvas() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -37,10 +39,19 @@ export function PlaygroundCanvas() {
     controls.enableDamping = true
     controls.dampingFactor = 0.05
 
+    // TEXTURES
+
+    const textures = [
+      new THREE.TextureLoader().load(texturesConstants.SKETCHFAB.BUST),
+      new THREE.TextureLoader().load(texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK),
+    ]
+    // console.log(textures)
+
     // OBJECT
 
     const uniforms = {
       progress: { type: 'f', value: 0.0 },
+      uTexture: { type: 't', value: textures[0] },
     }
 
     const shaderMaterial = new THREE.ShaderMaterial({
@@ -63,7 +74,7 @@ export function PlaygroundCanvas() {
       glbConstants.SKETCHFAB.BUST,
       function (gltf) {
         mesh = gltf.scene.children[0] as THREE.Mesh
-        // console.log(mesh.geometry.attributes)
+        console.log(mesh.geometry.attributes)
 
         setBufferGeometry(mesh, geometry)
       },
@@ -77,14 +88,15 @@ export function PlaygroundCanvas() {
 
     // BUFFER GEOMETRY
 
-    let positions: THREE.BufferAttribute
-
     function setBufferGeometry(mesh: THREE.Mesh, geometry: THREE.BufferGeometry) {
-      positions = mesh.geometry.attributes.position as THREE.BufferAttribute
+      const positions = mesh.geometry.attributes.position as THREE.BufferAttribute // Points position
+      const coordinates = mesh.geometry.attributes.uv as THREE.BufferAttribute // UV coordinates
       // console.log(positions)
 
       geometry.setAttribute('position', positions)
-      console.log(geometry)
+      // console.log(geometry)
+      geometry.setAttribute('aCoordinates', coordinates)
+      console.log(coordinates)
 
       const points = new THREE.Points(geometry, shaderMaterial)
       scene.add(points)
@@ -105,6 +117,8 @@ export function PlaygroundCanvas() {
     }
 
     animate()
+
+    // RESIZE
 
     const handleResize = () => {
       const width = window.innerWidth
