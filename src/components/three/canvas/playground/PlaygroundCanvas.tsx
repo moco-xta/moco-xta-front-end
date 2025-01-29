@@ -18,6 +18,9 @@ export function PlaygroundCanvas() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   const timeRef = useRef<number>(0)
+  const sizeRef = useRef<{ value: number }>({
+    value: 0,
+  })
   const opacityRef = useRef<{ value: number }>({
     value: 0,
   })
@@ -46,6 +49,7 @@ export function PlaygroundCanvas() {
 
   const uniforms = {
     time: { type: 'f', value: 0 },
+    size: { type: 'f', value: sizeRef.current.value },
     opacity: { type: 'f', value: opacityRef.current.value },
     shift: { type: 'f', value: shiftRef.current.value },
     progress: { type: 'f', value: 0.0 },
@@ -179,7 +183,7 @@ export function PlaygroundCanvas() {
         ease: 'power1.out',
       })
       gsap.to(shiftRef.current, {
-        duration: 3,
+        duration: 4,
         value: 0,
         ease: 'power1.out',
       })
@@ -213,6 +217,22 @@ export function PlaygroundCanvas() {
       duration: 5,
     })
     .to(
+      sizeRef.current,
+      {
+        keyframes: {
+          '0%': {
+            value: 0,
+          },
+          '100%': {
+            value: 5,
+          },
+          easeEach: 'power1.inOut',
+        },
+        duration: 5,
+      },
+      0,
+    )
+    .to(
       opacityRef.current,
       {
         keyframes: {
@@ -224,7 +244,7 @@ export function PlaygroundCanvas() {
           },
           easeEach: 'power1.in',
         },
-        duration: 2,
+        duration: 5,
       },
       0,
     )
@@ -240,7 +260,7 @@ export function PlaygroundCanvas() {
           },
           easeEach: 'power1.in',
         },
-        duration: 6,
+        duration: 7,
       },
       0,
     )
@@ -282,6 +302,7 @@ export function PlaygroundCanvas() {
       timeRef.current += 0.01
 
       uniforms.time.value = timeRef.current
+      uniforms.size.value = sizeRef.current.value
       uniforms.opacity.value = opacityRef.current.value
       uniforms.shift.value = shiftRef.current.value
       uniforms.move.value = moveRef.current

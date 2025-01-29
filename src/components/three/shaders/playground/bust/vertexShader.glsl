@@ -10,6 +10,7 @@ attribute float aPress;
 attribute float aDelay;
 
 uniform float time;
+uniform float size;
 uniform float move;
 uniform vec2 mouse;
 uniform float mousePressed;
@@ -40,7 +41,7 @@ void main() {
 	stable.z *= scale;
 
 	vec4 mvPosition = modelViewMatrix * vec4(stable, 1.0);
-	gl_PointSize = 10.0; // * (1.0 / -mvPosition.z);
+	gl_PointSize = size; // * (1.0 / -mvPosition.z);
 	gl_Position = projectionMatrix * mvPosition;
 	vCoordinates = aCoordinates.xy;
 	vPos = pos;
