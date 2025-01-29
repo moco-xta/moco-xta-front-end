@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/Addons.js'
-import gsap from 'gsap'
 
 import vertexShader from '@/components/three/shaders/playground/bust/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/playground/bust/fragmentShader.glsl'
@@ -15,40 +14,9 @@ function rand(a: number, b: number): number {
 }
 
 export function PlaygroundCanvas() {
-
-  // TEXTURES
-
-  const textures = [
-    new THREE.TextureLoader().load(texturesConstants.SKETCHFAB.BUST),
-    new THREE.TextureLoader().load(texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK),
-  ]
-  // console.log(textures)
-
-  // UNIFORMS
-
-  const uniforms = {
-    time: { type: 'f', value: 0 },
-    progress: { type: 'f', value: 0.0 },
-    uTexture: { type: 't', value: textures[0] },
-    mask: { type: 't', value: textures[1] },
-    move: { type: 'f', value: 0 },
-    mouse: { type: 'v2', value: new THREE.Vector2() },
-    mousePressed: { type: 'f', value: 0 },
-  }
-
   const containerRef = useRef<HTMLDivElement>(null)
+
   const timeRef = useRef<number>(0)
-  const materialRef = useRef<THREE.ShaderMaterial>(
-    new THREE.ShaderMaterial({
-      uniforms: uniforms,
-      vertexShader: vertexShader,
-      fragmentShader: fragmentShader,
-      transparent: true,
-      side: THREE.DoubleSide,
-      depthTest: false,
-      depthWrite: false,
-    }),
-  )
   const moveRef = useRef<number>(0)
   const pointerRef = useRef<THREE.Vector2>(new THREE.Vector2())
 
@@ -88,33 +56,6 @@ export function PlaygroundCanvas() {
   }, [])
 
   useEffect(() => {
-
-    const handleMouseDown = () => {
-      gsap.to(materialRef.current.uniforms.mousePressed, {
-        duration: 0.5,
-        value: 7,
-        ease: 'power1.out',
-      })
-    }
-
-    const handleMouseUp = () => {
-      gsap.to(materialRef.current.uniforms.mousePressed, {
-        duration: 0.5,
-        value: 0,
-        ease: 'power1.out',
-      })
-    }
-
-    window.addEventListener('mousedown', handleMouseDown, false)
-    window.addEventListener('mouseup', handleMouseUp, false)
-
-    return () => {
-      window.removeEventListener('mousedown', handleMouseDown, false)
-      window.removeEventListener('mouseup', handleMouseUp, false)
-    }
-  }, [])
-
-  useEffect(() => {
     if (!containerRef.current) return
 
     // SET UP
@@ -136,11 +77,38 @@ export function PlaygroundCanvas() {
     
     const raycaster = new THREE.Raycaster();
 
-    const controls = new OrbitControls(camera, renderer.domElement)
+    /* const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
-    controls.dampingFactor = 0.05
+    controls.dampingFactor = 0.05 */
+
+    // TEXTURES
+
+    const textures = [
+      new THREE.TextureLoader().load(texturesConstants.SKETCHFAB.BUST),
+      new THREE.TextureLoader().load(texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK),
+    ]
+    // console.log(textures)
 
     // OBJECT
+
+    const uniforms = {
+      time: { type: 'f', value: 0 },
+      progress: { type: 'f', value: 0.0 },
+      uTexture: { type: 't', value: textures[0] },
+      mask: { type: 't', value: textures[1] },
+      move: { type: 'f', value: 0 },
+      mouse: { type: 'v2', value: pointerRef.current },
+    }
+
+    const shaderMaterial = new THREE.ShaderMaterial({
+      uniforms,
+      vertexShader,
+      fragmentShader,
+      transparent: true,
+      side: THREE.DoubleSide,
+      depthTest: false,
+      depthWrite: false,
+    })
 
     const geometry = new THREE.BufferGeometry()
 
@@ -198,7 +166,7 @@ export function PlaygroundCanvas() {
       geometry.setAttribute('aPress', press)
       // console.log(press)
 
-      const points = new THREE.Points(geometry, materialRef.current)
+      const points = new THREE.Points(geometry, shaderMaterial)
       scene.add(points)
       scene.add(raycastedPlane)
     }
