@@ -13,7 +13,7 @@ import { logoMocoData } from '@/data/menu/header/logo_moco/three/logoMocoData'
 import Lights from './Lights'
 
 export type TLogoMocoCanvas = {
-  logoMocoMaterial: THREE.MeshNormalMaterial | THREE.MeshStandardMaterial
+  logoMocoMaterial?: THREE.MeshNormalMaterial | THREE.MeshStandardMaterial
 }
 
 export default function LogoMocoCanvas({ logoMocoMaterial }: TLogoMocoCanvas) {

@@ -45,7 +45,7 @@ export function PlaygroundCanvas() {
     mask: { type: 't', value: textures[1] },
     move: { type: 'f', value: 0 },
     mouse: { type: 'v2', value: new THREE.Vector2() },
-    mousePressed: { type: 'f', value: 0 },
+    mousePressed: { type: 'f', value: 1 },
   }
 
   const shaderMaterial = new THREE.ShaderMaterial({
@@ -72,7 +72,7 @@ export function PlaygroundCanvas() {
       speed.setX(i, rand(0.4, 1))
       offset.setX(i, rand(-100, 100))
       direction.setX(i, Math.random() > 0.5 ? 1 : -1)
-      press.setX(i, rand(0.4, 1))
+      press.setX(i, rand(0.2, 1))
     }
 
     geometry.setAttribute('position', positions)
@@ -151,7 +151,7 @@ export function PlaygroundCanvas() {
 
     const handleMouseUp = () => {
       gsap.to(shaderMaterial.uniforms.mousePressed, {
-        duration: 0.5,
+        duration: 1.5,
         value: 0,
         ease: 'power1.out',
       })
@@ -164,7 +164,29 @@ export function PlaygroundCanvas() {
       window.removeEventListener('mousedown', handleMouseDown, false)
       window.removeEventListener('mouseup', handleMouseUp, false)
     }
-  }, [])
+  }, [shaderMaterial.uniforms.mousePressed])
+
+
+  gsap.timeline()
+    .to(
+      shaderMaterial.uniforms.mousePressed,
+      {
+        keyframes: {
+          '0%': {
+            value: 10,
+          },
+          '50%': {
+            value: 7.5,
+          },
+          '100%': {
+            value: 0,
+            ease: 'power1.inOut',
+          },
+          easeEach: 'power1.in',
+        },
+        duration: 5,
+      }
+    )
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -184,13 +206,11 @@ export function PlaygroundCanvas() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     containerRef.current.appendChild(renderer.domElement)
     
-    const raycaster = new THREE.Raycaster();
+    // const raycaster = new THREE.Raycaster();
 
-    /* const controls = new OrbitControls(camera, renderer.domElement)
+    const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
-    controls.dampingFactor = 0.05 */
-
-    // OBJECT
+    controls.dampingFactor = 0.05
 
     // ANIMATE
 
@@ -198,20 +218,17 @@ export function PlaygroundCanvas() {
     const animate = () => {
       frameId = requestAnimationFrame(animate)
 
-      if (pointerRef && pointerRef.current) raycaster.setFromCamera( pointerRef.current, camera );
-      const intersects = mesh ? raycaster.intersectObjects( [mesh] ) : [];
+      // if (pointerRef && pointerRef.current) raycaster.setFromCamera( pointerRef.current, camera );
+      // const intersects = mesh ? raycaster.intersectObjects( [mesh] ) : [];
       // console.log('intersects', intersects[0] ? intersects[0].point : null)
     
-      for ( let i = 0; i < intersects.length; i ++ ) {
-      }
-
       timeRef.current += 0.01
 
       uniforms.time.value = timeRef.current
       uniforms.move.value = moveRef.current
-      uniforms.mouse.value = intersects[0] ? new THREE.Vector2(intersects[0].point.x, intersects[0].point.y) : new THREE.Vector2(100, 100)
+      // uniforms.mouse.value = intersects[0] ? new THREE.Vector2(intersects[0].point.x, intersects[0].point.y) : new THREE.Vector2(100, 100)
 
-      // controls.update()
+      controls.update()
 
       renderer.render(scene, camera)
     }
@@ -233,11 +250,11 @@ export function PlaygroundCanvas() {
     return () => {
       window.removeEventListener('resize', handleResize)
       containerRef.current?.removeChild(renderer.domElement)
-      // controls.dispose()
+      controls.dispose()
       renderer.dispose()
       cancelAnimationFrame(frameId)
     }
-  }, [])
+  }, [scene])
 
   return <div ref={containerRef} />
 }

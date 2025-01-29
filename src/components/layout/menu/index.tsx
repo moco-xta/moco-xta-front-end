@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import * as THREE from 'three'
 
 import Header from './header'
 import MenuOverlay from './menu_overlay'

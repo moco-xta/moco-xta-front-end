@@ -1,74 +1,18 @@
 import { useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
-import { ObjectMap, useFrame, useLoader, useThree } from '@react-three/fiber'
-import { GLTF } from 'three/examples/jsm/Addons.js'
+import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import type { TUniforms } from '@/types/shaders/types'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
-import useGlbLoader from '@/hooks/three/useGlbLoader'
 
 import vertexShader from '@/components/three/shaders/bust/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/bust/fragmentShader.glsl'
 
-import { getRandomInt } from '@/helpers/mathHelpers'
-
-import glbConstants from '@/constants/assets/glbConstants.json'
 import texturesConstants from '@/constants/assets/texturesConstants.json'
 import { default as foregroundGroupConstants } from '@/constants/hero/three/portrait/foreground/foregroundGroupConstants.json'
-
-const NUMBER = 4096 * 7
-
-const ATTRIBUTE_NAMES = {
-  POSITION: 'position',
-  COORDINATES: 'aCoordinates',
-  UV: 'aUv',
-  SPEED: 'aSpeed',
-  OFFSET: 'aOffset',
-  DIRECTION: 'aDirection',
-  PRESS: 'aPress',
-}
-
-const createAttributes = (geometry: THREE.BufferGeometry) => {
-  const positions = new THREE.BufferAttribute(new Float32Array(NUMBER * 3), 3)
-  const coordinates = new THREE.BufferAttribute(new Float32Array(NUMBER * 3), 3)
-  const uv = new THREE.BufferAttribute(new Float32Array(NUMBER * 2), 2)
-  const speeds = new THREE.BufferAttribute(new Float32Array(NUMBER), 1)
-  const offset = new THREE.BufferAttribute(new Float32Array(NUMBER), 1)
-  const direction = new THREE.BufferAttribute(new Float32Array(NUMBER), 1)
-  const press = new THREE.BufferAttribute(new Float32Array(NUMBER), 1)
-
-  const sourcePositions = geometry.attributes.position.array
-  const sourceUv = geometry.attributes.uv.array
-
-  for (let i = 0; i < NUMBER * 3; i++) {
-    const x = sourcePositions[i * 3]
-    const y = sourcePositions[i * 3 + 1]
-    const z = sourcePositions[i * 3 + 2]
-
-    positions.setXYZ(i, x, y, z)
-    coordinates.setXYZ(i, i * 2, i * 2 + 1, 0)
-    uv.setXY(i, sourceUv[i * 2], sourceUv[i * 2 + 1])
-    speeds.setX(i, getRandomInt({ min: 0.4, max: 1 }))
-    offset.setX(i, getRandomInt({ min: -1000, max: 1000 }))
-    // direction.setX(i, Math.random() > 0.5 ? 1 : -1)
-    direction.setX(i, 1)
-    press.setX(i, getRandomInt({ min: 0.4, max: 1 }))
-  }
-
-  const newGeometry = new THREE.BufferGeometry()
-  newGeometry.setAttribute(ATTRIBUTE_NAMES.POSITION, positions)
-  newGeometry.setAttribute(ATTRIBUTE_NAMES.COORDINATES, coordinates)
-  newGeometry.setAttribute(ATTRIBUTE_NAMES.UV, uv)
-  newGeometry.setAttribute(ATTRIBUTE_NAMES.SPEED, speeds)
-  newGeometry.setAttribute(ATTRIBUTE_NAMES.OFFSET, offset)
-  newGeometry.setAttribute(ATTRIBUTE_NAMES.DIRECTION, direction)
-  newGeometry.setAttribute(ATTRIBUTE_NAMES.PRESS, press)
-
-  return newGeometry
-}
 
 export default function Bust() {
   const { scene } = useThree()
@@ -81,9 +25,6 @@ export default function Bust() {
   ]
   const textures: THREE.Texture[] = useLoader(THREE.TextureLoader, texturesUrls).flat()
   useMemo(() => textures.forEach((texture) => (texture.minFilter = THREE.LinearFilter)), [textures])
-
-  // Load GLTF model
-  const bustGlb = useGlbLoader(glbConstants.SKETCHFAB.BUST) as GLTF & ObjectMap
 
   const opacityRef = useRef<{ value: number }>({
     value: 0,

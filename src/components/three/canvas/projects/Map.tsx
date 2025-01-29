@@ -40,7 +40,7 @@ export default function Map() {
     plane.position.y = -3.5
     plane.rotation.x = -Math.PI / 2
     scene.add(plane)
-  }, [scene])
+  }, [onMapLoad, scene])
 
   return null
 }
