@@ -1,3 +1,5 @@
+varying vec3 vPos;
+
 varying vec2 vCoordinates;
 
 uniform sampler2D uTexture;
@@ -10,5 +12,6 @@ void main() {
 	vec2 newUv = vec2(vCoordinates.x, vCoordinates.y);
 	vec4 image = texture2D(uTexture, newUv);
 	gl_FragColor = image;
-	gl_FragColor.a *= maskTexture.r;
+	float alpha = 1.0 - clamp(0.0, 1.0, abs(vPos.z / 7.0));
+	gl_FragColor.a *= maskTexture.r * alpha;
 }
