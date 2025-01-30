@@ -300,5 +300,11 @@ export default function BustComponent() {
     uniformsRef.current.anthropy.value = pointsAnthropyRef.current.value
   })
 
-  return <Bust ref={bustRef} position={new THREE.Vector3(0, 0.5, 0)} scale={2.5} />
+  return (
+    <Bust
+      ref={bustRef}
+      position={new THREE.Vector3(0, 0.5, 0)}
+      scale={2.5}
+    />
+  )
 }
