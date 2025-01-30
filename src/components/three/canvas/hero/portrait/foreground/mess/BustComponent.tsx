@@ -10,13 +10,18 @@ import type { TUniforms } from '@/types/shaders/types'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 import useGlbLoader from '@/hooks/three/useGlbLoader'
 
+import Bust from '@/components/three/models/sketchfab/Bust'
+
 import vertexShader from '@/components/three/shaders/bust/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/bust/fragmentShader.glsl'
+
+import { getBustAnimationsData } from '@/data/hero/three/portrait/foreground/mess/bustData'
 
 import glbConstants from '@/constants/assets/glbConstants.json'
 import texturesConstants from '@/constants/assets/texturesConstants.json'
 import { default as foregroundGroupConstants } from '@/constants/hero/three/portrait/foreground/foregroundGroupConstants.json'
-import Bust from '@/components/three/models/sketchfab/Bust'
+
+import { showHide } from '@/animation/index'
 
 export type TUniformValue = {
   value: number
@@ -137,7 +142,7 @@ export default function BustComponent() {
               },
               easeEach: 'power1.in',
             },
-            duration: 3,
+            duration: 2,
           },
           'portrait+=2',
         )
@@ -168,8 +173,11 @@ export default function BustComponent() {
               '0%': {
                 value: 0,
               },
-              '100%': {
+              '90%': {
                 value: 5,
+              },
+              '100%': {
+                value: 0,
               },
               easeEach: 'power1.inOut',
             },
@@ -184,12 +192,15 @@ export default function BustComponent() {
               '0%': {
                 value: 0,
               },
-              '100%': {
+              '40%': {
                 value: 1,
+              },
+              '100%': {
+                value: 0,
               },
               easeEach: 'power1.out',
             },
-            duration: 2,
+            duration: 5,
           },
           foregroundGroupConstants.label,
         )
@@ -232,19 +243,26 @@ export default function BustComponent() {
   // ONCLICK
 
   useGSAP((_, contextSafe) => {
+    showHide({
+      timeline: timeline,
+      ref: bustRef.current,
+      animationsData: getBustAnimationsData(),
+    })
+
     if (!contextSafe) return
 
     const handleMouseDown = contextSafe(() => {
       gsap.to(pointsAnthropyRef.current, {
-        duration: 0.5,
-        value: 7,
+        duration: 1,
+        value: 5,
         ease: 'power1.out',
+        delay: 0.5,
       })
-      gsap.to(pointsOpacityRef.current, {
+      /* gsap.to(pointsOpacityRef.current, {
         duration: 0.5,
-        value: 0.5,
+        value: 0.75,
         ease: 'power1.out',
-      })
+      }) */
       gsap.to(pointsRgbShiftRef.current, {
         duration: 0.5,
         value: 1,
@@ -275,7 +293,7 @@ export default function BustComponent() {
       })
       gsap.to(pointsSizeRef.current, {
         duration: 0.5,
-        value: 5,
+        value: 2,
         ease: 'power1.out',
       })
     })
@@ -303,8 +321,11 @@ export default function BustComponent() {
   return (
     <Bust
       ref={bustRef}
+      visible={false}
       position={new THREE.Vector3(0, 0.5, 0)}
       scale={2.5}
     />
   )
+
+  // return null
 }
