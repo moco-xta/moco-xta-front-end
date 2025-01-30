@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { ObjectMap, useFrame, useLoader, useThree } from '@react-three/fiber'
 import { GLTF } from 'three/examples/jsm/Addons.js'
@@ -16,8 +16,7 @@ import fragmentShader from '@/components/three/shaders/bust/fragmentShader.glsl'
 import glbConstants from '@/constants/assets/glbConstants.json'
 import texturesConstants from '@/constants/assets/texturesConstants.json'
 import { default as foregroundGroupConstants } from '@/constants/hero/three/portrait/foreground/foregroundGroupConstants.json'
-
-const SCALE = 2.5
+import Bust from '@/components/three/models/sketchfab/Bust'
 
 export type TUniformValue = {
   value: number
@@ -28,26 +27,11 @@ const texturesUrls = [
   texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK,
 ]
 
-function setMaterialOpacity(
-  meshRef: MutableRefObject<THREE.Mesh>,
-  meshOpacityRef: MutableRefObject<number>,
-) {
-  if (Array.isArray(meshRef.current.material)) {
-    meshRef.current.material.forEach((material) => {
-      material.transparent = true
-      material.opacity = meshOpacityRef.current
-      material.needsUpdate = true
-    })
-  } else {
-    meshRef.current.material.opacity = meshOpacityRef.current
-  }
-}
-
 function getRandomNumber(a: number, b: number): number {
   return a + (b - a) * Math.random()
 }
 
-export default function Bust() {
+export default function BustComponent() {
   const { scene } = useThree()
   const { timeline } = useGSAPTimelineContext()
 
@@ -59,6 +43,10 @@ export default function Bust() {
 
   const textures: THREE.Texture[] = useLoader(THREE.TextureLoader, texturesUrls).flat()
   useMemo(() => textures.forEach((texture) => (texture.minFilter = THREE.LinearFilter)), [textures])
+
+  // COMPONENT
+
+  const bustRef = useRef<THREE.Group>(null!)
 
   // MESH
 
@@ -92,6 +80,8 @@ export default function Bust() {
       depthWrite: false,
     }),
   )
+
+  // LOAD POINTS
 
   useEffect(() => {
     if (!bustGlb.scene.children[0]) {
@@ -129,9 +119,28 @@ export default function Bust() {
     scene.getObjectByName('mess_group')?.add(points)
   }, [bustGlb, scene])
 
+  // TIMELINE
+
   useGSAP(
     () => {
+      const bust: THREE.Mesh = bustRef.current.children[0] as THREE.Mesh
       timeline
+        .to(
+          bust.material,
+          {
+            keyframes: {
+              '0%': {
+                opacity: 0,
+              },
+              '100%': {
+                opacity: 1,
+              },
+              easeEach: 'power1.in',
+            },
+            duration: 3,
+          },
+          'portrait+=2',
+        )
         .to(
           pointsAnthropyRef.current,
           {
@@ -220,40 +229,7 @@ export default function Bust() {
     { scope: materialRef },
   )
 
-  /* useGSAP(
-    () => {
-      timeline
-        .to(
-          uniformsValuesRef.current,
-          {
-            keyframes: {
-              '0%': {
-                pointSize: 0,
-                opacity: 0,
-                moussePressed: 10,
-                rgbShift: 1,
-              },
-              '35%': {
-                moussePressed: 7.5,
-              },
-              '70%': {
-                pointSize: 1,
-                opacity: 1,
-                moussePressed: 0,
-              },
-              '100%': {
-                rgbShift: 0,
-              },
-              easeEach: 'power1.in',
-            },
-            // duration: foregroundGroupConstants.duration,
-            duration: 7,
-          },
-          foregroundGroupConstants.label,
-        )
-    },
-    { scope: materialRef },
-  ) */
+  // ONCLICK
 
   useGSAP((_, contextSafe) => {
     if (!contextSafe) return
@@ -270,6 +246,11 @@ export default function Bust() {
         ease: 'power1.out',
       })
       gsap.to(pointsRgbShiftRef.current, {
+        duration: 0.5,
+        value: 1,
+        ease: 'power1.out',
+      })
+      gsap.to(pointsSizeRef.current, {
         duration: 0.5,
         value: 1,
         ease: 'power1.out',
@@ -292,6 +273,11 @@ export default function Bust() {
         value: 0,
         ease: 'power1.out',
       })
+      gsap.to(pointsSizeRef.current, {
+        duration: 0.5,
+        value: 5,
+        ease: 'power1.out',
+      })
     })
 
     window.addEventListener('mousedown', handleMouseDown, false)
@@ -303,6 +289,8 @@ export default function Bust() {
     }
   })
 
+  // UPDATE
+
   useFrame(({ clock }) => {
     uniformsRef.current.time.value = clock.elapsedTime
     uniformsRef.current.pointSize.value = pointsSizeRef.current.value
@@ -312,5 +300,5 @@ export default function Bust() {
     uniformsRef.current.anthropy.value = pointsAnthropyRef.current.value
   })
 
-  return null
+  return <Bust ref={bustRef} position={new THREE.Vector3(0, 0.5, 0)} scale={2.5} />
 }

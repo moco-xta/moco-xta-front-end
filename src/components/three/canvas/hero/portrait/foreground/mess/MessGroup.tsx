@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
 // import ToolsGroup from './tools/ToolsGroup'
-import BustComponent from './Bust'
+import BustComponent from './BustComponent'
 // import ProfilePicture from './ProfilePicture'
 // import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
 // import HeartComponent from './HeartComponent'
