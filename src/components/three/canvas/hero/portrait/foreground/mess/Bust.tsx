@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react'
+import { MutableRefObject, useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { ObjectMap, useFrame, useLoader, useThree } from '@react-three/fiber'
 import { GLTF } from 'three/examples/jsm/Addons.js'
@@ -17,6 +17,8 @@ import glbConstants from '@/constants/assets/glbConstants.json'
 import texturesConstants from '@/constants/assets/texturesConstants.json'
 import { default as foregroundGroupConstants } from '@/constants/hero/three/portrait/foreground/foregroundGroupConstants.json'
 
+const SCALE = 2.5
+
 export type TUniformValue = {
   value: number
 }
@@ -26,6 +28,21 @@ const texturesUrls = [
   texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK,
 ]
 
+function setMaterialOpacity(
+  meshRef: MutableRefObject<THREE.Mesh>,
+  meshOpacityRef: MutableRefObject<number>,
+) {
+  if (Array.isArray(meshRef.current.material)) {
+    meshRef.current.material.forEach((material) => {
+      material.transparent = true
+      material.opacity = meshOpacityRef.current
+      material.needsUpdate = true
+    })
+  } else {
+    meshRef.current.material.opacity = meshOpacityRef.current
+  }
+}
+
 function getRandomNumber(a: number, b: number): number {
   return a + (b - a) * Math.random()
 }
@@ -34,24 +51,33 @@ export default function Bust() {
   const { scene } = useThree()
   const { timeline } = useGSAPTimelineContext()
 
-  // Textures
-  const textures: THREE.Texture[] = useLoader(THREE.TextureLoader, texturesUrls).flat()
-  useMemo(() => textures.forEach((texture) => (texture.minFilter = THREE.LinearFilter)), [textures])
+  // MODEL
 
   const bustGlb = useGlbLoader(glbConstants.SKETCHFAB.BUST) as GLTF & ObjectMap
 
-  const pointSizeRef = useRef<TUniformValue>({ value: 0 })
-  const opacityRef = useRef<TUniformValue>({ value: 0 })
-  const rgbShiftRef = useRef<TUniformValue>({ value: 1 })
-  const moveRef = useRef<TUniformValue>({ value: 1 })
-  const mousePressedRef = useRef<TUniformValue>({ value: 1 })
+  // TEXTURES
+
+  const textures: THREE.Texture[] = useLoader(THREE.TextureLoader, texturesUrls).flat()
+  useMemo(() => textures.forEach((texture) => (texture.minFilter = THREE.LinearFilter)), [textures])
+
+  // MESH
+
+  const meshRef = useRef<THREE.Mesh>(null!)
+
+  // POINTS
+
+  const pointsSizeRef = useRef<TUniformValue>({ value: 0 })
+  const pointsOpacityRef = useRef<TUniformValue>({ value: 0 })
+  const pointsRgbShiftRef = useRef<TUniformValue>({ value: 1 })
+  const pointsMoveRef = useRef<TUniformValue>({ value: 1 })
+  const pointsAnthropyRef = useRef<TUniformValue>({ value: 1 })
   const uniformsRef = useRef<TUniforms>({
     time: { type: 'f', value: 0 },
-    pointSize: { type: 'f', value: pointSizeRef.current.value },
-    opacity: { type: 'f', value: opacityRef.current.value },
-    rgbShift: { type: 'f', value: rgbShiftRef.current.value },
-    move: { type: 'f', value: moveRef.current.value },
-    mousePressed: { type: 'f', value: mousePressedRef.current.value },
+    pointSize: { type: 'f', value: pointsSizeRef.current.value },
+    opacity: { type: 'f', value: pointsOpacityRef.current.value },
+    rgbShift: { type: 'f', value: pointsRgbShiftRef.current.value },
+    move: { type: 'f', value: pointsMoveRef.current.value },
+    anthropy: { type: 'f', value: pointsAnthropyRef.current.value },
     uTexture: { type: 't', value: textures[0] },
     mask: { type: 't', value: textures[1] },
   })
@@ -72,13 +98,14 @@ export default function Bust() {
       return
     }
 
-    const bustMesh = bustGlb.scene.children[0] as THREE.Mesh
+    meshRef.current = bustGlb.scene.children[0] as THREE.Mesh
+
     const geometry = new THREE.BufferGeometry()
 
-    const number = bustMesh.geometry.attributes.position.array.length / 3
+    const number = meshRef.current.geometry.attributes.position.array.length / 3
 
-    const positions = bustMesh.geometry.attributes.position as THREE.BufferAttribute // Points position
-    const coordinates = bustMesh.geometry.attributes.uv as THREE.BufferAttribute // UV coordinates
+    const positions = meshRef.current.geometry.attributes.position as THREE.BufferAttribute // Points position
+    const coordinates = meshRef.current.geometry.attributes.uv as THREE.BufferAttribute // UV coordinates
     const speed = new THREE.BufferAttribute(new Float32Array(number), 1)
     const offset = new THREE.BufferAttribute(new Float32Array(number), 1)
     const direction = new THREE.BufferAttribute(new Float32Array(number), 1)
@@ -106,7 +133,7 @@ export default function Bust() {
     () => {
       timeline
         .to(
-          mousePressedRef.current,
+          pointsAnthropyRef.current,
           {
             keyframes: {
               '0%': {
@@ -126,7 +153,7 @@ export default function Bust() {
           foregroundGroupConstants.label,
         )
         .to(
-          pointSizeRef.current,
+          pointsSizeRef.current,
           {
             keyframes: {
               '0%': {
@@ -142,7 +169,7 @@ export default function Bust() {
           foregroundGroupConstants.label,
         )
         .to(
-          opacityRef.current,
+          pointsOpacityRef.current,
           {
             keyframes: {
               '0%': {
@@ -158,7 +185,7 @@ export default function Bust() {
           foregroundGroupConstants.label,
         )
         .to(
-          rgbShiftRef.current,
+          pointsRgbShiftRef.current,
           {
             keyframes: {
               '0%': {
@@ -174,7 +201,7 @@ export default function Bust() {
           foregroundGroupConstants.label,
         )
         .to(
-          moveRef.current,
+          pointsMoveRef.current,
           {
             keyframes: {
               '0%': {
@@ -232,17 +259,17 @@ export default function Bust() {
     if (!contextSafe) return
 
     const handleMouseDown = contextSafe(() => {
-      gsap.to(mousePressedRef.current, {
+      gsap.to(pointsAnthropyRef.current, {
         duration: 0.5,
         value: 7,
         ease: 'power1.out',
       })
-      gsap.to(opacityRef.current, {
+      gsap.to(pointsOpacityRef.current, {
         duration: 0.5,
         value: 0.5,
         ease: 'power1.out',
       })
-      gsap.to(rgbShiftRef.current, {
+      gsap.to(pointsRgbShiftRef.current, {
         duration: 0.5,
         value: 1,
         ease: 'power1.out',
@@ -250,17 +277,17 @@ export default function Bust() {
     })
 
     const handleMouseUp = contextSafe(() => {
-      gsap.to(mousePressedRef.current, {
+      gsap.to(pointsAnthropyRef.current, {
         duration: 0.5,
         value: 0,
         ease: 'power1.out',
       })
-      gsap.to(opacityRef.current, {
+      gsap.to(pointsOpacityRef.current, {
         duration: 0.5,
         value: 1,
         ease: 'power1.out',
       })
-      gsap.to(rgbShiftRef.current, {
+      gsap.to(pointsRgbShiftRef.current, {
         duration: 4,
         value: 0,
         ease: 'power1.out',
@@ -278,11 +305,11 @@ export default function Bust() {
 
   useFrame(({ clock }) => {
     uniformsRef.current.time.value = clock.elapsedTime
-    uniformsRef.current.pointSize.value = pointSizeRef.current.value
-    uniformsRef.current.opacity.value = opacityRef.current.value
-    uniformsRef.current.rgbShift.value = rgbShiftRef.current.value
-    uniformsRef.current.move.value = moveRef.current.value
-    uniformsRef.current.mousePressed.value = mousePressedRef.current.value
+    uniformsRef.current.pointSize.value = pointsSizeRef.current.value
+    uniformsRef.current.opacity.value = pointsOpacityRef.current.value
+    uniformsRef.current.rgbShift.value = pointsRgbShiftRef.current.value
+    uniformsRef.current.move.value = pointsMoveRef.current.value
+    uniformsRef.current.anthropy.value = pointsAnthropyRef.current.value
   })
 
   return null

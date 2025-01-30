@@ -12,8 +12,7 @@ attribute float aDelay;
 uniform float time;
 uniform float pointSize;
 uniform float move;
-uniform vec2 mouse;
-uniform float mousePressed;
+uniform float anthropy;
 
 float scale = 2.5;
 float yOffset = 0.5;
@@ -31,10 +30,10 @@ void main() {
 
 	// STABLE
 	vec3 stable = position;
-	// stable.x -= 0.5 * sin( time * aPress) * aDirection * mousePressed;
-	stable.x *= (1.0 + mousePressed * (sin(time * aPress) + 1.0));
-	stable.y *= (1.0 + mousePressed * (cos(time * aPress) + 1.0));
-	stable.z += 0.4 * cos(time * aPress) * aDirection * mousePressed;
+	// stable.x -= 0.5 * sin( time * aPress) * aDirection * anthropy;
+	stable.x *= (1.0 + anthropy * (sin(time * aPress) + 1.0));
+	stable.y *= (1.0 + anthropy * (cos(time * aPress) + 1.0));
+	stable.z += 0.4 * cos(time * aPress) * aDirection * anthropy;
 
 	stable.x *= scale;
 	stable.y = (stable.y *= scale) + yOffset;
