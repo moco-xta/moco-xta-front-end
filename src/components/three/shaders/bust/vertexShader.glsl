@@ -3,40 +3,45 @@ varying vec3 vPos;
 varying vec2 vCoordinates;
 
 attribute vec3 aCoordinates;
-attribute vec2 aUv;
 attribute float aSpeed;
 attribute float aOffset;
 attribute float aDirection;
 attribute float aPress;
-
-uniform float mouse;
-uniform float mousePressed;
+attribute float aDelay;
 
 uniform float time;
+uniform float pointSize;
 uniform float move;
+uniform vec2 mouse;
+uniform float mousePressed;
+
+float scale = 2.5;
+float yOffset = 0.5;
+
+float PI = 3.1415926538;
 
 void main() {
-	vUv = aUv;
+	vUv = uv;
 	vec3 pos = position;
 
 	// NOT STABLE
-	pos.x += sin(move * aSpeed) * 0.2;
-	pos.y += sin(move * aSpeed) * 0.2;
+	pos.x += sin(move * aSpeed) * 1.5;
+	pos.y += sin(move * aSpeed) * 1.5;
 	pos.z = mod(position.z + move * 20.0 * aSpeed + aOffset, 20.0) - 10.0;
-	// pos.z = mod(position.z + move * 20.0 * aSpeed + aOffset, 10.0 - time);
 
 	// STABLE
 	vec3 stable = position;
-	float dist = distance(stable.x, mouse);
-	float area = 1.0 - smoothstep(0.0, 1.0, dist);
- 
-	stable.x += 0.5 * sin( time * aPress) * aDirection * area * mousePressed;
-	stable.y += 0.5 * sin( time * aPress) * aDirection * area * mousePressed;
-	stable.z += 2.0 * cos(time * aPress) * aDirection * area * mousePressed;
+	// stable.x -= 0.5 * sin( time * aPress) * aDirection * mousePressed;
+	stable.x *= (1.0 + mousePressed * (sin(time * aPress) + 1.0));
+	stable.y *= (1.0 + mousePressed * (cos(time * aPress) + 1.0));
+	stable.z += 0.4 * cos(time * aPress) * aDirection * mousePressed;
+
+	stable.x *= scale;
+	stable.y = (stable.y *= scale) + yOffset;
+	stable.z *= scale;
 
 	vec4 mvPosition = modelViewMatrix * vec4(stable, 1.0);
-	gl_PointSize = 100.0 * (1.0 / -mvPosition.z);
-	// gl_PointSize = 100.0;
+	gl_PointSize = pointSize; // * (1.0 / -mvPosition.z);
 	gl_Position = projectionMatrix * mvPosition;
 	vCoordinates = aCoordinates.xy;
 	vPos = pos;

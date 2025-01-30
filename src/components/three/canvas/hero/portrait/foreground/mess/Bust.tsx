@@ -1,48 +1,63 @@
 import { useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
-import { useFrame, useLoader, useThree } from '@react-three/fiber'
+import { ObjectMap, useFrame, useLoader, useThree } from '@react-three/fiber'
+import { GLTF } from 'three/examples/jsm/Addons.js'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import type { TUniforms } from '@/types/shaders/types'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
+import useGlbLoader from '@/hooks/three/useGlbLoader'
 
 import vertexShader from '@/components/three/shaders/bust/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/bust/fragmentShader.glsl'
 
+import glbConstants from '@/constants/assets/glbConstants.json'
 import texturesConstants from '@/constants/assets/texturesConstants.json'
 import { default as foregroundGroupConstants } from '@/constants/hero/three/portrait/foreground/foregroundGroupConstants.json'
+
+export type TUniformValue = {
+  value: number
+}
+
+const texturesUrls = [
+  texturesConstants.SKETCHFAB.BUST,
+  texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK,
+]
+
+function getRandomNumber(a: number, b: number): number {
+  return a + (b - a) * Math.random()
+}
 
 export default function Bust() {
   const { scene } = useThree()
   const { timeline } = useGSAPTimelineContext()
 
-  // Load textures
-  const texturesUrls = [
-    texturesConstants.SKETCHFAB.BUST,
-    texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK,
-  ]
+  // Textures
   const textures: THREE.Texture[] = useLoader(THREE.TextureLoader, texturesUrls).flat()
   useMemo(() => textures.forEach((texture) => (texture.minFilter = THREE.LinearFilter)), [textures])
 
-  const opacityRef = useRef<{ value: number }>({
-    value: 0,
-  })
-  const pointRef = useRef<THREE.Vector2>(new THREE.Vector2())
-  const uniforms = useRef<TUniforms>({
+  const bustGlb = useGlbLoader(glbConstants.SKETCHFAB.BUST) as GLTF & ObjectMap
+
+  const pointSizeRef = useRef<TUniformValue>({ value: 0 })
+  const opacityRef = useRef<TUniformValue>({ value: 0 })
+  const rgbShiftRef = useRef<TUniformValue>({ value: 1 })
+  const moveRef = useRef<TUniformValue>({ value: 1 })
+  const mousePressedRef = useRef<TUniformValue>({ value: 1 })
+  const uniformsRef = useRef<TUniforms>({
     time: { type: 'f', value: 0 },
+    pointSize: { type: 'f', value: pointSizeRef.current.value },
     opacity: { type: 'f', value: opacityRef.current.value },
+    rgbShift: { type: 'f', value: rgbShiftRef.current.value },
+    move: { type: 'f', value: moveRef.current.value },
+    mousePressed: { type: 'f', value: mousePressedRef.current.value },
     uTexture: { type: 't', value: textures[0] },
     mask: { type: 't', value: textures[1] },
-    mouse: { type: 'v2', value: new THREE.Vector2(0.0, 0.0) },
-    mousePressed: { type: 'f', value: 0 },
-    move: { type: 'f', value: 0 },
   })
-
   const materialRef = useRef<THREE.ShaderMaterial>(
     new THREE.ShaderMaterial({
-      uniforms: uniforms.current,
+      uniforms: uniformsRef.current,
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
       transparent: true,
@@ -53,64 +68,76 @@ export default function Bust() {
   )
 
   useEffect(() => {
-    const NUMBER = 512
-    const NUMBER_SQUARED = Math.pow(NUMBER, 2)
-    let INDEX = 0
-    const FACTOR = 125
-
-    const geometry = new THREE.BufferGeometry()
-
-    const positions = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED * 3), 3)
-    const coordinates = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED * 3), 3)
-    const speeds = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
-    const offset = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
-    const direction = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
-    const press = new THREE.BufferAttribute(new Float32Array(NUMBER_SQUARED), 1)
-
-    function rand(a: number, b: number): number {
-      return a + (b - a) * Math.random()
+    if (!bustGlb.scene.children[0]) {
+      return
     }
 
-    for (let i = 0; i < NUMBER; i++) {
-      const posX = (i - NUMBER / 2) / FACTOR
-      for (let j = 0; j < NUMBER; j++) {
-        positions.setXYZ(INDEX, posX * 2, ((j - NUMBER / 2) / FACTOR) * 2, 0)
-        coordinates.setXYZ(INDEX, i, j, 0)
-        speeds.setX(INDEX, rand(0.4, 1))
-        offset.setX(INDEX, rand(-1000 / FACTOR, 1000 / FACTOR))
-        direction.setX(INDEX, Math.random() > 0.5 ? 1 : -1)
-        press.setX(INDEX, rand(0.4, 1))
-        INDEX++
-      }
+    const bustMesh = bustGlb.scene.children[0] as THREE.Mesh
+    const geometry = new THREE.BufferGeometry()
+
+    const number = bustMesh.geometry.attributes.position.array.length / 3
+
+    const positions = bustMesh.geometry.attributes.position as THREE.BufferAttribute // Points position
+    const coordinates = bustMesh.geometry.attributes.uv as THREE.BufferAttribute // UV coordinates
+    const speed = new THREE.BufferAttribute(new Float32Array(number), 1)
+    const offset = new THREE.BufferAttribute(new Float32Array(number), 1)
+    const direction = new THREE.BufferAttribute(new Float32Array(number), 1)
+    const press = new THREE.BufferAttribute(new Float32Array(number), 1)
+
+    for (let i = 0; i < number; i++) {
+      speed.setX(i, getRandomNumber(0.4, 1))
+      offset.setX(i, getRandomNumber(-100, 100))
+      direction.setX(i, Math.random() > 0.5 ? 1 : -1)
+      press.setX(i, getRandomNumber(0.2, 1))
     }
 
     geometry.setAttribute('position', positions)
     geometry.setAttribute('aCoordinates', coordinates)
-    geometry.setAttribute('aSpeed', speeds)
+    geometry.setAttribute('aSpeed', speed)
     geometry.setAttribute('aOffset', offset)
     geometry.setAttribute('aDirection', direction)
     geometry.setAttribute('aPress', press)
 
     const points = new THREE.Points(geometry, materialRef.current)
     scene.getObjectByName('mess_group')?.add(points)
-  }, [scene])
+  }, [bustGlb, scene])
 
   useGSAP(
     () => {
       timeline
         .to(
-          materialRef.current.uniforms.mousePressed,
+          mousePressedRef.current,
           {
             keyframes: {
               '0%': {
-                value: 8,
+                value: 10,
               },
               '50%': {
+                value: 7.5,
+              },
+              '100%': {
+                value: 0,
+                ease: 'power1.inOut',
+              },
+              easeEach: 'power1.in',
+            },
+            duration: 3,
+          },
+          foregroundGroupConstants.label,
+        )
+        .to(
+          pointSizeRef.current,
+          {
+            keyframes: {
+              '0%': {
                 value: 0,
               },
-              easeEach: 'power1.out',
+              '100%': {
+                value: 5,
+              },
+              easeEach: 'power1.inOut',
             },
-            duration: foregroundGroupConstants.duration,
+            duration: 5,
           },
           foregroundGroupConstants.label,
         )
@@ -121,12 +148,44 @@ export default function Bust() {
               '0%': {
                 value: 0,
               },
-              '50%': {
+              '100%': {
                 value: 1,
               },
               easeEach: 'power1.out',
             },
-            duration: foregroundGroupConstants.duration,
+            duration: 2,
+          },
+          foregroundGroupConstants.label,
+        )
+        .to(
+          rgbShiftRef.current,
+          {
+            keyframes: {
+              '0%': {
+                value: 1,
+              },
+              '100%': {
+                value: 0,
+              },
+              easeEach: 'power1.in',
+            },
+            duration: 5,
+          },
+          foregroundGroupConstants.label,
+        )
+        .to(
+          moveRef.current,
+          {
+            keyframes: {
+              '0%': {
+                value: 10,
+              },
+              '100%': {
+                value: 0,
+              },
+              easeEach: 'power1.in',
+            },
+            duration: 5,
           },
           foregroundGroupConstants.label,
         )
@@ -134,11 +193,46 @@ export default function Bust() {
     { scope: materialRef },
   )
 
+  /* useGSAP(
+    () => {
+      timeline
+        .to(
+          uniformsValuesRef.current,
+          {
+            keyframes: {
+              '0%': {
+                pointSize: 0,
+                opacity: 0,
+                moussePressed: 10,
+                rgbShift: 1,
+              },
+              '35%': {
+                moussePressed: 7.5,
+              },
+              '70%': {
+                pointSize: 1,
+                opacity: 1,
+                moussePressed: 0,
+              },
+              '100%': {
+                rgbShift: 0,
+              },
+              easeEach: 'power1.in',
+            },
+            // duration: foregroundGroupConstants.duration,
+            duration: 7,
+          },
+          foregroundGroupConstants.label,
+        )
+    },
+    { scope: materialRef },
+  ) */
+
   useGSAP((_, contextSafe) => {
     if (!contextSafe) return
 
     const handleMouseDown = contextSafe(() => {
-      gsap.to(materialRef.current.uniforms.mousePressed, {
+      gsap.to(mousePressedRef.current, {
         duration: 0.5,
         value: 7,
         ease: 'power1.out',
@@ -148,10 +242,15 @@ export default function Bust() {
         value: 0.5,
         ease: 'power1.out',
       })
+      gsap.to(rgbShiftRef.current, {
+        duration: 0.5,
+        value: 1,
+        ease: 'power1.out',
+      })
     })
 
     const handleMouseUp = contextSafe(() => {
-      gsap.to(materialRef.current.uniforms.mousePressed, {
+      gsap.to(mousePressedRef.current, {
         duration: 0.5,
         value: 0,
         ease: 'power1.out',
@@ -159,6 +258,11 @@ export default function Bust() {
       gsap.to(opacityRef.current, {
         duration: 0.5,
         value: 1,
+        ease: 'power1.out',
+      })
+      gsap.to(rgbShiftRef.current, {
+        duration: 4,
+        value: 0,
         ease: 'power1.out',
       })
     })
@@ -173,10 +277,12 @@ export default function Bust() {
   })
 
   useFrame(({ clock }) => {
-    materialRef.current.uniforms.time.value = clock.elapsedTime
-    materialRef.current.uniforms.opacity.value = opacityRef.current.value
-    materialRef.current.uniforms.move.value = 0
-    materialRef.current.uniforms.mouse.value = pointRef
+    uniformsRef.current.time.value = clock.elapsedTime
+    uniformsRef.current.pointSize.value = pointSizeRef.current.value
+    uniformsRef.current.opacity.value = opacityRef.current.value
+    uniformsRef.current.rgbShift.value = rgbShiftRef.current.value
+    uniformsRef.current.move.value = moveRef.current.value
+    uniformsRef.current.mousePressed.value = mousePressedRef.current.value
   })
 
   return null

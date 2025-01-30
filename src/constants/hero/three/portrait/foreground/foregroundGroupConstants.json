@@ -1,6 +1,6 @@
 {
   "duration": 4,
-  "label": "portrait",
+  "label": "portrait-=0.5",
   "defaultValues": {
     "name": "foreground_group",
     "visible": true,

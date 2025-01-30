@@ -24,7 +24,7 @@ export default function MessGroup() {
 
   const messGroupRef = useRef<THREE.Group>(null!)
 
-  useGSAP(
+  /* useGSAP(
     () => {
       showHide({
         timeline: timeline,
@@ -33,7 +33,7 @@ export default function MessGroup() {
       })
     },
     { scope: messGroupRef },
-  )
+  ) */
 
   return (
     <group
