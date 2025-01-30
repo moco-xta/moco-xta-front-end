@@ -4,13 +4,13 @@ import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
-import ToolsGroup from './tools/ToolsGroup'
+// import ToolsGroup from './tools/ToolsGroup'
 import BustComponent from './BustComponent'
 // import ProfilePicture from './ProfilePicture'
-import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
-import HeartComponent from './HeartComponent'
-import GaneshComponent from './GaneshComponent'
-import ChristusComponent from './ChristusComponent'
+// import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
+// import HeartComponent from './HeartComponent'
+// import GaneshComponent from './GaneshComponent'
+// import ChristusComponent from './ChristusComponent'
 
 import {
   messGroupDefaultValues,
@@ -41,13 +41,13 @@ export default function MessGroup() {
       {...messGroupDefaultValues}
       visible={messGroupDefaultValues.visible}
     >
-      <ToolsGroup />
+      {/* <ToolsGroup /> */}
       <BustComponent />
       {/* <ProfilePicture /> */}
-      <LogoAthleticoNacionalComponent />
-      <HeartComponent />
-      <GaneshComponent />
-      <ChristusComponent />
+      {/* <LogoAthleticoNacionalComponent /> */}
+      {/* <HeartComponent /> */}
+      {/* <GaneshComponent /> */}
+      {/* <ChristusComponent /> */}
     </group>
   )
 }
