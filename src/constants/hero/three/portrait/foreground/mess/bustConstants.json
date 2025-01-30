@@ -1,0 +1,8 @@
+{
+  "duration": 20,
+  "label": "portrait+=1",
+  "defaultValues": {
+    "name": "bust",
+    "visible": true
+  }
+}

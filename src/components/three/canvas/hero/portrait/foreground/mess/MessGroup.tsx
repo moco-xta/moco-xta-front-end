@@ -1,29 +1,30 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
+import { useGSAP } from '@gsap/react'
 
-// import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
+import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
-// import ToolsGroup from './tools/ToolsGroup'
+import ToolsGroup from './tools/ToolsGroup'
 import BustComponent from './BustComponent'
 // import ProfilePicture from './ProfilePicture'
-// import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
-// import HeartComponent from './HeartComponent'
-// import GaneshComponent from './GaneshComponent'
-// import ChristusComponent from './ChristusComponent'
+import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
+import HeartComponent from './HeartComponent'
+import GaneshComponent from './GaneshComponent'
+import ChristusComponent from './ChristusComponent'
 
 import {
   messGroupDefaultValues,
-  // getMessGroupAnimationsData,
+  getMessGroupAnimationsData,
 } from '@/data/hero/three/portrait/foreground/mess/messGroupData'
 
-// import { showHide } from '@/animation/index'
+import { showHide } from '@/animation/index'
 
 export default function MessGroup() {
-  // const { timeline } = useGSAPTimelineContext()
+  const { timeline } = useGSAPTimelineContext()
 
   const messGroupRef = useRef<THREE.Group>(null!)
 
-  /* useGSAP(
+  useGSAP(
     () => {
       showHide({
         timeline: timeline,
@@ -32,7 +33,7 @@ export default function MessGroup() {
       })
     },
     { scope: messGroupRef },
-  ) */
+  )
 
   return (
     <group
@@ -40,13 +41,13 @@ export default function MessGroup() {
       {...messGroupDefaultValues}
       visible={messGroupDefaultValues.visible}
     >
-      {/* <ToolsGroup /> */}
+      <ToolsGroup />
       <BustComponent />
       {/* <ProfilePicture /> */}
-      {/* <LogoAthleticoNacionalComponent /> */}
-      {/* <HeartComponent /> */}
-      {/* <GaneshComponent /> */}
-      {/* <ChristusComponent /> */}
+      <LogoAthleticoNacionalComponent />
+      <HeartComponent />
+      <GaneshComponent />
+      <ChristusComponent />
     </group>
   )
 }

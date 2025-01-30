@@ -30,13 +30,15 @@ void main() {
 
 	// STABLE
 	vec3 stable = position;
-	// stable.x -= 0.5 * sin( time * aPress) * aDirection * anthropy;
+	// stable.x -= 0.5 * sin( time * aPress) * aDirection * anthropy
+	// stable.x += 0.5 * sin( time * aPress) * aDirection * anthropy;
 	stable.x *= (1.0 + anthropy * (sin(time * aPress) + 1.0));
+	// stable.y += 0.25 * sin( time * aPress) * aDirection * anthropy;
 	stable.y *= (1.0 + anthropy * (cos(time * aPress) + 1.0));
 	stable.z += 0.4 * cos(time * aPress) * aDirection * anthropy;
 
 	stable.x *= scale;
-	stable.y = (stable.y *= scale) + yOffset;
+	stable.y = (stable.y *= scale) + yOffset + anthropy * 0.25;
 	stable.z *= scale;
 
 	vec4 mvPosition = modelViewMatrix * vec4(stable, 1.0);

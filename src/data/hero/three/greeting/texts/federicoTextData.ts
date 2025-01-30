@@ -23,7 +23,9 @@ export function getFedericoTextAnimationsData({
       position: {
         keyframes: {
           '0%': {
+            // x: '-=2',
             y: federicoTextConstants.defaultValues.position.y,
+            // z: '-=4',
           },
           [`${getKeyframePosition(greetingGroupConstants.duration, 'step_1.5')}`]: {
             x:

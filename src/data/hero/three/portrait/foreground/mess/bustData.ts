@@ -1,6 +1,10 @@
 import { MutableRefObject } from 'react'
 import * as THREE from 'three'
 
+import type { TElementAnimationData } from '@/types/data/animation/types'
+
+import { default as bustConstants } from '@/constants/hero/three/portrait/foreground/mess/bustConstants.json'
+
 export const bustDefaultValues = {
   number: 512,
   numberSquared: Math.pow(512, 2),
@@ -40,5 +44,12 @@ export function getBustUniforms(
       type: 'f',
       value: 0,
     },
+  }
+}
+
+export function getBustAnimationsData(): TElementAnimationData {
+  return {
+    label: bustConstants.label,
+    duration: bustConstants.duration,
   }
 }
