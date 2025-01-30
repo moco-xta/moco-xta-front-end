@@ -1,11 +1,10 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { useGSAP } from '@gsap/react'
 
-import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
+// import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
 // import ToolsGroup from './tools/ToolsGroup'
-import BustComponent from './Bust'
+import BustComponent from './BustComponent'
 // import ProfilePicture from './ProfilePicture'
 // import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
 // import HeartComponent from './HeartComponent'
@@ -14,17 +13,17 @@ import BustComponent from './Bust'
 
 import {
   messGroupDefaultValues,
-  getMessGroupAnimationsData,
+  // getMessGroupAnimationsData,
 } from '@/data/hero/three/portrait/foreground/mess/messGroupData'
 
-import { showHide } from '@/animation/index'
+// import { showHide } from '@/animation/index'
 
 export default function MessGroup() {
-  const { timeline } = useGSAPTimelineContext()
+  // const { timeline } = useGSAPTimelineContext()
 
   const messGroupRef = useRef<THREE.Group>(null!)
 
-  useGSAP(
+  /* useGSAP(
     () => {
       showHide({
         timeline: timeline,
@@ -33,7 +32,7 @@ export default function MessGroup() {
       })
     },
     { scope: messGroupRef },
-  )
+  ) */
 
   return (
     <group

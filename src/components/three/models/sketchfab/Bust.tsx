@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
@@ -8,6 +8,13 @@ import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 const Bust = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.SKETCHFAB.BUST) as GLTFResult
+
+  useLayoutEffect(() => {
+    ;(Object.keys(materials) as (keyof typeof materials)[]).forEach((key) => {
+      materials[key].transparent = true
+      materials[key].opacity = 0
+    })
+  }, [materials])
 
   return (
     <group
