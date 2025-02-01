@@ -2,7 +2,8 @@ import type { TElementAnimationData } from '@/types/data/animation/types'
 import type { TElementDefaultValues } from '@/types/data/animation/three/types'
 import type { TGetAnimationsDataSignature } from '@/types/data/animation/functions/types'
 
-import { getDefaultValues, getKeyframePosition } from '@/helpers/animationHelpers'
+import { getDefaultValues } from '@/helpers/animation/getDefaultValues'
+import { getKeyframePosition } from '@/helpers/animationHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/hero/three/greeting/greetingGroupConstants.json'
 import { default as hiTextConstants } from '@/constants/hero/three/greeting/texts/hiTextConstants.json'
