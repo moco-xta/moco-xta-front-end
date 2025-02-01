@@ -46,13 +46,13 @@
           "ease": "back.in"
         },
         "step_5": {
-          "z": -11.5,
+          "z": -6.5,
           "ease": "power1.in"
         },
         "step_6": {
           "x": "+=1.8",
           "y": "-=2",
-          "z": -25,
+          "z": -15,
           "ease": "none"
         },
         "easeEach": "none"

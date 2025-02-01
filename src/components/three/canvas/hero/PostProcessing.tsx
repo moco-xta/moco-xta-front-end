@@ -15,7 +15,7 @@ import { BlendFunction, DepthOfFieldEffect, KernelSize, Resolution } from 'postp
 
 export default function PostProcessing() {
   const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)
-  const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 2))
+  const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0))
 
   useLayoutEffect(() => {
     depthOfFieldRef.current.target = depthOfFieldTargetRef.current
@@ -40,12 +40,12 @@ export default function PostProcessing() {
     <EffectComposer>
       <DepthOfField
         ref={depthOfFieldRef}
-        focalLength={0.01}
-        bokehScale={5}
+        focalLength={0.1}
+        bokehScale={2.5}
         height={1024}
         width={1024}
       />
-      <Bloom
+      {/* <Bloom
         intensity={0.25}
         kernelSize={KernelSize.LARGE}
         luminanceThreshold={0.05}
@@ -53,19 +53,19 @@ export default function PostProcessing() {
         mipmapBlur={false}
         resolutionX={Resolution.AUTO_SIZE}
         resolutionY={Resolution.AUTO_SIZE}
-      />
+      /> */}
       {/* <Scanline
         blendFunction={BlendFunction.DARKEN}
         opacity={0.1}
         density={0.8}
       /> */}
-      <Noise opacity={0.5} />
-      <Vignette
+      {/* <Noise opacity={0.5} /> */}
+      {/* <Vignette
         offset={0.5}
         darkness={0.5}
         eskil={false}
         blendFunction={BlendFunction.NORMAL}
-      />
+      /> */}
     </EffectComposer>
   )
 }

@@ -11,6 +11,10 @@ import BustComponent from './BustComponent'
 // import HeartComponent from './HeartComponent'
 // import GaneshComponent from './GaneshComponent'
 // import ChristusComponent from './ChristusComponent'
+import { Knight } from '@/components/three/models/shared/Knight'
+import { QueenOfHearts } from '@/components/three/models/shared/QueenOfHearts'
+
+import { getDegreeEuler } from '@/helpers/threeHelpers'
 
 import {
   messGroupDefaultValues,
@@ -48,6 +52,20 @@ export default function MessGroup() {
       {/* <HeartComponent /> */}
       {/* <GaneshComponent /> */}
       {/* <ChristusComponent /> */}
+      <Knight
+        position={new THREE.Vector3(-3, -1.5, 1)}
+        rotation={getDegreeEuler({ x: 0, y: 90, z: 0 })}
+        scale={1.5}
+      />
+      <Knight
+        position={new THREE.Vector3(3, -1.5, 1)}
+        rotation={getDegreeEuler({ x: 0, y: 90, z: 0 })}
+        scale={1.5}
+      />
+      <QueenOfHearts
+        position={new THREE.Vector3(2, -1, 0)}
+        scale={0.25}
+      />
     </group>
   )
 }
