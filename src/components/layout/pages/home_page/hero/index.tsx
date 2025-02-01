@@ -12,11 +12,11 @@ import './index.scss'
 export default function Hero() {
   return (
     <GSAPTimelineProvider {...timelineDefaultValues}>
-      <>
+      <div id='hero_container'>
         <HeroCanvas />
         {/* <PlaygroundCanvas /> */}
         <AnimationControls />
-      </>
+      </div>
     </GSAPTimelineProvider>
   )
 }

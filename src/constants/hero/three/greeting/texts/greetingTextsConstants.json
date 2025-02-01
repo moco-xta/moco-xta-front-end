@@ -7,7 +7,7 @@
     "spaceWidth": 0.05
   },
   "material": {
-    "color": "#3d3d3d",
+    "color": "#000",
     "transparent": true,
     "opacity": 0
   }

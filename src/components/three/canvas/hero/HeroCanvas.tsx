@@ -5,7 +5,7 @@ import { OrbitControls } from '@react-three/drei'
 import Camera from './Camera'
 import Lightning from './lightning/Lightning'
 import GreetingGroup from './greeting/GreetingGroup'
-import PortraitGroup from './portrait/PortraitGroup'
+// import PortraitGroup from './portrait/PortraitGroup'
 // import AlsoKnowAsGroup from './also_know_as/AlsoKnowAsGroup'
 // import MocoGroup from './moco/MocoGroup'
 import PostProcessing from './PostProcessing'
@@ -22,7 +22,7 @@ export default function HeroCanvas() {
       <OrbitControls />
       <Suspense fallback={null}>
         <GreetingGroup />
-        <PortraitGroup />
+        {/* <PortraitGroup /> */}
         {/* <AlsoKnowAsGroup /> */}
         {/* <MocoGroup /> */}
       </Suspense>
