@@ -7,6 +7,8 @@ import type {
   TElementDefaultValues,
   TProperties,
   TPropertyTypes,
+  TParameterValueTypes,
+  TProcessedValueTypes,
 } from '@/types/data/animation/three/types'
 
 // GET DEFAULT VALUES
@@ -23,13 +25,13 @@ export function getDefaultValues(constants: TConstants): TElementDefaultValues {
       typeof propertyValue === 'number' ||
       typeof propertyValue === 'boolean'
     ) {
-      ;(defaultValues as unknown as Record<TProperties, string | number | boolean>)[
+      ;(defaultValues as unknown as Record<TProperties, TParameterValueTypes>)[
         property as TProperties
       ] = propertyValue
       continue
     }
 
-    let processedValue: THREE.Vector3 | THREE.Euler | Record<string, string | number | boolean>
+    let processedValue: TProcessedValueTypes
 
     if (property === 'position' || property === 'scale') {
       processedValue = new THREE.Vector3()
@@ -44,15 +46,12 @@ export function getDefaultValues(constants: TConstants): TElementDefaultValues {
         )
       })
     } else {
-      processedValue = { ...(propertyValue as Record<string, string | number | boolean>) }
+      processedValue = { ...(propertyValue as Record<string, TParameterValueTypes>) }
     }
 
-    ;(
-      defaultValues as unknown as Record<
-        TProperties,
-        string | number | boolean | THREE.Vector3 | THREE.Euler | Record<string, string | number | boolean>
-      >
-    )[property as TProperties] = processedValue
+    ;(defaultValues as unknown as Record<TProperties, TParameterValueTypes | TProcessedValueTypes>)[
+      property as TProperties
+    ] = processedValue
   }
 
   return defaultValues

@@ -5,26 +5,6 @@
     {
       "name": "greeting",
       "position": 1
-    },
-    {
-      "name": "portrait",
-      "position": 4
-    },
-    {
-      "name": "gobelino",
-      "position": 4
-    },
-    {
-      "name": "also_know_as",
-      "position": 8
-    },
-    {
-      "name": "moco",
-      "position": 0
-    },
-    {
-      "name": "developer",
-      "position": 10
     }
   ]
 }

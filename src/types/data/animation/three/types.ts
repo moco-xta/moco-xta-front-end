@@ -28,6 +28,13 @@ export type TPropertyTypes =
   | TDimensionsData
   | TMaterialData
 
+export type TParameterValueTypes = string | number | boolean
+
+export type TProcessedValueTypes =
+  | THREE.Vector3
+  | THREE.Euler
+  | Record<string, TParameterValueTypes>
+
 // CONSTANTS
 
 export type TConstants = {

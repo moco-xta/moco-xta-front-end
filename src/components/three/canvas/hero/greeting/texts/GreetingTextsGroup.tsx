@@ -23,17 +23,6 @@ export default function GreetingTextsGroup() {
     setGreetingTextsPositions(greetingTextsGroupRef)
   }, [greetingTextsGroupRef])
 
-  useGSAP(
-    () => {
-      animate({
-        timeline: timeline,
-        ref: greetingTextsGroupRef.current,
-        animationsData: getGreetingTextsGroupAnimationsData(),
-      })
-    },
-    { scope: greetingTextsGroupRef },
-  )
-
   return (
     <group ref={greetingTextsGroupRef}>
       <HiText />

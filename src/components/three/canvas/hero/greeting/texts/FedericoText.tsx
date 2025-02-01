@@ -20,24 +20,6 @@ export default function FedericoText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText('Federico')
 
-  useGSAP(
-    () => {
-      const letters: THREE.Mesh[] = gsap.utils.toArray(textGroupRef.current.children)
-      letters.forEach((letterRef, index) => {
-        animate({
-          timeline: timeline,
-          ref: letterRef,
-          animationsData: getFedericoTextAnimationsData({
-            textGroupRef: textGroupRef.current,
-            textLengthRef: textLengthRef.current,
-            index: index,
-          }),
-        })
-      })
-    },
-    { scope: textGroupRef },
-  )
-
   return (
     <Word3D
       ref={textGroupRef}
