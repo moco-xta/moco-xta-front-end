@@ -10,6 +10,7 @@ import vertexShader from '@/components/three/shaders/playground/default/vertexSh
 import fragmentShader from '@/components/three/shaders/playground/default/fragmentShader.glsl'
 
 // import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
 /* type TGlb = {
   animations: THREE.AnimationClip[]
@@ -62,6 +63,12 @@ export function PlaygroundCanvas() {
 
   const ambientLight = new THREE.AmbientLight(0xffffff, 10)
 
+  // ####################
+  // ## TEXTURE LOADER ##
+  // ####################
+
+  const texture = new THREE.TextureLoader().load(texturesConstants.PLAYGROUND.SUZANNE)
+
   // ############
   // ## LOADER ##
   // ############
@@ -100,6 +107,7 @@ export function PlaygroundCanvas() {
 
   const uniforms = {
     time: { type: 'f', value: 0 },
+    uTexture: { type: 't', value: texture },
   }
 
   const shaderMaterial = new THREE.ShaderMaterial({

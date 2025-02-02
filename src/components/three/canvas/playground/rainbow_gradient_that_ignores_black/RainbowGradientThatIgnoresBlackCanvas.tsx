@@ -1,23 +1,37 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+// import * as THREE from 'three/webgpu'
+// import { uv, vec4 } from 'three/tsl'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+// import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 
-import vertexShader from '@/components/three/shaders/playground/parametric_linear_rgb_dimmer/vertexShader.glsl'
-import fragmentShader from '@/components/three/shaders/playground/parametric_linear_rgb_dimmer/fragmentShader.glsl'
+import vertexShader from '@/components/three/shaders/playground/rainbow_gradient_that_ignores_black/vertexShader.glsl'
+import fragmentShader from '@/components/three/shaders/playground/rainbow_gradient_that_ignores_black/fragmentShader.glsl'
 
-import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+// import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
-type TGlb = {
+/* type TGlb = {
   animations: THREE.AnimationClip[]
   scene: THREE.Group
   scenes: THREE.Group[]
   cameras: THREE.Camera[]
   asset: object
-}
+} */
 
-export function ParametricLinearRgbDimmerCanvas() {
+// #####################
+// ## WEBGPU MATERIAL ##
+// #####################
+
+/* function getWebgpuMaterial() {
+  const material = new THREE.MeshPhysicalNodeMaterial()
+  material.colorNode = vec4(uv().x, uv().y, 1, 1)
+
+  return material
+} */
+
+export function RainbowGradientThatIgnoresBlackCanvas() {
   const containerRef = useRef<HTMLDivElement>(null!)
   const timeRef = useRef<number>(0)
 
@@ -32,13 +46,14 @@ export function ParametricLinearRgbDimmerCanvas() {
   // ############
 
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100)
-  camera.position.set(0, 0, 3)
+  camera.position.set(0, 0, 1)
 
   // ##############
   // ## RENDERER ##
   // ##############
 
   const renderer = new THREE.WebGLRenderer({ antialias: true })
+  // const renderer = new THREE.WebGPURenderer()
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
@@ -52,13 +67,22 @@ export function ParametricLinearRgbDimmerCanvas() {
   // ## TEXTURE LOADER ##
   // ####################
 
-  const texture = new THREE.TextureLoader().load(texturesConstants.PLAYGROUND.ASI_ES_LA_FOKIN_LIFE)
+  const texture = new THREE.TextureLoader().load(texturesConstants.PLAYGROUND.SUZANNE)
 
-  // #################
-  // ## GLTF LOADER ##
-  // #################
+  // ############
+  // ## LOADER ##
+  // ############
 
-  const loader = new GLTFLoader()
+  /* const loader = new GLTFLoader()
+  const dracoLoader = new DRACOLoader()
+  dracoLoader.setDecoderPath('/examples/jsm/libs/draco/')
+  loader.setDRACOLoader(dracoLoader) */
+
+  // ###############
+  // ## RAYCASTER ##
+  // ###############
+
+  /* const raycaster = new THREE.Raycaster(); */
 
   // ##############
   // ## GEOMETRY ##
@@ -99,6 +123,7 @@ export function ParametricLinearRgbDimmerCanvas() {
   // ###########
 
   const plane = new THREE.Mesh(geometry, shaderMaterial)
+  // const plane = new THREE.Mesh(geometry, getWebgpuMaterial())
 
   useEffect(() => {
     // #########
@@ -128,12 +153,10 @@ export function ParametricLinearRgbDimmerCanvas() {
     // ## LOAD GLB ##
     // ##############
 
-    loader.load(
+    /* loader.load(
       glbConstants.PLAYGROUND.SUZANNE,
       function (gltf: TGlb) {
-        const suzanne = gltf.scene.children[0] as THREE.Mesh
-        suzanne.material = shaderMaterial
-        // scene.add(suzanne)
+        scene.add(gltf.scene)
 
         gltf.animations
         gltf.scene
@@ -147,7 +170,7 @@ export function ParametricLinearRgbDimmerCanvas() {
       function (error) {
         console.error(error)
       },
-    )
+    ) */
 
     // #############
     // ## ANIMATE ##

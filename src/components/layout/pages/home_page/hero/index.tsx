@@ -8,6 +8,7 @@ import {
   AsciiWithWebgpuCanvas,
   ParametricLinearRgbDimmerCanvas,
   PlaygroundCanvas,
+  RainbowGradientThatIgnoresBlackCanvas,
 } from '@/components/three/canvas/playground'
 
 import { timelineDefaultValues } from '@/data/hero/timelineData'
@@ -21,7 +22,8 @@ export default function Hero() {
         {/* <HeroCanvas /> */}
         {/* <PlaygroundCanvas /> */}
         {/* <AsciiWithWebgpuCanvas /> */}
-        <ParametricLinearRgbDimmerCanvas />
+        {/* <ParametricLinearRgbDimmerCanvas /> */}
+        <RainbowGradientThatIgnoresBlackCanvas />
         {/* <AnimationControls /> */}
       </div>
     </GSAPTimelineProvider>
