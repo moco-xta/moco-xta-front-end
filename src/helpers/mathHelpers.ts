@@ -17,3 +17,10 @@ export const randomPositiveOrNegative = () => {
 export function isEven(number: number) {
   return number % 2 == 0
 }
+
+export function getPercentage(part: number, total: number) {
+  if (total === 0) {
+    throw new Error('Total cannot be zero.')
+  }
+  return (part / total) * 100
+}
