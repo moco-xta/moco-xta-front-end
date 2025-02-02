@@ -1,36 +1,23 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-// import * as THREE from 'three/webgpu'
-// import { uv, vec4 } from 'three/tsl'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
-// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-// import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
-import vertexShader from '@/components/three/shaders/playground/default/vertexShader.glsl'
-import fragmentShader from '@/components/three/shaders/playground/default/fragmentShader.glsl'
+import vertexShader from '@/components/three/shaders/playground/parametric_linear_rgb_dimmer/vertexShader.glsl'
+import fragmentShader from '@/components/three/shaders/playground/parametric_linear_rgb_dimmer/fragmentShader.glsl'
 
-// import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
 
-/* type TGlb = {
+type TGlb = {
   animations: THREE.AnimationClip[]
   scene: THREE.Group
   scenes: THREE.Group[]
   cameras: THREE.Camera[]
   asset: object
-} */
+}
 
-// #####################
-// ## WEBGPU MATERIAL ##
-// #####################
-
-/* function getWebgpuMaterial() {
-  const material = new THREE.MeshPhysicalNodeMaterial()
-  material.colorNode = vec4(uv().x, uv().y, 1, 1)
-
-  return material
-} */
-
-export function PlaygroundCanvas() {
+export function ParametricLinearRgbDimmerCanvas() {
   const containerRef = useRef<HTMLDivElement>(null!)
   const timeRef = useRef<number>(0)
 
@@ -45,14 +32,13 @@ export function PlaygroundCanvas() {
   // ############
 
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100)
-  camera.position.set(0, 0, 1)
+  camera.position.set(0, 0, 3)
 
   // ##############
   // ## RENDERER ##
   // ##############
 
   const renderer = new THREE.WebGLRenderer({ antialias: true })
-  // const renderer = new THREE.WebGPURenderer()
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
@@ -62,20 +48,17 @@ export function PlaygroundCanvas() {
 
   const ambientLight = new THREE.AmbientLight(0xffffff, 10)
 
-  // ############
-  // ## LOADER ##
-  // ############
+  // ####################
+  // ## TEXTURE LOADER ##
+  // ####################
 
-  /* const loader = new GLTFLoader()
-  const dracoLoader = new DRACOLoader()
-  dracoLoader.setDecoderPath('/examples/jsm/libs/draco/')
-  loader.setDRACOLoader(dracoLoader) */
+  const texture = new THREE.TextureLoader().load(texturesConstants.PLAYGROUND.SUZANNE)
 
-  // ###############
-  // ## RAYCASTER ##
-  // ###############
+  // #################
+  // ## GLTF LOADER ##
+  // #################
 
-  /* const raycaster = new THREE.Raycaster(); */
+  const loader = new GLTFLoader()
 
   // ##############
   // ## GEOMETRY ##
@@ -100,6 +83,7 @@ export function PlaygroundCanvas() {
 
   const uniforms = {
     time: { type: 'f', value: 0 },
+    uTexture: { type: 't', value: texture },
   }
 
   const shaderMaterial = new THREE.ShaderMaterial({
@@ -115,7 +99,6 @@ export function PlaygroundCanvas() {
   // ###########
 
   const plane = new THREE.Mesh(geometry, shaderMaterial)
-  // const plane = new THREE.Mesh(geometry, getWebgpuMaterial())
 
   useEffect(() => {
 
@@ -146,10 +129,12 @@ export function PlaygroundCanvas() {
     // ## LOAD GLB ##
     // ##############
 
-    /* loader.load(
+    loader.load(
       glbConstants.PLAYGROUND.SUZANNE,
       function (gltf: TGlb) {
-        scene.add(gltf.scene)
+        const suzanne = gltf.scene.children[0] as THREE.Mesh
+        suzanne.material = shaderMaterial
+        // scene.add(suzanne)
 
         gltf.animations
         gltf.scene
@@ -163,7 +148,7 @@ export function PlaygroundCanvas() {
       function (error) {
         console.error(error)
       },
-    ) */
+    )
 
     // #############
     // ## ANIMATE ##
