@@ -22,24 +22,6 @@ export default function HiText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.HI'))
 
-  useGSAP(
-    () => {
-      const letters: THREE.Mesh[] = gsap.utils.toArray(textGroupRef.current.children)
-      letters.forEach((letterRef, index) => {
-        animate({
-          timeline: timeline,
-          ref: letterRef,
-          // animationsData: getHiTextAnimationsData(index),
-          animationsData: getHiTextAnimationsData({
-            textLengthRef: textLengthRef.current,
-            index: index,
-          }),
-        })
-      })
-    },
-    { scope: textGroupRef },
-  )
-
   return (
     <Word3D
       ref={textGroupRef}

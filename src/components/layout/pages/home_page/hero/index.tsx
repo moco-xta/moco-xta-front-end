@@ -3,7 +3,13 @@ import React from 'react'
 import { GSAPTimelineProvider } from '@/contexts/GsapTimelineContext'
 
 import AnimationControls from '@/components/layout/buttons/animation_controls'
-import { HeroCanvas /* , PlaygroundCanvas */ } from '@/components/three/canvas'
+import { HeroCanvas } from '@/components/three/canvas'
+import {
+  AsciiWithWebgpuCanvas,
+  ParametricLinearRgbDimmerCanvas,
+  PlaygroundCanvas,
+  RainbowGradientThatIgnoresBlackCanvas,
+} from '@/components/three/canvas/playground'
 
 import { timelineDefaultValues } from '@/data/hero/timelineData'
 
@@ -12,11 +18,14 @@ import './index.scss'
 export default function Hero() {
   return (
     <GSAPTimelineProvider {...timelineDefaultValues}>
-      <>
-        <HeroCanvas />
+      <div id='hero_container'>
+        {/* <HeroCanvas /> */}
         {/* <PlaygroundCanvas /> */}
-        <AnimationControls />
-      </>
+        {/* <AsciiWithWebgpuCanvas /> */}
+        {/* <ParametricLinearRgbDimmerCanvas /> */}
+        <RainbowGradientThatIgnoresBlackCanvas />
+        {/* <AnimationControls /> */}
+      </div>
     </GSAPTimelineProvider>
   )
 }

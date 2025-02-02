@@ -15,17 +15,6 @@ export default function GreetingGroup() {
 
   const greetingGroupRef = useRef<THREE.Group>(null!)
 
-  useGSAP(
-    () => {
-      showHide({
-        timeline: timeline,
-        ref: greetingGroupRef.current,
-        animationsData: getGreetingGroupAnimationsData(),
-      })
-    },
-    { scope: greetingGroupRef },
-  )
-
   return (
     <group ref={greetingGroupRef}>
       <GreetingTextsGroup />

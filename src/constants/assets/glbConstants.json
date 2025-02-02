@@ -171,6 +171,9 @@
     "WALL_CLOCK_GLASS": "/models/glb/laboratory/WallClockGlass.glb",
     "WALLS": "/models/glb/laboratory/Walls.glb"
   },
+  "PLAYGROUND": {
+    "SUZANNE": "/models/glb/playground/Suzanne.glb"
+  },
   "SKETCHFAB": {
     "BUST": "/models/glb/sketchfab/Bust.glb"
   },

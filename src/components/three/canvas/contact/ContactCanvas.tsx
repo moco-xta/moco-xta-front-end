@@ -9,8 +9,6 @@ import PostProcessing from './PostProcessing'
 
 import { canvasDefaultValues } from '@/data/contact/three/canvasData'
 
-import './index.scss'
-
 export default function ContactCanvas() {
   return (
     <Canvas

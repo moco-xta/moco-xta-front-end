@@ -24,10 +24,17 @@ const Bust = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref
     >
       <mesh
         geometry={nodes.Face.geometry}
-        material={materials.bust_material}
+        // material={materials.bust_material}
         receiveShadow
         castShadow
-      />
+      >
+        <meshStandardMaterial
+          color={'#5700B6'}
+          roughness={0.75}
+          transparent
+          opacity={0}
+        />
+      </mesh>
     </group>
   )
 })

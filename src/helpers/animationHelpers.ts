@@ -9,56 +9,6 @@ import type {
   TPropertyTypes,
 } from '@/types/data/animation/three/types'
 
-// GET DEFAULT VALUES
-
-export function getDefaultValues(constants: TConstants): TElementDefaultValues {
-  let defaultValues = {} as TElementDefaultValues
-  for (const [property, propertyValue] of Object.entries(constants.defaultValues)) {
-    if (
-      typeof propertyValue === 'string' ||
-      typeof propertyValue === 'number' ||
-      typeof propertyValue === 'boolean'
-    ) {
-      defaultValues = {
-        ...defaultValues,
-        [property]: propertyValue,
-      }
-    } else {
-      let propertyValues: TPropertyTypes
-      if (property === 'position' || property === 'scale') {
-        propertyValues = new THREE.Vector3()
-        for (const [key, value] of Object.entries(propertyValue)) {
-          propertyValues[key as keyof TCoordinatesData] = value as number
-        }
-        defaultValues = {
-          ...defaultValues,
-          [property]: propertyValues as THREE.Vector3,
-        }
-      } else if (property === 'rotation') {
-        propertyValues = new THREE.Euler()
-        for (const [key, value] of Object.entries(propertyValue)) {
-          propertyValues[key as keyof TCoordinatesData] = THREE.MathUtils.degToRad(value as number)
-        }
-        defaultValues = {
-          ...defaultValues,
-          [property]: propertyValues as THREE.Euler,
-        }
-        // pushPropertyDefaultValues(defaultValues, property, propertyValues)
-      } else {
-        propertyValues = {}
-        for (const [key, value] of Object.entries(propertyValue)) {
-          propertyValues = { ...propertyValues, [key]: value }
-        }
-        defaultValues = {
-          ...defaultValues,
-          [property]: propertyValues,
-        }
-      }
-    }
-  }
-  return defaultValues
-}
-
 // GET DEFAULT VALUES ARRAY
 
 export function getDefaultValuesArray(constants: TConstants): TElementDefaultValues[] {
@@ -162,6 +112,54 @@ export function getDefaultValuesArray(constants: TConstants): TElementDefaultVal
   }
   return defaultValues
 }
+
+/* export function getAnimationsData(duration: number, constants: TConstants): TAnimationsData {
+  const animationsData: TAnimationsData = {};
+
+  for (const [property, keyframes] of Object.entries(constants.animations || {})) {
+    const propertyData: Record<string, Record<string, unknown>> = {};
+
+    // Process default values
+    if (constants.defaultValues.hasOwnProperty(property)) {
+      const defaultValues = constants.defaultValues[property as TProperties] as Record<string, string | number | boolean>;
+      for (const [key, value] of Object.entries(defaultValues)) {
+        const processedValue = processPropertyValue(property, key, value);
+        propertyData['0%'] = { ...(propertyData['0%'] || {}), [key]: processedValue };
+      }
+    }
+
+    // Process keyframes
+    for (const [key, values] of Object.entries(keyframes.keyframes)) {
+      if (key !== 'easeEach') {
+        const processedValues: Record<string, unknown> = {};
+        for (const [subKey, value] of Object.entries(values)) {
+          processedValues[subKey] = processPropertyValue(property, subKey, value);
+        }
+        const keyframePosition = getKeyframePosition(duration, key);
+        propertyData[keyframePosition] = processedValues;
+      } else {
+        propertyData.easeEach = values;
+      }
+    }
+
+    animationsData[property as TProperties] = { keyframes: propertyData };
+  }
+
+  return animationsData;
+}
+
+function processPropertyValue(property: string, key: string, value: unknown): unknown {
+  if (property === 'rotation' && key !== 'ease') {
+    return THREE.MathUtils.degToRad(value as number);
+  }
+  return value;
+}
+
+export function getKeyframePosition(duration: number, step: string): string {
+  const stepNumber = Number(step.split('_')[1]);
+  const percentage = ((100 / duration) * stepNumber).toFixed(2);
+  return `${percentage}%`;
+} */
 
 // GET ANIMATIONS DATA
 

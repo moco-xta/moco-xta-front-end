@@ -22,23 +22,6 @@ export default function ImText() {
   const { timeline } = useGSAPTimelineContext()
   const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('HERO.I_M'))
 
-  useGSAP(
-    () => {
-      const letters: THREE.Mesh[] = gsap.utils.toArray(textGroupRef.current.children)
-      letters.forEach((letterRef, index) => {
-        animate({
-          timeline: timeline,
-          ref: letterRef,
-          animationsData: getImTextAnimationsData({
-            textLengthRef: textLengthRef.current,
-            index: index,
-          }),
-        })
-      })
-    },
-    { scope: textGroupRef },
-  )
-
   return (
     <Word3D
       ref={textGroupRef}

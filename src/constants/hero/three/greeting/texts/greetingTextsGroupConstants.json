@@ -3,14 +3,14 @@
     "name": "greeting_texts_group",
     "visible": true,
     "position": {
-      "x": 5,
-      "y": -1.5,
-      "z": 6
+      "x": 0,
+      "y": 0,
+      "z": 0
     },
     "rotation": {
-      "x": -22,
+      "x": 0,
       "y": 0,
-      "z": 15
+      "z": 0
     },
     "dimensions": {
       "width": 10,
@@ -21,38 +21,10 @@
   "animations": {
     "position": {
       "keyframes": {
-        "step_1": {
-          "x": "-=2.2",
-          "y": "+=0.5",
-          "z": 4.5,
-          "ease": "back.in"
-        },
-        "step_2": {
-          "x": "-=5.2",
-          "y": "+=0",
-          "z": 2.6,
-          "ease": "back.in"
-        },
-        "step_3": {
-          "x": "+=5.2",
-          "y": "+=3",
-          "z": 4.4,
-          "ease": "back.in"
-        },
-        "step_4": {
-          "x": "-=5",
-          "y": "+=0",
-          "z": 2.5,
-          "ease": "back.in"
-        },
-        "step_5": {
-          "z": -11.5,
-          "ease": "power1.in"
-        },
         "step_6": {
-          "x": "+=1.8",
-          "y": "-=2",
-          "z": -25,
+          "x": "+=0",
+          "y": "+=0",
+          "z": "+=0",
           "ease": "none"
         },
         "easeEach": "none"
@@ -60,41 +32,11 @@
     },
     "rotation": {
       "keyframes": {
-        "step_1": {
-          "x": -33,
-          "y": 15,
-          "z": 0,
-          "ease": "back.in"
-        },
-        "step_2": {
-          "x": 15,
-          "y": -5,
-          "z": 0,
-          "ease": "back.in"
-        },
-        "step_3": {
-          "x": -15,
-          "y": 15,
-          "z": 0,
-          "ease": "back.in"
-        },
-        "step_4": {
-          "x": 0,
-          "y": -15,
-          "z": 0,
-          "ease": "back.in"
-        },
-        "step_5": {
-          "x": 0,
-          "y": 0,
-          "z": 0,
-          "ease": "power1.in"
-        },
         "step_6": {
           "x": 0,
           "y": 0,
           "z": 0,
-          "ease": "power1.in"
+          "ease": "none"
         },
         "easeEach": "none"
       }
