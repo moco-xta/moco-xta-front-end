@@ -101,7 +101,6 @@ export function ParametricLinearRgbDimmerCanvas() {
   const plane = new THREE.Mesh(geometry, shaderMaterial)
 
   useEffect(() => {
-
     // #########
     // ## DOM ##
     // #########

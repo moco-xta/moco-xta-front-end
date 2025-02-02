@@ -118,7 +118,6 @@ export function PlaygroundCanvas() {
   // const plane = new THREE.Mesh(geometry, getWebgpuMaterial())
 
   useEffect(() => {
-
     // #########
     // ## DOM ##
     // #########
