@@ -30,6 +30,9 @@
     "KNIGHT": "/img/textures/matcap/80CA23_B7EE37_D5FA4C_A3E434.png",
     "PINE_CONE": "/img/textures/matcap/8A6565_2E214D_D48A5F_ADA59C.png"
   },
+  "PLAYGROUND": {
+    "MOQUITO": "/img/textures/playground/moquito.jpg"
+  },
   "SKETCHFAB": {
     "BUST": "/img/textures/sketchfab/face_texture_TEST.jpg"
   },
