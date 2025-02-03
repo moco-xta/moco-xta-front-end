@@ -112,10 +112,45 @@ function createAsciiTexture() {
 }
 
 export function AsciiWithWebgpuCanvas() {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null!)
+  const frameIdRef = useRef<number>(0)
   const timeRef = useRef<number>(0)
 
+  // ###########
+  // ## SCENE ##
+  // ###########
+
   const scene = new THREE.Scene()
+
+  // ############
+  // ## CAMERA ##
+  // ############
+
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000,
+  )
+  camera.position.z = 3.8
+
+  // ##############
+  // ## RENDERER ##
+  // ##############
+
+  const renderer = new THREE.WebGPURenderer()
+  renderer.setSize(window.innerWidth, window.innerHeight)
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+  // ############
+  // ## LIGHTS ##
+  // ############
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1)
+
+  // ##############
+  // ## GEOMETRY ##
+  // ##############
 
   const geometry = new THREE.PlaneGeometry(SIZE, SIZE, 1, 1)
 
@@ -132,14 +167,14 @@ export function AsciiWithWebgpuCanvas() {
   let counter = 0
   for (let i = 0; i < ROWS; i++) {
     for (let j = 0; j < COLUMNS; j++) {
-      let index = i * COLUMNS + j
+      const index = i * COLUMNS + j
       positions[index * 3] = i * SIZE - ((ROWS - 1) / 2) * SIZE
       positions[index * 3 + 1] = j * SIZE - ((COLUMNS - 1) / 2) * SIZE
       positions[index * 3 + 2] = 0
       uv[index * 2] = i / (ROWS - 1)
       uv[index * 2 + 1] = j / (COLUMNS - 1)
       random[index] = Math.pow(Math.random(), 4)
-      let m = new THREE.Matrix4()
+      const m = new THREE.Matrix4()
       m.setPosition(positions[index * 3], positions[index * 3 + 1], positions[index * 3 + 2])
       instancedMeshes.setMatrixAt(index, m)
       counter++
@@ -147,41 +182,36 @@ export function AsciiWithWebgpuCanvas() {
   }
 
   instancedMeshes.instanceMatrix.needsUpdate = true
+
   geometry.setAttribute('aPixelUv', new THREE.InstancedBufferAttribute(uv, 2))
   geometry.setAttribute('aRandom', new THREE.InstancedBufferAttribute(random, 1))
 
   scene.add(instancedMeshes)
-
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1)
   scene.add(ambientLight)
 
   useEffect(() => {
+    // #########
+    // ## DOM ##
+    // #########
+
     if (!containerRef.current) return
 
-    // SET UP
-
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000,
-    )
-    camera.position.z = 3.8
-
-    const renderer = new THREE.WebGPURenderer()
-    renderer.setSize(window.innerWidth, window.innerHeight)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     containerRef.current.appendChild(renderer.domElement)
 
+    // ##############
+    // ## CONTROLS ##
+    // ##############
+  
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
     controls.dampingFactor = 0.05
 
-    // ANIMATE
+    // #############
+    // ## ANIMATE ##
+    // #############
 
-    let frameId: number
     const animate = () => {
-      frameId = requestAnimationFrame(animate)
+      frameIdRef.current = requestAnimationFrame(animate)
 
       timeRef.current += 0.01
 
@@ -192,8 +222,10 @@ export function AsciiWithWebgpuCanvas() {
 
     animate()
 
-    // RESIZE
-
+    // ############
+    // ## RESIZE ##
+    // ############
+  
     const handleResize = () => {
       const width = window.innerWidth
       const height = window.innerHeight
@@ -208,9 +240,9 @@ export function AsciiWithWebgpuCanvas() {
       window.removeEventListener('resize', handleResize)
       containerRef.current?.removeChild(renderer.domElement)
       controls.dispose()
-      cancelAnimationFrame(frameId)
+      cancelAnimationFrame(frameIdRef.current)
     }
-  }, [scene])
+  })
 
   return <div ref={containerRef} />
 }

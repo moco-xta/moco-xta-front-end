@@ -2,14 +2,14 @@ import React, { useLayoutEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import {
-  Bloom,
+  // Bloom,
   DepthOfField,
   EffectComposer,
-  Noise,
+  // Noise,
   // Scanline,
-  Vignette,
+  // Vignette,
 } from '@react-three/postprocessing'
-import { BlendFunction, DepthOfFieldEffect, KernelSize, Resolution } from 'postprocessing'
+import { /* BlendFunction, */ DepthOfFieldEffect/* , KernelSize, Resolution */ } from 'postprocessing'
 // import { gsap } from 'gsap'
 // import { useGSAP } from '@gsap/react'
 

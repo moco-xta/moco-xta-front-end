@@ -4,7 +4,7 @@ import { gsap } from 'gsap'
 
 import type { TDimensionsData } from '@/types/data/components/three/types'
 
-import { getPercentage } from './mathHelpers'
+// import { getPercentage } from './mathHelpers'
 
 import { greetingTextsGroupDefaultValues } from '@/data/hero/three/greeting/texts/greetingTextsGroupData'
 

@@ -33,6 +33,7 @@ import { default as texturesConstants } from '@/constants/assets/texturesConstan
 
 export function PlaygroundCanvas() {
   const containerRef = useRef<HTMLDivElement>(null!)
+  const frameIdRef = useRef<number>(0)
   const timeRef = useRef<number>(0)
 
   // ###########
@@ -137,7 +138,7 @@ export function PlaygroundCanvas() {
     // ##############
     // ## CONTROLS ##
     // ##############
-
+  
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
     controls.dampingFactor = 0.05
@@ -176,9 +177,8 @@ export function PlaygroundCanvas() {
     // ## ANIMATE ##
     // #############
 
-    let frameId: number
     const animate = () => {
-      frameId = requestAnimationFrame(animate)
+      frameIdRef.current = requestAnimationFrame(animate)
 
       timeRef.current += 0.01
       uniforms.time.value = timeRef.current
@@ -194,7 +194,7 @@ export function PlaygroundCanvas() {
     // ## RESIZE ##
     // ############
 
-    const handleResize = () => {
+    function handleResize() {
       const width = window.innerWidth
       const height = window.innerHeight
       renderer.setSize(width, height)
@@ -209,9 +209,9 @@ export function PlaygroundCanvas() {
       containerRef.current?.removeChild(renderer.domElement)
       controls.dispose()
       renderer.dispose()
-      cancelAnimationFrame(frameId)
+      cancelAnimationFrame(frameIdRef.current)
     }
-  }, [scene])
+  })
 
   return <div ref={containerRef} />
 }

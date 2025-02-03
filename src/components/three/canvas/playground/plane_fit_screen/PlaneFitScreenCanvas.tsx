@@ -238,7 +238,7 @@ export function PlaneFitScreenCanvas() {
       renderer.dispose()
       cancelAnimationFrame(frameId)
     }
-  }, [scene])
+  })
 
   return <div ref={containerRef} />
 }

@@ -19,6 +19,7 @@ type TGlb = {
 
 export function ParametricLinearRgbDimmerCanvas() {
   const containerRef = useRef<HTMLDivElement>(null!)
+  const frameIdRef = useRef<number>(0)
   const timeRef = useRef<number>(0)
 
   // ###########
@@ -153,9 +154,8 @@ export function ParametricLinearRgbDimmerCanvas() {
     // ## ANIMATE ##
     // #############
 
-    let frameId: number
     const animate = () => {
-      frameId = requestAnimationFrame(animate)
+      frameIdRef.current = requestAnimationFrame(animate)
 
       timeRef.current += 0.01
       uniforms.time.value = timeRef.current
@@ -171,7 +171,7 @@ export function ParametricLinearRgbDimmerCanvas() {
     // ## RESIZE ##
     // ############
 
-    const handleResize = () => {
+    function handleResize() {
       const width = window.innerWidth
       const height = window.innerHeight
       renderer.setSize(width, height)
@@ -186,9 +186,9 @@ export function ParametricLinearRgbDimmerCanvas() {
       containerRef.current?.removeChild(renderer.domElement)
       controls.dispose()
       renderer.dispose()
-      cancelAnimationFrame(frameId)
+      cancelAnimationFrame(frameIdRef.current)
     }
-  }, [scene])
+  })
 
   return <div ref={containerRef} />
 }

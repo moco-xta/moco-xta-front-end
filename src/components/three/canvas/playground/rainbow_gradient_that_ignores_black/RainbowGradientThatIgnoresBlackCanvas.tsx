@@ -211,7 +211,7 @@ export function RainbowGradientThatIgnoresBlackCanvas() {
       renderer.dispose()
       cancelAnimationFrame(frameId)
     }
-  }, [scene])
+  })
 
   return <div ref={containerRef} />
 }
