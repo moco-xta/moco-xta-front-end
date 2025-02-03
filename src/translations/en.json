@@ -92,7 +92,7 @@
             "PARAGRAPH_DESCRIPTION": "Sass (Syntactically Awesome Style Sheets) is a powerful CSS preprocessor that extends the capabilities of traditional CSS, making it easier to write and maintain stylesheets. It introduces features like variables, nested rules, mixins, functions, and inheritance, which help developers write cleaner, more modular, and reusable code. Sass files are written in either the .scss (Sassy CSS) or .sass (indented syntax) format and then compiled into standard CSS for use in web projects. Its advanced features enable dynamic styling, reduce redundancy, and improve organization, making it a favorite among developers for building complex and scalable designs. Sass is widely supported in modern front-end workflows and integrates seamlessly with build tools like Webpack, Gulp, and frameworks like React and Angular."
           },
           "TAILWIND": {
-            "PARAGRAPH_TITLE": "tailwindcss",
+            "PARAGRAPH_TITLE": "tailwind",
             "PARAGRAPH_DESCRIPTION": "Tailwind CSS is a utility-first CSS framework that enables developers to build modern, responsive user interfaces directly in their HTML by applying small, reusable utility classes. Unlike traditional CSS frameworks that provide pre-designed components, Tailwind offers low-level utility classes for properties like padding, margin, typography, and colors, giving developers complete control over the design without writing custom CSS. This approach promotes consistency, speeds up development, and makes it easier to create custom designs without leaving the HTML. Tailwind is highly customizable through its configuration file, allowing developers to define their design system, such as color palettes, breakpoints, and spacing scales. It also supports features like dark mode, responsive design, and Just-In-Time (JIT) compilation for optimized performance. Tailwind CSS is widely used in modern web development for its flexibility, efficiency, and ability to streamline the design process."
           }
         }
@@ -129,7 +129,7 @@
           },
           "BABYLONJS": {
             "PARAGRAPH_TITLE": "babylon.js",
-            "PARAGRAPH_DESCRIPTION": "Babylon.js is a powerful open-source JavaScript library used for building 3D graphics and interactive experiences. Created and maintained by Microsoft, Babylon.js provides a complete framework for creating and rendering 3D graphics, including geometries, materials, animations, and event handling. It supports WebGL, a standard for rendering 2D and 3D graphics, and allows developers to create visually stunning and interactive experiences on the web."
+            "PARAGRAPH_DESCRIPTION": "Babylon.js is a powerful, open-source 3D rendering engine and framework for building interactive web-based 3D applications and games. Built on WebGL, WebGPU, and WebXR, Babylon.js provides a comprehensive set of tools for creating high-performance 3D graphics, animations, and immersive experiences directly in the browser. It features a user-friendly API, a rich library of pre-built materials, lighting, and camera systems, and supports advanced techniques like physics simulations, particle systems, and post-processing effects. Babylon.js also integrates seamlessly with modern web development workflows, offering support for TypeScript, React, and other frameworks. With its extensive documentation, active community, and focus on ease of use, Babylon.js is a go-to choice for developers looking to create stunning 3D content for the web, including games, virtual reality (VR), augmented reality (AR), and data visualizations."
           }
         }
       },
@@ -139,19 +139,19 @@
         "PARAGRAPHS": {
           "PHOTOSHOP": {
             "PARAGRAPH_TITLE": "photoshop",
-            "PARAGRAPH_DESCRIPTION": "Photoshop is a powerful graphic design software developed by Adobe. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Photoshop allows designers to create visually stunning visuals and compositions. I use Photoshop to edit images, create 3D models, and optimize visuals for web and print."
+            "PARAGRAPH_DESCRIPTION": "Photoshop is a professional-grade raster graphics editing software developed by Adobe, widely regarded as the industry standard for image editing, photo manipulation, and digital art creation. It offers a vast array of tools and features, including layers, masks, filters, brushes, and advanced color correction, enabling users to create, edit, and enhance images with precision and creativity. Photoshop supports a wide range of file formats and integrates seamlessly with other Adobe Creative Cloud applications like Illustrator, Lightroom, and Premiere Pro. It is used by photographers, graphic designers, web developers, and artists for tasks such as photo retouching, compositing, digital painting, and designing user interfaces. With its powerful capabilities and continuous updates, Photoshop remains an essential tool for professionals and enthusiasts in the visual arts and design industries."
           },
           "ILLUSTRATOR": {
             "PARAGRAPH_TITLE": "illustrator",
-            "PARAGRAPH_DESCRIPTION": "Illustrator is a powerful vector graphics software developed by Adobe. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Illustrator allows designers to create visually stunning visuals and compositions. I use Illustrator to edit images, create 3D models, and optimize visuals for web and print."
+            "PARAGRAPH_DESCRIPTION": "Adobe Illustrator is a professional vector graphics editor developed by Adobe, widely used for creating scalable illustrations, logos, icons, typography, and complex designs. Unlike raster-based tools like Photoshop, Illustrator uses vector graphics, which are resolution-independent and can be scaled infinitely without losing quality. It offers a robust set of tools, including the Pen Tool for precise path creation, Shape Builder for combining shapes, and Gradient Mesh for realistic shading. Illustrator also supports advanced typography, artboards for multi-page designs, and integration with other Adobe Creative Cloud apps like Photoshop and InDesign. Its versatility and precision make it a go-to tool for graphic designers, illustrators, and branding professionals, enabling the creation of high-quality, print-ready, and digital-ready artwork."
           },
           "BLENDER": {
             "PARAGRAPH_TITLE": "blender",
-            "PARAGRAPH_DESCRIPTION": "Blender is a powerful 3D modeling software developed by Blender Foundation. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Blender allows designers to create visually stunning visuals and compositions. I use Blender to model, texture, and animate 3D objects and scenes, providing a deeper visual immersion."
+            "PARAGRAPH_DESCRIPTION": "Blender is a free and open-source 3D creation suite used for modeling, animation, rendering, compositing, video editing, and more. It provides a comprehensive set of tools for creating 3D assets, including polygonal modeling, sculpting, texturing, and rigging, as well as advanced features like physics simulations, particle systems, and fluid dynamics. Blender's powerful rendering engine, Cycles, supports photorealistic rendering, while its real-time engine, Eevee, enables fast previews and interactive workflows. It also includes a built-in video editor, motion tracking, and support for scripting with Python, making it highly customizable. Widely used by artists, animators, game developers, and VFX professionals, Blender is a versatile and accessible tool for creating high-quality 3D content for films, games, and interactive applications."
           },
           "SUBSTANCE_PAINTER": {
             "PARAGRAPH_TITLE": "substance painter",
-            "PARAGRAPH_DESCRIPTION": "Substance Painter is a powerful graphic design software developed by Adobe. With its intuitive interface, versatile tools, and powerful features like layering, blending, and adjustment, Substance Painter allows designers to create visually stunning visuals and compositions. I use Substance Painter to edit images, create 3D models, and optimize visuals for web and print."
+            "PARAGRAPH_DESCRIPTION": "Substance Painter is a industry-leading 3D texture painting software developed by Adobe, designed for creating highly detailed and realistic textures for 3D models. It offers a powerful set of tools for painting, sculpting, and applying materials directly onto 3D surfaces, using features like smart materials, particle brushes, and procedural effects. Substance Painter supports PBR (Physically Based Rendering) workflows, enabling artists to create textures that interact realistically with light and environment. It also integrates seamlessly with other 3D software and game engines like Blender, Maya, Unreal Engine, and Unity, making it a go-to tool for game developers, VFX artists, and 3D designers. With its intuitive interface, real-time feedback, and extensive material library, Substance Painter streamlines the texturing process, allowing artists to achieve professional-quality results efficiently."
           }
         }
       },
@@ -161,11 +161,11 @@
         "PARAGRAPHS": {
           "SPRING": {
             "PARAGRAPH_TITLE": "spring",
-            "PARAGRAPH_DESCRIPTION": "Spring Boot is a framework that simplifies the process of building stand-alone, production-grade Java applications. It is built on top of the Spring Framework, providing an easier way to create microservices and RESTful APIs. Spring Boot eliminates much of the configuration work required in traditional Spring applications by offering pre-configured defaults and automatic setups for things like databases, security, and web servers. With its convention-over-configuration approach, Spring Boot accelerates development and allows developers to focus on writing business logic while minimizing boilerplate code."
+            "PARAGRAPH_DESCRIPTION": "Spring is a powerful, open-source Java framework designed to simplify the development of enterprise-level applications. It provides a comprehensive programming and configuration model for building robust, scalable, and maintainable applications. Spring's core features include dependency injection (DI) and inversion of control (IoC), which promote loose coupling and easier testing. It also offers modules for data access, transaction management, security, and web development, including Spring MVC and Spring Boot. Spring Boot, in particular, simplifies the setup and deployment of standalone, production-grade applications with minimal configuration. Known for its flexibility, modularity, and extensive ecosystem, Spring is widely used for building RESTful APIs, microservices, and cloud-native applications, making it a cornerstone of modern Java development."
           },
           "DJANGO": {
             "PARAGRAPH_TITLE": "django",
-            "PARAGRAPH_DESCRIPTION": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It follows the 'batteries-included' philosophy, providing a robust set of tools for building secure and scalable web applications. With features like an ORM (Object-Relational Mapping) for database management, built-in authentication, and an admin interface, Django allows developers to focus on writing their applications instead of reinventing common functionality. Its strong security features, easy-to-use templating system, and extensive documentation make it a popular choice for both small projects and large-scale applications."
+            "PARAGRAPH_DESCRIPTION": "Django is a high-level, open-source Python web framework designed to help developers build secure, scalable, and maintainable web applications quickly. Known for its \"batteries-included\" philosophy, Django comes with a wide range of built-in features, such as an ORM (Object-Relational Mapper) for database interactions, an admin panel for content management, and robust authentication and authorization systems. It follows the Model-View-Template (MVT) architectural pattern, promoting clean and reusable code. Django also emphasizes security, offering protection against common vulnerabilities like SQL injection and cross-site scripting (XSS). With its extensive documentation, active community, and support for rapid development, Django is a popular choice for building everything from simple websites to complex, data-driven applications like content management systems (CMS), e-commerce platforms, and social networks."
           }
         }
       },
@@ -175,19 +175,19 @@
         "PARAGRAPHS": {
           "POSTGRESQL": {
             "PARAGRAPH_TITLE": "PostgreSQL",
-            "PARAGRAPH_DESCRIPTION": ""
+            "PARAGRAPH_DESCRIPTION": "PostgreSQL is a powerful, open-source relational database management system (RDBMS) known for its reliability, extensibility, and compliance with SQL standards. It supports a wide range of advanced features, including complex queries, foreign keys, triggers, views, and transactional integrity, making it suitable for both small and large-scale applications. PostgreSQL also offers support for JSON, geospatial data, and full-text search, as well as extensibility through custom functions, data types, and procedural languages like PL/pgSQL. Its robust performance, ACID compliance, and strong community support make it a popular choice for developers building data-intensive applications, such as web apps, analytics platforms, and enterprise systems. PostgreSQL is highly scalable and integrates well with modern development frameworks and tools, making it a versatile and future-proof database solution."
           },
           "MYSQL": {
             "PARAGRAPH_TITLE": "MySQL",
-            "PARAGRAPH_DESCRIPTION": ""
+            "PARAGRAPH_DESCRIPTION": "MySQL is a widely-used, open-source relational database management system (RDBMS) known for its speed, reliability, and ease of use. It uses Structured Query Language (SQL) to manage and manipulate data, supporting features like transactions, indexing, and stored procedures. MySQL is a core component of the LAMP (Linux, Apache, MySQL, PHP/Perl/Python) stack, making it a popular choice for web applications, content management systems (e.g., WordPress), and e-commerce platforms. It offers strong performance for read-heavy workloads and is highly scalable, with support for replication and clustering. While it may lack some advanced features of other databases like PostgreSQL, MySQL's simplicity, widespread adoption, and strong community support make it a go-to solution for developers building small to medium-sized applications."
           },
           "POSTMAN": {
             "PARAGRAPH_TITLE": "Postman",
-            "PARAGRAPH_DESCRIPTION": "Postman is a free, open-source API development tool that allows users to create, send, and test HTTP requests. It provides a user-friendly interface, powerful request builder, and extensive documentation, making it a popular choice for developers and API testing."
+            "PARAGRAPH_DESCRIPTION": "Postman is a popular collaboration platform for API development that simplifies the process of designing, testing, and documenting APIs. It provides a user-friendly interface for sending HTTP requests, inspecting responses, and debugging APIs, making it an essential tool for developers and testers. Postman supports features like automated testing with scripts, environment variables for dynamic configurations, and collections for organizing API requests. It also offers tools for mocking APIs, monitoring performance, and generating documentation. With its ability to integrate into CI/CD pipelines and support for team collaboration, Postman streamlines the API development lifecycle, making it a go-to tool for building, testing, and maintaining robust APIs."
           },
           "DBEAVER": {
             "PARAGRAPH_TITLE": "DBeaver",
-            "PARAGRAPH_DESCRIPTION": ""
+            "PARAGRAPH_DESCRIPTION": "DBeaver is a free, open-source universal database management tool that supports a wide range of databases, including MySQL, PostgreSQL, SQLite, Oracle, SQL Server, and more. It provides a user-friendly interface for database administration, query execution, and data manipulation, making it a versatile tool for developers and database administrators. DBeaver features advanced capabilities like schema editing, data export/import, ER diagram generation, and SQL syntax highlighting. It also supports cross-platform usage (Windows, macOS, Linux) and integrates with cloud databases. With its extensive database support, intuitive design, and powerful features, DBeaver is a popular choice for managing and interacting with databases efficiently."
           }
         }
       },
@@ -197,15 +197,15 @@
         "PARAGRAPHS": {
           "HOSTINGER": {
             "PARAGRAPH_TITLE": "hostinger",
-            "PARAGRAPH_DESCRIPTION": "Hostinger is a global web hosting provider known for offering affordable, high-performance hosting solutions for individuals and businesses. It provides a range of services, including shared hosting, cloud hosting, VPS hosting, and domain registration. Hostinger is recognized for its user-friendly interface, fast loading times, reliable uptime, and customer support available 24/7. The platform is optimized for popular content management systems (CMS) like WordPress and offers features such as one-click installs, website builders, and enhanced security. Hostinger also prides itself on delivering a fast, secure, and scalable web hosting experience while catering to both beginner users and experienced developers."
+            "PARAGRAPH_DESCRIPTION": "Hostinger is a global web hosting provider known for offering affordable and reliable hosting solutions for individuals and businesses. It provides a range of services, including shared hosting, cloud hosting, VPS hosting, and domain registration, catering to various needs from small personal websites to larger business applications. Hostinger is praised for its user-friendly control panel, fast server performance, and 24/7 customer support. It also offers a website builder and one-click installations for popular platforms like WordPress, making it accessible for beginners. With data centers worldwide, competitive pricing, and a 99.9% uptime guarantee, Hostinger is a popular choice for those seeking cost-effective and scalable hosting solutions."
           },
           "AWS": {
             "PARAGRAPH_TITLE": "AWS",
-            "PARAGRAPH_DESCRIPTION": "Amazon Web Services (AWS) is a cloud computing service that provides a wide range of tools, services, and services, making it a popular choice for developers and businesses looking to build, run, and scale their applications on the cloud."
+            "PARAGRAPH_DESCRIPTION": "Amazon Web Services (AWS) is a comprehensive and widely-used cloud computing platform offered by Amazon, providing a vast array of on-demand services, including computing power, storage, databases, machine learning, analytics, and networking. AWS enables businesses to build, deploy, and scale applications quickly and cost-effectively without the need for physical infrastructure. Popular services include EC2 (Elastic Compute Cloud) for virtual servers, S3 (Simple Storage Service) for scalable storage, and Lambda for serverless computing. Known for its reliability, scalability, and global infrastructure, AWS supports millions of customers worldwide, from startups to enterprises. Its pay-as-you-go pricing model, extensive documentation, and robust ecosystem make it a leading choice for cloud-based solutions."
           },
           "NGINX": {
             "PARAGRAPH_TITLE": "nginx",
-            "PARAGRAPH_DESCRIPTION": ""
+            "PARAGRAPH_DESCRIPTION": "Nginx is a high-performance, open-source web server, reverse proxy, and load balancer known for its efficiency and scalability. It is widely used to serve web content, handle HTTP requests, and distribute traffic across multiple servers to ensure high availability and reliability. Nginx excels at handling concurrent connections with minimal resource usage, making it ideal for high-traffic websites and applications. It also supports features like SSL/TLS termination, caching, and compression, enhancing performance and security. Often used in conjunction with application servers like Node.js or Django, Nginx is a critical component of modern web infrastructure, powering many high-profile sites and applications worldwide."
           }
         }
       },
@@ -215,23 +215,27 @@
         "PARAGRAPHS": {
           "JAVASCRIPT": {
             "PARAGRAPH_TITLE": "javascript",
-            "PARAGRAPH_DESCRIPTION": "JavaScript is a popular programming language that was developed by Netscape Corporation. It is a high-level, interpreted, and object-oriented programming language that provides a wide range of libraries and frameworks, making it a popular choice for building web applications, data analysis, machine learning, and automation. JavaScript is known for its simplicity, readability, and performance, making it a popular choice for building robust and scalable applications."
+            "PARAGRAPH_DESCRIPTION": "JavaScript is a versatile, high-level programming language primarily used for adding interactivity and dynamic behavior to web pages. As one of the core technologies of the web, alongside HTML and CSS, JavaScript enables developers to create responsive user interfaces, handle events, manipulate the DOM (Document Object Model), and communicate with servers via APIs. It supports both procedural and object-oriented programming paradigms and has a vast ecosystem of libraries and frameworks, such as React, Angular, and Vue.js, for building modern web applications. With the advent of Node.js, JavaScript can also be used for server-side development, making it a full-stack language. Its widespread adoption, active community, and continuous evolution through standards like ECMAScript have solidified JavaScript as an essential tool for web development and beyond."
           },
           "TYPESCRIPT": {
             "PARAGRAPH_TITLE": "typescript",
-            "PARAGRAPH_DESCRIPTION": "TypeScript is a superset of JavaScript that adds static type checking to JavaScript code. It is developed by Microsoft and is now maintained by Microsoft alongside TypeScript. TypeScript is known for its simplicity, readability, and performance, making it a popular choice for building web applications, data analysis, machine learning, and automation. TypeScript is also known for its strong type system, making it a popular choice for building robust and scalable applications."
+            "PARAGRAPH_DESCRIPTION": "TypeScript is a strongly typed, open-source programming language developed by Microsoft that builds on JavaScript by adding static type definitions. It enables developers to catch errors during development, improve code readability, and enhance tooling support with features like autocompletion and refactoring. TypeScript code is transpiled into plain JavaScript, making it compatible with all JavaScript environments, including browsers, Node.js, and Deno. It supports modern JavaScript features and introduces additional constructs like interfaces, enums, and decorators, making it ideal for large-scale applications. TypeScript is widely used with popular frameworks like Angular, React, and Vue.js, offering a more robust and maintainable development experience while retaining the flexibility of JavaScript."
           },
           "JAVA": {
             "PARAGRAPH_TITLE": "java",
-            "PARAGRAPH_DESCRIPTION": "Java is a popular programming language that was developed by Oracle Corporation. It is a statically-typed, object-oriented programming language that provides a strong foundation for building robust and scalable applications. Java is known for its simplicity, readability, and performance, making it a popular choice for building enterprise-grade applications and web services."
+            "PARAGRAPH_DESCRIPTION": "Java is a versatile, object-oriented programming language known for its \"write once, run anywhere\" philosophy, thanks to its platform-independent nature through the Java Virtual Machine (JVM). It is widely used for building enterprise-level applications, web services, mobile apps (Android), and large-scale systems. Java emphasizes strong typing, robustness, and security, with features like garbage collection, exception handling, and multithreading. Its extensive standard library and rich ecosystem of frameworks, such as Spring and Hibernate, make it a popular choice for developers. Java's long-standing presence, cross-platform compatibility, and strong community support have solidified its position as one of the most widely used programming languages in the world."
           },
           "PYTHON": {
             "PARAGRAPH_TITLE": "python",
-            "PARAGRAPH_DESCRIPTION": "Python is a popular programming language that was developed by Guido van Rossum and is widely used for both personal and professional development. It is a high-level, interpreted, and object-oriented programming language that provides a wide range of libraries and frameworks, making it a popular choice for building web applications, data analysis, machine learning, and automation. Python is known for its simplicity, readability, and performance, making it a popular choice for building robust and scalable applications."
+            "PARAGRAPH_DESCRIPTION": "Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming, making it suitable for a wide range of applications, from web development and data analysis to artificial intelligence and scientific computing. Python's extensive standard library and rich ecosystem of third-party packages, such as NumPy, Pandas, Django, and TensorFlow, enable developers to build powerful applications with minimal effort. Its clear syntax and dynamic typing make it an excellent choice for beginners, while its scalability and performance optimization options cater to advanced users. Python's widespread adoption, active community, and cross-platform compatibility have made it one of the most popular programming languages globally."
+          },
+          "C_PLUS_PLUS": {
+            "PARAGRAPH_TITLE": "C/C++",
+            "PARAGRAPH_DESCRIPTION": "C and C++ are powerful, general-purpose programming languages widely used for system programming, game development, and performance-critical applications. C, known for its efficiency and low-level control, is the foundation of many operating systems and embedded systems. C++ builds on C by adding object-oriented features like classes, inheritance, and polymorphism, as well as modern enhancements such as templates and the Standard Template Library (STL). Both languages offer fine-grained control over memory management and hardware, making them ideal for applications requiring high performance, such as game engines, real-time systems, and high-frequency trading platforms. Despite their steep learning curve, C and C++ remain essential tools for developers working on resource-constrained or performance-intensive projects."
           },
           "PHP": {
             "PARAGRAPH_TITLE": "php",
-            "PARAGRAPH_DESCRIPTION": "PHP is a popular programming language that was developed by the PHP Development Team. It is a server-side scripting language that allows developers to build dynamic web applications and websites. PHP is known for its simplicity, readability, and performance, making it a popular choice for building web applications, data analysis, and automation. PHP is also widely used for building APIs and web services, making it a popular choice for building APIs and web applications."
+            "PARAGRAPH_DESCRIPTION": "PHP is a widely-used, open-source server-side scripting language designed for web development. It is particularly well-suited for creating dynamic web pages and applications, often embedded within HTML. PHP powers many popular content management systems (CMS) like WordPress, Drupal, and Joomla, as well as frameworks like Laravel and Symfony. It supports a variety of databases, including MySQL and PostgreSQL, and integrates seamlessly with web servers like Apache and Nginx. Known for its ease of use, flexibility, and extensive documentation, PHP is a popular choice for building everything from small websites to large-scale web applications. Despite criticism of its older design, modern PHP versions have introduced significant improvements, making it a robust and efficient tool for web development."
           }
         }
       },
@@ -241,15 +245,15 @@
         "PARAGRAPHS": {
           "DEEPSEEK": {
             "PARAGRAPH_TITLE": "Deepseek",
-            "PARAGRAPH_DESCRIPTION": ""
+            "PARAGRAPH_DESCRIPTION": "DeepSeek is a cutting-edge artificial intelligence company focused on advancing the development of Artificial General Intelligence (AGI). Founded in 2023, DeepSeek aims to create intelligent systems capable of performing a wide range of tasks with human-like adaptability and reasoning. The company emphasizes research and innovation in machine learning, natural language processing, and cognitive computing to push the boundaries of AI capabilities. With a mission to make AGI a reality, DeepSeek is at the forefront of developing technologies that could revolutionize industries such as healthcare, education, and automation. Its commitment to ethical AI and groundbreaking research positions DeepSeek as a key player in the global AI landscape."
           },
           "CHATGPT": {
             "PARAGRAPH_TITLE": "ChatGPT",
-            "PARAGRAPH_DESCRIPTION": ""
+            "PARAGRAPH_DESCRIPTION": "ChatGPT is an advanced language model developed by OpenAI, designed to generate human-like text and engage in natural conversations. Built on the GPT (Generative Pre-trained Transformer) architecture, it leverages deep learning techniques to understand and respond to a wide range of queries, from casual chat to complex problem-solving. ChatGPT can assist with tasks like writing, coding, learning, and brainstorming, making it a versatile tool for individuals and businesses. It is trained on vast amounts of data and fine-tuned for safety and accuracy, though it may occasionally produce errors or require user guidance. With its ability to simulate human-like interaction, ChatGPT has become a popular AI assistant for applications in customer support, education, content creation, and more."
           },
           "COPILOT": {
             "PARAGRAPH_TITLE": "Copilot",
-            "PARAGRAPH_DESCRIPTION": ""
+            "PARAGRAPH_DESCRIPTION": "Copilot is an AI-powered code completion tool developed by GitHub in collaboration with OpenAI. It integrates directly into code editors like Visual Studio Code, providing real-time suggestions, autocompletion, and even entire code snippets based on context and natural language prompts. Powered by OpenAI's Codex model, Copilot is trained on vast amounts of public code, enabling it to assist with a wide range of programming languages and frameworks. It helps developers write code faster, reduce errors, and learn best practices by offering intelligent recommendations. While it enhances productivity, users should review and validate its suggestions to ensure accuracy and security. Copilot is widely used by developers to streamline coding workflows and accelerate software development."
           }
         }
       },
@@ -259,11 +263,11 @@
         "PARAGRAPHS": {
           "GITHUB": {
             "PARAGRAPH_TITLE": "GitHub",
-            "PARAGRAPH_DESCRIPTION": "GitHub is a web-based hosting service for version control using Git. It allows developers to create, fork, and collaborate on projects, as well as manage and share code repositories."
+            "PARAGRAPH_DESCRIPTION": "GitHub is a web-based platform for version control and collaboration, primarily used for software development. Built on Git, it allows developers to host, review, and manage code repositories, making it easier to collaborate on projects with teams. Key features include pull requests, issue tracking, code review, and project management tools, which streamline the development workflow. GitHub also supports continuous integration and deployment (CI/CD) through integrations with tools like GitHub Actions. It is widely used by open-source projects and enterprises alike, fostering a global community of developers who share and contribute to code. With its user-friendly interface and robust ecosystem, GitHub has become an essential tool for modern software development and collaboration."
           },
           "GITLAB": {
             "PARAGRAPH_TITLE": "GitLab",
-            "PARAGRAPH_DESCRIPTION": "GitLab is a web-based DevOps lifecycle tool that provides a Git repository manager, continuous integration, and continuous deployment (CI/CD) pipeline features. It allows developers to manage, secure, and deploy code efficiently."
+            "PARAGRAPH_DESCRIPTION": "GitLab is a comprehensive, web-based DevOps platform that provides tools for the entire software development lifecycle, from planning and coding to testing, deployment, and monitoring. Built on Git, it offers version control, continuous integration/continuous deployment (CI/CD), and collaboration features like issue tracking, code review, and project management. GitLab is available as both a cloud-hosted service and a self-managed solution, giving teams flexibility in how they deploy and use it. Known for its all-in-one approach, GitLab integrates seamlessly with various tools and supports a wide range of programming languages and frameworks. It is widely used by development teams to streamline workflows, improve productivity, and deliver high-quality software faster."
           }
         }
       },
@@ -271,17 +275,21 @@
         "SECTION_TITLE": "tools",
         "SECTION_DESCRIPTION": "<p>The right tools can significantly enhance productivity and streamline the development process. In this section, I highlight some of the essential tools that I use to build, test, and optimize my projects. GitHub is my go-to for version control and collaboration, enabling seamless teamwork and project management. Postman helps me efficiently test and document APIs, ensuring they are robust and functional. Docker provides a consistent development environment, making it easier to deploy applications across different platforms. Figma is my tool of choice for designing user interfaces and collaborating on design prototypes, while Google Analytics allows me to track user behavior and optimize web applications based on real-time data. Together, these tools help me deliver high-quality, efficient solutions while maintaining smooth workflows.</p>",
         "PARAGRAPHS": {
+          "AUTH0": {
+            "PARAGRAPH_TITLE": "Auth0",
+            "PARAGRAPH_DESCRIPTION": ""
+          },
           "FIGMA": {
             "PARAGRAPH_TITLE": "Figma",
-            "PARAGRAPH_DESCRIPTION": "Figma is a user-friendly, collaborative design platform that allows users to create, share, and edit digital designs. It offers a wide range of features, including version control, collaboration tools, and built-in design tools, making it a popular choice for designers and developers alike."
+            "PARAGRAPH_DESCRIPTION": "Figma is a cloud-based design and prototyping tool widely used for creating user interfaces, web designs, and interactive prototypes. It enables real-time collaboration, allowing multiple designers to work on the same project simultaneously, making it ideal for teams. Figma supports vector editing, design systems, and responsive design, with features like components, constraints, and auto-layout to streamline workflows. Its prototyping capabilities allow designers to create interactive mockups and share them with stakeholders for feedback. Figma is platform-agnostic, running in browsers and offering desktop apps for macOS and Windows. With its intuitive interface, robust collaboration tools, and seamless integration with other design and development tools, Figma has become a favorite among UI/UX designers and product teams."
           },
           "GOOGLE_ANALYTICS": {
             "PARAGRAPH_TITLE": "Google Analytics",
-            "PARAGRAPH_DESCRIPTION": "Google Analytics is a web analytics service that provides insights into how users interact with websites and applications. It allows developers to track user behavior, identify trends, and optimize their online presence."
+            "PARAGRAPH_DESCRIPTION": "Google Analytics is a powerful web analytics tool provided by Google that helps businesses and website owners track and analyze user behavior on their websites and apps. It provides insights into metrics like page views, bounce rates, session duration, and conversion rates, enabling users to understand audience demographics, traffic sources, and user engagement. Google Analytics offers features like real-time reporting, goal tracking, and e-commerce tracking, making it suitable for both small websites and large enterprises. It integrates seamlessly with other Google tools like Google Ads and Search Console, as well as third-party platforms. With its robust data visualization and customizable dashboards, Google Analytics is a go-to solution for optimizing website performance, improving marketing strategies, and making data-driven decisions."
           },
           "DOCKER": {
             "PARAGRAPH_TITLE": "Docker",
-            "PARAGRAPH_DESCRIPTION": "Docker is a containerization platform that allows developers to create, deploy, and run applications in isolated containers. It provides a consistent environment for running applications, making it easier to develop, test, and deploy applications."
+            "PARAGRAPH_DESCRIPTION": "Docker is an open-source platform designed to simplify the development, deployment, and running of applications using containerization. Containers package an application and its dependencies into a single, lightweight, and portable unit, ensuring consistency across different environments. Docker enables developers to build, ship, and run applications efficiently, reducing the \"it works on my machine\" problem. It supports a wide range of programming languages and frameworks and integrates with tools like Kubernetes for orchestration and scaling. Docker's ecosystem includes Docker Hub, a repository for sharing container images, and Docker Compose for managing multi-container applications. Widely used in DevOps and cloud-native development, Docker streamlines workflows, improves scalability, and enhances application portability."
           },
           "AZURE": {
             "PARAGRAPH_TITLE": "Azure",
@@ -289,7 +297,7 @@
           },
           "JIRA": {
             "PARAGRAPH_TITLE": "Jira",
-            "PARAGRAPH_DESCRIPTION": "Jira is a project management tool that allows teams to track tasks, issues, and progress. It provides a user-friendly interface, extensive documentation, and built-in tools, making it a popular choice for project management and collaboration."
+            "PARAGRAPH_DESCRIPTION": ""
           }
         }
       }
