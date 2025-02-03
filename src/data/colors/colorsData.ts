@@ -55,7 +55,7 @@ export const colorsData: TColorData[][] = [
       hex: '#ff5419',
     },
     {
-      name: 'claret',
+      name: 'dark scarlet',
       hex: '#580724',
     },
   ],

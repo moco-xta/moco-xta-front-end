@@ -1,1 +1,21 @@
 @import '@/styles/variables.module.scss';
+
+#quit_rubiks_cube {
+  padding: $px_margin_S $px_margin_M;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $px_margin_S;
+  color: $vanilla;
+  background: $dark_scarlet;
+  border-radius: 5px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+#quit_rubiks_cube:hover {
+  background: $sangria;
+}

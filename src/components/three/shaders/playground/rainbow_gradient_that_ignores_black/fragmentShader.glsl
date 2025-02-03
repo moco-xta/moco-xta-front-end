@@ -8,9 +8,9 @@ float PI = 3.1415926538;
 void main() {
 	vec4 color = texture2D(uTexture, vUv);
 
-	float strength = 0.3;
+	float strength = 0.5;
 	float speed = 0.5;
-	float angle = 0.0;
+	float angle = -135.0;
 
 	float hue = vUv.x * cos(radians(angle)) - vUv.y * sin(radians(angle));
 	hue = fract(hue + fract(time  * speed));

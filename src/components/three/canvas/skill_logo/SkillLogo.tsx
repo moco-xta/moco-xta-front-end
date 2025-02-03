@@ -7,7 +7,7 @@ import type { TSkillLogo } from '@/types/components/three/types'
 
 import useHoverModelAnimation from '@/hooks/three/useHoverModelAnimation'
 
-import { setGroupSize } from '@/helpers/threeHelpers'
+import { getDegreeEuler, setGroupSize } from '@/helpers/threeHelpers'
 
 import { skillLogoData } from '@/data/skills/skill_logo/three/skillLogoData'
 
@@ -30,6 +30,7 @@ const lazyWithForwardRef = (factory: TLazyFactory, componentName: string) => {
           <Component
             {...props}
             ref={ref}
+            rotation={getDegreeEuler(skillLogoData.hoverModelAnimationData.rotation.initial)}
           />
         )
       })
@@ -69,7 +70,7 @@ export default function SkillLogo({ logoData }: TSkillLogo) {
       <group>
         <Box
           ref={boxRef}
-          args={[2, 2, 0.1]}
+          args={[2, 2, 0]}
           onPointerMove={handleOnPointerMove}
           onPointerOut={handleOnPointerLeave}
         >

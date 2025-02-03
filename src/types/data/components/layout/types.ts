@@ -41,6 +41,7 @@ type TParagraphData = {
 }
 
 export type TSkillsParagraphData = TParagraphData & {
+  used: boolean
   logo: TLogoData
 }
 
