@@ -8,7 +8,9 @@
     "LOGO_BABYLONJS": "/models/glb/logos/LogoBabylonjs.glb",
     "LOGO_BLENDER": "/models/glb/logos/LogoBlender.glb",
     "LOGO_CHATGPT": "/models/glb/logos/LogoChatgpt.glb",
+    "LOGO_COPILOT": "/models/glb/logos/LogoCopilot.glb",
     "LOGO_CSS": "/models/glb/logos/LogoCss.glb",
+    "LOGO_DBEAVER": "/models/glb/logos/LogoDbeaver.glb",
     "LOGO_DEEPSEEK": "/models/glb/logos/LogoDeepseek.glb",
     "LOGO_DJANGO": "/models/glb/logos/LogoDjango.glb",
     "LOGO_DOCKER": "/models/glb/logos/LogoDocker.glb",
@@ -54,6 +56,7 @@
     "LOGO_THREEJS": "/models/glb/logos/LogoThreejs.glb",
     "LOGO_TYPESCRIPT": "/models/glb/logos/LogoTypescript.glb",
     "LOGO_WEBGL": "/models/glb/logos/LogoWebgl.glb",
+    "LOGO_WEBGPU": "/models/glb/logos/LogoWebgpu.glb",
     "LOGO_WPME": "/models/glb/logos/LogoWpme.glb",
     "LOGO_YARN": "/models/glb/logos/LogoYarn.glb"
   },

@@ -55,31 +55,31 @@
         "PARAGRAPHS": {
           "REDUX": {
             "PARAGRAPH_TITLE": "redux",
-            "PARAGRAPH_DESCRIPTION": "Redux is a popular open-source JavaScript library for managing application state. Created and maintained by Facebook, Redux provides a predictable and immutable state management solution that simplifies application development and encourages code organization. It supports functional programming concepts, including pure functions and immutable data, making it a powerful tool for building complex, scalable web applications."
+            "PARAGRAPH_DESCRIPTION": "Redux is a predictable state management library for JavaScript applications, commonly used with frameworks like React, Angular, or Vue to manage application state in a centralized and consistent way. It operates on the principle of a single, immutable \"store\" that holds the entire state of the application, making it easier to debug, test, and maintain complex applications. Redux uses a unidirectional data flow, where state changes are triggered by dispatching actions, which are processed by pure functions called reducers to update the state. This predictable pattern ensures that the state is updated in a controlled and traceable manner. Redux is particularly useful for large-scale applications with shared state across multiple components, enabling developers to manage state more efficiently and avoid prop-drilling. While it requires some boilerplate code, its ecosystem of middleware (like Redux Thunk or Redux Saga) and developer tools make it a powerful choice for state management in modern web development."
           },
           "GRAPHQL": {
-            "PARAGRAPH_TITLE": "graphql",
-            "PARAGRAPH_DESCRIPTION": "GraphQL is a query language for APIs and a runtime for executing queries by a server. Created and maintained by Facebook, GraphQL provides a flexible and powerful way to define data models and retrieve data from a server. It allows clients to request specific fields, nested fields, and relationships between objects, making it a powerful tool for building complex and scalable web applications."
+            "PARAGRAPH_TITLE": "graphQL",
+            "PARAGRAPH_DESCRIPTION": "GraphQL is a modern query language and runtime for APIs that enables clients to request exactly the data they need, nothing more and nothing less. Unlike traditional REST APIs, where endpoints return fixed data structures, GraphQL allows clients to define the shape and structure of the response using a single endpoint. This flexibility reduces over-fetching and under-fetching of data, improving performance and efficiency. GraphQL is strongly typed, with a schema that defines the types of data available and the relationships between them, making it self-documenting and easier to work with. It supports real-time updates through subscriptions, making it ideal for dynamic applications like social media feeds or live dashboards. Widely adopted by companies like Facebook (where it was created), GitHub, and Shopify, GraphQL is a powerful tool for building scalable, flexible, and developer-friendly APIs for web and mobile applications."
           },
           "GOOGLE_MAPS": {
             "PARAGRAPH_TITLE": "google maps",
-            "PARAGRAPH_DESCRIPTION": "Google Maps API JavaScript provides a simple and powerful way to embed Google Maps on your web pages. Developed and maintained by Google, it allows developers to create interactive maps, markers, and polygons, making it a popular choice for building custom and interactive experiences. With its powerful features, including street view, geocoding, and routing, Google Maps API JavaScript is a powerful tool for creating dynamic and engaging web applications."
+            "PARAGRAPH_DESCRIPTION": "The Google Maps API is a suite of powerful tools and services provided by Google that allows developers to integrate interactive maps, location-based features, and geospatial data into web and mobile applications. It offers a wide range of functionalities, including displaying customizable maps, adding markers, drawing routes, calculating distances, and providing real-time traffic and transit information. The API also supports advanced features like geocoding (converting addresses to coordinates), reverse geocoding (converting coordinates to addresses), and Places API for location search and details. With its robust documentation, extensive customization options, and support for multiple platforms, the Google Maps API is widely used for applications such as ride-sharing services, delivery tracking, travel planning, and location-based analytics. It is available in various forms, including JavaScript, Android, and iOS SDKs, making it a versatile choice for developers building location-aware applications."
           },
           "GSAP": {
             "PARAGRAPH_TITLE": "gsap",
-            "PARAGRAPH_DESCRIPTION": "GreenSock's GSAP (GreenSock Animation Platform) is a powerful, open-source JavaScript library for creating complex animations and interactive effects. Developed and maintained by GreenSock, GSAP provides a suite of powerful tools for animating elements, creating animations, and handling events. It supports CSS animations, SVG animations, and JavaScript objects, making it a versatile and flexible solution for creating dynamic and interactive web experiences."
+            "PARAGRAPH_DESCRIPTION": "GSAP (GreenSock Animation Platform) is a high-performance JavaScript animation library used to create smooth, complex, and interactive animations for the web. Known for its speed, flexibility, and robustness, GSAP allows developers to animate virtually any property of DOM elements, SVG, canvas, or even JavaScript objects. It provides a rich set of tools, including timelines for sequencing animations, easing functions for natural motion, and plugins for advanced features like scroll-triggered animations, morphing, and physics-based effects. GSAP is framework-agnostic, making it compatible with React, Vue, Angular, and other libraries, while its small file size and optimized performance ensure smooth animations even on low-powered devices. Widely used for creating engaging user interfaces, storytelling animations, and interactive web experiences, GSAP is a go-to solution for developers seeking professional-grade animation capabilities."
           },
           "NEXT_INTL": {
             "PARAGRAPH_TITLE": "next-intl",
-            "PARAGRAPH_DESCRIPTION": "Next-Intl is an internationalization library designed for Next.js applications, built on top of react-intl, which simplifies the implementation of multi-language support. It enables automatic locale detection, allowing the application to serve content in the user's preferred language. With seamless integration into Next.js' static site generation (SSG) and server-side rendering (SSR), it ensures improved SEO and performance by pre-rendering content in various languages. Next-Intl also supports rich message formatting for dates, numbers, and currencies, and provides an easy-to-use API for managing translations. It is scalable, making it an ideal choice for projects of any size, offering both simplicity and flexibility when building multilingual applications."
+            "PARAGRAPH_DESCRIPTION": "next-intl is a library designed to simplify internationalization (i18n) in Next.js applications, enabling developers to build multilingual websites with ease. It provides tools for managing translations, formatting dates, numbers, and currencies according to locale-specific conventions, and handling language routing. With next-intl, developers can store translations in JSON or other formats, dynamically load them based on the user's locale, and seamlessly integrate them into their Next.js components. It supports features like static generation (SSG) and server-side rendering (SSR), ensuring optimal performance and SEO for multilingual sites. By abstracting the complexities of i18n, next-intl helps developers create globally accessible web applications while maintaining clean and maintainable code. It's a popular choice for Next.js projects requiring robust internationalization support."
           },
           "FORMIK": {
             "PARAGRAPH_TITLE": "formik",
-            "PARAGRAPH_DESCRIPTION": "Formik is a form library for React that simplifies the process of creating forms with validation, submission, and error handling. Created and maintained by 4Catalyzer, Formik provides a high-level API for managing form state, validating input, and rendering form components. It supports functional components, hooks, and custom render props, making it a popular choice for building dynamic and interactive forms on the web."
+            "PARAGRAPH_DESCRIPTION": "Formik is a popular open-source library for building and managing forms in React applications. It simplifies form handling by providing a set of tools and utilities to manage form state, validation, submission, and error handling in a declarative and efficient way. Formik integrates seamlessly with React, allowing developers to create complex forms with minimal boilerplate code. It supports features like field-level validation, form-level validation, and asynchronous validation, and works well with validation libraries like Yup. Formik also provides helpers for handling form reset, dirty state tracking, and field arrays, making it a versatile choice for forms of any complexity. Its intuitive API and focus on developer experience have made it a go-to solution for form management in modern React applications."
           },
           "MUI": {
             "PARAGRAPH_TITLE": "mui",
-            "PARAGRAPH_DESCRIPTION": "Material-UI is a popular open-source React UI framework that follows the Material Design guidelines. Created and maintained by the team at Google, Material-UI provides a set of pre-built components, styles, and themes that make it easy to create visually appealing and user-friendly interfaces. It supports a wide range of components, including buttons, cards, forms, and navigation, making it a popular choice for building dynamic and responsive web applications."
+            "PARAGRAPH_DESCRIPTION": "MUI (formerly Material-UI) is a popular React component library that implements Google's Material Design principles, providing a comprehensive suite of pre-built, customizable UI components for building modern, responsive web applications. It includes a wide range of components such as buttons, dialogs, forms, navigation menus, and data tables, all designed with a consistent and visually appealing aesthetic. MUI emphasizes flexibility, allowing developers to easily customize themes, styles, and component behavior using its powerful theming system and CSS-in-JS solution. It also supports server-side rendering (SSR) and is optimized for performance, making it suitable for large-scale applications. With its extensive documentation, active community, and integration with popular tools like React and Next.js, MUI is a go-to choice for developers looking to create polished, user-friendly interfaces efficiently."
           }
         }
       },
@@ -89,11 +89,21 @@
         "PARAGRAPHS": {
           "SASS": {
             "PARAGRAPH_TITLE": "sass",
-            "PARAGRAPH_DESCRIPTION": "Sass is a CSS preprocessor that adds features like variables, nested rules, mixins, and functions to CSS. Created and maintained by the community, Sass provides a flexible and powerful way to write CSS that is easier to read, write, and maintain. It supports variables, nesting, mixins, and functions, making it a popular choice for building dynamic and modular CSS."
+            "PARAGRAPH_DESCRIPTION": "Sass (Syntactically Awesome Style Sheets) is a powerful CSS preprocessor that extends the capabilities of traditional CSS, making it easier to write and maintain stylesheets. It introduces features like variables, nested rules, mixins, functions, and inheritance, which help developers write cleaner, more modular, and reusable code. Sass files are written in either the .scss (Sassy CSS) or .sass (indented syntax) format and then compiled into standard CSS for use in web projects. Its advanced features enable dynamic styling, reduce redundancy, and improve organization, making it a favorite among developers for building complex and scalable designs. Sass is widely supported in modern front-end workflows and integrates seamlessly with build tools like Webpack, Gulp, and frameworks like React and Angular."
           },
           "TAILWIND": {
             "PARAGRAPH_TITLE": "tailwindcss",
-            "PARAGRAPH_DESCRIPTION": "Tailwind CSS is a utility-first CSS framework that provides a set of classes and components to help you build responsive, accessible, and efficient web applications. Created and maintained by the team at Tailwind Labs, Tailwind CSS provides a flexible and powerful way to write CSS that is easier to read, write, and maintain. It supports utility classes, components, and plugins, making it a popular choice for building dynamic and modular CSS."
+            "PARAGRAPH_DESCRIPTION": "Tailwind CSS is a utility-first CSS framework that enables developers to build modern, responsive user interfaces directly in their HTML by applying small, reusable utility classes. Unlike traditional CSS frameworks that provide pre-designed components, Tailwind offers low-level utility classes for properties like padding, margin, typography, and colors, giving developers complete control over the design without writing custom CSS. This approach promotes consistency, speeds up development, and makes it easier to create custom designs without leaving the HTML. Tailwind is highly customizable through its configuration file, allowing developers to define their design system, such as color palettes, breakpoints, and spacing scales. It also supports features like dark mode, responsive design, and Just-In-Time (JIT) compilation for optimized performance. Tailwind CSS is widely used in modern web development for its flexibility, efficiency, and ability to streamline the design process."
+          }
+        }
+      },
+      "MOBILE": {
+        "SECTION_TITLE": "Mobile",
+        "SECTION_DESCRIPTION": "<p></p>",
+        "PARAGRAPHS": {
+          "IONIC": {
+            "PARAGRAPH_TITLE": "ionic",
+            "PARAGRAPH_DESCRIPTION": "Ionic is an open-source framework for building cross-platform mobile and web applications using web technologies like HTML, CSS, and JavaScript. It provides a rich library of UI components and tools that mimic native mobile app behavior, enabling developers to create high-quality, performant apps for iOS, Android, and the web from a single codebase. Ionic integrates seamlessly with popular front-end frameworks like Angular, React, and Vue, offering flexibility in development. It also supports Capacitor, a native runtime that allows access to device features such as cameras, GPS, and file systems. With its focus on developer productivity, pre-built components, and strong community support, Ionic is a popular choice for building hybrid apps that deliver a native-like experience across multiple platforms."
           }
         }
       },
@@ -101,17 +111,21 @@
         "SECTION_TITLE": "real-time 3D",
         "SECTION_DESCRIPTION": "<p>The world of real-time 3D on the web is an exciting frontier that allows for highly interactive and immersive experiences. In this section, I showcase my expertise in creating stunning 3D visuals using WebGL and powerful libraries such as Three.js, React-three-fiber, and Babylon.js. By leveraging these technologies, I bring 3D objects, environments, and animations to life directly in the browser, enabling rich user interactions and dynamic visual experiences. Whether it's for gaming, data visualization, or immersive web applications, my skills in real-time 3D development allow me to create cutting-edge, visually captivating experiences on the web.</p>",
         "PARAGRAPHS": {
+          "WEBGPU": {
+            "PARAGRAPH_TITLE": "webGPU",
+            "PARAGRAPH_DESCRIPTION": "WebGPU is a cutting-edge, low-level graphics and compute API designed to bring high-performance GPU capabilities to web applications, succeeding WebGL with more advanced features and closer-to-the-metal control. Inspired by modern APIs like Vulkan, Metal, and Direct3D 12, WebGPU offers improved performance, cross-platform compatibility, and support for both graphics rendering and general-purpose compute tasks, such as machine learning and data processing. It introduces WGSL (WebGPU Shading Language) for safer and more efficient shader programming, along with fine-grained resource management and asynchronous operations to optimize performance. Supported by major browsers like Chrome, Firefox, and Safari, WebGPU is ideal for 3D gaming, data visualization, AR/VR, and other demanding web applications, providing a future-proof foundation for modern web development."
+          },
           "WEBGL": {
-            "PARAGRAPH_TITLE": "webgl",
-            "PARAGRAPH_DESCRIPTION": "WebGL is a standard for rendering 2D and 3D graphics on the web. Created and maintained by Khronos Group, WebGL provides a powerful API for creating and rendering 3D graphics on the web. It allows developers to create interactive, high-performance, and visually appealing user experiences by utilizing hardware-accelerated graphics processing units (GPUs)."
+            "PARAGRAPH_TITLE": "webGL",
+            "PARAGRAPH_DESCRIPTION": "WebGL (Web Graphics Library) is a widely-used JavaScript API for rendering 2D and 3D graphics in web browsers without the need for plugins. Based on OpenGL ES, WebGL allows developers to create interactive graphics, animations, and visualizations directly within the browser by leveraging the power of the GPU. It provides a familiar programming model for those experienced with OpenGL, making it accessible for creating games, data visualizations, and immersive web experiences. While WebGL has been a cornerstone of web-based graphics for years, it is now being complemented by more modern APIs like WebGPU, which offer greater performance and advanced features. WebGL remains a popular choice for its simplicity, broad browser support, and ability to deliver rich graphical content on the web."
           },
           "THREEJS": {
             "PARAGRAPH_TITLE": "three.js",
-            "PARAGRAPH_DESCRIPTION": "Three.js is a powerful open-source JavaScript library used for building 3D graphics and interactive experiences. Created and maintained by Mozilla, Three.js provides a complete framework for creating and rendering 3D graphics, including geometries, materials, animations, and event handling. It supports WebGL, a standard for rendering 2D and 3D graphics, and allows developers to create visually stunning and interactive experiences on the web."
+            "PARAGRAPH_DESCRIPTION": "Three.js is a popular, open-source JavaScript library that simplifies the creation and rendering of 3D graphics in web browsers using WebGL, WebGPU, or other rendering backends. Designed to be intuitive and developer-friendly, Three.js abstracts the complexities of low-level graphics APIs, allowing developers to quickly build 3D scenes, animations, and interactive experiences with minimal code. It provides a wide range of features, including lighting, materials, textures, cameras, and geometric primitives, as well as support for advanced techniques like shadows, particle systems, and post-processing effects. Widely used for games, data visualizations, AR/VR applications, and creative web projects, Three.js is a powerful tool for bringing high-quality 3D content to the web, making it accessible to both beginners and experienced developers."
           },
           "REACT_THREE_FIBER": {
             "PARAGRAPH_TITLE": "react-three-fiber",
-            "PARAGRAPH_DESCRIPTION": "React Three Fiber is a popular open-source library developed by the same team that created Three.js, providing a React component for rendering 3D graphics. React Three Fiber allows developers to build and render 3D graphics using React and leverage the power of Three.js to create visually stunning and interactive experiences on the web."
+            "PARAGRAPH_DESCRIPTION": "React Three Fiber is a powerful React renderer for Three.js that allows developers to build 3D graphics and interactive experiences declaratively using React's component-based architecture. By bridging the gap between Three.js and React, it enables seamless integration of 3D elements into React applications, making it easier to manage state, props, and lifecycle methods within 3D scenes. React Three Fiber abstracts the complexities of Three.js while retaining its full capabilities, offering a intuitive way to create 3D objects, animations, and effects using familiar React patterns. It is widely used for creating immersive web applications, games, data visualizations, and AR/VR experiences, combining the flexibility of Three.js with the efficiency and scalability of React. Ideal for both beginners and advanced developers, React Three Fiber simplifies 3D development while maintaining high performance and creative freedom."
           },
           "BABYLONJS": {
             "PARAGRAPH_TITLE": "babylon.js",
@@ -141,8 +155,8 @@
           }
         }
       },
-      "BACK_END": {
-        "SECTION_TITLE": "back-end",
+      "BACK_END_FRAMEWORKS": {
+        "SECTION_TITLE": "back-end frameworks",
         "SECTION_DESCRIPTION": "<p>In the world of back-end development, choosing the right framework is essential to building scalable, secure, and efficient applications. In this section, I showcase my expertise in two powerful back-end frameworks: Spring and Django. While I have experience with both, I am particularly comfortable with Spring due to its flexibility, robust ecosystem, and seamless integration with Java. Spring has enabled me to build high-performance, enterprise-grade applications, from RESTful APIs to complex business logic. Django, on the other hand, provides a streamlined approach for rapid development, making it an ideal choice for projects requiring quick turnaround times. These frameworks have equipped me with the skills to deliver solid, scalable back-end solutions for a wide range of applications.</p>",
         "PARAGRAPHS": {
           "SPRING": {
@@ -152,6 +166,28 @@
           "DJANGO": {
             "PARAGRAPH_TITLE": "django",
             "PARAGRAPH_DESCRIPTION": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It follows the 'batteries-included' philosophy, providing a robust set of tools for building secure and scalable web applications. With features like an ORM (Object-Relational Mapping) for database management, built-in authentication, and an admin interface, Django allows developers to focus on writing their applications instead of reinventing common functionality. Its strong security features, easy-to-use templating system, and extensive documentation make it a popular choice for both small projects and large-scale applications."
+          }
+        }
+      },
+      "DATABASE": {
+        "SECTION_TITLE": "Database",
+        "SECTION_DESCRIPTION": "<p></p>",
+        "PARAGRAPHS": {
+          "POSTGRESQL": {
+            "PARAGRAPH_TITLE": "PostgreSQL",
+            "PARAGRAPH_DESCRIPTION": ""
+          },
+          "MYSQL": {
+            "PARAGRAPH_TITLE": "MySQL",
+            "PARAGRAPH_DESCRIPTION": ""
+          },
+          "POSTMAN": {
+            "PARAGRAPH_TITLE": "Postman",
+            "PARAGRAPH_DESCRIPTION": "Postman is a free, open-source API development tool that allows users to create, send, and test HTTP requests. It provides a user-friendly interface, powerful request builder, and extensive documentation, making it a popular choice for developers and API testing."
+          },
+          "DBEAVER": {
+            "PARAGRAPH_TITLE": "DBeaver",
+            "PARAGRAPH_DESCRIPTION": ""
           }
         }
       },
@@ -166,6 +202,10 @@
           "AWS": {
             "PARAGRAPH_TITLE": "AWS",
             "PARAGRAPH_DESCRIPTION": "Amazon Web Services (AWS) is a cloud computing service that provides a wide range of tools, services, and services, making it a popular choice for developers and businesses looking to build, run, and scale their applications on the cloud."
+          },
+          "NGINX": {
+            "PARAGRAPH_TITLE": "nginx",
+            "PARAGRAPH_DESCRIPTION": ""
           }
         }
       },
@@ -195,14 +235,42 @@
           }
         }
       },
+      "AI": {
+        "SECTION_TITLE": "AI",
+        "SECTION_DESCRIPTION": "<p></p>",
+        "PARAGRAPHS": {
+          "DEEPSEEK": {
+            "PARAGRAPH_TITLE": "Deepseek",
+            "PARAGRAPH_DESCRIPTION": ""
+          },
+          "CHATGPT": {
+            "PARAGRAPH_TITLE": "ChatGPT",
+            "PARAGRAPH_DESCRIPTION": ""
+          },
+          "COPILOT": {
+            "PARAGRAPH_TITLE": "Copilot",
+            "PARAGRAPH_DESCRIPTION": ""
+          }
+        }
+      },
+      "VERSIONING": {
+        "SECTION_TITLE": "versioning",
+        "SECTION_DESCRIPTION": "<p></p>",
+        "PARAGRAPHS": {
+          "GITHUB": {
+            "PARAGRAPH_TITLE": "GitHub",
+            "PARAGRAPH_DESCRIPTION": "GitHub is a web-based hosting service for version control using Git. It allows developers to create, fork, and collaborate on projects, as well as manage and share code repositories."
+          },
+          "GITLAB": {
+            "PARAGRAPH_TITLE": "GitLab",
+            "PARAGRAPH_DESCRIPTION": "GitLab is a web-based DevOps lifecycle tool that provides a Git repository manager, continuous integration, and continuous deployment (CI/CD) pipeline features. It allows developers to manage, secure, and deploy code efficiently."
+          }
+        }
+      },
       "TOOLS": {
         "SECTION_TITLE": "tools",
         "SECTION_DESCRIPTION": "<p>The right tools can significantly enhance productivity and streamline the development process. In this section, I highlight some of the essential tools that I use to build, test, and optimize my projects. GitHub is my go-to for version control and collaboration, enabling seamless teamwork and project management. Postman helps me efficiently test and document APIs, ensuring they are robust and functional. Docker provides a consistent development environment, making it easier to deploy applications across different platforms. Figma is my tool of choice for designing user interfaces and collaborating on design prototypes, while Google Analytics allows me to track user behavior and optimize web applications based on real-time data. Together, these tools help me deliver high-quality, efficient solutions while maintaining smooth workflows.</p>",
         "PARAGRAPHS": {
-          "POSTMAN": {
-            "PARAGRAPH_TITLE": "Postman",
-            "PARAGRAPH_DESCRIPTION": "Postman is a free, open-source API development tool that allows users to create, send, and test HTTP requests. It provides a user-friendly interface, powerful request builder, and extensive documentation, making it a popular choice for developers and API testing."
-          },
           "FIGMA": {
             "PARAGRAPH_TITLE": "Figma",
             "PARAGRAPH_DESCRIPTION": "Figma is a user-friendly, collaborative design platform that allows users to create, share, and edit digital designs. It offers a wide range of features, including version control, collaboration tools, and built-in design tools, making it a popular choice for designers and developers alike."
@@ -211,17 +279,13 @@
             "PARAGRAPH_TITLE": "Google Analytics",
             "PARAGRAPH_DESCRIPTION": "Google Analytics is a web analytics service that provides insights into how users interact with websites and applications. It allows developers to track user behavior, identify trends, and optimize their online presence."
           },
-          "GITHUB": {
-            "PARAGRAPH_TITLE": "GitHub",
-            "PARAGRAPH_DESCRIPTION": "GitHub is a web-based hosting service for version control using Git. It allows developers to create, fork, and collaborate on projects, as well as manage and share code repositories."
-          },
-          "GITLAB": {
-            "PARAGRAPH_TITLE": "GitLab",
-            "PARAGRAPH_DESCRIPTION": "GitLab is a web-based DevOps lifecycle tool that provides a Git repository manager, continuous integration, and continuous deployment (CI/CD) pipeline features. It allows developers to manage, secure, and deploy code efficiently."
-          },
           "DOCKER": {
             "PARAGRAPH_TITLE": "Docker",
             "PARAGRAPH_DESCRIPTION": "Docker is a containerization platform that allows developers to create, deploy, and run applications in isolated containers. It provides a consistent environment for running applications, making it easier to develop, test, and deploy applications."
+          },
+          "AZURE": {
+            "PARAGRAPH_TITLE": "Azure",
+            "PARAGRAPH_DESCRIPTION": "Azure is a comprehensive cloud computing platform and service offered by Microsoft, designed to help businesses build, deploy, and manage applications and services through a global network of data centers. It provides a wide range of cloud services, including computing power, storage, networking, databases, artificial intelligence (AI), machine learning (ML), Internet of Things (IoT), and developer tools, all accessible on a pay-as-you-go basis. Azure supports a variety of programming languages, frameworks, and operating systems, making it highly flexible and scalable for diverse workloads, from small startups to large enterprises. With robust security, compliance, and hybrid cloud capabilities, Azure enables organizations to innovate faster, reduce costs, and achieve their digital transformation goals. It is widely used for hosting web applications, running virtual machines, analyzing big data, and building intelligent solutions, making it a key player in the cloud computing industry."
           },
           "JIRA": {
             "PARAGRAPH_TITLE": "Jira",

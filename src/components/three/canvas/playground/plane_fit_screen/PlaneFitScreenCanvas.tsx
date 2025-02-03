@@ -6,8 +6,8 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 // import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 
-import vertexShader from '@/components/three/shaders/playground/rainbow_gradient_that_ignores_black/vertexShader.glsl'
-import fragmentShader from '@/components/three/shaders/playground/rainbow_gradient_that_ignores_black/fragmentShader.glsl'
+import vertexShader from '@/components/three/shaders/playground/default/vertexShader.glsl'
+import fragmentShader from '@/components/three/shaders/playground/default/fragmentShader.glsl'
 
 // import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
@@ -31,7 +31,7 @@ import { default as texturesConstants } from '@/constants/assets/texturesConstan
   return material
 } */
 
-export function RainbowGradientThatIgnoresBlackCanvas() {
+export function PlaneFitScreenCanvas() {
   const containerRef = useRef<HTMLDivElement>(null!)
   const timeRef = useRef<number>(0)
 
@@ -46,7 +46,6 @@ export function RainbowGradientThatIgnoresBlackCanvas() {
   // ############
 
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100)
-  camera.position.set(0, 0, 1)
 
   // ##############
   // ## RENDERER ##
@@ -67,7 +66,7 @@ export function RainbowGradientThatIgnoresBlackCanvas() {
   // ## TEXTURE LOADER ##
   // ####################
 
-  const texture = new THREE.TextureLoader().load(texturesConstants.PLAYGROUND.ROSE)
+  const texture = new THREE.TextureLoader().load(texturesConstants.PLAYGROUND.SUZANNE)
 
   // ############
   // ## LOADER ##
@@ -88,7 +87,7 @@ export function RainbowGradientThatIgnoresBlackCanvas() {
   // ## GEOMETRY ##
   // ##############
 
-  const geometry = new THREE.PlaneGeometry(1, 1, 1, 1)
+  const geometry = new THREE.PlaneGeometry(2, 2, 1, 1)
 
   // ##############
   // ## MATERIAL ##
@@ -123,6 +122,9 @@ export function RainbowGradientThatIgnoresBlackCanvas() {
   // ###########
 
   const plane = new THREE.Mesh(geometry, shaderMaterial)
+  const aspect = window.innerWidth / window.innerHeight
+  plane.scale.x = aspect > 1 ? aspect : 1
+  plane.scale.y = aspect > 1 ? 1 : 1 / aspect
   // const plane = new THREE.Mesh(geometry, getWebgpuMaterial())
 
   useEffect(() => {
@@ -145,6 +147,8 @@ export function RainbowGradientThatIgnoresBlackCanvas() {
     // ##################
     // ## ADD TO SCENE ##
     // ##################
+
+    updateCameraAndPlane()
 
     scene.add(plane)
     scene.add(ambientLight)
@@ -189,6 +193,29 @@ export function RainbowGradientThatIgnoresBlackCanvas() {
     }
 
     animate()
+
+    // #############################
+    // ## UPDATE CAMERA AND PLANE ##
+    // #############################
+
+    function updateCameraAndPlane() {
+      const width = window.innerWidth
+      const height = window.innerHeight
+
+      renderer.setSize(width, height)
+
+      camera.aspect = width / height
+      camera.updateProjectionMatrix()
+
+      const fov = camera.fov * (Math.PI / 180)
+      const planeHeight = 2
+      const distance = planeHeight / 2 / Math.tan(fov / 2)
+
+      camera.position.z = distance
+
+      const aspect = width / height
+      plane.scale.x = aspect
+    }
 
     // ############
     // ## RESIZE ##

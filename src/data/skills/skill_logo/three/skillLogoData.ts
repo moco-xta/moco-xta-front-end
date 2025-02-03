@@ -15,9 +15,9 @@ export const skillLogoData = {
     rotation: {
       factor: 0.004,
       initial: {
-        x: 0,
-        y: 0,
-        z: 0,
+        x: -15,
+        y: 20,
+        z: 3,
       },
     },
     scale: {

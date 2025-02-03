@@ -7,6 +7,7 @@ import { HeroCanvas } from '@/components/three/canvas'
 import {
   AsciiWithWebgpuCanvas,
   ParametricLinearRgbDimmerCanvas,
+  PlaneFitScreenCanvas,
   PlaygroundCanvas,
   RainbowGradientThatIgnoresBlackCanvas,
 } from '@/components/three/canvas/playground'
@@ -23,7 +24,8 @@ export default function Hero() {
         {/* <PlaygroundCanvas /> */}
         {/* <AsciiWithWebgpuCanvas /> */}
         {/* <ParametricLinearRgbDimmerCanvas /> */}
-        <RainbowGradientThatIgnoresBlackCanvas />
+        {/* <RainbowGradientThatIgnoresBlackCanvas /> */}
+        <PlaneFitScreenCanvas />
         {/* <AnimationControls /> */}
       </div>
     </GSAPTimelineProvider>
