@@ -372,6 +372,14 @@ export const skillsData = {
           },
         },
         {
+          key: 'c_plus_plus',
+          used: true,
+          translationKey: 'C_PLUS_PLUS',
+          logo: {
+            name: 'LogoCPlusPlus',
+          },
+        },
+        {
           key: 'php',
           used: false,
           translationKey: 'PHP',
