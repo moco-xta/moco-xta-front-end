@@ -19,6 +19,7 @@
     "LOGO_FORMIK": "/models/glb/logos/LogoFormik.glb",
     "LOGO_GITHUB": "/models/glb/logos/LogoGithub.glb",
     "LOGO_GITLAB": "/models/glb/logos/LogoGitlab.glb",
+    "LOGO_GMAIL": "/models/glb/logos/LogoGmail.glb",
     "LOGO_GOOGLE_ANALYTICS": "/models/glb/logos/LogoGoogleAnalytics.glb",
     "LOGO_GOOGLE_MAPS": "/models/glb/logos/LogoGoogleMaps.glb",
     "LOGO_GRAPHQL": "/models/glb/logos/LogoGraphql.glb",
