@@ -126,12 +126,7 @@ export function AsciiWithWebgpuCanvas() {
   // ## CAMERA ##
   // ############
 
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000,
-  )
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
   camera.position.z = 3.8
 
   // ##############
@@ -201,7 +196,7 @@ export function AsciiWithWebgpuCanvas() {
     // ##############
     // ## CONTROLS ##
     // ##############
-  
+
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
     controls.dampingFactor = 0.05
@@ -225,7 +220,7 @@ export function AsciiWithWebgpuCanvas() {
     // ############
     // ## RESIZE ##
     // ############
-  
+
     const handleResize = () => {
       const width = window.innerWidth
       const height = window.innerHeight

@@ -199,6 +199,15 @@ export const skillsData = {
       translationKey: 'GRAPHICS',
       paragraphs: [
         {
+          key: 'figma',
+          used: true,
+          translationKey: 'FIGMA',
+          logo: {
+            name: 'LogoFigma',
+          },
+          paragraphs: [],
+        },
+        {
           key: 'photoshop',
           used: true,
           translationKey: 'PHOTOSHOP',
@@ -255,6 +264,30 @@ export const skillsData = {
           translationKey: 'DJANGO',
           logo: {
             name: 'LogoDjango',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'security',
+      translationKey: 'SECURITY',
+      paragraphs: [
+        {
+          key: 'spring_security',
+          used: true,
+          translationKey: 'SPRING_SECURITY',
+          logo: {
+            name: 'LogoSpringSecurity',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'auth0',
+          used: false,
+          translationKey: 'AUTH0',
+          logo: {
+            name: 'LogoAuth0',
           },
           paragraphs: [],
         },
@@ -321,6 +354,15 @@ export const skillsData = {
           translationKey: 'AWS',
           logo: {
             name: 'LogoAws',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'docker',
+          used: true,
+          translationKey: 'DOCKER',
+          logo: {
+            name: 'LogoDocker',
           },
           paragraphs: [],
         },
@@ -444,6 +486,15 @@ export const skillsData = {
           },
           paragraphs: [],
         },
+        {
+          key: 'azure',
+          used: false,
+          translationKey: 'AZURE',
+          logo: {
+            name: 'LogoAzure',
+          },
+          paragraphs: [],
+        },
       ],
     },
     {
@@ -451,47 +502,11 @@ export const skillsData = {
       translationKey: 'TOOLS',
       paragraphs: [
         {
-          key: 'auth0',
-          used: false,
-          translationKey: 'AUTH0',
-          logo: {
-            name: 'LogoAuth0',
-          },
-          paragraphs: [],
-        },
-        {
-          key: 'figma',
-          used: true,
-          translationKey: 'FIGMA',
-          logo: {
-            name: 'LogoFigma',
-          },
-          paragraphs: [],
-        },
-        {
           key: 'google_analytics',
           used: true,
           translationKey: 'GOOGLE_ANALYTICS',
           logo: {
             name: 'LogoGoogleAnalytics',
-          },
-          paragraphs: [],
-        },
-        {
-          key: 'docker',
-          used: true,
-          translationKey: 'DOCKER',
-          logo: {
-            name: 'LogoDocker',
-          },
-          paragraphs: [],
-        },
-        {
-          key: 'azure',
-          used: false,
-          translationKey: 'AZURE',
-          logo: {
-            name: 'LogoAzure',
           },
           paragraphs: [],
         },

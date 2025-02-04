@@ -51,6 +51,7 @@
     "LOGO_REDUX": "/models/glb/logos/LogoRedux.glb",
     "LOGO_SASS": "/models/glb/logos/LogoSass.glb",
     "LOGO_SPRING": "/models/glb/logos/LogoSpring.glb",
+    "LOGO_SPRING_SECURITY": "/models/glb/logos/LogoSpringSecurity.glb",
     "LOGO_SUBSTANCE_PAINTER": "/models/glb/logos/LogoSubstancePainter.glb",
     "LOGO_TAILWIND": "/models/glb/logos/LogoTailwind.glb",
     "LOGO_THE_BRINK": "/models/glb/logos/LogoTheBrink.glb",

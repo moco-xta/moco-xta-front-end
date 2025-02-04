@@ -137,6 +137,10 @@
         "SECTION_TITLE": "graphics",
         "SECTION_DESCRIPTION": "<p>The world of graphic design is evolving rapidly, with AI playing an increasingly important role in transforming the creative process. In this section, I highlight my expertise in graphic design using Photoshop, Illustrator, and Blender, while also embracing the innovations AI brings to the field. From AI-driven tools for image enhancement and content generation in Photoshop, to smart vectorization and design automation in Illustrator, AI has opened new possibilities for efficiency and creativity. Additionally, in Blender, AI assists in tasks like procedural modeling and animation, making 3D design faster and more intuitive. By integrating these advancements, I am able to push the boundaries of design, delivering both innovative and visually captivating assets for any project.</p>",
         "PARAGRAPHS": {
+          "FIGMA": {
+            "PARAGRAPH_TITLE": "Figma",
+            "PARAGRAPH_DESCRIPTION": "Figma is a cloud-based design and prototyping tool widely used for creating user interfaces, web designs, and interactive prototypes. It enables real-time collaboration, allowing multiple designers to work on the same project simultaneously, making it ideal for teams. Figma supports vector editing, design systems, and responsive design, with features like components, constraints, and auto-layout to streamline workflows. Its prototyping capabilities allow designers to create interactive mockups and share them with stakeholders for feedback. Figma is platform-agnostic, running in browsers and offering desktop apps for macOS and Windows. With its intuitive interface, robust collaboration tools, and seamless integration with other design and development tools, Figma has become a favorite among UI/UX designers and product teams."
+          },
           "PHOTOSHOP": {
             "PARAGRAPH_TITLE": "photoshop",
             "PARAGRAPH_DESCRIPTION": "Photoshop is a professional-grade raster graphics editing software developed by Adobe, widely regarded as the industry standard for image editing, photo manipulation, and digital art creation. It offers a vast array of tools and features, including layers, masks, filters, brushes, and advanced color correction, enabling users to create, edit, and enhance images with precision and creativity. Photoshop supports a wide range of file formats and integrates seamlessly with other Adobe Creative Cloud applications like Illustrator, Lightroom, and Premiere Pro. It is used by photographers, graphic designers, web developers, and artists for tasks such as photo retouching, compositing, digital painting, and designing user interfaces. With its powerful capabilities and continuous updates, Photoshop remains an essential tool for professionals and enthusiasts in the visual arts and design industries."
@@ -166,6 +170,20 @@
           "DJANGO": {
             "PARAGRAPH_TITLE": "django",
             "PARAGRAPH_DESCRIPTION": "Django is a high-level, open-source Python web framework designed to help developers build secure, scalable, and maintainable web applications quickly. Known for its \"batteries-included\" philosophy, Django comes with a wide range of built-in features, such as an ORM (Object-Relational Mapper) for database interactions, an admin panel for content management, and robust authentication and authorization systems. It follows the Model-View-Template (MVT) architectural pattern, promoting clean and reusable code. Django also emphasizes security, offering protection against common vulnerabilities like SQL injection and cross-site scripting (XSS). With its extensive documentation, active community, and support for rapid development, Django is a popular choice for building everything from simple websites to complex, data-driven applications like content management systems (CMS), e-commerce platforms, and social networks."
+          }
+        }
+      },
+      "SECURITY": {
+        "SECTION_TITLE": "Security",
+        "SECTION_DESCRIPTION": "<p></p>",
+        "PARAGRAPHS": {
+          "SPRING_SECURITY": {
+            "PARAGRAPH_TITLE": "Spring security",
+            "PARAGRAPH_DESCRIPTION": "Spring Security is a powerful and highly customizable framework for securing Java applications, particularly those built with the Spring ecosystem. It provides comprehensive security features, including authentication, authorization, and protection against common vulnerabilities like CSRF (Cross-Site Request Forgery) and session fixation. Spring Security supports a wide range of authentication mechanisms, such as form-based login, OAuth2, LDAP, and JWT (JSON Web Tokens), making it adaptable to various use cases. It integrates seamlessly with Spring Boot, enabling developers to easily secure REST APIs, web applications, and microservices. With its robust architecture and extensible design, Spring Security is a go-to solution for implementing enterprise-grade security in Java applications."
+          },
+          "AUTH0": {
+            "PARAGRAPH_TITLE": "Auth0",
+            "PARAGRAPH_DESCRIPTION": "Auth0 is a leading identity and access management (IAM) platform that simplifies authentication and authorization for applications. Acquired by Okta in 2021, it enables secure user login through features like single sign-on (SSO), multi-factor authentication (MFA), passwordless login, and social logins (e.g., Google, Facebook). Auth0 supports enterprise identity providers, including SAML, LDAP, and Active Directory, making it versatile for businesses of all sizes. Its Universal Identity Platform centralizes authentication across web, mobile, and legacy systems, ensuring seamless user experiences. Auth0 prioritizes security with features like anomaly detection, brute force protection, and breached password screening. Highly customizable, it allows developers to tailor login pages and workflows to meet specific needs. With developer-friendly APIs, SDKs, and compliance with GDPR, HIPAA, and CCPA, Auth0 is a trusted solution for enhancing security, improving user experiences, and streamlining identity management in modern applications."
           }
         }
       },
@@ -202,6 +220,10 @@
           "AWS": {
             "PARAGRAPH_TITLE": "AWS",
             "PARAGRAPH_DESCRIPTION": "Amazon Web Services (AWS) is a comprehensive and widely-used cloud computing platform offered by Amazon, providing a vast array of on-demand services, including computing power, storage, databases, machine learning, analytics, and networking. AWS enables businesses to build, deploy, and scale applications quickly and cost-effectively without the need for physical infrastructure. Popular services include EC2 (Elastic Compute Cloud) for virtual servers, S3 (Simple Storage Service) for scalable storage, and Lambda for serverless computing. Known for its reliability, scalability, and global infrastructure, AWS supports millions of customers worldwide, from startups to enterprises. Its pay-as-you-go pricing model, extensive documentation, and robust ecosystem make it a leading choice for cloud-based solutions."
+          },
+          "DOCKER": {
+            "PARAGRAPH_TITLE": "Docker",
+            "PARAGRAPH_DESCRIPTION": "Docker is an open-source platform designed to simplify the development, deployment, and running of applications using containerization. Containers package an application and its dependencies into a single, lightweight, and portable unit, ensuring consistency across different environments. Docker enables developers to build, ship, and run applications efficiently, reducing the \"it works on my machine\" problem. It supports a wide range of programming languages and frameworks and integrates with tools like Kubernetes for orchestration and scaling. Docker's ecosystem includes Docker Hub, a repository for sharing container images, and Docker Compose for managing multi-container applications. Widely used in DevOps and cloud-native development, Docker streamlines workflows, improves scalability, and enhances application portability."
           },
           "NGINX": {
             "PARAGRAPH_TITLE": "nginx",
@@ -268,6 +290,10 @@
           "GITLAB": {
             "PARAGRAPH_TITLE": "GitLab",
             "PARAGRAPH_DESCRIPTION": "GitLab is a comprehensive, web-based DevOps platform that provides tools for the entire software development lifecycle, from planning and coding to testing, deployment, and monitoring. Built on Git, it offers version control, continuous integration/continuous deployment (CI/CD), and collaboration features like issue tracking, code review, and project management. GitLab is available as both a cloud-hosted service and a self-managed solution, giving teams flexibility in how they deploy and use it. Known for its all-in-one approach, GitLab integrates seamlessly with various tools and supports a wide range of programming languages and frameworks. It is widely used by development teams to streamline workflows, improve productivity, and deliver high-quality software faster."
+          },
+          "AZURE": {
+            "PARAGRAPH_TITLE": "Azure",
+            "PARAGRAPH_DESCRIPTION": "Azure is a comprehensive cloud computing platform and service offered by Microsoft, designed to help businesses build, deploy, and manage applications and services through a global network of data centers. It provides a wide range of cloud services, including computing power, storage, networking, databases, artificial intelligence (AI), machine learning (ML), Internet of Things (IoT), and developer tools, all accessible on a pay-as-you-go basis. Azure supports a variety of programming languages, frameworks, and operating systems, making it highly flexible and scalable for diverse workloads, from small startups to large enterprises. With robust security, compliance, and hybrid cloud capabilities, Azure enables organizations to innovate faster, reduce costs, and achieve their digital transformation goals. It is widely used for hosting web applications, running virtual machines, analyzing big data, and building intelligent solutions, making it a key player in the cloud computing industry."
           }
         }
       },
@@ -275,29 +301,13 @@
         "SECTION_TITLE": "tools",
         "SECTION_DESCRIPTION": "<p>The right tools can significantly enhance productivity and streamline the development process. In this section, I highlight some of the essential tools that I use to build, test, and optimize my projects. GitHub is my go-to for version control and collaboration, enabling seamless teamwork and project management. Postman helps me efficiently test and document APIs, ensuring they are robust and functional. Docker provides a consistent development environment, making it easier to deploy applications across different platforms. Figma is my tool of choice for designing user interfaces and collaborating on design prototypes, while Google Analytics allows me to track user behavior and optimize web applications based on real-time data. Together, these tools help me deliver high-quality, efficient solutions while maintaining smooth workflows.</p>",
         "PARAGRAPHS": {
-          "AUTH0": {
-            "PARAGRAPH_TITLE": "Auth0",
-            "PARAGRAPH_DESCRIPTION": ""
-          },
-          "FIGMA": {
-            "PARAGRAPH_TITLE": "Figma",
-            "PARAGRAPH_DESCRIPTION": "Figma is a cloud-based design and prototyping tool widely used for creating user interfaces, web designs, and interactive prototypes. It enables real-time collaboration, allowing multiple designers to work on the same project simultaneously, making it ideal for teams. Figma supports vector editing, design systems, and responsive design, with features like components, constraints, and auto-layout to streamline workflows. Its prototyping capabilities allow designers to create interactive mockups and share them with stakeholders for feedback. Figma is platform-agnostic, running in browsers and offering desktop apps for macOS and Windows. With its intuitive interface, robust collaboration tools, and seamless integration with other design and development tools, Figma has become a favorite among UI/UX designers and product teams."
-          },
           "GOOGLE_ANALYTICS": {
             "PARAGRAPH_TITLE": "Google Analytics",
             "PARAGRAPH_DESCRIPTION": "Google Analytics is a powerful web analytics tool provided by Google that helps businesses and website owners track and analyze user behavior on their websites and apps. It provides insights into metrics like page views, bounce rates, session duration, and conversion rates, enabling users to understand audience demographics, traffic sources, and user engagement. Google Analytics offers features like real-time reporting, goal tracking, and e-commerce tracking, making it suitable for both small websites and large enterprises. It integrates seamlessly with other Google tools like Google Ads and Search Console, as well as third-party platforms. With its robust data visualization and customizable dashboards, Google Analytics is a go-to solution for optimizing website performance, improving marketing strategies, and making data-driven decisions."
           },
-          "DOCKER": {
-            "PARAGRAPH_TITLE": "Docker",
-            "PARAGRAPH_DESCRIPTION": "Docker is an open-source platform designed to simplify the development, deployment, and running of applications using containerization. Containers package an application and its dependencies into a single, lightweight, and portable unit, ensuring consistency across different environments. Docker enables developers to build, ship, and run applications efficiently, reducing the \"it works on my machine\" problem. It supports a wide range of programming languages and frameworks and integrates with tools like Kubernetes for orchestration and scaling. Docker's ecosystem includes Docker Hub, a repository for sharing container images, and Docker Compose for managing multi-container applications. Widely used in DevOps and cloud-native development, Docker streamlines workflows, improves scalability, and enhances application portability."
-          },
-          "AZURE": {
-            "PARAGRAPH_TITLE": "Azure",
-            "PARAGRAPH_DESCRIPTION": "Azure is a comprehensive cloud computing platform and service offered by Microsoft, designed to help businesses build, deploy, and manage applications and services through a global network of data centers. It provides a wide range of cloud services, including computing power, storage, networking, databases, artificial intelligence (AI), machine learning (ML), Internet of Things (IoT), and developer tools, all accessible on a pay-as-you-go basis. Azure supports a variety of programming languages, frameworks, and operating systems, making it highly flexible and scalable for diverse workloads, from small startups to large enterprises. With robust security, compliance, and hybrid cloud capabilities, Azure enables organizations to innovate faster, reduce costs, and achieve their digital transformation goals. It is widely used for hosting web applications, running virtual machines, analyzing big data, and building intelligent solutions, making it a key player in the cloud computing industry."
-          },
           "JIRA": {
             "PARAGRAPH_TITLE": "Jira",
-            "PARAGRAPH_DESCRIPTION": ""
+            "PARAGRAPH_DESCRIPTION": "Jira is a powerful project management and issue tracking software developed by Atlassian, widely used by teams to plan, track, and manage their work efficiently. It is particularly popular among software development teams for agile project management, but its flexibility makes it suitable for various industries and use cases. Jira allows users to create tasks, assign them to team members, set priorities, and track progress through customizable workflows. Key features include Scrum and Kanban boards, backlog management, sprint planning, and detailed reporting tools. With its robust integration capabilities, Jira seamlessly connects with other tools like Confluence, Bitbucket, and Slack, enhancing collaboration and productivity. Its highly customizable nature enables teams to tailor the platform to their specific needs, making it a versatile solution for managing projects of any size or complexity."
           }
         }
       }
