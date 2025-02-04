@@ -9,7 +9,9 @@ import {
   // Scanline,
   // Vignette,
 } from '@react-three/postprocessing'
-import { /* BlendFunction, */ DepthOfFieldEffect/* , KernelSize, Resolution */ } from 'postprocessing'
+import {
+  /* BlendFunction, */ DepthOfFieldEffect /* , KernelSize, Resolution */,
+} from 'postprocessing'
 // import { gsap } from 'gsap'
 // import { useGSAP } from '@gsap/react'
 
