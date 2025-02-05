@@ -4,6 +4,10 @@
   "labels": [
     {
       "name": "contact_me",
+      "position": 1
+    },
+    {
+      "name": "phone_number",
       "position": 3
     }
   ]

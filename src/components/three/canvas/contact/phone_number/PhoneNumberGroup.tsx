@@ -5,35 +5,35 @@ import { useGSAP } from '@gsap/react'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
-import ContactText from './texts/ContactText'
-import MeText from './texts/MeText'
+import PhoneNumberText from './texts/PhoneNumberText'
 import { IphoneKeyboard } from '../iphone_keyboard/IphoneKeyboard'
+import PhoneNumberInputComponent from './PhoneNumberInputComponent'
 
 import {
-  getContactMeGroupAnimationsData,
-  getContactMeGroupDefaultValues,
+  getPhoneNumberGroupAnimationsData,
   getIphoneKeyboardAnimationsData,
-} from '@/data/contact/three/contact_me/contactMeGroupData'
+} from '@/data/contact/three/phone_number/phoneNumberGroupData'
 
 import { animate, showHide } from '@/animation/index'
 
-export default function ContactMeGroup() {
+export default function PhoneNumberGroup() {
   const { timeline } = useGSAPTimelineContext()
 
-  const contactMeGroupRef = useRef<THREE.Group>(null!)
+  const phoneNumberGroupRef = useRef<THREE.Group>(null!)
+  const phoneNumberWithInputGroupRef = useRef<THREE.Group>(null!)
   const iphoneKeyboardGroupRef = useRef<THREE.Group>(null!)
 
   useGSAP(
     () => {
       showHide({
         timeline: timeline,
-        ref: contactMeGroupRef.current,
-        animationsData: getContactMeGroupAnimationsData(),
+        ref: phoneNumberGroupRef.current,
+        animationsData: getPhoneNumberGroupAnimationsData(),
       })
       animate({
         timeline: timeline,
-        ref: contactMeGroupRef.current,
-        animationsData: getContactMeGroupAnimationsData(),
+        ref: phoneNumberGroupRef.current,
+        animationsData: getPhoneNumberGroupAnimationsData(),
       })
       const iphoneKeyboardTouchs = gsap.utils.toArray(iphoneKeyboardGroupRef.current.children)
       iphoneKeyboardTouchs.forEach((iphoneKeyboardTouchRef, index) => {
@@ -47,17 +47,14 @@ export default function ContactMeGroup() {
         })
       })
     },
-    { scope: contactMeGroupRef },
+    { scope: phoneNumberGroupRef },
   )
 
   return (
-    <group
-      ref={contactMeGroupRef}
-      {...getContactMeGroupDefaultValues}
-    >
-      <group position={new THREE.Vector3(0, 0, -0.1)}>
-        <ContactText />
-        <MeText />
+    <group ref={phoneNumberGroupRef}>
+      <group ref={phoneNumberWithInputGroupRef}>
+        <PhoneNumberText />
+        <PhoneNumberInputComponent />
       </group>
       <IphoneKeyboard ref={iphoneKeyboardGroupRef} />
     </group>

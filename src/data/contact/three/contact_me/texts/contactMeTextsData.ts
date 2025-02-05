@@ -7,8 +7,8 @@ import { default as contactMeTextsConstants } from '@/constants/contact/three/co
 export const contactMeTextsDefaultValues: TText3DData = {
   geometry: {
     font: contactMeTextsConstants.geometry.font,
-    // size: contactMeTextsConstants.geometry.size,
-    // depth: contactMeTextsConstants.geometry.depth,
+    size: contactMeTextsConstants.geometry.size,
+    depth: contactMeTextsConstants.geometry.depth,
     center: contactMeTextsConstants.geometry.center,
     spaceWidth: contactMeTextsConstants.geometry.spaceWidth,
   },

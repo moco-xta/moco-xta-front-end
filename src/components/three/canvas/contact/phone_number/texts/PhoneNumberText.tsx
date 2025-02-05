@@ -1,26 +1,24 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { useTranslations } from 'next-intl'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 import useSplitted3DText from '@/hooks/animation/useSplitted3DText'
 
 import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 
-import { contactMeTextsDefaultValues } from '@/data/contact/three/contact_me/texts/contactMeTextsData'
+import { phoneNumberTextsDefaultValues } from '@/data/contact/three/phone_number/texts/phoneNumberTextsData'
 import {
-  getContactTextAnimationsData,
-  getContactTextDefaultValues,
-} from '@/data/contact/three/contact_me/texts/contactTextData'
+  getPhoneNumberTextAnimationsData,
+  getPhoneNumberTextDefaultValues,
+} from '@/data/contact/three/phone_number/texts/phoneNumberTextData'
 
 import { animate } from '@/animation/index'
 
-export default function ContactText() {
-  const t = useTranslations('CONTACT')
+export default function PhoneNumberText() {
   const { timeline } = useGSAPTimelineContext()
-  const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText(t('CONTACT_ME.CONTACT'))
+  const { textSplitted, textGroupRef, textLengthRef } = useSplitted3DText('(+33) 6 15 90 82 75')
 
   useLayoutEffect(() => {
     const box3 = new THREE.Box3()
@@ -29,13 +27,13 @@ export default function ContactText() {
   })
 
   useGSAP(() => {
-    const contactLetters = gsap.utils.toArray(textGroupRef.current.children)
-    contactLetters.forEach((letterRef, index) => {
+    const phoneNumberLetters = gsap.utils.toArray(textGroupRef.current.children)
+    phoneNumberLetters.forEach((letterRef, index) => {
       animate({
         timeline: timeline,
         ref: letterRef as THREE.Group,
         // animationsData: getHiTextAnimationsData(index),
-        animationsData: getContactTextAnimationsData({
+        animationsData: getPhoneNumberTextAnimationsData({
           textLengthRef: textLengthRef.current,
           index: index,
         }),
@@ -46,12 +44,12 @@ export default function ContactText() {
   return (
     <Word3D
       ref={textGroupRef}
-      {...getContactTextDefaultValues()}
-      {...contactMeTextsDefaultValues.geometry}
+      {...getPhoneNumberTextDefaultValues()}
+      {...phoneNumberTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}
     >
-      <meshStandardMaterial {...contactMeTextsDefaultValues.material} />
+      <meshStandardMaterial {...phoneNumberTextsDefaultValues.material} />
     </Word3D>
   )
 }
