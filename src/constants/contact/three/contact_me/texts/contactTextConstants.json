@@ -1,0 +1,54 @@
+{
+  "duration": 2.5,
+  "defaultValues": {
+    "name": "contact_text",
+    "visible": true,
+    "position": {
+      "x": 0,
+      "y": 0.5,
+      "z": -2
+    },
+    "rotation": {
+      "x": -45,
+      "y": 0,
+      "z": 0
+    },
+    "material": {
+      "opacity": 0
+    }
+  },
+  "animations": {
+    "position": {
+      "keyframes": {
+        "step_1": {
+          "y": 0.05,
+          "z": "+=2"
+        },
+        "easeEach": "power1.in"
+      }
+    },
+    "rotation": {
+      "keyframes": {
+        "step_1": {
+          "x": 0
+        },
+        "easeEach": "power1.in"
+      }
+    },
+    "material": {
+      "keyframes": {
+        "step_1": {
+          "opacity": 1
+        },
+        "step_2": {
+          "opacity": 1
+        },
+        "step_3": {
+          "opacity": 0
+        },
+        "easeEach": "power1.in"
+      }
+    },
+    "stagger": 0.075
+  }
+}

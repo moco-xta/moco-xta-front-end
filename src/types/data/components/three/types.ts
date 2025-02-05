@@ -35,6 +35,22 @@ export type TCoordinatesData = {
   z?: number
 }
 
+// RANDON RANGE POSITION
+
+export type TRandomRangePosition = {
+  min: number | TCoordinatesData
+  max: number | TCoordinatesData
+  decimal?: number
+}
+
+// RANDOM ROTATION SELECTED AXIS
+
+export type TRandomRotationSelectedAxis = {
+  x?: boolean
+  y?: boolean
+  z?: boolean
+}
+
 // DIMENSIONS
 
 export type TDimensionsData = {

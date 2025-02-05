@@ -1,0 +1,48 @@
+{
+  "label": "contact_me",
+  "duration": 3,
+  "defaultValues": {
+    "name": "contact_me_group",
+    "visible": false,
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": -7
+    },
+    "rotation": {
+      "z": 0
+    }
+  },
+  "animations": {
+    "position": {
+      "keyframes": {
+        "step_1": {
+          "z": 3,
+          "ease": "circ.inOut"
+        },
+        "step_2": {
+          "z": 0,
+          "ease": "circ.inOut"
+        },
+        "easeEach": "none"
+      }
+    },
+    "rotation": {
+      "keyframes": {
+        "step_1": {
+          "z": -15,
+          "ease": "circ.inOut"
+        },
+        "step_2": {
+          "z": 15,
+          "ease": "circ.inOut"
+        },
+        "step_3": {
+          "z": -180,
+          "ease": "circ.inOut"
+        },
+        "easeEach": "none"
+      }
+    }
+  }
+}

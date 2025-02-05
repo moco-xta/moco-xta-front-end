@@ -1,10 +1,6 @@
-interface RandomRangeInterface {
-  min: number
-  max: number
-  decimal?: number
-}
+import type { TRandomRange } from '@/types/maths/types'
 
-export const getRandomInt = ({ min, max, decimal = 1 }: RandomRangeInterface) => {
+export const getRandomInt = ({ min, max, decimal = 1 }: TRandomRange) => {
   min = Math.ceil(min)
   max = Math.floor(max)
   return (Math.floor(Math.random() * (max - min + 1)) + min) * decimal
