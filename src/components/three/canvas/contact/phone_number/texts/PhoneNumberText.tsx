@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useLayoutEffect } from 'react'
 import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'

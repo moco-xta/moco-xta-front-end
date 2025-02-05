@@ -36,14 +36,12 @@ export default function PhoneNumberGroup() {
         animationsData: getPhoneNumberGroupAnimationsData(),
       })
       const iphoneKeyboardTouchs = gsap.utils.toArray(iphoneKeyboardGroupRef.current.children)
-      iphoneKeyboardTouchs.forEach((iphoneKeyboardTouchRef, index) => {
+      iphoneKeyboardTouchs.forEach(iphoneKeyboardTouchRef => {
         animate({
           timeline: timeline,
           ref: iphoneKeyboardTouchRef as THREE.Group,
           // animationsData: getHiTextAnimationsData(index),
-          animationsData: getIphoneKeyboardAnimationsData({
-            index: index,
-          }),
+          animationsData: getIphoneKeyboardAnimationsData(),
         })
       })
     },

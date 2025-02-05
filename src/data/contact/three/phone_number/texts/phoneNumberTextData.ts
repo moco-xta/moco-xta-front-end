@@ -1,5 +1,3 @@
-import * as THREE from 'three'
-
 import type { TElementDefaultValues } from '@/types/data/animation/three/types'
 import type { TGetAnimationsDataSignature } from '@/types/data/animation/functions/types'
 import type { TElementAnimationData } from '@/types/data/animation/types'

@@ -1,6 +1,5 @@
 import type { TElementDefaultValues } from '@/types/data/animation/three/types'
 import type { TElementAnimationData } from '@/types/data/animation/types'
-import type { TGetAnimationsDataSignature } from '@/types/data/animation/functions/types'
 
 import { getDefaultValues } from '@/helpers/animation/getDefaultValues'
 import { getAnimationsData } from '@/helpers/animationHelpers'
@@ -22,9 +21,7 @@ export function getContactMeGroupAnimationsData(): TElementAnimationData {
   }
 }
 
-export function getIphoneKeyboardAnimationsData({
-  index,
-}: TGetAnimationsDataSignature): TElementAnimationData {
+export function getIphoneKeyboardAnimationsData(): TElementAnimationData {
   return {
     label: contactMeGroupConstants.label,
     duration: contactMeGroupConstants.duration,

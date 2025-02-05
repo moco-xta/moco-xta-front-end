@@ -5,7 +5,7 @@ import {
   // Bloom,
   DepthOfField,
   EffectComposer,
-  Noise,
+  // Noise,
   // Scanline,
   Vignette,
 } from '@react-three/postprocessing'
