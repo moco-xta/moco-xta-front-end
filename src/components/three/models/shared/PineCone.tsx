@@ -8,7 +8,6 @@ import useTextureLoader from '@/hooks/three/useTextureLoader'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
-import { default as pinConeConstants } from '@/constants/contact/three/pinConeConstants.json'
 
 export function PineCone(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(glbConstants.SHARED.PINE_CONE) as GLTFResult
@@ -17,8 +16,8 @@ export function PineCone(props: JSX.IntrinsicElements['group']) {
 
   const pineConeMaterial = new THREE.MeshMatcapMaterial({
     matcap: christusMap,
-    transparent: pinConeConstants.defaultValues.material.transparent,
-    opacity: pinConeConstants.defaultValues.material.opacity,
+    transparent: true,
+    opacity: 1,
   })
 
   return (

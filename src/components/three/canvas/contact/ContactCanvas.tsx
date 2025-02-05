@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 
-import Lightning from './lightning/Lightning'
+import Lightning from './lighting/Lightning'
 import Camera from './Camera'
 import ContactScene from './ContactScene'
 import PostProcessing from './PostProcessing'

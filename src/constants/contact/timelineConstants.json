@@ -1,0 +1,10 @@
+{
+  "timeScale": 1,
+  "delay": 1,
+  "labels": [
+    {
+      "name": "contact_me",
+      "position": 3
+    }
+  ]
+}

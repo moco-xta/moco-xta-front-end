@@ -1,7 +1,44 @@
 import * as THREE from 'three'
 import { ThreeEvent } from '@react-three/fiber'
 
-import type { TCoordinatesData } from '@/types/data/components/three/types'
+import type {
+  TCoordinatesData,
+  TRandomRangePosition,
+  TRandomRotationSelectedAxis,
+} from '@/types/data/components/three/types'
+
+import { getRandomInt, randomPositiveOrNegative } from './mathHelpers'
+
+export const getRandomPosition = ({ min, max, decimal = 1 }: TRandomRangePosition) => {
+  return new THREE.Vector3(
+    randomPositiveOrNegative() *
+      getRandomInt({
+        min: typeof min !== 'object' ? min : (min.x ?? 0),
+        max: typeof max !== 'object' ? max : (max.x ?? 0),
+        decimal: decimal,
+      }),
+    randomPositiveOrNegative() *
+      getRandomInt({
+        min: typeof min !== 'object' ? min : (min.y ?? 0),
+        max: typeof max !== 'object' ? max : (max.y ?? 0),
+        decimal: decimal,
+      }),
+    randomPositiveOrNegative() *
+      getRandomInt({
+        min: typeof min !== 'object' ? min : (min.z ?? 0),
+        max: typeof max !== 'object' ? max : (max.z ?? 0),
+        decimal: decimal,
+      }),
+  )
+}
+
+export const getRandomRotation = ({ x, y, z }: TRandomRotationSelectedAxis) => {
+  return new THREE.Euler(
+    x ? THREE.MathUtils.degToRad(getRandomInt({ min: 0, max: 360 })) : 0,
+    y ? THREE.MathUtils.degToRad(getRandomInt({ min: 0, max: 360 })) : 0,
+    z ? THREE.MathUtils.degToRad(getRandomInt({ min: 0, max: 360 })) : 0,
+  )
+}
 
 export function setGroupSize(boundingBox: THREE.Box3, object: THREE.Group, size: number) {
   const objectSize = new THREE.Vector3()

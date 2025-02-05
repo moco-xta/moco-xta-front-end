@@ -6,7 +6,6 @@ import { useGLTF } from '@react-three/drei'
 import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { default as logoAthleticoNacionalComponentConstants } from '@/constants/contact/three/logoAthleticoNacionalComponentConstants.json'
 
 export const LogoAthleticoNacional = forwardRef<THREE.Mesh, MeshProps>(
   function LogoAthleticoNacional(props, ref) {
@@ -16,10 +15,8 @@ export const LogoAthleticoNacional = forwardRef<THREE.Mesh, MeshProps>(
 
     useLayoutEffect(() => {
       ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
-        materials[key].transparent =
-          logoAthleticoNacionalComponentConstants.defaultValues.material.transparent
-        materials[key].opacity =
-          logoAthleticoNacionalComponentConstants.defaultValues.material.opacity
+        materials[key].transparent = true
+        materials[key].opacity = 1
       })
     }, [materials])
 

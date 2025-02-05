@@ -1,6 +1,7 @@
 {
+  "duration": 2.5,
   "defaultValues": {
-    "name": "pine_cone_component",
+    "name": "contact_text",
     "visible": true,
     "position": {
       "x": 0,
@@ -8,7 +9,6 @@
       "z": 0
     },
     "material": {
-      "transparent": true,
       "opacity": 1
     }
   },
