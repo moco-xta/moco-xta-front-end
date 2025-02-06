@@ -20,6 +20,8 @@ export const Metro = forwardRef<THREE.Group, GroupProps>(function Metro(props, r
       <mesh
         geometry={nodes.Metro.geometry}
         material={materials['metro_paris_#0C208F']}
+        receiveShadow
+        castShadow
       />
     </group>
   )
