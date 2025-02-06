@@ -10,8 +10,8 @@ import { getKeyframePosition } from '@/helpers/animationHelpers'
 import { default as contactMeGroupConstants } from '@/constants/contact/three/contact_me/contactMeGroupConstants.json'
 import { default as meTextConstants } from '@/constants/contact/three/contact_me/texts/meTextConstants.json'
 
-export const meTextDefaultValues: TElementDefaultValues = {
-  ...getDefaultValues(meTextConstants),
+export function getMeTextDefaultValues(): TElementDefaultValues {
+  return getDefaultValues(meTextConstants)
 }
 
 export function getMeTextAnimationsData({
@@ -58,9 +58,6 @@ export function getMeTextAnimationsData({
           },
           [`${getKeyframePosition(contactMeGroupConstants.duration, 'step_2')}`]: {
             opacity: meTextConstants.animations.material.keyframes['step_2'].opacity,
-          },
-          [`${getKeyframePosition(contactMeGroupConstants.duration, 'step_3')}`]: {
-            opacity: meTextConstants.animations.material.keyframes['step_3'].opacity,
           },
           easeEach: meTextConstants.animations.material.keyframes.easeEach,
         },

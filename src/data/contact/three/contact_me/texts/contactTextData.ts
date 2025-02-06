@@ -61,9 +61,6 @@ export function getContactTextAnimationsData({
           [`${getKeyframePosition(contactMeGroupConstants.duration, 'step_2')}`]: {
             opacity: contactTextConstants.animations.material.keyframes['step_2'].opacity,
           },
-          [`${getKeyframePosition(contactMeGroupConstants.duration, 'step_3')}`]: {
-            opacity: contactTextConstants.animations.material.keyframes['step_3'].opacity,
-          },
           easeEach: contactTextConstants.animations.material.keyframes.easeEach,
         },
       },

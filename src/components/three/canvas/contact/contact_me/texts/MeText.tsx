@@ -12,7 +12,7 @@ import { Word3D } from '@/components/three/lib/word_3d/Word3D'
 import { contactMeTextsDefaultValues } from '@/data/contact/three/contact_me/texts/contactMeTextsData'
 import {
   getMeTextAnimationsData,
-  meTextDefaultValues,
+  getMeTextDefaultValues,
 } from '@/data/contact/three/contact_me/texts/meTextData'
 
 import { animate } from '@/animation/index'
@@ -46,7 +46,7 @@ export default function MeText() {
   return (
     <Word3D
       ref={textGroupRef}
-      {...meTextDefaultValues}
+      {...getMeTextDefaultValues()}
       {...contactMeTextsDefaultValues.geometry}
       splittedWord={textSplitted}
       lengthRef={textLengthRef}

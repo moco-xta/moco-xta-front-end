@@ -1,6 +1,6 @@
 {
   "defaultValues": {
-    "name": "iphone_keyboard_touch",
+    "name": "iphone_keyboard_touchs_group",
     "visible": true,
     "rotation": {
       "z": 240
@@ -16,19 +16,6 @@
         "step_2": {
           "z": -10,
           "ease": "circ.inOut"
-        },
-        "easeEach": "none"
-      }
-    },
-    "material": {
-      "keyframes": {
-        "step_1": {
-          "opacity": 0.8,
-          "ease": "power2.out"
-        },
-        "step_2": {
-          "opacity": 0,
-          "ease": "power2.out"
         },
         "easeEach": "none"
       }

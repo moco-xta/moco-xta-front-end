@@ -41,9 +41,6 @@
           "opacity": 1
         },
         "step_2": {
-          "opacity": 1
-        },
-        "step_3": {
           "opacity": 0
         },
         "easeEach": "power1.in"

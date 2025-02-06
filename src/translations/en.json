@@ -516,6 +516,11 @@
     "CONTACT_ME": {
       "CONTACT": "contact",
       "ME": "me"
+    },
+    "BASED_IN": {
+      "I_M": "I'm",
+      "BASED": "based",
+      "IN_PARIS": "in paris"
     }
   },
   "COLORS": {

@@ -3,12 +3,16 @@
   "delay": 1,
   "labels": [
     {
-      "name": "contact_me",
+      "name": "based_in",
       "position": 1
     },
     {
-      "name": "phone_number",
+      "name": "contact_me",
       "position": 3
+    },
+    {
+      "name": "phone_number",
+      "position": 5
     }
   ]
 }
