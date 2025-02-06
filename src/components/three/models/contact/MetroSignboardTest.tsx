@@ -7,7 +7,7 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-export const MetroSignboardPutain = forwardRef<THREE.Group, GroupProps>(
+export const MetroSignboard = forwardRef<THREE.Group, GroupProps>(
   function MetroSignBoard(props, ref) {
     const { nodes, materials } = useGLTF(glbConstants.CONTACT.METRO_SIGNBOARD) as GLTFResult
 
@@ -18,15 +18,15 @@ export const MetroSignboardPutain = forwardRef<THREE.Group, GroupProps>(
         dispose={null}
       >
         <mesh
-          geometry={nodes.MetroSignboardPutain_1.geometry}
+          geometry={nodes.MetroSignboard_1.geometry}
           material={materials['metro_paris_#fff']}
         />
         <mesh
-          geometry={nodes.MetroSignboardPutain_2.geometry}
+          geometry={nodes.MetroSignboard_2.geometry}
           material={materials.metro_paris_signboard}
         />
         <mesh
-          geometry={nodes.MetroSignboardPutain_3.geometry}
+          geometry={nodes.MetroSignboard_3.geometry}
           material={materials['metro_paris_#0C208F']}
         />
       </group>
@@ -34,8 +34,8 @@ export const MetroSignboardPutain = forwardRef<THREE.Group, GroupProps>(
   },
 )
 
-MetroSignboardPutain.displayName = 'MetroSignboardPutain'
+MetroSignboard.displayName = 'MetroSignboard'
 
 useGLTF.preload(glbConstants.CONTACT.METRO_SIGNBOARD)
 
-export default MetroSignboardPutain
+export default MetroSignboard
