@@ -65,7 +65,7 @@
   "CONTACT": {
     "METRO": "/models//glb/contact/Metro.glb",
     "METRO_ARROW": "/models//glb/contact/MetroArrow.glb",
-    "METRO_SIGNBOARD": "/models//glb/contact/MetroSignboard.glb",
+    "METRO_SIGNBOARD": "/models//glb/contact/MetroSignboardPutain.glb",
     "PHONE_NUMBER_INPUT": "/models//glb/contact/PhoneNumberInput.glb"
   },
   "FLAGS": {
