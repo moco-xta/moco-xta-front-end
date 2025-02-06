@@ -12,14 +12,16 @@ export const MetroArrow = forwardRef<THREE.Group, GroupProps>(function MetroArro
 
   return (
     <group
-      position={[1.3, -0.7, 0]}
       ref={ref}
+      position={[1.3, -0.7, 0]}
       {...props}
       dispose={null}
     >
       <mesh
         geometry={nodes.MetroArrow.geometry}
         material={materials['metro_paris_#0C208F']}
+        receiveShadow
+        castShadow
       />
     </group>
   )

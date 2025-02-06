@@ -24,7 +24,7 @@ export default function BasedText() {
 
   useGSAP(() => {
     const contactLetters = gsap.utils.toArray(textGroupRef.current.children)
-    contactLetters.forEach(letterRef => {
+    contactLetters.forEach((letterRef) => {
       animate({
         timeline: timeline,
         ref: letterRef as THREE.Group,

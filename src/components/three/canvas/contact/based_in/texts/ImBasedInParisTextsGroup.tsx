@@ -3,7 +3,7 @@ import * as THREE from 'three'
 // import { FontLoader } from 'three/addons/loaders/FontLoader.js'
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js'
 
-import { extend/* , Object3DNode */ } from '@react-three/fiber'
+import { extend /* , Object3DNode */ } from '@react-three/fiber'
 
 import ImText from './ImText'
 import BasedText from './BasedText'
