@@ -11,7 +11,8 @@ import PhoneNumberInputComponent from './PhoneNumberInputComponent'
 
 import {
   getPhoneNumberGroupAnimationsData,
-  getIphoneKeyboardAnimationsData,
+  getIphoneKeyboardTouchsGroupAnimationsData,
+  getIphoneKeyboardTouchsAnimationsData,
 } from '@/data/contact/three/phone_number/phoneNumberGroupData'
 
 import { animate, showHide } from '@/animation/index'
@@ -35,13 +36,18 @@ export default function PhoneNumberGroup() {
         ref: phoneNumberGroupRef.current,
         animationsData: getPhoneNumberGroupAnimationsData(),
       })
+      animate({
+        timeline: timeline,
+        ref: iphoneKeyboardGroupRef.current,
+        animationsData: getIphoneKeyboardTouchsGroupAnimationsData(),
+      })
       const iphoneKeyboardTouchs = gsap.utils.toArray(iphoneKeyboardGroupRef.current.children)
-      iphoneKeyboardTouchs.forEach(iphoneKeyboardTouchRef => {
+      iphoneKeyboardTouchs.forEach((iphoneKeyboardTouchRef) => {
         animate({
           timeline: timeline,
           ref: iphoneKeyboardTouchRef as THREE.Group,
           // animationsData: getHiTextAnimationsData(index),
-          animationsData: getIphoneKeyboardAnimationsData(),
+          animationsData: getIphoneKeyboardTouchsAnimationsData(),
         })
       })
     },

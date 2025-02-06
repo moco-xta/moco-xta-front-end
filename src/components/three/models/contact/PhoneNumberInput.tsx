@@ -13,7 +13,7 @@ export const PhoneNumberInput = forwardRef<THREE.Mesh, MeshProps>(
 
     const material = new THREE.MeshStandardMaterial({
       color: 'white',
-      roughness: 0,
+      roughness: 1,
       transparent: true,
       opacity: 0,
     })

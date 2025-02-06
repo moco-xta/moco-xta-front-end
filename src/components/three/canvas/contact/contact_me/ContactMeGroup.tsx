@@ -36,7 +36,7 @@ export default function ContactMeGroup() {
         animationsData: getContactMeGroupAnimationsData(),
       })
       const iphoneKeyboardTouchs = gsap.utils.toArray(iphoneKeyboardGroupRef.current.children)
-      iphoneKeyboardTouchs.forEach(iphoneKeyboardTouchRef => {
+      iphoneKeyboardTouchs.forEach((iphoneKeyboardTouchRef) => {
         animate({
           timeline: timeline,
           ref: iphoneKeyboardTouchRef as THREE.Group,
