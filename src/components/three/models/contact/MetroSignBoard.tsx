@@ -7,7 +7,7 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-export const MetroSignBoard = forwardRef<THREE.Group, GroupProps>(
+export const MetroSignboard = forwardRef<THREE.Group, GroupProps>(
   function MetroSignBoard(props, ref) {
     const { nodes, materials } = useGLTF(glbConstants.CONTACT.METRO_SIGNBOARD) as GLTFResult
 
@@ -34,8 +34,8 @@ export const MetroSignBoard = forwardRef<THREE.Group, GroupProps>(
   },
 )
 
-MetroSignBoard.displayName = 'MetroSignBoard'
+MetroSignboard.displayName = 'MetroSignboard'
 
 useGLTF.preload(glbConstants.CONTACT.METRO_SIGNBOARD)
 
-export default MetroSignBoard
+export default MetroSignboard
