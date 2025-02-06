@@ -7,7 +7,7 @@ import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext
 // import ImBasedinParisTextsGroup from './texts/ImBasedInParisTextsGroup'
 import Metro from '@/components/three/models/contact/Metro'
 import MetroArrow from '@/components/three/models/contact/MetroArrow'
-import MetroSignboard from '@/components/three/models/contact/MetroSignboardTest'
+import MetroSignboard from '@/components/three/models/contact/MetroSignboard'
 
 import {
   getBasedInParisGroupAnimationsData,
