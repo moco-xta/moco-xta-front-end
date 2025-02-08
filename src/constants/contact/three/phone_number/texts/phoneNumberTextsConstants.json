@@ -1,0 +1,14 @@
+{
+  "geometry": {
+    "font": "/fonts/json/Gilroy_Heavy.json",
+    "size": 0.59,
+    "depth": 0.1,
+    "center": true,
+    "spaceWidth": 0.05
+  },
+  "material": {
+    "color": "#000",
+    "transparent": true,
+    "opacity": 0
+  }
+}

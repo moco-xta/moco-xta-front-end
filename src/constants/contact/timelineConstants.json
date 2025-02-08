@@ -1,0 +1,18 @@
+{
+  "timeScale": 1,
+  "delay": 1,
+  "labels": [
+    {
+      "name": "based_in",
+      "position": 1
+    },
+    {
+      "name": "contact_me",
+      "position": 3
+    },
+    {
+      "name": "phone_number",
+      "position": 5
+    }
+  ]
+}

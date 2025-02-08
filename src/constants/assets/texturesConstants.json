@@ -21,6 +21,23 @@
       "ROUGHNESS": "/img/textures/laboratory/parquet_roughness.jpg"
     }
   },
+  "CONTACT": {
+    "IPHONE_KEYBOARD": [
+      "/img/textures/contact/iphone_keyboard_0.jpg",
+      "/img/textures/contact/iphone_keyboard_1.jpg",
+      "/img/textures/contact/iphone_keyboard_2.jpg",
+      "/img/textures/contact/iphone_keyboard_3.jpg",
+      "/img/textures/contact/iphone_keyboard_4.jpg",
+      "/img/textures/contact/iphone_keyboard_5.jpg",
+      "/img/textures/contact/iphone_keyboard_6.jpg",
+      "/img/textures/contact/iphone_keyboard_7.jpg",
+      "/img/textures/contact/iphone_keyboard_8.jpg",
+      "/img/textures/contact/iphone_keyboard_9.jpg",
+      "/img/textures/contact/iphone_keyboard_call.jpg",
+      "/img/textures/contact/iphone_keyboard_hash.jpg",
+      "/img/textures/contact/iphone_keyboard_star.jpg"
+    ]
+  },
   "SHADERS": {
     "DOT_TEXTURE": "/img/textures/shaders/dot_texture.png",
     "GRADIENT_CIRCLE_MASK": "/img/textures/shaders/gradient_circle_mask.png"

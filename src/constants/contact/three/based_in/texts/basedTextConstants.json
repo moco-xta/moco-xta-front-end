@@ -1,15 +1,18 @@
 {
   "defaultValues": {
-    "name": "logo_athletico_nacional_component",
+    "name": "based_text",
     "visible": true,
     "position": {
-      "x": 1.2,
-      "y": -4,
-      "z": 2
+      "x": 0,
+      "y": 0,
+      "z": 0
     },
-    "scale": 0.7,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
     "material": {
-      "transparent": true,
       "opacity": 1
     }
   },
