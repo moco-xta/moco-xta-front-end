@@ -6,10 +6,10 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-import { metroParisBlue } from '../../materials/contact/contactMaterials'
+import { ligne12Material } from '../../materials/contact/contactMaterials'
 
-const MetroArrow = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes } = useGLTF(glbConstants.CONTACT.METRO_ARROW) as GLTFResult
+const Dot = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
+  const { nodes } = useGLTF(glbConstants.CONTACT.DOT) as GLTFResult
 
   return (
     <group
@@ -18,8 +18,8 @@ const MetroArrow = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
       dispose={null}
     >
       <mesh
-        geometry={nodes.MetroArrow.geometry}
-        material={metroParisBlue}
+        geometry={nodes.Dot.geometry}
+        material={ligne12Material}
         castShadow
         receiveShadow
       />
@@ -27,8 +27,8 @@ const MetroArrow = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
   )
 })
 
-MetroArrow.displayName = 'MetroArrow'
+Dot.displayName = 'Dot'
 
-useGLTF.preload(glbConstants.CONTACT.METRO_ARROW)
+useGLTF.preload(glbConstants.CONTACT.DOT)
 
-export default MetroArrow
+export default Dot

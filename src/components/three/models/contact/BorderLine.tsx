@@ -8,8 +8,8 @@ import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 import { metroParisBlue } from '../../materials/contact/contactMaterials'
 
-const MetroArrow = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes } = useGLTF(glbConstants.CONTACT.METRO_ARROW) as GLTFResult
+const BorderLine = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
+  const { nodes } = useGLTF(glbConstants.CONTACT.BORDER_LINE) as GLTFResult
 
   return (
     <group
@@ -18,7 +18,7 @@ const MetroArrow = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
       dispose={null}
     >
       <mesh
-        geometry={nodes.MetroArrow.geometry}
+        geometry={nodes.BorderLine.geometry}
         material={metroParisBlue}
         castShadow
         receiveShadow
@@ -27,8 +27,8 @@ const MetroArrow = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((prop
   )
 })
 
-MetroArrow.displayName = 'MetroArrow'
+BorderLine.displayName = 'BorderLine'
 
-useGLTF.preload(glbConstants.CONTACT.METRO_ARROW)
+useGLTF.preload(glbConstants.CONTACT.BORDER_LINE)
 
-export default MetroArrow
+export default BorderLine

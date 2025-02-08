@@ -1,9 +1,0 @@
-{
-  "label": "based_in",
-  "duration": 3,
-  "defaultValues": {
-    "name": "based_in_group",
-    "visible": false
-  },
-  "animations": {}
-}
