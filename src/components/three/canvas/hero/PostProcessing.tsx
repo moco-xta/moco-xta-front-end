@@ -1,31 +1,29 @@
-import React, { useLayoutEffect, useRef } from 'react'
-import * as THREE from 'three'
-import { useFrame } from '@react-three/fiber'
+import React/* , { useRef } */ from 'react'
+// import * as THREE from 'three'
+// import { useFrame } from '@react-three/fiber'
 import {
-  // Bloom,
+  Bloom,
   DepthOfField,
   EffectComposer,
   // Noise,
   // Scanline,
   // Vignette,
 } from '@react-three/postprocessing'
-import {
-  /* BlendFunction, */ DepthOfFieldEffect /* , KernelSize, Resolution */,
-} from 'postprocessing'
+import { /* BlendFunction, DepthOfFieldEffect, */ KernelSize, Resolution } from 'postprocessing'
 // import { gsap } from 'gsap'
 // import { useGSAP } from '@gsap/react'
 
 export default function PostProcessing() {
-  const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)
-  const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0))
+  // const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)
+  // const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0))
 
-  useLayoutEffect(() => {
+  /* useLayoutEffect(() => {
     depthOfFieldRef.current.target = depthOfFieldTargetRef.current
-  }, [])
+  }, []) */
 
-  useFrame(() => {
+  /* useFrame(() => {
     depthOfFieldRef.current.target = depthOfFieldTargetRef.current
-  })
+  }) */
 
   /* useGSAP(() => {
     gsap.to(depthOfFieldTargetRef.current, {
@@ -41,11 +39,19 @@ export default function PostProcessing() {
   return (
     <EffectComposer>
       <DepthOfField
-        ref={depthOfFieldRef}
-        focalLength={0.1}
-        bokehScale={2.5}
-        height={1024}
-        width={1024}
+        focusDistance={0.15}
+        focalLength={0.25}
+        bokehScale={1}
+      />
+      <Bloom
+        intensity={2.5}
+        blurPass={undefined}
+        kernelSize={KernelSize.LARGE}
+        luminanceThreshold={0.9}
+        luminanceSmoothing={0.025}
+        mipmapBlur={true}
+        resolutionX={Resolution.AUTO_SIZE}
+        resolutionY={Resolution.AUTO_SIZE}
       />
       {/* <Bloom
         intensity={0.25}

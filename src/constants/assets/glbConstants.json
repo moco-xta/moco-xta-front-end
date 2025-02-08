@@ -1,4 +1,10 @@
 {
+  "MOCO_HELIUM": {
+    "C_HELIUM_BALLOON": "/models/glb/hero/moco_helium/CHeliumBalloon.glb",
+    "M_HELIUM_BALLOON": "/models/glb/hero/moco_helium/MHeliumBalloon.glb",
+    "O_HELIUM_BALLOON": "/models/glb/hero/moco_helium/OHeliumBalloon.glb",
+    "SMILEY": "/models/glb/hero/moco_helium/Smiley.glb"
+  },
   "LOGOS": {
     "LOGO_ABWERKT": "/models/glb/logos/LogoAbwerkt.glb",
     "LOGO_ANGULAR": "/models/glb/logos/LogoAngular.glb",
@@ -19,6 +25,7 @@
     "LOGO_FORMIK": "/models/glb/logos/LogoFormik.glb",
     "LOGO_GITHUB": "/models/glb/logos/LogoGithub.glb",
     "LOGO_GITLAB": "/models/glb/logos/LogoGitlab.glb",
+    "LOGO_GMAIL": "/models/glb/logos/LogoGmail.glb",
     "LOGO_GOOGLE_ANALYTICS": "/models/glb/logos/LogoGoogleAnalytics.glb",
     "LOGO_GOOGLE_MAPS": "/models/glb/logos/LogoGoogleMaps.glb",
     "LOGO_GRAPHQL": "/models/glb/logos/LogoGraphql.glb",

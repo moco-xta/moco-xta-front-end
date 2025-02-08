@@ -34,7 +34,7 @@ import {
   // getBasedInGroupDefaultValues,
 } from '@/data/contact/three/based_in/basedInGroupData'
 
-import { showHide/* , animate */ } from '@/animation/index'
+import { showHide /* , animate */ } from '@/animation/index'
 
 export default function BasedInParisGroup() {
   const { timeline } = useGSAPTimelineContext()
