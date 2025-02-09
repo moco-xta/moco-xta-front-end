@@ -1,6 +1,6 @@
 @import '@/styles/variables.module.scss';
 
-#external_link {
+.external_link {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,6 +8,6 @@
   color: $external_link;
 
   svg {
-    margin-left: 5px;
+    margin: -3px 0 0 $px_margin_XS;
   }
 }
