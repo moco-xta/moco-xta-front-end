@@ -22,7 +22,7 @@ function MouseImpulseHandler({ rigidBodies }: TMouseImpulseHandler) {
   const { camera, pointer, scene } = useThree()
   const [impulseApplied, setImpulseApplied] = useState(false)
 
-  const windStrength = 0.001
+  const windStrength = 0.0005
 
   useFrame(() => {
     const raycaster = new THREE.Raycaster()
