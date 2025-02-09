@@ -16,7 +16,7 @@ export default function MenuOverlay() {
       <Header
         logoMocoMaterial={
           new THREE.MeshStandardMaterial({
-            color: '#FF51F6',
+            color: '#00f865',
             roughness: 0.5,
             side: THREE.DoubleSide,
           })

@@ -2,8 +2,9 @@ import React from 'react'
 
 import { GSAPTimelineProvider } from '@/contexts/GsapTimelineContext'
 
-// import AnimationControls from '@/components/layout/buttons/animation_controls'
+import HeadText from './head_text'
 import { HeroCanvas } from '@/components/three/canvas'
+// import AnimationControls from '@/components/layout/buttons/animation_controls'
 import {} from // AsciiWithWebgpuCanvas,
 // ParametricLinearRgbDimmerCanvas,
 // PlaneFitScreenCanvas,
@@ -19,6 +20,7 @@ export default function Hero() {
   return (
     <GSAPTimelineProvider {...timelineDefaultValues}>
       <div id='hero_container'>
+        <HeadText />
         <HeroCanvas />
         {/* <PlaygroundCanvas /> */}
         {/* <AsciiWithWebgpuCanvas /> */}

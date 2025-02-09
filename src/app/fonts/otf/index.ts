@@ -1,8 +1,13 @@
 import localFont from 'next/font/local'
 
-const parisineTryRegularFont = localFont({
-  src: './parisine/ParisineTry-Regular.otf',
-  variable: '--font-parisine-try-regular',
+const helveticaNeueBoldFont = localFont({
+  src: './helvetica_neue/HelveticaNeueBold.otf',
+  variable: '--font-helvetica-neue-bold',
 })
 
-export { parisineTryRegularFont }
+/* const parisineTryRegularFont = localFont({
+  src: './parisine/ParisineTry-Regular.otf',
+  variable: '--font-parisine-try-regular',
+}) */
+
+export { /* parisineTryRegularFont, */helveticaNeueBoldFont }
