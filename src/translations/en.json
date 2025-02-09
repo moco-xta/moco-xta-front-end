@@ -363,44 +363,89 @@
     "SECTIONS": {
       "FRONT_END": {
         "SECTION_TITLE": "front-end",
-        "SECTION_DESCRIPTION": "Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.",
+        "SECTION_DESCRIPTION": "<p>Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.</p>",
         "PARAGRAPHS": {
           "NEXTJS": {
             "PARAGRAPH_TITLE": "Next.js",
             "PARAGRAPH_DESCRIPTION": "Next.js is a React framework that enables you to build server-rendered and statically-generated web applications with ease. It provides a powerful feature set, such as automatic code splitting, server-side rendering, and SEO optimization, making it a popular choice for building modern web applications.",
             "LINKS": {
               "NEXTJS": {
-                "DESCRIPTION": "NEXTJS DOCUMENTATION DESCRIPTION"
+                "DESCRIPTION": "The Next.js documentation website is a comprehensive resource for learning and mastering Next.js, a popular React framework for building server-rendered and static web applications. It offers detailed guides, API references, and examples to help developers understand core concepts like routing, data fetching, and optimization. The site is well-organized, beginner-friendly, and regularly updated to reflect the latest features and best practices."
               },
               "CODEVOLUTION": {
-                "DESCRIPTION": "CODEVOLUTION DOCUMENTATION DESCRIPTION"
+                "DESCRIPTION": "The Codevolution YouTube channel is a popular resource for developers, offering clear and concise tutorials on modern web development technologies. It covers a wide range of topics, including React, Next.js, JavaScript, Node.js, and more. The channel is known for its beginner-friendly approach, practical examples, and step-by-step explanations, making it a go-to for anyone looking to learn or improve their coding skills."
               },
               "DEV_COMMUNITY": {
-                "DESCRIPTION": "DEV COMMUNITY DESCRIPTION"
+                "DESCRIPTION": "The Next.js topic on dev.to is a community-driven space where developers share articles, tutorials, and insights. It features a wide range of content, from beginner-friendly guides to advanced techniques, covering topics like server-side rendering, static site generation, API routes, and performance optimization. It's a great resource for learning, staying updated, and engaging with the Next.js community."
+              },
+              "DAVE_GRAY": {
+                "DESCRIPTION": "The Dave Gray YouTube channel is a popular educational resource for developers, offering high-quality tutorials on web development technologies like HTML, CSS, JavaScript, React, Next.js, Node.js, and more. Known for its clear, beginner-friendly explanations and practical examples, the channel focuses on helping viewers build real-world projects while learning coding fundamentals and best practices. It's a great choice for anyone looking to start or advance their programming journey."
               }
             }
           },
           "REACT": {
             "PARAGRAPH_TITLE": "react",
-            "PARAGRAPH_DESCRIPTION": "REACT DESCRIPTION",
+            "PARAGRAPH_DESCRIPTION": "Dive into the world of React, a powerful JavaScript library for building dynamic and interactive user interfaces. In this section, you'll find a curated list of resources, including tutorials, documentation, tools, and best practices to help you master React development. Whether you're a beginner or an experienced developer, these resources will guide you in creating efficient, scalable, and modern web applications.",
             "LINKS": {
               "REACT": {
-                "DESCRIPTION": "REACT DOCUMENTATION DESCRIPTION"
+                "DESCRIPTION": "The React documentation is a modern, beginner-friendly guide to mastering React. It offers interactive tutorials, clear explanations, and practical examples to help you understand core concepts like components, state, hooks, and effects. The updated documentation is designed to be intuitive and hands-on, making it an excellent resource for both new and experienced developers to build dynamic and efficient user interfaces"
               },
               "THE_LEAN_PROGRAMMER": {
-                "DESCRIPTION": "THE LEAN PROGRAMMER DOCUMENTATION DESCRIPTION"
+                "DESCRIPTION": "The Lean Programmer YouTube channel is a practical and engaging resource for developers, offering tutorials and insights on programming languages, frameworks, and tools. Known for its clear explanations and hands-on approach, the channel focuses on helping viewers build real-world projects while learning best practices in software development. It's a great choice for both beginners and experienced coders looking to enhance their skills."
               },
               "TECHSITH": {
-                "DESCRIPTION": "TECHSITH DOCUMENTATION DESCRIPTION"
+                "DESCRIPTION": "The Techsith YouTube channel is a highly regarded resource for developers, offering in-depth tutorials and explanations on JavaScript, React, Node.js, and other web development technologies. Known for its clear, concise, and detailed content, the channel focuses on core concepts, advanced topics, and interview preparation, making it a valuable resource for both beginners and experienced developers aiming to deepen their understanding and improve their coding skills."
               }
             }
           }
         }
       },
-      "3D": {
-        "SECTION_TITLE": "3D",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "FRONT_END_LIBRAIRIES": {
+        "SECTION_TITLE": "front-end librairies",
+        "SECTION_DESCRIPTION": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
         "PARAGRAPHS": {
+          "REDUX": {
+            "PARAGRAPH_TITLE": "Redux",
+            "PARAGRAPH_DESCRIPTION": "Redux is a predictable state management library for JavaScript applications, commonly used with React. It centralizes application state in a single store, making it easier to manage and debug. Redux follows a unidirectional data flow and uses actions and reducers to update state, ensuring consistency and scalability. It's widely used for building complex, data-driven applications with clear and maintainable code.",
+            "LINKS": {
+              "REDUX": {
+                "DESCRIPTION": "The Redux documentation is a comprehensive and well-structured guide to understanding and using Redux for state management in JavaScript applications. It provides clear explanations of core concepts like actions, reducers, and the store, along with practical examples and best practices. The documentation also includes advanced topics, troubleshooting tips, and integration guides for frameworks like React, making it an essential resource for both beginners and experienced developers."
+              },
+              "REDUX_TOOLKIT": {
+                "DESCRIPTION": "RTK (Redux Toolkit) is the official, opinionated toolset for efficient Redux development. It simplifies common Redux tasks by providing utilities like createSlice for reducing boilerplate, configureStore for setting up the store, and built-in support for async logic with createAsyncThunk. RTK promotes best practices, reduces complexity, and makes Redux easier to use, making it the recommended way to write Redux logic in modern applications."
+              }
+            }
+          },
+          "GSAP": {
+            "PARAGRAPH_TITLE": "GSAP",
+            "PARAGRAPH_DESCRIPTION": "GSAP (GreenSock Animation Platform) is a robust JavaScript library designed for creating high-performance, professional-grade animations for the web. It provides a suite of tools to animate HTML, SVG, and CSS properties with precision and flexibility. Known for its speed, smoothness, and cross-browser compatibility, GSAP is widely used by developers to build complex, interactive animations and user experiences with ease.",
+            "LINKS": {
+              "GSAP": {
+                "DESCRIPTION": "The GSAP documentation is a comprehensive and well-organized resource for mastering GSAP, a powerful JavaScript library for creating high-performance animations. It includes detailed guides, API references, and interactive examples to help developers understand and implement animations for web projects. The documentation is beginner-friendly yet thorough, making it an essential tool for both newcomers and experienced users to create smooth, complex, and engaging animations."
+              },
+              "GSAP_LEARNING": {
+                "DESCRIPTION": "The GSAP Learning Channel is an official resource by GreenSock, offering a variety of tutorials, tips, and demonstrations to help developers master GSAP (GreenSock Animation Platform). The channel features step-by-step guides, real-world examples, and deep dives into advanced techniques, making it an excellent place to learn how to create smooth, high-performance animations for web projects. It's perfect for both beginners and experienced developers looking to enhance their animation skills."
+              }
+            }
+          }
+        }
+      },
+      "REAL_TIME_3D": {
+        "SECTION_TITLE": "Real-time 3D",
+        "SECTION_DESCRIPTION": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
+        "PARAGRAPHS": {
+          "WEBGPU": {
+            "PARAGRAPH_TITLE": "WebGPU",
+            "PARAGRAPH_DESCRIPTION": "WebGPU is a next-generation web graphics API designed to provide modern, high-performance rendering and computation capabilities for web applications. It offers lower-level access to GPU hardware compared to WebGL, enabling more efficient and powerful graphics, machine learning, and parallel computing tasks. WebGPU is designed to be the successor to WebGL, bringing the benefits of APIs like Vulkan and Metal to the web, making it ideal for advanced 3D rendering, gaming, and data-intensive applications.",
+            "LINKS": {
+              "WEBGPU": {
+                "DESCRIPTION": "The W3C WebGPU documentation is the official specification and reference for the WebGPU API, providing detailed information on its architecture, features, and usage. It outlines the API's core concepts, such as GPU pipelines, shaders, and buffers, along with examples and guidelines for implementing high-performance graphics and computation on the web. This documentation is essential for developers looking to leverage WebGPU's advanced capabilities for modern web applications."
+              },
+              "GET_INTO_GAME_DEV": {
+                "DESCRIPTION": "The GetIntoGameDev YouTube channel is a dedicated resource for aspiring and experienced game developers. It offers tutorials, tips, and insights on various aspects of game development, including game design, programming, and using tools like Unity and Unreal Engine. The channel focuses on practical, hands-on content to help viewers learn how to create games, from beginner-friendly concepts to advanced techniques, making it a valuable resource for anyone passionate about game development."
+              }
+            }
+          },
           "WEBGL": {
             "PARAGRAPH_TITLE": "WebGL",
             "PARAGRAPH_DESCRIPTION": "WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 2D and 3D graphics within any compatible web browser without the use of plug-ins. It is based on OpenGL ES and provides a low-level, high-performance interface for creating graphics on the web.",
@@ -480,12 +525,12 @@
       },
       "BACK_END": {
         "SECTION_TITLE": "back-end",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SECTION_DESCRIPTION": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
         "PARAGRAPHS": {}
       },
       "PROGRAMMING_LANGUAGES": {
         "SECTION_TITLE": "programming languages",
-        "SECTION_DESCRIPTION": "DESCRIPTION",
+        "SECTION_DESCRIPTION": "<p>DESCRIPTION</p>",
         "PARAGRAPHS": {
           "HTML": {
             "PARAGRAPH_TITLE": "HTML",

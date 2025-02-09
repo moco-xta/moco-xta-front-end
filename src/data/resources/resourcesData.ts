@@ -27,7 +27,14 @@ export const resourcesData = {
               key: 'codevolution',
               translationKey: 'CODEVOLUTION',
               urlName: 'codevolution',
-              url: 'https://www.youtube.com/c/Codevolution/playlists',
+              url: 'https://www.youtube.com/c/Codevolution',
+              languages: ['en'],
+            },
+            {
+              key: 'dave_gray',
+              translationKey: 'DAVE_GRAY',
+              urlName: 'Dave Gray',
+              url: 'https://www.youtube.com/@DaveGrayTeachesCode',
               languages: ['en'],
             },
           ],
@@ -78,9 +85,95 @@ export const resourcesData = {
       ],
     },
     {
-      key: 'threed',
-      translationKey: '3D',
+      key: 'front_end_libraries',
+      translationKey: 'FRONT_END_LIBRAIRIES',
       paragraphs: [
+        {
+          key: 'redux',
+          translationKey: 'REDUX',
+          documentation: [
+            {
+              key: 'redux',
+              translationKey: 'REDUX',
+              urlName: 'Redux',
+              url: 'https://redux.js.org/introduction/getting-started',
+              languages: ['en'],
+            },
+            {
+              key: 'redux_toolkit',
+              translationKey: 'REDUX_TOOLKIT',
+              urlName: 'Redux toolkit',
+              url: 'https://redux-toolkit.js.org/introduction/getting-started',
+              languages: ['en'],
+            },
+          ],
+          websites: [],
+          youtubePlaylistlink: {
+            url: 'https://www.youtube.com/watch?v=Yokjzp91A4o&list=PLbEvIQDy5AOUIabt62KvkZIsda9gIQ0wv&pp=gAQB',
+          },
+          channels: [],
+          articles: [],
+        },
+        {
+          key: 'gsap',
+          translationKey: 'GSAP',
+          documentation: [
+            {
+              key: 'gsap',
+              translationKey: 'GSAP',
+              urlName: 'GSAP',
+              url: 'https://gsap.com/docs/v3/',
+              languages: ['en'],
+            },
+          ],
+          websites: [],
+          youtubePlaylistlink: {
+            url: 'https://www.youtube.com/watch?v=wlrHmiWm4vQ&list=PLbEvIQDy5AOVGBZBbDGSiMuB5IgycdgZQ&pp=gAQB',
+          },
+          channels: [
+            {
+              key: 'gsap_learning',
+              translationKey: 'GSAP_LEARNING',
+              urlName: 'GSAP learning',
+              url: 'https://www.youtube.com/@GreenSockLearning',
+              languages: ['en'],
+            },
+          ],
+          articles: [],
+        },
+      ],
+    },
+    {
+      key: 'real_time_3d',
+      translationKey: 'REAL_TIME_3D',
+      paragraphs: [
+        {
+          key: 'webgpu',
+          translationKey: 'WEBGPU',
+          documentation: [
+            {
+              key: 'webgpu',
+              translationKey: 'WEBGPU',
+              urlName: 'WebGPU',
+              url: 'https://www.w3.org/TR/webgpu/',
+              languages: ['en'],
+            },
+          ],
+          websites: [],
+          youtubePlaylistlink: {
+            url: 'https://www.youtube.com/watch?v=NxeRcnLr0ko&list=PLbEvIQDy5AOUQeJz5A40YQq90pZHxvNPO&pp=gAQB',
+          },
+          channels: [
+            {
+              key: 'get_into_game_dev',
+              translationKey: 'GET_INTO_GAME_DEV',
+              urlName: 'GetIntoGameDave',
+              url: 'https://www.youtube.com/@GetIntoGameDev/featured',
+              languages: ['en'],
+            },
+          ],
+          articles: [],
+        },
         {
           key: 'webgl',
           translationKey: 'WEBGL',
