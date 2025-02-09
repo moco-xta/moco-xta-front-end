@@ -5,11 +5,12 @@ import {
   Bloom,
   DepthOfField,
   EffectComposer,
+  ToneMapping,
   // Noise,
   // Scanline,
   // Vignette,
 } from '@react-three/postprocessing'
-import { /* BlendFunction, DepthOfFieldEffect, */ KernelSize, Resolution } from 'postprocessing'
+import { BlendFunction, /* DepthOfFieldEffect, */ KernelSize, Resolution } from 'postprocessing'
 // import { gsap } from 'gsap'
 // import { useGSAP } from '@gsap/react'
 
@@ -52,6 +53,15 @@ export default function PostProcessing() {
         mipmapBlur={true}
         resolutionX={Resolution.AUTO_SIZE}
         resolutionY={Resolution.AUTO_SIZE}
+      />
+      <ToneMapping
+        blendFunction={BlendFunction.NORMAL} // blend mode
+        adaptive={true} // toggle adaptive luminance map usage
+        resolution={1024} // texture resolution of the luminance map
+        middleGrey={0.5} // middle grey factor
+        maxLuminance={40.0} // maximum luminance
+        averageLuminance={2.0} // average luminance
+        adaptationRate={1.0} // luminance adaptation rate
       />
       {/* <Bloom
         intensity={0.25}

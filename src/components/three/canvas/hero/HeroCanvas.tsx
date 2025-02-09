@@ -20,8 +20,6 @@ import './index.scss'
 export default function HeroCanvas() {
   return (
     <Canvas
-      linear
-      flat
       {...canvasDefaultValues}
     >
       <Camera />
