@@ -19,9 +19,7 @@ import './index.scss'
 
 export default function HeroCanvas() {
   return (
-    <Canvas
-      {...canvasDefaultValues}
-    >
+    <Canvas {...canvasDefaultValues}>
       <Camera />
       <Lightning />
       {/* <OrbitControls /> */}

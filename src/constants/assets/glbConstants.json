@@ -23,6 +23,7 @@
     "LOGO_DOCKER": "/models/glb/logos/LogoDocker.glb",
     "LOGO_FIGMA": "/models/glb/logos/LogoFigma.glb",
     "LOGO_FORMIK": "/models/glb/logos/LogoFormik.glb",
+    "LOGO_GIT": "/models/glb/logos/LogoGit.glb",
     "LOGO_GITHUB": "/models/glb/logos/LogoGithub.glb",
     "LOGO_GITLAB": "/models/glb/logos/LogoGitlab.glb",
     "LOGO_GMAIL": "/models/glb/logos/LogoGmail.glb",

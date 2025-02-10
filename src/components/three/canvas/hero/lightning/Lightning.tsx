@@ -12,7 +12,10 @@ export default function Lightning() {
       {/* <AmbientLight /> */}
       <ambientLight intensity={2} />
       {/* <DirectionalLights /> */}
-      <Environment files={imgConstants.HDRS.HERO_ENVIRONMENT} environmentIntensity={1.5} />
+      <Environment
+        files={imgConstants.HDRS.HERO_ENVIRONMENT}
+        environmentIntensity={1.5}
+      />
     </>
   )
 }

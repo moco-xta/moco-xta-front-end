@@ -10,4 +10,4 @@ const helveticaNeueBoldFont = localFont({
   variable: '--font-parisine-try-regular',
 }) */
 
-export { /* parisineTryRegularFont, */helveticaNeueBoldFont }
+export { /* parisineTryRegularFont, */ helveticaNeueBoldFont }
