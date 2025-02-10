@@ -24,9 +24,10 @@ export default function PageIntroduction({ translationPath }: TPageIntroduction)
         {t.rich(`${translationPath}.PAGE_INTRODUCTION`, {
           p: (chunk) => <p className='pc_item paragraph_translation'>{chunk}</p>,
         })}
-        {t.rich(`${translationPath}.HOME_MADE`, {
-          p: (chunk) => <p className='pc_item home_made'>{chunk}</p>,
-        })}
+        {pathname === '/skills' &&
+          t.rich(`${translationPath}.HOME_MADE`, {
+            p: (chunk) => <p className='pc_item home_made'>{chunk}</p>,
+          })}
       </div>
       {pathname === '/resources' && (
         <div
