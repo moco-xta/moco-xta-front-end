@@ -6,11 +6,9 @@ import {
   DepthOfField,
   EffectComposer,
   ToneMapping,
-  // Noise,
-  // Scanline,
-  // Vignette,
+  Vignette,
 } from '@react-three/postprocessing'
-import { BlendFunction, /* DepthOfFieldEffect, */ KernelSize, Resolution } from 'postprocessing'
+import { BlendFunction, KernelSize, Resolution } from 'postprocessing'
 // import { gsap } from 'gsap'
 // import { useGSAP } from '@gsap/react'
 
@@ -40,9 +38,9 @@ export default function PostProcessing() {
   return (
     <EffectComposer>
       <DepthOfField
-        focusDistance={0.15}
-        focalLength={0.25}
-        bokehScale={1}
+        focusDistance={0.015}
+        focalLength={0.0035}
+        bokehScale={5}
       />
       <Bloom
         intensity={2.5}
@@ -63,27 +61,12 @@ export default function PostProcessing() {
         averageLuminance={2.0} // average luminance
         adaptationRate={1.0} // luminance adaptation rate
       />
-      {/* <Bloom
-        intensity={0.25}
-        kernelSize={KernelSize.LARGE}
-        luminanceThreshold={0.05}
-        luminanceSmoothing={0.025}
-        mipmapBlur={false}
-        resolutionX={Resolution.AUTO_SIZE}
-        resolutionY={Resolution.AUTO_SIZE}
-      /> */}
-      {/* <Scanline
-        blendFunction={BlendFunction.DARKEN}
-        opacity={0.1}
-        density={0.8}
-      /> */}
-      {/* <Noise opacity={0.5} /> */}
-      {/* <Vignette
+      <Vignette
         offset={0.5}
         darkness={0.5}
         eskil={false}
         blendFunction={BlendFunction.NORMAL}
-      /> */}
+      />
     </EffectComposer>
   )
 }

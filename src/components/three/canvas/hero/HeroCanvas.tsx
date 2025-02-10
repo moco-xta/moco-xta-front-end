@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+// import { OrbitControls } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 
 import Camera from './Camera'
@@ -24,7 +24,7 @@ export default function HeroCanvas() {
     >
       <Camera />
       <Lightning />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <Suspense fallback={null}>
         <Physics
           // debug
