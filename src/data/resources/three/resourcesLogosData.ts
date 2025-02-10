@@ -17,6 +17,7 @@ export const resourcesLogosData = {
       'LogoDocker',
       'LogoFigma',
       'LogoFormik',
+      'LogoGit',
       'LogoGithub',
       'LogoGitlab',
       'LogoGoogleAnalytics',
