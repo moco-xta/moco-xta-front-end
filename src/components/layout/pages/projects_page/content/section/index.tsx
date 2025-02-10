@@ -44,19 +44,23 @@ export default function Section({ projectData, companiesData, currentCompany }: 
     >
       <div className='project_container'>
         <SectionTitle
-          title={`${projectData.name} ${companiesData[currentCompany]?.name ? ' with ' + capitalizeFirstLetter(companiesData[currentCompany].name) : ''}`}
+          title={projectData.name}
         />
-        <p className='project_roles'>
+        {companiesData[currentCompany]?.name && <span>{capitalizeFirstLetter(t('WITH'))}{' '}{capitalizeFirstLetter(companiesData[currentCompany]?.name ?? '')}</span>}
+        <span className='project_roles'>
+          {capitalizeFirstLetter(t('SKILL') + `${projectData.roles.length > 1 ? 's' : ''}`)}{': '}
           {projectData.roles.map((role, index) => (
-            <span key={`role_${projectData.key}_${index}`}>{role}</span>
+            role + (index === projectData.roles.length - 1 ? "" : ", ")
           ))}
-        </p>
-        <p className='project_description'>{t(projectData.descriptionsKey)}</p>
-        <p className='project_tools'>
+        </span>
+          {t.rich(projectData.descriptionsKey, {
+            p: (chunk) => <p className='project_description'>{chunk}</p>,
+          })}
+        {/* <p className='project_tools'>
           {projectData.logos.tools.map((tool, index) => (
             <span key={`role_${projectData.key}_${index}`}>#{tool.name}</span>
           ))}
-        </p>
+        </p> */}
       </div>
     </section>
   )

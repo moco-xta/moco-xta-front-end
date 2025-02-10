@@ -10,12 +10,12 @@ export const projectsData: TProjectData[] = [
     name: 'Moco.xta',
     url: 'https://moco-xta.com/en',
     imageUrl: texturesConstants.PROJECTS.MOCO_XTA,
-    descriptionsKey: 'DESCRIPTIONS.LENTO',
+    descriptionsKey: 'DESCRIPTIONS.MOCO',
     dates: {
       to: moment(new Date()).format('YYYY-MM-DD'),
       from: '2024-01-01',
     },
-    roles: ['Full Stack', 'Real-time 3D'],
+    roles: ['Full-stack', 'Real-time 3D'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -40,7 +40,7 @@ export const projectsData: TProjectData[] = [
   },
   {
     key: 'abwerkt',
-    name: 'AB Werkt',
+    name: 'Abwerkt.nl',
     url: 'https://www.ab-werkt.eu/home',
     imageUrl: texturesConstants.PROJECTS.ABWERKT,
     descriptionsKey: 'DESCRIPTIONS.ABWERKT',
@@ -48,7 +48,7 @@ export const projectsData: TProjectData[] = [
       to: '2023-11-31',
       from: '2023-03-01',
     },
-    roles: ['Front End'],
+    roles: ['Front-end'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -73,12 +73,12 @@ export const projectsData: TProjectData[] = [
     name: 'Lento.eu',
     url: 'https://lento.eu/en',
     imageUrl: texturesConstants.PROJECTS.LENTO,
-    descriptionsKey: 'DESCRIPTIONS.ABWERKT',
+    descriptionsKey: 'DESCRIPTIONS.LENTO',
     dates: {
       to: '2023-02-28',
       from: '2022-02-01',
     },
-    roles: ['Front End'],
+    roles: ['Front-end'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -110,7 +110,7 @@ export const projectsData: TProjectData[] = [
       to: '2022-01-30',
       from: '2021-09-01',
     },
-    roles: ['Front End', 'Real-time 3D'],
+    roles: ['Full-stack', 'Real-time 3D'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -137,7 +137,7 @@ export const projectsData: TProjectData[] = [
       to: '2021-08-30',
       from: '2021-03-17',
     },
-    roles: ['Front End', 'Real-time 3D'],
+    roles: ['Full-stack', 'Real-time 3D'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -165,7 +165,7 @@ export const projectsData: TProjectData[] = [
       to: '2021-05-17',
       from: '2019-05-01',
     },
-    roles: ['Full stack', 'Real-time 3D'],
+    roles: ['Full-stack', 'Real-time 3D'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
