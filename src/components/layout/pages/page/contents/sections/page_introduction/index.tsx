@@ -1,6 +1,4 @@
 import React from 'react'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 import { FaYoutube } from 'react-icons/fa'
 
