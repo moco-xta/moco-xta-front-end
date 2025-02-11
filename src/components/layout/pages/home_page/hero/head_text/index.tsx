@@ -1,11 +1,9 @@
 import React from 'react'
-import { useTranslations } from 'next-intl'
 
 import './index.scss'
 import { helveticaNeueBoldFont } from '@/app/fonts/otf'
 
 export default function HeadText() {
-  const t = useTranslations('HOME')
 
   return (
     <div
