@@ -2,7 +2,9 @@ import type { ReactNode } from 'react'
 import type {
   TExternalLinkData,
   TPageData,
+  TResourcesPageData,
   TResourcesParagraphData,
+  TResourcesSectionData,
   TSectionData,
   TSkillsParagraphData,
 } from '@/types/data/components/layout/types'
@@ -22,6 +24,14 @@ export type TPage = {
   backgroundCanvas?: JSX.Element
 }
 
+// RESOURCES
+
+export type TResourcesPage = {
+  pageData: TResourcesPageData
+  extraButtons?: ReactNode[]
+  backgroundCanvas?: JSX.Element
+}
+
 export type TPlayerPage = {
   introduction: ReactNode
   canvas: JSX.Element
@@ -30,13 +40,19 @@ export type TPlayerPage = {
 // SIDE NAVIGATION MENU
 
 export type TSideNavigationMenu = {
-  pageData: TPageData
+  pageData: TPageData | TResourcesPageData
   extraButtons?: ReactNode[]
 }
 
 // CONTENT
 
 export type TContent = {
+  pageData: TPageData
+}
+
+// RESOURCES
+
+export type TResourcesContent = {
   pageData: TPageData
 }
 
@@ -53,7 +69,14 @@ export type TPlayerPageIntroduction = {
 
 export type TSection = {
   translationPath: string
-  sectionData: TSectionData
+  sectionData: TSectionData | TResourcesSectionData
+}
+
+// RESOURCES
+
+export type TResourcesSection = {
+  translationPath: string
+  sectionData: TSectionData | TResourcesSectionData
 }
 
 // PLAYER PAGE GREETING
@@ -95,21 +118,19 @@ export type TCurrentDate = {
 // PARAGRAPH
 
 export type TParagraph = {
-  sectionData: TSectionData
   translationPath: string
-  paragraphData: TSkillsParagraphData | TResourcesParagraphData
+  paragraphData: TSkillsParagraphData
+}
+
+export type TResourcesParagraph = {
+  translationPath: string
+  paragraphData: TResourcesParagraphData
 }
 
 export type TSkillsParagraph = {
   key: string
   translationPath: string
   paragraphData: TSkillsParagraphData
-}
-
-export type TResourcesParagraph = {
-  key: string
-  translationPath: string
-  paragraphData: TResourcesParagraphData
 }
 
 // TITLES

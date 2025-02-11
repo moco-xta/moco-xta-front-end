@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import { Page } from '@/components/layout/pages'
+import ResourcesPage from '@/components/layout/pages/resources_page'
 import { ResourcesCanvas } from '@/components/three/canvas'
 
 import { resourcesData } from '@/data/resources/resourcesData'
@@ -10,7 +10,7 @@ import { resourcesData } from '@/data/resources/resourcesData'
 
 export default function Resources() {
   return (
-    <Page
+    <ResourcesPage
       pageData={resourcesData}
       backgroundCanvas={<ResourcesCanvas />}
     />
