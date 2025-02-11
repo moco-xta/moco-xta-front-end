@@ -8,6 +8,27 @@ export type TPageData = {
   sections: TSectionData[]
 }
 
+export type TSectionData = {
+  key: string
+  translationKey: string
+  videoIntroduction?: {
+    from: string
+    url: string
+  }
+  document?: TLinksArrayData[]
+  paragraphs: TParagraphData[] | TSkillsParagraphData[] | TResourcesParagraphData[]
+}
+
+type TParagraphData = {
+  key: string
+  translationKey: string
+}
+
+export type TSkillsParagraphData = TParagraphData & {
+  used: boolean
+  logo: TLogoData
+}
+
 // RESOURCES
 
 export type TResourcesPageData = {
@@ -19,11 +40,26 @@ export type TResourcesPageData = {
 export type TResourcesSectionData = {
   key: string
   translationKey: string
+  paragraphs: TResourcesParagraphData[]
+}
+
+export type TResourcesParagraphData = TParagraphData & {
   videoIntroduction?: {
     from: string
     url: string
   }
-  paragraphs: TResourcesParagraphData
+  categories: TResourcesCategoryData
+}
+
+export type TResourcesCategoryData = {
+  key: string
+  translationKey: string
+  youtubePlaylistLink: {
+    url: string
+  }
+  documentation?: TLinksArrayData[]
+  channels?: TLinksArrayData[]
+  websites?: TLinksArrayData[]
 }
 
 // MENU
@@ -50,40 +86,6 @@ export type TResourcesMenuSectionData = {
 export type TMenuParagraphData = {
   key: string
   translationKey: string
-}
-
-// SECTION
-
-export type TSectionData = {
-  key: string
-  translationKey: string
-  videoIntroduction?: {
-    from: string
-    url: string
-  }
-  document?: TLinksArrayData[]
-  paragraphs: TParagraphData[] | TSkillsParagraphData[] | TResourcesParagraphData[]
-}
-
-// PARAGRAPH
-
-type TParagraphData = {
-  key: string
-  translationKey: string
-}
-
-export type TSkillsParagraphData = TParagraphData & {
-  used: boolean
-  logo: TLogoData
-}
-
-export type TResourcesParagraphData = TParagraphData & {
-  youtubePlaylistLink: {
-    url: string
-  }
-  documentation?: TLinksArrayData[]
-  channels?: TLinksArrayData[]
-  websites?: TLinksArrayData[]
 }
 
 // LINKS

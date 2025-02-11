@@ -119,7 +119,7 @@ export type TCurrentDate = {
 
 export type TParagraph = {
   translationPath: string
-  paragraphData: TSkillsParagraphData
+  paragraphData: TSkillsParagraphData | TResourcesParagraphData
 }
 
 export type TResourcesParagraph = {
