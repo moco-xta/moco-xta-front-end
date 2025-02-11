@@ -4,10 +4,10 @@ import { useTranslations } from 'next-intl'
 import type { TResourcesSection } from '@/types/components/layout/types'
 
 import { SectionTitle } from '@/components/layout/titles'
-import { LinksArray } from '@/components/layout/links'
+// import { LinksArray } from '@/components/layout/links'
 
 import './index.scss'
-import { TExternalLinkData } from '@/types/data/components/layout/types'
+// import { TExternalLinkData } from '@/types/data/components/layout/types'
 
 export default function ResourcesSection({ translationPath, sectionData }: TResourcesSection) {
   const t = useTranslations()
@@ -28,7 +28,7 @@ export default function ResourcesSection({ translationPath, sectionData }: TReso
           p: (chunk) => <p className='paragraph_translation'>{chunk}</p>,
         })}
       </div>
-      {sectionData.videoIntroduction && (
+      {/* {sectionData.videoIntroduction && (
         <div className='pc_item video_introduction_container'>
           <iframe
             // width='60%'
@@ -71,7 +71,7 @@ export default function ResourcesSection({ translationPath, sectionData }: TReso
           title={'WEBSITES'}
           links={sectionData.paragraphs.websites as unknown as TExternalLinkData[]}
         />
-      )}
+      )} */}
     </section>
   )
 }

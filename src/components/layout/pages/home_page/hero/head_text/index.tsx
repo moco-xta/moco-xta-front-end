@@ -4,7 +4,6 @@ import './index.scss'
 import { helveticaNeueBoldFont } from '@/app/fonts/otf'
 
 export default function HeadText() {
-
   return (
     <div
       id='front_end_developer_container'

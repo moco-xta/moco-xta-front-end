@@ -48,28 +48,6 @@ export default function ResourcesSection({ translationPath, sectionData }: TReso
           p: (chunk) => <p className='paragraph_translation'>{chunk}</p>,
         })}
       </div>
-      {sectionData.videoIntroduction && (
-        <div className='pc_item video_introduction_container'>
-          <iframe
-            // width='60%'
-            // height='280px'
-            src={sectionData.videoIntroduction.url}
-            title='YouTube video player'
-            frameBorder='0'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-            referrerPolicy='strict-origin-when-cross-origin'
-            allowFullScreen
-          ></iframe>
-          <div className='video_introduction_description'>
-            {t.rich(
-              `${translationPath}.SECTIONS.${sectionData.translationKey}.VIDEO_INTRODUCTION_DESCRIPTION`,
-              {
-                p: (chunk) => <p>{chunk}</p>,
-              },
-            )}
-          </div>
-        </div>
-      )}
     </section>
   )
 }

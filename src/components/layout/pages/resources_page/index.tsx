@@ -2,9 +2,10 @@ import React from 'react'
 
 import type { TResourcesPage } from '@/types/components/layout/types'
 
-import { ResourcesPageProvider } from '@/contexts/ResourcesPageContext'
-import { SideNavigationMenuLeft } from './menus'
-import ResourcesPageContent from './contents'
+import { PageProvider } from '@/contexts/PageContext'
+
+import { SideNavigationMenuLeft, SideNavigationMenuRight } from '../page/menus'
+import { PageContent } from '../page/contents'
 
 import './index.scss'
 
@@ -16,17 +17,18 @@ export default function ResourcesPage({
   return (
     <>
       {backgroundCanvas && <div id='background_canvas'>{backgroundCanvas}</div>}
-      <ResourcesPageProvider resourcesPageData={resourcesPageData}>
+      <PageProvider pageData={resourcesPageData}>
         <div className='page_container'>
           <div className='page'>
             <SideNavigationMenuLeft
               pageData={resourcesPageData}
               extraButtons={extraButtons}
             />
-            <ResourcesPageContent resourcesPageData={resourcesPageData} />
+            <PageContent pageData={resourcesPageData} />
+            <SideNavigationMenuRight pageData={resourcesPageData} />
           </div>
         </div>
-      </ResourcesPageProvider>
+      </PageProvider>
     </>
   )
 }

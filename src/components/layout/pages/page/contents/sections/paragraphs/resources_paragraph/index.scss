@@ -1,0 +1,30 @@
+@import '@/styles/variables.module.scss';
+
+.video_introduction_container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: calc(-85px + 40px);
+
+  iframe {
+    border-radius: 15px 0 0 15px;
+  }
+
+  .video_introduction_description {
+    height: 255px;
+    padding: $px_margin_L;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    background: rgba(64, 64, 64, 0.3);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    border-radius: 0 15px 15px 0;
+    font-size: 13px;
+
+    p {
+      line-height: 110%;
+    }
+  }
+}
