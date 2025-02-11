@@ -1,13 +1,11 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
-import type { TResourcesParagraphData } from '@/types/data/components/layout/types'
 import type { TResourcesSection } from '@/types/components/layout/types'
 
 import { usePageContext } from '@/contexts/PageContext'
 
 import { SectionTitle } from '@/components/layout/titles'
-import ResourcesParagraph from './paragraph'
 
 import './index.scss'
 
@@ -50,13 +48,28 @@ export default function ResourcesSection({ translationPath, sectionData }: TReso
           p: (chunk) => <p className='paragraph_translation'>{chunk}</p>,
         })}
       </div>
-      {(sectionData.paragraphs as TResourcesParagraphData[]).map((paragraphData) => (
-        <ResourcesParagraph
-          key={`paragrah_${sectionData.key}_${paragraphData.key}`}
-          translationPath={`${translationPath}.SECTIONS.${sectionData.translationKey}.PARAGRAPHS`}
-          paragraphData={paragraphData}
-        />
-      ))}
+      {sectionData.videoIntroduction && (
+        <div className='pc_item video_introduction_container'>
+          <iframe
+            // width='60%'
+            height='255px'
+            src={sectionData.videoIntroduction.url}
+            title='YouTube video player'
+            frameBorder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            referrerPolicy='strict-origin-when-cross-origin'
+            allowFullScreen
+          ></iframe>
+          <div>
+            {t.rich(
+              `${translationPath}.SECTIONS.${sectionData.translationKey}.VIDEO_INTRODUCTION_DESCRIPTION`,
+              {
+                p: (chunk) => <p className='video_introduction_description'>{chunk}</p>,
+              },
+            )}
+          </div>
+        </div>
+      )}
     </section>
   )
 }

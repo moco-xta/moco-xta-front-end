@@ -1,19 +1,13 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
-import type {
-  TExternalLinkData,
-  TResourcesParagraphData,
-  TSkillsParagraphData,
-} from '@/types/data/components/layout/types'
+import type { TResourcesSection } from '@/types/components/layout/types'
 
 import { usePageContext } from '@/contexts/PageContext'
 
 import { SectionTitle } from '@/components/layout/titles'
-import { Paragraph } from '../paragraphs'
 
 import './index.scss'
-import { LinksArray } from '@/components/layout/links'
 
 export default function ResourcesSection({ translationPath, sectionData }: TResourcesSection) {
   const t = useTranslations()
@@ -76,11 +70,6 @@ export default function ResourcesSection({ translationPath, sectionData }: TReso
           </div>
         </div>
       )}
-      <LinksArray
-        translationPath={`${translationPath}.${paragraphData.translationKey}`}
-        title={'DOCUMENTATION'}
-        links={sectionData.documentation as unknown as TExternalLinkData[]}
-      />
     </section>
   )
 }

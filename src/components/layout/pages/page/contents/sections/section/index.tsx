@@ -3,7 +3,6 @@ import { useTranslations } from 'next-intl'
 
 import type { TSection } from '@/types/components/layout/types'
 import type {
-  TResourcesParagraphData,
   TSkillsParagraphData,
 } from '@/types/data/components/layout/types'
 
