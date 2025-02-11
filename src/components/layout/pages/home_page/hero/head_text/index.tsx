@@ -11,7 +11,11 @@ export default function HeadText() {
     <div
       id='front_end_developer_container'
       className={`${helveticaNeueBoldFont.className}`}
-      dangerouslySetInnerHTML={{ __html: t('HERO.FRONT_END_DEVELOPER') }}
-    />
+    >
+      <p className='dream_in_3d'>Dream</p>
+      <p className='dream_in_3d'>in 3D</p>
+      <p className='build_in_reality'>Build</p>
+      <p className='build_in_reality'>in Reality</p>
+    </div>
   )
 }
