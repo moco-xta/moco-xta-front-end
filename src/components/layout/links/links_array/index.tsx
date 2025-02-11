@@ -15,7 +15,7 @@ export default function LinksArray({
   translationPath,
   title,
   links,
-  youtubePlaylistlink,
+  youtubePlaylistLink,
 }: TLinksArray) {
   const t = useTranslations()
 
@@ -26,7 +26,7 @@ export default function LinksArray({
     >
       <caption>
         {capitalizeFirstLetter(t(`RESOURCES.${title}`))}
-        {youtubePlaylistlink && <YoutubePlaylistLink url={youtubePlaylistlink.url} />}
+        {youtubePlaylistLink && <YoutubePlaylistLink url={youtubePlaylistLink.url} />}
       </caption>
       <tbody>
         {links.map(({ translationKey, urlName, url, languages }: TExternalLinkData) => (

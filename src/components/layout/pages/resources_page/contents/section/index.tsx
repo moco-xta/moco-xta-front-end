@@ -50,11 +50,28 @@ export default function ResourcesSection({ translationPath, sectionData }: TReso
           </div>
         </div>
       )}
-      <LinksArray
-        translationPath={`${translationPath}.${sectionData.paragraphs.translationKey}`}
-        title={'DOCUMENTATION'}
-        links={sectionData.paragraphs.documentation as unknown as TExternalLinkData[]}
-      />
+      {sectionData.paragraphs.documentation && sectionData.paragraphs.documentation.length > 0 && (
+        <LinksArray
+          translationPath={`${translationPath}.SECTIONS.${sectionData.paragraphs.translationKey}`}
+          title={'DOCUMENTATION'}
+          links={sectionData.paragraphs.documentation as unknown as TExternalLinkData[]}
+        />
+      )}
+      {sectionData.paragraphs.channels && sectionData.paragraphs.channels.length > 0 && (
+        <LinksArray
+          translationPath={`${translationPath}.SECTIONS.${sectionData.paragraphs.translationKey}`}
+          title={'CHANNELS'}
+          links={sectionData.paragraphs.channels as unknown as TExternalLinkData[]}
+          youtubePlaylistLink={sectionData.paragraphs.youtubePlaylistLink}
+        />
+      )}
+      {sectionData.paragraphs.websites && sectionData.paragraphs.websites.length > 0 && (
+        <LinksArray
+          translationPath={`${translationPath}.SECTIONS.${sectionData.paragraphs.translationKey}`}
+          title={'WEBSITES'}
+          links={sectionData.paragraphs.websites as unknown as TExternalLinkData[]}
+        />
+      )}
     </section>
   )
 }

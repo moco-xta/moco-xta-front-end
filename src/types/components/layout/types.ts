@@ -146,7 +146,7 @@ export type TLinksArray = {
   translationPath: string
   title: string
   links: TExternalLinkData[]
-  youtubePlaylistlink?: {
+  youtubePlaylistLink?: {
     url: string
   }
 }

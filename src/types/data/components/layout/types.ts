@@ -78,7 +78,12 @@ export type TSkillsParagraphData = TParagraphData & {
 }
 
 export type TResourcesParagraphData = TParagraphData & {
-  documentation: TLinksArrayData[]
+  youtubePlaylistLink: {
+    url: string
+  }
+  documentation?: TLinksArrayData[]
+  channels?: TLinksArrayData[]
+  websites?: TLinksArrayData[]
 }
 
 // LINKS
@@ -89,7 +94,7 @@ export type TLinksArrayData = {
   urlName: string
   url: string
   languages: string[]
-  youtubePlaylistlink?: {
+  youtubePlaylistLink?: {
     url: string
   }
 }
