@@ -374,7 +374,7 @@
     "SECTIONS": {
       "THREE_D": {
         "SECTION_TITLE": "3D",
-        "SECTION_DESCRIPTION": "<p>3D description...</p>",
+        "SECTION_DESCRIPTION": "<p>Welcome to the 3D section, where you'll find a curated collection of essential links, tools, and documentation for working with WebGPU, WebGL, Three.js, React Three Fiber, and Blender. Whether you're a beginner exploring real-time 3D graphics or an experienced developer building advanced interactive experiences, this section provides everything you need to enhance your workflow.</p><p>From low-level GPU programming with WebGPU and WebGL to high-level 3D scene management with Three.js and React Three Fiber, you'll find resources to help you create stunning, performant 3D applications. Additionally, we've included useful Blender resources for modeling, texturing, and rendering, ensuring you have the right tools to bring your 3D visions to life.</p>",
         "PARAGRAPHS": {
           "BLENDER": {
             "PARAGRAPH_TITLE": "blender",
@@ -437,6 +437,18 @@
               }
             }
           },
+          "WEBGPU": {
+            "PARAGRAPH_TITLE": "WebGPU",
+            "PARAGRAPH_DESCRIPTION": "<p>WebGPU is a next-generation graphics and compute API designed to provide high-performance GPU access for web applications. It serves as the successor to WebGL, offering lower-level control, improved efficiency, and modern rendering capabilities that align with Vulkan, Metal, and Direct3D 12. WebGPU enables developers to leverage advanced graphics features like compute shaders, explicit memory management, and parallel processing, making it ideal for real-time 3D rendering, machine learning, and high-performance computing in the browser.</p><p>With a streamlined API and support for better resource management, reduced CPU overhead, and enhanced rendering techniques, WebGPU provides a significant performance boost over its predecessors. It integrates seamlessly with frameworks like Three.js and Babylon.js, unlocking new possibilities for complex visualizations, gaming, and AI-powered applications. As browsers continue to adopt WebGPU, it is set to revolutionize web-based graphics and computation, bringing desktop-level performance to modern web applications.</p>",
+            "LINKS": {
+              "WEBGPU": {
+                "DESCRIPTION": "The W3C WebGPU documentation is the official specification and reference for the WebGPU API, providing detailed information on its architecture, features, and usage. It outlines the API's core concepts, such as GPU pipelines, shaders, and buffers, along with examples and guidelines for implementing high-performance graphics and computation on the web. This documentation is essential for developers looking to leverage WebGPU's advanced capabilities for modern web applications."
+              },
+              "GET_INTO_GAME_DEV": {
+                "DESCRIPTION": "The GetIntoGameDev YouTube channel is a dedicated resource for aspiring and experienced game developers. It offers tutorials, tips, and insights on various aspects of game development, including game design, programming, and using tools like Unity and Unreal Engine. The channel focuses on practical, hands-on content to help viewers learn how to create games, from beginner-friendly concepts to advanced techniques, making it a valuable resource for anyone passionate about game development."
+              }
+            }
+          },
           "WEBGL": {
             "PARAGRAPH_TITLE": "WebGL",
             "PARAGRAPH_DESCRIPTION": "<p>WebGL (Web Graphics Library) is a low-level JavaScript API that enables rendering high-performance 2D and 3D graphics directly in web browsers without requiring additional plugins. Based on OpenGL ES 2.0, WebGL provides direct access to the GPU, allowing for hardware-accelerated rendering of complex graphics. It integrates seamlessly with HTML5’s canvas element and supports cross-platform compatibility, making it a powerful tool for developing interactive applications, games, simulations, and data visualizations. WebGL uses a shader-based pipeline with GLSL (OpenGL Shading Language) for programmable vertex and fragment shaders, offering developers fine control over rendering but requiring manual handling of buffers, textures, and transformations.</p><p>While WebGL is powerful, its complexity has led to the development of high-level libraries like Three.js, Babylon.js, and PixiJS, which simplify 3D and 2D rendering. These frameworks provide built-in tools for managing lighting, shadows, physics, and animation, making WebGL more accessible to developers. WebGL is widely used in game development, VR/AR applications (via WebXR), real-time data visualization, and architectural rendering, allowing users to experience interactive 3D content directly in the browser. With its ability to harness GPU acceleration and its broad compatibility, WebGL remains a key technology for delivering immersive, real-time graphics on the web.</p>",
@@ -465,7 +477,7 @@
       },
       "ANIMATION": {
         "SECTION_TITLE": "Animation",
-        "SECTION_DESCRIPTION": "<p>Animation description...</p>",
+        "SECTION_DESCRIPTION": "<p>The Animation section gathers essential tools, libraries, and documentation for creating smooth, high-performance animations on the web. This section provides the key resources to help you bring motion to your projects with precision and efficiency.<p></p>From UI micro-interactions to complex timeline-based animations, these resources cover both 2D and 3D animation techniques, ensuring you have the right tools to create engaging and interactive experiences. Whether you're a developer or a designer, you'll find everything you need to master animation and elevate your web projects.</p>",
         "PARAGRAPHS": {
           "GSAP": {
             "PARAGRAPH_TITLE": "GSAP",
@@ -476,6 +488,24 @@
               },
               "GSAP_LEARNING": {
                 "DESCRIPTION": "The GSAP Learning Channel is an official resource by GreenSock, offering a variety of tutorials, tips, and demonstrations to help developers master GSAP (GreenSock Animation Platform). The channel features step-by-step guides, real-world examples, and deep dives into advanced techniques, making it an excellent place to learn how to create smooth, high-performance animations for web projects. It's perfect for both beginners and experienced developers looking to enhance their animation skills."
+              }
+            }
+          }
+        }
+      },
+      "DATA": {
+        "SECTION_TITLE": "Data",
+        "SECTION_DESCRIPTION": "<p>The Data section of the Resources page provides essential tools and libraries for managing, querying, and interacting with data efficiently. Whether you're handling state management with Redux/RTK, working with GraphQL for flexible APIs, or managing databases like PostgreSQL and MySQL, this section covers everything you need for seamless data handling in modern applications.</p><p>From backend databases to API testing and database exploration, tools like Postman and DBeaver help streamline development workflows, making it easier to test, debug, and optimize data interactions. Whether you're building a scalable state management system, designing efficient APIs, or working with relational databases, these resources will help you work with data effectively and efficiently.</p>",
+        "PARAGRAPHS": {
+          "REDUX": {
+            "PARAGRAPH_TITLE": "Redux/RTK",
+            "PARAGRAPH_DESCRIPTION": "<p>Redux is a predictable state management library for JavaScript applications, commonly used with React to manage complex application states. It follows a unidirectional data flow and is based on the principles of a single source of truth, immutability, and pure functions, making state management more predictable and easier to debug. Redux operates with a central store that holds the application state, and updates are performed through actions and reducers, ensuring a controlled and traceable data flow.</p><p>With features like time-travel debugging, middleware support, and devtools integration, Redux provides a scalable solution for handling global state in large applications. While it introduces some boilerplate, tools like Redux Toolkit (RTK) simplify the setup and enhance performance. Redux is widely used for managing UI state, server data caching, and complex workflows, making it a powerful choice for building maintainable and scalable front-end applications.</p>",
+            "LINKS": {
+              "REDUX": {
+                "DESCRIPTION": "The Redux documentation is a comprehensive and well-structured guide to understanding and using Redux for state management in JavaScript applications. It provides clear explanations of core concepts like actions, reducers, and the store, along with practical examples and best practices. The documentation also includes advanced topics, troubleshooting tips, and integration guides for frameworks like React, making it an essential resource for both beginners and experienced developers."
+              },
+              "REDUX_TOOLKIT": {
+                "DESCRIPTION": "RTK (Redux Toolkit) is the official, opinionated toolset for efficient Redux development. It simplifies common Redux tasks by providing utilities like createSlice for reducing boilerplate, configureStore for setting up the store, and built-in support for async logic with createAsyncThunk. RTK promotes best practices, reduces complexity, and makes Redux easier to use, making it the recommended way to write Redux logic in modern applications."
               }
             }
           }

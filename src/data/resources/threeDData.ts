@@ -5,6 +5,35 @@ export const threeDData: TResourcesSectionData = {
   translationKey: 'THREE_D',
   paragraphs: [
     {
+      key: 'webgpu',
+      translationKey: 'WEBGPU',
+      categories: {
+        key: 'webgpu',
+        translationKey: 'WEBGPU',
+        youtubePlaylistLink: {
+          url: 'https://www.youtube.com/watch?v=NxeRcnLr0ko&list=PLbEvIQDy5AOUQeJz5A40YQq90pZHxvNPO&pp=gAQB',
+        },
+        documentation: [
+          {
+            key: 'webgpu',
+            translationKey: 'WEBGPU',
+            urlName: 'WebGPU',
+            url: 'https://www.w3.org/TR/webgpu/',
+            languages: ['en'],
+          },
+        ],
+        channels: [
+          {
+            key: 'get_into_game_dev',
+            translationKey: 'GET_INTO_GAME_DEV',
+            urlName: 'GetIntoGameDave',
+            url: 'https://www.youtube.com/@GetIntoGameDev/featured',
+            languages: ['en'],
+          },
+        ],
+      },
+    },
+    {
       key: 'webgl',
       translationKey: 'WEBGL',
       categories: {
@@ -58,53 +87,6 @@ export const threeDData: TResourcesSectionData = {
             translationKey: 'SHADERTOY',
             urlName: 'Shadertoy',
             url: 'https://www.shadertoy.com/',
-            languages: ['en'],
-          },
-        ],
-      },
-    },
-    {
-      key: 'blender',
-      translationKey: 'BLENDER',
-      videoIntroduction: {
-        from: 'youtube',
-        url: 'https://www.youtube.com/embed/qJEWOTZnFeg?si=QUiDIL_w6uPhJirp',
-      },
-      categories: {
-        key: 'blender',
-        translationKey: 'BLENDER',
-        youtubePlaylistLink: {
-          url: 'https://www.youtube.com/watch?v=42K8Hc3fbtA&list=PLbEvIQDy5AOUYGSmRbs9C5kzKQUq1mcdL&pp=gAQB',
-        },
-        documentation: [
-          {
-            key: 'blender_org',
-            translationKey: 'BLENDER_ORG',
-            urlName: 'blender.org',
-            url: 'https://docs.blender.org/',
-            languages: ['en'],
-          },
-        ],
-        channels: [
-          {
-            key: 'blender',
-            translationKey: 'BLENDER',
-            urlName: 'Blender',
-            url: 'https://www.youtube.com/@BlenderOfficial',
-            languages: ['en'],
-          },
-          {
-            key: 'blender_guru',
-            translationKey: 'BLENDER_GURU',
-            urlName: 'Blender Guru',
-            url: 'https://www.youtube.com/@blenderguru',
-            languages: ['en'],
-          },
-          {
-            key: 'default_cube',
-            translationKey: 'DEFAULT_CUBE',
-            urlName: 'Default Cube',
-            url: 'https://www.youtube.com/@DefaultCube',
             languages: ['en'],
           },
         ],
@@ -204,6 +186,53 @@ export const threeDData: TResourcesSectionData = {
             translationKey: 'WAWA_SENSEI',
             urlName: 'Wawa Sensei',
             url: 'https://www.youtube.com/@WawaSensei',
+            languages: ['en'],
+          },
+        ],
+      },
+    },
+    {
+      key: 'blender',
+      translationKey: 'BLENDER',
+      videoIntroduction: {
+        from: 'youtube',
+        url: 'https://www.youtube.com/embed/qJEWOTZnFeg?si=QUiDIL_w6uPhJirp',
+      },
+      categories: {
+        key: 'blender',
+        translationKey: 'BLENDER',
+        youtubePlaylistLink: {
+          url: 'https://www.youtube.com/watch?v=42K8Hc3fbtA&list=PLbEvIQDy5AOUYGSmRbs9C5kzKQUq1mcdL&pp=gAQB',
+        },
+        documentation: [
+          {
+            key: 'blender_org',
+            translationKey: 'BLENDER_ORG',
+            urlName: 'blender.org',
+            url: 'https://docs.blender.org/',
+            languages: ['en'],
+          },
+        ],
+        channels: [
+          {
+            key: 'blender',
+            translationKey: 'BLENDER',
+            urlName: 'Blender',
+            url: 'https://www.youtube.com/@BlenderOfficial',
+            languages: ['en'],
+          },
+          {
+            key: 'blender_guru',
+            translationKey: 'BLENDER_GURU',
+            urlName: 'Blender Guru',
+            url: 'https://www.youtube.com/@blenderguru',
+            languages: ['en'],
+          },
+          {
+            key: 'default_cube',
+            translationKey: 'DEFAULT_CUBE',
+            urlName: 'Default Cube',
+            url: 'https://www.youtube.com/@DefaultCube',
             languages: ['en'],
           },
         ],
