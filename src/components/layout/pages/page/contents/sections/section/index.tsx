@@ -2,9 +2,7 @@ import React, { useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
 import type { TSection } from '@/types/components/layout/types'
-import type {
-  TSkillsParagraphData,
-} from '@/types/data/components/layout/types'
+import type { TSkillsParagraphData } from '@/types/data/components/layout/types'
 
 import { usePageContext } from '@/contexts/PageContext'
 

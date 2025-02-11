@@ -9,16 +9,19 @@ export const resourcesData = {
         from: 'youtube',
         url: 'https://www.youtube.com/embed/qJEWOTZnFeg?si=QUiDIL_w6uPhJirp',
       },
-      documentation: [
-        {
-          key: 'blender',
-          translationKey: 'BLENDER',
-          urlName: 'blender.org',
-          url: 'https://docs.blender.org/',
-          languages: ['en'],
-        },
-      ],
-      paragraphs: [],
+      paragraphs: {
+        key: 'blender',
+        translationKey: 'BLENDER',
+        documentation: [
+          {
+            key: 'blender_org',
+            translationKey: 'BLENDER_ORG',
+            urlName: 'blender_org',
+            url: 'https://docs.blender.org/',
+            languages: ['en'],
+          },
+        ],
+      },
     },
   ],
 }

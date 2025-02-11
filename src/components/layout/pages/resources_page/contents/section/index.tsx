@@ -1,38 +1,18 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
 import type { TResourcesSection } from '@/types/components/layout/types'
 
-import { usePageContext } from '@/contexts/PageContext'
-
 import { SectionTitle } from '@/components/layout/titles'
+import { LinksArray } from '@/components/layout/links'
 
 import './index.scss'
+import { TExternalLinkData } from '@/types/data/components/layout/types'
 
 export default function ResourcesSection({ translationPath, sectionData }: TResourcesSection) {
   const t = useTranslations()
 
-  const { handleSetCurrentParagraph } = usePageContext()
-
   const sectionRef = useRef<HTMLElement>(null!)
-
-  const handleScroll = useCallback(() => {
-    if (sectionRef.current) {
-      const boundingBox = sectionRef.current.getBoundingClientRect()
-      if (boundingBox.top >= 0 && boundingBox.top < 100)
-        handleSetCurrentParagraph({
-          key: 'introduction',
-          translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
-        })
-    }
-  }, [handleSetCurrentParagraph])
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true, capture: true })
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [handleScroll])
 
   return (
     <section
@@ -70,6 +50,11 @@ export default function ResourcesSection({ translationPath, sectionData }: TReso
           </div>
         </div>
       )}
+      <LinksArray
+        translationPath={`${translationPath}.${sectionData.paragraphs.translationKey}`}
+        title={'DOCUMENTATION'}
+        links={sectionData.paragraphs.documentation as unknown as TExternalLinkData[]}
+      />
     </section>
   )
 }

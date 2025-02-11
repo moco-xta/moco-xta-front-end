@@ -4,15 +4,15 @@ import { useGSAP } from '@gsap/react'
 
 import type { TResourcesContent } from '@/types/components/layout/types'
 
-import { usePageContext } from '@/contexts/PageContext'
+import { useResourcesPageContext } from '@/contexts/ResourcesPageContext'
 
 import { PageIntroduction } from '../../page/contents/sections'
 import ResourcesSection from './section'
 
 import './index.scss'
 
-export default function ResourcesPageContent({ pageData }: TResourcesContent) {
-  const { currentSection } = usePageContext()
+export default function ResourcesPageContent({ resourcesPageData }: TResourcesContent) {
+  const { currentSection } = useResourcesPageContext()
 
   const pageContentRef = useRef<HTMLDivElement>(null!)
 
@@ -27,7 +27,8 @@ export default function ResourcesPageContent({ pageData }: TResourcesContent) {
   })
 
   useEffect(() => {
-    const lastParagraph = document.getElementById(`${pageData.key}_content`)!.children[0].lastChild
+    const lastParagraph = document.getElementById(`${resourcesPageData.key}_content`)!.children[0]
+      .lastChild
     pageContentRef.current.style.paddingBottom =
       currentSection.key !== 'introduction'
         ? `${window.innerHeight - (lastParagraph as unknown as HTMLElement).clientHeight + 55}px`
@@ -35,30 +36,30 @@ export default function ResourcesPageContent({ pageData }: TResourcesContent) {
   })
 
   useEffect(() => {
-    document.getElementById(`${pageData.key}_content`)!.scrollTo(0, 0)
-  }, [currentSection, pageData.key])
+    document.getElementById(`${resourcesPageData.key}_content`)!.scrollTo(0, 0)
+  }, [currentSection, resourcesPageData.key])
 
   return (
     <div
       ref={pageContentRef}
-      id={`${pageData.key}_content`}
+      id={`${resourcesPageData.key}_content`}
       className='page_content'
       data-lenis-prevent
     >
       {currentSection.key === 'introduction' && (
         <PageIntroduction
           key='section_introduction'
-          prefixKey={pageData.key}
-          translationPath={pageData.translationKey}
+          prefixKey={resourcesPageData.key}
+          translationPath={resourcesPageData.translationKey}
         />
       )}
-      {pageData.sections.map((sectionData) => (
+      {resourcesPageData.sections.map((resourcesSectionData) => (
         <>
-          {currentSection.key === sectionData.key && (
+          {currentSection.key === resourcesSectionData.key && (
             <ResourcesSection
-              key={`section_${sectionData.key}`}
-              translationPath={pageData.translationKey}
-              sectionData={sectionData}
+              key={`section_${resourcesSectionData.key}`}
+              translationPath={resourcesPageData.translationKey}
+              sectionData={resourcesSectionData}
             />
           )}
         </>

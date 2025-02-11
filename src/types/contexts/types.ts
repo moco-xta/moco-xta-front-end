@@ -5,6 +5,8 @@ import type {
   TMenuParagraphData,
   TMenuSectionData,
   TPageData,
+  TResourcesMenuData,
+  TResourcesMenuSectionData,
   TResourcesPageData,
 } from '../data/components/layout/types'
 import type { TLabelData } from '../data/animation/types'
@@ -19,8 +21,21 @@ export type TPageContext = {
   handleSetCurrentParagraph: (newCurrentParagraph: TMenuParagraphData) => void
 }
 
+export type TResourcesPageContext = {
+  menuRef: MutableRefObject<TResourcesMenuData>
+  currentSection: TResourcesMenuSectionData
+  handleSetCurrentSection: (newCurrentSection: TResourcesMenuSectionData) => void
+  // currentParagraph: TResourcesMenuParagraphData | null
+  // handleSetCurrentParagraph: (newCurrentParagraph: TResourcesMenuParagraphData) => void
+}
+
 export type TPageProvider = {
-  pageData: TPageData | TResourcesPageData
+  pageData: TPageData
+  children: JSX.Element
+}
+
+export type TResourcesPageProvider = {
+  resourcesPageData: TResourcesPageData
   children: JSX.Element
 }
 

@@ -27,7 +27,7 @@ export type TPage = {
 // RESOURCES
 
 export type TResourcesPage = {
-  pageData: TResourcesPageData
+  resourcesPageData: TResourcesPageData
   extraButtons?: ReactNode[]
   backgroundCanvas?: JSX.Element
 }
@@ -53,7 +53,7 @@ export type TContent = {
 // RESOURCES
 
 export type TResourcesContent = {
-  pageData: TPageData
+  resourcesPageData: TResourcesPageData
 }
 
 // SECTIONS
@@ -76,7 +76,7 @@ export type TSection = {
 
 export type TResourcesSection = {
   translationPath: string
-  sectionData: TSectionData | TResourcesSectionData
+  sectionData: TResourcesSectionData
 }
 
 // PLAYER PAGE GREETING

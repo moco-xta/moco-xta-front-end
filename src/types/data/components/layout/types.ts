@@ -23,8 +23,7 @@ export type TResourcesSectionData = {
     from: string
     url: string
   }
-  document?: TLinksArrayData[]
-  paragraphs: TResourcesParagraphData[]
+  paragraphs: TResourcesParagraphData
 }
 
 // MENU
@@ -33,10 +32,19 @@ export type TMenuData = {
   sections: TMenuSectionData[]
 }
 
+export type TResourcesMenuData = {
+  sections: TResourcesMenuSectionData[]
+}
+
 export type TMenuSectionData = {
   key: string
   translationKey: string
   paragraphs: TMenuParagraphData[]
+}
+
+export type TResourcesMenuSectionData = {
+  key: string
+  translationKey: string
 }
 
 export type TMenuParagraphData = {
@@ -71,20 +79,16 @@ export type TSkillsParagraphData = TParagraphData & {
 
 export type TResourcesParagraphData = TParagraphData & {
   documentation: TLinksArrayData[]
-  youtubePlaylistlink?: {
-    url: string
-  }
-  websites: TLinksArrayData[]
-  channels: TLinksArrayData[]
-  articles: TLinksArrayData[]
 }
 
 // LINKS
 
 export type TLinksArrayData = {
-  translationPath: string
-  title: string
-  links: TExternalLinkData[]
+  key: string
+  translationKey: string
+  urlName: string
+  url: string
+  languages: string[]
   youtubePlaylistlink?: {
     url: string
   }

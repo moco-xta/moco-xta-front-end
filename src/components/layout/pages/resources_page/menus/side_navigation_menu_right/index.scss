@@ -1,0 +1,49 @@
+@import '@/styles/variables.module.scss';
+
+.side_navigation_menu_right {
+  width: 19%;
+  min-width: 120px;
+  height: 100%;
+  margin-top: $page_margin_top;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .side_navigation_menu_title {
+    margin-bottom: $px_margin_L;
+  }
+
+  .sdm_paragraphs_ol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: $grey_light;
+  }
+
+  .sdm_paragraph_li {
+    margin-bottom: $px_margin_XS;
+
+    .sdm_paragraph_a {
+      font-size: $font_size_S;
+      transition: all $hover_transition;
+      cursor: pointer;
+    }
+
+    .sdm_paragraph_a:hover {
+      color: $white;
+      font-weight: $font_weight_hover;
+      transition: all $hover_transition;
+    }
+  }
+
+  .sdm_current {
+    color: $sdm_current;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .read {
+    color: $white;
+    transition: all 0.2s;
+  }
+}
