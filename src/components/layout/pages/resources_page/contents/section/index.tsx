@@ -1,20 +1,17 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
-import type { TSection } from '@/types/components/layout/types'
-import type {
-  TResourcesParagraphData,
-  TSkillsParagraphData,
-} from '@/types/data/components/layout/types'
+import type { TResourcesParagraphData } from '@/types/data/components/layout/types'
+import type { TResourcesSection } from '@/types/components/layout/types'
 
 import { usePageContext } from '@/contexts/PageContext'
 
 import { SectionTitle } from '@/components/layout/titles'
-import { Paragraph } from '../paragraphs'
+import ResourcesParagraph from './paragraph'
 
 import './index.scss'
 
-export default function Section({ translationPath, sectionData }: TSection) {
+export default function ResourcesSection({ translationPath, sectionData }: TResourcesSection) {
   const t = useTranslations()
 
   const { handleSetCurrentParagraph } = usePageContext()
@@ -53,8 +50,8 @@ export default function Section({ translationPath, sectionData }: TSection) {
           p: (chunk) => <p className='paragraph_translation'>{chunk}</p>,
         })}
       </div>
-      {(sectionData.paragraphs as TSkillsParagraphData[]).map((paragraphData) => (
-        <Paragraph
+      {(sectionData.paragraphs as TResourcesParagraphData[]).map((paragraphData) => (
+        <ResourcesParagraph
           key={`paragrah_${sectionData.key}_${paragraphData.key}`}
           translationPath={`${translationPath}.SECTIONS.${sectionData.translationKey}.PARAGRAPHS`}
           paragraphData={paragraphData}

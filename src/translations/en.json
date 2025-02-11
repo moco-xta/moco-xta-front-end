@@ -372,6 +372,11 @@
     "CHANNELS": "channels",
     "ARTICLES": "articles",
     "SECTIONS": {
+      "BLENDER": {
+        "SECTION_TITLE": "blender",
+        "SECTION_DESCRIPTION": "<p>Blender is a powerful open-source 3D creation suite that supports modeling, sculpting, animation, rigging, rendering, compositing, video editing, and simulation. It is widely used in industries like animation, VFX, game development, and 3D printing.<p></p>Blender features a robust toolset, including procedural modeling, physics simulations, and a non-destructive modifier stack. It supports multiple rendering engines, including the real-time Eevee and the physically accurate Cycles. The software also integrates with Python for scripting and automation.<p></p>With an active community and continuous updates, Blender remains a leading choice for professionals and hobbyists seeking a free, feature-rich 3D software solution.</p>",
+        "VIDEO_INTRODUCTION_DESCRIPTION": "In the 2017 interview titled \"Money doesn't interest me\", Ton Roosendaal, the creator of the open-source 3D software Blender, discusses various aspects of the software's development and his philosophy. The interview covers topics such as the origins of Blender, early design decisions, and Roosendaal's vision for its future. He emphasizes his disinterest in monetary gain, focusing instead on fostering a collaborative community and advancing open-source development. The conversation provides insights into the challenges and successes encountered in building and maintaining Blender as a leading tool in the 3D graphics industry."
+      },
       "FRONT_END": {
         "SECTION_TITLE": "front-end",
         "SECTION_DESCRIPTION": "<p>Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.</p>",
@@ -400,6 +405,21 @@
             "LINKS": {
               "REACT": {
                 "DESCRIPTION": "The React documentation is a modern, beginner-friendly guide to mastering React. It offers interactive tutorials, clear explanations, and practical examples to help you understand core concepts like components, state, hooks, and effects. The updated documentation is designed to be intuitive and hands-on, making it an excellent resource for both new and experienced developers to build dynamic and efficient user interfaces"
+              },
+              "THE_LEAN_PROGRAMMER": {
+                "DESCRIPTION": "The Lean Programmer YouTube channel is a practical and engaging resource for developers, offering tutorials and insights on programming languages, frameworks, and tools. Known for its clear explanations and hands-on approach, the channel focuses on helping viewers build real-world projects while learning best practices in software development. It's a great choice for both beginners and experienced coders looking to enhance their skills."
+              },
+              "TECHSITH": {
+                "DESCRIPTION": "The Techsith YouTube channel is a highly regarded resource for developers, offering in-depth tutorials and explanations on JavaScript, React, Node.js, and other web development technologies. Known for its clear, concise, and detailed content, the channel focuses on core concepts, advanced topics, and interview preparation, making it a valuable resource for both beginners and experienced developers aiming to deepen their understanding and improve their coding skills."
+              }
+            }
+          },
+          "ANGULAR": {
+            "PARAGRAPH_TITLE": "angular",
+            "PARAGRAPH_DESCRIPTION": "",
+            "LINKS": {
+              "REACT": {
+                "DESCRIPTION": "Next.js is a React framework for building web applications with server-side rendering (SSR), static site generation (SSG), and client-side rendering (CSR). It provides features like API routes, middleware, and dynamic routing, optimizing performance and SEO. Next.js supports hybrid rendering, edge functions, and automatic image optimization. It integrates well with TypeScript, GraphQL, and various CMSs, making it a robust choice for modern full-stack development."
               },
               "THE_LEAN_PROGRAMMER": {
                 "DESCRIPTION": "The Lean Programmer YouTube channel is a practical and engaging resource for developers, offering tutorials and insights on programming languages, frameworks, and tools. Known for its clear explanations and hands-on approach, the channel focuses on helping viewers build real-world projects while learning best practices in software development. It's a great choice for both beginners and experienced coders looking to enhance their skills."

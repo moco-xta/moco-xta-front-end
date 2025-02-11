@@ -5,6 +5,7 @@ import type {
   TMenuParagraphData,
   TMenuSectionData,
   TPageData,
+  TResourcesPageData,
 } from '../data/components/layout/types'
 import type { TLabelData } from '../data/animation/types'
 
@@ -19,7 +20,7 @@ export type TPageContext = {
 }
 
 export type TPageProvider = {
-  pageData: TPageData
+  pageData: TPageData | TResourcesPageData
   children: JSX.Element
 }
 

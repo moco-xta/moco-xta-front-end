@@ -8,6 +8,25 @@ export type TPageData = {
   sections: TSectionData[]
 }
 
+// RESOURCES
+
+export type TResourcesPageData = {
+  key: string
+  translationKey: string
+  sections: TResourcesSectionData[]
+}
+
+export type TResourcesSectionData = {
+  key: string
+  translationKey: string
+  videoIntroduction?: {
+    from: string
+    url: string
+  }
+  document?: TLinksArrayData[]
+  paragraphs: TResourcesParagraphData[]
+}
+
 // MENU
 
 export type TMenuData = {
@@ -30,6 +49,11 @@ export type TMenuParagraphData = {
 export type TSectionData = {
   key: string
   translationKey: string
+  videoIntroduction?: {
+    from: string
+    url: string
+  }
+  document?: TLinksArrayData[]
   paragraphs: TParagraphData[] | TSkillsParagraphData[] | TResourcesParagraphData[]
 }
 
