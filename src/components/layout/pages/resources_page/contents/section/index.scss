@@ -23,10 +23,10 @@ section {
 
     .video_introduction_description {
       height: 255px;
-      padding: $px_margin_L;
+      padding: $px_margin_L $px_margin_XL;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      justify-content: center;
       text-align: justify;
       background: rgba(64, 64, 64, 0.3);
       -webkit-backdrop-filter: blur(7px);
@@ -34,6 +34,7 @@ section {
       border-radius: 0 15px 15px 0;
 
       p {
+        font-size: 14px;
         line-height: 110%;
       }
     }

@@ -1,7 +1,8 @@
 @import '@/styles/variables.module.scss';
 
 #links_array {
-  margin-bottom: 30px;
+  margin-top: 100px;
+  margin-bottom: calc(-85px + 40px);
 
   caption {
     width: 100%;
@@ -12,10 +13,12 @@
     justify-content: space-between;
     padding-bottom: 10px;
     border-collapse: collapse;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   tr {
-    padding: $px_margin_M;
+    padding: 0 $px_margin_M;
     display: flex;
     flex-direction: row;
     border-top: 1pt solid #ffffff33;
