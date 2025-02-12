@@ -31,7 +31,7 @@ export default function CurrentDate({ currentDate }: TCurrentDate) {
         <>
           <p
             id='day_number'
-            style={{ marginBottom: '-50px' }}
+            style={{ marginBottom: '-28px' }}
           >
             {moment(currentDate).format('DD')}
           </p>
