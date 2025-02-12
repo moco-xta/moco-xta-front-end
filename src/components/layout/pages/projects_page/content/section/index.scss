@@ -29,13 +29,20 @@
         flex-direction: row;
         align-items: center;
         font-size: 14px;
-        color: $sky;
+        font-weight: bold;
+        // color: $sky;
 
         .project_roles {
           margin: $px_margin_L 0;
           display: flex;
           flex-direction: row;
           gap: $px_margin_M;
+        }
+
+        .with {
+          display: flex;
+          flex-direction: row;
+          gap: 5px;
         }
       }
 

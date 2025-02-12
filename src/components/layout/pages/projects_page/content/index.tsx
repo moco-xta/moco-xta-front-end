@@ -64,11 +64,12 @@ export default function Content({ /* snapHeights, */ currentProject, currentComp
         ref={projectsContainerRef}
         id='projects_container'
       >
-        {projectsData.map((projectData) => (
+        {projectsData.map((projectData, index) => (
           <Section
             key={`project_section_${projectData.name}`}
             projectData={projectData}
             companiesData={companiesData}
+            index={index}
             currentCompany={currentCompany}
           />
         ))}

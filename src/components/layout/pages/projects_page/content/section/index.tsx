@@ -10,14 +10,16 @@ import { SectionTitle } from '@/components/layout/titles'
 import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 import './index.scss'
+import { ExternalLink } from '@/components/layout/links'
 
 export type TSection = {
   projectData: TProjectData
   companiesData: TCompanyData[]
+  index: number
   currentCompany: number
 }
 
-export default function Section({ projectData, companiesData, currentCompany }: TSection) {
+export default function Section({ projectData, companiesData, index, currentCompany }: TSection) {
   const locale = useLocale()
   const t = useTranslations('PROJECTS')
 
@@ -44,7 +46,10 @@ export default function Section({ projectData, companiesData, currentCompany }: 
       }}
     >
       <div className='project_container'>
-        <SectionTitle title={projectData.name} />
+        <SectionTitle
+          title={projectData.name}
+          url={projectData.url}
+        />
         <div className='project_details'>
           <div className='skills_and_with'>
             <span className='project_roles'>
@@ -57,12 +62,17 @@ export default function Section({ projectData, companiesData, currentCompany }: 
                 (role, index) => role + (index === projectData.roles.length - 1 ? '' : ', '),
               )}
             </span>
-            {companiesData[currentCompany]?.name &&
+            {index !== 0 &&
+              index !== 5 &&
               projectData.key !== 'moco' &&
               projectData.key !== 'openclassrooms' && (
-                <span>
+                <span className='with'>
                   {', '}
-                  {t('WITH')} {capitalizeFirstLetter(companiesData[currentCompany]?.name ?? '')}
+                  {t('WITH')}
+                  <ExternalLink
+                    urlName={capitalizeFirstLetter(companiesData[currentCompany]?.name ?? '')}
+                    url={capitalizeFirstLetter(companiesData[currentCompany]?.url ?? '')}
+                  />
                 </span>
               )}
           </div>

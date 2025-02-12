@@ -41,7 +41,7 @@ export const projectsData: TProjectData[] = [
   {
     key: 'abwerkt',
     name: 'ABWerkt.nl',
-    url: 'https://www.ab-werkt.eu/home',
+    url: 'https://www.ab-werkt.nl/',
     imageUrl: texturesConstants.PROJECTS.ABWERKT,
     descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
