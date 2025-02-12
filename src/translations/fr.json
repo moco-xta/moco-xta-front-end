@@ -359,122 +359,154 @@
     "SKILL": "compétence"
   },
   "RESOURCES": {
-    "PAGE_TITLE": "resources",
-    "PAGE_INTRODUCTION": "This page is your central destination for curated links and tools across the vast landscape of web development. Whether you're diving into Front-End Development, exploring the depths of Back-End Engineering, venturing into the world of 3D Graphics, or perfecting your skills in Web Design, you'll find valuable resources to guide and inspire you. From in-depth tutorials to cutting-edge libraries and communities, these links are handpicked to help developers and designers at all levels. Explore, learn, and create with confidence!",
-    "YOUTUBE_PLAYLISTS_DISCLAMER": "<p>Les playlists YouTube, bien que recensant de nombreux tutoriels, ne sont pas structurées comme un cours et ne suivent pas un ordre prédéfini. Chaque playlist est plutôt un regroupement de vidéos intéressantes ou utiles qu'il m’a semblé important de conserver.</p>",
-    "RESOURCES": "resources",
-    "ON_THIS_PAGE": "On this page",
+    "PAGE_TITLE": "ressources",
+    "PAGE_INTRODUCTION": "<p>Cette page est votre destination centrale pour des liens sélectionnés et des outils couvrant le vaste domaine du développement web. Que vous plongiez dans le développement Front-End, exploriez les profondeurs de l’ingénierie Back-End, vous aventuriez dans le monde des graphismes 3D ou perfectionniez vos compétences en design web, vous trouverez ici des ressources précieuses pour vous guider et vous inspirer. Des tutoriels approfondis aux bibliothèques de pointe en passant par les communautés spécialisées, ces liens ont été soigneusement choisis pour aider les développeurs et les designers de tous niveaux. Explorez, apprenez et créez en toute confiance !</p>",
+    "YOUTUBE_PLAYLISTS_DISCLAMER": "Les playlists YouTube, bien que recensant de nombreux tutoriels, ne sont pas structurées comme un cours et ne suivent pas un ordre prédéfini. Chaque playlist est plutôt un regroupement de vidéos intéressantes ou utiles qu'il m’a semblé important de conserver.",
+    "RESOURCES": "ressources",
+    "ON_THIS_PAGE": "Sur cette page",
     "DOCUMENTATION": "documentation",
-    "WEBSITES": "websites",
-    "CHANNELS": "channels",
+    "WEBSITES": "sites web",
+    "CHANNELS": "chaînes",
     "ARTICLES": "articles",
     "SECTIONS": {
-      "FRONT_END": {
-        "SECTION_TITLE": "front-end",
-        "SECTION_DESCRIPTION": "Front-end development focuses on building the client-side of web applications, enabling users to interact with websites directly in their browsers. It involves using technologies like HTML, CSS, and JavaScript, along with frameworks like React or Angular, to implement structure, functionality, and interactivity.",
-        "PARAGRAPHS": {
-          "HTML": {
-            "PARAGRAPH_TITLE": "HTML",
-            "PARAGRAPH_DESCRIPTION": "HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It forms the foundation of every website and is used in combination with CSS (for styling) and JavaScript (for interactivity).",
-            "LINKS": {
-              "W3SCHOOLS": {
-                "DESCRIPTION": "W3Schools is a popular and widely used educational website for learning web development technologies. It serves as a comprehensive resource for beginners and experienced developers alike, offering tutorials, references, and interactive examples."
-              },
-              "MOZILLA": {
-                "DESCRIPTION": "MDN Web Docs (formerly known as Mozilla Developer Network) is a highly regarded and comprehensive online resource for web developers. It is maintained by the Mozilla Foundation and contributions from the developer community. It provides in-depth documentation, tutorials, and guides for web development technologies."
-              },
-              "FREECODECAMP": {
-                "DESCRIPTION": "FreeCodeCamp is a non-profit organization that offers free online coding courses and tutorials. Their platform covers a wide range of topics, including HTML, CSS, JavaScript, and more. They also have a blog with articles on web development and programming."
-              }
-            }
-          }
-        }
-      },
-      "3D": {
+      "THREE_D": {
         "SECTION_TITLE": "3D",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SECTION_DESCRIPTION": "<p>Bienvenue dans la section 3D, où vous trouverez une collection sélectionnée de liens essentiels, d’outils et de documentations pour travailler avec WebGPU, WebGL, Three.js, React Three Fiber et Blender. Que vous soyez un débutant explorant les graphismes 3D en temps réel ou un développeur expérimenté créant des expériences interactives avancées, cette section vous offre tout ce dont vous avez besoin pour optimiser votre flux de travail.</p><p>De la programmation GPU bas niveau avec WebGPU et WebGL à la gestion de scènes 3D haut niveau avec Three.js et React Three Fiber, vous trouverez ici des ressources pour vous aider à concevoir des applications 3D performantes et impressionnantes. De plus, nous avons inclus des ressources utiles pour Blender, couvrant le modélisme, le texturing et le rendu, afin de vous assurer d’avoir les bons outils pour donner vie à vos créations en 3D.</p>",
         "PARAGRAPHS": {
-          "WEBGL": {
-            "PARAGRAPH_TITLE": "WebGL",
-            "PARAGRAPH_DESCRIPTION": "WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 2D and 3D graphics within any compatible web browser without the use of plug-ins. It is based on OpenGL ES and provides a low-level, high-performance interface for creating graphics on the web.",
+          "BLENDER": {
+            "PARAGRAPH_TITLE": "blender",
+            "PARAGRAPH_DESCRIPTION": "<p>Blender est une puissante suite de création 3D open-source qui prend en charge le modélisme, la sculpture, l'animation, le rigging, le rendu, la composition, le montage vidéo et la simulation. Il est largement utilisé dans des secteurs tels que l'animation, les effets visuels (VFX), le développement de jeux vidéo et l'impression 3D.</p> <p>Blender dispose d'un ensemble d'outils robuste, incluant le modélisme procédural, les simulations physiques et une pile de modificateurs non destructive. Il prend en charge plusieurs moteurs de rendu, dont Eevee en temps réel et Cycles, qui est physiquement précis. Le logiciel s'intègre également à Python pour le scripting et l'automatisation.</p> <p>Avec une communauté active et des mises à jour continues, Blender reste un choix de premier plan pour les professionnels et les passionnés à la recherche d'une solution 3D gratuite et riche en fonctionnalités.</p>",
+            "VIDEO_INTRODUCTION_DESCRIPTION": "<p>Dans l'entretien de 2017 intitulé \"L'argent ne m'intéresse pas\", Ton Roosendaal, le créateur du logiciel 3D open-source Blender, aborde divers aspects du développement du logiciel et sa philosophie. L'entretien couvre des sujets tels que les origines de Blender, les premières décisions de conception et la vision de Roosendaal pour l'avenir du logiciel. Il met l'accent sur son désintérêt pour le gain financier, se concentrant plutôt sur le développement d'une communauté collaborative et la promotion du développement open-source. La conversation offre un aperçu des défis et succès rencontrés dans la construction et la maintenance de Blender en tant qu'outil de premier plan dans l'industrie des graphiques 3D.</p>",
             "LINKS": {
-              "KHRONOS": {
-                "DESCRIPTION": "The Khronos Group is an industry consortium that develops open standards for graphics, parallel computing, and vision processing. Their website provides information on WebGL, including specifications, tutorials, and resources for developers."
+              "BLENDER_ORG": {
+                "DESCRIPTION": "La documentation de Blender.org est la ressource officielle pour apprendre et comprendre les fonctionnalités, les outils et les flux de travail de Blender. Elle propose des guides complets sur le modélisme, la sculpture, le texturage, l'animation, le rendu, la composition, le scripting et bien plus encore. La documentation comprend des explications détaillées, des tutoriels étape par étape et des références API pour les développeurs souhaitant étendre Blender avec Python. Mise à jour en continu par la communauté et les développeurs de Blender, elle constitue un guide essentiel tant pour les débutants que pour les professionnels souhaitant maîtriser les capacités de Blender."
               },
-              "WEBGL_FUNDAMENTALS": {
-                "DESCRIPTION": "WebGL Fundamentals is a website dedicated to teaching the fundamentals of WebGL programming. It covers topics like shaders, buffers, textures, and more, with interactive examples and detailed explanations to help developers learn and understand WebGL."
+              "BLENDER": {
+                "DESCRIPTION": "La chaîne YouTube de Blender est le centre officiel de Blender, la suite de création 3D open-source. Elle propose des tutoriels, des mises à jour des développeurs, des démonstrations de projets et un aperçu des nouvelles fonctionnalités et des versions à venir. La chaîne met en avant des projets communautaires, des cas d'utilisation dans l'industrie et des coulisses du développement de Blender. Que vous soyez débutant ou professionnel, la chaîne YouTube de Blender offre du contenu précieux pour aider les utilisateurs à explorer et à maîtriser le logiciel."
               },
-              "THE_BOOK_OF_SHADERS": {
-                "DESCRIPTION": "The Book of Shaders is an online resource for learning about fragment shaders and procedural graphics. It provides a series of interactive tutorials and examples that cover topics like color theory, noise functions, and ray marching, helping developers create visually stunning and complex effects."
+              "BLENDER_GURU": {
+                "DESCRIPTION": "Blender Guru est une chaîne YouTube créée par Andrew Price, dédiée à l'enseignement de Blender à travers des tutoriels de haute qualité sur le modélisme, la texturisation, l'éclairage et le rendu. Connue pour le fameux \"Donut Tutorial\", la chaîne aide les débutants ainsi que les utilisateurs avancés à maîtriser le design 3D en mettant l'accent sur le réalisme et les techniques de l'industrie. En plus des tutoriels, Blender Guru offre des aperçus sur l'avenir de Blender, des critiques de produits et des conseils pratiques, en faisant une ressource incontournable pour les artistes 3D du monde entier."
               },
-              "SHADERTOY": {
-                "DESCRIPTION": "ShaderToy is an online tool and community for creating and sharing shaders. It allows developers to write and test shaders in real-time, with a library of user-submitted shaders that showcase a wide range of visual effects and techniques. It is a valuable resource for learning and experimenting with shaders."
-              },
-              "YURI_ARTIUKH": {
-                "DESCRIPTION": "Yuri Artiukh is a 3D artist and educator who creates tutorials and resources for learning 3D graphics and animation. His YouTube channel features in-depth tutorials on topics like modeling, texturing, lighting, and rendering, as well as tips and tricks for creating realistic and visually appealing 3D scenes."
-              },
-              "VISIONARY_3D": {
-                "DESCRIPTION": "Visionary 3D is a YouTube channel dedicated to 3D graphics and animation, with a focus on software like Blender, Maya, and Unity. The channel offers tutorials, tips, and resources for creating 3D models, animations, and visual effects, as well as insights into the latest trends and techniques in the industry."
-              }
-            }
-          },
-          "THREEJS": {
-            "PARAGRAPH_TITLE": "Three.js",
-            "PARAGRAPH_DESCRIPTION": "Three.js is a JavaScript library used to create and display 3D graphics in web browsers using WebGL (Web Graphics Library). It simplifies the process of building interactive 3D content by abstracting much of the complexity of WebGL.",
-            "LINKS": {
-              "THREEJS": {
-                "DESCRIPTION": "The official documentation for Three.js provides detailed information on how to get started with the library, including installation instructions, examples, and API references."
+              "DEFAULT_CUBE": {
+                "DESCRIPTION": "Default Cube est une chaîne YouTube axée sur Blender, l'art 3D et les perspectives de l'industrie, animée par George Pavlovich. La chaîne propose des discussions stimulantes, des critiques et des analyses approfondies de l'écosystème de Blender, en abordant ses forces, ses limitations et l'univers plus large des graphiques 3D. Contrairement aux chaînes de tutoriels traditionnelles, Default Cube offre des commentaires sur des sujets tels que le rôle de Blender dans l'industrie, les comparaisons de logiciels et la réalité du travail d'artiste 3D. Avec un mélange d'humour, d'analyse et d'engagement communautaire, elle offre une perspective unique à la fois pour les passionnés de Blender et les artistes professionnels."
               }
             }
           },
           "REACT_THREE_FIBER": {
             "PARAGRAPH_TITLE": "React Three Fiber",
-            "PARAGRAPH_DESCRIPTION": "React Three Fiber (commonly referred to as react-three/fiber) is a React-based library for creating and managing 3D scenes using Three.js, a popular JavaScript library for rendering 3D graphics. React Three Fiber allows developers to leverage React's declarative programming model and component-based architecture to work with Three.js more efficiently and intuitively.",
+            "PARAGRAPH_DESCRIPTION": "<p>React Three Fiber est un puissant moteur de rendu React pour Three.js, permettant aux développeurs de créer et de gérer des scènes 3D dans le navigateur en utilisant le modèle de programmation déclarative de React. En intégrant Three.js avec React, React Three Fiber offre une manière intuitive et efficace de travailler avec des graphiques 3D, facilitant la gestion d'objets 3D complexes, d'animations et d'interactions au sein d'une application React.</p><p>Au lieu d'utiliser l'approche impérative traditionnelle de Three.js, où vous manipulez manuellement le graphe de scènes, React Three Fiber tire parti de l'architecture basée sur des composants de React. Cela signifie que vous pouvez définir des objets 3D, des caméras, des lumières et des animations en tant que composants React, ce qui permet une approche plus organisée, évolutive et maintenable pour le développement 3D. Avec le support des hooks, de la gestion d'état et des méthodes de cycle de vie, React Three Fiber s'intègre parfaitement dans vos projets React existants, permettant des mises à jour dynamiques et des expériences utilisateur fluides. Que vous créiez des visualisations interactives, des environnements immersifs ou des jeux, React Three Fiber offre une manière moderne et compatible avec React d'interagir avec du contenu 3D.</p>",
             "LINKS": {
               "REACT_THREE_FIBER": {
-                "DESCRIPTION": "The official documentation for React Three Fiber provides detailed information on how to get started with the library, including installation instructions, examples, and API references."
+                "DESCRIPTION": "La documentation officielle de React Three Fiber fournit des informations détaillées sur la façon de commencer avec la bibliothèque, y compris des instructions d'installation, des exemples et des références de l'API."
               },
               "REACT_THREE_DREI": {
-                "DESCRIPTION": "Drei is a collection of useful helpers and abstractions for React Three Fiber, designed to simplify common tasks and streamline the development process. It includes components for lighting, cameras, controls, and more, making it easier to create complex 3D scenes with React Three Fiber."
+                "DESCRIPTION": "Drei est une collection d'outils et d'abstractions utiles pour React Three Fiber, conçue pour simplifier les tâches courantes et rationaliser le processus de développement. Elle comprend des composants pour l'éclairage, les caméras, les contrôles et bien plus encore, facilitant ainsi la création de scènes 3D complexes avec React Three Fiber."
               },
               "REACT_THREE_POSTPROCESSING": {
-                "DESCRIPTION": "React Three Postprocessing is a library for applying post-processing effects to 3D graphics using React Three Fiber. It provides a set of high-level components and utilities for applying various post-processing effects, such as bloom, chromatic aberration, and depth of field."
+                "DESCRIPTION": "React Three Postprocessing est une bibliothèque permettant d'appliquer des effets de post-traitement aux graphiques 3D en utilisant React Three Fiber. Elle fournit un ensemble de composants de haut niveau et d'utilitaires pour appliquer divers effets de post-traitement, tels que le bloom, l'aberration chromatique et la profondeur de champ."
               },
               "REACT_THREE_RAPIER": {
-                "DESCRIPTION": "Rapier is a collection of React Three Fiber components and hooks that simplify the creation of physics-based simulations and interactions in 3D scenes. It provides a range of features for working with physics engines, collision detection, and rigid bodies, enabling developers to create realistic and interactive 3D environments."
+                "DESCRIPTION": "Rapier est une collection de composants et de hooks pour React Three Fiber qui simplifient la création de simulations et d'interactions basées sur la physique dans des scènes 3D. Elle offre une gamme de fonctionnalités pour travailler avec des moteurs physiques, la détection des collisions et les corps rigides, permettant ainsi aux développeurs de créer des environnements 3D réalistes et interactifs."
               },
               "REACT_THREE_CANNON": {
-                "DESCRIPTION": "React Three Cannon is a collection of React Three Fiber components and hooks that simplify the creation of physics-based simulations and interactions in 3D scenes using the Cannon.js physics engine. It provides a range of features for working with physics engines, collision detection, and rigid bodies, enabling developers to create realistic and interactive 3D environments."
+                "DESCRIPTION": "React Three Cannon est une collection de composants et de hooks pour React Three Fiber qui simplifient la création de simulations et d'interactions basées sur la physique dans des scènes 3D en utilisant le moteur physique Cannon.js. Elle offre une gamme de fonctionnalités pour travailler avec des moteurs physiques, la détection des collisions et les corps rigides, permettant ainsi aux développeurs de créer des environnements 3D réalistes et interactifs."
               },
               "REACT_THREE_GPU_PATHTRACER": {
-                "DESCRIPTION": "React Three GPU Pathtracer is a library for rendering 3D graphics using React Three Fiber and the GPU Path Tracer algorithm. It allows developers to create realistic and interactive 3D scenes with high performance and visual quality, while leveraging the power of GPUs for rendering."
+                "DESCRIPTION": "React Three GPU Pathtracer est une bibliothèque pour le rendu de graphiques 3D utilisant React Three Fiber et l'algorithme GPU Path Tracer. Elle permet aux développeurs de créer des scènes 3D réalistes et interactives avec des performances élevées et une qualité visuelle, tout en tirant parti de la puissance des GPU pour le rendu."
               },
               "REACT_SPRING": {
-                "DESCRIPTION": "React Spring is a popular and flexible animation library for React that simplifies the creation of animated components and transitions. It provides a set of hooks and components that allow developers to easily create and manage animations, including spring-based animations, physics-based animations, and more."
+                "DESCRIPTION": "React Spring est une bibliothèque d'animation populaire et flexible pour React qui simplifie la création de composants animés et de transitions. Elle fournit un ensemble de hooks et de composants permettant aux développeurs de créer et de gérer facilement des animations, y compris des animations basées sur des ressorts, des animations basées sur la physique, et bien plus encore."
               },
               "USE_GESTURE": {
-                "DESCRIPTION": "Use Gesture is a library for creating gesture-based interactions in React applications. It provides a set of hooks and components that enable developers to add touch, mouse, and pointer gestures to their applications, allowing for intuitive and responsive user interactions."
+                "DESCRIPTION": "Use Gesture est une bibliothèque permettant de créer des interactions basées sur des gestes dans les applications React. Elle fournit un ensemble de hooks et de composants qui permettent aux développeurs d'ajouter des gestes tactiles, souris et pointeur à leurs applications, offrant ainsi des interactions utilisateurs intuitives et réactives."
               },
               "LEVA": {
-                "DESCRIPTION": "Leva is a developer tool for creating adjustable values in React applications. It provides a set of components and hooks that allow developers to create sliders, color pickers, and other adjustable controls for tweaking values in real-time, making it easier to fine-tune the appearance and behavior of components."
+                "DESCRIPTION": "Leva est un outil pour les développeurs permettant de créer des valeurs ajustables dans les applications React. Il fournit un ensemble de composants et de hooks permettant aux développeurs de créer des curseurs, des sélecteurs de couleurs et d'autres contrôles ajustables pour modifier les valeurs en temps réel, ce qui facilite le réglage de l'apparence et du comportement des composants."
               },
               "MAATH": {
-                "DESCRIPTION": "Maath is a collection of math utilities and functions for 3D graphics and animation in React applications. It provides a range of functions for working with vectors, matrices, quaternions, and other mathematical concepts commonly used in 3D graphics programming, making it easier to perform complex calculations and transformations."
+                "DESCRIPTION": "Maath est une collection d'outils et de fonctions mathématiques pour les graphiques 3D et l'animation dans les applications React. Il offre une gamme de fonctions pour travailler avec des vecteurs, des matrices, des quaternions et d'autres concepts mathématiques couramment utilisés dans la programmation graphique 3D, facilitant ainsi l'exécution de calculs et de transformations complexes."
               },
               "ANDERSON_MANCINI": {
-                "DESCRIPTION": "Anderson Mancini is a Brazilian developer and educator who creates tutorials and resources for learning Three.js and React Three Fiber. His YouTube channel features in-depth tutorials on 3D graphics, animation, and interactive web development."
+                "DESCRIPTION": "Anderson Mancini est un développeur et éducateur brésilien qui crée des tutoriels et des ressources pour apprendre Three.js et React Three Fiber. Sa chaîne YouTube propose des tutoriels approfondis sur les graphiques 3D, l'animation et le développement web interactif."
               },
               "WAWA_SENSEI": {
-                "DESCRIPTION": "Wawa Sensei's YouTube channel is dedicated to 3D web development, focusing on technologies like Three.js and React Three Fiber. The channel offers concise, targeted tutorials that break down complex projects into manageable segments, aiding developers in learning and implementing 3D web applications effectively."
+                "DESCRIPTION": "La chaîne YouTube de Wawa Sensei est dédiée au développement web 3D, en se concentrant sur des technologies telles que Three.js et React Three Fiber. La chaîne propose des tutoriels concis et ciblés qui décomposent des projets complexes en segments faciles à gérer, aidant ainsi les développeurs à apprendre et à mettre en œuvre des applications web 3D de manière efficace."
+              }
+            }
+          },
+          "WEBGPU": {
+            "PARAGRAPH_TITLE": "WebGPU",
+            "PARAGRAPH_DESCRIPTION": "<p>WebGPU est une API graphique et de calcul de nouvelle génération conçue pour fournir un accès haute performance au GPU pour les applications web. Elle sert de successeur à WebGL, offrant un contrôle de bas niveau, une meilleure efficacité et des capacités de rendu modernes alignées avec Vulkan, Metal et Direct3D 12. WebGPU permet aux développeurs d'exploiter des fonctionnalités graphiques avancées comme les shaders de calcul, la gestion explicite de la mémoire et le traitement parallèle, ce qui le rend idéal pour le rendu 3D en temps réel, l'apprentissage automatique et le calcul haute performance dans le navigateur.</p><p>Avec une API simplifiée et un meilleur support pour la gestion des ressources, une réduction de la surcharge CPU et des techniques de rendu améliorées, WebGPU offre un gain de performance significatif par rapport à ses prédécesseurs. Il s'intègre parfaitement avec des frameworks comme Three.js et Babylon.js, ouvrant de nouvelles possibilités pour des visualisations complexes, des jeux et des applications alimentées par l'IA. À mesure que les navigateurs adoptent WebGPU, il est prêt à révolutionner les graphiques et le calcul web, apportant des performances de niveau desktop aux applications web modernes.</p>",
+            "LINKS": {
+              "WEBGPU": {
+                "DESCRIPTION": "La documentation WebGPU de W3C est la spécification officielle et la référence de l'API WebGPU, fournissant des informations détaillées sur son architecture, ses fonctionnalités et son utilisation. Elle décrit les concepts clés de l'API, tels que les pipelines GPU, les shaders et les tampons, ainsi que des exemples et des directives pour implémenter des graphiques haute performance et des calculs sur le web. Cette documentation est essentielle pour les développeurs cherchant à exploiter les capacités avancées de WebGPU pour les applications web modernes."
+              },
+              "GET_INTO_GAME_DEV": {
+                "DESCRIPTION": "La chaîne YouTube GetIntoGameDev est une ressource dédiée aux développeurs de jeux, qu'ils soient débutants ou expérimentés. Elle propose des tutoriels, des conseils et des idées sur divers aspects du développement de jeux, y compris la conception de jeux, la programmation et l'utilisation d'outils comme Unity et Unreal Engine. La chaîne se concentre sur un contenu pratique et concret pour aider les spectateurs à apprendre à créer des jeux, des concepts adaptés aux débutants aux techniques avancées, ce qui en fait une ressource précieuse pour toute personne passionnée par le développement de jeux vidéo."
+              }
+            }
+          },
+          "WEBGL": {
+            "PARAGRAPH_TITLE": "WebGL",
+            "PARAGRAPH_DESCRIPTION": "<p>WebGL (Web Graphics Library) est une API JavaScript de bas niveau qui permet de rendre des graphiques 2D et 3D haute performance directement dans les navigateurs web sans nécessiter de plugins supplémentaires. Basé sur OpenGL ES 2.0, WebGL offre un accès direct au GPU, permettant un rendu accéléré par le matériel de graphiques complexes. Il s'intègre parfaitement avec l'élément canvas de HTML5 et prend en charge la compatibilité multiplateforme, ce qui en fait un outil puissant pour développer des applications interactives, des jeux, des simulations et des visualisations de données. WebGL utilise un pipeline basé sur des shaders avec GLSL (OpenGL Shading Language) pour des shaders de vertex et de fragments programmables, offrant aux développeurs un contrôle précis sur le rendu, mais nécessitant une gestion manuelle des tampons, des textures et des transformations.</p><p>Bien que WebGL soit puissant, sa complexité a conduit au développement de bibliothèques de haut niveau comme Three.js, Babylon.js et PixiJS, qui simplifient le rendu 3D et 2D. Ces frameworks offrent des outils intégrés pour gérer l'éclairage, les ombres, la physique et l'animation, rendant WebGL plus accessible aux développeurs. WebGL est largement utilisé dans le développement de jeux, les applications VR/AR (via WebXR), la visualisation de données en temps réel et le rendu architectural, permettant aux utilisateurs de vivre du contenu interactif 3D directement dans le navigateur. Avec sa capacité à exploiter l'accélération GPU et sa large compatibilité, WebGL reste une technologie clé pour offrir des graphiques immersifs en temps réel sur le web.</p>",
+            "LINKS": {
+              "KHRONOS": {
+                "DESCRIPTION": "Le Khronos Group est un consortium industriel qui développe des normes ouvertes pour les graphiques, l'informatique parallèle et le traitement de la vision. Leur site web fournit des informations sur WebGL, y compris des spécifications, des tutoriels et des ressources pour les développeurs."
+              },
+              "YURI_ARTIUKH": {
+                "DESCRIPTION": "Yuri Artiukh est un artiste 3D et éducateur qui crée des tutoriels et des ressources pour apprendre les graphiques 3D et l'animation. Sa chaîne YouTube propose des tutoriels approfondis sur des sujets tels que la modélisation, la texturation, l'éclairage et le rendu, ainsi que des astuces pour créer des scènes 3D réalistes et visuellement attrayantes."
+              },
+              "VISIONARY_3D": {
+                "DESCRIPTION": "Visionary 3D est une chaîne YouTube dédiée aux graphiques 3D et à l'animation, avec un accent sur des logiciels tels que Blender, Maya et Unity. La chaîne propose des tutoriels, des conseils et des ressources pour créer des modèles 3D, des animations et des effets visuels, ainsi que des aperçus des dernières tendances et techniques dans l'industrie."
+              },
+              "WEBGL_FUNDAMENTALS": {
+                "DESCRIPTION": "WebGL Fundamentals est un site web dédié à l'enseignement des bases de la programmation WebGL. Il couvre des sujets tels que les shaders, les tampons, les textures, et plus encore, avec des exemples interactifs et des explications détaillées pour aider les développeurs à apprendre et comprendre WebGL."
+              },
+              "THE_BOOK_OF_SHADERS": {
+                "DESCRIPTION": "The Book of Shaders est une ressource en ligne pour apprendre les shaders de fragments et les graphiques procéduraux. Il propose une série de tutoriels interactifs et d'exemples couvrant des sujets tels que la théorie des couleurs, les fonctions de bruit et le ray marching, aidant les développeurs à créer des effets visuellement époustouflants et complexes."
+              },
+              "SHADERTOY": {
+                "DESCRIPTION": "ShaderToy est un outil en ligne et une communauté pour créer et partager des shaders. Il permet aux développeurs d'écrire et de tester des shaders en temps réel, avec une bibliothèque de shaders soumis par les utilisateurs qui présentent une large gamme d'effets visuels et de techniques. C'est une ressource précieuse pour apprendre et expérimenter avec des shaders."
               }
             }
           }
         }
       },
-      "BACK_END": {
-        "SECTION_TITLE": "back-end",
-        "SECTION_DESCRIPTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "PARAGRAPHS": {}
+      "ANIMATION": {
+        "SECTION_TITLE": "Animation",
+        "SECTION_DESCRIPTION": "<p>La section Animation regroupe les outils essentiels, les bibliothèques et la documentation pour créer des animations fluides et performantes sur le web. Cette section fournit les ressources clés pour vous aider à apporter du mouvement à vos projets avec précision et efficacité.</p><p>Des micro-interactions UI aux animations complexes basées sur des timelines, ces ressources couvrent des techniques d'animation en 2D et en 3D, vous assurant que vous disposez des bons outils pour créer des expériences captivantes et interactives. Que vous soyez développeur ou designer, vous trouverez tout ce dont vous avez besoin pour maîtriser l'animation et élever vos projets web.</p>",
+        "PARAGRAPHS": {
+          "GSAP": {
+            "PARAGRAPH_TITLE": "GSAP",
+            "PARAGRAPH_DESCRIPTION": "<p>GSAP (GreenSock Animation Platform) est une puissante bibliothèque JavaScript pour créer des animations haute performance dans le navigateur. Elle fournit un ensemble d'outils robustes pour animer les éléments DOM, les SVG, les canvas et les objets WebGL, en faisant une solution de choix pour créer des animations fluides et interactives dans les applications web. L'avantage principal de GSAP réside dans sa flexibilité, sa facilité d'utilisation et sa capacité à gérer des animations complexes avec précision et optimisation des performances, même sur les appareils mobiles.</p><p>Avec une API simple et des fonctionnalités telles que les timelines, les fonctions d'aisance et la séquenciation, GSAP permet aux développeurs de créer des animations complexes et de contrôler le flux des animations en toute simplicité. Elle prend en charge des fonctionnalités telles que les animations déclenchées par le défilement, les chemins de mouvement et les transformations 3D, et peut s'intégrer parfaitement avec d'autres frameworks comme React, Vue et Three.js. Que ce soit pour des interactions subtiles de l'interface utilisateur ou des animations interactives à grande échelle, GSAP aide les développeurs à réaliser des animations fluides et de haute qualité qui fonctionnent efficacement sur tous les principaux navigateurs.</p>",
+            "LINKS": {
+              "GSAP": {
+                "DESCRIPTION": "La documentation de GSAP est une ressource complète et bien organisée pour maîtriser GSAP, une bibliothèque JavaScript puissante pour créer des animations haute performance. Elle comprend des guides détaillés, des références API et des exemples interactifs pour aider les développeurs à comprendre et à implémenter des animations pour des projets web. La documentation est adaptée aux débutants tout en étant approfondie, ce qui en fait un outil essentiel pour les novices comme pour les utilisateurs expérimentés souhaitant créer des animations fluides, complexes et engageantes."
+              },
+              "GSAP_LEARNING": {
+                "DESCRIPTION": "La chaîne d'apprentissage de GSAP est une ressource officielle de GreenSock, proposant une variété de tutoriels, conseils et démonstrations pour aider les développeurs à maîtriser GSAP (GreenSock Animation Platform). La chaîne présente des guides étape par étape, des exemples concrets et des explorations approfondies des techniques avancées, ce qui en fait un excellent endroit pour apprendre à créer des animations fluides et performantes pour des projets web. Elle est idéale aussi bien pour les débutants que pour les développeurs expérimentés souhaitant améliorer leurs compétences en animation."
+              }
+            }
+          }
+        }
+      },
+      "DATA": {
+        "SECTION_TITLE": "Données",
+        "SECTION_DESCRIPTION": "<p>La section Données de la page des Ressources fournit des outils essentiels et des bibliothèques pour gérer, interroger et interagir avec les données de manière efficace. Que vous gériez l'état avec Redux/RTK, travailliez avec GraphQL pour des APIs flexibles, ou gériez des bases de données comme PostgreSQL et MySQL, cette section couvre tout ce dont vous avez besoin pour une gestion fluide des données dans des applications modernes.</p><p>Des bases de données backend aux tests d'API et à l'exploration de bases de données, des outils comme Postman et DBeaver aident à rationaliser les flux de travail de développement, facilitant le test, le débogage et l'optimisation des interactions avec les données. Que vous construisiez un système de gestion d'état évolutif, conceviez des APIs efficaces ou travailliez avec des bases de données relationnelles, ces ressources vous aideront à travailler avec les données de manière efficace et efficiente.</p>",
+        "PARAGRAPHS": {
+          "REDUX": {
+            "PARAGRAPH_TITLE": "Redux/RTK",
+            "PARAGRAPH_DESCRIPTION": "<p>Redux est une bibliothèque de gestion d'état prévisible pour les applications JavaScript, couramment utilisée avec React pour gérer les états complexes des applications. Elle suit un flux de données unidirectionnel et repose sur les principes d'une source unique de vérité, de l'immuabilité et des fonctions pures, rendant la gestion de l'état plus prévisible et plus facile à déboguer. Redux fonctionne avec un store central qui contient l'état de l'application, et les mises à jour se font par le biais d'actions et de réducteurs, assurant un flux de données contrôlé et traçable.</p><p>Avec des fonctionnalités comme le débogage à remontée dans le temps, le support des middleware et l'intégration des outils de développement, Redux offre une solution évolutive pour gérer l'état global dans des applications de grande taille. Bien qu'il introduise un peu de code répétitif, des outils comme Redux Toolkit (RTK) simplifient la configuration et améliorent les performances. Redux est largement utilisé pour gérer l'état de l'UI, la mise en cache des données serveur et les flux de travail complexes, en faisant un choix puissant pour créer des applications front-end maintenables et évolutives.</p>",
+            "LINKS": {
+              "REDUX": {
+                "DESCRIPTION": "La documentation de Redux est un guide complet et bien structuré pour comprendre et utiliser Redux pour la gestion de l'état dans les applications JavaScript. Elle fournit des explications claires des concepts fondamentaux tels que les actions, les réducteurs et le store, ainsi que des exemples pratiques et des bonnes pratiques. La documentation inclut également des sujets avancés, des conseils de dépannage et des guides d'intégration pour des frameworks comme React, ce qui en fait une ressource essentielle pour les débutants comme pour les développeurs expérimentés."
+              },
+              "REDUX_TOOLKIT": {
+                "DESCRIPTION": "RTK (Redux Toolkit) est l'ensemble d'outils officiel et orienté pour un développement efficace avec Redux. Il simplifie les tâches courantes de Redux en fournissant des utilitaires tels que createSlice pour réduire la répétition de code, configureStore pour configurer le store et un support intégré pour la logique asynchrone avec createAsyncThunk. RTK promeut les meilleures pratiques, réduit la complexité et facilite l'utilisation de Redux, en faisant la méthode recommandée pour écrire de la logique Redux dans les applications modernes."
+              }
+            }
+          }
+        }
       }
     }
   },
