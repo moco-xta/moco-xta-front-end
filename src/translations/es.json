@@ -29,7 +29,7 @@
   },
   "SKILLS": {
     "PAGE_TITLE": "habilidades",
-    "PAGE_INTRODUCTION": "<p>¡Hola! Soy Federico.</p><p>Mi camino en el desarrollo de software comenzó por una puerta inesperada: Blender. Apenas unos años después de su creación, descubrí esta poderosa herramienta de creación 3D y quedé cautivado de inmediato. Sin embargo, rápidamente me sentí limitado por un universo puramente visual y estático. Quería ir más allá: hacer que estos mundos fueran interactivos, dinámicos y accesibles desde cualquier dispositivo. Este deseo me llevó a sumergirme en la programación.</p><p>Primero me especialicé en desarrollo back-end, particularmente con Spring Framework, donde aprendí a diseñar sistemas robustos, seguros y de alto rendimiento. Sin embargo, faltaba algo: la conexión entre el 3D y el servidor. Fue solo cuando ingresé al mundo profesional que encontré este eslabón perdido: a través del desarrollo front-end. Trabajar en proyectos de gran escala me permitió adquirir una sólida experiencia en la construcción de aplicaciones confiables y eficientes, al tiempo que exploraba formas innovadoras de presentar datos.</p><p>Hoy, mi objetivo es claro: construir aplicaciones profesionales que integren el 3D para ofrecer una visualización de datos inmersiva y dinámica. Quiero ampliar los límites de la interacción de los usuarios con la información, creando experiencias que no solo sean funcionales sino también cautivadoras. Mi experiencia, que combina la creación 3D con el desarrollo back-end y front-end, me brinda una perspectiva única y una sólida experiencia técnica para enfrentar estos desafíos.</p><p>Me apasiona fusionar el poder de los datos con la belleza del 3D y estoy decidido a seguir innovando en este campo.</p>",
+    "PAGE_INTRODUCTION": "<p>¡Hola! Me llamo Federico.</p><p>Mi viaje en el desarrollo de software comenzó con una simple chispa de curiosidad por una herramienta que terminaría dando forma a mi futuro: Blender. Apenas unos años después de su lanzamiento, descubrí este poderoso software 3D y quedé inmediatamente fascinado por sus posibilidades. Diseñar entornos 3D complejos era apasionante, pero pronto sentí la necesidad de ir más allá de los visuales estáticos. Quería dar vida a esos mundos digitales, hacerlos interactivos, dinámicos y accesibles desde cualquier dispositivo. Esta visión despertó en mí una pasión por la programación y me llevó a convertir la imaginación en experiencias interactivas.</p><p>Comencé especializándome en el desarrollo back-end, enfocándome en Spring Framework, donde aprendí a construir sistemas robustos, seguros y eficientes. Sin embargo, me faltaba un elemento clave: la conexión entre el 3D y el servidor. Fue al ingresar al mundo profesional cuando encontré esa pieza faltante: el desarrollo front-end. Trabajar en proyectos de gran escala me permitió adquirir una sólida experiencia en la creación de aplicaciones confiables y optimizadas, mientras exploraba nuevas formas de visualizar e interactuar con los datos.</p><p>Hoy tengo un objetivo claro: crear aplicaciones profesionales que integren 3D para ofrecer una visualización inmersiva y dinámica de los datos. Quiero llevar la experiencia del usuario más allá, combinando el poder de los datos con la belleza del renderizado 3D, creando soluciones que no solo sean funcionales, sino también atractivas y envolventes. Mi trayectoria, que abarca el diseño 3D, el desarrollo back-end y front-end, me brinda una perspectiva única y una fuerte experiencia técnica para afrontar estos desafíos.</p><p>Impulsado por mi pasión por la innovación, sigo explorando y expandiendo los límites entre tecnología, interactividad y visualización 3D. </p>",
     "HOME_MADE": "<p>Este sitio web es 100% casero. Si bien no todas las tecnologías que se muestran aquí se utilizaron en su creación, representan aquellas con las que he tenido la oportunidad de trabajar.</p>",
     "SECTIONS": {
       "FRONT_END_FRAMEWORKS": {
@@ -51,7 +51,7 @@
         }
       },
       "FRONT_END_LIBRARIES": {
-        "SECTION_TITLE": "front-end libraries",
+        "SECTION_TITLE": "Bibliotecas de front-end",
         "SECTION_DESCRIPTION": "<p>En el desarrollo front-end moderno, las bibliotecas son cruciales para mejorar la funcionalidad, optimizar el rendimiento y simplificar tareas complejas. En esta sección, destaco mi experiencia con una variedad de bibliotecas poderosas que amplían las capacidades de marcos como Next.js, Angular y React.</p><p>Al aprovechar estas bibliotecas, puedo administrar de manera eficiente los estados de las aplicaciones, manejar las interacciones de datos y crear interfaces de usuario dinámicas. Estas herramientas simplifican las tareas complejas y mejoran el proceso de desarrollo general, lo que garantiza que las aplicaciones sean eficientes y escalables, al mismo tiempo que brindan una experiencia de usuario intuitiva y fluida.</p>",
         "PARAGRAPHS": {
           "GOOGLE_MAPS": {
@@ -163,7 +163,7 @@
         }
       },
       "DATA": {
-        "SECTION_TITLE": "Data",
+        "SECTION_TITLE": "Datos",
         "SECTION_DESCRIPTION": "<p>La gestión e integración de datos son fundamentales para crear aplicaciones dinámicas basadas en datos, y he adquirido experiencia trabajando con un conjunto diverso de herramientas y tecnologías para manejar tareas de datos complejas de manera eficiente. Utilizo Redux para la gestión de estados, garantizando que los datos de la aplicación fluyan sin problemas entre los componentes y mantengan la coherencia en toda la interfaz de usuario. Para gestionar las interacciones de API, confío en GraphQL, que me permite consultar y manipular datos de manera eficiente con solicitudes declarativas y flexibles.</p><p>En lo que respecta a las bases de datos, tengo experiencia práctica con PostgreSQL y MySQL, lo que me permite diseñar y administrar bases de datos relacionales que son escalables, confiables y optimizadas para el rendimiento. Para probar las API y garantizar una comunicación fluida entre servicios, confío en Postman, que simplifica las solicitudes de API y la validación de respuestas. Para optimizar la gestión de bases de datos y la visualización de datos, uso DBeaver, que proporciona una interfaz intuitiva para trabajar con bases de datos, lo que me permite consultar, administrar y optimizar mis estructuras de datos de manera efectiva.</p><p>Al combinar estas herramientas y tecnologías, puedo garantizar que los datos se administren de manera eficiente, lo que hace que cada aplicación sea más receptiva, confiable y escalable.</p>",
         "PARAGRAPHS": {
           "REDUX": {
@@ -193,7 +193,7 @@
         }
       },
       "SECURITY": {
-        "SECTION_TITLE": "Security",
+        "SECTION_TITLE": "Seguridad",
         "SECTION_DESCRIPTION": "<p>La seguridad es un componente esencial de cualquier aplicación web moderna, y garantizar una protección sólida tanto para los usuarios como para los datos es una prioridad máxima en mi proceso de desarrollo. A lo largo de mi experiencia, he trabajado extensamente con Spring Security para implementar sistemas de autenticación y autorización seguros. Gracias a Spring Security, he podido gestionar la autenticación de usuarios, aplicar un control de acceso basado en roles y proteger datos confidenciales mediante cifrado y protocolos seguros, lo que garantiza que las aplicaciones sigan siendo seguras y cumplan con los estándares de seguridad.</p><p>Además de Spring Security, también he integrado Auth0, una potente plataforma de gestión de identidad, para simplificar la autenticación de usuarios, mejorar la seguridad y habilitar el inicio de sesión único (SSO) en múltiples plataformas y aplicaciones. Al aprovechar las funciones de Auth0, puedo implementar rápidamente sistemas de inicio de sesión seguro, administrar identidades de usuarios y brindar un control de acceso perfecto en una variedad de servicios. Estas herramientas y técnicas combinadas me permiten crear aplicaciones altamente seguras y escalables que cumplen con los requisitos funcionales y de seguridad.</p>",
         "PARAGRAPHS": {
           "SPRING_SECURITY": {
@@ -207,7 +207,7 @@
         }
       },
       "HOSTING": {
-        "SECTION_TITLE": "hospedaje???",
+        "SECTION_TITLE": "hospedaje",
         "SECTION_DESCRIPTION": "El alojamiento es un componente fundamental para garantizar la confiabilidad, escalabilidad y rendimiento de las aplicaciones web. Tengo experiencia trabajando con Hostinger VPS y AWS para implementar y administrar aplicaciones, asegurando que sean altamente disponibles y escalables. Ya sea para proyectos personales o soluciones empresariales a gran escala, estas plataformas brindan la flexibilidad y la potencia necesarias para manejar la administración de infraestructura, el escalamiento automático y el equilibrio de carga.</p><p>Para una implementación optimizada y la consistencia del entorno, utilizo Docker, que me permite crear contenedores de aplicaciones aislados, lo que garantiza que la aplicación se ejecute sin problemas en varios entornos. Además, Nginx funciona como un potente proxy inverso y servidor web, optimizando el rendimiento y el equilibrio de carga, al tiempo que mejora la velocidad general de las aplicaciones que implemento.</p><p>Juntas, estas herramientas me permiten proporcionar soluciones de alojamiento eficientes y confiables que brindan alto rendimiento, escalabilidad y disponibilidad para cualquier aplicación web.</p>",
         "PARAGRAPHS": {
           "HOSTINGER": {
@@ -229,7 +229,7 @@
         }
       },
       "PROGRAMMING_LANGUAGES": {
-        "SECTION_TITLE": "programming languages",
+        "SECTION_TITLE": "lenguajes de programación",
         "SECTION_DESCRIPTION": "<p>Como desarrollador, tengo experiencia trabajando con una amplia gama de lenguajes de programación, cada uno de los cuales ofrece ventajas únicas para diferentes tipos de proyectos.</p><p>Soy competente en JavaScript y TypeScript, que utilizo tanto para el desarrollo front-end como back-end para crear aplicaciones web dinámicas e interactivas. Java ha sido un lenguaje clave en mi desarrollo back-end, particularmente con Spring Framework, donde me concentro en la creación de sistemas escalables, seguros y de alto rendimiento. Además de estos, tengo experiencia con Python, un lenguaje versátil que se utiliza a menudo para la creación de scripts, la automatización y el desarrollo back-end. Para aplicaciones de rendimiento crítico y programación de sistemas de bajo nivel, también trabajo con C y C++, que proporcionan el control y la eficiencia necesarios para la informática de alto rendimiento y los sistemas integrados.</p><p>Al combinar estos lenguajes, puedo abordar una amplia variedad de desafíos de desarrollo, desde aplicaciones web hasta programación a nivel de sistema, asegurando que se utilicen las herramientas adecuadas para cada tarea.</p>",
         "PARAGRAPHS": {
           "JAVASCRIPT": {
@@ -259,7 +259,7 @@
         }
       },
       "AI": {
-        "SECTION_TITLE": "AI",
+        "SECTION_TITLE": "IA",
         "SECTION_DESCRIPTION": "<p>La inteligencia artificial (IA) está revolucionando el proceso de desarrollo al mejorar la productividad y agilizar los flujos de trabajo. Suelo utilizar herramientas de IA que ayudan a automatizar tareas repetitivas, generar sugerencias de código y ofrecer información para la resolución de problemas. Estas herramientas me ayudan a ahorrar tiempo al proporcionar sugerencias adaptadas al contexto, lo que mejora la velocidad y la calidad de mi proceso de codificación. Además, me permiten navegar por bases de código complejas de forma más eficaz, lo que facilita la búsqueda de información relevante y la resolución de desafíos técnicos.</p><p>Más allá del desarrollo, también estoy explorando el potencial de la IA en las herramientas de producción y diseño gráfico. La capacidad de automatizar tareas, optimizar los flujos de trabajo y mejorar la creatividad todavía está en sus primeras etapas, pero estoy entusiasmado con las posibilidades. A medida que la IA sigue evolucionando, espero integrarla más profundamente en mi trabajo para mejorar tanto las prácticas de desarrollo como la creación de contenido visual.</p>",
         "PARAGRAPHS": {
           "DEEPSEEK": {
@@ -492,9 +492,9 @@
       }
     },
     "SIDE_NAVIGATION_MENU": {
-      "INTRODUCTION": "introduction",
+      "INTRODUCTION": "introducción",
       "ON_THIS_PAGE": "en esta página",
-      "ON_THIS_SECTION": "on this page"
+      "ON_THIS_SECTION": "En esta sección"
     },
     "BUTTONS": {
       "CLOSE": "cerrar",

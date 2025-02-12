@@ -7,5 +7,5 @@ import { threeDData } from './threeDData'
 export const resourcesPageData: TResourcesPageData = {
   key: 'resources',
   translationKey: 'RESOURCES',
-  sections: [{ ...threeDData }, { ...animationData }, {...dataData}],
+  sections: [{ ...threeDData }, { ...animationData }, { ...dataData }],
 }
