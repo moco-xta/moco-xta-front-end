@@ -1,4 +1,6 @@
 import React from 'react'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 import { FaYoutube } from 'react-icons/fa'
 
@@ -13,6 +15,14 @@ import './index.scss'
 export default function PageIntroduction({ translationPath }: TPageIntroduction) {
   const t = useTranslations()
   const pathname = usePathname()
+
+  useGSAP(() => {
+    gsap.from('.pi_introduction', {
+      duration: 1,
+      background: 'rgba(64, 64, 64, 0)',
+      delay: 2,
+    })
+  })
 
   return (
     <section

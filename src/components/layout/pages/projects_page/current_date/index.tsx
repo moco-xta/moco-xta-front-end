@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import type { TCurrentDate } from '@/types/components/layout/types'
 
 import './index.scss'
-import { gilroyHeavyFont } from '@/app/fonts/ttf'
+import { helveticaNeueBlackFont } from '@/app/fonts/otf'
 
 export default function CurrentDate({ currentDate }: TCurrentDate) {
   const locale = useLocale()
@@ -15,7 +15,7 @@ export default function CurrentDate({ currentDate }: TCurrentDate) {
   return (
     <div
       id='current_date'
-      className={`${gilroyHeavyFont.className}`}
+      className={`${helveticaNeueBlackFont.className}`}
     >
       {locale === 'en' ? (
         <>
