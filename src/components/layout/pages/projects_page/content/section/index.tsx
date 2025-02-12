@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -18,6 +18,7 @@ export type TSection = {
 }
 
 export default function Section({ projectData, companiesData, currentCompany }: TSection) {
+  const locale = useLocale()
   const t = useTranslations('PROJECTS')
 
   const projectSectionRef = useRef<HTMLDivElement>(null!)
@@ -44,27 +45,36 @@ export default function Section({ projectData, companiesData, currentCompany }: 
     >
       <div className='project_container'>
         <SectionTitle title={projectData.name} />
-        {companiesData[currentCompany]?.name && (
-          <span>
-            {capitalizeFirstLetter(t('WITH'))}{' '}
-            {capitalizeFirstLetter(companiesData[currentCompany]?.name ?? '')}
-          </span>
-        )}
-        <span className='project_roles'>
-          {capitalizeFirstLetter(t('SKILL') + `${projectData.roles.length > 1 ? 's' : ''}`)}
-          {': '}
-          {projectData.roles.map(
-            (role, index) => role + (index === projectData.roles.length - 1 ? '' : ', '),
-          )}
-        </span>
-        {t.rich(projectData.descriptionsKey, {
-          p: (chunk) => <p className='project_description'>{chunk}</p>,
-        })}
-        {/* <p className='project_tools'>
-          {projectData.logos.tools.map((tool, index) => (
-            <span key={`role_${projectData.key}_${index}`}>#{tool.name}</span>
-          ))}
-        </p> */}
+        <div className='project_details'>
+          <div className='skills_and_with'>
+            <span className='project_roles'>
+              {capitalizeFirstLetter(
+                t('SKILL') +
+                  `${projectData.roles.length > 1 ? (locale === 'es' ? 'es' : 's') : ''}`,
+              )}
+              {': '}
+              {projectData.roles.map(
+                (role, index) => role + (index === projectData.roles.length - 1 ? '' : ', '),
+              )}
+            </span>
+            {companiesData[currentCompany]?.name &&
+              projectData.key !== 'moco' &&
+              projectData.key !== 'openclassrooms' && (
+                <span>
+                  {', '}
+                  {t('WITH')} {capitalizeFirstLetter(companiesData[currentCompany]?.name ?? '')}
+                </span>
+              )}
+          </div>
+          {t.rich(projectData.descriptionsKey, {
+            p: (chunk) => <p className='project_description'>{chunk}</p>,
+          })}
+          <p className='project_tools'>
+            {projectData.logos.tools.map((tool, index) => (
+              <span key={`role_${projectData.key}_${index}`}>#{tool.name}</span>
+            ))}
+          </p>
+        </div>
       </div>
     </section>
   )

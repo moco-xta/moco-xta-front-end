@@ -12,7 +12,7 @@ export const companiesData: TCompanyData[] = [
   {
     key: 'ponthus',
     index: 1,
-    name: 'ponthus, Maastricht (NL)',
+    name: 'ponthus (Maastricht, NL)',
     logo: {
       path: 'logos/',
       prefix: 'Logo',
@@ -29,7 +29,7 @@ export const companiesData: TCompanyData[] = [
   {
     key: 'the_brink',
     index: 2,
-    name: 'The Brink, Amsterdam (NL)',
+    name: 'The Brink (Amsterdam, NL)',
     logo: {
       path: 'logos/',
       prefix: 'Logo',

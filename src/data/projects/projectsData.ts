@@ -10,7 +10,7 @@ export const projectsData: TProjectData[] = [
     name: 'Moco.xta',
     url: 'https://moco-xta.com/en',
     imageUrl: texturesConstants.PROJECTS.MOCO_XTA,
-    descriptionsKey: 'DESCRIPTIONS.MOCO',
+    descriptionsKey: 'DESCRIPTIONS.MOCO_XTA',
     dates: {
       to: moment(new Date()).format('YYYY-MM-DD'),
       from: '2024-01-01',
