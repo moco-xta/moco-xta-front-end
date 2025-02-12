@@ -4,4 +4,18 @@
   margin-bottom: $px_margin_M;
   font-size: $font_size_h2;
   font-weight: bold;
+  color: #fff;
+}
+
+.project_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  svg {
+    scale: 2;
+    color: #fff;
+    margin-top: -5px;
+    margin-left: 12px;
+  }
 }

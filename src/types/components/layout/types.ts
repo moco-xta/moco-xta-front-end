@@ -112,6 +112,8 @@ export type TLocations = {
 // CURRENT DATE
 
 export type TCurrentDate = {
+  currentProject: number
+  projectsNumber: number
   currentDate: Date
 }
 
@@ -138,6 +140,7 @@ export type TSkillsParagraph = {
 export type TTitle = {
   title?: string
   translationPath?: string
+  url?: string
 }
 
 // LINKS

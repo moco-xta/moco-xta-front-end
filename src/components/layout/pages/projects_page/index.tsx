@@ -46,7 +46,13 @@ export default function ProjectsPage() {
           currentProject={currentProject}
           currentCompany={currentCompany}
         />
-        {isValidDate(currentDate) && <CurrentDate currentDate={currentDate} />}
+        {isValidDate(currentDate) && (
+          <CurrentDate
+            currentProject={currentProject}
+            projectsNumber={projectsData.length}
+            currentDate={currentDate}
+          />
+        )}
       </div>
       {/* <div
         ref={googleMapContainerRef}
