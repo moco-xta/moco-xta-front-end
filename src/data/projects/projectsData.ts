@@ -172,6 +172,8 @@ export const projectsData: TProjectData[] = [
       project: { name: 'Openclassrooms' },
       tools: [
         { name: 'Angular' },
+        { name: 'Webgl' },
+        { name: 'Threejs' },
         { name: 'Babylonjs' },
         { name: 'Spring' },
         { name: 'Postgresql' },

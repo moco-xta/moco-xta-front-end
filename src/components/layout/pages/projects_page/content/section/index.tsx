@@ -69,11 +69,11 @@ export default function Section({ projectData, companiesData, currentCompany }: 
           {t.rich(projectData.descriptionsKey, {
             p: (chunk) => <p className='project_description'>{chunk}</p>,
           })}
-          <p className='project_tools'>
+          {/* <p className='project_tools'>
             {projectData.logos.tools.map((tool, index) => (
               <span key={`role_${projectData.key}_${index}`}>#{tool.name}</span>
             ))}
-          </p>
+          </p> */}
         </div>
       </div>
     </section>
