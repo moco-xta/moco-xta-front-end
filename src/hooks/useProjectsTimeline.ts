@@ -19,6 +19,7 @@ export default function useProjectsTimeline(
   // const keyDates = useMemo(() => getKeyDates([projectsData, companiesData, locationsData]), [projectsData, companiesData, locationsData]);
 
   // const [snapHeights, setSnapHeights] = useState<number[]>([])
+  const [container, setContainer] = useState<HTMLElement>(null!)
   const [y, setY] = useState<number>(0)
   const [offsetHeight, setOffsetHeight] = useState<number>(0)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
@@ -35,14 +36,22 @@ export default function useProjectsTimeline(
 
   useLenis((lenis) => {
     setY(lenis.targetScroll)
-    const container = document.getElementById('projects_timeline_container')
+    /* const container = document.getElementById('projects_timeline_container')
 
     if (container) {
       setOffsetHeight(container.offsetHeight - document.documentElement.clientHeight)
     } else {
-      setOffsetHeight(0) // Or handle the case where the element is not found
-    }
+      setOffsetHeight(0)
+    } */
   }) // TODO: Check if I still have the scrolling issue
+
+  useEffect(() => {
+    if (document) setContainer(document.getElementById('projects_timeline_container')!)
+  }, [])
+
+  useEffect(() => {
+    if (container) setOffsetHeight(container.offsetHeight - document.documentElement.clientHeight)
+  }, [container])
 
   useEffect(() => {
     if (offsetHeight) setDeltaPerDay(offsetHeight / daysDifference)
