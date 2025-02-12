@@ -10,7 +10,7 @@ export const layoutData = {
   companiesLogos: {
     position: {
       x: 3.3,
-      y: -1.5,
+      y: -1.25,
       z: 3.5,
     },
     gap: 8,
@@ -18,7 +18,7 @@ export const layoutData = {
   pictures: {
     position: {
       x: -3,
-      y: 0.5,
+      y: 1,
       z: 2.5,
     },
     gap: 8,
