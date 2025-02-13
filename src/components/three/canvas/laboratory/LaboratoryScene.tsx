@@ -7,6 +7,7 @@ import { DeskTray } from '../../models/laboratory/DeskTray'
 import { Dodecahedron } from '../../models/laboratory/Dodecahedron'
 import { Door } from '../../models/laboratory/Door'
 import { DoorFrame } from '../../models/laboratory/DoorFrame'
+import { FrameAmorLlamaAmor } from '../../models/laboratory/FrameAmorLlamaAmor'
 import { FrameBrain } from '../../models/laboratory/FrameBrain'
 import { FrameTrinity } from '../../models/laboratory/FrameTrinity'
 import { Icosahedron } from '../../models/laboratory/Icosahedron'
@@ -35,6 +36,7 @@ export default function LaboratoryScene() {
       <Dodecahedron />
       <Door />
       <DoorFrame />
+      <FrameAmorLlamaAmor />
       <FrameBrain />
       <FrameTrinity />
       <Icosahedron />
