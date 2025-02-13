@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { useHelper } from '@react-three/drei'
 
 const INTENSITY = 1.25
 const MAP_SIZE = [4096, 4096]
