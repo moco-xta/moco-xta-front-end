@@ -43,10 +43,12 @@ export function DeskChair(props: JSX.IntrinsicElements['group']) {
         >
           <mesh
             geometry={nodes.DeskChair_1.geometry}
-            material={new THREE.MeshStandardMaterial({
-              metalness: 1,
-              roughness: 0.35,
-            })}
+            material={
+              new THREE.MeshStandardMaterial({
+                metalness: 1,
+                roughness: 0.35,
+              })
+            }
             receiveShadow
             castShadow
           />
@@ -58,10 +60,12 @@ export function DeskChair(props: JSX.IntrinsicElements['group']) {
           />
           <mesh
             geometry={nodes.DeskChair_3.geometry}
-            material={new THREE.MeshStandardMaterial({
-              color: '#000',
-              roughness: 0.85,
-            })}
+            material={
+              new THREE.MeshStandardMaterial({
+                color: '#000',
+                roughness: 0.85,
+              })
+            }
             receiveShadow
             castShadow
           />

@@ -4,8 +4,6 @@ import { useGLTF } from '@react-three/drei'
 
 import type { GLTFResult } from '@/types/data/components/three/types'
 
-import { materialsData } from '@/data/about/three/materialsData'
-
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 export function Screen(props: JSX.IntrinsicElements['group']) {
@@ -25,10 +23,12 @@ export function Screen(props: JSX.IntrinsicElements['group']) {
       />
       <mesh
         geometry={nodes.Screen_2.geometry}
-        material={new THREE.MeshStandardMaterial({
-          color: '#000000',
-          roughness: 0.3
-        })}
+        material={
+          new THREE.MeshStandardMaterial({
+            color: '#000000',
+            roughness: 0.3,
+          })
+        }
         receiveShadow
         castShadow
       />
