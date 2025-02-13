@@ -209,7 +209,9 @@
     "VIRGEN_DE_GUADALUPE": "/models/glb/laboratory/VirgenDeGuadalupe.glb",
     "WALL_CLOCK": "/models/glb/laboratory/WallClock.glb",
     "WALL_CLOCK_GLASS": "/models/glb/laboratory/WallClockGlass.glb",
-    "WALLS": "/models/glb/laboratory/Walls.glb"
+    "WALLS": "/models/glb/laboratory/Walls.glb",
+    "WORLD_MAP": "/models/glb/laboratory/WorldMap.glb",
+    "WORLD_MAP_STAND": "/models/glb/laboratory/WorldMapStand.glb"
   },
   "PLAYGROUND": {
     "SUZANNE": "/models/glb/playground/Suzanne.glb"
