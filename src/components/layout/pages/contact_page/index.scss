@@ -5,20 +5,36 @@
   height: 100vh;
   // background: #c8bdb0ff;
 
-  #contact_section {
+  #contact_container {
     z-index: 1;
-    pointer-events: none;
     position: fixed;
-    width: 100%;
+    left: 5vw;
+    pointer-events: none;
     height: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
+    display: flex;
+    align-items: center;
 
-    .contact_socials_canvas {
-      position: absolute;
-      width: 100% !important;
-      height: 200px !important;
-      // background-color: red;
+    #contact_section {
+      margin: 0 !important;
+      padding: 0 !important;
+
+      #contact_content {
+        width: 30vw;
+        padding: $px_margin_S $px_margin_L $px_margin_L $px_margin_L;
+        background: rgba(64, 64, 64, 0.3);
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+        border-top: 1pt solid #ffffff33;
+        border-radius: 0 0 15px 15px;
+        text-align: justify;
+
+        .contact_socials_canvas {
+          position: absolute;
+          width: 250px !important;
+          height: 50px !important;
+          // background-color: red;
+        }
+      }
     }
   }
 }
