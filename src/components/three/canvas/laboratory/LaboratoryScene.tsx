@@ -23,6 +23,8 @@ import { VirgenDeGuadalupe } from '../../models/laboratory/VirgenDeGuadalupe'
 import WallClockGroup from './WallClockGroup'
 import { SpeakerBox } from '../../models/laboratory/SpeakerBox'
 import { Walls } from '../../models/laboratory/Walls'
+import { WorldMap } from '../../models/laboratory/WorldMap'
+import { WorldMapStand } from '../../models/laboratory/WorldMapStand'
 
 import { laboratoryData } from '@/data/about/three/laboratoryData'
 
@@ -62,6 +64,8 @@ export default function LaboratoryScene() {
       <VirgenDeGuadalupe />
       <WallClockGroup />
       <Walls />
+      <WorldMap />
+      <WorldMapStand />
     </>
   )
 }
