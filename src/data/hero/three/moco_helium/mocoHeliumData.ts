@@ -23,7 +23,7 @@ export const mocoHeliumData = {
   balloons: {
     position: {
       group: {
-        x: -0.08,
+        x: 0.12,
         y: 0,
         z: 0,
       },
@@ -49,7 +49,7 @@ export const mocoHeliumData = {
       },
     },
     rotation: {
-      y: -25,
+      y: 33,
     },
   },
 }

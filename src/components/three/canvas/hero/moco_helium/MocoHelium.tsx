@@ -142,7 +142,6 @@ export default function MocoHelium() {
               mocoHeliumData.balloons.position.o2.z,
             )
           }
-          scale={[-1, -1, -1]}
           registerRigidBody={registerRigidBody}
         >
           <OHeliumBalloon />
