@@ -58,9 +58,9 @@ function MouseImpulseHandler({ rigidBodies }: TMouseImpulseHandler) {
     }
 
     const randomWindDirection = [
-      Math.sin(performance.now() * 0.002),
-      Math.cos(performance.now() * 0.001),
-      Math.cos(performance.now() * 0.003),
+      Math.sin(performance.now() * 0.001),
+      Math.cos(performance.now() * 0.0005),
+      Math.cos(performance.now() * 0.0015),
     ]
     const force = {
       x: randomWindDirection[0] * windStrength,
@@ -142,6 +142,7 @@ export default function MocoHelium() {
               mocoHeliumData.balloons.position.o2.z,
             )
           }
+          scale={[-1, -1, -1]}
           registerRigidBody={registerRigidBody}
         >
           <OHeliumBalloon />
