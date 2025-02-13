@@ -516,6 +516,19 @@
       "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
   },
+  "CONTACT": {
+    "CONTACT": "Contact",
+    "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "CONTACT_ME": {
+      "CONTACT": "",
+      "ME": ""
+    },
+    "BASED_IN": {
+      "I_M": "",
+      "BASED": "",
+      "IN_PARIS": ""
+    }
+  },
   "LAYOUT": {
     "PLAYER_PAGE": {
       "INSTRUCTIONS": {
