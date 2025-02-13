@@ -187,6 +187,8 @@
     "DODECAHEDRON": "/models/glb/laboratory/Dodecahedron.glb",
     "DOOR": "/models/glb/laboratory/Door.glb",
     "DOOR_FRAME": "/models/glb/laboratory/DoorFrame.glb",
+    "FRAME_BRAIN": "/models/glb/laboratory/FrameBrain.glb",
+    "FRAME_TRINITY": "/models/glb/laboratory/FrameTrinity.glb",
     "HOUR_AND_MINUTE_MARKERS": "/models/glb/laboratory/HourAndMinuteMarkers.glb",
     "HOUR_HAND": "/models/glb/laboratory/HourHand.glb",
     "ICOSAHEDRON": "/models/glb/laboratory/Icosahedron.glb",
