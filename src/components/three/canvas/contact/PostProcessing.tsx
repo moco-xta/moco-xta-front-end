@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import {
   // Bloom,
-  DepthOfField,
+  // DepthOfField,
   EffectComposer,
   // Noise,
   // Scanline,
@@ -38,13 +38,13 @@ export default function PostProcessing() {
 
   return (
     <EffectComposer>
-      <DepthOfField
+      {/* <DepthOfField
         ref={depthOfFieldRef}
         focalLength={0.01}
         bokehScale={5}
         height={1024}
         width={1024}
-      />
+      /> */}
       {/* <Bloom
         intensity={0.05}
         kernelSize={KernelSize.LARGE}
