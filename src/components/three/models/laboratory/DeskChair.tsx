@@ -5,12 +5,10 @@ import { CuboidCollider, type RapierRigidBody, RigidBody } from '@react-three/ra
 
 import type { GLTFResult } from '@/types/data/components/three/types'
 
-import { materialsData } from '@/data/about/three/materialsData'
-
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 export function DeskChair(props: JSX.IntrinsicElements['group']) {
-  const { nodes /* materials */ } = useGLTF(glbConstants.LABORATORY.DESK_CHAIR) as GLTFResult
+  const { nodes, materials } = useGLTF(glbConstants.LABORATORY.DESK_CHAIR) as GLTFResult
 
   const rigidBodyRef = useRef<RapierRigidBody>(null)
 
@@ -54,18 +52,18 @@ export function DeskChair(props: JSX.IntrinsicElements['group']) {
           />
           <mesh
             geometry={nodes.DeskChair_2.geometry}
-            material={materialsData.toDoMaterial}
-            receiveShadow
-            castShadow
-          />
-          <mesh
-            geometry={nodes.DeskChair_3.geometry}
             material={
               new THREE.MeshStandardMaterial({
                 color: '#000',
                 roughness: 0.85,
               })
             }
+            receiveShadow
+            castShadow
+          />
+          <mesh
+            geometry={nodes.DeskChair_3.geometry}
+            material={materials.desk_chair_leather_material}
             receiveShadow
             castShadow
           />
