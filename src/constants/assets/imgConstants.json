@@ -1,4 +1,13 @@
 {
+  "PNG": {
+    "ARIES": {
+      "SRC": "/img/png/aries.png",
+      "DIMENSIONS": {
+        "WITDH": 132,
+        "HEIGHT": 70
+      }
+    }
+  },
   "BACKGROUNDS": {
     "VERBAL_SHOOTA": "/img/backgrounds/verbal_shoota.jpg"
   },

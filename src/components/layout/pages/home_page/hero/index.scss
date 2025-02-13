@@ -4,4 +4,12 @@
   width: 100vw;
   height: 100vh;
   background: $moco_helium_background;
+
+  img {
+    z-index: 0;
+    position: absolute;
+    right: 25px;
+    bottom: 7%;
+    opacity: 30%;
+  }
 }

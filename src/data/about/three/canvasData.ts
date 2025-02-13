@@ -1,7 +1,7 @@
 import { CanvasProps } from '@react-three/fiber'
 
 export const canvasDefaultValues: Partial<CanvasProps> = {
-  dpr: 1,
+  dpr: 2,
   shadows: true,
   legacy: false,
   linear: false,
