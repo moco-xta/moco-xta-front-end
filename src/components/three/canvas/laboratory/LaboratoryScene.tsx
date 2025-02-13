@@ -21,9 +21,10 @@ import { Screen } from '../../models/laboratory/Screen'
 import { ShelfDesk } from '../../models/laboratory/ShelfDesk'
 import { Tetrahedron } from '../../models/laboratory/Tetrahedron'
 import { Trestle } from '../../models/laboratory/Trestle'
-import { VirgenDeGuadalupe } from '../../models/laboratory/VirgenDeGuadalupe'
 import WallClockGroup from './WallClockGroup'
 import { SpeakerBox } from '../../models/laboratory/SpeakerBox'
+import { VinylAurora } from '../../models/laboratory/VinylAurora'
+import { VirgenDeGuadalupe } from '../../models/laboratory/VirgenDeGuadalupe'
 import { Walls } from '../../models/laboratory/Walls'
 import { WorldMap } from '../../models/laboratory/WorldMap'
 import { WorldMapStand } from '../../models/laboratory/WorldMapStand'
@@ -65,6 +66,7 @@ export default function LaboratoryScene() {
           {...trestleData}
         />
       ))}
+      <VinylAurora />
       <VirgenDeGuadalupe />
       <WallClockGroup />
       <Walls />
