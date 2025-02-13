@@ -6,11 +6,19 @@
   // background: #c8bdb0ff;
 
   #contact_section {
+    z-index: 1;
     pointer-events: none;
     position: fixed;
     width: 100%;
     height: 100%;
     margin: 0 !important;
     padding: 0 !important;
+
+    .contact_socials_canvas {
+      position: absolute;
+      width: 100% !important;
+      height: 200px !important;
+      // background-color: red;
+    }
   }
 }
