@@ -9,10 +9,18 @@ export function WorldMap(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(glbConstants.LABORATORY.WORLD_MAP) as GLTFResult
 
   return (
-    <group position={[-12.188, 12.685, -14.096]} rotation={[0, -Math.PI / 9, 0.262]} {...props} dispose={null}>
-      <mesh geometry={nodes.WorldMap.geometry} material={materials.world_map_material}
+    <group
+      position={[-12.188, 12.685, -14.096]}
+      rotation={[0, -Math.PI / 9, 0.262]}
+      {...props}
+      dispose={null}
+    >
+      <mesh
+        geometry={nodes.WorldMap.geometry}
+        material={materials.world_map_material}
         receiveShadow
-        castShadow />
+        castShadow
+      />
     </group>
   )
 }

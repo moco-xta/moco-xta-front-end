@@ -9,6 +9,8 @@ import { Door } from '../../models/laboratory/Door'
 import { DoorFrame } from '../../models/laboratory/DoorFrame'
 import { FrameAmorLlamaAmor } from '../../models/laboratory/FrameAmorLlamaAmor'
 import { FrameBrain } from '../../models/laboratory/FrameBrain'
+import { FrameCelestialMap } from '../../models/laboratory/FrameCelestialMap'
+import { FrameNicotianaRustica } from '../../models/laboratory/FrameNicotianaRustica'
 import { FrameTrinity } from '../../models/laboratory/FrameTrinity'
 import { Icosahedron } from '../../models/laboratory/Icosahedron'
 import { MacBookPro } from '../../models/laboratory/MacBookPro'
@@ -40,6 +42,8 @@ export default function LaboratoryScene() {
       <DoorFrame />
       <FrameAmorLlamaAmor />
       <FrameBrain />
+      <FrameCelestialMap />
+      <FrameNicotianaRustica />
       <FrameTrinity />
       <Icosahedron />
       <MacBookPro />

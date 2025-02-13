@@ -189,6 +189,8 @@
     "DOOR_FRAME": "/models/glb/laboratory/DoorFrame.glb",
     "FRAME_AMOR_LLAMA_AMOR": "/models/glb/laboratory/FrameAmorLlamaAmor.glb",
     "FRAME_BRAIN": "/models/glb/laboratory/FrameBrain.glb",
+    "FRAME_CELESTIAL_MAP": "/models/glb/laboratory/FrameCelestialMap.glb",
+    "FRAME_NICOTIANA_RUSTICA": "/models/glb/laboratory/FrameNicotianaRustica.glb",
     "FRAME_TRINITY": "/models/glb/laboratory/FrameTrinity.glb",
     "HOUR_AND_MINUTE_MARKERS": "/models/glb/laboratory/HourAndMinuteMarkers.glb",
     "HOUR_HAND": "/models/glb/laboratory/HourHand.glb",
