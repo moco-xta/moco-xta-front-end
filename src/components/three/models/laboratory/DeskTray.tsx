@@ -12,7 +12,7 @@ export function DeskTray(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF(glbConstants.LABORATORY.DESK_TRAY) as GLTFResult
 
   return (
-    <RigidBody>
+    <RigidBody type='fixed'>
       <group
         {...props}
         dispose={null}

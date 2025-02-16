@@ -10,7 +10,7 @@ export function Trestle(props: JSX.IntrinsicElements['mesh']) {
   const { nodes, materials } = useGLTF(glbConstants.LABORATORY.TRESTLE) as GLTFResult
 
   return (
-    <RigidBody colliders='trimesh'>
+    <RigidBody colliders='trimesh' type='fixed'>
       <mesh
         geometry={nodes.Trestle.geometry}
         material={materials.Material}
