@@ -5,7 +5,7 @@ export const ambientLightDefaultValues = {
 
 export const spotLightsDefaultValues = {
   color: '#fff',
-  intensity: 0.75,
+  intensity: 1,
   angle: 1.87,
   distance: 70,
   decay: 0.4,
