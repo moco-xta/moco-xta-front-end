@@ -25,12 +25,12 @@ export default function Hero() {
       <div id='hero_container'>
         <HeadText />
         <HeroCanvas />
-        <Image
+        {/* <Image
           src={imgConstants.PNG.ARIES.SRC}
           width={imgConstants.PNG.ARIES.DIMENSIONS.WITDH}
           height={imgConstants.PNG.ARIES.DIMENSIONS.HEIGHT}
           alt='Aries'
-        />
+        /> */}
         {/* <PlaygroundCanvas /> */}
         {/* <AsciiWithWebgpuCanvas /> */}
         {/* <ParametricLinearRgbDimmerCanvas /> */}
