@@ -30,6 +30,7 @@ import { WorldMap } from '../../models/laboratory/WorldMap'
 import { WorldMapStand } from '../../models/laboratory/WorldMapStand'
 
 import { laboratoryData } from '@/data/about/three/laboratoryData'
+import { RigidBody } from '@react-three/rapier'
 
 export default function LaboratoryScene() {
   return (
@@ -37,7 +38,15 @@ export default function LaboratoryScene() {
       <Couronnes />
       <Cube />
       <DeskChair />
-      <DeskTray />
+      <RigidBody>
+        <DeskTray />
+        {laboratoryData.trestles.map((trestleData) => (
+          <Trestle
+            key={`trestle_${trestleData.name}`}
+            {...trestleData}
+          />
+        ))}
+      </RigidBody>
       <Dodecahedron />
       <Door />
       <DoorFrame />
@@ -60,16 +69,11 @@ export default function LaboratoryScene() {
         />
       ))}
       <Tetrahedron />
-      {laboratoryData.trestles.map((trestleData) => (
-        <Trestle
-          key={`trestle_${trestleData.name}`}
-          {...trestleData}
-        />
-      ))}
       <VinylAurora />
       <VirgenDeGuadalupe />
       <WallClockGroup />
       <Walls />
+      <RigidBody colliders='cuboid' />
       <WorldMap />
       <WorldMapStand />
     </>

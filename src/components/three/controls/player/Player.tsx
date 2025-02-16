@@ -21,6 +21,7 @@ const JUMP_FORCE = 8
 const GROUNDED_DISTANCE = 0.25
 
 export default function Player({
+  rigidBodyDefaultValues,
   cameraDefaultValues,
   speed = SPEED,
   jumpForce = JUMP_FORCE,
@@ -116,14 +117,14 @@ export default function Player({
         colliders={false}
         mass={1}
         type='dynamic'
-        position={new THREE.Vector3(0, 15, 20)}
+        position={rigidBodyDefaultValues.position}
         enabledRotations={[false, false, false]}
         linearDamping={0.75}
         angularDamping={0.15}
         friction={0.2}
       >
         <CapsuleCollider
-          args={[0.75, 0.5]}
+          args={[14, 2]}
           mass={1000}
         />
         <PlayerCamera cameraDefaultValues={cameraDefaultValues} />

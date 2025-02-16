@@ -32,7 +32,10 @@ export default function ProjectsCanvas() {
           debug={debug}
           gravity={[0, -9.81, 0]}
         >
-          <Player cameraDefaultValues={cameraDefaultValues.camera} />
+          <Player
+            rigidBodyDefaultValues={cameraDefaultValues.rigidBody!}
+            cameraDefaultValues={cameraDefaultValues.camera}
+          />
           <LaboratoryScene />
           <PhysicsGround
             args={[physicsGroundDefaultValues.width, physicsGroundDefaultValues.depth]}
