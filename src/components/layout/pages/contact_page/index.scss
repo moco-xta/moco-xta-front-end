@@ -28,11 +28,21 @@
         border-radius: 0 0 15px 15px;
         text-align: justify;
 
-        .contact_socials_canvas {
-          position: absolute;
-          width: 250px !important;
-          height: 50px !important;
-          // background-color: red;
+        .contact_page_introduction_text {
+          p {
+            margin-bottom: $px_margin_M;
+          }
+        }
+
+        #contact {
+          margin-bottom: $px_margin_M;
+        }
+
+        .contact_details {
+          display: flex;
+          flex-direction: row;
+          gap: $px_margin_S;
+          align-items: center;
         }
       }
     }

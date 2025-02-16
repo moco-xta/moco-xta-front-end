@@ -518,7 +518,8 @@
   },
   "CONTACT": {
     "CONTACT": "Contact",
-    "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "GET_IN_TOUCH": "Contactez-moi !",
+    "INTRODUCTION": "<p>Merci pour votre visite ! J'adorerais avoir de vos nouvelles. Que vous ayez une question, une idée de collaboration ou simplement envie de dire bonjour, n'hésitez pas à me contacter. Je suis là pour vous aider et ferai de mon mieux pour vous répondre dès que possible.</p>",
     "CONTACT_ME": {
       "CONTACT": "",
       "ME": ""

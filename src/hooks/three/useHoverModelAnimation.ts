@@ -12,6 +12,7 @@ export default function useHoverModelAnimation({
   offset,
 }: TUseHoverModelAnimation) {
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
+    document.body.style.cursor = 'pointer' // Change cursor to pointer
     const { x, y } = getUvMousePositionOnMesh(event)
 
     if (ref && ref.current) {
@@ -33,6 +34,7 @@ export default function useHoverModelAnimation({
   }
 
   function handleOnPointerLeave() {
+    document.body.style.cursor = 'auto'
     if (ref && ref.current) {
       gsap.to(ref.current.rotation, {
         duration: animationData.duration,

@@ -4,22 +4,23 @@ import { Box } from '@react-three/drei'
 
 import useHoverModelAnimation from '@/hooks/three/useHoverModelAnimation'
 
-import LogoGithub from '@/components/three/models/logos/LogoGithub'
+import LogoPinterest from '@/components/three/models/logos/LogoPinterest'
 
 import { socialsLogosData } from '@/data/contact/three/socialsLogosData'
 
-export default function LogoGithubComponent() {
-  const logoGithubRef = useRef<THREE.Group>(null!)
+export default function LogoPinterestComponent() {
+  const logoPinterestRef = useRef<THREE.Group>(null!)
   const boxRef = useRef<THREE.Mesh>(null!)
 
   const { handleOnPointerMove, handleOnPointerLeave } = useHoverModelAnimation({
-    ref: logoGithubRef,
+    ref: logoPinterestRef,
     animationData: socialsLogosData.hoverModelAnimationData,
+    offset: new THREE.Vector3(3, -1.25, 0),
   })
 
   useEffect(() => {
-    if (logoGithubRef.current && boxRef.current) {
-      const boundingBox = new THREE.Box3().setFromObject(logoGithubRef.current)
+    if (logoPinterestRef.current && boxRef.current) {
+      const boundingBox = new THREE.Box3().setFromObject(logoPinterestRef.current)
       const size = boundingBox.getSize(new THREE.Vector3())
       boxRef.current.scale.set(size.x, size.y, size.z)
       boxRef.current.updateMatrix()
@@ -27,8 +28,12 @@ export default function LogoGithubComponent() {
     }
   }, [])
 
+  function handleOnClick() {
+    window.open('https://fr.pinterest.com/mocoxta/', '_blank')
+  }
+
   return (
-    <>
+    <group position={[0, -1.25, 0]}>
       <group>
         <Box
           ref={boxRef}
@@ -43,7 +48,17 @@ export default function LogoGithubComponent() {
           />
         </Box>
       </group>
-      <LogoGithub ref={logoGithubRef} />
-    </>
+      <LogoPinterest
+        ref={logoPinterestRef}
+        scale={
+          new THREE.Vector3(
+            socialsLogosData.hoverModelAnimationData.scale.initial,
+            socialsLogosData.hoverModelAnimationData.scale.initial,
+            socialsLogosData.hoverModelAnimationData.scale.initial,
+          )
+        }
+        onClick={handleOnClick}
+      />
+    </group>
   )
 }

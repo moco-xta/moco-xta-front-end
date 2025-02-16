@@ -4,23 +4,23 @@ import { Box } from '@react-three/drei'
 
 import useHoverModelAnimation from '@/hooks/three/useHoverModelAnimation'
 
-import LogoPinterest from '@/components/three/models/logos/LogoPinterest'
+import LogoGithub from '@/components/three/models/logos/LogoGithub'
 
 import { socialsLogosData } from '@/data/contact/three/socialsLogosData'
 
-export default function LogoPinterestComponent() {
-  const logoPinterestRef = useRef<THREE.Group>(null!)
+export default function LogoGithubComponent() {
+  const logoGithubRef = useRef<THREE.Group>(null!)
   const boxRef = useRef<THREE.Mesh>(null!)
 
   const { handleOnPointerMove, handleOnPointerLeave } = useHoverModelAnimation({
-    ref: logoPinterestRef,
+    ref: logoGithubRef,
     animationData: socialsLogosData.hoverModelAnimationData,
-    offset: new THREE.Vector3(-2.75, 0, 0),
+    offset: new THREE.Vector3(3, 0, 0),
   })
 
   useEffect(() => {
-    if (logoPinterestRef.current && boxRef.current) {
-      const boundingBox = new THREE.Box3().setFromObject(logoPinterestRef.current)
+    if (logoGithubRef.current && boxRef.current) {
+      const boundingBox = new THREE.Box3().setFromObject(logoGithubRef.current)
       const size = boundingBox.getSize(new THREE.Vector3())
       boxRef.current.scale.set(size.x, size.y, size.z)
       boxRef.current.updateMatrix()
@@ -28,8 +28,12 @@ export default function LogoPinterestComponent() {
     }
   }, [])
 
+  function handleOnClick() {
+    window.open('https://github.com/moco-xta', '_blank')
+  }
+
   return (
-    <group position={[-2.75, 0, 0]}>
+    <group position={[0, 0, 0]}>
       <group>
         <Box
           ref={boxRef}
@@ -44,7 +48,17 @@ export default function LogoPinterestComponent() {
           />
         </Box>
       </group>
-      <LogoPinterest ref={logoPinterestRef} />
+      <LogoGithub
+        ref={logoGithubRef}
+        scale={
+          new THREE.Vector3(
+            socialsLogosData.hoverModelAnimationData.scale.initial,
+            socialsLogosData.hoverModelAnimationData.scale.initial,
+            socialsLogosData.hoverModelAnimationData.scale.initial,
+          )
+        }
+        onClick={handleOnClick}
+      />
     </group>
   )
 }

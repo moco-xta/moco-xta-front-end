@@ -11,8 +11,8 @@ export const socialsLogosData = {
       },
     },
     scale: {
-      factor: 1.15,
-      initial: 1,
+      factor: 0.575,
+      initial: 0.5,
     },
   },
 }
