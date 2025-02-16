@@ -76,15 +76,15 @@ export default function ColorPage() {
       formik.setFieldValue('color.hex', value)
     }
     if (formik.values.color.hex.length !== 6 || !/^[0-9A-Fa-f]{6}$/.test(formik.values.color.hex)) {
-      setLighter(getLighterAndDarkerColors(formik.values.color.hex, 10).lighter)
-      setDarker(getLighterAndDarkerColors(formik.values.color.hex, 10).darker)
+      setLighter([...getLighterAndDarkerColors(formik.values.color.hex, 10).lighter])
+      setDarker([...getLighterAndDarkerColors(formik.values.color.hex, 10).darker])
       setGradient(generateGradient(formik.values.color.hex, 10))
       const colorRelationships = getColorRelationships(value)
       setComplementary(colorRelationships.complementary)
-      setAnalogous(colorRelationships.analogous)
-      setTriadic(colorRelationships.triadic)
-      setSplitComplementary(colorRelationships.splitComplementary)
-      setTetradic(colorRelationships.tetradic)
+      setAnalogous([...colorRelationships.analogous])
+      setTriadic([...colorRelationships.triadic])
+      setSplitComplementary([...colorRelationships.splitComplementary])
+      setTetradic([...colorRelationships.tetradic])
     }
   }
 
