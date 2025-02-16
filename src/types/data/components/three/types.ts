@@ -8,6 +8,9 @@ import type { TLazyPad } from '@/types/components/three/types'
 // CAMERA
 
 export type TCameraDefaultValues = {
+  rigidBody?: {
+    position: THREE.Vector3
+  }
   camera: TPerspectiveCameraData
   float?: FloatProps
 }

@@ -17,6 +17,9 @@ export type TCanvasDefaultValues = Partial<CanvasProps>
 // PLAYER
 
 export type TPlayer = {
+  rigidBodyDefaultValues: {
+    position: THREE.Vector3
+  }
   cameraDefaultValues: TPerspectiveCameraData
   speed?: number
   jumpForce?: number
