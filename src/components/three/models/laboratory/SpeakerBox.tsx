@@ -1,4 +1,5 @@
 import React from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 
@@ -7,7 +8,6 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 import { Speaker } from './Speaker'
 
 import { laboratoryData } from '@/data/about/three/laboratoryData'
-import { materialsData } from '@/data/about/three/materialsData'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
@@ -28,7 +28,12 @@ export function SpeakerBox(props: JSX.IntrinsicElements['group']) {
         />
         <mesh
           geometry={nodes.SpeakerBox_2.geometry}
-          material={materialsData.toDoMaterial}
+          material={
+            new THREE.MeshStandardMaterial({
+              metalness: 1,
+              roughness: 0.2,
+            })
+          }
           receiveShadow
           castShadow
         />
