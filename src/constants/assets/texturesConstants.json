@@ -14,6 +14,7 @@
     "WPME": "/img/textures/projects/wpme.png"
   },
   "LABORATORY": {
+    "LE_PIQUE_NIQUE": "/img/textures/laboratory/emile_claus_le_pique_nique_1887.jpg",
     "PARQUET": {
       "DIFFUSE": "/img/textures/laboratory/parquet_diffuse.jpg",
       "BUMP": "/img/textures/laboratory/parquet_bump.jpg",
