@@ -10,12 +10,12 @@ export const projectsData: TProjectData[] = [
     name: 'Moco.xta',
     url: 'https://moco-xta.com/en',
     imageUrl: texturesConstants.PROJECTS.MOCO_XTA,
-    descriptionsKey: 'DESCRIPTIONS.LENTO',
+    descriptionsKey: 'DESCRIPTIONS.MOCO_XTA',
     dates: {
       to: moment(new Date()).format('YYYY-MM-DD'),
       from: '2024-01-01',
     },
-    roles: ['Full Stack', 'Real-time 3D'],
+    roles: ['Full-stack', 'Real-time 3D'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -40,15 +40,15 @@ export const projectsData: TProjectData[] = [
   },
   {
     key: 'abwerkt',
-    name: 'AB Werkt',
-    url: 'https://www.ab-werkt.eu/home',
+    name: 'ABWerkt.nl',
+    url: 'https://www.ab-werkt.nl/',
     imageUrl: texturesConstants.PROJECTS.ABWERKT,
     descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
       to: '2023-11-31',
       from: '2023-03-01',
     },
-    roles: ['Front End'],
+    roles: ['Front-end'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -73,12 +73,12 @@ export const projectsData: TProjectData[] = [
     name: 'Lento.eu',
     url: 'https://lento.eu/en',
     imageUrl: texturesConstants.PROJECTS.LENTO,
-    descriptionsKey: 'DESCRIPTIONS.ABWERKT',
+    descriptionsKey: 'DESCRIPTIONS.LENTO',
     dates: {
       to: '2023-02-28',
-      from: '2021-11-01',
+      from: '2022-02-01',
     },
-    roles: ['Front End'],
+    roles: ['Front-end'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -107,10 +107,10 @@ export const projectsData: TProjectData[] = [
     imageUrl: texturesConstants.PROJECTS.HUNDREDS_HANDS,
     descriptionsKey: 'DESCRIPTIONS.HUNDRED_HANDS',
     dates: {
-      to: '2021-10-31',
+      to: '2022-01-30',
       from: '2021-09-01',
     },
-    roles: ['Front End', 'Real-time 3D'],
+    roles: ['Full-stack', 'Real-time 3D'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -135,9 +135,9 @@ export const projectsData: TProjectData[] = [
     descriptionsKey: 'DESCRIPTIONS.WPME',
     dates: {
       to: '2021-08-30',
-      from: '2021-05-17',
+      from: '2021-03-17',
     },
-    roles: ['Front End', 'Real-time 3D'],
+    roles: ['Full-stack', 'Real-time 3D'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
@@ -165,13 +165,15 @@ export const projectsData: TProjectData[] = [
       to: '2021-05-17',
       from: '2019-05-01',
     },
-    roles: ['Full stack', 'Real-time 3D'],
+    roles: ['Full-stack', 'Real-time 3D'],
     logos: {
       prefix: 'Logo',
       path: 'logos/',
       project: { name: 'Openclassrooms' },
       tools: [
         { name: 'Angular' },
+        { name: 'Webgl' },
+        { name: 'Threejs' },
         { name: 'Babylonjs' },
         { name: 'Spring' },
         { name: 'Postgresql' },

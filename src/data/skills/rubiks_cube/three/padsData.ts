@@ -6,17 +6,10 @@ export const padsData = {
   defaultValues: {
     material: {
       attach: 'material',
-      colors: [
-        'rgb(255, 0, 0)',
-        'rgb(0, 255, 0)',
-        'rgb(0, 0, 255)',
-        'rgb(255, 255, 0)',
-        'rgb(0, 255, 255)',
-        'rgb(255, 255, 255)',
-      ],
       roughness: 0.75,
     },
   },
+  padColors: ['#FF51F5', '#00F865', '#493DFF', '#FF5419', '#AEECFF', '#FFFFEB'],
   lazy: {
     pathToModel: 'rubiks_cube/',
     models: [

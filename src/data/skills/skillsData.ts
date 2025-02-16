@@ -8,6 +8,7 @@ export const skillsData = {
       paragraphs: [
         {
           key: 'nextjs',
+          used: true,
           translationKey: 'NEXTJS',
           logo: {
             name: 'LogoNextjs',
@@ -16,6 +17,7 @@ export const skillsData = {
         },
         {
           key: 'react',
+          used: false,
           translationKey: 'REACT',
           logo: {
             name: 'LogoReact',
@@ -24,6 +26,7 @@ export const skillsData = {
         },
         {
           key: 'angular',
+          used: false,
           translationKey: 'ANGULAR',
           logo: {
             name: 'LogoAngular',
@@ -37,47 +40,8 @@ export const skillsData = {
       translationKey: 'FRONT_END_LIBRARIES',
       paragraphs: [
         {
-          key: 'redux',
-          translationKey: 'REDUX',
-          logo: {
-            name: 'LogoRedux',
-          },
-          paragraphs: [],
-        },
-        {
-          key: 'graphql',
-          translationKey: 'GRAPHQL',
-          logo: {
-            name: 'LogoGraphql',
-          },
-          paragraphs: [],
-        },
-        {
-          key: 'google_maps',
-          translationKey: 'GOOGLE_MAPS',
-          logo: {
-            name: 'LogoGoogleMaps',
-          },
-          paragraphs: [],
-        },
-        {
-          key: 'gsap',
-          translationKey: 'GSAP',
-          logo: {
-            name: 'LogoGsap',
-          },
-          paragraphs: [],
-        },
-        {
-          key: 'next_intl',
-          translationKey: 'NEXT_INTL',
-          logo: {
-            name: 'LogoNextIntl',
-          },
-          paragraphs: [],
-        },
-        {
           key: 'formik',
+          used: true,
           translationKey: 'FORMIK',
           logo: {
             name: 'LogoFormik',
@@ -86,31 +50,43 @@ export const skillsData = {
         },
         {
           key: 'mui',
+          used: false,
           translationKey: 'MUI',
           logo: {
             name: 'LogoMui',
           },
           paragraphs: [],
         },
-      ],
-    },
-    {
-      key: 'styling',
-      translationKey: 'STYLING',
-      paragraphs: [
         {
-          key: 'sass',
-          translationKey: 'SASS',
+          key: 'next_intl',
+          used: true,
+          translationKey: 'NEXT_INTL',
           logo: {
-            name: 'LogoSass',
+            name: 'LogoNextIntl',
           },
           paragraphs: [],
         },
         {
-          key: 'tailwind',
-          translationKey: 'TAILWIND',
+          key: 'google_maps',
+          used: false,
+          translationKey: 'GOOGLE_MAPS',
           logo: {
-            name: 'LogoTailwind',
+            name: 'LogoGoogleMaps',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'mobile',
+      translationKey: 'MOBILE',
+      paragraphs: [
+        {
+          key: 'ionic',
+          used: false,
+          translationKey: 'IONIC',
+          logo: {
+            name: 'LogoIonic',
           },
           paragraphs: [],
         },
@@ -121,7 +97,17 @@ export const skillsData = {
       translationKey: 'REAL_TIME_THREED',
       paragraphs: [
         {
+          key: 'webgpu',
+          used: true,
+          translationKey: 'WEBGPU',
+          logo: {
+            name: 'LogoWebgpu',
+          },
+          paragraphs: [],
+        },
+        {
           key: 'webgl',
+          used: true,
           translationKey: 'WEBGL',
           logo: {
             name: 'LogoWebgl',
@@ -129,7 +115,8 @@ export const skillsData = {
           paragraphs: [],
         },
         {
-          key: 'threjs',
+          key: 'threejs',
+          used: true,
           translationKey: 'THREEJS',
           logo: {
             name: 'LogoThreejs',
@@ -138,6 +125,7 @@ export const skillsData = {
         },
         {
           key: 'react_three_fiber',
+          used: true,
           translationKey: 'REACT_THREE_FIBER',
           logo: {
             name: 'LogoReactThreeDrei',
@@ -146,9 +134,43 @@ export const skillsData = {
         },
         {
           key: 'babylonjs',
+          used: false,
           translationKey: 'BABYLONJS',
           logo: {
             name: 'LogoBabylonjs',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'styling_and_animation',
+      translationKey: 'STYLING_AND_ANIMATION',
+      paragraphs: [
+        {
+          key: 'sass',
+          used: true,
+          translationKey: 'SASS',
+          logo: {
+            name: 'LogoSass',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'tailwind',
+          used: false,
+          translationKey: 'TAILWIND',
+          logo: {
+            name: 'LogoTailwind',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'gsap',
+          used: true,
+          translationKey: 'GSAP',
+          logo: {
+            name: 'LogoGsap',
           },
           paragraphs: [],
         },
@@ -160,6 +182,7 @@ export const skillsData = {
       paragraphs: [
         {
           key: 'photoshop',
+          used: true,
           translationKey: 'PHOTOSHOP',
           logo: {
             name: 'LogoPhotoshop',
@@ -168,6 +191,7 @@ export const skillsData = {
         },
         {
           key: 'illustrator',
+          used: true,
           translationKey: 'ILLUSTRATOR',
           logo: {
             name: 'LogoIllustrator',
@@ -176,6 +200,7 @@ export const skillsData = {
         },
         {
           key: 'blender',
+          used: true,
           translationKey: 'BLENDER',
           logo: {
             name: 'LogoBlender',
@@ -184,6 +209,7 @@ export const skillsData = {
         },
         {
           key: 'substance_painter',
+          used: false,
           translationKey: 'SUBSTANCE_PAINTER',
           logo: {
             name: 'LogoSubstancePainter',
@@ -193,11 +219,12 @@ export const skillsData = {
       ],
     },
     {
-      key: 'back_end',
-      translationKey: 'BACK_END',
+      key: 'back_end_frameworks',
+      translationKey: 'BACK_END_FRAMEWORKS',
       paragraphs: [
         {
           key: 'spring',
+          used: true,
           translationKey: 'SPRING',
           logo: {
             name: 'LogoSpring',
@@ -206,9 +233,94 @@ export const skillsData = {
         },
         {
           key: 'django',
+          used: false,
           translationKey: 'DJANGO',
           logo: {
             name: 'LogoDjango',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'data',
+      translationKey: 'DATA',
+      paragraphs: [
+        {
+          key: 'redux',
+          used: true,
+          translationKey: 'REDUX',
+          logo: {
+            name: 'LogoRedux',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'graphql',
+          used: false,
+          translationKey: 'GRAPHQL',
+          logo: {
+            name: 'LogoGraphql',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'postgresql',
+          used: true,
+          translationKey: 'POSTGRESQL',
+          logo: {
+            name: 'LogoPostgresql',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'mysql',
+          used: false,
+          translationKey: 'MYSQL',
+          logo: {
+            name: 'LogoMysql',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'postman',
+          used: true,
+          translationKey: 'POSTMAN',
+          logo: {
+            name: 'LogoPostman',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'dbeaver',
+          used: false,
+          translationKey: 'DBEAVER',
+          logo: {
+            name: 'LogoDbeaver',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'security',
+      translationKey: 'SECURITY',
+      paragraphs: [
+        {
+          key: 'spring_security',
+          used: true,
+          translationKey: 'SPRING_SECURITY',
+          logo: {
+            name: 'LogoSpringSecurity',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'auth0',
+          used: false,
+          translationKey: 'AUTH0',
+          logo: {
+            name: 'LogoAuth0',
           },
           paragraphs: [],
         },
@@ -220,6 +332,7 @@ export const skillsData = {
       paragraphs: [
         {
           key: 'hostinger',
+          used: true,
           translationKey: 'HOSTINGER',
           logo: {
             name: 'LogoHostinger',
@@ -228,9 +341,28 @@ export const skillsData = {
         },
         {
           key: 'aws',
+          used: false,
           translationKey: 'AWS',
           logo: {
             name: 'LogoAws',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'docker',
+          used: true,
+          translationKey: 'DOCKER',
+          logo: {
+            name: 'LogoDocker',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'nginx',
+          used: true,
+          translationKey: 'NGINX',
+          logo: {
+            name: 'LogoNginx',
           },
           paragraphs: [],
         },
@@ -242,6 +374,7 @@ export const skillsData = {
       paragraphs: [
         {
           key: 'javascript',
+          used: true,
           translationKey: 'JAVASCRIPT',
           logo: {
             name: 'LogoJavascript',
@@ -249,6 +382,7 @@ export const skillsData = {
         },
         {
           key: 'typescript',
+          used: true,
           translationKey: 'TYPESCRIPT',
           logo: {
             name: 'LogoTypescript',
@@ -256,6 +390,7 @@ export const skillsData = {
         },
         {
           key: 'java',
+          used: true,
           translationKey: 'JAVA',
           logo: {
             name: 'LogoJava',
@@ -263,50 +398,79 @@ export const skillsData = {
         },
         {
           key: 'python',
+          used: false,
           translationKey: 'PYTHON',
           logo: {
             name: 'LogoPython',
           },
         },
         {
+          key: 'c_plus_plus',
+          used: true,
+          translationKey: 'C_PLUS_PLUS',
+          logo: {
+            name: 'LogoCPlusPlus',
+          },
+        },
+        /* {
           key: 'php',
+          used: false,
           translationKey: 'PHP',
           logo: {
             name: 'LogoPhp',
           },
+        }, */
+      ],
+    },
+    {
+      key: 'ai',
+      translationKey: 'AI',
+      paragraphs: [
+        {
+          key: 'deepseek',
+          used: true,
+          translationKey: 'DEEPSEEK',
+          logo: {
+            name: 'LogoDeepseek',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'chatgpt',
+          used: true,
+          translationKey: 'CHATGPT',
+          logo: {
+            name: 'LogoChatgpt',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'copilot',
+          used: true,
+          translationKey: 'COPILOT',
+          logo: {
+            name: 'LogoCopilot',
+          },
+          paragraphs: [],
         },
       ],
     },
     {
-      key: 'tools',
-      translationKey: 'TOOLS',
+      key: 'versioning',
+      translationKey: 'VERSIONING',
       paragraphs: [
         {
-          key: 'postman',
-          translationKey: 'POSTMAN',
+          key: 'git',
+          used: true,
+          translationKey: 'GIT',
           logo: {
-            name: 'LogoPostman',
-          },
-          paragraphs: [],
-        },
-        {
-          key: 'figma',
-          translationKey: 'FIGMA',
-          logo: {
-            name: 'LogoFigma',
-          },
-          paragraphs: [],
-        },
-        {
-          key: 'google_analytics',
-          translationKey: 'GOOGLE_ANALYTICS',
-          logo: {
-            name: 'LogoGoogleAnalytics',
+            name: 'LogoGit',
           },
           paragraphs: [],
         },
         {
           key: 'github',
+          used: true,
           translationKey: 'GITHUB',
           logo: {
             name: 'LogoGithub',
@@ -315,6 +479,7 @@ export const skillsData = {
         },
         {
           key: 'gitlab',
+          used: false,
           translationKey: 'GITLAB',
           logo: {
             name: 'LogoGitlab',
@@ -322,15 +487,41 @@ export const skillsData = {
           paragraphs: [],
         },
         {
-          key: 'docker',
-          translationKey: 'DOCKER',
+          key: 'azure',
+          used: false,
+          translationKey: 'AZURE',
           logo: {
-            name: 'LogoDocker',
+            name: 'LogoAzure',
+          },
+          paragraphs: [],
+        },
+      ],
+    },
+    {
+      key: 'tools',
+      translationKey: 'TOOLS',
+      paragraphs: [
+        {
+          key: 'figma',
+          used: true,
+          translationKey: 'FIGMA',
+          logo: {
+            name: 'LogoFigma',
+          },
+          paragraphs: [],
+        },
+        {
+          key: 'google_analytics',
+          used: true,
+          translationKey: 'GOOGLE_ANALYTICS',
+          logo: {
+            name: 'LogoGoogleAnalytics',
           },
           paragraphs: [],
         },
         {
           key: 'jira',
+          used: false,
           translationKey: 'JIRA',
           logo: {
             name: 'LogoJira',

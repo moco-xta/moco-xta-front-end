@@ -2,16 +2,15 @@
 
 import React from 'react'
 
-import { Page } from '@/components/layout/pages'
+import ResourcesPage from '@/components/layout/pages/resources_page'
 import { ResourcesCanvas } from '@/components/three/canvas'
 
-import { resourcesData } from '@/data/resources/resourcesData'
-// import { skillsData } from '@/data/skills/skillsData'
+import { resourcesPageData } from '@/data/resources/resourcesData'
 
 export default function Resources() {
   return (
-    <Page
-      pageData={resourcesData}
+    <ResourcesPage
+      resourcesPageData={resourcesPageData}
       backgroundCanvas={<ResourcesCanvas />}
     />
   )

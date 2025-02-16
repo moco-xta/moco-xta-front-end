@@ -8,4 +8,5 @@ import type { THoverModelAnimation } from '../components/three/animation/types'
 export type TUseHoverModelAnimation = {
   ref: MutableRefObject<THREE.Group | THREE.Mesh>
   animationData: THoverModelAnimation
+  offset?: THREE.Vector3
 }

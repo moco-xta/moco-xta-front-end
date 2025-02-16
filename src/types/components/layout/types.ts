@@ -2,7 +2,9 @@ import type { ReactNode } from 'react'
 import type {
   TExternalLinkData,
   TPageData,
+  TResourcesPageData,
   TResourcesParagraphData,
+  TResourcesSectionData,
   TSectionData,
   TSkillsParagraphData,
 } from '@/types/data/components/layout/types'
@@ -22,6 +24,14 @@ export type TPage = {
   backgroundCanvas?: JSX.Element
 }
 
+// RESOURCES
+
+export type TResourcesPage = {
+  resourcesPageData: TResourcesPageData
+  extraButtons?: ReactNode[]
+  backgroundCanvas?: JSX.Element
+}
+
 export type TPlayerPage = {
   introduction: ReactNode
   canvas: JSX.Element
@@ -30,7 +40,7 @@ export type TPlayerPage = {
 // SIDE NAVIGATION MENU
 
 export type TSideNavigationMenu = {
-  pageData: TPageData
+  pageData: TPageData | TResourcesPageData
   extraButtons?: ReactNode[]
 }
 
@@ -38,6 +48,12 @@ export type TSideNavigationMenu = {
 
 export type TContent = {
   pageData: TPageData
+}
+
+// RESOURCES
+
+export type TResourcesContent = {
+  resourcesPageData: TResourcesPageData
 }
 
 // SECTIONS
@@ -53,7 +69,14 @@ export type TPlayerPageIntroduction = {
 
 export type TSection = {
   translationPath: string
-  sectionData: TSectionData
+  sectionData: TSectionData | TResourcesSectionData
+}
+
+// RESOURCES
+
+export type TResourcesSection = {
+  translationPath: string
+  sectionData: TResourcesSectionData
 }
 
 // PLAYER PAGE GREETING
@@ -67,7 +90,7 @@ export type TPlayerPageGreeting = {
 export type TProjectScene = {
   currentProject: number
   currentCompany: number
-  currentLocation: number
+  // currentLocation: number
 }
 
 export type TProjectsLogos = {
@@ -89,15 +112,21 @@ export type TLocations = {
 // CURRENT DATE
 
 export type TCurrentDate = {
+  currentProject: number
+  projectsNumber: number
   currentDate: Date
 }
 
 // PARAGRAPH
 
 export type TParagraph = {
-  sectionData: TSectionData
   translationPath: string
   paragraphData: TSkillsParagraphData | TResourcesParagraphData
+}
+
+export type TResourcesParagraph = {
+  translationPath: string
+  paragraphData: TResourcesParagraphData
 }
 
 export type TSkillsParagraph = {
@@ -106,17 +135,12 @@ export type TSkillsParagraph = {
   paragraphData: TSkillsParagraphData
 }
 
-export type TResourcesParagraph = {
-  key: string
-  translationPath: string
-  paragraphData: TResourcesParagraphData
-}
-
 // TITLES
 
 export type TTitle = {
   title?: string
   translationPath?: string
+  url?: string
 }
 
 // LINKS
@@ -125,7 +149,7 @@ export type TLinksArray = {
   translationPath: string
   title: string
   links: TExternalLinkData[]
-  youtubePlaylistlink?: {
+  youtubePlaylistLink?: {
     url: string
   }
 }

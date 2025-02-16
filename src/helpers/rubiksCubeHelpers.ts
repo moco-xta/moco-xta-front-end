@@ -3,10 +3,12 @@ import * as THREE from 'three'
 import type { ThreeEvent } from '@react-three/fiber'
 import { gsap } from 'gsap'
 
+import type { TCoordinatesData } from '@/types/data/components/three/types'
+
 import { getDegreeEuler } from './threeHelpers'
 
 import { rubiksCubeData } from '@/data/skills/rubiks_cube/three/rubiksCubeData'
-import { TCoordinatesData } from '@/types/data/components/three/types'
+import { padsData } from '@/data/skills/rubiks_cube/three/padsData'
 
 export function setCubeCoordinates(x: number, y: number, z: number) {
   function setCoordinate(value: number) {
@@ -21,6 +23,29 @@ export function setRoundedCubeType(coordinates: THREE.Vector3) {
     if (value === 0) maxNumberOfPads -= 1
   })
   return maxNumberOfPads
+}
+
+export function getRotationAndMaterial(
+  coordinates: THREE.Vector3,
+  index: number,
+): {
+  rotation: THREE.Euler
+  material: THREE.MeshStandardMaterial
+} {
+  const rotation = setPadRotation(coordinates, index)
+
+  const normal = new THREE.Vector3(0, 1, 0)
+  const euler = new THREE.Euler(rotation.x, rotation.y, rotation.z, 'XYZ')
+  normal.applyEuler(euler)
+  const color = setPadColor(normal, padsData.padColors)
+
+  return {
+    rotation: rotation,
+    material: new THREE.MeshStandardMaterial({
+      color: color,
+      roughness: padsData.defaultValues.material.roughness,
+    }),
+  }
 }
 
 export const setPadRotation = (coordinates: THREE.Vector3, index: number): THREE.Euler => {
@@ -82,62 +107,13 @@ export const setPadColor = (normal: THREE.Vector3, colors: string[]): THREE.Colo
   return new THREE.Color(colors[colorIndex])
 }
 
-export function getDofTargetPosition(A: TCoordinatesData, B: TCoordinatesData, cubeSize: number) {
-  const halfSize = cubeSize / 2
-
-  const xmin = (A.x ?? 0) - halfSize
-  const xmax = (A.x ?? 0) + halfSize
-  const ymin = (A.y ?? 0) - halfSize
-  const ymax = (A.y ?? 0) + halfSize
-  const zmin = (A.z ?? 0) - halfSize
-  const zmax = (A.z ?? 0) + halfSize
-
-  const dy = (B.y ?? 0) - (A.y ?? 0)
-  const dx = (B.x ?? 0) - (A.x ?? 0)
-  const dz = (B.z ?? 0) - (A.z ?? 0)
-
-  interface IntersectionPoint {
-    x: number
-    y: number
-    z: number
-    t: number
-  }
-
-  function intersectPlane(
-    coord: number,
-    dCoord: number,
-    fixedValue: number,
-    bounds1: [number, number],
-    bounds2: [number, number],
-  ): IntersectionPoint | null {
-    if (dCoord === 0) return null
-    const t = (fixedValue - coord) / dCoord
-    const x = (A.x ?? 0) + t * dx
-    const y = (A.y ?? 0) + t * dy
-    const z = (A.z ?? 0) + t * dz
-
-    if (t >= 0 && bounds1[0] <= x && x <= bounds1[1] && bounds2[0] <= y && y <= bounds2[1]) {
-      return { x, y, z, t }
-    }
-    return null
-  }
-
-  const candidates = [
-    intersectPlane(A.x ?? 0, dx, xmin, [ymin, ymax], [zmin, zmax]),
-    intersectPlane(A.x ?? 0, dx, xmax, [ymin, ymax], [zmin, zmax]),
-    intersectPlane(A.y ?? 0, dy, ymin, [xmin, xmax], [zmin, zmax]),
-    intersectPlane(A.y ?? 0, dy, ymax, [xmin, xmax], [zmin, zmax]),
-    intersectPlane(A.z ?? 0, dz, zmin, [xmin, xmax], [ymin, ymax]),
-    intersectPlane(A.z ?? 0, dz, zmax, [xmin, xmax], [ymin, ymax]),
-  ].filter((point) => point !== null)
-
-  if (candidates.length === 0) {
-    return null
-  }
-  candidates.sort((a, b) => a.t - b.t)
-  const { x, y, z } = candidates[0] as IntersectionPoint
-  console.log('dofTargetPosition', x, y, z)
-  return new THREE.Vector3(x, y, z)
+export function getDofTargetPosition(A: THREE.Vector3, B: THREE.Vector3, cubeHalfSize: number) {
+  const direction = new THREE.Vector3().subVectors(B, A).normalize()
+  const intersection = new THREE.Vector3()
+  const t =
+    cubeHalfSize / Math.max(Math.abs(direction.x), Math.abs(direction.y), Math.abs(direction.z))
+  intersection.copy(A).add(direction.multiplyScalar(t))
+  return intersection
 }
 
 export function getDofFocalLength(A: TCoordinatesData, B: TCoordinatesData, P: TCoordinatesData) {
@@ -146,18 +122,13 @@ export function getDofFocalLength(A: TCoordinatesData, B: TCoordinatesData, P: T
       ((B.y ?? 0) - (A.y ?? 0)) ** 2 +
       ((B.z ?? 0) - (A.z ?? 0)) ** 2,
   )
-
   const lengthAP = Math.sqrt(
     ((P.x ?? 0) - (A.x ?? 0)) ** 2 +
       ((P.y ?? 0) - (A.y ?? 0)) ** 2 +
       ((P.z ?? 0) - (A.z ?? 0)) ** 2,
   )
-
   const t = lengthAP / lengthAB
-
-  console.log('folcalLength', 0.1 + t * (0.25 - 0.1))
-
-  return 0.1 + t * (0.25 - 0.1)
+  return parseFloat((0.2 + t * (0.2 - 0.0001)).toFixed(1))
 }
 
 export function getCameraDestinationPosition(

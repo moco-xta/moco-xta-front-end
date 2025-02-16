@@ -1,41 +1,50 @@
 @import '@/styles/variables.module.scss';
 
 #links_array {
-  margin-bottom: 30px;
+  margin-top: 100px;
+  margin-bottom: calc(-85px + 40px);
 
   caption {
     width: 100%;
-    padding: 0 15px;
+    // padding: 0 15px;
+    padding-right: $px_margin_S;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 10px;
     border-collapse: collapse;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   tr {
-    padding: 10px 0;
+    padding: 0 $px_margin_M;
     display: flex;
     flex-direction: row;
-    border-top: 1pt solid #1c1c1c;
+    border-top: 1pt solid #ffffff33;
     font-weight: 200;
 
     .links_array_link {
-      min-width: 300px;
-      padding-left: 15px;
+      min-width: 265px;
+      padding: $px_margin_M;
       display: flex;
       align-items: flex-start;
     }
 
     .links_array_description {
       min-width: 300px;
-      padding-right: 15px;
+      padding: $px_margin_M;
       display: flex;
       align-items: flex-start;
       text-align: justify;
       font-weight: 300;
+      font-size: 14px;
     }
+  }
+
+  tr:last-child {
+    border-radius: 0 0 15px 15px;
   }
 
   tr:hover {

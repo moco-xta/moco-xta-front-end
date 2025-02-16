@@ -20,7 +20,7 @@ export default function ToolsLogosGroup({
   return (
     <group
       ref={toolsLogosGroupRef}
-      position={new THREE.Vector3(-4, 0, 0)}
+      position={new THREE.Vector3(-4, -0.25, 0)}
     >
       {projectData.logos.tools.map((logoData, index) => (
         <ToolLogo

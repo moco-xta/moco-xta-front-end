@@ -8,10 +8,68 @@ export type TPageData = {
   sections: TSectionData[]
 }
 
+export type TSectionData = {
+  key: string
+  translationKey: string
+  videoIntroduction?: {
+    from: string
+    url: string
+  }
+  document?: TLinksArrayData[]
+  paragraphs: TParagraphData[] | TSkillsParagraphData[] | TResourcesParagraphData[]
+}
+
+type TParagraphData = {
+  key: string
+  translationKey: string
+}
+
+export type TSkillsParagraphData = TParagraphData & {
+  used: boolean
+  logo: TLogoData
+}
+
+// RESOURCES
+
+export type TResourcesPageData = {
+  key: string
+  translationKey: string
+  sections: TResourcesSectionData[]
+}
+
+export type TResourcesSectionData = {
+  key: string
+  translationKey: string
+  paragraphs: TResourcesParagraphData[]
+}
+
+export type TResourcesParagraphData = TParagraphData & {
+  videoIntroduction?: {
+    from: string
+    url: string
+  }
+  categories: TResourcesCategoryData
+}
+
+export type TResourcesCategoryData = {
+  key: string
+  translationKey: string
+  youtubePlaylistLink: {
+    url: string
+  }
+  documentation?: TLinksArrayData[]
+  channels?: TLinksArrayData[]
+  websites?: TLinksArrayData[]
+}
+
 // MENU
 
 export type TMenuData = {
   sections: TMenuSectionData[]
+}
+
+export type TResourcesMenuData = {
+  sections: TResourcesMenuSectionData[]
 }
 
 export type TMenuSectionData = {
@@ -20,47 +78,25 @@ export type TMenuSectionData = {
   paragraphs: TMenuParagraphData[]
 }
 
+export type TResourcesMenuSectionData = {
+  key: string
+  translationKey: string
+}
+
 export type TMenuParagraphData = {
   key: string
   translationKey: string
 }
 
-// SECTION
-
-export type TSectionData = {
-  key: string
-  translationKey: string
-  paragraphs: TParagraphData[] | TSkillsParagraphData[] | TResourcesParagraphData[]
-}
-
-// PARAGRAPH
-
-type TParagraphData = {
-  key: string
-  translationKey: string
-}
-
-export type TSkillsParagraphData = TParagraphData & {
-  logo: TLogoData
-}
-
-export type TResourcesParagraphData = TParagraphData & {
-  documentation: TLinksArrayData[]
-  youtubePlaylistlink?: {
-    url: string
-  }
-  websites: TLinksArrayData[]
-  channels: TLinksArrayData[]
-  articles: TLinksArrayData[]
-}
-
 // LINKS
 
 export type TLinksArrayData = {
-  translationPath: string
-  title: string
-  links: TExternalLinkData[]
-  youtubePlaylistlink?: {
+  key: string
+  translationKey: string
+  urlName: string
+  url: string
+  languages: string[]
+  youtubePlaylistLink?: {
     url: string
   }
 }

@@ -1,29 +1,28 @@
-import React, { useLayoutEffect, useRef } from 'react'
-import * as THREE from 'three'
-import { useFrame } from '@react-three/fiber'
+import React /* , { useRef } */ from 'react'
+// import * as THREE from 'three'
+// import { useFrame } from '@react-three/fiber'
 import {
   Bloom,
   DepthOfField,
   EffectComposer,
-  Noise,
-  // Scanline,
+  ToneMapping,
   Vignette,
 } from '@react-three/postprocessing'
-import { BlendFunction, DepthOfFieldEffect, KernelSize, Resolution } from 'postprocessing'
+import { BlendFunction, KernelSize, Resolution } from 'postprocessing'
 // import { gsap } from 'gsap'
 // import { useGSAP } from '@gsap/react'
 
 export default function PostProcessing() {
-  const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)
-  const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 2))
+  // const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)
+  // const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0))
 
-  useLayoutEffect(() => {
+  /* useLayoutEffect(() => {
     depthOfFieldRef.current.target = depthOfFieldTargetRef.current
-  }, [])
+  }, []) */
 
-  useFrame(() => {
+  /* useFrame(() => {
     depthOfFieldRef.current.target = depthOfFieldTargetRef.current
-  })
+  }) */
 
   /* useGSAP(() => {
     gsap.to(depthOfFieldTargetRef.current, {
@@ -39,27 +38,29 @@ export default function PostProcessing() {
   return (
     <EffectComposer>
       <DepthOfField
-        ref={depthOfFieldRef}
-        focalLength={0.01}
+        focusDistance={0.015}
+        focalLength={0.0035}
         bokehScale={5}
-        height={1024}
-        width={1024}
       />
       <Bloom
-        intensity={0.25}
+        intensity={2.5}
+        blurPass={undefined}
         kernelSize={KernelSize.LARGE}
-        luminanceThreshold={0.05}
+        luminanceThreshold={0.9}
         luminanceSmoothing={0.025}
-        mipmapBlur={false}
+        mipmapBlur={true}
         resolutionX={Resolution.AUTO_SIZE}
         resolutionY={Resolution.AUTO_SIZE}
       />
-      {/* <Scanline
-        blendFunction={BlendFunction.DARKEN}
-        opacity={0.1}
-        density={0.8}
-      /> */}
-      <Noise opacity={0.5} />
+      <ToneMapping
+        blendFunction={BlendFunction.NORMAL} // blend mode
+        adaptive={true} // toggle adaptive luminance map usage
+        resolution={1024} // texture resolution of the luminance map
+        middleGrey={0.5} // middle grey factor
+        maxLuminance={40.0} // maximum luminance
+        averageLuminance={2.0} // average luminance
+        adaptationRate={1.0} // luminance adaptation rate
+      />
       <Vignette
         offset={0.5}
         darkness={0.5}

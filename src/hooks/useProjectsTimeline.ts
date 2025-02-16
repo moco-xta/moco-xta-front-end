@@ -1,19 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useEffect, /* useMemo, */ useState } from 'react'
 import { useLenis } from 'lenis/react'
 
 import type {
   TCompanyData,
-  TLocationData,
+  // TLocationData,
   TProjectData,
 } from '@/types/data/components/layout/types'
 
-import { getDifferenceBetweenTwoDatesInDays } from '@/helpers/dateHelpers'
+import {
+  getDifferenceBetweenTwoDatesInDays /* , getKeyDates, getSnapHeights */,
+} from '@/helpers/dateHelpers'
 
 export default function useProjectsTimeline(
   projectsData: TProjectData[],
   companiesData: TCompanyData[],
-  locationsData: TLocationData[],
+  // locationsData: TLocationData[],
 ) {
+  // const keyDates = useMemo(() => getKeyDates([projectsData, companiesData, locationsData]), [projectsData, companiesData, locationsData]);
+
+  // const [snapHeights, setSnapHeights] = useState<number[]>([])
+  const [container, setContainer] = useState<HTMLElement>(null!)
   const [y, setY] = useState<number>(0)
   const [offsetHeight, setOffsetHeight] = useState<number>(0)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
@@ -26,18 +32,26 @@ export default function useProjectsTimeline(
   const [deltaPerDay, setDeltaPerDay] = useState<number>(0)
   const [currentProject, setCurrentProject] = useState<number>(0)
   const [currentCompany, setCurrentCompany] = useState<number>(0)
-  const [currentLocation, setCurrentLocation] = useState<number>(0)
+  // const [currentLocation, setCurrentLocation] = useState<number>(0)
 
   useLenis((lenis) => {
     setY(lenis.targetScroll)
-    const container = document.getElementById('projects_timeline_container')
+    /* const container = document.getElementById('projects_timeline_container')
 
     if (container) {
       setOffsetHeight(container.offsetHeight - document.documentElement.clientHeight)
     } else {
-      setOffsetHeight(0) // Or handle the case where the element is not found
-    }
-  })
+      setOffsetHeight(0)
+    } */
+  }) // TODO: Check if I still have the scrolling issue
+
+  useEffect(() => {
+    if (document) setContainer(document.getElementById('projects_timeline_container')!)
+  }, [])
+
+  useEffect(() => {
+    if (container) setOffsetHeight(container.offsetHeight - document.documentElement.clientHeight)
+  }, [container])
 
   useEffect(() => {
     if (offsetHeight) setDeltaPerDay(offsetHeight / daysDifference)
@@ -48,7 +62,9 @@ export default function useProjectsTimeline(
     const updatedDate = new Date()
     updatedDate.setDate(updatedDate.getDate() - daysScrolled)
     setCurrentDate(updatedDate)
-  }, [y, deltaPerDay])
+
+    // setSnapHeights(getSnapHeights(keyDates, deltaPerDay))
+  }, [y, deltaPerDay /* , keyDates */])
 
   useEffect(() => {
     projectsData.forEach((project, index) => {
@@ -70,7 +86,7 @@ export default function useProjectsTimeline(
     })
   }, [currentDate, companiesData])
 
-  useEffect(() => {
+  /* useEffect(() => {
     locationsData.forEach((locationData, index) => {
       if (
         currentDate.getTime() > new Date(locationData.dates.from).getTime() &&
@@ -78,7 +94,7 @@ export default function useProjectsTimeline(
       )
         setCurrentLocation(index)
     })
-  }, [currentDate, locationsData])
+  }, [currentDate, locationsData]) */
 
-  return { currentDate, currentProject, currentCompany, currentLocation }
+  return { /* snapHeights, */ currentDate, currentProject, currentCompany /* , currentLocation */ }
 }

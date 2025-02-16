@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 
-import { GSAPTimelineContext } from '@/contexts/GsapTimelineContext'
+import { GSAPTimelineContext } from '../../contexts/GsapTimelineContext'
 
 export const useGSAPTimelineContext = () => {
   const gsapTimelineContext = useContext(GSAPTimelineContext)

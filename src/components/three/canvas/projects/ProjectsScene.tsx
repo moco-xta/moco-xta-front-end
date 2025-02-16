@@ -6,12 +6,13 @@ import ProjectsLogos from './ProjectsLogos'
 import CompaniesLogos from './CompaniesLogos'
 import ProjectsPictures from './ProjectsPictures'
 import ToolsLogosGroups from './ToolsLogosGroups'
-import Locations from './Locations'
+// import Map from './Map'
+// import Locations from './Locations'
 
 export default function ProjectsScene({
   currentProject,
   currentCompany,
-  currentLocation,
+  // currentLocation,
 }: TProjectScene) {
   return (
     <>
@@ -19,7 +20,8 @@ export default function ProjectsScene({
       <CompaniesLogos currentCompany={currentCompany} />
       <ProjectsPictures currentProject={currentProject} />
       <ToolsLogosGroups currentProject={currentProject} />
-      <Locations currentLocation={currentLocation} />
+      {/* <Locations currentLocation={currentLocation} /> */}
+      {/* <Map /> */}
     </>
   )
 }

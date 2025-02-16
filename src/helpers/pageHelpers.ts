@@ -3,6 +3,8 @@ import type {
   TMenuParagraphData,
   TMenuSectionData,
   TPageData,
+  TResourcesMenuData,
+  TResourcesPageData,
 } from '@/types/data/components/layout/types'
 
 export function getMenu(pageData: TPageData): TMenuData {
@@ -14,6 +16,15 @@ export function getMenu(pageData: TPageData): TMenuData {
         key: paragraphData.key,
         translationKey: paragraphData.translationKey,
       })),
+    })),
+  }
+}
+
+export function getResourcesMenu(pageData: TResourcesPageData): TResourcesMenuData {
+  return {
+    sections: pageData.sections.map((sectionData) => ({
+      key: sectionData.key,
+      translationKey: sectionData.translationKey,
     })),
   }
 }

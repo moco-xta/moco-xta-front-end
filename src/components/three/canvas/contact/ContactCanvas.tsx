@@ -2,14 +2,12 @@ import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 
-import Lightning from './lightning/Lightning'
+import Lightning from './lighting/Lightning'
 import Camera from './Camera'
 import ContactScene from './ContactScene'
-import PostProcessing from './PostProcessing'
+// import PostProcessing from './PostProcessing'
 
 import { canvasDefaultValues } from '@/data/contact/three/canvasData'
-
-import './index.scss'
 
 export default function ContactCanvas() {
   return (
@@ -24,7 +22,7 @@ export default function ContactCanvas() {
       <Suspense fallback={null}>
         <ContactScene />
       </Suspense>
-      <PostProcessing />
+      {/* <PostProcessing /> */}
     </Canvas>
   )
 }

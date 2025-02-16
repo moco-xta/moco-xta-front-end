@@ -6,16 +6,21 @@ import type { TUseHoverModelAnimation } from '@/types/hooks/types'
 
 import { getUvMousePositionOnMesh } from '@/helpers/threeHelpers'
 
-export default function useHoverModelAnimation({ ref, animationData }: TUseHoverModelAnimation) {
+export default function useHoverModelAnimation({
+  ref,
+  animationData,
+  offset,
+}: TUseHoverModelAnimation) {
   function handleOnPointerMove(event: ThreeEvent<PointerEvent>) {
+    document.body.style.cursor = 'pointer' // Change cursor to pointer
     const { x, y } = getUvMousePositionOnMesh(event)
 
     if (ref && ref.current) {
       gsap.to(ref.current.rotation, {
         duration: animationData.duration,
         ease: animationData.ease,
-        x: -y * animationData.rotation.factor,
-        y: -x * animationData.rotation.factor,
+        x: -(y - (offset?.y ?? 0) * 100) * animationData.rotation.factor,
+        y: -(x - (offset?.x ?? 0) * 100) * animationData.rotation.factor,
         z: animationData.rotation.factor,
       })
       gsap.to(ref.current!.scale, {
@@ -29,6 +34,7 @@ export default function useHoverModelAnimation({ ref, animationData }: TUseHover
   }
 
   function handleOnPointerLeave() {
+    document.body.style.cursor = 'auto'
     if (ref && ref.current) {
       gsap.to(ref.current.rotation, {
         duration: animationData.duration,

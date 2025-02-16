@@ -10,7 +10,7 @@ import './index.scss'
 export default function ExternalLink({ urlName, url }: TExternalLinkData) {
   return (
     <Link
-      id='external_link'
+      className='external_link'
       href={url}
       target='_blank'
     >

@@ -1,4 +1,6 @@
 import React from 'react'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 import { FaYoutube } from 'react-icons/fa'
 
@@ -14,6 +16,14 @@ export default function PageIntroduction({ translationPath }: TPageIntroduction)
   const t = useTranslations()
   const pathname = usePathname()
 
+  useGSAP(() => {
+    gsap.from('.pi_introduction', {
+      duration: 1,
+      background: 'rgba(64, 64, 64, 0)',
+      delay: 2,
+    })
+  })
+
   return (
     <section
       id='introduction_section'
@@ -22,8 +32,12 @@ export default function PageIntroduction({ translationPath }: TPageIntroduction)
       <PageTitle translationPath={`${translationPath}.PAGE_TITLE`} />
       <div className='pc_item pi_introduction'>
         {t.rich(`${translationPath}.PAGE_INTRODUCTION`, {
-          p: (chunk) => <p className='paragraph_translation'>{chunk}</p>,
+          p: (chunk) => <p className='pc_item paragraph_translation'>{chunk}</p>,
         })}
+        {pathname === '/skills' &&
+          t.rich(`${translationPath}.HOME_MADE`, {
+            p: (chunk) => <p className='pc_item home_made'>{chunk}</p>,
+          })}
       </div>
       {pathname === '/resources' && (
         <div

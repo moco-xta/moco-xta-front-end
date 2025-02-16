@@ -4,6 +4,8 @@ import { gsap } from 'gsap'
 
 import type { TDimensionsData } from '@/types/data/components/three/types'
 
+// import { getPercentage } from './mathHelpers'
+
 import { greetingTextsGroupDefaultValues } from '@/data/hero/three/greeting/texts/greetingTextsGroupData'
 
 // SET GREETING TEXTS POSITIONS
@@ -48,7 +50,7 @@ export function setGreetingTextsPositions(greetingTextsGroupRef: MutableRefObjec
   texts[2].matrixWorldNeedsUpdate = true
   const scaleLineDown =
     greetingTextsGroupDefaultValues.dimensions!.width! / greetingTextsDimensions[2].width!
-  texts[2].position.set(0, -5, 0)
+  // texts[2].position.set(0, -5, 0)
   texts[2].scale.set(
     scaleLineDown,
     scaleLineDown,
@@ -76,10 +78,11 @@ export function setGreetingTextsPositions(greetingTextsGroupRef: MutableRefObjec
   greetingTextsGroupRef.current.position.set(
     -greetingTextsGroupDefaultValues.dimensions!.width! / 2 +
       greetingTextsGroupDefaultValues?.position!.x,
-    greetingTextsGroupBoundingBox.min.y +
-      greetingTextsGroupBoundingBox.max.y -
-      MARGIN / 2 +
-      greetingTextsGroupDefaultValues?.position!.y,
+    (newGreetingTextsBoundingBoxes[2].min.y +
+      newGreetingTextsBoundingBoxes[2].max.y +
+      MARGIN -
+      (newGreetingTextsBoundingBoxes[0].min.y + newGreetingTextsBoundingBoxes[0].max.y)) /
+      2,
     0 + greetingTextsGroupDefaultValues?.position!.z,
   )
 }

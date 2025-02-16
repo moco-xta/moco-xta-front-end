@@ -1,33 +1,26 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import * as THREE from 'three'
-import { useThree } from '@react-three/fiber'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import type { TRotationGroupsAndButtons } from '@/types/components/three/types'
-import type { TRubiksCubeStatus } from '@/types/redux/types'
 
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import {
-  setRubiksCubeIsLocked /* , setRubiksCubeStatus */,
-  setRubiksCubeIsMixed,
-} from '@/redux/slices/rubiksCubeStateSlice'
+import { setRubiksCubeIsMixed, setRubiksCubeIsRotating } from '@/redux/slices/rubiksCubeStateSlice'
 
 import { Button } from '../../models/rubiks_cube/Button'
 
 import { rubiksCubeData } from '@/data/skills/rubiks_cube/three/rubiksCubeData'
 import { buttonsData } from '@/data/skills/rubiks_cube/three/buttonsData'
 import { mixRubiksCube } from '@/helpers/rubiksCubeHelpers'
-import { cameraDefaultValues } from '@/data/skills/rubiks_cube/three/cameraData'
 
 export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGroupsAndButtons) {
-  const { camera } = useThree()
   const { timeline } = useGSAPTimelineContext()
 
-  const { rubiksCubeIsLocked /* , status */ } = useSelector(
+  const { rubiksCubeIsLocked, rubiksCubeIsRotating } = useSelector(
     (state: RootState) => state.rubiksCubeState,
   )
 
@@ -40,8 +33,8 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
     timeline.pause()
   }
 
-  function handleSetRubiksCubeIsLocked(isRotating: boolean) {
-    dispatch(setRubiksCubeIsLocked(isRotating))
+  function handleSetRubiksCubeIsRotating(isRotating: boolean) {
+    dispatch(setRubiksCubeIsRotating(isRotating))
   }
 
   useGSAP(
@@ -74,43 +67,11 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
             keyframes: mixRubiksCube(rubiksCubeRef, rotationGroupRef, rubiksCubeData.functions),
             ease: 'none',
             duration: 12,
-            onUpdate: function () {
-              // camera.rotateOnWorldAxis(new THREE.Vector3(0,1,0), THREE.Math.degToRad(angle*this.ratio/100)); // this also doesn't work as expected; if we call outside gsap : camera.rotateOnWorldAxis(new THREE.Vector3(0,1,0), THREE.Math.degToRad(angle)), works perfectly
-              // camera.updateProjectionMatrix();
-            },
             onComplete: () => handleSetRubiksCubeIsMixed(),
           },
           'mix+=1',
         )
         .addPause()
-      /* .to(
-          camera.position,
-          {
-            x: 10,
-            y: 10,
-            z: 10,
-            duration: 2,
-            ease: 'power1.out',
-            delay: 1,
-            onComplete: () => {
-              handleGoTo('quit')
-            }
-          },
-          'play',
-        )
-        .to(
-          camera.position,
-          {
-            x: cameraDefaultValues.camera.position!.x,
-            y: cameraDefaultValues.camera.position!.y,
-            z: cameraDefaultValues.camera.position!.z,
-            duration: 2,
-            ease: 'power1.out',
-            delay: 1,
-            onComplete: () => handleGoTo('play'),
-          },
-          'quit',
-        ) */
     },
     { scope: rubiksCubeRef },
   )
@@ -144,13 +105,14 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
                   buttonFunction(
                     rubiksCubeRef,
                     rotationGroupRef,
-                    rubiksCubeIsLocked,
-                    handleSetRubiksCubeIsLocked,
+                    rubiksCubeIsRotating,
+                    handleSetRubiksCubeIsRotating,
                     e,
                   )
                 }
                 arrow={buttonData.arrow}
                 rubiksCubeIsLocked={rubiksCubeIsLocked}
+                rubiksCubeIsRotating={rubiksCubeIsRotating}
               />
             ))}
           </group>

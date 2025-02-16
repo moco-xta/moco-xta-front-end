@@ -14,12 +14,30 @@
     "WPME": "/img/textures/projects/wpme.png"
   },
   "LABORATORY": {
+    "LE_PIQUE_NIQUE": "/img/textures/laboratory/emile_claus_le_pique_nique_1887.jpg",
     "PARQUET": {
       "DIFFUSE": "/img/textures/laboratory/parquet_diffuse.jpg",
       "BUMP": "/img/textures/laboratory/parquet_bump.jpg",
       "NORMAL": "/img/textures/laboratory/parquet_normal.jpg",
       "ROUGHNESS": "/img/textures/laboratory/parquet_roughness.jpg"
     }
+  },
+  "CONTACT": {
+    "IPHONE_KEYBOARD": [
+      "/img/textures/contact/iphone_keyboard_0.jpg",
+      "/img/textures/contact/iphone_keyboard_1.jpg",
+      "/img/textures/contact/iphone_keyboard_2.jpg",
+      "/img/textures/contact/iphone_keyboard_3.jpg",
+      "/img/textures/contact/iphone_keyboard_4.jpg",
+      "/img/textures/contact/iphone_keyboard_5.jpg",
+      "/img/textures/contact/iphone_keyboard_6.jpg",
+      "/img/textures/contact/iphone_keyboard_7.jpg",
+      "/img/textures/contact/iphone_keyboard_8.jpg",
+      "/img/textures/contact/iphone_keyboard_9.jpg",
+      "/img/textures/contact/iphone_keyboard_call.jpg",
+      "/img/textures/contact/iphone_keyboard_hash.jpg",
+      "/img/textures/contact/iphone_keyboard_star.jpg"
+    ]
   },
   "SHADERS": {
     "DOT_TEXTURE": "/img/textures/shaders/dot_texture.png",
@@ -29,6 +47,12 @@
     "CHRISTUS": "/img/textures/matcap/36220C_C6C391_8C844A_8B7B4C.png",
     "KNIGHT": "/img/textures/matcap/80CA23_B7EE37_D5FA4C_A3E434.png",
     "PINE_CONE": "/img/textures/matcap/8A6565_2E214D_D48A5F_ADA59C.png"
+  },
+  "PLAYGROUND": {
+    "ASI_ES_LA_FOKIN_LIFE": "/img/textures/playground/asi_es_la_fokin_life.jpg",
+    "MOQUITO": "/img/textures/playground/moquito.jpg",
+    "ROSE": "/img/textures/playground/rose.png",
+    "SUZANNE": "/img/textures/playground/suzanne.jpg"
   },
   "SKETCHFAB": {
     "BUST": "/img/textures/sketchfab/face_texture_TEST.jpg"

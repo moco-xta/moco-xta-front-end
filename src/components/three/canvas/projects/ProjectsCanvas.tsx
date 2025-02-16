@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
+// import { OrbitControls } from '@react-three/drei'
 
 import Lightning from './lightning/Lightning'
 import ProjectsScene from './ProjectsScene'
@@ -13,13 +14,13 @@ import PostProcessing from './PostProcessing'
 export type TProjectCanvas = {
   currentProject: number
   currentCompany: number
-  currentLocation: number
+  // currentLocation: number
 }
 
 export default function ProjectsCanvas({
   currentProject,
   currentCompany,
-  currentLocation,
+  // currentLocation,
 }: TProjectCanvas) {
   return (
     <Canvas
@@ -29,12 +30,13 @@ export default function ProjectsCanvas({
       }}
     >
       <CameraWithFloat defaultValues={cameraDefaultValues} />
+      {/* <OrbitControls /> */}
       <Lightning />
       <Suspense fallback={null}>
         <ProjectsScene
           currentProject={currentProject}
           currentCompany={currentCompany}
-          currentLocation={currentLocation}
+          // currentLocation={currentLocation}
         />
       </Suspense>
       <PostProcessing />

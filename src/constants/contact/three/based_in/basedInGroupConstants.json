@@ -1,0 +1,38 @@
+{
+  "label": "based_in",
+  "duration": 33,
+  "defaultValues": {
+    "name": "based_in_group",
+    "visible": false,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  "animations": {
+    "position": {
+      "keyframes": {
+        "step_1": {
+          "x": "+=3",
+          "z": "-=3",
+          "ease": "circ.inOut"
+        },
+        "step_2": {
+          "x": 0,
+          "ease": "circ.inOut"
+        },
+        "easeEach": "none"
+      }
+    },
+    "rotation": {
+      "keyframes": {
+        "step_1": {
+          "z": 0,
+          "ease": "circ.inOut"
+        },
+        "easeEach": "none"
+      }
+    }
+  }
+}

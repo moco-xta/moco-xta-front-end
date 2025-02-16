@@ -3,9 +3,9 @@ import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import {
   // Bloom,
-  DepthOfField,
+  // DepthOfField,
   EffectComposer,
-  Noise,
+  // Noise,
   // Scanline,
   Vignette,
 } from '@react-three/postprocessing'
@@ -15,7 +15,7 @@ import { BlendFunction, DepthOfFieldEffect /* , KernelSize, Resolution */ } from
 
 export default function PostProcessing() {
   const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)
-  const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 2))
+  const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0))
 
   useLayoutEffect(() => {
     depthOfFieldRef.current.target = depthOfFieldTargetRef.current
@@ -38,13 +38,13 @@ export default function PostProcessing() {
 
   return (
     <EffectComposer>
-      <DepthOfField
+      {/* <DepthOfField
         ref={depthOfFieldRef}
         focalLength={0.01}
         bokehScale={5}
         height={1024}
         width={1024}
-      />
+      /> */}
       {/* <Bloom
         intensity={0.05}
         kernelSize={KernelSize.LARGE}
@@ -59,7 +59,7 @@ export default function PostProcessing() {
         opacity={0.1}
         density={0.8}
       /> */}
-      <Noise opacity={0.5} />
+      {/* <Noise opacity={0.5} /> */}
       <Vignette
         offset={0.5}
         darkness={0.5}

@@ -2,7 +2,8 @@ import type { TElementAnimationData } from '@/types/data/animation/types'
 import type { TElementDefaultValues } from '@/types/data/animation/three/types'
 import type { TGetAnimationsDataSignature } from '@/types/data/animation/functions/types'
 
-import { getDefaultValues, getKeyframePosition } from '@/helpers/animationHelpers'
+import { getDefaultValues } from '@/helpers/animation/getDefaultValues'
+import { getKeyframePosition } from '@/helpers/animationHelpers'
 import { getRandomInt, randomPositiveOrNegative } from '@/helpers/mathHelpers'
 
 import { default as greetingGroupConstants } from '@/constants/hero/three/greeting/greetingGroupConstants.json'
@@ -23,7 +24,9 @@ export function getFedericoTextAnimationsData({
       position: {
         keyframes: {
           '0%': {
+            // x: '-=2',
             y: federicoTextConstants.defaultValues.position.y,
+            // z: '-=4',
           },
           [`${getKeyframePosition(greetingGroupConstants.duration, 'step_1.5')}`]: {
             x:

@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
+import { FaTools } from 'react-icons/fa'
 
 import type { TSkillsParagraph } from '@/types/components/layout/types'
 
@@ -46,6 +47,12 @@ export default function SkillsParagraph({ translationPath, paragraphData }: TSki
         </div>
         <p className='sp_description'>
           {t(`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_DESCRIPTION`)}
+          {paragraphData.used && (
+            <p className='used'>
+              <FaTools />
+              Used to develop this app
+            </p>
+          )}
         </p>
       </div>
     </div>

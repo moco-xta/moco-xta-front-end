@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
 import type { TResourcesParagraph } from '@/types/components/layout/types'
+import type { TExternalLinkData } from '@/types/data/components/layout/types'
 
 import { usePageContext } from '@/contexts/PageContext'
 
@@ -9,7 +10,6 @@ import { ParagraphTitle } from '@/components/layout/titles'
 import { LinksArray } from '@/components/layout/links'
 
 import './index.scss'
-import { TExternalLinkData } from '@/types/data/components/layout/types'
 
 export default function ResourcesParagraph({
   translationPath,
@@ -36,44 +36,64 @@ export default function ResourcesParagraph({
   }, [handleScroll])
 
   return (
-    <div
+    <section
       ref={paragraphRef}
       id={`${paragraphData.key}_paragraph`}
-      className='resources_paragraph'
+      className='pc_item resources_paragraph'
     >
       <ParagraphTitle
         translationPath={`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_TITLE`}
       />
-      <p className='pc_item resources_paragraph_description'>
-        {t(`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_DESCRIPTION`)}
-      </p>
-      <LinksArray
-        translationPath={`${translationPath}.${paragraphData.translationKey}`}
-        title={'DOCUMENTATION'}
-        links={paragraphData.documentation as unknown as TExternalLinkData[]}
-      />
-      {paragraphData.websites.length > 0 && (
-        <LinksArray
-          translationPath={`${translationPath}.${paragraphData.translationKey}`}
-          title={'WEBSITES'}
-          links={paragraphData.websites as unknown as TExternalLinkData[]}
-        />
+      <div className='pc_item section_description'>
+        {t.rich(`${translationPath}.${paragraphData.translationKey}.PARAGRAPH_DESCRIPTION`, {
+          p: (chunk) => <p className='paragraph_translation'>{chunk}</p>,
+        })}
+      </div>
+      {paragraphData.videoIntroduction && (
+        <div className='pc_item video_introduction_container'>
+          <iframe
+            // width='60%'
+            height='255px'
+            src={paragraphData.videoIntroduction.url}
+            title='YouTube video player'
+            frameBorder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            referrerPolicy='strict-origin-when-cross-origin'
+            allowFullScreen
+          ></iframe>
+          <div>
+            {t.rich(
+              `${translationPath}.${paragraphData.translationKey}.VIDEO_INTRODUCTION_DESCRIPTION`,
+              {
+                p: (chunk) => <p className='video_introduction_description'>{chunk}</p>,
+              },
+            )}
+          </div>
+        </div>
       )}
-      {paragraphData.channels.length > 0 && (
+      {paragraphData.categories.documentation &&
+        paragraphData.categories.documentation.length > 0 && (
+          <LinksArray
+            translationPath={`${translationPath}.${paragraphData.categories.translationKey}`}
+            title={'DOCUMENTATION'}
+            links={paragraphData.categories.documentation as unknown as TExternalLinkData[]}
+          />
+        )}
+      {paragraphData.categories.channels && paragraphData.categories.channels.length > 0 && (
         <LinksArray
-          translationPath={`${translationPath}.${paragraphData.translationKey}`}
+          translationPath={`${translationPath}.${paragraphData.categories.translationKey}`}
           title={'CHANNELS'}
-          links={paragraphData.channels as unknown as TExternalLinkData[]}
-          youtubePlaylistlink={paragraphData.youtubePlaylistlink}
+          links={paragraphData.categories.channels as unknown as TExternalLinkData[]}
+          youtubePlaylistLink={paragraphData.categories.youtubePlaylistLink}
         />
       )}
-      {paragraphData.articles.length > 0 && (
+      {paragraphData.categories.websites && paragraphData.categories.websites.length > 0 && (
         <LinksArray
-          translationPath={`${translationPath}.${paragraphData.translationKey}`}
-          title={'ARTICLES'}
-          links={paragraphData.articles as unknown as TExternalLinkData[]}
+          translationPath={`${translationPath}.${paragraphData.categories.translationKey}`}
+          title={'WEBSITES'}
+          links={paragraphData.categories.websites as unknown as TExternalLinkData[]}
         />
       )}
-    </div>
+    </section>
   )
 }

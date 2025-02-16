@@ -3,6 +3,6 @@
   "duration": 6,
   "defaultValues": {
     "name": "greeting_group",
-    "visible": false
+    "visible": true
   }
 }

@@ -30,8 +30,8 @@ export default function PageContent({ pageData }: TContent) {
     pageContentRef.current.style.paddingBottom =
       currentSection.key !== 'introduction'
         ? `${window.innerHeight - (lastParagraph as unknown as HTMLElement).clientHeight + 55}px`
-        : '0px'
-  })
+        : '50px'
+  }, [currentSection])
 
   useEffect(() => {
     document.getElementById(`${pageData.key}_content`)!.scrollTo(0, 0)

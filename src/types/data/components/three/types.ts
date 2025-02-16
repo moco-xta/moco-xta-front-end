@@ -8,6 +8,9 @@ import type { TLazyPad } from '@/types/components/three/types'
 // CAMERA
 
 export type TCameraDefaultValues = {
+  rigidBody?: {
+    position: THREE.Vector3
+  }
   camera: TPerspectiveCameraData
   float?: FloatProps
 }
@@ -33,6 +36,22 @@ export type TCoordinatesData = {
   x?: number
   y?: number
   z?: number
+}
+
+// RANDON RANGE POSITION
+
+export type TRandomRangePosition = {
+  min: number | TCoordinatesData
+  max: number | TCoordinatesData
+  decimal?: number
+}
+
+// RANDOM ROTATION SELECTED AXIS
+
+export type TRandomRotationSelectedAxis = {
+  x?: boolean
+  y?: boolean
+  z?: boolean
 }
 
 // DIMENSIONS

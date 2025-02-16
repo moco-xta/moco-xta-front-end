@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-
-import type { TRubiksCubeStatus } from '@/types/redux/types'
+import { FaRunning } from 'react-icons/fa'
 
 import { AppDispatch } from '@/redux/store'
 import { setRubiksCubeIsLocked } from '@/redux/slices/rubiksCubeStateSlice'
@@ -19,5 +18,13 @@ export default function QuitRubiksCube() {
     timeline.seek('quit').play()
   }
 
-  return <button onClick={handleOnClick}>Quit</button>
+  return (
+    <button
+      id='quit_rubiks_cube'
+      onClick={handleOnClick}
+    >
+      <FaRunning />
+      QUIT
+    </button>
+  )
 }

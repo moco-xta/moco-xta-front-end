@@ -6,16 +6,17 @@ import { useLocale, useTranslations } from 'next-intl'
 import type { TCurrentDate } from '@/types/components/layout/types'
 
 import './index.scss'
-import { gilroyHeavyFont } from '@/app/fonts/ttf'
+import { helveticaNeueBlackFont } from '@/app/fonts/otf'
+import { helveticaFont } from '@/app/fonts/ttf'
 
-export default function CurrentDate({ currentDate }: TCurrentDate) {
+export default function CurrentDate({ currentProject, projectsNumber, currentDate }: TCurrentDate) {
   const locale = useLocale()
   const t = useTranslations('PROJECTS')
 
   return (
     <div
       id='current_date'
-      className={`${gilroyHeavyFont.className}`}
+      className={`${helveticaNeueBlackFont.className}`}
     >
       {locale === 'en' ? (
         <>
@@ -31,7 +32,7 @@ export default function CurrentDate({ currentDate }: TCurrentDate) {
         <>
           <p
             id='day_number'
-            style={{ marginBottom: '-50px' }}
+            style={{ marginBottom: '-28px' }}
           >
             {moment(currentDate).format('DD')}
           </p>
@@ -41,6 +42,12 @@ export default function CurrentDate({ currentDate }: TCurrentDate) {
       <div id='arrow_and_year_container'>
         <FaArrowLeft id='arrow_left_icon' />
         <p id='year'>{moment(currentDate).format('YYYY')}</p>
+      </div>
+      <div
+        id='tracker'
+        className={helveticaFont.className}
+      >
+        {currentProject + 1}/{projectsNumber}
       </div>
     </div>
   )
