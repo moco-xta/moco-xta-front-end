@@ -512,13 +512,13 @@
   },
   "ABOUT": {
     "INTRODUCTION": {
-      "TITLE": "about",
-      "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      "TITLE": "a proposito",
+      "INTRODUCTION": "<p>¡Hola! Soy Federico, un desarrollador franco-colombiano radicado en París. A los 41 años, di un salto emocionante al mundo de la tecnología, transformando mi pasión por resolver problemas y la creatividad en una carrera próspera como desarrollador. Mi trayectoria es un testimonio del poder de la reinvención, impulsada por la curiosidad, la resiliencia y el amor por el aprendizaje.</p><p>Este espacio de trabajo en 3D es un reflejo de quién soy: un lugar donde se entrelazan mis habilidades profesionales y mis pasiones personales. Más allá del código, este espacio muestra lo que me define: los libros que alimentan mi pensamiento, las películas que despiertan mi imaginación y la música que inspira mi creatividad. Estos elementos se entrelazan en mi trabajo, influyendo en cómo abordo los desafíos y me conecto con el mundo.</p><p>Ya sea desarrollando una aplicación elegante, sumergiéndome en un ensayo cautivador o explorando la narrativa de una gran película, siempre estoy buscando crecer, crear y compartir. Este espacio es una invitación a explorar no solo lo que hago, sino quién soy. ¡Conectémonos y veamos a dónde nos llevan nuestras pasiones compartidas!</p>"
     }
   },
   "CONTACT": {
     "CONTACT": "Contacto",
-    "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "INTRODUCTION": "",
     "CONTACT_ME": {
       "CONTACT": "",
       "ME": ""
@@ -532,11 +532,11 @@
   "LAYOUT": {
     "PLAYER_PAGE": {
       "INSTRUCTIONS": {
-        "TITLE": "instructions",
+        "TITLE": "instrucciones",
         "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "use the keyboard arrows to move",
-        "USE": "use",
-        "OR": "or",
-        "TO_DIRECT_THE_CAMERA": "to direct the camera"
+        "USE": "usa",
+        "OR": "o",
+        "TO_DIRECT_THE_CAMERA": "Para dirigir la cámara"
       }
     },
     "SIDE_NAVIGATION_MENU": {

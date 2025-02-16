@@ -679,7 +679,7 @@
   "ABOUT": {
     "INTRODUCTION": {
       "TITLE": "about",
-      "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      "INTRODUCTION": "<p>Hi! I’m Federico, a French-Colombian developer based in Paris. At 41, I’ve taken an exciting leap into the world of tech, transforming my passion for problem-solving and creativity into a thriving career as a developer. My journey is a testament to the power of reinvention, fueled by curiosity, resilience, and a love for learning.</p><p>This 3D workspace is a reflection of who I am—a place where my professional skills and personal passions intersect. Beyond code, this space showcases what makes me me: the thought-provoking books that shape my thinking, the movies that spark my imagination, and the music that fuels my creativity. These elements are woven into my work, influencing how I approach challenges and connect with the world.</p><p>Whether I’m developing a sleek application, diving into a captivating essay, or exploring the storytelling of a great film, I’m always seeking to grow, create, and share. This space is an invitation to explore not just what I do, but who I am. Let’s connect and see where our shared passions can take us!</p>"
     }
   },
   "CONTACT": {
@@ -697,7 +697,7 @@
   },
   "COLORS": {
     "TITLE": "colors",
-    "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    "INTRODUCTION": ""
   },
   "LAYOUT": {
     "PLAYER_PAGE": {
@@ -707,6 +707,10 @@
         "USE": "use",
         "OR": "or",
         "TO_DIRECT_THE_CAMERA": "to direct the camera"
+      },
+      "LEAVE_SCENE": {
+        "PRESS": "Press",
+        "TO_LEAVE": "to leave"
       }
     },
     "SIDE_NAVIGATION_MENU": {

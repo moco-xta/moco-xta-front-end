@@ -4,10 +4,10 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  padding: 22% $px_margin_XL $px_margin_XL $px_margin_XL;
+  padding: 0 $px_margin_XL 0 $px_margin_XL;
   display: flex;
-  // align-items: center;
-  // justify-content: center;
+  flex-direction: row;
+  align-items: center;
   background: #00000088;
 }
 
@@ -17,6 +17,29 @@
 }
 
 .hide_player_page_greeting {
+  transition: opacity $transition_M linear;
+  opacity: 0;
+}
+
+#press_escape_to_leave {
+  position: absolute;
+  width: 100%;
+  bottom: $px_margin_S;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #escape_keyboard_key {
+    margin: 0 $gap_XS;
+  }
+}
+
+.show_ecape_to_leave {
+  transition: opacity $transition_M linear;
+  opacity: 1;
+}
+
+.hide_escape_to_leave {
   transition: opacity $transition_M linear;
   opacity: 0;
 }
