@@ -537,6 +537,10 @@
         "USE": "Utilisez",
         "OR": "ou",
         "TO_DIRECT_THE_CAMERA": "pour diriger la caméra"
+      },
+      "LEAVE_SCENE": {
+        "PRESS": "Presse",
+        "TO_LEAVE": "pour quitter"
       }
     },
     "SIDE_NAVIGATION_MENU": {

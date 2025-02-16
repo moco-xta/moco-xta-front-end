@@ -537,6 +537,10 @@
         "USE": "usa",
         "OR": "o",
         "TO_DIRECT_THE_CAMERA": "Para dirigir la cámara"
+      },
+      "LEAVE_SCENE": {
+        "PRESS": "Prensa",
+        "TO_LEAVE": "para salir"
       }
     },
     "SIDE_NAVIGATION_MENU": {
