@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 import { GSAPTimelineProvider } from '@/contexts/GsapTimelineContext'
 
@@ -15,7 +15,7 @@ import {} from // AsciiWithWebgpuCanvas,
 
 import { timelineDefaultValues } from '@/data/hero/timelineData'
 
-import { default as imgConstants } from '@/constants/assets/imgConstants.json'
+// import { default as imgConstants } from '@/constants/assets/imgConstants.json'
 
 import './index.scss'
 
