@@ -38,15 +38,13 @@ export default function LaboratoryScene() {
       <Couronnes />
       <Cube />
       <DeskChair />
-      <RigidBody>
-        <DeskTray />
-        {laboratoryData.trestles.map((trestleData) => (
-          <Trestle
-            key={`trestle_${trestleData.name}`}
-            {...trestleData}
-          />
-        ))}
-      </RigidBody>
+      <DeskTray />
+      {laboratoryData.trestles.map((trestleData) => (
+        <Trestle
+          key={`trestle_${trestleData.name}`}
+          {...trestleData}
+        />
+      ))}
       <Dodecahedron />
       <Door />
       <DoorFrame />
@@ -73,9 +71,10 @@ export default function LaboratoryScene() {
       <VirgenDeGuadalupe />
       <WallClockGroup />
       <Walls />
-      <RigidBody colliders='cuboid' />
-      <WorldMap />
-      <WorldMapStand />
+      <RigidBody colliders='cuboid'>
+        <WorldMap />
+        <WorldMapStand />
+      </RigidBody>
     </>
   )
 }
