@@ -1,6 +1,6 @@
 export const lightsData = {
   pointLights: {
-    intensity: 50,
+    intensity: 75,
     positions: [
       {
         X: 5,
