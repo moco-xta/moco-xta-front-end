@@ -518,7 +518,8 @@
   },
   "CONTACT": {
     "CONTACT": "Contacto",
-    "INTRODUCTION": "",
+    "GET_IN_TOUCH": "¡Contáctame!",
+    "INTRODUCTION": "<p>Gracias por visitar mi página. Me encantaría saber de ti. Ya sea que tengas una pregunta, una idea de colaboración o simplemente quieras saludar, no dudes en escribirme. Estoy aquí para ayudarte y haré todo lo posible por responderte lo antes posible.</p>",
     "CONTACT_ME": {
       "CONTACT": "",
       "ME": ""

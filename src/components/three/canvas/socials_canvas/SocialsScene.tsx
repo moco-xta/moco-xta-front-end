@@ -7,11 +7,6 @@ import React /* , { useRef } */ from 'react'
 // import fragmentShader from '@/components/three/shaders/deform_geometry/fragmentShader.glsl'
 
 // import { default as texturesConstants } from '@/constants/assets/texturesConstants.json'
-import LogoGithubComponent from './socials_logos/LogoGithubComponent'
-import LogoInstagramComponent from './socials_logos/LogoInstagramComponent'
-import LogoLinkedInComponent from './socials_logos/LogoLinkedInComponent'
-import LogoPinterestComponent from './socials_logos/LogoPinterestComponent'
-import LogoXComponent from './socials_logos/LogoXComponent'
 
 /* const uniforms = {
   tExplosion: {
@@ -42,11 +37,6 @@ export default function SocialsScene() {
 
   return (
     <>
-      <LogoXComponent />
-      <LogoInstagramComponent />
-      <LogoLinkedInComponent />
-      <LogoPinterestComponent />
-      <LogoGithubComponent />
       {/* <mesh ref={icosahedronRef} material={deformGeometryShaderMaterial}>
         <icosahedronGeometry
           attach='geometry'

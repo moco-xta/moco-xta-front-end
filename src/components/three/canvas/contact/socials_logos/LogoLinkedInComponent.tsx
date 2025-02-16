@@ -15,7 +15,7 @@ export default function LogoLinkedInComponent() {
   const { handleOnPointerMove, handleOnPointerLeave } = useHoverModelAnimation({
     ref: logoLinkedInRef,
     animationData: socialsLogosData.hoverModelAnimationData,
-    offset: new THREE.Vector3(2.75, 0, 0),
+    offset: new THREE.Vector3(3, -2.5, 0),
   })
 
   useEffect(() => {
@@ -28,8 +28,12 @@ export default function LogoLinkedInComponent() {
     }
   }, [])
 
+  function handleOnClick() {
+    window.open('', '_blank')
+  }
+
   return (
-    <group position={[2.75, 0, 0]}>
+    <group position={[0, -2.5, 0]}>
       <group>
         <Box
           ref={boxRef}
@@ -44,7 +48,17 @@ export default function LogoLinkedInComponent() {
           />
         </Box>
       </group>
-      <LogoLinkedIn ref={logoLinkedInRef} />
+      <LogoLinkedIn
+        ref={logoLinkedInRef}
+        scale={
+          new THREE.Vector3(
+            socialsLogosData.hoverModelAnimationData.scale.initial,
+            socialsLogosData.hoverModelAnimationData.scale.initial,
+            socialsLogosData.hoverModelAnimationData.scale.initial,
+          )
+        }
+        onClick={handleOnClick}
+      />
     </group>
   )
 }
