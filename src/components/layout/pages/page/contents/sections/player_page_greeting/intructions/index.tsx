@@ -8,13 +8,14 @@ import { EnterSceneButton } from '@/components/layout/buttons'
 import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 import './index.scss'
+import { ParagraphTitle } from '@/components/layout/titles'
 
 export default function Instructions() {
   const t = useTranslations('LAYOUT.PLAYER_PAGE.INSTRUCTIONS')
 
   return (
     <div className='instructions'>
-      <h2 className='instructions_title'>{capitalizeFirstLetter(t('TITLE'))}</h2>
+      <ParagraphTitle translationPath={'LAYOUT.PLAYER_PAGE.INSTRUCTIONS.TITLE'} />
 
       <div className='displacement_desktop_instructions'>
         <div className='displacement_keyboard_keys'>

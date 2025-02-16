@@ -513,7 +513,7 @@
   "ABOUT": {
     "INTRODUCTION": {
       "TITLE": "about",
-      "INTRODUCTION": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      "INTRODUCTION": "<p>Bonjour ! Je m’appelle Federico, je suis développeur franco-colombien basé à Paris. À 41 ans, j’ai fait un saut passionnant dans le monde de la tech, transformant mon goût pour la résolution de problèmes et la créativité en une carrière épanouissante dans le développement. Mon parcours est une preuve que la réinvention est toujours possible, portée par la curiosité, la résilience et l’amour de l’apprentissage.</p><p>Cet espace de travail en 3D est le reflet de qui je suis — un lieu où se mêlent mes compétences professionnelles et mes passions personnelles. Au-delà du code, cet espace met en lumière ce qui me définit : les livres de réflexion qui nourrissent ma pensée, les films qui stimulent mon imagination et la musique qui inspire ma créativité. Ces éléments s’entrelacent dans mon travail, influençant ma manière d’aborder les défis et de me connecter au monde.</p><p>Que je sois en train de développer une application élégante, de plonger dans un essai captivant ou d’explorer la narration d’un grand film, je suis toujours à la recherche de nouvelles façons de grandir, de créer et de partager. Cet espace est une invitation à explorer non seulement ce que je fais, mais aussi qui je suis. Prenons contact et voyons où nos passions communes peuvent nous mener !</p>"
     }
   },
   "CONTACT": {
@@ -533,10 +533,14 @@
     "PLAYER_PAGE": {
       "INSTRUCTIONS": {
         "TITLE": "instructions",
-        "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "use the keyboard arrows to move",
-        "USE": "use",
-        "OR": "or",
-        "TO_DIRECT_THE_CAMERA": "to direct the camera"
+        "USE_THE_KEYBOARD_ARROWS_TO_MOVE": "utilisez les flèches du clavier pour vous déplacer",
+        "USE": "Utilisez",
+        "OR": "ou",
+        "TO_DIRECT_THE_CAMERA": "pour diriger la caméra"
+      },
+      "LEAVE_SCENE": {
+        "PRESS": "Presse",
+        "TO_LEAVE": "pour quitter"
       }
     },
     "SIDE_NAVIGATION_MENU": {
