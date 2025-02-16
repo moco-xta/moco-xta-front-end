@@ -10,7 +10,7 @@ export function MacBookPro(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(glbConstants.LABORATORY.MAC_BOOK_PRO) as GLTFResult
 
   return (
-    <RigidBody colliders='hull'>
+    <RigidBody colliders='trimesh'>
       <group
         position={[0, 9.182, -8]}
         {...props}
