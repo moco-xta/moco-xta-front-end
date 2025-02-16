@@ -6,7 +6,7 @@ const initialState: TPlayerPageStateSlice = {
   showInstructions: true,
   pointerLockControlsSelector: 'enter_scene_button',
   dopTargetPosition: { x: 0, y: 0, z: 0 },
-  debug: true,
+  debug: false,
 }
 
 const playerStateSlice = createSlice({
