@@ -12,6 +12,10 @@ import { cameraDefaultValues } from '@/data/skills/rubiks_cube/three/cameraData'
 export default function RubiksCubeCanvas() {
   return (
     <Canvas
+      shadows
+      legacy={false}
+      linear
+      flat
       {...canvasDefaultValues}
       camera={cameraDefaultValues.camera}
     >

@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { Bloom, DepthOfField, EffectComposer } from '@react-three/postprocessing'
-import { KernelSize, Resolution } from 'postprocessing'
+import { Bloom, DepthOfField, EffectComposer, ToneMapping } from '@react-three/postprocessing'
+import { BlendFunction, KernelSize, Resolution } from 'postprocessing'
 import { useGSAP } from '@gsap/react'
 
 import { RootState } from '@/redux/store'
@@ -133,6 +133,15 @@ export default function PostProcessing() {
           mipmapBlur={postProcessingData.bloom.mipmapBlur}
           resolutionX={Resolution.AUTO_SIZE}
           resolutionY={Resolution.AUTO_SIZE}
+        />
+        <ToneMapping
+          blendFunction={BlendFunction.NORMAL} // blend mode
+          adaptive={true} // toggle adaptive luminance map usage
+          resolution={2048} // texture resolution of the luminance map
+          middleGrey={0.5} // middle grey factor
+          maxLuminance={20.0} // maximum luminance
+          averageLuminance={5.0} // average luminance
+          adaptationRate={1.0} // luminance adaptation rate
         />
       </EffectComposer>
     </>

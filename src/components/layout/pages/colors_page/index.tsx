@@ -185,8 +185,8 @@ export default function ColorPage() {
             >
               {triadic.map((color) => (
                 <div
-                key={`triadic_${color}`}
-                id={`triadic_${color}`}
+                  key={`triadic_${color}`}
+                  id={`triadic_${color}`}
                   className='color_square'
                   style={{ background: color }}
                 />
@@ -198,8 +198,8 @@ export default function ColorPage() {
             >
               {splitComplementary.map((color) => (
                 <div
-                key={`split_complementary_${color}`}
-                id={`split_complementary_${color}`}
+                  key={`split_complementary_${color}`}
+                  id={`split_complementary_${color}`}
                   className='color_square'
                   style={{ background: color }}
                 />
@@ -211,8 +211,8 @@ export default function ColorPage() {
             >
               {tetradic.map((color) => (
                 <div
-                key={`tetradic_${color}`}
-                id={`tetradic_${color}`}
+                  key={`tetradic_${color}`}
+                  id={`tetradic_${color}`}
                   className='color_square'
                   style={{ background: color }}
                 />
