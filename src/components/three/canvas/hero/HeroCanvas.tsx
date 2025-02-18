@@ -1,8 +1,9 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 // import { OrbitControls } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
+import { isMobile } from 'react-device-detect'
 
 import Camera from './Camera'
 import Lightning from './lightning/Lightning'
@@ -18,9 +19,11 @@ import { mocoHeliumData } from '@/data/hero/three/moco_helium/mocoHeliumData'
 import './index.scss'
 
 export default function HeroCanvas() {
+  const [terminalType] = useState<'isDesktop' | 'isMobile'>(!isMobile ? 'isDesktop' : 'isMobile')
+
   return (
     <Canvas {...canvasDefaultValues}>
-      <Camera />
+      <Camera terminalType={terminalType} />
       <Lightning />
       {/* <OrbitControls /> */}
       <Suspense fallback={null}>
@@ -41,13 +44,13 @@ export default function HeroCanvas() {
               )
             }
           >
-            <MocoHelium />
-            <Wrapper />
+            <MocoHelium terminalType={terminalType} />
+            <Wrapper terminalType={terminalType} />
           </group>
         </Physics>
         {/* <GreetingGroup /> */}
       </Suspense>
-      <PostProcessing />
+      <PostProcessing terminalType={terminalType} />
     </Canvas>
   )
 }

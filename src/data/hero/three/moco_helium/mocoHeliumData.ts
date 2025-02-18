@@ -12,9 +12,16 @@ export const mocoHeliumData = {
   },
   wrapper: {
     args: {
-      width: 2.7,
-      height: 1.1,
-      depth: 0.83,
+      isDesktop: {
+        width: 2.7,
+        height: 1.1,
+        depth: 0.83,
+      },
+      isMobile: {
+        width: 1.6,
+        height: 2.2,
+        depth: 0.85,
+      },
     },
     material: {
       opacity: 0.2,
@@ -28,24 +35,52 @@ export const mocoHeliumData = {
         z: 0,
       },
       m: {
-        x: -0.96,
-        y: 0,
-        z: 0,
+        isDesktop: {
+          x: -0.96,
+          y: 0,
+          z: 0,
+        },
+        isMobile: {
+          x: -0.48,
+          y: 0.55,
+          z: 0,
+        },
       },
       o1: {
-        x: -0.32,
-        y: 0,
-        z: 0,
+        isDesktop: {
+          x: -0.32,
+          y: 0,
+          z: 0,
+        },
+        isMobile: {
+          x: 0.32,
+          y: 0.55,
+          z: 0,
+        },
       },
       c: {
-        x: 0.32,
-        y: 0,
-        z: 0,
+        isDesktop: {
+          x: 0.32,
+          y: 0,
+          z: 0,
+        },
+        isMobile: {
+          x: -0.32,
+          y: -0.55,
+          z: 0,
+        },
       },
       o2: {
-        x: 0.96,
-        y: 0,
-        z: 0,
+        isDesktop: {
+          x: 0.96,
+          y: 0,
+          z: 0,
+        },
+        isMobile: {
+          x: 0.32,
+          y: -0.55,
+          z: 0,
+        },
       },
     },
     rotation: {
