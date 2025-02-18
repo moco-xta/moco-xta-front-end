@@ -12,6 +12,7 @@ export type THeader = {
 export type TLogoMoco = {
   isMain?: boolean
   logoMocoMaterial?: THREE.MeshNormalMaterial | THREE.MeshStandardMaterial
+  className: string
 }
 
 // LAZY FACTORY

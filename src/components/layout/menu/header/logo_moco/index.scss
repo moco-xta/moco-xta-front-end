@@ -2,9 +2,17 @@
 
 #main_logo_moco,
 #logo_moco {
-  width: 100px;
-  height: 75px;
   margin-top: $px_margin_XXS;
   margin-left: $px_margin_XXS;
   opacity: 1;
+}
+
+.logo_moco_large {
+  width: 100px;
+  height: 75px;
+}
+
+.logo_moco_small {
+  width: 80px;
+  height: 60px;
 }
