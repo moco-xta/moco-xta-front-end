@@ -558,5 +558,10 @@
       "DOCUMENTATION": "documentación",
       "MY_PLAYLIST": "mi lista de reproducción"
     }
+  },
+  "DISCLAMERS": {
+    "HOME": {
+      "IS_MOBILE": "¡Gracias por tu visita! La versión móvil está en desarrollo. Para una mejor experiencia, accede desde un ordenador o tablet. ¡Muy pronto estará lista!"
+    }
   }
 }

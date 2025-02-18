@@ -16,12 +16,11 @@ export default function Header({ isMain = false, logoMocoMaterial }: THeader) {
         logoMocoMaterial={logoMocoMaterial}
         className={!isMobile ? 'logo_moco_large' : 'logo_moco_small'}
       />
-      {!isMobile && (
-        <div className='header_buttons_container'>
-          <LocaleSwitcher />
-          <MenuButton state={isMain ? 'open' : 'close'} />
-        </div>
-      )}
+
+      <div className='header_buttons_container'>
+        <LocaleSwitcher />
+        {!isMobile && <MenuButton state={isMain ? 'open' : 'close'} />}
+      </div>
     </header>
   )
 }

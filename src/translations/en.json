@@ -728,5 +728,10 @@
       "DOCUMENTATION": "documentation",
       "MY_PLAYLIST": "my playlist"
     }
+  },
+  "DISCLAMERS": {
+    "HOME": {
+      "IS_MOBILE": "Thanks for visiting! The mobile version is currently in development. For the best experience, please view on desktop or tablet. Stay tuned!"
+    }
   }
 }

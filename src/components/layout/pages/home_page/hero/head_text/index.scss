@@ -37,7 +37,6 @@
 #front_end_developer_container {
   z-index: 2;
   position: absolute;
-  bottom: 7%;
   width: fit-content;
   height: fit-content;
   // padding: 15px 25px 15px 25px;
@@ -74,9 +73,11 @@
 }
 
 .slogan_container_large {
+  bottom: 7%;
   padding: 15px 25px 15px 25px;
 }
 
 .slogan_container_small {
+  bottom: 12%;
   padding: 10px 15px 10px 15px;
 }
