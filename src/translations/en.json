@@ -733,6 +733,7 @@
     "HOME": {
       "IS_MOBILE": "Thanks for visiting! The mobile version is currently in development. For the best experience, please view on desktop or tablet. Stay tuned!"
     },
-    "RESOURCES": "Welcome to the Resources page! We’re excited to share valuable tools, guides, and materials with you. Content will be added gradually, so check back often as we expand this section."
+    "RESOURCES": "Welcome to the Resources page! We’re excited to share valuable tools, guides, and materials with you. Content will be added gradually, so check back often as we expand this section.",
+    "ABOUT": "This scene is still a work in progress! Elements will be added step by step, so check back often to see the progress and discover new additions."
   }
 }
