@@ -37,10 +37,9 @@
 #front_end_developer_container {
   z-index: 2;
   position: absolute;
-  bottom: 7%;
   width: fit-content;
   height: fit-content;
-  padding: 15px 25px 15px 25px;
+  // padding: 15px 25px 15px 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,9 +51,16 @@
   backdrop-filter: blur(5px);
   // opacity: 0.8;
 
-  p {
-    font-size: 33px;
+  .slogan {
     line-height: 105%;
+  }
+
+  .slogan_large {
+    font-size: 33px;
+  }
+
+  .slogan_small {
+    font-size: 18px;
   }
 
   .dream_in_3d {
@@ -64,4 +70,14 @@
   .build_in_reality {
     color: $sky;
   }
+}
+
+.slogan_container_large {
+  bottom: 7%;
+  padding: 15px 25px 15px 25px;
+}
+
+.slogan_container_small {
+  bottom: 12%;
+  padding: 10px 15px 10px 15px;
 }

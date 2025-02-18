@@ -28,16 +28,18 @@ export default function Page({
       {backgroundCanvas && <div id='background_canvas'>{backgroundCanvas}</div>}
       {displayPage ? (
         <PageProvider pageData={pageData}>
-          <div className='page_container'>
-            <div className='page'>
-              <SideNavigationMenuLeft
-                pageData={pageData}
-                extraButtons={extraButtons}
-              />
-              <PageContent pageData={pageData} />
-              <SideNavigationMenuRight pageData={pageData} />
+          <>
+            <div className='page_container'>
+              <div className='page'>
+                <SideNavigationMenuLeft
+                  pageData={pageData}
+                  extraButtons={extraButtons}
+                />
+                <PageContent pageData={pageData} />
+                <SideNavigationMenuRight pageData={pageData} />
+              </div>
             </div>
-          </div>
+          </>
         </PageProvider>
       ) : (
         <div className='canvas_dashboard'>

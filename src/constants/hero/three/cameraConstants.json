@@ -3,9 +3,16 @@
     "camera": {
       "makeDefault": true,
       "position": {
-        "x": 0,
-        "y": 0,
-        "z": 1.75
+        "isDesktop": {
+          "x": 0,
+          "y": 0,
+          "z": 1.75
+        },
+        "isMobile": {
+          "x": 0.075,
+          "y": 0,
+          "z": 2.5
+        }
       },
       "fov": 50,
       "near": 0.01,

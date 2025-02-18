@@ -80,7 +80,11 @@ function MouseImpulseHandler({ rigidBodies }: TMouseImpulseHandler) {
   return null
 }
 
-export default function MocoHelium() {
+export type TMocoHelium = {
+  terminalType: 'isDesktop' | 'isMobile'
+}
+
+export default function MocoHelium({ terminalType }: TMocoHelium) {
   const rigidBodies = useRef(new Map<string, RapierRigidBody>())
 
   const registerRigidBody = (name: string, rigidBody: RapierRigidBody) => {
@@ -98,9 +102,9 @@ export default function MocoHelium() {
           name={'m_helium_balloons'}
           position={
             new THREE.Vector3(
-              mocoHeliumData.balloons.position.m.x,
-              mocoHeliumData.balloons.position.m.y,
-              mocoHeliumData.balloons.position.m.z,
+              mocoHeliumData.balloons.position.m[terminalType].x,
+              mocoHeliumData.balloons.position.m[terminalType].y,
+              mocoHeliumData.balloons.position.m[terminalType].z,
             )
           }
           registerRigidBody={registerRigidBody}
@@ -111,9 +115,9 @@ export default function MocoHelium() {
           name={'o1_helium_balloons'}
           position={
             new THREE.Vector3(
-              mocoHeliumData.balloons.position.o1.x,
-              mocoHeliumData.balloons.position.o1.y,
-              mocoHeliumData.balloons.position.o1.z,
+              mocoHeliumData.balloons.position.o1[terminalType].x,
+              mocoHeliumData.balloons.position.o1[terminalType].y,
+              mocoHeliumData.balloons.position.o1[terminalType].z,
             )
           }
           registerRigidBody={registerRigidBody}
@@ -124,9 +128,9 @@ export default function MocoHelium() {
           name={'c_helium_balloons'}
           position={
             new THREE.Vector3(
-              mocoHeliumData.balloons.position.c.x,
-              mocoHeliumData.balloons.position.c.y,
-              mocoHeliumData.balloons.position.c.z,
+              mocoHeliumData.balloons.position.c[terminalType].x,
+              mocoHeliumData.balloons.position.c[terminalType].y,
+              mocoHeliumData.balloons.position.c[terminalType].z,
             )
           }
           registerRigidBody={registerRigidBody}
@@ -137,9 +141,9 @@ export default function MocoHelium() {
           name={'o2_helium_balloons'}
           position={
             new THREE.Vector3(
-              mocoHeliumData.balloons.position.o2.x,
-              mocoHeliumData.balloons.position.o2.y,
-              mocoHeliumData.balloons.position.o2.z,
+              mocoHeliumData.balloons.position.o2[terminalType].x,
+              mocoHeliumData.balloons.position.o2[terminalType].y,
+              mocoHeliumData.balloons.position.o2[terminalType].z,
             )
           }
           registerRigidBody={registerRigidBody}

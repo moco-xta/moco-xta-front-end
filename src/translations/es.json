@@ -558,5 +558,12 @@
       "DOCUMENTATION": "documentación",
       "MY_PLAYLIST": "mi lista de reproducción"
     }
+  },
+  "DISCLAMERS": {
+    "HOME": {
+      "IS_MOBILE": "¡Gracias por tu visita! La versión móvil está en desarrollo. Para una mejor experiencia, accede desde un ordenador o tablet. ¡Muy pronto estará lista!"
+    },
+    "RESOURCES": "¡Bienvenido/a a la página de Recursos! Estamos emocionados de compartir contigo herramientas, guías y materiales valiosos. El contenido se añadirá poco a poco, así que visítanos de nuevo para descubrir las novedades.",
+    "ABOUT": "Esta escena está aún en desarrollo. Los elementos se añadirán poco a poco, así que visítanos de nuevo para descubrir las novedades a medida que avanzamos."
   }
 }

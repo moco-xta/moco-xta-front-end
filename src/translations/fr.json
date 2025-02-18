@@ -558,5 +558,12 @@
       "DOCUMENTATION": "documentation",
       "MY_PLAYLIST": "ma playlist"
     }
+  },
+  "DISCLAMERS": {
+    "HOME": {
+      "IS_MOBILE": "Merci pour votre visite ! La version mobile est en cours de développement. Pour une meilleure expérience, consultez le site sur ordinateur ou tablette. À bientôt !"
+    },
+    "RESOURCES": "Bienvenue sur la page Ressources ! Nous sommes ravis de partager avec vous des outils, des guides et des matériels utiles. Le contenu sera ajouté progressivement, alors n’hésitez pas à revenir régulièrement pour découvrir les nouveautés.",
+    "ABOUT": ""
   }
 }
