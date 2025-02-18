@@ -8,4 +8,33 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  .photography_page_introduction {
+    display: flex;
+    flex-direction: column;
+  
+    .photography_page_introduction_title {
+      margin-bottom: $px_margin_M;
+    }
+  
+    .photography_page_introduction_text {
+      width: 80%;
+      max-width: 800px;
+      padding: $px_margin_L;
+      text-align: justify;
+      border-top: 1pt solid #ffffff33;
+      background: rgba(64, 64, 64, 0.3);
+      -webkit-backdrop-filter: blur(7px);
+      backdrop-filter: blur(7px);
+      border-radius: 0 0 15px 15px;
+  
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }

@@ -530,6 +530,10 @@
       "IN_PARIS": ""
     }
   },
+  "PHOTOGRAHY": {
+    "TITLE": "photographie",
+    "INTRODUCTION": "<p>La photographie a toujours été l’une de mes plus grandes passions. De l’énergie brute de la photographie de rue à l’intimité des portraits et à la narration des paysages urbains, je trouve une inspiration sans fin à capturer des moments et des scènes qui reflètent l’âme d’une ville. Paris, avec son charme intemporel et son énergie vibrante, continue de m’inspirer.</p><p>Au fil des années, j’ai eu le privilège d’exposer mon travail, et mes photographies ont été présentées dans des articles de journaux locaux. Cependant, ces dernières années, je me suis davantage concentré sur le développement, et la photographie est passée au second plan. Aujourd’hui, je suis ravi de renouer avec cette passion et de replonger dans l’art de la narration visuelle.</p><p>Cette page est encore en construction, mais elle sera bientôt remplie de mon travail, de mes récits et de nouveaux projets. Restez à l’écoute – l’objectif est sur le point de refaire surface !</p>"
+  },
   "LAYOUT": {
     "PLAYER_PAGE": {
       "INSTRUCTIONS": {
@@ -564,6 +568,6 @@
       "IS_MOBILE": "Merci pour votre visite ! La version mobile est en cours de développement. Pour une meilleure expérience, consultez le site sur ordinateur ou tablette. À bientôt !"
     },
     "RESOURCES": "Bienvenue sur la page Ressources ! Nous sommes ravis de partager avec vous des outils, des guides et des matériels utiles. Le contenu sera ajouté progressivement, alors n’hésitez pas à revenir régulièrement pour découvrir les nouveautés.",
-    "ABOUT": ""
+    "ABOUT": "Cette scène est encore en cours de développement. Les éléments seront ajoutés étape par étape, alors revenez régulièrement pour découvrir les nouveautés au fur et à mesure."
   }
 }
