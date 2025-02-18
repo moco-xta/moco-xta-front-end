@@ -25,7 +25,7 @@ export default function Router() {
     <div id='routes'>
       {routesData
         .filter((route) => route.hasOwnProperty('index'))
-        .filter((route) => !isMobile ? true : route.mobile ? true : false)
+        .filter((route) => (!isMobile ? true : route.mobile ? true : false))
         .sort((a, b) => a.index! - b.index!)
         .map((route) => {
           return (
