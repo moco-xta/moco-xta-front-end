@@ -732,6 +732,7 @@
   "DISCLAMERS": {
     "HOME": {
       "IS_MOBILE": "Thanks for visiting! The mobile version is currently in development. For the best experience, please view on desktop or tablet. Stay tuned!"
-    }
+    },
+    "RESOURCES": "Welcome to the Resources page! We’re excited to share valuable tools, guides, and materials with you. Content will be added gradually, so check back often as we expand this section."
   }
 }

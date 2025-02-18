@@ -38,30 +38,32 @@ export default function PageContent({ pageData }: TContent) {
   }, [currentSection, pageData.key])
 
   return (
-    <div
-      ref={pageContentRef}
-      id={`${pageData.key}_content`}
-      className='page_content'
-      data-lenis-prevent
-    >
-      {currentSection.key === 'introduction' && (
-        <PageIntroduction
-          key='section_introduction'
-          prefixKey={pageData.key}
-          translationPath={pageData.translationKey}
-        />
-      )}
-      {pageData.sections.map((sectionData) => (
-        <>
-          {currentSection.key === sectionData.key && (
-            <Section
-              key={`section_${sectionData.key}`}
-              translationPath={pageData.translationKey}
-              sectionData={sectionData}
-            />
-          )}
-        </>
-      ))}
-    </div>
+    <>
+      <div
+        ref={pageContentRef}
+        id={`${pageData.key}_content`}
+        className='page_content'
+        data-lenis-prevent
+      >
+        {currentSection.key === 'introduction' && (
+          <PageIntroduction
+            key='section_introduction'
+            prefixKey={pageData.key}
+            translationPath={pageData.translationKey}
+          />
+        )}
+        {pageData.sections.map((sectionData) => (
+          <>
+            {currentSection.key === sectionData.key && (
+              <Section
+                key={`section_${sectionData.key}`}
+                translationPath={pageData.translationKey}
+                sectionData={sectionData}
+              />
+            )}
+          </>
+        ))}
+      </div>
+    </>
   )
 }

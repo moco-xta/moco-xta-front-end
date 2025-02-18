@@ -1,15 +1,16 @@
 import React from 'react'
+import { isMobile } from 'react-device-detect'
 
 import Hero from './hero'
+import Disclamer from '../../disclamer'
 
 import './index.scss'
-import Disclamer from '../../disclamer'
 
 export default function HomePage() {
   return (
     <div id='home_page'>
       <Hero />
-      <Disclamer />
+      {isMobile && <Disclamer translationKey={'HOME.IS_MOBILE'} />}
     </div>
   )
 }
