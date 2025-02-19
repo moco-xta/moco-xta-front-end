@@ -8,13 +8,6 @@ export default function Map() {
   const [mapDiv, setMapDiv] = useState<HTMLElement | null>(null!)
   const [texture, setTexture] = useState<THREE.CanvasTexture>(null!)
 
-  function onMapLoad() {
-    setMapDiv(document.getElementById('google_map_container'))
-    if (mapDiv) {
-      // Convert the map's DOM element to a canvas texture
-    }
-  }
-
   useEffect(() => {
     if (mapDiv) {
       console.log('mapDiv', mapDiv)
@@ -33,6 +26,12 @@ export default function Map() {
   }, [texture])
 
   useEffect(() => {
+    function onMapLoad() {
+      setMapDiv(document.getElementById('google_map_container'))
+      if (mapDiv) {
+        // Convert the map's DOM element to a canvas texture
+      }
+    }
     onMapLoad()
     const geometry = new THREE.PlaneGeometry(25, 25)
     const material = new THREE.MeshBasicMaterial({ transparent: true, opacity: 0.5 })
@@ -40,7 +39,7 @@ export default function Map() {
     plane.position.y = -3.5
     plane.rotation.x = -Math.PI / 2
     scene.add(plane)
-  }, [onMapLoad, scene])
+  }, [mapDiv, scene])
 
   return null
 }

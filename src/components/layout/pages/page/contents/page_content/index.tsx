@@ -31,7 +31,7 @@ export default function PageContent({ pageData }: TContent) {
       currentSection.key !== 'introduction'
         ? `${window.innerHeight - (lastParagraph as unknown as HTMLElement).clientHeight + 55}px`
         : '50px'
-  }, [currentSection])
+  }, [currentSection, pageData.key])
 
   useEffect(() => {
     document.getElementById(`${pageData.key}_content`)!.scrollTo(0, 0)

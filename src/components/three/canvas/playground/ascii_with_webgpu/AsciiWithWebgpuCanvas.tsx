@@ -231,9 +231,10 @@ export function AsciiWithWebgpuCanvas() {
 
     window.addEventListener('resize', handleResize)
 
+    const container = containerRef.current
     return () => {
       window.removeEventListener('resize', handleResize)
-      containerRef.current?.removeChild(renderer.domElement)
+      container.removeChild(renderer.domElement)
       controls.dispose()
       cancelAnimationFrame(frameIdRef.current)
     }
