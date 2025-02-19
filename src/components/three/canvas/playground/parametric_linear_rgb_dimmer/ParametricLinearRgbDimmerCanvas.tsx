@@ -181,9 +181,10 @@ export function ParametricLinearRgbDimmerCanvas() {
 
     window.addEventListener('resize', handleResize)
 
+    const container = containerRef.current
     return () => {
       window.removeEventListener('resize', handleResize)
-      containerRef.current?.removeChild(renderer.domElement)
+      container.removeChild(renderer.domElement)
       controls.dispose()
       renderer.dispose()
       cancelAnimationFrame(frameIdRef.current)

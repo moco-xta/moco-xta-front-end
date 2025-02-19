@@ -86,7 +86,7 @@ export default function Content({ /* snapHeights, */ currentProject, currentComp
       <div
         ref={projectsTimelineContainerRef}
         id='projects_timeline_container'
-        style={{ height: `${projectsData.length * 1.5}00vh` }}
+        style={{ height: projectsData.length * 1.5 * window.innerHeight }}
       >
         <p style={{ opacity: 0 }}>Content</p>
       </div>

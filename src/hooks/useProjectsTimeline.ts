@@ -19,9 +19,8 @@ export default function useProjectsTimeline(
   // const keyDates = useMemo(() => getKeyDates([projectsData, companiesData, locationsData]), [projectsData, companiesData, locationsData]);
 
   // const [snapHeights, setSnapHeights] = useState<number[]>([])
-  const [container, setContainer] = useState<HTMLElement>(null!)
   const [y, setY] = useState<number>(0)
-  const [offsetHeight, setOffsetHeight] = useState<number>(0)
+  const [offsetHeight] = useState<number>(projectsData.length * 1.5 * window.innerHeight - window.innerHeight)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
     getDifferenceBetweenTwoDatesInDays(
@@ -46,15 +45,7 @@ export default function useProjectsTimeline(
   }) // TODO: Check if I still have the scrolling issue
 
   useEffect(() => {
-    if (document) setContainer(document.getElementById('projects_timeline_container')!)
-  }, [])
-
-  useEffect(() => {
-    if (container) setOffsetHeight(container.offsetHeight - document.documentElement.clientHeight)
-  }, [container])
-
-  useEffect(() => {
-    if (offsetHeight) setDeltaPerDay(offsetHeight / daysDifference)
+    setDeltaPerDay(offsetHeight / daysDifference)
   }, [offsetHeight, daysDifference])
 
   useEffect(() => {
