@@ -118,8 +118,7 @@ export default function BustComponent() {
     geometry.setAttribute('aDirection', direction)
     geometry.setAttribute('aPress', press)
 
-    const points = new THREE.Points(geometry, materialRef.current)
-    console.log('points', points)
+    // const points = new THREE.Points(geometry, materialRef.current)
     // scene.add(points)
   }, [bustGlb, scene])
 
