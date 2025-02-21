@@ -10,7 +10,7 @@ import type { TUniforms } from '@/types/shaders/types'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 import useGlbLoader from '@/hooks/three/useGlbLoader'
 
-import Bust from '@/components/three/models/sketchfab/Bust'
+import SorayaBust from '@/components/three/models/contact/SorayaBust'
 
 import vertexShader from '@/components/three/shaders/bust/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/bust/fragmentShader.glsl'
@@ -26,7 +26,7 @@ export type TUniformValue = {
 }
 
 const texturesUrls = [
-  texturesConstants.SKETCHFAB.BUST,
+  texturesConstants.CONTACT.SORAYA_BUST,
   texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK,
 ]
 
@@ -40,7 +40,7 @@ export default function BustComponent() {
 
   // MODEL
 
-  const bustGlb = useGlbLoader(glbConstants.SKETCHFAB.BUST) as GLTF & ObjectMap
+  const bustGlb = useGlbLoader(glbConstants.CONTACT.SORAYA_BUST) as GLTF & ObjectMap
 
   // TEXTURES
 
@@ -118,8 +118,8 @@ export default function BustComponent() {
     geometry.setAttribute('aDirection', direction)
     geometry.setAttribute('aPress', press)
 
-    // const points = new THREE.Points(geometry, materialRef.current)
-    // scene.add(points)
+    const points = new THREE.Points(geometry, materialRef.current)
+    scene.add(points)
   }, [bustGlb, scene])
 
   // TIMELINE
@@ -252,7 +252,7 @@ export default function BustComponent() {
     const handleMouseDown = contextSafe(() => {
       gsap.to(pointsAnthropyRef.current, {
         duration: 1,
-        value: 5,
+        value: 0,
         ease: 'power1.out',
         delay: 0.5,
       })
@@ -262,13 +262,13 @@ export default function BustComponent() {
         ease: 'power1.out',
       }) */
       gsap.to(pointsRgbShiftRef.current, {
-        duration: 0.5,
+        duration: 1,
         value: 1,
         ease: 'power1.out',
       })
       gsap.to(pointsSizeRef.current, {
         duration: 0.5,
-        value: 1,
+        value: 3,
         ease: 'power1.out',
       })
     })
@@ -317,10 +317,10 @@ export default function BustComponent() {
   })
 
   return (
-    <Bust
+    <SorayaBust
       ref={bustRef}
       visible={false}
-      position={new THREE.Vector3(0, 0.5, 0)}
+      position={new THREE.Vector3(0, -0.25, 0)}
       scale={2.5}
     />
   )

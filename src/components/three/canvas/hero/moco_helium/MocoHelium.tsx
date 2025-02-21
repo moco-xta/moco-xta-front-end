@@ -67,7 +67,7 @@ function MouseImpulseHandler({ rigidBodies }: TMouseImpulseHandler) {
       z: randomWindDirection[2] * windStrength,
     }
 
-    rigidBodies.current.forEach((rigidBody/* , name */) => {
+    rigidBodies.current.forEach((rigidBody /* , name */) => {
       rigidBody.applyImpulse(force, true)
     })
   })

@@ -27,7 +27,7 @@ export function isValidDate(date: Date) {
 export function getKeyDates(data: [TProjectData[], TCompanyData[], TLocationData[]]): number[] {
   const dates: string[] = []
   data.forEach((dataArray) => {
-    dataArray.forEach((item/* , index */) => {
+    dataArray.forEach((item /* , index */) => {
       dates.push(item.dates.from)
     })
   })
