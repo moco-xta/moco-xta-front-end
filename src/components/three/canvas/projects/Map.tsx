@@ -6,24 +6,18 @@ export default function Map() {
   const { scene } = useThree()
 
   const [mapDiv, setMapDiv] = useState<HTMLElement | null>(null!)
-  const [texture, setTexture] = useState<THREE.CanvasTexture>(null!)
+  // const [texture, setTexture] = useState<THREE.CanvasTexture>(null!)
 
   useEffect(() => {
     if (mapDiv) {
-      console.log('mapDiv', mapDiv)
       const canvas = mapDiv.querySelector('iframe') // Google Maps uses a canvas internally
-      console.log('canvas', canvas)
       if (canvas) {
         const mapTexture = new THREE.CanvasTexture(canvas)
         mapTexture.needsUpdate = true
-        setTexture(mapTexture)
+        // setTexture(mapTexture)
       }
     }
   }, [mapDiv])
-
-  useEffect(() => {
-    console.log('texture', texture)
-  }, [texture])
 
   useEffect(() => {
     function onMapLoad() {

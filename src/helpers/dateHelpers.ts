@@ -27,15 +27,10 @@ export function isValidDate(date: Date) {
 export function getKeyDates(data: [TProjectData[], TCompanyData[], TLocationData[]]): number[] {
   const dates: string[] = []
   data.forEach((dataArray) => {
-    dataArray.forEach((item, index) => {
-      console.log(index)
+    dataArray.forEach((item /* , index */) => {
       dates.push(item.dates.from)
     })
   })
-  console.log(dates)
-  console.log(removeDuplicateDates(dates))
-  console.log(sortDates(removeDuplicateDates(dates)))
-  console.log(getDaysBetweenDates(sortDates(removeDuplicateDates(dates))))
   return getDaysBetweenDates(sortDates(removeDuplicateDates(dates)))
 }
 
@@ -78,6 +73,5 @@ export function getSnapHeights(keyDates: number[], deltaPerDay: number): number[
   keyDates.forEach((keyDate) => {
     snapHeights.push(keyDate * deltaPerDay)
   })
-  console.log('snapHeights', snapHeights)
   return snapHeights
 }

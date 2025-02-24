@@ -142,8 +142,8 @@ export function ParametricLinearRgbDimmerCanvas() {
         gltf.cameras
         gltf.asset
       },
-      function (xhr) {
-        console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+      function (/* xhr */) {
+        // console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
       },
       function (error) {
         console.error(error)

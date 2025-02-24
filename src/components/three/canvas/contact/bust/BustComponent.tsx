@@ -10,7 +10,7 @@ import type { TUniforms } from '@/types/shaders/types'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 import useGlbLoader from '@/hooks/three/useGlbLoader'
 
-import Bust from '@/components/three/models/sketchfab/Bust'
+import SorayaBust from '@/components/three/models/contact/SorayaBust'
 
 import vertexShader from '@/components/three/shaders/bust/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/bust/fragmentShader.glsl'
@@ -18,15 +18,12 @@ import fragmentShader from '@/components/three/shaders/bust/fragmentShader.glsl'
 import glbConstants from '@/constants/assets/glbConstants.json'
 import texturesConstants from '@/constants/assets/texturesConstants.json'
 
-import { showHide } from '@/animation/index'
-import { getBustAnimationsData } from '@/data/contact/three/bust/bustData'
-
 export type TUniformValue = {
   value: number
 }
 
 const texturesUrls = [
-  texturesConstants.SKETCHFAB.BUST,
+  texturesConstants.CONTACT.SORAYA_BUST,
   texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK,
 ]
 
@@ -40,7 +37,7 @@ export default function BustComponent() {
 
   // MODEL
 
-  const bustGlb = useGlbLoader(glbConstants.SKETCHFAB.BUST) as GLTF & ObjectMap
+  const bustGlb = useGlbLoader(glbConstants.CONTACT.SORAYA_BUST) as GLTF & ObjectMap
 
   // TEXTURES
 
@@ -49,7 +46,7 @@ export default function BustComponent() {
 
   // COMPONENT
 
-  const bustRef = useRef<THREE.Group>(null!)
+  const bustRef = useRef<THREE.Mesh>(null!)
 
   // MESH
 
@@ -71,6 +68,7 @@ export default function BustComponent() {
     anthropy: { type: 'f', value: pointsAnthropyRef.current.value },
     uTexture: { type: 't', value: textures[0] },
     mask: { type: 't', value: textures[1] },
+    // shadowMatrix: { type: 't', value: textures[1] },
   })
   const materialRef = useRef<THREE.ShaderMaterial>(
     new THREE.ShaderMaterial({
@@ -79,8 +77,8 @@ export default function BustComponent() {
       fragmentShader: fragmentShader,
       transparent: true,
       side: THREE.DoubleSide,
-      depthTest: false,
-      depthWrite: false,
+      depthTest: true, // Ensure depth testing is enabled
+      depthWrite: true, // Ensure depth writing is enabled
     }),
   )
 
@@ -112,6 +110,10 @@ export default function BustComponent() {
     }
 
     geometry.setAttribute('position', positions)
+    geometry.setAttribute(
+      'uv',
+      new THREE.BufferAttribute(meshRef.current.geometry.attributes.uv.array as Float32Array, 2),
+    )
     geometry.setAttribute('aCoordinates', coordinates)
     geometry.setAttribute('aSpeed', speed)
     geometry.setAttribute('aOffset', offset)
@@ -119,17 +121,16 @@ export default function BustComponent() {
     geometry.setAttribute('aPress', press)
 
     const points = new THREE.Points(geometry, materialRef.current)
-    console.log('points', points)
-    // scene.add(points)
+    scene.add(points)
   }, [bustGlb, scene])
 
   // TIMELINE
 
   useGSAP(
     () => {
-      const bust: THREE.Mesh = bustRef.current.children[0] as THREE.Mesh
+      // const bust: THREE.Mesh = bustRef.current.children[0] as THREE.Mesh
       timeline
-        .to(
+        /* .to(
           bust.material,
           {
             keyframes: {
@@ -144,7 +145,7 @@ export default function BustComponent() {
             duration: 2,
           },
           'contact',
-        )
+        ) */
         .to(
           pointsAnthropyRef.current,
           {
@@ -242,18 +243,18 @@ export default function BustComponent() {
   // ONCLICK
 
   useGSAP((_, contextSafe) => {
-    showHide({
+    /* showHide({
       timeline: timeline,
       ref: bustRef.current,
       animationsData: getBustAnimationsData(),
-    })
+    }) */
 
     if (!contextSafe) return
 
     const handleMouseDown = contextSafe(() => {
       gsap.to(pointsAnthropyRef.current, {
         duration: 1,
-        value: 5,
+        value: 0,
         ease: 'power1.out',
         delay: 0.5,
       })
@@ -263,13 +264,13 @@ export default function BustComponent() {
         ease: 'power1.out',
       }) */
       gsap.to(pointsRgbShiftRef.current, {
-        duration: 0.5,
+        duration: 1,
         value: 1,
         ease: 'power1.out',
       })
       gsap.to(pointsSizeRef.current, {
         duration: 0.5,
-        value: 1,
+        value: 3,
         ease: 'power1.out',
       })
     })
@@ -315,14 +316,15 @@ export default function BustComponent() {
     uniformsRef.current.rgbShift.value = pointsRgbShiftRef.current.value
     uniformsRef.current.move.value = pointsMoveRef.current.value
     uniformsRef.current.anthropy.value = pointsAnthropyRef.current.value
+    // uniformsRef.current.shadowMatrix.value = light.shadow.matrix
   })
 
   return (
-    <Bust
+    <SorayaBust
       ref={bustRef}
       visible={false}
-      position={new THREE.Vector3(0, 0.5, 0)}
-      scale={2.5}
+      // position={new THREE.Vector3(0, -0.25, 0)}
+      // scale={2.5}
     />
   )
 

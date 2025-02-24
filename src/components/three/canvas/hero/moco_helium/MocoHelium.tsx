@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useLayoutEffect, useRef, useState } from 'react'
+import React, { MutableRefObject, /* useLayoutEffect, */ useRef, useState } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 
@@ -38,11 +38,10 @@ function MouseImpulseHandler({ rigidBodies }: TMouseImpulseHandler) {
       // Check if the object has a name corresponding to a RigidBody
       if (object.name && rigidBodies.current.has(object.name)) {
         const rigidBody = rigidBodies.current.get(object.name)
-        console.log('rigidBody', rigidBody)
+        // console.log('rigidBody', rigidBody)
 
         // Apply impulse when the mouse moves
         if (rigidBody && !impulseApplied) {
-          console.log('test')
           const impulseStrength = 0.5 // Adjust the strength of the impulse
           const impulseDirection = {
             x: pointer.x * impulseStrength,
@@ -68,11 +67,7 @@ function MouseImpulseHandler({ rigidBodies }: TMouseImpulseHandler) {
       z: randomWindDirection[2] * windStrength,
     }
 
-    rigidBodies.current.forEach((rigidBody, name) => {
-      console.log(`RigidBody Name: ${name}`)
-      console.log('RigidBody Instance:', rigidBody)
-
-      // Example: Apply a small upward force to all RigidBodies
+    rigidBodies.current.forEach((rigidBody /* , name */) => {
       rigidBody.applyImpulse(force, true)
     })
   })
@@ -90,10 +85,6 @@ export default function MocoHelium({ terminalType }: TMocoHelium) {
   const registerRigidBody = (name: string, rigidBody: RapierRigidBody) => {
     rigidBodies.current.set(name, rigidBody)
   }
-
-  useLayoutEffect(() => {
-    console.log('rigidBodies I', rigidBodies.current)
-  }, [rigidBodies])
 
   return (
     <>

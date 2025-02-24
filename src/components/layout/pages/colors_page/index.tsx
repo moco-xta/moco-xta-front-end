@@ -63,8 +63,8 @@ export default function ColorPage() {
     validationSchema: colorValidationSchema,
     validateOnChange: true,
     validateOnBlur: true,
-    onSubmit: (values) => {
-      console.log('Submitted values:', values)
+    onSubmit: (/* values */) => {
+      // console.log('Submitted values:', values)
     },
   })
 
