@@ -81,12 +81,7 @@ export default function BustComponent() {
   const linesRef = useRef<Line[]>([])
   const tempSparklesArrayColorsRef: number[] = []
 
-  const modelsUrls = useMemo(
-    () => [
-      glbConstants.MOCO_HELIUM.O_HELIUM_BALLOON,
-    ],
-    [],
-  )
+  const modelsUrls = useMemo(() => [glbConstants.MOCO_HELIUM.O_HELIUM_BALLOON], [])
   const linesColors = useMemo(
     () => [
       new THREE.Color(0xfaad80).multiplyScalar(0.5),
@@ -140,7 +135,6 @@ export default function BustComponent() {
     window.sparkles = sparkles.current
     // console.log('window', window)
     // pointsRef.current.position.set(-2, 0, 0)
-
 
     modelsUrls.forEach((url) => {
       loader.current.load(url, function (gltf) {

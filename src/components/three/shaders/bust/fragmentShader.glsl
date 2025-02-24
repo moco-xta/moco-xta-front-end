@@ -2,6 +2,7 @@ precision mediump float;
 
 varying vec3 vPos;
 varying vec2 vCoordinates;
+varying vec2 vUv;
 
 uniform float opacity;
 uniform float rgbShift;
@@ -20,11 +21,12 @@ vec4 setRgbShift(sampler2D uTexture, vec2 vUv, float rgbShift) {
 void main() {
 	vec4 maskTexture = texture2D(mask, gl_PointCoord);
 	vec2 newUv = vec2(vCoordinates.x, vCoordinates.y);
-	vec4 color = setRgbShift(uTexture, newUv, rgbShift);
-	// vec4 image = texture2D(uTexture, newUv);
+	// vec4 color = setRgbShift(uTexture, newUv, rgbShift);
+	vec4 image = texture2D(uTexture, vUv);
 
-	// gl_FragColor = image;
-	gl_FragColor = vec4(color);
+	gl_FragColor = image;
+	// gl_FragColor = vec4(vCoordinates, 1.0, 1.0);
+	// gl_FragColor = vec4(color);
 	float alpha = 1.0 - clamp(0.0, 1.0, abs(vPos.z / 900.0));
-	gl_FragColor.a *= maskTexture.r * alpha * opacity;
+	gl_FragColor.a *= maskTexture.r * alpha * opacity * 0.5;
 }

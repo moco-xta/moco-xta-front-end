@@ -9,6 +9,7 @@
     }
   },
   "BACKGROUNDS": {
+    "ROBUSTE": "/img/backgrounds/robuste.jpg",
     "VERBAL_SHOOTA": "/img/backgrounds/verbal_shoota.jpg"
   },
   "GIF": {
