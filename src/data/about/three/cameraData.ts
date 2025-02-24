@@ -14,6 +14,6 @@ export const cameraDefaultValues: TCameraDefaultValues = {
     rotation: getDegreeEuler({ x: -3, y: 43, z: 0 }),
     fov: 50,
     near: 0.01,
-    far: 100,
+    far: 500,
   },
 }

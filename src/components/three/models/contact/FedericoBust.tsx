@@ -10,8 +10,15 @@ const FedericoBust = forwardRef<THREE.Mesh, JSX.IntrinsicElements['mesh']>((prop
   const { nodes, materials } = useGLTF(glbConstants.CONTACT.FEDERICO_BUST) as GLTFResult
 
   return (
-      <mesh
-      ref={ref} geometry={nodes.Mesh_0002.geometry} material={materials['Material_0.002']} receiveShadow castShadow {...props} dispose={null} />
+    <mesh
+      ref={ref}
+      geometry={nodes.Mesh_0002.geometry}
+      material={materials['Material_0.002']}
+      receiveShadow
+      castShadow
+      {...props}
+      dispose={null}
+    />
   )
 })
 
