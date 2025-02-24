@@ -244,6 +244,7 @@ float lerp(float a, float b, float t) {
 
 void main() {
   vUv = vec2(uv.x, 1.0 - uv.y); 
+  // vUv = uv; 
 	vec3 pos = position;
   float turbulenceStrength = 0.1 * anthropy; // Adjust strength of turbulence
   pos += turbulenceStrength * vec3(
@@ -294,7 +295,7 @@ void main() {
 
 
 	vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
-	gl_PointSize = 20.0 * (1.0 / -mvPosition.z);
+	gl_PointSize = 23.0 * (1.0 / -mvPosition.z);
 	// gl_PointSize = 5.0;
 	gl_Position = projectionMatrix * mvPosition;
 	vCoordinates = aCoordinates.xy;

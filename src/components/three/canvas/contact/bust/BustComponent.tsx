@@ -10,7 +10,7 @@ import type { TUniforms } from '@/types/shaders/types'
 import { useGSAPTimelineContext } from '@/hooks/animation/useGSAPTimelineContext'
 import useGlbLoader from '@/hooks/three/useGlbLoader'
 
-import SorayaBust from '@/components/three/models/contact/SorayaBust'
+import FedericoBust from '@/components/three/models/contact/FedericoBust'
 
 import vertexShader from '@/components/three/shaders/bust/vertexShader.glsl'
 import fragmentShader from '@/components/three/shaders/bust/fragmentShader.glsl'
@@ -23,7 +23,7 @@ export type TUniformValue = {
 }
 
 const texturesUrls = [
-  texturesConstants.CONTACT.SORAYA_BUST,
+  texturesConstants.CONTACT.FEDERICO_BUST,
   texturesConstants.SHADERS.GRADIENT_CIRCLE_MASK,
 ]
 
@@ -37,7 +37,7 @@ export default function BustComponent() {
 
   // MODEL
 
-  const bustGlb = useGlbLoader(glbConstants.CONTACT.SORAYA_BUST) as GLTF & ObjectMap
+  const bustGlb = useGlbLoader(glbConstants.CONTACT.FEDERICO_BUST) as GLTF & ObjectMap
 
   // TEXTURES
 
@@ -320,7 +320,7 @@ export default function BustComponent() {
   })
 
   return (
-    <SorayaBust
+    <FedericoBust
       ref={bustRef}
       visible={false}
       // position={new THREE.Vector3(0, -0.25, 0)}
