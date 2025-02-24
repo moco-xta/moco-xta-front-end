@@ -10,9 +10,9 @@ export default function LogoAthleticoNacionalComponent() {
   return (
     <LogoAthleticoNacional
       ref={logoAthleticoNacionalComponentRef}
-      position={new THREE.Vector3(0.65, -0.7, 0.675)}
+      position={new THREE.Vector3(1, -1.1, 1.25)}
       rotation={getDegreeEuler({ x: -15, y: 15 })}
-      scale={0.3}
+      scale={0.4}
     />
   )
 }

@@ -1,4 +1,4 @@
 export const physicsGroundDefaultValues = {
-  width: 100,
-  depth: 100,
+  width: 1000,
+  depth: 1000,
 }

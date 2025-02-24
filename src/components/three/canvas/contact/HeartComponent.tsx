@@ -9,8 +9,8 @@ export default function HeartComponent() {
   return (
     <Heart
       ref={heartComponentRef}
-      position={new THREE.Vector3(0.5, -1, 0.25)}
-      scale={0.33}
+      position={new THREE.Vector3(0.75, -1.25, 0.5)}
+      scale={0.5}
     />
   )
 }
