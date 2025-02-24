@@ -57,7 +57,7 @@ export default function BustComponent() {
   const uniformsRef = useRef<TUniforms>({
     pointTexture: {
       type: 't',
-      value: new THREE.TextureLoader().load(texturesConstants.CONTACT.SORAYA_BUST),
+      value: new THREE.TextureLoader().load(texturesConstants.CONTACT.FEDERICO_BUST),
     },
   })
   const sparklesMaterial = useRef<THREE.ShaderMaterial>(

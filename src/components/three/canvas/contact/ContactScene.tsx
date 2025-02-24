@@ -1,7 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 
-// import BustComponent from './bust/BustComponent'
+import BustComponent from './bust/BustComponent'
 import HeartComponent from './HeartComponent'
 import LogoGithubComponent from './socials_logos/LogoGithubComponent'
 import LogoInstagramComponent from './socials_logos/LogoInstagramComponent'
@@ -14,7 +14,7 @@ import LogoAthleticoNacionalComponent from './LogoAthleticoNacionalComponent'
 export default function ContactScene() {
   return (
     <group>
-      {/* <BustComponent /> */}
+      <BustComponent />
       <HeartComponent />
       <LogoAthleticoNacionalComponent />
       <group

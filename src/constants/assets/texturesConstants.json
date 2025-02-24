@@ -38,7 +38,7 @@
       "/img/textures/contact/iphone_keyboard_hash.jpg",
       "/img/textures/contact/iphone_keyboard_star.jpg"
     ],
-    "SORAYA_BUST": "/img/textures/contact/soraya_bust.jpg"
+    "FEDERICO_BUST": "/img/textures/contact/federico_bust.jpg"
   },
   "SHADERS": {
     "DOT_TEXTURE": "/img/textures/shaders/dot_texture.png",
