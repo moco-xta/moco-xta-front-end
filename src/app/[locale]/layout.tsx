@@ -27,6 +27,9 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+
+      </head>
       <ReactLenis
         root
         options={{
@@ -46,10 +49,9 @@ export default function LocaleLayout({
               {children}
             </NextIntlClientProvider>
           </ReduxProvider>
-          <GoogleAnalytics gaId="G-TN9SNWP2HB" />
         </body>
       </ReactLenis>
-      
+      <GoogleAnalytics gaId="G-TN9SNWP2HB" />
     </html>
   )
 }
