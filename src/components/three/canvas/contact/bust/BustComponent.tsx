@@ -54,8 +54,8 @@ export default function BustComponent() {
 
   // POINTS
 
-  const pointsSizeRef = useRef<TUniformValue>({ value: 0 })
-  const pointsOpacityRef = useRef<TUniformValue>({ value: 0 })
+  const pointsSizeRef = useRef<TUniformValue>({ value: 1 })
+  const pointsOpacityRef = useRef<TUniformValue>({ value: 1 })
   const pointsRgbShiftRef = useRef<TUniformValue>({ value: 1 })
   const pointsMoveRef = useRef<TUniformValue>({ value: 1 })
   const pointsAnthropyRef = useRef<TUniformValue>({ value: 1 })
@@ -146,7 +146,7 @@ export default function BustComponent() {
           },
           'contact',
         ) */
-        .to(
+        /* .to(
           pointsAnthropyRef.current,
           {
             keyframes: {
@@ -176,9 +176,6 @@ export default function BustComponent() {
               '90%': {
                 value: 1,
               },
-              /* '100%': {
-                value: 0,
-              }, */
               easeEach: 'power1.inOut',
             },
             duration: 5,
@@ -195,9 +192,6 @@ export default function BustComponent() {
               '40%': {
                 value: 1,
               },
-              /* '100%': {
-                value: 0,
-              }, */
               easeEach: 'power1.out',
             },
             duration: 5,
@@ -235,7 +229,7 @@ export default function BustComponent() {
             duration: 5,
           },
           'contact',
-        )
+        ) */
     },
     { scope: materialRef },
   )
