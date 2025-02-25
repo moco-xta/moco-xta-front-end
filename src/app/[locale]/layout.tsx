@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { ReactLenis } from 'lenis/react'
 
@@ -45,8 +46,10 @@ export default function LocaleLayout({
               {children}
             </NextIntlClientProvider>
           </ReduxProvider>
+          <GoogleAnalytics gaId="G-TN9SNWP2HB" />
         </body>
       </ReactLenis>
+      
     </html>
   )
 }

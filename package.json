@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@next/third-parties": "^15.1.7",
     "@react-google-maps/api": "^2.20.5",
     "@react-three/drei": "^9.120.6",
     "@react-three/fiber": "^8.17.12",
