@@ -30,7 +30,7 @@ export default function ResourcesCanvas() {
           <ResourcesLogos />
         </Physics>
       </Suspense>
-      <PostProcessing />
+      {/* <PostProcessing /> */}
     </Canvas>
   )
 }

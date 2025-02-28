@@ -130,7 +130,7 @@ export default function BustComponent() {
     () => {
       // const bust: THREE.Mesh = bustRef.current.children[0] as THREE.Mesh
       timeline
-        /* .to(
+      /* .to(
           bust.material,
           {
             keyframes: {
@@ -146,7 +146,7 @@ export default function BustComponent() {
           },
           'contact',
         ) */
-        /* .to(
+      /* .to(
           pointsAnthropyRef.current,
           {
             keyframes: {

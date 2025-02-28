@@ -24,13 +24,11 @@ export default function LocaleLayout({
   }
 }>) {
   const translations = useMessages()
-  // const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_KEY
+  const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_KEY
 
   return (
     <html lang={locale}>
-      <head>
-
-      </head>
+      <head></head>
       <ReactLenis
         root
         options={{
@@ -52,7 +50,7 @@ export default function LocaleLayout({
           </ReduxProvider>
         </body>
       </ReactLenis>
-      <GoogleAnalytics gaId="G-TN9SNWP2HB" />
+      <GoogleAnalytics gaId={gaId!} />
     </html>
   )
 }

@@ -134,6 +134,11 @@ export type TResourcesLogo = {
   componentName: string
 }
 
+export type TLogo = THREE.Group & {
+  metalness?: number
+  roughness?: number
+}
+
 // LABORATORY
 
 export type TWallClockComponent = GroupProps & {

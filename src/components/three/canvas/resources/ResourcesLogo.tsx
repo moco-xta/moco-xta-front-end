@@ -44,7 +44,11 @@ export const ResourcesLogo = ({ pathToModel, componentName }: TResourcesLogo) =>
           args={[1]}
           scale={[1, 1, 0.5]}
         />
-        <Logo ref={logoRef} />
+        <Logo
+          ref={logoRef}
+          roughness={0.25}
+          metalness={0.5}
+        />
       </RigidBody>
     </Suspense>
   )
