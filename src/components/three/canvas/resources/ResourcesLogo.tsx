@@ -39,6 +39,7 @@ export const ResourcesLogo = ({ pathToModel, componentName }: TResourcesLogo) =>
         angularDamping={0.15}
         friction={0.2}
         position={[r(20), r(20) - 25, r(20) - 10]}
+        // colliders='hull'
       >
         <BallCollider
           args={[1]}
@@ -46,8 +47,8 @@ export const ResourcesLogo = ({ pathToModel, componentName }: TResourcesLogo) =>
         />
         <Logo
           ref={logoRef}
-          roughness={0.25}
-          metalness={0.5}
+          /* roughness={0.25}
+          metalness={0.5} */
         />
       </RigidBody>
     </Suspense>

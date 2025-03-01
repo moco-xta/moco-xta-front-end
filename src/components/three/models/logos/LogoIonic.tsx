@@ -6,6 +6,7 @@ import type { TLogo } from '@/types/components/three/types'
 import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import { getSkinMaterial } from '../../materials/resources/resourcesMaterials'
 
 const LogoIonic = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...rest }, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_IONIC) as GLTFResult
@@ -26,7 +27,7 @@ const LogoIonic = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...res
     >
       <mesh
         geometry={nodes.LogoIonic.geometry}
-        material={materials['logo_ionic_#387fff']}
+        material={getSkinMaterial('#ffffff')}
         castShadow
         receiveShadow
       />

@@ -1,58 +1,60 @@
 export const resourcesLogosData = {
   lazy: {
     pathToModel: 'logos/',
-    modelsMultiplier: 2,
+    modelsMultiplier: 1,
     models: [
       'LogoAngular',
       'LogoAuth0',
-      'LogoAws',
+      /* 'LogoAws', */
       'LogoAzure',
-      'LogoBabylonjs',
+      /* 'LogoBabylonjs', */
       'LogoBlender',
-      'LogoChatgpt',
+      /* 'LogoChatgpt',
       'LogoCopilot',
       'LogoCPlusPlus',
-      'LogoCss',
+      'LogoCss', */
       'LogoDeepseek',
       'LogoDocker',
-      'LogoFigma',
-      'LogoFormik',
-      'LogoGit',
-      'LogoGithub',
+      'LogoFigmaUnicolor',
+      /* 'LogoFormik', */
+      /* 'LogoGit', */
+      /* 'LogoGithub', */
       'LogoGitlab',
-      'LogoGoogleAnalytics',
-      'LogoGoogleMaps',
-      'LogoGraphql',
-      'LogoGsap',
-      'LogoHostinger',
-      'LogoHtml',
-      'LogoIllustrator',
+      /* 'LogoGoogleAnalytics', */
+      /* 'LogoGoogleMaps', */ // ***
+      /* 'LogoGraphql', */
+      /* 'LogoGsap', */ // ***
+      /* 'LogoHostinger', */
+      /* 'LogoHtml', */
+      /* 'LogoIllustrator', */
       'LogoIonic',
-      'LogoJava',
-      'LogoJavascript',
-      'LogoJira',
-      'LogoMui',
-      'LogoMysql',
-      'LogoNextIntl',
-      'LogoNextjs',
-      'LogoNginx',
-      'LogoNpm',
-      'LogoPhotoshop',
-      'LogoPostgresql',
-      'LogoPostman',
+      /* 'LogoJava', */
+      /* 'LogoJavascript', */
+      /* 'LogoJira', */
+      'LogoLightning',
+      /* 'LogoMui', */
+      /* 'LogoMysql', */
+      /* 'LogoNextIntl', */
+      /* 'LogoNextjs', */ // ***
+      /* 'LogoNginx', */
+      /* 'LogoNpm', */
+      /* 'LogoPhotoshop', */
+      /* 'LogoPostgresql', */ // ***
+      /* 'LogoPostman', */
       'LogoPython',
-      'LogoReact',
-      'LogoReactThreeDrei',
-      'LogoRedux',
-      'LogoSass',
-      'LogoSpring',
-      'LogoSpringSecurity',
-      'LogoSubstancePainter',
-      'LogoTailwind',
-      'LogoTypescript',
-      'LogoWebgl',
-      'LogoWebgpu',
-      'LogoYarn',
+      /* 'LogoReact', */ // ***
+      /* 'LogoReactThreeDrei', */
+      /* 'LogoReactThreeDreiUnicolor', */
+      /* 'LogoRedux', */ // ***
+      /* 'LogoSass', */ // ***
+      /* 'LogoSpring', */ // ***
+      /* 'LogoSpringSecurity', */
+      /* 'LogoSubstancePainter', */ // ***
+      /* 'LogoTailwind', */ // ***
+      /* 'LogoTypescript', */
+      /* 'LogoWebgl', */
+      'LogoWebgpuUnicolor',
+      /* 'LogoYarn', */ // ***
     ],
   },
 }

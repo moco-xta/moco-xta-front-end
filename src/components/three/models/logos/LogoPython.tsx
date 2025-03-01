@@ -6,6 +6,7 @@ import type { TLogo } from '@/types/components/three/types'
 import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+import { getSkinMaterial } from '../../materials/resources/resourcesMaterials'
 
 const LogoPython = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...rest }, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_PYTHON) as GLTFResult
@@ -26,11 +27,15 @@ const LogoPython = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...re
     >
       <mesh
         geometry={nodes.LogoPython_1.geometry}
-        material={materials['logo_python_#fdd94b']}
+        material={getSkinMaterial('#000000')}
+        receiveShadow
+        castShadow
       />
       <mesh
         geometry={nodes.LogoPython_2.geometry}
-        material={materials['logo_python_#3771a1']}
+        material={getSkinMaterial('#000000')}
+        receiveShadow
+        castShadow
       />
     </group>
   )

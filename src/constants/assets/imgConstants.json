@@ -20,6 +20,8 @@
     "HERO_ENVIRONMENT": "/img/hdr/peppermint_powerplant_2_1k.hdr"
   },
   "EXR": {
-    "STUDIO_001": "/img/exr/studio_small_09_4k.exr"
+    "STUDIO_03": "/img/exr/studio_small_03_4k.exr",
+    "STUDIO_04": "/img/exr/studio_small_04_4k.exr",
+    "STUDIO_09": "/img/exr/studio_small_09_4k.exr"
   }
 }
