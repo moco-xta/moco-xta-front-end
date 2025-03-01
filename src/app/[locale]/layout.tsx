@@ -5,8 +5,6 @@ import { ReactLenis } from 'lenis/react'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
-import Menu from '@/components/layout/menu'
-
 import '@/styles/globals.scss'
 
 export const metadata: Metadata = {
@@ -44,7 +42,6 @@ export default function LocaleLayout({
               // locale={locale}
               messages={translations}
             >
-              <Menu />
               {children}
             </NextIntlClientProvider>
           </ReduxProvider>

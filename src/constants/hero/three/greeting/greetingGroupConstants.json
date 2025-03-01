@@ -1,8 +1,0 @@
-{
-  "label": "greeting",
-  "duration": 6,
-  "defaultValues": {
-    "name": "greeting_group",
-    "visible": true
-  }
-}

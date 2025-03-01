@@ -4,12 +4,12 @@ import React from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import { HomePage } from '@/components/layout/pages'
+import Hero from '@/components/layout/slices/hero'
 
 import './index.scss'
 
 gsap.registerPlugin(useGSAP)
 
 export default function Page() {
-  return <HomePage />
+  return <Hero />
 }
