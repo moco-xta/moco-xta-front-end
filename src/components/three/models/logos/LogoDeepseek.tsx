@@ -7,8 +7,6 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-import { getGlossyMaterial } from '../../materials/resources/resourcesMaterials'
-
 const LogoDeepseek = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...rest }, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_DEEPSEEK) as GLTFResult
 
@@ -28,8 +26,7 @@ const LogoDeepseek = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...
     >
       <mesh
         geometry={nodes.LogoDeepseek.geometry}
-        // material={materials['logo_deepseek_#4C6BFEFF']}
-        material={getGlossyMaterial('#ffffff')}
+        material={materials['logo_deepseek_#4C6BFEFF']}
         castShadow
         receiveShadow
       />

@@ -11,8 +11,8 @@ const LogoAbwerkt = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...r
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_ABWERKT) as GLTFResult
 
   ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
-    // materials[key].roughness = roughness ?? 1
-    // materials[key].side = THREE.DoubleSide
+    materials[key].roughness = roughness ?? 1
+    materials[key].side = THREE.DoubleSide
   })
 
   return (

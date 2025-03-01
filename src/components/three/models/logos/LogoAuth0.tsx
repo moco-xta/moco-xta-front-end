@@ -7,14 +7,12 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-import { oilMaterial } from '../../materials/resources/resourcesMaterials'
-
 const LogoAuth0 = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...rest }, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_AUTH0) as GLTFResult
 
   ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
-    // materials[key].roughness = roughness ?? 1
-    // materials[key].side = THREE.DoubleSide
+    materials[key].roughness = roughness ?? 1
+    materials[key].side = THREE.DoubleSide
   })
 
   return (
@@ -25,15 +23,13 @@ const LogoAuth0 = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...res
     >
       <mesh
         geometry={nodes.LogoAuth0_1.geometry}
-        // material={materials['logo_auth0_#EB5424FF']}
-        material={oilMaterial}
+        material={materials['logo_auth0_#EB5424FF']}
         castShadow
         receiveShadow
       />
       <mesh
         geometry={nodes.LogoAuth0_2.geometry}
-        // material={materials['logo_auth0_#fff']}
-        material={oilMaterial}
+        material={materials['logo_auth0_#fff']}
         castShadow
         receiveShadow
       />

@@ -7,14 +7,12 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-import { getMatteMaterial } from '../../materials/resources/resourcesMaterials'
-
 const LogoGitlab = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...rest }, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_GITLAB) as GLTFResult
 
   ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
-    // materials[key].roughness = roughness ?? 1
-    // materials[key].side = THREE.DoubleSide
+    materials[key].roughness = roughness ?? 1
+    materials[key].side = THREE.DoubleSide
   })
 
   return (
@@ -25,22 +23,19 @@ const LogoGitlab = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...re
     >
       <mesh
         geometry={nodes.LogoGitlab_1.geometry}
-        // material={materials['logo_gitlab_#E24328']}
-        material={getMatteMaterial('#888888')}
+        material={materials['logo_gitlab_#E24328']}
         castShadow
         receiveShadow
       />
       <mesh
         geometry={nodes.LogoGitlab_2.geometry}
-        // material={materials['logo_gitlab_#FC6D25']}
-        material={getMatteMaterial('#888888')}
+        material={materials['logo_gitlab_#FC6D25']}
         castShadow
         receiveShadow
       />
       <mesh
         geometry={nodes.LogoGitlab_3.geometry}
-        // material={materials['logo_gitlab_#FBA326']}
-        material={getMatteMaterial('#888888')}
+        material={materials['logo_gitlab_#FBA326']}
         castShadow
         receiveShadow
       />
