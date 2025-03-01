@@ -7,15 +7,13 @@ import type { GLTFResult } from '@/types/data/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-import { greyMaterial } from '../../materials/resources/resourcesMaterials'
-
 const LogoAws = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...rest }, ref) => {
   const { nodes, materials } = useGLTF(glbConstants.LOGOS.LOGO_AWS) as GLTFResult
 
   useLayoutEffect(() => {
     ;(Object.keys(materials) as Array<keyof typeof materials>).forEach((key) => {
-      // materials[key].metalness = metalness ?? 1
-      // materials[key].roughness = roughness ?? 1
+      materials[key].metalness = metalness ?? 1
+      materials[key].roughness = roughness ?? 1
       materials[key].side = THREE.DoubleSide
     })
   }, [materials, metalness, roughness])
@@ -29,16 +27,14 @@ const LogoAws = forwardRef<THREE.Group, TLogo>(({ roughness, metalness, ...rest 
       <mesh
         name='LogoAws_1'
         geometry={nodes.LogoAws_1.geometry}
-        // material={materials['logo_aws_#fff']}
-        material={greyMaterial}
+        material={materials['logo_aws_#fff']}
         castShadow
         receiveShadow
       />
       <mesh
         name='LogoAws_2'
         geometry={nodes.LogoAws_2.geometry}
-        // material={materials['logo_aws_#ff9900']}
-        material={greyMaterial}
+        material={materials['logo_aws_#ff9900']}
         castShadow
         receiveShadow
       />
