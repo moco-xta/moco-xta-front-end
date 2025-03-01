@@ -17,7 +17,7 @@ export default function ResourcesPage({
   return (
     <>
       {backgroundCanvas && <div id='background_canvas'>{backgroundCanvas}</div>}
-      <PageProvider pageData={resourcesPageData}>
+      {/* <PageProvider pageData={resourcesPageData}>
         <div className='page_container'>
           <div className='page'>
             <SideNavigationMenuLeft
@@ -28,7 +28,7 @@ export default function ResourcesPage({
             <SideNavigationMenuRight pageData={resourcesPageData} />
           </div>
         </div>
-      </PageProvider>
+      </PageProvider> */}
     </>
   )
 }

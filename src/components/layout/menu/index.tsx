@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import * as THREE from 'three'
 
 import Header from './header'
 import MenuOverlay from './menu_overlay'
@@ -14,7 +15,14 @@ export default function Menu() {
       id='menu_container'
       className={`menu_container_zIndex ${sansTrialRegularFont.className}`}
     >
-      <Header isMain={true} />
+      <Header
+        isMain={true}
+        logoMocoMaterial={
+          new THREE.MeshStandardMaterial({
+            color: '#222222',
+          })
+        }
+      />
       <MenuOverlay />
     </div>
   )

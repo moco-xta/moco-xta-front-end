@@ -1,5 +1,5 @@
 export const fogData = {
   attach: 'fog',
   color: 'black',
-  density: 0.1,
+  density: 0.05,
 }

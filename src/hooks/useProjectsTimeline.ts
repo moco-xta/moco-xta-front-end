@@ -20,9 +20,7 @@ export default function useProjectsTimeline(
 
   // const [snapHeights, setSnapHeights] = useState<number[]>([])
   const [y, setY] = useState<number>(0)
-  const [offsetHeight] = useState<number>(
-    10000 - window.innerHeight,
-  )
+  const [offsetHeight] = useState<number>(10000 - window.innerHeight)
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
   const [daysDifference] = useState<number>(
     getDifferenceBetweenTwoDatesInDays(

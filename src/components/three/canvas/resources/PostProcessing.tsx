@@ -1,8 +1,23 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
-import { Bloom, DepthOfField, EffectComposer, SSAO, Vignette } from '@react-three/postprocessing'
-import { BlendFunction, DepthOfFieldEffect, KernelSize, Resolution } from 'postprocessing'
+import {
+  Bloom,
+  DepthOfField,
+  EffectComposer,
+  SSAO,
+  ToneMapping,
+  Vignette,
+} from '@react-three/postprocessing'
+import {
+  BlendFunction,
+  DepthOfFieldEffect,
+  KernelSize,
+  Resolution,
+  ToneMappingMode,
+} from 'postprocessing'
+
+import { postProcessingData } from '@/data/hero/three/postProcessingData'
 
 export default function PostProcessing() {
   const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)
@@ -20,10 +35,10 @@ export default function PostProcessing() {
     <EffectComposer enableNormalPass>
       <DepthOfField
         ref={depthOfFieldRef}
-        focalLength={0.01}
-        bokehScale={5}
-        height={1024}
-        width={1024}
+        focalLength={0.025}
+        bokehScale={2}
+        height={2048}
+        width={2048}
       />
       <SSAO
         blendFunction={BlendFunction.MULTIPLY}
@@ -57,15 +72,19 @@ export default function PostProcessing() {
         worldProximityThreshold={0.5}
         worldProximityFalloff={0.1}
       />
-      <Bloom
-        intensity={0.25}
+      {/* <Bloom
+        intensity={0.5}
         kernelSize={KernelSize.LARGE}
         luminanceThreshold={0.05}
         luminanceSmoothing={0.025}
         mipmapBlur={false}
         resolutionX={Resolution.AUTO_SIZE}
         resolutionY={Resolution.AUTO_SIZE}
-      />
+      /> */}
+      {/* <ToneMapping
+        {...postProcessingData.toneMapping}
+        blendFunction={BlendFunction.NORMAL}
+      /> */}
       <Vignette
         offset={0.5}
         darkness={0.5}

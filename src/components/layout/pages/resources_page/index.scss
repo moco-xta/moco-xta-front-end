@@ -1,13 +1,14 @@
 @import '@/styles/variables.module.scss';
 
 #background_canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
   width: 100vw;
   height: 100vh;
-  margin: 0 !important;
+  padding: $px_margin_XL !important;
   padding: 0 !important;
+  background: #111111;
 }
 
 .page_container {

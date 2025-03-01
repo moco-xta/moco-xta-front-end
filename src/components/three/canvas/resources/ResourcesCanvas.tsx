@@ -8,6 +8,7 @@ import Fog from './Fog'
 import Pointer from './Pointer'
 import { ResourcesLogos } from './ResourcesLogos'
 import PostProcessing from './PostProcessing'
+import { OrbitControls } from '@react-three/drei'
 
 export default function ResourcesCanvas() {
   const pointerRef = useRef<THREE.Vector3>(new THREE.Vector3())
@@ -16,9 +17,10 @@ export default function ResourcesCanvas() {
     <Canvas
       shadows
       gl={{ alpha: true, stencil: false, antialias: false }}
-      camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
+      camera={{ position: [0, 0, 15], fov: 32.5, near: 1, far: 100 }}
       // onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
     >
+      <OrbitControls />
       <Lights />
       <Fog />
       <Suspense fallback={null}>

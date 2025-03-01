@@ -3,10 +3,10 @@ import React from 'react'
 export default function Lights() {
   return (
     <>
-      <ambientLight intensity={1.5} />
+      <ambientLight intensity={3} />
       <spotLight
         position={[5, 5, 5]}
-        intensity={1}
+        intensity={3}
         angle={0.3}
         penumbra={1}
         decay={0}
@@ -14,7 +14,7 @@ export default function Lights() {
       />
       <spotLight
         position={[-5, 5, 5]}
-        intensity={1}
+        intensity={3}
         angle={0.3}
         penumbra={1}
         decay={0}
@@ -22,7 +22,7 @@ export default function Lights() {
       />
       <spotLight
         position={[0, 0, 10]}
-        intensity={1}
+        intensity={3}
         angle={0.3}
         penumbra={1}
         decay={0}
