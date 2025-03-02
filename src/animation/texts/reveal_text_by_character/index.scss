@@ -1,0 +1,9 @@
+@import '@/styles/variables.module.scss';
+
+#reveal_letter_by_letter {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+  .letter {
+    display: inline-block;
+  }
+}

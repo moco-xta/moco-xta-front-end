@@ -41,3 +41,10 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+// Z-INDEXES
+
+.header_zIndex {
+  position: absolute;
+  z-index: 10;
+}

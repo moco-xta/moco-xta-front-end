@@ -12,7 +12,7 @@ import './index.scss'
 
 export default function Header() {
   return (
-    <div>
+    <div className='header_zIndex'>
       <LogoMocoCanvas logoMocoMaterial={getMatteMaterial(logoMocoData.material.color)} />
     </div>
   )

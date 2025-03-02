@@ -4,35 +4,33 @@ import gsap from 'gsap'
 
 import type { TTextAnimation } from '@/types/animation/text/types'
 
-import { splitTextToWords } from '@/helpers/textHelpers'
+import { splitTextToCharacters } from '@/helpers/textHelpers'
 
 import './index.scss'
 
-export default function TextBlockTransitionNine({ tag: Tag, id, className, text }: TTextAnimation) {
+export default function RevealTextByCharacter({
+  tag: Tag,
+  id,
+  className,
+  text,
+}: TTextAnimation) {
   const containerRef = useRef<HTMLElement>(null!)
 
   useGSAP(
     () => {
       const animation = gsap.fromTo(
-        '.word',
+        '.letter',
         {
-          xPercent: () => gsap.utils.random(-50, 50),
-          yPercent: () => gsap.utils.random(-10, 10),
-          z: () => gsap.utils.random(400, 700),
-          rotationX: () => gsap.utils.random(-90, 90),
+          yPercent: 100,
           opacity: 0,
         },
         {
-          xPercent: 0,
           yPercent: 0,
-          z: 0,
-          rotationX: 0,
           opacity: 1,
-          duration: 1,
+          duration: 0.5,
           ease: 'power1.out',
           stagger: {
-            each: 0.06,
-            from: 'random',
+            each: 0.1,
           },
         },
       )
@@ -47,12 +45,12 @@ export default function TextBlockTransitionNine({ tag: Tag, id, className, text 
       id={id}
       className={className}
     >
-      {splitTextToWords(text).map((word, index) => (
+      {splitTextToCharacters(text).map((letter, index) => (
         <span
-          key={`${id}_word_${index}`}
-          className='word'
+          key={`${id}_letter_${index}`}
+          className='letter'
         >
-          {word}&nbsp;
+          {letter !== ' ' ? letter : '\u00A0'}
         </span>
       ))}
     </Tag>

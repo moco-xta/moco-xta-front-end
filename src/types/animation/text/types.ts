@@ -1,6 +1,6 @@
 import { ElementType, HTMLAttributes } from 'react'
 
-export type TTextBlockTransitionNine = HTMLAttributes<HTMLOrSVGElement> & {
+export type TTextAnimation = HTMLAttributes<HTMLOrSVGElement> & {
   tag: ElementType
   id: string
   className?: string
