@@ -28,7 +28,10 @@ export default function LocaleLayout({
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_KEY
 
   return (
-    <html lang={locale} className={helveticaMediumFont.className}>
+    <html
+      lang={locale}
+      className={helveticaMediumFont.className}
+    >
       <head></head>
       <ReactLenis
         root
