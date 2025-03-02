@@ -1,7 +1,7 @@
 import React from 'react'
 
 import TextBlockTransitionNine from '@/animation/texts/text_block_transition_nine'
-import RevealTextByCharacter from '@/animation/texts/reveal_text_by_character'
+import RevealTextByCharacters from '@/animation/texts/reveal_text_by_character'
 
 import './index.scss'
 
@@ -14,7 +14,7 @@ export default function TextAnimationLibrarySlice() {
         className={'text'}
         text={'We help brands create digital\nexperiences that connect with\ntheir audience'}
       />
-      <RevealTextByCharacter
+      <RevealTextByCharacters
         tag={'p'}
         id={'reveal_letter_by_letter'}
         className={'text'}

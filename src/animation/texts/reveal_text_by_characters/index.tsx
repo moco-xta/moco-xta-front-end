@@ -8,7 +8,7 @@ import { splitTextToCharacters } from '@/helpers/textHelpers'
 
 import './index.scss'
 
-export default function RevealTextByCharacter({
+export default function RevealTextByCharacters({
   tag: Tag,
   id,
   className,
