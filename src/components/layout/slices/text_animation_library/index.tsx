@@ -1,7 +1,7 @@
 import React from 'react'
 
 import TextBlockTransitionNine from '@/animation/texts/text_block_transition_nine'
-import RevealTextByCharacters from '@/animation/texts/reveal_text_by_character'
+import RevealTextByCharacters from '@/animation/texts/reveal_text_by_characters'
 
 import './index.scss'
 
