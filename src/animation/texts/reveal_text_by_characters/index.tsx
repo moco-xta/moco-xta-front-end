@@ -8,12 +8,7 @@ import { splitTextToCharacters } from '@/helpers/textHelpers'
 
 import './index.scss'
 
-export default function RevealTextByCharacters({
-  tag: Tag,
-  id,
-  className,
-  text,
-}: TTextAnimation) {
+export default function RevealTextByCharacters({ tag: Tag, id, className, text }: TTextAnimation) {
   const containerRef = useRef<HTMLElement>(null!)
 
   useGSAP(

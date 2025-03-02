@@ -10,9 +10,9 @@ import CustomCamera from '../../lib/custom_camera/CustomCamera'
 import Lights from './Lights'
 import LogoMoco from '../../models/logos/LogoMoco'
 
-import { canvasDefaultValues } from '@/data/header/logo_moco/three/canvasData'
-import { cameraDefaultValues } from '@/data/header/logo_moco/three/cameraData'
-import { logoMocoData } from '@/data/header/logo_moco/three/logoMocoData'
+import { canvasDefaultValues } from '@/data/canvas/logo_moco/canvasData'
+import { cameraDefaultValues } from '@/data/canvas/logo_moco/cameraData'
+import { logoMocoData } from '@/data/canvas/logo_moco/logoMocoData'
 
 export default function LogoMocoCanvas({ logoMocoMaterial }: TLogoMocoCanvas) {
   const logoMocoRef = useRef<THREE.Group<THREE.Object3DEventMap>>(null!) // TODO: MouseEvent.mozPressure is deprecated. Use PointerEvent.pressure instead.
@@ -29,6 +29,7 @@ export default function LogoMocoCanvas({ logoMocoMaterial }: TLogoMocoCanvas) {
       <Suspense fallback={null}>
         <LogoMoco
           ref={logoMocoRef}
+          position={new THREE.Vector3(0, 0.7, 0)}
           material={logoMocoMaterial}
           onPointerMove={handleOnPointerMove}
           onPointerOut={handleOnPointerLeave}

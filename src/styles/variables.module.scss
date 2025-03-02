@@ -7,3 +7,25 @@ $grey_medium: #7b7b7b;
 $grey_dark: #515151;
 $grey_darker: #292929;
 $black: #000;
+
+$anti_flash_white: #f0f1fa;
+$blizzard_blue: #b2dbf5;
+$blue_jeans: #69b1f5;
+$blue: #0000ff;
+$chinese_black: #0f1114;
+
+:export {
+  white: $white;
+  greyLighter: $grey_lighter;
+  greyLight: $grey_light;
+  greyMedium: $grey_medium;
+  greyDark: $grey_dark;
+  greyDarker: $grey_darker;
+  black: $black;
+
+  antiFlashWhite: $anti_flash_white;
+  blizzardBlue: $blizzard_blue;
+  blueJeans: $blue_jeans;
+  blue: $blue;
+  chineseBlack: $chinese_black;
+}

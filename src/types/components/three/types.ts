@@ -1,3 +1,4 @@
+import { MutableRefObject } from 'react'
 import * as THREE from 'three'
 import { GLTF } from 'three-stdlib'
 import { GroupProps } from '@react-three/fiber'
@@ -29,4 +30,15 @@ export type TLogoMocoCanvas = {
 
 export type TLogoMoco = GroupProps & {
   material: THREE.Material
+}
+
+// HERO
+
+export type TPointer = {
+  pointerRef: MutableRefObject<THREE.Vector3>
+}
+
+export type THeroLogo = {
+  pathToModel: string
+  componentName: string
 }

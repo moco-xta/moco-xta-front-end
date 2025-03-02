@@ -1,5 +1,17 @@
 {
   "LOGOS": {
-    "LOGO_MOCO": "/models/glb/logos/LogoMoco.glb"
+    "LOGO_MOCO": "/models/glb/logos/LogoMoco.glb",
+    "UNICOLOR": {
+      "LOGO_ANGULAR_UNICOLOR": "/models/glb/logos/unicolor/LogoAngularUnicolor.glb",
+      "LOGO_AUTH0_UNICOLOR": "/models/glb/logos/unicolor/LogoAuth0Unicolor.glb",
+      "LOGO_AZURE_UNICOLOR": "/models/glb/logos/unicolor/LogoAzureUnicolor.glb",
+      "LOGO_BLENDER_UNICOLOR": "/models/glb/logos/unicolor/LogoBlenderUnicolor.glb",
+      "LOGO_DEEPSEEK_UNICOLOR": "/models/glb/logos/unicolor/LogoDeepseekUnicolor.glb",
+      "LOGO_DOCKER_UNICOLOR": "/models/glb/logos/unicolor/LogoDockerUnicolor.glb",
+      "LOGO_FIGMA_UNICOLOR": "/models/glb/logos/unicolor/LogoFigmaUnicolor.glb",
+      "LOGO_GITLAB_UNICOLOR": "/models/glb/logos/unicolor/LogoGitlabUnicolor.glb",
+      "LOGO_GOOGLE_MAPS_UNICOLOR": "/models/glb/logos/unicolor/LogoGoogleMapsUnicolor.glb",
+      "LOGO_LIGHTNING": "/models/glb/logos/unicolor/LogoLightning.glb"
+    }
   }
 }

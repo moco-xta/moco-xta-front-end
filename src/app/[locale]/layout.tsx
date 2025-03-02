@@ -8,7 +8,7 @@ import ReduxProvider from '@/redux/ReduxProvider'
 import Header from '@/components/layout/header'
 
 import '@/styles/globals.scss'
-import { helveticaMediumFont } from '../fonts'
+import { helveticaRomanFont } from '../fonts'
 
 export const metadata: Metadata = {
   title: "Moco's portfolio - Federico Desmoulin",
@@ -30,7 +30,7 @@ export default function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={helveticaMediumFont.className}
+      className={helveticaRomanFont.className}
     >
       <head></head>
       <ReactLenis
