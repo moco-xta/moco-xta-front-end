@@ -8,6 +8,8 @@ import { logoMocoData } from '@/data/header/logo_moco/three/logoMocoData'
 
 import { getMatteMaterial } from '@/components/three/materials'
 
+import './index.scss'
+
 export default function Header() {
   return (
     <div>

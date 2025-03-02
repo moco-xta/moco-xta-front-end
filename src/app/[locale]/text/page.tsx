@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 
 import TextAnimationLibrarySlice from '@/components/layout/slices/text_animation_library'

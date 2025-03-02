@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './index.scss'
+
 export default function Hero() {
-  return <div>Home</div>
+  return <section>Home</section>
 }
