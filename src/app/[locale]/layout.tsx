@@ -5,7 +5,10 @@ import { ReactLenis } from 'lenis/react'
 
 import ReduxProvider from '@/redux/ReduxProvider'
 
+import Header from '@/components/layout/header'
+
 import '@/styles/globals.scss'
+import { helveticaMediumFont } from '../fonts'
 
 export const metadata: Metadata = {
   title: "Moco's portfolio - Federico Desmoulin",
@@ -25,7 +28,7 @@ export default function LocaleLayout({
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_KEY
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={helveticaMediumFont.className}>
       <head></head>
       <ReactLenis
         root
@@ -37,6 +40,7 @@ export default function LocaleLayout({
         }}
       >
         <body>
+          <Header />
           <ReduxProvider>
             <NextIntlClientProvider
               // locale={locale}

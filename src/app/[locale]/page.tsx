@@ -10,6 +10,6 @@ import './index.scss'
 
 gsap.registerPlugin(useGSAP)
 
-export default function Page() {
+export default function Home() {
   return <Hero />
 }
