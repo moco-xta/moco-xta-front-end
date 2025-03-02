@@ -1,4 +1,4 @@
-import { TRouteData } from "@/types/routes/types";
+import { TRouteData } from '@/types/routes/types'
 
 export const routesData: TRouteData[] = [
   {
