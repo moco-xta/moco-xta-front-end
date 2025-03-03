@@ -5,6 +5,14 @@ import { GroupProps } from '@react-three/fiber'
 
 import type { TCameraDefaultValues } from '@/types/data/three/types'
 
+// COORDINATES
+
+export type TCoordinatesData = {
+  x?: number
+  y?: number
+  z?: number
+}
+
 // CUSTOM CAMERA
 
 export type TCamera = {
@@ -33,6 +41,10 @@ export type TLogoMoco = GroupProps & {
 }
 
 // HERO
+
+export type TMocoHelium = {
+  terminalType: 'isDesktop' | 'isMobile'
+}
 
 export type TPointer = {
   pointerRef: MutableRefObject<THREE.Vector3>

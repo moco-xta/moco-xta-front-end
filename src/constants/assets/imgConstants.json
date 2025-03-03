@@ -2,9 +2,13 @@
   "ENVIRONMENTS": {
     "EXR": {
       "STUDIO_03_4K": "/img/environments/exr/studio_small_03_4k.exr",
+      "STUDIO_03_1K": "/img/environments/exr/studio_small_03_1k.exr",
       "STUDIO_04_4K": "/img/environments/exr/studio_small_04_4k.exr",
       "STUDIO_09_1K": "/img/environments/exr/studio_small_09_1k.exr",
       "STUDIO_09_4K": "/img/environments/exr/studio_small_09_4k.exr"
+    },
+    "HDR": {
+      "HERO_ENVIRONMENT": "/img/environments/hdr/peppermint_powerplant_2_1k.hdr"
     }
   }
 }

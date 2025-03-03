@@ -1,4 +1,10 @@
 {
+  "MOCO_HELIUM": {
+    "C_HELIUM_BALLOON": "/models/glb/moco_helium/CHeliumBalloon.glb",
+    "M_HELIUM_BALLOON": "/models/glb/moco_helium/MHeliumBalloon.glb",
+    "O_HELIUM_BALLOON": "/models/glb/moco_helium/OHeliumBalloon.glb",
+    "SMILEY": "/models/glb/moco_helium/Smiley.glb"
+  },
   "LOGOS": {
     "LOGO_MOCO": "/models/glb/logos/LogoMoco.glb",
     "UNICOLOR": {

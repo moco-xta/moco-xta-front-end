@@ -14,7 +14,9 @@ export default function Hero() {
         className={'text_block_animation_nine'}
         text={'We help brands create digital\nexperiences that connect with\ntheir audience'}
       />
-      <HeroCanvas />
+      <div id='hero_canvas_container'>
+        <HeroCanvas />
+      </div>
     </section>
   )
 }

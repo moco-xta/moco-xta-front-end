@@ -1,20 +1,26 @@
 export const heroLogosData = {
   lazy: {
-    pathToModel: 'logos/unicolor/',
+    // pathToModel: 'logos/unicolor/',
+    pathToModel: 'moco_helium/',
     modelsMultiplier: 1,
     models: [
-      'LogoAngularUnicolor',
-      'LogoAuth0Unicolor',
-      'LogoAzureUnicolor',
-      'LogoBlenderUnicolor',
-      'LogoDeepseekUnicolor',
-      'LogoDockerUnicolor',
-      'LogoFigmaUnicolor',
-      'LogoGitlabUnicolor',
-      'LogoGoogleMapsUnicolor',
+      'MHeliumBalloon',
+      'OHeliumBalloon',
+      'CHeliumBalloon',
+      'OHeliumBalloon',
+      'Smiley',
+      /* 'LogoAngularUnicolor', */
+      /* 'LogoAuth0Unicolor', */
+      /* 'LogoAzureUnicolor', */
+      /* 'LogoBlenderUnicolor', */
+      /* 'LogoDeepseekUnicolor', */
+      /* 'LogoDockerUnicolor', */
+      /* 'LogoFigmaUnicolor', */
+      /* 'LogoGitlabUnicolor', */
+      /* 'LogoGoogleMapsUnicolor', */
       /* 'LogoGsap', */ // ***
       /* 'LogoIonic', */
-      'LogoLightning',
+      /* 'LogoLightning', */
       /* 'LogoNextjs', */ // ***
       /* 'LogoPostgresql', */ // ***
       /* 'LogoPython', */

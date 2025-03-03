@@ -26,7 +26,7 @@ export default function Pointer({ pointerRef }: TPointer) {
       colliders={'ball'}
       ref={ref}
     >
-      <BallCollider args={[2]} />
+      <BallCollider args={[1]} />
     </RigidBody>
   )
 }

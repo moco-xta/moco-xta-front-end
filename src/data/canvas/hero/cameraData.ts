@@ -1,13 +1,20 @@
 import * as THREE from 'three'
 
-import type { TCameraDefaultValues } from '@/types/data/three/types'
+export type TCameraDefaultValuesSignature = {
+  terminalType: 'isDesktop' | 'isMobile'
+}
 
-export const cameraDefaultValues: TCameraDefaultValues = {
-  camera: {
-    makeDefault: true,
-    position: new THREE.Vector3(0, 0, 15),
-    fov: 32.5,
-    near: 0.1,
-    far: 33,
-  },
+export function cameraDefaultValues({ terminalType }: TCameraDefaultValuesSignature) {
+  return {
+    camera: {
+      makeDefault: true,
+      position:
+        terminalType === 'isDesktop'
+          ? new THREE.Vector3(-0.1, 0, 1.75)
+          : new THREE.Vector3(0.075, 0, 2.5),
+      fov: 50,
+      near: 0.01,
+      far: 10,
+    },
+  }
 }

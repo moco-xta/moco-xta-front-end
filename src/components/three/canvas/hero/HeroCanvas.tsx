@@ -1,37 +1,47 @@
-import React, { Suspense, useRef } from 'react'
-import * as THREE from 'three'
+import React, { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { SoftShadows } from '@react-three/drei'
+// import { Shadow } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
+import { isMobile } from 'react-device-detect'
 
-import CustomCamera from '../../lib/custom_camera/CustomCamera'
+import { Camera } from './Camera'
 import Lights from './Lights'
 import Fog from './Fog'
-import Pointer from './Pointer'
-import { HeroLogos } from './HeroLogos'
+import MocoHelium from './MocoHelium'
+import Wrapper from './Wrapper'
+import PostProcessing from './PostProcessing'
 
 import { canvasDefaultValues } from '@/data/canvas/hero/canvasData'
-import { cameraDefaultValues } from '@/data/canvas/hero/cameraData'
-import { softShadowsDefaultValues } from '@/data/canvas/hero/softShadowsData'
+import { mocoHeliumData } from '@/data/canvas/hero/mocoHeliumData'
 
 export default function HeroCanvas() {
-  const pointerRef = useRef<THREE.Vector3>(new THREE.Vector3())
+  const [terminalType] = useState<'isDesktop' | 'isMobile'>(!isMobile ? 'isDesktop' : 'isMobile')
 
   return (
     <Canvas {...canvasDefaultValues}>
-      <CustomCamera defaultValues={cameraDefaultValues} />
+      <Camera terminalType={terminalType} />
       <Lights />
-      <SoftShadows {...softShadowsDefaultValues} />
+      {/* <Shadow
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={10}
+        opacity={0.4}
+        color='black'
+      /> */}
       <Fog />
       <Suspense fallback={null}>
         <Physics
           // debug
-          gravity={[0, 0, 0]}
+          gravity={[
+            mocoHeliumData.physics.gravity.x,
+            mocoHeliumData.physics.gravity.y,
+            mocoHeliumData.physics.gravity.z,
+          ]}
         >
-          <Pointer pointerRef={pointerRef} />
-          <HeroLogos />
+          <MocoHelium terminalType={terminalType} />
+          <Wrapper terminalType={terminalType} />
         </Physics>
       </Suspense>
+      <PostProcessing terminalType={terminalType} />
     </Canvas>
   )
 }
