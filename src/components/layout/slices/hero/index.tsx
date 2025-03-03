@@ -4,6 +4,7 @@ import TextBlockTransitionNine from '@/animation/texts/text_block_transition_nin
 import HeroCanvas from '@/components/three/canvas/hero/HeroCanvas'
 
 import './index.scss'
+import { AriesIcon, FireIcon } from '@/components/svg'
 
 export default function Hero() {
   return (
@@ -14,8 +15,11 @@ export default function Hero() {
         className={'text_block_animation_nine'}
         text={'We help brands create digital\nexperiences that connect with\ntheir audience'}
       />
-      <div id='hero_canvas_container'>
-        <HeroCanvas />
+      <HeroCanvas />
+      <div id='scroll_to_explore'>
+        <FireIcon style={{ height: '20px' }} />
+        <AriesIcon style={{ height: '20px' }} />
+        <span>Scroll to Explore</span>
       </div>
     </section>
   )

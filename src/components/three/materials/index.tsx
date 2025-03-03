@@ -3,7 +3,7 @@ import * as THREE from 'three'
 export const heliumBalloonMaterial = new THREE.MeshPhysicalMaterial({
   color: '#888888',
   metalness: 1,
-  roughness: 0.05,
+  roughness: 0.075,
   reflectivity: 10,
 })
 

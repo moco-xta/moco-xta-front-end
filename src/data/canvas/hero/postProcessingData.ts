@@ -1,9 +1,9 @@
 export const postProcessingData = {
   depthOfField: {
     isDesktop: {
-      focusDistance: 0.015,
+      focusDistance: 0.025,
       focalLength: 0.35,
-      bokehScale: 5,
+      bokehScale: 2.5,
     },
     isMobile: {
       focusDistance: 0.15,

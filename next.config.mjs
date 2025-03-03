@@ -11,6 +11,9 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.(glsl|frag|vert)$/,
       type: 'asset/source',
+    }, {
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
     })
     return config
   },

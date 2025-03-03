@@ -23,6 +23,6 @@ const OHeliumBalloon = forwardRef<THREE.Mesh, JSX.IntrinsicElements['mesh']>((pr
 
 OHeliumBalloon.displayName = 'OHeliumBalloon'
 
-useGLTF.preload(glbConstants.MOCO_HELIUM.O_HELIUM_BALLOON)
+// useGLTF.preload(glbConstants.MOCO_HELIUM.O_HELIUM_BALLOON)
 
 export default OHeliumBalloon
