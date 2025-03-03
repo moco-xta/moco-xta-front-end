@@ -6,6 +6,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import Hero from '@/components/layout/slices/hero'
+import Introduction from '@/components/layout/slices/introduction'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
@@ -14,7 +15,12 @@ import './index.scss'
 gsap.registerPlugin(useGSAP)
 
 export default function Home() {
-  return <Hero />
+  return (
+    <>
+      <Hero />
+      <Introduction />
+    </>
+  )
 }
 
 useGLTF.preload(glbConstants.MOCO_HELIUM.C_HELIUM_BALLOON)
