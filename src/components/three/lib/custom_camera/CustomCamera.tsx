@@ -11,7 +11,7 @@ function Camera({ defaultValues }: TCamera) {
   return (
     <PerspectiveCamera
       ref={cameraRef}
-      {...defaultValues.camera}
+      {...defaultValues}
     />
   )
 }
