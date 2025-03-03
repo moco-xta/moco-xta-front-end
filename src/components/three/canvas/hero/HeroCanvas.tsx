@@ -1,6 +1,5 @@
 import React, { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-// import { Shadow } from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 import { isMobile } from 'react-device-detect'
 
@@ -21,12 +20,6 @@ export default function HeroCanvas() {
     <Canvas {...canvasDefaultValues}>
       <Camera terminalType={terminalType} />
       <Lights />
-      {/* <Shadow
-        rotation={[-Math.PI / 2, 0, 0]}
-        scale={10}
-        opacity={0.4}
-        color='black'
-      /> */}
       <Fog />
       <Suspense fallback={null}>
         <Physics

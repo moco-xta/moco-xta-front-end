@@ -17,8 +17,8 @@ export type TCameraDefaultValues = {
 }
 
 export type TPerspectiveCameraData = {
-  makeDefault?: boolean
-  position?: THREE.Vector3 | { isDesktop: THREE.Vector3; isMobile: THREE.Vector3 }
+  makeDefault: boolean
+  position?: THREE.Vector3
   rotation?: THREE.Euler
   fov?: number
   near?: number
