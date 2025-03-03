@@ -5,6 +5,7 @@ export const canvasDefaultValues: TCanvasData = {
   style: {
     width: '100vw',
     height: '100vh',
+    background: 'purple',
   },
   dpr: 1,
   legacy: true,

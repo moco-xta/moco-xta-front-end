@@ -4,6 +4,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import Hero from '@/components/layout/slices/hero'
 import Introduction from '@/components/layout/slices/introduction'
@@ -13,6 +14,7 @@ import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import './index.scss'
 
 gsap.registerPlugin(useGSAP)
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
   return (
