@@ -1,0 +1,12 @@
+@import '@/styles/variables.module.scss';
+
+#introduction_content {
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 30vh;
+
+  .introduction_title {
+    font-size: 10vw;
+  }
+}

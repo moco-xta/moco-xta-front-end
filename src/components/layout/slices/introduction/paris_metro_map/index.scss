@@ -1,0 +1,9 @@
+@import '@/styles/variables.module.scss';
+
+#paris_metro_map {
+  z-index: 1;
+  position: absolute;
+  width: 100vw;
+  // margin-left: -10vw;
+  // height: 150vh;
+}

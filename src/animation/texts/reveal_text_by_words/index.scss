@@ -1,9 +1,9 @@
 @import '@/styles/variables.module.scss';
 
-#reveal_letter_by_characters {
+.reveal_letter_by_words {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
-  .letter {
+  .word {
     display: inline-block;
     opacity: 0;
   }

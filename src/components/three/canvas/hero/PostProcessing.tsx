@@ -8,7 +8,7 @@ import {
 } from '@react-three/postprocessing'
 import { BlendFunction, KernelSize, Resolution } from 'postprocessing'
 
-import { postProcessingData } from '@/data/canvas/hero/postProcessingData'
+import { postProcessingData } from '@/data/hero/three/postProcessingData'
 
 export type TPostProcessing = {
   terminalType: 'isDesktop' | 'isMobile'

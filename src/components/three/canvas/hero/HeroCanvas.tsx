@@ -10,8 +10,8 @@ import MocoHelium from './MocoHelium'
 import Wrapper from './Wrapper'
 import PostProcessing from './PostProcessing'
 
-import { canvasDefaultValues } from '@/data/canvas/hero/canvasData'
-import { mocoHeliumData } from '@/data/canvas/hero/mocoHeliumData'
+import { canvasDefaultValues } from '@/data/hero/three/canvasData'
+import { mocoHeliumData } from '@/data/hero/three/mocoHeliumData'
 
 export default function HeroCanvas() {
   const [terminalType] = useState<'isDesktop' | 'isMobile'>(!isMobile ? 'isDesktop' : 'isMobile')

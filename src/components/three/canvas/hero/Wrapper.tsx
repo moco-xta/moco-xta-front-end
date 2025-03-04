@@ -4,7 +4,7 @@ import { RigidBody } from '@react-three/rapier'
 
 import { getDegreeEuler } from '@/helpers/threeHelpers'
 
-import { mocoHeliumData } from '@/data/canvas/hero/mocoHeliumData'
+import { mocoHeliumData } from '@/data/hero/three/mocoHeliumData'
 
 import { wrapperMaterial } from '../../materials'
 

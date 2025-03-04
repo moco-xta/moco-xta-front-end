@@ -13,7 +13,7 @@ import { RigidBodyWrapper } from './RigidBodyWrapper'
 
 import { getDegreeEuler } from '@/helpers/threeHelpers'
 
-import { mocoHeliumData } from '@/data/canvas/hero/mocoHeliumData'
+import { mocoHeliumData } from '@/data/hero/three/mocoHeliumData'
 
 export type TMouseImpulseHandler = {
   rigidBodies: MutableRefObject<Map<string, RapierRigidBody>>

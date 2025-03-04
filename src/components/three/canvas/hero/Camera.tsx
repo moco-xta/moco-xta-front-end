@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { PerspectiveCamera } from '@react-three/drei'
 
-import { cameraDefaultValues } from '@/data/canvas/hero/cameraData'
+import { cameraDefaultValues } from '@/data/hero/three/cameraData'
 
 export type TCameraWrapper = {
   terminalType: 'isDesktop' | 'isMobile'

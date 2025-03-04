@@ -5,4 +5,8 @@ export type TTextAnimation = HTMLAttributes<HTMLOrSVGElement> & {
   id: string
   className?: string
   text: string
+  animation?: {
+    from: Record<string, string | number>
+    to: Record<string, string | number>
+  }
 }

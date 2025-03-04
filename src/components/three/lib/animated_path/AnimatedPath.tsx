@@ -29,25 +29,24 @@ export default function AnimatedPath({
     const pathElement = pathRef.current
     const length = pathElement.getTotalLength()
 
-    // Set initial styles
     gsap.set(pathElement, {
       strokeDasharray: length,
       strokeDashoffset: length,
     })
 
-    // ScrollTrigger animation
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: svgRef.current,
-        start: 'top center',
-        end: 'bottom center',
+        start: 'top 75%',
+        end: 'bottom 75%',
         scrub: true,
-        markers: true, // Remove for production
+        // markers: true,
       },
     })
 
     tl.to(pathElement, {
       strokeDashoffset: 0,
+      opacity: 1,
       duration: 2,
       ease: 'power1.inOut',
     })
@@ -66,7 +65,7 @@ export default function AnimatedPath({
     <div style={{ zIndex: `${id}`, position: 'absolute', width: '100%', height: '100%' }}>
       <svg
         ref={svgRef}
-        viewBox='0 0 100 100'
+        viewBox='0 -1 100 100'
         preserveAspectRatio={preserveAspectRatio}
       >
         <path
@@ -74,7 +73,7 @@ export default function AnimatedPath({
           d={scaleSvgPath(path, 0.145)}
           fill='none'
           stroke={stroke}
-          // opacity={length}
+          opacity={0}
           strokeWidth={strokeWidth}
           // transform="scale(0.3 0.3)"
         />

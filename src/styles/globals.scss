@@ -16,6 +16,7 @@ body {
   width: 100vw;
   background: $anti_flash_white;
   color: $black;
+  overflow-x: hidden;
   user-select: none;
 }
 
@@ -47,4 +48,10 @@ html.lenis body {
 .header_zIndex {
   position: absolute;
   z-index: 10;
+}
+
+// LAYOUT
+
+h1 {
+  font-size: 80px;
 }

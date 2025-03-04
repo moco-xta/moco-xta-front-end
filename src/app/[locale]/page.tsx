@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -17,11 +17,33 @@ gsap.registerPlugin(useGSAP)
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
+  const containerRef = useRef<HTMLDivElement>(null!)
+
+  useGSAP(
+    () => {
+      const animationFn = gsap.to('#home_page', {
+        scrollTrigger: {
+          trigger: '#introduction_section',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: true,
+          markers: true,
+        },
+        background: '#0f1114',
+        ease: 'power1.in',
+      })
+      return () => animationFn.kill()
+    },
+    { scope: containerRef },
+  )
+
   return (
-    <>
-      <Hero />
-      <Introduction />
-    </>
+    <div ref={containerRef}>
+      <div id='home_page'>
+        <Hero />
+        <Introduction />
+      </div>
+    </div>
   )
 }
 
