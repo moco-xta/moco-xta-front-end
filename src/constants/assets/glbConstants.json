@@ -1,10 +1,4 @@
 {
-  "MOCO_HELIUM": {
-    "C_HELIUM_BALLOON": "/models/glb/moco_helium/CHeliumBalloon.glb",
-    "M_HELIUM_BALLOON": "/models/glb/moco_helium/MHeliumBalloon.glb",
-    "O_HELIUM_BALLOON": "/models/glb/moco_helium/OHeliumBalloon.glb",
-    "SMILEY": "/models/glb/moco_helium/Smiley.glb"
-  },
   "LOGOS": {
     "LOGO_MOCO": "/models/glb/logos/LogoMoco.glb",
     "UNICOLOR": {
@@ -19,5 +13,15 @@
       "LOGO_GOOGLE_MAPS_UNICOLOR": "/models/glb/logos/unicolor/LogoGoogleMapsUnicolor.glb",
       "LOGO_LIGHTNING": "/models/glb/logos/unicolor/LogoLightning.glb"
     }
+  },
+  "METRO": {
+    "LIGNE_8_CURVE": "/models/glb/metro/Ligne8Path.glb",
+    "TEST_PATH": "/models/glb/metro/TestPath.glb"
+  },
+  "MOCO_HELIUM": {
+    "C_HELIUM_BALLOON": "/models/glb/moco_helium/CHeliumBalloon.glb",
+    "M_HELIUM_BALLOON": "/models/glb/moco_helium/MHeliumBalloon.glb",
+    "O_HELIUM_BALLOON": "/models/glb/moco_helium/OHeliumBalloon.glb",
+    "SMILEY": "/models/glb/moco_helium/Smiley.glb"
   }
 }
