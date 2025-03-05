@@ -9,6 +9,7 @@ import MorphingDemo from './morphing_demo'
 import './index.scss'
 import styles from '@/styles/variables.module.scss'
 import VideoSVG from './video_svg'
+import MorphVideo from './morph_video'
 
 export default function Introduction() {
   return (
@@ -17,6 +18,7 @@ export default function Introduction() {
       <ParisMetroMap />
       <MorphingDemo />
       <VideoSVG />
+      <MorphVideo />
     </section>
   )
 }
