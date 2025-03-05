@@ -2,8 +2,12 @@
 
 import { configureStore } from '@reduxjs/toolkit'
 
+import playerPageStateSlice from './slices/playerPageStateSlice'
+
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    playerPageState: playerPageStateSlice,
+  },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 })
 

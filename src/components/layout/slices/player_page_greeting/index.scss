@@ -1,0 +1,19 @@
+@import '@/styles/variables.module.scss';
+
+#player_page_greeting_section {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #00000000;
+}
+
+.show_player_page_greeting {
+  transition: opacity $transition_M linear;
+  opacity: 1;
+}
+
+.hide_player_page_greeting {
+  transition: opacity $transition_M linear;
+  opacity: 0;
+}

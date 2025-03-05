@@ -14,6 +14,55 @@ $blue_jeans: #69b1f5;
 $blue: #0000ff;
 $chinese_black: #0f1114;
 
+// MARGINS
+
+$px_margin_XXXS: 3px;
+$px_margin_XXS: 5px;
+$px_margin_XS: 7px;
+$px_margin_S: 10px;
+$px_margin_M: 15px;
+$px_margin_L: 20px;
+$px_margin_XL: 30px;
+$px_margin_XL: 50px;
+$px_margin_XXL: 100px;
+
+// GAPS
+
+$gap_XXL: 200px;
+$gap_XL: 100px;
+$gap_L: 50px;
+$gap_M: 30px;
+$gap_S: 20px;
+$gap_XS: 10px;
+$gap_XXS: 5px;
+$gap_XXXS: 2px;
+
+// FONTS
+
+$font_size_h1: 60px;
+$font_size_h2: 60px;
+$font_size_h3: 36px;
+$font_size_h4: 22px;
+
+$font_size_XXS: 11px;
+$font_size_XS: 12px;
+$font_size_S: 14px;
+$font_size_M: 18px;
+$font_size_L: 24px;
+$font_size_XL: 32px;
+$font_size_XXL: 48px;
+
+$font_weight_hover: 500;
+
+// TRANSITIONS
+
+$transition_M: 0.3s;
+$transition_L: 0.5s;
+$transition_XL: 1s;
+$transition_XXL: 2s;
+
+$hover_transition: 0.2s;
+
 :export {
   white: $white;
   greyLighter: $grey_lighter;

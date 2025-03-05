@@ -14,14 +14,47 @@
       "LOGO_LIGHTNING": "/models/glb/logos/unicolor/LogoLightning.glb"
     }
   },
-  "METRO": {
-    "LIGNE_8_CURVE": "/models/glb/metro/Ligne8Path.glb",
-    "TEST_PATH": "/models/glb/metro/TestPath.glb"
-  },
   "MOCO_HELIUM": {
     "C_HELIUM_BALLOON": "/models/glb/moco_helium/CHeliumBalloon.glb",
     "M_HELIUM_BALLOON": "/models/glb/moco_helium/MHeliumBalloon.glb",
     "O_HELIUM_BALLOON": "/models/glb/moco_helium/OHeliumBalloon.glb",
     "SMILEY": "/models/glb/moco_helium/Smiley.glb"
+  },
+  "LABORATORY": {
+    "COURONNES": "/models/glb/laboratory/Couronnes.glb",
+    "CUBE": "/models/glb/laboratory/Cube.glb",
+    "DESK_CHAIR": "/models/glb/laboratory/DeskChair.glb",
+    "DESK_TRAY": "/models/glb/laboratory/DeskTray.glb",
+    "DODECAHEDRON": "/models/glb/laboratory/Dodecahedron.glb",
+    "DOOR": "/models/glb/laboratory/Door.glb",
+    "DOOR_FRAME": "/models/glb/laboratory/DoorFrame.glb",
+    "FRAME_AMOR_LLAMA_AMOR": "/models/glb/laboratory/FrameAmorLlamaAmor.glb",
+    "FRAME_BRAIN": "/models/glb/laboratory/FrameBrain.glb",
+    "FRAME_CELESTIAL_MAP": "/models/glb/laboratory/FrameCelestialMap.glb",
+    "FRAME_NICOTIANA_RUSTICA": "/models/glb/laboratory/FrameNicotianaRustica.glb",
+    "FRAME_TRINITY": "/models/glb/laboratory/FrameTrinity.glb",
+    "HOUR_AND_MINUTE_MARKERS": "/models/glb/laboratory/HourAndMinuteMarkers.glb",
+    "HOUR_HAND": "/models/glb/laboratory/HourHand.glb",
+    "ICOSAHEDRON": "/models/glb/laboratory/Icosahedron.glb",
+    "MAC_BOOK_PRO": "/models/glb/laboratory/MacBookPro.glb",
+    "MINUTE_HAND": "/models/glb/laboratory/MinuteHand.glb",
+    "MONDAINE_WALL_CLOCK_BACKGROUND": "/models/glb/laboratory/MondaineWallClockBackground.glb",
+    "OCTAHEDRON": "/models/glb/laboratory/Octahedron.glb",
+    "PABLO_ESCOBAR": "/models/glb/laboratory/PabloEscobar.glb",
+    "PARQUET": "/models/glb/laboratory/Parquet.glb",
+    "SCREEN": "/models/glb/laboratory/Screen.glb",
+    "SECOND_HAND": "/models/glb/laboratory/SecondHand.glb",
+    "SHELF_DESK": "/models/glb/laboratory/ShelfDesk.glb",
+    "SPEAKER": "/models/glb/laboratory/Speaker.glb",
+    "SPEAKER_BOX": "/models/glb/laboratory/SpeakerBox.glb",
+    "TETRAHEDRON": "/models/glb/laboratory/Tetrahedron.glb",
+    "TRESTLE": "/models/glb/laboratory/Trestle.glb",
+    "VINYL_AURORA": "/models/glb/laboratory/VinylAurora.glb",
+    "VIRGEN_DE_GUADALUPE": "/models/glb/laboratory/VirgenDeGuadalupe.glb",
+    "WALL_CLOCK": "/models/glb/laboratory/WallClock.glb",
+    "WALL_CLOCK_GLASS": "/models/glb/laboratory/WallClockGlass.glb",
+    "WALLS": "/models/glb/laboratory/Walls.glb",
+    "WORLD_MAP": "/models/glb/laboratory/WorldMap.glb",
+    "WORLD_MAP_STAND": "/models/glb/laboratory/WorldMapStand.glb"
   }
 }

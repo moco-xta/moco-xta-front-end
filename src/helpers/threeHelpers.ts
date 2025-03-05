@@ -19,3 +19,9 @@ export function getDegreeEuler(rotationData: TCoordinatesData) {
     'XYZ',
   )
 }
+
+export function generateRandomHexGrey(min: number, max: number) {
+  const decimalValue = Math.round(Math.random() * (max - min) + min)
+  const hexadecimalValue = decimalValue.toString(16)
+  return new THREE.Color('#' + hexadecimalValue + hexadecimalValue + hexadecimalValue)
+}

@@ -1,0 +1,26 @@
+import React from 'react'
+import { useGLTF } from '@react-three/drei'
+
+import type { GLTFResult } from '@/types/components/three/types'
+
+import { glassMaterial } from '../../materials'
+
+import { default as glbConstants } from '@/constants/assets/glbConstants.json'
+
+export function WallClockGlass(props: JSX.IntrinsicElements['group']) {
+  const { nodes } = useGLTF(glbConstants.LABORATORY.WALL_CLOCK_GLASS) as GLTFResult
+
+  return (
+    <group
+      {...props}
+      dispose={null}
+    >
+      <mesh
+        geometry={nodes.WallClockGlass.geometry}
+        material={glassMaterial}
+      />
+    </group>
+  )
+}
+
+useGLTF.preload(glbConstants.LABORATORY.WALL_CLOCK_GLASS)

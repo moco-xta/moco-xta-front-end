@@ -1,0 +1,10 @@
+{
+  "LABORATORY": {
+    "PARQUET": {
+      "DIFFUSE": "/img/textures/laboratory/parquet_diffuse.jpg",
+      "BUMP": "/img/textures/laboratory/parquet_bump.jpg",
+      "NORMAL": "/img/textures/laboratory/parquet_normal.jpg",
+      "ROUGHNESS": "/img/textures/laboratory/parquet_roughness.jpg"
+    }
+  }
+}

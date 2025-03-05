@@ -82,3 +82,20 @@ export const oilMaterial = new THREE.MeshPhysicalMaterial({
   iridescenceIOR: 1.6,
   fog: true,
 })
+
+export const whitePaintMaterial = new THREE.MeshStandardMaterial({
+  color: '#fff',
+  roughness: 0.8,
+})
+
+export const glassMaterial = new THREE.MeshPhysicalMaterial({
+  color: '#555',
+  roughness: 0,
+  /* transmission: 1, */
+  ior: 1.5,
+  /* thickness: 0.2, */
+  specularIntensity: 1,
+  clearcoat: 1,
+  transparent: true,
+  opacity: 0.3,
+})

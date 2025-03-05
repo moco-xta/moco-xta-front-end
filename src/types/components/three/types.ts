@@ -3,15 +3,7 @@ import * as THREE from 'three'
 import { GLTF } from 'three-stdlib'
 import { GroupProps } from '@react-three/fiber'
 
-import type { TCameraDefaultValues } from '@/types/data/three/types'
-
-// COORDINATES
-
-export type TCoordinatesData = {
-  x?: number
-  y?: number
-  z?: number
-}
+import type { TCameraDefaultValues, TPerspectiveCameraData } from '@/types/data/three/types'
 
 // CUSTOM CAMERA
 
@@ -21,6 +13,17 @@ export type TCamera = {
 
 export type TCustomCamera = {
   defaultValues: TCameraDefaultValues
+}
+
+// CONTROLS
+
+export type TPlayer = {
+  rigidBodyDefaultValues: {
+    position: THREE.Vector3
+  }
+  cameraDefaultValues: TPerspectiveCameraData
+  speed?: number
+  jumpForce?: number
 }
 
 // MODELS

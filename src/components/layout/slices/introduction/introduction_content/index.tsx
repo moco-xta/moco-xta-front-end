@@ -5,13 +5,13 @@ import ImText from './im_text'
 import FedericoText from './federico_text'
 
 import './index.scss'
-import { helveticaMediumFont } from '@/app/fonts'
+import { montserratBoldFont } from '@/app/fonts'
 
 export default function IntroductionContent() {
   return (
     <div
       id='introduction_content'
-      className={`${helveticaMediumFont.className}`}
+      className={`${montserratBoldFont.className}`}
     >
       <p>
         <HiText />

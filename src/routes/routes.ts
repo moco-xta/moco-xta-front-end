@@ -5,4 +5,8 @@ export const routesData: TRouteData[] = [
     translationKey: 'HOME',
     path: '/',
   },
+  {
+    translationKey: 'ABOUT',
+    path: '/about',
+  },
 ]
