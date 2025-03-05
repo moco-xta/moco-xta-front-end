@@ -1,4 +1,4 @@
-import type { TCoordinatesData } from "../components/three/types"
+import type { TCoordinatesData } from '../components/three/types'
 
 // PLAYER STATE
 

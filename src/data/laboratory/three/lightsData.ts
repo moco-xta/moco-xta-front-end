@@ -1,4 +1,4 @@
-import type { TSpotLightsDefaultValues } from "@/types/data/three/types"
+import type { TSpotLightsDefaultValues } from '@/types/data/three/types'
 
 export const ambientLightDefaultValues = {
   color: '#fff',

@@ -2,13 +2,13 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { Environment, Lightformer, SoftShadows, useHelper } from '@react-three/drei'
 
-import type { TSpotLightsDefaultValues } from "@/types/data/three/types"
+import type { TSpotLightsDefaultValues } from '@/types/data/three/types'
 
 import { spotLightsDefaultValues } from '@/data/laboratory/three/lightsData'
 
 export type TCustomSpotLight = {
-  defaultValues: TSpotLightsDefaultValues,
-  index: number,
+  defaultValues: TSpotLightsDefaultValues
+  index: number
 }
 
 function CustomSpotLight({ defaultValues, index }: TCustomSpotLight) {
@@ -16,7 +16,8 @@ function CustomSpotLight({ defaultValues, index }: TCustomSpotLight) {
 
   // useHelper(spotLightRef, THREE.SpotLightHelper, 'cyan')
 
-  const { orientations, position, targetPosition, ...rest } = defaultValues as TSpotLightsDefaultValues
+  const { orientations, position, targetPosition, ...rest } =
+    defaultValues as TSpotLightsDefaultValues
 
   return (
     <spotLight
@@ -45,7 +46,13 @@ export default function Lights() {
     <>
       <ambientLight intensity={0.045} />
       {spotLightsDefaultValues.orientations.map((_, index) => {
-        return <CustomSpotLight key={`custom_spot_light_${index}`} defaultValues={spotLightsDefaultValues} index={index} />
+        return (
+          <CustomSpotLight
+            key={`custom_spot_light_${index}`}
+            defaultValues={spotLightsDefaultValues}
+            index={index}
+          />
+        )
       })}
       {/* <Environment>
         <Lightformer

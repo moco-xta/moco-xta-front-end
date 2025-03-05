@@ -31,7 +31,7 @@ export type TSpotLightsDefaultValues = {
   orientations: TOrientation[]
   position: TImperativeCoordinatesData
   targetPosition: TImperativeCoordinatesData
-  color: string,
+  color: string
   intensity: number
   angle: number
   distance: number
@@ -59,7 +59,6 @@ export type TImperativeCoordinatesData = {
   y: number
   z: number
 }
-
 
 export type TCoordinatesData = {
   x?: number
