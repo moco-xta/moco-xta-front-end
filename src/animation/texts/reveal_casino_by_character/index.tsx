@@ -17,7 +17,6 @@ export type TRevealCasinoByCharacter = {
 }
 
 export default function RevealCasinoByCharacter({ route, isActive }: TRevealCasinoByCharacter) {
-
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
 
   useEffect(() => {
