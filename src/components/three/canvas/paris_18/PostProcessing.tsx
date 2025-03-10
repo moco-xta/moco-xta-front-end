@@ -17,8 +17,8 @@ export default function PostProcessing() {
         opacity: { value: 1.0, min: 0.0, max: 1.0, label: 'opacity' },
         position: {
           value: new THREE.Vector3(-25, 6, -60),
-          step: 1,
           label: 'position',
+          options: [],
         },
         glareSize: {
           value: 0.35,

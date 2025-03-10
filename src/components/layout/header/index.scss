@@ -1,5 +1,14 @@
 @import '@/styles/variables.module.scss';
 
 header {
+  position: fixed;
+  width: 100%;
   padding: 4.2vh 4.2vw 0 4.2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  #header_buttons {
+    font-size: 0.875em;
+  }
 }

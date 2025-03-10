@@ -3,7 +3,7 @@ import type { TCanvasData } from '@/types/data/three/types'
 export const canvasDefaultValues: TCanvasData = {
   id: 'logo_moco_canvas',
   style: {
-    position: 'absolute',
+    // position: 'absolute',
     width: '150px',
     height: '150px',
   },

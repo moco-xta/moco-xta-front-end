@@ -1,0 +1,12 @@
+@import '@/styles/variables.module.scss';
+
+#routes {
+  position: relative;
+  padding: 1em 0.3125em;
+  background-color: $white;
+  border-radius: 0.625em;
+  opacity: 0;
+  transform: rotateZ(5deg) translateX(-5px) translateY(20px) translateZ(100px) scale(1.15);
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}

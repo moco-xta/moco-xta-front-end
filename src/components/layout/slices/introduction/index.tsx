@@ -7,7 +7,6 @@ import ParisMetroMap from './paris_metro_map'
 import MorphingDemo from './morphing_demo'
 
 import './index.scss'
-import styles from '@/styles/variables.module.scss'
 import VideoSVG from './video_svg'
 import MorphVideo from './morph_video'
 

@@ -56,5 +56,8 @@
     "WALLS": "/models/glb/laboratory/Walls.glb",
     "WORLD_MAP": "/models/glb/laboratory/WorldMap.glb",
     "WORLD_MAP_STAND": "/models/glb/laboratory/WorldMapStand.glb"
+  },
+  "PLANETS": {
+    "URANUS": "/models/glb/planets/Uranus.glb"
   }
 }

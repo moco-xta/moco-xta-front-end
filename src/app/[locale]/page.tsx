@@ -43,7 +43,7 @@ export default function Home() {
       <div id='home_page'>
         <Hero />
         <Introduction />
-        <Paris18 />
+        {/* <Paris18 /> */}
       </div>
     </div>
   )

@@ -1,4 +1,11 @@
-import type { TCoordinatesData } from '../components/three/types'
+import { TCoordinatesData } from '../data/three/types'
+
+// APP STATE
+
+export type TAppState = {
+  menuIsOpen: boolean
+  localeSwitcherIsOpen: boolean
+}
 
 // PLAYER STATE
 

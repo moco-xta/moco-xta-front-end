@@ -14,6 +14,13 @@ $blue_jeans: #69b1f5;
 $blue: #0000ff;
 $chinese_black: #0f1114;
 
+$void_black: #262626;
+$lime_green: #b2f141;
+$bright_lavender: #b087fc;
+$light_grey: #d7d8dc;
+$raisin_black: #202020;
+$lavender_mist: #eae1ff;
+
 // MARGINS
 
 $px_margin_XXXS: 3px;
@@ -77,4 +84,11 @@ $hover_transition: 0.2s;
   blueJeans: $blue_jeans;
   blue: $blue;
   chineseBlack: $chinese_black;
+
+  voidBlack: $void_black;
+  limeGreen: $lime_green;
+  brightLavender: $bright_lavender;
+  lightGrey: $light_grey;
+  raisinBlack: $raisin_black;
+  lavenderMist: $lavender_mist;
 }

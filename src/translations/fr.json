@@ -1,4 +1,14 @@
 {
+  "ROUTES": {
+    "ABOUT": "a propos",
+    "COLORS": "couleurs",
+    "CONTACT": "contact",
+    "HOME": "home",
+    "PHOTOGRAPHY": "photographie",
+    "PROJECTS": "projets",
+    "RESOURCES": "ressources",
+    "SKILLS": "competences"
+  },
   "LAYOUT": {
     "BUTTONS": {
       "ENTER": "entrer"

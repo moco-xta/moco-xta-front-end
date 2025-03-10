@@ -43,12 +43,12 @@ export default function LocaleLayout({
         }}
       >
         <body>
-          <Header />
           <ReduxProvider>
             <NextIntlClientProvider
-              // locale={locale}
+              locale={locale}
               messages={translations}
             >
+              <Header />
               {children}
             </NextIntlClientProvider>
           </ReduxProvider>
