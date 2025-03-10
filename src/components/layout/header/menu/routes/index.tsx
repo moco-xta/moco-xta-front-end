@@ -1,7 +1,11 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useTranslations } from 'next-intl'
 
 import { Link, usePathname } from '@/i18n/routing'
+
+import { AppDispatch } from '@/redux/store'
+import { toggleMenu } from '@/redux/slices/appStateSlice'
 
 import RevealCasinoByCharacter from '@/animation/texts/reveal_casino_by_character'
 
@@ -12,6 +16,11 @@ import './index.scss'
 export default function Routes() {
   const t = useTranslations('ROUTES')
   const pathname = usePathname()
+  const dispatch = useDispatch<AppDispatch>()
+  
+  const handleToggleMenu = () => {
+    dispatch(toggleMenu())
+  }
 
   return (
     <div id='routes'>
@@ -23,9 +32,10 @@ export default function Routes() {
             <Link
               key={`route_${route.translationKey}`}
               href={route.path}
+              onClick={handleToggleMenu}
             >
               <RevealCasinoByCharacter
-                route={route.translationKey}
+                route={t(route.translationKey)}
                 isActive={pathname === route.path}
               />
             </Link>

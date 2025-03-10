@@ -69,6 +69,9 @@ export default function RevealCasinoByCharacter({ route, isActive }: TRevealCasi
       )
   })
 
+  const handleOnClick = () => {
+    if (!isActive) timelineRef.current.reverse()
+  }
   const handleMouseEnter = () => {
     if (!isActive) timelineRef.current.play()
   }
@@ -79,6 +82,7 @@ export default function RevealCasinoByCharacter({ route, isActive }: TRevealCasi
   return (
     <div
       className='route_block'
+      onClick={handleOnClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
