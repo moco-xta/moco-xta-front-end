@@ -1,4 +1,4 @@
-import { Billboard, Bvh, Center, MeshTransmissionMaterial, Text, Text3D } from '@react-three/drei'
+import { /* Billboard, Bvh, */ Center, /* MeshTransmissionMaterial, Text, Text3D */ } from '@react-three/drei'
 import SkyBox from './SkyBox'
 
 export default function Paris18Scene() {

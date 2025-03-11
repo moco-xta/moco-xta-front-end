@@ -27,6 +27,7 @@ const MorphingDemo = () => {
 
       return () => anim.pause() // Cleanup animation
     }
+    return undefined
   }, [])
 
   return (

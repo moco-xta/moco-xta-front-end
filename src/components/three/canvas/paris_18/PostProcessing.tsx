@@ -1,5 +1,5 @@
 import React from 'react'
-import * as THREE from 'three'
+// import * as THREE from 'three'
 import {
   Bloom,
   BrightnessContrast,
@@ -7,10 +7,10 @@ import {
   LensFlare,
   Vignette,
 } from '@react-three/postprocessing'
-import { folder, useControls } from 'leva'
+// import { folder, useControls } from 'leva'
 
 export default function PostProcessing() {
-  const lensFlareProps = useControls({
+  /* const lensFlareProps = useControls({
     LensFlare: folder(
       {
         enabled: { value: true, label: 'enabled?' },
@@ -109,7 +109,7 @@ export default function PostProcessing() {
         collapsed: true,
       },
     ),
-  })
+  }) */
 
   return (
     <EffectComposer multisampling={0}>

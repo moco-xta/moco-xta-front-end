@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { ThreeEvent } from '@react-three/fiber'
 
-import type { TCoordinatesData } from '@/types/components/three/types'
+import type { TCoordinatesData } from '@/types/data/three/types'
 
 export function getUvMousePositionOnMesh(event: ThreeEvent<PointerEvent>) {
   const pointCoordinates = event.point

@@ -1,17 +1,17 @@
 import React from 'react'
-import { FaArrowDown, FaArrowLeft, FaArrowRight, FaArrowUp, FaMousePointer } from 'react-icons/fa'
-import { LuTouchpad } from 'react-icons/lu'
-import { useTranslations } from 'next-intl'
+// import { FaArrowDown, FaArrowLeft, FaArrowRight, FaArrowUp, FaMousePointer } from 'react-icons/fa'
+// import { LuTouchpad } from 'react-icons/lu'
+// import { useTranslations } from 'next-intl'
 
-import ParagraphTitle from '@/components/layout/titles/paragraph_title'
+// import ParagraphTitle from '@/components/layout/titles/paragraph_title'
 import EnterSceneButton from '@/components/layout/buttons/enter_scene_button'
 
-import { capitalizeFirstLetter } from '@/helpers/textHelpers'
+// import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 import './index.scss'
 
 export default function PlayerPageInstructions() {
-  const t = useTranslations('LAYOUT.PLAYER_PAGE.INSTRUCTIONS')
+  // const t = useTranslations('LAYOUT.PLAYER_PAGE.INSTRUCTIONS')
 
   return (
     <div className='instructions'>

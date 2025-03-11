@@ -18,7 +18,7 @@ export default function AnimatedPath({
   stroke,
   strokeWidth,
   preserveAspectRatio = 'xMidYMid meet',
-  maxWidth = 800,
+  // maxWidth = 800,
 }: TPathAnimation) {
   const pathRef = useRef<SVGPathElement>(null)
   const svgRef = useRef<SVGSVGElement>(null)

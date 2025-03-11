@@ -12,7 +12,7 @@ const MorphVideo = () => {
     const initAnimation = async () => {
       try {
         // Initialize morph animation
-        const anim = anime({
+        anime({
           targets: pathRef.current,
           d: [
             { value: 'M 10,30 50,30 50,70 10,70 Z' }, // Square

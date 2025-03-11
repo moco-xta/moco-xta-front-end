@@ -1,6 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 import { RigidBody } from '@react-three/rapier'
+
 import { TPhysicsGround } from '@/types/components/three/types'
 
 export default function PhysicsGround({

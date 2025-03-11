@@ -1,6 +1,4 @@
-import React, { useRef } from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
+import React from 'react'
 
 import IntroductionContent from './introduction_content'
 import ParisMetroMap from './paris_metro_map'

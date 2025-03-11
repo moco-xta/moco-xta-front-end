@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import type { GroupProps } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 
-import type { GLTFResult } from '@/types/data/components/three/types'
+import type { GLTFResult } from '@/types/components/three/types'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 

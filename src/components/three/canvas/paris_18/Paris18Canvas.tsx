@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Box, OrbitControls } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 
 import Lights from './Lights'
 import Paris18Scene from './Paris18Scene'

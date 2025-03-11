@@ -1,10 +1,10 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, /* useSelector */ } from 'react-redux'
 import { useLocale, useTranslations } from 'next-intl'
 import { FaArrowRight } from 'react-icons/fa'
 import { RiTranslate2 } from 'react-icons/ri'
 
-import { AppDispatch, RootState } from '@/redux/store'
+import { AppDispatch, /* RootState */ } from '@/redux/store'
 import { toggleLocaleSwitcher } from '@/redux/slices/appStateSlice'
 
 import './index.scss'
@@ -15,7 +15,7 @@ export default function LocaleSwitcherButton() {
   const locale = useLocale()
   const dispatch = useDispatch<AppDispatch>()
 
-  const localeSwitcherIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
+  // const localeSwitcherIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
 
   const handleLocaleSwitcherIsOpen = () => {
     dispatch(toggleLocaleSwitcher())

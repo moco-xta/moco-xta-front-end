@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { useTranslations } from 'next-intl'
+// import { useTranslations } from 'next-intl'
 
-import type { TPlayerPageGreeting } from '@/types/components/layout/types'
+// import type { TPlayerPageGreeting } from '@/types/components/layout/types'
 
 import { RootState } from '@/redux/store'
 
@@ -10,8 +10,8 @@ import Instructions from './intructions'
 
 import './index.scss'
 
-export default function PlayerPageGreeting({ introduction }: TPlayerPageGreeting) {
-  const t = useTranslations('LAYOUT.PLAYER_PAGE.LEAVE_SCENE')
+export default function PlayerPageGreeting(/* { introduction }: TPlayerPageGreeting */) {
+  // const t = useTranslations('LAYOUT.PLAYER_PAGE.LEAVE_SCENE')
   const { showInstructions } = useSelector((state: RootState) => state.playerPageState)
 
   return (

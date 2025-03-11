@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { FaArrowRight } from 'react-icons/fa'
@@ -16,10 +16,6 @@ export type TRevealCasinoByCharacter = {
 
 export default function RevealCasinoByCharacter({ route, isActive }: TRevealCasinoByCharacter) {
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
-
-  useEffect(() => {
-    console.log('timelineRef.current.reversed()', timelineRef.current.reversed())
-  }, [timelineRef.current])
 
   useGSAP(() => {
     timelineRef.current

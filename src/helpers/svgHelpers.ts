@@ -33,7 +33,7 @@ const COMMAND_MAP: Record<string, CommandDefinition> = {
 
 export function scaleSvgPath(path: string, scaleX: number, scaleY: number = scaleX): string {
   const tokens = path.match(/[A-Za-z]|[-+]?(?:\d+\.?\d*|\.\d+)(?:[eE][-+]?\d+)?/g) || []
-  let result: string[] = []
+  const result: string[] = []
   let currentCommand = ''
   let paramIndex = 0
 

@@ -15,7 +15,7 @@ export type TCustomCamera = {
   defaultValues: TCameraDefaultValues
 }
 
-// CONTROLS
+// PLAYER
 
 export type TPlayer = {
   rigidBodyDefaultValues: {
@@ -24,6 +24,21 @@ export type TPlayer = {
   cameraDefaultValues: TPerspectiveCameraData
   speed?: number
   jumpForce?: number
+}
+
+export type TPlayerCamera = {
+  cameraDefaultValues: TPerspectiveCameraData
+}
+
+export type TPlayerPointerLockControls = {
+  pointerLockControlsSelector: string
+}
+
+// PHYSICS
+
+export type TPhysicsGround = {
+  args: [number, number]
+  position?: THREE.Vector3
 }
 
 // MODELS
@@ -80,3 +95,9 @@ export type TRotationGroupsAndButtons = {
 }
 
 export type TLazyPad = LazyExoticComponent<ComponentType<MeshProps>>
+
+// LABORATORY
+
+export type TWallClockComponent = GroupProps & {
+  date: Date
+}

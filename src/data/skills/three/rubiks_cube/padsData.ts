@@ -1,7 +1,7 @@
 import { lazy } from 'react'
 
-import type { TLazyPadData } from '@/types/data/components/three/types'
 import type { TLazyPad } from '@/types/components/three/types'
+import type { TLazyPadData } from '@/types/data/three/types'
 
 export const padsData = {
   defaultValues: {

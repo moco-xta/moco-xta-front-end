@@ -1,5 +1,13 @@
 import { ReactNode } from 'react'
 
+// TITLES
+
+export type TTitle = {
+  title?: string
+  translationPath?: string
+  url?: string
+}
+
 // PLAYER PAGE
 
 export type TPlayerPage = {

@@ -8,7 +8,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import Hero from '@/components/layout/slices/hero'
 import Introduction from '@/components/layout/slices/introduction'
-import Paris18 from '@/components/layout/slices/paris_18'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
