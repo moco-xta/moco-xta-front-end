@@ -21,28 +21,31 @@ export default function MenuButton() {
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
 
   useGSAP(() => {
-    timelineRef.current.to('#routes', {
-      // xPercent: 0,
-      // yPercent: 0,
-      // z: 0,
-      // rotationX: 0,
-      // rotationY: 0,
-      // rotationZ: 0,
-      // rotationY: 0,
-      // rotate3d: '0, 0, 0, 0',
-      // rotation: "1, 0, 0, -20deg",
-      // rotation: "360,1,1,0",
-      // rotation: '0, 0, 0',
-      translateX: 0,
-      translateY: 0,
-      translateZ: 0,
-      // rotateX: 0,
-      rotateZ: 0,
-      scale: 1,
-      opacity: 1,
-      duration: 0.25,
-      ease: 'power1.out',
-    })
+    timelineRef.current
+      .to('#routes', {
+        translateX: 0,
+        translateY: 0,
+        translateZ: 0,
+        rotateZ: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 0.25,
+        ease: 'power1.out',
+      })
+      .to(
+        '#socials_container',
+        {
+          translateX: 0,
+          translateY: 0,
+          translateZ: 0,
+          rotateZ: 0,
+          scale: 1,
+          opacity: 1,
+          duration: 0.25,
+          ease: 'power1.out',
+        },
+        0,
+      )
   })
 
   useEffect(() => {

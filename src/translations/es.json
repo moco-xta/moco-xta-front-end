@@ -9,6 +9,11 @@
     "RESOURCES": "recursos",
     "SKILLS": "habilidades"
   },
+  "LOCALES": {
+    "EN": "Inglés",
+    "ES": "Español",
+    "FR": "Français"
+  },
   "LAYOUT": {
     "BUTTONS": {
       "ENTER": "entrar"

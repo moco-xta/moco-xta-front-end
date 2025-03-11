@@ -17,7 +17,7 @@ export default function Routes() {
   const t = useTranslations('ROUTES')
   const pathname = usePathname()
   const dispatch = useDispatch<AppDispatch>()
-  
+
   const handleToggleMenu = () => {
     dispatch(toggleMenu())
   }

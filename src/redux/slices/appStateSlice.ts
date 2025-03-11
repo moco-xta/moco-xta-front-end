@@ -17,12 +17,12 @@ const appStateSlice = createSlice({
     toggleMenu: (state) => {
       state.menuIsOpen = !state.menuIsOpen
     },
-    setLocaleSwitcherIsOpen: (state, action: PayloadAction<boolean>) => {
-      state.localeSwitcherIsOpen = action.payload
+    toggleLocaleSwitcher: (state) => {
+      state.localeSwitcherIsOpen = !state.localeSwitcherIsOpen
     },
   },
 })
 
-export const { setMenuIsOpen, toggleMenu, setLocaleSwitcherIsOpen } = appStateSlice.actions
+export const { setMenuIsOpen, toggleMenu, toggleLocaleSwitcher } = appStateSlice.actions
 
 export default appStateSlice.reducer

@@ -9,6 +9,9 @@ header {
   justify-content: space-between;
 
   #header_buttons {
+    display: flex;
+    flex-direction: row;
+    gap: $gap_XS;
     font-size: 0.875em;
   }
 }

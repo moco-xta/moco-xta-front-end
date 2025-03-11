@@ -4,8 +4,6 @@ import { useGSAP } from '@gsap/react'
 import { FaArrowRight } from 'react-icons/fa'
 import { GoDotFill } from 'react-icons/go'
 
-import type { TTextAnimation } from '@/types/animation/text/types'
-
 import { splitTextToCharacters } from '@/helpers/textHelpers'
 
 import './index.scss'
@@ -48,7 +46,7 @@ export default function RevealCasinoByCharacter({ route, isActive }: TRevealCasi
       .to(
         `.${route}_route_background`,
         {
-          backgroundColor: styles.limeGreen,
+          backgroundColor: styles.lavenderMist,
           scale: 1,
           opacity: 1,
           duration: timelineRef.current.reversed() ? 0.1 : 0.5,
