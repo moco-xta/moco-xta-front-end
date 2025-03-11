@@ -1,20 +1,22 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 
 import CustomCamera from '../../lib/custom_camera/CustomCamera'
 import Lights from './Lights'
-import IntroductionScene from './IntroductionScene'
 
-import { canvasDefaultValues } from '@/data/canvas/introduction/canvasData'
-import { cameraDefaultValues } from '@/data/canvas/introduction/cameraData'
+import { canvasDefaultValues } from '@/data/skills/three/rubiks_cube/canvasData'
+import { cameraDefaultValues } from '@/data/skills/three/rubiks_cube/cameraData'
+import RubiksCube from './RubiksCube'
 
-export default function IntroductionCanvas() {
+export default function RubiksCubeCanvas() {
   return (
     <Canvas {...canvasDefaultValues}>
       <CustomCamera defaultValues={cameraDefaultValues} />
       <Lights />
+      <OrbitControls />
       <Suspense fallback={null}>
-        <IntroductionScene />
+        <RubiksCube />
       </Suspense>
     </Canvas>
   )

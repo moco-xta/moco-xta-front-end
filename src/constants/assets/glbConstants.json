@@ -59,5 +59,37 @@
   },
   "PLANETS": {
     "URANUS": "/models/glb/planets/Uranus.glb"
+  },
+  "RUBIKS_CUBE": {
+    "BUTTON": "/models/glb/rubiks_cube/Button.glb",
+    "BASE_CUBE": "/models/glb/rubiks_cube/BaseCube.glb",
+    "PAD_BLENDER": "/models/glb/rubiks_cube/PadBlender.glb",
+    "PAD_CHAT_GPT": "/models/glb/rubiks_cube/PadChatGpt.glb",
+    "PAD_CSS": "/models/glb/rubiks_cube/PadCss.glb",
+    "PAD_DOCKER": "/models/glb/rubiks_cube/PadDocker.glb",
+    "PAD_FIGMA": "/models/glb/rubiks_cube/PadFigma.glb",
+    "PAD_FORMIK": "/models/glb/rubiks_cube/PadFormik.glb",
+    "PAD_GITHUB": "/models/glb/rubiks_cube/PadGithub.glb",
+    "PAD_GOOGLE_ANALYTICS": "/models/glb/rubiks_cube/PadGoogleAnalytics.glb",
+    "PAD_GSAP": "/models/glb/rubiks_cube/PadGsap.glb",
+    "PAD_HOSTINGER": "/models/glb/rubiks_cube/PadHostinger.glb",
+    "PAD_HTML": "/models/glb/rubiks_cube/PadHtml.glb",
+    "PAD_ILLUSTRATOR": "/models/glb/rubiks_cube/PadIllustrator.glb",
+    "PAD_JAVA": "/models/glb/rubiks_cube/PadJava.glb",
+    "PAD_JAVASCRIPT": "/models/glb/rubiks_cube/PadJavascript.glb",
+    "PAD_NEXT": "/models/glb/rubiks_cube/PadNext.glb",
+    "PAD_NEXT_INTL": "/models/glb/rubiks_cube/PadNextIntl.glb",
+    "PAD_NGINX": "/models/glb/rubiks_cube/PadNginx.glb",
+    "PAD_NPM": "/models/glb/rubiks_cube/PadNpm.glb",
+    "PAD_PHOTOSHOP": "/models/glb/rubiks_cube/PadPhotoshop.glb",
+    "PAD_POSTGRESQL": "/models/glb/rubiks_cube/PadPostgresql.glb",
+    "PAD_POSTMAN": "/models/glb/rubiks_cube/PadPostman.glb",
+    "PAD_REACT_THREE_DREI": "/models/glb/rubiks_cube/PadReactThreeDrei.glb",
+    "PAD_REDUX": "/models/glb/rubiks_cube/PadRedux.glb",
+    "PAD_SASS": "/models/glb/rubiks_cube/PadSass.glb",
+    "PAD_SPRING": "/models/glb/rubiks_cube/PadSpring.glb",
+    "PAD_THREEJS": "/models/glb/rubiks_cube/PadThreejs.glb",
+    "PAD_TYPESCRIPT": "/models/glb/rubiks_cube/PadTypescript.glb",
+    "PAD_WEBGL": "/models/glb/rubiks_cube/PadWebgl.glb"
   }
 }

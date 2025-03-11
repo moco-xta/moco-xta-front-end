@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import type { CanvasProps } from '@react-three/fiber'
 import type { FloatProps } from '@react-three/drei'
+import { TLazyPad } from '@/types/components/three/types'
 
 // CANVAS
 
@@ -64,4 +65,11 @@ export type TCoordinatesData = {
   x?: number
   y?: number
   z?: number
+}
+
+// RUBIKS CUBE
+
+export type TLazyPadData = {
+  componentName: string
+  model: TLazyPad
 }

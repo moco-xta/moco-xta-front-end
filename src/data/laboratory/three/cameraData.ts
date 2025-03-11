@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import type { TCameraDefaultValues } from '@/types/data/components/three/types'
+import type { TCameraDefaultValues } from '@/types/data/three/types'
 
 import { getDegreeEuler } from '@/helpers/threeHelpers'
 

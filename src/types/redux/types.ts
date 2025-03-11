@@ -15,3 +15,14 @@ export type TPlayerPageStateSlice = {
   dopTargetPosition: TCoordinatesData
   debug: boolean
 }
+
+// RUBIKS CUBE
+
+export type TRubiksCubeStateSlice = {
+  // status: TRubiksCubeStatus
+  rubiksCubeIsLocked: boolean
+  rubiksCubeIsMixed: boolean
+  rubiksCubeIsRotating: boolean
+}
+
+export type TRubiksCubeStatus = 'off' | 'mixing' | 'playing'

@@ -1,7 +1,7 @@
-import { MutableRefObject } from 'react'
+import { ComponentType, LazyExoticComponent, MutableRefObject } from 'react'
 import * as THREE from 'three'
 import { GLTF } from 'three-stdlib'
-import { GroupProps } from '@react-three/fiber'
+import { GroupProps, MeshProps } from '@react-three/fiber'
 
 import type { TCameraDefaultValues, TPerspectiveCameraData } from '@/types/data/three/types'
 
@@ -57,3 +57,26 @@ export type THeroLogo = {
   pathToModel: string
   componentName: string
 }
+
+// RUBIKS CUBE
+
+export type TCube = {
+  coordinates: THREE.Vector3
+  padIndexRef: MutableRefObject<number>
+}
+
+export type TPads = {
+  coordinates: THREE.Vector3
+  padIndexRef: MutableRefObject<number>
+}
+
+export type TPad = {
+  currentPadIndex: number
+  rotation: THREE.Euler
+}
+
+export type TRotationGroupsAndButtons = {
+  rubiksCubeRef: MutableRefObject<THREE.Group>
+}
+
+export type TLazyPad = LazyExoticComponent<ComponentType<MeshProps>>
