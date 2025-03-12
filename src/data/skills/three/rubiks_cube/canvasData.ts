@@ -1,12 +1,12 @@
 import type { TCanvasData } from '@/types/data/three/types'
 
 export const canvasDefaultValues: TCanvasData = {
-  id: 'hero_canvas',
+  id: 'skills_canvas',
   style: {
-    width: '100vw',
+    width: '42vw',
     height: '100vh',
   },
-  dpr: 1.5,
+  dpr: 2,
   legacy: false,
   linear: true,
   flat: true,

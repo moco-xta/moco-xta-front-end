@@ -1,8 +1,8 @@
 export const postProcessingData = {
   depthOfField: {
     focusDistance: 0.1,
-    focalLength: 0.3,
-    bokehScale: 10,
+    // focalLength: 0.1,
+    bokehScale: 5,
   },
   bloom: {
     intensity: 0.25,

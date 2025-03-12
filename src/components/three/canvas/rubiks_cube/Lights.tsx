@@ -6,7 +6,7 @@ import { lightsData } from '@/data/skills/three/rubiks_cube/lightsData'
 export default function Lights() {
   return (
     <>
-      <ambientLight />
+      <ambientLight intensity={0.85} />
       <Environment>
       <Lightformer
         intensity={lightsData.lightformer.intensity}

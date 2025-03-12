@@ -1,7 +1,7 @@
 export const baseCubeData = {
   defaultValues: {
     material: {
-      color: 'grey',
+      color: '#696969',
       roughness: 0.75,
     },
   },

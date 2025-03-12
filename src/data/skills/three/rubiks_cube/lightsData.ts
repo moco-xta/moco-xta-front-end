@@ -1,5 +1,5 @@
 export const lightsData = {
   lightformer: {
-    intensity: 1
+    intensity: 1.5
   }
 }
