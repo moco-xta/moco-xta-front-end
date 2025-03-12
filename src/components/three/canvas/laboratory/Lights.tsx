@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { /* Environment, Lightformer, */ SoftShadows, /* useHelper */ } from '@react-three/drei'
+import { /* Environment, Lightformer, */ SoftShadows /* useHelper */ } from '@react-three/drei'
 
 import type { TSpotLightsDefaultValues } from '@/types/data/three/types'
 

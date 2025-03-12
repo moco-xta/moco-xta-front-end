@@ -10,7 +10,7 @@ export const padsData = {
       roughness: 0.75,
     },
   },
-  padColors: ['#FF51F5', '#00F865', '#493DFF', '#FF5419', '#AEECFF', '#FFFFEB'],
+  padColors: ['#b2f141', '#b087fc', '#d7d8dc', '#202020', '#eae1ff', '#fff'],
   lazy: {
     pathToModel: 'rubiks_cube/',
     models: [
