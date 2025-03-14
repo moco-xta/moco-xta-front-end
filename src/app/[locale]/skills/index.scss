@@ -1,47 +1,12 @@
 @import '@/styles/variables.module.scss';
 
 #skills_page {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-  #skills_introduction {
-    width: 58vw;
+  #skills_slice {
+    position: relative;
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-    justify-content: center;
-    /* display: grid;
-    grid-template-rows: repeat(12, minmax(0, 1fr));
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-gap: 20px; */
-
-    #skills_title_container {
-      font-size: 6em;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      /* position: relative;
-      grid-column: 1 / 5;
-      grid-row: 4 / 5;
-       */
-
-      #skills_title_arrow {
-        margin-bottom: 42px;
-        font-size: 0.75em;
-        transform: rotateZ(45deg);
-      }
-    }
-
-    #skills_introduction_text {
-      width: 80%;
-      text-align: justify;
-      /* position: relative;
-      grid-column: 1 / 5;
-      grid-row: 6 / span 3;
-      display: flex; */
-    }
   }
 }

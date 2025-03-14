@@ -13,9 +13,5 @@ export type TPageTitle = {
 export default function PageTitle({ id, translationPath }: TPageTitle) {
   const t = useTranslations()
 
-  return (
-    <h1 id={id}>
-      {capitalizeFirstLetter(t(translationPath))}
-    </h1>
-  )
+  return <h1 id={id}>{capitalizeFirstLetter(t(translationPath))}</h1>
 }

@@ -41,12 +41,12 @@ export default function RotationGroupAndButtons({ rubiksCubeRef }: TRotationGrou
   useGSAP(
     () => {
       const cubes: THREE.Group[] = gsap.utils.toArray(rubiksCubeRef.current.children)
-      cubes.reverse().forEach((cubeRef, index) => {
+      cubes/* .reverse() */.forEach((cubeRef, index) => {
         timeline.fromTo(
           cubeRef.position,
           {
             x: cubeRef.position.x * 3,
-            y: (cubeRef.position.y - 3 - index) * 5,
+            y: (cubeRef.position.y - 3 - index) * -5,
             z: cubeRef.position.z * 3,
           },
           {

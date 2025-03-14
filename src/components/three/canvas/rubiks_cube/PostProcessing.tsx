@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { Bloom, DepthOfField, EffectComposer, ToneMapping } from '@react-three/postprocessing'
-import { BlendFunction, KernelSize, Resolution } from 'postprocessing'
+import { Bloom, DepthOfField, EffectComposer, /* ToneMapping */ } from '@react-three/postprocessing'
+import { /* BlendFunction, */ KernelSize, Resolution } from 'postprocessing'
 import { useGSAP } from '@gsap/react'
 
 import { RootState } from '@/redux/store'
@@ -110,9 +110,9 @@ export default function PostProcessing() {
     <>
       <OrbitControls
         ref={controlsRef}
-        enableZoom
-        minDistance={7}
-        maxDistance={12}
+        enableZoom={false}
+        maxPolarAngle={THREE.MathUtils.degToRad(145)}
+        minPolarAngle={THREE.MathUtils.degToRad(35)}
         target={new THREE.Vector3(0, 0, 0)}
         autoRotate={rubiksCubeIsLocked}
         autoRotateSpeed={0.5}

@@ -7,7 +7,7 @@ export const padsData = {
   defaultValues: {
     material: {
       attach: 'material',
-      roughness: 0.75,
+      roughness: 0.05,
     },
   },
   padColors: ['#b2f141', '#b087fc', '#d7d8dc', '#202020', '#eae1ff', '#fff'],

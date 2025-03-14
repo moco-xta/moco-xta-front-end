@@ -6,8 +6,8 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import Hero from '@/components/layout/slices/hero'
-import Introduction from '@/components/layout/slices/introduction'
+import Hero from '@/components/layout/slices/home/hero'
+import Introduction from '@/components/layout/slices/home/introduction'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
