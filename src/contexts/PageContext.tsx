@@ -1,7 +1,11 @@
 import { createContext, useContext, useRef, useState } from 'react'
 
 import type { TPageContext, TPageProvider } from '@/types/contexts/types'
-import type { TMenuData, TMenuParagraphData, TMenuSectionData } from '@/types/components/layout/types'
+import type {
+  TMenuData,
+  TMenuParagraphData,
+  TMenuSectionData,
+} from '@/types/components/layout/types'
 
 import { getMenu } from '@/helpers/pageHelpers'
 
@@ -9,7 +13,9 @@ export const PageContext = createContext<TPageContext>(null!)
 
 export const PageProvider = ({ pageData, children }: TPageProvider) => {
   const menuRef = useRef<TMenuData>(getMenu(pageData))
-  const [currentSection, setCurrentSection] = useState<TMenuSectionData>({...pageData.sections[0]})
+  const [currentSection, setCurrentSection] = useState<TMenuSectionData>({
+    ...pageData.sections[0],
+  })
   const [currentParagraph, setCurrentParagraph] = useState<TMenuParagraphData>(null!)
 
   const handleSetCurrentSection = (newCurrentSection: TMenuSectionData) => {

@@ -1,5 +1,9 @@
-import type { TPageData } from "@/types/data/components/layout/types";
-import type { TMenuData, TMenuParagraphData, TMenuSectionData } from "@/types/components/layout/types";
+import type { TPageData } from '@/types/data/components/layout/types'
+import type {
+  TMenuData,
+  TMenuParagraphData,
+  TMenuSectionData,
+} from '@/types/components/layout/types'
 
 export function getMenu(pageData: TPageData): TMenuData {
   return {
@@ -19,8 +23,5 @@ export function getIndexByPropertyValue(
   property: keyof TMenuSectionData | keyof TMenuParagraphData,
   value: string,
 ) {
-  return array.findIndex(
-    (item) =>
-      item[property] === value,
-  )
+  return array.findIndex((item) => item[property] === value)
 }

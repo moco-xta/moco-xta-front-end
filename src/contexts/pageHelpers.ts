@@ -1,7 +1,4 @@
-import type {
-  TMenuData,
-  TPageData,
-} from '@/types/data/components/layout/types'
+import type { TMenuData, TPageData } from '@/types/data/components/layout/types'
 
 export function getMenu(pageData: TPageData): TMenuData {
   return {

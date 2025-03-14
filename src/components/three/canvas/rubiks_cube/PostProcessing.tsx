@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { Bloom, DepthOfField, EffectComposer, /* ToneMapping */ } from '@react-three/postprocessing'
+import { Bloom, DepthOfField, EffectComposer /* ToneMapping */ } from '@react-three/postprocessing'
 import { /* BlendFunction, */ KernelSize, Resolution } from 'postprocessing'
 import { useGSAP } from '@gsap/react'
 

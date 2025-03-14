@@ -13,7 +13,7 @@ import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
 export default function Introduction() {
   const t = useTranslations('SKILLS')
-  
+
   return (
     <GSAPTimelineProvider {...timelineDefaultValues}>
       <div id='skills_introduction_slice'>

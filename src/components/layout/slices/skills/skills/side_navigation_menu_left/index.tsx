@@ -21,9 +21,7 @@ export default function SideNavigationMenuLeft({ pageData }: TSideNavigationMenu
 
   return (
     <nav className='side_navigation_menu'>
-      <p>
-        {capitalizeFirstLetter(t('LAYOUT.SIDE_NAVIGATION_MENU.ON_THIS_PAGE'))}
-      </p>
+      <p>{capitalizeFirstLetter(t('LAYOUT.SIDE_NAVIGATION_MENU.ON_THIS_PAGE'))}</p>
       <ol>
         {menuRef.current.sections.map((sectionData) => {
           const translationPathRef = `${pageData.translationKey}.SECTIONS.${sectionData.translationKey}`
