@@ -9,13 +9,11 @@ import type { TLocales } from '@/types/locales/types'
 import { AppDispatch, RootState } from '@/redux/store'
 import { toggleLocaleSwitcher } from '@/redux/slices/appStateSlice'
 
-import LocaleSwitcherButton from '../../buttons/locale_switcher_button'
-
 import { localesConstants } from '@/i18n/i18n.config'
 
 import './index.scss'
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcherOptions() {
   const t = useTranslations('LOCALES')
   const locale = useLocale()
   const router = useRouter()
@@ -34,24 +32,21 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <div id='locale_switcher'>
-      <LocaleSwitcherButton />
-      <div id='locale_switcher_content'>
-        {localesConstants
-          .filter((localeOption) => localeOption !== locale)
-          .sort((a, b) => a.localeCompare(b))
-          .map((localeOption) => {
-            return (
-              <li
-                key={`locale_switcher_option_${localeOption}`}
-                className='locale locale_option'
-                onClick={() => handleSetCurrentLocale(localeOption)}
-              >
-                <span>{t(`${localeOption.toUpperCase()}`)}</span>
-              </li>
-            )
-          })}
-      </div>
+    <div id='locale_switcher_options'>
+      {localesConstants
+        .filter((localeOption) => localeOption !== locale)
+        .sort((a, b) => a.localeCompare(b))
+        .map((localeOption) => {
+          return (
+            <li
+              key={`locale_switcher_option_${localeOption}`}
+              className='locale locale_option'
+              onClick={() => handleSetCurrentLocale(localeOption)}
+            >
+              <span>{t(`${localeOption.toUpperCase()}`)}</span>
+            </li>
+          )
+        })}
     </div>
   )
 }

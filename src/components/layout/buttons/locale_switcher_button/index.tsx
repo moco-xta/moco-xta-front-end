@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useDispatch /* useSelector */ } from 'react-redux'
 import { useLocale, useTranslations } from 'next-intl'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 import { FaArrowRight } from 'react-icons/fa'
 import { RiTranslate2 } from 'react-icons/ri'
 
@@ -15,21 +17,65 @@ export default function LocaleSwitcherButton() {
   const locale = useLocale()
   const dispatch = useDispatch<AppDispatch>()
 
+  const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
+
   // const localeSwitcherIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
 
-  const handleLocaleSwitcherIsOpen = () => {
+  useGSAP(() => {
+    timelineRef.current
+      .to('#tanslation_icon', {
+        scale: 0,
+        opacity: 0,
+        duration: 0.25,
+        ease: 'power1.out',
+      })
+      .to(
+        '#arrow_icon',
+        {
+          translateX: '20px',
+          color: 'white',
+          duration: 0.25,
+          ease: 'power1.out',
+        },
+        0,
+      )
+      .to(
+        '#locale_text',
+        {
+          translateX: '20px',
+          duration: 0.25,
+          ease: 'power1.out',
+        },
+        0,
+      )
+  })
+
+  const handleOnClick = () => {
     dispatch(toggleLocaleSwitcher())
   }
 
+  const handleMouseEnter = () => {
+    timelineRef.current.play()
+  }
+  const handleMouseLeave = () => {
+    timelineRef.current.reverse()
+  }
+
   return (
-    <button
-      id='locale_switcher_button'
-      className={`${helveticaRomanFont.className}`}
-      onClick={handleLocaleSwitcherIsOpen}
+    <div
+      id='locale_switcher_button_wrapper'
+      onClick={handleOnClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <FaArrowRight />
-      {t(locale.toUpperCase())}
-      <RiTranslate2 />
-    </button>
+      <FaArrowRight id='arrow_icon' />
+      <button
+        id='locale_switcher_button'
+        className={`${helveticaRomanFont.className}`}
+      >
+        <span id='locale_text'>{t(locale.toUpperCase()).toUpperCase()}</span>
+        <RiTranslate2 id='tanslation_icon' />
+      </button>
+    </div>
   )
 }

@@ -21,7 +21,7 @@ export default function MenuButton() {
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
 
   useGSAP(() => {
-    timelineRef.current
+    /* timelineRef.current
       .to('#routes', {
         translateX: 0,
         translateY: 0,
@@ -31,6 +31,7 @@ export default function MenuButton() {
         opacity: 1,
         duration: 0.25,
         ease: 'power1.out',
+        delay: 0.1
       })
       .to(
         '#socials_container',
@@ -43,9 +44,10 @@ export default function MenuButton() {
           opacity: 1,
           duration: 0.25,
           ease: 'power1.out',
+          delay: 0.1
         },
         0,
-      )
+      ) */
   })
 
   useEffect(() => {

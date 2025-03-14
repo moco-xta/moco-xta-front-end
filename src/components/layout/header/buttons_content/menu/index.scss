@@ -1,13 +1,15 @@
 @import '@/styles/variables.module.scss';
 
 #menu {
+  position: absolute;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: $gap_XS;
 
   #menu_content {
-    perspective: 1000px;
+    // perspective: 1000px;
     width: 200px;
     height: 200px;
     display: flex;

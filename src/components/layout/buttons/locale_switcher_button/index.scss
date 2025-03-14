@@ -1,19 +1,36 @@
 @import '@/styles/variables.module.scss';
 
-#locale_switcher_button {
-  height: 3.2em;
-  padding: 0px 1.125em 0px 1.625em;
-  font-size: 0.875em;
-  font-weight: 900;
-  background-color: $light_grey;
-  border-radius: 6.25em;
-  border-width: initial;
-  cursor: pointer;
-  transition:
-    color 0.4s,
-    background-color 0.4s;
-}
+#locale_switcher_button_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-#locale_switcher_button:hover {
-  background-color: $bright_lavender;
+  #arrow_icon {
+    // color: $anti_flash_white;
+    color: red;
+  }
+
+  #locale_switcher_button {
+    height: 3.2em;
+    padding: 0px 1.125em 0px 1.625em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $gap_XXS;
+    font-size: 0.875em;
+    font-weight: 900;
+    color: $white;
+    background-color: $void_black;
+    border-radius: 6.25em;
+    transition: all 0.4s;
+
+    #tanslation_icon {
+      transform: scale(1);
+    }
+  }
+
+  #locale_switcher_button:hover {
+    background-color: $bright_lavender;
+  }
 }

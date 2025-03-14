@@ -6,7 +6,7 @@ import { GoDotFill } from 'react-icons/go'
 
 import { splitTextToCharacters } from '@/helpers/textHelpers'
 
-import './index.scss'
+// import './index.scss'
 import styles from '@/styles/variables.module.scss'
 
 export type TRevealCasinoByCharacter = {
