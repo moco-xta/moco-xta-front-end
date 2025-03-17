@@ -16,12 +16,18 @@ import './index.scss'
 export default function Header() {
   return (
     <>
-      <header className='header_zIndex'>
+      <header
+        id='header_logo'
+        className='header_zIndex'
+      >
         <LogoMocoCanvas logoMocoMaterial={getMatteMaterial(logoMocoData.material.color)} />
-        <div id='header_buttons'>
-          <LocaleSwitcherButton />
-          <MenuButton />
-        </div>
+      </header>
+      <header
+        id='header_buttons'
+        className='header_zIndex'
+      >
+        <LocaleSwitcherButton />
+        <MenuButton />
       </header>
       <ButtonsContents />
     </>

@@ -6,17 +6,17 @@
   padding: 0.75em 0.5em 0.65em 1em;
   background-color: $void_black;
   border-radius: 15px;
-  
+
   .locale_option {
     font-size: 0.75em;
     font-weight: 900;
     color: $white;
   }
-  
+
   .locale_option:first-child {
     padding-bottom: 0.25em;
   }
-  
+
   .locale_option:last-child {
     padding-top: 0.25em;
   }
