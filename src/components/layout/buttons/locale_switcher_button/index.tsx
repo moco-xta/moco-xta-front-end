@@ -84,7 +84,10 @@ export default function LocaleSwitcherButton() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <FaArrowRight id='arrow_icon' size={10} />
+      <FaArrowRight
+        id='arrow_icon'
+        size={10}
+      />
       <button
         ref={localeSwitcherButtonRef}
         id='locale_switcher_button'
