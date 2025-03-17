@@ -7,6 +7,7 @@ const initialState: TAppState = {
   localeSwitcher: {
     isOpen: false,
     contentPosition: {
+      width: null,
       top: null,
       left: null,
     },
@@ -28,8 +29,9 @@ const appStateSlice = createSlice({
     },
     setLocalSwitcherPositionContent: (
       state,
-      action: PayloadAction<{ top: number; left: number }>,
+      action: PayloadAction<{ width: number; top: number; left: number }>,
     ) => {
+      state.localeSwitcher.contentPosition.width = action.payload.width
       state.localeSwitcher.contentPosition.top = action.payload.top
       state.localeSwitcher.contentPosition.left = action.payload.left
     },

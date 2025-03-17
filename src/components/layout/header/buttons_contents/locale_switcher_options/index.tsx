@@ -33,6 +33,7 @@ export default function LocaleSwitcherOptions() {
     <div
       id='locale_switcher_options'
       style={{
+        width: `${localeSwitcher.contentPosition.width}px`,
         top: `${localeSwitcher.contentPosition.top}px`,
         left: `${localeSwitcher.contentPosition.left}px`,
       }}
@@ -47,7 +48,7 @@ export default function LocaleSwitcherOptions() {
               className='locale locale_option'
               onClick={() => handleSetCurrentLocale(localeOption)}
             >
-              <span>{t(`${localeOption.toUpperCase()}`)}</span>
+              <span>{t(`${localeOption.toUpperCase()}`).toUpperCase()}</span>
             </li>
           )
         })}

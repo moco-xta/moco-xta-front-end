@@ -7,6 +7,7 @@ export type TAppState = {
   localeSwitcher: {
     isOpen: boolean
     contentPosition: {
+      width: number | null
       top: number | null
       left: number | null
     }

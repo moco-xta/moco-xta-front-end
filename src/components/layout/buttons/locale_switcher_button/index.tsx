@@ -25,6 +25,7 @@ export default function LocaleSwitcherButton() {
 
     dispatch(
       setLocalSwitcherPositionContent({
+        width: rect.width,
         top: rect.top + rect.height,
         left: rect.left,
       }),
