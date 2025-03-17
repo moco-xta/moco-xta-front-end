@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import { useDispatch /* useSelector */ } from 'react-redux'
 import { useLocale, useTranslations } from 'next-intl'
 import { gsap } from 'gsap'
@@ -20,7 +20,29 @@ export default function LocaleSwitcherButton() {
   const localeSwitcherButtonRef = useRef<HTMLButtonElement>(null!)
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
 
-  // const localeSwitcherIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
+  const handleResize = useCallback(() => {
+    const rect = localeSwitcherButtonRef.current.getBoundingClientRect()
+
+    dispatch(
+      setLocalSwitcherPositionContent({
+        top: rect.top + rect.height,
+        left: rect.left,
+      }),
+    )
+  }, [dispatch])
+
+  useEffect(() => {
+    if (localeSwitcherButtonRef.current) handleResize()
+  }, [dispatch, handleResize, localeSwitcherButtonRef])
+
+  useEffect(() => {
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [handleResize])
 
   useGSAP(() => {
     timelineRef.current
@@ -62,20 +84,6 @@ export default function LocaleSwitcherButton() {
   const handleMouseLeave = () => {
     timelineRef.current.reverse()
   }
-
-  useEffect(() => {
-    if (localeSwitcherButtonRef.current) {
-      const rect = localeSwitcherButtonRef.current.getBoundingClientRect()
-
-      dispatch(
-        setLocalSwitcherPositionContent({
-          top: rect.top + rect.height,
-          left: rect.left,
-        }),
-      )
-      console.log('Div position:', rect)
-    }
-  }, [dispatch, localeSwitcherButtonRef])
 
   return (
     <div
