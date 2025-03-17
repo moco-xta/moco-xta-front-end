@@ -1,6 +1,7 @@
 @import '@/styles/variables.module.scss';
 
 #locale_switcher_options {
+  position: absolute;
   width: fit-content;
   margin-top: $gap_XS;
 

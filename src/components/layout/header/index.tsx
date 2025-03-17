@@ -5,7 +5,7 @@ import React from 'react'
 import LogoMocoCanvas from '@/components/three/canvas/logo_moco/LogoMocoCanvas'
 import LocaleSwitcherButton from '../buttons/locale_switcher_button'
 import MenuButton from '../buttons/menu_button'
-import ButtonsContent from './buttons_content'
+import ButtonsContents from './buttons_contents'
 
 import { logoMocoData } from '@/data/logo_moco/three/logoMocoData'
 
@@ -23,7 +23,7 @@ export default function Header() {
           <MenuButton />
         </div>
       </header>
-      <ButtonsContent />
+      <ButtonsContents />
     </>
   )
 }

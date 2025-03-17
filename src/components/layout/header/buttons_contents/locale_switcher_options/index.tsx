@@ -2,9 +2,9 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocale, useTranslations } from 'next-intl'
 
-import { usePathname, useRouter } from '@/i18n/routing'
-
 import type { TLocales } from '@/types/locales/types'
+
+import { usePathname, useRouter } from '@/i18n/routing'
 
 import { AppDispatch, RootState } from '@/redux/store'
 import { toggleLocaleSwitcher } from '@/redux/slices/appStateSlice'
@@ -20,19 +20,23 @@ export default function LocaleSwitcherOptions() {
   const pathname = usePathname()
   const dispatch = useDispatch<AppDispatch>()
 
-  const localeSwitcherIsOpen = useSelector(
-    (state: RootState) => state.appState.localeSwitcherIsOpen,
-  )
+  const localeSwitcher = useSelector((state: RootState) => state.appState.localeSwitcher)
 
   function handleSetCurrentLocale(localeOption: TLocales) {
-    if (localeSwitcherIsOpen) {
+    if (localeSwitcher.isOpen) {
       router.replace({ pathname }, { locale: localeOption })
       dispatch(toggleLocaleSwitcher())
     }
   }
 
   return (
-    <div id='locale_switcher_options'>
+    <div
+      id='locale_switcher_options'
+      style={{
+        top: `${localeSwitcher.contentPosition.top}px`,
+        left: `${localeSwitcher.contentPosition.left}px`,
+      }}
+    >
       {localesConstants
         .filter((localeOption) => localeOption !== locale)
         .sort((a, b) => a.localeCompare(b))

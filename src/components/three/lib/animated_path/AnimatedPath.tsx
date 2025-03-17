@@ -57,10 +57,6 @@ export default function AnimatedPath({
     }
   }, [])
 
-  useEffect(() => {
-    console.log('pathRef.current', pathRef.current)
-  }, [pathRef])
-
   return (
     <div style={{ zIndex: `${id}`, position: 'absolute', width: '100%', height: '100%' }}>
       <svg

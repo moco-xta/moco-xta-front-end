@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useDispatch /* useSelector */ } from 'react-redux'
 import { useLocale, useTranslations } from 'next-intl'
 import { gsap } from 'gsap'
@@ -7,7 +7,7 @@ import { FaArrowRight } from 'react-icons/fa'
 import { RiTranslate2 } from 'react-icons/ri'
 
 import { AppDispatch /* RootState */ } from '@/redux/store'
-import { toggleLocaleSwitcher } from '@/redux/slices/appStateSlice'
+import { setLocalSwitcherPositionContent, toggleLocaleSwitcher } from '@/redux/slices/appStateSlice'
 
 import './index.scss'
 import { helveticaRomanFont } from '@/app/fonts'
@@ -17,6 +17,7 @@ export default function LocaleSwitcherButton() {
   const locale = useLocale()
   const dispatch = useDispatch<AppDispatch>()
 
+  const localeSwitcherButtonRef = useRef<HTMLButtonElement>(null!)
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
 
   // const localeSwitcherIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
@@ -61,6 +62,20 @@ export default function LocaleSwitcherButton() {
     timelineRef.current.reverse()
   }
 
+  useEffect(() => {
+    if (localeSwitcherButtonRef.current) {
+      const rect = localeSwitcherButtonRef.current.getBoundingClientRect()
+
+      dispatch(
+        setLocalSwitcherPositionContent({
+          top: rect.top + rect.height,
+          left: rect.left,
+        }),
+      )
+      console.log('Div position:', rect)
+    }
+  }, [dispatch, localeSwitcherButtonRef])
+
   return (
     <div
       id='locale_switcher_button_wrapper'
@@ -70,6 +85,7 @@ export default function LocaleSwitcherButton() {
     >
       <FaArrowRight id='arrow_icon' />
       <button
+        ref={localeSwitcherButtonRef}
         id='locale_switcher_button'
         className={`${helveticaRomanFont.className}`}
       >

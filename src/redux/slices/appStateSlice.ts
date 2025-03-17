@@ -4,7 +4,13 @@ import type { TAppState } from '@/types/redux/types'
 
 const initialState: TAppState = {
   menuIsOpen: false,
-  localeSwitcherIsOpen: false,
+  localeSwitcher: {
+    isOpen: false,
+    contentPosition: {
+      top: null,
+      left: null,
+    },
+  },
 }
 
 const appStateSlice = createSlice({
@@ -18,11 +24,19 @@ const appStateSlice = createSlice({
       state.menuIsOpen = !state.menuIsOpen
     },
     toggleLocaleSwitcher: (state) => {
-      state.localeSwitcherIsOpen = !state.localeSwitcherIsOpen
+      state.localeSwitcher.isOpen = !state.localeSwitcher.isOpen
+    },
+    setLocalSwitcherPositionContent: (
+      state,
+      action: PayloadAction<{ top: number; left: number }>,
+    ) => {
+      state.localeSwitcher.contentPosition.top = action.payload.top
+      state.localeSwitcher.contentPosition.left = action.payload.left
     },
   },
 })
 
-export const { setMenuIsOpen, toggleMenu, toggleLocaleSwitcher } = appStateSlice.actions
+export const { setMenuIsOpen, toggleMenu, toggleLocaleSwitcher, setLocalSwitcherPositionContent } =
+  appStateSlice.actions
 
 export default appStateSlice.reducer

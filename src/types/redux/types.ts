@@ -4,7 +4,13 @@ import { TCoordinatesData } from '../data/three/types'
 
 export type TAppState = {
   menuIsOpen: boolean
-  localeSwitcherIsOpen: boolean
+  localeSwitcher: {
+    isOpen: boolean
+    contentPosition: {
+      top: number | null
+      left: number | null
+    }
+  }
 }
 
 // PLAYER STATE

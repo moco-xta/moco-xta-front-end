@@ -9,17 +9,17 @@ import LocaleSwitcherOptions from './locale_switcher_options'
 import './index.scss'
 
 export default function ButtonsContent() {
-  const { menuIsOpen, localeSwitcherIsOpen } = useSelector((state: RootState) => state.appState)
+  const { menuIsOpen, localeSwitcher } = useSelector((state: RootState) => state.appState)
 
   return (
     <>
-      {(menuIsOpen || localeSwitcherIsOpen) && (
+      {(menuIsOpen || localeSwitcher.isOpen) && (
         <div
           id='header_buttons_content'
           className='header_buttons_content_zIndex'
         >
           {menuIsOpen && <Menu />}
-          {localeSwitcherIsOpen && <LocaleSwitcherOptions />}
+          {localeSwitcher.isOpen && <LocaleSwitcherOptions />}
         </div>
       )}
     </>
