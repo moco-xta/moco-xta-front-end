@@ -7,12 +7,15 @@
 
   #arrow_icon {
     // color: $anti_flash_white;
-    color: red;
+    color: $white;
+    margin-top: -2px;
+    margin-right: -10px;
+    opacity: 0;
   }
 
   #locale_switcher_button {
     height: 3.2em;
-    padding: 0px 1.125em 0px 1.625em;
+    padding: 0.125em 1.125em 0px 1.225em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -32,25 +35,5 @@
 
   #locale_switcher_button:hover {
     background-color: $bright_lavender;
-  }
-}
-
-#locale_switcher_options {
-  position: absolute;
-  width: fit-content;
-  margin-top: $gap_XS;
-
-  .locale_option {
-    padding: 10px;
-    color: $white;
-    background-color: $void_black;
-  }
-
-  .locale_option:first-child {
-    border-radius: 15px 15px 0 0;
-  }
-
-  .locale_option:last-child {
-    border-radius: 0 0 15px 15px;
   }
 }

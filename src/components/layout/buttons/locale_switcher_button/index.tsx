@@ -33,8 +33,9 @@ export default function LocaleSwitcherButton() {
       .to(
         '#arrow_icon',
         {
-          translateX: '20px',
+          translateX: '15px',
           color: 'white',
+          opacity: 1,
           duration: 0.25,
           ease: 'power1.out',
         },
@@ -43,7 +44,7 @@ export default function LocaleSwitcherButton() {
       .to(
         '#locale_text',
         {
-          translateX: '20px',
+          translateX: '15px',
           duration: 0.25,
           ease: 'power1.out',
         },
@@ -83,7 +84,7 @@ export default function LocaleSwitcherButton() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <FaArrowRight id='arrow_icon' />
+      <FaArrowRight id='arrow_icon' size={10} />
       <button
         ref={localeSwitcherButtonRef}
         id='locale_switcher_button'
