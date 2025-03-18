@@ -1,13 +1,13 @@
 import React, { useCallback, useEffect, useRef } from 'react'
-import { useDispatch /* useSelector */ } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useLocale, useTranslations } from 'next-intl'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { FaArrowRight } from 'react-icons/fa'
 import { RiTranslate2 } from 'react-icons/ri'
 
-import { AppDispatch /* RootState */ } from '@/redux/store'
-import { setLocalSwitcherPositionContent, toggleLocaleSwitcher } from '@/redux/slices/appStateSlice'
+import { AppDispatch, RootState } from '@/redux/store'
+import { setLocalSwitcherContentPosition, toggleLocaleSwitcher } from '@/redux/slices/appStateSlice'
 
 import './index.scss'
 import { helveticaRomanFont } from '@/app/fonts'
@@ -17,14 +17,17 @@ export default function LocaleSwitcherButton() {
   const locale = useLocale()
   const dispatch = useDispatch<AppDispatch>()
 
+  const { localeSwitcher } = useSelector((state: RootState) => state.appState)
+
   const localeSwitcherButtonRef = useRef<HTMLButtonElement>(null!)
-  const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
+  const buttonTimelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
+  const contentTimelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
 
   const handleResize = useCallback(() => {
     const rect = localeSwitcherButtonRef.current.getBoundingClientRect()
 
     dispatch(
-      setLocalSwitcherPositionContent({
+      setLocalSwitcherContentPosition({
         width: rect.width,
         top: rect.top + rect.height,
         left: rect.left,
@@ -46,7 +49,7 @@ export default function LocaleSwitcherButton() {
   }, [handleResize])
 
   useGSAP(() => {
-    timelineRef.current
+    buttonTimelineRef.current
       .to('#tanslation_icon', {
         scale: 0,
         opacity: 0,
@@ -73,6 +76,25 @@ export default function LocaleSwitcherButton() {
         },
         0,
       )
+
+    contentTimelineRef.current
+      .to('.locale_option', {
+        opacity: 1,
+        duration: 0.25,
+        ease: 'power1.out',
+        stagger: 0.05,
+        // TODO: final animation
+      })
+      .to(
+        '#arrow_icon',
+        {
+          rotate: '90deg',
+          marginTop: 0,
+          duration: 0.25,
+          ease: 'power1.out',
+        },
+        0,
+      )
   })
 
   const handleOnClick = () => {
@@ -80,11 +102,19 @@ export default function LocaleSwitcherButton() {
   }
 
   const handleMouseEnter = () => {
-    timelineRef.current.play()
+    buttonTimelineRef.current.play()
   }
   const handleMouseLeave = () => {
-    timelineRef.current.reverse()
+    buttonTimelineRef.current.reverse()
   }
+
+  useEffect(() => {
+    if (localeSwitcher.isOpen) {
+      contentTimelineRef.current.play()
+    } else {
+      contentTimelineRef.current.reverse()
+    }
+  }, [localeSwitcher.isOpen])
 
   return (
     <div

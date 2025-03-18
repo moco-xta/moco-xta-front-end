@@ -3,11 +3,19 @@ import { TCoordinatesData } from '../data/three/types'
 // APP STATE
 
 export type TAppState = {
-  menuIsOpen: boolean
-  localeSwitcher: {
+  menu: {
     isOpen: boolean
     contentPosition: {
+      top: number | null
+      right: number | null
+    }
+  }
+  localeSwitcher: {
+    isOpen: boolean
+    contentDimensions: {
       width: number | null
+    }
+    contentPosition: {
       top: number | null
       left: number | null
     }

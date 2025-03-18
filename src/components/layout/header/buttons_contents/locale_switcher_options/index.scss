@@ -3,21 +3,30 @@
 #locale_switcher_options {
   position: absolute;
   margin-top: $gap_XS;
-  padding: 0.75em 0.5em 0.65em 1em;
-  background-color: $void_black;
-  border-radius: 15px;
 
   .locale_option {
+    padding: 1.125em;
     font-size: 0.75em;
     font-weight: 900;
     color: $white;
+    cursor: pointer;
+    background-color: $void_black;
+    opacity: 0;
+    // TODO: final animation
+  }
+
+  .locale_option:hover {
+    background-color: $bright_lavender;
   }
 
   .locale_option:first-child {
-    padding-bottom: 0.25em;
+    padding-top: 1.25em;
+    padding-bottom: 0.8em;
+    border-radius: 15px 15px 0 0;
   }
 
   .locale_option:last-child {
-    padding-top: 0.25em;
+    padding-top: 0.9em;
+    border-radius: 0 0 15px 15px;
   }
 }

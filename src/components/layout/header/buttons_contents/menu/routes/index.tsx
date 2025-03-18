@@ -11,7 +11,7 @@ import RevealCasinoByCharacter from '@/animation/texts/reveal_casino_by_characte
 
 import { routesData } from '@/routes/routes'
 
-// import './index.scss'
+import './index.scss'
 
 export default function Routes() {
   const t = useTranslations('ROUTES')

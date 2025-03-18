@@ -33,7 +33,7 @@ export default function LocaleSwitcherOptions() {
     <div
       id='locale_switcher_options'
       style={{
-        width: `${localeSwitcher.contentPosition.width}px`,
+        width: `${localeSwitcher.contentDimensions.width}px`,
         top: `${localeSwitcher.contentPosition.top}px`,
         left: `${localeSwitcher.contentPosition.left}px`,
       }}

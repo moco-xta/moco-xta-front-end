@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { toggleMenu } from '@/redux/slices/appStateSlice'
+import { setMenuContentPosition, toggleMenu } from '@/redux/slices/appStateSlice'
 
 import './index.scss'
 import { helveticaRomanFont } from '@/app/fonts'
@@ -12,13 +12,38 @@ import { helveticaRomanFont } from '@/app/fonts'
 export default function MenuButton() {
   const dispatch = useDispatch<AppDispatch>()
 
-  const menuIsOpen = useSelector((state: RootState) => state.appState.menuIsOpen)
+  const menu = useSelector((state: RootState) => state.appState.menu)
 
   const handleToggleMenu = () => {
     dispatch(toggleMenu())
   }
 
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
+  const menuButtonRef = useRef<HTMLButtonElement>(null!)
+
+  const handleResize = useCallback(() => {
+    const rect = menuButtonRef.current.getBoundingClientRect()
+
+    dispatch(
+      setMenuContentPosition({
+        top: rect.top + rect.height,
+        right: window.innerWidth - (rect.left + rect.width),
+      }),
+    )
+  }, [dispatch])
+
+  useEffect(() => {
+    if (menuButtonRef.current) handleResize()
+  }, [dispatch, handleResize, menuButtonRef])
+
+  useEffect(() => {
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [handleResize])
 
   useGSAP(() => {
     /* timelineRef.current
@@ -51,15 +76,16 @@ export default function MenuButton() {
   })
 
   useEffect(() => {
-    if (menuIsOpen) {
+    if (menu.isOpen) {
       timelineRef.current.play()
     } else {
       timelineRef.current.reverse()
     }
-  }, [menuIsOpen])
+  }, [menu.isOpen])
 
   return (
     <button
+      ref={menuButtonRef}
       id='menu_button'
       className={`${helveticaRomanFont.className}`}
       onClick={handleToggleMenu}
