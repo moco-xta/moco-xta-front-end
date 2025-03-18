@@ -55,6 +55,10 @@ export default function LocaleSwitcherButton() {
   useGSAP(() => {
     buttonTimelineRef.current
       .to('#tanslation_icon', {
+        onStart: () => {
+          document.getElementById('locale_switcher_options')!.style.zIndex = '1'
+          document.getElementById('menu')!.style.zIndex = '0'
+        },
         scale: 0,
         opacity: 0,
         duration: 0.25,
