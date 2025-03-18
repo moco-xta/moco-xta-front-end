@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import Introduction from '@/components/layout/slices/skills/introduction'
+// import Introduction from '@/components/layout/slices/skills/introduction'
 import SkillsSLice from '@/components/layout/slices/skills/skills'
 
 import './index.scss'
