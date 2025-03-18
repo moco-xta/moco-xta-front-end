@@ -7,7 +7,11 @@ import { FaArrowRight } from 'react-icons/fa'
 import { RiTranslate2 } from 'react-icons/ri'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { setLocalSwitcherContentPosition, toggleLocaleSwitcher } from '@/redux/slices/appStateSlice'
+import {
+  setLocalSwitcherContentPosition,
+  toggleLocaleSwitcher,
+  toggleMenu,
+} from '@/redux/slices/appStateSlice'
 
 import './index.scss'
 import { helveticaRomanFont } from '@/app/fonts'
@@ -17,7 +21,7 @@ export default function LocaleSwitcherButton() {
   const locale = useLocale()
   const dispatch = useDispatch<AppDispatch>()
 
-  const { localeSwitcher } = useSelector((state: RootState) => state.appState)
+  const { menu, localeSwitcher } = useSelector((state: RootState) => state.appState)
 
   const localeSwitcherButtonRef = useRef<HTMLButtonElement>(null!)
   const buttonTimelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
@@ -99,6 +103,7 @@ export default function LocaleSwitcherButton() {
 
   const handleOnClick = () => {
     dispatch(toggleLocaleSwitcher())
+    if (menu.isOpen) dispatch(toggleMenu())
   }
 
   const handleMouseEnter = () => {

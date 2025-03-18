@@ -4,7 +4,11 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 import { AppDispatch, RootState } from '@/redux/store'
-import { setMenuContentPosition, toggleMenu } from '@/redux/slices/appStateSlice'
+import {
+  setMenuContentPosition,
+  toggleLocaleSwitcher,
+  toggleMenu,
+} from '@/redux/slices/appStateSlice'
 
 import './index.scss'
 import { helveticaRomanFont } from '@/app/fonts'
@@ -12,10 +16,11 @@ import { helveticaRomanFont } from '@/app/fonts'
 export default function MenuButton() {
   const dispatch = useDispatch<AppDispatch>()
 
-  const menu = useSelector((state: RootState) => state.appState.menu)
+  const { menu, localeSwitcher } = useSelector((state: RootState) => state.appState)
 
-  const handleToggleMenu = () => {
+  const handleOnClick = () => {
     dispatch(toggleMenu())
+    if (localeSwitcher.isOpen) dispatch(toggleLocaleSwitcher())
   }
 
   const timelineRef = useRef<GSAPTimeline>(gsap.timeline({ paused: true }))
@@ -56,7 +61,7 @@ export default function MenuButton() {
         opacity: 1,
         duration: 0.25,
         ease: 'power1.out',
-        delay: 0.1
+        delay: 0.1,
       })
       .to(
         '#socials_container',
@@ -69,7 +74,7 @@ export default function MenuButton() {
           opacity: 1,
           duration: 0.25,
           ease: 'power1.out',
-          delay: 0.1
+          delay: 0.1,
         },
         0,
       )
@@ -88,7 +93,7 @@ export default function MenuButton() {
       ref={menuButtonRef}
       id='menu_button'
       className={`${helveticaRomanFont.className}`}
-      onClick={handleToggleMenu}
+      onClick={handleOnClick}
     >
       MENU
     </button>
