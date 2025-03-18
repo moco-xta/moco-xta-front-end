@@ -46,7 +46,7 @@ export default function MenuButton() {
   }, [handleResize])
 
   useGSAP(() => {
-    /* timelineRef.current
+    timelineRef.current
       .to('#routes', {
         translateX: 0,
         translateY: 0,
@@ -72,7 +72,7 @@ export default function MenuButton() {
           delay: 0.1
         },
         0,
-      ) */
+      )
   })
 
   useEffect(() => {
