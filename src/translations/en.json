@@ -41,6 +41,9 @@
         "LINE_6": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
       }
     },
+    "MAIN_SKILLS": {
+      "SECTION_TITLE": "Main skills"
+    },
     "LAST_PROJECTS": {
       "SECTION_TITLE": "Last projects"
     }
