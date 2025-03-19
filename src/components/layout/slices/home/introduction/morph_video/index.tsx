@@ -1,49 +1,59 @@
-// components/MorphVideo.jsx
-import { useEffect, useRef } from 'react'
+import { RefObject, useEffect, useRef } from 'react'
 import anime from 'animejs'
+import gsap from 'gsap'
 
-const MorphVideo = () => {
-  const pathRef = useRef(null)
-  const videoRef = useRef<HTMLVideoElement>(null!)
+export type TMorphVideo = {
+  introductionSectionRef: RefObject<HTMLElement>
+}
+
+const MorphVideo = ({ introductionSectionRef }: TMorphVideo) => {
+  const pathRef = useRef<SVGPathElement | null>(null)
+  const videoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined' || !pathRef.current) return
 
-    const initAnimation = async () => {
-      try {
-        // Initialize morph animation
-        anime({
-          targets: pathRef.current,
-          d: [
-            { value: 'M 10,30 50,30 50,70 10,70 Z' }, // Square
-            { value: 'M 30,10 70,10 70,50 30,50 Z' }, // Diamond
-            { value: 'M 20,20 80,20 80,80 20,80 Z' }, // Rectangle
-            { value: 'M 40,40 Q 60,20 80,40 T 60,60 40,40 Z' }, // Complex shape
-          ],
-          easing: 'easeInOutQuad',
-          duration: 3000,
-          loop: true,
-        })
+    // Anime.js morph animation
+    const morphAnimation = anime({
+      targets: pathRef.current,
+      d: [
+        { value: 'M 10,30 50,30 50,70 10,70 Z' }, // Square
+        { value: 'M 30,10 70,10 70,50 30,50 Z' }, // Diamond
+        { value: 'M 20,20 80,20 80,80 20,80 Z' }, // Rectangle
+        { value: 'M 40,40 Q 60,20 80,40 T 60,60 40,40 Z' }, // Complex shape
+      ],
+      easing: 'linear',
+      duration: 1, // Set duration to 1ms since GSAP will control it
+      autoplay: false, // Disable autoplay
+    })
 
-        // Handle video play
-        if (videoRef.current) {
-          videoRef.current.play().catch(() => {
-            // Fallback for autoplay restrictions
-            const playButton = document.createElement('button')
-            playButton.innerHTML = 'Play Video'
-            playButton.style.position = 'absolute'
-            playButton.style.top = '20px'
-            playButton.style.left = '20px'
-            playButton.onclick = () => videoRef.current.play()
-            document.querySelector('.container')!.appendChild(playButton)
-          })
-        }
-      } catch (error) {
-        console.error('Animation error:', error)
-      }
+    // GSAP ScrollTrigger
+    gsap.to(morphAnimation, {
+      progress: 1, // Animate from 0 to 100%
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.container',
+        start: 'top bottom', // Start animation when the element enters the viewport
+        end: 'top top', // End when it reaches the top
+        scrub: 1, // Smooth scrolling effect
+      },
+      onUpdate: () => {
+        morphAnimation.seek(morphAnimation.duration * morphAnimation.progress) // Sync anime.js
+      },
+    })
+
+    // Handle video autoplay restrictions
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        const playButton = document.createElement('button')
+        playButton.innerHTML = 'Play Video'
+        playButton.style.position = 'absolute'
+        playButton.style.top = '20px'
+        playButton.style.left = '20px'
+        playButton.onclick = () => videoRef.current?.play()
+        document.querySelector('.container')?.appendChild(playButton)
+      })
     }
-
-    initAnimation()
   }, [])
 
   return (
