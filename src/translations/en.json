@@ -19,6 +19,7 @@
       "ENTER": "enter"
     },
     "SIDE_NAVIGATION_MENU": {
+      "INTRODUCTION": "introduction",
       "ON_THIS_PAGE": "on this page",
       "ON_THIS_SECTION": "on this section"
     }
