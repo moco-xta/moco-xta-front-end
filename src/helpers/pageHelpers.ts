@@ -19,9 +19,12 @@ export function getMenu(pageData: TPageData): TMenuData {
 }
 
 export function getIndexByPropertyValue(
-  array: TMenuSectionData[],
+  array: TMenuSectionData[] | TMenuParagraphData[],
   property: keyof TMenuSectionData | keyof TMenuParagraphData,
   value: string,
 ) {
-  return array.findIndex((item) => item[property] === value)
+  return array.findIndex(
+    (item) =>
+      (item as TMenuSectionData | TMenuParagraphData)[property as keyof typeof item] === value,
+  )
 }

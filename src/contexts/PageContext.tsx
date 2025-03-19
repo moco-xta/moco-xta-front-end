@@ -14,9 +14,14 @@ export const PageContext = createContext<TPageContext>(null!)
 export const PageProvider = ({ pageData, children }: TPageProvider) => {
   const menuRef = useRef<TMenuData>(getMenu(pageData))
   const [currentSection, setCurrentSection] = useState<TMenuSectionData>({
-    ...pageData.sections[0],
+    key: 'front_end_frameworks',
+    translationKey: 'FRONT_END_FRAMEWORKS',
+    paragraphs: [],
   })
-  const [currentParagraph, setCurrentParagraph] = useState<TMenuParagraphData>(null!)
+  const [currentParagraph, setCurrentParagraph] = useState<TMenuParagraphData>({
+    key: 'introduction',
+    translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
+  })
 
   const handleSetCurrentSection = (newCurrentSection: TMenuSectionData) => {
     setCurrentSection(newCurrentSection)

@@ -6,7 +6,7 @@ import type { TMenuParagraphData, TSideNavigationMenu } from '@/types/components
 import { usePageContext } from '@/contexts/PageContext'
 
 import { capitalizeFirstLetter } from '@/helpers/textHelpers'
-// import { getIndexByPropertyValue } from '@/helpers/pageHelpers'
+import { getIndexByPropertyValue } from '@/helpers/pageHelpers'
 
 import './index.scss'
 
@@ -64,7 +64,7 @@ export default function SideNavigationMenuRight({ pageData }: TSideNavigationMen
                 className='sdm_item sdm_paragraph_li'
               >
                 <a
-                  // className={`sdm_a sdm_paragraph_a ${currentParagraph!.key === paragraphData.key ? 'sdm_current' : getIndexByPropertyValue(currentSection.paragraphs, 'key', currentParagraph!.key) > getIndexByPropertyValue(currentSection.paragraphs, 'key', paragraphData!.key) ? 'read' : ''}`}
+                  className={`sdm_a sdm_paragraph_a ${currentParagraph.key === paragraphData.key ? 'sdm_current' : getIndexByPropertyValue(currentSection.paragraphs, 'key', currentParagraph!.key) > getIndexByPropertyValue(currentSection.paragraphs, 'key', paragraphData!.key) ? 'read' : ''}`}
                   onClick={() => handleOnClick(paragraphData)}
                 >
                   {capitalizeFirstLetter(
