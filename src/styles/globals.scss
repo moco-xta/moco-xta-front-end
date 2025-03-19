@@ -93,3 +93,10 @@ button {
   cursor: pointer;
   outline: inherit;
 }
+
+// ANIMATION
+
+.text_revealed {
+  display: inline-block;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}

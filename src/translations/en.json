@@ -28,7 +28,8 @@
       "HI": "Hi!",
       "I_M": "I'm",
       "A": "a",
-      "FRONT_END_DEVELOPER": "front-end developer"
+      "FRONT_END": "front-end",
+      "DEVELOPER": "developer"
     }
   },
   "SKILLS": {

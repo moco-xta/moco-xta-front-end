@@ -16,19 +16,18 @@ export default function ImText({ introductionSectionRef }: TImTextByWords) {
 
   useGSAP(
     () => {
-      gsap
-        .to('#im_text', {
-          scrollTrigger: {
-            trigger: introductionSectionRef.current,
-            start: 'top center',
-            markers: true,
-          },
-          yPercent: -100,
-          opacity: 1,
-          duration: 0.5,
-          delay: 0.25,
-          ease: 'power1.out',
-        })
+      gsap.to('#im_text', {
+        scrollTrigger: {
+          trigger: introductionSectionRef.current,
+          start: 'top center',
+          markers: true,
+        },
+        yPercent: -100,
+        opacity: 1,
+        duration: 0.5,
+        delay: 0.25,
+        ease: 'power1.out',
+      })
       /* return () => animationFn.kill() */
     },
     { scope: introductionSectionRef },

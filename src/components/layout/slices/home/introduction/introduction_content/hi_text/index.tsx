@@ -1,7 +1,7 @@
 import React, { RefObject, useRef } from 'react'
-import { useTranslations } from 'next-intl'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { useTranslations } from 'next-intl'
 
 import './index.scss'
 
@@ -16,18 +16,17 @@ export default function HiText({ introductionSectionRef }: THiTextByWords) {
 
   useGSAP(
     () => {
-      const animationFn = gsap
-        .to('#hi_text', {
-          scrollTrigger: {
-            trigger: introductionSectionRef.current,
-            start: 'top center',
-            markers: true,
-          },
-          yPercent: -100,
-          opacity: 1,
-          duration: 0.5,
-          ease: 'power1.out',
-        })
+      const animationFn = gsap.to('#hi_text', {
+        scrollTrigger: {
+          trigger: introductionSectionRef.current,
+          start: 'top center',
+          markers: true,
+        },
+        yPercent: -100,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power1.out',
+      })
       return () => animationFn.kill()
     },
     { scope: introductionSectionRef },
