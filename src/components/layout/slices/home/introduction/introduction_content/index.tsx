@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { RefObject } from 'react'
 
 import HiText from './hi_text'
 import ImText from './im_text'
@@ -7,23 +7,27 @@ import FedericoText from './federico_text'
 import './index.scss'
 import { montserratBoldFont } from '@/app/fonts'
 
-export default function IntroductionContent() {
+export type TIntroductionContent = {
+  introductionSectionRef: RefObject<HTMLElement>
+}
+
+export default function IntroductionContent({ introductionSectionRef }: TIntroductionContent) {
   return (
     <div
       id='introduction_content'
       className={`${montserratBoldFont.className}`}
     >
-      <p>
-        <HiText />
+      <div>
+        <HiText introductionSectionRef={introductionSectionRef} />
         &nbsp;
-        <ImText />
+        <ImText introductionSectionRef={introductionSectionRef} />
         &nbsp;
         <FedericoText />
         <br />
         <span>Front-end</span>
         &nbsp;
         <span>Developer</span>
-      </p>
+      </div>
     </div>
   )
 }

@@ -1,28 +1,48 @@
-import React from 'react'
-
-import RevealTextByWords from '@/animation/texts/reveal_text_by_words'
+import React, { RefObject, useRef } from 'react'
+import { useTranslations } from 'next-intl'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 import './index.scss'
 
-export default function ImText() {
-  return (
-    <RevealTextByWords
-      tag={'span'}
-      id={'federico_text'}
-      className={`introduction_title reveal_letter_by_words`}
-      text={"I'm"}
-      animation={{
-        from: {
-          xPercent: -100,
-          opacity: 0,
-        },
-        to: {
-          xPercent: 0,
+export type TImTextByWords = {
+  introductionSectionRef: RefObject<HTMLElement>
+}
+
+export default function ImText({ introductionSectionRef }: TImTextByWords) {
+  const t = useTranslations('HOME.INTRODUCTION')
+
+  const imTextRef = useRef<HTMLSpanElement>(null!)
+
+  useGSAP(
+    () => {
+      gsap
+        .to('#im_text', {
+          scrollTrigger: {
+            trigger: introductionSectionRef.current,
+            start: 'top center',
+            markers: true,
+          },
+          yPercent: -100,
           opacity: 1,
           duration: 0.5,
+          delay: 0.25,
           ease: 'power1.out',
-        },
-      }}
-    />
+        })
+      /* return () => animationFn.kill() */
+    },
+    { scope: introductionSectionRef },
+  )
+
+  return (
+    <div id='im_text_wrapper'>
+      <span
+        ref={imTextRef}
+        id='im_text'
+        className='introduction_title'
+      >
+        {t('I_M')}
+      </span>
+    </div>
   )
 }

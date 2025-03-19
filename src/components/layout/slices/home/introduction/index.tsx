@@ -1,21 +1,26 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import IntroductionContent from './introduction_content'
 import ParisMetroMap from './paris_metro_map'
-import MorphingDemo from './morphing_demo'
+// import MorphingDemo from './morphing_demo'
+// import VideoSVG from './video_svg'
+// import MorphVideo from './morph_video'
 
 import './index.scss'
-import VideoSVG from './video_svg'
-import MorphVideo from './morph_video'
 
 export default function Introduction() {
+  const introductionSectionRef = useRef<HTMLElement>(null!)
+
   return (
-    <section id='introduction_section'>
-      <IntroductionContent />
+    <section
+      ref={introductionSectionRef}
+      id='introduction_section'
+    >
+      <IntroductionContent introductionSectionRef={introductionSectionRef} />
       <ParisMetroMap />
-      <MorphingDemo />
-      <VideoSVG />
-      <MorphVideo />
+      {/* <MorphingDemo /> */}
+      {/* <VideoSVG /> */}
+      {/* <MorphVideo /> */}
     </section>
   )
 }

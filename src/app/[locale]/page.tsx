@@ -27,7 +27,7 @@ export default function Home() {
           start: 'top top',
           end: 'bottom bottom',
           scrub: true,
-          markers: true,
+          // markers: true,
         },
         background: '#0f1114',
         ease: 'power1.in',

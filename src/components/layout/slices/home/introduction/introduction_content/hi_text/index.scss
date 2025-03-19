@@ -1,1 +1,12 @@
 @import '@/styles/variables.module.scss';
+
+#hi_text_wrapper {
+  display: inline-block;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+  #hi_text {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
