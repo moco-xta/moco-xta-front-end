@@ -3,6 +3,8 @@
 #skills_page {
   display: flex;
   flex-direction: column;
+  // scroll-snap-type: y mandatory;
+  // scroll-snap-type: proximity;
 
   #skills_slice {
     position: relative;

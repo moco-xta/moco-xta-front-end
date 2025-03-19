@@ -13,11 +13,14 @@ import './index.scss'
 export default function SkillsSLice() {
   return (
     <PageProvider pageData={skillsData}>
-      <div id='skills_slice'>
+      <section
+        id='skills_slice'
+        className='skills_section'
+      >
         <SideNavigationMenuLeft pageData={skillsData} />
-        <SkillsDetails />
-        <SideNavigationMenuRight />
-      </div>
+        {/* <SkillsDetails /> */}
+        {/* <SideNavigationMenuRight /> */}
+      </section>
     </PageProvider>
   )
 }

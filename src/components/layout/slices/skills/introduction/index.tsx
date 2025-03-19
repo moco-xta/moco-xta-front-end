@@ -16,7 +16,10 @@ export default function Introduction() {
 
   return (
     <GSAPTimelineProvider {...timelineDefaultValues}>
-      <div id='skills_introduction_slice'>
+      <section
+        id='skills_introduction_slice'
+        className='skills_section'
+      >
         <RubiksCubeCanvas />
         <div id='skills_introduction'>
           <div id='skills_title_container'>
@@ -29,7 +32,7 @@ export default function Introduction() {
             })}
           </div>
         </div>
-      </div>
+      </section>
     </GSAPTimelineProvider>
   )
 }
