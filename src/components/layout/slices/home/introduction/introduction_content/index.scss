@@ -6,7 +6,37 @@
   width: 100vw;
   height: 30vh;
 
+  #hi_text {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  #im_text {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  #federico_text {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  #a_text {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  #front_end_text {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  #developer_text {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
   .introduction_title {
-    font-size: 10vw;
+    font-size: 7vw;
   }
 }

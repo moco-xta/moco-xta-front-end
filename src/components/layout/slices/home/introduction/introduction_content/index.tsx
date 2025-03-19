@@ -1,4 +1,6 @@
-import React, { RefObject } from 'react'
+import React, { RefObject, useRef } from 'react'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
 import './index.scss'
@@ -29,6 +31,53 @@ function TextRevealed({ id, text }: TextRevealed) {
 
 export default function IntroductionContent({ introductionSectionRef }: TIntroductionContent) {
   const t = useTranslations('HOME.INTRODUCTION')
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: introductionSectionRef.current,
+        start: 'top center',
+        markers: true,
+      },
+    })
+
+    tl.to('#hi_text', {
+      yPercent: -100,
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power1.out',
+    })
+      .to('#im_text', {
+        yPercent: -100,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power1.out',
+      })
+      .to('#federico_text', {
+        yPercent: -100,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power1.out',
+      })
+      .to('#a_text', {
+        yPercent: -100,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power1.out',
+      })
+      .to('#front_end_text', {
+        yPercent: -100,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power1.out',
+      })
+      .to('#developer_text', {
+        yPercent: -100,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power1.out',
+      })
+  })
 
   return (
     <div
