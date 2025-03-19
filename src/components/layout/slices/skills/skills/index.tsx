@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SideNavigationMenuLeft from './side_navigation_menu_left'
-// import SkillsDetails from './skills_details'
+import SkillsDetails from './skills_details'
 import SideNavigationMenuRight from './side_navigation_menu_right'
 
 import { PageProvider } from '@/contexts/PageContext'
@@ -18,7 +18,7 @@ export default function SkillsSLice() {
         className='skills_section'
       >
         <SideNavigationMenuLeft pageData={skillsData} />
-        {/* <SkillsDetails /> */}
+        <SkillsDetails />
         <SideNavigationMenuRight pageData={skillsData} />
       </section>
     </PageProvider>

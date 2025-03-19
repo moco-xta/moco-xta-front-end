@@ -1,0 +1,16 @@
+import React, { useRef } from 'react'
+import * as THREE from 'three'
+import { PerspectiveCamera } from '@react-three/drei'
+
+import { cameraDefaultValues } from '@/data/skills/three/skills_logo/cameraData'
+
+export default function Camera() {
+  const cameraRef = useRef<THREE.PerspectiveCamera>(null!)
+
+  return (
+    <PerspectiveCamera
+      ref={cameraRef}
+      {...cameraDefaultValues.camera}
+    />
+  )
+}
