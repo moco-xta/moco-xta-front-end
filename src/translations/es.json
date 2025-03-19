@@ -25,10 +25,24 @@
   },
   "HOME": {
     "INTRODUCTION": {
-      "HI": "¡Holá!",
-      "I_M": "Soy",
-      "A": "un",
-      "FRONT_END_DEVELOPER": "front-end developer"
+      "SECTION_TITLE": {
+        "HI": "¡Holá!",
+        "I_M": "Soy",
+        "A": "un",
+        "FRONT_END": "front-end",
+        "DEVELOPER": "developer"
+      },
+      "INTRODUCTION": {
+        "LINE_1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "LINE_2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "LINE_3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "LINE_4": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "LINE_5": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "LINE_6": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      }
+    },
+    "LAST_PROJECTS": {
+      "SECTION_TITLE": "Últimos proyectos"
     }
   },
   "SKILLS": {

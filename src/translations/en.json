@@ -25,7 +25,7 @@
   },
   "HOME": {
     "INTRODUCTION": {
-      "TITLE": {
+      "SECTION_TITLE": {
         "HI": "Hi!",
         "I_M": "I'm",
         "A": "a",
@@ -40,6 +40,9 @@
         "LINE_5": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         "LINE_6": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
       }
+    },
+    "LAST_PROJECTS": {
+      "SECTION_TITLE": "Last projects"
     }
   },
   "SKILLS": {

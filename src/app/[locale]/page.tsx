@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import Hero from '@/components/layout/slices/home/hero'
 import Introduction from '@/components/layout/slices/home/introduction'
+import LastProjects from '@/components/layout/slices/home/last_projects'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
@@ -19,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null!)
 
-  useGSAP(
+  /* useGSAP(
     () => {
       const animationFn = gsap.to('#home_page', {
         scrollTrigger: {
@@ -35,13 +36,14 @@ export default function Home() {
       return () => animationFn.kill()
     },
     { scope: containerRef },
-  )
+  ) */
 
   return (
     <div ref={containerRef}>
       <div id='home_page'>
         <Hero />
         <Introduction />
+        <LastProjects />
         {/* <Paris18 /> */}
       </div>
     </div>

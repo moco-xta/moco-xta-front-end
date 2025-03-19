@@ -24,7 +24,7 @@ function TextRevealed({ id, text }: TTextRevealed) {
     <div className='text_revealed'>
       <span
         id={id}
-        className='introduction_title'
+        className='section_title'
       >
         {text}
         &nbsp;
@@ -110,11 +110,11 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
       <div className={`${helveticaMediumFont.className}`}>
         <TextRevealed
           id={'hi_text'}
-          text={t('TITLE.HI')}
+          text={t('SECTION_TITLE.HI')}
         />
         <TextRevealed
           id={'im_text'}
-          text={t('TITLE.I_M')}
+          text={t('SECTION_TITLE.I_M')}
         />
         <TextRevealed
           id={'federico_text'}
@@ -123,15 +123,15 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
         <br />
         <TextRevealed
           id={'a_text'}
-          text={t('TITLE.A')}
+          text={t('SECTION_TITLE.A')}
         />
         <TextRevealed
           id={'front_end_text'}
-          text={t('TITLE.FRONT_END')}
+          text={t('SECTION_TITLE.FRONT_END')}
         />
         <TextRevealed
           id={'developer_text'}
-          text={t('TITLE.DEVELOPER')}
+          text={t('SECTION_TITLE.DEVELOPER')}
         />
       </div>
 
