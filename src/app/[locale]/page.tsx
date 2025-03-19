@@ -13,6 +13,7 @@ import LastProjects from '@/components/layout/slices/home/last_projects'
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 import './index.scss'
+import MainSkills from '@/components/layout/slices/home/main_skills'
 
 gsap.registerPlugin(useGSAP)
 gsap.registerPlugin(ScrollTrigger)
@@ -43,6 +44,7 @@ export default function Home() {
       <div id='home_page'>
         <Hero />
         <Introduction />
+        <MainSkills />
         <LastProjects />
         {/* <Paris18 /> */}
       </div>
