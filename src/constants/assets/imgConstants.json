@@ -1,4 +1,14 @@
 {
+  "PNG": {
+    "PROJECTS": {
+      "ABWERKT": "/img/png/projects/abwerkt.png",
+      "HUNDREDS_HANDS": "/img/png/projects/hundred_hands.png",
+      "LENTO": "/img/png/projects/lento.png",
+      "MOCO_XTA": "/img/png/projects/moco_xta.png",
+      "OPENCLASSROOMS": "/img/png/projects/openclassrooms.png",
+      "WPME": "/img/png/projects/wpme.png"
+    }
+  },
   "ENVIRONMENTS": {
     "EXR": {
       "STUDIO_03_4K": "/img/environments/exr/studio_small_03_4k.exr",
