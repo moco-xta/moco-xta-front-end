@@ -39,4 +39,24 @@
   .introduction_title {
     font-size: 7vw;
   }
+
+  .introduction_line_wrapper {
+    display: block;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 150%, 0% 150%);
+
+    .introduction_line {
+      transform-origin: bottom left;
+      transform: translateY(100%) rotateZ(1deg);
+    }
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, #000, #0000 25%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+    display: inline-block;
+  }
 }
