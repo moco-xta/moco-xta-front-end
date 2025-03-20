@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 import type { TTextAnimation } from '@/types/animation/text/types'
 
