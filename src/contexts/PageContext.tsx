@@ -1,46 +1,34 @@
-import { createContext, useContext, useRef, useState } from 'react'
+import { createContext, useContext, /* useRef, */ useState } from 'react'
 
 import type { TPageContext, TPageProvider } from '@/types/contexts/types'
-import type {
-  TMenuData,
-  TMenuParagraphData,
-  TMenuSectionData,
-} from '@/types/components/layout/types'
+import type { TParagraphData, TSectionData } from '@/types/data/components/layout/types'
+// import type { TMenuData } from '@/types/components/layout/types'
 
-import { getMenu } from '@/helpers/pageHelpers'
+// import { getMenu } from '@/helpers/pageHelpers'
 
 export const PageContext = createContext<TPageContext>(null!)
 
 export const PageProvider = ({ pageData, children }: TPageProvider) => {
-  const menuRef = useRef<TMenuData>(getMenu(pageData))
-  const [currentSection, setCurrentSection] = useState<TMenuSectionData>({
-    key: 'front_end_frameworks',
-    translationKey: 'FRONT_END_FRAMEWORKS',
-    paragraphs: [],
-  })
-  const [currentParagraph, setCurrentParagraph] = useState<TMenuParagraphData>({
-    key: 'introduction',
-    translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
-    logoName: 'LogoNextjs',
+  // const menuRef = useRef<TMenuData>(getMenu(pageData))
+
+  const [currentSection, setCurrentSection] = useState<TSectionData>({ ...pageData.sections[0] })
+  const [currentParagraph, setCurrentParagraph] = useState<TParagraphData>({
+    ...pageData.sections[0].paragraphs[0],
   })
 
-  const handleSetCurrentSection = (newCurrentSection: TMenuSectionData) => {
+  const handleSetCurrentSection = (newCurrentSection: TSectionData) => {
     setCurrentSection(newCurrentSection)
-    setCurrentParagraph({
-      key: 'introduction',
-      translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
-      logoName: 'LogoNextjs',
-    })
+    setCurrentParagraph({ ...newCurrentSection.paragraphs[0] })
   }
 
-  const handleSetCurrentParagraph = (newCurrentParagraph: TMenuParagraphData) => {
+  const handleSetCurrentParagraph = (newCurrentParagraph: TParagraphData) => {
     setCurrentParagraph(newCurrentParagraph)
   }
 
   return (
     <PageContext.Provider
       value={{
-        menuRef: menuRef,
+        // menuRef: menuRef,
         currentSection: currentSection,
         handleSetCurrentSection: handleSetCurrentSection,
         currentParagraph: currentParagraph,

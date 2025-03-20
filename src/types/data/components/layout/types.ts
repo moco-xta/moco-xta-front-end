@@ -12,7 +12,11 @@ export type TSectionData = {
   paragraphs: TParagraphData[]
 }
 
-type TParagraphData = {
+export type TParagraphData = {
   key: string
+  used: boolean
   translationKey: string
+  logo: {
+    name: string
+  }
 }

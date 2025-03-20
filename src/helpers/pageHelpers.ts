@@ -1,11 +1,7 @@
-import type { TPageData } from '@/types/data/components/layout/types'
-import type {
-  TMenuData,
-  TMenuParagraphData,
-  TMenuSectionData,
-} from '@/types/components/layout/types'
+import type { TPageData, TParagraphData, TSectionData } from '@/types/data/components/layout/types'
+import type { TMenuData } from '@/types/components/layout/types'
 
-export function getMenu(pageData: TPageData): TMenuData {
+/* export function getMenu(pageData: TPageData): TMenuData {
   return {
     sections: pageData.sections.map((sectionData) => ({
       key: sectionData.key,
@@ -16,15 +12,14 @@ export function getMenu(pageData: TPageData): TMenuData {
       })),
     })),
   }
-}
+} */
 
 export function getIndexByPropertyValue(
-  array: TMenuSectionData[] | TMenuParagraphData[],
-  property: keyof TMenuSectionData | keyof TMenuParagraphData,
+  array: TSectionData[] | TParagraphData[],
+  property: keyof TSectionData | keyof TParagraphData,
   value: string,
 ) {
   return array.findIndex(
-    (item) =>
-      (item as TMenuSectionData | TMenuParagraphData)[property as keyof typeof item] === value,
+    (item) => (item as TSectionData | TParagraphData)[property as keyof typeof item] === value,
   )
 }

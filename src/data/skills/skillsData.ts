@@ -13,7 +13,6 @@ export const skillsData = {
           logo: {
             name: 'LogoNextjs',
           },
-          paragraphs: [],
         },
         {
           key: 'react',
@@ -22,7 +21,6 @@ export const skillsData = {
           logo: {
             name: 'LogoReact',
           },
-          paragraphs: [],
         },
         {
           key: 'angular',
@@ -31,7 +29,6 @@ export const skillsData = {
           logo: {
             name: 'LogoAngular',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -46,7 +43,6 @@ export const skillsData = {
           logo: {
             name: 'LogoFormik',
           },
-          paragraphs: [],
         },
         {
           key: 'mui',
@@ -55,7 +51,6 @@ export const skillsData = {
           logo: {
             name: 'LogoMui',
           },
-          paragraphs: [],
         },
         {
           key: 'next_intl',
@@ -64,7 +59,6 @@ export const skillsData = {
           logo: {
             name: 'LogoNextIntl',
           },
-          paragraphs: [],
         },
         {
           key: 'google_maps',
@@ -73,7 +67,6 @@ export const skillsData = {
           logo: {
             name: 'LogoGoogleMaps',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -88,7 +81,6 @@ export const skillsData = {
           logo: {
             name: 'LogoIonic',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -103,7 +95,6 @@ export const skillsData = {
           logo: {
             name: 'LogoWebgpu',
           },
-          paragraphs: [],
         },
         {
           key: 'webgl',
@@ -112,7 +103,6 @@ export const skillsData = {
           logo: {
             name: 'LogoWebgl',
           },
-          paragraphs: [],
         },
         {
           key: 'threejs',
@@ -121,7 +111,6 @@ export const skillsData = {
           logo: {
             name: 'LogoThreejs',
           },
-          paragraphs: [],
         },
         {
           key: 'react_three_fiber',
@@ -130,7 +119,6 @@ export const skillsData = {
           logo: {
             name: 'LogoReactThreeDrei',
           },
-          paragraphs: [],
         },
         {
           key: 'babylonjs',
@@ -139,7 +127,6 @@ export const skillsData = {
           logo: {
             name: 'LogoBabylonjs',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -154,7 +141,6 @@ export const skillsData = {
           logo: {
             name: 'LogoSass',
           },
-          paragraphs: [],
         },
         {
           key: 'tailwind',
@@ -163,7 +149,6 @@ export const skillsData = {
           logo: {
             name: 'LogoTailwind',
           },
-          paragraphs: [],
         },
         {
           key: 'gsap',
@@ -172,7 +157,6 @@ export const skillsData = {
           logo: {
             name: 'LogoGsap',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -187,7 +171,6 @@ export const skillsData = {
           logo: {
             name: 'LogoPhotoshop',
           },
-          paragraphs: [],
         },
         {
           key: 'illustrator',
@@ -196,7 +179,6 @@ export const skillsData = {
           logo: {
             name: 'LogoIllustrator',
           },
-          paragraphs: [],
         },
         {
           key: 'blender',
@@ -205,7 +187,6 @@ export const skillsData = {
           logo: {
             name: 'LogoBlender',
           },
-          paragraphs: [],
         },
         {
           key: 'substance_painter',
@@ -214,7 +195,6 @@ export const skillsData = {
           logo: {
             name: 'LogoSubstancePainter',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -229,7 +209,6 @@ export const skillsData = {
           logo: {
             name: 'LogoSpring',
           },
-          paragraphs: [],
         },
         {
           key: 'django',
@@ -238,7 +217,6 @@ export const skillsData = {
           logo: {
             name: 'LogoDjango',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -253,7 +231,6 @@ export const skillsData = {
           logo: {
             name: 'LogoRedux',
           },
-          paragraphs: [],
         },
         {
           key: 'graphql',
@@ -262,7 +239,6 @@ export const skillsData = {
           logo: {
             name: 'LogoGraphql',
           },
-          paragraphs: [],
         },
         {
           key: 'postgresql',
@@ -271,7 +247,6 @@ export const skillsData = {
           logo: {
             name: 'LogoPostgresql',
           },
-          paragraphs: [],
         },
         {
           key: 'mysql',
@@ -280,7 +255,6 @@ export const skillsData = {
           logo: {
             name: 'LogoMysql',
           },
-          paragraphs: [],
         },
         {
           key: 'postman',
@@ -289,7 +263,6 @@ export const skillsData = {
           logo: {
             name: 'LogoPostman',
           },
-          paragraphs: [],
         },
         {
           key: 'dbeaver',
@@ -298,7 +271,6 @@ export const skillsData = {
           logo: {
             name: 'LogoDbeaver',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -313,7 +285,6 @@ export const skillsData = {
           logo: {
             name: 'LogoSpringSecurity',
           },
-          paragraphs: [],
         },
         {
           key: 'auth0',
@@ -322,7 +293,6 @@ export const skillsData = {
           logo: {
             name: 'LogoAuth0',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -337,7 +307,6 @@ export const skillsData = {
           logo: {
             name: 'LogoHostinger',
           },
-          paragraphs: [],
         },
         {
           key: 'aws',
@@ -346,7 +315,6 @@ export const skillsData = {
           logo: {
             name: 'LogoAws',
           },
-          paragraphs: [],
         },
         {
           key: 'docker',
@@ -355,7 +323,6 @@ export const skillsData = {
           logo: {
             name: 'LogoDocker',
           },
-          paragraphs: [],
         },
         {
           key: 'nginx',
@@ -364,7 +331,6 @@ export const skillsData = {
           logo: {
             name: 'LogoNginx',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -433,7 +399,6 @@ export const skillsData = {
           logo: {
             name: 'LogoDeepseek',
           },
-          paragraphs: [],
         },
         {
           key: 'chatgpt',
@@ -442,7 +407,6 @@ export const skillsData = {
           logo: {
             name: 'LogoChatgpt',
           },
-          paragraphs: [],
         },
         {
           key: 'copilot',
@@ -451,7 +415,6 @@ export const skillsData = {
           logo: {
             name: 'LogoCopilot',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -466,7 +429,6 @@ export const skillsData = {
           logo: {
             name: 'LogoGit',
           },
-          paragraphs: [],
         },
         {
           key: 'github',
@@ -475,7 +437,6 @@ export const skillsData = {
           logo: {
             name: 'LogoGithub',
           },
-          paragraphs: [],
         },
         {
           key: 'gitlab',
@@ -484,7 +445,6 @@ export const skillsData = {
           logo: {
             name: 'LogoGitlab',
           },
-          paragraphs: [],
         },
         {
           key: 'azure',
@@ -493,7 +453,6 @@ export const skillsData = {
           logo: {
             name: 'LogoAzure',
           },
-          paragraphs: [],
         },
       ],
     },
@@ -508,7 +467,6 @@ export const skillsData = {
           logo: {
             name: 'LogoFigma',
           },
-          paragraphs: [],
         },
         {
           key: 'google_analytics',
@@ -517,7 +475,6 @@ export const skillsData = {
           logo: {
             name: 'LogoGoogleAnalytics',
           },
-          paragraphs: [],
         },
         {
           key: 'jira',
@@ -526,7 +483,6 @@ export const skillsData = {
           logo: {
             name: 'LogoJira',
           },
-          paragraphs: [],
         },
       ],
     },

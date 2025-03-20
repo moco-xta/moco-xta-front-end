@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import type { TPageData } from '@/types/data/components/layout/types'
+import type { TPageData, TSectionData } from '@/types/data/components/layout/types'
 
 // TITLES
 
@@ -29,19 +29,7 @@ export type TPlayerPageIntroduction = {
 // MENU
 
 export type TMenuData = {
-  sections: TMenuSectionData[]
-}
-
-export type TMenuSectionData = {
-  key: string
-  translationKey: string
-  paragraphs: TMenuParagraphData[]
-}
-
-export type TMenuParagraphData = {
-  key: string
-  translationKey: string
-  logoName: string
+  sections: TSectionData[]
 }
 
 // SIDE NAVIGATION MENU

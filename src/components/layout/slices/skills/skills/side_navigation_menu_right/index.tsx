@@ -1,7 +1,8 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
-import type { TMenuParagraphData, TSideNavigationMenu } from '@/types/components/layout/types'
+import type { TSideNavigationMenu } from '@/types/components/layout/types'
+import type { TParagraphData } from '@/types/data/components/layout/types'
 
 import { usePageContext } from '@/contexts/PageContext'
 
@@ -13,17 +14,9 @@ import './index.scss'
 export default function SideNavigationMenuRight({ pageData }: TSideNavigationMenu) {
   const t = useTranslations()
 
-  const { menuRef, currentSection, currentParagraph, handleSetCurrentParagraph } = usePageContext()
+  const { currentSection, currentParagraph, handleSetCurrentParagraph } = usePageContext()
 
-  function handleOnClick(paragraphData: TMenuParagraphData) {
-    if (paragraphData.key !== 'introduction') {
-      const paragraphElement = document.getElementById(`${paragraphData.key}_paragraph`)
-      if (paragraphElement) {
-        paragraphElement.scrollIntoView({ block: 'start', behavior: 'smooth' })
-      }
-    } /*  else {
-      document.getElementById(`${pageData.key}_content`)!.scrollTo({ top: 0, behavior: 'smooth' })
-    } */
+  function handleOnClick(paragraphData: TParagraphData) {
     handleSetCurrentParagraph(paragraphData)
   }
 
@@ -35,26 +28,7 @@ export default function SideNavigationMenuRight({ pageData }: TSideNavigationMen
         </p>
       )}
       <ol className='sdm_paragraphs_ol'>
-        {currentSection.key !== 'introduction' && (
-          <li
-            key={`sdm_paragraph_li_introduction`}
-            className='sdm_item sdm_paragraph_li'
-          >
-            <a
-              className={`sdm_a sdm_paragraph_a ${currentParagraph?.key === 'introduction' ? 'sdm_current' : 'read'}`}
-              onClick={() =>
-                handleOnClick({
-                  key: 'introduction',
-                  translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
-                  logoName: 'LogoAngular',
-                })
-              }
-            >
-              {capitalizeFirstLetter(t('LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION'))}
-            </a>
-          </li>
-        )}
-        {menuRef.current.sections
+        {pageData.sections
           .filter((sectionData) => sectionData.key === currentSection.key)
           .map((sectionData) => {
             const translationPathRef = `${pageData.translationKey}.SECTIONS.${sectionData.translationKey}`

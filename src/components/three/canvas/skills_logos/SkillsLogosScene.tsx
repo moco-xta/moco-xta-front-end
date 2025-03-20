@@ -30,7 +30,7 @@ export default function SkillsLogosScene() {
               key={index}
               pathToModel={skillsLogosData.lazy.pathToModel}
               componentName={componentName}
-              currentLogoName={currentParagraph.logoName}
+              currentLogoName={currentParagraph.logo.name}
             />
           )
         })}

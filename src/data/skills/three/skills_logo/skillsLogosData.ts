@@ -4,55 +4,55 @@ export const skillsLogosData = {
     modelsMultiplier: 1,
     models: [
       'LogoAngular',
-      /* 'LogoAuth0', */
-      /* 'LogoAws', */
-      /* 'LogoAzure', */
-      /* 'LogoBabylonjs', */
-      /* 'LogoBlender', */
-      /* 'LogoChatgpt', */
-      /* 'LogoCopilot', */
-      /* 'LogoCPlusPlus', */
-      /* 'LogoCss', */
-      /* 'LogoDeepseek', */
-      /* 'LogoDocker', */
-      /* 'LogoFigma', */
-      /* 'LogoFormik', */
-      /* 'LogoGit', */
-      /* 'LogoGithub', */
-      /* 'LogoGitlab', */
-      /* 'LogoGoogleAnalytics', */
-      /* 'LogoGoogleMaps', */
-      /* 'LogoGraphql', */
-      /* 'LogoGsap', */
-      /* 'LogoHostinger', */
-      /* 'LogoHtml', */
-      /* 'LogoIllustrator', */
-      /* 'LogoIonic', */
-      /* 'LogoJava', */
-      /* 'LogoJavascript', */
-      /* 'LogoJira', */
-      /* 'LogoMui', */
-      /* 'LogoMysql', */
-      /* 'LogoNextIntl', */
+      'LogoAuth0',
+      'LogoAws',
+      'LogoAzure',
+      'LogoBabylonjs',
+      'LogoBlender',
+      'LogoChatgpt',
+      'LogoCopilot',
+      'LogoCPlusPlus',
+      'LogoCss',
+      'LogoDeepseek',
+      'LogoDocker',
+      'LogoFigma',
+      'LogoFormik',
+      'LogoGit',
+      'LogoGithub',
+      'LogoGitlab',
+      'LogoGoogleAnalytics',
+      'LogoGoogleMaps',
+      'LogoGraphql',
+      'LogoGsap',
+      'LogoHostinger',
+      'LogoHtml',
+      'LogoIllustrator',
+      'LogoIonic',
+      'LogoJava',
+      'LogoJavascript',
+      'LogoJira',
+      'LogoMui',
+      'LogoMysql',
+      'LogoNextIntl',
       'LogoNextjs',
-      /* 'LogoNginx', */
-      /* 'LogoNpm', */
-      /* 'LogoPhotoshop', */
-      /* 'LogoPostgresql', */
-      /* 'LogoPostman', */
-      /* 'LogoPython', */
+      'LogoNginx',
+      'LogoNpm',
+      'LogoPhotoshop',
+      'LogoPostgresql',
+      'LogoPostman',
+      'LogoPython',
       'LogoReact',
-      /* 'LogoReactThreeDrei', */
-      /* 'LogoRedux', */
-      /* 'LogoSass', */
-      /* 'LogoSpring', */
-      /* 'LogoSpringSecurity', */
-      /* 'LogoSubstancePainter', */
-      /* 'LogoTailwind', */
-      /* 'LogoTypescript', */
-      /* 'LogoWebgl', */
-      /* 'LogoWebgpu', */
-      /* 'LogoYarn', */
+      'LogoReactThreeDrei',
+      'LogoRedux',
+      'LogoSass',
+      'LogoSpring',
+      'LogoSpringSecurity',
+      'LogoSubstancePainter',
+      'LogoTailwind',
+      'LogoTypescript',
+      'LogoWebgl',
+      'LogoWebgpu',
+      'LogoYarn',
     ],
   },
 }
