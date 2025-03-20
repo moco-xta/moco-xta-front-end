@@ -16,8 +16,8 @@ export default function Introduction() {
       ref={introductionSectionRef}
       id='introduction_section'
     >
-      <IntroductionContent introductionSectionRef={introductionSectionRef} />
-      <ParisMetroMap />
+      {/* <IntroductionContent introductionSectionRef={introductionSectionRef} /> */}
+      {/* <ParisMetroMap /> */}
       {/* <MorphingDemo /> */}
       {/* <VideoSVG /> */}
       <MorphVideo introductionSectionRef={introductionSectionRef} />

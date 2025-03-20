@@ -20,7 +20,7 @@ const MorphVideo = ({ introductionSectionRef }: TMorphVideo) => {
         { value: 'M 10,30 50,30 50,70 10,70 Z' }, // Square
         { value: 'M 30,10 70,10 70,50 30,50 Z' }, // Diamond
         { value: 'M 20,20 80,20 80,80 20,80 Z' }, // Rectangle
-        { value: 'M 40,40 Q 60,20 80,40 T 60,60 40,40 Z' }, // Complex shape
+        { value: 'M 32.400619,54.148975 H 185.52682 c 6.63902,0 11.98379,5.344771 11.98379,11.983791 v 81.667304 c 0,6.63902 -5.34477,11.98379 -11.98379,11.98379 H 32.400619 c -6.63902,0 -11.983791,-5.34477 -11.983791,-11.98379 V 66.132766 c 0,-6.63902 5.344771,-11.983791 11.983791,-11.983791 z' }, // Complex shape
       ],
       easing: 'linear',
       duration: 1, // Set duration to 1ms since GSAP will control it
@@ -59,7 +59,7 @@ const MorphVideo = ({ introductionSectionRef }: TMorphVideo) => {
   return (
     <div
       className='container'
-      style={{ position: 'relative', width: '500px', height: '500px' }}
+      style={{ position: 'relative', width: '100vw', height: '100vw' }}
     >
       {/* Video element with SVG clip-path */}
       <video
