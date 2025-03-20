@@ -21,6 +21,7 @@ export const PageProvider = ({ pageData, children }: TPageProvider) => {
   const [currentParagraph, setCurrentParagraph] = useState<TMenuParagraphData>({
     key: 'introduction',
     translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
+    logoName: 'LogoNextjs',
   })
 
   const handleSetCurrentSection = (newCurrentSection: TMenuSectionData) => {
@@ -28,6 +29,7 @@ export const PageProvider = ({ pageData, children }: TPageProvider) => {
     setCurrentParagraph({
       key: 'introduction',
       translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
+      logoName: 'LogoNextjs',
     })
   }
 

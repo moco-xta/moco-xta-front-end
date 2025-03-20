@@ -21,9 +21,9 @@ export default function SideNavigationMenuRight({ pageData }: TSideNavigationMen
       if (paragraphElement) {
         paragraphElement.scrollIntoView({ block: 'start', behavior: 'smooth' })
       }
-    } else {
+    } /*  else {
       document.getElementById(`${pageData.key}_content`)!.scrollTo({ top: 0, behavior: 'smooth' })
-    }
+    } */
     handleSetCurrentParagraph(paragraphData)
   }
 
@@ -46,6 +46,7 @@ export default function SideNavigationMenuRight({ pageData }: TSideNavigationMen
                 handleOnClick({
                   key: 'introduction',
                   translationKey: 'LAYOUT.SIDE_NAVIGATION_MENU.INTRODUCTION',
+                  logoName: 'LogoAngular',
                 })
               }
             >

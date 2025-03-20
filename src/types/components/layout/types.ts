@@ -41,6 +41,7 @@ export type TMenuSectionData = {
 export type TMenuParagraphData = {
   key: string
   translationKey: string
+  logoName: string
 }
 
 // SIDE NAVIGATION MENU

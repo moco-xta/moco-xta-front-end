@@ -12,7 +12,7 @@ export default function SkillsLogosCanvas() {
     <Canvas {...canvasDefaultValues}>
       <Camera />
       <Lights />
-        <SkillsLogosScene />
+      <SkillsLogosScene />
     </Canvas>
   )
 }
