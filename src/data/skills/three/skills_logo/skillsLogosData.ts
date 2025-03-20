@@ -55,4 +55,20 @@ export const skillsLogosData = {
       'LogoYarn',
     ],
   },
+  hoverModelAnimationData: {
+    duration: 0.2,
+    ease: 'power3.out',
+    rotation: {
+      factor: 0.004,
+      initial: {
+        x: -15,
+        y: 20,
+        z: 3,
+      },
+    },
+    scale: {
+      factor: 1.15,
+      initial: 1,
+    },
+  },
 }
