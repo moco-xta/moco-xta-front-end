@@ -5,7 +5,7 @@ export const skillsData = {
     {
       key: 'front_end_frameworks',
       translationKey: 'FRONT_END_FRAMEWORKS',
-      paragraphs: [
+      skills: [
         {
           key: 'nextjs',
           used: true,
@@ -35,7 +35,7 @@ export const skillsData = {
     {
       key: 'front_end_libraries',
       translationKey: 'FRONT_END_LIBRARIES',
-      paragraphs: [
+      skills: [
         {
           key: 'formik',
           used: true,
@@ -73,7 +73,7 @@ export const skillsData = {
     {
       key: 'mobile',
       translationKey: 'MOBILE',
-      paragraphs: [
+      skills: [
         {
           key: 'ionic',
           used: false,
@@ -87,7 +87,7 @@ export const skillsData = {
     {
       key: 'real_time_threed',
       translationKey: 'REAL_TIME_THREED',
-      paragraphs: [
+      skills: [
         {
           key: 'webgpu',
           used: true,
@@ -133,7 +133,7 @@ export const skillsData = {
     {
       key: 'styling_and_animation',
       translationKey: 'STYLING_AND_ANIMATION',
-      paragraphs: [
+      skills: [
         {
           key: 'sass',
           used: true,
@@ -163,7 +163,7 @@ export const skillsData = {
     {
       key: 'graphics',
       translationKey: 'GRAPHICS',
-      paragraphs: [
+      skills: [
         {
           key: 'photoshop',
           used: true,
@@ -201,7 +201,7 @@ export const skillsData = {
     {
       key: 'back_end_frameworks',
       translationKey: 'BACK_END_FRAMEWORKS',
-      paragraphs: [
+      skills: [
         {
           key: 'spring',
           used: true,
@@ -223,7 +223,7 @@ export const skillsData = {
     {
       key: 'data',
       translationKey: 'DATA',
-      paragraphs: [
+      skills: [
         {
           key: 'redux',
           used: true,
@@ -277,7 +277,7 @@ export const skillsData = {
     {
       key: 'security',
       translationKey: 'SECURITY',
-      paragraphs: [
+      skills: [
         {
           key: 'spring_security',
           used: true,
@@ -299,7 +299,7 @@ export const skillsData = {
     {
       key: 'hosting',
       translationKey: 'HOSTING',
-      paragraphs: [
+      skills: [
         {
           key: 'hostinger',
           used: true,
@@ -337,7 +337,7 @@ export const skillsData = {
     {
       key: 'programming_languages',
       translationKey: 'PROGRAMMING_LANGUAGES',
-      paragraphs: [
+      skills: [
         {
           key: 'javascript',
           used: true,
@@ -391,7 +391,7 @@ export const skillsData = {
     {
       key: 'ai',
       translationKey: 'AI',
-      paragraphs: [
+      skills: [
         {
           key: 'deepseek',
           used: true,
@@ -421,7 +421,7 @@ export const skillsData = {
     {
       key: 'versioning',
       translationKey: 'VERSIONING',
-      paragraphs: [
+      skills: [
         {
           key: 'git',
           used: true,
@@ -459,7 +459,7 @@ export const skillsData = {
     {
       key: 'tools',
       translationKey: 'TOOLS',
-      paragraphs: [
+      skills: [
         {
           key: 'figma',
           used: true,

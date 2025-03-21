@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useTranslations } from 'next-intl'
 
-import { usePageContext } from '@/contexts/PageContext'
+import { useSkillsPageContext } from '@/contexts/SkillsPageContext'
 
 import SkillsLogosCanvas from '@/components/three/canvas/skills_logos/SkillsLogosCanvas'
 
@@ -14,7 +14,7 @@ import './index.scss'
 export default function SkillsDetails() {
   const t = useTranslations()
 
-  const { currentSection, currentParagraph } = usePageContext()
+  const { currentSection, currentSkill } = useSkillsPageContext()
 
   const containerRef = useRef<HTMLParagraphElement>(null!)
 
@@ -55,9 +55,11 @@ export default function SkillsDetails() {
         ref={containerRef}
         className='skill_description'
       >
-        {splitTextToWords(t(
-          `SKILLS.SECTIONS.${currentSection.translationKey}.PARAGRAPHS.${currentParagraph.translationKey}.PARAGRAPH_DESCRIPTION`,
-        )).map((word, index) => (
+        {splitTextToWords(
+          t(
+            `SKILLS.SECTIONS.${currentSection.translationKey}.SKILLS.${currentSkill.translationKey}.SKILL_DESCRIPTION`,
+          ),
+        ).map((word, index) => (
           <span
             key={`skill_description_word_${index}`}
             className='skill_description_word'

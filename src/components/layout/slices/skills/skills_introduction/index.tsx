@@ -11,7 +11,7 @@ import { timelineDefaultValues } from '@/data/skills/timelineData'
 import './index.scss'
 import { capitalizeFirstLetter } from '@/helpers/textHelpers'
 
-export default function Introduction() {
+export default function SkillsIntroduction() {
   const t = useTranslations('SKILLS')
 
   return (

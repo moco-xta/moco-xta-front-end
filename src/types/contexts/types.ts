@@ -1,8 +1,5 @@
-import { MutableRefObject } from 'react'
-
 import type { TLabelData } from '../animation/types'
-import type { TMenuData } from '../components/layout/types'
-import type { TPageData, TParagraphData, TSectionData } from '../data/components/layout/types'
+import type { TPageData, TSkillData, TSectionData } from '../data/components/layout/types'
 
 // GSAP TIMELINE CONTEXT
 
@@ -21,15 +18,14 @@ export type TGSAPTimelineProvider = {
 
 // PAGE CONTEXT
 
-export type TPageContext = {
-  // menuRef: MutableRefObject<TMenuData>
+export type TSkillsPageContext = {
   currentSection: TSectionData
   handleSetCurrentSection: (newCurrentSection: TSectionData) => void
-  currentParagraph: TParagraphData
-  handleSetCurrentParagraph: (newCurrentParagraph: TParagraphData) => void
+  currentSkill: TSkillData
+  handleSetCurrentSkill: (newCurrentParagraph: TSkillData) => void
 }
 
-export type TPageProvider = {
-  pageData: TPageData
+export type TSkillsPageProvider = {
+  skillsData: TPageData
   children: JSX.Element
 }

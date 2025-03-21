@@ -34,6 +34,6 @@ export type TMenuData = {
 
 // SIDE NAVIGATION MENU
 
-export type TSideNavigationMenu = {
-  pageData: TPageData
+export type TSkillsSideNavigationMenu = {
+  skillsData: TPageData
 }

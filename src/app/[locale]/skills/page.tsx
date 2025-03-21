@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import Introduction from '@/components/layout/slices/skills/introduction'
+import SkillsIntroduction from '@/components/layout/slices/skills/skills_introduction'
 import SkillsSlice from '@/components/layout/slices/skills/skills'
 
 import './index.scss'
@@ -48,7 +48,7 @@ export default function Skills() {
       ref={skillsPageRef}
       id='skills_page'
     >
-      <Introduction />
+      <SkillsIntroduction />
       <SkillsSlice />
     </div>
   )

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import SideNavigationMenuLeft from './side_navigation_menu_left'
+import SkillsSideNavigationMenuLeft from './skills_side_navigation_menu_left'
 import SkillsDetails from './skills_details'
-import SideNavigationMenuRight from './side_navigation_menu_right'
+import SkillsSideNavigationMenuRight from './skills_side_navigation_menu_right'
 
-import { PageProvider } from '@/contexts/PageContext'
+import { SkillsPageProvider } from '@/contexts/SkillsPageContext'
 
 import { skillsData } from '@/data/skills/skillsData'
 
@@ -12,15 +12,15 @@ import './index.scss'
 
 export default function SkillsSLice() {
   return (
-    <PageProvider pageData={skillsData}>
+    <SkillsPageProvider skillsData={skillsData}>
       <section
         id='skills_slice'
         className='skills_section'
       >
-        <SideNavigationMenuLeft pageData={skillsData} />
+        <SkillsSideNavigationMenuLeft skillsData={skillsData} />
         <SkillsDetails />
-        <SideNavigationMenuRight pageData={skillsData} />
+        <SkillsSideNavigationMenuRight skillsData={skillsData} />
       </section>
-    </PageProvider>
+    </SkillsPageProvider>
   )
 }

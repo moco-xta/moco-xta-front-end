@@ -9,10 +9,10 @@ export type TPageData = {
 export type TSectionData = {
   key: string
   translationKey: string
-  paragraphs: TParagraphData[]
+  skills: TSkillData[]
 }
 
-export type TParagraphData = {
+export type TSkillData = {
   key: string
   used: boolean
   translationKey: string
