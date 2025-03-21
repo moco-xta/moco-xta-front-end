@@ -21,19 +21,25 @@ export default function SkillsSideNavigationMenuLeft({ skillsData }: TSkillsSide
   }
 
   return (
-    <nav className='side_navigation_menu'>
-      <p>{capitalizeFirstLetter(t('SKILLS.SIDE_NAVIGATION_MENU.SKILLS'))}</p>
-      <ol>
+    <nav
+      id='skills_snm_left'
+      className='side_navigation_menu'
+    >
+      <p className='smn_title'>{capitalizeFirstLetter(t('SKILLS.SIDE_NAVIGATION_MENU.SKILLS'))}</p>
+      <ol
+        id='ol_smn_left'
+        className='ol_smn'
+      >
         {skillsData.sections.map((sectionData) => {
           const translationPathRef = `${skillsData.translationKey}.SECTIONS.${sectionData.translationKey}`
 
           return (
             <li
-              key={`skills_sdm_section_li_${sectionData.key}`}
-              className=''
+              key={`skills_li_smn_${sectionData.key}`}
+              className='li_smn'
             >
               <a
-                className={`${currentSection.key === sectionData.key ? 'current_section' : getIndexByPropertyValue(skillsData.sections, 'key', currentSection.key) > getIndexByPropertyValue(skillsData.sections, 'key', sectionData.key) ? 'section_read' : ''}`}
+                className={`${currentSection.key === sectionData.key ? 'li_smn_current' : getIndexByPropertyValue(skillsData.sections, 'key', currentSection.key) > getIndexByPropertyValue(skillsData.sections, 'key', sectionData.key) ? 'li_smn_read' : ''}`}
                 onClick={() => handleOnClick({ ...sectionData })}
               >
                 {capitalizeFirstLetter(t(`${translationPathRef}.SECTION_TITLE`))}

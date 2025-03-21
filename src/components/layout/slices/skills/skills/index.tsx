@@ -17,12 +17,12 @@ export default function SkillsSLice() {
         id='skills_slice'
         className='skills_section'
       >
-        <div id='sdm_left' />
+        {/* <div id='sdm_left' /> */}
         <div id='content' />
-        <div id='sdm_right' />
-        {/* <SkillsSideNavigationMenuLeft skillsData={skillsData} /> */}
+        {/* <div id='sdm_right' /> */}
+        <SkillsSideNavigationMenuLeft skillsData={skillsData} />
         {/* <SkillsDetails /> */}
-        {/* <SkillsSideNavigationMenuRight skillsData={skillsData} /> */}
+        <SkillsSideNavigationMenuRight skillsData={skillsData} />
       </section>
     </SkillsPageProvider>
   )
