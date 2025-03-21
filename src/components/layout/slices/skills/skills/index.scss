@@ -4,7 +4,29 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  gap: 1em;
+
+  #sdm_left {
+    grid-column: 2 / 4;
+    grid-row: 3 / 10;
+    background-color: red;
+  }
+
+  #content {
+    grid-column: 4 / 9;
+    grid-row: 3 / 10;
+    background-color: blue;
+  }
+
+  #sdm_right {
+    grid-column: 9 / 11;
+    grid-row: 3 / 10;
+    background-color: green;
+  }
 }

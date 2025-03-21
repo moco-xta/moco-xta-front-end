@@ -22,18 +22,18 @@ export default function SkillsSideNavigationMenuLeft({ skillsData }: TSkillsSide
 
   return (
     <nav className='side_navigation_menu'>
-      <p>{capitalizeFirstLetter(t('LAYOUT.SIDE_NAVIGATION_MENU.ON_THIS_PAGE'))}</p>
+      <p>{capitalizeFirstLetter(t('SKILLS.SIDE_NAVIGATION_MENU.SKILLS'))}</p>
       <ol>
         {skillsData.sections.map((sectionData) => {
           const translationPathRef = `${skillsData.translationKey}.SECTIONS.${sectionData.translationKey}`
 
           return (
             <li
-              key={`sdm_section_li_${sectionData.key}`}
-              className='sdm_item_left sdm_section_li'
+              key={`skills_sdm_section_li_${sectionData.key}`}
+              className=''
             >
               <a
-                className={`sdm_a ${currentSection.key === sectionData.key ? 'sdm_current' : getIndexByPropertyValue(skillsData.sections, 'key', currentSection.key) > getIndexByPropertyValue(skillsData.sections, 'key', sectionData.key) ? 'read' : ''}`}
+                className={`${currentSection.key === sectionData.key ? 'current_section' : getIndexByPropertyValue(skillsData.sections, 'key', currentSection.key) > getIndexByPropertyValue(skillsData.sections, 'key', sectionData.key) ? 'section_read' : ''}`}
                 onClick={() => handleOnClick({ ...sectionData })}
               >
                 {capitalizeFirstLetter(t(`${translationPathRef}.SECTION_TITLE`))}

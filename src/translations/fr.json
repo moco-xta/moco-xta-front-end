@@ -17,11 +17,6 @@
   "LAYOUT": {
     "BUTTONS": {
       "ENTER": "entrer"
-    },
-    "SIDE_NAVIGATION_MENU": {
-      "INTRODUCTION": "introduction",
-      "ON_THIS_PAGE": "sur cette page",
-      "ON_THIS_SECTION": "dans cette section"
     }
   },
   "HOME": {

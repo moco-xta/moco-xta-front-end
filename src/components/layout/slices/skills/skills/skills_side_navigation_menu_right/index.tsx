@@ -22,11 +22,6 @@ export default function SkillsSideNavigationMenuRight({ skillsData }: TSkillsSid
 
   return (
     <nav className='side_navigation_menu_right'>
-      {currentSection.key !== 'introduction' && (
-        <p className='sdm_item_right side_navigation_menu_title'>
-          {capitalizeFirstLetter(t('LAYOUT.SIDE_NAVIGATION_MENU.ON_THIS_SECTION'))}
-        </p>
-      )}
       <ol className='sdm_paragraphs_ol'>
         {skillsData.sections
           .filter((sectionData) => sectionData.key === currentSection.key)
@@ -35,11 +30,11 @@ export default function SkillsSideNavigationMenuRight({ skillsData }: TSkillsSid
 
             return sectionData.skills.map((skillData) => (
               <li
-                key={`sdm_paragraph_li_${sectionData.key}_${skillData.key}`}
+                key={`skills_sdm_skill_li_${sectionData.key}_${skillData.key}`}
                 className='sdm_item sdm_paragraph_li'
               >
                 <a
-                  className={`sdm_a sdm_paragraph_a ${currentSkill.key === skillData.key ? 'sdm_current' : getIndexByPropertyValue(currentSection.skills, 'key', currentSkill!.key) > getIndexByPropertyValue(currentSection.skills, 'key', skillData!.key) ? 'read' : ''}`}
+                  className={`${currentSkill.key === skillData.key ? 'current_skill' : getIndexByPropertyValue(currentSection.skills, 'key', currentSkill!.key) > getIndexByPropertyValue(currentSection.skills, 'key', skillData!.key) ? 'skill_read' : ''}`}
                   onClick={() => handleOnClick(skillData)}
                 >
                   {capitalizeFirstLetter(
