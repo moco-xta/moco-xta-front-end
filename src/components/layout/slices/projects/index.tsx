@@ -1,8 +1,13 @@
 import React from 'react'
 
+import useProjectsTimeline from '@/hooks/useProjectsTimeline'
+
+import ProjectsCanvas from '@/components/three/canvas/projects/ProjectsCanvas'
+import Content from './content'
 import CurrentDate from './current_date'
 
 import { projectsData } from '@/data/projects/projectsData'
+import { companiesData } from '@/data/projects/companiesData'
 
 import { isValidDate } from '@/helpers/dateHelpers'
 
@@ -14,13 +19,23 @@ export type TProjectsSlice = {
   currentCompany: number
 }
 
-export default function ProjectsSlice({
-  currentDate,
-  currentProject,
-  currentCompany,
-}: TProjectsSlice) {
+export default function ProjectsSlice() {
+  const { currentDate, currentProject, currentCompany } = useProjectsTimeline(
+    projectsData,
+    companiesData,
+  )
+
   return (
-    <>
+    <div id='projects_page'>
+      <ProjectsCanvas
+        currentProject={currentProject}
+        currentCompany={currentCompany}
+      />
+      <Content
+        // snapHeights={snapHeights}
+        currentProject={currentProject}
+        currentCompany={currentCompany}
+      />
       {isValidDate(currentDate) && (
         <CurrentDate
           currentProject={currentProject}
@@ -28,6 +43,6 @@ export default function ProjectsSlice({
           currentDate={currentDate}
         />
       )}
-    </>
+    </div>
   )
 }

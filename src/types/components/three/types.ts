@@ -1,9 +1,10 @@
 import { ComponentType, LazyExoticComponent, MutableRefObject } from 'react'
 import * as THREE from 'three'
 import { GLTF } from 'three-stdlib'
-import { GroupProps, MeshProps } from '@react-three/fiber'
+import { AmbientLightProps, DirectionalLightProps, GroupProps, MeshProps } from '@react-three/fiber'
 
 import type { TCameraDefaultValues, TPerspectiveCameraData } from '@/types/data/three/types'
+import type { TLogoData } from '@/types/data/components/three/types'
 
 // CUSTOM CAMERA
 
@@ -46,6 +47,29 @@ export type TPhysicsGround = {
 export type GLTFResult = GLTF & {
   nodes: Record<string, THREE.Mesh>
   materials: Record<string, THREE.MeshStandardMaterial>
+}
+
+// LIGHTS
+
+export type TAmbientLightData = {
+  defaultValues: AmbientLightProps
+}
+
+export type TDirectionalLightData = DirectionalLightProps & {
+  'shadow-mapSize': [number, number]
+  'shadow-camera-far': number
+  'shadow-camera-left': number
+  'shadow-camera-right': number
+  'shadow-camera-top': number
+  'shadow-camera-bottom': number
+  'shadow-radius': number
+  'shadow-bias': number
+}
+
+// LAZY FACTORY
+
+export type TLazyFactory = {
+  (): Promise<{ default: React.ComponentType<any> }>
 }
 
 // LOGO MOCO
@@ -95,6 +119,20 @@ export type TRotationGroupsAndButtons = {
 }
 
 export type TLazyPad = LazyExoticComponent<ComponentType<MeshProps>>
+
+// PROJECTS
+
+export type TProjectScene = {
+  currentProject: number
+  currentCompany: number
+}
+
+export type TProjectLogo = Partial<THREE.Group> & {
+  path: string
+  prefix: string
+  logoData: TLogoData
+  maxSize?: number
+}
 
 // LABORATORY
 

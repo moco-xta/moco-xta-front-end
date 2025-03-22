@@ -2,7 +2,7 @@ import * as THREE from 'three'
 
 import type { TDirectionalLightData } from '@/types/components/three/types'
 
-import { default as directionalLightsConstants } from '@/constants/projects/three/lightning/directionalLightsConstants.json'
+import { default as directionalLightsConstants } from '@/constants/projects/three/lights/directionalLightsConstants.json'
 
 export function directionalLightsDefaultValues(): TDirectionalLightData[] {
   const directionalLightsData: TDirectionalLightData[] = []

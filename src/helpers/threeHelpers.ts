@@ -25,3 +25,15 @@ export function generateRandomHexGrey(min: number, max: number) {
   const hexadecimalValue = decimalValue.toString(16)
   return new THREE.Color('#' + hexadecimalValue + hexadecimalValue + hexadecimalValue)
 }
+
+export function setGroupSize(boundingBox: THREE.Box3, object: THREE.Group, size: number) {
+  const objectSize = new THREE.Vector3()
+  boundingBox.getSize(objectSize)
+  const scaleFactor = size / Math.max(objectSize.x, objectSize.y)
+  object.children.forEach((child) => {
+    if (child instanceof THREE.Mesh) {
+      child.scale.set(scaleFactor, scaleFactor, scaleFactor)
+      child.updateWorldMatrix(true, false)
+    }
+  })
+}

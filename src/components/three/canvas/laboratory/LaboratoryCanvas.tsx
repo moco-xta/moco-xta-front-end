@@ -15,7 +15,7 @@ import { canvasDefaultValues } from '@/data/laboratory/three/canvasData'
 import { cameraDefaultValues } from '@/data/laboratory/three/cameraData'
 import { physicsGroundDefaultValues } from '@/data/laboratory/three/physicsGroundData'
 
-export default function ProjectsCanvas() {
+export default function LaboratoryCanvas() {
   const { debug } = useSelector((state: RootState) => state.playerPageState)
 
   return (
