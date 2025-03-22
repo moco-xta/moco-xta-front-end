@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import type { TPageData, TSectionData } from '@/types/data/components/layout/types'
+import type { TSkillsData } from '@/types/data/components/layout/types'
 
 // TITLES
 
@@ -26,14 +26,16 @@ export type TPlayerPageIntroduction = {
   translationPath: string
 }
 
-// MENU
-
-export type TMenuData = {
-  sections: TSectionData[]
-}
-
-// SIDE NAVIGATION MENU
+// SKILLS
 
 export type TSkillsSideNavigationMenu = {
-  skillsData: TPageData
+  skillsData: TSkillsData
+}
+
+// PROJECTS
+
+export type TCurrentDate = {
+  currentProject: number
+  projectsNumber: number
+  currentDate: Date
 }

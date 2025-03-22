@@ -6,8 +6,6 @@ import type { TSkillData, TSectionData } from '@/types/data/components/layout/ty
 export const SkillsPageContext = createContext<TSkillsPageContext>(null!)
 
 export const SkillsPageProvider = ({ skillsData, children }: TSkillsPageProvider) => {
-  // const menuRef = useRef<TMenuData>(getMenu(pageData))
-
   const [currentSection, setCurrentSection] = useState<TSectionData>({ ...skillsData.sections[0] })
   const [currentSkill, setCurrentSkill] = useState<TSkillData>({
     ...skillsData.sections[0].skills[0],

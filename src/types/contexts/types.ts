@@ -1,5 +1,5 @@
 import type { TLabelData } from '../animation/types'
-import type { TPageData, TSkillData, TSectionData } from '../data/components/layout/types'
+import type { TSkillsData, TSkillData, TSectionData } from '../data/components/layout/types'
 
 // GSAP TIMELINE CONTEXT
 
@@ -26,6 +26,6 @@ export type TSkillsPageContext = {
 }
 
 export type TSkillsPageProvider = {
-  skillsData: TPageData
+  skillsData: TSkillsData
   children: JSX.Element
 }
