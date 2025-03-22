@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useRef } from 'react'
+import React, { lazy, Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Box } from '@react-three/drei'
 
@@ -22,6 +22,16 @@ export default function SkillLogo({ pathToModel, componentName, currentLogoName 
     ref: logoRef,
     animationData: skillsLogosData.hoverModelAnimationData,
   })
+
+  useEffect(() => {
+    if (logoRef.current && boxRef.current) {
+      const boundingBox = new THREE.Box3().setFromObject(logoRef.current)
+      const size = boundingBox.getSize(new THREE.Vector3())
+      boxRef.current.scale.set(size.x, size.y, size.z)
+      boxRef.current.updateMatrix()
+      boxRef.current.updateMatrixWorld()
+    }
+  }, [])
 
   return (
     <>

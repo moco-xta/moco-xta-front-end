@@ -14,6 +14,7 @@ export const skillsLogosData = {
       'LogoCPlusPlus',
       'LogoCss',
       'LogoDeepseek',
+      'LogoDjango',
       'LogoDocker',
       'LogoFigma',
       'LogoFormik',

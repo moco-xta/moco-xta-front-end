@@ -18,10 +18,13 @@ export default function SkillsSLice() {
         className='skills_section'
       >
         {/* <div id='sdm_left' /> */}
-        <div id='content' />
+        {/* <div id='content'>
+          <div id='introduction' />
+          <div id='skill' />
+        </div> */}
         {/* <div id='sdm_right' /> */}
         <SkillsSideNavigationMenuLeft skillsData={skillsData} />
-        {/* <SkillsDetails /> */}
+        <SkillsDetails />
         <SkillsSideNavigationMenuRight skillsData={skillsData} />
       </section>
     </SkillsPageProvider>

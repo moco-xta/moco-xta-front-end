@@ -7,7 +7,7 @@ import { useSkillsPageContext } from '@/contexts/SkillsPageContext'
 
 import SkillsLogosCanvas from '@/components/three/canvas/skills_logos/SkillsLogosCanvas'
 
-import { splitTextToWords } from '@/helpers/textHelpers'
+import { capitalizeFirstLetter, splitTextToWords } from '@/helpers/textHelpers'
 
 import './index.scss'
 
@@ -18,7 +18,7 @@ export default function SkillsDetails() {
 
   const containerRef = useRef<HTMLParagraphElement>(null!)
 
-  useGSAP(
+  /* useGSAP(
     () => {
       const animation = gsap.fromTo(
         '.skill_description_word',
@@ -46,28 +46,43 @@ export default function SkillsDetails() {
       return () => animation.kill()
     },
     { scope: containerRef },
-  )
+  ) */
 
   return (
-    <div>
-      <SkillsLogosCanvas />
-      <p
-        ref={containerRef}
-        className='skill_description'
-      >
-        {splitTextToWords(
-          t(
-            `SKILLS.SECTIONS.${currentSection.translationKey}.SKILLS.${currentSkill.translationKey}.SKILL_DESCRIPTION`,
-          ),
-        ).map((word, index) => (
-          <span
-            key={`skill_description_word_${index}`}
-            className='skill_description_word'
-          >
-            {word}&nbsp;
-          </span>
-        ))}
-      </p>
+    <div id='skills_content'>
+      <div id='introduction_section'>
+        <h1 id='h1_skills_section'>
+          {capitalizeFirstLetter(
+            t(`SKILLS.SECTIONS.${currentSection.translationKey}.SECTION_TITLE`),
+          )}
+        </h1>
+        {t.rich(`SKILLS.SECTIONS.${currentSection.translationKey}.SECTION_DESCRIPTION`, {
+          p: (chunk) => <p className='p_skills_section_introduction'>{chunk}</p>,
+        })}
+      </div>
+      <div id='skill'>
+        <SkillsLogosCanvas />
+        <p
+          ref={containerRef}
+          id='skill_description_container'
+        >
+          {/* {splitTextToWords( */}
+          <p id='skill_description'>
+            {t(
+              `SKILLS.SECTIONS.${currentSection.translationKey}.SKILLS.${currentSkill.translationKey}.SKILL_DESCRIPTION`,
+            )}
+          </p>
+          {/* ,
+          ).map((word, index) => (
+            <span
+              key={`skill_description_word_${index}`}
+              className='skill_description_word'
+            >
+              {word}&nbsp;
+            </span>
+          ))} */}
+        </p>
+      </div>
     </div>
   )
 }

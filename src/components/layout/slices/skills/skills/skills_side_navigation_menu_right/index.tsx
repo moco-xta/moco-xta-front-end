@@ -40,7 +40,7 @@ export default function SkillsSideNavigationMenuRight({ skillsData }: TSkillsSid
                 className='li_smn'
               >
                 <a
-                  className={`${currentSkill.key === skillData.key ? 'li_smn_current' : getIndexByPropertyValue(currentSection.skills, 'key', currentSkill!.key) > getIndexByPropertyValue(currentSection.skills, 'key', skillData!.key) ? 'li_smn_read' : ''}`}
+                  className={`${currentSkill.key === skillData.key ? 'li_smn_current' : getIndexByPropertyValue(currentSection.skills, 'key', currentSkill!.key) > getIndexByPropertyValue(currentSection.skills, 'key', skillData!.key) ? 'li_smn_read' : 'li_smn_to_read'}`}
                   onClick={() => handleOnClick(skillData)}
                 >
                   {capitalizeFirstLetter(

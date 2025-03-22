@@ -4,13 +4,10 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  /* display: flex;
-  flex-direction: row;
-  align-items: center; */
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(11, 1fr);
-  gap: 1em;
+  gap: $gap_M;
 
   .side_navigation_menu {
     width: 100%;
@@ -43,11 +40,11 @@
       color: $bright_lavender;
     }
 
-    .li_smn_read {
-      opacity: 0.5;
+    .li_smn_to_read {
+      opacity: 0.7;
     }
 
-    .li_smn_read:hover {
+    .li_smn_to_read:hover {
       opacity: 1;
     }
   }
@@ -57,17 +54,59 @@
     grid-row: 3 / 10;
 
     align-items: end;
-    // background-color: red;
 
     #ol_smn_left {
       align-items: end;
     }
   }
 
-  #content {
+  #skills_content {
     grid-column: 4 / 9;
     grid-row: 3 / 10;
-    background-color: blue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $gap_M;
+
+    #introduction_section {
+      grid-column: 0 / 0;
+
+      #h1_skills_section {
+        margin-bottom: $gap_S;
+        font-size: 3.5em;
+        font-weight: 900;
+      }
+
+      .p_skills_section_introduction {
+        text-align: justify;
+      }
+    }
+
+    #skill {
+      grid-column: 1 / 1;
+
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: $gap_M;
+
+      #skills_logos_canvas {
+        height: 100%;
+        aspect-ratio: 1;
+        background-color: $raisin_black;
+        border-radius: 15px;
+      }
+
+      #skill_description_container {
+        width: 100%;
+
+        #skill_description {
+          // font-size: 0.95em;
+          text-align: justify;
+        }
+      }
+    }
   }
 
   #skills_snm_right {
