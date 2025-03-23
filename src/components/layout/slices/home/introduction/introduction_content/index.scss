@@ -6,53 +6,93 @@
   width: 100vw;
   height: 30vh;
 
-  #hi_text {
-    opacity: 0;
-    transform: translateY(100%);
-  }
+  #introduction_title {
+    margin: $gap_XL;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
 
-  #im_text {
-    opacity: 0;
-    transform: translateY(100%);
-  }
+    .introduction_title_lines {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      line-height: 7.5em;
+      // line-height: 7.5rem;
 
-  #federico_text {
-    opacity: 0;
-    transform: translateY(100%);
-  }
+      .introduction_title_blocks {
+        opacity: 0;
+        display: inline-block;
+      }
+    }
 
-  #a_text {
-    opacity: 0;
-    transform: translateY(100%);
-  }
+    #introduction_title_first_line {
+      gap: 0;
 
-  #front_end_text {
-    opacity: 0;
-    transform: translateY(100%);
-  }
 
-  #developer_text {
-    opacity: 0;
-    transform: translateY(100%);
-  }
+      #hi_text {
+        transform: translateY(100%);
+      }
+    
+      #im_text {
+        transform: translateX(-100%);
+      }
+    
+      #federico_text {
+        transform: translateX(-100%);
+      }
+    }
 
-  .introduction_line_wrapper {
-    display: block;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 150%, 0% 150%);
-
-    .introduction_line {
-      transform-origin: bottom left;
-      transform: translateY(100%) rotateZ(1deg);
+    #introduction_title_second_line {
+  
+      #a_text {
+        transform: translateY(-100%);
+      }
+    
+      #front_end_text {
+        transform: translateY(-100%);
+      }
+    
+      #developer_text {
+        transform: translateY(-100%);
+      }
     }
   }
 
-  .gradient-text {
-    background: linear-gradient(to right, #000, #0000 25%);
+  #home_introduction_container {
+    width: 100%;
+    margin-left: 55vw;
+    display: flex;
+    flex-direction: column;
+    // align-items: end;
+    align-items: start;
+    gap: 50px;
+    font-size: 1em;
+    line-height: 1.5em;
 
-    -webkit-background-clip: text;
-    background-clip: text;
+    .introduction_line_wrapper {
+      display: block;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 150%, 0% 150%);
 
-    color: transparent;
-    display: inline-block;
+      .introduction_line {
+        opacity: 0;
+        transform-origin: bottom left;
+        transform: translateY(100%) rotateZ(3deg);
+      }
+    }
+
+    .gradient-text {
+      // background: linear-gradient(to right, #000, #000 100%);
+      // -webkit-background-clip: text;
+      // background-clip: text;
+  
+      // color: transparent;
+      display: inline-block;
+    }
+
+    #learn_more_button {
+      margin-top: 120px;
+    }
   }
 }

@@ -66,13 +66,23 @@ section {
 // TITLES
 
 .section_title {
-  font-size: 7vw;
+  font-size: 8em;
+  // font-size: 7vw;
 }
 
 // PARAGRAPHS
 
 .parapgraph {
   margin-bottom: 20px;
+}
+
+// BUTTONS
+
+.button_style_1 {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 // LINKS
