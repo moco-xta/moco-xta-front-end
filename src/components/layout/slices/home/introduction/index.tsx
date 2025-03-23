@@ -4,7 +4,7 @@ import IntroductionContent from './introduction_content'
 import ParisMetroMap from './paris_metro_map'
 // import MorphingDemo from './morphing_demo'
 // import VideoSVG from './video_svg'
-import MorphVideo from './morph_video'
+// import MorphVideo from './morph_video'
 
 import './index.scss'
 
@@ -16,11 +16,11 @@ export default function Introduction() {
       ref={introductionSectionRef}
       id='introduction_section'
     >
-      {/* <IntroductionContent introductionSectionRef={introductionSectionRef} /> */}
-      {/* <ParisMetroMap /> */}
+      <IntroductionContent introductionSectionRef={introductionSectionRef} />
+      <ParisMetroMap />
       {/* <MorphingDemo /> */}
       {/* <VideoSVG /> */}
-      <MorphVideo introductionSectionRef={introductionSectionRef} />
+      {/* <MorphVideo introductionSectionRef={introductionSectionRef} /> */}
     </section>
   )
 }
