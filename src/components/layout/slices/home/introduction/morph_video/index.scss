@@ -1,0 +1,10 @@
+@import '@/styles/variables.module.scss';
+
+#morph_video_container {
+  position: relative;
+  width: 80vw;
+  height: 80vw;
+  display: flex;
+  // align-items: center;
+  background-color: red;
+}
