@@ -76,7 +76,12 @@ function LineRevealed({ text }: TLineRevealed) {
 
   return (
     <div className='introduction_line_wrapper'>
-      <p ref={textRef} className='introduction_line gradient-text'>{text}</p>
+      <p
+        ref={textRef}
+        className='introduction_line gradient-text'
+      >
+        {text}
+      </p>
     </div>
   )
 }
@@ -93,48 +98,71 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
       },
     })
 
-    tl
-      .to('#hi_text', {
-        yPercent: -100,
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power1.out',
-      })
-      .to('#im_text', {
-        xPercent: 100,
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power1.out',
-      }, '-=0.25')
-      .to('#federico_text', {
-        xPercent: 100,
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power1.out',
-      }, '-=0.25')
-      .to('#introduction_title_first_line', {
-        gap: '75px',
-        duration: 0.5,
-        ease: 'power1.out',
-      }, '-=0.25')
-      .to('#a_text', {
-        yPercent: 100,
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power1.out',
-      }, '-=0.75')
-      .to('#front_end_text', {
-        yPercent: 100,
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power1.out',
-      }, '-=0.25')
-      .to('#developer_text', {
-        yPercent: 100,
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power1.out',
-      }, '-=0.25')
+    tl.to('#hi_text', {
+      yPercent: -100,
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power1.out',
+    })
+      .to(
+        '#im_text',
+        {
+          xPercent: 100,
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power1.out',
+        },
+        '-=0.25',
+      )
+      .to(
+        '#federico_text',
+        {
+          xPercent: 100,
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power1.out',
+        },
+        '-=0.25',
+      )
+      .to(
+        '#introduction_title_first_line',
+        {
+          gap: '75px',
+          duration: 0.5,
+          ease: 'power1.out',
+        },
+        '-=0.25',
+      )
+      .to(
+        '#a_text',
+        {
+          yPercent: 100,
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power1.out',
+        },
+        '-=0.75',
+      )
+      .to(
+        '#front_end_text',
+        {
+          yPercent: 100,
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power1.out',
+        },
+        '-=0.25',
+      )
+      .to(
+        '#developer_text',
+        {
+          yPercent: 100,
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power1.out',
+        },
+        '-=0.25',
+      )
 
     const animationFn = gsap.to('.introduction_line', {
       scrollTrigger: {
@@ -183,7 +211,10 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
   return (
     <div id='introduction_content'>
       <div id='introduction_title' /* className={`${helveticaMediumFont.className}`} */>
-        <div id='introduction_title_first_line' className='introduction_title_lines'>
+        <div
+          id='introduction_title_first_line'
+          className='introduction_title_lines'
+        >
           <TextRevealed
             id='hi_text'
             text={t('SECTION_TITLE.HI')}
@@ -199,7 +230,10 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
             />
           </div>
         </div>
-        <div id='introduction_title_second_line' className='introduction_title_lines'>
+        <div
+          id='introduction_title_second_line'
+          className='introduction_title_lines'
+        >
           <TextRevealed
             id='a_text'
             text={t('SECTION_TITLE.A')}
@@ -222,9 +256,13 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
         <LineRevealed text={t('INTRODUCTION.LINE_4')} />
         <LineRevealed text={t('INTRODUCTION.LINE_5')} />
         {/* <LineRevealed text={t('INTRODUCTION.LINE_6')} /> */}
-        <button id='learn_more_button' className='button_style_1'>Learn more</button>
+        <button
+          id='learn_more_button'
+          className='button_style_1'
+        >
+          Learn more
+        </button>
       </div>
-
     </div>
   )
 }

@@ -30,30 +30,28 @@
     #introduction_title_first_line {
       gap: 0;
 
-
       #hi_text {
         transform: translateY(100%);
       }
-    
+
       #im_text {
         transform: translateX(-100%);
       }
-    
+
       #federico_text {
         transform: translateX(-100%);
       }
     }
 
     #introduction_title_second_line {
-  
       #a_text {
         transform: translateY(-100%);
       }
-    
+
       #front_end_text {
         transform: translateY(-100%);
       }
-    
+
       #developer_text {
         transform: translateY(-100%);
       }
@@ -86,7 +84,7 @@
       // background: linear-gradient(to right, #000, #000 100%);
       // -webkit-background-clip: text;
       // background-clip: text;
-  
+
       // color: transparent;
       display: inline-block;
     }
