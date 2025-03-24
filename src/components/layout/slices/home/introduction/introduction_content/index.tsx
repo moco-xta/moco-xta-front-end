@@ -182,7 +182,7 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
 
   return (
     <div id='introduction_content'>
-      <div id='introduction_title' className={`${helveticaMediumFont.className}`}>
+      <div id='introduction_title' /* className={`${helveticaMediumFont.className}`} */>
         <div id='introduction_title_first_line' className='introduction_title_lines'>
           <TextRevealed
             id='hi_text'
