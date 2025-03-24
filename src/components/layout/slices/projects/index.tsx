@@ -2,7 +2,7 @@ import React from 'react'
 
 import useProjectsTimeline from '@/hooks/useProjectsTimeline'
 
-import ProjectsCanvas from '@/components/three/canvas/projects/ProjectsCanvas'
+import ProjectsCanvas from '@/components/three/canvas/new_projects/ProjectsCanvas'
 import Content from './content'
 import CurrentDate from './current_date'
 
@@ -20,12 +20,12 @@ export type TProjectsSlice = {
 }
 
 export default function ProjectsSlice() {
-  const { currentDate, currentProject, currentCompany } = useProjectsTimeline(
+  /* const { currentDate, currentProject, currentCompany } = useProjectsTimeline(
     projectsData,
     companiesData,
-  )
+  ) */
 
-  return (
+  /* return (
     <div id='projects_page'>
       <ProjectsCanvas
         currentProject={currentProject}
@@ -44,5 +44,7 @@ export default function ProjectsSlice() {
         />
       )}
     </div>
-  )
+  ) */
+
+  return <ProjectsCanvas />
 }

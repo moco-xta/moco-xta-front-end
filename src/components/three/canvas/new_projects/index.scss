@@ -1,0 +1,17 @@
+@import '@/styles/variables.module.scss';
+
+#block {
+  z-index: 2;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.n {
+  z-index: 1;
+  position: absolute;
+  width: 200px;
+  height: 10px;
+  background-color: black;
+}

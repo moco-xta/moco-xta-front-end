@@ -3,7 +3,7 @@ import { CanvasProps } from '@react-three/fiber'
 export const canvasDefaultValues: Partial<CanvasProps> = {
   id: 'projects_canvas',
   style: {
-    position: 'fixed',
+    // position: 'fixed',
     top: 0,
     left: 0,
     width: '100vw',
