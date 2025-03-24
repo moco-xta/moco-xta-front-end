@@ -21,7 +21,8 @@ export default function NewVideoDeform() {
       <video
         id='video'
         src='/videos/test.mp4'
-        /* autoplay */ loop playsInline
+        /* autoplay */ loop
+        playsInline
         style={{ filter: 'url(#wave)' }}
       />
     </>

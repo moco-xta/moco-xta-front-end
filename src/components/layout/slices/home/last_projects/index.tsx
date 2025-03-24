@@ -16,7 +16,10 @@ export default function LastProjects() {
 
       <div id='projects_wrapper'>
         {projectsData.map((project) => (
-          <div className='project'>
+          <div
+            key={project.key}
+            className='project'
+          >
             <Image
               src={project.imageUrl}
               width={600}
