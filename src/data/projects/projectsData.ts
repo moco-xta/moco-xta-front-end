@@ -9,7 +9,7 @@ export const projectsData: TProjectData[] = [
     key: 'moco_xta',
     name: 'Moco.xta',
     url: 'https://moco-xta.com/en',
-    imageUrl: imgConstants.PNG.PROJECTS.MOCO_XTA,
+    imageUrl: imgConstants.PNG.PROJECTS.LOGO_MOCO,
     descriptionsKey: 'DESCRIPTIONS.MOCO_XTA',
     dates: {
       to: moment(new Date()).format('YYYY-MM-DD'),
@@ -42,7 +42,7 @@ export const projectsData: TProjectData[] = [
     key: 'abwerkt',
     name: 'ABWerkt.nl',
     url: 'https://www.ab-werkt.nl/',
-    imageUrl: imgConstants.PNG.PROJECTS.ABWERKT,
+    imageUrl: imgConstants.PNG.PROJECTS.LOGO_MOCO,
     descriptionsKey: 'DESCRIPTIONS.ABWERKT',
     dates: {
       to: '2023-11-31',
@@ -72,7 +72,7 @@ export const projectsData: TProjectData[] = [
     key: 'lento',
     name: 'Lento.eu',
     url: 'https://lento.eu/en',
-    imageUrl: imgConstants.PNG.PROJECTS.LENTO,
+    imageUrl: imgConstants.PNG.PROJECTS.LOGO_MOCO,
     descriptionsKey: 'DESCRIPTIONS.LENTO',
     dates: {
       to: '2023-02-28',
@@ -104,7 +104,7 @@ export const projectsData: TProjectData[] = [
     key: 'hundred_hands',
     name: '100 Hands',
     url: 'https://www.100hands.nl/',
-    imageUrl: imgConstants.PNG.PROJECTS.HUNDREDS_HANDS,
+    imageUrl: imgConstants.PNG.PROJECTS.LOGO_MOCO,
     descriptionsKey: 'DESCRIPTIONS.HUNDRED_HANDS',
     dates: {
       to: '2022-01-30',
@@ -131,7 +131,7 @@ export const projectsData: TProjectData[] = [
     key: 'wpme',
     name: 'WPME',
     url: 'https://wpme.group/',
-    imageUrl: imgConstants.PNG.PROJECTS.WPME,
+    imageUrl: imgConstants.PNG.PROJECTS.LOGO_MOCO,
     descriptionsKey: 'DESCRIPTIONS.WPME',
     dates: {
       to: '2021-08-30',
@@ -159,7 +159,7 @@ export const projectsData: TProjectData[] = [
     key: 'openclassrooms',
     name: 'Openclassrooms',
     url: 'https://openclassrooms.com/en/',
-    imageUrl: imgConstants.PNG.PROJECTS.OPENCLASSROOMS,
+    imageUrl: imgConstants.PNG.PROJECTS.LOGO_MOCO,
     descriptionsKey: 'DESCRIPTIONS.OPENCLASSROOMS',
     dates: {
       to: '2021-05-17',

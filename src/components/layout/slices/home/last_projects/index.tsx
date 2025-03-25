@@ -3,17 +3,20 @@ import React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 
-import { projectsData } from '@/data/projects/projectsData'
+import LastProjectsCanvas from '@/components/three/canvas/last_projects/LastProjectsCanvas'
+import LastProjectCanvas from '@/components/three/canvas/last_project/LastProjectCanvas'
 
 import './index.scss'
-import LastProjectCanvas from '@/components/three/canvas/last_project/LastProjectCanvas'
+import { projectsData } from '@/data/projects/projectsData'
 
 export default function LastProjects() {
   const t = useTranslations('HOME.LAST_PROJECTS')
 
   return (
     <section id='last-projects-section'>
-      {/* <p className='section_title'>{t('SECTION_TITLE')}</p> */}
+      <p className='section_title'>{t('SECTION_TITLE')}</p>
+
+      {/* <LastProjectsCanvas /> */}
 
       <div id='projects-grid'>
         {projectsData.map((project, index) => {
@@ -23,7 +26,7 @@ export default function LastProjects() {
                 key={`last_project_${project.key}`}
                 className='last-project'
               >
-                <LastProjectCanvas />
+                <LastProjectCanvas textureUrl={project.imageUrl} />
                 <p>
                   {project.roles.map((role) => (
                     <span key={role}>{role}</span>
@@ -36,7 +39,7 @@ export default function LastProjects() {
               </div>
             )
           }
-          })}
+        })}
       </div>
     </section>
   )

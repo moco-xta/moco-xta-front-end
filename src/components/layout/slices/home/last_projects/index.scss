@@ -1,50 +1,25 @@
 @import '@/styles/variables.module.scss';
 
-/* #last_projects_section {
-  width: 100vw;
-  height: 100vh;
-
-  #projects_wrapper {
-    width: 80%;
-    display: flex;
-    // flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-} */
-
 #last-projects-section {
   width: 100vw;
   height: fit-content;
   padding: 0 4.2vw;
 
   #projects-grid {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; */
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 
     .last-project {
-      /* width: 100%;
-      height: auto;
-      display: block; */
       aspect-ratio: 16/9;
       margin-bottom: 100px;
       flex: 1 1 calc(50% - 20px);
     }
-
-    /* @media (max-width: 768px) {
-      // grid-template-columns: 1fr; // Change to a single column on smaller screens
-      flex: 1 1 100%;
-    } */
   }
 }
 
 @media (max-width: 768px) {
   .last-project {
-    // grid-template-columns: 1fr;
     flex: 1 1 100%;
   }
 }

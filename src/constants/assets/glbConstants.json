@@ -126,6 +126,9 @@
   "PLANETS": {
     "URANUS": "/models/glb/planets/Uranus.glb"
   },
+  "PROJECTS": {
+    "ROUNDED_PLANE": "/models/glb/projects/RoundedPlane.glb"
+  },
   "RUBIKS_CUBE": {
     "BUTTON": "/models/glb/rubiks_cube/Button.glb",
     "BASE_CUBE": "/models/glb/rubiks_cube/BaseCube.glb",

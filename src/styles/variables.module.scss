@@ -23,6 +23,10 @@ $lavender_mist: #eae1ff;
 
 $external_link: #47a8ff;
 
+// SCREEN BREAKPOINTS
+
+$screen_breakpoint: 768px;
+
 // MARGINS
 
 $px_margin_XXXS: 3px;
@@ -93,4 +97,6 @@ $hover_transition: 0.2s;
   lightGrey: $light_grey;
   raisinBlack: $raisin_black;
   lavenderMist: $lavender_mist;
+
+  screenBreakpoint: $screen_breakpoint;
 }

@@ -1,13 +1,13 @@
 import React from 'react'
-import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
+import * as THREE from 'three'
 import { OrbitControls, OrthographicCamera } from '@react-three/drei'
 
-import LastProjectScene from './LastProjectScene'
+import LastProjectsScene from './LastProjectsScene'
 
-import { canvasDefaultValues } from '@/data/projects/three/last_project/canvasData'
+import { canvasDefaultValues } from '@/data/projects/three/last_projects/canvasData'
 
-export default function LastProjectCanvas({ textureUrl }: { textureUrl: string }) {
+export default function LastProjectsCanvas() {
   return (
     <Canvas {...canvasDefaultValues}>
       <OrthographicCamera
@@ -15,8 +15,8 @@ export default function LastProjectCanvas({ textureUrl }: { textureUrl: string }
         position={new THREE.Vector3(0, 0, 1)}
         zoom={200}
       />
-      <OrbitControls />
-      <LastProjectScene textureUrl={textureUrl} />
+      <OrbitControls enableZoom={false} />
+      <LastProjectsScene />
     </Canvas>
   )
 }
