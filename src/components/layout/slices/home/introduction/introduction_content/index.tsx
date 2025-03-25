@@ -47,7 +47,7 @@ function LineRevealed({ text }: TLineRevealed) {
       scrollTrigger: {
         trigger: textRef.current,
         start: 'top 60%',
-        markers: true,
+        // markers: true,
       },
       colorAlpha: 1,      // Final alpha value (0 → 1)
       stopPos: 100,       // Final position (0% → 100%)
@@ -168,7 +168,7 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
       scrollTrigger: {
         trigger: introductionSectionRef.current,
         start: 'top 60%',
-        markers: true,
+        // markers: true,
       },
       yPercent: -100,
       rotateZ: '0deg',
@@ -182,7 +182,7 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
       scrollTrigger: {
         trigger: introductionSectionRef.current,
         start: 'top 60%',
-        markers: true,
+        // markers: true,
       },
       gap: '0px',
       duration: 1.5,
@@ -194,7 +194,7 @@ export default function IntroductionContent({ introductionSectionRef }: TIntrodu
       scrollTrigger: {
         trigger: introductionSectionRef.current,
         start: 'top 60%',
-        markers: true,
+        // markers: true,
       },
       background: 'linear-gradient(to right, #000, #0000 100%)',
       duration: 1.5,

@@ -46,7 +46,7 @@ const MorphVideo = ({ introductionSectionRef }: TMorphVideo) => {
         start: 'top center',
         end: 'top top',
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
       onUpdate: () => {
         morphAnimation.seek(morphAnimation.duration * morphAnimation.progress)
