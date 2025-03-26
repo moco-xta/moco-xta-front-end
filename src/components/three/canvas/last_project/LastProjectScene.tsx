@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
@@ -9,7 +10,49 @@ import fragmentShader from '../../shaders/last_project/fragmentShader.glsl'
 import { isOdd } from '@/helpers/mathHelpers'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-import { useEffect, useMemo } from 'react'
+
+function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
+  const loader = new GLTFLoader()
+
+  const textureLoader = new THREE.TextureLoader()
+  const texture = textureLoader.load(textureUrl)
+
+  const material = new THREE.ShaderMaterial({
+    side: THREE.DoubleSide,
+    transparent: true,
+    opacity: 1,
+    uniforms: {
+      time: { value: 0 },
+      uTexture: { value: texture },
+    },
+    vertexShader: vertexShader,
+    fragmentShader: fragmentShader,
+  })
+  material.needsUpdate = true
+
+  loader.load(
+    glbConstants.PROJECTS.ROUNDED_PLANE,
+    function (gltf) {
+      const model = gltf.scenes[0].children[0]
+      if (model instanceof THREE.Mesh) {
+        model.name = `last_project_mesh_${index}`
+        model.material = material
+        const scale = 0.8
+        model.scale.set(scale, scale, scale)
+        model.updateMatrix()
+        model.position.set(isOdd(index) ? 0.2 : -0.2, 0, 0)
+        model.rotation.set(0, 0, THREE.MathUtils.degToRad(isOdd(index) ? -10 : 10))
+      }
+      scene.add(model)
+    },
+    function (xhr) {
+      console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+    },
+    function (error) {
+      console.error('An error happened:', error)
+    },
+  )
+}
 
 export default function LastProjectScene({
   index,
@@ -20,57 +63,14 @@ export default function LastProjectScene({
 }) {
   const { scene } = useThree()
 
-  const textureLoader = new THREE.TextureLoader()
-  const texture = textureLoader.load(textureUrl)
+  const [isLoaded, setIsLoaded] = useState<boolean>(false)
 
-  const material = useMemo(() => {
-    return new THREE.ShaderMaterial({
-      side: THREE.DoubleSide,
-      transparent: true,
-      opacity: 1,
-      uniforms: {
-        time: { value: 0 },
-        uTexture: { value: texture },
-      },
-      vertexShader: vertexShader,
-      fragmentShader: fragmentShader,
-    })
-  }, [texture])
-  material.needsUpdate = true
-
-  useMemo(() => {
-    const loader = new GLTFLoader()
-    loader.load(
-      glbConstants.PROJECTS.ROUNDED_PLANE,
-      function (gltf) {
-        const model = gltf.scenes[0].children[0]
-        if (model instanceof THREE.Mesh) {
-          model.name = `last_project_mesh_${index}`
-          model.material = material
-          const scale = 0.8
-          model.scale.set(scale, scale, scale)
-          model.updateMatrix()
-          model.rotation.set(0, 0, THREE.MathUtils.degToRad(isOdd(index) ? -1 : 1))
-        }
-        scene.add(model)
-      },
-      function (xhr) {
-        console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
-      },
-      function (error) {
-        console.error('An error happened:', error)
-      },
-    )
-  }, [index, material, scene])
-
-  /* useEffect(() => {
-    return () => {
-      const model = scene.getObjectByName(`last_project_mesh_${index}`);
-      if (model) {
-        scene.remove(model);
-      }
-    };
-  }, [scene, index]); */
+  useEffect(() => {
+    if (!isLoaded) {
+      addModel(index, textureUrl, scene)
+      setIsLoaded(true)
+    }
+  }, [scene, index, textureUrl, isLoaded])
 
   useEffect(() => {
     const triggerElement = document.querySelector(`#last-project-canvas-container-${index}`)
@@ -80,21 +80,41 @@ export default function LastProjectScene({
       const model = scene.getObjectByName(`last_project_mesh_${index}`)
       console.log('Model:', model)
       if (model) {
-        gsap.to(model.rotation, {
-          z: THREE.MathUtils.degToRad(10),
+        const timeline = gsap.timeline({
           scrollTrigger: {
             trigger: `#last-project-canvas-container-${index}`,
-            start: 'top center',
-            end: 'bottom center',
+            start: 'top 75%',
+            end: 'bottom 70%',
             scrub: 1,
             markers: true,
-            onUpdate: () => {
-              console.log('ScrollTrigger Update')
-            },
           },
         })
+        timeline
+          .to(
+            model.position,
+            {
+              x: isOdd(index) ? -0.1 : 0.1,
+            },
+            0,
+          )
+          .to(
+            model.rotation,
+            {
+              z: THREE.MathUtils.degToRad(0),
+            },
+            0,
+          )
+          .to(
+            model.scale,
+            {
+              x: 1.05,
+              y: 1.05,
+              z: 1.05,
+            },
+            0,
+          )
       } else {
-        setTimeout(checkModel, 100) // Retry after 100ms
+        setTimeout(checkModel, 100)
       }
     }
 

@@ -5,7 +5,7 @@ uniform float uDistanceFromCenter;
 float PI = 3.1415926538;
 
 void main() {
-	vUv = (uv- vec2(0.5)) * (0.8 - 0.2 * uDistanceFromCenter * (2.0 * uDistanceFromCenter)) + vec2(0.5);
+	vUv = (uv - vec2(0.5)) * (0.8 - 0.2 * uDistanceFromCenter * (2.0 * uDistanceFromCenter)) + vec2(0.5);
 
 	vec3 pos = position;
 

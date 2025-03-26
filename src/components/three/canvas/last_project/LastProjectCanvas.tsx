@@ -1,7 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera } from '@react-three/drei'
 
 import LastProjectScene from './LastProjectScene'
 
@@ -16,15 +16,10 @@ export default function LastProjectCanvas({
 }) {
   return (
     <Canvas {...canvasDefaultValues}>
-      <OrthographicCamera
-        makeDefault
-        position={new THREE.Vector3(0, 0, 1)}
-        zoom={200}
-      />
-      {/* <PerspectiveCamera
+      <PerspectiveCamera
         makeDefault
         position={new THREE.Vector3(0, 0, 2.5)}
-      /> */}
+      />
       {/* <OrbitControls /> */}
       <LastProjectScene
         index={index}

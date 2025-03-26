@@ -1,13 +1,12 @@
 import React from 'react'
-// import Image from 'next/image'
 import { FaArrowRight } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 
-import LastProjectsCanvas from '@/components/three/canvas/last_projects/LastProjectsCanvas'
 import LastProjectCanvas from '@/components/three/canvas/last_project/LastProjectCanvas'
 
-import './index.scss'
 import { projectsData } from '@/data/projects/projectsData'
+
+import './index.scss'
 
 export default function LastProjects() {
   const t = useTranslations('HOME.LAST_PROJECTS')
