@@ -14,7 +14,6 @@ export default function LastProjects() {
   return (
     <section id='last-projects-section'>
       <p className='section_title'>{t('SECTION_TITLE')}</p>
-
       <div id='projects-grid'>
         {projectsData.map((project, index) => {
           if (index < 6) {
@@ -28,15 +27,17 @@ export default function LastProjects() {
                   index={index}
                   textureUrl={project.imageUrl}
                 />
-                <p>
-                  {project.roles.map((role) => (
-                    <span key={role}>{role}</span>
-                  ))}
-                </p>
-                <p>
-                  <FaArrowRight />
-                  {project.name}
-                </p>
+                <div className='last-project-info'>
+                  <p className='last-project-roles'>
+                    {project.roles.map((role) => (
+                      <span key={role}>{role}</span>
+                    ))}
+                  </p>
+                  <p className='last-project-name'>
+                    <FaArrowRight />
+                    {project.name}
+                  </p>
+                </div>
               </div>
             )
           }

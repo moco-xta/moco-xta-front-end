@@ -13,6 +13,8 @@ import { isOdd } from '@/helpers/mathHelpers'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
+import styles from '@/styles/variables.module.scss'
+
 function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
   const loader = new GLTFLoader()
 
@@ -30,6 +32,7 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
       uZoom: { value: 1.0 },
       uScrollSpeed: { value: 0.0 },
       uScrollDirection: { value: 1 },
+      uIsMobile: { value: window.innerWidth < Number(styles.screenBreakpoint) },
     },
     vertexShader: vertexShader,
     fragmentShader: fragmentShader,
@@ -46,11 +49,16 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
         const scale = 0.8
         model.scale.set(scale, scale, scale)
         model.updateMatrix()
-        model.position.set(isOdd(index) ? -0.6 : 0.6, 0, 0)
+        if (window.innerWidth > Number(styles.screenBreakpoint))
+          model.position.set(isOdd(index) ? -0.6 : 0.6, 0, 0)
         model.rotation.set(
           THREE.MathUtils.degToRad(-5),
-          THREE.MathUtils.degToRad(isOdd(index) ? -5 : 5),
-          THREE.MathUtils.degToRad(isOdd(index) ? -5 : 5),
+          THREE.MathUtils.degToRad(
+            window.innerWidth > Number(styles.screenBreakpoint) ? (isOdd(index) ? -5 : 5) : 0,
+          ),
+          THREE.MathUtils.degToRad(
+            window.innerWidth > Number(styles.screenBreakpoint) ? (isOdd(index) ? -5 : 5) : 0,
+          ),
         )
       }
       scene.add(model)
@@ -76,6 +84,18 @@ export default function LastProjectScene({
   const speedRef = useScrollSpeed()
 
   const [isLoaded, setIsLoaded] = useState<boolean>(false)
+  const [isMobile, setIsMobile] = useState<boolean>(
+    window.innerWidth < Number(styles.screenBreakpoint),
+  )
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < Number(styles.screenBreakpoint))
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
     if (!isLoaded) {
@@ -96,16 +116,21 @@ export default function LastProjectScene({
           scrollTrigger: {
             trigger: `#last-project-canvas-container-${index}`,
             start: 'top 95%',
-            end: 'bottom 70%',
+            end: 'bottom 60%',
             scrub: 1,
-            markers: true,
+            // markers: true,
           },
         })
         timeline
           .to(
             model.position,
             {
-              x: isOdd(index) ? -0.1 : 0.1,
+              x:
+                window.innerWidth > Number(styles.screenBreakpoint)
+                  ? isOdd(index)
+                    ? -0.1
+                    : 0.1
+                  : 0,
             },
             0,
           )
@@ -146,7 +171,7 @@ export default function LastProjectScene({
       if (object instanceof THREE.Mesh && object.material instanceof THREE.ShaderMaterial) {
         object.material.uniforms.time.value = time
         object.material.uniforms.uScrollSpeed.value = speedRef.current
-        // object.material.uniforms.uScrollDirection.value = direction
+        object.material.uniforms.uIsMobile.value = isMobile
       }
     })
   })
