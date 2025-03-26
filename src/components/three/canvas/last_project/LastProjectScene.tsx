@@ -4,6 +4,8 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import gsap from 'gsap'
 
+import { useScrollSpeed } from '@/hooks/useScrollSpeed'
+
 import vertexShader from '../../shaders/last_project/vertexShader.glsl'
 import fragmentShader from '../../shaders/last_project/fragmentShader.glsl'
 
@@ -23,7 +25,11 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
     opacity: 1,
     uniforms: {
       time: { value: 0 },
+      uIsOdd: { value: isOdd(index) ? 1.0 : -1.0 },
       uTexture: { value: texture },
+      uZoom: { value: 1.0 },
+      uScrollSpeed: { value: 0.0 },
+      uScrollDirection: { value: 1 },
     },
     vertexShader: vertexShader,
     fragmentShader: fragmentShader,
@@ -40,8 +46,12 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
         const scale = 0.8
         model.scale.set(scale, scale, scale)
         model.updateMatrix()
-        model.position.set(isOdd(index) ? 0.2 : -0.2, 0, 0)
-        model.rotation.set(0, 0, THREE.MathUtils.degToRad(isOdd(index) ? -10 : 10))
+        model.position.set(isOdd(index) ? -0.6 : 0.6, 0, 0)
+        model.rotation.set(
+          THREE.MathUtils.degToRad(-5),
+          THREE.MathUtils.degToRad(isOdd(index) ? -5 : 5),
+          THREE.MathUtils.degToRad(isOdd(index) ? -5 : 5),
+        )
       }
       scene.add(model)
     },
@@ -63,6 +73,8 @@ export default function LastProjectScene({
 }) {
   const { scene } = useThree()
 
+  const speedRef = useScrollSpeed()
+
   const [isLoaded, setIsLoaded] = useState<boolean>(false)
 
   useEffect(() => {
@@ -79,11 +91,11 @@ export default function LastProjectScene({
     const checkModel = () => {
       const model = scene.getObjectByName(`last_project_mesh_${index}`)
       console.log('Model:', model)
-      if (model) {
+      if (model && model instanceof THREE.Mesh) {
         const timeline = gsap.timeline({
           scrollTrigger: {
             trigger: `#last-project-canvas-container-${index}`,
-            start: 'top 75%',
+            start: 'top 95%',
             end: 'bottom 70%',
             scrub: 1,
             markers: true,
@@ -100,6 +112,8 @@ export default function LastProjectScene({
           .to(
             model.rotation,
             {
+              x: THREE.MathUtils.degToRad(0),
+              y: THREE.MathUtils.degToRad(0),
               z: THREE.MathUtils.degToRad(0),
             },
             0,
@@ -113,6 +127,10 @@ export default function LastProjectScene({
             },
             0,
           )
+          .to(model.material.uniforms.uZoom, {
+            value: 1.1,
+          }),
+          -0.1
       } else {
         setTimeout(checkModel, 100)
       }
@@ -127,6 +145,8 @@ export default function LastProjectScene({
     scene.traverse((object) => {
       if (object instanceof THREE.Mesh && object.material instanceof THREE.ShaderMaterial) {
         object.material.uniforms.time.value = time
+        object.material.uniforms.uScrollSpeed.value = speedRef.current
+        // object.material.uniforms.uScrollDirection.value = direction
       }
     })
   })
