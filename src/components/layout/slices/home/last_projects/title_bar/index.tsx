@@ -15,20 +15,19 @@ export default function LastProjectsTitleBar() {
   useGSAP(
     () => {
       gsap.to('.last-projects-title-character', {
-        yPercent: -110,
+        yPercent: -100,
         rotateZ: 0,
         opacity: 1,
         duration: 0.25,
         ease: 'none',
-        stagger: 0.05,
+        stagger: 0.075,
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top 80%',
-          markers: true
-        }
+        },
       })
     },
-    { scope: containerRef }
+    { scope: containerRef },
   )
 
   return (

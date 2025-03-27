@@ -44,7 +44,7 @@ export default function Home() {
       <div id='home_page'>
         <Hero />
         <LastProjects />
-        {/* <Introduction /> */}
+        <Introduction />
         {/* <MainSkills /> */}
         {/* <Paris18 /> */}
       </div>
