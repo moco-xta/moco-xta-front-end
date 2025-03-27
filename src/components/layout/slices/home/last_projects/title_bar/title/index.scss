@@ -1,0 +1,19 @@
+@import '@/styles/variables.module.scss';
+
+#last-projects-title {
+  position: absolute;
+  width: fit-content;
+  font-size: 8vw;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  will-change: transform;
+  overflow: hidden;
+
+  .last-projects-title-character {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%) rotateZ(30deg);
+    will-change: transform;
+  }
+}
