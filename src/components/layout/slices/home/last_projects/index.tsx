@@ -7,14 +7,14 @@ import { useTranslations } from 'next-intl'
 import LastProjectCanvas from '@/components/three/canvas/last_project/LastProjectCanvas'
 
 import { isOdd } from '@/helpers/mathHelpers'
+import { splitTextToCharacters } from '@/helpers/textHelpers'
 
 import { projectsData } from '@/data/projects/projectsData'
 
 import './index.scss'
 
 const getRandomChar = () => {
-  const chars =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
   return chars[Math.floor(Math.random() * chars.length)]
 }
 
@@ -63,7 +63,7 @@ export default function LastProjects() {
             start: 'top 80%',
             end: 'bottom 70%',
             scrub: true,
-            markers: true,
+            // markers: true,
           },
         })
 
@@ -88,6 +88,55 @@ export default function LastProjects() {
             i * 0.05,
           )
         })
+
+        const tl2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            start: 'top 80%',
+            // end: 'bottom 70%',
+            markers: true,
+          },
+        })
+
+        tl2
+          .to('.last-project-name-container .last-project-name', {
+            translateY: '41%',
+            duration: 1.5,
+            // ease: 'power1.out',
+          })
+          .to(
+            '.last-project-name-item',
+            {
+              translateY: '0%',
+              duration: 1.5,
+              ease: 'power1.out',
+            },
+            0,
+          )
+          .to(
+            '.last-project-name-character',
+            {
+              translateY: '0%',
+              opacity: 1,
+              duration: 1.5,
+              ease: 'sine.inOut',
+              stagger: {
+                each: 0.05,
+                from: 'center',
+                grid: 'auto',
+                axis: 'x',
+              },
+              motionPath: {
+                path: [
+                  { x: 0, y: 0 },
+                  { x: 0, y: -20 },
+                  { x: 0, y: 0 },
+                ],
+                curviness: 2,
+              },
+            },
+            0,
+          )
       })
 
       // Cleanup function
@@ -118,17 +167,32 @@ export default function LastProjects() {
                   className={`last-project-info ${isOdd(index) ? 'last-project-info-left' : 'last-project-info-right'}`}
                 >
                   <p className='last-project-roles'>
-                    <RolesAnimation
-                      key={`last_project_${project.key}_roles`}
-                      text={rolesRef.current[index]}
-                    />
+                    <span>{rolesRef.current[index]}</span>
                   </p>
-                  <p className='last-project-name'>
+                  <p className='last-project-name-container'>
                     <FaArrowRight
                       className='last-project-arrow'
                       size={25}
                     />
-                    {project.name}
+                    <div className='last-project-name'>
+                      {Array(5)
+                        .fill(null)
+                        .map((_, i) => (
+                          <span
+                            key={`last_project_name_${index}_${i}`}
+                            className='last-project-name-item'
+                          >
+                            {splitTextToCharacters(project.name).map((letter, index) => (
+                              <span
+                                key={`last_project_name_character_${project.name}_${i}_${index}`}
+                                className='last-project-name-character'
+                              >
+                                {letter !== ' ' ? letter : '\u00A0'}
+                              </span>
+                            ))}
+                          </span>
+                        ))}
+                    </div>
                   </p>
                 </div>
               </div>

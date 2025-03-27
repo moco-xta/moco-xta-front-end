@@ -32,15 +32,39 @@
           }
         }
 
-        .last-project-name {
+        .last-project-name-container {
+          margin-top: -60px;
           display: flex;
           align-items: center;
           gap: 10px;
           font-size: 2.2em;
           font-weight: bold;
+          // clip-path: polygon(0% 32.5%, 100% 32.5%, 100% 62.5%, 0% 62.5%);
+          clip-path: polygon(0% 40%, 100% 40%, 100% 60%, 0% 60%);
 
           .last-project-arrow {
             margin-top: -3px;
+          }
+
+          .last-project-name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-172%);
+
+            .last-project-name-item {
+              // margin-bottom: 20px;
+              line-height: 1.2;
+              transform: translateY(-100%);
+
+              .last-project-name-character {
+                display: inline-block; // Ensure transform works
+                transform: translateY(-100%);
+                will-change: transform; // Optimize for animation
+                position: relative; // Ensure transform works properly
+                opacity: 0;
+              }
+            }
           }
         }
       }

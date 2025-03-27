@@ -29,7 +29,7 @@ export default function Header() {
         <LocaleSwitcherButton />
         <MenuButton />
       </header>
-      {/* <ButtonsContents /> */}
+      <ButtonsContents />
     </>
   )
 }
