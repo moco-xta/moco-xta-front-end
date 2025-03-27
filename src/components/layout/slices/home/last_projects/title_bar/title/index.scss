@@ -17,3 +17,10 @@
     will-change: transform;
   }
 }
+
+@media (max-width: $screen_breakpoint) {
+  #last-projects-title-wrapper {
+    margin-top: 0px;
+    font-size: 15vw;
+  }
+}

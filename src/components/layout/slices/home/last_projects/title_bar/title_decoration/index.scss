@@ -1,0 +1,33 @@
+@import '@/styles/variables.module.scss';
+
+#last-projects-title-decoration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: $base-padding-x;
+  padding-top: 20px;
+  display: block;
+  font-size: 0.9vw;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  .last-projects-title-decoration-line-wrapper {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    .last-projects-title-decoration-line {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(100%);
+      will-change: transform;
+    }
+  }
+}
+
+@media (max-width: $screen_breakpoint) {
+  #last-projects-title-decoration {
+    position: relative;
+    font-size: 2.5vw;
+    width: 100%;
+    margin: 3em 0;
+  }
+}

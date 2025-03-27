@@ -4,35 +4,10 @@
   grid-column: 1 / span 12;
   padding-top: 0.5em;
   width: 100%;
-
-  #last-projects-title-decoration {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-right: $base-padding-x;
-    padding-top: 20px;
-    display: block;
-    font-size: 0.9vw;
-    line-height: 1.4;
-    text-transform: uppercase;
-    // will-change: transform;
-  }
 }
 
 @media (max-width: $screen_breakpoint) {
   #last-projects-title-bar {
     grid-column: 1 / span 6;
-
-    #last-projects-title-wrapper {
-      margin-top: 0px;
-      font-size: 15vw;
-    }
-
-    #last-projects-title-decoration {
-      position: relative;
-      font-size: 2.5vw;
-      width: 100%;
-      margin: 3em 0;
-    }
   }
 }
