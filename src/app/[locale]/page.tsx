@@ -43,9 +43,9 @@ export default function Home() {
     <div ref={containerRef}>
       <div id='home_page'>
         <Hero />
-        <Introduction />
-        <MainSkills />
         <LastProjects />
+        {/* <Introduction /> */}
+        {/* <MainSkills /> */}
         {/* <Paris18 /> */}
       </div>
     </div>

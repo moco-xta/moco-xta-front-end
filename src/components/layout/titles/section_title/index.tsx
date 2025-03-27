@@ -1,5 +1,31 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
+
+import { capitalizeFirstLetter } from '@/helpers/textHelpers'
+
+import './index.scss'
+
+export default function SectionTitle({
+  title,
+  translationPath,
+}: {
+  title: string
+  translationPath: string
+}) {
+  const t = useTranslations()
+
+  return (
+    <h2
+      id='section_title'
+      className='pc_item'
+    >
+      {capitalizeFirstLetter(title ? title : t(translationPath))}
+    </h2>
+  )
+}
+
+/* import React from 'react'
+import { useTranslations } from 'next-intl'
 import { LuExternalLink } from 'react-icons/lu'
 
 import type { TTitle } from '@/types/components/layout/types'
@@ -40,3 +66,4 @@ export default function SectionTitle({ title, translationPath, url }: TTitle) {
     </>
   )
 }
+ */

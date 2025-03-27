@@ -1,3 +1,17 @@
+// PADDING
+
+$base-padding-x: max(5vw, 40px);
+$base-padding-y: clamp(30px, 4vw, 50px);
+
+// GRID
+
+$grid-gap: 2vw;
+$grid-space: calc((100% - 11 * $grid-gap) / 12);
+
+// ####################
+// ####################
+// ####################
+
 // COLORS
 
 $white: #fff;

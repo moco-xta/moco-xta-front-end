@@ -1,79 +1,16 @@
 @import '@/styles/variables.module.scss';
 
 #last-projects-section {
-  width: 100vw;
-  height: fit-content;
-  padding: 0 4.2vw;
-
-  #projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-
-    .last-project {
-      aspect-ratio: 16/9;
-      margin-bottom: 50px;
-      width: calc(50% - 10px);
-      max-width: 100%;
-
-      .last-project-info {
-        margin-top: -30px;
-        margin-left: 5vw;
-
-        .last-project-roles {
-          margin-bottom: 10px;
-          display: flex;
-          align-items: center;
-          font-size: 1.2em;
-
-          .last-project-roles-animation {
-            opacity: 1;
-          }
-        }
-
-        .last-project-name-container {
-          margin-top: -80px;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 2.2em;
-          font-weight: bold;
-          // clip-path: polygon(0% 32.5%, 100% 32.5%, 100% 62.5%, 0% 62.5%);
-          clip-path: polygon(0% 40%, 100% 40%, 100% 60%, 0% 60%);
-
-          .last-project-arrow {
-            margin-top: -3px;
-          }
-
-          .last-project-name {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transform: translateY(-172%);
-
-            .last-project-name-item {
-              // margin-bottom: 20px;
-              line-height: 1.2;
-              transform: translateY(-100%);
-
-              .last-project-name-character {
-                display: inline-block; // Ensure transform works
-                transform: translateY(-100%);
-                will-change: transform; // Optimize for animation
-                position: relative; // Ensure transform works properly
-                opacity: 0;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: $grid-gap;
+  padding: $base-padding-y $base-padding-x;
 }
 
 @media (max-width: $screen_breakpoint) {
-  .last-project {
-    flex: 1 1 100%;
+  #last-projects-section {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
