@@ -54,10 +54,14 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
         model.rotation.set(
           THREE.MathUtils.degToRad(-5),
           THREE.MathUtils.degToRad(
-            window.innerWidth > Number(styles.screenBreakpoint) ? (isOdd(index) ? -5 : 5) : 0,
+            /* window.innerWidth > Number(styles.screenBreakpoint) ? ( */ isOdd(index)
+              ? -5
+              : 5 /* ) : 0 */,
           ),
           THREE.MathUtils.degToRad(
-            window.innerWidth > Number(styles.screenBreakpoint) ? (isOdd(index) ? -5 : 5) : 0,
+            /* window.innerWidth > Number(styles.screenBreakpoint) ? ( */ isOdd(index)
+              ? -5
+              : 5 /* ) : 0 */,
           ),
         )
       }
@@ -110,11 +114,10 @@ export default function LastProjectScene({
 
     const checkModel = () => {
       const model = scene.getObjectByName(`last_project_mesh_${index}`)
-      console.log('Model:', model)
       if (model && model instanceof THREE.Mesh) {
         const timeline = gsap.timeline({
           scrollTrigger: {
-            trigger: `#last-project-canvas-container-${index}`,
+            trigger: `#last-project-container-${index}`,
             start: 'top 95%',
             end: 'bottom 60%',
             scrub: 1,

@@ -14,8 +14,36 @@
     .last-project {
       aspect-ratio: 16/9;
       margin-bottom: 50px;
-      width: calc(50% - 10px); // More precise width calculation
+      width: calc(50% - 10px);
       max-width: 100%;
+
+      .last-project-info {
+        margin-top: -30px;
+        margin-left: 5vw;
+
+        .last-project-roles {
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          font-size: 1.2em;
+
+          .last-project-roles-animation {
+            opacity: 1;
+          }
+        }
+
+        .last-project-name {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 2.2em;
+          font-weight: bold;
+
+          .last-project-arrow {
+            margin-top: -3px;
+          }
+        }
+      }
     }
   }
 }
