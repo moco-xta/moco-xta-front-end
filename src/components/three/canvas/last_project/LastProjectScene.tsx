@@ -35,6 +35,7 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene, isSmall
       uZoom: { value: 1.0 },
       uScrollSpeed: { value: 0.0 },
       uScrollDirection: { value: 1 },
+      uBlur: { value: 0.0 },
       uIsMobile: { value: isSmallScreen },
     },
     vertexShader: vertexShader,
@@ -48,15 +49,24 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene, isSmall
       model.name = `last_project_mesh_${index}`
       model.raycast = THREE.Mesh.prototype.raycast
       model.material = material
+    
+      model.geometry.computeBoundingBox()
+      const size = new THREE.Vector3()
+      model.geometry.boundingBox?.getSize(size)
+      console.log('Model size:', size)
+      
+      const targetSize = 1
+      const scale = targetSize / Math.max(size.x, size.y, size.z)
+      model.scale.set(scale, scale, scale)
+      
 
-      // Debug geometry
-      console.log('Model geometry:', {
-        vertices: model.geometry.attributes.position.count,
-        faces: model.geometry.index?.count,
-        boundingBox: model.geometry.boundingBox,
-      })
+      if (!isSmallScreen) model.position.set(isOdd(index) ? -0.6 : 0.6, 0, 0)
+      model.rotation.set(
+        THREE.MathUtils.degToRad(-5),
+        THREE.MathUtils.degToRad(!isSmallScreen ? (isOdd(index) ? -5 : 5) : 0),
+        THREE.MathUtils.degToRad(!isSmallScreen ? (isOdd(index) ? -5 : 5) : 0),
+      )
 
-      // Ensure geometry is ready for raycasting
       model.geometry.computeBoundingBox()
       model.geometry.computeBoundingSphere()
 
@@ -84,12 +94,9 @@ export default function LastProjectScene({
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(window.innerWidth < screenBreakpoint)
   const [isHovered, setIsHovered] = useState<boolean>(false)
 
-  useEffect(() => {
-    console.log('isHovered', isHovered)
-  }, [isHovered])
-
   const raycaster = useRef(new THREE.Raycaster())
   const pointer = useRef(new THREE.Vector2())
+  const blurRef = useRef({ value: 0 })
 
   useEffect(() => {
     const handleResize = () => {
@@ -121,7 +128,7 @@ export default function LastProjectScene({
     }
   }, [scene, isLoaded])
 
-  /* useEffect(() => {
+  useEffect(() => {
     const triggerElement = document.querySelector(`#last-projects-card-${index}`)
 
     const checkModel = () => {
@@ -141,7 +148,7 @@ export default function LastProjectScene({
             model.position,
             {
               x:
-                window.innerWidth > Number(styles.screenBreakpoint)
+                !isSmallScreen
                   ? isOdd(index)
                     ? -0.1
                     : 0.1
@@ -177,7 +184,67 @@ export default function LastProjectScene({
     }
 
     checkModel()
-  }, [scene, index]) */
+  }, [scene, index])
+
+  /* useEffect(() => {
+    gsap.to(blurRef.current, {
+      value: isHovered ? 1 : 0,
+      duration: 0.5,
+      ease: 'power3.out',
+    })
+  }, [isHovered]) */
+  
+  /* useEffect(() => {
+  let animationFrameId: number
+
+  const animateBlur = () => {
+    if (isHovered) {
+      const time = performance.now() / 1000 // Get time in seconds
+      blurRef.current.value = Math.sin(time * Math.PI) * 5 // Oscillate between 0 and 5
+      animationFrameId = requestAnimationFrame(animateBlur)
+    } else {
+      blurRef.current.value = 0
+    }
+  }
+
+  animateBlur()
+
+  return () => {
+    if (animationFrameId) {
+      cancelAnimationFrame(animationFrameId)
+    }
+  }
+}, [isHovered]) */
+
+useEffect(() => {
+  console.log('isHovered', isHovered)
+  let startTime: number | null = null
+  
+  const animateBlur = (timestamp: number) => {
+    if (!startTime) startTime = timestamp
+    const elapsed = timestamp - startTime
+    const duration = 250 // 1 second total for the animation
+    
+    // Calculate progress (0 to 1)
+    const progress = Math.min(elapsed / duration, 1)
+    
+    // Use sine function to create smooth in-out motion
+    blurRef.current.value = Math.sin(progress * Math.PI) * 5
+
+    console.log('blur', blurRef.current.value)
+    
+    if (progress < 1) {
+      requestAnimationFrame(animateBlur)
+    }
+  }
+
+  // Start animation when hover state changes
+  const animationFrameId = requestAnimationFrame(animateBlur)
+  
+  return () => {
+    cancelAnimationFrame(animationFrameId)
+  }
+}, [isHovered])
 
   useFrame(({ clock }) => {
     const time = clock.getElapsedTime()
@@ -187,27 +254,16 @@ export default function LastProjectScene({
         object.material.uniforms.time.value = time
         object.material.uniforms.uScrollSpeed.value = speedRef.current
         object.material.uniforms.uIsMobile.value = isSmallScreen
-        // object.updateMatrix()
-        // object.updateMatrixWorld(true)
+        object.material.uniforms.uBlur.value = blurRef.current.value
       }
     })
 
-    // Debug raycasting
     raycaster.current.setFromCamera(pointer.current, camera)
     const model = scene.getObjectByName(`last_project_mesh_${index}`)
     if (model) {
-      // Use recursive flag to check all child objects
       const intersects = raycaster.current.intersectObject(model, true)
 
-      // Log detailed information about the intersection
       if (intersects.length > 0) {
-        console.log('Intersection details:', {
-          modelName: intersects[0].object.name,
-          point: intersects[0].point,
-          distance: intersects[0].distance,
-          uv: intersects[0].uv,
-          face: intersects[0].face,
-        })
         setIsHovered(true)
       } else {
         setIsHovered(false)

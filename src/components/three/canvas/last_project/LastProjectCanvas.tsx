@@ -21,10 +21,10 @@ export default function LastProjectCanvas({
     >
       <PerspectiveCamera
         makeDefault
-        position={new THREE.Vector3(0, 0, 5)}
+        position={new THREE.Vector3(0, 0, 2)}
         fov={45}
         near={0.1}
-        far={1000}
+        far={10}
         onUpdate={(camera) => {
           camera.updateProjectionMatrix()
           camera.updateMatrixWorld()
