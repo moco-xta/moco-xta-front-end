@@ -1,7 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera } from '@react-three/drei'
 
 import LastProjectScene from './LastProjectScene'
 
@@ -30,7 +30,6 @@ export default function LastProjectCanvas({
           camera.updateMatrixWorld()
         }}
       />
-      {/* <OrbitControls  /> */}
       <LastProjectScene
         index={index}
         textureUrl={textureUrl}
