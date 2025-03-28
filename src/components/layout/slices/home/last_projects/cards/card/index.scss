@@ -4,9 +4,27 @@
   position: relative;
   float: left;
   grid-column: span 6 / span 6;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   pointer-events: auto;
-  // background-color: red;
+
+  .last-project-info {
+    position: relative;
+    width: 100%;
+  }
+
+  .last-project-info-left {
+    margin-left: 3.5vw;
+  }
+
+  .last-project-info-right {
+    margin-left: 0.5vw;
+  }
+
+  .last-project-small-screen {
+    margin-left: 4vw;
+  }
 }
 
 @media (max-width: $screen_breakpoint) {

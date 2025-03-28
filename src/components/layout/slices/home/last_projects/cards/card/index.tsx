@@ -2,10 +2,26 @@ import React from 'react'
 
 import type { IProjectData } from '@/types/data/projects/types'
 
-import './index.scss'
-import LastProjectCanvas from '@/components/three/canvas/last_project/LastProjectCanvas'
+import useIsSmallScreen from '@/hooks/useisSmallScreen'
 
-export default function ProjectCard({ index, project }: { index: number; project: IProjectData }) {
+import LastProjectCanvas from '@/components/three/canvas/last_project/LastProjectCanvas'
+import LastProjectsRoles from './roles'
+
+import { isOdd } from '@/helpers/mathHelpers'
+
+import './index.scss'
+
+export default function ProjectCard({
+  index,
+  project,
+  roles,
+}: {
+  index: number
+  project: IProjectData
+  roles: string
+}) {
+  const isSmallScreen = useIsSmallScreen()
+
   return (
     <a
       id={`last-projects-card-${index}`}
@@ -15,6 +31,14 @@ export default function ProjectCard({ index, project }: { index: number; project
         index={index}
         textureUrl={project.imageUrl}
       />
+      <div
+        className={`last-project-info ${!isSmallScreen ? (!isOdd(index) ? 'last-project-info-left' : 'last-project-info-right') : 'last-project-small-screen'}`}
+      >
+        <LastProjectsRoles
+          index={index}
+          roles={roles}
+        />
+      </div>
     </a>
   )
 }

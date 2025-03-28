@@ -4,6 +4,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import gsap from 'gsap'
 
+import useIsSmallScreen from '@/hooks/useisSmallScreen'
 import { useScrollSpeed } from '@/hooks/useScrollSpeed'
 
 import vertexShader from '../../shaders/last_project/vertexShader.glsl'
@@ -12,8 +13,6 @@ import fragmentShader from '../../shaders/last_project/fragmentShader.glsl'
 import { isOdd } from '@/helpers/mathHelpers'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
-
-import styles from '@/styles/variables.module.scss'
 
 function addModel(index: number, textureUrl: string, scene: THREE.Scene, isSmallScreen: boolean) {
   const loader = new GLTFLoader()
@@ -86,25 +85,15 @@ export default function LastProjectScene({
 }) {
   const { scene, camera } = useThree()
 
+  const isSmallScreen = useIsSmallScreen()
   const speedRef = useScrollSpeed()
 
   const [isLoaded, setIsLoaded] = useState<boolean>(false)
-  const [screenBreakpoint] = useState<number>(parseInt(styles.screenBreakpoint, 10))
-  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(window.innerWidth < screenBreakpoint)
   const [isHovered, setIsHovered] = useState<boolean>(false)
 
   const raycaster = useRef(new THREE.Raycaster())
   const pointer = useRef(new THREE.Vector2())
   const blurRef = useRef({ value: 0 })
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < screenBreakpoint)
-    }
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [screenBreakpoint])
 
   useEffect(() => {
     const onPointerMove = (event: MouseEvent) => {
