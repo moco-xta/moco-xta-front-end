@@ -1,0 +1,16 @@
+@import '@/styles/variables.module.scss';
+
+.project_card {
+  position: relative;
+  float: left;
+  grid-column: span 6 / span 6;
+  cursor: pointer;
+  pointer-events: auto;
+  // background-color: red;
+}
+
+@media (max-width: $screen_breakpoint) {
+  .project_card {
+    grid-column: span 6 / span 6;
+  }
+}

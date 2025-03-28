@@ -15,7 +15,7 @@ import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 import styles from '@/styles/variables.module.scss'
 
-function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
+function addModel(index: number, textureUrl: string, scene: THREE.Scene, isSmallScreen: boolean) {
   const loader = new GLTFLoader()
 
   const textureLoader = new THREE.TextureLoader()
@@ -32,7 +32,7 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
       uZoom: { value: 1.0 },
       uScrollSpeed: { value: 0.0 },
       uScrollDirection: { value: 1 },
-      uIsMobile: { value: window.innerWidth < Number(styles.screenBreakpoint) },
+      uIsMobile: { value: isSmallScreen },
     },
     vertexShader: vertexShader,
     fragmentShader: fragmentShader,
@@ -49,20 +49,11 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene) {
         const scale = 0.8
         model.scale.set(scale, scale, scale)
         model.updateMatrix()
-        if (window.innerWidth > Number(styles.screenBreakpoint))
-          model.position.set(isOdd(index) ? -0.6 : 0.6, 0, 0)
+        if (!isSmallScreen) model.position.set(isOdd(index) ? -0.6 : 0.6, 0, 0)
         model.rotation.set(
           THREE.MathUtils.degToRad(-5),
-          THREE.MathUtils.degToRad(
-            /* window.innerWidth > Number(styles.screenBreakpoint) ? ( */ isOdd(index)
-              ? -5
-              : 5 /* ) : 0 */,
-          ),
-          THREE.MathUtils.degToRad(
-            /* window.innerWidth > Number(styles.screenBreakpoint) ? ( */ isOdd(index)
-              ? -5
-              : 5 /* ) : 0 */,
-          ),
+          THREE.MathUtils.degToRad(!isSmallScreen ? (isOdd(index) ? -5 : 5) : 0),
+          THREE.MathUtils.degToRad(!isSmallScreen ? (isOdd(index) ? -5 : 5) : 0),
         )
       }
       scene.add(model)
@@ -88,40 +79,38 @@ export default function LastProjectScene({
   const speedRef = useScrollSpeed()
 
   const [isLoaded, setIsLoaded] = useState<boolean>(false)
-  const [isMobile, setIsMobile] = useState<boolean>(
-    window.innerWidth < Number(styles.screenBreakpoint),
-  )
+  const [screenBreakpoint] = useState<number>(parseInt(styles.screenBreakpoint, 10))
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(window.innerWidth < screenBreakpoint)
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < Number(styles.screenBreakpoint))
+      setIsSmallScreen(window.innerWidth < screenBreakpoint)
     }
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [screenBreakpoint])
 
   useEffect(() => {
     if (!isLoaded) {
-      addModel(index, textureUrl, scene)
+      addModel(index, textureUrl, scene, isSmallScreen)
       setIsLoaded(true)
     }
-  }, [scene, index, textureUrl, isLoaded])
+  }, [scene, isLoaded])
 
   useEffect(() => {
-    const triggerElement = document.querySelector(`#last-project-canvas-container-${index}`)
-    console.log('Trigger Element:', triggerElement)
+    const triggerElement = document.querySelector(`#last-projects-card-${index}`)
 
     const checkModel = () => {
       const model = scene.getObjectByName(`last_project_mesh_${index}`)
       if (model && model instanceof THREE.Mesh) {
         const timeline = gsap.timeline({
           scrollTrigger: {
-            trigger: `#last-project-container-${index}`,
+            trigger: triggerElement,
             start: 'top 95%',
             end: 'bottom 60%',
             scrub: 1,
-            // markers: true,
+            markers: true,
           },
         })
         timeline
@@ -174,7 +163,7 @@ export default function LastProjectScene({
       if (object instanceof THREE.Mesh && object.material instanceof THREE.ShaderMaterial) {
         object.material.uniforms.time.value = time
         object.material.uniforms.uScrollSpeed.value = speedRef.current
-        object.material.uniforms.uIsMobile.value = isMobile
+        object.material.uniforms.uIsMobile.value = isSmallScreen
       }
     })
   })

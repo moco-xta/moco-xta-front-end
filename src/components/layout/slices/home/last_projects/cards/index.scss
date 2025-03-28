@@ -1,0 +1,19 @@
+@import '@/styles/variables.module.scss';
+
+#last-projects-cards {
+  position: relative;
+  margin-top: calc(10.35px * 20);
+  grid-column: 1 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: $grid-gap;
+  row-gap: $grid-gap;
+}
+
+@media (max-width: $screen_breakpoint) {
+  #last-projects-cards {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-column: 1 / span 6;
+    margin-top: 0;
+  }
+}

@@ -18,7 +18,7 @@ export default function LastProjectCanvas({
     <Canvas {...canvasDefaultValues}>
       <PerspectiveCamera
         makeDefault
-        position={new THREE.Vector3(0, 0, 2.5)}
+        position={new THREE.Vector3(0, 0, 2.25)}
       />
       {/* <OrbitControls  /> */}
       <LastProjectScene

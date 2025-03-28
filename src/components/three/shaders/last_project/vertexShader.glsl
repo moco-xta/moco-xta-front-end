@@ -23,7 +23,7 @@ void main() {
 		pos.z += pow(abs((1.0 - pos.y) - 1.0), 2.0) * stretchFactor;
 	}
 
-	if (uIsMobile == 1.0) {
+	if (uIsMobile != 1.0) {
 		if (uIsOdd > 0.0) {
 			pos.x += pow(abs(pos.y - 1.0), 2.0) * stretchFactor;
 		} else {

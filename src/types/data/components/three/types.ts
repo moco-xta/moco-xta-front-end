@@ -6,6 +6,6 @@ export type TTexturesData = Record<string, Record<string, THREE.Texture>>
 
 // LOGO
 
-export type TLogoData = {
+export interface ILogoData {
   name: string
 }

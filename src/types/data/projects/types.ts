@@ -1,4 +1,6 @@
-export type TProjectData = {
+import type { ILogoData } from '../components/three/types'
+
+export interface IProjectData {
   key: string
   url: string
   name: string
@@ -11,7 +13,7 @@ export type TProjectData = {
   logos: {
     prefix: string
     path: string
-    project: TLogoData
-    tools: TLogoData[]
+    project: ILogoData
+    tools: ILogoData[]
   }
 }
