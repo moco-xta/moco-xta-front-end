@@ -21,9 +21,9 @@ export default function LastProjectsRoles({ index, roles }: { index: number; rol
     container.innerHTML = characters
       .map(
         (char) =>
-          `<span class="char" data-original="${char === ' ' ? '\u00A0' : char}">${
-            char === ' ' ? '&nbsp;' : char
-          }</span>`,
+          `<span class="char" data-original="${
+            char === ' ' ? '\u00A0' : char
+          }">${char === ' ' ? '&nbsp;' : char}</span>`,
       )
       .join('')
 
@@ -33,13 +33,21 @@ export default function LastProjectsRoles({ index, roles }: { index: number; rol
       scrollTrigger: {
         trigger: container,
         start: 'top 80%',
-        end: 'bottom 70%',
-        scrub: true,
+        end: 'bottom 80%',
       },
     })
 
     charSpans.forEach((span, i) => {
       let count = 0
+
+      tl.from(
+        span,
+        {
+          opacity: 0,
+          duration: 0.05,
+        },
+        i * 0.05,
+      )
 
       tl.call(
         () => {
@@ -71,7 +79,7 @@ export default function LastProjectsRoles({ index, roles }: { index: number; rol
     <p
       ref={containerRef}
       id={`last-projects-roles-${index}`}
-      className='last-project-roles'
+      className="last-project-roles"
     >
       {roles}
     </p>

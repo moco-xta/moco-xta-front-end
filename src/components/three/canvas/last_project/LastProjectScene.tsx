@@ -4,7 +4,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import gsap from 'gsap'
 
-import useIsSmallScreen from '@/hooks/useisSmallScreen'
+import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 import { useScrollSpeed } from '@/hooks/useScrollSpeed'
 
 import vertexShader from '../../shaders/last_project/vertexShader.glsl'

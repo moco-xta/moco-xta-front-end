@@ -2,7 +2,7 @@ import React from 'react'
 
 import type { IProjectData } from '@/types/data/projects/types'
 
-import useIsSmallScreen from '@/hooks/useisSmallScreen'
+import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 
 import LastProjectCanvas from '@/components/three/canvas/last_project/LastProjectCanvas'
 import LastProjectsRoles from './roles'
