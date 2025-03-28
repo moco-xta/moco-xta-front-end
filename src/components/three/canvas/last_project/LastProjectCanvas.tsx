@@ -15,10 +15,20 @@ export default function LastProjectCanvas({
   textureUrl: string
 }) {
   return (
-    <Canvas {...canvasDefaultValues}>
+    <Canvas
+      id={`last-project-canvas-${index}`}
+      {...canvasDefaultValues}
+    >
       <PerspectiveCamera
         makeDefault
-        position={new THREE.Vector3(0, 0, 2.25)}
+        position={new THREE.Vector3(0, 0, 5)}
+        fov={45}
+        near={0.1}
+        far={1000}
+        onUpdate={(camera) => {
+          camera.updateProjectionMatrix()
+          camera.updateMatrixWorld()
+        }}
       />
       {/* <OrbitControls  /> */}
       <LastProjectScene

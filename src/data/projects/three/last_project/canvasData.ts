@@ -10,7 +10,7 @@ export const canvasDefaultValues: Partial<CanvasProps> = {
     // height: '100%',
     aspectRatio: '16 / 9',
     objectFit: 'contain',
-    // backgroundColor: 'blue',
+    backgroundColor: 'blue',
   },
   dpr: 2,
   shadows: true,
