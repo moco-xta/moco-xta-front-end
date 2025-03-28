@@ -6,6 +6,7 @@ import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 
 import LastProjectCanvas from '@/components/three/canvas/last_project/LastProjectCanvas'
 import LastProjectsRoles from './roles'
+import LastProjectsName from './name'
 
 import { isOdd } from '@/helpers/mathHelpers'
 
@@ -37,6 +38,10 @@ export default function ProjectCard({
         <LastProjectsRoles
           index={index}
           roles={roles}
+        />
+        <LastProjectsName
+          index={index}
+          name={project.name}
         />
       </div>
     </a>

@@ -32,7 +32,7 @@ export default function LastProjectsRoles({ index, roles }: { index: number; rol
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container,
-        start: 'top 80%',
+        start: 'top 95%',
         end: 'bottom 80%',
       },
     })
@@ -79,7 +79,7 @@ export default function LastProjectsRoles({ index, roles }: { index: number; rol
     <p
       ref={containerRef}
       id={`last-projects-roles-${index}`}
-      className="last-project-roles"
+      className='last-project-roles'
     >
       {roles}
     </p>
