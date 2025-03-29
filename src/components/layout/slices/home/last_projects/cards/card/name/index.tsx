@@ -65,6 +65,7 @@ export default function LastProjectsName({ index, name }: { index: number; name:
 
       const projectName = document.querySelector(`#last-projects-name-${index}`)
       const characters = container.querySelectorAll('.last-project-name-character')
+      const reversedArray = Array.from(characters).reverse()
 
       const card = document.querySelector(`#last-projects-card-${index}`)
 
@@ -72,36 +73,70 @@ export default function LastProjectsName({ index, name }: { index: number; name:
 
       const tl2 = gsap.timeline({ paused: true })
 
-      tl2
-        .to(
-          characters,
+      characters.forEach((character, index) => {
+        tl2.to(
+          character,
           {
             x: '30px',
             duration: 0.1,
-            stagger: {
-              each: 0.025,
-              from: 'end',
-            },
             ease: 'power1.out',
           },
-          0, // Start at position 0
+          index * 0.025 // Add delay based on index
         )
-        .to(
-          projectName,
-          {
-            x: 0, // Changed from 0 to '30px' to match the characters
-            duration: 0.1,
-            ease: 'power1.out',
-          },
-          0, // Start at position 0
-        )
-
-      card.addEventListener('mouseenter', () => {
-        tl2.play() // Play the timeline on hover
       })
-
+  
+      // Add project name animation to the timeline
+      tl2.to(
+        projectName,
+        {
+          x: '30px',
+          duration: 0.1,
+          ease: 'power1.out',
+        },
+        0 // Start at the same time as the first character animation
+      )
+  
+      card.addEventListener('mouseenter', () => {
+        tl2.play()
+      })
+  
+      /* card.addEventListener('mouseleave', () => {
+        tl2.reverse()
+      }) */
+    
+      card.addEventListener('mouseenter', () => {
+        /* reversedArray.forEach((character, index) => {
+          gsap.to(character, {
+            x: '30px',
+            duration: 0.1,
+            delay: index * 0.025, // Add delay based on index
+            ease: 'power1.out',
+          })
+        }) */
+        
+        gsap.to(projectName, {
+          x: 0,
+          duration: 0.1,
+          ease: 'power1.out',
+        })
+      })
+  
       card.addEventListener('mouseleave', () => {
-        tl2.reverse() // Reverse the timeline on mouse leave
+        gsap.to(characters, {
+          x: '0px',
+          duration: 0.1,
+          stagger: {
+            each: 0.025,
+            from: 'start',
+          },
+          ease: 'power1.out',
+        })
+  
+        gsap.to(projectName, {
+          x: '-35px',
+          duration: 0.1,
+          ease: 'power1.out',
+        })
       })
     },
     { scope: containerRef },
