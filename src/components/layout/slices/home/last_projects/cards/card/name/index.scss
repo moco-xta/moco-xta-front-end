@@ -23,7 +23,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      transform: translateY(-172%);
+      transform: translateX(0) translateY(-172%);
 
       .last-project-name-item {
         // margin-bottom: 20px;
@@ -32,10 +32,10 @@
 
         .last-project-name-character {
           display: inline-block; // Ensure transform works
-          transform: translateY(-100%);
+          transform: translateX(0) translateY(-100%);
           margin-left: 0;
           margin-left: 0;
-          letter-spacing: 0;
+          // letter-spacing: 0;
           will-change: transform; // Optimize for animation
           position: relative; // Ensure transform works properly
           opacity: 0;
@@ -45,7 +45,7 @@
   }
 
   .last-project-name-container:hover {
-    transform: translateX(0px);
+    // transform: translateX(0px);
     // letter-spacing: 0.02em;
     // transition: letter-spacing 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
