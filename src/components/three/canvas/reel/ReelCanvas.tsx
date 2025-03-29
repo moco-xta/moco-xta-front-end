@@ -9,9 +9,7 @@ import { canvasDefaultValues } from '@/data/reel/three/canvasData'
 
 export default function ReelCanvas() {
   return (
-    <Canvas
-      {...canvasDefaultValues}
-    >
+    <Canvas {...canvasDefaultValues}>
       <PerspectiveCamera
         makeDefault
         position={new THREE.Vector3(-2, 1, 2.5)}

@@ -1,23 +1,23 @@
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { useAnimations, useGLTF } from '@react-three/drei';
-import { gsap } from 'gsap';
+import { useAnimations, useGLTF } from '@react-three/drei'
+import { gsap } from 'gsap'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 export default function ReelScene() {
-  const group = useRef<THREE.Group>(null!);
-  const { scene, animations } = useGLTF(glbConstants.INTRODUCTION.REEL_PLANE);
-  const { actions } = useAnimations(animations, group);
+  const group = useRef<THREE.Group>(null!)
+  const { scene, animations } = useGLTF(glbConstants.INTRODUCTION.REEL_PLANE)
+  const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
-    const action = actions['Key.001Action.002']; // Replace with your animation name
-    if (!action) return;
-  
+    const action = actions['Key.001Action.002'] // Replace with your animation name
+    if (!action) return
+
     // Set the animation to pause initially
-    action.play();
-    action.paused = true;
-  
+    action.play()
+    action.paused = true
+
     // Create a GSAP timeline for the animation
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -28,19 +28,19 @@ export default function ReelScene() {
         markers: true,
         onUpdate: (self) => {
           // Update the animation progress based on scroll
-          action.time = action.getClip().duration * self.progress;
+          action.time = action.getClip().duration * self.progress
         },
       },
-    });
-  
+    })
+
     return () => {
-      timeline.kill(); // Clean up the timeline on unmount
-    };
-  }, [actions]);
+      timeline.kill() // Clean up the timeline on unmount
+    }
+  }, [actions])
 
   return (
     <group ref={group}>
       <primitive object={scene} />
     </group>
-  );
+  )
 }

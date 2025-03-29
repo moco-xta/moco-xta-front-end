@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { FaArrowRight } from 'react-icons/fa'
@@ -8,11 +8,21 @@ import { splitTextToCharacters } from '@/helpers/textHelpers'
 import './index.scss'
 
 export default function LastProjectsName({ index, name }: { index: number; name: string }) {
-  const containerRef = React.useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const charactersRef = useRef<NodeListOf<Element> | null>(null)
+  const cardRef = useRef<Element | null>(null)
+
+  // Initialize values when the component mounts
+  useEffect(() => {
+    if (containerRef.current) {
+      charactersRef.current = containerRef.current.querySelectorAll('.last-project-name-character')
+      cardRef.current = document.querySelector(`#last-projects-card-${index}`)
+    }
+  }, [index])
 
   useGSAP(
     () => {
-      if (!containerRef.current) return
+      if (!containerRef.current || !cardRef.current || !charactersRef.current) return
 
       const container = containerRef.current
 
@@ -63,66 +73,22 @@ export default function LastProjectsName({ index, name }: { index: number; name:
           0,
         )
 
-      const projectName = document.querySelector(`#last-projects-name-${index}`)
-      const characters = container.querySelectorAll('.last-project-name-character')
-      const reversedArray = Array.from(characters).reverse()
-
-      const card = document.querySelector(`#last-projects-card-${index}`)
-
-      if (!card || !characters) return
-
-      const tl2 = gsap.timeline({ paused: true })
-
-      characters.forEach((character, index) => {
-        tl2.to(
-          character,
-          {
-            x: '30px',
-            duration: 0.1,
-            ease: 'power1.out',
-          },
-          index * 0.025 // Add delay based on index
-        )
-      })
-  
-      // Add project name animation to the timeline
-      tl2.to(
-        projectName,
-        {
+      /* cardRef.current.addEventListener('mouseenter', () => {
+        // Animate characters with stagger
+        gsap.to(charactersRef.current, {
           x: '30px',
           duration: 0.1,
+          stagger: {
+            each: 0.025,
+            from: 'end',
+          },
           ease: 'power1.out',
-        },
-        0 // Start at the same time as the first character animation
-      )
-  
-      card.addEventListener('mouseenter', () => {
-        tl2.play()
-      })
-  
-      /* card.addEventListener('mouseleave', () => {
-        tl2.reverse()
-      }) */
-    
-      card.addEventListener('mouseenter', () => {
-        /* reversedArray.forEach((character, index) => {
-          gsap.to(character, {
-            x: '30px',
-            duration: 0.1,
-            delay: index * 0.025, // Add delay based on index
-            ease: 'power1.out',
-          })
-        }) */
-        
-        gsap.to(projectName, {        
-          x: 0,
-          duration: 0.1,
-          ease: 'power1.out',
-        })
-      })
-  
-      card.addEventListener('mouseleave', () => {
-        gsap.to(characters, {
+        });
+      });
+
+      cardRef.current.addEventListener('mouseleave', () => {
+        // Reverse animations
+        gsap.to(charactersRef.current, {
           x: '0px',
           duration: 0.1,
           stagger: {
@@ -130,14 +96,8 @@ export default function LastProjectsName({ index, name }: { index: number; name:
             from: 'start',
           },
           ease: 'power1.out',
-        })
-  
-        gsap.to(projectName, {
-          x: '-35px',
-          duration: 0.1,
-          ease: 'power1.out',
-        })
-      })
+        });
+      }); */
     },
     { scope: containerRef },
   )
@@ -167,9 +127,9 @@ export default function LastProjectsName({ index, name }: { index: number; name:
                 {splitTextToCharacters(name).map((letter, index) => (
                   <span
                     key={`last_project_name_character_${name}_${i}_${index}`}
-                    className={`last-project-name-character last-project-name-character-${index}`}
+                    className='last-project-name-character'
                   >
-                    {letter !== ' ' ? letter : '\u00A0'}
+                    {letter}
                   </span>
                 ))}
               </span>
