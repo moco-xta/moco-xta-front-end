@@ -15,7 +15,6 @@ export default function LastProjectsName({ index, name }: { index: number; name:
       if (!containerRef.current) return
 
       const container = containerRef.current
-      const characters = splitTextToCharacters(name)
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -44,7 +43,7 @@ export default function LastProjectsName({ index, name }: { index: number; name:
           {
             translateY: '0%',
             opacity: 1,
-            duration: 1.5,
+            duration: 1,
             ease: 'sine.inOut',
             stagger: {
               each: 0.045,
@@ -63,39 +62,74 @@ export default function LastProjectsName({ index, name }: { index: number; name:
           },
           0,
         )
-    },
+
+        const characters = container.querySelectorAll('.last-project-name-character')
+        const charactersArray = Array.from(characters).reverse()
+        
+        const card = document.querySelector(`#last-projects-card-${index}`)
+    
+        if (!card || !characters) return
+
+        const tl2 = gsap.timeline({ paused: true }) // Timeline paused by default
+    
+        charactersArray.forEach((character, index) => {
+          tl2.to(character, {
+            letterSpacing: '0.1em',
+            duration: 0.3,
+            ease: 'power1.out',
+          }, '+=index * 0.05')
+          .to(character, {
+            letterSpacing: '0em',
+            duration: 0.3,
+            ease: 'power1.out',
+          }, 0.5)
+        })
+    
+        card.addEventListener('mouseenter', () => {
+          tl2.play() // Play the timeline on hover
+        })
+    
+        card.addEventListener('mouseleave', () => {
+          tl2.reverse() // Reverse the timeline on mouse leave
+        })
+      },
+    
     { scope: `#last-projects-name-${index}` },
   )
 
   return (
-    <p
+    <div
       ref={containerRef}
-      id={`last-projects-name-${index}`}
-      className='last-project-name-container'
+      className='last-projects-name-wrapper'
     >
-      <FaArrowRight
-        className='last-project-arrow'
-        size={25}
-      />
-      <div className='last-project-name'>
-        {Array(5)
-          .fill(null)
-          .map((_, i) => (
-            <span
-              key={`last_project_name_${index}_${i}`}
-              className='last-project-name-item'
-            >
-              {splitTextToCharacters(name).map((letter, index) => (
-                <span
-                  key={`last_project_name_character_${name}_${i}_${index}`}
-                  className='last-project-name-character'
-                >
-                  {letter !== ' ' ? letter : '\u00A0'}
-                </span>
-              ))}
-            </span>
-          ))}
-      </div>
-    </p>
+      <p
+        id={`last-projects-name-${index}`}
+        className='last-project-name-container'
+      >
+        <FaArrowRight
+          className='last-project-arrow'
+          size={25}
+        />
+        <div className='last-project-name'>
+          {Array(5)
+            .fill(null)
+            .map((_, i) => (
+              <span
+                key={`last_project_name_${index}_${i}`}
+                className='last-project-name-item'
+              >
+                {splitTextToCharacters(name).map((letter, index) => (
+                  <span
+                    key={`last_project_name_character_${name}_${i}_${index}`}
+                    className={`last-project-name-character last-project-name-character-${index}`}
+                  >
+                    {letter !== ' ' ? letter : '\u00A0'}
+                  </span>
+                ))}
+              </span>
+            ))}
+        </div>
+      </p>
+    </div>
   )
 }

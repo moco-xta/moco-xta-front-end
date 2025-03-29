@@ -167,10 +167,9 @@ export default function LastProjectScene({
     }
 
     checkModel()
-  }, [scene, index])
+  }, [scene, index, isSmallScreen])
 
   useEffect(() => {
-    console.log('isHovered', isHovered)
     let startTime: number | null = null
 
     const animateBlur = (timestamp: number) => {
@@ -181,8 +180,6 @@ export default function LastProjectScene({
       const progress = Math.min(elapsed / duration, 1)
 
       blurRef.current.value = Math.sin(progress * Math.PI) * 5
-
-      console.log('blur', blurRef.current.value)
 
       if (progress < 1) {
         requestAnimationFrame(animateBlur)
