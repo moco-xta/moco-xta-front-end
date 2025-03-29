@@ -63,6 +63,7 @@ export default function LastProjectsName({ index, name }: { index: number; name:
           0,
         )
 
+        const projectName = document.querySelector(`#last-projects-name-${index}`)
         const characters = container.querySelectorAll('.last-project-name-character')
         const charactersArray = Array.from(characters).reverse()
         
@@ -75,14 +76,19 @@ export default function LastProjectsName({ index, name }: { index: number; name:
         charactersArray.forEach((character, index) => {
           tl2.to(character, {
             letterSpacing: '0.1em',
-            duration: 0.3,
+            duration: 0.1,
             ease: 'power1.out',
           }, '+=index * 0.05')
           .to(character, {
             letterSpacing: '0em',
-            duration: 0.3,
+            duration: 0.1,
             ease: 'power1.out',
           }, 0.5)
+          .to(projectName, {
+            x: '0px',
+            duration: 0.05 * charactersArray.length / 2,
+            ease: 'power1.out',
+          }, 0)
         })
     
         card.addEventListener('mouseenter', () => {
