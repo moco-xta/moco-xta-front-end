@@ -1,4 +1,7 @@
 {
+  "INTRODUCTION": {
+    "REEL_PLANE": "/models/glb/introduction/ReelPlane.glb"
+  },
   "LOGOS": {
     "LOGO_ABWERKT": "/models/glb/logos/LogoAbwerkt.glb",
     "LOGO_ANGULAR": "/models/glb/logos/LogoAngular.glb",

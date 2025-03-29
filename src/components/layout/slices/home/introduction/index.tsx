@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 
 import IntroductionContent from './introduction_content'
 import ParisMetroMap from './paris_metro_map'
+import ReelCanvas from '@/components/three/canvas/reel/ReelCanvas'
 // import MorphingDemo from './morphing_demo'
 // import VideoSVG from './video_svg'
 // import MorphVideo from './morph_video'
@@ -22,6 +23,7 @@ export default function Introduction() {
       {/* <NewVideoDeform /> */}
       <IntroductionContent introductionSectionRef={introductionSectionRef} />
       <ParisMetroMap />
+      <ReelCanvas />
       {/* <MorphVideo introductionSectionRef={introductionSectionRef} /> */}
       {/* <MorphingDemo /> */}
       {/* <VideoSVG /> */}

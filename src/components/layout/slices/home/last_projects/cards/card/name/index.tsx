@@ -21,7 +21,7 @@ export default function LastProjectsName({ index, name }: { index: number; name:
           trigger: container,
           start: 'top 80%',
           end: 'bottom 70%',
-          markers: true,
+          // markers: true,
         },
       })
 
@@ -114,7 +114,7 @@ export default function LastProjectsName({ index, name }: { index: number; name:
           })
         }) */
         
-        gsap.to(projectName, {
+        gsap.to(projectName, {        
           x: 0,
           duration: 0.1,
           ease: 'power1.out',

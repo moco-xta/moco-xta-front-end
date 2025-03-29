@@ -128,7 +128,7 @@ export default function LastProjectScene({
             start: 'top 95%',
             end: 'bottom 60%',
             scrub: 1,
-            markers: true,
+            // markers: true,
           },
         })
         timeline
