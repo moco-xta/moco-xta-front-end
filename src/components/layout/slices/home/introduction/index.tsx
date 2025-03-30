@@ -16,7 +16,7 @@ export default function Introduction() {
     >
       <IntroductionContent containerRef={containerRef} />
       <ParisMetroMap />
-      {/* <ReelCanvas /> */}
+      <ReelCanvas />
     </section>
   )
 }

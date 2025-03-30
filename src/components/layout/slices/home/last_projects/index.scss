@@ -3,6 +3,7 @@
 #last-projects-section {
   position: relative;
   width: 100%;
+  margin-top: 30vh;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: $grid-gap;
