@@ -67,6 +67,8 @@ section {
 
 .section-title {
   font-size: 8vw;
+  letter-spacing: -0.02em;
+  line-height: 1;
 }
 
 // PARAGRAPHS
@@ -115,7 +117,11 @@ button {
 
 // ANIMATION
 
-.text_revealed {
+.text-revealed-wrapper {
   display: inline-block;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+  .text-revealed {
+    display: inline-block;
+  }
 }

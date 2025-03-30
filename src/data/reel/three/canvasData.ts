@@ -5,7 +5,7 @@ export const canvasDefaultValues: Partial<CanvasProps> = {
   style: {
     width: '100%',
     height: '40vh',
-    backgroundColor: 'blue',
+    // backgroundColor: 'blue',
   },
   dpr: 2,
   shadows: true,
