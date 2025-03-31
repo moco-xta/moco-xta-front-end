@@ -4,8 +4,8 @@ export const canvasDefaultValues: Partial<CanvasProps> = {
   id: 'reel_canvas',
   style: {
     width: '100%',
-    height: '40vh',
-    // backgroundColor: 'blue',
+    height: '170vh',
+    // backgroundColor: '#0000FF88',
   },
   dpr: 2,
   shadows: true,

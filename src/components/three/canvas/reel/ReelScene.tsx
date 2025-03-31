@@ -1,46 +1,56 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+import { useThree } from '@react-three/fiber'
 import { useAnimations, useGLTF } from '@react-three/drei'
 import { gsap } from 'gsap'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
 export default function ReelScene() {
-  const group = useRef<THREE.Group>(null!)
-  const { scene, animations } = useGLTF(glbConstants.INTRODUCTION.REEL_PLANE)
-  const { actions } = useAnimations(animations, group)
+  const { scene: modelScene, animations } = useGLTF(glbConstants.INTRODUCTION.REEL_PLANE)
+  const groupRef = useRef<THREE.Group>(null!)
+  const { actions } = useAnimations(animations, groupRef)
 
   useEffect(() => {
-    const action = actions['Key.001Action.002'] // Replace with your animation name
-    if (!action) return
+    if (actions) {
+      const action1 = actions['Key.001Action'] // Replace with your animation key
+      const action2 = actions['RoundedPlaneAction'] // Replace with your animation key
 
-    // Set the animation to pause initially
-    action.play()
-    action.paused = true
+      if (!action1 || !action2) {
+        console.error('Missing animation actions:', actions)
+        return
+      }
 
-    // Create a GSAP timeline for the animation
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#reel_canvas', // Replace with the ID of your scroll trigger element
-        start: 'top center', // When the trigger element hits the center of the viewport
-        end: 'bottom center', // When the trigger element leaves the viewport
-        scrub: true, // Smoothly scrub through the animation
-        markers: true,
-        onUpdate: (self) => {
-          // Update the animation progress based on scroll
-          action.time = action.getClip().duration * self.progress
+      // Play the animations
+      action1.play()
+      action2.play()
+
+      // Optionally, control the animations with GSAP
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#reel_canvas',
+          start: 'top center',
+          end: 'bottom center',
+          scrub: true,
+          markers: true,
+          onUpdate: (self) => {
+            action1.time = action1.getClip().duration * self.progress
+            action2.time = action2.getClip().duration * self.progress
+          },
         },
-      },
-    })
+      })
 
-    return () => {
-      timeline.kill() // Clean up the timeline on unmount
+      return () => {
+        timeline.kill()
+        action1.stop()
+        action2.stop()
+      }
     }
   }, [actions])
 
   return (
-    <group ref={group}>
-      <primitive object={scene} />
+    <group ref={groupRef}>
+      <primitive object={modelScene.children[0]} />
     </group>
   )
 }
