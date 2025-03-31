@@ -3,6 +3,7 @@
 #introduction_section {
   z-index: 2;
   position: relative;
-  width: 100w;
-  height: 150vh;
+  width: 100vw;
+  height: 120vw;
+  scroll-snap-align: start;
 }

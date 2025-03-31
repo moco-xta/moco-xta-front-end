@@ -1,4 +1,5 @@
 {
-  "TEST": "/videos/test.mp4",
-  "TEST_2": "/videos/test_2.mp4"
+  "TEST": "/videos/test.webm",
+  "TEST_2": "/videos/test_2.webm",
+  "TEST_3": "/videos/test_3.webm"
 }

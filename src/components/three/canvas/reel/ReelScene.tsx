@@ -6,7 +6,6 @@ import gsap from 'gsap'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as videosConstants } from '@/constants/assets/videosConstants.json'
-import { FaTruckMedical } from 'react-icons/fa6'
 
 function addModel(
   scene: THREE.Scene,
@@ -16,7 +15,7 @@ function addModel(
   const loader = new GLTFLoader()
 
   const video = document.createElement('video')
-  video.src = videosConstants.TEST_2
+  video.src = videosConstants.TEST_3
   video.loop = true
   video.muted = true
   video.playsInline = true
@@ -58,11 +57,12 @@ function addModel(
 
       timelineRef.current = gsap.timeline({
         scrollTrigger: {
-          trigger: '#reel_canvas',
-          start: 'top 20%',
-          end: 'bottom 80%',
+          trigger: '#introduction_section',
+          start: 'top top',
+          end: 'bottom 90%',
+          ease: 'power2.out',
           scrub: 1,
-          markers: true,
+          // markers: true,
           onUpdate: (self) => {
             if (mixerRef.current) {
               const duration = gltf.animations[1].duration

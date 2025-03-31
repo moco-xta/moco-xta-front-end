@@ -1,1 +1,6 @@
 @import '@/styles/variables.module.scss';
+
+#home_page {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}

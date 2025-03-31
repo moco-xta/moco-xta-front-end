@@ -8,7 +8,7 @@ import './index.scss'
 
 export default function ParisMetroMap() {
   return (
-    <>
+    <div id='paris_metro_map'>
       {metroLinesData.map((line) => (
         <div
           key={line.id}
@@ -23,6 +23,6 @@ export default function ParisMetroMap() {
           />
         </div>
       ))}
-    </>
+    </div>
   )
 }
