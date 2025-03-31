@@ -52,7 +52,6 @@ function addModel(index: number, textureUrl: string, scene: THREE.Scene, isSmall
       model.geometry.computeBoundingBox()
       const size = new THREE.Vector3()
       model.geometry.boundingBox?.getSize(size)
-      console.log('Model size:', size)
 
       const targetSize = 1
       const scale = targetSize / Math.max(size.x, size.y, size.z)
@@ -114,7 +113,7 @@ export default function LastProjectScene({
       addModel(index, textureUrl, scene, isSmallScreen)
       setIsLoaded(true)
     }
-  }, [scene, isLoaded])
+  }, [scene, isLoaded, index, textureUrl, isSmallScreen])
 
   useEffect(() => {
     const triggerElement = document.querySelector(`#last-projects-card-${index}`)

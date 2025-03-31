@@ -17,7 +17,7 @@ export default function ReelCanvas() {
         near={0.1}
         far={10}
       />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <ambientLight intensity={5} />
       <ReelScene />
     </Canvas>
