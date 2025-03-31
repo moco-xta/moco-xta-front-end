@@ -2,11 +2,17 @@ import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+import gsap from 'gsap'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 import { default as videosConstants } from '@/constants/assets/videosConstants.json'
+import { FaTruckMedical } from 'react-icons/fa6'
 
-function addModel(scene: THREE.Scene) {
+function addModel(
+  scene: THREE.Scene,
+  mixerRef: React.MutableRefObject<THREE.AnimationMixer | null>,
+  timelineRef: React.MutableRefObject<gsap.core.Timeline | null>,
+) {
   const loader = new GLTFLoader()
 
   const video = document.createElement('video')
@@ -36,24 +42,62 @@ function addModel(scene: THREE.Scene) {
   loader.load(glbConstants.INTRODUCTION.REEL_PLANE, function (gltf) {
     const model = gltf.scenes[0].children[0]
     if (model instanceof THREE.Mesh) {
-      model.name = `reel_mesh`
       model.material = material
-
       scene.add(model)
+
+      mixerRef.current = new THREE.AnimationMixer(model)
+      const actions = {
+        action1: mixerRef.current.clipAction(gltf.animations[0]),
+        action2: mixerRef.current.clipAction(gltf.animations[1]),
+      }
+
+      actions.action1.play().paused = false
+      actions.action2.play().paused = false
+
+      console.log(document.querySelector('#reel_canvas'))
+
+      timelineRef.current = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#reel_canvas',
+          start: 'top 20%',
+          end: 'bottom 80%',
+          scrub: 1,
+          markers: true,
+          onUpdate: (self) => {
+            if (mixerRef.current) {
+              const duration = gltf.animations[1].duration
+              if (self.progress < 1) {
+                mixerRef.current.setTime(duration * self.progress)
+              }
+            }
+          },
+        },
+      })
     }
   })
 }
 
 export default function ReelScene() {
   const { scene } = useThree()
-
+  const mixerRef = useRef<THREE.AnimationMixer | null>(null)
+  const timelineRef = useRef<gsap.core.Timeline | null>(null)
   const [isLoaded, setIsLoaded] = useState<boolean>(false)
 
   useEffect(() => {
     if (!isLoaded) {
-      addModel(scene)
+      addModel(scene, mixerRef, timelineRef)
       setIsLoaded(true)
+
+      return () => {
+        if (timelineRef.current) {
+          timelineRef.current.kill()
+        }
+        if (mixerRef.current) {
+          mixerRef.current.stopAllAction()
+        }
+      }
     }
+    return () => {}
   }, [scene, isLoaded])
 
   return null
