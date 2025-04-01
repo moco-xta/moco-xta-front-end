@@ -89,6 +89,7 @@
     "O_HELIUM_BALLOON": "/models/glb/moco_helium/OHeliumBalloon.glb",
     "SMILEY": "/models/glb/moco_helium/Smiley.glb"
   },
+  "MONTMARTRE": "/models/glb/montmartre/Montmartre.glb",
   "LABORATORY": {
     "COURONNES": "/models/glb/laboratory/Couronnes.glb",
     "CUBE": "/models/glb/laboratory/Cube.glb",

@@ -5,7 +5,9 @@ import { PerspectiveCamera } from '@react-three/drei'
 import { useWindowSize } from '@/hooks/useWindowSize'
 
 import ReelScene from './ReelScene'
+
 import { setCameraZPosition } from '@/helpers/threeHelpers'
+
 import { canvasDefaultValues } from '@/data/reel/three/canvasData'
 
 export default function ReelCanvas() {
