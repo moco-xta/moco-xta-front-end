@@ -2,11 +2,15 @@ import * as THREE from 'three'
 
 // UNIFORMS
 
-export type TUniforms = Record<string, TUniform>
+export type TUniforms = Record<string, IUniform>
 
-type TUniform = {
+interface IUniform {
   type: string
   value: number | THREE.Texture | THREE.Vector2 | THREE.Vector3
+}
+
+export interface IUniformValue {
+  value: number
 }
 
 // MOCO

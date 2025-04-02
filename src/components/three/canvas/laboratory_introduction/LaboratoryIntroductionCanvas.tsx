@@ -13,12 +13,12 @@ export default function LaboratoryIntroductionCanvas() {
   return (
     <Canvas {...canvasDefaultValues}>
       <PerspectiveCamera {...cameraDefaultValues.camera} />
-      <OrbitControls />
+      <OrbitControls target={[0, 10, 0]} />
       <Lights />
       <Suspense fallback={null}>
         <LaboratoryIntroductionScene />
       </Suspense>
-      {/* <PostProcessing /> */}
+      <PostProcessing />
     </Canvas>
   )
 }
