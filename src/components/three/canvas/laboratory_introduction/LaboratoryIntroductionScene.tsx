@@ -108,18 +108,23 @@ function addModel(
           child.name = 'laboratory_introduction'
           child.material = wireframeMaterialRef.current
           const boundingBox = calculateBoundingBox(child.geometry.attributes.position.array)
-          console.log(boundingBox.min[2])
-          console.log(boundingBox.max[2])
+          console.log('boundingBox', boundingBox.min[2])
+          console.log('boundingBox', boundingBox.max[2])
 
           const number = child.geometry.attributes.position.array.length / 3
           const min = new THREE.BufferAttribute(new Float32Array(number), 1)
           const max = new THREE.BufferAttribute(new Float32Array(number), 1)
+          const opacityOffset = new THREE.BufferAttribute(new Float32Array(number), 1)
+
           for (let i = 0; i < number; i++) {
             min.setX(i, boundingBox.min[2])
             max.setX(i, boundingBox.max[2])
+            opacityOffset.setX(i, random(0, 1))
           }
+
           child.geometry.setAttribute('min', min)
           child.geometry.setAttribute('max', max)
+          child.geometry.setAttribute('opacityOffset', opacityOffset)
         }
       })
       scene.add(group)
@@ -246,7 +251,7 @@ export default function LaboratoryIntroductionScene() {
       .fromTo(
         wireframeOpacityFactorRef.current,
         { value: 1 },
-        { value: 0, duration: 10, ease: 'power1.out' },
+        { value: 0, duration: 10, ease: 'none' },
         5,
       )
   })
