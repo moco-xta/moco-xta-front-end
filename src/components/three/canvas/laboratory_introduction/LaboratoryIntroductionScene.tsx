@@ -7,11 +7,11 @@ import { useGSAP } from '@gsap/react'
 
 import type { IUniformValue, TUniforms } from '@/types/shaders/types'
 
-import vertexShader from '../../shaders/laboratory_introduction/vertexShader.glsl'
-import fragmentShader from '../../shaders/laboratory_introduction/fragmentShader.glsl'
+import dotsVertexShader from '../../shaders/laboratory_introduction/dots/vertexShader.glsl'
+import dotsFragmentShader from '../../shaders/laboratory_introduction/dots/fragmentShader.glsl'
 
-import defaultVertexShader from '../../shaders/playground/default/vertexShader.glsl'
-import defaultFragmentShader from '../../shaders/playground/default/fragmentShader.glsl'
+import wireframeVertexShader from '../../shaders/laboratory_introduction/wireframe/vertexShader.glsl'
+import wireframeFragmentShader from '../../shaders/laboratory_introduction/wireframe/fragmentShader.glsl'
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
@@ -67,7 +67,7 @@ function addModel(scene: THREE.Scene, materialRef: MutableRefObject<THREE.Shader
     })
   })
 
-  /* const material = new THREE.ShaderMaterial({
+  const material = new THREE.ShaderMaterial({
     side: THREE.DoubleSide,
     transparent: true,
     opacity: 1,
@@ -78,8 +78,8 @@ function addModel(scene: THREE.Scene, materialRef: MutableRefObject<THREE.Shader
     uniforms: {
       time: { value: 0 },
     },
-    vertexShader: defaultVertexShader,
-    fragmentShader: defaultFragmentShader,
+    vertexShader: wireframeVertexShader,
+    fragmentShader: wireframeFragmentShader,
   })
   material.needsUpdate = true
 
@@ -94,7 +94,7 @@ function addModel(scene: THREE.Scene, materialRef: MutableRefObject<THREE.Shader
       })
       scene.add(group)
     })
-  }) */
+  })
 }
 
 export default function LaboratoryIntroductionScene() {
@@ -126,8 +126,8 @@ export default function LaboratoryIntroductionScene() {
   const materialRef = useRef<THREE.ShaderMaterial>(
     new THREE.ShaderMaterial({
       uniforms: uniformsRef.current,
-      vertexShader: vertexShader,
-      fragmentShader: fragmentShader,
+      vertexShader: dotsVertexShader,
+      fragmentShader: dotsFragmentShader,
       transparent: true,
       side: THREE.DoubleSide,
       depthTest: true,
