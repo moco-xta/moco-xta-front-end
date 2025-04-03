@@ -75,7 +75,7 @@ function addModel(
           const max = new THREE.BufferAttribute(new Float32Array(number * 3), 3)
 
           for (let i = 0; i < number; i++) {
-            offset.setX(i, random(0, 33))
+            offset.setX(i, random(0, 44))
             circularOffset.setX(i, Math.random())
             speed.setX(i, random(0.4, 1))
             direction.setX(i, Math.random() > 0.5 ? 1 : -1)
@@ -241,10 +241,16 @@ export default function LaboratoryIntroductionScene() {
     const SPEED = 5
 
     timeline
+      /* .fromTo(
+        camera.position,
+        { x: 72 * 2, z: 32 * 3, duration: SPEED * 2, ease: 'power1.out' },
+        { x: 16, z: 8, duration: SPEED * 2, ease: 'power1.out' },
+        0
+      ) */
       .fromTo(
         pointsSizeRef.current,
         { value: 0 },
-        { value: 1, duration: SPEED, ease: 'power1.out' },
+        { value: 5, duration: SPEED, ease: 'power1.out' },
         0
       )
       .fromTo(
@@ -268,8 +274,8 @@ export default function LaboratoryIntroductionScene() {
       .fromTo(
         wireframeOpacityFactorRef.current,
         { value: 1 },
-        { value: 0, duration: SPEED / 2, ease: 'steps(15)' },
-        SPEED / 2 + 1,
+        { value: 0, duration: SPEED * 5, ease: 'power1.out' },
+        SPEED * 0.75,
       )
   })
 

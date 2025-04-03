@@ -5,7 +5,7 @@ import { BlendFunction, DepthOfFieldEffect, KernelSize, Resolution } from 'postp
 
 export default function PostProcessing() {
   const depthOfFieldRef = useRef<DepthOfFieldEffect>(null!)
-  const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 5))
+  const depthOfFieldTargetRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 10, 0))
 
   useLayoutEffect(() => {
     depthOfFieldRef.current.target = depthOfFieldTargetRef.current
@@ -15,7 +15,7 @@ export default function PostProcessing() {
     <EffectComposer enableNormalPass>
       <DepthOfField
         ref={depthOfFieldRef}
-        focalLength={0.5}
+        focalLength={2}
         bokehScale={2.5}
         height={1024}
         width={1024}

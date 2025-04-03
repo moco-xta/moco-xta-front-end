@@ -7,7 +7,7 @@ import { getDegreeEuler } from '@/helpers/threeHelpers'
 export const cameraDefaultValues: TCameraDefaultValues = {
   camera: {
     makeDefault: true,
-    position: new THREE.Vector3(75, 25, 55),
+    position: new THREE.Vector3(18, 14, 8),
     // rotation: getDegreeEuler({ x: 0, y: 43, z: 0 }),
     fov: 50,
     near: 0.01,
