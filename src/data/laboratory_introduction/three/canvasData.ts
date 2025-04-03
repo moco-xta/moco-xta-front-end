@@ -9,7 +9,7 @@ export const canvasDefaultValues: Partial<CanvasProps> = {
     left: 0,
     width: '100vw',
     height: '100vh',
-    backgroundColor: 'black',
+    // backgroundColor: 'black',
   },
   dpr: 2,
   shadows: true,

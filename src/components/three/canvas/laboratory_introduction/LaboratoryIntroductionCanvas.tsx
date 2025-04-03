@@ -18,7 +18,7 @@ export default function LaboratoryIntroductionCanvas() {
       <Suspense fallback={null}>
         <LaboratoryIntroductionScene />
       </Suspense>
-      <PostProcessing />
+      {/* <PostProcessing /> */}
     </Canvas>
   )
 }
