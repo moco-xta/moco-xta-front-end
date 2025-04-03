@@ -112,13 +112,13 @@ function addModel(
           console.log('boundingBox', boundingBox.max[2])
 
           const number = child.geometry.attributes.position.array.length / 3
-          const min = new THREE.BufferAttribute(new Float32Array(number), 1)
-          const max = new THREE.BufferAttribute(new Float32Array(number), 1)
+          const min = new THREE.BufferAttribute(new Float32Array(number * 3), 3)
+          const max = new THREE.BufferAttribute(new Float32Array(number * 3), 3)
           const opacityOffset = new THREE.BufferAttribute(new Float32Array(number), 1)
 
           for (let i = 0; i < number; i++) {
-            min.setX(i, boundingBox.min[2])
-            max.setX(i, boundingBox.max[2])
+            min.setXYZ(i, boundingBox.min[0], boundingBox.min[1], boundingBox.min[2])
+            max.setXYZ(i, boundingBox.max[0], boundingBox.max[1], boundingBox.max[2])
             opacityOffset.setX(i, random(0, 1))
           }
 
@@ -230,29 +230,38 @@ export default function LaboratoryIntroductionScene() {
   useGSAP(() => {
     const timeline = gsap.timeline()
 
+    const SPEED = 5
+
     timeline
+      .fromTo(
+        pointsSizeRef.current,
+        { value: 0 },
+        { value: 1, duration: SPEED, ease: 'power1.out' },
+        0
+      )
       .fromTo(
         offsetFactorRef.current,
         { value: 10 },
-        { value: 0, duration: 10, ease: 'power1.out' },
+        { value: 0, duration: SPEED, ease: 'power1.out' },
+        0
       )
       .fromTo(
         radiusOffsetFactorRef.current,
         { value: 10 },
-        { value: 0, duration: 10, ease: 'power1.out' },
+        { value: 0, duration: SPEED, ease: 'power1.out' },
         0,
       )
       .fromTo(
         dotsOpacityFactorRef.current,
         { value: 0 },
-        { value: 1, duration: 10, ease: 'power1.out' },
+        { value: 1, duration: SPEED, ease: 'power1.out' },
         0,
       )
       .fromTo(
         wireframeOpacityFactorRef.current,
         { value: 1 },
-        { value: 0, duration: 10, ease: 'none' },
-        5,
+        { value: 0, duration: SPEED, ease: 'none' },
+        SPEED / 2,
       )
   })
 
