@@ -59,6 +59,8 @@ function addModel(
     gltf.scenes.forEach((group) => {
       group.traverse((child) => {
         if (child instanceof THREE.Mesh) {
+          const boundingBox = calculateBoundingBox(child.geometry.attributes.position.array)
+
           const geometry = new THREE.BufferGeometry()
           const number = child.geometry.attributes.position.array.length / 3
           const position = child.geometry.attributes.position as THREE.BufferAttribute
@@ -69,6 +71,8 @@ function addModel(
           const press = new THREE.BufferAttribute(new Float32Array(number), 1)
           const radiusOffset = new THREE.BufferAttribute(new Float32Array(number), 1)
           const opacityOffset = new THREE.BufferAttribute(new Float32Array(number), 1)
+          const min = new THREE.BufferAttribute(new Float32Array(number * 3), 3)
+          const max = new THREE.BufferAttribute(new Float32Array(number * 3), 3)
 
           for (let i = 0; i < number; i++) {
             offset.setX(i, random(0, 33))
@@ -79,6 +83,8 @@ function addModel(
             // radiusOffset.setX(i, Math.random() * 10)
             radiusOffset.setX(i, random(4, 10))
             opacityOffset.setX(i, random(0, 1))
+            min.setXYZ(i, boundingBox.min[0], boundingBox.min[1], boundingBox.min[2])
+            max.setXYZ(i, boundingBox.max[0], boundingBox.max[1], boundingBox.max[2])
           }
 
           console.log('circularOffset', circularOffset)
@@ -91,6 +97,8 @@ function addModel(
           geometry.setAttribute('press', press)
           geometry.setAttribute('radiusOffset', radiusOffset)
           geometry.setAttribute('opacityOffset', opacityOffset)
+          geometry.setAttribute('min', min)
+          geometry.setAttribute('max', max)
 
           const points = new THREE.Points(geometry, dotsMaterialRef.current)
           scene.add(points)
@@ -241,13 +249,13 @@ export default function LaboratoryIntroductionScene() {
       )
       .fromTo(
         offsetFactorRef.current,
-        { value: 10 },
+        { value: 20 },
         { value: 0, duration: SPEED, ease: 'power1.out' },
         0
       )
       .fromTo(
         radiusOffsetFactorRef.current,
-        { value: 10 },
+        { value: 20 },
         { value: 0, duration: SPEED, ease: 'power1.out' },
         0,
       )
@@ -260,8 +268,8 @@ export default function LaboratoryIntroductionScene() {
       .fromTo(
         wireframeOpacityFactorRef.current,
         { value: 1 },
-        { value: 0, duration: SPEED, ease: 'none' },
-        SPEED / 2,
+        { value: 0, duration: SPEED / 2, ease: 'steps(15)' },
+        SPEED / 2 + 1,
       )
   })
 

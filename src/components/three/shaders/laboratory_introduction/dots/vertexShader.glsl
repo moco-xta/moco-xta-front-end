@@ -13,9 +13,12 @@ uniform float pointSize;
 uniform float time;
 uniform float offsetFactor;
 uniform float radiusOffsetFactor;
+attribute vec3 min;
+attribute vec3 max;
 
 varying vec2 vUv;
 varying float vOpacityOffset;
+varying float normalizedXPosition;
 
 float PI = 3.1415926538;
 
@@ -24,11 +27,14 @@ void main() {
 	// gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 	vec3 pos = position;
 
+
+	normalizedXPosition = sin((pos.x + max.x) / (max.x - min.x));
+
 	// pos.x += sin(move * speed * time);
 	pos.x += sin(time + circularOffset) * radiusOffset * radiusOffsetFactor;
 	// pos.y += cos(move * speed * time);
 	pos.y += cos(time + circularOffset) * radiusOffset * radiusOffsetFactor;
-	pos.z = position.z + (move * 5.0 * speed + offset) * offsetFactor;
+	pos.z = position.z + (move * 5.0 * speed + offset + 32.0) * offsetFactor * (normalizedXPosition + 1.0);
 	// pos.z = mod(position.z + move * 20.0 * speed + offset, 20.0);
 
 
