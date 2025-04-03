@@ -2,7 +2,7 @@ attribute float circularOffset;
 attribute float direction;
 attribute float offset;
 attribute float press;
-attribute float opacity;
+attribute float opacityOffset;
 attribute float radiusOffset;
 attribute float speed;
 
@@ -12,11 +12,10 @@ uniform float mousePressed;
 uniform float pointSize;
 uniform float time;
 uniform float offsetFactor;
-uniform float opacityFactor;
 uniform float radiusOffsetFactor;
 
 varying vec2 vUv;
-varying float vOpacity;
+varying float vOpacityOffset;
 
 float PI = 3.1415926538;
 
@@ -51,5 +50,5 @@ void main() {
 	// gl_PointSize = 23.0 * (1.0 / -mvPosition.z);
 	gl_PointSize = pointSize;
 	gl_Position = projectionMatrix * mvPosition;
-	vOpacity = opacityFactor;
+	vOpacityOffset = opacityOffset;
 }

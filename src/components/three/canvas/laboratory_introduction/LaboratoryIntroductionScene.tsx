@@ -15,12 +15,44 @@ import wireframeFragmentShader from '../../shaders/laboratory_introduction/wiref
 
 import { default as glbConstants } from '@/constants/assets/glbConstants.json'
 
-function addModel(scene: THREE.Scene, materialRef: MutableRefObject<THREE.ShaderMaterial>) {
+function addModel(
+  scene: THREE.Scene,
+  dotsMaterialRef: MutableRefObject<THREE.ShaderMaterial>,
+  wireframeMaterialRef: MutableRefObject<THREE.ShaderMaterial>,
+) {
   const loader = new GLTFLoader()
 
   function random(a: number, b: number) {
     return a + (a - b) * Math.random()
     // return (b - a) * Math.random()
+  }
+
+  function calculateBoundingBox(vertices: number[]) {
+    let minX = Infinity,
+      minY = Infinity,
+      minZ = Infinity
+    let maxX = -Infinity,
+      maxY = -Infinity,
+      maxZ = -Infinity
+
+    for (let i = 0; i < vertices.length; i += 3) {
+      const x = vertices[i]
+      const y = vertices[i + 1]
+      const z = vertices[i + 2]
+
+      minX = Math.min(minX, x)
+      minY = Math.min(minY, y)
+      minZ = Math.min(minZ, z)
+
+      maxX = Math.max(maxX, x)
+      maxY = Math.max(maxY, y)
+      maxZ = Math.max(maxZ, z)
+    }
+
+    return {
+      min: [minX, minY, minZ],
+      max: [maxX, maxY, maxZ],
+    }
   }
 
   loader.load(glbConstants.LABORATORY_INTRODUCTION_DOTS, function (gltf) {
@@ -36,7 +68,7 @@ function addModel(scene: THREE.Scene, materialRef: MutableRefObject<THREE.Shader
           const direction = new THREE.BufferAttribute(new Float32Array(number), 1)
           const press = new THREE.BufferAttribute(new Float32Array(number), 1)
           const radiusOffset = new THREE.BufferAttribute(new Float32Array(number), 1)
-          const opacity = new THREE.BufferAttribute(new Float32Array(number), 1)
+          const opacityOffset = new THREE.BufferAttribute(new Float32Array(number), 1)
 
           for (let i = 0; i < number; i++) {
             offset.setX(i, random(0, 33))
@@ -46,7 +78,7 @@ function addModel(scene: THREE.Scene, materialRef: MutableRefObject<THREE.Shader
             press.setX(i, random(0.4, 1))
             // radiusOffset.setX(i, Math.random() * 10)
             radiusOffset.setX(i, random(4, 10))
-            opacity.setX(i, random(0.1, 1))
+            opacityOffset.setX(i, random(0, 1))
           }
 
           console.log('circularOffset', circularOffset)
@@ -58,38 +90,36 @@ function addModel(scene: THREE.Scene, materialRef: MutableRefObject<THREE.Shader
           geometry.setAttribute('direction', direction)
           geometry.setAttribute('press', press)
           geometry.setAttribute('radiusOffset', radiusOffset)
-          geometry.setAttribute('opacity', opacity)
+          geometry.setAttribute('opacityOffset', opacityOffset)
 
-          const points = new THREE.Points(geometry, materialRef.current)
+          const points = new THREE.Points(geometry, dotsMaterialRef.current)
           scene.add(points)
         }
       })
     })
   })
 
-  const material = new THREE.ShaderMaterial({
-    side: THREE.DoubleSide,
-    transparent: true,
-    opacity: 1,
-    wireframe: true,
-    depthTest: true,
-    depthWrite: true,
-    // alphaTest: 0.5,
-    uniforms: {
-      time: { value: 0 },
-    },
-    vertexShader: wireframeVertexShader,
-    fragmentShader: wireframeFragmentShader,
-  })
-  material.needsUpdate = true
-
-  loader.load(glbConstants.LABORATORY_INTRODUCTION, function (gltf) {
+  loader.load(glbConstants.LABORATORY_INTRODUCTION_DOTS, function (gltf) {
     gltf.scenes.forEach((group) => {
       group.traverse((child) => {
         if (child instanceof THREE.Mesh) {
-          // console.log(child)
+          console.log(child)
+
           child.name = 'laboratory_introduction'
-          child.material = material
+          child.material = wireframeMaterialRef.current
+          const boundingBox = calculateBoundingBox(child.geometry.attributes.position.array)
+          console.log(boundingBox.min[2])
+          console.log(boundingBox.max[2])
+
+          const number = child.geometry.attributes.position.array.length / 3
+          const min = new THREE.BufferAttribute(new Float32Array(number), 1)
+          const max = new THREE.BufferAttribute(new Float32Array(number), 1)
+          for (let i = 0; i < number; i++) {
+            min.setX(i, boundingBox.min[2])
+            max.setX(i, boundingBox.max[2])
+          }
+          child.geometry.setAttribute('min', min)
+          child.geometry.setAttribute('max', max)
         }
       })
       scene.add(group)
@@ -110,9 +140,9 @@ export default function LaboratoryIntroductionScene() {
   const mousePressedRef = useRef<IUniformValue>({ value: 0 })
   const offsetFactorRef = useRef<IUniformValue>({ value: 0 })
   const radiusOffsetFactorRef = useRef<IUniformValue>({ value: 0 })
-  const opacityFactorRef = useRef<IUniformValue>({ value: 0 })
+  const dotsOpacityFactorRef = useRef<IUniformValue>({ value: 0 })
 
-  const uniformsRef = useRef<TUniforms>({
+  const dotsUniformsRef = useRef<TUniforms>({
     time: { type: 'f', value: 0 },
     pointSize: { type: 'f', value: pointsSizeRef.current.value },
     move: { type: 'f', value: moveRef.current.value },
@@ -120,25 +150,46 @@ export default function LaboratoryIntroductionScene() {
     mousePressed: { type: 'f', value: mousePressedRef.current.value },
     offsetFactor: { type: 'f', value: offsetFactorRef.current.value },
     radiusOffsetFactor: { type: 'f', value: radiusOffsetFactorRef.current.value },
-    opacityFactor: { type: 'f', value: opacityFactorRef.current.value },
+    dotsOpacityFactor: { type: 'f', value: dotsOpacityFactorRef.current.value },
   })
 
-  const materialRef = useRef<THREE.ShaderMaterial>(
+  const dotsMaterialRef = useRef<THREE.ShaderMaterial>(
     new THREE.ShaderMaterial({
-      uniforms: uniformsRef.current,
+      uniforms: dotsUniformsRef.current,
       vertexShader: dotsVertexShader,
       fragmentShader: dotsFragmentShader,
       transparent: true,
       side: THREE.DoubleSide,
-      depthTest: true,
-      depthWrite: true,
+      depthTest: false,
+      depthWrite: false,
     }),
   )
-  materialRef.current.needsUpdate = true
+  dotsMaterialRef.current.needsUpdate = true
+
+  const wireframeOpacityFactorRef = useRef<IUniformValue>({ value: 0 })
+
+  const wireframeUniformsRef = useRef<TUniforms>({
+    time: { type: 'f', value: 0 },
+    wireframeOpacityFactor: { type: 'f', value: wireframeOpacityFactorRef.current.value },
+  })
+
+  const wireframeMaterialRef = useRef<THREE.ShaderMaterial>(
+    new THREE.ShaderMaterial({
+      uniforms: wireframeUniformsRef.current,
+      vertexShader: wireframeVertexShader,
+      fragmentShader: wireframeFragmentShader,
+      transparent: true,
+      wireframe: true,
+      side: THREE.DoubleSide,
+      depthTest: false,
+      depthWrite: false,
+    }),
+  )
+  wireframeMaterialRef.current.needsUpdate = true
 
   useEffect(() => {
     if (!isLoaded) {
-      addModel(scene, materialRef)
+      addModel(scene, dotsMaterialRef, wireframeMaterialRef)
       setIsLoaded(true)
     }
   }, [scene, isLoaded])
@@ -187,24 +238,34 @@ export default function LaboratoryIntroductionScene() {
         0,
       )
       .fromTo(
-        opacityFactorRef.current,
+        dotsOpacityFactorRef.current,
         { value: 0 },
         { value: 1, duration: 10, ease: 'power1.out' },
         0,
+      )
+      .fromTo(
+        wireframeOpacityFactorRef.current,
+        { value: 1 },
+        { value: 0, duration: 10, ease: 'power1.out' },
+        5,
       )
   })
 
   useFrame(({ clock }) => {
     const time = clock.getElapsedTime()
 
-    uniformsRef.current.time.value = time
-    uniformsRef.current.pointSize.value = pointsSizeRef.current.value
-    uniformsRef.current.move.value = moveRef.current.value
-    uniformsRef.current.mouse.value = mouseRef.current.value
-    uniformsRef.current.mousePressed.value = mousePressedRef.current.value
-    uniformsRef.current.offsetFactor.value = offsetFactorRef.current.value
-    uniformsRef.current.radiusOffsetFactor.value = radiusOffsetFactorRef.current.value
-    uniformsRef.current.opacityFactor.value = opacityFactorRef.current.value
+    dotsUniformsRef.current.time.value = time
+    dotsUniformsRef.current.pointSize.value = pointsSizeRef.current.value
+    dotsUniformsRef.current.move.value = moveRef.current.value
+    dotsUniformsRef.current.mouse.value = mouseRef.current.value
+    dotsUniformsRef.current.mousePressed.value = mousePressedRef.current.value
+    dotsUniformsRef.current.offsetFactor.value = offsetFactorRef.current.value
+    dotsUniformsRef.current.radiusOffsetFactor.value = radiusOffsetFactorRef.current.value
+    dotsUniformsRef.current.dotsOpacityFactor.value = dotsOpacityFactorRef.current.value
+
+    wireframeUniformsRef.current.time.value = time
+    wireframeUniformsRef.current.wireframeOpacityFactor.value =
+      wireframeOpacityFactorRef.current.value
 
     /* raycasterRef.current.setFromCamera(pointerRef.current.value, camera)
     const model = scene.getObjectByName('laboratory_introduction')
